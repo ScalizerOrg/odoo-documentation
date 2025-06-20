@@ -20,10 +20,9 @@ offer payment solutions through :doc:`payment terminals<../terminals>` to handle
 Worldline/Axepta BNP Paribas configuration
 ==========================================
 
-First, enable the Worldline or the Axepta BNP Paribas payment terminal in the
-:ref:`POS settings <configuration/settings>` under :guilabel:`Payment Terminals`.
-Then :doc:`connect the IoT system to Odoo </applications/general/iot/connect>`
-and follow these steps on the terminal:
+First, enable the Worldline or the Axepta BNP Paribas payment terminal in the :ref:`POS settings
+<pos/use/settings>` under :guilabel:`Payment Terminals`. Then :doc:`connect the IoT system to Odoo
+</applications/general/iot/connect>` and follow these steps on the terminal:
 
 #. **Configure the ECR protocol**:
 

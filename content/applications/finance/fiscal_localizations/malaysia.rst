@@ -413,8 +413,7 @@ issued from an invoice or a :guilabel:`Self-billed Debit Note` from a vendor bil
 POS workflow
 ------------
 
-Two workflows are available to issue e-invoices in
-:doc:`Point of Sale <../../sales/point_of_sale>`:
+Two workflows are available to issue e-invoices in :doc:`Point of Sale <../../sales/point_of_sale>`:
 
 - :ref:`Individual e-invoice <malaysia/myinvois/pos_workflow/submit>`: Issue an e-invoice
   immediately for a specific order using the customer's details.
@@ -427,8 +426,8 @@ Individual e-invoice
 ~~~~~~~~~~~~~~~~~~~~
 
 To issue an individual e-invoice and send it to MyInvois,
-:ref:`create an invoice <receipts-invoices/invoices>`, and ensure the selected customer has a valid
-:abbr:`TIN (tax identification number)` or **Identification Number**.
+:doc:`create an invoice </applications/sales/point_of_sale/use/pos_invoices>`, and ensure the
+selected customer has a valid :abbr:`TIN (tax identification number)` or **Identification Number**.
 
 .. note::
    If the QR code does not appear on the invoice, the MyInvois validation is still in progress.
@@ -451,8 +450,8 @@ individually :ref:`invoiced <malaysia/myinvois/pos_workflow/submit>` nor
 :ref:`refunded <malaysia/myinvois/pos_workflow/refund>`.
 
 .. note::
-   Orders belonging to an :ref:`open <pos/session-start>` POS session are not included in the
-   consolidation. :ref:`Close <pos/session-close>` the session to include them.
+   Orders belonging to an :ref:`open POS register <pos/use/open-register>` are not included in the
+   consolidation. :ref:`Close the register <pos/use/register-close>` to include them.
 
 To submit the consolidation, click :guilabel:`Submit to MyInvois` on the form view.
 For multiple records, click :guilabel:`Consolidated Invoices` to go back to the list view, and
@@ -464,7 +463,7 @@ Consolidated e-invoices are issued to the pre-configured :guilabel:`General Publ
 Refunds
 ~~~~~~~
 
-To refund a customer, :ref:`process a return <pos/refund>`.
+To refund a customer, :ref:`process a return <pos/use/refund>`.
 
 Refunds for orders e-invoiced individually or via consolidation must be issued as e-invoices
 (Refund Notes). To do so, click :guilabel:`Invoice` before processing the refund.
