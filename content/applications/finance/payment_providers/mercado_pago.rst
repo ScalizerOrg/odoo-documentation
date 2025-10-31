@@ -3,37 +3,51 @@ Mercado Pago
 ============
 
 `Mercado Pago <https://www.mercadopago.com/>`_ is an online payment provider covering several
-countries, currencies and payment methods in Latin America.
+countries, currencies, and payment methods in Latin America.
 
 .. _payment_providers/mercado_pago/configure_dashboard:
 
-Configuration on Mercado Pago Dashboard
+Configuration on Mercado Pago dashboard
 =======================================
 
-#. Log into the `Mercado Pago Dashboard <https://www.mercadopago.com.mx/developers/panel>`_
-   and select your application or create a new one.
-#. Select :guilabel:`Credenciales de producción` in the left part of the application page, then
-   select the industry, optionally enter your domain, and click :guilabel:`Activar credenciales
-   de producción`.
-#. Copy the :guilabel:`Access token` and save it for later.
+#. Create a Mercado Pago account if necessary and log into the Mercado Pago dashboard:
+
+   - `Mercado Pago dashboard for Mexico <https://www.mercadopago.com.mx/developers>`_
+   - `Mercado Pago dashboard for Argentina <https://www.mercadopago.com.ar/developers>`_
+   - `Mercado Pago dashboard for Brazil <https://www.mercadopago.com.br/developers>`_
+   - `Mercado Pago dashboard for Chile <https://www.mercadopago.cl/developers>`_
+   - `Mercado Pago dashboard for Colombia <https://www.mercadopago.com.co/developers>`_
+   - `Mercado Pago dashboard for Peru <https://www.mercadopago.com.pe/developers>`_
+   - `Mercado Pago dashboard for Uruguay <https://www.mercadopago.com.uy/developers>`_
+
+#. In the top-right corner, click :guilabel:`Your integrations`, then :guilabel:`View all`.
+#. Select the relevant application or `create a new one
+   <https://www.mercadopago.com.mx/developers/en/docs/checkout-api-orders/create-application>`_.
+#. Select :guilabel:`Production Credentials` in the left menu.
+#. Select the relevant industry, optionally enter the domain, and click :guilabel:`Generate
+   production credentials`.
+
+.. important::
+   The testing environment is not supported; all transactions are generated in the production
+   environment.
+
+Odoo configuration
+==================
+
+#. :ref:`Navigate to the payment provider Mercado Pago <payment_providers/add_new>`.
+#. In the :guilabel:`Credentials` tab, select the country of your :ref:`Mercado Pago account
+   <payment_providers/mercado_pago/configure_dashboard>` in the :guilabel:`Account Country` field.
+#. Click :guilabel:`Connect`.
+#. Select the relevant country, then go through the sign-in process on the Mercado Pago portal
+   using your :ref:`credentials <payment_providers/mercado_pago/configure_dashboard>`.
+#. At the end of the process, you are redirected to Odoo, the :guilabel:`Access token` is generated,
+   and the payment provider is :guilabel:`Enabled`.
+#. Configure the remaining options as needed.
 
 .. tip::
-   If you are trying Mercado Pago as a test, select :guilabel:`Credienciales de prueba` in the left
-   part of the application page, then copy the test :guilabel:`Access token`.
-
-.. image:: mercado_pago/mp-credentials.png
-   :alt: Production and testing credentials in Mercado Pago.
-
-.. _payment_providers/mercado_pago/configure_odoo:
-
-Configuration on Odoo
-=====================
-
-#. :ref:`Navigate to the payment provider Mercado Pago <payment_providers/add_new>` and change its
-   state to :guilabel:`Enabled`.
-#. In the :guilabel:`Credentials` tab, fill in the :guilabel:`Access Token` with the value you saved
-   at the :ref:`payment_providers/mercado_pago/configure_dashboard` step.
-#. Configure the rest of the options to your liking.
+   - Click :guilabel:`Disconnect your Mercado Pago Account` to disconnect the current account and
+     connect a different one if needed.
+   - :ref:`Tokenization <payment_providers/tokenization>` is supported for credit cards.
 
 .. seealso::
    - :doc:`../payment_providers`
