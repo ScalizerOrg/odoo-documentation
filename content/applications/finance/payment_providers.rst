@@ -121,8 +121,8 @@ Online payment providers
      -
      -
    * - :doc:`Mercado Pago <payment_providers/mercado_pago>`
-     - The provider's website
-     -
+     - Odoo or the provider's website
+     - |V|
      -
      -
      -
