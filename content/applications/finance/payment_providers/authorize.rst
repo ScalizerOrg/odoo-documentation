@@ -1,75 +1,65 @@
 =============
-Authorize.Net
+Authorize.net
 =============
 
-`Authorize.Net <https://www.authorize.net>`_ is a United States-based online payment solution
-provider, allowing businesses to accept **credit cards**.
+`Authorize.net <https://www.authorize.net>`_ is a United States-based online payment solution
+provider, allowing businesses to accept credit cards and :ref:`ACH payments
+<payment_providers/authorize/ach_payments>`.
 
-Configuration
-=============
+.. _payment_providers/authorize/portal:
 
-.. seealso::
-   - :ref:`payment_providers/add_new`
+Configuration on the Authorize.net portal
+=========================================
 
-Credentials tab
----------------
+#. `Create an Authorize.net account <https://www.authorize.net/sign-up/pricing>`_ if necessary and
+   `log in to the Authorize.net merchant portal <https://login.authorize.net>`_.
+#. On the merchant portal homepage, go to :menuselection:`Account --> Account and API Settings`.
+#. Click :guilabel:`API Credentials and Keys`.
+#. Copy the :guilabel:`API Login ID` and save it for the
+   :ref:`payment_providers/authorize/odoo-configuration` step.
+#. Click :guilabel:`Generate new transaction key`, then :guilabel:`Generate new signature key`
+   and save the keys for the :ref:`payment_providers/authorize/odoo-configuration` step.
 
-Odoo needs your **API Credentials & Keys** to connect with your Authorize.Net account, which
-comprise:
-
-- **API Login ID**: The ID solely used to identify the account with Authorize.Net.
-- **API Transaction Key**
-- **API Signature Key**
-- **API Client Key**
-
-To retrieve them, log into your Authorize.Net account, go to :menuselection:`Account --> Settings
---> Security Settings --> API Credentials & Keys`, generate your **Transaction Key** and
-**Signature Key**, and paste them on the related fields in Odoo. Then, click on **Generate Client
-Key**.
-
-.. important::
-   To test Authorize.Net with a *sandbox* account, change the :guilabel:`State` to :guilabel:`Test
-   Mode`. We recommend doing this on a test Odoo database, rather than on your main database.
-
-   If you use the :guilabel:`Test Mode` with a regular account, it results in the following error:
-   *The merchant login ID or password is invalid or the account is inactive*.
-
-Configuration tab
------------------
-
-Place a hold on a card
-~~~~~~~~~~~~~~~~~~~~~~
-
-With Authorize.Net, you can enable the :ref:`manual capture
-<payment_providers/manual_capture>`. If enabled, the funds are reserved for 30 days on the
-customer's card, but not charged yet.
-
-.. warning::
-   After **30 days**, the transaction is **voided automatically** by Authorize.Net.
-
-.. seealso::
-   - :doc:`../payment_providers`
-
-.. _authorize/ach_payments:
+.. _payment_providers/authorize/ach_payments:
 
 ACH payments (USA only)
-=======================
+-----------------------
 
 :abbr:`ACH (automated clearing house)` is an electronic funds transfer system used between bank
-accounts in the United States.
+accounts in the United States. To enable this payment method for your Authorize.net account, `apply
+for the eCheck service on Authorize.net
+<https://support.authorize.net/knowledgebase/Knowledgearticle/?code=KA-04421>`_.
 
-Configuration
--------------
+.. seealso::
+   :ref:`l10n_us/ach-electronic-transfers`
 
-To give customers the possibility to pay using ACH, `sign up for Authorize.Net eCheck's service
-<https://www.authorize.net/payments/echeck.html>`_. Once eCheck is activated, duplicate the
-previously configured Authorize.Net payment provider on Odoo by going to :menuselection:`Accounting
---> Configuration --> Payment Providers --> Authorize.net`. Then, click the cog icon
-(:guilabel:`⛭`) and select :guilabel:`Duplicate`. Change the provider's name to differentiate both
-versions (e.g., `Authorize.net - Banks`).
+.. _payment_providers/authorize/odoo-configuration:
 
-When ready, change the provider's :guilabel:`State` to :guilabel:`Enabled` for a regular account or
-:guilabel:`Test Mode` for a sandbox account.
+Odoo configuration
+==================
+
+#. :ref:`Navigate to the payment provider Authorize.net <payment_providers/add_new>`.
+#. Set the :guilabel:`State` field to :guilabel:`Enabled` (or :guilabel:`Test Mode` if you want to
+   :ref:`test the integration without affecting live transactions <payment_providers/test-mode>`).
+#. Fill in the :guilabel:`API Login ID`, :guilabel:`API Transaction Key`, and :guilabel:`API
+   Signature Key` fields with the values saved at the step
+   :ref:`payment_providers/authorize/portal`.
+
+   .. note::
+      When using the :ref:`test mode <payment_providers/test-mode>`, enter the
+      :ref:`API credentials <payment_providers/authorize/portal>` of your `Authorize.net sandbox
+      account <https://logintest.authorize.net/>`_.
+
+#. Click :guilabel:`Generate Client Key`.
+#. Click :guilabel:`Generate your webhook` to create the :guilabel:`Webhook ID`.
+#. Configure the remaining options as needed.
+
+.. tip::
+   - To recreate the webhook (e.g., after a domain change), click :guilabel:`Re-generate your
+     webhook`.
+   - The webhook is automatically configured with the correct URL and event types. To review
+     webhook notifications on Authorize.net, log into the merchant portal, go to
+     :menuselection:`Account --> Account and API Settings`, and click :guilabel:`Webhooks`.
 
 Import an Authorize.Net statement
 =================================
