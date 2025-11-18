@@ -632,7 +632,7 @@ Receive ACH payments: payment provider integration
 |ACH| payments are supported by *Authorize.net* and *Stripe* payment integrations in Odoo.
 
 .. seealso::
-   - :ref:`Setting up Authorize.net for ACH payments (Odoo) <authorize/ach_payments>`
+   - :ref:`Setting up Authorize.net for ACH payments (Odoo) <payment_providers/authorize/ach_payments>`
    - `Authorize.net's ACH payment processing for small businesses documentation
      <https://www.authorize.net/resources/blog/2021/ach-payments-for-small-businesses.html>`_
    - :doc:`Setting up Stripe for ACH payments (Odoo) <../payment_providers/stripe>`
