@@ -170,7 +170,7 @@ these steps:
 
 .. tip::
    To hide the `Shop` menu item, :doc:`restrict ecommerce access to logged-in users
-   <../../ecommerce/customer_accounts>`.
+   <../../ecommerce/configuration/customer_accounts>`.
 
 .. _website/header_footer/footer-design:
 

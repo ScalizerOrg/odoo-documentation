@@ -12,23 +12,14 @@ core product is added to a quote. They are also suggested in eCommerce interacti
 adds an associated core product to their shopping cart.
 
 .. note::
-   Optional products are differentiated from accessory products and alternative products by where
-   they appear in the customer's shopping experience.
-
-   - Optional products are suggested when a core product has been added to a cart or a quotation.
-   - Accessory products appear as suggestions when viewing an eCommerce cart.
-   - Alternative products are suggested at the bottom of an eCommerce product page whenever the
-     product page is viewed.
+   Optional products differ from :ref:`accessory and alternative products
+   <ecommerce/products/cross_upselling>` in terms of where they are displayed during the customer’s
+   online shopping journey.
 
 .. figure:: optional_products/optional-products-quotation.png
    :alt: A screen from the quotation process shows how optional products appear as a pop-up window.
 
    Optional products as they appear during the quotation process.
-
-.. figure:: optional_products/optional-products-ecommerce.png
-   :alt: An eCommerce shopping cart screen shows how optional products appear in eCommerce websites.
-
-   Optional products as they appear when viewing the shopping cart on an eCommerce website.
 
 .. _sales/sales_quotations/config-optional-product:
 

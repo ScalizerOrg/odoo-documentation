@@ -49,7 +49,9 @@ redirects users to the default contact form.
    an online catalog but cannot share prices publicly (e.g., to offer custom or variable pricing).
 
 To display the :guilabel:`Contact Us` button and a note saying `Not Available For Sale` , you need
-to :ref:`hide your prices <ecommerce/prices/hide-prices>` on your product page.
+to :ref:`hide prices <ecommerce/prices/hide-prices>` on the product page. When the customer clicks
+the :guilabel:`Contact Us` button, they are redirected to the contact form where the
+:guilabel:`Subject` field is already auto-filled with the requested product's name.
 
 .. image:: checkout/cart-contact-us.png
    :alt: Contact us button on product page
@@ -145,7 +147,7 @@ checkout options.
 .. tip::
    Restrict access to the :ref:`shop <ecommerce/customer_accounts/shop-access>` and :ref:`checkout
    <ecommerce/customer_accounts/checkout-access>` for specific customers, e.g., in a :doc:`B2B
-   <b2b_b2c>` business setup.
+   <../ecommerce/configuration/b2b_b2c>` business setup.
 
 .. _ecommerce/checkout/review_order:
 
@@ -162,7 +164,7 @@ Open the website editor to :ref:`enable <ecommerce/checkout/customize_steps>` ch
 as:
 
 - :guilabel:`Suggested Accessories`: to showcase :ref:`accessory products
-  <ecommerce/cross_upselling/accessory>`;
+  <ecommerce/products/cross_upselling>`;
 - :guilabel:`Promo Code`: to allow customers to redeem :ref:`gift cards <ewallet_gift/gift-cards>`
   or apply :doc:`discount codes <../../sales/sales/products_prices/loyalty_discount>`;
 - :guilabel:`Add to Wishlist`: :ref:`Enable wishlists
