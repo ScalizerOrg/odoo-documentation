@@ -12,6 +12,8 @@ that customers can combine with the main dish.
 In retail, this feature allows you to create a product set with multiple products to choose from and
 combine.
 
+.. _pos/combos/configuration:
+
 Configuration
 =============
 

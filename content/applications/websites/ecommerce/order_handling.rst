@@ -51,8 +51,8 @@ Orders`, and select one to open it. The status bar at the top of the order shows
    - If the customer pays via :ref:`wire transfer <payment_providers/bank_payments/wire_transfer>`,
      the quotation is *not* automatically confirmed. In this case, the customer receives a
      notification on the :guilabel:`My account` page of their :doc:`customer account
-     <customer_accounts>` to review and pay for the order. After the payment is received, the order
-     must be manually confirmed in the backend.
+     <configuration/customer_accounts>` to review and pay for the order. After the payment
+     is received, the order must be manually confirmed in the backend.
 
 .. seealso::
    - :doc:`checkout`

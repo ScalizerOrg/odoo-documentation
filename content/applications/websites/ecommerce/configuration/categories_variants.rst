@@ -109,4 +109,4 @@ select the product you wish to modify, go to the :guilabel:`Sales` tab, navigate
    - Categories that do not contain any products are not visible on the shop page.
 
 .. seealso::
-   :doc:`../products`
+   :doc:`products`

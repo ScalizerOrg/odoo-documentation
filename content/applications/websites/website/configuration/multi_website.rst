@@ -11,7 +11,7 @@ target audience.
 Each website can be designed and configured independently with its own :doc:`domain name
 <domain_names>`, :doc:`theme <../web_design/themes>`, :doc:`pages <../structure/pages>`, :doc:`menus
 <../structure/header_footer>`, :doc:`languages <translate>`, :doc:`products
-<../../ecommerce/products>`, assigned sales team, etc. They can also
+<../../ecommerce/configuration/products>`, assigned sales team, etc. They can also
 :ref:`share content and pages <multi-website/website_content>`.
 
 .. tip::
@@ -124,7 +124,7 @@ Customer accounts
 -----------------
 
 You can :doc:`allow your customers to use the same account
-<../../ecommerce/customer_accounts>` on all of your websites by enabling the :guilabel:`Shared
+<../../ecommerce/configuration/customer_accounts>` on all of your websites by enabling the :guilabel:`Shared
 Customer Accounts` check box in the website settings.
 
 Pricing
