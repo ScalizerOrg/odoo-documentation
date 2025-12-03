@@ -22,7 +22,7 @@ product form or use :doc:`fiscal positions
 .. _ecommerce-price-management-tax-display:
 
 Choosing the displayed price tax usually depends on a country's regulations or the type of customers
-(:doc:`B2B vs. B2C <../b2b_b2c>`). To select the type of price displayed, go to
+(:doc:`B2B vs. B2C <b2b_b2c>`). To select the type of price displayed, go to
 :menuselection:`Website --> Configuration --> Settings`, select the website, scroll down to the
 :guilabel:`eCommerce` section, and under :guilabel:`Display Product Prices` select between:
 
@@ -53,7 +53,7 @@ price on the product page, follow these steps:
 
 #. Go to :menuselection:`Website --> Configuration --> Settings`, scroll to the
    :guilabel:`eCommerce` section, and enable :guilabel:`Product Reference Price`.
-#. :ref:`Navigate to the product form <ecommerce/products/create-products>`.
+#. :ref:`Navigate to the product form <ecommerce/products/product-creation>`.
 #. Set the product's :guilabel:`Sales Price` and select the unit (e.g., :guilabel:`Units`).
 #. In the :guilabel:`Base Unit Count` field, enter the number of units in the product, then
    select the relevant unit from the dropdown list.
@@ -193,9 +193,9 @@ Use :ref:`Custom filters <search/custom-filters>` if needed.
         If the :guilabel:`Selectable` option is enabled for `EU regular prices` and
         `US prices`, and the customer is from the European Union, only the pricelists
         `EU regular prices` and `EU prices with discounts` will be available. However, since the
-        `EU prices with discount` list is not selectable, it will disappear once the customer selects
-        the `EU regular prices` list and prices will be displayed based on the `EU regular prices`
-        pricelist on the catalog.
+        `EU prices with discount` list is not selectable, it will disappear once the customer
+        selects the `EU regular prices` list and prices will be displayed based on the `EU regular
+        prices` pricelist on the catalog.
 
 Pricelist application
 ---------------------
@@ -256,7 +256,7 @@ alongside it.
 To display a permanently discounted price, navigate to :menuselection:`Website --> Configuration
 --> Settings`, scroll down to the :guilabel:`eCommerce`, enable the :guilabel:`Comparison
 Price` option, and :guilabel:`Save`. Then, :ref:`go to the product form
-<ecommerce/products/create-products>`, enter the new (discounted) price in the
+<ecommerce/products/product-creation>`, enter the new (discounted) price in the
 :guilabel:`Sales Price` field and the original one (strikethrough) in the
 :guilabel:`Compare to Price` field.
 
@@ -331,4 +331,4 @@ pricelist is assigned to the correct website and is listed first among the websi
      customers with :doc:`portal access <../../../general/users/user_portals/portal_access>`.
 
 .. seealso::
-   :doc:`../customer_accounts`
+   :doc:`customer_accounts`

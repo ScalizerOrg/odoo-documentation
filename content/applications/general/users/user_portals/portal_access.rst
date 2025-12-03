@@ -46,6 +46,8 @@ user for that Odoo database.
 .. image:: portal_access/multiple-user-access.png
    :alt: Grant access to multiple users at once.
 
+.. _portal/revoke-access:
+
 Revoking portal access
 ----------------------
 

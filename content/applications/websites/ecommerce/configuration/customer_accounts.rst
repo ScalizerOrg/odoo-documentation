@@ -6,20 +6,20 @@ Using customer accounts for an e-commerce enables you to :ref:`manage customers
 <ecommerce/customer_accounts/account-creation>`, control access to the :ref:`shop
 <ecommerce/customer_accounts/shop-access>`, the :ref:`checkout
 <ecommerce/customer_accounts/checkout-access>`, or the :doc:`customer portal
-<../../general/users/user_portals/portal_access>`, and support both :doc:`B2B and B2C operations
-<b2b_b2c>`.
+</applications/general/users/user_portals/portal_access>`, and support both :doc:`B2B and B2C
+operations <b2b_b2c>`.
 
 After logging in, customers can access their :doc:`customer portal
-<../../general/users/user_portals>` by clicking their username in the top-right corner of the
-screen and selecting :guilabel:`My Account`. From there, they can view all their documents in one
-place, such as quotations, orders, invoices, and more.
+</applications/general/users/user_portals>` by clicking their username in the top-right corner of
+the screen and selecting :guilabel:`My Account`. From there, they can view all their documents in
+one place, such as quotations, orders, invoices, and more.
 
 .. image:: customer_accounts/account-log.png
    :alt: Customer account access
 
 .. tip::
    The customer account page can be customized with building blocks and other features through
-   the :doc:`website builder <../website/web_design>`.
+   the :doc:`website editor </applications/websites/website/web_design>`.
 
 .. _ecommerce/customer_accounts/account-creation:
 
@@ -34,7 +34,7 @@ of the following options:
 - :guilabel:`On invitation`: Customers can only create an account if the website owner sends them
   an invitation.
 - :guilabel:`Free sign up`: Every website visitor can create an account and sign in. They will
-  get access to the :doc:`portal <../../general/users/user_portals>` by default.
+  get access to the :doc:`portal </applications/general/users/user_portals>` by default.
 
 .. _ecommerce/customer_accounts/grant-access:
 
@@ -68,13 +68,16 @@ instructions on setting a password and activating their account.
    <website/building_blocks/action>` to automatically create a customer record in the backend when
    filled in.
 
+.. _ecommerce/customer_accounts/access-restriction:
+
 Access restriction
 ==================
 
 Once a customer account is created, it is still possible to adjust the access rights
 either globally or for individual users:
 
-- :doc:`Revoke access or re-invite a user <../../general/users/user_portals/portal_access>`
+- :doc:`Revoke access or re-invite a customer
+  </applications/general/users/user_portals/portal_access>`
   using the related buttons in the :guilabel:`Portal Access Management` pop-up.
 - Restrict :ref:`access to the shop <ecommerce/customer_accounts/shop-access>`;
 - Decide whether customers need to create an account to :ref:`complete the checkout
@@ -83,8 +86,8 @@ either globally or for individual users:
 .. tip::
    It is also possible to define the types of documents customers have access to. To do so, click
    your username in the upper-right corner of the website, select :guilabel:`My Account` and open
-   the :doc:`website builder <../website/web_design>`. On the :guilabel:`Style` tab, enable or
-   disable access to specific documents as needed.
+   the :doc:`website builder </applications/websites/website/web_design>`. On the :guilabel:`Style`
+   tab, enable or disable access to specific documents as needed.
 
 .. _ecommerce/customer_accounts/shop-access:
 

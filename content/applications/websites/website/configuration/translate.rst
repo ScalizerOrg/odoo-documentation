@@ -5,6 +5,8 @@ Translations
 Your website can be translated into multiple languages, allowing visitors to view its content in
 their preferred language.
 
+.. _translate/language-configuration:
+
 Configuration
 =============
 
