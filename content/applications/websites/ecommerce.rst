@@ -6,64 +6,56 @@
 eCommerce
 =========
 
-Build and run your open-source online store with Odoo eCommerce. Create your products, customize the
-ordering and checkout process, configure delivery methods, handle sales and delivery orders, create
-customer accounts, and monitor your performance.
+Odoo eCommerce provides an open-source platform for building and managing an online store. It
+offers a wide range of tools and features to configure products, customize the design, manage
+ordering and checkout processes, set up delivery methods, handle orders, and analyze performance.
 
 .. cards::
 
-   .. card:: Products
-      :target: ecommerce/products
+   .. card:: Configuration
+      :target: ecommerce/configuration
       :large:
 
-      Configure your product pages, adjust the shop page layout, set up the pricing, and define
-      suggestions for optional and accessory products.
+      Configure products, create product variants and categories, and set up pricing. Use customer
+      accounts to manage access according to your business model (B2B or B2C) and needs.
 
    .. card:: eCommerce design
       :target: ecommerce/ecommerce_design
       :large:
 
-      Design the product catalog and product pages using a wide range of design features,
-      building blocks, and additional e-commerce-specific features and buttons.
+      Design the product catalog and product pages using design elements, building blocks, and
+      e-commerce-specific options and buttons.
 
    .. card:: Ordering and checkout
       :target: ecommerce/checkout
       :large:
 
-      Customize the ordering and checkout process with the website editor to fit your business needs.
+      Customize the ordering and checkout process to fit your business needs.
 
    .. card:: Delivery
       :target: ecommerce/shipping
       :large:
 
-      Enable and configure delivery methods to provide your customers with one or multiple options
-      upon checkout.
+      Enable and configure delivery methods to provide customers with one or multiple options upon
+      checkout.
 
    .. card:: Order handling
       :target: ecommerce/order_handling
       :large:
 
-      Handle all business documents related to your e-commerce orders: sales orders, delivery
-      orders, invoices, and legal requirements.
-
-   .. card:: Customer accounts
-      :target: ecommerce/customer_accounts
-      :large:
-
-      Define your customers' login process and grant portal access to all
-      users or a select group.
+      Handle the complete e-commerce order lifecycle, from sales and abandoned carts to delivery,
+      stock management, returns, and invoicing.
 
    .. card:: Performance management
       :target: ecommerce/performance
-      :large:
 
-      Analyze sales data to evaluate your e-commerce performance.
+      Analyze sales data to evaluate the shop's performance.
 
    .. card:: Google Merchant Center
       :target: ecommerce/google_merchant_center
-      :large:
 
-      Manage and submit your product data to Google with Google Merchant Center.
+      Connect Odoo eCommerce to Google Merchant Center and other platforms, such as TikTok,
+      Facebook, or Instagram to showcase products across multiple channels.
 
 .. note::
    Odoo offers a :ref:`free custom domain name <domain-name/register>` to all Odoo Online databases
@@ -78,12 +70,10 @@ customer accounts, and monitor your performance.
 .. toctree::
    :titlesonly:
 
-   ecommerce/products
+   ecommerce/configuration
    ecommerce/ecommerce_design
    ecommerce/checkout
    ecommerce/shipping
    ecommerce/order_handling
-   ecommerce/b2b_b2c
-   ecommerce/customer_accounts
    ecommerce/performance
    ecommerce/google_merchant_center

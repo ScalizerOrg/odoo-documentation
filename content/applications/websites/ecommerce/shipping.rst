@@ -114,9 +114,10 @@ To allow customers to reserve products online and collect them in-store, follow 
 
 .. note::
    - When the product is in stock, a location selector is displayed on the :doc:`product
-     <products>` and :doc:`checkout <checkout>` pages. Customers cannot select a pickup location
-     if the product is out of stock at that location, unless the :ref:`Continue selling
-     <ecommerce/products/stock-management>` option for out-of-stock products is enabled.
+     <configuration/products>` and :doc:`checkout <checkout>` pages. Customers cannot
+     select a pickup location if the product is out of stock at that location, unless the
+     :ref:`Continue selling <ecommerce/products/stock-management>` option for out-of-stock products
+     is enabled.
    - If the :ref:`Show Available Qty <ecommerce/products/stock-management>` option is enabled for a
      product, customers can view the stock quantity available for each warehouse in the location
      selector on the product page.

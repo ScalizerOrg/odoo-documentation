@@ -3,7 +3,7 @@ B2B and B2C
 ===========
 
 Odoo eCommerce is designed to fulfill the needs of both B2B and B2C companies. It allows you to
-configure :doc:`prices <products/prices>`, manage :doc:`access <customer_accounts>` for specific
+configure :doc:`prices <prices>`, manage :doc:`access <customer_accounts>` for specific
 customers, and :ref:`customize the website <ecommerce/b2b_b2c/multiple-websites>` to support B2B,
 B2C, or both business models.
 
@@ -36,6 +36,8 @@ pricing <ecommerce/prices/hide-prices>`.
    - :doc:`/applications/finance/accounting/taxes/B2B_B2C`
    - :ref:`Discounts <ecommerce/prices/discounts>`
 
+.. _ecommerce/b2b_b2c/access-request:
+
 Access request
 ==============
 
@@ -44,16 +46,17 @@ web shop and make it available for :ref:`logged-in users <ecommerce/customer_acc
 only. To prevent anyone from signing up freely, set the :ref:`Customer Account
 <ecommerce/customer_accounts/account-creation>` setting option to :guilabel:`On invitation`.
 To create a page where customers request access, open the :doc:`website editor
-<../website/web_design>`, :ref:`create a form <website/building_blocks/form>`, customize it, and in
-the :guilabel:`Action` field, select :guilabel:`Create a customer`.
+</applications/websites/website/web_design>`, :ref:`create a form <website/building_blocks/form>`,
+customize it, and in the :guilabel:`Action` field, select :guilabel:`Create a Customer`.
 
 .. tip::
    You can assign tags created on a contact form under :menuselection:`Website --> Configuration
-   --> Customers` to identify what kind of customers have submitted the form. To do so, select
-   a field in the form while in :guilabel:`Edit` mode, click the :guilabel:`+ Field` button under
-   the :guilabel:`Style` tab, and set the field's :guilabel:`Type` to :guilabel:`Tags`.
+   --> Customers` to identify what kind of customers have submitted the form. To do so, open the
+   :doc:`website editor </applications/websites/website/web_design>` and select a field in the
+   form. Then, in the :guilabel:`Style` tab, click the :guilabel:`+ Field` button in the
+   :guilabel:`Field` section heading and set the field's :guilabel:`Type` to :guilabel:`Tags`.
    Toggle the tags that should be automatically assigned when a customer fills in the form and set
-   the field's :guilabel:`Visibility` to :guilabel:`Hidden`.
+   the field's :guilabel:`Visibility Rule` to :guilabel:`Hidden`.
 
 When a customer submits the form, a new contact is automatically created in the database. The
 contact is assigned the first pricelist from the list of available pricelists, and, if applicable,
@@ -95,15 +98,20 @@ corresponding website.
 
 .. tip::
    If you are running a B2B and B2C business, we *strongly* recommend to create two :doc:`separate
-   websites <../website/configuration/multi_website>` and assign a :ref:`zero-priced pricelist
-   <ecommerce/b2b_b2c/prices>` to the B2B website and a regular pricelist to the B2C website.
+   websites </applications/websites/website/configuration/multi_website>` and assign a
+   :ref:`zero-priced pricelist <ecommerce/b2b_b2c/prices>` to the B2B website and a regular
+   pricelist to the B2C website.
    In case, you prefer using a single website, configure it using :ref:`country groups
    <ecommerce/prices/country-groups>` and assigning :ref:`pricelists <ecommerce/prices/pricelists>`
    to customers, and deactivate the :ref:`Selectable <ecommerce/prices/selectable-pricelists>`
    option.
 
+.. _ecommerce/b2b_b2c/additional-features:
+
 Additional features
 ===================
+
+.. _ecommerce/b2b_b2c/invoices:
 
 Invoice
 -------
@@ -119,7 +127,7 @@ this feature has not been enabled, the customer only receives an order confirmat
 B2B fields at checkout
 ----------------------
 
-On the :guilabel:`Order summary` page, open the :doc:`website editor <../website/web_design>`, go to
-the :guilabel:`Style` tab, and toggle the :guilabel:`Show B2B Fields` switch to display B2B-specific
-additional fields like :guilabel:`VAT` or :guilabel:`Company Name` during the :ref:`delivery
-<ecommerce/checkout/delivery>` step.
+On the :guilabel:`Order summary` page, open the :doc:`website editor
+</applications/websites/website/web_design>`, go to the :guilabel:`Style` tab, and toggle the
+:guilabel:`Show B2B Fields` switch to display B2B-specific additional fields like :guilabel:`VAT`
+or :guilabel:`Company Name` during the :ref:`delivery <ecommerce/checkout/delivery>` step.

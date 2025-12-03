@@ -96,6 +96,8 @@ To add a video, type `/video`, insert the URL, and turn on the desired options:
 - :guilabel:`Loop`: to play the video on a loop.
 - :guilabel:`Hide player controls`
 - :guilabel:`Hide fullscreen button`
+- :guilabel:`Vertical`: to display the video in vertical format (portrait mode).
+- :guilabel:`Start at`: to define the timestamp where the video should start, in `MM:SS` format.
 
 .. _website/elements/icons:
 
