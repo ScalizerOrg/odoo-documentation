@@ -115,7 +115,7 @@ number of attribute sections:
 
 .. seealso::
    - :doc:`../../../sales/sales/products_prices/products/variants`
-   - :doc:`../../ecommerce/products/categories_variants`
+   - :doc:`../../ecommerce/configuration/categories_variants`
 
 .. _ecommerce/catalog/product-listing:
 

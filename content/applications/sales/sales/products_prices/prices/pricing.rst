@@ -210,7 +210,7 @@ Lastly, configure a :guilabel:`Price` for the rental rule in the respective colu
    :alt: The rental tab in a pricelist configuration form.
 
 .. seealso::
-   :doc:`Ecommerce price configuration </applications/websites/ecommerce/products/prices>`
+   :doc:`Ecommerce price configuration </applications/websites/ecommerce/configuration/prices>`
 
 .. _sales/products/customer-pricelist-application:
 
@@ -279,4 +279,4 @@ rule on a fresh form.
 
 .. seealso::
    - :doc:`/applications/sales/sales/products_prices/prices/currencies`
-   - :doc:`/applications/websites/ecommerce/products/prices`
+   - :doc:`/applications/websites/ecommerce/configuration/prices`
