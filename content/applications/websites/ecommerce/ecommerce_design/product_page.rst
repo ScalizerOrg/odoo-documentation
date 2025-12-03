@@ -17,7 +17,7 @@ Product images and videos
 =========================
 
 After :ref:`adding media items on the product form <ecommerce/products/images>` or upon
-:ref:`product creation in the frontend <ecommerce/products/create-products>`, customize them on the
+:ref:`product creation in the frontend <ecommerce/products/product-creation>`, customize them on the
 frontend product pages. To do so, navigate to the relevant product page in the online shop, click
 :guilabel:`Edit` in the upper-right corner, and navigate to the :guilabel:`Style` tab.
 
@@ -154,13 +154,13 @@ Toggle the following options on/off to enable or disable features across all pro
      packagings.
    - :ref:`Documents <ecommerce/products/digital-files>`: Add relevant documents, such as
      user manuals or other supporting materials.
-   - :ref:`Alternative products <ecommerce/cross_upselling/alternative>`: Suggest similar
+   - :ref:`Alternative products <ecommerce/products/cross_upselling>`: Suggest similar
      products and customize the section.
-   - :ref:`Show Available Quantity <ecommerce/products/stock-management/inventory>`: Display the
+   - :ref:`Show Available Quantity <ecommerce/products/stock-management>`: Display the
      available product quantity when the quantity falls below a specified threshold.
-   - :ref:`Out-of-Stock Message <ecommerce/products/stock-management/inventory>`: Display a
+   - :ref:`Out-of-Stock Message <ecommerce/products/stock-management>`: Display a
      customized message for products that are out of stock.
-   - :ref:`Get notified when back in stock <ecommerce/products/stock-management/inventory>`:
+   - :ref:`Get notified when back in stock <ecommerce/products/stock-management>`:
      Customers can insert their email address to receive a notification when the item is back in
      stock.
    - :guilabel:`Product Page Extra Fields`: To enable specific extra fields for the product page,

@@ -22,7 +22,7 @@ product form or use :doc:`fiscal positions
 .. _ecommerce-price-management-tax-display:
 
 Choosing the displayed price tax usually depends on a country's regulations or the type of customers
-(:doc:`B2B vs. B2C <../b2b_b2c>`). To select the type of price displayed, go to
+(:doc:`B2B vs. B2C <b2b_b2c>`). To select the type of price displayed, go to
 :menuselection:`Website --> Configuration --> Settings`, select the website, scroll down to the
 :guilabel:`eCommerce` section, and under :guilabel:`Display Product Prices` select between:
 
@@ -53,7 +53,7 @@ price on the product page, follow these steps:
 
 #. Go to :menuselection:`Website --> Configuration --> Settings`, scroll to the
    :guilabel:`eCommerce` section, and enable :guilabel:`Product Reference Price`.
-#. :ref:`Navigate to the product form <ecommerce/products/create-products>`.
+#. :ref:`Navigate to the product form <ecommerce/products/product-creation>`.
 #. Set the product's :guilabel:`Sales Price` and select the unit (e.g., :guilabel:`Units`).
 #. In the :guilabel:`Base Unit Count` field, enter the number of units in the product, then
    select the relevant unit from the dropdown list.
@@ -86,9 +86,9 @@ discounts based on currencies, time periods, purchase volumes, :ref:`customers' 
 <ecommerce/prices/geoip>`, and/or customer type.
 To enable pricelists for eCommerce, go to :menuselection:`Website --> Configuration --> Settings`,
 scroll down to the :guilabel:`eCommerce` section, enable :guilabel:`Pricelists`, and
-:guilabel:`Save`. Then, click :guilabel:`Pricelists` or go to :menuselection:`Website --> eCommerce
---> Pricelists` and :ref:`configure <sales/products/pricelist-configuration>` the relevant
-pricelists.
+:guilabel:`Save`. Then, click :icon:`fa-arrow-right` :guilabel:`Pricelists` or go to
+:menuselection:`Website --> eCommerce --> Pricelists` and :ref:`configure
+<sales/products/pricelist-configuration>` the relevant pricelists.
 
 In the :guilabel:`Ecommerce` tab, configure options specific to online sales, such as assigning a
 :guilabel:`Website` to a pricelist, allowing customers to :ref:`select it
@@ -160,7 +160,7 @@ as needed. For instance, select :guilabel:`European Union` to apply the pricelis
 states.
 
 To create a new country group, click :guilabel:`Search more` in the dropdown list, then
-:guilabel:`New`. Add a :guilabel:`Group Name` and select the relevant :guilabel:`Countries`.
+:guilabel:`Create New`. Add a :guilabel:`Group Name` and select the relevant :guilabel:`Countries`.
 Use :ref:`Custom filters <search/custom-filters>` if needed.
 
 .. note::
@@ -193,9 +193,9 @@ Use :ref:`Custom filters <search/custom-filters>` if needed.
         If the :guilabel:`Selectable` option is enabled for `EU regular prices` and
         `US prices`, and the customer is from the European Union, only the pricelists
         `EU regular prices` and `EU prices with discounts` will be available. However, since the
-        `EU prices with discount` list is not selectable, it will disappear once the customer selects
-        the `EU regular prices` list and prices will be displayed based on the `EU regular prices`
-        pricelist on the catalog.
+        `EU prices with discount` list is not selectable, it will disappear once the customer
+        selects the `EU regular prices` list and prices will be displayed based on the `EU regular
+        prices` pricelist on the catalog.
 
 Pricelist application
 ---------------------
@@ -256,7 +256,7 @@ alongside it.
 To display a permanently discounted price, navigate to :menuselection:`Website --> Configuration
 --> Settings`, scroll down to the :guilabel:`eCommerce`, enable the :guilabel:`Comparison
 Price` option, and :guilabel:`Save`. Then, :ref:`go to the product form
-<ecommerce/products/create-products>`, enter the new (discounted) price in the
+<ecommerce/products/product-creation>`, enter the new (discounted) price in the
 :guilabel:`Sales Price` field and the original one (strikethrough) in the
 :guilabel:`Compare to Price` field.
 
@@ -292,11 +292,11 @@ E-commerce promotional code
 
 To offer a discounted pricelist for customers with a specific discount code, access the relevant
 :ref:`pricelist form <ecommerce/prices/pricelists>`, go to the :guilabel:`Ecommerce` tab, and add
-an :guilabel:`E-commerce Promotional Code`, e.g., `SUMMERSALE10%`. Then, go to the :guilabel:`Sales
-Price` tab, click :guilabel:`Add a line`, and :ref:`configure the discount
-<sales/products/price-rules>`. When a customer inserts the code during the :ref:`checkout process
-<ecommerce/checkout/review_order>`, this discount is granted according to the :guilabel:`Sales
-Price` configuration.
+an :guilabel:`E-commerce Promotional Code`, e.g., `SUMMERSALE10%`. Then, go to the :guilabel:`Rules`
+tab, click :guilabel:`Add a line`, and :ref:`configure the discount <sales/products/price-rules>`.
+When a customer inserts the code during the :ref:`checkout process
+<ecommerce/checkout/review_order>`, this discount is granted according to the configuration in the
+:guilabel:`Rules` tab.
 
 .. note::
    Make sure that the :ref:`Promo Code <ecommerce/checkout/review_order>` option
@@ -331,4 +331,4 @@ pricelist is assigned to the correct website and is listed first among the websi
      customers with :doc:`portal access <../../../general/users/user_portals/portal_access>`.
 
 .. seealso::
-   :doc:`../customer_accounts`
+   :doc:`customer_accounts`
