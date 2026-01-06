@@ -136,8 +136,8 @@ Once the media is selected, click :guilabel:`Add`.
 Product combos
 --------------
 
-:doc:`Product combinations </applications/sales/point_of_sale/combos>` allow users to configure a
-set of related products to buy as a bundle. To :ref:`configure combos <pos/combos/configuration>`,
+:ref:`Product combinations <pos/products/combos>` allow users to configure a
+set of related products to buy as a bundle. To :ref:`configure combos <pos/products/combo-choices>`,
 go to :menuselection:`Website --> eCommerce --> Combo Choices`. Once finished and published,
 customers can choose the combo when adding the product to the cart. Depending on the configuration,
 certain items may incur an additional charge.
