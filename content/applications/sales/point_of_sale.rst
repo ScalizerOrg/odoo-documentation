@@ -39,7 +39,6 @@ This hardware can be connected directly or through an :doc:`IoT system <../gener
    point_of_sale/employee_login
    point_of_sale/preparation
    point_of_sale/self_order
-   point_of_sale/combos
    point_of_sale/shop
    point_of_sale/restaurant
    point_of_sale/pricing
