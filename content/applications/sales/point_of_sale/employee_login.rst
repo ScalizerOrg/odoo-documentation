@@ -45,9 +45,9 @@ settings <pos/use/settings>`. Then,
 
       Employees with minimal rights can perform the following actions within the POS:
 
-      **Session management:**
+      **Register management:**
 
-      - Lock and unlock an open POS session.
+      - Lock and unlock an open POS register.
       - Reload data.
 
       **Sales transactions:**
@@ -64,7 +64,7 @@ settings <pos/use/settings>`. Then,
 
       In addition to the minimal rights, employees with basic rights can also:
 
-      **Session management:**
+      **Register management:**
 
       - :ref:`Open the POS register <pos/use/open-register>`.
       - :ref:`Perform cash-in and cash-out operations <pos/use/cash-register>`.
@@ -111,10 +111,11 @@ their name from the list of authorized users, or by entering :ref:`their PIN cod
 <pos/employee_login/pin>` in the :guilabel:`Enter your PIN` field.
 
 .. image:: employee_login/log-in.png
-   :alt: Login window to open a register when the multiple cashiers feature is active
+   :alt: Login window to open the register when the multiple cashiers feature is active
 
-To switch between users from the :ref:`interface <pos/use/open-register>`, click on the currently
-logged-in employee's name at the top right of the POS screen and select the user to switch to.
+To switch between users from the :ref:`POS interface <pos/use/open-register>`, click on the
+currently logged-in employee's name at the top right of the POS screen and select the user to
+switch to.
 
 .. tip::
    In the absence of a scanner, click the :icon:`fa-barcode` icon (:guilabel:`barcode`) to scan
@@ -137,9 +138,9 @@ the employee's profile in the **Employees** module:
    - Click :guilabel:`Generate` to create a unique badge ID automatically.
 #. Click :guilabel:`Print Badge` to generate a barcode representation of the assigned badge ID.
 
-To switch users from the :ref:`interface <pos/use/open-register>`, using a badge, you must first
-lock the register. To do so, click the :icon:`fa-lg fa-lock` icon (:guilabel:`lock`) to return to
-the login screen. Then, the new employee can scan their badge to log in.
+To switch between users from the :ref:`POS interface <pos/use/open-register>`, using a badge, you
+must first lock the register. To do so, click the :icon:`fa-lg fa-lock` icon (:guilabel:`lock`) to
+return to the login screen. Then, the new employee can scan their badge to log in.
 
 .. _pos/employee_login/pin:
 
