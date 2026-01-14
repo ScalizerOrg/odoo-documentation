@@ -489,6 +489,8 @@ This section may be left blank if they do not require any work permits or visas 
      Typically, an employee needs either a visa *or* a work permit, not both. For this reason, only
      one document can be added to the :guilabel:`Document` field.
 
+.. _employees/location:
+
 Location
 --------
 
@@ -496,7 +498,7 @@ This section is visible for all employees, and does not require any other apps t
 this section to be visible. Enter the following information in this section:
 
 - :guilabel:`Private Address`: Enter the employee's home address in this field.
-- :guilabel:`Home-Work Distance`: enter the number, in miles or kilometers, the employee commutes to
+- :guilabel:`Home-Work Distance`: Enter the number, in miles or kilometers, the employee commutes to
   work, in one direction. The unit of measure can be changed from kilometers (:guilabel:`km`) to
   miles (:guilabel:`mi`) using the drop-down menu. This field is only necessary if the employee is
   receiving any type of commuter benefits or tax deductions based on commute distances.
