@@ -205,6 +205,8 @@ manually)` icon near the top to save.
 
 .. _rental/service_products/ro-with-service-product:
 
+.. _rental/service_products/create-rental-order:
+
 Create a rental order with a service product
 ============================================
 
