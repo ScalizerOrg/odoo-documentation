@@ -158,6 +158,18 @@ Additional settings
       .. seealso::
          :doc:`pricing/fiscal_position`
 
+   .. tab:: Launch on IoT Box
+        This option allows for using an :doc:`IoT Box <../../general/iot/iot_box>` connected to a
+        touchscreen as a self-ordering kiosk.
+
+        #. :doc:`Connect an IoT Box <../../general/iot/connect>` to your Odoo database.
+        #. Ensure a touchscreen :doc:`display <../../general/iot/devices/screen>` is connected
+        #. Select the IoT Box from the :guilabel:`Launch on` field.
+
+        .. note::
+            Once connected to the IoT box, the touchscreen display appears as two separate
+            devices in the IoT box's list of devices: a display and a keyboard input device.
+
 Preview
 -------
 
@@ -188,24 +200,16 @@ Usage guidelines
 
    .. group-tab:: Kiosk
 
-      On the POS user's end,
-
-      #. Click :guilabel:`Start Kiosk`.
-      #. Open the provided URL on the self-ordering kiosk(s).
-
-         - Click the provided URL to open the kiosk in a new tab;
-         - Click :guilabel:`Install App` to install the kiosk module on your self-ordering kiosk; or
-         - Click :guilabel:`Open on IoT Box` if your kiosk is :doc:`connected to an IoT system
-           <../../general/iot/connect>`
-
-      .. image:: self_order/kiosk-opening-popup.png
-         :alt: Popup window to open the kiosk
+      On the POS user's end, click :guilabel:`Start Kiosk`.
 
       .. note::
-         - Once the register is open, :guilabel:`Start Kiosk` switches to :guilabel:`Open Kiosk` on
-           the POS card.
-         - Click :guilabel:`Open Kiosk` on the POS card to reopen the popup window and access the
-           self-ordering interface.
+         - If an IoT Box is configured as a kiosk, the self-ordering interface opens directly on
+           the connected touchscreen. Otherwise, it opens in a new browser tab on the device used
+           to access it.
+         - Once the register is open, :guilabel:`Start Kiosk` switches to :guilabel:`Open Kiosk` on the
+           POS card.
+         - Click :guilabel:`Open Kiosk` on the POS card to reopen the self-ordering interface in a new
+           tab or to refresh the kiosk's IoT Box touchscreen display if it is already running.
 
       On the customers' end,
 
@@ -219,6 +223,6 @@ Usage guidelines
          :scale: 65 %
 
 .. important::
-   - The POS register must be open for customers to place an order.
+   - :ref:`The POS register must be open <pos/use/open-register>` for customers to place an order.
    - Once an order is placed, it is automatically sent to :doc:`the preparation screen
      <preparation>` and added to the list of POS orders.
