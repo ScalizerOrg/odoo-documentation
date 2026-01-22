@@ -153,6 +153,7 @@ when extra time is counted and what time is not logged.
    - :doc:`attendances/attendance_onboarding`
    - :doc:`attendances/management`
    - :doc:`attendances/attendance_logs`
+   - :doc:`attendances/overtime`
    - :doc:`attendances/hardware`
    - :doc:`attendances/attendance_reporting`
 
@@ -164,5 +165,6 @@ when extra time is counted and what time is not logged.
    attendances/attendance_onboarding
    attendances/management
    attendances/attendance_logs
+   attendances/overtime
    attendances/hardware
    attendances/attendance_reporting
