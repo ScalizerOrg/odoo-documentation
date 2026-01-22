@@ -47,6 +47,21 @@ To configure your company information, open the **Settings** app, scroll down to
 - :guilabel:`PAN`: essential for determining the type of taxpayer.
 - :guilabel:`GSTIN`: necessary for generating e-Invoices, E-waybills and filing GST returns.
 
+.. _india/gsp_configuration:
+
+GSP configuration
+-----------------
+
+To use the :ref:`e-Invoicing <india/e-invoicing>`, :ref:`E-Way bill <india/e-waybill>`, and
+:ref:`GST return filing <india/gstr>` services in Odoo, configure :guilabel:`BVM IT Consulting
+Services India Private Limited` as the :abbr:`GSP (GST Suvidha Provider)`. To do so, go to
+:menuselection:`Accounting --> Configuration --> Settings`, scroll down to the :guilabel:`Select
+GSP Provider` section, and set the :guilabel:`GSP` field to :guilabel:`BVM IT Consulting`.
+
+.. note::
+   If you do not see this option in the Accounting settings, :ref:`upgrade <general/upgrade>` the
+   :guilabel:`Indian - Accounting` (`l10n_in`) module.
+
 .. _india/indian-configuration:
 
 Indian Configuration
@@ -111,9 +126,9 @@ You must register on the :abbr:`NIC (National Informatics Centre)` e-Invoice por
    User`;
 #. After that, you should receive an :abbr:`OTP (one-time password)` code on your registered mobile
    number. Enter the OTP code and click :guilabel:`Verify OTP`;
-#. Select :guilabel:`Through GSP` for the API interface, set :guilabel:`Tera Software Limited` as
-   GSP, and type in a :guilabel:`Username` and :guilabel:`Password` for your API. Once it is done,
-   click :guilabel:`Submit`.
+#. Select :guilabel:`Through GSP` for the API interface, set :guilabel:`BVM IT Consulting Services
+   India Private Limited` as GSP, and type in a :guilabel:`Username` and :guilabel:`Password` for
+   your API. Once it is done, click :guilabel:`Submit`.
 
    .. image:: india/submit-api-registration-details.png
       :alt: Submit API specific Username and Password
@@ -126,6 +141,9 @@ Configuration in Odoo
 To enable the e-Invoice service in Odoo, :ref:`activate <india/indian-configuration>` the
 :guilabel:`E-Invoicing` feature and enter the :guilabel:`Username` and :guilabel:`Password`
 previously set for the API.
+
+Additionally, make sure the :ref:`GSP field is configured <india/gsp_configuration>` in the
+Accounting settings.
 
 .. _india/e-invoicing-workflow:
 
@@ -261,14 +279,16 @@ You must register on the :abbr:`NIC (National Informatics Centre)` E-Way bill po
 #. From your dashboard, go to :menuselection:`Registration --> For GSP`;
 #. Click :guilabel:`Send OTP`. Once you have received the code on your registered mobile number,
    enter it and click :guilabel:`Verify OTP`;
-#. Check if :guilabel:`Tera Software Limited` is already on the registered GSP/ERP list. If so, use
-   the username and password used to log in to the NIC portal. Otherwise, follow the next steps;
+#. Check if :guilabel:`BVM IT Consulting Services India Private Limited` is already on the
+   registered GSP/ERP list. If so, use the username and password used to log in to the NIC portal.
+   Otherwise, follow the next step.
 
    .. image:: india/e-waybill-gsp-list.png
       :alt: E-Way bill list of registered GSP/ERP
 
-#. Select :guilabel:`Add/New`, select :guilabel:`Tera Software Limited` as your GSP Name, create a
-   :guilabel:`Username` and a :guilabel:`Password` for your API, and click :guilabel:`Add`.
+#. Select :guilabel:`Add/New`, select :guilabel:`BVM IT Consulting Services India Private Limited`
+   as your GSP Name, create a :guilabel:`Username` and a :guilabel:`Password` for your API, and
+   click :guilabel:`Add`.
 
    .. image:: india/e-waybill-registration-details.png
       :alt: Submit GSP API registration details
@@ -280,6 +300,9 @@ Configuration in Odoo
 
 To enable the E-Way bill service in Odoo, :ref:`activate <india/indian-configuration>` the
 :guilabel:`E-Way bill` feature and enter the :guilabel:`Username` and :guilabel:`Password`.
+
+Additionally, make sure the :ref:`GSP field is configured <india/gsp_configuration>` in the
+Accounting settings.
 
 .. _india/e-waybill-workflow:
 
@@ -419,6 +442,9 @@ Username`.
 
    .. image:: india/gst-setup.png
       :alt: Please enter your GST portal Username as Username
+
+Additionally, make sure the :ref:`GSP field is configured <india/gsp_configuration>` in the
+Accounting settings.
 
 .. _india/gstr_workflow:
 
