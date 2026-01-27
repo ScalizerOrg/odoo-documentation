@@ -265,6 +265,8 @@ purposes, if necessary.
 .. seealso::
    `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_
 
+.. _rental/multi-location-management:
+
 Multi-location management and transfers
 =======================================
 
