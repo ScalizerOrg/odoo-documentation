@@ -165,10 +165,18 @@ invoicing` section. Under :guilabel:`Service Tax Administration (SAT)`, select t
 Regime` that applies to the company from the drop-down list, and click :guilabel:`Save`.
 
 .. tip::
-   In order to test the Mexican localization, configure the company with a real address within
-   Mexico (including all fields). Add `EKU9003173C9` as the :guilabel:`Tax ID` and `ESCUELA KEMPER
-   URGATE` as the :guilabel:`Company Name`. For the :guilabel:`Fiscal Regime`, use
-   :guilabel:`General de Ley Personas Morales`.
+   To test the Mexican localization, make sure the following fields are filled in:
+
+   - :guilabel:`Company form`:
+
+     - :guilabel:`Company Name`: enter `INNOVACION VALOR Y DESARROLLO SA SA`
+     - :guilabel:`Address`: fill in all fields with a real address in Mexico, and `58000` as
+       :guilabel:`Zip`
+     - :guilabel:`RFC`: enter `IVD920810GU2`
+
+   - Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll down to the
+     :guilabel:`MX Electronic invoicing` section. In the :guilabel:`Fiscal Regime` field, select
+     :guilabel:`General de Ley Personas Morales`.
 
 Branches
 --------
@@ -367,9 +375,9 @@ PAC credentials
 ~~~~~~~~~~~~~~~
 
 After processing your `Private Key (CSD)
-<https://www.sat.gob.mx/aplicacion/16660/genera-y-descarga-tus-archivos-a-traves-de-la-aplicacion-
-certifica>`_ with the |SAT|, you **must** register directly with the :ref:`PAC
-<l10n/mx/requirements>` of your choice before you start creating invoices from Odoo.
+<https://sat.gob.mx/portal/public/tramites/certificado-de-sello-digital>`_ with the |SAT|, you
+**must** register directly with the :ref:`PAC <l10n/mx/requirements>` of your choice before you
+start creating invoices from Odoo.
 
 Once you've created your account with any of these providers, go to :menuselection:`Accounting -->
 Configuration --> Settings` and navigate to the :guilabel:`MX Electronic invoicing` section. Under
@@ -410,7 +418,8 @@ menu.
    records are optional.
 
 .. tip::
-   In order to test the electronic invoicing, the following |SAT| test certificates are provided:
+   To test the electronic invoicing, the following |SAT| test certificates are provided and can be
+   tested with either :guilabel:`Quadrum` or :guilabel:`Solución Factible` as PAC:
 
    - :download:`Certificate <mexico/certificate.cer>`
    - :download:`Certificate Key <mexico/certificate.key>`
@@ -764,6 +773,24 @@ Like with invoices, go to the payment and click :guilabel:`Update SAT` in order 
    This action cancels the invoice and marks the :guilabel:`Reason` as :guilabel:`01 - Invoice
    issued with errors (with related document)`.
 
+.. _l10n/mx/cancellation-acknowledgement:
+
+Cancellation Acknowledgement
+****************************
+
+To print a cancellation |PAC| response after cancelling a |CFDI|, click :guilabel:`Print` on the
+corresponding cancellation line in the :guilabel:`CFDI` tab of the invoice form.
+
+To include the current :guilabel:`SAT status` in the PDF, click :guilabel:`Update SAT` in the
+invoice form. Note that when a payment is reviewed, the invoice status is updated accordingly.
+
+.. image:: mexico/mx-invoice-cancellation-acknowledgement.png
+   :alt: Cancellation acknowledgement example.
+
+.. important::
+   A cancellation acknowledgement confirms that the cancellation was requested successfully, but it
+   is *not* definitive proof that the CFDI has been fully cancelled.
+
 .. _l10n/mx/special-use-cases:
 
 Invoicing special use cases
@@ -1068,23 +1095,39 @@ After this, go to :menuselection:`Sales --> To Invoice --> Orders to Invoice`, s
 sales orders and press :guilabel:`Create Invoices`. Make sure to disable the :guilabel:`Consolidated
 Billing` checkbox and click :guilabel:`Create Draft Invoice`.
 
-Odoo will redirect to a list of invoices. Select all of them and in the :icon:`fa-gear`
-:guilabel:`Actions` drop-down menu select :guilabel:`Post entries`. Select all posted invoices again
-and go back to the  :icon:`fa-gear` :guilabel:`Actions` drop-down menu to select :guilabel:`Create
-Global Invoice`.
+In the list of draft invoices displayed, select all, click :icon:`fa-gear` :guilabel:`Actions`, and
+select :guilabel:`Confirm entries`. Then, select all posted invoices again and return to the
+:icon:`fa-gear` :guilabel:`Actions` drop-down menu to select :guilabel:`Create Global Invoice`.
 
-In the wizard, select the :guilabel:`Periodicity` indicated by a professional accountant and press
-:guilabel:`Create`. All invoices should be signed under the same XML file, with the same
+In the :guilabel:`Create Global Invoice` window, select the :guilabel:`Periodicity` recommended by
+your accountant and use the :guilabel:`Date` field to specify the period to be invoiced. Then, click
+:guilabel:`Create`. Verify all invoices are signed under the same XML file and share the same
 :guilabel:`Fiscal Folio`.
+
+.. note::
+   - The selected :guilabel:`Date` is used only to extract the *month* and *year* for the XML. For
+     bimonthly periodicity, the month determines the period declared as follows:
+
+     - Months 1-12: Standard month number (January = 1, February = 2, etc.)
+     - January - February -> 13
+     - March - April -> 14
+     - May - June -> 15
+     - July - August -> 16
+     - September - October -> 17
+     - November - December -> 18
+
+   - Global invoices created this way won't include a **PDF** attachment, as their information is
+     already in Odoo and isn't meant to be seen by customers.
+
+.. example::
+   - Selecting the date 01/12/2026 with monthly periodicity declares month 12 and year 2026.
+   - Selecting the date 01/12/2026 with bimonthly periodicity declares month 18 and year 2026.
+   - Selecting the date 01/12/2026 with daily periodicity declares month 12 and year 2026.
 
 .. tip::
    - Click :guilabel:`Show` in the :guilabel:`CFDI` tab to display a list with all related invoices.
    - Click :guilabel:`Cancel` in the :guilabel:`CFDI` tab to cancel the global invoice in both the
      |SAT| and Odoo.
-
-.. note::
-   Global invoices created this way won't have a **PDF** in them as their information is already
-   within Odoo and is not to be seen by a customer.
 
 .. _l10n/mx/reporting:
 
@@ -1376,6 +1419,23 @@ the invoice's :guilabel:`Other Info` tab.
 
 Finally, confirm the invoice with the same process as a regular invoice, and click the
 :guilabel:`Send` button to sign it via CFDI.
+
+.. _l10n/mx/external-trade-services:
+
+Invoicing services
+~~~~~~~~~~~~~~~~~~
+
+Services and merchandise can be invoiced together on the same invoice if the service is set up
+correctly. To do so, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Customers --> Products` and access the relevant service
+   form.
+#. In the :guilabel:`Accounting` tab, under the :guilabel:`UNSPSC` section, find the :guilabel:`UMT
+   Aduana` field and click the :icon:`oi-arrow-right` :guilabel:`(right arrow)`.
+#. Verify that either the :guilabel:`UNSPSC Category` is selected to :guilabel:`E48 service unit` or
+   the :guilabel:`Customs code` is set as `99`.
+
+Invoicing with either of these codes sets the service price to 0 for customs declarations.
 
 .. _l10n/mx/pos:
 
