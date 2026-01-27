@@ -33,6 +33,8 @@ calculation includes the cost and quantity of components and operations listed o
 addition to the operating costs of the work centers where those operations are carried out, and the
 amount paid to each employee who works on an operation.
 
+.. _manufacturing/mo-costs/component-cost:
+
 Component cost
 --------------
 

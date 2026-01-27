@@ -684,6 +684,8 @@ respective app must be installed. For example, if the **Time Off** app is not in
 .. tip::
    If any approver field is left empty, the approval is done by an Administrator or Approver.
 
+.. _hr/employees/new_employee/application-settings:
+
 Application settings
 --------------------
 

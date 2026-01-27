@@ -65,6 +65,8 @@ click :guilabel:`Add a line` at the bottom of the list.
    - :doc:`../reporting/oee`
    - :doc:`../workflows/work_center_time_off`
 
+.. _manufacturing/management/using_work_centers/set-productivity-standards:
+
 Set productivity standards and allowed employees
 ------------------------------------------------
 
