@@ -5,7 +5,7 @@ Sign a document
 Depending on the situation, you may need to sign:
 
 - a single document or :ref:`envelope of multiple documents
-  <sign/prepare-document/create-envelope>` that you or another person :ref:`prepared for electronic
+  <sign/request-signatures/create-envelope>` that you or another person :ref:`prepared for electronic
   signature using Odoo Sign <sign/sign-document/signature-request>`; or
 - one or more `.pdf` documents that have :ref:`not been prepared for electronic signature
   <sign/sign-document/pdf-document>` by the sender
@@ -49,7 +49,7 @@ To sign a document prepared using Odoo Sign:
 #. When all required fields have been completed, click :guilabel:`Validate & Send Completed
    Document` at the bottom of the document.
 
-   If there are :ref:`multiple documents <sign/prepare-document/create-envelope>` to sign, click
+   If there are :ref:`multiple documents <sign/request-signatures/create-envelope>` to sign, click
    :guilabel:`Next` at the bottom of the document, enter the requested information for the next and
    any subsequent documents. Once all documents have been signed, click :guilabel:`Validate & Send
    Completed Document`.
@@ -72,16 +72,16 @@ Auto-completed fields
 ---------------------
 
 In Odoo Sign, certain field types can be :ref:`configured to be auto-completed
-<sign/fields/auto-fill>` using data about the signer, e.g., name or email address, that is stored in
-the sender's Odoo database.
+<sign/configuration/auto-fill>` using data about the signer, e.g., name or email address, that is
+stored in the sender's Odoo database.
 
 Depending on the configuration, these fields can be read-only or can still be edited after
 auto-completion.
 
 .. _sign/sign-document/initials-signature:
 
-Define initials and signature
------------------------------
+Define a signature and initials
+-------------------------------
 
 If you are an:
 
@@ -118,6 +118,27 @@ To define how your initials/signature should appear after clicking the relevant 
 If there are multiple documents to sign within the same document envelope, the defined
 initials/signature can thereafter be added directly by clicking the relevant field.
 
+.. _sign/sign-document/decline:
+
+Decline a signature request
+---------------------------
+
+.. note::
+   It is only possible to decline a signature request when accessing it through the link sent by
+   email. Declining is not available when the document is accessed directly from Odoo.
+
+To decline a signature request, click the :icon:`fa-caret-down` (:guilabel:`dropdown`) button in
+the top-right corner next to the name(s) of the signer(s), then select :guilabel:`Decline to sign`.
+Enter the reason for the refusal, then click :guilabel:`Decline`.
+
+The signature request is then marked as :guilabel:`Cancelled` and the refusal is recorded in the
+:ref:`signature request's activity logs and chatter <sign/request-signatures/manage-form>`.
+Any other signers are notified and any remaining signers can no longer sign the document.
+
+.. note::
+   It is not possible to decline the signature of an individual document within a document envelope.
+   Declining to sign cancels the entire signature request.
+
 .. _sign/sign-document/pdf-document:
 
 Sign an unprepared .pdf document
@@ -145,7 +166,7 @@ To sign a document in Odoo:
      document(s), then click :guilabel:`Open`.
    - From a record's chatter or from the Documents app: Click on the `.pdf` document to open it,
      then click :guilabel:`Sign` in the upper-right corner.
-#. :ref:`Add the relevant fields <sign/prepare-document/add-fields>` to the document, then click
+#. :ref:`Add the relevant fields <sign/request-signatures/add-fields>` to the document, then click
    :guilabel:`Sign Now`.
 #. In the :guilabel:`New Signature Request` window, ensure you are selected as the signer.
    Optionally:
@@ -160,8 +181,8 @@ To sign a document in Odoo:
 
    .. tip::
       When signing a document that contains only :ref:`auto-completed fields
-      <sign/fields/auto-fill>`, e.g., name, email, etc., click :guilabel:`Download` to immediately
-      download a fully signed version, without having to complete the fields manually.
+      <sign/configuration/auto-fill>`, e.g., name, email, etc., click :guilabel:`Download` to
+      immediately download a fully signed version, without having to complete the fields manually.
 
 #. :ref:`Complete and sign the document(s) <sign/sign-document/signature-request>`.
 
@@ -191,7 +212,7 @@ the Documents app.
 
 To enable the :guilabel:`Sign` option:
 
-   #. In the Documents app, with the relevant folder or sub-folder open, click the :icon:`fa-cog`
-      :guilabel:`(Actions)` icon beside the name of the folder.
-   #. Click :icon:`fa-cog` :menuselection:`Actions on Select -->` :icon:`fa-caret-right`
-      :menuselection:`Sign`.
+#. In the Documents app, with the relevant folder or sub-folder open, click the :icon:`fa-cog`
+   :guilabel:`(Actions)` icon beside the name of the folder.
+#. Click :icon:`fa-cog` :menuselection:`Actions on Select -->` :icon:`fa-caret-right`
+   :menuselection:`Sign`.
