@@ -58,8 +58,8 @@ To add default terms and conditions to signature requests:
 
 .. note::
    It is also possible to manually attach files, such as terms and conditions, when
-   :ref:`configuring a signature request <sign/configure-signature-request>`. For :ref:`templates
-   <sign/request-signatures/templates>`, files can be attached by default in the
+   :ref:`configuring a signature request <sign/request-signatures/configure-request>`. For
+   :ref:`templates <sign/request-signatures/templates>`, files can be attached by default in the
    :guilabel:`Communication` section of the template :guilabel:`Configuration` when creating or
    editing the template.
 
@@ -68,11 +68,12 @@ To add default terms and conditions to signature requests:
 Fields
 ======
 
-Fields are :ref:`added to documents <sign/prepare-document/add-fields>` to indicate what information
-must be completed by the signers. Various fields are available by default. These fields can be
-:ref:`edited and additional fields can be created <sign/fields/create-edit-fields>` if needed.
+Fields are :ref:`added to documents <sign/request-signatures/add-fields>` to indicate what
+information must be completed by the signers. Various fields are available by default. These fields
+can be :ref:`edited and additional fields can be created <sign/configuration/create-edit-fields>`
+if needed.
 
-.. _sign/fields/create-edit-fields:
+.. _sign/configuration/create-edit-fields:
 
 Create and edit fields
 ----------------------
@@ -84,9 +85,10 @@ To create or edit a field:
 #. Complete or edit the following fields:
 
    - :guilabel:`Field Name`: Enter or edit the field name. This is visible in the list of fields in
-     the left panel when a document is being :ref:`prepared for signature <sign/prepare-document>`.
-   - :guilabel:`Type`: Choose the relevant :ref:`field type <sign/fields/field-types>` from the
-     dropdown; there are nine possible field types.
+     the left panel when a document is being :ref:`prepared for signature
+     <sign/request-signatures/prepare-document>`.
+   - :guilabel:`Type`: Choose the relevant :ref:`field type <sign/configuration/field-types>` from
+     the dropdown; there are nine possible field types.
    - :guilabel:`Placeholder`: Optionally, specify a placeholder text that provides the signer with a
      hint or example :ref:`during the signing process <sign/sign-document/signature-request>`. If
      this field is left blank, the :guilabel:`Field Name` is used as placeholder text.
@@ -98,13 +100,13 @@ To create or edit a field:
 
      .. note::
         The size of any field can be modified manually when :ref:`adding the field to a document
-        <sign/prepare-document/add-fields>`.
+        <sign/request-signatures/add-fields>`.
 
    - For :guilabel:`Text` and :guilabel:`Multiline Text` fields only, optionally use the
-     :guilabel:`Linked to` field to :ref:`configure auto-completion <sign/fields/auto-fill>` so the
-     field can be auto-completed during the signing process.
+     :guilabel:`Linked to` field to :ref:`configure auto-completion <sign/configuration/auto-fill>`
+     so the field can be auto-completed during the signing process.
 
-.. _sign/fields/field-types:
+.. _sign/configuration/field-types:
 
 Field types
 ~~~~~~~~~~~
@@ -117,21 +119,21 @@ Field types
   field.
 - :guilabel:`Text` and :guilabel:`Multiline Text`: Signers can enter text on a single line or on
   multiple lines, respectively. These field types can be :ref:`configured to be auto-completed
-  <sign/fields/auto-fill>` during the signing process.
+  <sign/configuration/auto-fill>` during the signing process.
 - :guilabel:`Checkbox`: Signers can tick a box (e.g., to confirm they accept the terms and
   conditions).
 - :guilabel:`Radio`: Signers can select a single option from a series of options (defined when the
-  field is :ref:`added to the document <sign/prepare-document/add-fields>`) by clicking the radio
+  field is :ref:`added to the document <sign/request-signatures/add-fields>`) by clicking the radio
   button beside the desired option.
 - :guilabel:`Selection`: Signers can select a single option from a series of options (defined when
-  the field is :ref:`added to the document <sign/prepare-document/add-fields>`) via a dropdown
+  the field is :ref:`added to the document <sign/request-signatures/add-fields>`) via a dropdown
   menu.
 - :guilabel:`Strikethrough`: Signers can reject certain phrases by clicking the strikethrough field,
   which adds a visible line through the text.
 - :guilabel:`Stamp`: Signers can add a company stamp (defined when the
-  field is :ref:`added to the document <sign/prepare-document/add-fields>`).
+  field is :ref:`added to the document <sign/request-signatures/add-fields>`).
 
-.. _sign/fields/auto-fill:
+.. _sign/configuration/auto-fill:
 
 Configure auto-complete fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

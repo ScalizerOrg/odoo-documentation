@@ -266,7 +266,7 @@ click :guilabel:`Request Signature`.
    :alt: The Request Signature option in the Odoo Rental application.
 
 A *Sign Documents* pop-up window displays. Either :ref:`select an existing document template
-<sign/templates/use-odoo-record>`  or :ref:`create a new one
+<sign/request-signatures/template-odoo-record>`  or :ref:`create a new one
 <sign/request-signatures/one-off-record>`.
 
 After sending the request, a link to the signature request appears in the record's chatter. The

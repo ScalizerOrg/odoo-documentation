@@ -225,7 +225,7 @@ To request a signature, open the **Rental** app and select the desired rental or
    :alt: The Request Signature option in the Odoo Rental application.
 
 In the *Sign Documents* pop-up window, either :ref:`select an existing document template
-<sign/templates/use-odoo-record>`  or :ref:`create a new one
+<sign/request-signatures/template-odoo-record>`  or :ref:`create a new one
 <sign/request-signatures/one-off-record>`.
 
 After sending the request, a link to the signature request appears in the record's chatter. The

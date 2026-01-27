@@ -6,7 +6,7 @@ Various security features are integrated into Odoo Sign by default, such as:
 
 - :ref:`email verification <sign/security/authentication>`, whereby the signer receives a unique
   link to the document or :ref:`envelope of multiple documents
-  <sign/prepare-document/create-envelope>` via an email sent directly to their email address
+  <sign/request-signatures/create-envelope>` via an email sent directly to their email address
 - a :ref:`signatory hash <sign/security/hash>` that links the signer's identity to the exact content
   of the document at the moment of signing
 - a :ref:`certificate of completion <sign/security/certificate-of-completion>` that provides
@@ -56,8 +56,8 @@ fully signed document(s).
    When documents are :doc:`signed via an Odoo record's chatter <sign_document>`, or when a
    signature request initiated from an Odoo record is fully completed (whether a :ref:`one-off
    document <sign/request-signatures/one-off-record>` or :ref:`using a template
-   <sign/templates/use-odoo-record>`), the certificate of completion is also added to the chatter,
-   along with the fully signed document(s).
+   <sign/request-signatures/template-odoo-record>`), the certificate of completion is also added to
+   the chatter, along with the fully signed document(s).
 
 This certificate contains details of the signing process that support the validity of the signatures
 and provide proof that the document has not been altered after signing.
