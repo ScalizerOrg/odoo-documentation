@@ -39,8 +39,8 @@ Physical Inventory` by selecting specific locations and products for counting, a
 **Barcode** app.
 
 To view a requested inventory count, navigate to the :menuselection:`Barcode app` dashboard. If a
-count has been requested, the number of products to be counted is listed on the :guilabel:`Inventory
-count` button.
+count has been requested, the number of products to be counted is listed on the :guilabel:`Count
+Inventory` button.
 
 .. image:: adjustments/assigned-count.png
    :alt: The Barcode dashboard with an assigned count.
@@ -49,10 +49,10 @@ Configuration
 =============
 
 Before an inventory adjustment can be performed with the **Barcode** app, the app has to be
-installed, and configured. Navigate to :menuselection:`Inventory app --> Configuration -->
-Settings`, and scroll to the :guilabel:`Barcode` section. Tick the checkbox next to
-:guilabel:`Barcode Scanner`, and click :guilabel:`Save` to save any changes. If necessary, click
-:guilabel:`Confirm` on the pop-up.
+installed and configured. Navigate to :menuselection:`Inventory app --> Configuration --> Settings`,
+and scroll to the :guilabel:`Barcode` section. Select the checkbox next to :guilabel:`Barcode
+Scanner`, and click :guilabel:`Save` to save any changes. If necessary, click :guilabel:`Confirm` on
+the pop-up.
 
 .. danger::
    Enabling the **Barcode** feature requires installing the **Barcode** application. Installing a
@@ -77,7 +77,7 @@ Performing an inventory count
 =============================
 
 To perform an inventory adjustment, first navigate to the :menuselection:`Barcode app`. If assigned
-counts exist, tap :guilabel:`Inventory Count` to view pending tasks.
+counts exist, tap :guilabel:`Count Inventory` to view pending tasks.
 
 .. image:: adjustments/adjustments-barcode-scanner.png
    :alt: Barcode app start screen with scanner.
@@ -108,7 +108,7 @@ add or subtract quantity of the product, and the number keys can be used to add 
    adjustment by scanning the barcodes for those specific products.
 
    .. image:: adjustments/adjustments-barcode-inventory-client-action.png
-      :alt: Barcode Inventory Client Action page with inventory adjustment.
+      :alt: Barcode Physical Inventory page with inventory adjustment.
 
 .. _inventory/barcode/count-location:
 
@@ -121,30 +121,42 @@ assigning an entire location to a user by assigning a single product count. Duri
 users can ensure accurate inventory numbers, see if products that should be in a location are
 missing, or discover products incorrectly stored within a location.
 
-To enable this feature, navigate to :menuselection:`Inventory app --> Configuration --> Settings`,
-and scroll to the :guilabel:`Barcode` section. Tick the :guilabel:`Count Entire Locations` checkbox,
-then click :guilabel:`Save`.
-
 .. important::
-   This setting is only visible if the :guilabel:`Storage Locations` checkbox is ticked.
+   You can only count entire locations if :guilabel:`Storage Locations` is enabled in the Inventory
+   settings, found at :menuselection:`Inventory app --> Configuration --> Settings`.
 
 To perform an inventory count of an entire location, navigate to :menuselection:`Barcode app -->
-Inventory Count`. Scan the desired location barcode. The app then displays all assigned products in
-that location. :ref:`Proceed with the count <inventory/barcode/perform-count>` as normal.
+Count Inventory`. Tap the :icon:`fa-cog` :guilabel:`(actions)` icon. Enter or scan a location
+barcode, and select the :guilabel:`Count Entire Locations` check box. Tap :guilabel:`Apply`. The app
+then displays all assigned products in that location. :ref:`Proceed with the count
+<inventory/barcode/perform-count>` as normal.
 
 Show quantity to count
 ----------------------
 
-When conducting an inventory count, the expected quantity of products is displayed by default, to
-provide the user with a baseline to use when performing the count. However, as this can result in
-users relying on this count instead of performing a new count, this quantity can be hidden.
+When conducting an inventory count, the expected quantity of products is not displayed by default,
+as displaying expected quantities can result in users relying on this count instead of performing a
+new count.
 
-Navigate to :menuselection:`Inventory app --> Configuration --> Settings`. In the
-:guilabel:`Barcode` section, clear the :guilabel:`Show Quantity to Count` checkbox, then click
-:guilabel:`Save`.
+To show the expected quantity, navigate to :menuselection:`Inventory app --> Operations --> Physical
+Inventory`. Request a count by selecting the check boxes to the left of the products to count, then
+clicking the :guilabel:`Request a Count` button. The *Inventory Request* window opens.
 
-.. image:: adjustments/show-quantity-to-count-disabled.png
-   :alt: An inventory count without the show quantity to count feature enabled.
+Specify a user to assign the count to in the :guilabel:`Assign to` field. Specify the date to
+perform the count in the :guilabel:`Scheduled at` field. Select the :guilabel:`Show Expected
+Quantity` check box to show the expected quantity on the *Barcode* :guilabel:`Count Inventory` page.
+
+.. example::
+   Warehouse managers have requested a count of all `Cable Management Box` products in inventory.
+
+   .. image:: adjustments/show-expected-quantity.png
+      :alt: An inventory request with the Show Expected Quantity check box selected.
+
+   When the assigned user opens the :guilabel:`Count Inventory` page in the *Barcode* app, the
+   expected quantity of `90` units of the `Cable Management Box` product is displayed.
+
+   .. image:: adjustments/expected-quantity-on-count.png
+      :alt: The expected quantity is displayed.
 
 Manually add products to an inventory count
 ===========================================
@@ -152,7 +164,7 @@ Manually add products to an inventory count
 When barcodes for location or products are not available, Odoo **Barcode** can still be used to
 perform inventory counts.
 
-To do this, navigate to the :menuselection:`Barcode app --> Inventory Count`.
+To do this, navigate to :menuselection:`Barcode app --> Count Inventory`.
 
 To manually add products to this adjustment, click the white :guilabel:`Add Product` button at the
 bottom of the screen.
@@ -160,28 +172,28 @@ bottom of the screen.
 This navigates to a new, blank page where the desired product, quantity, and source location must be
 chosen.
 
-.. image:: adjustments/adjustments-keypad.png
-   :alt: Keypad to add products on Barcode Inventory Client Action page.
-
 First, click the :guilabel:`Product` line, and choose the product whose stock count should be
 adjusted. Then, manually enter the quantity of that product, either by changing the `1` in the
 :guilabel:`Quantity` line, or by clicking the :guilabel:`+1` and :guilabel:`-1` buttons to add or
 subtract quantity of the product. The number pad can be used to add quantity, as well.
 
-Below the number pad is the :guilabel:`location` line, which should read `WH/Stock` by default.
-Click this line to reveal a drop-down menu of locations to choose from, and choose the
-:guilabel:`source location` for this inventory adjustment.
+Below the number pad is the :guilabel:`Location` line, which should read `WH/Stock` by default.
+Click this line to reveal a list of locations to choose from, and choose the location for this
+inventory adjustment.
 
 Click :guilabel:`Confirm` to confirm the changes.
+
+.. image:: adjustments/adjustments-keypad.png
+   :alt: Keypad to add products on Barcode Inventory Client Action page.
 
 Finalizing an inventory count
 =============================
 
 After counting all of the products, review the entries to ensure all the counted quantities are
-accurately entered. To complete the inventory adjustment, click :guilabel:`Apply`.
+accurately entered. To complete the inventory adjustment, click :guilabel:`Confirm`.
 
 .. tip::
-   The :guilabel:`Validate` barcode can be scanned in place of clicking the :guilabel:`Apply`
+   The :guilabel:`Validate` barcode can be scanned in place of clicking the :guilabel:`Confirm`
    button.
 
 Odoo then navigates back to the :guilabel:`Barcode Scanning` screen. A small green banner appears in
