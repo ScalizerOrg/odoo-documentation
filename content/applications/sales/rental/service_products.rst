@@ -72,7 +72,8 @@ Create a new service product
 
 .. important::
 
-   The **Project** and the **Sales** apps must be installed for following options to be available:
+   The **Project** and the **Sales** apps must be installed for the following options to be
+   available:
 
    - :guilabel:`Create on Order`
    - :guilabel:`Project Template`
@@ -207,7 +208,7 @@ click :guilabel:`Request Signature`.
    :alt: The Request Signature option in the Odoo Rental application.
 
 A *Sign Documents* pop-up window displays. Either :ref:`select an existing document
-template <sign/templates/use-odoo-record>`  or :ref:`create a new one
+template <sign/request-signatures/template-odoo-record>` or :ref:`create a new one
 <sign/request-signatures/one-off-record>`.
 
 After sending the request, a link to the signature request appears in the record's chatter. The
