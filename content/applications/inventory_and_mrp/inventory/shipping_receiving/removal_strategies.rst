@@ -10,7 +10,7 @@ warehouse, and **when**. For example, for perishable products, prioritizing the 
 with the nearest expiration date helps minimize food spoilage.
 
 The following columns in the table below list the removal strategies available in Odoo, and detail
-how pickings are determined along with the picking order. Leverage these removal strategies to have
+how pickings are determined and the picking order. Leverage these removal strategies to have
 Odoo automatically select how products are selected for orders:
 
 .. list-table::
@@ -36,19 +36,22 @@ Odoo automatically select how products are selected for orders:
      - Alphanumeric name of location
      - Quantity closest to fulfilling demand
 
-For comprehensive examples for how to use each removal strategy, refer to each individual
+For comprehensive examples of how to use each removal strategy, refer to each individual
 documentation page.
+
+.. note::
+   FIFO is the default removal strategy. When a removal strategy is not set for the location or the
+   product category, FIFO is used.
 
 .. _inventory/warehouses_storage/removal-config:
 
 Configuration
 =============
 
-Removal strategies are set on either the product category or storage location.
+Removal strategies are set at either the product category or the storage location level.
 
 .. image:: removal_strategies/navigate-location-category.png
-   :align: center
-   :alt: Change the Force Removal Strategy for either the Product Categories or Locations.
+   :alt: Change the Force Removal Strategy for either the product categories or locations.
 
 Configure removal strategies on the location by going to :menuselection:`Inventory --> Configuration
 --> Locations`, and selecting the desired location. On the location form, choose a removal strategy
@@ -59,16 +62,16 @@ from the :guilabel:`Removal Strategy` field's drop-down menu options.
    :guilabel:`Multi-Step Routes` settings **must** be enabled in :menuselection:`Inventory -->
    Configuration --> Settings`.
 
-   These features are **only** necessary when setting the removal strategy on a location.
+   These features are **only** necessary when setting the removal strategy for a location.
 
 Configure removal strategies on product categories by going to :menuselection:`Inventory -->
-Configuration --> Product Categories` and selecting the intended product category. Next, choose a
-removal strategy from the :guilabel:`Force Removal Strategy` drop-down menu options.
+Configuration --> Categories`, then selecting the intended product category. Next, choose a removal
+strategy from the :guilabel:`Force Removal Strategy` drop-down menu options.
 
 .. important::
-   When there are different removal strategies applied on both the location and product category for
-   a product, the value set on the :guilabel:`Force Removal Strategy` field set on a
-   :guilabel:`Product Category` form is applied as top priority.
+   When different removal strategies are applied to both the location and product category for a
+   product, the value set in the :guilabel:`Force Removal Strategy` field on the category form takes
+   priority.
 
 Required features
 =================
@@ -105,11 +108,10 @@ Lots and serial numbers
 
 Lots and serial numbers differentiate identical products and track information like arrival or
 expiration dates. To enable this feature, navigate to :menuselection:`Inventory --> Configuration
---> Settings`. Under the :guilabel:`Traceability` heading, check the box beside :guilabel:`Lots &
-Serial Numbers` to enable the feature.
+--> Settings`. Under the *Traceability* heading, check the box beside :guilabel:`Lots & Serial
+Numbers` to enable the feature.
 
 .. image:: removal_strategies/enable-lots.png
-   :align: center
    :alt: Enable lots and serial numbers.
 
 Next, ensure the intended product is tracked by lots or serial numbers by navigating to the product
@@ -127,14 +129,13 @@ Locations and routes
 
 **Storage locations** and **multi-step routes** are necessary features for setting **all** types of
 removal strategies on a location. However, these features are specifically required for the closest
-location removal strategy since it is only applied at the location level.
+location removal strategy, as it is applied at the location level.
 
 To activate these features, navigate to :menuselection:`Inventory --> Configuration --> Settings`.
-Under the :guilabel:`Warehouse` heading, enable the :guilabel:`Storage Location` and
-:guilabel:`Multi-Step Routes` features.
+Under the *Warehouse* heading, enable the :guilabel:`Storage Location` and :guilabel:`Multi-Step
+Routes` features.
 
 .. image:: removal_strategies/enable-location.png
-   :align: center
    :alt: Enable the locations and route features.
 
 .. _inventory/warehouses_storage/exp-setup:
@@ -142,15 +143,14 @@ Under the :guilabel:`Warehouse` heading, enable the :guilabel:`Storage Location`
 Expiration date
 ---------------
 
-Enable the **expiration date** feature to track expiration dates, best before dates, removal dates,
+Enable the **expiration date** feature to track expiration dates, best-before dates, removal dates,
 and alert dates on a lot or serial number by navigating to :menuselection:`Inventory -->
 Configuration --> Settings`.
 
-Under the :guilabel:`Traceability` heading, ensure the :guilabel:`Lots & Serial Numbers` feature is
-selected, and then select the check box for :guilabel:`Expiration Dates` to enable the feature.
+Under the *Traceability* heading, ensure the :guilabel:`Lots & Serial Numbers` feature is selected,
+and then select the check box for :guilabel:`Expiration Dates` to enable the feature.
 
 .. image:: removal_strategies/enable-expiration.png
-   :align: center
    :alt: Enable expiration dates feature for FEFO.
 
 .. _inventory/warehouses_storage/pack-setup:
@@ -165,7 +165,6 @@ Navigate to :menuselection:`Inventory --> Configuration --> Settings` and select
 the :guilabel:`Packages` feature.
 
 .. image:: removal_strategies/enable-pack.png
-   :align: center
    :alt: Enable the packages feature.
 
 .. seealso::
