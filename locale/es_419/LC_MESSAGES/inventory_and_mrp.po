@@ -30,8 +30,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-22 18:30+0000\n"
-"PO-Revision-Date: 2026-01-28 23:21+0000\n"
-"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
+"PO-Revision-Date: 2026-01-29 23:21+0000\n"
+"Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/inventory_and_mrp/es_419/>\n"
 "Language: es_419\n"
@@ -8860,6 +8860,10 @@ msgid ""
 "and :guilabel:`Packages` features (:menuselection:`Inventory app --> "
 "Configuration --> Settings`)."
 msgstr ""
+":guilabel:`Uso del embalaje` es un campo en el formulario de embalaje en "
+"Odoo que solo es visible si activas las funciones :guilabel:`Transferencias "
+"en lote, por olas o preparación de órdenes` y :guilabel:`Embalajes` "
+"(:menuselection:`aplicación Inventario --> Configuración --> Ajustes`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:22
 msgid ""
@@ -8868,6 +8872,10 @@ msgid ""
 "**only** when configuring packages for :ref:`cluster pickings <inventory/"
 "warehouses_storage/cluster-pack>`."
 msgstr ""
+"De forma predeterminada, el campo :guilabel:`Uso del embalaje` se configura "
+"como :guilabel:`Caja desechable`. Cambia este campo a :guilabel:`Caja "
+"desechable` **solo** cuando se configuren los embalajes para :ref:`"
+"preparación de pedidos <inventory/warehouses_storage/cluster-pack>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:26
 msgid ""
@@ -8877,6 +8885,12 @@ msgid ""
 "itself (e.g. boxes, pallets, other shipping containers) in shipping cost "
 "calculations."
 msgstr ""
+":guilabel:`Tipo de embalaje` es una función opcional que se usa para :doc:`"
+"calcular el costo del envío <../../shipping_receiving/setup_configuration>`, "
+"de acuerdo con el peso real de envío. Crea tipos de paquete para incluir el "
+"peso del paquete en sí "
+"(por ejemplo, cajas, pallets y otros contenedores de envío) en el cálculo de "
+"los costos de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:32
 msgid ""
@@ -8952,6 +8966,8 @@ msgid ""
 "Clicking each :ref:`Details <inventory/warehouses_storage/detailed-"
 "operations>` link on the product line."
 msgstr ""
+"Hacer clic en cada enlace de :ref:`Detalles <inventory/warehouses_storage/"
+"detailed-operations>` en la línea del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:70
 msgid ""
@@ -8963,7 +8979,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:76
 msgid "Details"
-msgstr ""
+msgstr "Detalles"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:78
 msgid ""
@@ -8971,10 +8987,14 @@ msgid ""
 "package by clicking the :guilabel:`Details` link in "
 "the :guilabel:`Operations` tab."
 msgstr ""
+"En cualquier transferencia del almacén "
+"(por ejemplo recepción u orden de entrega), haz clic en el enlace "
+":guilabel:`Detalles` en la pestaña :guilabel:`Operaciones` para agregar un "
+"producto al paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Details link on the product line."
-msgstr ""
+msgstr "El enlace Detalles en la línea del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:84
 msgid ""
@@ -8991,6 +9011,11 @@ msgid ""
 "clicking :guilabel:`Add a line`. Select an existing package, or create a new "
 "one by typing the name of the new package, then select :guilabel:`Create`."
 msgstr ""
+"Para poner el :guilabel:`Producto` en un paquete, asigna el producto a un "
+":guilabel:`Paquete de destino`. Para dividir varios paquetes, haz clic en "
+":guilabel:`Agregar una línea`. Selecciona un paquete existente, o escribe el "
+"nombre del paquete nuevo para crear uno y después haz clic en "
+":guilabel:`Crear`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:93
 msgid "Assign a package to \"Destination Package\" field."
@@ -8998,7 +9023,7 @@ msgstr "Asignar un paquete en el campo \"Paquete de destino\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:93
 msgid "20 units of `Acoustic Bloc Screen` are placed in `PACK0000001`."
-msgstr ""
+msgstr "Se colocan 20 unidades de `Pantallas acústicas` en `PACK0000001`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:95
 msgid ""
@@ -9007,6 +9032,10 @@ msgid ""
 "the :guilabel:`Product` in different packages. Once finished, "
 "click :guilabel:`Save` to close the window."
 msgstr ""
+"Después, especifica la cantidad de artículos que va en el embalaje en la "
+"columna :guilabel:`Cantidad`. Repite los pasos antes mencionados para poner "
+"el :guilabel:`Producto` en diferentes paquetes. Una vez que termines, haz "
+"clic en :guilabel:`Guardar` para cerrar la ventana."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:100
 msgid ""
@@ -9053,10 +9082,13 @@ msgid ""
 "clicked to create a new package, `PACK0000002`, and assign all items to it "
 "in the :guilabel:`Destination Package` field."
 msgstr ""
+"En la trasferencia por lote `BATCH/00001`, se hizo clic en el botón "
+":guilabel:`Poner en el paquete` para crear un paquete nuevo, `PACK0000002` y "
+"asignarle todos los elementos en el campo :guilabel:`Paquete de destino`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:125
 msgid "Create package types"
-msgstr ""
+msgstr "Crea tipos de paquetes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:127
 msgid ""
@@ -9135,6 +9167,8 @@ msgid ""
 ":guilabel:`Barcode`: Define a barcode to identify the package type from a "
 "scan."
 msgstr ""
+":guilabel:`Código de barras`: Define un código de barras para identificar el "
+"tipo de paquete al escanearlo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:150
 msgid ""
@@ -9142,17 +9176,24 @@ msgid ""
 "**only** at the selected company. Leave the field blank if it is available "
 "at all companies."
 msgstr ""
+":guilabel:`Empresa`: Especifica una empresa para que el tipo de paquete esté "
+"disponible **solo** en la empresa seleccionada. Deja el campo vacío si está "
+"disponible en todas las empresas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
 msgid ""
 ":guilabel:`Carrier`: Specify the intended shipping carrier for this package "
 "type."
 msgstr ""
+":guilabel:`Transportista`: Especifica al transportista correspondiente para "
+"este tipo de paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:153
 msgid ""
 ":guilabel:`Carrier Code`: Define a code that is linked to the package type."
 msgstr ""
+":guilabel:`Código de transportista`: Define un código vinculado al tipo de "
+"paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Package type for FedEx's 25 kilogram box."
@@ -9169,11 +9210,18 @@ msgid ""
 "Cluster Transfers` feature, located in the :guilabel:`Operations` section. "
 "Doing so makes the *Package Use* field become visible on a package form."
 msgstr ""
+"Para usar la *preparación de paquetes*, primero navega a :menuselection:`la "
+"aplicación Inventario --> Configuración --> Ajustes` y activa la función "
+":guilabel:`Traslados por lote, olas y por preparación de varias órdenes`, "
+"ubicado en la sección :guilabel:`Operaciones`. Al hacerlo, el campo *Uso del "
+"paquete* se hace visible en el formulario del paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid ""
 "Activate the Batch, Wave & Cluster Transfers feature in Inventory Settings."
 msgstr ""
+"Activa la función Traslados por lote, olas y por preparación de varias "
+"órdenes en los ajustes de Inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:171
 msgid ""
@@ -9221,6 +9269,9 @@ msgid ""
 "**only** at the selected company. Leave the field blank if the package is "
 "available at all companies."
 msgstr ""
+":guilabel:`Empresa`: Especifica una empresa para que el paquete esté "
+"disponible **solo** en la empresa seleccionada. Deja el campo vacío si está "
+"disponible en todas las empresas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:186
 msgid ":guilabel:`Location`: current location of the package."
@@ -9236,6 +9287,10 @@ msgid ""
 "for moving products within the warehouse. Choose :guilabel:`Disposable Box` "
 "for packages used to ship products to customers."
 msgstr ""
+":guilabel:`Uso del paquete`: Selecciona :guilabel:`Caja reutilizable` para "
+"paquetes que se usan para mover productos dentro de un almacén. Selecciona "
+":guilabel:`Caja desechable` para embalajes que se usan para enviar productos "
+"a los clientes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Display package form to create a cluster pack."
@@ -9260,6 +9315,9 @@ msgid ""
 "To view all packages, go to :menuselection:`Inventory app --> Products --> "
 "Packages`. By default, packages are shown in Kanban view."
 msgstr ""
+"Para ver todos los embalajes, ve a :menuselection:`la aplicación Inventario "
+"--> Productos --> Embalajes`. Los embalajes se muestran en vista de kanban "
+"de forma predeterminada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Packages dashboard."
@@ -11254,18 +11312,27 @@ msgid ""
 "(either from a vendor or in stock after production) in which goods may "
 "become dangerous and should not be used or consumed."
 msgstr ""
+":guilabel:`Fecha de caducidad`: El número de días después de recibir los "
+"productos "
+"(ya sea del proveedor o que entren a existencias después de producción) en "
+"el que los bienes se pueden volver peligrosos y no se deben usar o consumir."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:77
 msgid ""
 ":guilabel:`Best Before Date`: the number of days before the expiration date "
 "in which the goods start deteriorating, **without** being dangerous yet."
 msgstr ""
+":guilabel:`Fecha de consumo preferente`: El número de días antes de la fecha "
+"de caducidad en la que los bienes se comienzan a deteriorar **sin** ser "
+"peligrosos todavía."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:79
 msgid ""
 ":guilabel:`Removal Date`: the number of days before the expiration date in "
 "which the goods should be removed from stock."
 msgstr ""
+":guilabel:`Fecha de remoción`: El número de días antes de la fecha de "
+"caducidad en la que los bienes se deben quitar de existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:81
 msgid ""
@@ -11273,6 +11340,9 @@ msgid ""
 "which an alert should be raised on goods in a particular lot or containing a "
 "particular serial number."
 msgstr ""
+":guilabel:`Fecha de alerta`: El número de días antes de la fecha de "
+"caducidad en la que se debe enviar una alerta sobre los bienes en un lote "
+"particular o que tengan un número de serie específico."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:85
 msgid ""
@@ -11322,6 +11392,11 @@ msgid ""
 "ordered products. The receipt cannot be validated without an assigned lot or "
 "serial number."
 msgstr ""
+"Hacer clic en :guilabel:`Validar` antes de asignar un número de serie a las "
+"cantidades del producto ordenado hace que aparezca una ventana emergente "
+":guilabel:`Operación inválida`. La ventana emergente requiere que ingrese un "
+"lote o número de serie para los productos ordenados. El destinatario no "
+"puede validarse sin asignar un lote o número de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:0
 msgid "User error popup when validating an order with no lot number."
@@ -11334,6 +11409,9 @@ msgid ""
 "From here, click the :guilabel:`Details` link located on the of the product "
 "line. When clicked, a :guilabel:`Detailed Operations` popup will appear."
 msgstr ""
+"Aquí, haz clic en el enlace :guilabel:`Detalles` que se ubica en la línea "
+"del producto. Cuando hagas clic, aparecerá la ventana emergente :guilabel:`"
+"Operaciones detalladas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:112
 msgid ""
@@ -11377,6 +11455,11 @@ msgid ""
 "Report`, which includes: a :guilabel:`Reference` document; "
 "the :guilabel:`Product` being traced; the :guilabel:`Lot/Serial #`; and more."
 msgstr ""
+"Aparecerá el botón inteligente :icon:`oi-arrow-up` :guilabel:`Trazabilidad` "
+"al validar la recepción. Haz clic para ver el :guilabel:`reporte de "
+"trazabilidad` actualizado, que incluye: un documento de "
+":guilabel:`Referencia`; el :guilabel:`Producto` que se debe rastrear; el "
+":guilabel:`Número de lote o de serie` y más."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:130
 msgid "Set expiration dates on manufactured products"
@@ -11400,6 +11483,11 @@ msgid ""
 "the :guilabel:`Product` field drop-down menu, then specify "
 "the :guilabel:`Quantity` to produce."
 msgstr ""
+"Para crear una orden de fabricación ve a :menuselection:`la aplicación "
+"Manufactura --> Operaciones --> Órdenes de fabricación` y haz clic en "
+":guilabel:`Nuevo`. Selecciona el producto que quieras fabricar en el menú "
+"desplegable del campo :guilabel:`Producto` y después especifica la "
+":guilabel:`cantidad` a producir."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:None
 msgid "Manufacturing order for product with expiration date."
@@ -11429,6 +11517,10 @@ msgid ""
 "information for those specific numbers. On that pop-up, all expiration "
 "information that was previously configured for the product is displayed."
 msgstr ""
+"El número apropiado de lote o serie se agrega al campo en automático. Haz "
+"clic en el enlace :guilabel:`Detalles` para mostrar información adicional "
+"para esos números específicos. En esa ventana emergente, se muestra toda la "
+"información de caducidad que se configuró para el producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:None
 msgid "Components pop-up with expiration information for specific lot number."
@@ -11505,6 +11597,9 @@ msgid ""
 "process all :guilabel:`Done` quantities and deliver the products to the "
 "customer."
 msgstr ""
+"En el formulario de destinatario del almacén, haz clic en :guilabel:`Validar`"
+" para procesar todas las cantidades :guilabel:`listas` de forma automática y "
+"entregarle los productos a los clientes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:184
 msgid ""
@@ -11533,7 +11628,7 @@ msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:192
 msgid ":doc:`../../shipping_receiving/removal_strategies/fefo`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/removal_strategies/fefo`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:195
 msgid "View expiration dates for lots & serial numbers"
@@ -11600,12 +11695,17 @@ msgid ""
 "Then, click into a :guilabel:`Lot/Serial Number` with perishable products. "
 "Doing so reveals the lot or serial number form."
 msgstr ""
+"Después, haz clic en un :guilabel:`número de lote o serie` con productos "
+"perecederos. Hacer esto mostrará el formulario del lote o número de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:226
 msgid ""
 "On the :guilabel:`Lot/Serial Number` detail form, the :guilabel:`Dates` tab "
 "lists all expiration information related to the products."
 msgstr ""
+"En el formulario de detalles de :guilabel:`número de lote o serie`, la "
+"pestaña :guilabel:`Fechas` muestra toda la información de caducidad "
+"relacionada a los productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:229
 msgid ""
@@ -11652,7 +11752,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:None
 msgid "List of expiration alerts on the Lots/Serial Numbers page."
-msgstr ""
+msgstr "Lista de alertas de caducidad en la página de números de lote y serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:248
 msgid "Expiration notifications"
@@ -11897,8 +11997,8 @@ msgstr ""
 msgid ""
 "There are two ways to assign lot numbers: **manually** and **importing**."
 msgstr ""
-"Hay dos formas de asignar números de lote: **de forma manual** y mediante "
-"**una importación**."
+"Hay dos formas de asignar números de lote: **de forma manual** y mediante **"
+"una importación**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:106
 msgid "Manual assignment"
@@ -12640,7 +12740,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:15
 msgid "Change product tracking and perform inventory adjustments"
-msgstr ""
+msgstr "Cambia el monitoreo de productos y realiza ajustes de inventario"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:17
 msgid ""
@@ -12657,6 +12757,8 @@ msgid ""
 "Next, change the :guilabel:`Track Inventory` setting to :guilabel:`By Lots` "
 "or :guilabel:`By Unique Serial Number`."
 msgstr ""
+"Luego, cambia el ajuste de :guilabel:`Rastreo de inventario` de :guilabel:`"
+"Por lotes` o :guilabel:`Por número de serie único`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:None
 msgid "Enable Track Inventory By Lots or By Unique Serial Number."
