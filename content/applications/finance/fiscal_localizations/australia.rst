@@ -39,6 +39,10 @@ Configuration
      - `l10n_au_keypay`
      - Synchronises all pay runs from Employment Hero with Odoo’s journal entries.
 
+.. note::
+   It is not possible for users of the Australian fiscal localization to deactivate :doc:`two-factor
+   authentication (2FA) <../../general/users/2fa>` as it is required by the Australian government.
+
 .. _australia/coa:
 
 Chart of Accounts
