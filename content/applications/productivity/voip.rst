@@ -1,58 +1,60 @@
 :show-content:
 
-===================================
-VoIP (Voice over Internet Protocol)
-===================================
-
 .. |VOIP| replace:: :abbr:`VoIP (Voice over Internet Protocol)`
 
-|VOIP| in Odoo enables businesses to handle calls over the internet by integrating directly with
-Odoo apps like **CRM**, **Helpdesk**, and more. Calls and messages are logged within these apps,
-keeping records linked to customer interactions.
+=====
+Phone
+=====
 
-.. seealso::
-   `Odoo Tutorials: VoIP <https://www.odoo.com/slides/voip-voice-over-ip-315>`_
+.. note::
+   As of Odoo 19.0, the *VoIP* module has been renamed to *Odoo Phone*.
 
-Users can make and receive calls, track communication history, and automate call routing based on
-predefined rules. Features like call recording and analytics provide insights into call volume and
-response times, helping teams track communication efficiency.
+The Odoo **Phone** app enables businesses to handle calls over the internet by integrating directly
+with Odoo apps like **CRM** and **Helpdesk**. The **Phone** app can link calls and messages to
+customer interactions, log communication history, and automate call routing based on predefined
+rules. Features like call recording and analytics provide insights into call volume and response
+times, helping businesses streamline external communication and track team performance.
 
 .. cards::
-   .. card:: VoIP actions
+   .. card:: *Phone* widget
       :target: voip/voip_widget
       :large:
 
-      Get oriented with the features of the VoIP widget, like what actions can be taken during a
+      Get started with the **Phone** widget essentials, including actions that can be taken during a
       call.
 
    .. card:: Devices and integrations
       :target: voip/devices_integrations
       :large:
 
-      Learn about accessing the VoIP widget from different devices (like phones) and apps (like
+      Learn how to access the **Phone** widget from different devices (like phones) and apps (like
       Linphone).
 
-VoIP terms
+.. seealso::
+   `Odoo Tutorials: Phone <https://www.odoo.com/slides/voip-voice-over-ip-315>`_
+
+About VoIP
 ==========
 
-- **VoIP**: Voice over Internet Protocol. Technology that is used to handle calls that are not made
+The **Phone** app uses the following technologies to make and receive calls in Odoo:
+
+- **Voice over Internet Protocol (VoIP)**: Technology that is used to handle calls that are not made
   from a phone line.
-- **SIP**: Session Initiation Protocol. Technology included in |VOIP| that specifically handles the
+- **Session Initiation Protocol (SIP)**: Technology included in |VOIP| that specifically handles the
   setup, management, and termination of calls.
 - **Call queue**: A system to route calls (usually in a support team). This allows customers to wait
   for help if no support agents are available.
 - **Dial plans**: A system to define how |VOIP| calls are routed, based on set rules.
 
-Configure VoIP
-==============
+Configure the Phone app
+=======================
 
-To use |VOIP|, first :ref:`install <general/install>` the :guilabel:`VoIP` module.
+To make |VOIP| calls in Odoo, first :ref:`install <general/install>` the **Phone** app.
 
-Once the module is installed, a :icon:`oi-voip` (:guilabel:`VoIP`) icon will appear at the top of
-the screen. This is where phone calls are made from within Odoo. When this icon is clicked, a |VOIP|
-pop-up widget appears on the screen, and is where emails can be sent, user and employee info can be
-edited, and activities can be managed. While this pop-up widget is open, the user can navigate
-through their Odoo apps.
+Once the app is installed, a :icon:`oi-voip` (:guilabel:`Phone`) icon will appear at the top of the
+screen. When this icon is clicked, a **Phone** pop-up widget appears on the screen. This is where
+users can make and receive calls, send emails, edit user and employee info, and manage activities.
+The pop-up widget stays open when navigating other Odoo apps.
 
 Assign user permissions
 -----------------------
@@ -76,30 +78,13 @@ There are three access roles for |VOIP|:
 To modify these roles or add custom roles, see :ref:`Create and modify groups
 <access-rights/groups>`.
 
-Add a VoIP provider
--------------------
+Connect to a VoIP provider
+--------------------------
 
-In order to use |VOIP|, a service provider must be connected to the Odoo database. While |VOIP|
-setup is minimal in Odoo, most configuration happens in the external |VOIP| service provider. Two
-verified providers are :doc:`OnSIP <voip/onsip>` and :doc:`Axivox <voip/axivox>`. Click on the cards
-below to learn how to configure these service providers in the Odoo database. If these providers
-cannot be used, an alternate provider must meet these requirements to connect with Odoo:
-
-- |VOIP| host must provide access to a SIP server via a websocket connection
-- |VOIP| host must support WebRTC protocol
-
-To add the credentials for the alternate provider, go to the **Settings** app and search for `VoIP`.
-In the :guilabel:`Integrations` section under :guilabel:`VoIP`, click :guilabel:`Manage Providers`.
-And then, click :guilabel:`New` and enter the requested information (like the websocket's URL). Note
-that the :guilabel:`OnSIP Domain` field is where the domain created by the alternate provider goes.
-
-If any issues with the |VOIP| service provider are encountered, then reach out to their support
-team. If any issues when setting up the |VOIP| service provider are encountered in Odoo, then follow
-the :ref:`relevant troubleshooting steps <voip/voip_widget/troubleshooting_voip>`.
-
-.. warning::
-   Odoo **cannot** verify that every alternate provider is compatible with Odoo's systems. However,
-   if the above requirements are met, then no issues should be found.
+Making calls through the **Phone** app also requires a |VOIP| service provider. Odoo supports three
+verified providers by default: :doc:`Axivox <voip/axivox>`, :doc:`DIDWW <voip/didww>`, and
+:doc:`OnSIP <voip/onsip>`. Click on the cards below to learn how to configure these service
+providers in the Odoo database:
 
 .. cards::
    .. card:: Axivox configuration
@@ -116,26 +101,51 @@ the :ref:`relevant troubleshooting steps <voip/voip_widget/troubleshooting_voip>
       Learn how to set up OnSIP in Odoo. This includes entering OnSIP credentials into Odoo and
       handling troubleshooting.
 
+   .. card:: DIDWW configuration
+      :target: voip/didww
+      :large:
+
+      Learn how to set up DIDWW in Odoo. This includes entering DIDWW credentials into Odoo and
+      purchasing new numbers.
+
+Other providers must meet two requirements to connect with Odoo:
+
+#. The |VOIP| host must provide access to a SIP server via a websocket connection.
+#. The |VOIP| host must support WebRTC protocol.
+
+.. important::
+   If these requirements are met, it should be possible to add the alternate provider to Odoo.
+   However, Odoo recommends using a verified provider, and cannot guarantee that every alternate
+   provider is compatible with the **Phone** app.
+
+To add credentials for an alternate provider, go to the :menuselection:`Phone app --> Configuration
+--> Settings`. Click :guilabel:`New` and enter the provider information (like the websocket's URL).
+Enter the domain created by the alternate provider in the :guilabel:`OnSIP Domain` field.
+
+For issues setting up the |VOIP| service provider in Odoo, follow the :ref:`relevant troubleshooting
+steps <voip/voip_widget/troubleshooting_voip>`. For any other issues with the |VOIP| service
+provider, reach out directly to their support team.
+
 VoIP workflows
 ==============
 
- Here are a few commonly used workflows for Odoo |VOIP|. This technology is especially popular with
- sales teams and support teams, but can be useful for other teams as well.
+Odoo **Phone** is popular with sales teams and support teams, but can be useful for other teams as
+well. Click the cards below to learn about |VOIP| workflows in Odoo:
 
 .. cards::
    .. card:: Sales teams and VoIP
       :target: voip/sales_calls
       :large:
 
-      Learn how to use VoIP for a sales team. This includes making sales calls, handling follow-ups,
-      and sending a sales quotation while on a call.
+      Learn how to use Odoo **Phone** for a sales team workflow. This includes making sales calls,
+      handling follow-ups, and sending a sales quotation while on a call.
 
    .. card:: Support queues and VoIP
       :target: voip/support_calls
       :large:
 
-      Learn how to use VoIP for a support team. This includes joining a call queue as an agent and
-      handling support tickets that require calls.
+      Learn how to use Odoo **Phone** for a support team workflow. This includes joining a call
+      queue as an agent and handling live phone support tickets.
 
 .. toctree::
    :titlesonly:
