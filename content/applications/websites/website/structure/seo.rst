@@ -111,7 +111,7 @@ other image by clicking the :icon:`fa-upload` :guilabel:`(upload)` button.
 
 .. tip::
    You can set a default social share image. Go to :menuselection:`Website --> Configuration --> Settings`
-   in the :guilabel:`SEO`section and tick the :guilabel:`Default Social Share Image` checkbox.
+   in the :guilabel:`SEO` section and tick the :guilabel:`Default Social Share Image` checkbox.
 
 .. note::
    - The :guilabel:`Social Preview` card displays how the page's information would appear when
