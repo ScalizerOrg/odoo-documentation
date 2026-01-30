@@ -607,14 +607,14 @@ Float (`float`)
 
         .. code-block:: xml
 
-            <field name="int_value" options="{'type': 'number'}" />
+            <field name="float_value" options="{'type': 'number'}" />
 
     - `step`: set the step to the value up and down when the user click on buttons
       (only for input of type number, `1` by default)
 
         .. code-block:: xml
 
-            <field name="int_value" options="{'type': 'number', 'step': 0.1}" />
+            <field name="float_value" options="{'type': 'number', 'step': 0.1}" />
 
     - `format`: should the number be formatted. (`true` by default)
 
@@ -623,14 +623,24 @@ Float (`float`)
 
         .. code-block:: xml
 
-            <field name="int_value" options="{'format': false}" />
+            <field name="float_value" options="{'format': false}" />
+
+    - `min_display_digits`: The minimum number of decimal digits to display.
+
+      For example, if set to 3 and no decimal precision is provided:
+      `1.2` becomes `"1.200"`, `1.123` becomes `"1.123"` and `1.1234` becomes `"1.1234"`.
+
+        .. code-block:: xml
+
+            <field name="float_value" options="{'min_display_digits': 3}" />
+
 
     - `hide_trailing_zeros`: hide zeros to the right of the last non-zero digit,
       e.g. `1.20` becomes `1.2` (`false` by default).
 
         .. code-block:: xml
 
-            <field name="int_value" options="{'hide_trailing_zeros': true}" />
+            <field name="float_value" options="{'hide_trailing_zeros': true}" />
 
 Time (`float_time`)
     The goal of this widget is to display properly a float value that represents
