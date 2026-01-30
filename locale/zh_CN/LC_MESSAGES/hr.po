@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-22 18:30+0000\n"
-"PO-Revision-Date: 2026-01-23 23:20+0000\n"
+"PO-Revision-Date: 2026-01-30 23:21+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/hr/zh_Hans/>\n"
@@ -2294,6 +2294,10 @@ msgid ""
 "everyone's hours, and gain insights on which employees are working overtime "
 "or checking out of work earlier than expected."
 msgstr ""
+"Odoo **考勤** 管理应用可作为员工打卡机使用。员工既可通过 :ref:`亭式模式专用设"
+"备 <attendances/kiosk-mode-entry>`完成上下班打卡，也可 :ref:`直接在系统后台 <"
+"attendances/check-in>`进行打卡操作。管理人员可随时查看在岗人员状态，生成工时"
+"统计报表，同时深入了解员工加班时长、早退等出勤情况。"
 
 #: ../../content/applications/hr/attendances.rst:16
 msgid "Access rights"
@@ -2319,7 +2323,7 @@ msgstr ""
 msgid ""
 "Access to both the **Attendances** application and the various features "
 "within the application is determined by access rights."
-msgstr ""
+msgstr "能否访问**考勤**应用及其内置的各项功能，均由系统的访问权限配置决定。"
 
 #: ../../content/applications/hr/attendances.rst:27
 msgid ""
@@ -2405,6 +2409,10 @@ msgid ""
 "records, both on the **Attendances** application dashboard as well as in the "
 "attendance reports, and make modifications to their records."
 msgstr ""
+"若需查询某员工的考勤审批人，可进入 :menuselection:`员工应用`，点击对应员工档"
+"案。切换至 :guilabel:`工作信息` 标签页，下滑至 :guilabel:`审批人` 板块，查看 "
+":guilabel:`考勤` 字段即可。被选中的审批人可在**考勤**应用的仪表板及考勤报表中"
+"查看该员工的考勤记录，并对记录进行修改操作。"
 
 #: ../../content/applications/hr/attendances.rst:68
 #: ../../content/applications/hr/attendances/kiosks.rst:22
@@ -2437,6 +2445,9 @@ msgid ""
 "building-o` :guilabel:`(building)` icon apply to all companies within the "
 "database."
 msgstr ""
+"任何带有 :icon:`fa-building-o` :guilabel:`(构建)` 图标的配置项都是针对特定公"
+"司的配置。没有 :icon:`fa-building-o` :guilabel:`(构建)` 图标的项目适用于数据"
+"库中的所有公司。"
 
 #: ../../content/applications/hr/attendances.rst:83
 msgid "Modes"
@@ -2448,6 +2459,8 @@ msgid ""
 "feature to allow users to check in and out directly from the Odoo database. "
 "If this is not activated, users must use a kiosk to check in and out of work."
 msgstr ""
+":guilabel:`后台考勤打卡` :icon:`fa-building-o`：启用此功能后，用户可直接在 "
+"Odoo 系统后台完成上下班打卡；若未启用，用户则必须通过自助考勤机进行打卡操作。"
 
 #: ../../content/applications/hr/attendances.rst:88
 msgid ""
@@ -2455,6 +2468,8 @@ msgid ""
 "to automatically check out employees according to their working schedule, "
 "after a buffer of time has passed."
 msgstr ""
+":guilabel:`自动签退`:icon:`fa-building-o`：启用此功能后，系统将在员工排班结束"
+"后的缓冲期过后，自动为员工执行签退操作。"
 
 #: ../../content/applications/hr/attendances.rst:90
 msgid ""
@@ -2463,6 +2478,9 @@ msgid ""
 "time, in hours, that must elapse after an employee's working hours have "
 "ended, before they are automatically checked out."
 msgstr ""
+":guilabel:`签退宽限时长`：仅当 :guilabel:`自动签退` :icon:`fa-building-o` 功"
+"能启用时，此字段才会显示。请输入员工排班结束后，系统自动执行签退操作前的宽限"
+"时长，单位为小时。"
 
 #: ../../content/applications/hr/attendances.rst:95
 msgid ""
@@ -2471,6 +2489,9 @@ msgid ""
 "at 9:00 AM and forgets to check out at 5:00 PM. At 7:00 PM, they are "
 "automatically checked out."
 msgstr ""
+"启用 :guilabel:`自动签退`选项，并将 :guilabel:`宽限时长` 设为 2.00 小时。一名"
+"员工上午 9:00 打卡上班，下午 5:00 下班时忘记签退，系统将在当晚 7:00 自动为其"
+"完成签退。"
 
 #: ../../content/applications/hr/attendances.rst:99
 msgid ""
@@ -2479,6 +2500,9 @@ msgid ""
 "vacation time or sick time, on the :doc:`attendance report <attendances/"
 "attendance_reporting>`."
 msgstr ""
+":guilabel:`缺勤管理` :icon:`fa-building-o`： 激活此功能可在 :doc:`考勤报表 <"
+"attendances/attendance_reporting>` 中记录任何与请假申请无关的缺勤，如休假时间"
+"或病假时间。"
 
 #: ../../content/applications/hr/attendances.rst:104
 msgid "Extra Hours"
@@ -2503,13 +2527,18 @@ msgid ""
 "specified minutes, the extra time **is** counted as overtime for the "
 "employee."
 msgstr ""
+":guilabel:`公司侧加班宽限时长`：输入时长（单位：分钟），员工加班时长**未**达"
+"到该阈值的部分，不计入加班统计。具体规则：员工下班打卡时，若超时时长低于设定"
+"分钟数，则该部分时长**不**计为加班；若超时时长高于设定分钟数，则全部超时时长"
+"均计入加班。"
 
 #: ../../content/applications/hr/attendances.rst:116
 msgid ""
 "A company sets the :guilabel:`Tolerance Time In Favor Of Company` to `15` "
 "minutes, and the working hours for the entire company are set from 9:00 AM "
 "to 5:00 PM."
-msgstr ""
+msgstr "一家公司将 :guilabel:`公司侧加班宽限时长` 设置为 15 分钟，全员标准工时为上午 "
+"9:00 至下午 5:00。"
 
 #: ../../content/applications/hr/attendances.rst:119
 msgid ""
@@ -2517,6 +2546,8 @@ msgid ""
 "extra 14 minutes are **not** counted towards their overtime. If the employee "
 "checks out at 5:17 PM, they earn 17 minutes of overtime."
 msgstr ""
+"员工上午 9:00 打卡上班，下午 5:14 打卡下班，超时 14 分钟，**不**计入加班时长"
+"；若该员工下午 5:17 打卡下班，超时 17 分钟，则这 17 分钟全部计入加班时长。"
 
 #: ../../content/applications/hr/attendances.rst:123
 msgid ""
@@ -2530,13 +2561,18 @@ msgid ""
 "working hours and more than this specified grace period, they **are** "
 "penalized for their reduced hours."
 msgstr ""
+":guilabel:`员工侧考勤宽限时长`：输入时长（单位：分钟），员工当日实际工时少于"
+"标准工时，但差值未超过该阈值的，**不会**对其考勤记录产生负面影响。具体规则："
+"员工下班打卡时，若当日工时不足标准时长，且时长差值低于设定分钟数，则**不会**"
+"因此被处罚；若时长差值高于设定分钟数，则会因工时不足被处罚。"
 
 #: ../../content/applications/hr/attendances.rst:132
 msgid ""
 "A company sets the :guilabel:`Tolerance Time In Favor Of Employee` fields to "
 "`15` minutes, and the working hours for the entire company are set from 9:00 "
 "AM to 5:00 PM."
-msgstr ""
+msgstr "一家公司将 :guilabel:`员工侧考勤宽限时长` 设置为 15 分钟，全员标准工时为上午 "
+"9:00 至下午 5:00。"
 
 #: ../../content/applications/hr/attendances.rst:135
 msgid ""
@@ -2547,6 +2583,10 @@ msgid ""
 "they **are** penalized, and they are logged as only working 7 hours and 35 "
 "minutes."
 msgstr ""
+"员工上午 9:05 打卡上班，下午 4:55 打卡下班，当日实际工时比标准时长少 10 分钟"
+"，未超过宽限阈值，**不会**被处罚，考勤记录按 8 小时标准工时统计。若该员工下午"
+" 4:40 打卡下班，当日实际工时比标准时长少 20 分钟，超出宽限阈值，**将会**被处"
+"罚，考勤记录按 7 小时 35 分钟统计。"
 
 #: ../../content/applications/hr/attendances.rst:141
 msgid ""
@@ -2555,6 +2595,9 @@ msgid ""
 "extra time automatically approved, or :guilabel:`Approved by Manager` if all "
 "extra time should be reviewed and approved by a manager."
 msgstr ""
+":guilabel:`加班时长审批` :icon:`fa-building-o`：可选择以下任一单选按钮：勾选 "
+":guilabel:`自动审批`，则所有加班时长自动通过审批；勾选 :guilabel:`经理审批`，"
+"则所有加班时长均需经管理人员审核批准后方可生效。"
 
 #: ../../content/applications/hr/attendances.rst:145
 msgid ""
@@ -2649,6 +2692,8 @@ msgid ""
 "filter` :guilabel:`Filters` or :icon:`oi-group` :guilabel:`Group By`, or "
 "combine both to present the desired information."
 msgstr ""
+"在这些情况下，请使用搜索栏选择 :icon:`fa-filter` :guilabel:`筛选器` 或 :icon"
+":`oi-group` :guilabel:`分组方式`，或将两者结合起来以显示所需的信息。"
 
 #: ../../content/applications/hr/attendances.rst:189
 msgid ":doc:`../essentials/search`"
@@ -2783,6 +2828,10 @@ msgid ""
 "companies with hybrid working schedules, who may need to perform audits to "
 "ensure proper compliance."
 msgstr ""
+"Odoo 会针对每一次上下班打卡，同步记录打卡时间与打卡地点，具体记录字段会根据打"
+"卡方式的不同有所差异。这些详尽的考勤日志可用于核实员工在任意工作日的在岗地点"
+"，对于实行混合办公制度的企业而言尤为实用 —— 这类企业可能需要通过考勤审计，确"
+"保相关制度得到合规执行。"
 
 #: ../../content/applications/hr/attendances.rst:244
 msgid "The detailed attendance log contains the following information:"
@@ -2819,13 +2868,15 @@ msgstr ""
 msgid ""
 ":guilabel:`Worked Extra Hours`: Unpaid overtime hours worked beyond the "
 "expected working schedule (shows **only** when present for the employee)."
-msgstr ""
+msgstr ":guilabel:`加班时间`： 超出预期工作时间的无偿加班时数（**仅**显示雇员存在时）"
+"。"
 
 #: ../../content/applications/hr/attendances.rst:257
 msgid ""
 ":guilabel:`Extra Hours`: Approved overtime (the :guilabel:`Worked Time` "
 "minus the approved :guilabel:`Worked Extra Hours`."
-msgstr ""
+msgstr ":guilabel:`额外时间`：批准的加班时间（:guilabel:`工作时间`减去批准的 :guilabe"
+"l:`额外工作时间`。"
 
 #: ../../content/applications/hr/attendances.rst:261
 msgid "Check in/check out details"
