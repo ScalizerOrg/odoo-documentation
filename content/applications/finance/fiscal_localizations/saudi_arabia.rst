@@ -176,7 +176,8 @@ Company and contacts
 To ensure proper integration with :ref:`ZATCA <localizations/saudi-arabia/zatca>`, the following
 fields are required on the :ref:`company record <general/companies/company>`:
 
-- :guilabel:`Company Name` (must match exactly VAT certificate)
+- :guilabel:`Company Name`, limited to a maximum of 63 characters to comply with ZATCA
+  requirements.
 - All relevant :guilabel:`Address` fields, including the :guilabel:`District`, :guilabel:`Building
   Number`, and :guilabel:`Plot Identification`
 - :guilabel:`Identification Scheme`
