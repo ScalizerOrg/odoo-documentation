@@ -85,8 +85,8 @@ Once completed, click the :guilabel:`Set the Badge` button. The *Set-up* pop-up 
 notification stating `Badge assigned successfully!` appears in the upper-right corner of the
 *Onboarding* dashboard.
 
-The new badge number appears in the *Badge ID* field in the *Settings* tab on the :ref:`employee's
-form <employees/hr-attn-pos>`.
+The new badge number appears in the *RFID/Badge Number* field in the *Settings* tab on the
+:ref:`employee's form <employees/hr-attn-pos>`.
 
 .. image:: attendance_onboarding/new-barcode.png
    :alt: A barcode set-up pop-up window with a new barcode entered.
