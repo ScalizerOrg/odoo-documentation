@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 18:30+0000\n"
+"POT-Creation-Date: 2026-01-29 18:30+0000\n"
 "PO-Revision-Date: 2025-12-30 23:10+0000\n"
 "Last-Translator: \"Manon Rondou (ronm)\" <ronm@odoo.com>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -6384,49 +6384,35 @@ msgstr ""
 "en masse. Après avoir complété le formulaire, un e-mail d'activation est "
 "envoyé à l'adresse e-mail et l'expéditeur de confiance peut être activé."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:87
+#: ../../content/applications/general/email_communication/mailjet_api.rst:88
 msgid ""
-"It is recommended to set up the :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` settings on the "
-"domain of the sender."
+"To prevent emails from being marked as spam, :ref:`set up a custom domain "
+"<email-online-sh-domain>`. Using the Odoo-provided subdomain "
+"(*dbname.odoo.com*) with the Mailjet server may lead to email deliverability "
+"issues, because the email authentication protocols (:abbr:`SPF (Sender "
+"Policy Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)`, "
+"and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
+"Conformance)`) cannot be configured on that subdomain."
 msgstr ""
-"Il est recommandé de configurer les paramètres :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` sur le domaine de "
-"l'expéditeur."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:92
+#: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
 "`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
 "us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
 "Guide>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+#: ../../content/applications/general/email_communication/mailjet_api.rst:99
 msgid ""
 "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:98
-msgid ""
-"If the database is not using a custom domain, then in order to verify the "
-"sender's address, a temporary alias (of the three email addresses mentioned "
-"above) should be set up in Odoo CRM to create a lead. Then, the database is "
-"able to receive the verification email and verify the accounts."
-msgstr ""
-"Si la base de données n'utilise pas de domaine personnalisé, alors afin de "
-"vérifier l'adresse de l'expéditeur, un alias temporaire (des trois adresses "
-"e-mail susmentionnées) doit être configuré dans Odoo CRM pour créer une "
-"piste. Ensuite, la base de données est capable de recevoir l'e-mail de "
-"vérification et de vérifier les comptes."
-
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
 msgstr "Ajouter un domaine"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:108
+#: ../../content/applications/general/email_communication/mailjet_api.rst:107
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -6444,7 +6430,7 @@ msgstr ""
 "ensuite sur :guilabel:`Ajouter un domaine` pour ajouter le domaine "
 "personnalisé."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:115
+#: ../../content/applications/general/email_communication/mailjet_api.rst:114
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
@@ -6452,7 +6438,7 @@ msgstr ""
 "Le domaine doit être ajouté au compte Mailjet et ensuite validé via "
 "le :abbr:`DNS (Domain Name System)`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:118
+#: ../../content/applications/general/email_communication/mailjet_api.rst:117
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
@@ -6460,7 +6446,7 @@ msgstr ""
 "Après cela, complétez la page :guilabel:`Ajouter un nouveau nom de domaine` "
 "sur Mailjet et cliquez sur :guilabel:`Continuer`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:121
+#: ../../content/applications/general/email_communication/mailjet_api.rst:120
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), "
@@ -6479,11 +6465,11 @@ msgstr ""
 msgid "The TXT record information to input on the domain's DNS."
 msgstr "Les informations d'enregistrement TXT à saisir dans le DNS du domaine."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:129
 msgid "Setup in the domain's DNS"
 msgstr "Configuration dans le DNS du domaine"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:132
+#: ../../content/applications/general/email_communication/mailjet_api.rst:131
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT "
 "record to the domain's :abbr:`DNS (Domain Name System)`. This process varies "
@@ -6500,11 +6486,11 @@ msgstr ""
 "contiennent l':guilabel:`Hôte` et la :guilabel:`Valeur`. Collez ces "
 "informations dans les champs correspondants de l'enregistrement TXT."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:138
 msgid "Return to Mailjet account information"
 msgstr "Revenir aux informations du compte Mailjet"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:141
+#: ../../content/applications/general/email_communication/mailjet_api.rst:140
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate "
@@ -6518,7 +6504,7 @@ msgstr ""
 "adresse expéditeur`, cliquez sur l'icône d'engrenage à côté "
 "de :guilabel:`Domaine` et sélectionnez :guilabel:`Valider`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:145
+#: ../../content/applications/general/email_communication/mailjet_api.rst:144
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -6528,7 +6514,7 @@ msgstr ""
 "adresses de l'expéditeur <https://app.mailjet.com/ account/sender>`_ dans "
 "les Informations du compte Mailjet et en cliquant sur :guilabel:`Gérer`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:148
+#: ../../content/applications/general/email_communication/mailjet_api.rst:147
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -6542,7 +6528,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "Vérifiez l'enregistrement DNS dans Mailjet."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:154
+#: ../../content/applications/general/email_communication/mailjet_api.rst:153
 msgid ""
 "After successfully setting up the domain, there is an option "
 "to :guilabel:`Authenticate this domain (SPF/DKIM)`. This button "
@@ -6556,7 +6542,7 @@ msgstr ""
 "(DomainKeys Identified Mail) à fournir au fournisseur :abbr:`DNS (Domain "
 "Name System)`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+#: ../../content/applications/general/email_communication/mailjet_api.rst:158
 msgid ""
 "`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/"
 "hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
@@ -6570,11 +6556,11 @@ msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr ""
 "Authentifier le domaine avec les enregistrements SPF/DKIM dans Mailjet."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:167
 msgid "Set up in Odoo"
 msgstr "Configuration dans Odoo"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:170
+#: ../../content/applications/general/email_communication/mailjet_api.rst:169
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to "
 "the :guilabel:`Settings`. With :ref:`developer-mode` turned on, go to "
@@ -6588,7 +6574,7 @@ msgstr ""
 "sortants`. Ensuite, créez une nouvelle configuration de serveur sortant en "
 "cliquant sur le bouton :guilabel:`Créer`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:175
+#: ../../content/applications/general/email_communication/mailjet_api.rst:174
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -6604,7 +6590,7 @@ msgstr ""
 "(Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)` même si "
 "Mailjet ne l'exige pas."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:180
+#: ../../content/applications/general/email_communication/mailjet_api.rst:179
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For "
 "the :guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied "
@@ -6618,7 +6604,7 @@ msgstr ""
 "pouvez trouver ces paramètres dans :menuselection:`Mailjet -->  Paramètres "
 "du compte --> Paramètres SMTP et SEND API`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:185
+#: ../../content/applications/general/email_communication/mailjet_api.rst:184
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set "
 "the :guilabel:`Priority` value higher than that of any transactional email "
@@ -14439,6 +14425,30 @@ msgstr ""
 "à :guilabel:`Gérer les modes de paiement` dans le menu sur la droite. "
 "Ajoutez ensuite les nouvelles informations de paiement et "
 "sélectionnez :guilabel:`Ajouter une nouvelle carte`."
+
+#~ msgid ""
+#~ "It is recommended to set up the :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` "
+#~ "settings on the domain of the sender."
+#~ msgstr ""
+#~ "Il est recommandé de configurer les paramètres :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` sur le "
+#~ "domaine de l'expéditeur."
+
+#~ msgid ""
+#~ "If the database is not using a custom domain, then in order to verify the "
+#~ "sender's address, a temporary alias (of the three email addresses "
+#~ "mentioned above) should be set up in Odoo CRM to create a lead. Then, the "
+#~ "database is able to receive the verification email and verify the "
+#~ "accounts."
+#~ msgstr ""
+#~ "Si la base de données n'utilise pas de domaine personnalisé, alors afin "
+#~ "de vérifier l'adresse de l'expéditeur, un alias temporaire (des trois "
+#~ "adresses e-mail susmentionnées) doit être configuré dans Odoo CRM pour "
+#~ "créer une piste. Ensuite, la base de données est capable de recevoir l'e-"
+#~ "mail de vérification et de vérifier les comptes."
 
 #~ msgid "Use"
 #~ msgstr "Explication"
