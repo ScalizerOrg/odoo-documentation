@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 18:31+0000\n"
-"PO-Revision-Date: 2026-01-16 23:05+0000\n"
+"POT-Creation-Date: 2026-01-29 18:30+0000\n"
+"PO-Revision-Date: 2026-01-31 23:10+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-17-doc/"
 "general/ko/>\n"
@@ -6824,18 +6824,18 @@ msgstr ""
 "일 중에서 적절한 이메일 유형을 선택합니다. 양식을 작성하면 해당 이메일 주소"
 "로 활성화용 이메일이 전송되며 신뢰할 수 있는 발신자를 활성화할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:87
+#: ../../content/applications/general/email_communication/mailjet_api.rst:88
 msgid ""
-"It is recommended to set up the :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` settings on the "
-"domain of the sender."
+"To prevent emails from being marked as spam, :ref:`set up a custom domain "
+"<email-online-sh-domain>`. Using the Odoo-provided subdomain "
+"(*dbname.odoo.com*) with the Mailjet server may lead to email deliverability "
+"issues, because the email authentication protocols (:abbr:`SPF (Sender "
+"Policy Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)`, "
+"and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
+"Conformance)`) cannot be configured on that subdomain."
 msgstr ""
-"발신자 도메인에 :abbr:`SPF (발신자 정책 프레임워크)`/:abbr:`DKIM (도메인 키 "
-"식별 메일)`/:abbr:`DMARC (도메인 기반 메시지 인증, 보고 및 준수)` 항목을 설정"
-"해 두는 것이 좋습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:92
+#: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
 "`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
 "us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
@@ -6845,21 +6845,13 @@ msgstr ""
 "articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
 "Guide>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+#: ../../content/applications/general/email_communication/mailjet_api.rst:99
 msgid ""
 "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
 msgstr ""
 "`Mailjet DMARC 참고 문서 <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
-
-#: ../../content/applications/general/email_communication/mailjet_api.rst:98
-msgid ""
-"It is recommended to set up a custom domain. Due to increased security on "
-"provider side, emails sent with an outgoing mail server other than the "
-"Odoo's provided one using subdomain (dbname.odoo.com) will fail due to DMARC "
-"policy, and/or be marked as spam."
-msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
@@ -8257,7 +8249,7 @@ msgstr "Windows 가상 IoT"
 
 #: ../../content/applications/general/iot.rst:52
 msgid "Set up Windows virtual IoT."
-msgstr ""
+msgstr "Windows 가상 IoT를 설정합니다."
 
 #: ../../content/applications/general/iot.rst:58
 #: ../../content/applications/general/iot/connect.rst:3
@@ -12240,10 +12232,18 @@ msgstr ""
 "도구에 액세스해야 한다는 의미로, 더욱 어렵게 만드는 것입니다."
 
 #: ../../content/applications/general/users/2fa.rst:18
+msgid ""
+"Some governments, such as the :doc:`Australian <../../finance/"
+"fiscal_localizations/australia>` government, require |2fa|. For "
+"these :doc:`fiscal localizations <../../finance/fiscal_localizations>`, it "
+"is not possible to deactivate |2fa|."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:23
 msgid "Requirements"
 msgstr "요구 사항"
 
-#: ../../content/applications/general/users/2fa.rst:21
+#: ../../content/applications/general/users/2fa.rst:26
 msgid ""
 "These lists are just examples. They are **not** endorsements of any specific "
 "software."
@@ -12251,7 +12251,7 @@ msgstr ""
 "이 목록은 예시로 제시된 것입니다. 특정 소프트웨어를 추천하는 것이 **아닙니다"
 "**."
 
-#: ../../content/applications/general/users/2fa.rst:23
+#: ../../content/applications/general/users/2fa.rst:28
 msgid ""
 "Phone-based authenticators are the easiest and most commonly used. Examples "
 "include:"
@@ -12259,26 +12259,26 @@ msgstr ""
 "휴대폰을 이용한 인증서는 가장 쉽고 일반적으로 사용되는 인증 수단입니다. 예를 "
 "들면 다음과 같습니다:"
 
-#: ../../content/applications/general/users/2fa.rst:25
+#: ../../content/applications/general/users/2fa.rst:30
 msgid "`Authy <https://authy.com/>`_"
 msgstr "`Authy <https://authy.com/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:26
+#: ../../content/applications/general/users/2fa.rst:31
 msgid "`FreeOTP <https://freeotp.github.io/>`_"
 msgstr "`FreeOTP <https://freeotp.github.io/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:27
+#: ../../content/applications/general/users/2fa.rst:32
 msgid ""
 "`Google Authenticator <https://support.google.com/accounts/answer/1066447?"
 "hl=en>`_"
 msgstr ""
 "`Google 인증 <https://support.google.com/accounts/answer/1066447?hl=en>`_"
 
-#: ../../content/applications/general/users/2fa.rst:28
+#: ../../content/applications/general/users/2fa.rst:33
 msgid "`LastPass Authenticator <https://lastpass.com/auth/>`_"
 msgstr "`LastPass 인증 <https://lastpass.com/auth/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:29
+#: ../../content/applications/general/users/2fa.rst:34
 msgid ""
 "`Microsoft Authenticator <https://www.microsoft.com/en-gb/account/"
 "authenticator?cmp=h66ftb_42hbak>`_"
@@ -12286,21 +12286,21 @@ msgstr ""
 "`Microsoft 인증 <https://www.microsoft.com/en-gb/account/authenticator?"
 "cmp=h66ftb_42hbak>`_"
 
-#: ../../content/applications/general/users/2fa.rst:32
+#: ../../content/applications/general/users/2fa.rst:37
 msgid "Password managers are another option. Common examples include:"
 msgstr ""
 "비밀번호 관리자를 선택할 수도 있습니다. 다음과 같은 일반적인 예시를 확인해 보"
 "세요."
 
-#: ../../content/applications/general/users/2fa.rst:34
+#: ../../content/applications/general/users/2fa.rst:39
 msgid "`1Password <https://support.1password.com/one-time-passwords/>`_"
 msgstr "`1Password <https://support.1password.com/one-time-passwords/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:35
-msgid "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
-msgstr "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
+#: ../../content/applications/general/users/2fa.rst:40
+msgid "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_"
+msgstr ""
 
-#: ../../content/applications/general/users/2fa.rst:38
+#: ../../content/applications/general/users/2fa.rst:43
 msgid ""
 "The remainder of this document uses Google Authenticator as an example, as "
 "it is one of the most commonly used. This is **not** an endorsement of the "
@@ -12309,11 +12309,11 @@ msgstr ""
 "이 문서의 나머지 부분에서는 가장 일반적으로 사용되는 Google 인증 방식을 예로 "
 "들어 설명합니다. 해당 제품을 추천하는 것이 **아닙니다**."
 
-#: ../../content/applications/general/users/2fa.rst:42
+#: ../../content/applications/general/users/2fa.rst:47
 msgid "Two-factor authentication setup"
 msgstr "2단계 인증 설정"
 
-#: ../../content/applications/general/users/2fa.rst:44
+#: ../../content/applications/general/users/2fa.rst:49
 msgid ""
 "After selecting an authenticator, log in to Odoo, then click the profile "
 "avatar in the upper-right corner, and select :guilabel:`My Profile` from the "
@@ -12322,7 +12322,7 @@ msgstr ""
 "인증자를 선택한 후 Odoo에 로그인한 다음, 오른쪽 상단에 있는 아바타를 클릭하"
 "고 드롭다운 메뉴에서 :guilabel:`내 프로필` 을 선택합니다."
 
-#: ../../content/applications/general/users/2fa.rst:47
+#: ../../content/applications/general/users/2fa.rst:52
 msgid ""
 "Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-"
 "Factor Authentication` toggle to *active*."
@@ -12330,7 +12330,7 @@ msgstr ""
 ":guilabel:`계정 보안` 탭을 클릭한 다음 :guilabel:`2단계 인증` 토글을 *활성화"
 "* 로 밀어서 전환합니다."
 
-#: ../../content/applications/general/users/2fa.rst:53
+#: ../../content/applications/general/users/2fa.rst:58
 msgid ""
 "This generates a :guilabel:`Security Control` pop-up window that requires "
 "password confirmation to continue. Enter the appropriate password, then "
@@ -12342,13 +12342,13 @@ msgstr ""
 "릭합니다. 그런 다음 |QR| 과 함께 :guilabel:`2단계 인증 활성화` 팝업 창이 나타"
 "납니다."
 
-#: ../../content/applications/general/users/2fa.rst:61
+#: ../../content/applications/general/users/2fa.rst:66
 msgid ""
 "Using the desired authenticator application, scan the |QR| when prompted."
 msgstr ""
 "원하는 인증자 애플리케이션을 사용하여, 메시지가 표시되면 |QR| 을 스캔합니다."
 
-#: ../../content/applications/general/users/2fa.rst:64
+#: ../../content/applications/general/users/2fa.rst:69
 msgid ""
 "If scanning the screen is not possible (e.g. the setup is being completed on "
 "the *same* device as the authenticator application), clicking the "
@@ -12359,11 +12359,11 @@ msgstr ""
 "완료할 경우) 대체할 방법으로는 :guilabel:`스캔이 되지 않나요?` 링크를 클릭하"
 "거나 비밀번호를 복사하여 인증 장치를 수동으로 설정할 수 있습니다."
 
-#: ../../content/applications/general/users/2fa.rst:74
+#: ../../content/applications/general/users/2fa.rst:79
 msgid "Afterwards, the authenticator should display a *verification code*."
 msgstr "그러면 인증자에 *확인 코드* 가 표시됩니다."
 
-#: ../../content/applications/general/users/2fa.rst:79
+#: ../../content/applications/general/users/2fa.rst:84
 msgid ""
 "Enter the code into the :guilabel:`Verification Code` field, then "
 "click :guilabel:`Activate`."
@@ -12371,15 +12371,15 @@ msgstr ""
 ":guilabel:`인증 코드` 필드에 코드를 입력한 다음 :guilabel:`활성화` 를 클릭합"
 "니다."
 
-#: ../../content/applications/general/users/2fa.rst:85
+#: ../../content/applications/general/users/2fa.rst:90
 msgid "Logging in"
 msgstr "로그인하기"
 
-#: ../../content/applications/general/users/2fa.rst:87
+#: ../../content/applications/general/users/2fa.rst:92
 msgid "To confirm |2fa| setup is complete, log out of Odoo."
 msgstr "|2fa| 설정이 완료되었는지 확인하려면 Odoo에서 로그아웃합니다."
 
-#: ../../content/applications/general/users/2fa.rst:89
+#: ../../content/applications/general/users/2fa.rst:94
 msgid ""
 "On the login page, input the username and password, then "
 "click :guilabel:`Log in`. On the :guilabel:`Two-factor Authentication` page, "
@@ -12394,7 +12394,7 @@ msgstr ""
 msgid "The login page with 2fa enabled."
 msgstr "2단계 인증이 활성화되어 있는 로그인 페이지"
 
-#: ../../content/applications/general/users/2fa.rst:98
+#: ../../content/applications/general/users/2fa.rst:103
 msgid ""
 "If a user loses access to their authenticator, an administrator **must** "
 "deactivate |2fa| on the account before the user can log in."
@@ -12402,11 +12402,11 @@ msgstr ""
 "사용자가 인증자 액세스 권한을 분실한 경우에는, 사용자가 로그인하기 전에 **반"
 "드시** 관리자 계정에서 |2fa| 를 비활성화해야 합니다."
 
-#: ../../content/applications/general/users/2fa.rst:102
+#: ../../content/applications/general/users/2fa.rst:107
 msgid "Enforce two-factor authentication"
 msgstr "2단계 인증 적용"
 
-#: ../../content/applications/general/users/2fa.rst:104
+#: ../../content/applications/general/users/2fa.rst:109
 msgid ""
 "To enforce the use of |2fa| for all users, first navigate "
 "to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
@@ -12417,7 +12417,7 @@ msgstr ""
 "현황판 --> 앱` 으로 이동합니다. :guilabel:`검색...` 표시줄에서 :guilabel:`앱"
 "` 필터를 제거한 다음 `메일을 통한 2FA` 를 검색합니다."
 
-#: ../../content/applications/general/users/2fa.rst:108
+#: ../../content/applications/general/users/2fa.rst:113
 msgid ""
 "Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` "
 "module."
@@ -12429,7 +12429,7 @@ msgstr ""
 msgid "The 2FA by mail module in the Apps directory."
 msgstr "앱 디렉토리에 있는 이메일 2중 인증 모듈"
 
-#: ../../content/applications/general/users/2fa.rst:114
+#: ../../content/applications/general/users/2fa.rst:119
 msgid ""
 "After installation is complete, go to :guilabel:`Settings app: Permissions`. "
 "Tick the checkbox labeled, :guilabel:`Enforce two-factor authentication`. "
@@ -12441,7 +12441,7 @@ msgstr ""
 "정 내용을 :guilabel:`직원만` 또는 :guilabel:`모든 사용자` 에 적용할지 선택합"
 "니다."
 
-#: ../../content/applications/general/users/2fa.rst:119
+#: ../../content/applications/general/users/2fa.rst:124
 msgid ""
 "Selecting :guilabel:`All users` applies the setting to portal users, in "
 "addition to employees."
@@ -12453,7 +12453,7 @@ msgstr ""
 msgid "The enforce two factor setting in the Settings application."
 msgstr "설정 애플리케이션에서 2단계 설정을 적용합니다."
 
-#: ../../content/applications/general/users/2fa.rst:125
+#: ../../content/applications/general/users/2fa.rst:130
 msgid "Click :guilabel:`Save` to commit any unsaved changes."
 msgstr "저장되지 않은 변경 사항이 적용되도록 :guilabel:`저장` 을 클릭합니다."
 
@@ -14464,6 +14464,21 @@ msgstr ""
 "결제 옵션을 고객이 관리하고자 할 경우에는, 오른쪽 메뉴에서 :guilabel:`결제 방"
 "법 관리`로 이동합니다. 그런 다음, 새로운 결제 정보를 추가하고 :guilabel:`새 "
 "카드 추가`를 선택합니다."
+
+#~ msgid ""
+#~ "It is recommended to set up the :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` "
+#~ "settings on the domain of the sender."
+#~ msgstr ""
+#~ "발신자 도메인에 :abbr:`SPF (발신자 정책 프레임워크)`/:abbr:`DKIM (도메인 "
+#~ "키 식별 메일)`/:abbr:`DMARC (도메인 기반 메시지 인증, 보고 및 준수)` 항목"
+#~ "을 설정해 두는 것이 좋습니다."
+
+#~ msgid ""
+#~ "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
+#~ msgstr ""
+#~ "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
 
 #~ msgid ""
 #~ "If the database is not using a custom domain, then in order to verify the "

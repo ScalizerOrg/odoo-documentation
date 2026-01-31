@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 18:31+0000\n"
+"POT-Creation-Date: 2026-01-29 18:30+0000\n"
 "PO-Revision-Date: 2025-12-18 23:05+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/"
@@ -7124,19 +7124,18 @@ msgstr ""
 "ou e-mails em massa. Depois de preencher o formulário, um e-mail de ativação "
 "é enviado para o endereço de e-mail e remetente confiável pode ser ativado."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:87
+#: ../../content/applications/general/email_communication/mailjet_api.rst:88
 msgid ""
-"It is recommended to set up the :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` settings on the "
-"domain of the sender."
+"To prevent emails from being marked as spam, :ref:`set up a custom domain "
+"<email-online-sh-domain>`. Using the Odoo-provided subdomain "
+"(*dbname.odoo.com*) with the Mailjet server may lead to email deliverability "
+"issues, because the email authentication protocols (:abbr:`SPF (Sender "
+"Policy Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)`, "
+"and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
+"Conformance)`) cannot be configured on that subdomain."
 msgstr ""
-"Recomenda-se configurar as definições de :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` no domínio do "
-"remetente."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:92
+#: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
 "`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
 "us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
@@ -7146,21 +7145,13 @@ msgstr ""
 "us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
 "Guide>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+#: ../../content/applications/general/email_communication/mailjet_api.rst:99
 msgid ""
 "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
 msgstr ""
 "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
-
-#: ../../content/applications/general/email_communication/mailjet_api.rst:98
-msgid ""
-"It is recommended to set up a custom domain. Due to increased security on "
-"provider side, emails sent with an outgoing mail server other than the "
-"Odoo's provided one using subdomain (dbname.odoo.com) will fail due to DMARC "
-"policy, and/or be marked as spam."
-msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
@@ -13098,10 +13089,18 @@ msgstr ""
 "conta *e* ter acesso ao autenticador, o que é uma proposta mais difícil."
 
 #: ../../content/applications/general/users/2fa.rst:18
+msgid ""
+"Some governments, such as the :doc:`Australian <../../finance/"
+"fiscal_localizations/australia>` government, require |2fa|. For "
+"these :doc:`fiscal localizations <../../finance/fiscal_localizations>`, it "
+"is not possible to deactivate |2fa|."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:23
 msgid "Requirements"
 msgstr "Pré-requisitos"
 
-#: ../../content/applications/general/users/2fa.rst:21
+#: ../../content/applications/general/users/2fa.rst:26
 msgid ""
 "These lists are just examples. They are **not** endorsements of any specific "
 "software."
@@ -13109,7 +13108,7 @@ msgstr ""
 "Essas listas são apenas exemplos, **não** são recomendações de nenhum "
 "software específico."
 
-#: ../../content/applications/general/users/2fa.rst:23
+#: ../../content/applications/general/users/2fa.rst:28
 msgid ""
 "Phone-based authenticators are the easiest and most commonly used. Examples "
 "include:"
@@ -13117,15 +13116,15 @@ msgstr ""
 "Os autenticadores de celular são os mais fáceis e mais utilizados. Os "
 "exemplos incluem:"
 
-#: ../../content/applications/general/users/2fa.rst:25
+#: ../../content/applications/general/users/2fa.rst:30
 msgid "`Authy <https://authy.com/>`_"
 msgstr "`Authy <https://authy.com/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:26
+#: ../../content/applications/general/users/2fa.rst:31
 msgid "`FreeOTP <https://freeotp.github.io/>`_"
 msgstr "`FreeOTP <https://freeotp.github.io/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:27
+#: ../../content/applications/general/users/2fa.rst:32
 msgid ""
 "`Google Authenticator <https://support.google.com/accounts/answer/1066447?"
 "hl=en>`_"
@@ -13133,11 +13132,11 @@ msgstr ""
 "`Google Authenticator <https://support.google.com/accounts/answer/1066447?"
 "hl=en>`_"
 
-#: ../../content/applications/general/users/2fa.rst:28
+#: ../../content/applications/general/users/2fa.rst:33
 msgid "`LastPass Authenticator <https://lastpass.com/auth/>`_"
 msgstr "`LastPass Authenticator <https://lastpass.com/auth/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:29
+#: ../../content/applications/general/users/2fa.rst:34
 msgid ""
 "`Microsoft Authenticator <https://www.microsoft.com/en-gb/account/"
 "authenticator?cmp=h66ftb_42hbak>`_"
@@ -13145,19 +13144,19 @@ msgstr ""
 "`Microsoft Authenticator <https://www.microsoft.com/en-gb/account/"
 "authenticator?cmp=h66ftb_42hbak>`_"
 
-#: ../../content/applications/general/users/2fa.rst:32
+#: ../../content/applications/general/users/2fa.rst:37
 msgid "Password managers are another option. Common examples include:"
 msgstr "Administradores de senhas são outra opção. Exemplos comuns incluem:"
 
-#: ../../content/applications/general/users/2fa.rst:34
+#: ../../content/applications/general/users/2fa.rst:39
 msgid "`1Password <https://support.1password.com/one-time-passwords/>`_"
 msgstr "`1Password <https://support.1password.com/one-time-passwords/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:35
-msgid "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
-msgstr "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
+#: ../../content/applications/general/users/2fa.rst:40
+msgid "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_"
+msgstr ""
 
-#: ../../content/applications/general/users/2fa.rst:38
+#: ../../content/applications/general/users/2fa.rst:43
 msgid ""
 "The remainder of this document uses Google Authenticator as an example, as "
 "it is one of the most commonly used. This is **not** an endorsement of the "
@@ -13166,11 +13165,11 @@ msgstr ""
 "O resto deste documento utiliza o Google Authenticator como exemplo, uma vez "
 "que é um dos mais utilizados. Isto **não** é um endosso do produto."
 
-#: ../../content/applications/general/users/2fa.rst:42
+#: ../../content/applications/general/users/2fa.rst:47
 msgid "Two-factor authentication setup"
 msgstr "Configuração da autenticação de dois fatores"
 
-#: ../../content/applications/general/users/2fa.rst:44
+#: ../../content/applications/general/users/2fa.rst:49
 msgid ""
 "After selecting an authenticator, log in to Odoo, then click the profile "
 "avatar in the upper-right corner, and select :guilabel:`My Profile` from the "
@@ -13180,7 +13179,7 @@ msgstr ""
 "avatar do perfil no canto superior direito e selecione :guilabel:`Meu "
 "perfil` no menu suspenso resultante."
 
-#: ../../content/applications/general/users/2fa.rst:47
+#: ../../content/applications/general/users/2fa.rst:52
 msgid ""
 "Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-"
 "Factor Authentication` toggle to *active*."
@@ -13188,7 +13187,7 @@ msgstr ""
 "Clique na aba :guilabel:`Segurança da conta` e, em seguida, coloque a "
 "opção :guilabel:`Autenticação de dois fatores` na posição *ativa*."
 
-#: ../../content/applications/general/users/2fa.rst:53
+#: ../../content/applications/general/users/2fa.rst:58
 msgid ""
 "This generates a :guilabel:`Security Control` pop-up window that requires "
 "password confirmation to continue. Enter the appropriate password, then "
@@ -13200,13 +13199,13 @@ msgstr ""
 "em :guilabel:`Confirmar senha`. Em seguida, é exibida uma janela pop-"
 "up :guilabel:`Ativação da autenticação de dois fatores`, com um |QR|."
 
-#: ../../content/applications/general/users/2fa.rst:61
+#: ../../content/applications/general/users/2fa.rst:66
 msgid ""
 "Using the desired authenticator application, scan the |QR| when prompted."
 msgstr ""
 "Com o aplicativo de autenticação preferido, leia o |QR| quando solicitado."
 
-#: ../../content/applications/general/users/2fa.rst:64
+#: ../../content/applications/general/users/2fa.rst:69
 msgid ""
 "If scanning the screen is not possible (e.g. the setup is being completed on "
 "the *same* device as the authenticator application), clicking the "
@@ -13218,11 +13217,11 @@ msgstr ""
 "clicar no link :guilabel:`Não consegue escanear?` fornecido ou copiar o "
 "segredo para configurar manualmente o autenticador."
 
-#: ../../content/applications/general/users/2fa.rst:74
+#: ../../content/applications/general/users/2fa.rst:79
 msgid "Afterwards, the authenticator should display a *verification code*."
 msgstr "Em seguida, o autenticador apresentará um *código de verificação*."
 
-#: ../../content/applications/general/users/2fa.rst:79
+#: ../../content/applications/general/users/2fa.rst:84
 msgid ""
 "Enter the code into the :guilabel:`Verification Code` field, then "
 "click :guilabel:`Activate`."
@@ -13230,16 +13229,16 @@ msgstr ""
 "Insira o código no campo :guilabel:`Código de verificação` e, em seguida, "
 "clique em :guilabel:`Ativar`."
 
-#: ../../content/applications/general/users/2fa.rst:85
+#: ../../content/applications/general/users/2fa.rst:90
 msgid "Logging in"
 msgstr "Fazer login"
 
-#: ../../content/applications/general/users/2fa.rst:87
+#: ../../content/applications/general/users/2fa.rst:92
 msgid "To confirm |2fa| setup is complete, log out of Odoo."
 msgstr ""
 "Para confirmar que a configuração do |2fa| está concluída, saia do Odoo."
 
-#: ../../content/applications/general/users/2fa.rst:89
+#: ../../content/applications/general/users/2fa.rst:94
 msgid ""
 "On the login page, input the username and password, then "
 "click :guilabel:`Log in`. On the :guilabel:`Two-factor Authentication` page, "
@@ -13256,7 +13255,7 @@ msgstr ""
 msgid "The login page with 2fa enabled."
 msgstr "A página de início de sessão com o 2fa ativado."
 
-#: ../../content/applications/general/users/2fa.rst:98
+#: ../../content/applications/general/users/2fa.rst:103
 msgid ""
 "If a user loses access to their authenticator, an administrator **must** "
 "deactivate |2fa| on the account before the user can log in."
@@ -13264,11 +13263,11 @@ msgstr ""
 "Se o usuário perder o acesso ao seu autenticador, um administrador **deve** "
 "desativar a |2fa| na conta antes de o usuário conseguir iniciar sessão."
 
-#: ../../content/applications/general/users/2fa.rst:102
+#: ../../content/applications/general/users/2fa.rst:107
 msgid "Enforce two-factor authentication"
 msgstr "Impor autenticação de dois fatores"
 
-#: ../../content/applications/general/users/2fa.rst:104
+#: ../../content/applications/general/users/2fa.rst:109
 msgid ""
 "To enforce the use of |2fa| for all users, first navigate "
 "to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
@@ -13280,7 +13279,7 @@ msgstr ""
 "filtro :guilabel:`Aplicativos` da barra :guilabel:`Pesquisar...` e, em "
 "seguida, pesquise `2FA por e-mail`."
 
-#: ../../content/applications/general/users/2fa.rst:108
+#: ../../content/applications/general/users/2fa.rst:113
 msgid ""
 "Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` "
 "module."
@@ -13292,7 +13291,7 @@ msgstr ""
 msgid "The 2FA by mail module in the Apps directory."
 msgstr "O módulo 2FA por e-mail no diretório Aplicativos."
 
-#: ../../content/applications/general/users/2fa.rst:114
+#: ../../content/applications/general/users/2fa.rst:119
 msgid ""
 "After installation is complete, go to :guilabel:`Settings app: Permissions`. "
 "Tick the checkbox labeled, :guilabel:`Enforce two-factor authentication`. "
@@ -13305,7 +13304,7 @@ msgstr ""
 "pretende aplicar esta definição a :guilabel:`Somente funcionários`, "
 "ou :guilabel:`Todos os usuários`."
 
-#: ../../content/applications/general/users/2fa.rst:119
+#: ../../content/applications/general/users/2fa.rst:124
 msgid ""
 "Selecting :guilabel:`All users` applies the setting to portal users, in "
 "addition to employees."
@@ -13317,7 +13316,7 @@ msgstr ""
 msgid "The enforce two factor setting in the Settings application."
 msgstr "A definição de imposição de dois fatores no app Definições."
 
-#: ../../content/applications/general/users/2fa.rst:125
+#: ../../content/applications/general/users/2fa.rst:130
 msgid "Click :guilabel:`Save` to commit any unsaved changes."
 msgstr "Clique em :guilabel:`Salvar` para confirmar alterações não salvas."
 
@@ -15473,6 +15472,22 @@ msgstr ""
 "Se quiser gerenciar as opções de pagamento, navegue até :guilabel:`Gerenciar "
 "formas de pagamento` no menu à direita. Em seguida, adicione as novas "
 "informações de pagamento e selecione :guilabel:`Adicionar novo cartão`."
+
+#~ msgid ""
+#~ "It is recommended to set up the :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` "
+#~ "settings on the domain of the sender."
+#~ msgstr ""
+#~ "Recomenda-se configurar as definições de :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` no "
+#~ "domínio do remetente."
+
+#~ msgid ""
+#~ "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
+#~ msgstr ""
+#~ "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
 
 #~ msgid ""
 #~ "IoT systems support printers connected through USB, network connection, "

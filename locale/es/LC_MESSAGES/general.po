@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 18:31+0000\n"
+"POT-Creation-Date: 2026-01-29 18:30+0000\n"
 "PO-Revision-Date: 2026-01-20 23:05+0000\n"
 "Last-Translator: \"Noemi Pla Garcia (nopl)\" <nopl@odoo.com>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-17-doc/"
@@ -36,8 +36,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
-" ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
+"0) ? 1 : 2);\n"
 "X-Generator: Weblate 5.14.3\n"
 
 #: ../../content/applications/general.rst:3
@@ -7275,37 +7275,28 @@ msgstr ""
 "masivos. Después de completar el formulario, se envía un correo electrónico "
 "de confirmación a la dirección y se puede activar el remitente."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:87
+#: ../../content/applications/general/email_communication/mailjet_api.rst:88
 msgid ""
-"It is recommended to set up the :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` settings on the "
-"domain of the sender."
+"To prevent emails from being marked as spam, :ref:`set up a custom domain "
+"<email-online-sh-domain>`. Using the Odoo-provided subdomain "
+"(*dbname.odoo.com*) with the Mailjet server may lead to email deliverability "
+"issues, because the email authentication protocols (:abbr:`SPF (Sender "
+"Policy Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)`, "
+"and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
+"Conformance)`) cannot be configured on that subdomain."
 msgstr ""
-"Le recomendamos configurar los ajustes :abbr:`SPF (Convenio de "
-"remitentes)`, :abbr:`DKIM (DomainKeys Identified Mail)` y :abbr:`DMARC "
-"(Autenticación basada en dominios para mensajes, reportes y conformidad)` en "
-"el dominio del remitente."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:92
+#: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
 "`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
 "us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
 "Guide>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+#: ../../content/applications/general/email_communication/mailjet_api.rst:99
 msgid ""
 "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
-msgstr ""
-
-#: ../../content/applications/general/email_communication/mailjet_api.rst:98
-msgid ""
-"It is recommended to set up a custom domain. Due to increased security on "
-"provider side, emails sent with an outgoing mail server other than the "
-"Odoo's provided one using subdomain (dbname.odoo.com) will fail due to DMARC "
-"policy, and/or be marked as spam."
 msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:105
@@ -9640,8 +9631,8 @@ msgid ""
 msgstr ""
 "Los sistemas IoT son compatibles con impresoras conectadas mediante USB o "
 "conexión de red. `Las impresoras compatibles <https://www.odoo.com/page/iot-"
-"hardware>`__ se detectan automáticamente y aparecen en la lista "
-":guilabel:`Dispositivos` de la aplicación IoT."
+"hardware>`__ se detectan automáticamente y aparecen en la "
+"lista :guilabel:`Dispositivos` de la aplicación IoT."
 
 #: ../../content/applications/general/iot/devices/printer.rst:None
 msgid "The printer as it would appear in the IoT app devices list."
@@ -10211,8 +10202,8 @@ msgid ""
 "Set the :guilabel:`Make` value to :guilabel:`Raw` and the :guilabel:`Model` "
 "value to :guilabel:`Raw Queue (en)`."
 msgstr ""
-"Establezca el valor de :guilabel:`Make` en :guilabel:`Raw` y el valor "
-":guilabel:`Model` en :guilabel:`Raw Queue (en)`."
+"Establezca el valor de :guilabel:`Make` en :guilabel:`Raw` y el "
+"valor :guilabel:`Model` en :guilabel:`Raw Queue (en)`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:236
 msgid ""
@@ -10614,8 +10605,8 @@ msgid ""
 msgstr ""
 "Haga clic en :menuselection:`Impresoras` en el menú superior; aparecerán "
 "todas las impresoras instaladas en el servidor OpenPrinting CUPS, incluida "
-"la :guilabel:`DYMO LabelWriter 450 DUO Label` recién actualizada "
-"(o el modelo de impresora DYMO que se esté utilizando)."
+"la :guilabel:`DYMO LabelWriter 450 DUO Label` recién actualizada (o el "
+"modelo de impresora DYMO que se esté utilizando)."
 
 #: ../../content/applications/general/iot/devices/printer.rst:389
 msgid ""
@@ -10647,8 +10638,8 @@ msgid ""
 "the drivers on the device <printer/dymo/update_drivers>`."
 msgstr ""
 "Si la impresora DYMO LabelWriter 450 DUO no imprime o no la reconoce el "
-"sistema, es decir, tiene un controlador de tipo :guilabel:`RAW` , entonces "
-":ref:`actualice los controladores del dispositivo <printer/dymo/"
+"sistema, es decir, tiene un controlador de tipo :guilabel:`RAW` , "
+"entonces :ref:`actualice los controladores del dispositivo <printer/dymo/"
 "update_drivers>`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:403
@@ -10675,9 +10666,8 @@ msgid ""
 msgstr ""
 "En la siguiente página, en la sección :guilabel:`Impresoras locales` , "
 "seleccione la impresora preinstalada :guilabel:`DYMO LabelWriter 450 DUO "
-"Label (DYMO LabelWriter 450 DUO Label)` "
-"(o el modelo de impresora DYMO que se esté usando). Haga clic en "
-":guilabel:`Continuar`."
+"Label (DYMO LabelWriter 450 DUO Label)` (o el modelo de impresora DYMO que "
+"se esté usando). Haga clic en :guilabel:`Continuar`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:0
 msgid ""
@@ -10749,10 +10739,10 @@ msgid ""
 "Test Page` to print a test label. The test label should print out "
 "immediately, or after one or two seconds."
 msgstr ""
-"Haga clic en la lista desplegable :guilabel:`Mantenimiento` y seleccione "
-":guilabel:`Imprimir página de prueba` para imprimir una etiqueta de prueba. "
-"La etiqueta de prueba debería imprimirse de inmediato o pasados unos "
-"segundos."
+"Haga clic en la lista desplegable :guilabel:`Mantenimiento` y "
+"seleccione :guilabel:`Imprimir página de prueba` para imprimir una etiqueta "
+"de prueba. La etiqueta de prueba debería imprimirse de inmediato o pasados "
+"unos segundos."
 
 #: ../../content/applications/general/iot/devices/printer.rst:441
 msgid "The Zebra printer does not print anything"
@@ -10767,12 +10757,12 @@ msgid ""
 "to :menuselection:`Settings --> Technical --> User Interface --> Views`, and "
 "search for the corresponding template."
 msgstr ""
-"Las impresoras Zebra son bastante sensibles al formato del código ZPL "
-"(Zebra Programming Language) que se imprime. Si la impresora no imprime nada "
-"o imprime etiquetas en blanco, pruebe a cambiar el formato del informe "
-"enviado a la impresora. Para ello, active el :ref:`modo desarrollador "
-"<developer-mode>`, vaya a :menuselection:`Ajustes --> Técnico --> Interfaz "
-"de usuario --> Vistas`, y busque la plantilla correspondiente."
+"Las impresoras Zebra son bastante sensibles al formato del código ZPL (Zebra "
+"Programming Language) que se imprime. Si la impresora no imprime nada o "
+"imprime etiquetas en blanco, pruebe a cambiar el formato del informe enviado "
+"a la impresora. Para ello, active el :ref:`modo desarrollador <developer-"
+"mode>`, vaya a :menuselection:`Ajustes --> Técnico --> Interfaz de usuario --"
+"> Vistas`, y busque la plantilla correspondiente."
 
 #: ../../content/applications/general/iot/devices/printer.rst:450
 msgid ""
@@ -10797,13 +10787,14 @@ msgid ""
 "feature. This feature allows to list all detected printers together with all "
 "available drivers, creating one entry for each printer–driver pair."
 msgstr ""
-"Si la impresora aparece varias veces en la página de inicio del :ref:`"
-"dispositivo IoT <iot/iot-box/homepage>` o del :ref:`IoT virtual de Windows <"
-"iot/windows-iot/homepage>` y/o en la lista de :guilabel:`Dispositivos` del "
-":ref:`formulario del sistema IoT <iot/connect/IoT-form>`, la causa suele ser "
-"la función de detección automática de CUPS. Esta función permite mostrar "
-"todas las impresoras detectadas junto con todos los controladores "
-"disponibles, creando una entrada por cada combinación impresora-controlador."
+"Si la impresora aparece varias veces en la página de inicio "
+"del :ref:`dispositivo IoT <iot/iot-box/homepage>` o del :ref:`IoT virtual de "
+"Windows <iot/windows-iot/homepage>` y/o en la lista "
+"de :guilabel:`Dispositivos` del :ref:`formulario del sistema IoT <iot/"
+"connect/IoT-form>`, la causa suele ser la función de detección automática de "
+"CUPS. Esta función permite mostrar todas las impresoras detectadas junto con "
+"todos los controladores disponibles, creando una entrada por cada "
+"combinación impresora-controlador."
 
 #: ../../content/applications/general/iot/devices/printer.rst:462
 msgid "Simply select the entry that works best and ignore the others."
@@ -10837,8 +10828,8 @@ msgstr ""
 "están configurados con el formato QWERTY de EE. UU. Si el lector de códigos "
 "de barras utiliza una distribución diferente, vaya a :menuselection:`IoT --> "
 "Dispositivos` y haga clic en la tarjeta del dispositivo del lector de "
-"códigos de barras. A continuación, seleccione el idioma correcto en el campo "
-":guilabel:`Distribución del teclado` ."
+"códigos de barras. A continuación, seleccione el idioma correcto en el "
+"campo :guilabel:`Distribución del teclado` ."
 
 #: ../../content/applications/general/iot/devices/printer.rst:478
 #: ../../content/applications/general/iot/devices/printer.rst:508
@@ -10848,8 +10839,8 @@ msgid ""
 "(e.g., :guilabel:`English (UK)`, :guilabel:`English (US)`, etc.)."
 msgstr ""
 "La :guilabel:`distribución del teclado` depende del idioma, y las opciones "
-"disponibles varían según el dispositivo y el idioma de la base de datos "
-"(por ejemplo: :guilabel:`Inglés (UK)`, :guilabel:`Inglés (US)`, etc.)."
+"disponibles varían según el dispositivo y el idioma de la base de datos (por "
+"ejemplo: :guilabel:`Inglés (UK)`, :guilabel:`Inglés (US)`, etc.)."
 
 #: ../../content/applications/general/iot/devices/printer.rst:483
 msgid "Nothing happens when a barcode is scanned"
@@ -10862,8 +10853,8 @@ msgid ""
 "and the barcode is configured to send an `ENTER` character (keycode 28) at "
 "the end of every barcode."
 msgstr ""
-"Asegúrese de que el dispositivo correcto esté seleccionado en la :doc:`"
-"configuración del punto de venta </applications/sales/point_of_sale/"
+"Asegúrese de que el dispositivo correcto esté seleccionado en "
+"la :doc:`configuración del punto de venta </applications/sales/point_of_sale/"
 "configuration/pos_iot>` (cuando corresponda) y de que el lector de código de "
 "barras esté configurado para enviar el carácter`ENTER`(código de tecla 28) "
 "al final de cada código de barras."
@@ -10909,8 +10900,8 @@ msgstr ""
 "lector puede interpretar cada carácter del código de barras como un escaneo "
 "independiente. Para solucionarlo, vaya a :menuselection:`IoT --> "
 "Dispositivos` y haga clic en la tarjeta del dispositivo del lector de "
-"códigos de barras. A continuación, seleccione el idioma correcto en el campo "
-":guilabel:`Distribución del teclado` ."
+"códigos de barras. A continuación, seleccione el idioma correcto en el "
+"campo :guilabel:`Distribución del teclado` ."
 
 #: ../../content/applications/general/iot/devices/scale.rst:3
 msgid "Connect a scale"
@@ -12909,10 +12900,18 @@ msgstr ""
 "difícil."
 
 #: ../../content/applications/general/users/2fa.rst:18
+msgid ""
+"Some governments, such as the :doc:`Australian <../../finance/"
+"fiscal_localizations/australia>` government, require |2fa|. For "
+"these :doc:`fiscal localizations <../../finance/fiscal_localizations>`, it "
+"is not possible to deactivate |2fa|."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:23
 msgid "Requirements"
 msgstr "Requisitos"
 
-#: ../../content/applications/general/users/2fa.rst:21
+#: ../../content/applications/general/users/2fa.rst:26
 msgid ""
 "These lists are just examples. They are **not** endorsements of any specific "
 "software."
@@ -12920,7 +12919,7 @@ msgstr ""
 "La siguiente lista solo incluye ejemplos, *no* hacemos promoción a un "
 "software específico."
 
-#: ../../content/applications/general/users/2fa.rst:23
+#: ../../content/applications/general/users/2fa.rst:28
 msgid ""
 "Phone-based authenticators are the easiest and most commonly used. Examples "
 "include:"
@@ -12928,15 +12927,15 @@ msgstr ""
 "Los autenticadores para móvil son los más fáciles y utilizados. Algunos "
 "ejemplos incluyen:"
 
-#: ../../content/applications/general/users/2fa.rst:25
+#: ../../content/applications/general/users/2fa.rst:30
 msgid "`Authy <https://authy.com/>`_"
 msgstr "`Authy <https://authy.com/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:26
+#: ../../content/applications/general/users/2fa.rst:31
 msgid "`FreeOTP <https://freeotp.github.io/>`_"
 msgstr "`FreeOTP <https://freeotp.github.io/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:27
+#: ../../content/applications/general/users/2fa.rst:32
 msgid ""
 "`Google Authenticator <https://support.google.com/accounts/answer/1066447?"
 "hl=en>`_"
@@ -12944,11 +12943,11 @@ msgstr ""
 "`Autenticador de Google <https://support.google.com/accounts/answer/1066447?"
 "hl=en>`_"
 
-#: ../../content/applications/general/users/2fa.rst:28
+#: ../../content/applications/general/users/2fa.rst:33
 msgid "`LastPass Authenticator <https://lastpass.com/auth/>`_"
 msgstr "`LastPass <https://lastpass.com/auth/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:29
+#: ../../content/applications/general/users/2fa.rst:34
 msgid ""
 "`Microsoft Authenticator <https://www.microsoft.com/en-gb/account/"
 "authenticator?cmp=h66ftb_42hbak>`_"
@@ -12956,19 +12955,19 @@ msgstr ""
 "`Microsoft Authenticator <https://www.microsoft.com/en-gb/account/"
 "authenticator?cmp=h66ftb_42hbak>`_"
 
-#: ../../content/applications/general/users/2fa.rst:32
+#: ../../content/applications/general/users/2fa.rst:37
 msgid "Password managers are another option. Common examples include:"
 msgstr "Otra de las opciones disponibles son los gestores de contraseña como:"
 
-#: ../../content/applications/general/users/2fa.rst:34
+#: ../../content/applications/general/users/2fa.rst:39
 msgid "`1Password <https://support.1password.com/one-time-passwords/>`_"
 msgstr "`1Password <https://support.1password.com/one-time-passwords/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:35
-msgid "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
-msgstr "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
+#: ../../content/applications/general/users/2fa.rst:40
+msgid "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_"
+msgstr ""
 
-#: ../../content/applications/general/users/2fa.rst:38
+#: ../../content/applications/general/users/2fa.rst:43
 msgid ""
 "The remainder of this document uses Google Authenticator as an example, as "
 "it is one of the most commonly used. This is **not** an endorsement of the "
@@ -12977,11 +12976,11 @@ msgstr ""
 "El resto de este documento utiliza el autenticador de Google como ejemplo "
 "porque es uno de los más utilizados, **no** es promoción para el producto."
 
-#: ../../content/applications/general/users/2fa.rst:42
+#: ../../content/applications/general/users/2fa.rst:47
 msgid "Two-factor authentication setup"
 msgstr "Configuración de la autenticación de dos factores"
 
-#: ../../content/applications/general/users/2fa.rst:44
+#: ../../content/applications/general/users/2fa.rst:49
 msgid ""
 "After selecting an authenticator, log in to Odoo, then click the profile "
 "avatar in the upper-right corner, and select :guilabel:`My Profile` from the "
@@ -12991,7 +12990,7 @@ msgstr ""
 "avatar de su perfil que está situado en la esquina superior derecha y "
 "seleccione :guilabel:`Mi perfil` en el menú desplegable."
 
-#: ../../content/applications/general/users/2fa.rst:47
+#: ../../content/applications/general/users/2fa.rst:52
 msgid ""
 "Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-"
 "Factor Authentication` toggle to *active*."
@@ -12999,7 +12998,7 @@ msgstr ""
 "Haga clic en la pestaña :guilabel:`Seguridad de la cuenta` y después "
 "presione el botón :guilabel:`Autenticación de dos factores` para *activarlo*."
 
-#: ../../content/applications/general/users/2fa.rst:53
+#: ../../content/applications/general/users/2fa.rst:58
 msgid ""
 "This generates a :guilabel:`Security Control` pop-up window that requires "
 "password confirmation to continue. Enter the appropriate password, then "
@@ -13012,14 +13011,14 @@ msgstr ""
 "Después aparecerá la ventana emergente de :guilabel:`activación de "
 "autenticación de dos factores` con un código QR."
 
-#: ../../content/applications/general/users/2fa.rst:61
+#: ../../content/applications/general/users/2fa.rst:66
 msgid ""
 "Using the desired authenticator application, scan the |QR| when prompted."
 msgstr ""
 "Escanee el código QR cuando se le solicite con la aplicación de "
 "autenticación que haya seleccionado. "
 
-#: ../../content/applications/general/users/2fa.rst:64
+#: ../../content/applications/general/users/2fa.rst:69
 msgid ""
 "If scanning the screen is not possible (e.g. the setup is being completed on "
 "the *same* device as the authenticator application), clicking the "
@@ -13032,11 +13031,11 @@ msgstr ""
 "puede escanear?` o copie el secreto para configurar el autentificador de "
 "forma manual."
 
-#: ../../content/applications/general/users/2fa.rst:74
+#: ../../content/applications/general/users/2fa.rst:79
 msgid "Afterwards, the authenticator should display a *verification code*."
 msgstr "Después, el autenticador debe mostrar un *código de verificación*."
 
-#: ../../content/applications/general/users/2fa.rst:79
+#: ../../content/applications/general/users/2fa.rst:84
 msgid ""
 "Enter the code into the :guilabel:`Verification Code` field, then "
 "click :guilabel:`Activate`."
@@ -13044,17 +13043,17 @@ msgstr ""
 "Escriba el código en el campo :guilabel:`Código de verificación` y después "
 "haga clic en :guilabel:`Activar`."
 
-#: ../../content/applications/general/users/2fa.rst:85
+#: ../../content/applications/general/users/2fa.rst:90
 msgid "Logging in"
 msgstr "Iniciar sesión"
 
-#: ../../content/applications/general/users/2fa.rst:87
+#: ../../content/applications/general/users/2fa.rst:92
 msgid "To confirm |2fa| setup is complete, log out of Odoo."
 msgstr ""
 "Cierre su sesión de Odoo para verificar que completó la configuración de la "
 "autentificación de dos factores."
 
-#: ../../content/applications/general/users/2fa.rst:89
+#: ../../content/applications/general/users/2fa.rst:94
 msgid ""
 "On the login page, input the username and password, then "
 "click :guilabel:`Log in`. On the :guilabel:`Two-factor Authentication` page, "
@@ -13074,7 +13073,7 @@ msgstr ""
 "La página de inicio de sesión con la autenticación de dos factores "
 "habilitada."
 
-#: ../../content/applications/general/users/2fa.rst:98
+#: ../../content/applications/general/users/2fa.rst:103
 msgid ""
 "If a user loses access to their authenticator, an administrator **must** "
 "deactivate |2fa| on the account before the user can log in."
@@ -13083,11 +13082,11 @@ msgstr ""
 "**debe** desactivar la autenticación de dos factores en la cuenta antes de "
 "que el usuario pueda iniciar sesión."
 
-#: ../../content/applications/general/users/2fa.rst:102
+#: ../../content/applications/general/users/2fa.rst:107
 msgid "Enforce two-factor authentication"
 msgstr "Forzar la autenticación de dos factores"
 
-#: ../../content/applications/general/users/2fa.rst:104
+#: ../../content/applications/general/users/2fa.rst:109
 msgid ""
 "To enforce the use of |2fa| for all users, first navigate "
 "to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
@@ -13099,7 +13098,7 @@ msgstr ""
 "Aplicaciones`. Elimine el filtro :guilabel:`Aplicaciones` de "
 "la :guilabel:`barra de búsqueda` y luego busque `A2F por correo`."
 
-#: ../../content/applications/general/users/2fa.rst:108
+#: ../../content/applications/general/users/2fa.rst:113
 msgid ""
 "Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` "
 "module."
@@ -13111,7 +13110,7 @@ msgstr ""
 msgid "The 2FA by mail module in the Apps directory."
 msgstr "El módulo A2F por correo en el directorio de aplicaciones."
 
-#: ../../content/applications/general/users/2fa.rst:114
+#: ../../content/applications/general/users/2fa.rst:119
 msgid ""
 "After installation is complete, go to :guilabel:`Settings app: Permissions`. "
 "Tick the checkbox labeled, :guilabel:`Enforce two-factor authentication`. "
@@ -13124,7 +13123,7 @@ msgstr ""
 "estos ajustes :guilabel:`solo a los empleados` o a :guilabel:`todos los "
 "usuarios`."
 
-#: ../../content/applications/general/users/2fa.rst:119
+#: ../../content/applications/general/users/2fa.rst:124
 msgid ""
 "Selecting :guilabel:`All users` applies the setting to portal users, in "
 "addition to employees."
@@ -13138,7 +13137,7 @@ msgstr ""
 "La función establecer la autenticación de dos factores en la aplicación "
 "Ajustes."
 
-#: ../../content/applications/general/users/2fa.rst:125
+#: ../../content/applications/general/users/2fa.rst:130
 msgid "Click :guilabel:`Save` to commit any unsaved changes."
 msgstr "Haga clic en :guilabel:`Guardar` para implementar los cambios."
 
@@ -15308,6 +15307,22 @@ msgstr ""
 "a :guilabel:`gestionar métodos de pago` en el menú de la derecha. Después, "
 "agregue la nueva información de pago y seleccione :guilabel:`Agregar nueva "
 "tarjeta`."
+
+#~ msgid ""
+#~ "It is recommended to set up the :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` "
+#~ "settings on the domain of the sender."
+#~ msgstr ""
+#~ "Le recomendamos configurar los ajustes :abbr:`SPF (Convenio de "
+#~ "remitentes)`, :abbr:`DKIM (DomainKeys Identified Mail)` y :abbr:`DMARC "
+#~ "(Autenticación basada en dominios para mensajes, reportes y conformidad)` "
+#~ "en el dominio del remitente."
+
+#~ msgid ""
+#~ "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
+#~ msgstr ""
+#~ "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
 
 #~ msgid ""
 #~ "IoT systems support printers connected through USB, network connection, "

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 18:31+0000\n"
+"POT-Creation-Date: 2026-01-29 18:30+0000\n"
 "PO-Revision-Date: 2025-12-18 23:05+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-17-doc/"
@@ -7282,19 +7282,18 @@ msgstr ""
 "masive. După completarea formularului, un e-mail de activare este trimis la "
 "adresa de e-mail și expeditorul de încredere poate fi activat."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:87
+#: ../../content/applications/general/email_communication/mailjet_api.rst:88
 msgid ""
-"It is recommended to set up the :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` settings on the "
-"domain of the sender."
+"To prevent emails from being marked as spam, :ref:`set up a custom domain "
+"<email-online-sh-domain>`. Using the Odoo-provided subdomain "
+"(*dbname.odoo.com*) with the Mailjet server may lead to email deliverability "
+"issues, because the email authentication protocols (:abbr:`SPF (Sender "
+"Policy Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)`, "
+"and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
+"Conformance)`) cannot be configured on that subdomain."
 msgstr ""
-"Este recomandat să se configureze setările :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` pe domeniul "
-"expeditorului."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:92
+#: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
 "`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
 "us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
@@ -7304,21 +7303,13 @@ msgstr ""
 "articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
 "Guide>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+#: ../../content/applications/general/email_communication/mailjet_api.rst:99
 msgid ""
 "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
 msgstr ""
 "`Documentația DMARC Mailjet <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
-
-#: ../../content/applications/general/email_communication/mailjet_api.rst:98
-msgid ""
-"It is recommended to set up a custom domain. Due to increased security on "
-"provider side, emails sent with an outgoing mail server other than the "
-"Odoo's provided one using subdomain (dbname.odoo.com) will fail due to DMARC "
-"policy, and/or be marked as spam."
-msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
@@ -13322,10 +13313,18 @@ msgstr ""
 "contului *și* să aibă acces la autentificator, ceea ce este mult mai dificil."
 
 #: ../../content/applications/general/users/2fa.rst:18
+msgid ""
+"Some governments, such as the :doc:`Australian <../../finance/"
+"fiscal_localizations/australia>` government, require |2fa|. For "
+"these :doc:`fiscal localizations <../../finance/fiscal_localizations>`, it "
+"is not possible to deactivate |2fa|."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:23
 msgid "Requirements"
 msgstr "Cerințe"
 
-#: ../../content/applications/general/users/2fa.rst:21
+#: ../../content/applications/general/users/2fa.rst:26
 msgid ""
 "These lists are just examples. They are **not** endorsements of any specific "
 "software."
@@ -13333,7 +13332,7 @@ msgstr ""
 "Aceste liste sunt doar exemple. Ele **nu** reprezintă recomandări pentru "
 "niciun software anume."
 
-#: ../../content/applications/general/users/2fa.rst:23
+#: ../../content/applications/general/users/2fa.rst:28
 msgid ""
 "Phone-based authenticators are the easiest and most commonly used. Examples "
 "include:"
@@ -13341,15 +13340,15 @@ msgstr ""
 "Autentificatoarele bazate pe telefon sunt cele mai simple și mai des "
 "utilizate. Exemple:"
 
-#: ../../content/applications/general/users/2fa.rst:25
+#: ../../content/applications/general/users/2fa.rst:30
 msgid "`Authy <https://authy.com/>`_"
 msgstr "`Authy <https://authy.com/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:26
+#: ../../content/applications/general/users/2fa.rst:31
 msgid "`FreeOTP <https://freeotp.github.io/>`_"
 msgstr "`FreeOTP <https://freeotp.github.io/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:27
+#: ../../content/applications/general/users/2fa.rst:32
 msgid ""
 "`Google Authenticator <https://support.google.com/accounts/answer/1066447?"
 "hl=en>`_"
@@ -13357,11 +13356,11 @@ msgstr ""
 "`Google Authenticator <https://support.google.com/accounts/answer/1066447?"
 "hl=en>`_"
 
-#: ../../content/applications/general/users/2fa.rst:28
+#: ../../content/applications/general/users/2fa.rst:33
 msgid "`LastPass Authenticator <https://lastpass.com/auth/>`_"
 msgstr "`LastPass Authenticator <https://lastpass.com/auth/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:29
+#: ../../content/applications/general/users/2fa.rst:34
 msgid ""
 "`Microsoft Authenticator <https://www.microsoft.com/en-gb/account/"
 "authenticator?cmp=h66ftb_42hbak>`_"
@@ -13369,19 +13368,19 @@ msgstr ""
 "`Microsoft Authenticator <https://www.microsoft.com/en-gb/account/"
 "authenticator?cmp=h66ftb_42hbak>`_"
 
-#: ../../content/applications/general/users/2fa.rst:32
+#: ../../content/applications/general/users/2fa.rst:37
 msgid "Password managers are another option. Common examples include:"
 msgstr "Managerii de parole sunt o altă opțiune. Exemple comune includ:"
 
-#: ../../content/applications/general/users/2fa.rst:34
+#: ../../content/applications/general/users/2fa.rst:39
 msgid "`1Password <https://support.1password.com/one-time-passwords/>`_"
 msgstr "`1Password <https://support.1password.com/one-time-passwords/>`_"
 
-#: ../../content/applications/general/users/2fa.rst:35
-msgid "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
-msgstr "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
+#: ../../content/applications/general/users/2fa.rst:40
+msgid "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_"
+msgstr ""
 
-#: ../../content/applications/general/users/2fa.rst:38
+#: ../../content/applications/general/users/2fa.rst:43
 msgid ""
 "The remainder of this document uses Google Authenticator as an example, as "
 "it is one of the most commonly used. This is **not** an endorsement of the "
@@ -13391,11 +13390,11 @@ msgstr ""
 "este unul dintre cele mai utilizate. Aceasta **nu** reprezintă o recomandare "
 "pentru produs."
 
-#: ../../content/applications/general/users/2fa.rst:42
+#: ../../content/applications/general/users/2fa.rst:47
 msgid "Two-factor authentication setup"
 msgstr "Configurare autentificare în doi pași"
 
-#: ../../content/applications/general/users/2fa.rst:44
+#: ../../content/applications/general/users/2fa.rst:49
 msgid ""
 "After selecting an authenticator, log in to Odoo, then click the profile "
 "avatar in the upper-right corner, and select :guilabel:`My Profile` from the "
@@ -13405,7 +13404,7 @@ msgstr ""
 "clic pe avatarul de profil din colțul din dreapta sus și "
 "selectați :guilabel:`My Profile` din meniul derulant."
 
-#: ../../content/applications/general/users/2fa.rst:47
+#: ../../content/applications/general/users/2fa.rst:52
 msgid ""
 "Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-"
 "Factor Authentication` toggle to *active*."
@@ -13413,7 +13412,7 @@ msgstr ""
 "Faceți clic pe fila :guilabel:`Account Security`, apoi activați "
 "comutatorul :guilabel:`Two-Factor Authentication`."
 
-#: ../../content/applications/general/users/2fa.rst:53
+#: ../../content/applications/general/users/2fa.rst:58
 msgid ""
 "This generates a :guilabel:`Security Control` pop-up window that requires "
 "password confirmation to continue. Enter the appropriate password, then "
@@ -13426,14 +13425,14 @@ msgstr ""
 "continuare, apare o fereastră pop-up :guilabel:`Two-Factor Authentication "
 "Activation` cu un |QR|."
 
-#: ../../content/applications/general/users/2fa.rst:61
+#: ../../content/applications/general/users/2fa.rst:66
 msgid ""
 "Using the desired authenticator application, scan the |QR| when prompted."
 msgstr ""
 "Folosind aplicația de autentificare dorită, scanați |QR| atunci când vi se "
 "solicită."
 
-#: ../../content/applications/general/users/2fa.rst:64
+#: ../../content/applications/general/users/2fa.rst:69
 msgid ""
 "If scanning the screen is not possible (e.g. the setup is being completed on "
 "the *same* device as the authenticator application), clicking the "
@@ -13445,12 +13444,12 @@ msgstr ""
 "linkul :guilabel:`Cannot scan it?` sau puteți copia secretul pentru a "
 "configura manual autentificatorul."
 
-#: ../../content/applications/general/users/2fa.rst:74
+#: ../../content/applications/general/users/2fa.rst:79
 msgid "Afterwards, the authenticator should display a *verification code*."
 msgstr ""
 "După aceea, autentificatorul ar trebui să afișeze un *cod de verificare*."
 
-#: ../../content/applications/general/users/2fa.rst:79
+#: ../../content/applications/general/users/2fa.rst:84
 msgid ""
 "Enter the code into the :guilabel:`Verification Code` field, then "
 "click :guilabel:`Activate`."
@@ -13458,16 +13457,16 @@ msgstr ""
 "Introduceți codul în câmpul :guilabel:`Verification Code`, apoi faceți clic "
 "pe :guilabel:`Activate`."
 
-#: ../../content/applications/general/users/2fa.rst:85
+#: ../../content/applications/general/users/2fa.rst:90
 msgid "Logging in"
 msgstr "Autentificare"
 
-#: ../../content/applications/general/users/2fa.rst:87
+#: ../../content/applications/general/users/2fa.rst:92
 msgid "To confirm |2fa| setup is complete, log out of Odoo."
 msgstr ""
 "Pentru a confirma că |2fa| este configurat complet, deconectați-vă din Odoo."
 
-#: ../../content/applications/general/users/2fa.rst:89
+#: ../../content/applications/general/users/2fa.rst:94
 msgid ""
 "On the login page, input the username and password, then "
 "click :guilabel:`Log in`. On the :guilabel:`Two-factor Authentication` page, "
@@ -13484,7 +13483,7 @@ msgstr ""
 msgid "The login page with 2fa enabled."
 msgstr "Pagina de autentificare cu 2fa activat."
 
-#: ../../content/applications/general/users/2fa.rst:98
+#: ../../content/applications/general/users/2fa.rst:103
 msgid ""
 "If a user loses access to their authenticator, an administrator **must** "
 "deactivate |2fa| on the account before the user can log in."
@@ -13493,11 +13492,11 @@ msgstr ""
 "**trebuie** să dezactiveze |2fa| pe cont înainte ca utilizatorul să se poată "
 "autentifica."
 
-#: ../../content/applications/general/users/2fa.rst:102
+#: ../../content/applications/general/users/2fa.rst:107
 msgid "Enforce two-factor authentication"
 msgstr "Aplică autentificarea cu doi factori"
 
-#: ../../content/applications/general/users/2fa.rst:104
+#: ../../content/applications/general/users/2fa.rst:109
 msgid ""
 "To enforce the use of |2fa| for all users, first navigate "
 "to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
@@ -13509,7 +13508,7 @@ msgstr ""
 "filtrul :guilabel:`Apps` din bara :guilabel:`Search...`, apoi căutați `2FA "
 "by mail`."
 
-#: ../../content/applications/general/users/2fa.rst:108
+#: ../../content/applications/general/users/2fa.rst:113
 msgid ""
 "Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` "
 "module."
@@ -13521,7 +13520,7 @@ msgstr ""
 msgid "The 2FA by mail module in the Apps directory."
 msgstr "Modulul 2FA by mail din directorul Apps."
 
-#: ../../content/applications/general/users/2fa.rst:114
+#: ../../content/applications/general/users/2fa.rst:119
 msgid ""
 "After installation is complete, go to :guilabel:`Settings app: Permissions`. "
 "Tick the checkbox labeled, :guilabel:`Enforce two-factor authentication`. "
@@ -13533,7 +13532,7 @@ msgstr ""
 "butoanele radio pentru a alege dacă aplicați această setare doar "
 "pentru :guilabel:`Employees only` sau pentru :guilabel:`All users`."
 
-#: ../../content/applications/general/users/2fa.rst:119
+#: ../../content/applications/general/users/2fa.rst:124
 msgid ""
 "Selecting :guilabel:`All users` applies the setting to portal users, in "
 "addition to employees."
@@ -13546,7 +13545,7 @@ msgid "The enforce two factor setting in the Settings application."
 msgstr ""
 "Setarea de impunere a autentificării cu doi factori în aplicația Settings."
 
-#: ../../content/applications/general/users/2fa.rst:125
+#: ../../content/applications/general/users/2fa.rst:130
 msgid "Click :guilabel:`Save` to commit any unsaved changes."
 msgstr "Faceți clic pe :guilabel:`Save` pentru a salva modificările nesalvate."
 
@@ -15712,6 +15711,22 @@ msgstr ""
 "la :guilabel:`Gestionați metodele de plată` din meniul din dreapta. Apoi, "
 "adăugați noile informații de plată și selectați :guilabel:`Adăugați un card "
 "nou`."
+
+#~ msgid ""
+#~ "It is recommended to set up the :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` "
+#~ "settings on the domain of the sender."
+#~ msgstr ""
+#~ "Este recomandat să se configureze setările :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` pe "
+#~ "domeniul expeditorului."
+
+#~ msgid ""
+#~ "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
+#~ msgstr ""
+#~ "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,"
 
 #~ msgid ""
 #~ "IoT systems support printers connected through USB, network connection, "
