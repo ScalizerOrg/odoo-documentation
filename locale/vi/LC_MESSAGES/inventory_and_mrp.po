@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 18:30+0000\n"
+"POT-Creation-Date: 2026-01-30 18:30+0000\n"
 "PO-Revision-Date: 2026-01-20 23:22+0000\n"
 "Last-Translator: \"Thi Huong Nguyen (thng)\" <thng@odoo.com>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -5819,6 +5819,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:12
 msgid "Enable settings"
 msgstr ""
 
@@ -6809,6 +6810,339 @@ msgstr ""
 "trừ 1 kg từ LOT2 để thêm 1.000 g vào LOT1. Mặc dù có thể hoạt động, cách "
 "giải quyết này có thể tốn thời gian và dễ xảy ra sai sót."
 
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:3
+msgid "Pack-in-pack"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:5
+msgid ""
+"In more complex warehouse operations, it is sometimes necessary to handle "
+"groups of containers (for example, grouping pallets together). These "
+"containers may be physically combined or logically grouped at the database "
+"level, allowing them to be treated as a single unit for certain stock "
+"movements while still retaining visibility into their internal structure. "
+"This makes it possible to move the entire group with a single scan, rather "
+"than scanning each pallet individually."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:14
+msgid ""
+"Before working with the pack-in-pack settings, "
+"open :menuselection:`Inventory app --> Configuration --> Settings`. Enable "
+"the :guilabel:`Packages` setting. Be sure to click :guilabel:`Save` before "
+"exiting this page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
+msgid "Enable Packages in the Inventory configuration settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:22
+msgid "Set package type"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:24
+msgid ""
+"The *Set Package Type* setting must be enabled for all operations that "
+"require pack-in-pack functionality."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:27
+msgid ""
+"Open :menuselection:`Inventory app --> Configuration --> Operation Types`. "
+"The :guilabel:`Operation Types` page opens. Open an operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:30
+msgid ""
+"On the operation type form, in the :guilabel:`Packages` section, "
+"select :guilabel:`Set Package Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:34
+msgid ""
+":guilabel:`Set Package Type` is enabled for the `Receipts` operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:0
+msgid "Update the Set Package Type setting on the operation type form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:125
+msgid "Create package types"
+msgstr "Tạo loại kiện hàng"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:127
+msgid ""
+"Create package types by navigating to :menuselection:`Inventory app --> "
+"Configuration --> Package Types`, in order to set custom dimensions and "
+"weight limits. This feature is mainly used to calculate package weights for "
+"shipping costs."
+msgstr ""
+"Tạo loại kiện hàng bằng cách đi đến :menuselection:`Ứng dụng Tồn kho --> Cấu "
+"hình --> Loại kiện hàng`, để thiết lập kích thước tùy chỉnh và giới hạn khối "
+"lượng. Tính năng này chủ yếu được sử dụng để tính khối lượng kiện hàng khi "
+"xác định phí vận chuyển."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:135
+msgid ""
+"On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a "
+"blank package type form. The fields of the form are as follows:"
+msgstr ""
+"Trên danh sách :guilabel:`Loại kiện hàng`, khi nhấp vào :guilabel:`Mới` sẽ "
+"mở một biểu mẫu loại kiện hàng trống. Các trường của biểu mẫu như sau:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:49
+msgid ":guilabel:`Package Type` (required): Define the package type's name."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:50
+msgid ""
+":guilabel:`Size`: Define the package dimensions in millimeters (mm). The "
+"fields, from left to right, define the Length, Width, and Height."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:52
+msgid ""
+":guilabel:`Weight`: weight of an empty package (e.g., an empty box, pallet)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:55
+msgid ""
+"Odoo calculates the package's weight by adding the weight of the empty "
+"package plus the weight of the items, which can be found in "
+"the :guilabel:`Weight` field, in the :guilabel:`Inventory` tab, of each "
+"product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:148
+msgid ":guilabel:`Max Weight`: maximum shipping weight allowed in the package."
+msgstr ""
+":guilabel:`Khối lượng tối đa`: khối lượng vận chuyển tối đa được phép trong "
+"kiện hàng."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:149
+msgid ""
+":guilabel:`Barcode`: Define a barcode to identify the package type from a "
+"scan."
+msgstr ""
+":guilabel:`Mã vạch`: Xác định mã vạch để nhận diện loại kiện thông qua quét."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:61
+msgid ""
+":guilabel:`Sequence Prefix`: Specify a prefix to use when a new package name "
+"is created by Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:64
+msgid ""
+"Use `PAL` for the `Pallet` package type. When the first package of the "
+"`Pallet` type is created, it is named `PAL0000001`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:67
+msgid ""
+":guilabel:`Company`: Specify a company to make the package type available "
+"only within that company. Leave the field blank if it is available at all "
+"companies."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
+msgid ""
+":guilabel:`Carrier`: Specify the intended shipping carrier for this package "
+"type."
+msgstr ""
+":guilabel:`Đơn vị vận chuyển`: Chỉ định đơn vị vận chuyển dự kiến cho loại "
+"kiện hàng này."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:153
+msgid ""
+":guilabel:`Carrier Code`: Define a code that is linked to the package type."
+msgstr ""
+":guilabel:`Mã đơn vị vận chuyển`: Xác định mã được liên kết với loại kiện "
+"hàng."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
+msgid "Create a custom package type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:76
+msgid "Pack-in-pack process"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:78
+msgid ""
+"After :guilabel:`Set Package Type` is enabled in the operation type form, "
+"pack-in-pack can be used from that operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:81
+msgid ""
+"Open the operation type from the :guilabel:`Operations` menu. The list of "
+"operations for that operation type displays. Open an operation from that "
+"list."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:84
+msgid ""
+"To put the contents of a line into a single package, click "
+"the :guilabel:`Details` link on the far right of the product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
+msgid ""
+"Use the Details link to open the Detailed Operations window and specify a "
+"package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:90
+msgid ""
+"The *Detailed Operations* window opens. In this window, specify "
+"a :guilabel:`Store to` location, the name of the :guilabel:`Destination "
+"Package`, and the :guilabel:`Quantity` of items to be put in that package. "
+"To break the inventory into multiple packages, click the :guilabel:`Add a "
+"line` link; be sure that the :guilabel:`Quantity` of each line adds up to "
+"the total :guilabel:`Demand`. Click :guilabel:`Save` to create the package "
+"in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
+msgid "Specify a Destination Package in the Detailed Operations form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:99
+msgid "Repeat this process for all product lines on the operation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:101
+msgid ""
+"Alternatively, click the :guilabel:`Put in Pack` button on the operation "
+"form to put all items with a :guilabel:`Quantity` greater than `0.00` into a "
+"package. The *Put in Pack* pop-up window opens."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:104
+msgid ""
+"In the *Put in Pack* window, specify a :guilabel:`Package Type` "
+"and :guilabel:`Package`, or leave the :guilabel:`Package` field blank to "
+"create a new package. Then click the :guilabel:`Put in Pack` button. The "
+"package name appears in the product line's :guilabel:`Packages` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
+msgid "Specify a Package Type and, optionally, a package name."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:112
+msgid ""
+"A business has placed an order for `20` units each of `Apple Juice Cans`, "
+"`Orange Juice Cans`, `Sparkling Water Cans`, and `Soda Cans`. When the order "
+"arrives, each product arrives in its own box of 20 cans."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:116
+msgid ""
+"The warehouse manager specifies a separate package for each product line on "
+"the receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:0
+msgid "Four packages are created on the receipt form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:121
+msgid ""
+"Then, to organize all packages into a single larger unit (for example, to "
+"package multiple cases of soda into a pallet), click the :guilabel:`Put in "
+"Pack` button. After closing the *Put in Pack* window, "
+"the :guilabel:`Packages` field for the product lines in the greater package "
+"updates with the new package name."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:127
+msgid ""
+"Continuing the example from above, the warehouse manager wants to package "
+"all of the products onto a single pallet for storage in the warehouse. They "
+"click the :guilabel:`Put in Pack` button, then in the *Put in Pack* window, "
+"they specify `Pallet` as the :guilabel:`Package Type`. "
+"The :guilabel:`Packages` field for all product lines updates to show the "
+"pallet package name, `PAL0000001`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:0
+msgid "The Packages field updates with a new package name."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:136
+msgid ""
+"Be sure to :guilabel:`Validate` the operation to process its move in "
+"inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:139
+msgid "Viewing the packages in an operation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:141
+msgid ""
+"To view the packages created from an operation, click the :icon:`fa-"
+"cubes` :guilabel:`Packages` smart button at the top of the operation form. "
+"By default, this list is filtered by the :guilabel:`Main Packages`, or the "
+"largest package assigned to the operation. To view all packages, remove "
+"the :guilabel:`Main Packages` filter."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
+msgid "Show all packages on the Packages list."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:150
+msgid "Removing packages from parent packages"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:152
+msgid ""
+"To remove packages from parent packages, click the :icon:`fa-"
+"cubes` :guilabel:`Packages` smart button at the top of the operation form. "
+"By default, this list is filtered by the :guilabel:`Main Packages`, or the "
+"largest package assigned to the operation. To view all packages, remove "
+"the :guilabel:`Main Packages` filter."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:157
+msgid ""
+"Select the check boxes next to the packages that you want to remove, then "
+"click the :guilabel:`Remove` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:161
+msgid "Viewing packages in inventory"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:163
+msgid ""
+"Open :menuselection:`Inventory app --> Products --> Packages`. All packages "
+"in inventory are listed here."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:166
+msgid ""
+"To view the contents of a package, open the package from the list of "
+"packages. The products in the package, including the child packages they are "
+"stored in, are listed on the package form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
+msgid "Child packages are listed on the package reference form."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:7
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:32
 msgid ""
@@ -7072,22 +7406,6 @@ msgstr ""
 "kiện` đã được nhấn để tạo một kiện mới, `PACK0000002`, và gán tất cả mặt "
 "hàng vào đó trong trường :guilabel:`Kiện hàng đích`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:125
-msgid "Create package types"
-msgstr "Tạo loại kiện hàng"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:127
-msgid ""
-"Create package types by navigating to :menuselection:`Inventory app --> "
-"Configuration --> Package Types`, in order to set custom dimensions and "
-"weight limits. This feature is mainly used to calculate package weights for "
-"shipping costs."
-msgstr ""
-"Tạo loại kiện hàng bằng cách đi đến :menuselection:`Ứng dụng Tồn kho --> Cấu "
-"hình --> Loại kiện hàng`, để thiết lập kích thước tùy chỉnh và giới hạn khối "
-"lượng. Tính năng này chủ yếu được sử dụng để tính khối lượng kiện hàng khi "
-"xác định phí vận chuyển."
-
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:132
 msgid ""
 ":doc:`Shipping carriers <../../shipping_receiving/setup_configuration/"
@@ -7099,14 +7417,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:133
 msgid ":doc:`../../shipping_receiving/setup_configuration`"
 msgstr ":doc:`../../shipping_receiving/setup_configuration`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:135
-msgid ""
-"On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a "
-"blank package type form. The fields of the form are as follows:"
-msgstr ""
-"Trên danh sách :guilabel:`Loại kiện hàng`, khi nhấp vào :guilabel:`Mới` sẽ "
-"mở một biểu mẫu loại kiện hàng trống. Các trường của biểu mẫu như sau:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:138
 msgid ":guilabel:`Package Type` (required): define the package type's name."
@@ -7141,19 +7451,6 @@ msgstr ""
 "trường :guilabel:`Khối lượng`, trong tab :guilabel:`Tồn kho`, của mỗi biểu "
 "mẫu sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:148
-msgid ":guilabel:`Max Weight`: maximum shipping weight allowed in the package."
-msgstr ""
-":guilabel:`Khối lượng tối đa`: khối lượng vận chuyển tối đa được phép trong "
-"kiện hàng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:149
-msgid ""
-":guilabel:`Barcode`: Define a barcode to identify the package type from a "
-"scan."
-msgstr ""
-":guilabel:`Mã vạch`: Xác định mã vạch để nhận diện loại kiện thông qua quét."
-
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:150
 msgid ""
 ":guilabel:`Company`: Specify a company to make the package type available "
@@ -7163,21 +7460,6 @@ msgstr ""
 ":guilabel:`Công ty`: Chỉ định một công ty để loại kiện hàng **chỉ** khả dụng "
 "tại công ty được chọn. Để trống nếu muốn loại kiện khả dụng ở tất cả các "
 "công ty."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
-msgid ""
-":guilabel:`Carrier`: Specify the intended shipping carrier for this package "
-"type."
-msgstr ""
-":guilabel:`Đơn vị vận chuyển`: Chỉ định đơn vị vận chuyển dự kiến cho loại "
-"kiện hàng này."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:153
-msgid ""
-":guilabel:`Carrier Code`: Define a code that is linked to the package type."
-msgstr ""
-":guilabel:`Mã đơn vị vận chuyển`: Xác định mã được liên kết với loại kiện "
-"hàng."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Package type for FedEx's 25 kilogram box."

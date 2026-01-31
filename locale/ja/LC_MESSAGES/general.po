@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 18:30+0000\n"
+"POT-Creation-Date: 2026-01-30 18:30+0000\n"
 "PO-Revision-Date: 2026-01-27 23:22+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -6843,47 +6843,35 @@ msgstr ""
 "完了すると、入力したメールアドレス宛に有効化メールが送信され、信頼できる送信"
 "者の有効化が行われます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:87
+#: ../../content/applications/general/email_communication/mailjet_api.rst:88
 msgid ""
-"It is recommended to set up the :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` settings on the "
-"domain of the sender."
+"To prevent emails from being marked as spam, :ref:`set up a custom domain "
+"<email-online-sh-domain>`. Using the Odoo-provided subdomain "
+"(*dbname.odoo.com*) with the Mailjet server may lead to email deliverability "
+"issues, because the email authentication protocols (:abbr:`SPF (Sender "
+"Policy Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)`, "
+"and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
+"Conformance)`) cannot be configured on that subdomain."
 msgstr ""
-"送信者のドメインで、:abbr:`SPF (Sender Policy Framework)`/:abbr:`DKIM "
-"(DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-based Message "
-"Authentication, Reporting, and Conformance)` の設定を行うことをお勧めします。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:92
+#: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
 "`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
 "us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
 "Guide>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+#: ../../content/applications/general/email_communication/mailjet_api.rst:99
 msgid ""
 "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:98
-msgid ""
-"If the database is not using a custom domain, then in order to verify the "
-"sender's address, a temporary alias (of the three email addresses mentioned "
-"above) should be set up in Odoo CRM to create a lead. Then, the database is "
-"able to receive the verification email and verify the accounts."
-msgstr ""
-"データベースがカスタムドメインを使用していない場合、送信者のアドレスを確認す"
-"るには、Odoo CRMに一時的なエイリアス(上記の3つのEメールアドレスのうちの1つ)を"
-"設定してリードを作成する必要があります。 その後、データベースは確認Eメールを"
-"受信し、アカウントを確認することができます。"
-
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
 msgstr "ドメインを追加する"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:108
+#: ../../content/applications/general/email_communication/mailjet_api.rst:107
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -6900,7 +6888,7 @@ msgstr ""
 "に、カスタムドメインを追加するには、:guilabel:`ドメインの追加` をクリックしま"
 "す。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:115
+#: ../../content/applications/general/email_communication/mailjet_api.rst:114
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
@@ -6908,7 +6896,7 @@ msgstr ""
 "ドメインはMailjetアカウントに追加し、 :abbr:`DNS (Domain Name System)` で検証"
 "済である必要があります。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:118
+#: ../../content/applications/general/email_communication/mailjet_api.rst:117
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
@@ -6916,7 +6904,7 @@ msgstr ""
 "その後、Mailjetの :guilabel:`新規ドメインを追加` ページで :guilabel:`続行` を"
 "クリックします。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:121
+#: ../../content/applications/general/email_communication/mailjet_api.rst:120
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), "
@@ -6934,11 +6922,11 @@ msgstr ""
 msgid "The TXT record information to input on the domain's DNS."
 msgstr "TXTレコードは、ドメインのDNSに入力する情報です。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:129
 msgid "Setup in the domain's DNS"
 msgstr "ドメインのDNSでの設定"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:132
+#: ../../content/applications/general/email_communication/mailjet_api.rst:131
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT "
 "record to the domain's :abbr:`DNS (Domain Name System)`. This process varies "
@@ -6954,11 +6942,11 @@ msgstr ""
 "スト`と:guilabel:`値`で構成されています。これらの情報をTXTレコードの対応する"
 "フィールドに貼付けます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:138
 msgid "Return to Mailjet account information"
 msgstr "Return to Mailjetアカウント情報に戻る"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:141
+#: ../../content/applications/general/email_communication/mailjet_api.rst:140
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate "
@@ -6971,7 +6959,7 @@ msgstr ""
 "またはアドレスを追加` に移動し、:guilabel:`ドメイン` の隣にある歯車アイコンを"
 "クリックし、:guilabel:`検証` を選択します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:145
+#: ../../content/applications/general/email_communication/mailjet_api.rst:144
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -6981,7 +6969,7 @@ msgstr ""
 "app.mailjet.com/ account/sender>`_ ページで、:guilabel:`管理` をクリックする"
 "ことでも行うことができます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:148
+#: ../../content/applications/general/email_communication/mailjet_api.rst:147
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -6994,7 +6982,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "MailjetでDNSレコードを確認します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:154
+#: ../../content/applications/general/email_communication/mailjet_api.rst:153
 msgid ""
 "After successfully setting up the domain, there is an option "
 "to :guilabel:`Authenticate this domain (SPF/DKIM)`. This button "
@@ -7007,7 +6995,7 @@ msgstr ""
 "Policy Framework)` および :abbr:`DKIM(DomainKeys Identified Mail)レコードが入"
 "力され、:abbr:`DNS (Domain Name System)` プロバイダーに送信されます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+#: ../../content/applications/general/email_communication/mailjet_api.rst:158
 msgid ""
 "`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/"
 "hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
@@ -7019,11 +7007,11 @@ msgstr ""
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "MailjetのSPF/DKIMレコードでドメインを認証します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:167
 msgid "Set up in Odoo"
 msgstr "Odooでの設定"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:170
+#: ../../content/applications/general/email_communication/mailjet_api.rst:169
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to "
 "the :guilabel:`Settings`. With :ref:`developer-mode` turned on, go to "
@@ -7036,7 +7024,7 @@ msgstr ""
 "メール --> 送信メールサーバ` に進みます。次に、:guilabel:`作成` ボタンをク"
 "リックして、新しい送信サーバ設定を作成します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:175
+#: ../../content/applications/general/email_communication/mailjet_api.rst:174
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -7051,7 +7039,7 @@ msgstr ""
 "す。Mailjetが要求しない場合でも、:abbr:`SSL (Secure Sockets "
 "Layer)`/:abbr:`TLS (Transport Layer Security)` を使用することを推奨します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:180
+#: ../../content/applications/general/email_communication/mailjet_api.rst:179
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For "
 "the :guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied "
@@ -7064,7 +7052,7 @@ msgstr ""
 "キー` を入力します。これらの設定は、:menuselection:`Mailjet --> アカウント設"
 "定 --> SMTP およびAPI送信設定` で確認できます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:185
+#: ../../content/applications/general/email_communication/mailjet_api.rst:184
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set "
 "the :guilabel:`Priority` value higher than that of any transactional email "
@@ -9338,11 +9326,11 @@ msgid ""
 "check has been reached, or when a specific key is pressed during "
 "manufacturing."
 msgstr ""
-"カメラは、Odooデータベースを搭載した :abbr:`IoT (モノのインターネット)` Boxに"
-"、わずか数ステップで接続できます。カメラが :abbr:`IoT (モノのインターネット)`"
-"  Boxに接続されると、製造工程で使用したり、品質検査ポイント/品質チェックにリ"
-"ンクすることができます。 それにより、選択した品質検査ポイント/チェックに達し"
-"た時や、製造中に特定のキーが押された時に写真を撮影することができます。"
+"カメラは、Odooデータベースを搭載した :abbr:`IoT (モノのインターネット)` Box"
+"に、わずか数ステップで接続できます。カメラが :abbr:`IoT (モノのインターネッ"
+"ト)`  Boxに接続されると、製造工程で使用したり、品質検査ポイント/品質チェック"
+"にリンクすることができます。 それにより、選択した品質検査ポイント/チェックに"
+"達した時や、製造中に特定のキーが押された時に写真を撮影することができます。"
 
 #: ../../content/applications/general/iot/devices/camera.rst:14
 msgid ""
@@ -9604,9 +9592,9 @@ msgid ""
 "quality control point/quality check, or for use in a work center during the "
 "manufacturing process."
 msgstr ""
-"Odooの :abbr:`IoT (モノのインターネット)` Boxを使用すると、測定ツールをOdooデ"
-"ータベースに接続し、品質検査ポイント/品質チェックにおける *品質アプリ* での使"
-"用、または製造プロセスにおける作業区での使用が可能です。"
+"Odooの :abbr:`IoT (モノのインターネット)` Boxを使用すると、測定ツールをOdoo"
+"データベースに接続し、品質検査ポイント/品質チェックにおける *品質アプリ* での"
+"使用、または製造プロセスにおける作業区での使用が可能です。"
 
 #: ../../content/applications/general/iot/devices/measurement_tool.rst:11
 msgid ""
@@ -13057,29 +13045,21 @@ msgstr "2要素認証"
 
 #: ../../content/applications/general/users/2fa.rst:8
 msgid ""
-"*Two-factor authentication (2FA)* is a way to improve security, and prevent "
-"unauthorized persons from accessing user accounts."
+"*Two-factor authentication (2FA)* is a security measure that helps prevent "
+"unauthorized access to user accounts."
 msgstr ""
-"*2 要素認証 (2FA)* はセキュリティを向上させ、権限のない人物がユーザアカウント"
-"にアクセスするのを防ぐ方法です。"
 
 #: ../../content/applications/general/users/2fa.rst:11
 msgid ""
-"Practically, |2fa| means storing a secret inside an *authenticator*, usually "
-"on a mobile phone, and exchanging a code from the authenticator when trying "
-"to log in."
+"Practically, |2fa| means storing a secret in an *authenticator*, usually on "
+"a mobile phone, and exchanging a code from the authenticator when logging in."
 msgstr ""
-"実際には、|2fa| とは、通常は携帯電話に搭載された認証アプリ内に秘密を保存し、"
-"ログイン時に認証アプリからコードを交換することを意味します。"
 
 #: ../../content/applications/general/users/2fa.rst:14
 msgid ""
-"This means an unauthorized user would need to guess the account password "
-"*and* have access to the authenticator, which is a more difficult "
-"proposition."
+"This means an unauthorized user would need to guess the account password and "
+"have access to the authenticator, which is a more difficult proposition."
 msgstr ""
-"つまり、不正ユーザは、アカウントのパスワードを推測する必要があり、さらに認証"
-"アプリへのアクセスも必要となります。これはより困難な課題です。"
 
 #: ../../content/applications/general/users/2fa.rst:18
 msgid "Requirements"
@@ -13175,6 +13155,10 @@ msgstr ""
 ":guilabel:`アカウントセキュリティ` タブをクリックし、:guilabel:`2要素認証` ト"
 "グルを *有効* にスライドさせます。"
 
+#: ../../content/applications/general/users/2fa.rst:None
+msgid "The account secuirty tab in a user profile."
+msgstr ""
+
 #: ../../content/applications/general/users/2fa.rst:53
 msgid ""
 "This generates a :guilabel:`Security Control` pop-up window that requires "
@@ -13187,30 +13171,38 @@ msgstr ""
 "力し、:guilabel:`パスワードの確認` をクリックします。すると、 |QR| コードと共"
 "に、:guilabel:`2要素認証の有効化` ポップアップウィンドウが表示されます。"
 
-#: ../../content/applications/general/users/2fa.rst:61
+#: ../../content/applications/general/users/2fa.rst:60
+msgid "The 2fa authentication QR code in Odoo."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:60
 msgid ""
 "Using the desired authenticator application, scan the |QR| when prompted."
 msgstr ""
 "希望する認証アプリケーションを使用して、指示が出たら |QR| コードをスキャンし"
 "ます。"
 
-#: ../../content/applications/general/users/2fa.rst:64
+#: ../../content/applications/general/users/2fa.rst:63
 msgid ""
-"If scanning the screen is not possible (e.g. the setup is being completed on "
-"the *same* device as the authenticator application), clicking the "
-"provided :guilabel:`Cannot scan it?` link, or copying the secret to manually "
-"set up the authenticator, is an alternative."
+"If scanning the screen is not possible (e.g., the setup is being completed "
+"on the *same* device as the authenticator application), click the "
+"provided :guilabel:`Cannot scan it?` link, or copying the code to set up the "
+"authenticator manually, is an alternative."
 msgstr ""
-"画面のスキャンが不可能な場合(例えば、認証アプリケーションと同じデバイスでセッ"
-"トアップが完了している場合など)、表示されている :guilabel:`スキャンできません"
-"か？` リンクをクリックするか、認証アプリケーションを手動でセットアップするた"
-"めのシークレットをコピーする、という代替手段があります。"
 
-#: ../../content/applications/general/users/2fa.rst:74
+#: ../../content/applications/general/users/2fa.rst:0
+msgid "A 2fa secret code on an authentication popup."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:70
 msgid "Afterwards, the authenticator should display a *verification code*."
 msgstr "その後、認証システムに *認証コード* が表示されます。"
 
-#: ../../content/applications/general/users/2fa.rst:79
+#: ../../content/applications/general/users/2fa.rst:None
+msgid "A view of the Google authenticator app with the six digit code for 2fa."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:75
 msgid ""
 "Enter the code into the :guilabel:`Verification Code` field, then "
 "click :guilabel:`Activate`."
@@ -13218,17 +13210,23 @@ msgstr ""
 "そのコードを :guilabel:`認証コード` フィールドに入力し、:guilabel:`有効化` を"
 "クリックします。"
 
-#: ../../content/applications/general/users/2fa.rst:85
+#: ../../content/applications/general/users/2fa.rst:None
+msgid ""
+"The success message that appears in a user profile when 2fa is successfully "
+"enabled."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:81
 msgid "Logging in"
 msgstr "ログイン"
 
-#: ../../content/applications/general/users/2fa.rst:87
+#: ../../content/applications/general/users/2fa.rst:83
 msgid "To confirm |2fa| setup is complete, log out of Odoo."
 msgstr ""
 "|2fa| (2要素認証)のセットアップが完了したことを確認するには、Odooからログアウ"
 "トして下さい。"
 
-#: ../../content/applications/general/users/2fa.rst:89
+#: ../../content/applications/general/users/2fa.rst:85
 msgid ""
 "On the login page, input the username and password, then "
 "click :guilabel:`Log in`. On the :guilabel:`Two-factor Authentication` page, "
@@ -13244,7 +13242,7 @@ msgstr ""
 msgid "The login page with 2fa enabled."
 msgstr "2要素認証が有効になっているログインページ"
 
-#: ../../content/applications/general/users/2fa.rst:98
+#: ../../content/applications/general/users/2fa.rst:93
 msgid ""
 "If a user loses access to their authenticator, an administrator **must** "
 "deactivate |2fa| on the account before the user can log in."
@@ -13253,62 +13251,33 @@ msgstr ""
 "る前に、管理者はアカウントの |2fa| (2要素認証)を無効化する **必要があります"
 "**。"
 
-#: ../../content/applications/general/users/2fa.rst:102
+#: ../../content/applications/general/users/2fa.rst:97
 msgid "Enforce two-factor authentication"
 msgstr "2要素承認を強制する"
 
-#: ../../content/applications/general/users/2fa.rst:104
+#: ../../content/applications/general/users/2fa.rst:99
 msgid ""
-"To enforce the use of |2fa| for all users, first navigate "
-"to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
-"the :guilabel:`Apps` filter from the :guilabel:`Search...` bar, then search "
-"for `2FA by mail`."
-msgstr ""
-"全てのユーザに対して |2fa| の使用を強制するには、まず最初に :menuselection:`"
-"メインOdooダッシュボード --> アプリ` に移動します。 :guilabel:`検索...` バー"
-"から :guilabel:`アプリ` フィルタリングを削除し、次に `メールによる2FA(2要素認"
-"証)` を検索します。"
-
-#: ../../content/applications/general/users/2fa.rst:108
-msgid ""
-"Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` "
-"module."
-msgstr ""
-":guilabel:`メールによる2FA` モジュールのかんばんカードの :guilabel:`インス"
-"トール` をクリックします。"
-
-#: ../../content/applications/general/users/2fa.rst:None
-msgid "The 2FA by mail module in the Apps directory."
-msgstr "アプリダイレクトりのメールによる2FA(2要素認証)モジュール"
-
-#: ../../content/applications/general/users/2fa.rst:114
-msgid ""
-"After installation is complete, go to :guilabel:`Settings app: Permissions`. "
-"Tick the checkbox labeled, :guilabel:`Enforce two-factor authentication`. "
+"To enforce |2fa| for every user in the database, navigate to "
+"the :menuselection:`Settings` app. In the :guilabel:`Permissions` section, "
+"tick the checkbox labeled :guilabel:`Enforce two-factor authentication`. "
 "Then, use the radio buttons to choose whether to apply this setting "
-"to :guilabel:`Employees only`, or :guilabel:`All users`."
+"to :guilabel:`Employees only` or :guilabel:`All users`."
 msgstr ""
-"インストールが完了したら、:guilabel:`設定アプリ: 権限` に移動しま"
-"す。 :guilabel:`2要素認証の強制` とラベルの付いたチェックボックスにチェックを"
-"入れます。 次に、ラジオボタンを使用して、この設定を :guilabel:`従業員のみ` に"
-"適用するか、:guilabel:`全てのユーザ` に適用するかを指定します。"
 
-#: ../../content/applications/general/users/2fa.rst:119
+#: ../../content/applications/general/users/2fa.rst:105
 msgid ""
-"Selecting :guilabel:`All users` applies the setting to portal users, in "
+"Selecting :guilabel:`All users` applies the setting to portal users in "
 "addition to employees."
 msgstr ""
-":guilabel:`全てのユーザ` を選択すると、従業員に加えてポータルユーザにも設定が"
-"適用されます。"
+
+#: ../../content/applications/general/users/2fa.rst:107
+msgid "Click :guilabel:`Save` to commit any unsaved changes."
+msgstr ""
+"保存されていない変更を確定するには、:guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid "The enforce two factor setting in the Settings application."
 msgstr "設定アプリケーションで2要素認証を有効にします。"
-
-#: ../../content/applications/general/users/2fa.rst:125
-msgid "Click :guilabel:`Save` to commit any unsaved changes."
-msgstr ""
-"保存されていない変更を確定するには、:guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/general/users/access_rights.rst:3
 msgid "Access rights"
@@ -15561,6 +15530,102 @@ msgstr ""
 #: ../../content/applications/general/users/user_portals/updating_portal_info.rst:154
 msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ""
+
+#~ msgid ""
+#~ "It is recommended to set up the :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` "
+#~ "settings on the domain of the sender."
+#~ msgstr ""
+#~ "送信者のドメインで、:abbr:`SPF (Sender Policy Framework)`/:abbr:`DKIM "
+#~ "(DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-based Message "
+#~ "Authentication, Reporting, and Conformance)` の設定を行うことをお勧めしま"
+#~ "す。"
+
+#~ msgid ""
+#~ "If the database is not using a custom domain, then in order to verify the "
+#~ "sender's address, a temporary alias (of the three email addresses "
+#~ "mentioned above) should be set up in Odoo CRM to create a lead. Then, the "
+#~ "database is able to receive the verification email and verify the "
+#~ "accounts."
+#~ msgstr ""
+#~ "データベースがカスタムドメインを使用していない場合、送信者のアドレスを確認"
+#~ "するには、Odoo CRMに一時的なエイリアス(上記の3つのEメールアドレスのうちの1"
+#~ "つ)を設定してリードを作成する必要があります。 その後、データベースは確認E"
+#~ "メールを受信し、アカウントを確認することができます。"
+
+#~ msgid ""
+#~ "*Two-factor authentication (2FA)* is a way to improve security, and "
+#~ "prevent unauthorized persons from accessing user accounts."
+#~ msgstr ""
+#~ "*2 要素認証 (2FA)* はセキュリティを向上させ、権限のない人物がユーザアカウ"
+#~ "ントにアクセスするのを防ぐ方法です。"
+
+#~ msgid ""
+#~ "Practically, |2fa| means storing a secret inside an *authenticator*, "
+#~ "usually on a mobile phone, and exchanging a code from the authenticator "
+#~ "when trying to log in."
+#~ msgstr ""
+#~ "実際には、|2fa| とは、通常は携帯電話に搭載された認証アプリ内に秘密を保存"
+#~ "し、ログイン時に認証アプリからコードを交換することを意味します。"
+
+#~ msgid ""
+#~ "This means an unauthorized user would need to guess the account password "
+#~ "*and* have access to the authenticator, which is a more difficult "
+#~ "proposition."
+#~ msgstr ""
+#~ "つまり、不正ユーザは、アカウントのパスワードを推測する必要があり、さらに認"
+#~ "証アプリへのアクセスも必要となります。これはより困難な課題です。"
+
+#~ msgid ""
+#~ "If scanning the screen is not possible (e.g. the setup is being completed "
+#~ "on the *same* device as the authenticator application), clicking the "
+#~ "provided :guilabel:`Cannot scan it?` link, or copying the secret to "
+#~ "manually set up the authenticator, is an alternative."
+#~ msgstr ""
+#~ "画面のスキャンが不可能な場合(例えば、認証アプリケーションと同じデバイスで"
+#~ "セットアップが完了している場合など)、表示されている :guilabel:`スキャンで"
+#~ "きませんか？` リンクをクリックするか、認証アプリケーションを手動でセット"
+#~ "アップするためのシークレットをコピーする、という代替手段があります。"
+
+#~ msgid ""
+#~ "To enforce the use of |2fa| for all users, first navigate "
+#~ "to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
+#~ "the :guilabel:`Apps` filter from the :guilabel:`Search...` bar, then "
+#~ "search for `2FA by mail`."
+#~ msgstr ""
+#~ "全てのユーザに対して |2fa| の使用を強制するには、まず最初"
+#~ "に :menuselection:`メインOdooダッシュボード --> アプリ` に移動しま"
+#~ "す。 :guilabel:`検索...` バーから :guilabel:`アプリ` フィルタリングを削除"
+#~ "し、次に `メールによる2FA(2要素認証)` を検索します。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by "
+#~ "mail` module."
+#~ msgstr ""
+#~ ":guilabel:`メールによる2FA` モジュールのかんばんカードの :guilabel:`インス"
+#~ "トール` をクリックします。"
+
+#~ msgid "The 2FA by mail module in the Apps directory."
+#~ msgstr "アプリダイレクトりのメールによる2FA(2要素認証)モジュール"
+
+#~ msgid ""
+#~ "After installation is complete, go to :guilabel:`Settings app: "
+#~ "Permissions`. Tick the checkbox labeled, :guilabel:`Enforce two-factor "
+#~ "authentication`. Then, use the radio buttons to choose whether to apply "
+#~ "this setting to :guilabel:`Employees only`, or :guilabel:`All users`."
+#~ msgstr ""
+#~ "インストールが完了したら、:guilabel:`設定アプリ: 権限` に移動しま"
+#~ "す。 :guilabel:`2要素認証の強制` とラベルの付いたチェックボックスにチェッ"
+#~ "クを入れます。 次に、ラジオボタンを使用して、この設定を :guilabel:`従業員"
+#~ "のみ` に適用するか、:guilabel:`全てのユーザ` に適用するかを指定します。"
+
+#~ msgid ""
+#~ "Selecting :guilabel:`All users` applies the setting to portal users, in "
+#~ "addition to employees."
+#~ msgstr ""
+#~ ":guilabel:`全てのユーザ` を選択すると、従業員に加えてポータルユーザにも設"
+#~ "定が適用されます。"
 
 #~ msgid ""
 #~ "Click :guilabel:`Create` and on the new/blank form that appears, add the "

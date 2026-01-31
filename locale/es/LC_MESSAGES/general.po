@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 18:30+0000\n"
+"POT-Creation-Date: 2026-01-30 18:30+0000\n"
 "PO-Revision-Date: 2026-01-19 23:22+0000\n"
 "Last-Translator: \"Noemi Pla Garcia (nopl)\" <nopl@odoo.com>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -7255,50 +7255,35 @@ msgstr ""
 "masivos. Después de completar el formulario, se envía un correo electrónico "
 "de confirmación a la dirección y se puede activar el remitente."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:87
+#: ../../content/applications/general/email_communication/mailjet_api.rst:88
 msgid ""
-"It is recommended to set up the :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` settings on the "
-"domain of the sender."
+"To prevent emails from being marked as spam, :ref:`set up a custom domain "
+"<email-online-sh-domain>`. Using the Odoo-provided subdomain "
+"(*dbname.odoo.com*) with the Mailjet server may lead to email deliverability "
+"issues, because the email authentication protocols (:abbr:`SPF (Sender "
+"Policy Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)`, "
+"and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
+"Conformance)`) cannot be configured on that subdomain."
 msgstr ""
-"Le recomendamos configurar los ajustes :abbr:`SPF (Convenio de "
-"remitentes)`, :abbr:`DKIM (DomainKeys Identified Mail)` y :abbr:`DMARC "
-"(Autenticación basada en dominios para mensajes, informes y conformidad)` en "
-"el dominio del remitente."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:92
+#: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
 "`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
 "us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
 "Guide>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+#: ../../content/applications/general/email_communication/mailjet_api.rst:99
 msgid ""
 "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:98
-msgid ""
-"If the database is not using a custom domain, then in order to verify the "
-"sender's address, a temporary alias (of the three email addresses mentioned "
-"above) should be set up in Odoo CRM to create a lead. Then, the database is "
-"able to receive the verification email and verify the accounts."
-msgstr ""
-"Si la base de datos no utiliza un dominio personalizado, para verificar la "
-"dirección de remitente, se debe configurar un seudónimo temporal (de las "
-"tres direcciones de correo electrónico que se mencionaron anteriormente) "
-"para crear un lead en la aplicación CRM de Odoo. Posteriormente, la base de "
-"datos puede recibir el correo electrónico de verificación y verificar las "
-"cuentas."
-
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
 msgstr "Agregar un dominio"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:108
+#: ../../content/applications/general/email_communication/mailjet_api.rst:107
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -7316,7 +7301,7 @@ msgstr ""
 "de :guilabel:`Remitentes y dominios`. Después, haga clic "
 "en :guilabel:`Agregar dominio` para agregar su dominio personalizado."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:115
+#: ../../content/applications/general/email_communication/mailjet_api.rst:114
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
@@ -7324,7 +7309,7 @@ msgstr ""
 "La cuenta de Mailjet necesita del dominio para luego validarlo a través "
 "del :abbr:`DNS (Sistema de nombres de dominio)`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:118
+#: ../../content/applications/general/email_communication/mailjet_api.rst:117
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
@@ -7332,7 +7317,7 @@ msgstr ""
 "Posteriormente, complete la página de :guilabel:`Agregar un nuevo dominio` "
 "en Mailjet y haga clic en :guilabel:`Continuar`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:121
+#: ../../content/applications/general/email_communication/mailjet_api.rst:120
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), "
@@ -7352,11 +7337,11 @@ msgid "The TXT record information to input on the domain's DNS."
 msgstr ""
 "Información de registro TXT que se debe introducir en el DNS del dominio."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:129
 msgid "Setup in the domain's DNS"
 msgstr "Configuración en el DNS del dominio"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:132
+#: ../../content/applications/general/email_communication/mailjet_api.rst:131
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT "
 "record to the domain's :abbr:`DNS (Domain Name System)`. This process varies "
@@ -7373,11 +7358,11 @@ msgstr ""
 "consiste en el :guilabel:`alojamiento` y el :guilabel:`valor`. Péguelos en "
 "los campos correspondientes del registro TXT."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:138
 msgid "Return to Mailjet account information"
 msgstr "Volver a la información de cuenta de Mailjet"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:141
+#: ../../content/applications/general/email_communication/mailjet_api.rst:140
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate "
@@ -7391,7 +7376,7 @@ msgstr ""
 "dirección de remitente`, haga clic en el icono de engranaje que se encuentra "
 "junto a :guilabel:`Dominio` y seleccione :guilabel:`Validar`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:145
+#: ../../content/applications/general/email_communication/mailjet_api.rst:144
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -7401,7 +7386,7 @@ msgstr ""
 "direcciones de remitentes <https://app.mailjet.com/ account/sender>`_ en la "
 "información de cuenta de Mailjet y hacer clic en :guilabel:`Gestionar`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:148
+#: ../../content/applications/general/email_communication/mailjet_api.rst:147
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -7415,7 +7400,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "Revisar el registro del DNS en Mailjet."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:154
+#: ../../content/applications/general/email_communication/mailjet_api.rst:153
 msgid ""
 "After successfully setting up the domain, there is an option "
 "to :guilabel:`Authenticate this domain (SPF/DKIM)`. This button "
@@ -7429,7 +7414,7 @@ msgstr ""
 "Identified Mail)` para ingresarlos en el proveedor de :abbr:`DNS (Sistema de "
 "nombres de dominio)`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+#: ../../content/applications/general/email_communication/mailjet_api.rst:158
 msgid ""
 "`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/"
 "hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
@@ -7442,11 +7427,11 @@ msgstr ""
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "Autenticación del dominio con registros SPF/DKIM en Mailjet."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:167
 msgid "Set up in Odoo"
 msgstr "Configuración en Odoo"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:170
+#: ../../content/applications/general/email_communication/mailjet_api.rst:169
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to "
 "the :guilabel:`Settings`. With :ref:`developer-mode` turned on, go to "
@@ -7460,7 +7445,7 @@ msgstr ""
 "correo saliente`. Posteriormente, cree una nueva configuración de servidor "
 "saliente al hacer clic en el botón de :guilabel:`Crear`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:175
+#: ../../content/applications/general/email_communication/mailjet_api.rst:174
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -7476,7 +7461,7 @@ msgstr ""
 "(Capa de sockets seguros)`/:abbr:`TLS (Seguridad de la capa de transporte)` "
 "aunque no sean necesarios para utilizar Mailjet."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:180
+#: ../../content/applications/general/email_communication/mailjet_api.rst:179
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For "
 "the :guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied "
@@ -7490,7 +7475,7 @@ msgstr ""
 "ajuestes en :menuselection:`Mailjet -->  Ajustes de cuenta --> Ajustes de "
 "API SMTP y ENVIAR`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:185
+#: ../../content/applications/general/email_communication/mailjet_api.rst:184
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set "
 "the :guilabel:`Priority` value higher than that of any transactional email "
@@ -13225,31 +13210,21 @@ msgstr "Autenticación de dos factores"
 
 #: ../../content/applications/general/users/2fa.rst:8
 msgid ""
-"*Two-factor authentication (2FA)* is a way to improve security, and prevent "
-"unauthorized persons from accessing user accounts."
+"*Two-factor authentication (2FA)* is a security measure that helps prevent "
+"unauthorized access to user accounts."
 msgstr ""
-"La *autenticación de dos factores (2FA)* permite mejorar la seguridad de una "
-"cuenta y evita que las personas que no están autorizadas accedan a ellas."
 
 #: ../../content/applications/general/users/2fa.rst:11
 msgid ""
-"Practically, |2fa| means storing a secret inside an *authenticator*, usually "
-"on a mobile phone, and exchanging a code from the authenticator when trying "
-"to log in."
+"Practically, |2fa| means storing a secret in an *authenticator*, usually on "
+"a mobile phone, and exchanging a code from the authenticator when logging in."
 msgstr ""
-"Esta función almacena un secreto dentro de un *autentificador*, por lo "
-"general un móvil, e intercambia un código desde su autentificador cuando "
-"quiere iniciar sesión."
 
 #: ../../content/applications/general/users/2fa.rst:14
 msgid ""
-"This means an unauthorized user would need to guess the account password "
-"*and* have access to the authenticator, which is a more difficult "
-"proposition."
+"This means an unauthorized user would need to guess the account password and "
+"have access to the authenticator, which is a more difficult proposition."
 msgstr ""
-"Esto significa que un usuario sin autorización tendría que adivinar la "
-"contraseña de la cuenta *y* tener acceso al autenticador, que sería bastante "
-"difícil."
 
 #: ../../content/applications/general/users/2fa.rst:18
 msgid "Requirements"
@@ -13342,6 +13317,10 @@ msgstr ""
 "Haga clic en la pestaña :guilabel:`Seguridad de la cuenta` y después "
 "presione el botón :guilabel:`Autenticación de dos factores` para *activarlo*."
 
+#: ../../content/applications/general/users/2fa.rst:None
+msgid "The account secuirty tab in a user profile."
+msgstr ""
+
 #: ../../content/applications/general/users/2fa.rst:53
 msgid ""
 "This generates a :guilabel:`Security Control` pop-up window that requires "
@@ -13355,31 +13334,38 @@ msgstr ""
 "Después aparecerá la ventana emergente de :guilabel:`activación de "
 "autenticación de dos factores` con un código QR."
 
-#: ../../content/applications/general/users/2fa.rst:61
+#: ../../content/applications/general/users/2fa.rst:60
+msgid "The 2fa authentication QR code in Odoo."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:60
 msgid ""
 "Using the desired authenticator application, scan the |QR| when prompted."
 msgstr ""
 "Escanee el código QR cuando se le solicite con la aplicación de "
 "autenticación que haya seleccionado."
 
-#: ../../content/applications/general/users/2fa.rst:64
+#: ../../content/applications/general/users/2fa.rst:63
 msgid ""
-"If scanning the screen is not possible (e.g. the setup is being completed on "
-"the *same* device as the authenticator application), clicking the "
-"provided :guilabel:`Cannot scan it?` link, or copying the secret to manually "
-"set up the authenticator, is an alternative."
+"If scanning the screen is not possible (e.g., the setup is being completed "
+"on the *same* device as the authenticator application), click the "
+"provided :guilabel:`Cannot scan it?` link, or copying the code to set up the "
+"authenticator manually, is an alternative."
 msgstr ""
-"Si no puede escanear la pantalla (por ejemplo, porque realizará la "
-"configuración en el *mismo* móvil en el que instaló la aplicación de "
-"autenticación), como alternativa haga clic en el enlace :guilabel:`¿No lo "
-"puede escanear?` o copie el secreto para configurar el autentificador de "
-"forma manual."
 
-#: ../../content/applications/general/users/2fa.rst:74
+#: ../../content/applications/general/users/2fa.rst:0
+msgid "A 2fa secret code on an authentication popup."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:70
 msgid "Afterwards, the authenticator should display a *verification code*."
 msgstr "Después, el autenticador debe mostrar un *código de verificación*."
 
-#: ../../content/applications/general/users/2fa.rst:79
+#: ../../content/applications/general/users/2fa.rst:None
+msgid "A view of the Google authenticator app with the six digit code for 2fa."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:75
 msgid ""
 "Enter the code into the :guilabel:`Verification Code` field, then "
 "click :guilabel:`Activate`."
@@ -13387,17 +13373,23 @@ msgstr ""
 "Escriba el código en el campo :guilabel:`Código de verificación` y después "
 "haga clic en :guilabel:`Activar`."
 
-#: ../../content/applications/general/users/2fa.rst:85
+#: ../../content/applications/general/users/2fa.rst:None
+msgid ""
+"The success message that appears in a user profile when 2fa is successfully "
+"enabled."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:81
 msgid "Logging in"
 msgstr "Iniciar sesión"
 
-#: ../../content/applications/general/users/2fa.rst:87
+#: ../../content/applications/general/users/2fa.rst:83
 msgid "To confirm |2fa| setup is complete, log out of Odoo."
 msgstr ""
 "Cierre su sesión de Odoo para verificar que completó la configuración de la "
 "autentificación de dos factores."
 
-#: ../../content/applications/general/users/2fa.rst:89
+#: ../../content/applications/general/users/2fa.rst:85
 msgid ""
 "On the login page, input the username and password, then "
 "click :guilabel:`Log in`. On the :guilabel:`Two-factor Authentication` page, "
@@ -13417,7 +13409,7 @@ msgstr ""
 "La página de inicio de sesión con la autenticación de dos factores "
 "habilitada."
 
-#: ../../content/applications/general/users/2fa.rst:98
+#: ../../content/applications/general/users/2fa.rst:93
 msgid ""
 "If a user loses access to their authenticator, an administrator **must** "
 "deactivate |2fa| on the account before the user can log in."
@@ -13426,64 +13418,34 @@ msgstr ""
 "**debe** desactivar la autenticación de dos factores en la cuenta antes de "
 "que el usuario pueda iniciar sesión."
 
-#: ../../content/applications/general/users/2fa.rst:102
+#: ../../content/applications/general/users/2fa.rst:97
 msgid "Enforce two-factor authentication"
 msgstr "Forzar la autenticación de dos factores"
 
-#: ../../content/applications/general/users/2fa.rst:104
+#: ../../content/applications/general/users/2fa.rst:99
 msgid ""
-"To enforce the use of |2fa| for all users, first navigate "
-"to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
-"the :guilabel:`Apps` filter from the :guilabel:`Search...` bar, then search "
-"for `2FA by mail`."
-msgstr ""
-"Para establecer el uso de la autenticación de dos factores (A2F) para todos "
-"los usuarios, primero vaya al :menuselection:`tablero principal de Odoo --> "
-"Aplicaciones`. Elimine el filtro :guilabel:`Aplicaciones` de "
-"la :guilabel:`barra de búsqueda` y luego busque `A2F por correo`."
-
-#: ../../content/applications/general/users/2fa.rst:108
-msgid ""
-"Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` "
-"module."
-msgstr ""
-"Haga clic en :guilabel:`Instalar` en la tarjeta de kanban del "
-"módulo :guilabel:`A2F por correo`."
-
-#: ../../content/applications/general/users/2fa.rst:None
-msgid "The 2FA by mail module in the Apps directory."
-msgstr "El módulo A2F por correo en el directorio de aplicaciones."
-
-#: ../../content/applications/general/users/2fa.rst:114
-msgid ""
-"After installation is complete, go to :guilabel:`Settings app: Permissions`. "
-"Tick the checkbox labeled, :guilabel:`Enforce two-factor authentication`. "
+"To enforce |2fa| for every user in the database, navigate to "
+"the :menuselection:`Settings` app. In the :guilabel:`Permissions` section, "
+"tick the checkbox labeled :guilabel:`Enforce two-factor authentication`. "
 "Then, use the radio buttons to choose whether to apply this setting "
-"to :guilabel:`Employees only`, or :guilabel:`All users`."
+"to :guilabel:`Employees only` or :guilabel:`All users`."
 msgstr ""
-"Después de completar la instalación vaya a :guilabel:`Ajustes: Permisos` y "
-"seleccione la casilla :guilabel:`Establecer la autenticación de dos "
-"factores`. Después, use los botones de opción para elegir si desea aplicar "
-"estos ajustes :guilabel:`solo a los empleados` o a :guilabel:`todos los "
-"usuarios`."
 
-#: ../../content/applications/general/users/2fa.rst:119
+#: ../../content/applications/general/users/2fa.rst:105
 msgid ""
-"Selecting :guilabel:`All users` applies the setting to portal users, in "
+"Selecting :guilabel:`All users` applies the setting to portal users in "
 "addition to employees."
 msgstr ""
-"Al seleccionar :guilabel:`Todos los usuarios` los ajustes aplican para los "
-"usuarios del portal y los empleados."
+
+#: ../../content/applications/general/users/2fa.rst:107
+msgid "Click :guilabel:`Save` to commit any unsaved changes."
+msgstr "Haga clic en :guilabel:`Guardar` para implementar los cambios."
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid "The enforce two factor setting in the Settings application."
 msgstr ""
 "La función establecer la autenticación de dos factores en la aplicación "
 "Ajustes."
-
-#: ../../content/applications/general/users/2fa.rst:125
-msgid "Click :guilabel:`Save` to commit any unsaved changes."
-msgstr "Haga clic en :guilabel:`Guardar` para implementar los cambios."
 
 #: ../../content/applications/general/users/access_rights.rst:3
 msgid "Access rights"
@@ -15779,6 +15741,109 @@ msgstr ""
 #: ../../content/applications/general/users/user_portals/updating_portal_info.rst:154
 msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ""
+
+#~ msgid ""
+#~ "It is recommended to set up the :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` "
+#~ "settings on the domain of the sender."
+#~ msgstr ""
+#~ "Le recomendamos configurar los ajustes :abbr:`SPF (Convenio de "
+#~ "remitentes)`, :abbr:`DKIM (DomainKeys Identified Mail)` y :abbr:`DMARC "
+#~ "(Autenticación basada en dominios para mensajes, informes y conformidad)` "
+#~ "en el dominio del remitente."
+
+#~ msgid ""
+#~ "If the database is not using a custom domain, then in order to verify the "
+#~ "sender's address, a temporary alias (of the three email addresses "
+#~ "mentioned above) should be set up in Odoo CRM to create a lead. Then, the "
+#~ "database is able to receive the verification email and verify the "
+#~ "accounts."
+#~ msgstr ""
+#~ "Si la base de datos no utiliza un dominio personalizado, para verificar "
+#~ "la dirección de remitente, se debe configurar un seudónimo temporal (de "
+#~ "las tres direcciones de correo electrónico que se mencionaron "
+#~ "anteriormente) para crear un lead en la aplicación CRM de Odoo. "
+#~ "Posteriormente, la base de datos puede recibir el correo electrónico de "
+#~ "verificación y verificar las cuentas."
+
+#~ msgid ""
+#~ "*Two-factor authentication (2FA)* is a way to improve security, and "
+#~ "prevent unauthorized persons from accessing user accounts."
+#~ msgstr ""
+#~ "La *autenticación de dos factores (2FA)* permite mejorar la seguridad de "
+#~ "una cuenta y evita que las personas que no están autorizadas accedan a "
+#~ "ellas."
+
+#~ msgid ""
+#~ "Practically, |2fa| means storing a secret inside an *authenticator*, "
+#~ "usually on a mobile phone, and exchanging a code from the authenticator "
+#~ "when trying to log in."
+#~ msgstr ""
+#~ "Esta función almacena un secreto dentro de un *autentificador*, por lo "
+#~ "general un móvil, e intercambia un código desde su autentificador cuando "
+#~ "quiere iniciar sesión."
+
+#~ msgid ""
+#~ "This means an unauthorized user would need to guess the account password "
+#~ "*and* have access to the authenticator, which is a more difficult "
+#~ "proposition."
+#~ msgstr ""
+#~ "Esto significa que un usuario sin autorización tendría que adivinar la "
+#~ "contraseña de la cuenta *y* tener acceso al autenticador, que sería "
+#~ "bastante difícil."
+
+#~ msgid ""
+#~ "If scanning the screen is not possible (e.g. the setup is being completed "
+#~ "on the *same* device as the authenticator application), clicking the "
+#~ "provided :guilabel:`Cannot scan it?` link, or copying the secret to "
+#~ "manually set up the authenticator, is an alternative."
+#~ msgstr ""
+#~ "Si no puede escanear la pantalla (por ejemplo, porque realizará la "
+#~ "configuración en el *mismo* móvil en el que instaló la aplicación de "
+#~ "autenticación), como alternativa haga clic en el enlace :guilabel:`¿No lo "
+#~ "puede escanear?` o copie el secreto para configurar el autentificador de "
+#~ "forma manual."
+
+#~ msgid ""
+#~ "To enforce the use of |2fa| for all users, first navigate "
+#~ "to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
+#~ "the :guilabel:`Apps` filter from the :guilabel:`Search...` bar, then "
+#~ "search for `2FA by mail`."
+#~ msgstr ""
+#~ "Para establecer el uso de la autenticación de dos factores (A2F) para "
+#~ "todos los usuarios, primero vaya al :menuselection:`tablero principal de "
+#~ "Odoo --> Aplicaciones`. Elimine el filtro :guilabel:`Aplicaciones` de "
+#~ "la :guilabel:`barra de búsqueda` y luego busque `A2F por correo`."
+
+#~ msgid ""
+#~ "Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by "
+#~ "mail` module."
+#~ msgstr ""
+#~ "Haga clic en :guilabel:`Instalar` en la tarjeta de kanban del "
+#~ "módulo :guilabel:`A2F por correo`."
+
+#~ msgid "The 2FA by mail module in the Apps directory."
+#~ msgstr "El módulo A2F por correo en el directorio de aplicaciones."
+
+#~ msgid ""
+#~ "After installation is complete, go to :guilabel:`Settings app: "
+#~ "Permissions`. Tick the checkbox labeled, :guilabel:`Enforce two-factor "
+#~ "authentication`. Then, use the radio buttons to choose whether to apply "
+#~ "this setting to :guilabel:`Employees only`, or :guilabel:`All users`."
+#~ msgstr ""
+#~ "Después de completar la instalación vaya a :guilabel:`Ajustes: Permisos` "
+#~ "y seleccione la casilla :guilabel:`Establecer la autenticación de dos "
+#~ "factores`. Después, use los botones de opción para elegir si desea "
+#~ "aplicar estos ajustes :guilabel:`solo a los empleados` o "
+#~ "a :guilabel:`todos los usuarios`."
+
+#~ msgid ""
+#~ "Selecting :guilabel:`All users` applies the setting to portal users, in "
+#~ "addition to employees."
+#~ msgstr ""
+#~ "Al seleccionar :guilabel:`Todos los usuarios` los ajustes aplican para "
+#~ "los usuarios del portal y los empleados."
 
 #~ msgid ""
 #~ "IoT systems support printers connected through USB, network connection, "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 18:30+0000\n"
+"POT-Creation-Date: 2026-01-30 18:30+0000\n"
 "PO-Revision-Date: 2026-01-30 23:21+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -539,6 +539,7 @@ msgstr ":doc:`Odoo 基础知识报表功能 <../../essentials/reporting>`"
 
 #: ../../content/applications/hr/appraisals/appraisal_analysis.rst:123
 #: ../../content/applications/hr/appraisals/skills_evolution.rst:160
+#: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
 
@@ -2295,8 +2296,8 @@ msgid ""
 "or checking out of work earlier than expected."
 msgstr ""
 "Odoo **考勤** 管理应用可作为员工打卡机使用。员工既可通过 :ref:`亭式模式专用设"
-"备 <attendances/kiosk-mode-entry>`完成上下班打卡，也可 :ref:`直接在系统后台 <"
-"attendances/check-in>`进行打卡操作。管理人员可随时查看在岗人员状态，生成工时"
+"备 <attendances/kiosk-mode-entry>`完成上下班打卡，也可 :ref:`直接在系统后台 "
+"<attendances/check-in>`进行打卡操作。管理人员可随时查看在岗人员状态，生成工时"
 "统计报表，同时深入了解员工加班时长、早退等出勤情况。"
 
 #: ../../content/applications/hr/attendances.rst:16
@@ -2330,64 +2331,43 @@ msgid ""
 "To see what access rights a user has, navigate to "
 "the :menuselection:`Settings app --> Users & Companies --> Users`, and click "
 "on an individual user. The :guilabel:`Access Rights` tab is visible by "
-"default. Scroll down to the :guilabel:`HUMAN RESOURCES` section to view the "
-"settings. For the :guilabel:`Attendances` field, the options are either to "
-"leave the field blank or select :guilabel:`Administrator`."
+"default. Scroll down to the *Human Resources* section to view the settings. "
+"For the :guilabel:`Attendances` field, the following options appear:"
 msgstr ""
-"查看用户权限路径：:menuselection:`设置应用 --> 用户与公司 --> 用户`，选择具体"
-"用户后默认显示 :guilabel:`访问权限` 标签页。滚动至 :guilabel:`人力资源` 部"
-"分，其中 :guilabel:`考勤` 字段可选留空或设为 :guilabel:`管理员`。"
 
-#: ../../content/applications/hr/attendances.rst:33
+#: ../../content/applications/hr/attendances.rst:32
 msgid ""
-"If the :guilabel:`Administrator` option is selected, the user has full "
-"access to the entire **Attendances** application, with no restrictions. They "
-"can view all employee attendance records, enter *Kiosk Mode* from the "
-"application, access all reporting metrics, and make modifications to the "
-"settings. If left blank, the user does **not** have access to the "
-"**Attendances** application."
+":guilabel:`No`: The user does **not** have access to the **Attendances** "
+"application, and is **not** able to open the app, even though it appears on "
+"the main database dashboard. An *Access Error* pop-up message appears when "
+"the application is clicked. The user can only check in and out of the "
+"database either through an :ref:`attendance kiosk <attendances/kiosk-mode-"
+"entry>` or the :doc:`attendance icon <attendances/check_in_check_out>` in "
+"the top-right corner of the Odoo database, which is visible at all times, in "
+"every application)."
 msgstr ""
-"选择 :guilabel:`管理员` 权限的用户可以完全访问整个 *考勤* 应用程序，包括查看"
-"所有考勤记录、进入*终端模式*、访问报表数据及修改设置。如果留空，则用户**无法"
-"**访问**考勤**应用程序的权限。"
 
-#: ../../content/applications/hr/attendances.rst:39
+#: ../../content/applications/hr/attendances.rst:38
 msgid ""
-"If a user does **not** have :guilabel:`Administrator` rights for the "
-"**Attendances** app, they are **not** able to open the app, even though it "
-"appears on the main database dashboard. An :guilabel:`Access Error` pop-up "
-"message appears, stating:"
+":guilabel:`Officer: Manage all attendances`: The user has full access to all "
+"employee attendance records, including the ability to modify and create "
+"records, but does **not** have access to the configuration menu and settings."
 msgstr ""
-"如果用户**没有****考勤**应用程序的 :guilabel:`管理员` 权限，则**无法**打开该"
-"应用程序，即使它出现在主数据库仪表板上。弹出 :guilabel:`访问错误` 消息，说"
-"明："
 
-#: ../../content/applications/hr/attendances.rst:43
+#: ../../content/applications/hr/attendances.rst:41
 msgid ""
-"`You do not have enough rights to access the fields "
-"\"attendance_manager_id\" on Employee (hr.employee). Please contact your "
-"system administrator.`"
+":guilabel:`Administrator`: The user has full access to the entire "
+"**Attendances** application, with no restrictions. They can view all "
+"employee attendance records, enter :ref:`kiosk mode <attendances/enable-"
+"kiosk-mode>` from the application, access all :doc:`reporting <attendances/"
+"attendance_reporting>` metrics, and make modifications to the settings."
 msgstr ""
-"`您无权访问员工(hr.employee)中的\"attendance_manager_id\"字段，请联系系统管理"
-"员。"
 
-#: ../../content/applications/hr/attendances.rst:46
-msgid ""
-"Users who cannot access the **Attendances** app can still :doc:`check in and "
-"check out <../hr/attendances/check_in_check_out>` of work within the "
-"database, using the :icon:`fa-circle` :guilabel:`(red circle)` or :icon:`fa-"
-"circle` :guilabel:`(green circle)` that are always available at the top of "
-"the database."
-msgstr ""
-"无**考勤**应用访问权限的用户，仍可通过数据库顶部常驻的 :icon:fa-"
-"circle :guilabel:`(红色圆圈)` 或 :icon:fa-circle :guilabel:`(绿色圆圈)` 进"
-"行 :doc:`打卡 <../hr/attendances/check_in_check_out>`。"
-
-#: ../../content/applications/hr/attendances.rst:54
+#: ../../content/applications/hr/attendances.rst:49
 msgid "Approvers"
 msgstr "审批人"
 
-#: ../../content/applications/hr/attendances.rst:56
+#: ../../content/applications/hr/attendances.rst:51
 msgid ""
 "An approver is a user assigned to review and manage an employee's attendance "
 "records. An approver is typically a manager, though that is not required. "
@@ -2399,22 +2379,18 @@ msgstr ""
 "**仅能**访问和修改被指派员工的记录，这是普通用户查看**考勤**应用数据的唯一例"
 "外情况。"
 
-#: ../../content/applications/hr/attendances.rst:61
+#: ../../content/applications/hr/attendances.rst:56
 msgid ""
-"To view who the attendance approver for an employee is, navigate to "
-"the :menuselection:`Employees application` and click on the specific "
-"employee. Click on the :guilabel:`Work Information` tab, scroll to "
-"the :guilabel:`APPROVERS` section, and check the :guilabel:`Attendance` "
-"field. The person selected is able to view that employee's attendance "
-"records, both on the **Attendances** application dashboard as well as in the "
-"attendance reports, and make modifications to their records."
+"To view the attendance approver for an employee, navigate to "
+"the :menuselection:`Employees` application and click on the specific "
+"employee. Click on the :guilabel:`Settings` tab, scroll to the *Approvers* "
+"section, and check the :guilabel:`Attendance` field. The person selected is "
+"able to view that employee's attendance records, both on the **Attendances** "
+"application dashboard as well as in the attendance reports, and make "
+"modifications to their records."
 msgstr ""
-"若需查询某员工的考勤审批人，可进入 :menuselection:`员工应用`，点击对应员工档"
-"案。切换至 :guilabel:`工作信息` 标签页，下滑至 :guilabel:`审批人` 板块，查看 "
-":guilabel:`考勤` 字段即可。被选中的审批人可在**考勤**应用的仪表板及考勤报表中"
-"查看该员工的考勤记录，并对记录进行修改操作。"
 
-#: ../../content/applications/hr/attendances.rst:68
+#: ../../content/applications/hr/attendances.rst:63
 #: ../../content/applications/hr/attendances/kiosks.rst:22
 #: ../../content/applications/hr/frontdesk.rst:15
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:840
@@ -2426,34 +2402,33 @@ msgstr ""
 msgid "Configuration"
 msgstr "配置"
 
-#: ../../content/applications/hr/attendances.rst:70
+#: ../../content/applications/hr/attendances.rst:65
 msgid ""
 "Few configurations are needed in the **Attendances** app. Determining how "
 "employees check in and out, defining how the kiosks function, and "
-"determining how extra hours are computed are all set in the Configuration "
-"menu. Navigate to the :menuselection:`Attendances application --> "
-"Configuration` to access the configuration menu."
+"determining how extra hours are computed are all configured in the settings "
+"menu. Navigate to the :menuselection:`Attendances app --> Configuration --> "
+"Settings` to access the settings menu."
 msgstr ""
-"**考勤**应用程序中需要的配置很少。确定员工的签到和签退方式、定义自助服务机的"
-"功能以及确定额外工时的计算方式都可以在配置菜单中进行设置。导航"
-"至 :menuselection:`考勤应用程序 --> 配置` 访问配置菜单。"
 
-#: ../../content/applications/hr/attendances.rst:76
+#: ../../content/applications/hr/attendances.rst:71
 msgid ""
 "Any configuration item with a :icon:`fa-building-o` :guilabel:`(building)` "
-"icon is a company-specific configuration. Items without an :icon:`fa-"
-"building-o` :guilabel:`(building)` icon apply to all companies within the "
-"database."
+"icon is a company-specific configuration. Items without a :icon:`fa-building-"
+"o` :guilabel:`(building)` icon apply to all companies within the database."
 msgstr ""
-"任何带有 :icon:`fa-building-o` :guilabel:`(构建)` 图标的配置项都是针对特定公"
-"司的配置。没有 :icon:`fa-building-o` :guilabel:`(构建)` 图标的项目适用于数据"
-"库中的所有公司。"
 
-#: ../../content/applications/hr/attendances.rst:83
+#: ../../content/applications/hr/attendances.rst:78
 msgid "Modes"
 msgstr "模式"
 
-#: ../../content/applications/hr/attendances.rst:85
+#: ../../content/applications/hr/attendances.rst:80
+msgid ""
+"This section specifies how employees log in and out, and how absences are "
+"handled."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:82
 msgid ""
 ":guilabel:`Attendances from Backend` :icon:`fa-building-o`: Activate this "
 "feature to allow users to check in and out directly from the Odoo database. "
@@ -2462,27 +2437,17 @@ msgstr ""
 ":guilabel:`后台考勤打卡` :icon:`fa-building-o`：启用此功能后，用户可直接在 "
 "Odoo 系统后台完成上下班打卡；若未启用，用户则必须通过自助考勤机进行打卡操作。"
 
-#: ../../content/applications/hr/attendances.rst:88
+#: ../../content/applications/hr/attendances.rst:85
 msgid ""
 ":guilabel:`Automatic Check-Out` :icon:`fa-building-o`: Activate this feature "
 "to automatically check out employees according to their working schedule, "
-"after a buffer of time has passed."
+"after a buffer of time has passed. When enabled, a :guilabel:`Tolerance` "
+"field appears below this option. Enter the amount of time, in hours, that "
+"must elapse after an employee's working hours have ended, before they are "
+"automatically checked out."
 msgstr ""
-":guilabel:`自动签退`:icon:`fa-building-o`：启用此功能后，系统将在员工排班结束"
-"后的缓冲期过后，自动为员工执行签退操作。"
 
-#: ../../content/applications/hr/attendances.rst:90
-msgid ""
-":guilabel:`Tolerance`: This field appears only when the :guilabel:`Automatic "
-"Check-Out` :icon:`fa-building-o` feature is enabled. Enter the amount of "
-"time, in hours, that must elapse after an employee's working hours have "
-"ended, before they are automatically checked out."
-msgstr ""
-":guilabel:`签退宽限时长`：仅当 :guilabel:`自动签退` :icon:`fa-building-o` 功"
-"能启用时，此字段才会显示。请输入员工排班结束后，系统自动执行签退操作前的宽限"
-"时长，单位为小时。"
-
-#: ../../content/applications/hr/attendances.rst:95
+#: ../../content/applications/hr/attendances.rst:92
 msgid ""
 "With the :guilabel:`Automatic Check-Out` option enabled, and "
 "the :guilabel:`Tolerance` set to `2.00` hours, an employee checks in to work "
@@ -2493,22 +2458,20 @@ msgstr ""
 "员工上午 9:00 打卡上班，下午 5:00 下班时忘记签退，系统将在当晚 7:00 自动为其"
 "完成签退。"
 
-#: ../../content/applications/hr/attendances.rst:99
+#: ../../content/applications/hr/attendances.rst:96
 msgid ""
 ":guilabel:`Absence Management` :icon:`fa-building-o`: Activate this feature "
 "to log any absences that are not associated with a time off request, such as "
 "vacation time or sick time, on the :doc:`attendance report <attendances/"
-"attendance_reporting>`."
+"attendance_reporting>`. This does **not** apply for employees with a "
+"flexible working schedule."
 msgstr ""
-":guilabel:`缺勤管理` :icon:`fa-building-o`： 激活此功能可在 :doc:`考勤报表 <"
-"attendances/attendance_reporting>` 中记录任何与请假申请无关的缺勤，如休假时间"
-"或病假时间。"
 
-#: ../../content/applications/hr/attendances.rst:104
+#: ../../content/applications/hr/attendances.rst:102
 msgid "Extra Hours"
 msgstr "加班时间"
 
-#: ../../content/applications/hr/attendances.rst:106
+#: ../../content/applications/hr/attendances.rst:104
 msgid ""
 "This section specifies how extra time (sometimes referred to as *overtime*) "
 "is calculated, including when extra time is counted and what time is not "
@@ -2517,7 +2480,7 @@ msgstr ""
 "本部分详细说明额外工时（有时称为*加班*）的计算方式，包括计入额外工时的情形以"
 "及不计入工时的情形。"
 
-#: ../../content/applications/hr/attendances.rst:109
+#: ../../content/applications/hr/attendances.rst:107
 msgid ""
 ":guilabel:`Tolerance Time In Favor Of Company`: Enter the amount of time, in "
 "minutes, that is **not** counted towards an employee's overtime. When an "
@@ -2532,24 +2495,25 @@ msgstr ""
 "分钟数，则该部分时长**不**计为加班；若超时时长高于设定分钟数，则全部超时时长"
 "均计入加班。"
 
-#: ../../content/applications/hr/attendances.rst:116
+#: ../../content/applications/hr/attendances.rst:114
 msgid ""
 "A company sets the :guilabel:`Tolerance Time In Favor Of Company` to `15` "
 "minutes, and the working hours for the entire company are set from 9:00 AM "
 "to 5:00 PM."
-msgstr "一家公司将 :guilabel:`公司侧加班宽限时长` 设置为 15 分钟，全员标准工时为上午 "
+msgstr ""
+"一家公司将 :guilabel:`公司侧加班宽限时长` 设置为 15 分钟，全员标准工时为上午 "
 "9:00 至下午 5:00。"
 
-#: ../../content/applications/hr/attendances.rst:119
+#: ../../content/applications/hr/attendances.rst:117
 msgid ""
 "An employee checks in at 9:00 AM. If the employee checks out at 5:14 PM, the "
 "extra 14 minutes are **not** counted towards their overtime. If the employee "
 "checks out at 5:17 PM, they earn 17 minutes of overtime."
 msgstr ""
-"员工上午 9:00 打卡上班，下午 5:14 打卡下班，超时 14 分钟，**不**计入加班时长"
-"；若该员工下午 5:17 打卡下班，超时 17 分钟，则这 17 分钟全部计入加班时长。"
+"员工上午 9:00 打卡上班，下午 5:14 打卡下班，超时 14 分钟，**不**计入加班时"
+"长；若该员工下午 5:17 打卡下班，超时 17 分钟，则这 17 分钟全部计入加班时长。"
 
-#: ../../content/applications/hr/attendances.rst:123
+#: ../../content/applications/hr/attendances.rst:121
 msgid ""
 ":guilabel:`Tolerance Time In Favor Of Employee`: Enter the amount of time, "
 "in minutes, that an employee is given, which does **not** adversely affect "
@@ -2566,15 +2530,16 @@ msgstr ""
 "员工下班打卡时，若当日工时不足标准时长，且时长差值低于设定分钟数，则**不会**"
 "因此被处罚；若时长差值高于设定分钟数，则会因工时不足被处罚。"
 
-#: ../../content/applications/hr/attendances.rst:132
+#: ../../content/applications/hr/attendances.rst:130
 msgid ""
 "A company sets the :guilabel:`Tolerance Time In Favor Of Employee` fields to "
 "`15` minutes, and the working hours for the entire company are set from 9:00 "
 "AM to 5:00 PM."
-msgstr "一家公司将 :guilabel:`员工侧考勤宽限时长` 设置为 15 分钟，全员标准工时为上午 "
+msgstr ""
+"一家公司将 :guilabel:`员工侧考勤宽限时长` 设置为 15 分钟，全员标准工时为上午 "
 "9:00 至下午 5:00。"
 
-#: ../../content/applications/hr/attendances.rst:135
+#: ../../content/applications/hr/attendances.rst:133
 msgid ""
 "An employee checks in at 9:05 AM. If the employee checks out at 4:55 PM, "
 "even though they logged a total of 10 minutes less than their full working "
@@ -2583,23 +2548,23 @@ msgid ""
 "they **are** penalized, and they are logged as only working 7 hours and 35 "
 "minutes."
 msgstr ""
-"员工上午 9:05 打卡上班，下午 4:55 打卡下班，当日实际工时比标准时长少 10 分钟"
-"，未超过宽限阈值，**不会**被处罚，考勤记录按 8 小时标准工时统计。若该员工下午"
-" 4:40 打卡下班，当日实际工时比标准时长少 20 分钟，超出宽限阈值，**将会**被处"
-"罚，考勤记录按 7 小时 35 分钟统计。"
+"员工上午 9:05 打卡上班，下午 4:55 打卡下班，当日实际工时比标准时长少 10 分"
+"钟，未超过宽限阈值，**不会**被处罚，考勤记录按 8 小时标准工时统计。若该员工下"
+"午 4:40 打卡下班，当日实际工时比标准时长少 20 分钟，超出宽限阈值，**将会**被"
+"处罚，考勤记录按 7 小时 35 分钟统计。"
 
-#: ../../content/applications/hr/attendances.rst:141
+#: ../../content/applications/hr/attendances.rst:139
 msgid ""
 ":guilabel:`Extra Hours Validation` :icon:`fa-building-o`: Click on either "
 "the radio button next to :guilabel:`Automatically Approved` to have all "
 "extra time automatically approved, or :guilabel:`Approved by Manager` if all "
 "extra time should be reviewed and approved by a manager."
 msgstr ""
-":guilabel:`加班时长审批` :icon:`fa-building-o`：可选择以下任一单选按钮：勾选 "
-":guilabel:`自动审批`，则所有加班时长自动通过审批；勾选 :guilabel:`经理审批`，"
-"则所有加班时长均需经管理人员审核批准后方可生效。"
+":guilabel:`加班时长审批` :icon:`fa-building-o`：可选择以下任一单选按钮：勾"
+"选 :guilabel:`自动审批`，则所有加班时长自动通过审批；勾选 :guilabel:`经理审批"
+"`，则所有加班时长均需经管理人员审核批准后方可生效。"
 
-#: ../../content/applications/hr/attendances.rst:145
+#: ../../content/applications/hr/attendances.rst:143
 msgid ""
 ":guilabel:`Display Extra Hours`: Activate this box to display the extra "
 "hours logged by an employee when they check out with a kiosk, or when a user "
@@ -2608,7 +2573,7 @@ msgstr ""
 ":guilabel:`显示额外时间`：激活此框可在员工使用自助服务机结账或用户在数据库中"
 "结账时显示其记录的额外工时。"
 
-#: ../../content/applications/hr/attendances.rst:149
+#: ../../content/applications/hr/attendances.rst:147
 msgid ""
 "Approved extra hours can be :ref:`deducted from an approved time off request "
 "<time_off/deduct-extra-hours>`."
@@ -2616,67 +2581,140 @@ msgstr ""
 "已批准的额外工时可从 :ref:`已批准的休假申请中扣除<time_off/deduct-extra-"
 "hours>`。"
 
+#: ../../content/applications/hr/attendances.rst:151
+msgid ":doc:`attendances/check_in_check_out`"
+msgstr ":doc:`attendances/check_in_check_out`"
+
+#: ../../content/applications/hr/attendances.rst:152
+msgid ":doc:`attendances/kiosks`"
+msgstr ":doc:`attendances/kiosks`"
+
 #: ../../content/applications/hr/attendances.rst:153
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:11
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:231
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:428
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:862
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1365
-#: ../../content/applications/hr/time_off.rst:529
-msgid "Overview"
-msgstr "概述"
+msgid ":doc:`attendances/management`"
+msgstr ":doc:`attendances/management`"
+
+#: ../../content/applications/hr/attendances.rst:154
+msgid ":doc:`attendances/attendance_logs`"
+msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:155
+msgid ":doc:`attendances/hardware`"
+msgstr ":doc:`attendances/hardware`"
+
+#: ../../content/applications/hr/attendances.rst:156
+msgid ":doc:`attendances/attendance_reporting`"
+msgstr ":doc:`attendances/attendance_reporting`"
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:3
+msgid "Attendance logs"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:5
 msgid ""
 "When entering the **Attendances** application, the :guilabel:`Overview` "
-"dashboard is presented, containing all the user's check in and check out "
-"information. If the user has the required :ref:`access rights <attendances/"
-"access-rights>` or is an :ref:`approver <attendances/approvers>` for "
-"specific employees, those employees' check-in and check-out information also "
-"appears on the :guilabel:`Overview` dashboard."
+"dashboard is presented by default, and displays all the user's attendance "
+"logs (their check in and check out information) for the current day. If the "
+"user has the required :ref:`access rights <attendances/access-rights>` or is "
+"an :ref:`approver <attendances/approvers>` for specific employees, those "
+"employees' attendance logs also appear on the :guilabel:`Overview` dashboard."
 msgstr ""
-"进入 **参与者** 应用程序后，将显示 :guilabel:`概览` 仪表板，其中包含用户的所"
-"有签入和签出信息。如果用户拥有所需的 :ref:`访问权限 <attendances/access-"
-"rights>`，或者是特定员工的 :ref:`批准人 <attendances/approvers>`，这些员工的"
-"签入和签出信息也会显示在 :guilabel:`概览` 仪表板上。"
 
-#: ../../content/applications/hr/attendances.rst:161
+#: ../../content/applications/hr/attendances/attendance_logs.rst:11
 msgid ""
-"The **Attendance** dashboard allows switching between :icon:`fa-"
-"tasks` :guilabel:`(Gantt)` and :icon:`oi-view-list` :guilabel:`(List)` "
-"views, and selecting a period to analyze. The current period is "
-"automatically highlighted in yellow for real-time attendance records, while "
-"the :icon:`fa-crosshairs` :guilabel:`(Focus Today)` button instantly returns "
-"the dashboard to the present date."
+"The :guilabel:`Overview` dashboard displays the current day, segmented by "
+"hour, with the current hour highlighted in yellow. The appearance of "
+"the :guilabel:`Overview` dashboard is determined by the :ref:`working "
+"schedule <employees/schedule>` set on the employee's records. Each "
+"employee's working hours appear in white, while all other hours appear in "
+"gray. This allows managers to visually determine if an employee is working "
+"outside of their working hours."
 msgstr ""
-"**考勤** 仪表板支持在 :icon:`fa-tasks` :guilabel:`(甘特图)` 和 :icon:`oi-"
-"view-list` :guilabel:`(列表)` 视图间切换，并可选择分析时段。当前时段会以黄色"
-"高亮显示实时考勤记录，点击 :icon:`fa-crosshairs` :guilabel:`(聚焦今日)` 按钮"
-"可立即跳转至当天数据。"
 
-#: ../../content/applications/hr/attendances.rst:None
+#: ../../content/applications/hr/attendances/attendance_logs.rst:17
+msgid ""
+"Employees populate the rows, alphabetically by first name. Each attendance "
+"log displays the total hours along with the specific check in and check out "
+"times. The log colors indicate the following statuses:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:21
+msgid "Gray: Completed entries where the employee has checked in and out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:22
+msgid ""
+"Green: Active entries where the employee checked in but has not yet checked "
+"out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:23
+msgid ""
+"Red: Entries with any errors (e.g. employees have double entries, or forget "
+"to check out)."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:None
 msgid ""
 "The overview dashboard presenting the information for the week, with the "
 "current day\n"
 "highlighted."
 msgstr "概览仪表板显示一周的信息，并突出显示当前日期。"
 
-#: ../../content/applications/hr/attendances.rst:172
+#: ../../content/applications/hr/attendances/attendance_logs.rst:29
 msgid ""
-"Any entries that have errors appear in red, indicating they need to be "
-"resolved by a user with the proper :ref:`access rights <attendances/access-"
-"rights>` and/or are :ref:`approvers <attendances/approvers>` for the "
+"A color-coded bar indicates how many hours out of the total expected hours "
+"the employee has logged for the day. Rollover the color bar to view the "
+"details for the employee's current day. Solid colors indicate the logged "
+"hours (with both a start and end time), while pale colors indicate the "
+"employee is signed in, but has not signed out yet. Only *completed* "
+"attendance logs (records with a check in and check out time) appear in the "
+"summary of the logged time."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:36
+msgid ""
+"Abigail Peterson is scheduled to work from 9:00 AM to 12:00 PM, then take a "
+"one-hour lunch break from 12:00 PM to 1:00 PM, then work from 1:00 PM to "
+"6:00 PM, for a total of eight hours."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:39
+msgid ""
+"Abigails checks in at 9:00 AM, and checks out at 12:00 PM. She logs in again "
+"at 1:00 PM. The current time is 2:15 PM. The rollover information displays "
+"`3h / 8h`, indicating Abigail has logged three completed working hours out "
+"of a total of eight. There is a pale green line that extends past the "
+"summary block, indicating she checked in at 1:00 PM, but has not yet checked "
+"out. The length of the pale green line indicates the time worked."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:0
+msgid ""
+"The rollover green bar indicating Abigail logged 3 hours, and is currently "
+"logged in."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:48
+msgid ""
+"The **Attendances** dashboard allows for changing the displayed time period, "
+"either :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, :guilabel:`Quarter`, :guilabel:`Year`, "
+"or a custom time period. To instantly return the dashboard to the present "
+"date, click the :guilabel:`Today` button at any time."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:54
+msgid ""
+"Any attendance logs that have errors appear in red, indicating they need to "
+"be resolved by a user with the proper :ref:`access rights <attendances/"
+"access-rights>` or are :ref:`approvers <attendances/approvers>` for the "
 "employees with the errors."
 msgstr ""
-"有错误的条目显示为红色，表明需要由具有适当 :ref:`访问权限 <attendances/"
-"access-rights>` 的用户和/或员工的 :ref:`审批人 <attendances/approvers>` 来解"
-"决。"
 
-#: ../../content/applications/hr/attendances.rst:179
+#: ../../content/applications/hr/attendances/attendance_logs.rst:61
 msgid "Filters and groups"
 msgstr "筛选器和分组"
 
-#: ../../content/applications/hr/attendances.rst:181
+#: ../../content/applications/hr/attendances/attendance_logs.rst:63
 msgid ""
 "Sometimes, attendance officers and managers need to view specific records, "
 "such as all automatic checkouts, to determine which employees chronically "
@@ -2686,141 +2724,137 @@ msgstr ""
 "有时，考勤员和经理需要查看特定记录，如所有自动签出记录，以确定哪些员工长期忘"
 "记签出，或按部门查看，以确定哪个团队加班最多。"
 
-#: ../../content/applications/hr/attendances.rst:185
+#: ../../content/applications/hr/attendances/attendance_logs.rst:67
 msgid ""
 "For these cases, use the search bar to select a :icon:`fa-"
 "filter` :guilabel:`Filters` or :icon:`oi-group` :guilabel:`Group By`, or "
 "combine both to present the desired information."
 msgstr ""
-"在这些情况下，请使用搜索栏选择 :icon:`fa-filter` :guilabel:`筛选器` 或 :icon"
-":`oi-group` :guilabel:`分组方式`，或将两者结合起来以显示所需的信息。"
+"在这些情况下，请使用搜索栏选择 :icon:`fa-filter` :guilabel:`筛选器` "
+"或 :icon:`oi-group` :guilabel:`分组方式`，或将两者结合起来以显示所需的信息。"
 
-#: ../../content/applications/hr/attendances.rst:189
-msgid ":doc:`../essentials/search`"
-msgstr ":doc:`../essentials/search`"
-
-#: ../../content/applications/hr/attendances.rst:192
+#: ../../content/applications/hr/attendances/attendance_logs.rst:74
 msgid "High-value filters"
 msgstr "高价值筛选器"
 
-#: ../../content/applications/hr/attendances.rst:199
+#: ../../content/applications/hr/attendances/attendance_logs.rst:81
 msgid "Filter"
 msgstr "筛选"
 
-#: ../../content/applications/hr/attendances.rst:200
+#: ../../content/applications/hr/attendances/attendance_logs.rst:82
 msgid "Common use case"
 msgstr "常见使用场景"
 
-#: ../../content/applications/hr/attendances.rst:201
+#: ../../content/applications/hr/attendances/attendance_logs.rst:83
 msgid "At Work"
 msgstr "工作中"
 
-#: ../../content/applications/hr/attendances.rst:202
+#: ../../content/applications/hr/attendances/attendance_logs.rst:84
 msgid ""
 "Verify employees still on-site before shutting down the building for the "
 "night, or to perform a head count."
 msgstr "在夜间关闭办公楼前确认仍在岗员工，执行人员清点。"
 
-#: ../../content/applications/hr/attendances.rst:204
-#: ../../content/applications/hr/lunch/orders.rst:86
+#: ../../content/applications/hr/attendances/attendance_logs.rst:86
+#: ../../content/applications/hr/lunch/orders.rst:115
 msgid "Errors"
 msgstr "错误"
 
-#: ../../content/applications/hr/attendances.rst:205
+#: ../../content/applications/hr/attendances/attendance_logs.rst:87
 msgid "View all errors to correct them prior to payroll processing."
 msgstr "查看所有错误记录以便在薪资处理前修正。"
 
-#: ../../content/applications/hr/attendances.rst:206
+#: ../../content/applications/hr/attendances/attendance_logs.rst:88
 msgid "Automatically Checked-Out"
 msgstr "自动签退"
 
-#: ../../content/applications/hr/attendances.rst:207
+#: ../../content/applications/hr/attendances/attendance_logs.rst:89
 msgid ""
 "Perform an audit to determine employees who chronically forget to check-out "
 "of work."
 msgstr "审计经常忘记签退的员工。"
 
-#: ../../content/applications/hr/attendances.rst:208
+#: ../../content/applications/hr/attendances/attendance_logs.rst:90
 msgid "Date"
 msgstr "日期"
 
-#: ../../content/applications/hr/attendances.rst:209
+#: ../../content/applications/hr/attendances/attendance_logs.rst:91
 msgid "Limit results to a specific pay-period or audit window."
 msgstr "将结果限定在特定薪资周期或审计时段。"
 
-#: ../../content/applications/hr/attendances.rst:210
+#: ../../content/applications/hr/attendances/attendance_logs.rst:92
 msgid "Active/Archived Employees"
 msgstr "在职/已存档员工"
 
-#: ../../content/applications/hr/attendances.rst:211
+#: ../../content/applications/hr/attendances/attendance_logs.rst:93
 msgid ""
 "Switch between current staff and former employees when auditing historical "
 "data."
 msgstr "审计历史数据时在当前员工与离职员工间切换。"
 
-#: ../../content/applications/hr/attendances.rst:214
+#: ../../content/applications/hr/attendances/attendance_logs.rst:96
 msgid "Insightful groupings"
 msgstr "智能分组"
 
-#: ../../content/applications/hr/attendances.rst:221
+#: ../../content/applications/hr/attendances/attendance_logs.rst:103
 msgid "Group by"
 msgstr "分组"
 
-#: ../../content/applications/hr/attendances.rst:222
+#: ../../content/applications/hr/attendances/attendance_logs.rst:104
 msgid "When it helps"
 msgstr "适用场景"
 
-#: ../../content/applications/hr/attendances.rst:223
+#: ../../content/applications/hr/attendances/attendance_logs.rst:105
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:977
 msgid "Employee"
 msgstr "员工"
 
-#: ../../content/applications/hr/attendances.rst:224
-msgid "Review individual attendance records during a 1:1 meeting."
-msgstr "在1对1会议中查看个人考勤记录。"
+#: ../../content/applications/hr/attendances/attendance_logs.rst:106
+msgid "Review individual attendance logs during a 1:1 meeting."
+msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:225
+#: ../../content/applications/hr/attendances/attendance_logs.rst:107
 msgid "Department"
 msgstr "部门"
 
-#: ../../content/applications/hr/attendances.rst:226
+#: ../../content/applications/hr/attendances/attendance_logs.rst:108
 msgid ""
 "Compare staffing levels and working hours to determine over-working and "
 "under-working teams."
 msgstr "对比人员配置与工时，识别工作超负荷或不足的团队。"
 
-#: ../../content/applications/hr/attendances.rst:227
+#: ../../content/applications/hr/attendances/attendance_logs.rst:109
 msgid "Manager"
 msgstr "管理员"
 
-#: ../../content/applications/hr/attendances.rst:228
+#: ../../content/applications/hr/attendances/attendance_logs.rst:110
 msgid ""
 "Determine where attendance follow-up questions can be directed to for an "
 "employee."
 msgstr "确定需要跟进考勤问题的员工对接人。"
 
-#: ../../content/applications/hr/attendances.rst:229
+#: ../../content/applications/hr/attendances/attendance_logs.rst:111
 msgid "Method"
 msgstr "方法"
 
-#: ../../content/applications/hr/attendances.rst:230
+#: ../../content/applications/hr/attendances/attendance_logs.rst:112
 msgid ""
 "Spot trends in attendance methods to potentially resolve hardware issues."
 msgstr "发现考勤方式趋势以排查硬件问题。"
 
-#: ../../content/applications/hr/attendances.rst:231
+#: ../../content/applications/hr/attendances/attendance_logs.rst:113
 msgid "Date (Day/Week/Month)"
 msgstr "日期（日/周/月）"
 
-#: ../../content/applications/hr/attendances.rst:232
+#: ../../content/applications/hr/attendances/attendance_logs.rst:114
 msgid "Identify absenteeism spikes or seasonal patterns."
 msgstr "识别缺勤高峰或季节性规律。"
 
-#: ../../content/applications/hr/attendances.rst:237
+#: ../../content/applications/hr/attendances/attendance_logs.rst:119
 msgid "Attendance log details"
 msgstr "考勤记录详情"
 
-#: ../../content/applications/hr/attendances.rst:239
+#: ../../content/applications/hr/attendances/attendance_logs.rst:121
 msgid ""
 "Odoo records both the time and location for every check-in and check-out, "
 "with fields varying by the method used. These detailed attendance logs can "
@@ -2829,105 +2863,132 @@ msgid ""
 "ensure proper compliance."
 msgstr ""
 "Odoo 会针对每一次上下班打卡，同步记录打卡时间与打卡地点，具体记录字段会根据打"
-"卡方式的不同有所差异。这些详尽的考勤日志可用于核实员工在任意工作日的在岗地点"
-"，对于实行混合办公制度的企业而言尤为实用 —— 这类企业可能需要通过考勤审计，确"
-"保相关制度得到合规执行。"
+"卡方式的不同有所差异。这些详尽的考勤日志可用于核实员工在任意工作日的在岗地"
+"点，对于实行混合办公制度的企业而言尤为实用 —— 这类企业可能需要通过考勤审计，"
+"确保相关制度得到合规执行。"
 
-#: ../../content/applications/hr/attendances.rst:244
-msgid "The detailed attendance log contains the following information:"
-msgstr "详细的考勤记录包含以下信息："
+#: ../../content/applications/hr/attendances/attendance_logs.rst:126
+msgid ""
+"To view an attendance log, click on any attendance entry on "
+"the :guilabel:`Overview` dashboard, and the attendance log appears in a pop-"
+"up window. This log displays a summary, including the following information:"
+msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:247
-msgid "Main details"
-msgstr "主要详情"
-
-#: ../../content/applications/hr/attendances.rst:249
+#: ../../content/applications/hr/attendances/attendance_logs.rst:130
 msgid ":guilabel:`Employee`: The name of the employee."
 msgstr ":guilabel:`员工`：员工姓名。"
 
-#: ../../content/applications/hr/attendances.rst:250
+#: ../../content/applications/hr/attendances/attendance_logs.rst:131
 msgid ":guilabel:`Check In`: The date and time the employee checked in."
 msgstr ":guilabel:`签到`： 员工签到的日期和时间。"
 
-#: ../../content/applications/hr/attendances.rst:251
+#: ../../content/applications/hr/attendances/attendance_logs.rst:132
 msgid ""
 ":guilabel:`Check Out`: The date and time the employee checked out. This "
 "**only** appears if the employee has checked out."
 msgstr ":guilabel:`签退`：员工签退的日期和时间。**只有**员工签退时才会显示。"
 
-#: ../../content/applications/hr/attendances.rst:253
+#: ../../content/applications/hr/attendances/attendance_logs.rst:134
 msgid ""
-":guilabel:`Worked Time`: The total amount of time the employee logged for "
-"the day, across multiple check-ins and outs, in an hour and minute format "
-"(HH:MM)."
+":guilabel:`Worked Time`: The amount of time the employee logged for that "
+"specific entry, in an hour and minute format (HH:MM)."
 msgstr ""
-":guilabel:`工作时间`： 员工当天多次签到和签退的总时间，格式为小时和分钟"
-"（HH:MM）。"
 
-#: ../../content/applications/hr/attendances.rst:255
+#: ../../content/applications/hr/attendances/attendance_logs.rst:136
 msgid ""
-":guilabel:`Worked Extra Hours`: Unpaid overtime hours worked beyond the "
-"expected working schedule (shows **only** when present for the employee)."
-msgstr ":guilabel:`加班时间`： 超出预期工作时间的无偿加班时数（**仅**显示雇员存在时）"
-"。"
+":guilabel:`Worked Extra Hours`: The unpaid overtime hours worked beyond the "
+"expected working schedule for that specific entry (shows **only** when "
+"present for the employee)."
+msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:257
+#: ../../content/applications/hr/attendances/attendance_logs.rst:138
 msgid ""
-":guilabel:`Extra Hours`: Approved overtime (the :guilabel:`Worked Time` "
-"minus the approved :guilabel:`Worked Extra Hours`."
-msgstr ":guilabel:`额外时间`：批准的加班时间（:guilabel:`工作时间`减去批准的 :guilabe"
-"l:`额外工作时间`。"
+":guilabel:`Extra Hours`: The approved overtime for that specific entry "
+"(the :guilabel:`Worked Time` minus the approved :guilabel:`Worked Extra "
+"Hours`."
+msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:261
+#: ../../content/applications/hr/attendances/attendance_logs.rst:None
+msgid "The details on the attendance log pop-up window."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:145
 msgid "Check in/check out details"
 msgstr "签到/签退详情"
 
-#: ../../content/applications/hr/attendances.rst:263
+#: ../../content/applications/hr/attendances/attendance_logs.rst:147
 msgid ""
-"The following information appears for both the :guilabel:`Check In` "
-"and :guilabel:`Check Out` sections."
-msgstr "以下信息同时显示在 :guilabel:`签到` 和 :guilabel:`签退` 部分。"
-
-#: ../../content/applications/hr/attendances.rst:266
-msgid ""
-":guilabel:`Mode`: Attendance submission method. Can be :ref:`Systray "
-"<attendances/check-in>`, :ref:`Kiosk <attendances/kiosk-mode-entry>`, "
-"or :guilabel:`Manual` entry."
+"Additional detailed check in and check out information for the attendance "
+"log is available. Click the :icon:`fa-expand` :guilabel:`(expand)` icon in "
+"the upper-right corner of the attendance log, and the detailed record loads."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:268
-msgid ":guilabel:`IP Address`: The device's IP address used to log in or out."
-msgstr ":guilabel:`IP 地址`： 用于登录或退出的设备 IP 地址。"
-
-#: ../../content/applications/hr/attendances.rst:269
+#: ../../content/applications/hr/attendances/attendance_logs.rst:151
 msgid ""
-":guilabel:`Browser`: The web browser the employee used to log in or out."
+"The following additional information appears for both the *Check In* and "
+"*Check Out* sections, which appear in the expanded attendance log."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:270
+#: ../../content/applications/hr/attendances/attendance_logs.rst:154
+msgid ""
+":guilabel:`Mode`: The attendance submission method. The available options "
+"are:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:156
+msgid ""
+":guilabel:`Systray`: The employee checked in or out :doc:`directly from the "
+"database <../attendances/check_in_check_out>`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:158
+msgid ""
+":guilabel:`Kiosk`: The employee checked in or out using an :ref:`attendance "
+"kiosk <attendances/kiosk-mode-entry>`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:160
+msgid ""
+":guilabel:`Manual`: The employee's manager or an **Attendances** app "
+"administrator :ref:`manually created the attendance record <attendances/"
+"create-records>`. This typically occurs when an employee forgets to check in "
+"or check out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:164
+msgid ""
+":guilabel:`IP Address`: The device's IP address used to check in or out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:165
+msgid ""
+":guilabel:`Browser`: The web browser the employee used to check in or out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:166
 msgid ""
 ":guilabel:`Localisation`: The city and country associated with the "
 "computer's IP address."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:271
+#: ../../content/applications/hr/attendances/attendance_logs.rst:167
 msgid ""
-":guilabel:`GPS Coordinates`: The specific coordinates when the user logged "
+":guilabel:`GPS Coordinates`: The specific coordinates when the user checked "
 "in or out. To view the specific coordinates on a map, click the :icon:`oi-"
 "arrow-right` :guilabel:`View on Maps` button beneath the :guilabel:`GPS "
 "Coordinates`. This opens a map in a new browser tab, with the specific "
 "location pointed out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:None
+#: ../../content/applications/hr/attendances/attendance_logs.rst:None
 msgid "The detailed information for an attendance entry."
 msgstr "考勤记录的详细信息。"
 
-#: ../../content/applications/hr/attendances.rst:280
+#: ../../content/applications/hr/attendances/attendance_logs.rst:176
 msgid "Attendance errors"
 msgstr "考勤异常"
 
-#: ../../content/applications/hr/attendances.rst:282
+#: ../../content/applications/hr/attendances/attendance_logs.rst:178
 msgid ""
 "Entries that contain an error appear on the overview dashboard in red. In "
 "the :icon:`fa-tasks` :guilabel:`(Gantt)` view, the entry appears with a red "
@@ -2935,24 +2996,24 @@ msgid ""
 "text appears in red."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:286
+#: ../../content/applications/hr/attendances/attendance_logs.rst:182
 msgid ""
 "An error occurs when an employee has checked in but not checked out within "
 "24 hours, or when a single check-in period exceeds 16 hours."
 msgstr "员工打卡后 24 小时内未签退，或单次打卡时段超过 16 小时，将触发异常。"
 
-#: ../../content/applications/hr/attendances.rst:289
+#: ../../content/applications/hr/attendances/attendance_logs.rst:185
 msgid ""
 "To fix the error, the attendance entry must be modified or deleted. Click on "
 "the entry to reveal a pop-up containing the details for that particular "
-"entry. To modify the :guilabel:`Check In` and/or :guilabel:`Check Out` "
+"entry. To modify the :guilabel:`Check In` or :guilabel:`Check Out` "
 "information, click on the :guilabel:`Check In` or :guilabel:`Check Out` "
 "field, and a calendar selector appears. Click on the desired date, then use "
 "the time selector beneath the calendar to select the specific time for the "
 "entry. When the information is correct, click :guilabel:`Apply.`"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:296
+#: ../../content/applications/hr/attendances/attendance_logs.rst:192
 msgid ""
 "When all the information on the pop-up is correct, click :guilabel:`Save & "
 "Close`. When the entry no longer has an error, the entry appears in gray "
@@ -2961,32 +3022,12 @@ msgstr ""
 "弹出窗口中的所有信息都正确后，点击 :guilabel:`保存并关闭`。当条目不再有错误"
 "时，条目将显示为灰色而不是红色。"
 
-#: ../../content/applications/hr/attendances.rst:299
+#: ../../content/applications/hr/attendances/attendance_logs.rst:195
 msgid ""
 "To delete an entry, click the red :guilabel:`Delete` button on the pop-up "
 "window instead of making modifications to the entry."
 msgstr ""
 "如需删除记录，请点击弹窗中的红色 :guilabel:`删除` 按钮（而非修改记录）。"
-
-#: ../../content/applications/hr/attendances.rst:303
-msgid ":doc:`attendances/check_in_check_out`"
-msgstr ":doc:`attendances/check_in_check_out`"
-
-#: ../../content/applications/hr/attendances.rst:304
-msgid ":doc:`attendances/kiosks`"
-msgstr ":doc:`attendances/kiosks`"
-
-#: ../../content/applications/hr/attendances.rst:305
-msgid ":doc:`attendances/management`"
-msgstr ":doc:`attendances/management`"
-
-#: ../../content/applications/hr/attendances.rst:306
-msgid ":doc:`attendances/hardware`"
-msgstr ":doc:`attendances/hardware`"
-
-#: ../../content/applications/hr/attendances.rst:307
-msgid ":doc:`attendances/attendance_reporting`"
-msgstr ":doc:`attendances/attendance_reporting`"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:3
 msgid "Attendance reporting"
@@ -3056,12 +3097,9 @@ msgstr ":guilabel:`核准差额`：*已批准* 加班时长与实际加班*总�
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:29
 msgid ""
-"To present different information, adjust the :ref:`filters and groups "
-"<attendances/filters-groups>` in the same way as in the :guilabel:`Overview` "
-"dashboard."
+"To present different information, adjust the filters and groups in the same "
+"way as in the :guilabel:`Overview` dashboard."
 msgstr ""
-"要显示不同的信息，请调整 :ref:`筛选器和分组<attendances/filters-groups>` ，方"
-"法与 :guilabel:`概览` 仪表板相同。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:None
 msgid ""
@@ -3758,11 +3796,11 @@ msgstr ""
 "的 :icon:fa-refresh:guilabel:`生成新 URL 按钮`，生成新 URL 并同步更新终端设备"
 "配置。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:81
+#: ../../content/applications/hr/attendances/kiosks.rst:83
 msgid "Kiosk mode"
 msgstr "自助考勤模式"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:83
+#: ../../content/applications/hr/attendances/kiosks.rst:85
 msgid ""
 "Entering *Kiosk Mode* is **only** available for users with "
 "specific :ref:`access rights <attendances/access-rights>`."
@@ -3770,11 +3808,11 @@ msgstr ""
 "**只有**拥有特定 :ref:`访问权限 <attendances/access-rights>` 的用户才能进入*"
 "自助考勤模式*。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:86
+#: ../../content/applications/hr/attendances/kiosks.rst:88
 msgid "*Kiosk Mode* can be activated in two different ways:"
 msgstr "*自助考勤模式* 可以通过两种不同方式激活："
 
-#: ../../content/applications/hr/attendances/kiosks.rst:88
+#: ../../content/applications/hr/attendances/kiosks.rst:90
 msgid ""
 "Navigate to the :menuselection:`Attendances app`, and click :guilabel:`Kiosk "
 "Mode` in the top menu. The device then signs out of Odoo and enters *Kiosk "
@@ -3783,7 +3821,7 @@ msgstr ""
 "导航至 :menuselection:`考勤应用程序`，然后点击顶部菜单中的 :guilabel:`自助考"
 "勤模式`。然后，设备将退出 Odoo 并进入 *自助考勤终端模式*。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:90
+#: ../../content/applications/hr/attendances/kiosks.rst:92
 msgid ""
 "Navigate to the :menuselection:`Attendances app --> Configuration`. In "
 "the :guilabel:`Kiosk Settings` section, use the link in "
@@ -3800,7 +3838,7 @@ msgid ""
 "application."
 msgstr "考勤应用程序设置部分中的自助考勤 URL 字段。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:98
+#: ../../content/applications/hr/attendances/kiosks.rst:100
 msgid ""
 "As a security measure, once a device is in *Kiosk Mode*, it is not possible "
 "to go back into the database without signing back in."
@@ -3808,7 +3846,7 @@ msgstr ""
 "作为一项安全措施，一旦设备进入*自助考勤模式*，如果没有重新登录，就无法再进入"
 "数据库。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:102
+#: ../../content/applications/hr/attendances/kiosks.rst:104
 msgid ""
 "At any time, a new kiosk URL can be generated, if needed. Click "
 "the :icon:`fa-refresh` :guilabel:`Generate a new Kiosk Mode URL`"
@@ -3816,22 +3854,22 @@ msgstr ""
 "如有需要，可随时生成新的自助考勤 URL。点击 :icon:`fa-refresh`:guilabel:`生成"
 "新的自助考勤模式 URL` 。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:105
+#: ../../content/applications/hr/attendances/kiosks.rst:107
 msgid ""
 "To exit *Kiosk Mode*, either close the tab in the web browser or return to "
 "the main log-in screen of Odoo."
 msgstr ""
 "要退出 *自助考勤模式*，需关闭网页浏览器中的选项卡或返回 Odoo 主登录界面。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:111
+#: ../../content/applications/hr/attendances/kiosks.rst:113
 msgid "Check in and out with a kiosk"
 msgstr "使用自助服务终端签到和签出"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:114
+#: ../../content/applications/hr/attendances/kiosks.rst:116
 msgid "Badge"
 msgstr "徽标"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:116
+#: ../../content/applications/hr/attendances/kiosks.rst:118
 msgid ""
 "To check in or out using a badge, tap the :icon:`fa-barcode` :guilabel:`Scan "
 "your badge` image in the center of the kiosk."
@@ -3843,7 +3881,7 @@ msgstr ""
 msgid "The Attendances Kiosk view displaying the scan badge image."
 msgstr "显示扫描徽章图像的自助考勤终端视图。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:122
+#: ../../content/applications/hr/attendances/kiosks.rst:124
 msgid ""
 "Then, scan the barcode on the badge using the method configured in "
 "the :ref:`Kiosk Settings <attendances/kiosk-settings>` section of the "
@@ -3852,7 +3890,7 @@ msgstr ""
 "然后，使用配置菜单的 :ref:`自助考勤设置 <attendances/kiosk-settings>` 部分中"
 "配置的方法扫描胸牌上的条形码。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:125
+#: ../../content/applications/hr/attendances/kiosks.rst:127
 msgid ""
 "Once the barcode is scanned, the employee is checked in or out, and "
 "a :ref:`confirmation message <attendances/confirmation>` appears with all "
@@ -3861,16 +3899,16 @@ msgstr ""
 "扫描条形码后，员工即可办理签到或签出手续，同时会出现一条包含所有信息的 :ref:`"
 "确认消息 <attendances/confirmation>` 消息。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:129
+#: ../../content/applications/hr/attendances/kiosks.rst:131
 msgid "RFID"
 msgstr "RFID"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:131
+#: ../../content/applications/hr/attendances/kiosks.rst:133
 msgid ""
 "To check in or out using an RFID key fob, scan the fob with an RFID reader."
 msgstr "要使用 RFID 钥匙扣办理签到或签出手续，需用 RFID 阅读器扫描钥匙扣即可。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:133
+#: ../../content/applications/hr/attendances/kiosks.rst:135
 msgid ""
 "Once scanned, the employee is either checked in or checked out, and "
 "a :ref:`confirmation message <attendances/confirmation>` appears with all "
@@ -3879,18 +3917,18 @@ msgstr ""
 "扫描完成后，员工将被签到或签出，并出现一条包含所有信息的 :ref:`确认信息 "
 "<attendances/confirmation>` 。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:137
+#: ../../content/applications/hr/attendances/kiosks.rst:139
 msgid "Manually"
 msgstr "手动"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:139
+#: ../../content/applications/hr/attendances/kiosks.rst:141
 msgid ""
 "Users who do not have a scannable badge, or an RFID fob, can manually check "
 "in and out at a kiosk."
 msgstr ""
 "没有可扫描胸牌或 RFID 钥匙扣的用户可以在自助终端上手动办理签到和签出手续。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:141
+#: ../../content/applications/hr/attendances/kiosks.rst:143
 msgid ""
 "Tap the :icon:`fa-user-o` :guilabel:`Identify Manually` button on the kiosk, "
 "and a screen appears with all the employees that can be checked in or out. "
@@ -3899,7 +3937,7 @@ msgstr ""
 "点击自助服务终端上的 :icon:`fa-user-o` :guilabel:`手动识别` 按钮，屏幕上就会"
 "出现所有可签到或签退的员工。**员工** 应用程序仪表板也有同样的显示。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:145
+#: ../../content/applications/hr/attendances/kiosks.rst:147
 msgid ""
 "Tap on a person to check them in or out, and a :ref:`confirmation message "
 "<attendances/confirmation>` appears."
@@ -3907,17 +3945,17 @@ msgstr ""
 "点击某个人，将其签到或签出，然后会出现 :ref:`确认消息 <attendances/"
 "confirmation>`。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:148
+#: ../../content/applications/hr/attendances/kiosks.rst:150
 msgid "To find a specific person, either:"
 msgstr "查找指定人员的方式："
 
-#: ../../content/applications/hr/attendances/kiosks.rst:150
+#: ../../content/applications/hr/attendances/kiosks.rst:152
 msgid ""
 "Search: tap into the search bar and enter the desired person's name. As the "
 "name is typed in, the matching results are displayed on the screen."
 msgstr "搜索：轻触搜索栏并输入人员姓名，输入时将实时显示匹配结果。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:152
+#: ../../content/applications/hr/attendances/kiosks.rst:154
 msgid ""
 "By department: tap on any desired selection in the department section, "
 "located on the left side of the screen, to **only** view employees from that "
@@ -3927,11 +3965,11 @@ msgstr ""
 "按部门筛选：轻触屏幕左侧部门区域中的选项，可 **仅** 查看该部门员工。部门名称"
 "后的数字表示该部门员工总数。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:157
+#: ../../content/applications/hr/attendances/kiosks.rst:159
 msgid "PIN"
 msgstr "PIN"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:159
+#: ../../content/applications/hr/attendances/kiosks.rst:161
 msgid ""
 "If the :guilabel:`Employee PIN Identification` checkbox was ticked in "
 "the :ref:`Kiosk Settings <attendances/kiosk-settings>` section of the "
@@ -3942,7 +3980,7 @@ msgstr ""
 "了 :guilabel:`员工 PIN 码识别` 复选框，则员工在手动签到或签出时会被提示输入 "
 "PIN。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:163
+#: ../../content/applications/hr/attendances/kiosks.rst:165
 msgid ""
 "After the employee is selected, a number pad appears with a message. When "
 "checking in, :guilabel:`(Employee) Please enter your PIN to check in` "
@@ -3953,7 +3991,7 @@ msgstr ""
 "工）请输入您的 PIN 码签到`。结账时，数字上方会显示 :guilabel:`（员工）请输入"
 "您的密码结账`。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:167
+#: ../../content/applications/hr/attendances/kiosks.rst:169
 msgid ""
 "Tap in the PIN using the number pad, then tap :guilabel:`OK` when done. The "
 "employee is then checked in or out, and a :ref:`confirmation message "
@@ -3966,17 +4004,17 @@ msgstr ""
 msgid "The pop-up that appears when prompted to enter a pin."
 msgstr "提示输入密码时弹出的窗口。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:176
+#: ../../content/applications/hr/attendances/kiosks.rst:178
 msgid "Confirmation message"
 msgstr "确认信息"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:178
+#: ../../content/applications/hr/attendances/kiosks.rst:180
 msgid ""
 "When an employee checks in or out, a confirmation message appears, with all "
 "the check in or check out information."
 msgstr "员工签到或签退时，系统会显示一条确认信息，其中包含所有签到或签退信息。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:181
+#: ../../content/applications/hr/attendances/kiosks.rst:183
 msgid ""
 "When checking in, the :guilabel:`Welcome (Employee)` message appears, along "
 "with the current date and time. If the employee has already checked in and "
@@ -3987,7 +4025,7 @@ msgstr ""
 "已经签到和签退，则会出现 :guilabel:`今天之前的小时数： HH:MM` 信息也会出现，"
 "显示之前记录的总小时数。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:185
+#: ../../content/applications/hr/attendances/kiosks.rst:187
 msgid ""
 "When checking out, :guilabel:`Goodbye (Employee)` appears, as well as the "
 "date and time of check out. Beneath the message is an :guilabel:`Hours "
@@ -3996,7 +4034,7 @@ msgstr ""
 "签退时，系统会显示 :guilabel:`再见（员工）` 以及结账日期和时间。信息下方"
 "是 :guilabel:`今日工作时间： HH:MM`字段，显示当天记录的总时数和总分钟数。"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:189
+#: ../../content/applications/hr/attendances/kiosks.rst:191
 msgid ""
 "Beneath both the \"welcome\" and \"goodbye\" messages is an :guilabel:`OK` "
 "button. To exit the screen before the preset time in the kiosk, tap "
@@ -4233,11 +4271,11 @@ msgstr ""
 ":guilabel:`手动记录`：该记录是通过**考勤**应用手动创建的。通常由管理人员用于"
 "补录缺失的考勤记录。"
 
-#: ../../content/applications/hr/attendances/management.rst:97
+#: ../../content/applications/hr/attendances/management.rst:99
 msgid "Create attendance records"
 msgstr "创建考勤记录"
 
-#: ../../content/applications/hr/attendances/management.rst:99
+#: ../../content/applications/hr/attendances/management.rst:101
 msgid ""
 "When necessary, users with the required :ref:`access rights <employees/work-"
 "info-tab>` are able to create attendance records manually in the "
@@ -4249,7 +4287,7 @@ msgstr ""
 "勤** 应用程序中手动创建考勤记录。在某些情况下，由于员工无法追溯创建考勤记录，"
 "因此在员工忘记签到和签退时需要这样做。"
 
-#: ../../content/applications/hr/attendances/management.rst:104
+#: ../../content/applications/hr/attendances/management.rst:106
 msgid ""
 "To add a missing attendance record, navigate to :menuselection:`Attendances "
 "app --> Overview`. Click the :guilabel:`New` button in the upper-left "
@@ -4260,14 +4298,14 @@ msgstr ""
 "角的 :guilabel:`新建` 按钮。在弹出的 :guilabel:`创建` 窗口中，在表单中输入以"
 "下信息："
 
-#: ../../content/applications/hr/attendances/management.rst:108
+#: ../../content/applications/hr/attendances/management.rst:110
 msgid ""
 ":guilabel:`Employee`: select the employee the record is being created for. "
 "The signed-in user populates this field, by default."
 msgstr ""
 ":guilabel:`员工`：选择要创建记录的员工。默认情况下，此字段由已登录用户填充。"
 
-#: ../../content/applications/hr/attendances/management.rst:110
+#: ../../content/applications/hr/attendances/management.rst:112
 msgid ""
 ":guilabel:`Check In`: using the calendar modal, select the check in date and "
 "time, then click :icon:`fa-check` :guilabel:`Apply`. By default, the current "
@@ -4277,7 +4315,7 @@ msgstr ""
 "check`(检查) :guilabel:`应用`。默认情况下，选择当前日期，时间设置为 "
 "`00:00:00`。"
 
-#: ../../content/applications/hr/attendances/management.rst:113
+#: ../../content/applications/hr/attendances/management.rst:115
 msgid ""
 ":guilabel:`Check Out`: using the calendar modal, select the check out date "
 "and time, then click :icon:`fa-check` :guilabel:`Apply`. By default, the "
@@ -4287,7 +4325,7 @@ msgstr ""
 "check`(结账) :guilabel:`应用`。默认情况下，选择以下日期，时间设置为 "
 "`00:00:00`。"
 
-#: ../../content/applications/hr/attendances/management.rst:116
+#: ../../content/applications/hr/attendances/management.rst:118
 msgid ""
 ":guilabel:`Worked Time`: this field is automatically populated with the "
 "difference from the selected :guilabel:`Check In` and :guilabel:`Check Out` "
@@ -4296,13 +4334,13 @@ msgstr ""
 ":guilabel:`工作时间`：该字段将自动填入所选的 :guilabel:`签到` 和 :guilabel:`"
 "签退` 时间的差值。此字段**不能**修改。"
 
-#: ../../content/applications/hr/attendances/management.rst:118
+#: ../../content/applications/hr/attendances/management.rst:120
 msgid ""
 ":guilabel:`Extra Hours`: enter the number of overtime hours, if any, to be "
 "approved."
 msgstr ":guilabel:`加班时间`：输入要批准的加班时数（如有）。"
 
-#: ../../content/applications/hr/attendances/management.rst:121
+#: ../../content/applications/hr/attendances/management.rst:123
 msgid ""
 "Once :guilabel:`Extra Hours` are added, they are automatically approved by "
 "the system. However, it is possible to manually refuse them, as explained in "
@@ -11153,24 +11191,24 @@ msgstr "配置以下内容："
 
 #: ../../content/applications/hr/lunch.rst:27
 msgid ""
-":guilabel:`Lunch Overdraft`: enter the maximum overdraft amount for "
+":guilabel:`Lunch Overdraft`: Enter the maximum overdraft amount for "
 "employees. The currency format is determined by the localization setting of "
 "the company."
 msgstr ""
-":guilabel:`午餐透支`：输入员工的最大透支额度。货币格式由公司的本地化设置决"
-"定。"
 
 #: ../../content/applications/hr/lunch.rst:29
 msgid ""
-":guilabel:`Reception notification`: set the message users receive via the "
+":guilabel:`Reception notification`: Set the message users receive via the "
 "**Discuss** app when their food has been delivered. The default message "
 "`Your lunch has been delivered. Enjoy your meal!` populates this field, but "
 "can be modified, if desired."
 msgstr ""
-":guilabel:`送达通知`：设置当餐食送达时，用户通过**内部讨论**应用收到的消息。"
-"该字段默认填充消息`您的午餐已送达，请慢用！`，但可根据需要进行修改。"
 
 #: ../../content/applications/hr/lunch.rst:34
+msgid "Translation support"
+msgstr ""
+
+#: ../../content/applications/hr/lunch.rst:36
 msgid ""
 "If a database has multiple languages installed, many forms in the **Lunch** "
 "application have the option of entering translations for various fields."
@@ -11178,7 +11216,7 @@ msgstr ""
 "如果数据库安装了多种语言，**午餐**应用中的许多表单都提供了为不同字段输入翻译"
 "的选项。"
 
-#: ../../content/applications/hr/lunch.rst:37
+#: ../../content/applications/hr/lunch.rst:39
 msgid ""
 "If translations are available to be configured, a language code appears next "
 "to a translatable field on a form. To add translations for that field, click "
@@ -11188,26 +11226,22 @@ msgstr ""
 "如果某个字段可配置翻译，其旁边会出现一个语言代码。要为该字段添加翻译，请点击"
 "双字母语言代码（例如，:guilabel:`EN`代表英语），之后会弹出一个翻译窗口。"
 
-#: ../../content/applications/hr/lunch.rst:41
+#: ../../content/applications/hr/lunch.rst:43
 msgid ""
-"The following is an example for the :guilabel:`Reception notification` field "
-"in the settings menu:"
-msgstr "以下是设置菜单中:guilabel:`送达通知`字段的一个示例："
+"The image below is an example for the :guilabel:`Reception notification` "
+"field in the settings menu."
+msgstr ""
 
-#: ../../content/applications/hr/lunch.rst:44
+#: ../../content/applications/hr/lunch.rst:45
 msgid ""
 "Navigate to :menuselection:`Lunch app --> Configuration --> Settings`. Click "
-"the :guilabel:`EN` In the top-right of the text box beneath "
+"the :guilabel:`EN` in the top-right of the text box beneath "
 "the :guilabel:`Reception notification` section. A :guilabel:`Translate: "
 "company_lunch_notify_message` pop-up window loads with the option to enter a "
 "translation for the other languages used by the database."
 msgstr ""
-"前往 :menuselection:`午餐应用 --> 配置 --> 设置`。点击 :guilabel:`送达通知`部"
-"分下方文本框右上角的 :guilabel:`EN`。系统会加载一个 :guilabel:`翻译："
-"company_lunch_notify_message` 弹出窗口，其中提供了为数据库使用的其他语言输入"
-"翻译的选项。"
 
-#: ../../content/applications/hr/lunch.rst:49
+#: ../../content/applications/hr/lunch.rst:50
 msgid ""
 "The first column lists the different languages in alphabetical order, with "
 "the currently selected language in bold. The second column has the currently "
@@ -11217,18 +11251,17 @@ msgstr ""
 "第一列按字母顺序列出不同的语言，当前选择的语言以粗体显示。第二列显示每种语言"
 "当前配置的消息。最右侧的最后一列为每种语言提供一个文本框以输入翻译。"
 
-#: ../../content/applications/hr/lunch.rst:53
+#: ../../content/applications/hr/lunch.rst:54
 msgid ""
 "Enter the text that should appear for each language, then "
 "click :guilabel:`Save`."
 msgstr "为每种语言输入应显示的文本，然后点击 :guilabel:`保存`。"
 
-#: ../../content/applications/hr/lunch.rst:0
+#: ../../content/applications/hr/lunch.rst:None
 msgid ""
-"The translation text box, with the current language highlighted, and the "
-"Arabic\n"
-"translation field highlighted."
-msgstr "翻译文本框，其中当前语言和阿拉伯语翻译字段被高亮显示。"
+"The translation text box with the current language at the top and "
+"translations below."
+msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:62
 msgid "Locations"
@@ -11298,87 +11331,79 @@ msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:90
 msgid ""
-":guilabel:`Alert Name`: enter a name for the alert. This should be short and "
+":guilabel:`Alert Name`: Enter a name for the alert. This should be short and "
 "descriptive, such as `New Lunch Vendor` or `Order by 11:00 AM`. This field "
 "is **required**."
 msgstr ""
-":guilabel:`提醒名称`：为提醒输入一个名称。名称应简短且具描述性，例如新午餐供"
-"应商或上午11点前下单。此字段为**必填项**。"
 
 #: ../../content/applications/hr/lunch.rst:92
-msgid ""
-":guilabel:`Display`: select whether the alert is visible in the **Lunch** "
-"app (:guilabel:`Alert in app)` or sent to employees via the **Discuss** app "
-"in a chat window (:guilabel:`Chat notification`)."
+msgid ":guilabel:`Display`: Select how the alert is shown. The options are:"
 msgstr ""
-":guilabel:`显示方式`：选择提醒是显示在**午餐**应用中（:guilabel:`应用内提醒"
-"`），还是通过**内部讨论**应用的聊天窗口发送给员工（:guilabel:`聊天通知`）。"
+
+#: ../../content/applications/hr/lunch.rst:94
+msgid ""
+":guilabel:`Alert in app`: The alert is visible on the main **Lunch** app "
+"dashboard, in an orange box, above the user's name on the right side of the "
+"dashboard."
+msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:96
 msgid ""
-":guilabel:`Recipients`: this field only appears if :guilabel:`Chat "
-"notification` is selected for the :guilabel:`Display` option. Select who "
-"receives the chat alert. The options "
+":guilabel:`Chat notification`: The alert is sent to users via the "
+"**Discuss** app in a chat window. If this option is selected, the following "
+"additional field appears:"
+msgstr ""
+
+#: ../../content/applications/hr/lunch.rst:99
+msgid ""
+":guilabel:`Recipients`: Select who receives the chat alert. The options "
 "are: :guilabel:`Everyone`, :guilabel:`Employee who ordered last "
 "week`, :guilabel:`Employee who ordered last month`, or :guilabel:`Employee "
 "who ordered last year`."
 msgstr ""
-":guilabel:`收件人`：此字段仅在 :guilabel:`聊天通知` 被选中为 :guilabel:`显示"
-"` 选项时才会出现。选择接收聊天提示的对象。选项包括：:guilabel:`所有人"
-"`、:guilabel:`上周订购的员工`、:guilabel:`上月订购的员工`或 :guilabel:`去年订"
-"购的员工`。"
 
-#: ../../content/applications/hr/lunch.rst:101
+#: ../../content/applications/hr/lunch.rst:103
 msgid ""
-":guilabel:`Location`: select the locations the alert should appear for from "
-"the drop-down menu. Multiple locations can be selected. This field is "
+":guilabel:`Location`: Select the locations the alert appears for using the "
+"drop-down menu. Multiple locations can be selected. This field is "
 "**required**, therefore, if the alert applies to all locations, select all "
-"the locations from the drop-down menu."
+"the locations from the drop-down menu. If this field is left blank, the "
+"alert will **not** be displayed."
 msgstr ""
-":guilabel:`位置`：从下拉菜单中选择警报应出现的位置。可选择多个地点。此字段为"
-"**必填**，因此，如果警报适用于所有地点，请从下拉菜单中选择所有地点。"
 
-#: ../../content/applications/hr/lunch.rst:104
+#: ../../content/applications/hr/lunch.rst:107
 msgid ""
-":guilabel:`Show Until`: if the alert should expire on a specific date, "
+":guilabel:`Show Until`: If the alert should expire on a specific date, "
 "select the date from the calendar picker."
 msgstr ""
-":guilabel:`显示至`：如果提醒应在特定日期后失效，请从日历选择器中选择该日期。"
 
-#: ../../content/applications/hr/lunch.rst:106
+#: ../../content/applications/hr/lunch.rst:109
 msgid ""
-":guilabel:`Active`: this option is on (appears green) by default. To turn "
-"off the alert, click the toggle so that it no longer appears green."
+":guilabel:`Active`: This option is enabled (appears green) by default. To "
+"turn off the alert, click the toggle so that it no longer appears green."
 msgstr ""
-":guilabel:`启用`：默认情况下，此选项为开启状态（显示为绿色）。要关闭提醒，请"
-"点击此开关，使其不再显示为绿色。"
 
-#: ../../content/applications/hr/lunch.rst:108
+#: ../../content/applications/hr/lunch.rst:111
 msgid ""
 ":guilabel:`Message`: Enter the alert message in this field. This field is "
 "**required**."
 msgstr ":guilabel:`消息`：在此字段中输入提醒消息。此字段为**必填项**。"
 
-#: ../../content/applications/hr/lunch.rst:109
-msgid ""
-":guilabel:`Notification Time`: select the days of the week the alert should "
-"be sent. By default, all seven days are active. Click on a checkbox to "
-"change the setting from active to inactive."
-msgstr ""
-":guilabel:`通知日`：选择应发送提醒的星期。默认情况下，一周七天均为激活状态。"
-"点击复选框可将设置从激活更改为非激活。"
-
 #: ../../content/applications/hr/lunch.rst:112
 msgid ""
-"If :guilabel:`Chat notification` was selected for the :guilabel:`Display` "
-"option, a :guilabel:`Time` field also appears. Enter the time the chat "
-"message should be sent. Next, select if the time is either :guilabel:`AM` "
-"or :guilabel:`PM` using the drop-down menu to the right of "
-"the :guilabel:`Time` field."
+":guilabel:`Notification Time`: Select the days of the week the alert is "
+"visible or sent. By default, all seven days are active. Click on a checkbox "
+"to change the setting from active to inactive."
 msgstr ""
-"如果:guilabel:`显示` 选项中选择了:guilabel:`聊天通知` ，则还会出现:guilabel:`"
-"时间` 字段。输入发送聊天信息的时间。然后，使用 :guilabel:`时间` 字段右侧的下"
-"拉菜单选择时间是 :guilabel:`上午` 还是 :guilabel:`下午` 。"
+
+#: ../../content/applications/hr/lunch.rst:117
+msgid ""
+"If :guilabel:`Chat notification` was selected for the :guilabel:`Display` "
+"option, a time field appears beneath the :guilabel:`Notification Time` "
+"block. Enter the time the chat message is sent. Next, select if the time is "
+"either :guilabel:`AM` or :guilabel:`PM` using the drop-down menu to the "
+"right of the time field."
+msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:None
 msgid ""
@@ -11389,23 +11414,23 @@ msgstr ""
 "填写了所有信息的警报表，用于在上午 10:30 发送聊天警报，\n"
 "要求员工在上午 11:30 之前提交订单。"
 
-#: ../../content/applications/hr/lunch.rst:122
+#: ../../content/applications/hr/lunch.rst:127
 msgid ":doc:`lunch/vendors`"
 msgstr ":doc:`lunch/vendors`"
 
-#: ../../content/applications/hr/lunch.rst:123
+#: ../../content/applications/hr/lunch.rst:128
 msgid ":doc:`lunch/products`"
 msgstr ":doc:`lunch/products`"
 
-#: ../../content/applications/hr/lunch.rst:124
+#: ../../content/applications/hr/lunch.rst:129
 msgid ":doc:`lunch/orders`"
 msgstr ":doc:`lunch/orders`"
 
-#: ../../content/applications/hr/lunch.rst:125
+#: ../../content/applications/hr/lunch.rst:130
 msgid ":doc:`lunch/user-accounts`"
 msgstr ":doc:`lunch/user-accounts`"
 
-#: ../../content/applications/hr/lunch.rst:126
+#: ../../content/applications/hr/lunch.rst:131
 msgid ":doc:`lunch/management`"
 msgstr ":doc:`lunch/management`"
 
@@ -11777,11 +11802,9 @@ msgstr "订单"
 
 #: ../../content/applications/hr/lunch/orders.rst:7
 msgid ""
-"The **Lunch** app lets employees place lunch orders, see what's available "
+"The **Lunch** app lets employees place lunch orders, see what is available "
 "each day, and check their account balance, all from one place."
 msgstr ""
-"通过**午餐**应用程序，员工可以在一个地方下午餐订单、查看每天的供应情况并查看"
-"账户余额。"
 
 #: ../../content/applications/hr/lunch/orders.rst:10
 msgid ""
@@ -11808,60 +11831,48 @@ msgstr "订购午餐"
 #: ../../content/applications/hr/lunch/orders.rst:19
 msgid ""
 "On the main :guilabel:`Order Your Lunch` dashboard, all the necessary "
-"information needed to place an order is visible. Enable "
-"the :guilabel:`Available Today` filter in the search bar by clicking into "
-"the search bar and selecting :guilabel:`Available Today`. This filter shows "
-"only products that can be purchased that day, based on the :ref:`vendor's "
-"availability <lunch/availability>`."
+"information needed to place an order is visible. The default filter is for "
+"the current day (example: :icon:`fa-filter` :guilabel:`Wednesday`), which "
+"shows only products that can be purchased that day, based on "
+"the :ref:`vendor's availability <lunch/availability>`."
 msgstr ""
-"在 :guilabel:`订购午餐` 主仪表板上，可以看到下订单所需的所有必要信息。点击搜"
-"索栏并选择 :guilabel:`今日提供`，启用搜索栏中的 :guilabel:`今日提供` 过滤器。"
-"该过滤器根据 :ref:`供应商的供货情况 <lunch/availability>` 仅显示当天可购买的"
-"产品。"
 
 #: ../../content/applications/hr/lunch/orders.rst:24
 msgid ""
 "The left-side of the dashboard displays the various :guilabel:`Categories` "
 "of products available, along with the :guilabel:`Vendors` supplying the "
-"products. To the right of each line is a number, which indicates how many "
-"products are associated with that respective category or vendor."
+"products. To the right of each line is a number, indicating how many "
+"products are associated with that category or vendor."
 msgstr ""
-"仪表板的左侧显示各种 :guilabel:`类别` 可用产品，以及提供产品的 :guilabel:`供"
-"应商` 。每一行的右侧是一个数字，表示与该类别或供应商相关联的产品数量。"
 
 #: ../../content/applications/hr/lunch/orders.rst:28
 msgid ""
-"To filter the products by categories or vendors, tick the checkbox next to "
-"the desired category or vendor to only view items related to those "
-"selections. Multiple selections can be made in each section."
+"To filter the products by categories or vendors, click the checkbox next to "
+"the desired category or vendor to view only items within those selections. "
+"Multiple selections can be made in each section."
 msgstr ""
-"要按类别或供应商筛选产品，请勾选所需类别或供应商旁边的复选框，这样就只能查看"
-"与这些选择相关的项目。每个部分都可以进行多项选择。"
 
-#: ../../content/applications/hr/lunch/orders.rst:33
+#: ../../content/applications/hr/lunch/orders.rst:32
 msgid ""
 "If multiple selections are made, **only** products that fall under **all** "
 "the selected options are shown."
 msgstr "如果进行了多项选择，则**只**显示属于**所有**所选选项的产品。"
 
-#: ../../content/applications/hr/lunch/orders.rst:36
+#: ../../content/applications/hr/lunch/orders.rst:35
 msgid ""
-"The top portion of the dashboard, which serves as an order summary, displays "
-"the user's account information, and the order details for today, if any "
-"orders have been placed."
+"The right side of the dashboard, which serves as an account hub, displays "
+"the user, their location, the current date, their account balance (located "
+"in the :icon:`fa-money` :guilabel:`Available Balance` field), and order "
+"details for the current day, if any orders have been placed."
 msgstr ""
-"仪表板的顶部是订单摘要，显示用户的账户信息和今天的订单详情（如果已有订单）。"
 
 #: ../../content/applications/hr/lunch/orders.rst:39
 msgid ""
-"The main section, beneath the user's information, displays all the products "
-"in a default Kanban view. Each product card displays the name, cost, vendor, "
-"photo, and description of the product. If the product is configured as new, "
-"it also displays a :guilabel:`New` tag."
+"The middle section displays all the products in a default Kanban view. Each "
+"product card displays the name, cost, vendor, photo, and description of the "
+"product. If the product is configured as new, it also displays a "
+"green :guilabel:`New` tag."
 msgstr ""
-"用户信息下方的主要部分以默认看板视图显示所有产品。每个产品卡都显示产品的名"
-"称、成本、供应商、照片和描述。如果产品配置为新产品，还会显示 :guilabel:`新的"
-"` 标签。"
 
 #: ../../content/applications/hr/lunch/orders.rst:None
 msgid "The Lunch app dashboard."
@@ -11875,53 +11886,93 @@ msgstr ""
 "在**午餐**应用程序中列出供应商名称的任何地方，例如看板产品卡上，也会列出他们"
 "的电话号码。"
 
-#: ../../content/applications/hr/lunch/orders.rst:50
-msgid ""
-"The products can also be displayed in a list view, by clicking the :icon:`oi-"
-"view-list` :guilabel:`(List)` icon in the top-right corner of the dashboard."
-msgstr ""
-"点击仪表板右上角的 :icon:`oi-view-list` :guilabel:`（列表）` 图标，还可以列表"
-"视图显示产品。"
-
-#: ../../content/applications/hr/lunch/orders.rst:54
+#: ../../content/applications/hr/lunch/orders.rst:51
 msgid "Placing orders"
 msgstr "下订单"
 
-#: ../../content/applications/hr/lunch/orders.rst:56
+#: ../../content/applications/hr/lunch/orders.rst:53
 msgid ""
 "To place a lunch order, navigate to the main :guilabel:`Order Your Lunch` "
-"dashboard, by either opening the **Lunch** app, or by navigating "
+"dashboard by either opening the **Lunch** app or by navigating "
 "to :menuselection:`Lunch app --> My Lunch --> New Order`."
 msgstr ""
-"要下午餐订单，请通过打开 **午餐**应用程序或前往:menuselection:`午餐应用程序 "
-"--> 我的午餐 --> 新订单`，进入 :guilabel:`订购午餐`主仪表板。"
 
-#: ../../content/applications/hr/lunch/orders.rst:61
+#: ../../content/applications/hr/lunch/orders.rst:57
+msgid "Select the location"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:59
+msgid ""
+"Ensure the location set in the account hub on the right-side of "
+"the :guilabel:`Order Your Lunch` dashboard is correct. Click "
+"the :guilabel:`Location` drop-down menu to view all **Lunch** app locations, "
+"and select the user's current location (or the location the user wants their "
+"lunch delivered to)."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:65
+msgid ""
+"The user's work schedule, which indicates where they work each day, is "
+"**not** reflected in the :guilabel:`Location` field. Every available "
+"location must be configured in the **lunch** app, and all locations are "
+"available to all users in the database, regardless of work location. This "
+"way, users can order lunch and have it delivered to the location where they "
+"*will be* during lunchtime."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:71
+msgid ""
+"For example, an employee works in the factory and has a lunch meeting with "
+"their supervisor at the main office, two blocks away. The employee selects "
+"the main office as their location in the **Lunch** app, and their order is "
+"delivered to the main office rather than the factory."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:76
+msgid "Select the date"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:78
+msgid ""
+"The **Lunch** app allows for placing orders not only for the current day, "
+"but also for ordering future meals. This feature allows users to plan meals "
+"in advance, without having to place daily orders."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:82
+msgid ""
+"Click the date on the right side of the :guilabel:`Order Your Lunch` "
+"dashboard to open a calendar pop-up window. Click on the desired date to "
+"select it. Any products added are for delivery on the selected date."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:86
+msgid ""
+"Multiple products with multiple delivery dates can be ordered at once; each "
+"day does not need to be processed separately."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:90
 msgid "Add products to an order"
 msgstr "将产品添加到订单"
 
-#: ../../content/applications/hr/lunch/orders.rst:63
+#: ../../content/applications/hr/lunch/orders.rst:92
 msgid ""
 "From the :guilabel:`Order Your Lunch` dashboard, click on a desired product "
-"to add to an order, and the product appears in a :guilabel:`Configure Your "
-"Order` pop-up window."
+"to add it to an order; it appears in the *Configure Your Order* pop-up "
+"window."
 msgstr ""
-"在 :guilabel:`订购午餐`仪表板上，点击所需的产品添加到订单中，产品就会出现"
-"在 :guilabel:`配置订单` 弹出窗口中。"
 
-#: ../../content/applications/hr/lunch/orders.rst:66
+#: ../../content/applications/hr/lunch/orders.rst:95
 msgid ""
 "At the top of the pop-up window is the product image, name, and price. "
-"Beneath that, there are potential :guilabel:`Extras` fields, showcasing "
+"Beneath that, there are potential :guilabel:`Extras` fields that showcase "
 "any :ref:`extra items or options <lunch/extras>`, such as toppings or "
-"drinks. Tick the checkbox next to any desired extras present in "
+"drinks. Click the checkbox next to any desired extras present in "
 "the :guilabel:`Extras` fields to add them to the order."
 msgstr ""
-"弹出窗口的顶部是产品图片、名称和价格。下面是潜在的 :guilabel:`附加` 字段，显"
-"示任何 :ref:`额外项目或选项 <lunch/extras>`，如配料或饮料。勾选 :guilabel:`附"
-"加` 字段中任何所需额外项目旁边的复选框，即可将其添加到订单中。"
 
-#: ../../content/applications/hr/lunch/orders.rst:71
+#: ../../content/applications/hr/lunch/orders.rst:100
 msgid ""
 "Each extra option is organized by a category, complete with its name and "
 "price. As extras are selected, the displayed price at the top of the pop-up "
@@ -11930,18 +11981,15 @@ msgstr ""
 "每个额外选项都按类别编排，并附有名称和价格。在选择额外选项时，弹出窗口顶部显"
 "示的价格会更新，以反映所有当前选择。"
 
-#: ../../content/applications/hr/lunch/orders.rst:75
+#: ../../content/applications/hr/lunch/orders.rst:104
 msgid ""
 "Beneath the :guilabel:`Extras` field is the :guilabel:`Description` of the "
 "product, followed by a :guilabel:`Notes` field. The :guilabel:`Notes` field "
-"is used to enter any vital information, which is then sent to the vendor "
-"regarding the order, such as any special requests or food allergies."
+"is used to enter vital information that is then sent to the vendor regarding "
+"the order, such as any special requests or food allergies."
 msgstr ""
-"在 :guilabel:`附加` 字段下面是产品的 :guilabel:`说明` 字段，然后"
-"是 :guilabel:`笔记` 字段。guilabel:`笔记`字段用于输入任何重要信息，然后将这些"
-"信息发送给供应商，如任何特殊要求或食物过敏。"
 
-#: ../../content/applications/hr/lunch/orders.rst:79
+#: ../../content/applications/hr/lunch/orders.rst:108
 msgid ""
 "When all selections for the product have been made, click the :guilabel:`Add "
 "To Cart` button in the lower-left of the pop-up window. To cancel the order, "
@@ -11954,7 +12002,49 @@ msgstr ""
 msgid "The pop-up window for a personal pizza, with all the extras selected."
 msgstr "个人比萨的弹出窗口，选择了所有附加选项。"
 
-#: ../../content/applications/hr/lunch/orders.rst:88
+#: ../../content/applications/hr/lunch/orders.rst:117
+msgid ""
+"There can be several reasons why an order cannot be placed: a :ref:`lack of "
+"funds <lunch/insufficient-funds>`, an :ref:`incomplete order <lunch/"
+"incomplete>`, or being outside the vendors :ref:`operating hours <lunch/"
+"outside-hours>`."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:124
+msgid "Insufficient funds"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:126
+msgid ""
+"If the price for the item in the :guilabel:`Configure Your Order` pop-up "
+"window exceeds the :guilabel:`Available Balance` for the user, the following "
+"error appears:"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:129
+msgid ""
+"`Your wallet does not contain enough money to order that. To add some money "
+"to your wallet, please contact your lunch manager.`"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:132
+msgid ""
+"Additionally, the :guilabel:`Add To Cart` button is hidden, and only "
+"the :guilabel:`Discard` button appears."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:135
+msgid ""
+"If this error appears, the user must :doc:`add funds to their lunch account "
+"<user-accounts>` through a **Lunch** app administrator before placing the "
+"order."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:141
+msgid "Incomplete orders"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:143
 msgid ""
 "Depending on how the various :ref:`extras <lunch/configure-extras>` are "
 "configured for a vendor, it is possible to receive an error when attempting "
@@ -11963,15 +12053,13 @@ msgstr ""
 "根据供应商配置各种 :ref:`附加 <lunch/configure-extras>` 方式，在尝试将产品添"
 "加到购物车时可能会收到错误信息。"
 
-#: ../../content/applications/hr/lunch/orders.rst:91
+#: ../../content/applications/hr/lunch/orders.rst:146
 msgid ""
-"An error can occur when a configured product **requires** the user to select "
-"an option in the :guilabel:`Extras` field, but the user neglects to make one."
+"An error occurs when a configured product **requires** the user to select an "
+"option in the :guilabel:`Extras` field, but the user neglects to make one."
 msgstr ""
-"当配置的产品**要求**用户在 :guilabel:`附加` 字段中选择一个选项，但用户忽略了"
-"该选项时，可能会发生错误。"
 
-#: ../../content/applications/hr/lunch/orders.rst:94
+#: ../../content/applications/hr/lunch/orders.rst:149
 msgid ""
 "When this occurs, a :guilabel:`Validation Error` pop-up window appears. The "
 "error is briefly explained in the pop-up window. Click :guilabel:`Close` to "
@@ -11982,7 +12070,7 @@ msgstr ""
 "错误。点击 :guilabel:`关闭`，以关闭窗口，并在弹出的 :guilabel:`配置您的订单` "
 "窗口中进行必要的更改。"
 
-#: ../../content/applications/hr/lunch/orders.rst:99
+#: ../../content/applications/hr/lunch/orders.rst:154
 msgid ""
 "The vendor, The Pizza Palace, provides a free beverage with any purchase. "
 "Their products are configured so that a beverage selection is **required** "
@@ -11990,7 +12078,7 @@ msgid ""
 "cart."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:103
+#: ../../content/applications/hr/lunch/orders.rst:158
 msgid ""
 "If a selection is **not** made, an error occurs. The message that appears is "
 "`You have to order one and only one Free Beverage with Purchase`."
@@ -12003,70 +12091,73 @@ msgid ""
 "beverage displayed."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:111
-msgid "Your Order summary"
+#: ../../content/applications/hr/lunch/orders.rst:168
+msgid "Outside vendor hours"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:113
+#: ../../content/applications/hr/lunch/orders.rst:170
 msgid ""
-"When at least one item is added to an order, the items appear at the top of "
-"the dashboard in the :guilabel:`Your Order` summary. In addition to the "
-"products, users can view the account information, in addition to all the "
-"information related to orders placed during the current calendar day."
+"Each vendor in the **Lunch** app has their :ref:`availability <lunch/"
+"availability>` configured, with both their operating hours as well as the "
+"deadline for sending orders via email."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:117
+#: ../../content/applications/hr/lunch/orders.rst:173
 msgid ""
-"As products are added to an order, they appear at the top center of the "
-"summary box. Each product is listed beneath the words :guilabel:`Your "
-"Order`, with the product name, quantity, and a status tag."
+"If a user clicks on a product for a vendor who is either closed or whose "
+"order window is closed, the following message appears on the *Configure Your "
+"Product* pop-up window: `The orders for this vendor have already been sent.`"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:120
-msgid "The available tags that can be displayed for each item are:"
-msgstr ""
-
-#: ../../content/applications/hr/lunch/orders.rst:122
+#: ../../content/applications/hr/lunch/orders.rst:177
 msgid ""
-":guilabel:`To Order`: the product has been added to the cart, but has not "
-"been purchased yet by the user."
+"Click the :guilabel:`Discard` button, and make a selection from another "
+"vendor."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:124
+#: ../../content/applications/hr/lunch/orders.rst:180
+msgid "Order summary"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:182
 msgid ""
-":guilabel:`Ordered`: the product has been purchased by the user, and is "
-"waiting to be sent to the vendor by a **Lunch** app manager."
+"When items are added to an order, the items appear in the :guilabel:`Your "
+"Order` summary, located on the right-side of the :guilabel:`Order Your "
+"Lunch` dashboard."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:126
+#: ../../content/applications/hr/lunch/orders.rst:185
 msgid ""
-":guilabel:`Sent`: the order for the product has been sent to the vendor by a "
-"**Lunch** app manager."
+"Each product is listed in its own Kanban card, with the product name, the "
+"user's location, any extras added, the quantity, a status tag, the delivery "
+"date for the order, and the total amount."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:128
+#: ../../content/applications/hr/lunch/orders.rst:188
 msgid ""
-":guilabel:`Received`: the product has been delivered by the vendor to the "
-"user's location, and has been verified as received by a **Lunch** app "
-"manager."
+"The available tags that can be displayed for each item in "
+"the :guilabel:`Your Order` section are:"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:131
+#: ../../content/applications/hr/lunch/orders.rst:190
+msgid ""
+":guilabel:`To Order`: The product has been added to the cart, but has not "
+"been purchased yet by the user yet. This tag appears in gray."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:192
+msgid ""
+":guilabel:`Ordered`: The product has been purchased by the user and is "
+"waiting to be sent to the vendor by a **Lunch** app manager. This tag "
+"appears in purple."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:195
 msgid ""
 "Product quantities can be adjusted by clicking the :icon:`fa-"
-"plus` :guilabel:`(plus)` or :icon:`fa-minus` :guilabel:`(minus)` icons to "
-"the left of the listed product. The product price adjusts in real-time to "
-"display the cost for the currently selected quantity of the product."
-msgstr ""
-
-#: ../../content/applications/hr/lunch/orders.rst:135
-msgid ""
-"The right side of the :guilabel:`Your Order` summary displays the purchasing "
-"information. The :guilabel:`Total` amount for the entire day's lunch order "
-"is displayed. The :guilabel:`Already Paid` field indicates how much has been "
-"paid that day towards the :guilabel:`Total` amount. The :guilabel:`To Pay` "
-"field displays how much of the remaining :guilabel:`Total` amount must be "
-"paid, in order to place the currently configured order."
+"plus` :guilabel:`(plus)` or :icon:`fa-minus` :guilabel:`(minus)` icons "
+"beneath the listed product. The product price adjusts in real-time to "
+"reflect the cost for the currently selected quantity of the product."
 msgstr ""
 
 #: ../../content/applications/hr/lunch/orders.rst:None
@@ -12074,74 +12165,174 @@ msgid ""
 "The 'Your Orders' section of the dashboard, with purchasing information."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:145
+#: ../../content/applications/hr/lunch/orders.rst:202
 msgid ""
-"Users can place multiple orders throughout the day, and are not restricted "
-"to only placing one lunch order each day. Multiple orders might need to be "
-"placed, due to users forgetting to add items to an order, or if there are "
-"multiple meals that are available to be purchased for the office (not only "
-"lunch), and so on."
+"Beneath the :guilabel:`Your Order` section is a summary of the purchasing "
+"information, including the following:"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:150
+#: ../../content/applications/hr/lunch/orders.rst:205
+msgid ""
+":guilabel:`Total`: This field displays the total amount for the entire day's "
+"lunch order, including all items already ordered, received, and all pending "
+"orders."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:207
+msgid ""
+":guilabel:`Already Paid`: This field indicates how much has been paid that "
+"day towards the :guilabel:`Total` amount."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:209
+msgid ""
+":guilabel:`To Pay`: This field displays how much of the "
+"remaining :guilabel:`Total` amount must be paid in order to place the "
+"currently configured order (items with a tag of :guilabel:`To Order`)."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:None
+msgid "The various account totals for the user's account."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:216
+msgid ""
+"Users can place multiple orders throughout the day, and are not restricted "
+"to a single lunch order per day. Multiple orders might need to be placed, "
+"due to users forgetting to add items to an order, or because there are "
+"multiple meals available for purchase for the office (not just lunch), and "
+"so on."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:221
 msgid ""
 "Depending on the various vendors, and how the vendors and products are "
-"configured, it is possible to order breakfast, lunch, dinner, coffee, and/or "
+"configured, it is possible to order breakfast, lunch, dinner, coffee, and "
 "snacks."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:154
+#: ../../content/applications/hr/lunch/orders.rst:225
+msgid "Cancel an order"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:227
+msgid ""
+"Orders can be cancelled at any time, as long as the orders have **not** been "
+"sent to the vendor. All orders that appear in the :guilabel:`Your Order` "
+"section can be cancelled. All orders that have been sent appear in "
+"the :guilabel:`Passed orders` section, and are ineligible for cancellation."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:231
+msgid ""
+"Orders can be cancelled in two ways, :ref:`individually <lunch/cancel-one>`, "
+"or :ref:`in bulk <lunch/cancel-all>`."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:235
+msgid ""
+"To check and ensure an order is cancelled, navigate to :menuselection:`Lunch "
+"app --> My Lunch --> My Order History`. A gray :guilabel:`Cancelled` icon "
+"appears next to any cancelled orders."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:241
+msgid "Cancel an individual item"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:243
+msgid ""
+"On the :guilabel:`Order Your Lunch` dashboard, click the :icon:`fa-"
+"minus` :guilabel:`(minus)` icon beneath the desired product in "
+"the :guilabel:`Your Order` section, until the quantity is zero. The order is "
+"cancelled, and the product disappears from the :guilabel:`Your Order` "
+"section."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:250
+msgid "Cancel all items"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:252
+msgid ""
+"All items in the :guilabel:`Your Order` section of the :guilabel:`Order Your "
+"Lunch` dashboard can be cancelled at one time. Click the :guilabel:`Clear "
+"Order` button at the bottom of the right-side of the dashboard, and all "
+"products are cancelled."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:257
 msgid "Submit an order"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:156
+#: ../../content/applications/hr/lunch/orders.rst:259
 msgid ""
-"To place the order, click the :guilabel:`Order Now` button on the right-side "
-"of the :guilabel:`Your Order` summary. The user is charged the amount that "
-"is displayed in the :guilabel:`To Pay` field, and the cost is deducted from "
-"their **Lunch** account balance."
+"To place the order, click the :guilabel:`Order Now` button on the right side "
+"of the :guilabel:`Order Your Lunch` dashboard, located at the bottom. The "
+"user is charged the amount that is displayed in the :guilabel:`To Pay` "
+"field, and the cost is deducted from their **Lunch** account balance."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:160
+#: ../../content/applications/hr/lunch/orders.rst:263
 msgid ""
 "Once the order is placed, the tags for the purchased items in "
-"the :guilabel:`Your Order` field change from orange :guilabel:`To Order` "
-"tags to red :guilabel:`Ordered` tags."
+"the :guilabel:`Your Order` section change from gray :guilabel:`To Order` "
+"tags to purple :guilabel:`Ordered` tags."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:164
+#: ../../content/applications/hr/lunch/orders.rst:267
 msgid "Track an order"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:166
+#: ../../content/applications/hr/lunch/orders.rst:269
 msgid ""
-"When orders have been sent to the vendors, the tags for the items in "
-"the :guilabel:`Your Order` summary change from red :guilabel:`Ordered` tags "
-"to blue :guilabel:`Sent` tags."
+"When orders have been sent to the vendors, the products move to "
+"the :guilabel:`Passed orders` section, located on the right-side of "
+"the :guilabel:`Order Your Lunch` dashboard. All :guilabel:`Passed orders` "
+"are collapsed, by default. Click the :icon:`fa-chevron-"
+"down` :guilabel:`(expand)` icon and all past orders appear in their own "
+"Kanban card."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:169
+#: ../../content/applications/hr/lunch/orders.rst:274
 msgid ""
-"Once orders have been received and verified, the tags change from "
-"blue :guilabel:`Sent` tags to green :guilabel:`Received` tags."
+"Each Kanban card displays the product name, cost, and delivery location and "
+"date for the product."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:173
+#: ../../content/applications/hr/lunch/orders.rst:276
+msgid "Additionally, each Kanban card has one of the following status tags:"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:278
+msgid ""
+":guilabel:`Ordered`: This tag appears in blue and indicates the order was "
+"sent to the vendor, but has not been received yet."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:280
+msgid ""
+":guilabel:`Received`: This tag appears in green, and indicates that the "
+"order has arrived at the location, and has been verified by the **Lunch** "
+"app administrator."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:284
 msgid "Receive an order"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:175
+#: ../../content/applications/hr/lunch/orders.rst:286
 msgid ""
-"When orders are received at the delivery location, they are confirmed by a "
-"**Lunch** app manager, and a notification is sent to the employee who "
-"ordered the food."
+"When orders are received at the delivery location, the **Lunch** app manager "
+"confirms them, and a notification is sent to the employee who ordered the "
+"food via email."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:179
+#: ../../content/applications/hr/lunch/orders.rst:290
 msgid "My Orders"
 msgstr "我的订单"
 
-#: ../../content/applications/hr/lunch/orders.rst:181
+#: ../../content/applications/hr/lunch/orders.rst:292
 msgid ""
 "To view a full list of all orders placed in the **Lunch** app for the "
 "currently signed-in user, navigate to :menuselection:`Lunch app --> My Lunch "
@@ -12151,7 +12342,7 @@ msgid ""
 "search bar."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:186
+#: ../../content/applications/hr/lunch/orders.rst:297
 msgid ""
 "All products appear in a list view, organized by date. The list displays "
 "the :guilabel:`Order "
@@ -12164,46 +12355,51 @@ msgstr ""
 "`、:guilabel:`用户`、:guilabel:`午餐地点`、:guilabel:`价格` 和:guilabel:`状态"
 "` 信息。如果在多公司数据库中，还会出现 :guilabel:`公司` 列。"
 
-#: ../../content/applications/hr/lunch/orders.rst:191
+#: ../../content/applications/hr/lunch/orders.rst:302
 msgid ""
-"The total cost for each order is displayed on the line containing the order "
-"date. At the bottom of the list, beneath all the lines, the overall total "
-"amount paid for all the orders appears, under the :guilabel:`Price` column."
-msgstr ""
-"每份订单的总费用显示在包含订单日期的行上。在列表底部，所有行下面"
-"的 :guilabel:`价格` 列显示所有订单的总支付金额。"
-
-#: ../../content/applications/hr/lunch/orders.rst:195
-msgid ""
-"At the end of each product line with a status of :guilabel:`Ordered` "
-"or :guilabel:`Sent`, an :guilabel:`X Cancel` button appears. "
-"Click :guilabel:`X Cancel` to cancel that product order. Once a product "
-"order has been cancelled, the money paid for that product is refunded, and "
-"appears in the user's account."
+"The total cost for each day's orders is displayed on the top line containing "
+"the order date. At the bottom of the list, beneath all the lines, the "
+"overall total amount paid for all the orders appears, under "
+"the :guilabel:`Price` column."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:200
+#: ../../content/applications/hr/lunch/orders.rst:306
+msgid ""
+"At the end of each product line with a status "
+"of :guilabel:`Ordered`, :guilabel:`To Order`, or :guilabel:`Sent`, "
+"a :icon:`fa-times` :guilabel:`Cancel` button appears. Click :icon:`fa-"
+"times` :guilabel:`Cancel` to cancel that product order. Once a product order "
+"has been cancelled, the money paid for that product is refunded and appears "
+"in the user's account."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:311
 msgid ""
 "At the end of each product line with a status of :guilabel:`Received`, "
-"a :guilabel:`Re-order` button appears. Click :guilabel:`Re-order` to "
-"instantly reorder that same product, with the same extras, if applicable. "
-"The new order appears in the list, under the current date, and the product "
-"is paid for, with money deducted from the user's account."
+"a :icon:`fa-history` :guilabel:`Re-order` button appears. Click :icon:`fa-"
+"history` :guilabel:`Re-order` to instantly reorder that same product, with "
+"the same extras, if applicable. The new order appears in the list, under the "
+"current date, and the product is paid for, with money deducted from the "
+"user's account."
 msgstr ""
-"在每个状态为 :guilabel:`已收到` 的产品系列末尾，会出现一个 :guilabel:`重新订"
-"购` 按钮。点击 :guilabel:`重新订购` 即可重新订购相同的产品，并添加相同的附加"
-"功能（如适用）。新订单会出现在当前日期下的列表中，产品已付款，款项会从用户账"
-"户中扣除。"
+
+#: ../../content/applications/hr/lunch/orders.rst:316
+msgid ""
+"Any order with a status of :guilabel:`Cancelled` has a :icon:`fa-"
+"undo` :guilabel:`Reset` button at the end of the line. To un-cancel and "
+"order, click the :icon:`fa-undo` :guilabel:`Reset` button, and the product "
+"status changes to :guilabel:`Ordered`."
+msgstr ""
 
 #: ../../content/applications/hr/lunch/orders.rst:None
 msgid "The list view that appears when navigating to the My Orders dashboard."
 msgstr "导航到“我的订单”仪表板时显示的列表视图。"
 
-#: ../../content/applications/hr/lunch/orders.rst:209
+#: ../../content/applications/hr/lunch/orders.rst:324
 msgid "My Account"
 msgstr "我的账号"
 
-#: ../../content/applications/hr/lunch/orders.rst:211
+#: ../../content/applications/hr/lunch/orders.rst:326
 msgid ""
 "To view a summary of all transactions in the user's account, navigate "
 "to :menuselection:`Lunch app --> My Lunch --> My Account History`. Doing so "
@@ -12212,7 +12408,7 @@ msgstr ""
 "要查看用户账户中所有交易的摘要，请导航至 :menuselection:`午餐管理应用程序 --"
 "> 我的午餐 --> 我的帐户历史`。这样就会显示 :guilabel:`我的账户` 面板。"
 
-#: ../../content/applications/hr/lunch/orders.rst:214
+#: ../../content/applications/hr/lunch/orders.rst:329
 msgid ""
 "The default presentation of the :guilabel:`My Account` dashboard displays "
 "all entries, from newest to oldest. "
@@ -12222,14 +12418,14 @@ msgstr ""
 ":guilabel:`我的账户`仪表板的默认显示方式是显示所有条目，从最新到最旧。列表中"
 "仅显示 :guilabel:`日期`、:guilabel:`描述`和 :guilabel:`金额`字段。"
 
-#: ../../content/applications/hr/lunch/orders.rst:218
+#: ../../content/applications/hr/lunch/orders.rst:333
 msgid ""
 "Entries with a negative figure listed in the :guilabel:`Amount` column "
 "represent products purchased in the **Lunch** app. These appear in a `$-"
 "XX.XX` format."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:221
+#: ../../content/applications/hr/lunch/orders.rst:336
 msgid ""
 "Entries with a positive balance either represent funds added to the user's "
 "lunch account, or cancelled orders that were eventually refunded to the "
@@ -12385,26 +12581,20 @@ msgstr "管理用户账户"
 msgid ""
 "In Odoo's **Lunch** application, users pay for products directly from their "
 "**Lunch** app account. For funds to appear in their account, a **Lunch** app "
-"manager **must** transfer funds into each user's account."
+"manager must transfer funds into each user's account."
 msgstr ""
 
 #: ../../content/applications/hr/lunch/user-accounts.rst:10
 msgid ""
-"To add funds and manage user accounts, the user must "
-"have :guilabel:`Administrator` access rights set for the **Lunch** "
-"application. This is verified by navigating to :menuselection:`Settings app "
-"-->` :icon:`oi-arrow-right` :guilabel:`Manage Users`. Then, click on a user "
-"to view their various settings and access rights."
+"To add funds and manage user accounts, the user must have "
+"*Administrator* :doc:`access rights <../../general/users/access_rights/>` "
+"for the **Lunch** application. Access rights can be managed by navigating to "
+"the :menuselection:`Settings app` app and clicking :icon:`oi-arrow-"
+"right` :guilabel:`Manage Users`. Click on a user to view their individual "
+"access rights."
 msgstr ""
 
 #: ../../content/applications/hr/lunch/user-accounts.rst:15
-msgid ""
-"For more information, refer to the :doc:`Access rights <../../general/users/"
-"access_rights/>` documentation."
-msgstr ""
-"更多信息，请参阅 :doc:`访问权限<.../../general/users/access_rights/>` 文档。"
-
-#: ../../content/applications/hr/lunch/user-accounts.rst:18
 msgid ""
 "The **Lunch** application does **not** directly interface in any way with "
 "software or products linked to any monetary accounts or billing. Money "
@@ -12412,7 +12602,7 @@ msgid ""
 "cards be charged."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:22
+#: ../../content/applications/hr/lunch/user-accounts.rst:19
 msgid ""
 "Odoo's **Lunch** application **only** allows for manual entries of cash "
 "exchanges that are handled by the **Lunch** app manager. It is up to each "
@@ -12420,37 +12610,37 @@ msgid ""
 "replenished."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:27
+#: ../../content/applications/hr/lunch/user-accounts.rst:24
 msgid ""
 "Some examples of how money can be organized and transferred within a company:"
 msgstr "举例说明公司内部如何组织和转移资金："
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:29
+#: ../../content/applications/hr/lunch/user-accounts.rst:26
 msgid ""
 "Cash is handed to the **Lunch** app manager, who then updates the user's "
 "account."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:30
+#: ../../content/applications/hr/lunch/user-accounts.rst:27
 msgid ""
 "Money is automatically deducted from the user's paychecks, then the "
 "**Lunch** app manager updates the account when paychecks are issued. This "
 "requires :ref:`adding a salary attachment <payroll/worked-days-inputs>` for "
-"the user's payslip in the *Payroll* app."
+"the user's payslip in the **Payroll** app."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:33
+#: ../../content/applications/hr/lunch/user-accounts.rst:30
 msgid ""
 "Companies can sell \"lunch tickets\" at a set price (for example, one ticket "
 "costs $5.00). Users can purchase tickets from a **Lunch** app manager, who "
 "then updates the user's account."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:39
+#: ../../content/applications/hr/lunch/user-accounts.rst:36
 msgid "Cash Moves"
 msgstr "现金凭证"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:41
+#: ../../content/applications/hr/lunch/user-accounts.rst:38
 msgid ""
 "To add funds to user accounts, each cash move must be individually logged. "
 "To view all cash move records, or create a new cash move, navigate "
@@ -12461,7 +12651,7 @@ msgstr ""
 "新的现金移动，请导航至 :menuselection:`午餐应用程序 --> 管理器 --> 现金移动"
 "`。这样就会显示 :guilabel:`现金流动` 仪表板。"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:45
+#: ../../content/applications/hr/lunch/user-accounts.rst:42
 msgid ""
 "On the :guilabel:`Cash Moves` dashboard, all cash moves are presented in a "
 "default list view, displaying each "
@@ -12477,11 +12667,11 @@ msgstr ""
 msgid "The list view of all cash moves."
 msgstr "所有现金流动的列表视图。"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:54
+#: ../../content/applications/hr/lunch/user-accounts.rst:51
 msgid "Add funds"
 msgstr "增加资金"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:56
+#: ../../content/applications/hr/lunch/user-accounts.rst:53
 msgid ""
 "To add funds to a lunch account, click the :guilabel:`New` button, located "
 "in the top-left corner of the :guilabel:`Cash Moves` dashboard."
@@ -12489,74 +12679,71 @@ msgstr ""
 "要向午餐账户添加资金，请点击位于 :guilabel:`现金移动` 仪表板左上角"
 "的 :guilabel:`新建` 按钮。"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:59
+#: ../../content/applications/hr/lunch/user-accounts.rst:56
 msgid ""
 "A blank :guilabel:`Cash Moves` form loads. Enter the following information "
 "on the form:"
 msgstr "加载空白的 :guilabel:`现金移动` 表格。在表格中输入以下信息："
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:61
+#: ../../content/applications/hr/lunch/user-accounts.rst:58
 msgid ""
-":guilabel:`User`: select the user depositing cash into their account from "
+":guilabel:`User`: Select the user depositing cash into their account from "
 "the drop-down menu. If the user is not in the database, they can be created "
 "by typing their name in the :guilabel:`User` field, and clicking "
 "either :guilabel:`Create \"user\"` or :guilabel:`Create and edit...` to "
 "create the user and edit the :guilabel:`Create User` form."
 msgstr ""
-":guilabel:`用户`：从下拉菜单中选择将现金存入其账户的用户。如果用户不在数据库"
-"中，可在 :guilabel:`用户` 字段中输入用户名，然后点击 :guilabel:`创建 \"用户"
-"\"` 或 :guilabel:`创建和编辑...`，创建用户并编辑 :guilabel:`创建用户` 表单。"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:65
+#: ../../content/applications/hr/lunch/user-accounts.rst:62
 msgid ""
-":guilabel:`Date`: using the calendar popover, select the date the "
-"transaction occurred."
-msgstr ":guilabel:`日期`：使用弹出式日历，选择交易发生的日期。"
+":guilabel:`Date`: Select the date the transaction occurred using the "
+"calendar popover."
+msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:66
-msgid ":guilabel:`Amount`: enter the amount being added to the lunch account."
-msgstr ":guilabel:`金额`：输入要添加到午餐账户的金额。"
+#: ../../content/applications/hr/lunch/user-accounts.rst:63
+msgid ":guilabel:`Amount`: Enter the amount being added to the lunch account."
+msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:67
-msgid ":guilabel:`Description`: enter a brief description of the transaction."
-msgstr ":guilabel:`描述`：输入交易的简要说明。"
+#: ../../content/applications/hr/lunch/user-accounts.rst:64
+msgid ":guilabel:`Description`: Enter a brief description of the transaction."
+msgstr ""
 
 #: ../../content/applications/hr/lunch/user-accounts.rst:None
-msgid "The cash move form filled out for a transaction of $40.00."
-msgstr "现金移动表填写的交易金额为 $40.00。"
+msgid "The cash move form filled out for a transaction of $25.00."
+msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:73
+#: ../../content/applications/hr/lunch/user-accounts.rst:70
 msgid "Control Accounts"
 msgstr "管理账户"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:75
+#: ../../content/applications/hr/lunch/user-accounts.rst:72
 msgid ""
-"An overview of every transaction in the **Lunch** app, including all cash "
-"deposits and purchases, can be viewed on the main *Control Accounts* "
-"dashboard. To access this dashboard, navigate to :menuselection:`Lunch app --"
-"> Manager --> Control Accounts.`"
+"The main *Control Accounts* dashboard provides an overview of every "
+"transaction in the **Lunch** app, including all cash deposits and purchases. "
+"To access this dashboard, navigate to :menuselection:`Lunch app --> Manager "
+"--> Control Accounts.`"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:79
+#: ../../content/applications/hr/lunch/user-accounts.rst:76
 msgid ""
-"All transactions are grouped :guilabel:`By Employee`, and listed "
-"alphabetically by the user's first name. At the end of the user's name, a "
-"number appears. This indicates the number of individual records logged for "
-"that user."
+"Transactions are grouped :guilabel:`By Employee`, and listed alphabetically "
+"by the user's first name. Their available balance is displayed in "
+"the :guilabel:`Amount` column. This takes into account all deposits and "
+"transactions to their lunch account."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:83
+#: ../../content/applications/hr/lunch/user-accounts.rst:80
 msgid ""
-"The default view is to have all individual transactions hidden. To view all "
-"transactions for a user, click the :icon:`fa-caret-"
-"right` :guilabel:`(triangle)` icon to the left of the desired name to expand "
-"that specific group."
+"Individual transactions are hidden in the default view. To view all "
+"transactions for a specific user, click the :icon:`fa-caret-"
+"right` :guilabel:`(triangle)` icon to the left of their name to expand the "
+"full list of transactions associated with their lunch account."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:87
+#: ../../content/applications/hr/lunch/user-accounts.rst:84
 msgid ""
-"Each record includes "
-"the :guilabel:`Date`, :guilabel:`User`, :guilabel:`Description`, "
+"Each line includes the "
+"transaction :guilabel:`Date`, :guilabel:`User`, :guilabel:`Description`, "
 "and :guilabel:`Amount`."
 msgstr ""
 
@@ -12565,20 +12752,21 @@ msgid ""
 "The Control Accounts dashboard with two employee's transactions expanded."
 msgstr ""
 
+#: ../../content/applications/hr/lunch/user-accounts.rst:91
+msgid ""
+"The :guilabel:`Control Accounts` dashboard is a view-only list of "
+"transactions within the **Lunch** app, and does **not** allow modifications "
+"to be made to any records listed."
+msgstr ""
+
 #: ../../content/applications/hr/lunch/user-accounts.rst:94
 msgid ""
-"This list only displays the various transactions within the **Lunch** app, "
-"and does **not** allow modifications to be made to any records listed."
+"Cash moves can be modified through the :ref:`Cash Moves <lunch/cash-moves>` "
+"dashboard, only."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:97
-msgid ""
-"Cash moves can be modified, but **only** from the :ref:`Cash Moves <lunch/"
-"cash-moves>` dashboard, not from the :guilabel:`Control Accounts` dashboard."
-msgstr ""
-
-#: ../../content/applications/hr/lunch/user-accounts.rst:100
-msgid "It is **not** possible to modify any product-related records."
+#: ../../content/applications/hr/lunch/user-accounts.rst:96
+msgid "Product-related records **cannot** be modified."
 msgstr ""
 
 #: ../../content/applications/hr/lunch/vendors.rst:3
@@ -16741,6 +16929,15 @@ msgstr "比利时"
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:8
 msgid "Understanding the Belgian payslip"
 msgstr "了解比利时工资单"
+
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:11
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:231
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:428
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:862
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1365
+#: ../../content/applications/hr/time_off.rst:529
+msgid "Overview"
+msgstr "概述"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:13
 msgid ""
@@ -38989,6 +39186,10 @@ msgid ":doc:`referrals/referral_analysis`"
 msgstr ""
 
 #: ../../content/applications/hr/referrals.rst:256
+msgid ":doc:`referrals/rewards_report`"
+msgstr ""
+
+#: ../../content/applications/hr/referrals.rst:257
 msgid ":doc:`referrals/points_report`"
 msgstr ""
 
@@ -39767,6 +39968,60 @@ msgid ""
 msgstr ""
 "购买按钮出现在马克杯和背包奖励的下方，而自行车奖励则说明需要多少积分才能兑"
 "换。"
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:3
+msgid "Rewards report"
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:5
+msgid ""
+"In the **Referrals** app, it is possible to view a report of the rewards "
+"that employees have redeemed. This can help determine the most popular "
+"rewards and which rewards employees do not request."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:9
+msgid ""
+"Incentivizing employees to recruit highly qualified applicants is aided by "
+"offering :doc:`rewards <rewards>` that entice employees to earn points. "
+"Additionally, it can be helpful for the **Referrals** app administrator to "
+"see what rewards are popular, to ensure a stock of highly sought-after "
+"rewards is always available."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:15
+msgid "Reward analysis"
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:17
+msgid ""
+"To view the *Reward Analysis* report, navigate to :menuselection:`Referrals "
+"app --> Reporting --> Rewards`. This opens the :guilabel:`Reward Analysis` "
+"report in a default stacked (:icon:`fa-database`) bar chart (:icon:`fa-bar-"
+"chart`)."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:21
+msgid ""
+"The X-axis is populated with the various rewards, while the Y-axis is "
+"populated with the number of rewards redeemed by employees. All employees "
+"who have redeemed rewards appear in their own identifying color."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:25
+msgid ""
+"This report shows that :guilabel:`Chocolate Covered Nuts` are the most "
+"desired reward, with 23 distributed to employees. It can also be determined "
+"that employees do not often request "
+"the :guilabel:`Sweatshirt`, :guilabel:`Backpack`, :guilabel:`Tablet`, "
+"and :guilabel:`Electric Bicycle`; therefore, inventory for those items does "
+"not need to be as high as the :guilabel:`Chocolate Covered Nuts`."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:None
+msgid ""
+"The rewards report showing the chocolate covered nuts as the most requested."
+msgstr ""
 
 #: ../../content/applications/hr/referrals/share_jobs.rst:3
 msgid "Share job positions"
@@ -42673,6 +42928,489 @@ msgstr ""
 msgid ""
 "A time off request form filled out for an employee home sick with the flu."
 msgstr ""
+
+#~ msgid ""
+#~ "To see what access rights a user has, navigate to "
+#~ "the :menuselection:`Settings app --> Users & Companies --> Users`, and "
+#~ "click on an individual user. The :guilabel:`Access Rights` tab is visible "
+#~ "by default. Scroll down to the :guilabel:`HUMAN RESOURCES` section to "
+#~ "view the settings. For the :guilabel:`Attendances` field, the options are "
+#~ "either to leave the field blank or select :guilabel:`Administrator`."
+#~ msgstr ""
+#~ "查看用户权限路径：:menuselection:`设置应用 --> 用户与公司 --> 用户`，选择"
+#~ "具体用户后默认显示 :guilabel:`访问权限` 标签页。滚动至 :guilabel:`人力资源"
+#~ "` 部分，其中 :guilabel:`考勤` 字段可选留空或设为 :guilabel:`管理员`。"
+
+#~ msgid ""
+#~ "If the :guilabel:`Administrator` option is selected, the user has full "
+#~ "access to the entire **Attendances** application, with no restrictions. "
+#~ "They can view all employee attendance records, enter *Kiosk Mode* from "
+#~ "the application, access all reporting metrics, and make modifications to "
+#~ "the settings. If left blank, the user does **not** have access to the "
+#~ "**Attendances** application."
+#~ msgstr ""
+#~ "选择 :guilabel:`管理员` 权限的用户可以完全访问整个 *考勤* 应用程序，包括查"
+#~ "看所有考勤记录、进入*终端模式*、访问报表数据及修改设置。如果留空，则用户**"
+#~ "无法**访问**考勤**应用程序的权限。"
+
+#~ msgid ""
+#~ "If a user does **not** have :guilabel:`Administrator` rights for the "
+#~ "**Attendances** app, they are **not** able to open the app, even though "
+#~ "it appears on the main database dashboard. An :guilabel:`Access Error` "
+#~ "pop-up message appears, stating:"
+#~ msgstr ""
+#~ "如果用户**没有****考勤**应用程序的 :guilabel:`管理员` 权限，则**无法**打开"
+#~ "该应用程序，即使它出现在主数据库仪表板上。弹出 :guilabel:`访问错误` 消息，"
+#~ "说明："
+
+#~ msgid ""
+#~ "`You do not have enough rights to access the fields "
+#~ "\"attendance_manager_id\" on Employee (hr.employee). Please contact your "
+#~ "system administrator.`"
+#~ msgstr ""
+#~ "`您无权访问员工(hr.employee)中的\"attendance_manager_id\"字段，请联系系统"
+#~ "管理员。"
+
+#~ msgid ""
+#~ "Users who cannot access the **Attendances** app can still :doc:`check in "
+#~ "and check out <../hr/attendances/check_in_check_out>` of work within the "
+#~ "database, using the :icon:`fa-circle` :guilabel:`(red circle)` "
+#~ "or :icon:`fa-circle` :guilabel:`(green circle)` that are always available "
+#~ "at the top of the database."
+#~ msgstr ""
+#~ "无**考勤**应用访问权限的用户，仍可通过数据库顶部常驻的 :icon:fa-"
+#~ "circle :guilabel:`(红色圆圈)` 或 :icon:fa-circle :guilabel:`(绿色圆圈)` 进"
+#~ "行 :doc:`打卡 <../hr/attendances/check_in_check_out>`。"
+
+#~ msgid ""
+#~ "To view who the attendance approver for an employee is, navigate to "
+#~ "the :menuselection:`Employees application` and click on the specific "
+#~ "employee. Click on the :guilabel:`Work Information` tab, scroll to "
+#~ "the :guilabel:`APPROVERS` section, and check the :guilabel:`Attendance` "
+#~ "field. The person selected is able to view that employee's attendance "
+#~ "records, both on the **Attendances** application dashboard as well as in "
+#~ "the attendance reports, and make modifications to their records."
+#~ msgstr ""
+#~ "若需查询某员工的考勤审批人，可进入 :menuselection:`员工应用`，点击对应员工"
+#~ "档案。切换至 :guilabel:`工作信息` 标签页，下滑至 :guilabel:`审批人` 板块，"
+#~ "查看 :guilabel:`考勤` 字段即可。被选中的审批人可在**考勤**应用的仪表板及考"
+#~ "勤报表中查看该员工的考勤记录，并对记录进行修改操作。"
+
+#~ msgid ""
+#~ "Few configurations are needed in the **Attendances** app. Determining how "
+#~ "employees check in and out, defining how the kiosks function, and "
+#~ "determining how extra hours are computed are all set in the Configuration "
+#~ "menu. Navigate to the :menuselection:`Attendances application --> "
+#~ "Configuration` to access the configuration menu."
+#~ msgstr ""
+#~ "**考勤**应用程序中需要的配置很少。确定员工的签到和签退方式、定义自助服务机"
+#~ "的功能以及确定额外工时的计算方式都可以在配置菜单中进行设置。导航"
+#~ "至 :menuselection:`考勤应用程序 --> 配置` 访问配置菜单。"
+
+#~ msgid ""
+#~ "Any configuration item with a :icon:`fa-building-"
+#~ "o` :guilabel:`(building)` icon is a company-specific configuration. Items "
+#~ "without an :icon:`fa-building-o` :guilabel:`(building)` icon apply to all "
+#~ "companies within the database."
+#~ msgstr ""
+#~ "任何带有 :icon:`fa-building-o` :guilabel:`(构建)` 图标的配置项都是针对特定"
+#~ "公司的配置。没有 :icon:`fa-building-o` :guilabel:`(构建)` 图标的项目适用于"
+#~ "数据库中的所有公司。"
+
+#~ msgid ""
+#~ ":guilabel:`Automatic Check-Out` :icon:`fa-building-o`: Activate this "
+#~ "feature to automatically check out employees according to their working "
+#~ "schedule, after a buffer of time has passed."
+#~ msgstr ""
+#~ ":guilabel:`自动签退`:icon:`fa-building-o`：启用此功能后，系统将在员工排班"
+#~ "结束后的缓冲期过后，自动为员工执行签退操作。"
+
+#~ msgid ""
+#~ ":guilabel:`Tolerance`: This field appears only when "
+#~ "the :guilabel:`Automatic Check-Out` :icon:`fa-building-o` feature is "
+#~ "enabled. Enter the amount of time, in hours, that must elapse after an "
+#~ "employee's working hours have ended, before they are automatically "
+#~ "checked out."
+#~ msgstr ""
+#~ ":guilabel:`签退宽限时长`：仅当 :guilabel:`自动签退` :icon:`fa-building-o` "
+#~ "功能启用时，此字段才会显示。请输入员工排班结束后，系统自动执行签退操作前的"
+#~ "宽限时长，单位为小时。"
+
+#~ msgid ""
+#~ ":guilabel:`Absence Management` :icon:`fa-building-o`: Activate this "
+#~ "feature to log any absences that are not associated with a time off "
+#~ "request, such as vacation time or sick time, on the :doc:`attendance "
+#~ "report <attendances/attendance_reporting>`."
+#~ msgstr ""
+#~ ":guilabel:`缺勤管理` :icon:`fa-building-o`： 激活此功能可在 :doc:`考勤报"
+#~ "表 <attendances/attendance_reporting>` 中记录任何与请假申请无关的缺勤，如"
+#~ "休假时间或病假时间。"
+
+#~ msgid ""
+#~ "When entering the **Attendances** application, the :guilabel:`Overview` "
+#~ "dashboard is presented, containing all the user's check in and check out "
+#~ "information. If the user has the required :ref:`access rights "
+#~ "<attendances/access-rights>` or is an :ref:`approver <attendances/"
+#~ "approvers>` for specific employees, those employees' check-in and check-"
+#~ "out information also appears on the :guilabel:`Overview` dashboard."
+#~ msgstr ""
+#~ "进入 **参与者** 应用程序后，将显示 :guilabel:`概览` 仪表板，其中包含用户的"
+#~ "所有签入和签出信息。如果用户拥有所需的 :ref:`访问权限 <attendances/access-"
+#~ "rights>`，或者是特定员工的 :ref:`批准人 <attendances/approvers>`，这些员工"
+#~ "的签入和签出信息也会显示在 :guilabel:`概览` 仪表板上。"
+
+#~ msgid ""
+#~ "The **Attendance** dashboard allows switching between :icon:`fa-"
+#~ "tasks` :guilabel:`(Gantt)` and :icon:`oi-view-list` :guilabel:`(List)` "
+#~ "views, and selecting a period to analyze. The current period is "
+#~ "automatically highlighted in yellow for real-time attendance records, "
+#~ "while the :icon:`fa-crosshairs` :guilabel:`(Focus Today)` button "
+#~ "instantly returns the dashboard to the present date."
+#~ msgstr ""
+#~ "**考勤** 仪表板支持在 :icon:`fa-tasks` :guilabel:`(甘特图)` 和 :icon:`oi-"
+#~ "view-list` :guilabel:`(列表)` 视图间切换，并可选择分析时段。当前时段会以黄"
+#~ "色高亮显示实时考勤记录，点击 :icon:`fa-crosshairs` :guilabel:`(聚焦今日)` "
+#~ "按钮可立即跳转至当天数据。"
+
+#~ msgid ""
+#~ "Any entries that have errors appear in red, indicating they need to be "
+#~ "resolved by a user with the proper :ref:`access rights <attendances/"
+#~ "access-rights>` and/or are :ref:`approvers <attendances/approvers>` for "
+#~ "the employees with the errors."
+#~ msgstr ""
+#~ "有错误的条目显示为红色，表明需要由具有适当 :ref:`访问权限 <attendances/"
+#~ "access-rights>` 的用户和/或员工的 :ref:`审批人 <attendances/approvers>` 来"
+#~ "解决。"
+
+#~ msgid ":doc:`../essentials/search`"
+#~ msgstr ":doc:`../essentials/search`"
+
+#~ msgid "Review individual attendance records during a 1:1 meeting."
+#~ msgstr "在1对1会议中查看个人考勤记录。"
+
+#~ msgid "The detailed attendance log contains the following information:"
+#~ msgstr "详细的考勤记录包含以下信息："
+
+#~ msgid "Main details"
+#~ msgstr "主要详情"
+
+#~ msgid ""
+#~ ":guilabel:`Worked Time`: The total amount of time the employee logged for "
+#~ "the day, across multiple check-ins and outs, in an hour and minute format "
+#~ "(HH:MM)."
+#~ msgstr ""
+#~ ":guilabel:`工作时间`： 员工当天多次签到和签退的总时间，格式为小时和分钟"
+#~ "（HH:MM）。"
+
+#~ msgid ""
+#~ ":guilabel:`Worked Extra Hours`: Unpaid overtime hours worked beyond the "
+#~ "expected working schedule (shows **only** when present for the employee)."
+#~ msgstr ""
+#~ ":guilabel:`加班时间`： 超出预期工作时间的无偿加班时数（**仅**显示雇员存在"
+#~ "时）。"
+
+#~ msgid ""
+#~ ":guilabel:`Extra Hours`: Approved overtime (the :guilabel:`Worked Time` "
+#~ "minus the approved :guilabel:`Worked Extra Hours`."
+#~ msgstr ""
+#~ ":guilabel:`额外时间`：批准的加班时间（:guilabel:`工作时间`减去批准"
+#~ "的 :guilabel:`额外工作时间`。"
+
+#~ msgid ""
+#~ "The following information appears for both the :guilabel:`Check In` "
+#~ "and :guilabel:`Check Out` sections."
+#~ msgstr "以下信息同时显示在 :guilabel:`签到` 和 :guilabel:`签退` 部分。"
+
+#~ msgid ""
+#~ ":guilabel:`IP Address`: The device's IP address used to log in or out."
+#~ msgstr ":guilabel:`IP 地址`： 用于登录或退出的设备 IP 地址。"
+
+#~ msgid ""
+#~ "To present different information, adjust the :ref:`filters and groups "
+#~ "<attendances/filters-groups>` in the same way as in "
+#~ "the :guilabel:`Overview` dashboard."
+#~ msgstr ""
+#~ "要显示不同的信息，请调整 :ref:`筛选器和分组<attendances/filters-"
+#~ "groups>` ，方法与 :guilabel:`概览` 仪表板相同。"
+
+#~ msgid ""
+#~ ":guilabel:`Lunch Overdraft`: enter the maximum overdraft amount for "
+#~ "employees. The currency format is determined by the localization setting "
+#~ "of the company."
+#~ msgstr ""
+#~ ":guilabel:`午餐透支`：输入员工的最大透支额度。货币格式由公司的本地化设置决"
+#~ "定。"
+
+#~ msgid ""
+#~ ":guilabel:`Reception notification`: set the message users receive via the "
+#~ "**Discuss** app when their food has been delivered. The default message "
+#~ "`Your lunch has been delivered. Enjoy your meal!` populates this field, "
+#~ "but can be modified, if desired."
+#~ msgstr ""
+#~ ":guilabel:`送达通知`：设置当餐食送达时，用户通过**内部讨论**应用收到的消"
+#~ "息。该字段默认填充消息`您的午餐已送达，请慢用！`，但可根据需要进行修改。"
+
+#~ msgid ""
+#~ "The following is an example for the :guilabel:`Reception notification` "
+#~ "field in the settings menu:"
+#~ msgstr "以下是设置菜单中:guilabel:`送达通知`字段的一个示例："
+
+#~ msgid ""
+#~ "Navigate to :menuselection:`Lunch app --> Configuration --> Settings`. "
+#~ "Click the :guilabel:`EN` In the top-right of the text box beneath "
+#~ "the :guilabel:`Reception notification` section. A :guilabel:`Translate: "
+#~ "company_lunch_notify_message` pop-up window loads with the option to "
+#~ "enter a translation for the other languages used by the database."
+#~ msgstr ""
+#~ "前往 :menuselection:`午餐应用 --> 配置 --> 设置`。点击 :guilabel:`送达通知"
+#~ "`部分下方文本框右上角的 :guilabel:`EN`。系统会加载一个 :guilabel:`翻译："
+#~ "company_lunch_notify_message` 弹出窗口，其中提供了为数据库使用的其他语言输"
+#~ "入翻译的选项。"
+
+#~ msgid ""
+#~ "The translation text box, with the current language highlighted, and the "
+#~ "Arabic\n"
+#~ "translation field highlighted."
+#~ msgstr "翻译文本框，其中当前语言和阿拉伯语翻译字段被高亮显示。"
+
+#~ msgid ""
+#~ ":guilabel:`Alert Name`: enter a name for the alert. This should be short "
+#~ "and descriptive, such as `New Lunch Vendor` or `Order by 11:00 AM`. This "
+#~ "field is **required**."
+#~ msgstr ""
+#~ ":guilabel:`提醒名称`：为提醒输入一个名称。名称应简短且具描述性，例如新午餐"
+#~ "供应商或上午11点前下单。此字段为**必填项**。"
+
+#~ msgid ""
+#~ ":guilabel:`Display`: select whether the alert is visible in the **Lunch** "
+#~ "app (:guilabel:`Alert in app)` or sent to employees via the **Discuss** "
+#~ "app in a chat window (:guilabel:`Chat notification`)."
+#~ msgstr ""
+#~ ":guilabel:`显示方式`：选择提醒是显示在**午餐**应用中（:guilabel:`应用内提"
+#~ "醒`），还是通过**内部讨论**应用的聊天窗口发送给员工（:guilabel:`聊天通知"
+#~ "`）。"
+
+#~ msgid ""
+#~ ":guilabel:`Recipients`: this field only appears if :guilabel:`Chat "
+#~ "notification` is selected for the :guilabel:`Display` option. Select who "
+#~ "receives the chat alert. The options "
+#~ "are: :guilabel:`Everyone`, :guilabel:`Employee who ordered last "
+#~ "week`, :guilabel:`Employee who ordered last month`, "
+#~ "or :guilabel:`Employee who ordered last year`."
+#~ msgstr ""
+#~ ":guilabel:`收件人`：此字段仅在 :guilabel:`聊天通知` 被选中为 :guilabel:`显"
+#~ "示` 选项时才会出现。选择接收聊天提示的对象。选项包括：:guilabel:`所有人"
+#~ "`、:guilabel:`上周订购的员工`、:guilabel:`上月订购的员工`或 :guilabel:`去"
+#~ "年订购的员工`。"
+
+#~ msgid ""
+#~ ":guilabel:`Location`: select the locations the alert should appear for "
+#~ "from the drop-down menu. Multiple locations can be selected. This field "
+#~ "is **required**, therefore, if the alert applies to all locations, select "
+#~ "all the locations from the drop-down menu."
+#~ msgstr ""
+#~ ":guilabel:`位置`：从下拉菜单中选择警报应出现的位置。可选择多个地点。此字段"
+#~ "为**必填**，因此，如果警报适用于所有地点，请从下拉菜单中选择所有地点。"
+
+#~ msgid ""
+#~ ":guilabel:`Show Until`: if the alert should expire on a specific date, "
+#~ "select the date from the calendar picker."
+#~ msgstr ""
+#~ ":guilabel:`显示至`：如果提醒应在特定日期后失效，请从日历选择器中选择该日"
+#~ "期。"
+
+#~ msgid ""
+#~ ":guilabel:`Active`: this option is on (appears green) by default. To turn "
+#~ "off the alert, click the toggle so that it no longer appears green."
+#~ msgstr ""
+#~ ":guilabel:`启用`：默认情况下，此选项为开启状态（显示为绿色）。要关闭提醒，"
+#~ "请点击此开关，使其不再显示为绿色。"
+
+#~ msgid ""
+#~ ":guilabel:`Notification Time`: select the days of the week the alert "
+#~ "should be sent. By default, all seven days are active. Click on a "
+#~ "checkbox to change the setting from active to inactive."
+#~ msgstr ""
+#~ ":guilabel:`通知日`：选择应发送提醒的星期。默认情况下，一周七天均为激活状"
+#~ "态。点击复选框可将设置从激活更改为非激活。"
+
+#~ msgid ""
+#~ "If :guilabel:`Chat notification` was selected for the :guilabel:`Display` "
+#~ "option, a :guilabel:`Time` field also appears. Enter the time the chat "
+#~ "message should be sent. Next, select if the time is either :guilabel:`AM` "
+#~ "or :guilabel:`PM` using the drop-down menu to the right of "
+#~ "the :guilabel:`Time` field."
+#~ msgstr ""
+#~ "如果:guilabel:`显示` 选项中选择了:guilabel:`聊天通知` ，则还会出"
+#~ "现:guilabel:`时间` 字段。输入发送聊天信息的时间。然后，使用 :guilabel:`时"
+#~ "间` 字段右侧的下拉菜单选择时间是 :guilabel:`上午` 还是 :guilabel:`下午` 。"
+
+#~ msgid ""
+#~ "The **Lunch** app lets employees place lunch orders, see what's available "
+#~ "each day, and check their account balance, all from one place."
+#~ msgstr ""
+#~ "通过**午餐**应用程序，员工可以在一个地方下午餐订单、查看每天的供应情况并查"
+#~ "看账户余额。"
+
+#~ msgid ""
+#~ "On the main :guilabel:`Order Your Lunch` dashboard, all the necessary "
+#~ "information needed to place an order is visible. Enable "
+#~ "the :guilabel:`Available Today` filter in the search bar by clicking into "
+#~ "the search bar and selecting :guilabel:`Available Today`. This filter "
+#~ "shows only products that can be purchased that day, based on "
+#~ "the :ref:`vendor's availability <lunch/availability>`."
+#~ msgstr ""
+#~ "在 :guilabel:`订购午餐` 主仪表板上，可以看到下订单所需的所有必要信息。点击"
+#~ "搜索栏并选择 :guilabel:`今日提供`，启用搜索栏中的 :guilabel:`今日提供` 过"
+#~ "滤器。该过滤器根据 :ref:`供应商的供货情况 <lunch/availability>` 仅显示当天"
+#~ "可购买的产品。"
+
+#~ msgid ""
+#~ "The left-side of the dashboard displays the "
+#~ "various :guilabel:`Categories` of products available, along with "
+#~ "the :guilabel:`Vendors` supplying the products. To the right of each line "
+#~ "is a number, which indicates how many products are associated with that "
+#~ "respective category or vendor."
+#~ msgstr ""
+#~ "仪表板的左侧显示各种 :guilabel:`类别` 可用产品，以及提供产品的 :guilabel:`"
+#~ "供应商` 。每一行的右侧是一个数字，表示与该类别或供应商相关联的产品数量。"
+
+#~ msgid ""
+#~ "To filter the products by categories or vendors, tick the checkbox next "
+#~ "to the desired category or vendor to only view items related to those "
+#~ "selections. Multiple selections can be made in each section."
+#~ msgstr ""
+#~ "要按类别或供应商筛选产品，请勾选所需类别或供应商旁边的复选框，这样就只能查"
+#~ "看与这些选择相关的项目。每个部分都可以进行多项选择。"
+
+#~ msgid ""
+#~ "The top portion of the dashboard, which serves as an order summary, "
+#~ "displays the user's account information, and the order details for today, "
+#~ "if any orders have been placed."
+#~ msgstr ""
+#~ "仪表板的顶部是订单摘要，显示用户的账户信息和今天的订单详情（如果已有订"
+#~ "单）。"
+
+#~ msgid ""
+#~ "The main section, beneath the user's information, displays all the "
+#~ "products in a default Kanban view. Each product card displays the name, "
+#~ "cost, vendor, photo, and description of the product. If the product is "
+#~ "configured as new, it also displays a :guilabel:`New` tag."
+#~ msgstr ""
+#~ "用户信息下方的主要部分以默认看板视图显示所有产品。每个产品卡都显示产品的名"
+#~ "称、成本、供应商、照片和描述。如果产品配置为新产品，还会显示 :guilabel:`新"
+#~ "的` 标签。"
+
+#~ msgid ""
+#~ "The products can also be displayed in a list view, by clicking "
+#~ "the :icon:`oi-view-list` :guilabel:`(List)` icon in the top-right corner "
+#~ "of the dashboard."
+#~ msgstr ""
+#~ "点击仪表板右上角的 :icon:`oi-view-list` :guilabel:`（列表）` 图标，还可以"
+#~ "列表视图显示产品。"
+
+#~ msgid ""
+#~ "To place a lunch order, navigate to the main :guilabel:`Order Your Lunch` "
+#~ "dashboard, by either opening the **Lunch** app, or by navigating "
+#~ "to :menuselection:`Lunch app --> My Lunch --> New Order`."
+#~ msgstr ""
+#~ "要下午餐订单，请通过打开 **午餐**应用程序或前往:menuselection:`午餐应用程"
+#~ "序 --> 我的午餐 --> 新订单`，进入 :guilabel:`订购午餐`主仪表板。"
+
+#~ msgid ""
+#~ "From the :guilabel:`Order Your Lunch` dashboard, click on a desired "
+#~ "product to add to an order, and the product appears in "
+#~ "a :guilabel:`Configure Your Order` pop-up window."
+#~ msgstr ""
+#~ "在 :guilabel:`订购午餐`仪表板上，点击所需的产品添加到订单中，产品就会出现"
+#~ "在 :guilabel:`配置订单` 弹出窗口中。"
+
+#~ msgid ""
+#~ "At the top of the pop-up window is the product image, name, and price. "
+#~ "Beneath that, there are potential :guilabel:`Extras` fields, showcasing "
+#~ "any :ref:`extra items or options <lunch/extras>`, such as toppings or "
+#~ "drinks. Tick the checkbox next to any desired extras present in "
+#~ "the :guilabel:`Extras` fields to add them to the order."
+#~ msgstr ""
+#~ "弹出窗口的顶部是产品图片、名称和价格。下面是潜在的 :guilabel:`附加` 字段，"
+#~ "显示任何 :ref:`额外项目或选项 <lunch/extras>`，如配料或饮料。勾"
+#~ "选 :guilabel:`附加` 字段中任何所需额外项目旁边的复选框，即可将其添加到订单"
+#~ "中。"
+
+#~ msgid ""
+#~ "Beneath the :guilabel:`Extras` field is the :guilabel:`Description` of "
+#~ "the product, followed by a :guilabel:`Notes` field. The :guilabel:`Notes` "
+#~ "field is used to enter any vital information, which is then sent to the "
+#~ "vendor regarding the order, such as any special requests or food "
+#~ "allergies."
+#~ msgstr ""
+#~ "在 :guilabel:`附加` 字段下面是产品的 :guilabel:`说明` 字段，然后"
+#~ "是 :guilabel:`笔记` 字段。guilabel:`笔记`字段用于输入任何重要信息，然后将"
+#~ "这些信息发送给供应商，如任何特殊要求或食物过敏。"
+
+#~ msgid ""
+#~ "An error can occur when a configured product **requires** the user to "
+#~ "select an option in the :guilabel:`Extras` field, but the user neglects "
+#~ "to make one."
+#~ msgstr ""
+#~ "当配置的产品**要求**用户在 :guilabel:`附加` 字段中选择一个选项，但用户忽略"
+#~ "了该选项时，可能会发生错误。"
+
+#~ msgid ""
+#~ "The total cost for each order is displayed on the line containing the "
+#~ "order date. At the bottom of the list, beneath all the lines, the overall "
+#~ "total amount paid for all the orders appears, under the :guilabel:`Price` "
+#~ "column."
+#~ msgstr ""
+#~ "每份订单的总费用显示在包含订单日期的行上。在列表底部，所有行下面"
+#~ "的 :guilabel:`价格` 列显示所有订单的总支付金额。"
+
+#~ msgid ""
+#~ "At the end of each product line with a status of :guilabel:`Received`, "
+#~ "a :guilabel:`Re-order` button appears. Click :guilabel:`Re-order` to "
+#~ "instantly reorder that same product, with the same extras, if applicable. "
+#~ "The new order appears in the list, under the current date, and the "
+#~ "product is paid for, with money deducted from the user's account."
+#~ msgstr ""
+#~ "在每个状态为 :guilabel:`已收到` 的产品系列末尾，会出现一个 :guilabel:`重新"
+#~ "订购` 按钮。点击 :guilabel:`重新订购` 即可重新订购相同的产品，并添加相同的"
+#~ "附加功能（如适用）。新订单会出现在当前日期下的列表中，产品已付款，款项会从"
+#~ "用户账户中扣除。"
+
+#~ msgid ""
+#~ "For more information, refer to the :doc:`Access rights <../../general/"
+#~ "users/access_rights/>` documentation."
+#~ msgstr ""
+#~ "更多信息，请参阅 :doc:`访问权限<.../../general/users/access_rights/>` 文"
+#~ "档。"
+
+#~ msgid ""
+#~ ":guilabel:`User`: select the user depositing cash into their account from "
+#~ "the drop-down menu. If the user is not in the database, they can be "
+#~ "created by typing their name in the :guilabel:`User` field, and clicking "
+#~ "either :guilabel:`Create \"user\"` or :guilabel:`Create and edit...` to "
+#~ "create the user and edit the :guilabel:`Create User` form."
+#~ msgstr ""
+#~ ":guilabel:`用户`：从下拉菜单中选择将现金存入其账户的用户。如果用户不在数据"
+#~ "库中，可在 :guilabel:`用户` 字段中输入用户名，然后点击 :guilabel:`创建 "
+#~ "\"用户\"` 或 :guilabel:`创建和编辑...`，创建用户并编辑 :guilabel:`创建用户"
+#~ "` 表单。"
+
+#~ msgid ""
+#~ ":guilabel:`Date`: using the calendar popover, select the date the "
+#~ "transaction occurred."
+#~ msgstr ":guilabel:`日期`：使用弹出式日历，选择交易发生的日期。"
+
+#~ msgid ""
+#~ ":guilabel:`Amount`: enter the amount being added to the lunch account."
+#~ msgstr ":guilabel:`金额`：输入要添加到午餐账户的金额。"
+
+#~ msgid ""
+#~ ":guilabel:`Description`: enter a brief description of the transaction."
+#~ msgstr ":guilabel:`描述`：输入交易的简要说明。"
+
+#~ msgid "The cash move form filled out for a transaction of $40.00."
+#~ msgstr "现金移动表填写的交易金额为 $40.00。"
 
 #~ msgid ""
 #~ "When adding a vehicle to the fleet, specify the vehicle model to maintain "

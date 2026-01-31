@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 18:30+0000\n"
+"POT-Creation-Date: 2026-01-30 18:30+0000\n"
 "PO-Revision-Date: 2026-01-20 23:21+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -6799,18 +6799,18 @@ msgstr ""
 "일 중에서 적절한 이메일 유형을 선택합니다. 양식을 작성하면 해당 이메일 주소"
 "로 활성화용 이메일이 전송되며 신뢰할 수 있는 발신자를 활성화할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:87
+#: ../../content/applications/general/email_communication/mailjet_api.rst:88
 msgid ""
-"It is recommended to set up the :abbr:`SPF (Sender Policy "
-"Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-"
-"based Message Authentication, Reporting, and Conformance)` settings on the "
-"domain of the sender."
+"To prevent emails from being marked as spam, :ref:`set up a custom domain "
+"<email-online-sh-domain>`. Using the Odoo-provided subdomain "
+"(*dbname.odoo.com*) with the Mailjet server may lead to email deliverability "
+"issues, because the email authentication protocols (:abbr:`SPF (Sender "
+"Policy Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)`, "
+"and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
+"Conformance)`) cannot be configured on that subdomain."
 msgstr ""
-"발신자 도메인에 :abbr:`SPF (발신자 정책 프레임워크)`/:abbr:`DKIM (도메인 키 "
-"식별 메일)`/:abbr:`DMARC (도메인 기반 메시지 인증, 보고 및 준수)` 항목을 설정"
-"해 두는 것이 좋습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:92
+#: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
 "`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
 "us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
@@ -6820,7 +6820,7 @@ msgstr ""
 "articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-"
 "Guide>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+#: ../../content/applications/general/email_communication/mailjet_api.rst:99
 msgid ""
 "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
@@ -6828,23 +6828,11 @@ msgstr ""
 "`Mailjet DMARC 참고 문서 <https://documentation.mailjet.com/hc/en-us/"
 "articles/20531905163419-Understanding-DMARC>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:98
-msgid ""
-"If the database is not using a custom domain, then in order to verify the "
-"sender's address, a temporary alias (of the three email addresses mentioned "
-"above) should be set up in Odoo CRM to create a lead. Then, the database is "
-"able to receive the verification email and verify the accounts."
-msgstr ""
-"데이터베이스에서 사용자 지정 도메인을 사용하지 않는 경우 발신자 주소를 확인하"
-"려면 임시 별칭 (위에 언급된 세 개의 이메일 주소 중)을 Odoo CRM에 설정하여 영"
-"업제안을 생성해야 합니다. 그러면 데이터베이스에서 인증용 이메일을 수신하여 계"
-"정을 확인할 수 있습니다."
-
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
 msgstr "도메인 추가하기"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:108
+#: ../../content/applications/general/email_communication/mailjet_api.rst:107
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -6860,7 +6848,7 @@ msgstr ""
 "메인 또는 주소 추가` 링크를 클릭합니다. 그런 다음 :guilabel:`도메인 추가` 를 "
 "클릭하여 사용자 지정 도메인을 추가합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:115
+#: ../../content/applications/general/email_communication/mailjet_api.rst:114
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
@@ -6868,7 +6856,7 @@ msgstr ""
 "도메인을 Mailjet 계정에 추가한 다음 :abbr:`DNS (도메인 주소 시스템)` 를 통해 "
 "유효성을 검사해야 합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:118
+#: ../../content/applications/general/email_communication/mailjet_api.rst:117
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
@@ -6876,7 +6864,7 @@ msgstr ""
 "그런 다음 Mailjet에서 :guilabel:`새 도메인 추가` 페이지를 만든 후 :guilabel:`"
 "계속` 을 클릭합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:121
+#: ../../content/applications/general/email_communication/mailjet_api.rst:120
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), "
@@ -6894,11 +6882,11 @@ msgstr ""
 msgid "The TXT record information to input on the domain's DNS."
 msgstr "도메인의 DNS에 입력할 TXT 레코드 정보"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:129
 msgid "Setup in the domain's DNS"
 msgstr "도메인 DNS에 설정하기"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:132
+#: ../../content/applications/general/email_communication/mailjet_api.rst:131
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT "
 "record to the domain's :abbr:`DNS (Domain Name System)`. This process varies "
@@ -6913,11 +6901,11 @@ msgstr ""
 "체 측에 문의하세요. TXT 레코드 정보는 :guilabel:`호스트` 및 :guilabel:`값` 으"
 "로 구성되어 있습니다. 이 내용을 TXT 레코드의 해당 항목에 붙여넣습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:138
 msgid "Return to Mailjet account information"
 msgstr "Mailjet 계정 정보로 돌아가기"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:141
+#: ../../content/applications/general/email_communication/mailjet_api.rst:140
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate "
@@ -6930,7 +6918,7 @@ msgstr ""
 "인 또는 주소 추가` 로 이동하여 :guilabel:`도메인` 옆에 있는 톱니바퀴 아이콘"
 "을 클릭한 후 :guilabel:`승인` 을 선택합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:145
+#: ../../content/applications/general/email_communication/mailjet_api.rst:144
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -6940,7 +6928,7 @@ msgstr ""
 "app.mailjet.com/ account/sender>`_ 페이지에 있는 :guilabel:`관리` 를 클릭하"
 "는 방법으로도 할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:148
+#: ../../content/applications/general/email_communication/mailjet_api.rst:147
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -6953,7 +6941,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "Mailjet에 있는 DNS 레코드를 확인합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:154
+#: ../../content/applications/general/email_communication/mailjet_api.rst:153
 msgid ""
 "After successfully setting up the domain, there is an option "
 "to :guilabel:`Authenticate this domain (SPF/DKIM)`. This button "
@@ -6966,7 +6954,7 @@ msgstr ""
 "및 :abbr:`DKIM (도메인키 식별 메일) 레코드가 입력되어 :abbr:`DNS (도메인 주"
 "소 시스템)` 공급업체 항목이 입력됩니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+#: ../../content/applications/general/email_communication/mailjet_api.rst:158
 msgid ""
 "`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/"
 "hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
@@ -6978,11 +6966,11 @@ msgstr ""
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "Mailjet에서 SPF/DKIM 레코드로 도메인을 인증합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:167
 msgid "Set up in Odoo"
 msgstr "Odoo에서 설정하기"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:170
+#: ../../content/applications/general/email_communication/mailjet_api.rst:169
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to "
 "the :guilabel:`Settings`. With :ref:`developer-mode` turned on, go to "
@@ -6995,7 +6983,7 @@ msgstr ""
 "이메일 --> 발신 메일 서버` 로 이동합니다. 그런 다음 :guilabel:`만들기` 버튼"
 "을 클릭하여 새로운 발신 서버 설정을 생성합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:175
+#: ../../content/applications/general/email_communication/mailjet_api.rst:174
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -7010,7 +6998,7 @@ msgstr ""
 "하지 않더라도 :abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer "
 "Security)` 를 사용하는 것이 좋습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:180
+#: ../../content/applications/general/email_communication/mailjet_api.rst:179
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For "
 "the :guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied "
@@ -7023,7 +7011,7 @@ msgstr ""
 "를 입력합니다. 이와 같은 설정은 :menuselection:`Mailjet --> 계정 설정 --> "
 "SMTP 및 SEND API 설정` 에서 확인할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:185
+#: ../../content/applications/general/email_communication/mailjet_api.rst:184
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set "
 "the :guilabel:`Priority` value higher than that of any transactional email "
@@ -12603,30 +12591,21 @@ msgstr "2단계 인증"
 
 #: ../../content/applications/general/users/2fa.rst:8
 msgid ""
-"*Two-factor authentication (2FA)* is a way to improve security, and prevent "
-"unauthorized persons from accessing user accounts."
+"*Two-factor authentication (2FA)* is a security measure that helps prevent "
+"unauthorized access to user accounts."
 msgstr ""
-"*2단계 인증 (2FA)* 을 통해 보안을 강화하고 권한이 없는 사람이 사용자 계정에 "
-"액세스하는 것을 방지할 수 있습니다."
 
 #: ../../content/applications/general/users/2fa.rst:11
 msgid ""
-"Practically, |2fa| means storing a secret inside an *authenticator*, usually "
-"on a mobile phone, and exchanging a code from the authenticator when trying "
-"to log in."
+"Practically, |2fa| means storing a secret in an *authenticator*, usually on "
+"a mobile phone, and exchanging a code from the authenticator when logging in."
 msgstr ""
-"실제로 |2fa|는 *인증 도구* 에 비밀번호를 저장하는 방식으로 일반적으로 휴대폰"
-"을 이용하며, 로그인 시도를 할 때 인증 도구를 통해 코드를 교환하는 방식으로 이"
-"루어집니다."
 
 #: ../../content/applications/general/users/2fa.rst:14
 msgid ""
-"This means an unauthorized user would need to guess the account password "
-"*and* have access to the authenticator, which is a more difficult "
-"proposition."
+"This means an unauthorized user would need to guess the account password and "
+"have access to the authenticator, which is a more difficult proposition."
 msgstr ""
-"이는 사용자에게 권한이 없는 경우에는 계정 비밀번호를 추측하고 *동시에* 인증 "
-"도구에 액세스해야 한다는 의미로, 더욱 어렵게 만드는 것입니다."
 
 #: ../../content/applications/general/users/2fa.rst:18
 msgid "Requirements"
@@ -12719,6 +12698,10 @@ msgstr ""
 ":guilabel:`계정 보안` 탭을 클릭한 다음 :guilabel:`2단계 인증` 토글을 *활성화"
 "* 로 밀어서 전환합니다."
 
+#: ../../content/applications/general/users/2fa.rst:None
+msgid "The account secuirty tab in a user profile."
+msgstr ""
+
 #: ../../content/applications/general/users/2fa.rst:53
 msgid ""
 "This generates a :guilabel:`Security Control` pop-up window that requires "
@@ -12731,28 +12714,37 @@ msgstr ""
 "릭합니다. 그런 다음 |QR| 과 함께 :guilabel:`2단계 인증 활성화` 팝업 창이 나타"
 "납니다."
 
-#: ../../content/applications/general/users/2fa.rst:61
+#: ../../content/applications/general/users/2fa.rst:60
+msgid "The 2fa authentication QR code in Odoo."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:60
 msgid ""
 "Using the desired authenticator application, scan the |QR| when prompted."
 msgstr ""
 "원하는 인증자 애플리케이션을 사용하여, 메시지가 표시되면 |QR| 을 스캔합니다."
 
-#: ../../content/applications/general/users/2fa.rst:64
+#: ../../content/applications/general/users/2fa.rst:63
 msgid ""
-"If scanning the screen is not possible (e.g. the setup is being completed on "
-"the *same* device as the authenticator application), clicking the "
-"provided :guilabel:`Cannot scan it?` link, or copying the secret to manually "
-"set up the authenticator, is an alternative."
+"If scanning the screen is not possible (e.g., the setup is being completed "
+"on the *same* device as the authenticator application), click the "
+"provided :guilabel:`Cannot scan it?` link, or copying the code to set up the "
+"authenticator manually, is an alternative."
 msgstr ""
-"화면을 스캔할 수 없는 경우 (예: 인증 애플리케이션과 *동일한* 장치에서 설정을 "
-"완료할 경우) 대체할 방법으로는 :guilabel:`스캔이 되지 않나요?` 링크를 클릭하"
-"거나 비밀번호를 복사하여 인증 장치를 수동으로 설정할 수 있습니다."
 
-#: ../../content/applications/general/users/2fa.rst:74
+#: ../../content/applications/general/users/2fa.rst:0
+msgid "A 2fa secret code on an authentication popup."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:70
 msgid "Afterwards, the authenticator should display a *verification code*."
 msgstr "그러면 인증자에 *확인 코드* 가 표시됩니다."
 
-#: ../../content/applications/general/users/2fa.rst:79
+#: ../../content/applications/general/users/2fa.rst:None
+msgid "A view of the Google authenticator app with the six digit code for 2fa."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:75
 msgid ""
 "Enter the code into the :guilabel:`Verification Code` field, then "
 "click :guilabel:`Activate`."
@@ -12760,15 +12752,21 @@ msgstr ""
 ":guilabel:`인증 코드` 필드에 코드를 입력한 다음 :guilabel:`활성화` 를 클릭합"
 "니다."
 
-#: ../../content/applications/general/users/2fa.rst:85
+#: ../../content/applications/general/users/2fa.rst:None
+msgid ""
+"The success message that appears in a user profile when 2fa is successfully "
+"enabled."
+msgstr ""
+
+#: ../../content/applications/general/users/2fa.rst:81
 msgid "Logging in"
 msgstr "로그인하기"
 
-#: ../../content/applications/general/users/2fa.rst:87
+#: ../../content/applications/general/users/2fa.rst:83
 msgid "To confirm |2fa| setup is complete, log out of Odoo."
 msgstr "|2fa| 설정이 완료되었는지 확인하려면 Odoo에서 로그아웃합니다."
 
-#: ../../content/applications/general/users/2fa.rst:89
+#: ../../content/applications/general/users/2fa.rst:85
 msgid ""
 "On the login page, input the username and password, then "
 "click :guilabel:`Log in`. On the :guilabel:`Two-factor Authentication` page, "
@@ -12783,7 +12781,7 @@ msgstr ""
 msgid "The login page with 2fa enabled."
 msgstr "2단계 인증이 활성화되어 있는 로그인 페이지"
 
-#: ../../content/applications/general/users/2fa.rst:98
+#: ../../content/applications/general/users/2fa.rst:93
 msgid ""
 "If a user loses access to their authenticator, an administrator **must** "
 "deactivate |2fa| on the account before the user can log in."
@@ -12791,60 +12789,32 @@ msgstr ""
 "사용자가 인증자 액세스 권한을 분실한 경우에는, 사용자가 로그인하기 전에 **반"
 "드시** 관리자 계정에서 |2fa| 를 비활성화해야 합니다."
 
-#: ../../content/applications/general/users/2fa.rst:102
+#: ../../content/applications/general/users/2fa.rst:97
 msgid "Enforce two-factor authentication"
 msgstr "2단계 인증 적용"
 
-#: ../../content/applications/general/users/2fa.rst:104
+#: ../../content/applications/general/users/2fa.rst:99
 msgid ""
-"To enforce the use of |2fa| for all users, first navigate "
-"to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
-"the :guilabel:`Apps` filter from the :guilabel:`Search...` bar, then search "
-"for `2FA by mail`."
-msgstr ""
-"모든 사용자가 |2fa| 를 사용하도록 강제하려면 먼저 :menuselection:`기본 Odoo "
-"현황판 --> 앱` 으로 이동합니다. :guilabel:`검색...` 표시줄에서 :guilabel:`앱"
-"` 필터를 제거한 다음 `메일을 통한 2FA` 를 검색합니다."
-
-#: ../../content/applications/general/users/2fa.rst:108
-msgid ""
-"Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` "
-"module."
-msgstr ""
-"칸반 카드에서 :guilabel:`이메일을 사용한 2단계 인증` 모듈 :guilabel:`설치` "
-"를 클릭합니다."
-
-#: ../../content/applications/general/users/2fa.rst:None
-msgid "The 2FA by mail module in the Apps directory."
-msgstr "앱 디렉토리에 있는 이메일 2중 인증 모듈"
-
-#: ../../content/applications/general/users/2fa.rst:114
-msgid ""
-"After installation is complete, go to :guilabel:`Settings app: Permissions`. "
-"Tick the checkbox labeled, :guilabel:`Enforce two-factor authentication`. "
+"To enforce |2fa| for every user in the database, navigate to "
+"the :menuselection:`Settings` app. In the :guilabel:`Permissions` section, "
+"tick the checkbox labeled :guilabel:`Enforce two-factor authentication`. "
 "Then, use the radio buttons to choose whether to apply this setting "
-"to :guilabel:`Employees only`, or :guilabel:`All users`."
+"to :guilabel:`Employees only` or :guilabel:`All users`."
 msgstr ""
-"설치가 완료되면 :guilabel:`설정 앱: 권한` 으로 이동합니다. :guilabel:`2단계 "
-"인증 적용` 이라고 표시된 확인란을 선택합니다. 그런 다음 선택 버튼으로 이 설"
-"정 내용을 :guilabel:`직원만` 또는 :guilabel:`모든 사용자` 에 적용할지 선택합"
-"니다."
 
-#: ../../content/applications/general/users/2fa.rst:119
+#: ../../content/applications/general/users/2fa.rst:105
 msgid ""
-"Selecting :guilabel:`All users` applies the setting to portal users, in "
+"Selecting :guilabel:`All users` applies the setting to portal users in "
 "addition to employees."
 msgstr ""
-":guilabel:`모든 사용자` 를 선택하면 직원 외 포털 사용자에게도 설정이 적용됩니"
-"다."
+
+#: ../../content/applications/general/users/2fa.rst:107
+msgid "Click :guilabel:`Save` to commit any unsaved changes."
+msgstr "저장되지 않은 변경 사항이 적용되도록 :guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid "The enforce two factor setting in the Settings application."
 msgstr "설정 애플리케이션에서 2단계 설정을 적용합니다."
-
-#: ../../content/applications/general/users/2fa.rst:125
-msgid "Click :guilabel:`Save` to commit any unsaved changes."
-msgstr "저장되지 않은 변경 사항이 적용되도록 :guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/general/users/access_rights.rst:3
 msgid "Access rights"
@@ -15033,6 +15003,100 @@ msgstr ":doc:`액세스 권한 </applications/general/users/access_rights>`"
 #: ../../content/applications/general/users/user_portals/updating_portal_info.rst:154
 msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ":doc:`포털 액세스 참고 문서 <portal_access>`"
+
+#~ msgid ""
+#~ "It is recommended to set up the :abbr:`SPF (Sender Policy "
+#~ "Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC "
+#~ "(Domain-based Message Authentication, Reporting, and Conformance)` "
+#~ "settings on the domain of the sender."
+#~ msgstr ""
+#~ "발신자 도메인에 :abbr:`SPF (발신자 정책 프레임워크)`/:abbr:`DKIM (도메인 "
+#~ "키 식별 메일)`/:abbr:`DMARC (도메인 기반 메시지 인증, 보고 및 준수)` 항목"
+#~ "을 설정해 두는 것이 좋습니다."
+
+#~ msgid ""
+#~ "If the database is not using a custom domain, then in order to verify the "
+#~ "sender's address, a temporary alias (of the three email addresses "
+#~ "mentioned above) should be set up in Odoo CRM to create a lead. Then, the "
+#~ "database is able to receive the verification email and verify the "
+#~ "accounts."
+#~ msgstr ""
+#~ "데이터베이스에서 사용자 지정 도메인을 사용하지 않는 경우 발신자 주소를 확"
+#~ "인하려면 임시 별칭 (위에 언급된 세 개의 이메일 주소 중)을 Odoo CRM에 설정"
+#~ "하여 영업제안을 생성해야 합니다. 그러면 데이터베이스에서 인증용 이메일을 "
+#~ "수신하여 계정을 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "*Two-factor authentication (2FA)* is a way to improve security, and "
+#~ "prevent unauthorized persons from accessing user accounts."
+#~ msgstr ""
+#~ "*2단계 인증 (2FA)* 을 통해 보안을 강화하고 권한이 없는 사람이 사용자 계정"
+#~ "에 액세스하는 것을 방지할 수 있습니다."
+
+#~ msgid ""
+#~ "Practically, |2fa| means storing a secret inside an *authenticator*, "
+#~ "usually on a mobile phone, and exchanging a code from the authenticator "
+#~ "when trying to log in."
+#~ msgstr ""
+#~ "실제로 |2fa|는 *인증 도구* 에 비밀번호를 저장하는 방식으로 일반적으로 휴대"
+#~ "폰을 이용하며, 로그인 시도를 할 때 인증 도구를 통해 코드를 교환하는 방식으"
+#~ "로 이루어집니다."
+
+#~ msgid ""
+#~ "This means an unauthorized user would need to guess the account password "
+#~ "*and* have access to the authenticator, which is a more difficult "
+#~ "proposition."
+#~ msgstr ""
+#~ "이는 사용자에게 권한이 없는 경우에는 계정 비밀번호를 추측하고 *동시에* 인"
+#~ "증 도구에 액세스해야 한다는 의미로, 더욱 어렵게 만드는 것입니다."
+
+#~ msgid ""
+#~ "If scanning the screen is not possible (e.g. the setup is being completed "
+#~ "on the *same* device as the authenticator application), clicking the "
+#~ "provided :guilabel:`Cannot scan it?` link, or copying the secret to "
+#~ "manually set up the authenticator, is an alternative."
+#~ msgstr ""
+#~ "화면을 스캔할 수 없는 경우 (예: 인증 애플리케이션과 *동일한* 장치에서 설정"
+#~ "을 완료할 경우) 대체할 방법으로는 :guilabel:`스캔이 되지 않나요?` 링크를 "
+#~ "클릭하거나 비밀번호를 복사하여 인증 장치를 수동으로 설정할 수 있습니다."
+
+#~ msgid ""
+#~ "To enforce the use of |2fa| for all users, first navigate "
+#~ "to :menuselection:`Main Odoo Dashboard --> Apps`. Remove "
+#~ "the :guilabel:`Apps` filter from the :guilabel:`Search...` bar, then "
+#~ "search for `2FA by mail`."
+#~ msgstr ""
+#~ "모든 사용자가 |2fa| 를 사용하도록 강제하려면 먼저 :menuselection:`기본 "
+#~ "Odoo 현황판 --> 앱` 으로 이동합니다. :guilabel:`검색...` 표시줄에"
+#~ "서 :guilabel:`앱` 필터를 제거한 다음 `메일을 통한 2FA` 를 검색합니다."
+
+#~ msgid ""
+#~ "Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by "
+#~ "mail` module."
+#~ msgstr ""
+#~ "칸반 카드에서 :guilabel:`이메일을 사용한 2단계 인증` 모듈 :guilabel:`설치"
+#~ "` 를 클릭합니다."
+
+#~ msgid "The 2FA by mail module in the Apps directory."
+#~ msgstr "앱 디렉토리에 있는 이메일 2중 인증 모듈"
+
+#~ msgid ""
+#~ "After installation is complete, go to :guilabel:`Settings app: "
+#~ "Permissions`. Tick the checkbox labeled, :guilabel:`Enforce two-factor "
+#~ "authentication`. Then, use the radio buttons to choose whether to apply "
+#~ "this setting to :guilabel:`Employees only`, or :guilabel:`All users`."
+#~ msgstr ""
+#~ "설치가 완료되면 :guilabel:`설정 앱: 권한` 으로 이동합니다. :guilabel:`2단"
+#~ "계 인증 적용` 이라고 표시된 확인란을 선택합니다. 그런 다음 선택 버튼으로 "
+#~ "이 설정 내용을 :guilabel:`직원만` 또는 :guilabel:`모든 사용자` 에 적용할"
+#~ "지 선택합니다."
+
+#~ msgid ""
+#~ "Selecting :guilabel:`All users` applies the setting to portal users, in "
+#~ "addition to employees."
+#~ msgstr ""
+#~ ":guilabel:`모든 사용자` 를 선택하면 직원 외 포털 사용자에게도 설정이 적용"
+#~ "됩니다."
 
 #~ msgid ""
 #~ "Click :guilabel:`Create` and on the new/blank form that appears, add the "

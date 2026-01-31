@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 18:30+0000\n"
+"POT-Creation-Date: 2026-01-30 18:30+0000\n"
 "PO-Revision-Date: 2026-01-27 23:22+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/hr/ko/"
@@ -512,6 +512,7 @@ msgstr ":doc:`Odoo 필수 정보 보고 <../../essentials/reporting>`"
 
 #: ../../content/applications/hr/appraisals/appraisal_analysis.rst:123
 #: ../../content/applications/hr/appraisals/skills_evolution.rst:160
+#: ../../content/applications/hr/attendances/attendance_logs.rst:71
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
 
@@ -2150,60 +2151,43 @@ msgid ""
 "To see what access rights a user has, navigate to "
 "the :menuselection:`Settings app --> Users & Companies --> Users`, and click "
 "on an individual user. The :guilabel:`Access Rights` tab is visible by "
-"default. Scroll down to the :guilabel:`HUMAN RESOURCES` section to view the "
-"settings. For the :guilabel:`Attendances` field, the options are either to "
-"leave the field blank or select :guilabel:`Administrator`."
+"default. Scroll down to the *Human Resources* section to view the settings. "
+"For the :guilabel:`Attendances` field, the following options appear:"
 msgstr ""
-"사용자에게 어떤 액세스 권한이 있는지 확인하려면 :menuselection:`설정 앱 --> "
-"사용자 및 회사: 사용자` 로 이동하여 개별 사용자를 클릭합니다. :guilabel:`액세"
-"스 권한` 탭이 기본값으로 표시됩니다. :guilabel:`인적 자원` 섹션까지 아래로 스"
-"크롤을 이동하면 설정된 내용을 볼 수 있습니다. :guilabel:`근태` 필드의 경우 비"
-"워두거나 :guilabel:`관리자` 를 선택합니다."
 
-#: ../../content/applications/hr/attendances.rst:33
+#: ../../content/applications/hr/attendances.rst:32
 msgid ""
-"If the :guilabel:`Administrator` option is selected, the user has full "
-"access to the entire **Attendances** application, with no restrictions. They "
-"can view all employee attendance records, enter *Kiosk Mode* from the "
-"application, access all reporting metrics, and make modifications to the "
-"settings. If left blank, the user does **not** have access to the "
-"**Attendances** application."
+":guilabel:`No`: The user does **not** have access to the **Attendances** "
+"application, and is **not** able to open the app, even though it appears on "
+"the main database dashboard. An *Access Error* pop-up message appears when "
+"the application is clicked. The user can only check in and out of the "
+"database either through an :ref:`attendance kiosk <attendances/kiosk-mode-"
+"entry>` or the :doc:`attendance icon <attendances/check_in_check_out>` in "
+"the top-right corner of the Odoo database, which is visible at all times, in "
+"every application)."
 msgstr ""
-":guilabel:`관리자` 를 선택할 경우 사용자는 제한 없이 전체 **근태** 애플리케이"
-"션에 대한 액세스 권한을 모두 갖게 됩니다. 모든 직원 근태 기록을 확인할 수 있"
-"으며, 애플리케이션에서 *키오스크 모드* 를 입력하거나, 모든 보고 지표에 액세스"
-"할 수 있으며, 설정 항목을 수정할 수 있습니다. 비워둘 경우에는 사용자가 **근태"
-"** 애플리케이션에 액세스할 수 **없습니다**."
 
-#: ../../content/applications/hr/attendances.rst:39
+#: ../../content/applications/hr/attendances.rst:38
 msgid ""
-"If a user does **not** have :guilabel:`Administrator` rights for the "
-"**Attendances** app, they are **not** able to open the app, even though it "
-"appears on the main database dashboard. An :guilabel:`Access Error` pop-up "
-"message appears, stating:"
+":guilabel:`Officer: Manage all attendances`: The user has full access to all "
+"employee attendance records, including the ability to modify and create "
+"records, but does **not** have access to the configuration menu and settings."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:43
+#: ../../content/applications/hr/attendances.rst:41
 msgid ""
-"`You do not have enough rights to access the fields "
-"\"attendance_manager_id\" on Employee (hr.employee). Please contact your "
-"system administrator.`"
+":guilabel:`Administrator`: The user has full access to the entire "
+"**Attendances** application, with no restrictions. They can view all "
+"employee attendance records, enter :ref:`kiosk mode <attendances/enable-"
+"kiosk-mode>` from the application, access all :doc:`reporting <attendances/"
+"attendance_reporting>` metrics, and make modifications to the settings."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:46
-msgid ""
-"Users who cannot access the **Attendances** app can still :doc:`check in and "
-"check out <../hr/attendances/check_in_check_out>` of work within the "
-"database, using the :icon:`fa-circle` :guilabel:`(red circle)` or :icon:`fa-"
-"circle` :guilabel:`(green circle)` that are always available at the top of "
-"the database."
-msgstr ""
-
-#: ../../content/applications/hr/attendances.rst:54
+#: ../../content/applications/hr/attendances.rst:49
 msgid "Approvers"
 msgstr "결재권자"
 
-#: ../../content/applications/hr/attendances.rst:56
+#: ../../content/applications/hr/attendances.rst:51
 msgid ""
 "An approver is a user assigned to review and manage an employee's attendance "
 "records. An approver is typically a manager, though that is not required. "
@@ -2217,18 +2201,18 @@ msgstr ""
 "할 수 있습니다. 이는 관리자가 아닌 사용자가 **근태** 앱에서 기록 열람을 할 "
 "수 있는 유일한 예외 사항입니다."
 
-#: ../../content/applications/hr/attendances.rst:61
+#: ../../content/applications/hr/attendances.rst:56
 msgid ""
-"To view who the attendance approver for an employee is, navigate to "
-"the :menuselection:`Employees application` and click on the specific "
-"employee. Click on the :guilabel:`Work Information` tab, scroll to "
-"the :guilabel:`APPROVERS` section, and check the :guilabel:`Attendance` "
-"field. The person selected is able to view that employee's attendance "
-"records, both on the **Attendances** application dashboard as well as in the "
-"attendance reports, and make modifications to their records."
+"To view the attendance approver for an employee, navigate to "
+"the :menuselection:`Employees` application and click on the specific "
+"employee. Click on the :guilabel:`Settings` tab, scroll to the *Approvers* "
+"section, and check the :guilabel:`Attendance` field. The person selected is "
+"able to view that employee's attendance records, both on the **Attendances** "
+"application dashboard as well as in the attendance reports, and make "
+"modifications to their records."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:68
+#: ../../content/applications/hr/attendances.rst:63
 #: ../../content/applications/hr/attendances/kiosks.rst:22
 #: ../../content/applications/hr/frontdesk.rst:15
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:840
@@ -2240,55 +2224,50 @@ msgstr ""
 msgid "Configuration"
 msgstr "환경설정"
 
-#: ../../content/applications/hr/attendances.rst:70
+#: ../../content/applications/hr/attendances.rst:65
 msgid ""
 "Few configurations are needed in the **Attendances** app. Determining how "
 "employees check in and out, defining how the kiosks function, and "
-"determining how extra hours are computed are all set in the Configuration "
-"menu. Navigate to the :menuselection:`Attendances application --> "
-"Configuration` to access the configuration menu."
+"determining how extra hours are computed are all configured in the settings "
+"menu. Navigate to the :menuselection:`Attendances app --> Configuration --> "
+"Settings` to access the settings menu."
 msgstr ""
-"**근태** 앱은 별도로 환경설정해야 하는 항목이 거의 없습니다. 직원이 체크인 "
-"및 체크아웃으로 출퇴근 처리를 하는 방법에 대한 지정 내용이나, 키오스크 작동 "
-"방법에 대한 정의, 추가 시간을 계산하는 방법 등이 환경설정 메뉴에서 이미 설정"
-"되어 있습니다. :menuselection:`근태 애플리케이션 --> 환경설정` 으로 이동하여 "
-"환경설정 메뉴를 확인해 보세요."
 
-#: ../../content/applications/hr/attendances.rst:76
+#: ../../content/applications/hr/attendances.rst:71
 msgid ""
 "Any configuration item with a :icon:`fa-building-o` :guilabel:`(building)` "
-"icon is a company-specific configuration. Items without an :icon:`fa-"
-"building-o` :guilabel:`(building)` icon apply to all companies within the "
-"database."
+"icon is a company-specific configuration. Items without a :icon:`fa-building-"
+"o` :guilabel:`(building)` icon apply to all companies within the database."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:83
+#: ../../content/applications/hr/attendances.rst:78
 msgid "Modes"
 msgstr "모드"
 
-#: ../../content/applications/hr/attendances.rst:85
+#: ../../content/applications/hr/attendances.rst:80
+msgid ""
+"This section specifies how employees log in and out, and how absences are "
+"handled."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:82
 msgid ""
 ":guilabel:`Attendances from Backend` :icon:`fa-building-o`: Activate this "
 "feature to allow users to check in and out directly from the Odoo database. "
 "If this is not activated, users must use a kiosk to check in and out of work."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:88
+#: ../../content/applications/hr/attendances.rst:85
 msgid ""
 ":guilabel:`Automatic Check-Out` :icon:`fa-building-o`: Activate this feature "
 "to automatically check out employees according to their working schedule, "
-"after a buffer of time has passed."
+"after a buffer of time has passed. When enabled, a :guilabel:`Tolerance` "
+"field appears below this option. Enter the amount of time, in hours, that "
+"must elapse after an employee's working hours have ended, before they are "
+"automatically checked out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:90
-msgid ""
-":guilabel:`Tolerance`: This field appears only when the :guilabel:`Automatic "
-"Check-Out` :icon:`fa-building-o` feature is enabled. Enter the amount of "
-"time, in hours, that must elapse after an employee's working hours have "
-"ended, before they are automatically checked out."
-msgstr ""
-
-#: ../../content/applications/hr/attendances.rst:95
+#: ../../content/applications/hr/attendances.rst:92
 msgid ""
 "With the :guilabel:`Automatic Check-Out` option enabled, and "
 "the :guilabel:`Tolerance` set to `2.00` hours, an employee checks in to work "
@@ -2296,26 +2275,27 @@ msgid ""
 "automatically checked out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:99
+#: ../../content/applications/hr/attendances.rst:96
 msgid ""
 ":guilabel:`Absence Management` :icon:`fa-building-o`: Activate this feature "
 "to log any absences that are not associated with a time off request, such as "
 "vacation time or sick time, on the :doc:`attendance report <attendances/"
-"attendance_reporting>`."
+"attendance_reporting>`. This does **not** apply for employees with a "
+"flexible working schedule."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:104
+#: ../../content/applications/hr/attendances.rst:102
 msgid "Extra Hours"
 msgstr "추가 시간"
 
-#: ../../content/applications/hr/attendances.rst:106
+#: ../../content/applications/hr/attendances.rst:104
 msgid ""
 "This section specifies how extra time (sometimes referred to as *overtime*) "
 "is calculated, including when extra time is counted and what time is not "
 "logged."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:109
+#: ../../content/applications/hr/attendances.rst:107
 msgid ""
 ":guilabel:`Tolerance Time In Favor Of Company`: Enter the amount of time, in "
 "minutes, that is **not** counted towards an employee's overtime. When an "
@@ -2326,21 +2306,21 @@ msgid ""
 "employee."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:116
+#: ../../content/applications/hr/attendances.rst:114
 msgid ""
 "A company sets the :guilabel:`Tolerance Time In Favor Of Company` to `15` "
 "minutes, and the working hours for the entire company are set from 9:00 AM "
 "to 5:00 PM."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:119
+#: ../../content/applications/hr/attendances.rst:117
 msgid ""
 "An employee checks in at 9:00 AM. If the employee checks out at 5:14 PM, the "
 "extra 14 minutes are **not** counted towards their overtime. If the employee "
 "checks out at 5:17 PM, they earn 17 minutes of overtime."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:123
+#: ../../content/applications/hr/attendances.rst:121
 msgid ""
 ":guilabel:`Tolerance Time In Favor Of Employee`: Enter the amount of time, "
 "in minutes, that an employee is given, which does **not** adversely affect "
@@ -2359,14 +2339,14 @@ msgstr ""
 "**. 직원이 체크아웃할 때 하루 총 기록 시간이 지정된 근무 시간보다 적고 유예 "
 "시간을 초과하는 경우에는 근무 시간 부족에 대한 **불이익을 받습니다**."
 
-#: ../../content/applications/hr/attendances.rst:132
+#: ../../content/applications/hr/attendances.rst:130
 msgid ""
 "A company sets the :guilabel:`Tolerance Time In Favor Of Employee` fields to "
 "`15` minutes, and the working hours for the entire company are set from 9:00 "
 "AM to 5:00 PM."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:135
+#: ../../content/applications/hr/attendances.rst:133
 msgid ""
 "An employee checks in at 9:05 AM. If the employee checks out at 4:55 PM, "
 "even though they logged a total of 10 minutes less than their full working "
@@ -2376,7 +2356,7 @@ msgid ""
 "minutes."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:141
+#: ../../content/applications/hr/attendances.rst:139
 msgid ""
 ":guilabel:`Extra Hours Validation` :icon:`fa-building-o`: Click on either "
 "the radio button next to :guilabel:`Automatically Approved` to have all "
@@ -2384,55 +2364,92 @@ msgid ""
 "extra time should be reviewed and approved by a manager."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:145
+#: ../../content/applications/hr/attendances.rst:143
 msgid ""
 ":guilabel:`Display Extra Hours`: Activate this box to display the extra "
 "hours logged by an employee when they check out with a kiosk, or when a user "
 "checks out in the database."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:149
+#: ../../content/applications/hr/attendances.rst:147
 msgid ""
 "Approved extra hours can be :ref:`deducted from an approved time off request "
 "<time_off/deduct-extra-hours>`."
 msgstr ""
 
+#: ../../content/applications/hr/attendances.rst:151
+msgid ":doc:`attendances/check_in_check_out`"
+msgstr ":doc:`근태/체크인 및 체크아웃`"
+
+#: ../../content/applications/hr/attendances.rst:152
+msgid ":doc:`attendances/kiosks`"
+msgstr ":doc:`attendances/kiosks`"
+
 #: ../../content/applications/hr/attendances.rst:153
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:11
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:231
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:428
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:862
-#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1365
-#: ../../content/applications/hr/time_off.rst:529
-msgid "Overview"
-msgstr "전체보기"
+msgid ":doc:`attendances/management`"
+msgstr ":doc:`attendances/management`"
+
+#: ../../content/applications/hr/attendances.rst:154
+msgid ":doc:`attendances/attendance_logs`"
+msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:155
+msgid ":doc:`attendances/hardware`"
+msgstr ":doc:`근태/하드웨어`"
+
+#: ../../content/applications/hr/attendances.rst:156
+msgid ":doc:`attendances/attendance_reporting`"
+msgstr ":doc:`attendances/attendance_reporting`"
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:3
+msgid "Attendance logs"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:5
 msgid ""
 "When entering the **Attendances** application, the :guilabel:`Overview` "
-"dashboard is presented, containing all the user's check in and check out "
-"information. If the user has the required :ref:`access rights <attendances/"
-"access-rights>` or is an :ref:`approver <attendances/approvers>` for "
-"specific employees, those employees' check-in and check-out information also "
-"appears on the :guilabel:`Overview` dashboard."
+"dashboard is presented by default, and displays all the user's attendance "
+"logs (their check in and check out information) for the current day. If the "
+"user has the required :ref:`access rights <attendances/access-rights>` or is "
+"an :ref:`approver <attendances/approvers>` for specific employees, those "
+"employees' attendance logs also appear on the :guilabel:`Overview` dashboard."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:161
+#: ../../content/applications/hr/attendances/attendance_logs.rst:11
 msgid ""
-"The **Attendance** dashboard allows switching between :icon:`fa-"
-"tasks` :guilabel:`(Gantt)` and :icon:`oi-view-list` :guilabel:`(List)` "
-"views, and selecting a period to analyze. The current period is "
-"automatically highlighted in yellow for real-time attendance records, while "
-"the :icon:`fa-crosshairs` :guilabel:`(Focus Today)` button instantly returns "
-"the dashboard to the present date."
+"The :guilabel:`Overview` dashboard displays the current day, segmented by "
+"hour, with the current hour highlighted in yellow. The appearance of "
+"the :guilabel:`Overview` dashboard is determined by the :ref:`working "
+"schedule <employees/schedule>` set on the employee's records. Each "
+"employee's working hours appear in white, while all other hours appear in "
+"gray. This allows managers to visually determine if an employee is working "
+"outside of their working hours."
 msgstr ""
-"**근태** 현황판에서는 :icon:`fa-tasks` :guilabel:`(간트)` 보기 및 :icon:`oi-"
-"view-list` :guilabel:`(목록)` 보기 사이에 전환이 가능하며, 분석할 기간을 선택"
-"할 수 있습니다. 현재 기간은 실시간 근태 기록을 할 수 있도록 자동으로 노란색으"
-"로 강조 표시되며, :icon:`fa-crosshairs` :guilabel:`(오늘)` 버튼을 누르면 현황"
-"판이 즉시 현재 날짜로 돌아갑니다."
 
-#: ../../content/applications/hr/attendances.rst:None
+#: ../../content/applications/hr/attendances/attendance_logs.rst:17
+msgid ""
+"Employees populate the rows, alphabetically by first name. Each attendance "
+"log displays the total hours along with the specific check in and check out "
+"times. The log colors indicate the following statuses:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:21
+msgid "Gray: Completed entries where the employee has checked in and out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:22
+msgid ""
+"Green: Active entries where the employee checked in but has not yet checked "
+"out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:23
+msgid ""
+"Red: Entries with any errors (e.g. employees have double entries, or forget "
+"to check out)."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:None
 msgid ""
 "The overview dashboard presenting the information for the week, with the "
 "current day\n"
@@ -2441,19 +2458,61 @@ msgstr ""
 "한 주의 정보를 제공하는 개요 현황판에서 현재 날짜가 강조 표시되어 있는\n"
 "화면"
 
-#: ../../content/applications/hr/attendances.rst:172
+#: ../../content/applications/hr/attendances/attendance_logs.rst:29
 msgid ""
-"Any entries that have errors appear in red, indicating they need to be "
-"resolved by a user with the proper :ref:`access rights <attendances/access-"
-"rights>` and/or are :ref:`approvers <attendances/approvers>` for the "
+"A color-coded bar indicates how many hours out of the total expected hours "
+"the employee has logged for the day. Rollover the color bar to view the "
+"details for the employee's current day. Solid colors indicate the logged "
+"hours (with both a start and end time), while pale colors indicate the "
+"employee is signed in, but has not signed out yet. Only *completed* "
+"attendance logs (records with a check in and check out time) appear in the "
+"summary of the logged time."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:36
+msgid ""
+"Abigail Peterson is scheduled to work from 9:00 AM to 12:00 PM, then take a "
+"one-hour lunch break from 12:00 PM to 1:00 PM, then work from 1:00 PM to "
+"6:00 PM, for a total of eight hours."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:39
+msgid ""
+"Abigails checks in at 9:00 AM, and checks out at 12:00 PM. She logs in again "
+"at 1:00 PM. The current time is 2:15 PM. The rollover information displays "
+"`3h / 8h`, indicating Abigail has logged three completed working hours out "
+"of a total of eight. There is a pale green line that extends past the "
+"summary block, indicating she checked in at 1:00 PM, but has not yet checked "
+"out. The length of the pale green line indicates the time worked."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:0
+msgid ""
+"The rollover green bar indicating Abigail logged 3 hours, and is currently "
+"logged in."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:48
+msgid ""
+"The **Attendances** dashboard allows for changing the displayed time period, "
+"either :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, :guilabel:`Quarter`, :guilabel:`Year`, "
+"or a custom time period. To instantly return the dashboard to the present "
+"date, click the :guilabel:`Today` button at any time."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:54
+msgid ""
+"Any attendance logs that have errors appear in red, indicating they need to "
+"be resolved by a user with the proper :ref:`access rights <attendances/"
+"access-rights>` or are :ref:`approvers <attendances/approvers>` for the "
 "employees with the errors."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:179
+#: ../../content/applications/hr/attendances/attendance_logs.rst:61
 msgid "Filters and groups"
 msgstr "필터 및 그룹"
 
-#: ../../content/applications/hr/attendances.rst:181
+#: ../../content/applications/hr/attendances/attendance_logs.rst:63
 msgid ""
 "Sometimes, attendance officers and managers need to view specific records, "
 "such as all automatic checkouts, to determine which employees chronically "
@@ -2461,71 +2520,67 @@ msgid ""
 "the most overtime."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:185
+#: ../../content/applications/hr/attendances/attendance_logs.rst:67
 msgid ""
 "For these cases, use the search bar to select a :icon:`fa-"
 "filter` :guilabel:`Filters` or :icon:`oi-group` :guilabel:`Group By`, or "
 "combine both to present the desired information."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:189
-msgid ":doc:`../essentials/search`"
-msgstr ":doc:`../essentials/search`"
-
-#: ../../content/applications/hr/attendances.rst:192
+#: ../../content/applications/hr/attendances/attendance_logs.rst:74
 msgid "High-value filters"
 msgstr "고급 필터"
 
-#: ../../content/applications/hr/attendances.rst:199
+#: ../../content/applications/hr/attendances/attendance_logs.rst:81
 msgid "Filter"
 msgstr "필터"
 
-#: ../../content/applications/hr/attendances.rst:200
+#: ../../content/applications/hr/attendances/attendance_logs.rst:82
 msgid "Common use case"
 msgstr "일반적인 사례 소개"
 
-#: ../../content/applications/hr/attendances.rst:201
+#: ../../content/applications/hr/attendances/attendance_logs.rst:83
 msgid "At Work"
 msgstr "직장"
 
-#: ../../content/applications/hr/attendances.rst:202
+#: ../../content/applications/hr/attendances/attendance_logs.rst:84
 msgid ""
 "Verify employees still on-site before shutting down the building for the "
 "night, or to perform a head count."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:204
-#: ../../content/applications/hr/lunch/orders.rst:86
+#: ../../content/applications/hr/attendances/attendance_logs.rst:86
+#: ../../content/applications/hr/lunch/orders.rst:115
 msgid "Errors"
 msgstr "오류"
 
-#: ../../content/applications/hr/attendances.rst:205
+#: ../../content/applications/hr/attendances/attendance_logs.rst:87
 msgid "View all errors to correct them prior to payroll processing."
 msgstr "급여 작업을 하기 전에 오류 사항을 모두 확인한 후 수정하세요."
 
-#: ../../content/applications/hr/attendances.rst:206
+#: ../../content/applications/hr/attendances/attendance_logs.rst:88
 msgid "Automatically Checked-Out"
 msgstr "자동으로 체크 아웃"
 
-#: ../../content/applications/hr/attendances.rst:207
+#: ../../content/applications/hr/attendances/attendance_logs.rst:89
 msgid ""
 "Perform an audit to determine employees who chronically forget to check-out "
 "of work."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:208
+#: ../../content/applications/hr/attendances/attendance_logs.rst:90
 msgid "Date"
 msgstr "날짜"
 
-#: ../../content/applications/hr/attendances.rst:209
+#: ../../content/applications/hr/attendances/attendance_logs.rst:91
 msgid "Limit results to a specific pay-period or audit window."
 msgstr "결과를 특정 급여 기간 또는 감사 기간으로 제한합니다."
 
-#: ../../content/applications/hr/attendances.rst:210
+#: ../../content/applications/hr/attendances/attendance_logs.rst:92
 msgid "Active/Archived Employees"
 msgstr "현재 근무 중인 직원 / 보관함으로 이동된 직원"
 
-#: ../../content/applications/hr/attendances.rst:211
+#: ../../content/applications/hr/attendances/attendance_logs.rst:93
 msgid ""
 "Switch between current staff and former employees when auditing historical "
 "data."
@@ -2533,71 +2588,71 @@ msgstr ""
 "데이터 이력에 대한 감사 시 현재 직원과 이전 직원 간에 자유롭게 전환이 가능합"
 "니다."
 
-#: ../../content/applications/hr/attendances.rst:214
+#: ../../content/applications/hr/attendances/attendance_logs.rst:96
 msgid "Insightful groupings"
 msgstr "그룹화를 통한 이해도 제고"
 
-#: ../../content/applications/hr/attendances.rst:221
+#: ../../content/applications/hr/attendances/attendance_logs.rst:103
 msgid "Group by"
 msgstr "그룹별"
 
-#: ../../content/applications/hr/attendances.rst:222
+#: ../../content/applications/hr/attendances/attendance_logs.rst:104
 msgid "When it helps"
 msgstr "도움이 되는 경우"
 
-#: ../../content/applications/hr/attendances.rst:223
+#: ../../content/applications/hr/attendances/attendance_logs.rst:105
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:977
 msgid "Employee"
 msgstr "직원"
 
-#: ../../content/applications/hr/attendances.rst:224
-msgid "Review individual attendance records during a 1:1 meeting."
-msgstr "1:1 미팅에서 개별 근태 기록을 검토합니다."
+#: ../../content/applications/hr/attendances/attendance_logs.rst:106
+msgid "Review individual attendance logs during a 1:1 meeting."
+msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:225
+#: ../../content/applications/hr/attendances/attendance_logs.rst:107
 msgid "Department"
 msgstr "부서"
 
-#: ../../content/applications/hr/attendances.rst:226
+#: ../../content/applications/hr/attendances/attendance_logs.rst:108
 msgid ""
 "Compare staffing levels and working hours to determine over-working and "
 "under-working teams."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:227
+#: ../../content/applications/hr/attendances/attendance_logs.rst:109
 msgid "Manager"
 msgstr "관리자"
 
-#: ../../content/applications/hr/attendances.rst:228
+#: ../../content/applications/hr/attendances/attendance_logs.rst:110
 msgid ""
 "Determine where attendance follow-up questions can be directed to for an "
 "employee."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:229
+#: ../../content/applications/hr/attendances/attendance_logs.rst:111
 msgid "Method"
 msgstr "방법"
 
-#: ../../content/applications/hr/attendances.rst:230
+#: ../../content/applications/hr/attendances/attendance_logs.rst:112
 msgid ""
 "Spot trends in attendance methods to potentially resolve hardware issues."
 msgstr ""
 "출퇴근 방식에 대한 추세를 파악하여 잠재적인 하드웨어 문제를 해결하도록 합니"
 "다."
 
-#: ../../content/applications/hr/attendances.rst:231
+#: ../../content/applications/hr/attendances/attendance_logs.rst:113
 msgid "Date (Day/Week/Month)"
 msgstr "날짜 (일/주/월)"
 
-#: ../../content/applications/hr/attendances.rst:232
+#: ../../content/applications/hr/attendances/attendance_logs.rst:114
 msgid "Identify absenteeism spikes or seasonal patterns."
 msgstr "결근이 급증하는 경우 또는 기간의 패턴을 파악합니다."
 
-#: ../../content/applications/hr/attendances.rst:237
+#: ../../content/applications/hr/attendances/attendance_logs.rst:119
 msgid "Attendance log details"
 msgstr "근태 로그 세부 정보"
 
-#: ../../content/applications/hr/attendances.rst:239
+#: ../../content/applications/hr/attendances/attendance_logs.rst:121
 msgid ""
 "Odoo records both the time and location for every check-in and check-out, "
 "with fields varying by the method used. These detailed attendance logs can "
@@ -2606,99 +2661,128 @@ msgid ""
 "ensure proper compliance."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:244
-msgid "The detailed attendance log contains the following information:"
-msgstr "근태 로그 세부 정보에는 다음의 내용이 포함되어 있습니다."
+#: ../../content/applications/hr/attendances/attendance_logs.rst:126
+msgid ""
+"To view an attendance log, click on any attendance entry on "
+"the :guilabel:`Overview` dashboard, and the attendance log appears in a pop-"
+"up window. This log displays a summary, including the following information:"
+msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:247
-msgid "Main details"
-msgstr "주요 세부 정보"
-
-#: ../../content/applications/hr/attendances.rst:249
+#: ../../content/applications/hr/attendances/attendance_logs.rst:130
 msgid ":guilabel:`Employee`: The name of the employee."
 msgstr ":guilabel:`직원`: 직원의 이름입니다."
 
-#: ../../content/applications/hr/attendances.rst:250
+#: ../../content/applications/hr/attendances/attendance_logs.rst:131
 msgid ":guilabel:`Check In`: The date and time the employee checked in."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:251
+#: ../../content/applications/hr/attendances/attendance_logs.rst:132
 msgid ""
 ":guilabel:`Check Out`: The date and time the employee checked out. This "
 "**only** appears if the employee has checked out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:253
+#: ../../content/applications/hr/attendances/attendance_logs.rst:134
 msgid ""
-":guilabel:`Worked Time`: The total amount of time the employee logged for "
-"the day, across multiple check-ins and outs, in an hour and minute format "
-"(HH:MM)."
+":guilabel:`Worked Time`: The amount of time the employee logged for that "
+"specific entry, in an hour and minute format (HH:MM)."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:255
+#: ../../content/applications/hr/attendances/attendance_logs.rst:136
 msgid ""
-":guilabel:`Worked Extra Hours`: Unpaid overtime hours worked beyond the "
-"expected working schedule (shows **only** when present for the employee)."
+":guilabel:`Worked Extra Hours`: The unpaid overtime hours worked beyond the "
+"expected working schedule for that specific entry (shows **only** when "
+"present for the employee)."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:257
+#: ../../content/applications/hr/attendances/attendance_logs.rst:138
 msgid ""
-":guilabel:`Extra Hours`: Approved overtime (the :guilabel:`Worked Time` "
-"minus the approved :guilabel:`Worked Extra Hours`."
+":guilabel:`Extra Hours`: The approved overtime for that specific entry "
+"(the :guilabel:`Worked Time` minus the approved :guilabel:`Worked Extra "
+"Hours`."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:261
+#: ../../content/applications/hr/attendances/attendance_logs.rst:None
+msgid "The details on the attendance log pop-up window."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:145
 msgid "Check in/check out details"
 msgstr "체크인/체크아웃 세부 정보"
 
-#: ../../content/applications/hr/attendances.rst:263
+#: ../../content/applications/hr/attendances/attendance_logs.rst:147
 msgid ""
-"The following information appears for both the :guilabel:`Check In` "
-"and :guilabel:`Check Out` sections."
+"Additional detailed check in and check out information for the attendance "
+"log is available. Click the :icon:`fa-expand` :guilabel:`(expand)` icon in "
+"the upper-right corner of the attendance log, and the detailed record loads."
 msgstr ""
-"다음 정보는 :guilabel:`체크인` 및 :guilabel:`체크아웃` 섹션에서 모두 표시됩니"
-"다."
 
-#: ../../content/applications/hr/attendances.rst:266
+#: ../../content/applications/hr/attendances/attendance_logs.rst:151
 msgid ""
-":guilabel:`Mode`: Attendance submission method. Can be :ref:`Systray "
-"<attendances/check-in>`, :ref:`Kiosk <attendances/kiosk-mode-entry>`, "
-"or :guilabel:`Manual` entry."
+"The following additional information appears for both the *Check In* and "
+"*Check Out* sections, which appear in the expanded attendance log."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:268
-msgid ":guilabel:`IP Address`: The device's IP address used to log in or out."
-msgstr ""
-
-#: ../../content/applications/hr/attendances.rst:269
+#: ../../content/applications/hr/attendances/attendance_logs.rst:154
 msgid ""
-":guilabel:`Browser`: The web browser the employee used to log in or out."
+":guilabel:`Mode`: The attendance submission method. The available options "
+"are:"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:270
+#: ../../content/applications/hr/attendances/attendance_logs.rst:156
+msgid ""
+":guilabel:`Systray`: The employee checked in or out :doc:`directly from the "
+"database <../attendances/check_in_check_out>`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:158
+msgid ""
+":guilabel:`Kiosk`: The employee checked in or out using an :ref:`attendance "
+"kiosk <attendances/kiosk-mode-entry>`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:160
+msgid ""
+":guilabel:`Manual`: The employee's manager or an **Attendances** app "
+"administrator :ref:`manually created the attendance record <attendances/"
+"create-records>`. This typically occurs when an employee forgets to check in "
+"or check out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:164
+msgid ""
+":guilabel:`IP Address`: The device's IP address used to check in or out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:165
+msgid ""
+":guilabel:`Browser`: The web browser the employee used to check in or out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/attendance_logs.rst:166
 msgid ""
 ":guilabel:`Localisation`: The city and country associated with the "
 "computer's IP address."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:271
+#: ../../content/applications/hr/attendances/attendance_logs.rst:167
 msgid ""
-":guilabel:`GPS Coordinates`: The specific coordinates when the user logged "
+":guilabel:`GPS Coordinates`: The specific coordinates when the user checked "
 "in or out. To view the specific coordinates on a map, click the :icon:`oi-"
 "arrow-right` :guilabel:`View on Maps` button beneath the :guilabel:`GPS "
 "Coordinates`. This opens a map in a new browser tab, with the specific "
 "location pointed out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:None
+#: ../../content/applications/hr/attendances/attendance_logs.rst:None
 msgid "The detailed information for an attendance entry."
 msgstr "근태 항목에 대한 세부 정보입니다."
 
-#: ../../content/applications/hr/attendances.rst:280
+#: ../../content/applications/hr/attendances/attendance_logs.rst:176
 msgid "Attendance errors"
 msgstr "근태 관리 오류"
 
-#: ../../content/applications/hr/attendances.rst:282
+#: ../../content/applications/hr/attendances/attendance_logs.rst:178
 msgid ""
 "Entries that contain an error appear on the overview dashboard in red. In "
 "the :icon:`fa-tasks` :guilabel:`(Gantt)` view, the entry appears with a red "
@@ -2706,30 +2790,24 @@ msgid ""
 "text appears in red."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:286
+#: ../../content/applications/hr/attendances/attendance_logs.rst:182
 msgid ""
 "An error occurs when an employee has checked in but not checked out within "
 "24 hours, or when a single check-in period exceeds 16 hours."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:289
+#: ../../content/applications/hr/attendances/attendance_logs.rst:185
 msgid ""
 "To fix the error, the attendance entry must be modified or deleted. Click on "
 "the entry to reveal a pop-up containing the details for that particular "
-"entry. To modify the :guilabel:`Check In` and/or :guilabel:`Check Out` "
+"entry. To modify the :guilabel:`Check In` or :guilabel:`Check Out` "
 "information, click on the :guilabel:`Check In` or :guilabel:`Check Out` "
 "field, and a calendar selector appears. Click on the desired date, then use "
 "the time selector beneath the calendar to select the specific time for the "
 "entry. When the information is correct, click :guilabel:`Apply.`"
 msgstr ""
-"오류를 수정하려면 근태 항목을 수정하거나 삭제해야 합니다. 해당하는 항목을 클"
-"릭하면 항목에 대한 세부 정보가 팝업창으로 표시됩니다. :guilabel:`체크인` 이"
-"나 :guilabel:`체크아웃` 정보를 수정하려면 :guilabel:`체크인` 또는 :guilabel:`"
-"체크아웃` 필드를 클릭하여 달력 선택기를 표시합니다. 원하는 날짜를 클릭한 다"
-"음 달력 아래의 시간 선택기를 사용하여 해당 항목에 정확한 시간을 선택합니다. "
-"내용이 모두 정확한지 확인한 후 :guilabel:`적용` 을 클릭합니다."
 
-#: ../../content/applications/hr/attendances.rst:296
+#: ../../content/applications/hr/attendances/attendance_logs.rst:192
 msgid ""
 "When all the information on the pop-up is correct, click :guilabel:`Save & "
 "Close`. When the entry no longer has an error, the entry appears in gray "
@@ -2738,31 +2816,11 @@ msgstr ""
 "팝업창에 있는 정보가 모두 정확하면 :guilabel:`저장 후 닫기` 를 클릭합니다. "
 "더 이상 오류가 없으면 항목이 빨간색 대신 회색으로 표시됩니다."
 
-#: ../../content/applications/hr/attendances.rst:299
+#: ../../content/applications/hr/attendances/attendance_logs.rst:195
 msgid ""
 "To delete an entry, click the red :guilabel:`Delete` button on the pop-up "
 "window instead of making modifications to the entry."
 msgstr ""
-
-#: ../../content/applications/hr/attendances.rst:303
-msgid ":doc:`attendances/check_in_check_out`"
-msgstr ":doc:`근태/체크인 및 체크아웃`"
-
-#: ../../content/applications/hr/attendances.rst:304
-msgid ":doc:`attendances/kiosks`"
-msgstr ":doc:`attendances/kiosks`"
-
-#: ../../content/applications/hr/attendances.rst:305
-msgid ":doc:`attendances/management`"
-msgstr ":doc:`attendances/management`"
-
-#: ../../content/applications/hr/attendances.rst:306
-msgid ":doc:`attendances/hardware`"
-msgstr ":doc:`근태/하드웨어`"
-
-#: ../../content/applications/hr/attendances.rst:307
-msgid ":doc:`attendances/attendance_reporting`"
-msgstr ":doc:`attendances/attendance_reporting`"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:3
 msgid "Attendance reporting"
@@ -2831,12 +2889,9 @@ msgstr ""
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:29
 msgid ""
-"To present different information, adjust the :ref:`filters and groups "
-"<attendances/filters-groups>` in the same way as in the :guilabel:`Overview` "
-"dashboard."
+"To present different information, adjust the filters and groups in the same "
+"way as in the :guilabel:`Overview` dashboard."
 msgstr ""
-"다른 정보를 표시하려면 :ref:`필터 및 그룹 <attendances/filters-groups>` "
-"을 :guilabel:`개요` 현황판에서와 동일한 방식으로 조정합니다."
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:None
 msgid ""
@@ -3511,11 +3566,11 @@ msgstr ""
 "refresh` :guilabel:`새 URL 생성`을 클릭하여 새 URL을 생성한 후 키오스크를 업"
 "데이트합니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:81
+#: ../../content/applications/hr/attendances/kiosks.rst:83
 msgid "Kiosk mode"
 msgstr "키오스크 모드"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:83
+#: ../../content/applications/hr/attendances/kiosks.rst:85
 msgid ""
 "Entering *Kiosk Mode* is **only** available for users with "
 "specific :ref:`access rights <attendances/access-rights>`."
@@ -3523,11 +3578,11 @@ msgstr ""
 "키오스크 모드를 사용하려면 :ref:`액세스 권한 <attendances/access-rights>` 이 "
 "있어야 합니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:86
+#: ../../content/applications/hr/attendances/kiosks.rst:88
 msgid "*Kiosk Mode* can be activated in two different ways:"
 msgstr "두 가지 방법으로 *키오스크 모드* 를 활성화할 수 있습니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:88
+#: ../../content/applications/hr/attendances/kiosks.rst:90
 msgid ""
 "Navigate to the :menuselection:`Attendances app`, and click :guilabel:`Kiosk "
 "Mode` in the top menu. The device then signs out of Odoo and enters *Kiosk "
@@ -3537,7 +3592,7 @@ msgstr ""
 "모드` 를 클릭합니다. 그러면 Odoo에서 장치가 로그아웃된 후 *키오스크 모드* 로 "
 "들어갑니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:90
+#: ../../content/applications/hr/attendances/kiosks.rst:92
 msgid ""
 "Navigate to the :menuselection:`Attendances app --> Configuration`. In "
 "the :guilabel:`Kiosk Settings` section, use the link in "
@@ -3554,7 +3609,7 @@ msgid ""
 "application."
 msgstr "근태 애플리케이션의 설정 메뉴에 있는 근태 키오스크 URL 입니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:98
+#: ../../content/applications/hr/attendances/kiosks.rst:100
 msgid ""
 "As a security measure, once a device is in *Kiosk Mode*, it is not possible "
 "to go back into the database without signing back in."
@@ -3562,7 +3617,7 @@ msgstr ""
 "보안을 위한 조치로, 장치가 *키오스크 모드* 로 전환될 경우 데이터베이스로 돌아"
 "가려면 반드시 다시 로그인을 해야 합니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:102
+#: ../../content/applications/hr/attendances/kiosks.rst:104
 msgid ""
 "At any time, a new kiosk URL can be generated, if needed. Click "
 "the :icon:`fa-refresh` :guilabel:`Generate a new Kiosk Mode URL`"
@@ -3570,21 +3625,21 @@ msgstr ""
 "필요한 경우 언제든지 새로운 키오스크 URL을 생성할 수 있습니다. :icon:`fa-"
 "refresh` :guilabel:`새 키오스크 모드 URL 생성` 을 클릭합니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:105
+#: ../../content/applications/hr/attendances/kiosks.rst:107
 msgid ""
 "To exit *Kiosk Mode*, either close the tab in the web browser or return to "
 "the main log-in screen of Odoo."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:111
+#: ../../content/applications/hr/attendances/kiosks.rst:113
 msgid "Check in and out with a kiosk"
 msgstr "키오스크에서 체크인 및 체크아웃하기"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:114
+#: ../../content/applications/hr/attendances/kiosks.rst:116
 msgid "Badge"
 msgstr "배지"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:116
+#: ../../content/applications/hr/attendances/kiosks.rst:118
 msgid ""
 "To check in or out using a badge, tap the :icon:`fa-barcode` :guilabel:`Scan "
 "your badge` image in the center of the kiosk."
@@ -3594,7 +3649,7 @@ msgstr ""
 msgid "The Attendances Kiosk view displaying the scan badge image."
 msgstr "사원증 스캔 이미지가 표시되어 있는 근태 키오스크 화면"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:122
+#: ../../content/applications/hr/attendances/kiosks.rst:124
 msgid ""
 "Then, scan the barcode on the badge using the method configured in "
 "the :ref:`Kiosk Settings <attendances/kiosk-settings>` section of the "
@@ -3603,7 +3658,7 @@ msgstr ""
 "그런 다음 설정 메뉴의 :ref:`키오스크 설정 <attendances/kiosk-settings>` 섹션"
 "에 설정되어 있는 방법으로 사원증의 바코드를 스캔합니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:125
+#: ../../content/applications/hr/attendances/kiosks.rst:127
 msgid ""
 "Once the barcode is scanned, the employee is checked in or out, and "
 "a :ref:`confirmation message <attendances/confirmation>` appears with all "
@@ -3612,16 +3667,16 @@ msgstr ""
 "바코드를 스캔하면 직원이 체크인 또는 체크아웃되고, 모든 정보와 함께 :ref:`확"
 "인 메시지 <attendances/confirmation>` 가 표시됩니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:129
+#: ../../content/applications/hr/attendances/kiosks.rst:131
 msgid "RFID"
 msgstr "RFID"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:131
+#: ../../content/applications/hr/attendances/kiosks.rst:133
 msgid ""
 "To check in or out using an RFID key fob, scan the fob with an RFID reader."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:133
+#: ../../content/applications/hr/attendances/kiosks.rst:135
 msgid ""
 "Once scanned, the employee is either checked in or checked out, and "
 "a :ref:`confirmation message <attendances/confirmation>` appears with all "
@@ -3630,11 +3685,11 @@ msgstr ""
 "스캔이 완료되면 직원이 체크인 또는 체크아웃되고, 모든 정보와 함께 :ref:`확인 "
 "메시지 <attendances/confirmation>` 가 표시됩니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:137
+#: ../../content/applications/hr/attendances/kiosks.rst:139
 msgid "Manually"
 msgstr "수동"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:139
+#: ../../content/applications/hr/attendances/kiosks.rst:141
 msgid ""
 "Users who do not have a scannable badge, or an RFID fob, can manually check "
 "in and out at a kiosk."
@@ -3642,14 +3697,14 @@ msgstr ""
 "스캔 기능이 있는 사원증이나 RFID 리모트키가 없는 사용자는 키오스크에서 직접 "
 "체크인 및 체크아웃을 할 수 있습니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:141
+#: ../../content/applications/hr/attendances/kiosks.rst:143
 msgid ""
 "Tap the :icon:`fa-user-o` :guilabel:`Identify Manually` button on the kiosk, "
 "and a screen appears with all the employees that can be checked in or out. "
 "The **Employees** app dashboard has the same display."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:145
+#: ../../content/applications/hr/attendances/kiosks.rst:147
 msgid ""
 "Tap on a person to check them in or out, and a :ref:`confirmation message "
 "<attendances/confirmation>` appears."
@@ -3657,17 +3712,17 @@ msgstr ""
 "체크인 또는 체크아웃할 사람을 탭하면 :ref:`확인 메시지 <attendances/"
 "confirmation>` 가 표시됩니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:148
+#: ../../content/applications/hr/attendances/kiosks.rst:150
 msgid "To find a specific person, either:"
 msgstr "특정인을 검색하려면:"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:150
+#: ../../content/applications/hr/attendances/kiosks.rst:152
 msgid ""
 "Search: tap into the search bar and enter the desired person's name. As the "
 "name is typed in, the matching results are displayed on the screen."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:152
+#: ../../content/applications/hr/attendances/kiosks.rst:154
 msgid ""
 "By department: tap on any desired selection in the department section, "
 "located on the left side of the screen, to **only** view employees from that "
@@ -3678,11 +3733,11 @@ msgstr ""
 "의 직원만** 조회가 가능합니다. 각 부서 목록의 끝에 있는 숫자는 해당 부서의 직"
 "원 수를 나타냅니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:157
+#: ../../content/applications/hr/attendances/kiosks.rst:159
 msgid "PIN"
 msgstr "사원 번호"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:159
+#: ../../content/applications/hr/attendances/kiosks.rst:161
 msgid ""
 "If the :guilabel:`Employee PIN Identification` checkbox was ticked in "
 "the :ref:`Kiosk Settings <attendances/kiosk-settings>` section of the "
@@ -3693,7 +3748,7 @@ msgstr ""
 "에서 :guilabel:`직원 PIN 식별` 확인란을 선택하면, 직원이 체크인 또는 체크아웃"
 "을 수동으로 할 경우 PIN을 입력하라는 메시지가 표시됩니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:163
+#: ../../content/applications/hr/attendances/kiosks.rst:165
 msgid ""
 "After the employee is selected, a number pad appears with a message. When "
 "checking in, :guilabel:`(Employee) Please enter your PIN to check in` "
@@ -3705,7 +3760,7 @@ msgstr ""
 "웃 시 숫자 위에 :guilabel:`(직원)님 체크아웃하려면 PIN을 입력하세요` 가 표시"
 "됩니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:167
+#: ../../content/applications/hr/attendances/kiosks.rst:169
 msgid ""
 "Tap in the PIN using the number pad, then tap :guilabel:`OK` when done. The "
 "employee is then checked in or out, and a :ref:`confirmation message "
@@ -3719,17 +3774,17 @@ msgstr ""
 msgid "The pop-up that appears when prompted to enter a pin."
 msgstr "PIN 번호를 입력하라는 메시지가 표시될 때 나타나는 팝업창입니다."
 
-#: ../../content/applications/hr/attendances/kiosks.rst:176
+#: ../../content/applications/hr/attendances/kiosks.rst:178
 msgid "Confirmation message"
 msgstr "확인 메시지"
 
-#: ../../content/applications/hr/attendances/kiosks.rst:178
+#: ../../content/applications/hr/attendances/kiosks.rst:180
 msgid ""
 "When an employee checks in or out, a confirmation message appears, with all "
 "the check in or check out information."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:181
+#: ../../content/applications/hr/attendances/kiosks.rst:183
 msgid ""
 "When checking in, the :guilabel:`Welcome (Employee)` message appears, along "
 "with the current date and time. If the employee has already checked in and "
@@ -3737,14 +3792,14 @@ msgid ""
 "appears, showing the total hours logged earlier."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:185
+#: ../../content/applications/hr/attendances/kiosks.rst:187
 msgid ""
 "When checking out, :guilabel:`Goodbye (Employee)` appears, as well as the "
 "date and time of check out. Beneath the message is an :guilabel:`Hours "
 "Today: HH:MM` field, with the total hours and minutes logged for the day."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:189
+#: ../../content/applications/hr/attendances/kiosks.rst:191
 msgid ""
 "Beneath both the \"welcome\" and \"goodbye\" messages is an :guilabel:`OK` "
 "button. To exit the screen before the preset time in the kiosk, tap "
@@ -3948,11 +4003,11 @@ msgid ""
 "app. This is typically done by management, to add a missing record."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/management.rst:97
+#: ../../content/applications/hr/attendances/management.rst:99
 msgid "Create attendance records"
 msgstr "출퇴근 기록 생성"
 
-#: ../../content/applications/hr/attendances/management.rst:99
+#: ../../content/applications/hr/attendances/management.rst:101
 msgid ""
 "When necessary, users with the required :ref:`access rights <employees/work-"
 "info-tab>` are able to create attendance records manually in the "
@@ -3965,7 +4020,7 @@ msgstr ""
 "직원이 교대 근무를 할 때 체크인 및 체크아웃 하는 것을 잊어버린 경우와 같이, "
 "출퇴근 기록을 소급하여 생성할 수 없는 경우에 이 기능을 활용할 수 있습니다."
 
-#: ../../content/applications/hr/attendances/management.rst:104
+#: ../../content/applications/hr/attendances/management.rst:106
 msgid ""
 "To add a missing attendance record, navigate to :menuselection:`Attendances "
 "app --> Overview`. Click the :guilabel:`New` button in the upper-left "
@@ -3973,40 +4028,40 @@ msgid ""
 "information on the form:"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/management.rst:108
+#: ../../content/applications/hr/attendances/management.rst:110
 msgid ""
 ":guilabel:`Employee`: select the employee the record is being created for. "
 "The signed-in user populates this field, by default."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/management.rst:110
+#: ../../content/applications/hr/attendances/management.rst:112
 msgid ""
 ":guilabel:`Check In`: using the calendar modal, select the check in date and "
 "time, then click :icon:`fa-check` :guilabel:`Apply`. By default, the current "
 "date is selected, and the time is set to `00:00:00`."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/management.rst:113
+#: ../../content/applications/hr/attendances/management.rst:115
 msgid ""
 ":guilabel:`Check Out`: using the calendar modal, select the check out date "
 "and time, then click :icon:`fa-check` :guilabel:`Apply`. By default, the "
 "following date is selected, and the time is set to `00:00:00`."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/management.rst:116
+#: ../../content/applications/hr/attendances/management.rst:118
 msgid ""
 ":guilabel:`Worked Time`: this field is automatically populated with the "
 "difference from the selected :guilabel:`Check In` and :guilabel:`Check Out` "
 "times. This field **cannot** be modified."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/management.rst:118
+#: ../../content/applications/hr/attendances/management.rst:120
 msgid ""
 ":guilabel:`Extra Hours`: enter the number of overtime hours, if any, to be "
 "approved."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/management.rst:121
+#: ../../content/applications/hr/attendances/management.rst:123
 msgid ""
 "Once :guilabel:`Extra Hours` are added, they are automatically approved by "
 "the system. However, it is possible to manually refuse them, as explained in "
@@ -10838,28 +10893,30 @@ msgstr "다음과 같이 환경설정합니다."
 
 #: ../../content/applications/hr/lunch.rst:27
 msgid ""
-":guilabel:`Lunch Overdraft`: enter the maximum overdraft amount for "
+":guilabel:`Lunch Overdraft`: Enter the maximum overdraft amount for "
 "employees. The currency format is determined by the localization setting of "
 "the company."
 msgstr ""
-":guilabel:`점심 초과 금액`: 직원의 최대 초과 금액을 입력합니다. 통화 형식은 "
-"회사의 현지화 설정에 따라 정해집니다."
 
 #: ../../content/applications/hr/lunch.rst:29
 msgid ""
-":guilabel:`Reception notification`: set the message users receive via the "
+":guilabel:`Reception notification`: Set the message users receive via the "
 "**Discuss** app when their food has been delivered. The default message "
 "`Your lunch has been delivered. Enjoy your meal!` populates this field, but "
 "can be modified, if desired."
 msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:34
+msgid "Translation support"
+msgstr ""
+
+#: ../../content/applications/hr/lunch.rst:36
 msgid ""
 "If a database has multiple languages installed, many forms in the **Lunch** "
 "application have the option of entering translations for various fields."
 msgstr ""
 
-#: ../../content/applications/hr/lunch.rst:37
+#: ../../content/applications/hr/lunch.rst:39
 msgid ""
 "If translations are available to be configured, a language code appears next "
 "to a translatable field on a form. To add translations for that field, click "
@@ -10871,26 +10928,22 @@ msgstr ""
 "에는 두 글자로 된 언어 코드 (예: 영어의 경우 :guilabel:`EN`)를 클릭하면 번역 "
 "팝업 창이 나타납니다."
 
-#: ../../content/applications/hr/lunch.rst:41
+#: ../../content/applications/hr/lunch.rst:43
 msgid ""
-"The following is an example for the :guilabel:`Reception notification` field "
-"in the settings menu:"
-msgstr "다음은 설정 메뉴에 있는 :guilabel:`수신 알림` 의 예시입니다."
+"The image below is an example for the :guilabel:`Reception notification` "
+"field in the settings menu."
+msgstr ""
 
-#: ../../content/applications/hr/lunch.rst:44
+#: ../../content/applications/hr/lunch.rst:45
 msgid ""
 "Navigate to :menuselection:`Lunch app --> Configuration --> Settings`. Click "
-"the :guilabel:`EN` In the top-right of the text box beneath "
+"the :guilabel:`EN` in the top-right of the text box beneath "
 "the :guilabel:`Reception notification` section. A :guilabel:`Translate: "
 "company_lunch_notify_message` pop-up window loads with the option to enter a "
 "translation for the other languages used by the database."
 msgstr ""
-":menuselection:`점심 앱 --> 환경설정 --> 설정` 으로 이동합니다. :guilabel:`수"
-"신 알림` 섹션 아래 텍스트 상자의 오른쪽 위에 있는 :guilabel:`EN` 을 클릭합니"
-"다. :guilabel:`번역: company_lunch_notify_message` 팝업 창으로 데이터베이스"
-"에 있는 다른 언어에 대한 번역 입력 옵션이 함께 로드됩니다."
 
-#: ../../content/applications/hr/lunch.rst:49
+#: ../../content/applications/hr/lunch.rst:50
 msgid ""
 "The first column lists the different languages in alphabetical order, with "
 "the currently selected language in bold. The second column has the currently "
@@ -10902,20 +10955,17 @@ msgstr ""
 "되어 있습니다. 맨 오른쪽의 마지막 열에는 각 언어에 대한 번역 내용을 입력할 "
 "수 있는 텍스트 상자가 있습니다."
 
-#: ../../content/applications/hr/lunch.rst:53
+#: ../../content/applications/hr/lunch.rst:54
 msgid ""
 "Enter the text that should appear for each language, then "
 "click :guilabel:`Save`."
 msgstr "각 언어에 표시할 텍스트를 입력한 다음 :guilabel:`저장` 을 클릭합니다."
 
-#: ../../content/applications/hr/lunch.rst:0
+#: ../../content/applications/hr/lunch.rst:None
 msgid ""
-"The translation text box, with the current language highlighted, and the "
-"Arabic\n"
-"translation field highlighted."
+"The translation text box with the current language at the top and "
+"translations below."
 msgstr ""
-"번역 텍스트 상자에서 현재 언어가 강조 표시되고 아랍어 번역 필드가 강조 표시되"
-"어 있는 모습"
 
 #: ../../content/applications/hr/lunch.rst:62
 msgid "Locations"
@@ -10983,89 +11033,80 @@ msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:90
 msgid ""
-":guilabel:`Alert Name`: enter a name for the alert. This should be short and "
+":guilabel:`Alert Name`: Enter a name for the alert. This should be short and "
 "descriptive, such as `New Lunch Vendor` or `Order by 11:00 AM`. This field "
 "is **required**."
 msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:92
+msgid ":guilabel:`Display`: Select how the alert is shown. The options are:"
+msgstr ""
+
+#: ../../content/applications/hr/lunch.rst:94
 msgid ""
-":guilabel:`Display`: select whether the alert is visible in the **Lunch** "
-"app (:guilabel:`Alert in app)` or sent to employees via the **Discuss** app "
-"in a chat window (:guilabel:`Chat notification`)."
+":guilabel:`Alert in app`: The alert is visible on the main **Lunch** app "
+"dashboard, in an orange box, above the user's name on the right side of the "
+"dashboard."
 msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:96
 msgid ""
-":guilabel:`Recipients`: this field only appears if :guilabel:`Chat "
-"notification` is selected for the :guilabel:`Display` option. Select who "
-"receives the chat alert. The options "
+":guilabel:`Chat notification`: The alert is sent to users via the "
+"**Discuss** app in a chat window. If this option is selected, the following "
+"additional field appears:"
+msgstr ""
+
+#: ../../content/applications/hr/lunch.rst:99
+msgid ""
+":guilabel:`Recipients`: Select who receives the chat alert. The options "
 "are: :guilabel:`Everyone`, :guilabel:`Employee who ordered last "
 "week`, :guilabel:`Employee who ordered last month`, or :guilabel:`Employee "
 "who ordered last year`."
 msgstr ""
-":guilabel:`수신자`: :guilabel:`표시` 항목 선택 사항으로 :guilabel:`채팅 알림"
-"` 을 선택한 경우에만 나타납니다. 채팅 알림을 받을 사람을 선택합니다. 수신 대"
-"상을 :guilabel:`모든 사람`, :guilabel:`지난주에 주문한 직원`, :guilabel:`지난"
-"달에 주문한 직원` 또는 :guilabel:`작년에 주문한 직원` 중에서 선택할 수 있습니"
-"다."
 
-#: ../../content/applications/hr/lunch.rst:101
+#: ../../content/applications/hr/lunch.rst:103
 msgid ""
-":guilabel:`Location`: select the locations the alert should appear for from "
-"the drop-down menu. Multiple locations can be selected. This field is "
+":guilabel:`Location`: Select the locations the alert appears for using the "
+"drop-down menu. Multiple locations can be selected. This field is "
 "**required**, therefore, if the alert applies to all locations, select all "
-"the locations from the drop-down menu."
+"the locations from the drop-down menu. If this field is left blank, the "
+"alert will **not** be displayed."
 msgstr ""
-":guilabel:`위치`: 알림이 표시될 위치를 드롭다운 메뉴에서 선택합니다. 위치는 "
-"여러 곳을 선택할 수 있습니다. 입력 **필수** 항목이므로, 모든 위치에 알림이 적"
-"용되게 할 경우 드롭다운 메뉴에서 모든 위치를 선택합니다."
 
-#: ../../content/applications/hr/lunch.rst:104
+#: ../../content/applications/hr/lunch.rst:107
 msgid ""
-":guilabel:`Show Until`: if the alert should expire on a specific date, "
+":guilabel:`Show Until`: If the alert should expire on a specific date, "
 "select the date from the calendar picker."
 msgstr ""
-":guilabel:`다음까지 표시`: 특정일에 알림이 만료되게 하려면 달력 선택기에서 날"
-"짜를 선택합니다."
 
-#: ../../content/applications/hr/lunch.rst:106
+#: ../../content/applications/hr/lunch.rst:109
 msgid ""
-":guilabel:`Active`: this option is on (appears green) by default. To turn "
-"off the alert, click the toggle so that it no longer appears green."
+":guilabel:`Active`: This option is enabled (appears green) by default. To "
+"turn off the alert, click the toggle so that it no longer appears green."
 msgstr ""
-":guilabel:`활성화`: 기본적으로 켜져 있습니다 (초록색으로 표시). 알림을 해제하"
-"려면 토글을 클릭하며 더 이상 초록색으로 표시되지 않습니다."
 
-#: ../../content/applications/hr/lunch.rst:108
+#: ../../content/applications/hr/lunch.rst:111
 msgid ""
 ":guilabel:`Message`: Enter the alert message in this field. This field is "
 "**required**."
 msgstr ""
 ":guilabel:`메시지`: 알림 메시지를 입력합니다. **필수** 입력 항목입니다."
 
-#: ../../content/applications/hr/lunch.rst:109
-msgid ""
-":guilabel:`Notification Time`: select the days of the week the alert should "
-"be sent. By default, all seven days are active. Click on a checkbox to "
-"change the setting from active to inactive."
-msgstr ""
-":guilabel:`알림 시간`: 알림이 전송될 요일을 선택합니다. 기본적으로 7일이 모"
-"두 활성화되어 있습니다. 활성에서 비활성 상태로 설정을 변경하려면 확인란을 클"
-"릭합니다."
-
 #: ../../content/applications/hr/lunch.rst:112
 msgid ""
-"If :guilabel:`Chat notification` was selected for the :guilabel:`Display` "
-"option, a :guilabel:`Time` field also appears. Enter the time the chat "
-"message should be sent. Next, select if the time is either :guilabel:`AM` "
-"or :guilabel:`PM` using the drop-down menu to the right of "
-"the :guilabel:`Time` field."
+":guilabel:`Notification Time`: Select the days of the week the alert is "
+"visible or sent. By default, all seven days are active. Click on a checkbox "
+"to change the setting from active to inactive."
 msgstr ""
-":guilabel:`표시` 기능으로 :guilabel:`채팅 알림` 을 선택한 경우에"
-"는 :guilabel:`시간` 항목도 같이 나타납니다. 채팅 메시지를 보낼 시간을 입력합"
-"니다. 그 다음, :guilabel:`시간` 오른쪽에 있는 드롭다운 메뉴를 사용하여 시간"
-"이 :guilabel:`AM` 또는 :guilabel:`PM` 중에서 선택합니다."
+
+#: ../../content/applications/hr/lunch.rst:117
+msgid ""
+"If :guilabel:`Chat notification` was selected for the :guilabel:`Display` "
+"option, a time field appears beneath the :guilabel:`Notification Time` "
+"block. Enter the time the chat message is sent. Next, select if the time is "
+"either :guilabel:`AM` or :guilabel:`PM` using the drop-down menu to the "
+"right of the time field."
+msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:None
 msgid ""
@@ -11077,23 +11118,23 @@ msgstr ""
 "으로,\n"
 "오전 11시 30분까지 주문서를 제출하도록 요청하는 내용"
 
-#: ../../content/applications/hr/lunch.rst:122
+#: ../../content/applications/hr/lunch.rst:127
 msgid ":doc:`lunch/vendors`"
 msgstr ":doc:`lunch/vendors`"
 
-#: ../../content/applications/hr/lunch.rst:123
+#: ../../content/applications/hr/lunch.rst:128
 msgid ":doc:`lunch/products`"
 msgstr ":doc:`lunch/products`"
 
-#: ../../content/applications/hr/lunch.rst:124
+#: ../../content/applications/hr/lunch.rst:129
 msgid ":doc:`lunch/orders`"
 msgstr ":doc:`점심/주문`"
 
-#: ../../content/applications/hr/lunch.rst:125
+#: ../../content/applications/hr/lunch.rst:130
 msgid ":doc:`lunch/user-accounts`"
 msgstr ":doc:`점심/사용자 계정`"
 
-#: ../../content/applications/hr/lunch.rst:126
+#: ../../content/applications/hr/lunch.rst:131
 msgid ":doc:`lunch/management`"
 msgstr ":doc:`점심/관리`"
 
@@ -11497,7 +11538,7 @@ msgstr "주문"
 
 #: ../../content/applications/hr/lunch/orders.rst:7
 msgid ""
-"The **Lunch** app lets employees place lunch orders, see what's available "
+"The **Lunch** app lets employees place lunch orders, see what is available "
 "each day, and check their account balance, all from one place."
 msgstr ""
 
@@ -11524,40 +11565,28 @@ msgstr "점심 주문"
 #: ../../content/applications/hr/lunch/orders.rst:19
 msgid ""
 "On the main :guilabel:`Order Your Lunch` dashboard, all the necessary "
-"information needed to place an order is visible. Enable "
-"the :guilabel:`Available Today` filter in the search bar by clicking into "
-"the search bar and selecting :guilabel:`Available Today`. This filter shows "
-"only products that can be purchased that day, based on the :ref:`vendor's "
-"availability <lunch/availability>`."
+"information needed to place an order is visible. The default filter is for "
+"the current day (example: :icon:`fa-filter` :guilabel:`Wednesday`), which "
+"shows only products that can be purchased that day, based on "
+"the :ref:`vendor's availability <lunch/availability>`."
 msgstr ""
-":guilabel:`점심 주문` 기본 현황판에는 주문할 때 필요한 모든 정보가 나타나 있"
-"습니다. :guilabel:`오늘 주문 가능` 한 메뉴는 검색 창을 클릭한 후 :guilabel:`"
-"오늘 주문 가능` 필터를 활성화하면 확인할 수 있습니다. 이 필터를 설정하"
-"면 :ref:`공급업체의 가능 여부 <lunch/availability>` 에 따라 해당 날짜에 주문"
-"할 수 있는 메뉴만 표시됩니다."
 
 #: ../../content/applications/hr/lunch/orders.rst:24
 msgid ""
 "The left-side of the dashboard displays the various :guilabel:`Categories` "
 "of products available, along with the :guilabel:`Vendors` supplying the "
-"products. To the right of each line is a number, which indicates how many "
-"products are associated with that respective category or vendor."
+"products. To the right of each line is a number, indicating how many "
+"products are associated with that category or vendor."
 msgstr ""
-"현황판 왼쪽에는 선택할 수 있는 다양한 품목 :guilabel:`카테고리` 가 납품을 담"
-"당하는 :guilabel:`공급업체` 와 함께 표시됩니다. 각 줄의 오른쪽에는 카테고리 "
-"또는 공급업체와 연관된 품목 수를 나타내는 숫자가 표시됩니다."
 
 #: ../../content/applications/hr/lunch/orders.rst:28
 msgid ""
-"To filter the products by categories or vendors, tick the checkbox next to "
-"the desired category or vendor to only view items related to those "
-"selections. Multiple selections can be made in each section."
+"To filter the products by categories or vendors, click the checkbox next to "
+"the desired category or vendor to view only items within those selections. "
+"Multiple selections can be made in each section."
 msgstr ""
-"카테고리나 공급업체별로 품목을 필터하려면, 선택한 조건과 관련된 항목만 보이도"
-"록 카테고리 또는 공급업체 옆에 있는 확인란을 선택합니다. 각 섹션에서 여러 개 "
-"항목을 선택할 수 있습니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:33
+#: ../../content/applications/hr/lunch/orders.rst:32
 msgid ""
 "If multiple selections are made, **only** products that fall under **all** "
 "the selected options are shown."
@@ -11565,25 +11594,21 @@ msgstr ""
 "항목을 여러 개 선택하면 선택한 조건에 **모두** 해당하는 품목에 **한해서만** "
 "표시됩니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:36
+#: ../../content/applications/hr/lunch/orders.rst:35
 msgid ""
-"The top portion of the dashboard, which serves as an order summary, displays "
-"the user's account information, and the order details for today, if any "
-"orders have been placed."
+"The right side of the dashboard, which serves as an account hub, displays "
+"the user, their location, the current date, their account balance (located "
+"in the :icon:`fa-money` :guilabel:`Available Balance` field), and order "
+"details for the current day, if any orders have been placed."
 msgstr ""
-"현황판의 상단에서 주문에 대한 요약을 확인할 수 있으며 사용자의 계정 정보와 함"
-"께 주문을 한 경우 오늘의 주문 세부 정보가 표시됩니다."
 
 #: ../../content/applications/hr/lunch/orders.rst:39
 msgid ""
-"The main section, beneath the user's information, displays all the products "
-"in a default Kanban view. Each product card displays the name, cost, vendor, "
-"photo, and description of the product. If the product is configured as new, "
-"it also displays a :guilabel:`New` tag."
+"The middle section displays all the products in a default Kanban view. Each "
+"product card displays the name, cost, vendor, photo, and description of the "
+"product. If the product is configured as new, it also displays a "
+"green :guilabel:`New` tag."
 msgstr ""
-"사용자 정보 아래에 있는 기본 섹션에 모든 품목이 기본 칸반 보기로 표시됩니다. "
-"품목 카드에는 품목명, 가격, 공급업체, 사진 및 설명이 나타나 있습니다. 새로운 "
-"품목을 환경 설정한 경우에는 :guilabel:`신규` 태그가 표시됩니다."
 
 #: ../../content/applications/hr/lunch/orders.rst:None
 msgid "The Lunch app dashboard."
@@ -11595,50 +11620,93 @@ msgid ""
 "product cards, their phone number is listed, as well."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:50
-msgid ""
-"The products can also be displayed in a list view, by clicking the :icon:`oi-"
-"view-list` :guilabel:`(List)` icon in the top-right corner of the dashboard."
-msgstr ""
-
-#: ../../content/applications/hr/lunch/orders.rst:54
+#: ../../content/applications/hr/lunch/orders.rst:51
 msgid "Placing orders"
 msgstr "주문하기"
 
-#: ../../content/applications/hr/lunch/orders.rst:56
+#: ../../content/applications/hr/lunch/orders.rst:53
 msgid ""
 "To place a lunch order, navigate to the main :guilabel:`Order Your Lunch` "
-"dashboard, by either opening the **Lunch** app, or by navigating "
+"dashboard by either opening the **Lunch** app or by navigating "
 "to :menuselection:`Lunch app --> My Lunch --> New Order`."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:61
+#: ../../content/applications/hr/lunch/orders.rst:57
+msgid "Select the location"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:59
+msgid ""
+"Ensure the location set in the account hub on the right-side of "
+"the :guilabel:`Order Your Lunch` dashboard is correct. Click "
+"the :guilabel:`Location` drop-down menu to view all **Lunch** app locations, "
+"and select the user's current location (or the location the user wants their "
+"lunch delivered to)."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:65
+msgid ""
+"The user's work schedule, which indicates where they work each day, is "
+"**not** reflected in the :guilabel:`Location` field. Every available "
+"location must be configured in the **lunch** app, and all locations are "
+"available to all users in the database, regardless of work location. This "
+"way, users can order lunch and have it delivered to the location where they "
+"*will be* during lunchtime."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:71
+msgid ""
+"For example, an employee works in the factory and has a lunch meeting with "
+"their supervisor at the main office, two blocks away. The employee selects "
+"the main office as their location in the **Lunch** app, and their order is "
+"delivered to the main office rather than the factory."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:76
+msgid "Select the date"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:78
+msgid ""
+"The **Lunch** app allows for placing orders not only for the current day, "
+"but also for ordering future meals. This feature allows users to plan meals "
+"in advance, without having to place daily orders."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:82
+msgid ""
+"Click the date on the right side of the :guilabel:`Order Your Lunch` "
+"dashboard to open a calendar pop-up window. Click on the desired date to "
+"select it. Any products added are for delivery on the selected date."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:86
+msgid ""
+"Multiple products with multiple delivery dates can be ordered at once; each "
+"day does not need to be processed separately."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:90
 msgid "Add products to an order"
 msgstr "주문서에 메뉴 추가하기"
 
-#: ../../content/applications/hr/lunch/orders.rst:63
+#: ../../content/applications/hr/lunch/orders.rst:92
 msgid ""
 "From the :guilabel:`Order Your Lunch` dashboard, click on a desired product "
-"to add to an order, and the product appears in a :guilabel:`Configure Your "
-"Order` pop-up window."
+"to add it to an order; it appears in the *Configure Your Order* pop-up "
+"window."
 msgstr ""
-":guilabel:`점심 주문하기` 현황판에서 주문에 추가할 메뉴를 클릭하면 해당 품목"
-"이 :guilabel:`주문 환경 설정` 팝업 창에 나타납니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:66
+#: ../../content/applications/hr/lunch/orders.rst:95
 msgid ""
 "At the top of the pop-up window is the product image, name, and price. "
-"Beneath that, there are potential :guilabel:`Extras` fields, showcasing "
+"Beneath that, there are potential :guilabel:`Extras` fields that showcase "
 "any :ref:`extra items or options <lunch/extras>`, such as toppings or "
-"drinks. Tick the checkbox next to any desired extras present in "
+"drinks. Click the checkbox next to any desired extras present in "
 "the :guilabel:`Extras` fields to add them to the order."
 msgstr ""
-"팝업창 상단에 품목 이미지와 이름, 가격이 표시되어 있습니다. 그 아래에는 선택 "
-"항목인 :guilabel:`추가` 필드가 있으며 토핑이나 음료와 같이 :ref:`추가 항목 또"
-"는 선택 메뉴 <lunch/extras>` 가 있는 경우 표시할 수 있습니다. 주문에 추가하려"
-"면 :guilabel:`추가` 필드의 추가 항목 옆에 있는 확인란을 선택합니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:71
+#: ../../content/applications/hr/lunch/orders.rst:100
 msgid ""
 "Each extra option is organized by a category, complete with its name and "
 "price. As extras are selected, the displayed price at the top of the pop-up "
@@ -11648,19 +11716,15 @@ msgstr ""
 "면 팝업 창 상단에 표시된 가격이 현재 선택한 항목이 모두 반영되도록 업데이트됩"
 "니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:75
+#: ../../content/applications/hr/lunch/orders.rst:104
 msgid ""
 "Beneath the :guilabel:`Extras` field is the :guilabel:`Description` of the "
 "product, followed by a :guilabel:`Notes` field. The :guilabel:`Notes` field "
-"is used to enter any vital information, which is then sent to the vendor "
-"regarding the order, such as any special requests or food allergies."
+"is used to enter vital information that is then sent to the vendor regarding "
+"the order, such as any special requests or food allergies."
 msgstr ""
-":guilabel:`추가` 필드 아래에는 품목 :guilabel:`설명` 과 함께 뒤이"
-"어 :guilabel:`메모` 필드가 있습니다. :guilabel:`메모` 필드에는 특별 요청이나 "
-"음식 알레르기와 같이 주문과 관련된 중요한 정보를 입력하여 공급업체에 전송합니"
-"다."
 
-#: ../../content/applications/hr/lunch/orders.rst:79
+#: ../../content/applications/hr/lunch/orders.rst:108
 msgid ""
 "When all selections for the product have been made, click the :guilabel:`Add "
 "To Cart` button in the lower-left of the pop-up window. To cancel the order, "
@@ -11674,7 +11738,49 @@ msgstr ""
 msgid "The pop-up window for a personal pizza, with all the extras selected."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:88
+#: ../../content/applications/hr/lunch/orders.rst:117
+msgid ""
+"There can be several reasons why an order cannot be placed: a :ref:`lack of "
+"funds <lunch/insufficient-funds>`, an :ref:`incomplete order <lunch/"
+"incomplete>`, or being outside the vendors :ref:`operating hours <lunch/"
+"outside-hours>`."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:124
+msgid "Insufficient funds"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:126
+msgid ""
+"If the price for the item in the :guilabel:`Configure Your Order` pop-up "
+"window exceeds the :guilabel:`Available Balance` for the user, the following "
+"error appears:"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:129
+msgid ""
+"`Your wallet does not contain enough money to order that. To add some money "
+"to your wallet, please contact your lunch manager.`"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:132
+msgid ""
+"Additionally, the :guilabel:`Add To Cart` button is hidden, and only "
+"the :guilabel:`Discard` button appears."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:135
+msgid ""
+"If this error appears, the user must :doc:`add funds to their lunch account "
+"<user-accounts>` through a **Lunch** app administrator before placing the "
+"order."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:141
+msgid "Incomplete orders"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:143
 msgid ""
 "Depending on how the various :ref:`extras <lunch/configure-extras>` are "
 "configured for a vendor, it is possible to receive an error when attempting "
@@ -11683,15 +11789,13 @@ msgstr ""
 "공급업체에 :ref:`추가 <lunch/configure-extras>` 항목이 얼마나 다양하게 구성되"
 "어 있는지에 따라 장바구니에 품목 추가를 할 때 오류가 발생할 수 있습니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:91
+#: ../../content/applications/hr/lunch/orders.rst:146
 msgid ""
-"An error can occur when a configured product **requires** the user to select "
-"an option in the :guilabel:`Extras` field, but the user neglects to make one."
+"An error occurs when a configured product **requires** the user to select an "
+"option in the :guilabel:`Extras` field, but the user neglects to make one."
 msgstr ""
-":guilabel:`추가` 필드에서 항목을 선택하는 것이 품목 환경설정에서 **필수** 이"
-"나 선택하지 않은 경우에는 오류가 발생할 수 있습니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:94
+#: ../../content/applications/hr/lunch/orders.rst:149
 msgid ""
 "When this occurs, a :guilabel:`Validation Error` pop-up window appears. The "
 "error is briefly explained in the pop-up window. Click :guilabel:`Close` to "
@@ -11702,7 +11806,7 @@ msgstr ""
 "한 설명이 간략하게 표시됩니다. :guilabel:`닫기` 를 클릭하여 창을 닫은 후 필요"
 "에 따라 :guilabel:`주문 환경 설정` 팝업 창에서 변경합니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:99
+#: ../../content/applications/hr/lunch/orders.rst:154
 msgid ""
 "The vendor, The Pizza Palace, provides a free beverage with any purchase. "
 "Their products are configured so that a beverage selection is **required** "
@@ -11713,7 +11817,7 @@ msgstr ""
 "니에 추가하기 *전에* :guilabel:`추가` 필드에서 음료 선택을 하는 과정이 **필수"
 "** 로 설정되어 있습니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:103
+#: ../../content/applications/hr/lunch/orders.rst:158
 msgid ""
 "If a selection is **not** made, an error occurs. The message that appears is "
 "`You have to order one and only one Free Beverage with Purchase`."
@@ -11730,172 +11834,248 @@ msgstr ""
 "무료 음료와 관련된 오류 내용이 표시되어 있는 :guilabel:`검증 오류\n"
 "팝업 창"
 
-#: ../../content/applications/hr/lunch/orders.rst:111
-msgid "Your Order summary"
-msgstr "주문 요약"
-
-#: ../../content/applications/hr/lunch/orders.rst:113
-msgid ""
-"When at least one item is added to an order, the items appear at the top of "
-"the dashboard in the :guilabel:`Your Order` summary. In addition to the "
-"products, users can view the account information, in addition to all the "
-"information related to orders placed during the current calendar day."
-msgstr ""
-"주문에 하나 이상 메뉴가 추가되면 현황판 상단에 있는 :guilabel:`주문` 요약에 "
-"품목이 표시됩니다. 품목 외에도 계정 정보를 볼 수 있으며, 해당 날짜에 접수된 "
-"주문과 관련된 모든 정보도 확인할 수 있습니다."
-
-#: ../../content/applications/hr/lunch/orders.rst:117
-msgid ""
-"As products are added to an order, they appear at the top center of the "
-"summary box. Each product is listed beneath the words :guilabel:`Your "
-"Order`, with the product name, quantity, and a status tag."
-msgstr ""
-"주문에 메뉴를 추가하면 요약 상자의 중앙 상단에 표시됩니다. 각 품목"
-"은 :guilabel:`내 주문` 제목 아래에 품목명, 수량 및 상태 태그와 함께 나타납니"
-"다."
-
-#: ../../content/applications/hr/lunch/orders.rst:120
-msgid "The available tags that can be displayed for each item are:"
-msgstr "다음과 같은 태그를 품목에 표시할 수 있습니다."
-
-#: ../../content/applications/hr/lunch/orders.rst:122
-msgid ""
-":guilabel:`To Order`: the product has been added to the cart, but has not "
-"been purchased yet by the user."
-msgstr ""
-":guilabel:`주문 대기 중`: 장바구니에 메뉴가 추가되었으나 아직 구매하지 않았습"
-"니다."
-
-#: ../../content/applications/hr/lunch/orders.rst:124
-msgid ""
-":guilabel:`Ordered`: the product has been purchased by the user, and is "
-"waiting to be sent to the vendor by a **Lunch** app manager."
+#: ../../content/applications/hr/lunch/orders.rst:168
+msgid "Outside vendor hours"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:126
+#: ../../content/applications/hr/lunch/orders.rst:170
 msgid ""
-":guilabel:`Sent`: the order for the product has been sent to the vendor by a "
-"**Lunch** app manager."
+"Each vendor in the **Lunch** app has their :ref:`availability <lunch/"
+"availability>` configured, with both their operating hours as well as the "
+"deadline for sending orders via email."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:128
+#: ../../content/applications/hr/lunch/orders.rst:173
 msgid ""
-":guilabel:`Received`: the product has been delivered by the vendor to the "
-"user's location, and has been verified as received by a **Lunch** app "
-"manager."
+"If a user clicks on a product for a vendor who is either closed or whose "
+"order window is closed, the following message appears on the *Configure Your "
+"Product* pop-up window: `The orders for this vendor have already been sent.`"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:131
+#: ../../content/applications/hr/lunch/orders.rst:177
+msgid ""
+"Click the :guilabel:`Discard` button, and make a selection from another "
+"vendor."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:180
+msgid "Order summary"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:182
+msgid ""
+"When items are added to an order, the items appear in the :guilabel:`Your "
+"Order` summary, located on the right-side of the :guilabel:`Order Your "
+"Lunch` dashboard."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:185
+msgid ""
+"Each product is listed in its own Kanban card, with the product name, the "
+"user's location, any extras added, the quantity, a status tag, the delivery "
+"date for the order, and the total amount."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:188
+msgid ""
+"The available tags that can be displayed for each item in "
+"the :guilabel:`Your Order` section are:"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:190
+msgid ""
+":guilabel:`To Order`: The product has been added to the cart, but has not "
+"been purchased yet by the user yet. This tag appears in gray."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:192
+msgid ""
+":guilabel:`Ordered`: The product has been purchased by the user and is "
+"waiting to be sent to the vendor by a **Lunch** app manager. This tag "
+"appears in purple."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:195
 msgid ""
 "Product quantities can be adjusted by clicking the :icon:`fa-"
-"plus` :guilabel:`(plus)` or :icon:`fa-minus` :guilabel:`(minus)` icons to "
-"the left of the listed product. The product price adjusts in real-time to "
-"display the cost for the currently selected quantity of the product."
+"plus` :guilabel:`(plus)` or :icon:`fa-minus` :guilabel:`(minus)` icons "
+"beneath the listed product. The product price adjusts in real-time to "
+"reflect the cost for the currently selected quantity of the product."
 msgstr ""
-
-#: ../../content/applications/hr/lunch/orders.rst:135
-msgid ""
-"The right side of the :guilabel:`Your Order` summary displays the purchasing "
-"information. The :guilabel:`Total` amount for the entire day's lunch order "
-"is displayed. The :guilabel:`Already Paid` field indicates how much has been "
-"paid that day towards the :guilabel:`Total` amount. The :guilabel:`To Pay` "
-"field displays how much of the remaining :guilabel:`Total` amount must be "
-"paid, in order to place the currently configured order."
-msgstr ""
-":guilabel:`내 주문` 요약의 오른쪽에는 구매 정보가 표시됩니다. 해당 날짜의 점"
-"심 주문에 대한 :guilabel:`총액` 이 금액으로 표시됩니다. :guilabel:`결제 완료"
-"` 필드에 있는 금액은 :guilabel:`총액` 중 해당 날짜에 대해 결제된 금액을 나타"
-"냅니다. :guilabel:`결제 예정` 필드에는 현재 설정된 주문을 진행하려면 남"
-"은 :guilabel:`총액` 금액 중 얼마를 결제해야 하는지 표시됩니다."
 
 #: ../../content/applications/hr/lunch/orders.rst:None
 msgid ""
 "The 'Your Orders' section of the dashboard, with purchasing information."
 msgstr "현황판의 '주문' 섹션에 구매 정보가 나타나 있는 모습입니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:145
+#: ../../content/applications/hr/lunch/orders.rst:202
+msgid ""
+"Beneath the :guilabel:`Your Order` section is a summary of the purchasing "
+"information, including the following:"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:205
+msgid ""
+":guilabel:`Total`: This field displays the total amount for the entire day's "
+"lunch order, including all items already ordered, received, and all pending "
+"orders."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:207
+msgid ""
+":guilabel:`Already Paid`: This field indicates how much has been paid that "
+"day towards the :guilabel:`Total` amount."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:209
+msgid ""
+":guilabel:`To Pay`: This field displays how much of the "
+"remaining :guilabel:`Total` amount must be paid in order to place the "
+"currently configured order (items with a tag of :guilabel:`To Order`)."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:None
+msgid "The various account totals for the user's account."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:216
 msgid ""
 "Users can place multiple orders throughout the day, and are not restricted "
-"to only placing one lunch order each day. Multiple orders might need to be "
-"placed, due to users forgetting to add items to an order, or if there are "
-"multiple meals that are available to be purchased for the office (not only "
-"lunch), and so on."
+"to a single lunch order per day. Multiple orders might need to be placed, "
+"due to users forgetting to add items to an order, or because there are "
+"multiple meals available for purchase for the office (not just lunch), and "
+"so on."
 msgstr ""
-"주문은 하루에도 여러 번 이루어질 수 있으며, 점심 주문을 하루에 하나만 주문해"
-"야 하는 것은 아닙니다. 주문은 여러 번 할 수 있으며 주문에 메뉴를 추가하는 것"
-"을 잊어버렸거나 사무실에서 식사 주문을 여러 번 할 수 있는 경우 (점심 포함 다"
-"른 식사 포함) 등이 있습니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:150
+#: ../../content/applications/hr/lunch/orders.rst:221
 msgid ""
 "Depending on the various vendors, and how the vendors and products are "
-"configured, it is possible to order breakfast, lunch, dinner, coffee, and/or "
+"configured, it is possible to order breakfast, lunch, dinner, coffee, and "
 "snacks."
 msgstr ""
-"다양한 공급업체와 업체 및 품목 설정 방식에 따라 아침, 점심, 저녁, 커피 또는 "
-"간식을 주문할 수 있습니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:154
+#: ../../content/applications/hr/lunch/orders.rst:225
+msgid "Cancel an order"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:227
+msgid ""
+"Orders can be cancelled at any time, as long as the orders have **not** been "
+"sent to the vendor. All orders that appear in the :guilabel:`Your Order` "
+"section can be cancelled. All orders that have been sent appear in "
+"the :guilabel:`Passed orders` section, and are ineligible for cancellation."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:231
+msgid ""
+"Orders can be cancelled in two ways, :ref:`individually <lunch/cancel-one>`, "
+"or :ref:`in bulk <lunch/cancel-all>`."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:235
+msgid ""
+"To check and ensure an order is cancelled, navigate to :menuselection:`Lunch "
+"app --> My Lunch --> My Order History`. A gray :guilabel:`Cancelled` icon "
+"appears next to any cancelled orders."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:241
+msgid "Cancel an individual item"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:243
+msgid ""
+"On the :guilabel:`Order Your Lunch` dashboard, click the :icon:`fa-"
+"minus` :guilabel:`(minus)` icon beneath the desired product in "
+"the :guilabel:`Your Order` section, until the quantity is zero. The order is "
+"cancelled, and the product disappears from the :guilabel:`Your Order` "
+"section."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:250
+msgid "Cancel all items"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:252
+msgid ""
+"All items in the :guilabel:`Your Order` section of the :guilabel:`Order Your "
+"Lunch` dashboard can be cancelled at one time. Click the :guilabel:`Clear "
+"Order` button at the bottom of the right-side of the dashboard, and all "
+"products are cancelled."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:257
 msgid "Submit an order"
 msgstr "주문서 제출"
 
-#: ../../content/applications/hr/lunch/orders.rst:156
+#: ../../content/applications/hr/lunch/orders.rst:259
 msgid ""
-"To place the order, click the :guilabel:`Order Now` button on the right-side "
-"of the :guilabel:`Your Order` summary. The user is charged the amount that "
-"is displayed in the :guilabel:`To Pay` field, and the cost is deducted from "
-"their **Lunch** account balance."
+"To place the order, click the :guilabel:`Order Now` button on the right side "
+"of the :guilabel:`Order Your Lunch` dashboard, located at the bottom. The "
+"user is charged the amount that is displayed in the :guilabel:`To Pay` "
+"field, and the cost is deducted from their **Lunch** account balance."
 msgstr ""
-"주문하려면 :guilabel:`내 주문` 요약 오른쪽에 있는 :guilabel:`지금 주문하기` "
-"버튼을 클릭합니다. :guilabel:`결제하기` 에 표시된 금액이 청구되며 **점심** 계"
-"정 잔액에서 해당 비용이 차감됩니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:160
+#: ../../content/applications/hr/lunch/orders.rst:263
 msgid ""
 "Once the order is placed, the tags for the purchased items in "
-"the :guilabel:`Your Order` field change from orange :guilabel:`To Order` "
-"tags to red :guilabel:`Ordered` tags."
+"the :guilabel:`Your Order` section change from gray :guilabel:`To Order` "
+"tags to purple :guilabel:`Ordered` tags."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:164
+#: ../../content/applications/hr/lunch/orders.rst:267
 msgid "Track an order"
 msgstr "주문 추적"
 
-#: ../../content/applications/hr/lunch/orders.rst:166
+#: ../../content/applications/hr/lunch/orders.rst:269
 msgid ""
-"When orders have been sent to the vendors, the tags for the items in "
-"the :guilabel:`Your Order` summary change from red :guilabel:`Ordered` tags "
-"to blue :guilabel:`Sent` tags."
+"When orders have been sent to the vendors, the products move to "
+"the :guilabel:`Passed orders` section, located on the right-side of "
+"the :guilabel:`Order Your Lunch` dashboard. All :guilabel:`Passed orders` "
+"are collapsed, by default. Click the :icon:`fa-chevron-"
+"down` :guilabel:`(expand)` icon and all past orders appear in their own "
+"Kanban card."
 msgstr ""
-"공급업체로 주문이 전송되면 :guilabel:`내 주문` 요약의 품목 태그가 빨간"
-"색 :guilabel:`주문 완료` 태그에서 파란색 :guilabel:`전송 완료` 태그로 변경됩"
-"니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:169
+#: ../../content/applications/hr/lunch/orders.rst:274
 msgid ""
-"Once orders have been received and verified, the tags change from "
-"blue :guilabel:`Sent` tags to green :guilabel:`Received` tags."
+"Each Kanban card displays the product name, cost, and delivery location and "
+"date for the product."
 msgstr ""
-"주문이 접수되고 확인이 완료되면 태그가 파란색 :guilabel:`전송 완료` 태그에서 "
-"초록색 :guilabel:`수령 완료` 태그로 변경됩니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:173
+#: ../../content/applications/hr/lunch/orders.rst:276
+msgid "Additionally, each Kanban card has one of the following status tags:"
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:278
+msgid ""
+":guilabel:`Ordered`: This tag appears in blue and indicates the order was "
+"sent to the vendor, but has not been received yet."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:280
+msgid ""
+":guilabel:`Received`: This tag appears in green, and indicates that the "
+"order has arrived at the location, and has been verified by the **Lunch** "
+"app administrator."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/orders.rst:284
 msgid "Receive an order"
 msgstr "주문 접수"
 
-#: ../../content/applications/hr/lunch/orders.rst:175
+#: ../../content/applications/hr/lunch/orders.rst:286
 msgid ""
-"When orders are received at the delivery location, they are confirmed by a "
-"**Lunch** app manager, and a notification is sent to the employee who "
-"ordered the food."
+"When orders are received at the delivery location, the **Lunch** app manager "
+"confirms them, and a notification is sent to the employee who ordered the "
+"food via email."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:179
+#: ../../content/applications/hr/lunch/orders.rst:290
 msgid "My Orders"
 msgstr "내 주문"
 
-#: ../../content/applications/hr/lunch/orders.rst:181
+#: ../../content/applications/hr/lunch/orders.rst:292
 msgid ""
 "To view a full list of all orders placed in the **Lunch** app for the "
 "currently signed-in user, navigate to :menuselection:`Lunch app --> My Lunch "
@@ -11910,7 +12090,7 @@ msgstr ""
 "를 :guilabel:`내 주문` 으로 설정하고 :guilabel:`주문일: 일` 을 그룹으로 하"
 "며, 두 조건 모두 검색창에서 기본값으로 지정되어 있습니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:186
+#: ../../content/applications/hr/lunch/orders.rst:297
 msgid ""
 "All products appear in a list view, organized by date. The list displays "
 "the :guilabel:`Order "
@@ -11924,50 +12104,51 @@ msgstr ""
 "`, :guilabel:`상태` 정보가 표시됩니다. 데이터베이스에 회사가 여러 개인 경우에"
 "는 :guilabel:`회사` 열도 나타납니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:191
+#: ../../content/applications/hr/lunch/orders.rst:302
 msgid ""
-"The total cost for each order is displayed on the line containing the order "
-"date. At the bottom of the list, beneath all the lines, the overall total "
-"amount paid for all the orders appears, under the :guilabel:`Price` column."
+"The total cost for each day's orders is displayed on the top line containing "
+"the order date. At the bottom of the list, beneath all the lines, the "
+"overall total amount paid for all the orders appears, under "
+"the :guilabel:`Price` column."
 msgstr ""
-"주문에 대한 총 비용은 주문일이 있는 줄에 표시됩니다. 목록 하단의 가장 아랫 줄"
-"에 모든 주문에 대해 결제한 전체 총액이 :guilabel:`가격` 열 아래에 표시됩니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:195
+#: ../../content/applications/hr/lunch/orders.rst:306
 msgid ""
-"At the end of each product line with a status of :guilabel:`Ordered` "
-"or :guilabel:`Sent`, an :guilabel:`X Cancel` button appears. "
-"Click :guilabel:`X Cancel` to cancel that product order. Once a product "
-"order has been cancelled, the money paid for that product is refunded, and "
-"appears in the user's account."
+"At the end of each product line with a status "
+"of :guilabel:`Ordered`, :guilabel:`To Order`, or :guilabel:`Sent`, "
+"a :icon:`fa-times` :guilabel:`Cancel` button appears. Click :icon:`fa-"
+"times` :guilabel:`Cancel` to cancel that product order. Once a product order "
+"has been cancelled, the money paid for that product is refunded and appears "
+"in the user's account."
 msgstr ""
-"품목 상태가 :guilabel:`주문 완료` 또는 :guilabel:`전송 완료` 인 경우에는 각 "
-"품목의 줄 끝에 :guilabel:`X 취소` 버튼이 나타납니다. 품목 주문을 취소하려"
-"면 :guilabel:`X 취소` 를 클릭합니다. 품목 주문이 취소된 후에는 해당 품목에 대"
-"한 결제 금액이 환불되며 사용자 계정에 표시됩니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:200
+#: ../../content/applications/hr/lunch/orders.rst:311
 msgid ""
 "At the end of each product line with a status of :guilabel:`Received`, "
-"a :guilabel:`Re-order` button appears. Click :guilabel:`Re-order` to "
-"instantly reorder that same product, with the same extras, if applicable. "
-"The new order appears in the list, under the current date, and the product "
-"is paid for, with money deducted from the user's account."
+"a :icon:`fa-history` :guilabel:`Re-order` button appears. Click :icon:`fa-"
+"history` :guilabel:`Re-order` to instantly reorder that same product, with "
+"the same extras, if applicable. The new order appears in the list, under the "
+"current date, and the product is paid for, with money deducted from the "
+"user's account."
 msgstr ""
-":guilabel:`수령 완료` 상태인 품목의 줄 끝에는 :guilabel:`재주문` 버튼이 나타"
-"납니다. :guilabel:`재주문` 을 클릭하면 동일한 품목을 같은 추가 항목과 함께 즉"
-"시 재주문합니다. 목록의 현재 날짜 아래에 새로운 주문이 표시되고 결제를 위해 "
-"사용자 계정에서 금액이 차감됩니다."
+
+#: ../../content/applications/hr/lunch/orders.rst:316
+msgid ""
+"Any order with a status of :guilabel:`Cancelled` has a :icon:`fa-"
+"undo` :guilabel:`Reset` button at the end of the line. To un-cancel and "
+"order, click the :icon:`fa-undo` :guilabel:`Reset` button, and the product "
+"status changes to :guilabel:`Ordered`."
+msgstr ""
 
 #: ../../content/applications/hr/lunch/orders.rst:None
 msgid "The list view that appears when navigating to the My Orders dashboard."
 msgstr "내 주문 현황판으로 이동하면 나타나는 목록 보기"
 
-#: ../../content/applications/hr/lunch/orders.rst:209
+#: ../../content/applications/hr/lunch/orders.rst:324
 msgid "My Account"
 msgstr "내 계정"
 
-#: ../../content/applications/hr/lunch/orders.rst:211
+#: ../../content/applications/hr/lunch/orders.rst:326
 msgid ""
 "To view a summary of all transactions in the user's account, navigate "
 "to :menuselection:`Lunch app --> My Lunch --> My Account History`. Doing so "
@@ -11977,7 +12158,7 @@ msgstr ""
 "내 점심 --> 내 계정 이력` 으로 이동합니다. 그러면 :guilabel:`내 계정` 현황판"
 "이 표시됩니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:214
+#: ../../content/applications/hr/lunch/orders.rst:329
 msgid ""
 "The default presentation of the :guilabel:`My Account` dashboard displays "
 "all entries, from newest to oldest. "
@@ -11988,14 +12169,14 @@ msgstr ""
 "로 모든 항목이 표시됩니다. 목록에서는 :guilabel:`날짜`, :guilabel:`설명` "
 "및 :guilabel:`금액` 만 표시됩니다."
 
-#: ../../content/applications/hr/lunch/orders.rst:218
+#: ../../content/applications/hr/lunch/orders.rst:333
 msgid ""
 "Entries with a negative figure listed in the :guilabel:`Amount` column "
 "represent products purchased in the **Lunch** app. These appear in a `$-"
 "XX.XX` format."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/orders.rst:221
+#: ../../content/applications/hr/lunch/orders.rst:336
 msgid ""
 "Entries with a positive balance either represent funds added to the user's "
 "lunch account, or cancelled orders that were eventually refunded to the "
@@ -12154,32 +12335,20 @@ msgstr "사용자 계정 관리"
 msgid ""
 "In Odoo's **Lunch** application, users pay for products directly from their "
 "**Lunch** app account. For funds to appear in their account, a **Lunch** app "
-"manager **must** transfer funds into each user's account."
+"manager must transfer funds into each user's account."
 msgstr ""
 
 #: ../../content/applications/hr/lunch/user-accounts.rst:10
 msgid ""
-"To add funds and manage user accounts, the user must "
-"have :guilabel:`Administrator` access rights set for the **Lunch** "
-"application. This is verified by navigating to :menuselection:`Settings app "
-"-->` :icon:`oi-arrow-right` :guilabel:`Manage Users`. Then, click on a user "
-"to view their various settings and access rights."
+"To add funds and manage user accounts, the user must have "
+"*Administrator* :doc:`access rights <../../general/users/access_rights/>` "
+"for the **Lunch** application. Access rights can be managed by navigating to "
+"the :menuselection:`Settings app` app and clicking :icon:`oi-arrow-"
+"right` :guilabel:`Manage Users`. Click on a user to view their individual "
+"access rights."
 msgstr ""
-"금액을 추가하고 사용자 계정을 관리하려면 **점심** 애플리케이션의 액세스 권한"
-"이 :guilabel:`관리자` 로 설정되어 있어야 합니다. 권한은 :menuselection:`설정 "
-"앱 --> :icon:`oi-arrow-right` :guilabel:`사용자 관리` 에서 확인할 수 있습니"
-"다. 그런 다음 사용자를 클릭하면 다양한 설정과 액세스 권한 내용을 확인할 수 있"
-"습니다."
 
 #: ../../content/applications/hr/lunch/user-accounts.rst:15
-msgid ""
-"For more information, refer to the :doc:`Access rights <../../general/users/"
-"access_rights/>` documentation."
-msgstr ""
-"자세한 내용은 :doc:`액세스 권한 <../../general/users/access_rights/>` 문서를 "
-"참조하세요."
-
-#: ../../content/applications/hr/lunch/user-accounts.rst:18
 msgid ""
 "The **Lunch** application does **not** directly interface in any way with "
 "software or products linked to any monetary accounts or billing. Money "
@@ -12187,7 +12356,7 @@ msgid ""
 "cards be charged."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:22
+#: ../../content/applications/hr/lunch/user-accounts.rst:19
 msgid ""
 "Odoo's **Lunch** application **only** allows for manual entries of cash "
 "exchanges that are handled by the **Lunch** app manager. It is up to each "
@@ -12195,38 +12364,38 @@ msgid ""
 "replenished."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:27
+#: ../../content/applications/hr/lunch/user-accounts.rst:24
 msgid ""
 "Some examples of how money can be organized and transferred within a company:"
 msgstr ""
 "다음은 회사 내에서 자금을 정산하고 이체하는 방법에 대한 몇 가지 예시입니다."
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:29
+#: ../../content/applications/hr/lunch/user-accounts.rst:26
 msgid ""
 "Cash is handed to the **Lunch** app manager, who then updates the user's "
 "account."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:30
+#: ../../content/applications/hr/lunch/user-accounts.rst:27
 msgid ""
 "Money is automatically deducted from the user's paychecks, then the "
 "**Lunch** app manager updates the account when paychecks are issued. This "
 "requires :ref:`adding a salary attachment <payroll/worked-days-inputs>` for "
-"the user's payslip in the *Payroll* app."
+"the user's payslip in the **Payroll** app."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:33
+#: ../../content/applications/hr/lunch/user-accounts.rst:30
 msgid ""
 "Companies can sell \"lunch tickets\" at a set price (for example, one ticket "
 "costs $5.00). Users can purchase tickets from a **Lunch** app manager, who "
 "then updates the user's account."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:39
+#: ../../content/applications/hr/lunch/user-accounts.rst:36
 msgid "Cash Moves"
 msgstr "이체"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:41
+#: ../../content/applications/hr/lunch/user-accounts.rst:38
 msgid ""
 "To add funds to user accounts, each cash move must be individually logged. "
 "To view all cash move records, or create a new cash move, navigate "
@@ -12238,7 +12407,7 @@ msgstr ""
 "면 :menuselection:`점심 앱 --> 관리자 --> 현금 작업` 으로 이동합니다. 그러"
 "면 :guilabel:`현금 작업` 현황판이 표시됩니다."
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:45
+#: ../../content/applications/hr/lunch/user-accounts.rst:42
 msgid ""
 "On the :guilabel:`Cash Moves` dashboard, all cash moves are presented in a "
 "default list view, displaying each "
@@ -12255,11 +12424,11 @@ msgstr ""
 msgid "The list view of all cash moves."
 msgstr "모든 현금 작업의 목록 보기"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:54
+#: ../../content/applications/hr/lunch/user-accounts.rst:51
 msgid "Add funds"
 msgstr "금액 추가하기"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:56
+#: ../../content/applications/hr/lunch/user-accounts.rst:53
 msgid ""
 "To add funds to a lunch account, click the :guilabel:`New` button, located "
 "in the top-left corner of the :guilabel:`Cash Moves` dashboard."
@@ -12267,108 +12436,96 @@ msgstr ""
 "점심 계정에 금액을 추가하려면 :guilabel:`현금 작업` 현황판의 왼쪽 상단에 있"
 "는 :guilabel:`새로 만들기` 버튼을 클릭합니다."
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:59
+#: ../../content/applications/hr/lunch/user-accounts.rst:56
 msgid ""
 "A blank :guilabel:`Cash Moves` form loads. Enter the following information "
 "on the form:"
 msgstr ""
 "빈 :guilabel:`현금 작업` 양식이 로드됩니다. 양식에 다음 정보를 입력합니다."
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:61
+#: ../../content/applications/hr/lunch/user-accounts.rst:58
 msgid ""
-":guilabel:`User`: select the user depositing cash into their account from "
+":guilabel:`User`: Select the user depositing cash into their account from "
 "the drop-down menu. If the user is not in the database, they can be created "
 "by typing their name in the :guilabel:`User` field, and clicking "
 "either :guilabel:`Create \"user\"` or :guilabel:`Create and edit...` to "
 "create the user and edit the :guilabel:`Create User` form."
 msgstr ""
-":guilabel:`사용자`: 드롭다운 메뉴에서 계정에 현금을 충전할 사용자를 선택합니"
-"다. 데이터베이스에 사용자가 없는 경우에는 :guilabel:`사용자` 필드에 이름을 입"
-"력하고 :guilabel:`\"사용자\" 만들기` 또는 :guilabel:`만들기 및 편집...` 을 클"
-"릭하여 사용자를 생성한 후 :guilabel:`사용자 만들기` 양식을 편집합니다."
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:65
+#: ../../content/applications/hr/lunch/user-accounts.rst:62
 msgid ""
-":guilabel:`Date`: using the calendar popover, select the date the "
-"transaction occurred."
+":guilabel:`Date`: Select the date the transaction occurred using the "
+"calendar popover."
 msgstr ""
-":guilabel:`날짜`: 달력 팝오버를 사용하여 거래가 발생한 날짜를 선택합니다."
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:66
-msgid ":guilabel:`Amount`: enter the amount being added to the lunch account."
-msgstr ":guilabel:`금액`: 점심 계정에 추가될 금액을 입력합니다."
+#: ../../content/applications/hr/lunch/user-accounts.rst:63
+msgid ":guilabel:`Amount`: Enter the amount being added to the lunch account."
+msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:67
-msgid ":guilabel:`Description`: enter a brief description of the transaction."
-msgstr ":guilabel:`설명`: 발생하는 건에 대해 간략하게 설명을 입력합니다."
+#: ../../content/applications/hr/lunch/user-accounts.rst:64
+msgid ":guilabel:`Description`: Enter a brief description of the transaction."
+msgstr ""
 
 #: ../../content/applications/hr/lunch/user-accounts.rst:None
-msgid "The cash move form filled out for a transaction of $40.00."
-msgstr "$40.00 금액에 해당하는 건에 대해 작성된 현금 작업 양식"
+msgid "The cash move form filled out for a transaction of $25.00."
+msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:73
+#: ../../content/applications/hr/lunch/user-accounts.rst:70
 msgid "Control Accounts"
 msgstr "계정 관리"
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:75
+#: ../../content/applications/hr/lunch/user-accounts.rst:72
 msgid ""
-"An overview of every transaction in the **Lunch** app, including all cash "
-"deposits and purchases, can be viewed on the main *Control Accounts* "
-"dashboard. To access this dashboard, navigate to :menuselection:`Lunch app --"
-"> Manager --> Control Accounts.`"
+"The main *Control Accounts* dashboard provides an overview of every "
+"transaction in the **Lunch** app, including all cash deposits and purchases. "
+"To access this dashboard, navigate to :menuselection:`Lunch app --> Manager "
+"--> Control Accounts.`"
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:79
+#: ../../content/applications/hr/lunch/user-accounts.rst:76
 msgid ""
-"All transactions are grouped :guilabel:`By Employee`, and listed "
-"alphabetically by the user's first name. At the end of the user's name, a "
-"number appears. This indicates the number of individual records logged for "
-"that user."
-msgstr ""
-"모든 거래는 :guilabel:`직원별` 그룹으로 사용자 이름을 기준으로 알파벳순으로 "
-"표시됩니다. 사용자 이름 끝에는 숫자가 표시되어 있습니다. 이 숫자는 해당 사용"
-"자에 대한 개별 기록 수를 의미합니다."
-
-#: ../../content/applications/hr/lunch/user-accounts.rst:83
-msgid ""
-"The default view is to have all individual transactions hidden. To view all "
-"transactions for a user, click the :icon:`fa-caret-"
-"right` :guilabel:`(triangle)` icon to the left of the desired name to expand "
-"that specific group."
+"Transactions are grouped :guilabel:`By Employee`, and listed alphabetically "
+"by the user's first name. Their available balance is displayed in "
+"the :guilabel:`Amount` column. This takes into account all deposits and "
+"transactions to their lunch account."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:87
+#: ../../content/applications/hr/lunch/user-accounts.rst:80
 msgid ""
-"Each record includes "
-"the :guilabel:`Date`, :guilabel:`User`, :guilabel:`Description`, "
+"Individual transactions are hidden in the default view. To view all "
+"transactions for a specific user, click the :icon:`fa-caret-"
+"right` :guilabel:`(triangle)` icon to the left of their name to expand the "
+"full list of transactions associated with their lunch account."
+msgstr ""
+
+#: ../../content/applications/hr/lunch/user-accounts.rst:84
+msgid ""
+"Each line includes the "
+"transaction :guilabel:`Date`, :guilabel:`User`, :guilabel:`Description`, "
 "and :guilabel:`Amount`."
 msgstr ""
-"각 레코드에는 :guilabel:`날짜`, :guilabel:`사용자`, :guilabel:`설명` "
-"및 :guilabel:`금액` 등이 있습니다."
 
 #: ../../content/applications/hr/lunch/user-accounts.rst:None
 msgid ""
 "The Control Accounts dashboard with two employee's transactions expanded."
 msgstr "직원 두 명의 주문 건에 대한 내역이 펼쳐져 있는 계정 관리 현황판"
 
+#: ../../content/applications/hr/lunch/user-accounts.rst:91
+msgid ""
+"The :guilabel:`Control Accounts` dashboard is a view-only list of "
+"transactions within the **Lunch** app, and does **not** allow modifications "
+"to be made to any records listed."
+msgstr ""
+
 #: ../../content/applications/hr/lunch/user-accounts.rst:94
 msgid ""
-"This list only displays the various transactions within the **Lunch** app, "
-"and does **not** allow modifications to be made to any records listed."
+"Cash moves can be modified through the :ref:`Cash Moves <lunch/cash-moves>` "
+"dashboard, only."
 msgstr ""
 
-#: ../../content/applications/hr/lunch/user-accounts.rst:97
-msgid ""
-"Cash moves can be modified, but **only** from the :ref:`Cash Moves <lunch/"
-"cash-moves>` dashboard, not from the :guilabel:`Control Accounts` dashboard."
+#: ../../content/applications/hr/lunch/user-accounts.rst:96
+msgid "Product-related records **cannot** be modified."
 msgstr ""
-"현금 작업을 수정할 수는 있으나 **오직** :ref:`현금 작업 <lunch/cash-moves>` "
-"현황판에서만 수정할 수 있으며 :guilabel:`계정 관리` 현황판에서는 수정할 수 없"
-"습니다."
-
-#: ../../content/applications/hr/lunch/user-accounts.rst:100
-msgid "It is **not** possible to modify any product-related records."
-msgstr "품목과 관련된 기록은 수정을 할 수 **없습니다**."
 
 #: ../../content/applications/hr/lunch/vendors.rst:3
 msgid "Vendors"
@@ -16575,6 +16732,15 @@ msgstr "벨기에"
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:8
 msgid "Understanding the Belgian payslip"
 msgstr "벨기에 급여명세서에 대한 이해"
+
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:11
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:231
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:428
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:862
+#: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1365
+#: ../../content/applications/hr/time_off.rst:529
+msgid "Overview"
+msgstr "전체보기"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:13
 msgid ""
@@ -39273,6 +39439,10 @@ msgid ":doc:`referrals/referral_analysis`"
 msgstr ":doc:`referrals/referral_analysis`"
 
 #: ../../content/applications/hr/referrals.rst:256
+msgid ":doc:`referrals/rewards_report`"
+msgstr ""
+
+#: ../../content/applications/hr/referrals.rst:257
 msgid ":doc:`referrals/points_report`"
 msgstr ":doc:`referrals/points_report`"
 
@@ -40104,6 +40274,60 @@ msgstr ""
 "머그컵과 백팩 리워드 상품 아래에 구매 버튼이 있으며, 자전거 리워드 상품을 구"
 "매하려면\n"
 "포인트가 얼마나 더 있어야 하는지 표시되어 있습니다."
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:3
+msgid "Rewards report"
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:5
+msgid ""
+"In the **Referrals** app, it is possible to view a report of the rewards "
+"that employees have redeemed. This can help determine the most popular "
+"rewards and which rewards employees do not request."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:9
+msgid ""
+"Incentivizing employees to recruit highly qualified applicants is aided by "
+"offering :doc:`rewards <rewards>` that entice employees to earn points. "
+"Additionally, it can be helpful for the **Referrals** app administrator to "
+"see what rewards are popular, to ensure a stock of highly sought-after "
+"rewards is always available."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:15
+msgid "Reward analysis"
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:17
+msgid ""
+"To view the *Reward Analysis* report, navigate to :menuselection:`Referrals "
+"app --> Reporting --> Rewards`. This opens the :guilabel:`Reward Analysis` "
+"report in a default stacked (:icon:`fa-database`) bar chart (:icon:`fa-bar-"
+"chart`)."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:21
+msgid ""
+"The X-axis is populated with the various rewards, while the Y-axis is "
+"populated with the number of rewards redeemed by employees. All employees "
+"who have redeemed rewards appear in their own identifying color."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:25
+msgid ""
+"This report shows that :guilabel:`Chocolate Covered Nuts` are the most "
+"desired reward, with 23 distributed to employees. It can also be determined "
+"that employees do not often request "
+"the :guilabel:`Sweatshirt`, :guilabel:`Backpack`, :guilabel:`Tablet`, "
+"and :guilabel:`Electric Bicycle`; therefore, inventory for those items does "
+"not need to be as high as the :guilabel:`Chocolate Covered Nuts`."
+msgstr ""
+
+#: ../../content/applications/hr/referrals/rewards_report.rst:None
+msgid ""
+"The rewards report showing the chocolate covered nuts as the most requested."
+msgstr ""
 
 #: ../../content/applications/hr/referrals/share_jobs.rst:3
 msgid "Share job positions"
@@ -43322,6 +43546,500 @@ msgstr ""
 msgid ""
 "A time off request form filled out for an employee home sick with the flu."
 msgstr ""
+
+#~ msgid ""
+#~ "To see what access rights a user has, navigate to "
+#~ "the :menuselection:`Settings app --> Users & Companies --> Users`, and "
+#~ "click on an individual user. The :guilabel:`Access Rights` tab is visible "
+#~ "by default. Scroll down to the :guilabel:`HUMAN RESOURCES` section to "
+#~ "view the settings. For the :guilabel:`Attendances` field, the options are "
+#~ "either to leave the field blank or select :guilabel:`Administrator`."
+#~ msgstr ""
+#~ "사용자에게 어떤 액세스 권한이 있는지 확인하려면 :menuselection:`설정 앱 --"
+#~ "> 사용자 및 회사: 사용자` 로 이동하여 개별 사용자를 클릭합니"
+#~ "다. :guilabel:`액세스 권한` 탭이 기본값으로 표시됩니다. :guilabel:`인적 자"
+#~ "원` 섹션까지 아래로 스크롤을 이동하면 설정된 내용을 볼 수 있습니"
+#~ "다. :guilabel:`근태` 필드의 경우 비워두거나 :guilabel:`관리자` 를 선택합니"
+#~ "다."
+
+#~ msgid ""
+#~ "If the :guilabel:`Administrator` option is selected, the user has full "
+#~ "access to the entire **Attendances** application, with no restrictions. "
+#~ "They can view all employee attendance records, enter *Kiosk Mode* from "
+#~ "the application, access all reporting metrics, and make modifications to "
+#~ "the settings. If left blank, the user does **not** have access to the "
+#~ "**Attendances** application."
+#~ msgstr ""
+#~ ":guilabel:`관리자` 를 선택할 경우 사용자는 제한 없이 전체 **근태** 애플리"
+#~ "케이션에 대한 액세스 권한을 모두 갖게 됩니다. 모든 직원 근태 기록을 확인"
+#~ "할 수 있으며, 애플리케이션에서 *키오스크 모드* 를 입력하거나, 모든 보고 지"
+#~ "표에 액세스할 수 있으며, 설정 항목을 수정할 수 있습니다. 비워둘 경우에는 "
+#~ "사용자가 **근태** 애플리케이션에 액세스할 수 **없습니다**."
+
+#~ msgid ""
+#~ "Few configurations are needed in the **Attendances** app. Determining how "
+#~ "employees check in and out, defining how the kiosks function, and "
+#~ "determining how extra hours are computed are all set in the Configuration "
+#~ "menu. Navigate to the :menuselection:`Attendances application --> "
+#~ "Configuration` to access the configuration menu."
+#~ msgstr ""
+#~ "**근태** 앱은 별도로 환경설정해야 하는 항목이 거의 없습니다. 직원이 체크"
+#~ "인 및 체크아웃으로 출퇴근 처리를 하는 방법에 대한 지정 내용이나, 키오스크 "
+#~ "작동 방법에 대한 정의, 추가 시간을 계산하는 방법 등이 환경설정 메뉴에서 이"
+#~ "미 설정되어 있습니다. :menuselection:`근태 애플리케이션 --> 환경설정` 으"
+#~ "로 이동하여 환경설정 메뉴를 확인해 보세요."
+
+#~ msgid ""
+#~ "The **Attendance** dashboard allows switching between :icon:`fa-"
+#~ "tasks` :guilabel:`(Gantt)` and :icon:`oi-view-list` :guilabel:`(List)` "
+#~ "views, and selecting a period to analyze. The current period is "
+#~ "automatically highlighted in yellow for real-time attendance records, "
+#~ "while the :icon:`fa-crosshairs` :guilabel:`(Focus Today)` button "
+#~ "instantly returns the dashboard to the present date."
+#~ msgstr ""
+#~ "**근태** 현황판에서는 :icon:`fa-tasks` :guilabel:`(간트)` 보기 "
+#~ "및 :icon:`oi-view-list` :guilabel:`(목록)` 보기 사이에 전환이 가능하며, 분"
+#~ "석할 기간을 선택할 수 있습니다. 현재 기간은 실시간 근태 기록을 할 수 있도"
+#~ "록 자동으로 노란색으로 강조 표시되며, :icon:`fa-crosshairs` :guilabel:`(오"
+#~ "늘)` 버튼을 누르면 현황판이 즉시 현재 날짜로 돌아갑니다."
+
+#~ msgid ":doc:`../essentials/search`"
+#~ msgstr ":doc:`../essentials/search`"
+
+#~ msgid "Review individual attendance records during a 1:1 meeting."
+#~ msgstr "1:1 미팅에서 개별 근태 기록을 검토합니다."
+
+#~ msgid "The detailed attendance log contains the following information:"
+#~ msgstr "근태 로그 세부 정보에는 다음의 내용이 포함되어 있습니다."
+
+#~ msgid "Main details"
+#~ msgstr "주요 세부 정보"
+
+#~ msgid ""
+#~ "The following information appears for both the :guilabel:`Check In` "
+#~ "and :guilabel:`Check Out` sections."
+#~ msgstr ""
+#~ "다음 정보는 :guilabel:`체크인` 및 :guilabel:`체크아웃` 섹션에서 모두 표시"
+#~ "됩니다."
+
+#~ msgid ""
+#~ "To fix the error, the attendance entry must be modified or deleted. Click "
+#~ "on the entry to reveal a pop-up containing the details for that "
+#~ "particular entry. To modify the :guilabel:`Check In` and/"
+#~ "or :guilabel:`Check Out` information, click on the :guilabel:`Check In` "
+#~ "or :guilabel:`Check Out` field, and a calendar selector appears. Click on "
+#~ "the desired date, then use the time selector beneath the calendar to "
+#~ "select the specific time for the entry. When the information is correct, "
+#~ "click :guilabel:`Apply.`"
+#~ msgstr ""
+#~ "오류를 수정하려면 근태 항목을 수정하거나 삭제해야 합니다. 해당하는 항목을 "
+#~ "클릭하면 항목에 대한 세부 정보가 팝업창으로 표시됩니다. :guilabel:`체크인"
+#~ "` 이나 :guilabel:`체크아웃` 정보를 수정하려면 :guilabel:`체크인` 또"
+#~ "는 :guilabel:`체크아웃` 필드를 클릭하여 달력 선택기를 표시합니다. 원하는 "
+#~ "날짜를 클릭한 다음 달력 아래의 시간 선택기를 사용하여 해당 항목에 정확한 "
+#~ "시간을 선택합니다. 내용이 모두 정확한지 확인한 후 :guilabel:`적용` 을 클릭"
+#~ "합니다."
+
+#~ msgid ""
+#~ "To present different information, adjust the :ref:`filters and groups "
+#~ "<attendances/filters-groups>` in the same way as in "
+#~ "the :guilabel:`Overview` dashboard."
+#~ msgstr ""
+#~ "다른 정보를 표시하려면 :ref:`필터 및 그룹 <attendances/filters-groups>` "
+#~ "을 :guilabel:`개요` 현황판에서와 동일한 방식으로 조정합니다."
+
+#~ msgid ""
+#~ ":guilabel:`Lunch Overdraft`: enter the maximum overdraft amount for "
+#~ "employees. The currency format is determined by the localization setting "
+#~ "of the company."
+#~ msgstr ""
+#~ ":guilabel:`점심 초과 금액`: 직원의 최대 초과 금액을 입력합니다. 통화 형식"
+#~ "은 회사의 현지화 설정에 따라 정해집니다."
+
+#~ msgid ""
+#~ "The following is an example for the :guilabel:`Reception notification` "
+#~ "field in the settings menu:"
+#~ msgstr "다음은 설정 메뉴에 있는 :guilabel:`수신 알림` 의 예시입니다."
+
+#~ msgid ""
+#~ "Navigate to :menuselection:`Lunch app --> Configuration --> Settings`. "
+#~ "Click the :guilabel:`EN` In the top-right of the text box beneath "
+#~ "the :guilabel:`Reception notification` section. A :guilabel:`Translate: "
+#~ "company_lunch_notify_message` pop-up window loads with the option to "
+#~ "enter a translation for the other languages used by the database."
+#~ msgstr ""
+#~ ":menuselection:`점심 앱 --> 환경설정 --> 설정` 으로 이동합니"
+#~ "다. :guilabel:`수신 알림` 섹션 아래 텍스트 상자의 오른쪽 위에 있"
+#~ "는 :guilabel:`EN` 을 클릭합니다. :guilabel:`번역: "
+#~ "company_lunch_notify_message` 팝업 창으로 데이터베이스에 있는 다른 언어에 "
+#~ "대한 번역 입력 옵션이 함께 로드됩니다."
+
+#~ msgid ""
+#~ "The translation text box, with the current language highlighted, and the "
+#~ "Arabic\n"
+#~ "translation field highlighted."
+#~ msgstr ""
+#~ "번역 텍스트 상자에서 현재 언어가 강조 표시되고 아랍어 번역 필드가 강조 표"
+#~ "시되어 있는 모습"
+
+#~ msgid ""
+#~ ":guilabel:`Recipients`: this field only appears if :guilabel:`Chat "
+#~ "notification` is selected for the :guilabel:`Display` option. Select who "
+#~ "receives the chat alert. The options "
+#~ "are: :guilabel:`Everyone`, :guilabel:`Employee who ordered last "
+#~ "week`, :guilabel:`Employee who ordered last month`, "
+#~ "or :guilabel:`Employee who ordered last year`."
+#~ msgstr ""
+#~ ":guilabel:`수신자`: :guilabel:`표시` 항목 선택 사항으로 :guilabel:`채팅 알"
+#~ "림` 을 선택한 경우에만 나타납니다. 채팅 알림을 받을 사람을 선택합니다. 수"
+#~ "신 대상을 :guilabel:`모든 사람`, :guilabel:`지난주에 주문한 직원"
+#~ "`, :guilabel:`지난달에 주문한 직원` 또는 :guilabel:`작년에 주문한 직원` 중"
+#~ "에서 선택할 수 있습니다."
+
+#~ msgid ""
+#~ ":guilabel:`Location`: select the locations the alert should appear for "
+#~ "from the drop-down menu. Multiple locations can be selected. This field "
+#~ "is **required**, therefore, if the alert applies to all locations, select "
+#~ "all the locations from the drop-down menu."
+#~ msgstr ""
+#~ ":guilabel:`위치`: 알림이 표시될 위치를 드롭다운 메뉴에서 선택합니다. 위치"
+#~ "는 여러 곳을 선택할 수 있습니다. 입력 **필수** 항목이므로, 모든 위치에 알"
+#~ "림이 적용되게 할 경우 드롭다운 메뉴에서 모든 위치를 선택합니다."
+
+#~ msgid ""
+#~ ":guilabel:`Show Until`: if the alert should expire on a specific date, "
+#~ "select the date from the calendar picker."
+#~ msgstr ""
+#~ ":guilabel:`다음까지 표시`: 특정일에 알림이 만료되게 하려면 달력 선택기에"
+#~ "서 날짜를 선택합니다."
+
+#~ msgid ""
+#~ ":guilabel:`Active`: this option is on (appears green) by default. To turn "
+#~ "off the alert, click the toggle so that it no longer appears green."
+#~ msgstr ""
+#~ ":guilabel:`활성화`: 기본적으로 켜져 있습니다 (초록색으로 표시). 알림을 해"
+#~ "제하려면 토글을 클릭하며 더 이상 초록색으로 표시되지 않습니다."
+
+#~ msgid ""
+#~ ":guilabel:`Notification Time`: select the days of the week the alert "
+#~ "should be sent. By default, all seven days are active. Click on a "
+#~ "checkbox to change the setting from active to inactive."
+#~ msgstr ""
+#~ ":guilabel:`알림 시간`: 알림이 전송될 요일을 선택합니다. 기본적으로 7일이 "
+#~ "모두 활성화되어 있습니다. 활성에서 비활성 상태로 설정을 변경하려면 확인란"
+#~ "을 클릭합니다."
+
+#~ msgid ""
+#~ "If :guilabel:`Chat notification` was selected for the :guilabel:`Display` "
+#~ "option, a :guilabel:`Time` field also appears. Enter the time the chat "
+#~ "message should be sent. Next, select if the time is either :guilabel:`AM` "
+#~ "or :guilabel:`PM` using the drop-down menu to the right of "
+#~ "the :guilabel:`Time` field."
+#~ msgstr ""
+#~ ":guilabel:`표시` 기능으로 :guilabel:`채팅 알림` 을 선택한 경우에"
+#~ "는 :guilabel:`시간` 항목도 같이 나타납니다. 채팅 메시지를 보낼 시간을 입력"
+#~ "합니다. 그 다음, :guilabel:`시간` 오른쪽에 있는 드롭다운 메뉴를 사용하여 "
+#~ "시간이 :guilabel:`AM` 또는 :guilabel:`PM` 중에서 선택합니다."
+
+#~ msgid ""
+#~ "On the main :guilabel:`Order Your Lunch` dashboard, all the necessary "
+#~ "information needed to place an order is visible. Enable "
+#~ "the :guilabel:`Available Today` filter in the search bar by clicking into "
+#~ "the search bar and selecting :guilabel:`Available Today`. This filter "
+#~ "shows only products that can be purchased that day, based on "
+#~ "the :ref:`vendor's availability <lunch/availability>`."
+#~ msgstr ""
+#~ ":guilabel:`점심 주문` 기본 현황판에는 주문할 때 필요한 모든 정보가 나타나 "
+#~ "있습니다. :guilabel:`오늘 주문 가능` 한 메뉴는 검색 창을 클릭한 "
+#~ "후 :guilabel:`오늘 주문 가능` 필터를 활성화하면 확인할 수 있습니다. 이 필"
+#~ "터를 설정하면 :ref:`공급업체의 가능 여부 <lunch/availability>` 에 따라 해"
+#~ "당 날짜에 주문할 수 있는 메뉴만 표시됩니다."
+
+#~ msgid ""
+#~ "The left-side of the dashboard displays the "
+#~ "various :guilabel:`Categories` of products available, along with "
+#~ "the :guilabel:`Vendors` supplying the products. To the right of each line "
+#~ "is a number, which indicates how many products are associated with that "
+#~ "respective category or vendor."
+#~ msgstr ""
+#~ "현황판 왼쪽에는 선택할 수 있는 다양한 품목 :guilabel:`카테고리` 가 납품을 "
+#~ "담당하는 :guilabel:`공급업체` 와 함께 표시됩니다. 각 줄의 오른쪽에는 카테"
+#~ "고리 또는 공급업체와 연관된 품목 수를 나타내는 숫자가 표시됩니다."
+
+#~ msgid ""
+#~ "To filter the products by categories or vendors, tick the checkbox next "
+#~ "to the desired category or vendor to only view items related to those "
+#~ "selections. Multiple selections can be made in each section."
+#~ msgstr ""
+#~ "카테고리나 공급업체별로 품목을 필터하려면, 선택한 조건과 관련된 항목만 보"
+#~ "이도록 카테고리 또는 공급업체 옆에 있는 확인란을 선택합니다. 각 섹션에서 "
+#~ "여러 개 항목을 선택할 수 있습니다."
+
+#~ msgid ""
+#~ "The top portion of the dashboard, which serves as an order summary, "
+#~ "displays the user's account information, and the order details for today, "
+#~ "if any orders have been placed."
+#~ msgstr ""
+#~ "현황판의 상단에서 주문에 대한 요약을 확인할 수 있으며 사용자의 계정 정보"
+#~ "와 함께 주문을 한 경우 오늘의 주문 세부 정보가 표시됩니다."
+
+#~ msgid ""
+#~ "The main section, beneath the user's information, displays all the "
+#~ "products in a default Kanban view. Each product card displays the name, "
+#~ "cost, vendor, photo, and description of the product. If the product is "
+#~ "configured as new, it also displays a :guilabel:`New` tag."
+#~ msgstr ""
+#~ "사용자 정보 아래에 있는 기본 섹션에 모든 품목이 기본 칸반 보기로 표시됩니"
+#~ "다. 품목 카드에는 품목명, 가격, 공급업체, 사진 및 설명이 나타나 있습니다. "
+#~ "새로운 품목을 환경 설정한 경우에는 :guilabel:`신규` 태그가 표시됩니다."
+
+#~ msgid ""
+#~ "From the :guilabel:`Order Your Lunch` dashboard, click on a desired "
+#~ "product to add to an order, and the product appears in "
+#~ "a :guilabel:`Configure Your Order` pop-up window."
+#~ msgstr ""
+#~ ":guilabel:`점심 주문하기` 현황판에서 주문에 추가할 메뉴를 클릭하면 해당 품"
+#~ "목이 :guilabel:`주문 환경 설정` 팝업 창에 나타납니다."
+
+#~ msgid ""
+#~ "At the top of the pop-up window is the product image, name, and price. "
+#~ "Beneath that, there are potential :guilabel:`Extras` fields, showcasing "
+#~ "any :ref:`extra items or options <lunch/extras>`, such as toppings or "
+#~ "drinks. Tick the checkbox next to any desired extras present in "
+#~ "the :guilabel:`Extras` fields to add them to the order."
+#~ msgstr ""
+#~ "팝업창 상단에 품목 이미지와 이름, 가격이 표시되어 있습니다. 그 아래에는 선"
+#~ "택 항목인 :guilabel:`추가` 필드가 있으며 토핑이나 음료와 같이 :ref:`추가 "
+#~ "항목 또는 선택 메뉴 <lunch/extras>` 가 있는 경우 표시할 수 있습니다. 주문"
+#~ "에 추가하려면 :guilabel:`추가` 필드의 추가 항목 옆에 있는 확인란을 선택합"
+#~ "니다."
+
+#~ msgid ""
+#~ "Beneath the :guilabel:`Extras` field is the :guilabel:`Description` of "
+#~ "the product, followed by a :guilabel:`Notes` field. The :guilabel:`Notes` "
+#~ "field is used to enter any vital information, which is then sent to the "
+#~ "vendor regarding the order, such as any special requests or food "
+#~ "allergies."
+#~ msgstr ""
+#~ ":guilabel:`추가` 필드 아래에는 품목 :guilabel:`설명` 과 함께 뒤이"
+#~ "어 :guilabel:`메모` 필드가 있습니다. :guilabel:`메모` 필드에는 특별 요청이"
+#~ "나 음식 알레르기와 같이 주문과 관련된 중요한 정보를 입력하여 공급업체에 전"
+#~ "송합니다."
+
+#~ msgid ""
+#~ "An error can occur when a configured product **requires** the user to "
+#~ "select an option in the :guilabel:`Extras` field, but the user neglects "
+#~ "to make one."
+#~ msgstr ""
+#~ ":guilabel:`추가` 필드에서 항목을 선택하는 것이 품목 환경설정에서 **필수** "
+#~ "이나 선택하지 않은 경우에는 오류가 발생할 수 있습니다."
+
+#~ msgid "Your Order summary"
+#~ msgstr "주문 요약"
+
+#~ msgid ""
+#~ "When at least one item is added to an order, the items appear at the top "
+#~ "of the dashboard in the :guilabel:`Your Order` summary. In addition to "
+#~ "the products, users can view the account information, in addition to all "
+#~ "the information related to orders placed during the current calendar day."
+#~ msgstr ""
+#~ "주문에 하나 이상 메뉴가 추가되면 현황판 상단에 있는 :guilabel:`주문` 요약"
+#~ "에 품목이 표시됩니다. 품목 외에도 계정 정보를 볼 수 있으며, 해당 날짜에 접"
+#~ "수된 주문과 관련된 모든 정보도 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "As products are added to an order, they appear at the top center of the "
+#~ "summary box. Each product is listed beneath the words :guilabel:`Your "
+#~ "Order`, with the product name, quantity, and a status tag."
+#~ msgstr ""
+#~ "주문에 메뉴를 추가하면 요약 상자의 중앙 상단에 표시됩니다. 각 품목"
+#~ "은 :guilabel:`내 주문` 제목 아래에 품목명, 수량 및 상태 태그와 함께 나타납"
+#~ "니다."
+
+#~ msgid "The available tags that can be displayed for each item are:"
+#~ msgstr "다음과 같은 태그를 품목에 표시할 수 있습니다."
+
+#~ msgid ""
+#~ ":guilabel:`To Order`: the product has been added to the cart, but has not "
+#~ "been purchased yet by the user."
+#~ msgstr ""
+#~ ":guilabel:`주문 대기 중`: 장바구니에 메뉴가 추가되었으나 아직 구매하지 않"
+#~ "았습니다."
+
+#~ msgid ""
+#~ "The right side of the :guilabel:`Your Order` summary displays the "
+#~ "purchasing information. The :guilabel:`Total` amount for the entire day's "
+#~ "lunch order is displayed. The :guilabel:`Already Paid` field indicates "
+#~ "how much has been paid that day towards the :guilabel:`Total` amount. "
+#~ "The :guilabel:`To Pay` field displays how much of the "
+#~ "remaining :guilabel:`Total` amount must be paid, in order to place the "
+#~ "currently configured order."
+#~ msgstr ""
+#~ ":guilabel:`내 주문` 요약의 오른쪽에는 구매 정보가 표시됩니다. 해당 날짜의 "
+#~ "점심 주문에 대한 :guilabel:`총액` 이 금액으로 표시됩니다. :guilabel:`결제 "
+#~ "완료` 필드에 있는 금액은 :guilabel:`총액` 중 해당 날짜에 대해 결제된 금액"
+#~ "을 나타냅니다. :guilabel:`결제 예정` 필드에는 현재 설정된 주문을 진행하려"
+#~ "면 남은 :guilabel:`총액` 금액 중 얼마를 결제해야 하는지 표시됩니다."
+
+#~ msgid ""
+#~ "Users can place multiple orders throughout the day, and are not "
+#~ "restricted to only placing one lunch order each day. Multiple orders "
+#~ "might need to be placed, due to users forgetting to add items to an "
+#~ "order, or if there are multiple meals that are available to be purchased "
+#~ "for the office (not only lunch), and so on."
+#~ msgstr ""
+#~ "주문은 하루에도 여러 번 이루어질 수 있으며, 점심 주문을 하루에 하나만 주문"
+#~ "해야 하는 것은 아닙니다. 주문은 여러 번 할 수 있으며 주문에 메뉴를 추가하"
+#~ "는 것을 잊어버렸거나 사무실에서 식사 주문을 여러 번 할 수 있는 경우 (점심 "
+#~ "포함 다른 식사 포함) 등이 있습니다."
+
+#~ msgid ""
+#~ "Depending on the various vendors, and how the vendors and products are "
+#~ "configured, it is possible to order breakfast, lunch, dinner, coffee, and/"
+#~ "or snacks."
+#~ msgstr ""
+#~ "다양한 공급업체와 업체 및 품목 설정 방식에 따라 아침, 점심, 저녁, 커피 또"
+#~ "는 간식을 주문할 수 있습니다."
+
+#~ msgid ""
+#~ "To place the order, click the :guilabel:`Order Now` button on the right-"
+#~ "side of the :guilabel:`Your Order` summary. The user is charged the "
+#~ "amount that is displayed in the :guilabel:`To Pay` field, and the cost is "
+#~ "deducted from their **Lunch** account balance."
+#~ msgstr ""
+#~ "주문하려면 :guilabel:`내 주문` 요약 오른쪽에 있는 :guilabel:`지금 주문하기"
+#~ "` 버튼을 클릭합니다. :guilabel:`결제하기` 에 표시된 금액이 청구되며 **점심"
+#~ "** 계정 잔액에서 해당 비용이 차감됩니다."
+
+#~ msgid ""
+#~ "When orders have been sent to the vendors, the tags for the items in "
+#~ "the :guilabel:`Your Order` summary change from red :guilabel:`Ordered` "
+#~ "tags to blue :guilabel:`Sent` tags."
+#~ msgstr ""
+#~ "공급업체로 주문이 전송되면 :guilabel:`내 주문` 요약의 품목 태그가 빨간"
+#~ "색 :guilabel:`주문 완료` 태그에서 파란색 :guilabel:`전송 완료` 태그로 변경"
+#~ "됩니다."
+
+#~ msgid ""
+#~ "Once orders have been received and verified, the tags change from "
+#~ "blue :guilabel:`Sent` tags to green :guilabel:`Received` tags."
+#~ msgstr ""
+#~ "주문이 접수되고 확인이 완료되면 태그가 파란색 :guilabel:`전송 완료` 태그에"
+#~ "서 초록색 :guilabel:`수령 완료` 태그로 변경됩니다."
+
+#~ msgid ""
+#~ "The total cost for each order is displayed on the line containing the "
+#~ "order date. At the bottom of the list, beneath all the lines, the overall "
+#~ "total amount paid for all the orders appears, under the :guilabel:`Price` "
+#~ "column."
+#~ msgstr ""
+#~ "주문에 대한 총 비용은 주문일이 있는 줄에 표시됩니다. 목록 하단의 가장 아"
+#~ "랫 줄에 모든 주문에 대해 결제한 전체 총액이 :guilabel:`가격` 열 아래에 표"
+#~ "시됩니다."
+
+#~ msgid ""
+#~ "At the end of each product line with a status of :guilabel:`Ordered` "
+#~ "or :guilabel:`Sent`, an :guilabel:`X Cancel` button appears. "
+#~ "Click :guilabel:`X Cancel` to cancel that product order. Once a product "
+#~ "order has been cancelled, the money paid for that product is refunded, "
+#~ "and appears in the user's account."
+#~ msgstr ""
+#~ "품목 상태가 :guilabel:`주문 완료` 또는 :guilabel:`전송 완료` 인 경우에는 "
+#~ "각 품목의 줄 끝에 :guilabel:`X 취소` 버튼이 나타납니다. 품목 주문을 취소하"
+#~ "려면 :guilabel:`X 취소` 를 클릭합니다. 품목 주문이 취소된 후에는 해당 품목"
+#~ "에 대한 결제 금액이 환불되며 사용자 계정에 표시됩니다."
+
+#~ msgid ""
+#~ "At the end of each product line with a status of :guilabel:`Received`, "
+#~ "a :guilabel:`Re-order` button appears. Click :guilabel:`Re-order` to "
+#~ "instantly reorder that same product, with the same extras, if applicable. "
+#~ "The new order appears in the list, under the current date, and the "
+#~ "product is paid for, with money deducted from the user's account."
+#~ msgstr ""
+#~ ":guilabel:`수령 완료` 상태인 품목의 줄 끝에는 :guilabel:`재주문` 버튼이 나"
+#~ "타납니다. :guilabel:`재주문` 을 클릭하면 동일한 품목을 같은 추가 항목과 함"
+#~ "께 즉시 재주문합니다. 목록의 현재 날짜 아래에 새로운 주문이 표시되고 결제"
+#~ "를 위해 사용자 계정에서 금액이 차감됩니다."
+
+#~ msgid ""
+#~ "To add funds and manage user accounts, the user must "
+#~ "have :guilabel:`Administrator` access rights set for the **Lunch** "
+#~ "application. This is verified by navigating to :menuselection:`Settings "
+#~ "app -->` :icon:`oi-arrow-right` :guilabel:`Manage Users`. Then, click on "
+#~ "a user to view their various settings and access rights."
+#~ msgstr ""
+#~ "금액을 추가하고 사용자 계정을 관리하려면 **점심** 애플리케이션의 액세스 권"
+#~ "한이 :guilabel:`관리자` 로 설정되어 있어야 합니다. 권한은 :menuselection:`"
+#~ "설정 앱 --> :icon:`oi-arrow-right` :guilabel:`사용자 관리` 에서 확인할 수 "
+#~ "있습니다. 그런 다음 사용자를 클릭하면 다양한 설정과 액세스 권한 내용을 확"
+#~ "인할 수 있습니다."
+
+#~ msgid ""
+#~ "For more information, refer to the :doc:`Access rights <../../general/"
+#~ "users/access_rights/>` documentation."
+#~ msgstr ""
+#~ "자세한 내용은 :doc:`액세스 권한 <../../general/users/access_rights/>` 문서"
+#~ "를 참조하세요."
+
+#~ msgid ""
+#~ ":guilabel:`User`: select the user depositing cash into their account from "
+#~ "the drop-down menu. If the user is not in the database, they can be "
+#~ "created by typing their name in the :guilabel:`User` field, and clicking "
+#~ "either :guilabel:`Create \"user\"` or :guilabel:`Create and edit...` to "
+#~ "create the user and edit the :guilabel:`Create User` form."
+#~ msgstr ""
+#~ ":guilabel:`사용자`: 드롭다운 메뉴에서 계정에 현금을 충전할 사용자를 선택합"
+#~ "니다. 데이터베이스에 사용자가 없는 경우에는 :guilabel:`사용자` 필드에 이름"
+#~ "을 입력하고 :guilabel:`\"사용자\" 만들기` 또는 :guilabel:`만들기 및 편"
+#~ "집...` 을 클릭하여 사용자를 생성한 후 :guilabel:`사용자 만들기` 양식을 편"
+#~ "집합니다."
+
+#~ msgid ""
+#~ ":guilabel:`Date`: using the calendar popover, select the date the "
+#~ "transaction occurred."
+#~ msgstr ""
+#~ ":guilabel:`날짜`: 달력 팝오버를 사용하여 거래가 발생한 날짜를 선택합니다."
+
+#~ msgid ""
+#~ ":guilabel:`Amount`: enter the amount being added to the lunch account."
+#~ msgstr ":guilabel:`금액`: 점심 계정에 추가될 금액을 입력합니다."
+
+#~ msgid ""
+#~ ":guilabel:`Description`: enter a brief description of the transaction."
+#~ msgstr ":guilabel:`설명`: 발생하는 건에 대해 간략하게 설명을 입력합니다."
+
+#~ msgid "The cash move form filled out for a transaction of $40.00."
+#~ msgstr "$40.00 금액에 해당하는 건에 대해 작성된 현금 작업 양식"
+
+#~ msgid ""
+#~ "All transactions are grouped :guilabel:`By Employee`, and listed "
+#~ "alphabetically by the user's first name. At the end of the user's name, a "
+#~ "number appears. This indicates the number of individual records logged "
+#~ "for that user."
+#~ msgstr ""
+#~ "모든 거래는 :guilabel:`직원별` 그룹으로 사용자 이름을 기준으로 알파벳순으"
+#~ "로 표시됩니다. 사용자 이름 끝에는 숫자가 표시되어 있습니다. 이 숫자는 해"
+#~ "당 사용자에 대한 개별 기록 수를 의미합니다."
+
+#~ msgid ""
+#~ "Each record includes "
+#~ "the :guilabel:`Date`, :guilabel:`User`, :guilabel:`Description`, "
+#~ "and :guilabel:`Amount`."
+#~ msgstr ""
+#~ "각 레코드에는 :guilabel:`날짜`, :guilabel:`사용자`, :guilabel:`설명` "
+#~ "및 :guilabel:`금액` 등이 있습니다."
+
+#~ msgid ""
+#~ "Cash moves can be modified, but **only** from the :ref:`Cash Moves <lunch/"
+#~ "cash-moves>` dashboard, not from the :guilabel:`Control Accounts` "
+#~ "dashboard."
+#~ msgstr ""
+#~ "현금 작업을 수정할 수는 있으나 **오직** :ref:`현금 작업 <lunch/cash-"
+#~ "moves>` 현황판에서만 수정할 수 있으며 :guilabel:`계정 관리` 현황판에서는 "
+#~ "수정할 수 없습니다."
+
+#~ msgid "It is **not** possible to modify any product-related records."
+#~ msgstr "품목과 관련된 기록은 수정을 할 수 **없습니다**."
 
 #~ msgid ""
 #~ "When adding a vehicle to the fleet, specify the vehicle model to maintain "

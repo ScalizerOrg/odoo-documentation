@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 18:30+0000\n"
+"POT-Creation-Date: 2026-01-30 18:30+0000\n"
 "PO-Revision-Date: 2025-12-24 23:21+0000\n"
 "Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-19-doc/sales/"
@@ -95,7 +95,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
@@ -10910,11 +10909,6 @@ msgstr ""
 "kompatibel**."
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:67
-msgid ":doc:`https`"
-msgstr ":doc:`https`"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:68
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:22
 msgid ":doc:`epos_ssc`"
 msgstr ":doc:`epos_ssc`"
 
@@ -10925,23 +10919,14 @@ msgstr "Selbstsigniertes Zertifikat für ePOS-Drucker"
 #: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:7
 msgid ""
 "To work with Odoo, some printer models that can be used without an :doc:`IoT "
-"system </applications/general/iot>` may require :doc:`the HTTPS protocol "
-"<https>` to establish a secure connection between the browser and the "
-"printer. However, trying to reach the printer's IP address using HTTPS leads "
-"to a warning page on most web browsers. In that case, you can "
-"temporarily :ref:`force the connection <epos_ssc/instructions>`, which "
-"allows you to reach the page in HTTPS and use the ePOS printer in Odoo as "
-"long as the browser window stays open."
+"system </applications/general/iot>` may require the HTTPS protocol to "
+"establish a secure connection between the browser and the printer. However, "
+"trying to reach the printer's IP address using HTTPS leads to a warning page "
+"on most web browsers. In that case, you can temporarily :ref:`force the "
+"connection <epos_ssc/instructions>`, which allows you to reach the page in "
+"HTTPS and use the ePOS printer in Odoo as long as the browser window stays "
+"open."
 msgstr ""
-"Um mit Odoo zu arbeiten, benötigen einige Druckermodelle, die ohne "
-"ein :doc:`IoT-System </applications/general/iot>` verwendet werden können, "
-"möglicherweise :doc:`das HTTPS-Protokoll <https>`, um eine sichere "
-"Verbindung zwischen dem Browser und dem Drucker herzustellen. Der Versuch, "
-"die IP-Adresse des Druckers über HTTPS zu erreichen, führt jedoch bei den "
-"meisten Webbrowsern zu einer Warnseite. In diesem Fall können Sie "
-"vorübergehend :ref:`die Verbindung erzwingen <epos_ssc/instructions>`, "
-"wodurch Sie die Seite in HTTPS erreichen und den ePOS-Drucker in Odoo "
-"verwenden können, solange das Browserfenster geöffnet bleibt."
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:15
 msgid ""
@@ -11551,53 +11536,6 @@ msgstr ""
 "angewendet wurde, sollten Sie keine Warnseite mehr sehen, und in der "
 "Adressleiste sollte ein Schloss-Symbol erscheinen, das anzeigt, dass die "
 "Verbindung sicher ist."
-
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:3
-msgid "Secure connection (HTTPS)"
-msgstr "Sichere Verbindung (HTTPS)"
-
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:5
-msgid ""
-"If **Direct Devices** is enabled in a Point of Sale settings (for example, "
-"if you use an :doc:`ePos printer <epos_printers>`), HTTP becomes the default "
-"protocol."
-msgstr ""
-"Wenn **Direkte Geräte** in den Einstellungen eines Kassensystems aktiviert "
-"sind (z. B. wenn Sie einen :doc:`ePos-Drucker <epos_printers>` verwenden), "
-"wird HTTP zum Standardprotokoll."
-
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:9
-msgid "Force your Point of Sale to use a secure connection (HTTPS)"
-msgstr "Ihr Kassensystem zwingen, eine sichere Verbindung zu verwenden (HTTPS)"
-
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:11
-msgid ""
-"Add a new **key** in the **System Parameters** to force your Point of Sale "
-"to use a secure connection with the HTTPS protocol."
-msgstr ""
-"Fügen Sie einen neuen **Schlüssel** in den **Systemparametern** hinzu, um "
-"Ihr Kassensystem zu zwingen, eine sichere Verbindung mit dem HTTPS-Protokoll "
-"zu verwenden."
-
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:14
-msgid ""
-"To do so, activate the :ref:`developer mode <developer-mode>`, go "
-"to :menuselection:`Settings --> Technical --> Parameters --> System "
-"Parameters`, then create a new parameter, add the following values and click "
-"on *Save*."
-msgstr ""
-"Aktivieren Sie dazu den :ref:`Entwicklermodus <developer-mode>`, gehen Sie "
-"zu :menuselection:`Einstellungen --> Technisch --> Parameter --> "
-"Systemparameter`, erstellen Sie dann einen neuen Parameter, fügen Sie die "
-"folgenden Werte hinzu und klicken Sie auf *Speichern*."
-
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:18
-msgid "**Key**: `point_of_sale.enforce_https`"
-msgstr "**Schlüssel**: `point_of_sale.enforce_https`"
-
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:19
-msgid "**Value**: `True`"
-msgstr "**Wert**: `True`"
 
 #: ../../content/applications/sales/point_of_sale/configuration/pos_iot.rst:3
 msgid "IoT system connection"
@@ -12355,6 +12293,7 @@ msgstr "Erhalten Sie ihre Atlas-Anmeldedaten:"
 #: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:70
 #: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:84
 #: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:156
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:63
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:60
 #: ../../content/applications/sales/point_of_sale/preparation.rst:16
 msgid "Go to the :ref:`POS settings <configuration/settings>`."
@@ -12928,7 +12867,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:38
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:37
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:38
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:109
 msgid "Save."
 msgstr "Speichern."
@@ -13015,6 +12954,7 @@ msgid "Create the associated :doc:`payment method <../payment_methods>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:19
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:64
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:61
 msgid "Select the POS in the :guilabel:`Point of Sale` field."
 msgstr "Wählen Sie im Feld :guilabel:`Kassensystem` das Kassensystem aus."
@@ -13032,7 +12972,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:30
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:49
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:50
 msgid ""
 "Once the transaction is successful, the payment is automatically validated "
 "in Point of Sale."
@@ -13047,7 +12987,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:34
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:54
 msgid "To cancel the payment request, click :guilabel:`Cancel`."
 msgstr ""
 "Um die Zahlungsanforderung zu stornieren, klicken Sie "
@@ -13290,7 +13230,6 @@ msgid "Tick the checkboxes and validate."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:116
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:74
 msgid "Payment method"
 msgstr "Zahlungsmethode"
 
@@ -14040,50 +13979,54 @@ msgid ":doc:`Adyen <terminals/adyen>`"
 msgstr ":doc:`Adyen <terminals/adyen>`"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:27
+msgid ":doc:`Dpopay <terminals/dpo>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:28
 msgid ":doc:`Ingenico <terminals/ingenico>`"
 msgstr ":doc:`Ingenico <terminals/ingenico>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:28
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:29
 msgid ":doc:`Mercado Pago <terminals/mercado_pago>`"
 msgstr ":doc:`Mercado Pago <terminals/mercado_pago>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:29
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:30
 msgid ":doc:`Pine Labs <terminals/pine_labs>`"
 msgstr ":doc:`Pine Labs <terminals/pine_labs>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:30
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:31
 msgid ":doc:`QFPay <terminals/qfpay>`"
 msgstr ":doc:`QFPay <terminals/qfpay>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:31
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:32
 msgid ":doc:`Razorpay <terminals/razorpay>`"
 msgstr ":doc:`Razorpay <terminals/razorpay>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:32
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:33
 msgid ":doc:`SIX <terminals/six>`"
 msgstr ":doc:`SIX <terminals/six>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:33
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:34
 msgid ":doc:`Stripe <terminals/stripe>`"
 msgstr ":doc:`Stripe <terminals/stripe>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:35
 msgid ":doc:`Tyro <terminals/tyro>`"
 msgstr ":doc:`Tyro <terminals/tyro>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:35
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:36
 msgid ":doc:`Viva.com <terminals/viva_com>`"
 msgstr ":doc:`Viva.com <terminals/viva_com>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:36
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:37
 msgid ":doc:`Worldline <terminals/worldline>`"
 msgstr ":doc:`Worldline <terminals/worldline>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:42
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:43
 msgid "Terminal use"
 msgstr "Terminal-Nutzung"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:45
 msgid ""
 "To process a :ref:`payment <pos/sell>` with a :ref:`configured terminal <pos/"
 "terminals/configuration>` for an order, select the terminal's :doc:`payment "
@@ -14096,7 +14039,7 @@ msgstr ""
 "Bildschirm :guilabel:`Zahlung` aus und folgen Sie dann den Anweisungen auf "
 "dem Terminalgerät."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:52
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:53
 msgid ""
 "Connection issues between Odoo and the payment terminal result in "
 "transaction cancellation."
@@ -14290,6 +14233,7 @@ msgstr ""
 "Bildschirms, um die Änderungen zu speichern."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:73
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:41
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:42
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:30
@@ -14398,12 +14342,163 @@ msgstr ""
 "Klicken Sie auf :guilabel:`Abrechnen`, um die Zahlung und das Trinkgeld zu "
 "bestätigen."
 
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:3
+msgid "DPO Pay"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:5
+msgid ""
+"`DPO Pay <https://dpogroup.com/>`_ offers in-store payment solutions for "
+"customer transactions through several physical `terminals <https://"
+"dpogroup.com/products/network-pos/>`_. These terminals support swiping, "
+"scanning, or tapping credit and debit cards (Visa, MasterCard, and American "
+"Express), as well as Mobile payments (Airtel Money and M-Pesa)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:11
+msgid ""
+":doc:`Use DPO Pay as a payment provider <../../../../finance/"
+"payment_providers/dpo>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:14
+msgid ""
+"DPO Pay payment terminals do not require an :doc:`IoT system </applications/"
+"general/iot>` to operate."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:16
+msgid ""
+"The Odoo DPO Pay module is only available for companies operating in the "
+"`African region <https://dpogroup.com/online-payments>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:18
+msgid "A DPO merchant account is required to process transactions."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:23
+msgid "DPO Pay credentials"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:25
+msgid ""
+"`Create a DPO Pay account and order at least one terminal <https://"
+"dpogroup.com/get-started-2/>`_. Once ordered, the sales team contacts you "
+"for the onboarding process and then sends an email containing the following "
+"credentials:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:29
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:29
+msgid "Client ID"
+msgstr "Client-ID"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:30
+msgid "Client Secret"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:31
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:27
+msgid "Merchant ID"
+msgstr "Händler-ID"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:32
+msgid "Terminal ID"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:33
+msgid "Chain ID"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:35
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:61
+msgid "Odoo configuration"
+msgstr "Odoo-Konfiguration"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:43
+msgid ""
+"To connect the DPO Pay terminal with Odoo Point of Sale, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:45
+msgid "Install the :ref:`PoS DPO Pay module <general/install>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:37
+msgid ":doc:`Create a new payment method <../../payment_methods>`:"
+msgstr ""
+":doc:`Erstellen Sie eine neue Zahlungsmethode <../../payment_methods>`:"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:48
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:39
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
+"and click :guilabel:`New`."
+msgstr ""
+"Gehen Sie zu :menuselection:`Kassensystem --> Konfiguration --> "
+"Zahlungsmethoden` und klicken Sie auf :guilabel:`Neu`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:58
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:62
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
+msgid "Set the :guilabel:`Journal` field to :guilabel:`Bank`."
+msgstr "Setzen Sie das Feld :guilabel:`Journal` auf :guilabel:`Bank`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:47
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:64
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:68
+msgid "Set the :guilabel:`Integration` field to :guilabel:`Terminal`."
+msgstr "Setzen Sie das Feld :guilabel:`Integration` auf :guilabel:`Terminal`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:52
+msgid "Set the :guilabel:`Integrate with` field to :guilabel:`DPO Pay`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:53
+msgid ""
+"Add the :ref:`credentials <pos/dpo/credentials>` to their corresponding "
+"fields."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:0
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:0
+msgid "Form to create a new payment method."
+msgstr "Formular, um eine neue Zahlungsmethode zu erstellen."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:59
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:56
+msgid "Add the payment method to a POS"
+msgstr "Zahlungsmethode zum Kassensystem hinzufügen"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:61
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:58
+msgid "To add a **payment method** to your point of sale:"
+msgstr "So fügen Sie eine **Zahlungsmethode** zu Ihrem Kassensystem hinzu:"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:65
+msgid ""
+"Add the payment method under the :guilabel:`Payment Methods` field in "
+"the :guilabel:`Payment` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:69
+msgid ""
+"Enable :guilabel:`DPO Pay Test Mode` to test transaction processes with a "
+"device."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:3
 msgid "Ingenico"
 msgstr "Ingenico"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:5
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:5
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:5
 msgid ""
 "Connecting a payment terminal allows you to offer a fluid payment flow to "
@@ -14526,251 +14621,278 @@ msgstr ""
 msgid "Mercado Pago"
 msgstr "Mercado Pago"
 
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:5
+msgid ""
+"Mercado Pago offers payment solutions through :doc:`payment terminals <../"
+"terminals>` to handle customer transactions."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:9
 msgid ""
-"Only **Point Smart** payment terminals in Argentina, Brazil, Chile, "
-"Colombia, Mexico, Peru, and Uruguay are supported. They can be purchased on "
-"`Mercado Pago's website <https://www.mercadopago.com.mx/herramientas-para-"
+"Odoo is compatible with Point Smart 1 or Point Smart 2 payment terminals, "
+"which can be purchased on the Mercado Pago website in `Argentina <https://"
+"www.mercadopago.com.ar/herramientas-para-vender/lectores-point>`_, `Brazil "
+"<https://www.mercadopago.com.br/ferramentas-para-vender/maquininhas-"
+"point>`_, and `Mexico <https://www.mercadopago.com.mx/herramientas-para-"
 "vender/lectores-point>`_."
 msgstr ""
-"Es werden ausschließlich **Point-Smart**-Zahlungsterminals in Argentinien, "
-"Brasilien, Chile, Kolumbien, Mexiko, Peru und Uruguay unterstützt. Diese "
-"können auf der `Website von Mercado Pago <https://www.mercadopago.com.mx/"
-"herramientas-para-vender/lectores-point>`_ erworben werden."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:14
 msgid ""
-"`Mercado Pago online payments <https://www.mercadopago.com.mx/herramientas-"
-"para-vender/check-out#benefits-checkout>`_"
+"Mercado Pago payment terminals do not require an :doc:`IoT Box </"
+"applications/general/iot>` to operate."
 msgstr ""
-"`Online-Zahlungen mit Mercado Pago <https://www.mercadopago.com.mx/"
-"herramientas-para-vender/check-out#benefits-checkout>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:22
-msgid "Create a `Mercado Pago account <https://www.mercadopago.com.mx/>`_."
-msgstr ""
-"Erstellen Sie ein `Mercado-Pago-Konto <https://www.mercadopago.com.mx/>`_."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:23
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:18
 msgid ""
-"Associate your Point Smart terminal with a :guilabel:`store` and "
-"a :guilabel:`cash drawer` by following `Mercado Pago's documentation "
-"<https://vendedores.mercadolibre.com.ar/nota/locales-una-herramienta-para-"
-"mejorar-la-gestion-de-tus-puntos-de-venta/>`_."
+":doc:`Mercado Pago online payments </applications/finance/payment_providers/"
+"mercado_pago>`"
 msgstr ""
-"Verknüpfen Sie Ihren Point-Smart-Terminal mit einem :guilabel:`Shop` und "
-"einer :guilabel:`Kasse`, indem Sie die `Dokumentation von Mercado Pago "
-"<https://vendedores.mercadolibre.com.ar/nota/locales-una-herramienta-para-"
-"mejorar-la-gestion-de-tus-puntos-de-venta/>`_ befolgen."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:27
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:19
 msgid ""
-"All purchased terminals are automatically displayed on your Mercado "
-"dashboard."
+"`Mercado Pago tutorial video (Spanish only) <https://www.youtube.com/watch?"
+"v=dpbexfTc4VQ>`_"
 msgstr ""
-"Alle erworbenen Terminals werden automatisch auf Ihrem Mercado-Dashboard "
-"angezeigt."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:29
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:24
+msgid "Mercado Pago configuration"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:26
 msgid ""
-"Set your Point Smart terminal to the :guilabel:`Point of Sale` operation "
-"mode."
+"The Mercado Pago configuration requires creating an account, if needed, "
+"and :ref:`connecting it to your payment terminal and store <pos/mercado-pago/"
+"terminal>`. Then, create a :ref:`Point Smart application <pos/mercado-pago/"
+"point-smart>` for technical setup and acquiring :ref:`credentials <pos/"
+"mercado-pago/credentials>` to complete the integration."
 msgstr ""
-"Richten Sie Ihren Point-Smart-Terminal zum "
-"Betriebsmodus :guilabel:`Kassensystem` ein."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:32
-msgid "Odoo does not support the :guilabel:`Standalone` operation mode."
-msgstr "Odoo unterstützt den Betriebsmodus :guilabel:`Unabhängig` nicht."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:34
-msgid ":ref:`Create a Point Smart application <pos-mercado-pago-application>`."
+msgid "Terminal and store connection"
 msgstr ""
-":ref:`Erstellen Sie eine Point-Smart-App <pos-mercado-pago-application>`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:35
-msgid ":ref:`Generate your credentials <pos-mercado-pago-credentials>`."
-msgstr ""
-":ref:`Generieren Sie Ihre Anmeldedaten <pos-mercado-pago-credentials>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:36
-msgid ""
-":ref:`Create and configure the related payment method <pos-mercado-pago-"
-"method>`."
+msgid "Create a Mercado Pago account if needed:"
 msgstr ""
-":ref:`Erstellen und konfigurieren Sie die entsprechende Zahlungsmethode <pos-"
-"mercado-pago-method>`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:38
+msgid "`Mercado Pago for Mexico <https://www.mercadopago.com.mx/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:39
+msgid "`Mercado Pago for Argentina <https://www.mercadopago.com.ar/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:40
+msgid "`Mercado Pago for Brazil <https://www.mercadopago.com.br/>`_"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:41
-msgid "Point Smart application"
-msgstr "Point-Smart-App"
+msgid ""
+"Turn on the Point Smart terminal. Follow the on-screen instructions until "
+"prompted to link the terminal with your Mercado Pago account."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:43
-msgid ""
-"Create a new application from Mercado Pago's `developer panel <https://"
-"www.mercadopago.com/developers>`_ by following `Mercado Pago's applications "
-"documentation <https://www.mercadopago.com.mx/ayuda/20152>`_, making sure "
-"you select :guilabel:`In person Payments`."
+msgid "Click :guilabel:`Soy responsable del negocio` to get a pairing QR code."
 msgstr ""
-"Erstellen Sie eine neue App über das `Entwickler-Panel <https://"
-"www.mercadopago.com/developers>`_ von Mercado Pago, indem Sie der "
-"`Dokumentation zu Apps von Mercado Pago folgen<https://"
-"www.mercadopago.com.mx/ayuda/20152>`_. Achten Sie darauf, dass "
-"Sie :guilabel:`Vor-Ort-Zahlungen` auswählen."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:44
+msgid "Connect to your Mercado Pago account with a mobile device."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:45
+msgid ""
+"Scan the QR code with the mobile device and complete the connection in your "
+"Mercado Pago account."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:46
+msgid "Ensure the terminal is correctly linked to your store:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:48
+msgid ""
+"Type your Mercado Pago account email address or phone number, then "
+"click :guilabel:`Continuar`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:50
+msgid "In the popover, click :guilabel:`Continuar`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:51
-msgid "Credentials"
-msgstr "Anmeldedaten"
+msgid ""
+"On the :guilabel:`Configura el lector para tu cuenta [account name]` screen, "
+"click :guilabel:`Empezar configuración`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:53
-msgid ""
-"Once the Point Smart application is created, three credentials are required:"
+msgid "Click :guilabel:`Crear nueva sucursal` to add a new point of sale."
 msgstr ""
-"Sobald die Point-Smart-App erstellt wurde, sind drei Anmeldeinformationen "
-"erforderlich:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:55
-msgid "An access token that Odoo uses to call Mercado Pago."
-msgstr "Ein Zugriffstoken, das Odoo verwendet, um Mercado Pago zu erreichen."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:54
+msgid ""
+"Type the point of sale's name and address. Add more information if needed, "
+"then click :guilabel:`Crear sucursal`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:56
 msgid ""
-"A webhook secret key that Odoo uses to authenticate notifications sent by "
-"Mercado Pago."
+"Type your register's name and click :guilabel:`Confirmar sucursal y caja`."
 msgstr ""
-"Ein Webhook-Geheimnisschlüssel, den Odoo verwendet, um Benachrichtigungen, "
-"die von Mercado Pago gesendet werden, zu authentifizieren."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:57
 msgid ""
-"The **terminal serial number** at the back of your Point Smart terminal."
+"Click :guilabel:`Crear clave` to create a security key and protect the point "
+"of sale."
 msgstr ""
-"Die **Seriennummer des Terminals** auf der Rückseite des Point-Smart-"
-"Terminal."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:59
-msgid ""
-"Retrieve the access token and webhook secret key by following `Mercado "
-"Pago's credentials documentation <https://www.mercadopago.com.mx/developers/"
-"en/docs/your-integrations/credentials>`_. Then, copy and paste them into "
-"Odoo when creating the payment method."
-msgstr ""
-"Rufen Sie das Zugriffstoken und den geheimen Webhook-Schlüssel ab, indem Sie "
-"der `Dokumentation zu den Anmeldedaten von Mercado Pago <https://"
-"www.mercadopago.com.mx/developers/en/docs/your-integrations/credentials>`_ "
-"folgen. Kopieren Sie diese dann und fügen Sie sie in Odoo ein, wenn Sie die "
-"Zahlungsmethode erstellen."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:62
+msgid "Point Smart application"
+msgstr "Point-Smart-App"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:64
 msgid ""
-"For the webhooks configuration, add the URL of your Odoo database (e.g., "
-"`https://mycompany.odoo.com`) followed by `/pos_mercado_pago/notification` "
-"(e.g., `https://mycompany.odoo.com/pos_mercado_pago/notification`)."
+"Log in to the `Mercado Pago Developer <https://www.mercadopago.com/"
+"developers>`_ portal."
 msgstr ""
-"Fügen Sie für die Webhooks-Konfiguration die URL Ihrer Odoo-Datenbank (z. B. "
-"`https://mycompany.odoo.com`) gefolgt von `/pos_mercado_pago/notification` "
-"(z. B. `https://mycompany.odoo.com/pos_mercado_pago/notification`) hinzu."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:0
-msgid "Webhooks configuration on Mercado Pago."
-msgstr "Webhooks-Konfiguration auf Mercado Pago."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:65
+msgid ""
+"Click :guilabel:`Tus integraciones`, then click `Crear aplicación <https://"
+"www.mercadopago.com.mx/ayuda/20152>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:67
+msgid ""
+"In the :guilabel:`Configuraciones básicas` section, type the application "
+"name, select :guilabel:`Pagos presencial` "
+"and :guilabel:`PointdeMercadoPago`, then click :guilabel:`Crear aplicación` "
+"to receive the application number."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:74
+msgid "Credentials generation"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:76
 msgid ""
-"Go to :menuselection:`Point of Sale --> Configuration --> Settings` and "
-"enable :guilabel:`Mercado Pago` under the :guilabel:`Payment Terminals` "
-"section."
+"There are three credentials to generate and collect from the `Mercado Pago "
+"Developer dashboard <https://www.mercadopago.com/developers>`_: a **webhook "
+"secret key**, an **access token**, and the **terminal serial number**."
 msgstr ""
-"Gehen Sie zu :menuselection:`Kassensystem --> Konfiguration --> "
-"Einstellungen` und aktivieren Sie die Funktion :guilabel:`Mercado Pago` im "
-"Abschnitt :guilabel:`Zahlungsterminals`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:78
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:34
-msgid ""
-":doc:`Create the related payment method <../../payment_methods>` by going "
-"to :menuselection:`Point of Sale --> Configuration --> Payment Methods`."
-msgstr ""
-":doc:`Erstellen Sie die entsprechende Zahlungsmethode <../../"
-"payment_methods>`, indem Sie zu :menuselection:`Kassensystem --> "
-"Konfiguration --> Zahlungsmethoden` gehen."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:80
-msgid "Set the journal type as :guilabel:`Bank`"
-msgstr "Legen Sie den Journaltyp auf :guilabel:`Bank` fest."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:81
-msgid ""
-"Select :guilabel:`Mercado Pago` in the :guilabel:`Use a Payment Terminal` "
-"field."
+msgid "Generate the webhook secret key:"
 msgstr ""
-"Wählen Sie :guilabel:`Mercado Pago` im Feld :guilabel:`Zahlungsterminal "
-"verwenden`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:82
 msgid ""
-"Fill in the mandatory fields with the :ref:`previously generated credentials "
-"<pos-mercado-pago-credentials>`:"
+"Click :guilabel:`Webhooks` under the :guilabel:`Notificaciones` section, "
+"then :guilabel:`Modo productivo`."
 msgstr ""
-"Füllen Sie die Pflichtfelder mit den :ref:`zuvor generierten Anmeldedaten "
-"<pos-mercado-pago-credentials>` aus:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:85
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:84
 msgid ""
-"Fill in the :guilabel:`Production user token` field using the access token."
+"Paste your Odoo database's URL followed by `/pos_mercado_pago/notification`. "
+"For example: `https://mycompany.odoo.com/pos_mercado_pago/notification`."
 msgstr ""
-"Füllen Sie das Feld :guilabel:`Produktionsbenutzertoken` mit dem "
-"Zugriffstoken aus."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:86
 msgid ""
-"Fill in the :guilabel:`Production secret key` field using the webhook secret "
-"key."
+"Copy the generated webhook secret key and save it for the :ref:`pos/mercado-"
+"pago/payment-method` step."
 msgstr ""
-"Füllen Sie das Feld :guilabel:`Geheimer Produktionsschlüssel` mit dem "
-"geheimen Webhook-Schlüssel aus."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:87
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:88
+msgid "Generate the access token:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:90
 msgid ""
-"Fill in the :guilabel:`Terminal S/N` field using the terminal serial number. "
-"You can find it at the back of your terminal."
+"Click :guilabel:`Credenciales de producción` under "
+"the :guilabel:`Producción` section, then :guilabel:`Activar credenciales de "
+"producción`."
 msgstr ""
-"Füllen Sie das Feld :guilabel:`S/N des Terminals` mit der Seriennummer des "
-"Terminals aus. Diese finden Sie auf der Rückseite Ihres Terminals."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:89
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:92
 msgid ""
-"Click the :guilabel:`Force PDV` button to activate the Point of Sale mode."
+"Copy the generated access token and save it for the :ref:`pos/mercado-pago/"
+"payment-method` step."
 msgstr ""
-"Klicken Sie auf die Schaltfläche :guilabel:`PDV erzwingen`, um den "
-"Kassensystem-Modus zu aktivieren."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:None
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:0
-msgid "Form to create a new payment method."
-msgstr "Formular, um eine neue Zahlungsmethode zu erstellen."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:94
 msgid ""
-"Select the payment method by going to the :ref:`POS' settings <configuration/"
-"settings>` and adding it to the payment method under the :guilabel:`Payment "
-"Methods` field of the :guilabel:`Payment` section."
+"Locate the terminal serial number on the back of the terminal and write it "
+"down for the :ref:`pos/mercado-pago/payment-method` step."
 msgstr ""
-"Wählen Sie die Zahlungsmethode aus, indem Sie zu den :ref:`Kassensystem-"
-"Einstellungen <configuration/settings>` gehen und sie der Zahlungsmethode im "
-"Feld :guilabel:`Zahlungsmethoden` im Abschnitt :guilabel:`Zahlung` "
-"hinzufügen."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:99
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:97
 msgid ""
-"Any action made on the terminal should trigger a notification on the POS "
-"interface. Ensure the :ref:`webhook secret key <pos-mercado-pago-"
-"credentials>` is correctly configured if you are not notified."
+"Once the Mercado Pago configuration is complete, log in to your Odoo "
+"database to create a :ref:`payment method <pos/mercado-pago/payment-method>` "
+"using the collected credentials."
 msgstr ""
-"Jede Aktion, die am Terminal durchgeführt wird, sollte eine Benachrichtigung "
-"auf der Kassenschnittstelle auslösen. Stellen Sie sicher, dass "
-"der  :ref:`Geheime Webhook-Schlüssel <pos-mercado-pago-credentials>` korrekt "
-"konfiguriert ist, wenn Sie keine Benachrichtigung erhalten."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:101
+msgid "Odoo does not support the :guilabel:`Standalone` operation mode."
+msgstr "Odoo unterstützt den Betriebsmodus :guilabel:`Unabhängig` nicht."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:104
+msgid ""
+"All terminals purchased with your Mercado Pago account are automatically "
+"displayed on the Mercado Pago dashboard."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:110
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:49
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:53
+msgid "Odoo POS configuration"
+msgstr "Konfiguration von Odoo Kassensystem"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:112
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Settings`, scroll "
+"down to the :guilabel:`Payment Terminals` section, enable :guilabel:`Mercado "
+"Pago`, and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:115
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
+"and :doc:`create the related payment method <../../payment_methods>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:117
+msgid ""
+"Fill in the mandatory fields using the :ref:`previously generated "
+"credentials <pos/mercado-pago/configuration>`:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:120
+msgid "Paste the access token in the :guilabel:`Production user token` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:121
+msgid ""
+"Paste the webhook secret key in the :guilabel:`Production secret key` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:122
+msgid "Type the terminal serial number in the :guilabel:`Terminal S/N` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:123
+msgid "Save the payment method."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:126
+msgid ""
+"Actions on the terminal should trigger a notification on the Odoo POS "
+"interface. If not, ensure the webhook secret key is correct."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:3
 msgid "Pine Labs"
@@ -14824,26 +14946,13 @@ msgstr ""
 "<https://www.pinelabs.com/contact-sales?tab=new>`_. Das System sendet Ihnen "
 "dann eine E-Mail mit den folgenden Anmeldedaten:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:27
-msgid "Merchant ID"
-msgstr "Händler-ID"
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:28
 msgid "Store ID"
 msgstr "Shop-ID"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:29
-msgid "Client ID"
-msgstr "Client-ID"
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:30
 msgid "Security Token"
 msgstr "Security-Token"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:35
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:61
-msgid "Odoo configuration"
-msgstr "Odoo-Konfiguration"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:37
 msgid ""
@@ -14881,20 +14990,6 @@ msgstr ""
 "Gehen Sie zu :menuselection:`Kassensystem --> Konfiguration --> "
 "Zahlungsmethoden` und :doc:`erstellen Sie eine Zahlungsmethode <../../"
 "payment_methods>`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:46
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:58
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:62
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
-msgid "Set the :guilabel:`Journal` field to :guilabel:`Bank`."
-msgstr "Setzen Sie das Feld :guilabel:`Journal` auf :guilabel:`Bank`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:47
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:60
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:64
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:68
-msgid "Set the :guilabel:`Integration` field to :guilabel:`Terminal`."
-msgstr "Setzen Sie das Feld :guilabel:`Integration` auf :guilabel:`Terminal`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:48
 msgid "Set the :guilabel:`Integrate with` field to :guilabel:`Pine Labs`."
@@ -15073,11 +15168,6 @@ msgstr ""
 "zu :menuselection:`MMS portal --> Settings --> Device Settings` (MMS-Portal "
 "--> Einstellungen --> Geräteeinstellungen)."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:49
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:53
-msgid "Odoo POS configuration"
-msgstr "Konfiguration von Odoo Kassensystem"
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:51
 msgid ""
 "To connect the QFPay terminal with Odoo Point of Sale, follow these steps:"
@@ -15194,6 +15284,15 @@ msgid ""
 msgstr ""
 ":doc:`Aktivieren Sie das Razorpay-POS-Modul <../../../../general/"
 "apps_modules>`, um das Zahlungsterminal zu aktivieren."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:34
+msgid ""
+":doc:`Create the related payment method <../../payment_methods>` by going "
+"to :menuselection:`Point of Sale --> Configuration --> Payment Methods`."
+msgstr ""
+":doc:`Erstellen Sie die entsprechende Zahlungsmethode <../../"
+"payment_methods>`, indem Sie zu :menuselection:`Kassensystem --> "
+"Konfiguration --> Zahlungsmethoden` gehen."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:37
 msgid "Set the :guilabel:`Journal` type as :guilabel:`Bank`."
@@ -15768,19 +15867,6 @@ msgid "Install the :ref:`POS Tyro module <general/install>`."
 msgstr ""
 "Installieren Sie das Modul :ref:`Kassensystem - Tyro <general/install>`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:37
-msgid ":doc:`Create a new payment method <../../payment_methods>`:"
-msgstr ""
-":doc:`Erstellen Sie eine neue Zahlungsmethode <../../payment_methods>`:"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:39
-msgid ""
-"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
-"and click :guilabel:`New`."
-msgstr ""
-"Gehen Sie zu :menuselection:`Kassensystem --> Konfiguration --> "
-"Zahlungsmethoden` und klicken Sie auf :guilabel:`Neu`."
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:41
 msgid "Set the :guilabel:`Journal` as :guilabel:`Bank`"
 msgstr "Legen Sie den Typ des :guilabel:`Journals` auf :guilabel:`Bank` fest."
@@ -15816,14 +15902,6 @@ msgid ""
 msgstr ""
 "Das Feld :guilabel:`Tyro-Modus` muss auf :guilabel:`Produktionsmodus` "
 "gesetzt werden."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:56
-msgid "Add the payment method to a POS"
-msgstr "Zahlungsmethode zum Kassensystem hinzufügen"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:58
-msgid "To add a **payment method** to your point of sale:"
-msgstr "So fügen Sie eine **Zahlungsmethode** zu Ihrem Kassensystem hinzu:"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:62
 msgid ""
@@ -16454,8 +16532,8 @@ msgid "Go to the WhatsApp application;"
 msgstr "Gehen Sie zur WhatsApp-Anwendung."
 
 #: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:78
-msgid "Create a new :ref:`WhatsApp template <WhatsApp/templates>`;"
-msgstr "Erstellen Sie eine neue :ref:`WhatsApp-Vorlage <WhatsApp/templates>`;"
+msgid "Create a new :ref:`WhatsApp template <whatsapp/odoo-templates>`;"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:79
 msgid "Configure the fields:"
@@ -24873,699 +24951,11 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:231
-#: ../../content/applications/sales/sales/invoicing/expense.rst:255
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:114
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:71
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:166
 msgid ":doc:`invoicing_policy`"
 msgstr ":doc:`invoicing_policy`"
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:3
-msgid "Reinvoice expenses to customers"
-msgstr "Spesen an Kunden weiterberechnen"
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:5
-msgid ""
-"While working on a project for a client, employees often have to spend their "
-"own money on various expenses related to the project."
-msgstr ""
-"Während der Arbeit an einem Projekt für einen Kunden müssen die Mitarbeiter "
-"oft ihr eigenes Geld für verschiedene Ausgaben im Zusammenhang mit dem "
-"Projekt ausgeben."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:8
-msgid ""
-"For example, an employee may need to use their own money to pay for a hotel, "
-"while they provide an on-site service for a client. As a company, this "
-"expense should be reinvoiced to the customer. With Odoo, these kinds of "
-"expenses can quickly be reinvoiced to the customer related to the project."
-msgstr ""
-"So kann es beispielsweise vorkommen, dass ein Mitarbeiter mit seinem eigenen "
-"Geld ein Hotel bezahlen muss, während er einen Vor-Ort-Service für einen "
-"Kunden erbringt. Als Unternehmen sollten diese Ausgaben dem Kunden in "
-"Rechnung gestellt werden. Mit Odoo können Sie diese Art von Ausgaben schnell "
-"an den Kunden weiterberechnen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:13
-msgid "Expenses application"
-msgstr "Spesenabrechnungsapp"
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:15
-msgid ""
-"To be able to reinvoice a customer for an expense, the *Expenses* "
-"application **must** be installed."
-msgstr ""
-"Um einem Kunden eine Ausgabe erneut in Rechnung stellen zu können, **muss** "
-"die *Spesenabrechnungsapp* installiert sein."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:17
-msgid ""
-"To install the *Expenses* application, navigate to :menuselection:`main Odoo "
-"dashboard --> Apps`, and click :guilabel:`Install` on the *Expenses* "
-"application block. When clicked, Odoo installs the application, refreshes "
-"the page, and returns to the main Odoo dashboard."
-msgstr ""
-"Um die *Spesenabrechnungsapp* zu installieren, navigieren Sie "
-"zu :menuselection:`Odoo Hauptdashboard --> Apps`, und klicken Sie "
-"auf :guilabel:`Installieren` im Block der *Spesenabrechnung*. Wenn Sie "
-"darauf klicken, installiert Odoo die App, aktualisiert die Seite und kehrt "
-"zum Hauptdashboard von Odoo zurück."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:22
-msgid "Add expenses to sales orders"
-msgstr "Verkaufsauftrag Spesen hinzufügen"
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:24
-msgid ""
-"To begin, have a sales order confirmed in the *Sales* app to which a "
-"reinvoiced expense can be added. Or, create a new sales order from scratch. "
-"To do that, navigate to the :menuselection:`Sales app --> New`. Doing so "
-"reveals a blank quotation form."
-msgstr ""
-"Lassen Sie sich zunächst in der *Verkaufsapp* einen Verkaufsauftrag "
-"bestätigen, an dem Sie eine neu berechnete Ausgabe hinzufügen können. Oder "
-"Sie erstellen einen neuen Verkaufsauftrag von Grund auf. Navigieren Sie dazu "
-"zur :menuselection:`Verkaufsapp --> Neu`. Daraufhin wird ein leeres "
-"Angebotsformular angezeigt."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:28
-msgid ""
-"Then, add a :guilabel:`Customer`, and add a product to the :guilabel:`Order "
-"Lines` tab, by clicking :guilabel:`Add a product`. Next, select a product "
-"from the drop-down menu."
-msgstr ""
-"Fügen Sie dann einen :guilabel:`Kunden` hinzu und fügen Sie im "
-"Reiter :guilabel:`Auftragspositionen` ein Produkt hinzu, indem Sie "
-"auf :guilabel:`Produkt hinzufügen` klicken. Wählen Sie dann ein Produkt aus "
-"dem Dropdown-Menü aus."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:31
-msgid "Lastly, click :guilabel:`Confirm` to confirm the sales order."
-msgstr ""
-"Klicken Sie schlussendlich auf :guilabel:`Bestätigen`, um den "
-"Verkaufsauftrag zu bestätigen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid ""
-"This is how a confirmed sales order looks in the Odoo Sales application."
-msgstr "So wird ein bestätigter Verkaufsauftragsblock in Odoo Verkauf."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:37
-msgid "With the sales order confirmed, it's time to create an expense."
-msgstr "Wenn der Verkaufsauftrag bestätigt ist, wird eine Ausgabe erstellt."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:39
-msgid ""
-"To do that, navigate to the *Expenses* application, by going "
-"to :menuselection:`main Odoo dashboard --> Expenses`."
-msgstr ""
-"Navigieren Sie dazu zu *Spesenabrechnungsapp*, indem Sie "
-"zum :menuselection:`Hauptdashboard von Odoo --> Spesenabrechnung` gehen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:42
-msgid ""
-"Then, from the *Expenses* dashboard, click :guilabel:`New` to reveal a blank "
-"expenses form."
-msgstr ""
-"Klicken Sie dann im *Spesenabrechnungsdashboard* auf :guilabel:`Neu`, um ein "
-"leeres Spesenformular zu öffnen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid "A blank expenses form in the Odoo Expenses application."
-msgstr "Ein leeres Spesenformular in der Odoo-Spesenabrechnungsapp."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:48
-msgid ""
-"On the expenses form, add a :guilabel:`Description` to easily reference the "
-"expense."
-msgstr ""
-"Fügen Sie auf dem Spesenformular eine :guilabel:`Beschreibung` hinzu, um die "
-"Ausgabe leicht referenzieren zu können."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:50
-msgid ""
-"Then, in the :guilabel:`Category` field, select one of the following options "
-"from the drop-down menu:"
-msgstr ""
-"Wählen Sie im Feld :guilabel:`Kategorie` eine der folgenden Optionen aus dem "
-"Dropdown-Menü aus:"
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:53
-msgid ""
-":guilabel:`Communication`: any form of communication related to a project/"
-"order."
-msgstr ""
-":guilabel:`Kommunikation`: jegliche Form der Kommunikation in Bezug auf ein "
-"Projekt oder einen Auftrag."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:54
-msgid ":guilabel:`Others`: expense that doesn't fit into any other categories."
-msgstr ":guilabel:`Andere`: Ausgabe, die in keine andere Kategorie passt."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:55
-msgid ":guilabel:`Meals`: any form of meal costs related to a project/order."
-msgstr ""
-":guilabel:`Mahlzeiten`: jegliche Form von Verzehrkosten in Bezug auf ein "
-"Projekt oder einen Auftrag."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:56
-msgid ":guilabel:`Gifts`: any form of gift costs related to a project/order."
-msgstr ""
-":guilabel:`Geschenke`: jegliche Form von Geschenkkosten in Bezug auf ein "
-"Projekt oder einen Auftrag."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:57
-msgid ""
-":guilabel:`Mileage`: any form of mileage (gas) costs related to project/"
-"order."
-msgstr ""
-":guilabel:`Kilometergeld`: jegliche Form von Fahrtkosten (Gas) in Bezug auf "
-"ein Projekt oder einen Auftrag."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:58
-msgid ""
-":guilabel:`Travel \\& Accommodation`: any travel or accommodation costs "
-"related to a project/order."
-msgstr ""
-":guilabel:`Reisen & Unterkunft`: jegliche Form von Reise- oder "
-"Übernachtungskosten in Bezug auf ein Projekt oder einen Auftrag."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:61
-msgid ""
-"New expense categories can be created from an expense form, by clicking "
-"the :guilabel:`Category` field drop-down menu, selecting :guilabel:`View "
-"All`, and clicking :guilabel:`New` from the :guilabel:`Search:Category` pop-"
-"up window."
-msgstr ""
-"Neue Ausgabenkategorien können in einem Ausgabenformular erstellt werden, "
-"indem Sie auf das Dropdown-Menü des Feldes :guilabel:`Kategorie` klicken, "
-"die Option :guilabel:`Alle anzeigen` wählen und im Pop-up-"
-"Fenster :guilabel:`Suchen:Kategorie` auf :guilabel:`Neu` klicken."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:0
-msgid ""
-"The Search:Category expenses pop-up window from a blank expenses form in "
-"Odoo Expenses."
-msgstr ""
-"Das Pop-up-Fenster für Spesen „Suchen: Kategorie“ aus einem leeren "
-"Spesenformular in Odoo Spesenabrechnung."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:69
-msgid ""
-"For this sample workflow, which will reinvoice a customer for a brief hotel "
-"stay, the :guilabel:`Category` for this example is :guilabel:`[TRANS \\& "
-"ACC] Travel \\& Accommodation`."
-msgstr ""
-"Für dieses Beispiel, bei dem ein Kunde für einen kurzen Hotelaufenthalt eine "
-"neue Rechnung erhält, lautet die :guilabel:`Kategorie` :guilabel:`[TRANS \\& "
-"ACC] Reisen \\& Unterkunft`."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:73
-msgid ""
-"The following example requires the *Sales*, *Accounting*, and *Expense* apps "
-"to view/modify all the fields mentioned during the workflow."
-msgstr ""
-"Das folgende Beispiel erfordert die Apps *Verkauf*, *Buchhaltung* und "
-"*Spesenabrechnung*, um alle während des Prozesses genannten Felder "
-"anzuzeigen/zu ändern."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:76
-msgid ""
-"Beneath the :guilabel:`Category` field, enter in the amount to be expensed "
-"in the :guilabel:`Total` field."
-msgstr ""
-"Geben Sie unter dem Feld :guilabel:`Kategorie` den Betrag ein, der in das "
-"Feld :guilabel:`Gesamt` verbucht werden soll."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:79
-msgid ""
-"Next, designate if there are any :guilabel:`Included taxes` in "
-"the :guilabel:`Total`. If a preconfigured tax amount is selected from "
-"the :guilabel:`Included taxes` field, Odoo auto-calculates the taxed amount, "
-"based on the amount entered in the :guilabel:`Total` field."
-msgstr ""
-"Als nächstes geben Sie an, ob im Feld :guilabel:`Gesamt` "
-"irgendwelche :guilabel:`Enthaltene Steuern` enthalten sind. Wenn ein "
-"vorkonfigurierter Steuerbetrag im Feld :guilabel:`Enthaltene Steuern` "
-"ausgewählt wird, berechnet Odoo automatisch den zu versteuernden Betrag auf "
-"der Grundlage des im Feld :guilabel:`Gesamt` eingegebenen Betrags."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:83
-msgid ""
-"Then, choose which :guilabel:`Employee` was responsible for the expense, and "
-"choose an option in the :guilabel:`Paid By` field: :guilabel:`Employee (to "
-"reimburse)` or :guilabel:`Company`."
-msgstr ""
-"Wählen Sie dann, welcher :guilabel:`Mitarbeiter` für die Ausgabe "
-"verantwortlich war, und wählen Sie eine Option im Feld :guilabel:`Bezahlt "
-"von`: :guilabel:`Mitarbeiter (zu erstatten)` oder :guilabel:`Unternehmen`."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:86
-msgid ""
-"In this case, our employee paid for the hotel with their own money, so "
-"the :guilabel:`Employee (to reimburse)` option is chosen."
-msgstr ""
-"In diesem Fall hat unser Mitarbeiter das Hotel mit seinem eigenen Geld "
-"bezahlt, sodass die Option :guilabel:`Mitarbeiter (zu erstatten)` gewählt "
-"wird."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:89
-msgid ""
-"On the right-hand side of the expenses form, the option to add "
-"a :guilabel:`Bill Reference` is available. Beneath that, the auto-"
-"populated :guilabel:`Expense Date` and :guilabel:`Account` fields are "
-"available."
-msgstr ""
-"Auf der rechten Seite des Ausgabenformulars haben Sie die Möglichkeit, "
-"eine :guilabel:`Rechnungsreferenz` hinzuzufügen. Darunter sind die "
-"automatisch ausgefüllten Felder :guilabel:`Datum der Ausgabe` "
-"und :guilabel:`Konto` verfügbar."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:94
-msgid ""
-"The :guilabel:`Expense Date` and :guilabel:`Account` field can be modified, "
-"if needed."
-msgstr ""
-"Die Felder :guilabel:`Datum der Ausgabe` und :guilabel:`Konto` können bei "
-"Bedarf geändert werden."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:96
-msgid ""
-"Next, in the :guilabel:`Customer to Reinvoice` field, click the blank field "
-"to reveal a drop-down menu. From this drop-down menu, select the appropriate "
-"sales order to which this expense should be attached. This field **must** be "
-"filled, in order to reinvoice a customer for an expense."
-msgstr ""
-"Als nächstes klicken Sie im Feld :guilabel:`An Kunden berechnen` auf das "
-"leere Feld, um ein Dropdown-Menü zu öffnen. Wählen Sie in diesem Dropdown-"
-"Menü den entsprechenden Verkaufsauftrag aus, dem diese Ausgabe zugeordnet "
-"werden soll. Dieses Feld **muss** ausgefüllt werden, um einem Kunden eine "
-"erneute Rechnung für eine Ausgabe zu stellen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:100
-msgid ""
-"Lastly, the option to modify the :guilabel:`Analytic Distribution` "
-"and :guilabel:`Company` fields are available. These fields are *not* "
-"required to complete a reinvoiced expense to a customer, but are available "
-"to modify, if needed."
-msgstr ""
-"Schließlich haben Sie noch die Möglichkeit, die "
-"Felder :guilabel:`Kostenverteilung` und :guilabel:`Unternehmen` zu ändern. "
-"Diese Felder sind *nicht* erforderlich, um eine erneute Rechnungsstellung an "
-"einen Kunden durchzuführen, können aber bei Bedarf geändert werden."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:104
-msgid ""
-"Also, at the bottom of the expense form, there is a :guilabel:`Notes...` "
-"section, wherein any notes related to this expense can be added, if needed."
-msgstr ""
-"Außerdem gibt es am unteren Rand des Ausgabenformulars einen "
-"Abschnitt :guilabel:`Notizen ...`, in dem Sie bei Bedarf Notizen zu dieser "
-"Ausgabe hinzufügen können."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid "A filled out expenses form in the Odoo Expenses application."
-msgstr "Ein ausgefülltes Spesenformular in der Odoo-Spesenabrechnungsapp."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:111
-msgid ""
-"At the top of the expense form, there are buttons to :guilabel:`Attach "
-"Receipt`, :guilabel:`Create Report`, and :guilabel:`Split Expense`."
-msgstr ""
-"Am oberen Rand des Ausgabenformulars finden Sie die "
-"Schaltflächen :guilabel:`Beleg anhängen`, :guilabel:`Abrechnung erstellen` "
-"und :guilabel:`Ausgabe aufteilen`."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:114
-msgid ""
-"If there is a physical or digital receipt that should be attached to the "
-"expense, click :guilabel:`Attach Receipt`."
-msgstr ""
-"Wenn es einen physischen oder digitalen Beleg gibt, der an die Ausgabe "
-"angehängt werden soll, klicken Sie auf :guilabel:`Beleg anhängen`."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:117
-msgid ""
-"If the cost of this expense needs to be split, click :guilabel:`Split "
-"Expense`. This feature can be used for a number of reasons (spitting expense "
-"with another employee, to accommodate different tax rates, etc.)."
-msgstr ""
-"Wenn die Kosten für diese Ausgabe aufgeteilt werden müssen, klicken Sie "
-"auf :guilabel:`Ausgabe aufteilen`. Diese Funktion kann aus einer Reihe von "
-"Gründen verwendet werden (Aufteilung der Ausgaben mit einem anderen "
-"Mitarbeiter, Berücksichtigung unterschiedlicher Steuersätze usw.)."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:121
-msgid ""
-"If neither of these options are necessary, click :guilabel:`Create Report` "
-"to lock in the expense report that was just configured."
-msgstr ""
-"Wenn keine dieser Optionen erforderlich ist, klicken Sie "
-"auf :guilabel:`Abrechnung erstellen`, um die soeben konfigurierte "
-"Spesenabrechnung zu speichern."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:124
-msgid ""
-"Doing so reveals an :guilabel:`Expense Report Summary` for the new expense."
-msgstr ""
-"Auf diese Weise erhalten Sie eine :guilabel:`Zusammenfassung der "
-"Spesenabrechnung` für die neue Ausgabe."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid "An expense report summary in the Odoo Expenses application."
-msgstr ""
-"Eine Zusammenfassung der Spesenabrechnung in der Odoo-Spesenabrechnungsapp."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:130
-msgid ""
-"Here, once the details related to the expense have been confirmed, "
-"click :guilabel:`Submit to Manager`. This sends the expense report to the "
-"approving manager, who will review the expense."
-msgstr ""
-"Klicken Sie hier, nachdem Sie die Details der Ausgabe bestätigt haben, "
-"auf :guilabel:`Beim Manager einreichen`. Dadurch wird die Spesenabrechnung "
-"an den genehmigenden Manager geschickt, der die Spesen überprüfen wird."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:133
-msgid ""
-"The manager in charge of reviewing and approving the expense will inspect "
-"the details related to the expense, and if there are no issues, they will "
-"click the :guilabel:`Approve` button — which *only* appears on the manager's "
-"view of the :guilabel:`Expense Report Summary` that's been submitted to the "
-"manager by the employee."
-msgstr ""
-"Der Manager, der für die Überprüfung und Genehmigung der Ausgabe zuständig "
-"ist, prüft die Details der Ausgabe und klickt, wenn es keine Probleme gibt, "
-"auf die Schaltfläche :guilabel:`Genehmigen` - die *nur* in der Ansicht des "
-"Managers auf der :guilabel:`Zusammenfassung der Spesenabrechnung` erscheint, "
-"die der Mitarbeiter dem Manager vorgelegt hat."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid ""
-"An expense report summary that a manager will approve with an Approve button."
-msgstr ""
-"Eine Zusammenfassung der Spesenabrechnung, die von einem Manager mit der "
-"Schaltfläche „Genehmigen“ genehmigt wird."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:142
-msgid ""
-"Once approved, the buttons at the top of the :guilabel:`Expense Report "
-"Summary` change once again. At this point, the buttons at the top of "
-"the :guilabel:`Expense Report Summary` are: :guilabel:`Post Journal "
-"Entries`, :guilabel:`Report in Next Payslip`, :guilabel:`Refuse`, "
-"and :guilabel:`Reset to Draft`."
-msgstr ""
-"Nach der Genehmigung ändern sich die Schaltflächen am oberen Rand des "
-"Fensters :guilabel:`Zusammenfassung der Spesenabrechnung` noch einmal. Zu "
-"diesem Zeitpunkt lauten die Schaltflächen am oberen Rand "
-"der :guilabel:`Zusammenfassung der "
-"Spesenabrechnung`: :guilabel:`Journalposten buchen`, :guilabel:`In nächster "
-"Gehaltsabrechnung verrechnen`, :guilabel:`Ablehnen` und :guilabel:`Auf "
-"Entwurf zurücksetzen`."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid ""
-"An expense report summary with post journal entries button at the top of the "
-"form."
-msgstr ""
-"Eine Zusammenfassung der Spesenabrechnung mit der Schaltfläche "
-"„Journalposten buchen” am oberen Rand des Formulars."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:151
-msgid ""
-"When the manager is satisfied with the :guilabel:`Expense Report Summary`, "
-"they'll click :guilabel:`Post Journal Entries`."
-msgstr ""
-"Wenn der Manager mit der :guilabel:`Zusammenfassung der Spesenabrechnung` "
-"zufrieden ist, klickt er auf :guilabel:`Journalposten buchen`."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:154
-msgid ""
-"Upon clicking :guilabel:`Post Journal Entries`, that button disappears, and "
-"the :guilabel:`Analytic Distribution` column in the :guilabel:`Expense` tab "
-"is filled with the sales order that was initially configured to the expense "
-"in the :guilabel:`Customer to Reinvoice` field."
-msgstr ""
-"Wenn Sie auf :guilabel:`Journalposten buchen` klicken, verschwindet diese "
-"Schaltfläche und die Spalte :guilabel:`Kostenverteilung` im "
-"Reiter :guilabel:`Ausgabe` wird mit dem Verkaufsauftrag gefüllt, der "
-"ursprünglich für die Ausgabe im Feld :guilabel:`An Kunden berechnen` "
-"konfiguriert wurde."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:159
-msgid ""
-"By default, the :guilabel:`Customer to Reinvoice` field is enabled for "
-"the :guilabel:`[TRANS & ACC] Travel & Accommodation`, :guilabel:`[COMM] "
-"Communication`, :guilabel:`[FOOD] Meals`, and :guilabel:`[MIL] Mileage` "
-"expense category."
-msgstr ""
-"Standardmäßig ist das Feld :guilabel:`An Kunden berechnen` für die "
-"Ausgabenkategorien :guilabel:`[TRANS & ACC] Reisen & "
-"Unterkunft`, :guilabel:`[COMM] Kommunikation`, :guilabel:`[FOOD] Mahlzeiten` "
-"und :guilabel:`[MIL] Kilometergeld` aktiviert."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:163
-msgid ""
-"It should be noted that **not** all of the default expense categories that "
-"come installed with the *Expenses* application have reinvoicing policies "
-"activated. The setting may have to be manually activated."
-msgstr ""
-"Bitte beachten Sie, dass **nicht** alle Standardausgabenkategorien, die mit "
-"der *Spesenabrechnungsapp* installiert werden, über aktivierte Richtlinien "
-"für die erneute Rechnungsstellung verfügen. Die Einstellung muss "
-"möglicherweise manuell aktiviert werden."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:167
-msgid ""
-"To do that, navigate to :menuselection:`Expenses app --> Configuration --> "
-"Expenses Categories` to view a list of all expense categories in the "
-"database."
-msgstr ""
-"Navigieren Sie dazu zu :menuselection:`Spesenabrechnungsapp --> "
-"Konfiguration --> Spesenkategorien`, um eine Liste aller Spesenkategorien in "
-"der Datenbank anzuzeigen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:170
-msgid ""
-"Look in the :guilabel:`Re-Invoice Expenses` column to see which selections "
-"have been made for each expense category."
-msgstr ""
-"Schauen Sie in die Spalte :guilabel:`Spesen weiterberechnen`, um zu sehen, "
-"welche Auswahlen für jede Spesenkategorie getroffen wurden."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:0
-msgid ""
-"The Re-Invoice Expenses column on the Expense Categories page in the Odoo "
-"Expenses app."
-msgstr ""
-"Die Spalte „Spesen weiterberechnen“ auf der Spesenkategorienseite in der "
-"Odoo-Spesenabrechnungsapp."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:177
-msgid ""
-"To modify an expense category, click the :icon:`fa-arrow-"
-"right` :guilabel:`(right arrow)` in the :guilabel:`Category` field, to "
-"reveal that specific expense from."
-msgstr ""
-"Um eine Spesenkategorie zu ändern, klicken Sie auf das :icon:`fa-arrow-"
-"right` :guilabel:`(Rechtspfeil)` im Feld :guilabel:`Kategorie`, um die "
-"entsprechende Ausgabe anzuzeigen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:180
-msgid ""
-"Under the :guilabel:`Invoicing` section, in the :guilabel:`Re-Invoice "
-"Expenses` field, select either :guilabel:`At cost` or :guilabel:`Sales "
-"price`."
-msgstr ""
-"Wählen Sie im Abschnitt :guilabel:`Rechnungsstellung` im "
-"Feld :guilabel:`Spesen weiterberechnen` entweder :guilabel:`Nach Aufwand` "
-"oder :guilabel:`Verkaufspreis` aus."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:0
-msgid ""
-"The Re-Invoice Expenses field on an Expense Category form in the Odoo "
-"Expenses app."
-msgstr ""
-"Das Feld „Spesen weiterberechnen“ auf der Spesenkategorienseite in der Odoo-"
-"Spesenabrechnungsapp."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:188
-msgid "Reinvoice expense"
-msgstr "Spesen weiterberechnen"
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:190
-msgid ""
-"With those steps completed, it's time to return to the sales order to "
-"complete the reinvoice of the expense to the customer."
-msgstr ""
-"Wenn diese Schritte abgeschlossen sind, ist es an der Zeit, zum "
-"Verkaufsauftrag zurückzukehren und die erneute Rechnungsstellung an den "
-"Kunden abzuschließen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:193
-msgid ""
-"To do that, navigate to :menuselection:`main Odoo dashboard --> Sales app`, "
-"and select the appropriate sales order that should be reinvoiced for the "
-"expense."
-msgstr ""
-"Navigieren Sie dazu zu :menuselection:`Hauptdashboard von Odoo --> "
-"Verkaufsapp`, und wählen Sie den entsprechenden Verkaufsauftrag aus, für den "
-"die Kosten erneut in Rechnung gestellt werden sollen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:196
-msgid ""
-"On the sales form, the newly-configured expense is now in "
-"the :guilabel:`Order Lines` tab, with its :guilabel:`Delivered` column "
-"filled in, and ready to be invoiced."
-msgstr ""
-"Auf dem Verkaufsformular befindet sich die neu konfigurierte Ausgabe nun im "
-"Reiter :guilabel:`Auftragspositionen`, wobei die "
-"Spalte :guilabel:`Geliefert` ausgefüllt ist, und in Rechnung gestellt werden "
-"kann."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid ""
-"A sales order with the configured expense ready to be invoiced in the Order "
-"Lines tab."
-msgstr ""
-"Ein Verkaufsauftrag mit dem konfigurierten Aufwand, der im Reiter  "
-"„Auftragspositionen“ fakturiert werden kann."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:203
-msgid ""
-"After confirming the details of the expense, click :guilabel:`Create "
-"Invoice` at the top of the sales order. When clicked, a :guilabel:`Create "
-"invoices` pop-up window appears."
-msgstr ""
-"Nachdem Sie die Details der Ausgabe bestätigt haben, klicken Sie "
-"auf :guilabel:`Rechnung erstellen` am oberen Rand des Verkaufsauftrags. Wenn "
-"Sie darauf klicken, erscheint ein Pop-up-Fenster :guilabel:`Rechnungen "
-"erstellen`."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid ""
-"A create invoices pop-up window that appears when the Create Invoice is "
-"clicked."
-msgstr ""
-"Ein Popup-Fenster „Rechnungen erstellen“, das erscheint, wenn Sie auf die "
-"Schaltfläche „Rechnung erstellen“ klicken."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:210
-msgid ""
-"From this pop-up window, leave the :guilabel:`Create Invoice` field on the "
-"default :guilabel:`Regular invoice` option, and click :guilabel:`Create "
-"Draft Invoice`."
-msgstr ""
-"In diesem Pop-up-Fenster lassen Sie das Feld :guilabel:`Rechnung erstellen` "
-"auf der Standardoption :guilabel:`Reguläre Rechnung` und klicken "
-"auf :guilabel:`Rechnungsentwurf erstellen`."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:213
-msgid ""
-"Doing so reveals a :guilabel:`Customer Invoice Draft` showing *only* the "
-"expense in the :guilabel:`Invoice Lines` tab."
-msgstr ""
-"Auf diese Weise wird ein :guilabel:`Kundenrechnungsentwurf` angezeigt, der "
-"*nur* die Ausgaben im Reiter :guilabel:`Rechnungszeilen` enthält."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid ""
-"A customer invoice draft with the expense in the Invoice Lines tab of the "
-"form."
-msgstr ""
-"Ein Kundenrechnungsentwurf mit der Ausgabe im Reiter „Rechnungszeilen“ des "
-"Formulars."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:220
-msgid ""
-"If all the information related to the expense is correct, "
-"click :guilabel:`Confirm` to confirm the invoice. Doing so moves the status "
-"of the invoice from :guilabel:`Draft` to :guilabel:`Posted`."
-msgstr ""
-"Wenn alle Angaben zur Ausgabe korrekt sind, klicken Sie "
-"auf :guilabel:`Bestätigen`, um die Rechnung zu bestätigen. Dadurch wird der "
-"Status der Rechnung von :guilabel:`Entwurf` auf :guilabel:`Gebucht` geändert."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:223
-msgid ""
-"To send the invoice to the customer, click :guilabel:`Send \\& Print`. Doing "
-"so reveals a :guilabel:`Send` pop-up window, with a preconfigured message "
-"and PDF invoice in the body of the message. The message can be reviewed and "
-"modified, if needed."
-msgstr ""
-"Um die Rechnung an den Kunden zu senden, klicken Sie auf :guilabel:`Senden & "
-"drucken`. Daraufhin öffnet sich ein Pop-up-Fenster :guilabel:`Senden` mit "
-"einer vorkonfigurierten Nachricht und einer PDF-Rechnung im Textkörper der "
-"Nachricht. Die Nachricht kann überprüft und bei Bedarf geändert werden."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:227
-msgid ""
-"Once ready, click :guilabel:`Send \\& Print` to send the invoice to the "
-"customer. When clicked, the pop-up window disappears, and Odoo sends the "
-"message/invoice to the customer. Additionally, a PDF of the invoice is "
-"automatically downloaded for record-keeping and/or printing purposes."
-msgstr ""
-"Sobald Sie fertig sind, klicken Sie auf :guilabel:`Senden & drucken`, um die "
-"Rechnung an den Kunden zu senden. Wenn Sie darauf klicken, wird das Pop-up-"
-"Fenster ausgeblendet und Odoo sendet die Nachricht/Rechnung an den Kunden. "
-"Außerdem wird automatisch eine PDF-Datei der Rechnung heruntergeladen, die "
-"Sie für Ihre Unterlagen und/oder zum Drucken verwenden können."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:231
-msgid ""
-"Back on the :guilabel:`Customer Invoice`, click the :guilabel:`Register "
-"Payment` button when the customer pays for the invoiced expense."
-msgstr ""
-"Zurück auf der :guilabel:`Kundenrechnung` klicken Sie auf die "
-"Schaltfläche :guilabel:`Zahlung registrieren`, wenn der Kunde die in "
-"Rechnung gestellte Ausgabe bezahlt."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid ""
-"A customer invoice with the register payment button ready to be clicked."
-msgstr ""
-"Eine Kundenrechnung mit der Schaltfläche „Zahlung registrieren“, die Sie "
-"anklicken können."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:238
-msgid ""
-"When :guilabel:`Register Payment` is clicked, a :guilabel:`Register Payment` "
-"pop-up window appears. In this pop-up window, the necessary fields are auto-"
-"populated with the correct information. After reviewing the information, "
-"click :guilabel:`Create Payment`."
-msgstr ""
-"Wenn Sie auf :guilabel:`Zahlung registrieren` klicken, erscheint ein Pop-up-"
-"Fenster :guilabel:`Zahlung registrieren`. In diesem Pop-up-Fenster werden "
-"die erforderlichen Felder automatisch mit den richtigen Informationen "
-"ausgefüllt. Nachdem Sie die Informationen überprüft haben, klicken Sie "
-"auf :guilabel:`Zahlung erstellen`."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:None
-msgid "A register payment pop-up window on a customer invoice in Odoo Sales."
-msgstr ""
-"Ein Pop-up-Fenster „Zahlung registrieren“ auf einer Kundenrechnung in Odoo "
-"Verkauf."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:246
-msgid ""
-"Once :guilabel:`Create Payment` is clicked, the pop-up window disappears, "
-"and a green :guilabel:`In Payment` banner is in the upper-right corner of "
-"the invoice, signifying this invoice is paid for in full. Thus, completing "
-"the workflow."
-msgstr ""
-"Sobald Sie auf :guilabel:`Zahlung erstellen` geklickt haben, verschwindet "
-"das Pop-up-Fenster und ein grünes :guilabel:`In Zahlung`-Banner erscheint in "
-"der oberen rechten Ecke der Rechnung, was bedeutet, dass diese Rechnung "
-"vollständig bezahlt ist. Damit ist der Arbeitsablauf abgeschlossen."
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:256
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:112
-msgid ":doc:`time_materials`"
-msgstr ":doc:`time_materials`"
-
-#: ../../content/applications/sales/sales/invoicing/expense.rst:257
-msgid ":doc:`milestone`"
-msgstr ":doc:`milestone`"
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:3
 msgid "Invoicing policies"
@@ -26002,6 +25392,10 @@ msgid ""
 "Additional milestones can be invoiced as they are completed, until all "
 "services are complete."
 msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:112
+msgid ":doc:`time_materials`"
+msgstr ":doc:`time_materials`"
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:113
 msgid ":doc:`proforma`"
@@ -31433,11 +30827,11 @@ msgstr ""
 "Die Odoo-*Verkaufsapp* bietet zwei verschiedene Möglichkeiten, Retouren zu "
 "bearbeiten, je nachdem, ob eine Rechnung versandt wurde oder nicht."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:9
+#: ../../content/applications/sales/sales/products_prices/returns.rst:11
 msgid "Before invoicing"
 msgstr "Vor der Rechnungsstellung"
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:11
+#: ../../content/applications/sales/sales/products_prices/returns.rst:13
 msgid ""
 "Returns are completed using *Reverse Transfers* when a customer decides to "
 "return a product **before** an invoice has been sent or validated."
@@ -31446,7 +30840,7 @@ msgstr ""
 "Kunde beschließt, ein Produkt zurückzusenden, **bevor** eine Rechnung "
 "gesendet oder bestätigt wurde."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:15
+#: ../../content/applications/sales/sales/products_prices/returns.rst:17
 msgid ""
 "In order to use *Reverse Transfers*, the *Inventory* app **must** be "
 "installed."
@@ -31454,7 +30848,7 @@ msgstr ""
 "Um *Transfers rückgängig machen* verwenden zu können, **muss** auch die "
 "*Lager*-App installiert sein."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:17
+#: ../../content/applications/sales/sales/products_prices/returns.rst:19
 msgid ""
 "To start a return before invoicing, navigate to the :menuselection:`Sales` "
 "app, select the desired sales order, and click on the :guilabel:`Delivery` "
@@ -31472,7 +30866,7 @@ msgstr ""
 "Ein typischer Verkaufsauftrag mit hervorgehobener intelligenten Schaltfläche "
 "„Lieferung“ in Odoo Verkauf."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:25
+#: ../../content/applications/sales/sales/products_prices/returns.rst:27
 msgid "On the validated delivery order, click :guilabel:`Return`."
 msgstr ""
 "Klicken Sie auf dem validierten Lieferauftrag auf :guilabel:`Retoure "
@@ -31485,13 +30879,13 @@ msgstr ""
 "Ein validierter Verkaufsauftrag mit hervorgehobener intelligenten "
 "Schaltfläche „Retoure“ in Odoo Verkauf."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:31
+#: ../../content/applications/sales/sales/products_prices/returns.rst:33
 msgid "This opens a :guilabel:`Reverse Transfer` pop-up window."
 msgstr ""
 "Dadurch wird ein Pop-up-Fenster :guilabel:`Transfer rückgängig machen` "
 "geöffnet."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:33
+#: ../../content/applications/sales/sales/products_prices/returns.rst:35
 msgid ""
 "By default, the :guilabel:`Quantity` matches the validated quantities from "
 "the delivery order. Update the quantities, if necessary. Click on "
@@ -31511,7 +30905,7 @@ msgstr ""
 "Das Pop-up-Fenster „Retoure“, um eine Retoure vor der Rechnungsstellung an "
 "den Kunden vorzunehmen."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:41
+#: ../../content/applications/sales/sales/products_prices/returns.rst:43
 msgid ""
 "Next, click :guilabel:`Return` to confirm the return. This generates a new "
 "warehouse operation for the incoming returned product(s)."
@@ -31523,7 +30917,7 @@ msgstr ""
 msgid "Warehouse operation after a return has been confirmed in Odoo Sales."
 msgstr "Lagervorgang nachdem eine Retoure in Odoo Verkauf bestätigt wurde."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:48
+#: ../../content/applications/sales/sales/products_prices/returns.rst:50
 msgid ""
 "Upon receiving the return, the warehouse team validates the warehouse "
 "operation by clicking :guilabel:`Validate`. Then, on the original sales "
@@ -31544,7 +30938,7 @@ msgstr ""
 "Die aktualisierte „Gelieferte“ Menge auf dem Verkaufsauftrag nach der "
 "rückgängig gemachten Transfer."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:56
+#: ../../content/applications/sales/sales/products_prices/returns.rst:58
 msgid ""
 "When an invoice is created, the customer receives an invoice **only** for "
 "the products they are keeping, if any."
@@ -31552,11 +30946,11 @@ msgstr ""
 "Wenn eine Rechnung erstellt wird, erhält der Kunde eine Rechnung **nur** für "
 "die Produkte, die er behält, falls zutreffend."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:60
+#: ../../content/applications/sales/sales/products_prices/returns.rst:64
 msgid "After invoicing"
 msgstr "Nach der Rechnungsstellung"
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:62
+#: ../../content/applications/sales/sales/products_prices/returns.rst:66
 msgid ""
 "Sometimes, customers return an item after they receive and/or pay for their "
 "invoice. In these cases, a return using only *Reverse Transfers* is "
@@ -31567,7 +30961,7 @@ msgstr ""
 "*Transfers rückgängig machen* unzureichend, da bestätigte oder versandte "
 "Rechnungen nicht geändert werden können."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:66
+#: ../../content/applications/sales/sales/products_prices/returns.rst:70
 msgid ""
 "However, *Reverse Transfers* can be used in conjunction with *Credit Notes* "
 "to complete the customer's return."
@@ -31575,7 +30969,7 @@ msgstr ""
 "Sie können jedoch *Transfers rückgängig machen* in Verbindung mit "
 "*Gutschriften* verwenden, um die Rückgabe des Kunden abzuschließen."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:69
+#: ../../content/applications/sales/sales/products_prices/returns.rst:73
 msgid ""
 "To start a return after invoicing, navigate to the relevant sales order in "
 "the :menuselection:`Sales` app."
@@ -31583,7 +30977,7 @@ msgstr ""
 "Um eine Retoure nach der Rechnungsstellung auszuführen, navigieren Sie "
 "zur :menuselection:`Verkaufsapp`."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:72
+#: ../../content/applications/sales/sales/products_prices/returns.rst:76
 msgid ""
 "If there is a payment registered on the sales order, the payment details "
 "appear in the chatter, and the invoice (accessible through "
@@ -31599,7 +30993,7 @@ msgstr ""
 msgid "Sample of a green in payment banner in Odoo Sales."
 msgstr "Beispiel eines grünen Banners „In Zahlung“ in Odoo Verkauf."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:80
+#: ../../content/applications/sales/sales/products_prices/returns.rst:84
 msgid ""
 "From the sales order, click on the :guilabel:`Delivery` smart button to view "
 "the validated delivery order. Then, click :guilabel:`Return` to open "
@@ -31610,7 +31004,7 @@ msgstr ""
 "anzuzeigen. Klicken Sie dann auf :guilabel:`Retoure`, um das Pop-up-"
 "Fenster :guilabel:`Transfer rückgängig machen` zu öffnen."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:83
+#: ../../content/applications/sales/sales/products_prices/returns.rst:87
 msgid ""
 "Next, edit the :guilabel:`Product` and/or :guilabel:`Quantity`, as needed "
 "for the return. Then, click :guilabel:`Return`. This generates a new "
@@ -31624,7 +31018,7 @@ msgstr ""
 "eingehenden Retouren erzeugt, der vom Lagerteam nach Eingang der Retoure "
 "durch Klick auf :guilabel:`Validieren` validiert wird."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:88
+#: ../../content/applications/sales/sales/products_prices/returns.rst:92
 msgid ""
 "Then, on the sales order, the :guilabel:`Delivered` quantity updates to "
 "reflect the difference between the initial validated quantities and the "
@@ -31634,7 +31028,7 @@ msgstr ""
 "Differenz zwischen den ursprünglich validierten Mengen und den "
 "zurückgegebenen Mengen wider."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:91
+#: ../../content/applications/sales/sales/products_prices/returns.rst:95
 msgid ""
 "To process a refund, navigate to the relevant invoice (from the sales order, "
 "click on the :guilabel:`Invoices` smart button). Then, click "
@@ -31653,7 +31047,7 @@ msgstr ""
 "Eine herkömmliche Kundenrechnung mit einer hervorgehobenen Schaltfläche "
 "„Gutschrift“ in Odoo Verkauf."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:99
+#: ../../content/applications/sales/sales/products_prices/returns.rst:103
 msgid "Doing so reveals a :guilabel:`Credit Note` pop-up form."
 msgstr "Dadruch erscheint das Pop-up-Formular :guilabel:`Gutschrift`."
 
@@ -31662,7 +31056,7 @@ msgid "Typical credit note pop-up form that appears in Odoo Sales."
 msgstr ""
 "Pop-up-Fenster einer typischen Gutschrift, die in Odoo Verkauf erscheint."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:105
+#: ../../content/applications/sales/sales/products_prices/returns.rst:109
 msgid ""
 "Start by entering a :guilabel:`Reason displayed on Credit Note` and a "
 "specific :guilabel:`Journal` to process the credit. Then, select a "
@@ -31672,7 +31066,7 @@ msgstr ""
 "bestimmtes :guilabel:`Journal` zur Verarbeitung der Gutschrift an. Wählen "
 "Sie dann ein bestimmtes :guilabel:`Stornodatum` an."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:108
+#: ../../content/applications/sales/sales/products_prices/returns.rst:112
 msgid ""
 "After the information is filled in, click :guilabel:`Reverse` "
 "or :guilabel:`Reverse and Create Invoice`. Then, edit the draft, if needed."
@@ -31681,13 +31075,13 @@ msgstr ""
 "auf :guilabel:`Stornieren` oder :guilabel:`Stornieren und Rechnung "
 "erstellen`."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:111
+#: ../../content/applications/sales/sales/products_prices/returns.rst:115
 msgid "Lastly, click :guilabel:`Confirm` to confirm the credit note."
 msgstr ""
 "Klicken Sie schlussendlich auf :guilabel:`Bestätigen`, um die Gutschrift zu "
 "bestätigen."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:113
+#: ../../content/applications/sales/sales/products_prices/returns.rst:117
 msgid ""
 "When complete, a blue banner reading: :guilabel:`You have outstanding "
 "credits for this customer. You can allocate them to mark this invoice as "
@@ -31698,7 +31092,7 @@ msgstr ""
 "können sie zuordnen, um diese Gutschrift als bezahlt zu kennzeichnen`, das "
 "oben auf der Seite erscheint."
 
-#: ../../content/applications/sales/sales/products_prices/returns.rst:117
+#: ../../content/applications/sales/sales/products_prices/returns.rst:121
 msgid ":doc:`../../../finance/accounting/customer_invoices/credit_notes`"
 msgstr ":doc:`../../../finance/accounting/customer_invoices/credit_notes`"
 
@@ -39907,6 +39301,902 @@ msgid ""
 msgstr ""
 "Der zugehörige Verkaufsauftrag, der über die intelligente Schaltfläche "
 "„Verkaufshistorie“ in Odoo Abonnements angezeigt wird."
+
+#~ msgid ":doc:`https`"
+#~ msgstr ":doc:`https`"
+
+#~ msgid ""
+#~ "To work with Odoo, some printer models that can be used without "
+#~ "an :doc:`IoT system </applications/general/iot>` may require :doc:`the "
+#~ "HTTPS protocol <https>` to establish a secure connection between the "
+#~ "browser and the printer. However, trying to reach the printer's IP "
+#~ "address using HTTPS leads to a warning page on most web browsers. In that "
+#~ "case, you can temporarily :ref:`force the connection <epos_ssc/"
+#~ "instructions>`, which allows you to reach the page in HTTPS and use the "
+#~ "ePOS printer in Odoo as long as the browser window stays open."
+#~ msgstr ""
+#~ "Um mit Odoo zu arbeiten, benötigen einige Druckermodelle, die ohne "
+#~ "ein :doc:`IoT-System </applications/general/iot>` verwendet werden "
+#~ "können, möglicherweise :doc:`das HTTPS-Protokoll <https>`, um eine "
+#~ "sichere Verbindung zwischen dem Browser und dem Drucker herzustellen. Der "
+#~ "Versuch, die IP-Adresse des Druckers über HTTPS zu erreichen, führt "
+#~ "jedoch bei den meisten Webbrowsern zu einer Warnseite. In diesem Fall "
+#~ "können Sie vorübergehend :ref:`die Verbindung erzwingen <epos_ssc/"
+#~ "instructions>`, wodurch Sie die Seite in HTTPS erreichen und den ePOS-"
+#~ "Drucker in Odoo verwenden können, solange das Browserfenster geöffnet "
+#~ "bleibt."
+
+#~ msgid "Secure connection (HTTPS)"
+#~ msgstr "Sichere Verbindung (HTTPS)"
+
+#~ msgid ""
+#~ "If **Direct Devices** is enabled in a Point of Sale settings (for "
+#~ "example, if you use an :doc:`ePos printer <epos_printers>`), HTTP becomes "
+#~ "the default protocol."
+#~ msgstr ""
+#~ "Wenn **Direkte Geräte** in den Einstellungen eines Kassensystems "
+#~ "aktiviert sind (z. B. wenn Sie einen :doc:`ePos-Drucker <epos_printers>` "
+#~ "verwenden), wird HTTP zum Standardprotokoll."
+
+#~ msgid "Force your Point of Sale to use a secure connection (HTTPS)"
+#~ msgstr ""
+#~ "Ihr Kassensystem zwingen, eine sichere Verbindung zu verwenden (HTTPS)"
+
+#~ msgid ""
+#~ "Add a new **key** in the **System Parameters** to force your Point of "
+#~ "Sale to use a secure connection with the HTTPS protocol."
+#~ msgstr ""
+#~ "Fügen Sie einen neuen **Schlüssel** in den **Systemparametern** hinzu, um "
+#~ "Ihr Kassensystem zu zwingen, eine sichere Verbindung mit dem HTTPS-"
+#~ "Protokoll zu verwenden."
+
+#~ msgid ""
+#~ "To do so, activate the :ref:`developer mode <developer-mode>`, go "
+#~ "to :menuselection:`Settings --> Technical --> Parameters --> System "
+#~ "Parameters`, then create a new parameter, add the following values and "
+#~ "click on *Save*."
+#~ msgstr ""
+#~ "Aktivieren Sie dazu den :ref:`Entwicklermodus <developer-mode>`, gehen "
+#~ "Sie zu :menuselection:`Einstellungen --> Technisch --> Parameter --> "
+#~ "Systemparameter`, erstellen Sie dann einen neuen Parameter, fügen Sie die "
+#~ "folgenden Werte hinzu und klicken Sie auf *Speichern*."
+
+#~ msgid "**Key**: `point_of_sale.enforce_https`"
+#~ msgstr "**Schlüssel**: `point_of_sale.enforce_https`"
+
+#~ msgid "**Value**: `True`"
+#~ msgstr "**Wert**: `True`"
+
+#~ msgid ""
+#~ "Only **Point Smart** payment terminals in Argentina, Brazil, Chile, "
+#~ "Colombia, Mexico, Peru, and Uruguay are supported. They can be purchased "
+#~ "on `Mercado Pago's website <https://www.mercadopago.com.mx/herramientas-"
+#~ "para-vender/lectores-point>`_."
+#~ msgstr ""
+#~ "Es werden ausschließlich **Point-Smart**-Zahlungsterminals in "
+#~ "Argentinien, Brasilien, Chile, Kolumbien, Mexiko, Peru und Uruguay "
+#~ "unterstützt. Diese können auf der `Website von Mercado Pago <https://"
+#~ "www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_ "
+#~ "erworben werden."
+
+#~ msgid ""
+#~ "`Mercado Pago online payments <https://www.mercadopago.com.mx/"
+#~ "herramientas-para-vender/check-out#benefits-checkout>`_"
+#~ msgstr ""
+#~ "`Online-Zahlungen mit Mercado Pago <https://www.mercadopago.com.mx/"
+#~ "herramientas-para-vender/check-out#benefits-checkout>`_"
+
+#~ msgid "Create a `Mercado Pago account <https://www.mercadopago.com.mx/>`_."
+#~ msgstr ""
+#~ "Erstellen Sie ein `Mercado-Pago-Konto <https://www.mercadopago.com.mx/>`_."
+
+#~ msgid ""
+#~ "Associate your Point Smart terminal with a :guilabel:`store` and "
+#~ "a :guilabel:`cash drawer` by following `Mercado Pago's documentation "
+#~ "<https://vendedores.mercadolibre.com.ar/nota/locales-una-herramienta-para-"
+#~ "mejorar-la-gestion-de-tus-puntos-de-venta/>`_."
+#~ msgstr ""
+#~ "Verknüpfen Sie Ihren Point-Smart-Terminal mit einem :guilabel:`Shop` und "
+#~ "einer :guilabel:`Kasse`, indem Sie die `Dokumentation von Mercado Pago "
+#~ "<https://vendedores.mercadolibre.com.ar/nota/locales-una-herramienta-para-"
+#~ "mejorar-la-gestion-de-tus-puntos-de-venta/>`_ befolgen."
+
+#~ msgid ""
+#~ "All purchased terminals are automatically displayed on your Mercado "
+#~ "dashboard."
+#~ msgstr ""
+#~ "Alle erworbenen Terminals werden automatisch auf Ihrem Mercado-Dashboard "
+#~ "angezeigt."
+
+#~ msgid ""
+#~ "Set your Point Smart terminal to the :guilabel:`Point of Sale` operation "
+#~ "mode."
+#~ msgstr ""
+#~ "Richten Sie Ihren Point-Smart-Terminal zum "
+#~ "Betriebsmodus :guilabel:`Kassensystem` ein."
+
+#~ msgid ""
+#~ ":ref:`Create a Point Smart application <pos-mercado-pago-application>`."
+#~ msgstr ""
+#~ ":ref:`Erstellen Sie eine Point-Smart-App <pos-mercado-pago-application>`."
+
+#~ msgid ":ref:`Generate your credentials <pos-mercado-pago-credentials>`."
+#~ msgstr ""
+#~ ":ref:`Generieren Sie Ihre Anmeldedaten <pos-mercado-pago-credentials>`."
+
+#~ msgid ""
+#~ ":ref:`Create and configure the related payment method <pos-mercado-pago-"
+#~ "method>`."
+#~ msgstr ""
+#~ ":ref:`Erstellen und konfigurieren Sie die entsprechende Zahlungsmethode "
+#~ "<pos-mercado-pago-method>`."
+
+#~ msgid ""
+#~ "Create a new application from Mercado Pago's `developer panel <https://"
+#~ "www.mercadopago.com/developers>`_ by following `Mercado Pago's "
+#~ "applications documentation <https://www.mercadopago.com.mx/ayuda/"
+#~ "20152>`_, making sure you select :guilabel:`In person Payments`."
+#~ msgstr ""
+#~ "Erstellen Sie eine neue App über das `Entwickler-Panel <https://"
+#~ "www.mercadopago.com/developers>`_ von Mercado Pago, indem Sie der "
+#~ "`Dokumentation zu Apps von Mercado Pago folgen<https://"
+#~ "www.mercadopago.com.mx/ayuda/20152>`_. Achten Sie darauf, dass "
+#~ "Sie :guilabel:`Vor-Ort-Zahlungen` auswählen."
+
+#~ msgid "Credentials"
+#~ msgstr "Anmeldedaten"
+
+#~ msgid ""
+#~ "Once the Point Smart application is created, three credentials are "
+#~ "required:"
+#~ msgstr ""
+#~ "Sobald die Point-Smart-App erstellt wurde, sind drei Anmeldeinformationen "
+#~ "erforderlich:"
+
+#~ msgid "An access token that Odoo uses to call Mercado Pago."
+#~ msgstr ""
+#~ "Ein Zugriffstoken, das Odoo verwendet, um Mercado Pago zu erreichen."
+
+#~ msgid ""
+#~ "A webhook secret key that Odoo uses to authenticate notifications sent by "
+#~ "Mercado Pago."
+#~ msgstr ""
+#~ "Ein Webhook-Geheimnisschlüssel, den Odoo verwendet, um "
+#~ "Benachrichtigungen, die von Mercado Pago gesendet werden, zu "
+#~ "authentifizieren."
+
+#~ msgid ""
+#~ "The **terminal serial number** at the back of your Point Smart terminal."
+#~ msgstr ""
+#~ "Die **Seriennummer des Terminals** auf der Rückseite des Point-Smart-"
+#~ "Terminal."
+
+#~ msgid ""
+#~ "Retrieve the access token and webhook secret key by following `Mercado "
+#~ "Pago's credentials documentation <https://www.mercadopago.com.mx/"
+#~ "developers/en/docs/your-integrations/credentials>`_. Then, copy and paste "
+#~ "them into Odoo when creating the payment method."
+#~ msgstr ""
+#~ "Rufen Sie das Zugriffstoken und den geheimen Webhook-Schlüssel ab, indem "
+#~ "Sie der `Dokumentation zu den Anmeldedaten von Mercado Pago <https://"
+#~ "www.mercadopago.com.mx/developers/en/docs/your-integrations/"
+#~ "credentials>`_ folgen. Kopieren Sie diese dann und fügen Sie sie in Odoo "
+#~ "ein, wenn Sie die Zahlungsmethode erstellen."
+
+#~ msgid ""
+#~ "For the webhooks configuration, add the URL of your Odoo database (e.g., "
+#~ "`https://mycompany.odoo.com`) followed by `/pos_mercado_pago/"
+#~ "notification` (e.g., `https://mycompany.odoo.com/pos_mercado_pago/"
+#~ "notification`)."
+#~ msgstr ""
+#~ "Fügen Sie für die Webhooks-Konfiguration die URL Ihrer Odoo-Datenbank (z. "
+#~ "B. `https://mycompany.odoo.com`) gefolgt von `/pos_mercado_pago/"
+#~ "notification` (z. B. `https://mycompany.odoo.com/pos_mercado_pago/"
+#~ "notification`) hinzu."
+
+#~ msgid "Webhooks configuration on Mercado Pago."
+#~ msgstr "Webhooks-Konfiguration auf Mercado Pago."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Point of Sale --> Configuration --> Settings` and "
+#~ "enable :guilabel:`Mercado Pago` under the :guilabel:`Payment Terminals` "
+#~ "section."
+#~ msgstr ""
+#~ "Gehen Sie zu :menuselection:`Kassensystem --> Konfiguration --> "
+#~ "Einstellungen` und aktivieren Sie die Funktion :guilabel:`Mercado Pago` "
+#~ "im Abschnitt :guilabel:`Zahlungsterminals`."
+
+#~ msgid "Set the journal type as :guilabel:`Bank`"
+#~ msgstr "Legen Sie den Journaltyp auf :guilabel:`Bank` fest."
+
+#~ msgid ""
+#~ "Select :guilabel:`Mercado Pago` in the :guilabel:`Use a Payment Terminal` "
+#~ "field."
+#~ msgstr ""
+#~ "Wählen Sie :guilabel:`Mercado Pago` im Feld :guilabel:`Zahlungsterminal "
+#~ "verwenden`."
+
+#~ msgid ""
+#~ "Fill in the mandatory fields with the :ref:`previously generated "
+#~ "credentials <pos-mercado-pago-credentials>`:"
+#~ msgstr ""
+#~ "Füllen Sie die Pflichtfelder mit den :ref:`zuvor generierten Anmeldedaten "
+#~ "<pos-mercado-pago-credentials>` aus:"
+
+#~ msgid ""
+#~ "Fill in the :guilabel:`Production user token` field using the access "
+#~ "token."
+#~ msgstr ""
+#~ "Füllen Sie das Feld :guilabel:`Produktionsbenutzertoken` mit dem "
+#~ "Zugriffstoken aus."
+
+#~ msgid ""
+#~ "Fill in the :guilabel:`Production secret key` field using the webhook "
+#~ "secret key."
+#~ msgstr ""
+#~ "Füllen Sie das Feld :guilabel:`Geheimer Produktionsschlüssel` mit dem "
+#~ "geheimen Webhook-Schlüssel aus."
+
+#~ msgid ""
+#~ "Fill in the :guilabel:`Terminal S/N` field using the terminal serial "
+#~ "number. You can find it at the back of your terminal."
+#~ msgstr ""
+#~ "Füllen Sie das Feld :guilabel:`S/N des Terminals` mit der Seriennummer "
+#~ "des Terminals aus. Diese finden Sie auf der Rückseite Ihres Terminals."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Force PDV` button to activate the Point of Sale mode."
+#~ msgstr ""
+#~ "Klicken Sie auf die Schaltfläche :guilabel:`PDV erzwingen`, um den "
+#~ "Kassensystem-Modus zu aktivieren."
+
+#~ msgid ""
+#~ "Select the payment method by going to the :ref:`POS' settings "
+#~ "<configuration/settings>` and adding it to the payment method under "
+#~ "the :guilabel:`Payment Methods` field of the :guilabel:`Payment` section."
+#~ msgstr ""
+#~ "Wählen Sie die Zahlungsmethode aus, indem Sie zu den :ref:`Kassensystem-"
+#~ "Einstellungen <configuration/settings>` gehen und sie der Zahlungsmethode "
+#~ "im Feld :guilabel:`Zahlungsmethoden` im Abschnitt :guilabel:`Zahlung` "
+#~ "hinzufügen."
+
+#~ msgid ""
+#~ "Any action made on the terminal should trigger a notification on the POS "
+#~ "interface. Ensure the :ref:`webhook secret key <pos-mercado-pago-"
+#~ "credentials>` is correctly configured if you are not notified."
+#~ msgstr ""
+#~ "Jede Aktion, die am Terminal durchgeführt wird, sollte eine "
+#~ "Benachrichtigung auf der Kassenschnittstelle auslösen. Stellen Sie "
+#~ "sicher, dass der  :ref:`Geheime Webhook-Schlüssel <pos-mercado-pago-"
+#~ "credentials>` korrekt konfiguriert ist, wenn Sie keine Benachrichtigung "
+#~ "erhalten."
+
+#~ msgid "Create a new :ref:`WhatsApp template <WhatsApp/templates>`;"
+#~ msgstr ""
+#~ "Erstellen Sie eine neue :ref:`WhatsApp-Vorlage <WhatsApp/templates>`;"
+
+#~ msgid "Reinvoice expenses to customers"
+#~ msgstr "Spesen an Kunden weiterberechnen"
+
+#~ msgid ""
+#~ "While working on a project for a client, employees often have to spend "
+#~ "their own money on various expenses related to the project."
+#~ msgstr ""
+#~ "Während der Arbeit an einem Projekt für einen Kunden müssen die "
+#~ "Mitarbeiter oft ihr eigenes Geld für verschiedene Ausgaben im "
+#~ "Zusammenhang mit dem Projekt ausgeben."
+
+#~ msgid ""
+#~ "For example, an employee may need to use their own money to pay for a "
+#~ "hotel, while they provide an on-site service for a client. As a company, "
+#~ "this expense should be reinvoiced to the customer. With Odoo, these kinds "
+#~ "of expenses can quickly be reinvoiced to the customer related to the "
+#~ "project."
+#~ msgstr ""
+#~ "So kann es beispielsweise vorkommen, dass ein Mitarbeiter mit seinem "
+#~ "eigenen Geld ein Hotel bezahlen muss, während er einen Vor-Ort-Service "
+#~ "für einen Kunden erbringt. Als Unternehmen sollten diese Ausgaben dem "
+#~ "Kunden in Rechnung gestellt werden. Mit Odoo können Sie diese Art von "
+#~ "Ausgaben schnell an den Kunden weiterberechnen."
+
+#~ msgid "Expenses application"
+#~ msgstr "Spesenabrechnungsapp"
+
+#~ msgid ""
+#~ "To be able to reinvoice a customer for an expense, the *Expenses* "
+#~ "application **must** be installed."
+#~ msgstr ""
+#~ "Um einem Kunden eine Ausgabe erneut in Rechnung stellen zu können, "
+#~ "**muss** die *Spesenabrechnungsapp* installiert sein."
+
+#~ msgid ""
+#~ "To install the *Expenses* application, navigate to :menuselection:`main "
+#~ "Odoo dashboard --> Apps`, and click :guilabel:`Install` on the *Expenses* "
+#~ "application block. When clicked, Odoo installs the application, refreshes "
+#~ "the page, and returns to the main Odoo dashboard."
+#~ msgstr ""
+#~ "Um die *Spesenabrechnungsapp* zu installieren, navigieren Sie "
+#~ "zu :menuselection:`Odoo Hauptdashboard --> Apps`, und klicken Sie "
+#~ "auf :guilabel:`Installieren` im Block der *Spesenabrechnung*. Wenn Sie "
+#~ "darauf klicken, installiert Odoo die App, aktualisiert die Seite und "
+#~ "kehrt zum Hauptdashboard von Odoo zurück."
+
+#~ msgid "Add expenses to sales orders"
+#~ msgstr "Verkaufsauftrag Spesen hinzufügen"
+
+#~ msgid ""
+#~ "To begin, have a sales order confirmed in the *Sales* app to which a "
+#~ "reinvoiced expense can be added. Or, create a new sales order from "
+#~ "scratch. To do that, navigate to the :menuselection:`Sales app --> New`. "
+#~ "Doing so reveals a blank quotation form."
+#~ msgstr ""
+#~ "Lassen Sie sich zunächst in der *Verkaufsapp* einen Verkaufsauftrag "
+#~ "bestätigen, an dem Sie eine neu berechnete Ausgabe hinzufügen können. "
+#~ "Oder Sie erstellen einen neuen Verkaufsauftrag von Grund auf. Navigieren "
+#~ "Sie dazu zur :menuselection:`Verkaufsapp --> Neu`. Daraufhin wird ein "
+#~ "leeres Angebotsformular angezeigt."
+
+#~ msgid ""
+#~ "Then, add a :guilabel:`Customer`, and add a product to "
+#~ "the :guilabel:`Order Lines` tab, by clicking :guilabel:`Add a product`. "
+#~ "Next, select a product from the drop-down menu."
+#~ msgstr ""
+#~ "Fügen Sie dann einen :guilabel:`Kunden` hinzu und fügen Sie im "
+#~ "Reiter :guilabel:`Auftragspositionen` ein Produkt hinzu, indem Sie "
+#~ "auf :guilabel:`Produkt hinzufügen` klicken. Wählen Sie dann ein Produkt "
+#~ "aus dem Dropdown-Menü aus."
+
+#~ msgid "Lastly, click :guilabel:`Confirm` to confirm the sales order."
+#~ msgstr ""
+#~ "Klicken Sie schlussendlich auf :guilabel:`Bestätigen`, um den "
+#~ "Verkaufsauftrag zu bestätigen."
+
+#~ msgid ""
+#~ "This is how a confirmed sales order looks in the Odoo Sales application."
+#~ msgstr "So wird ein bestätigter Verkaufsauftragsblock in Odoo Verkauf."
+
+#~ msgid "With the sales order confirmed, it's time to create an expense."
+#~ msgstr "Wenn der Verkaufsauftrag bestätigt ist, wird eine Ausgabe erstellt."
+
+#~ msgid ""
+#~ "To do that, navigate to the *Expenses* application, by going "
+#~ "to :menuselection:`main Odoo dashboard --> Expenses`."
+#~ msgstr ""
+#~ "Navigieren Sie dazu zu *Spesenabrechnungsapp*, indem Sie "
+#~ "zum :menuselection:`Hauptdashboard von Odoo --> Spesenabrechnung` gehen."
+
+#~ msgid ""
+#~ "Then, from the *Expenses* dashboard, click :guilabel:`New` to reveal a "
+#~ "blank expenses form."
+#~ msgstr ""
+#~ "Klicken Sie dann im *Spesenabrechnungsdashboard* auf :guilabel:`Neu`, um "
+#~ "ein leeres Spesenformular zu öffnen."
+
+#~ msgid "A blank expenses form in the Odoo Expenses application."
+#~ msgstr "Ein leeres Spesenformular in der Odoo-Spesenabrechnungsapp."
+
+#~ msgid ""
+#~ "On the expenses form, add a :guilabel:`Description` to easily reference "
+#~ "the expense."
+#~ msgstr ""
+#~ "Fügen Sie auf dem Spesenformular eine :guilabel:`Beschreibung` hinzu, um "
+#~ "die Ausgabe leicht referenzieren zu können."
+
+#~ msgid ""
+#~ "Then, in the :guilabel:`Category` field, select one of the following "
+#~ "options from the drop-down menu:"
+#~ msgstr ""
+#~ "Wählen Sie im Feld :guilabel:`Kategorie` eine der folgenden Optionen aus "
+#~ "dem Dropdown-Menü aus:"
+
+#~ msgid ""
+#~ ":guilabel:`Communication`: any form of communication related to a project/"
+#~ "order."
+#~ msgstr ""
+#~ ":guilabel:`Kommunikation`: jegliche Form der Kommunikation in Bezug auf "
+#~ "ein Projekt oder einen Auftrag."
+
+#~ msgid ""
+#~ ":guilabel:`Others`: expense that doesn't fit into any other categories."
+#~ msgstr ":guilabel:`Andere`: Ausgabe, die in keine andere Kategorie passt."
+
+#~ msgid ""
+#~ ":guilabel:`Meals`: any form of meal costs related to a project/order."
+#~ msgstr ""
+#~ ":guilabel:`Mahlzeiten`: jegliche Form von Verzehrkosten in Bezug auf ein "
+#~ "Projekt oder einen Auftrag."
+
+#~ msgid ""
+#~ ":guilabel:`Gifts`: any form of gift costs related to a project/order."
+#~ msgstr ""
+#~ ":guilabel:`Geschenke`: jegliche Form von Geschenkkosten in Bezug auf ein "
+#~ "Projekt oder einen Auftrag."
+
+#~ msgid ""
+#~ ":guilabel:`Mileage`: any form of mileage (gas) costs related to project/"
+#~ "order."
+#~ msgstr ""
+#~ ":guilabel:`Kilometergeld`: jegliche Form von Fahrtkosten (Gas) in Bezug "
+#~ "auf ein Projekt oder einen Auftrag."
+
+#~ msgid ""
+#~ ":guilabel:`Travel \\& Accommodation`: any travel or accommodation costs "
+#~ "related to a project/order."
+#~ msgstr ""
+#~ ":guilabel:`Reisen & Unterkunft`: jegliche Form von Reise- oder "
+#~ "Übernachtungskosten in Bezug auf ein Projekt oder einen Auftrag."
+
+#~ msgid ""
+#~ "New expense categories can be created from an expense form, by clicking "
+#~ "the :guilabel:`Category` field drop-down menu, selecting :guilabel:`View "
+#~ "All`, and clicking :guilabel:`New` from the :guilabel:`Search:Category` "
+#~ "pop-up window."
+#~ msgstr ""
+#~ "Neue Ausgabenkategorien können in einem Ausgabenformular erstellt werden, "
+#~ "indem Sie auf das Dropdown-Menü des Feldes :guilabel:`Kategorie` klicken, "
+#~ "die Option :guilabel:`Alle anzeigen` wählen und im Pop-up-"
+#~ "Fenster :guilabel:`Suchen:Kategorie` auf :guilabel:`Neu` klicken."
+
+#~ msgid ""
+#~ "The Search:Category expenses pop-up window from a blank expenses form in "
+#~ "Odoo Expenses."
+#~ msgstr ""
+#~ "Das Pop-up-Fenster für Spesen „Suchen: Kategorie“ aus einem leeren "
+#~ "Spesenformular in Odoo Spesenabrechnung."
+
+#~ msgid ""
+#~ "For this sample workflow, which will reinvoice a customer for a brief "
+#~ "hotel stay, the :guilabel:`Category` for this example "
+#~ "is :guilabel:`[TRANS \\& ACC] Travel \\& Accommodation`."
+#~ msgstr ""
+#~ "Für dieses Beispiel, bei dem ein Kunde für einen kurzen Hotelaufenthalt "
+#~ "eine neue Rechnung erhält, lautet "
+#~ "die :guilabel:`Kategorie` :guilabel:`[TRANS \\& ACC] Reisen \\& "
+#~ "Unterkunft`."
+
+#~ msgid ""
+#~ "The following example requires the *Sales*, *Accounting*, and *Expense* "
+#~ "apps to view/modify all the fields mentioned during the workflow."
+#~ msgstr ""
+#~ "Das folgende Beispiel erfordert die Apps *Verkauf*, *Buchhaltung* und "
+#~ "*Spesenabrechnung*, um alle während des Prozesses genannten Felder "
+#~ "anzuzeigen/zu ändern."
+
+#~ msgid ""
+#~ "Beneath the :guilabel:`Category` field, enter in the amount to be "
+#~ "expensed in the :guilabel:`Total` field."
+#~ msgstr ""
+#~ "Geben Sie unter dem Feld :guilabel:`Kategorie` den Betrag ein, der in das "
+#~ "Feld :guilabel:`Gesamt` verbucht werden soll."
+
+#~ msgid ""
+#~ "Next, designate if there are any :guilabel:`Included taxes` in "
+#~ "the :guilabel:`Total`. If a preconfigured tax amount is selected from "
+#~ "the :guilabel:`Included taxes` field, Odoo auto-calculates the taxed "
+#~ "amount, based on the amount entered in the :guilabel:`Total` field."
+#~ msgstr ""
+#~ "Als nächstes geben Sie an, ob im Feld :guilabel:`Gesamt` "
+#~ "irgendwelche :guilabel:`Enthaltene Steuern` enthalten sind. Wenn ein "
+#~ "vorkonfigurierter Steuerbetrag im Feld :guilabel:`Enthaltene Steuern` "
+#~ "ausgewählt wird, berechnet Odoo automatisch den zu versteuernden Betrag "
+#~ "auf der Grundlage des im Feld :guilabel:`Gesamt` eingegebenen Betrags."
+
+#~ msgid ""
+#~ "Then, choose which :guilabel:`Employee` was responsible for the expense, "
+#~ "and choose an option in the :guilabel:`Paid By` "
+#~ "field: :guilabel:`Employee (to reimburse)` or :guilabel:`Company`."
+#~ msgstr ""
+#~ "Wählen Sie dann, welcher :guilabel:`Mitarbeiter` für die Ausgabe "
+#~ "verantwortlich war, und wählen Sie eine Option im Feld :guilabel:`Bezahlt "
+#~ "von`: :guilabel:`Mitarbeiter (zu erstatten)` oder :guilabel:`Unternehmen`."
+
+#~ msgid ""
+#~ "In this case, our employee paid for the hotel with their own money, so "
+#~ "the :guilabel:`Employee (to reimburse)` option is chosen."
+#~ msgstr ""
+#~ "In diesem Fall hat unser Mitarbeiter das Hotel mit seinem eigenen Geld "
+#~ "bezahlt, sodass die Option :guilabel:`Mitarbeiter (zu erstatten)` gewählt "
+#~ "wird."
+
+#~ msgid ""
+#~ "On the right-hand side of the expenses form, the option to add "
+#~ "a :guilabel:`Bill Reference` is available. Beneath that, the auto-"
+#~ "populated :guilabel:`Expense Date` and :guilabel:`Account` fields are "
+#~ "available."
+#~ msgstr ""
+#~ "Auf der rechten Seite des Ausgabenformulars haben Sie die Möglichkeit, "
+#~ "eine :guilabel:`Rechnungsreferenz` hinzuzufügen. Darunter sind die "
+#~ "automatisch ausgefüllten Felder :guilabel:`Datum der Ausgabe` "
+#~ "und :guilabel:`Konto` verfügbar."
+
+#~ msgid ""
+#~ "The :guilabel:`Expense Date` and :guilabel:`Account` field can be "
+#~ "modified, if needed."
+#~ msgstr ""
+#~ "Die Felder :guilabel:`Datum der Ausgabe` und :guilabel:`Konto` können bei "
+#~ "Bedarf geändert werden."
+
+#~ msgid ""
+#~ "Next, in the :guilabel:`Customer to Reinvoice` field, click the blank "
+#~ "field to reveal a drop-down menu. From this drop-down menu, select the "
+#~ "appropriate sales order to which this expense should be attached. This "
+#~ "field **must** be filled, in order to reinvoice a customer for an expense."
+#~ msgstr ""
+#~ "Als nächstes klicken Sie im Feld :guilabel:`An Kunden berechnen` auf das "
+#~ "leere Feld, um ein Dropdown-Menü zu öffnen. Wählen Sie in diesem Dropdown-"
+#~ "Menü den entsprechenden Verkaufsauftrag aus, dem diese Ausgabe zugeordnet "
+#~ "werden soll. Dieses Feld **muss** ausgefüllt werden, um einem Kunden eine "
+#~ "erneute Rechnung für eine Ausgabe zu stellen."
+
+#~ msgid ""
+#~ "Lastly, the option to modify the :guilabel:`Analytic Distribution` "
+#~ "and :guilabel:`Company` fields are available. These fields are *not* "
+#~ "required to complete a reinvoiced expense to a customer, but are "
+#~ "available to modify, if needed."
+#~ msgstr ""
+#~ "Schließlich haben Sie noch die Möglichkeit, die "
+#~ "Felder :guilabel:`Kostenverteilung` und :guilabel:`Unternehmen` zu "
+#~ "ändern. Diese Felder sind *nicht* erforderlich, um eine erneute "
+#~ "Rechnungsstellung an einen Kunden durchzuführen, können aber bei Bedarf "
+#~ "geändert werden."
+
+#~ msgid ""
+#~ "Also, at the bottom of the expense form, there is a :guilabel:`Notes...` "
+#~ "section, wherein any notes related to this expense can be added, if "
+#~ "needed."
+#~ msgstr ""
+#~ "Außerdem gibt es am unteren Rand des Ausgabenformulars einen "
+#~ "Abschnitt :guilabel:`Notizen ...`, in dem Sie bei Bedarf Notizen zu "
+#~ "dieser Ausgabe hinzufügen können."
+
+#~ msgid "A filled out expenses form in the Odoo Expenses application."
+#~ msgstr "Ein ausgefülltes Spesenformular in der Odoo-Spesenabrechnungsapp."
+
+#~ msgid ""
+#~ "At the top of the expense form, there are buttons to :guilabel:`Attach "
+#~ "Receipt`, :guilabel:`Create Report`, and :guilabel:`Split Expense`."
+#~ msgstr ""
+#~ "Am oberen Rand des Ausgabenformulars finden Sie die "
+#~ "Schaltflächen :guilabel:`Beleg anhängen`, :guilabel:`Abrechnung "
+#~ "erstellen` und :guilabel:`Ausgabe aufteilen`."
+
+#~ msgid ""
+#~ "If there is a physical or digital receipt that should be attached to the "
+#~ "expense, click :guilabel:`Attach Receipt`."
+#~ msgstr ""
+#~ "Wenn es einen physischen oder digitalen Beleg gibt, der an die Ausgabe "
+#~ "angehängt werden soll, klicken Sie auf :guilabel:`Beleg anhängen`."
+
+#~ msgid ""
+#~ "If the cost of this expense needs to be split, click :guilabel:`Split "
+#~ "Expense`. This feature can be used for a number of reasons (spitting "
+#~ "expense with another employee, to accommodate different tax rates, etc.)."
+#~ msgstr ""
+#~ "Wenn die Kosten für diese Ausgabe aufgeteilt werden müssen, klicken Sie "
+#~ "auf :guilabel:`Ausgabe aufteilen`. Diese Funktion kann aus einer Reihe "
+#~ "von Gründen verwendet werden (Aufteilung der Ausgaben mit einem anderen "
+#~ "Mitarbeiter, Berücksichtigung unterschiedlicher Steuersätze usw.)."
+
+#~ msgid ""
+#~ "If neither of these options are necessary, click :guilabel:`Create "
+#~ "Report` to lock in the expense report that was just configured."
+#~ msgstr ""
+#~ "Wenn keine dieser Optionen erforderlich ist, klicken Sie "
+#~ "auf :guilabel:`Abrechnung erstellen`, um die soeben konfigurierte "
+#~ "Spesenabrechnung zu speichern."
+
+#~ msgid ""
+#~ "Doing so reveals an :guilabel:`Expense Report Summary` for the new "
+#~ "expense."
+#~ msgstr ""
+#~ "Auf diese Weise erhalten Sie eine :guilabel:`Zusammenfassung der "
+#~ "Spesenabrechnung` für die neue Ausgabe."
+
+#~ msgid "An expense report summary in the Odoo Expenses application."
+#~ msgstr ""
+#~ "Eine Zusammenfassung der Spesenabrechnung in der Odoo-"
+#~ "Spesenabrechnungsapp."
+
+#~ msgid ""
+#~ "Here, once the details related to the expense have been confirmed, "
+#~ "click :guilabel:`Submit to Manager`. This sends the expense report to the "
+#~ "approving manager, who will review the expense."
+#~ msgstr ""
+#~ "Klicken Sie hier, nachdem Sie die Details der Ausgabe bestätigt haben, "
+#~ "auf :guilabel:`Beim Manager einreichen`. Dadurch wird die "
+#~ "Spesenabrechnung an den genehmigenden Manager geschickt, der die Spesen "
+#~ "überprüfen wird."
+
+#~ msgid ""
+#~ "The manager in charge of reviewing and approving the expense will inspect "
+#~ "the details related to the expense, and if there are no issues, they will "
+#~ "click the :guilabel:`Approve` button — which *only* appears on the "
+#~ "manager's view of the :guilabel:`Expense Report Summary` that's been "
+#~ "submitted to the manager by the employee."
+#~ msgstr ""
+#~ "Der Manager, der für die Überprüfung und Genehmigung der Ausgabe "
+#~ "zuständig ist, prüft die Details der Ausgabe und klickt, wenn es keine "
+#~ "Probleme gibt, auf die Schaltfläche :guilabel:`Genehmigen` - die *nur* in "
+#~ "der Ansicht des Managers auf der :guilabel:`Zusammenfassung der "
+#~ "Spesenabrechnung` erscheint, die der Mitarbeiter dem Manager vorgelegt "
+#~ "hat."
+
+#~ msgid ""
+#~ "An expense report summary that a manager will approve with an Approve "
+#~ "button."
+#~ msgstr ""
+#~ "Eine Zusammenfassung der Spesenabrechnung, die von einem Manager mit der "
+#~ "Schaltfläche „Genehmigen“ genehmigt wird."
+
+#~ msgid ""
+#~ "Once approved, the buttons at the top of the :guilabel:`Expense Report "
+#~ "Summary` change once again. At this point, the buttons at the top of "
+#~ "the :guilabel:`Expense Report Summary` are: :guilabel:`Post Journal "
+#~ "Entries`, :guilabel:`Report in Next Payslip`, :guilabel:`Refuse`, "
+#~ "and :guilabel:`Reset to Draft`."
+#~ msgstr ""
+#~ "Nach der Genehmigung ändern sich die Schaltflächen am oberen Rand des "
+#~ "Fensters :guilabel:`Zusammenfassung der Spesenabrechnung` noch einmal. Zu "
+#~ "diesem Zeitpunkt lauten die Schaltflächen am oberen Rand "
+#~ "der :guilabel:`Zusammenfassung der "
+#~ "Spesenabrechnung`: :guilabel:`Journalposten buchen`, :guilabel:`In "
+#~ "nächster Gehaltsabrechnung verrechnen`, :guilabel:`Ablehnen` "
+#~ "und :guilabel:`Auf Entwurf zurücksetzen`."
+
+#~ msgid ""
+#~ "An expense report summary with post journal entries button at the top of "
+#~ "the form."
+#~ msgstr ""
+#~ "Eine Zusammenfassung der Spesenabrechnung mit der Schaltfläche "
+#~ "„Journalposten buchen” am oberen Rand des Formulars."
+
+#~ msgid ""
+#~ "When the manager is satisfied with the :guilabel:`Expense Report "
+#~ "Summary`, they'll click :guilabel:`Post Journal Entries`."
+#~ msgstr ""
+#~ "Wenn der Manager mit der :guilabel:`Zusammenfassung der Spesenabrechnung` "
+#~ "zufrieden ist, klickt er auf :guilabel:`Journalposten buchen`."
+
+#~ msgid ""
+#~ "Upon clicking :guilabel:`Post Journal Entries`, that button disappears, "
+#~ "and the :guilabel:`Analytic Distribution` column in "
+#~ "the :guilabel:`Expense` tab is filled with the sales order that was "
+#~ "initially configured to the expense in the :guilabel:`Customer to "
+#~ "Reinvoice` field."
+#~ msgstr ""
+#~ "Wenn Sie auf :guilabel:`Journalposten buchen` klicken, verschwindet diese "
+#~ "Schaltfläche und die Spalte :guilabel:`Kostenverteilung` im "
+#~ "Reiter :guilabel:`Ausgabe` wird mit dem Verkaufsauftrag gefüllt, der "
+#~ "ursprünglich für die Ausgabe im Feld :guilabel:`An Kunden berechnen` "
+#~ "konfiguriert wurde."
+
+#~ msgid ""
+#~ "By default, the :guilabel:`Customer to Reinvoice` field is enabled for "
+#~ "the :guilabel:`[TRANS & ACC] Travel & Accommodation`, :guilabel:`[COMM] "
+#~ "Communication`, :guilabel:`[FOOD] Meals`, and :guilabel:`[MIL] Mileage` "
+#~ "expense category."
+#~ msgstr ""
+#~ "Standardmäßig ist das Feld :guilabel:`An Kunden berechnen` für die "
+#~ "Ausgabenkategorien :guilabel:`[TRANS & ACC] Reisen & "
+#~ "Unterkunft`, :guilabel:`[COMM] Kommunikation`, :guilabel:`[FOOD] "
+#~ "Mahlzeiten` und :guilabel:`[MIL] Kilometergeld` aktiviert."
+
+#~ msgid ""
+#~ "It should be noted that **not** all of the default expense categories "
+#~ "that come installed with the *Expenses* application have reinvoicing "
+#~ "policies activated. The setting may have to be manually activated."
+#~ msgstr ""
+#~ "Bitte beachten Sie, dass **nicht** alle Standardausgabenkategorien, die "
+#~ "mit der *Spesenabrechnungsapp* installiert werden, über aktivierte "
+#~ "Richtlinien für die erneute Rechnungsstellung verfügen. Die Einstellung "
+#~ "muss möglicherweise manuell aktiviert werden."
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`Expenses app --> Configuration --"
+#~ "> Expenses Categories` to view a list of all expense categories in the "
+#~ "database."
+#~ msgstr ""
+#~ "Navigieren Sie dazu zu :menuselection:`Spesenabrechnungsapp --> "
+#~ "Konfiguration --> Spesenkategorien`, um eine Liste aller Spesenkategorien "
+#~ "in der Datenbank anzuzeigen."
+
+#~ msgid ""
+#~ "Look in the :guilabel:`Re-Invoice Expenses` column to see which "
+#~ "selections have been made for each expense category."
+#~ msgstr ""
+#~ "Schauen Sie in die Spalte :guilabel:`Spesen weiterberechnen`, um zu "
+#~ "sehen, welche Auswahlen für jede Spesenkategorie getroffen wurden."
+
+#~ msgid ""
+#~ "The Re-Invoice Expenses column on the Expense Categories page in the Odoo "
+#~ "Expenses app."
+#~ msgstr ""
+#~ "Die Spalte „Spesen weiterberechnen“ auf der Spesenkategorienseite in der "
+#~ "Odoo-Spesenabrechnungsapp."
+
+#~ msgid ""
+#~ "To modify an expense category, click the :icon:`fa-arrow-"
+#~ "right` :guilabel:`(right arrow)` in the :guilabel:`Category` field, to "
+#~ "reveal that specific expense from."
+#~ msgstr ""
+#~ "Um eine Spesenkategorie zu ändern, klicken Sie auf das :icon:`fa-arrow-"
+#~ "right` :guilabel:`(Rechtspfeil)` im Feld :guilabel:`Kategorie`, um die "
+#~ "entsprechende Ausgabe anzuzeigen."
+
+#~ msgid ""
+#~ "Under the :guilabel:`Invoicing` section, in the :guilabel:`Re-Invoice "
+#~ "Expenses` field, select either :guilabel:`At cost` or :guilabel:`Sales "
+#~ "price`."
+#~ msgstr ""
+#~ "Wählen Sie im Abschnitt :guilabel:`Rechnungsstellung` im "
+#~ "Feld :guilabel:`Spesen weiterberechnen` entweder :guilabel:`Nach Aufwand` "
+#~ "oder :guilabel:`Verkaufspreis` aus."
+
+#~ msgid ""
+#~ "The Re-Invoice Expenses field on an Expense Category form in the Odoo "
+#~ "Expenses app."
+#~ msgstr ""
+#~ "Das Feld „Spesen weiterberechnen“ auf der Spesenkategorienseite in der "
+#~ "Odoo-Spesenabrechnungsapp."
+
+#~ msgid "Reinvoice expense"
+#~ msgstr "Spesen weiterberechnen"
+
+#~ msgid ""
+#~ "With those steps completed, it's time to return to the sales order to "
+#~ "complete the reinvoice of the expense to the customer."
+#~ msgstr ""
+#~ "Wenn diese Schritte abgeschlossen sind, ist es an der Zeit, zum "
+#~ "Verkaufsauftrag zurückzukehren und die erneute Rechnungsstellung an den "
+#~ "Kunden abzuschließen."
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`main Odoo dashboard --> Sales "
+#~ "app`, and select the appropriate sales order that should be reinvoiced "
+#~ "for the expense."
+#~ msgstr ""
+#~ "Navigieren Sie dazu zu :menuselection:`Hauptdashboard von Odoo --> "
+#~ "Verkaufsapp`, und wählen Sie den entsprechenden Verkaufsauftrag aus, für "
+#~ "den die Kosten erneut in Rechnung gestellt werden sollen."
+
+#~ msgid ""
+#~ "On the sales form, the newly-configured expense is now in "
+#~ "the :guilabel:`Order Lines` tab, with its :guilabel:`Delivered` column "
+#~ "filled in, and ready to be invoiced."
+#~ msgstr ""
+#~ "Auf dem Verkaufsformular befindet sich die neu konfigurierte Ausgabe nun "
+#~ "im Reiter :guilabel:`Auftragspositionen`, wobei die "
+#~ "Spalte :guilabel:`Geliefert` ausgefüllt ist, und in Rechnung gestellt "
+#~ "werden kann."
+
+#~ msgid ""
+#~ "A sales order with the configured expense ready to be invoiced in the "
+#~ "Order Lines tab."
+#~ msgstr ""
+#~ "Ein Verkaufsauftrag mit dem konfigurierten Aufwand, der im Reiter  "
+#~ "„Auftragspositionen“ fakturiert werden kann."
+
+#~ msgid ""
+#~ "After confirming the details of the expense, click :guilabel:`Create "
+#~ "Invoice` at the top of the sales order. When clicked, a :guilabel:`Create "
+#~ "invoices` pop-up window appears."
+#~ msgstr ""
+#~ "Nachdem Sie die Details der Ausgabe bestätigt haben, klicken Sie "
+#~ "auf :guilabel:`Rechnung erstellen` am oberen Rand des Verkaufsauftrags. "
+#~ "Wenn Sie darauf klicken, erscheint ein Pop-up-"
+#~ "Fenster :guilabel:`Rechnungen erstellen`."
+
+#~ msgid ""
+#~ "A create invoices pop-up window that appears when the Create Invoice is "
+#~ "clicked."
+#~ msgstr ""
+#~ "Ein Popup-Fenster „Rechnungen erstellen“, das erscheint, wenn Sie auf die "
+#~ "Schaltfläche „Rechnung erstellen“ klicken."
+
+#~ msgid ""
+#~ "From this pop-up window, leave the :guilabel:`Create Invoice` field on "
+#~ "the default :guilabel:`Regular invoice` option, and "
+#~ "click :guilabel:`Create Draft Invoice`."
+#~ msgstr ""
+#~ "In diesem Pop-up-Fenster lassen Sie das Feld :guilabel:`Rechnung "
+#~ "erstellen` auf der Standardoption :guilabel:`Reguläre Rechnung` und "
+#~ "klicken auf :guilabel:`Rechnungsentwurf erstellen`."
+
+#~ msgid ""
+#~ "Doing so reveals a :guilabel:`Customer Invoice Draft` showing *only* the "
+#~ "expense in the :guilabel:`Invoice Lines` tab."
+#~ msgstr ""
+#~ "Auf diese Weise wird ein :guilabel:`Kundenrechnungsentwurf` angezeigt, "
+#~ "der *nur* die Ausgaben im Reiter :guilabel:`Rechnungszeilen` enthält."
+
+#~ msgid ""
+#~ "A customer invoice draft with the expense in the Invoice Lines tab of the "
+#~ "form."
+#~ msgstr ""
+#~ "Ein Kundenrechnungsentwurf mit der Ausgabe im Reiter „Rechnungszeilen“ "
+#~ "des Formulars."
+
+#~ msgid ""
+#~ "If all the information related to the expense is correct, "
+#~ "click :guilabel:`Confirm` to confirm the invoice. Doing so moves the "
+#~ "status of the invoice from :guilabel:`Draft` to :guilabel:`Posted`."
+#~ msgstr ""
+#~ "Wenn alle Angaben zur Ausgabe korrekt sind, klicken Sie "
+#~ "auf :guilabel:`Bestätigen`, um die Rechnung zu bestätigen. Dadurch wird "
+#~ "der Status der Rechnung von :guilabel:`Entwurf` auf :guilabel:`Gebucht` "
+#~ "geändert."
+
+#~ msgid ""
+#~ "To send the invoice to the customer, click :guilabel:`Send \\& Print`. "
+#~ "Doing so reveals a :guilabel:`Send` pop-up window, with a preconfigured "
+#~ "message and PDF invoice in the body of the message. The message can be "
+#~ "reviewed and modified, if needed."
+#~ msgstr ""
+#~ "Um die Rechnung an den Kunden zu senden, klicken Sie "
+#~ "auf :guilabel:`Senden & drucken`. Daraufhin öffnet sich ein Pop-up-"
+#~ "Fenster :guilabel:`Senden` mit einer vorkonfigurierten Nachricht und "
+#~ "einer PDF-Rechnung im Textkörper der Nachricht. Die Nachricht kann "
+#~ "überprüft und bei Bedarf geändert werden."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Send \\& Print` to send the invoice to the "
+#~ "customer. When clicked, the pop-up window disappears, and Odoo sends the "
+#~ "message/invoice to the customer. Additionally, a PDF of the invoice is "
+#~ "automatically downloaded for record-keeping and/or printing purposes."
+#~ msgstr ""
+#~ "Sobald Sie fertig sind, klicken Sie auf :guilabel:`Senden & drucken`, um "
+#~ "die Rechnung an den Kunden zu senden. Wenn Sie darauf klicken, wird das "
+#~ "Pop-up-Fenster ausgeblendet und Odoo sendet die Nachricht/Rechnung an den "
+#~ "Kunden. Außerdem wird automatisch eine PDF-Datei der Rechnung "
+#~ "heruntergeladen, die Sie für Ihre Unterlagen und/oder zum Drucken "
+#~ "verwenden können."
+
+#~ msgid ""
+#~ "Back on the :guilabel:`Customer Invoice`, click the :guilabel:`Register "
+#~ "Payment` button when the customer pays for the invoiced expense."
+#~ msgstr ""
+#~ "Zurück auf der :guilabel:`Kundenrechnung` klicken Sie auf die "
+#~ "Schaltfläche :guilabel:`Zahlung registrieren`, wenn der Kunde die in "
+#~ "Rechnung gestellte Ausgabe bezahlt."
+
+#~ msgid ""
+#~ "A customer invoice with the register payment button ready to be clicked."
+#~ msgstr ""
+#~ "Eine Kundenrechnung mit der Schaltfläche „Zahlung registrieren“, die Sie "
+#~ "anklicken können."
+
+#~ msgid ""
+#~ "When :guilabel:`Register Payment` is clicked, a :guilabel:`Register "
+#~ "Payment` pop-up window appears. In this pop-up window, the necessary "
+#~ "fields are auto-populated with the correct information. After reviewing "
+#~ "the information, click :guilabel:`Create Payment`."
+#~ msgstr ""
+#~ "Wenn Sie auf :guilabel:`Zahlung registrieren` klicken, erscheint ein Pop-"
+#~ "up-Fenster :guilabel:`Zahlung registrieren`. In diesem Pop-up-Fenster "
+#~ "werden die erforderlichen Felder automatisch mit den richtigen "
+#~ "Informationen ausgefüllt. Nachdem Sie die Informationen überprüft haben, "
+#~ "klicken Sie auf :guilabel:`Zahlung erstellen`."
+
+#~ msgid ""
+#~ "A register payment pop-up window on a customer invoice in Odoo Sales."
+#~ msgstr ""
+#~ "Ein Pop-up-Fenster „Zahlung registrieren“ auf einer Kundenrechnung in "
+#~ "Odoo Verkauf."
+
+#~ msgid ""
+#~ "Once :guilabel:`Create Payment` is clicked, the pop-up window disappears, "
+#~ "and a green :guilabel:`In Payment` banner is in the upper-right corner of "
+#~ "the invoice, signifying this invoice is paid for in full. Thus, "
+#~ "completing the workflow."
+#~ msgstr ""
+#~ "Sobald Sie auf :guilabel:`Zahlung erstellen` geklickt haben, verschwindet "
+#~ "das Pop-up-Fenster und ein grünes :guilabel:`In Zahlung`-Banner erscheint "
+#~ "in der oberen rechten Ecke der Rechnung, was bedeutet, dass diese "
+#~ "Rechnung vollständig bezahlt ist. Damit ist der Arbeitsablauf "
+#~ "abgeschlossen."
+
+#~ msgid ":doc:`milestone`"
+#~ msgstr ":doc:`milestone`"
 
 #~ msgid "Lastly, click :guilabel:`Confirm` to save changes."
 #~ msgstr ""

@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 18:30+0000\n"
+"POT-Creation-Date: 2026-01-30 18:30+0000\n"
 "PO-Revision-Date: 2026-01-30 23:21+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
@@ -36,8 +36,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
-" ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
+"0) ? 1 : 2);\n"
 "X-Generator: Weblate 5.14.3\n"
 
 #: ../../content/applications/websites.rst:5
@@ -466,6 +466,7 @@ msgstr ""
 "web para encajar con tus necesidades."
 
 #: ../../content/applications/websites/ecommerce.rst:35
+#: ../../content/applications/websites/ecommerce/order_handling.rst:93
 #: ../../content/applications/websites/ecommerce/shipping.rst:3
 msgid "Delivery"
 msgstr "Entrega"
@@ -675,20 +676,11 @@ msgid ""
 "--> Configuration --> Customers` to identify what kind of customers have "
 "submitted the form. To do so, select a field in the form while "
 "in :guilabel:`Edit` mode, click the :guilabel:`+ Field` button under "
-"the :guilabel:`Customize` tab, and set the field's :guilabel:`Type` "
+"the :guilabel:`Style` tab, and set the field's :guilabel:`Type` "
 "to :guilabel:`Tags`. Toggle the tags that should be automatically assigned "
 "when a customer fills in the form and set the field's :guilabel:`Visibility` "
 "to :guilabel:`Hidden`."
 msgstr ""
-"Puedes asignar las etiquetas creadas en un formulario de contacto "
-"desde :menuselection:`Sitio web --> Configuración --> Clientes` para "
-"identificar qué tipo de clientes enviaron el formulario. Para hacerlo, "
-"selecciona un campo en el formulario en el modo de :guilabel:`edición`, haz "
-"clic en el botón :guilabel:`+ Campo` en la pestaña :guilabel:`Personalizar` "
-"y modifica el :guilabel:`tipo` del campo a :guilabel:`Etiquetas`. Elige las "
-"etiquetas a asignar de forma automática cuando un cliente completa el "
-"formulario y cambia la :guilabel:`visibilidad` del campo "
-"a :guilabel:`Oculto`."
 
 #: ../../content/applications/websites/ecommerce/b2b_b2c.rst:58
 msgid ""
@@ -816,17 +808,11 @@ msgid ""
 "Depending on the type of business (B2B or B2C), you might want to issue an "
 "invoice. An invoice can either be generated automatically (for B2B) or on "
 "demand of the customer (for B2C). This process can be automated if (and "
-"when) the online payment is :ref:`confirmed <handling/sales>`. To automate "
-"invoicing, enable the :ref:`Automatic Invoice <handling/legal>` setting. If "
-"this feature has not been enabled, the customer only receives an order "
-"confirmation."
+"when) the online payment is :ref:`confirmed <ecommerce/handling/sales>`. To "
+"automate invoicing, enable the :ref:`Automatic Invoice <ecommerce/handling/"
+"invoices>` setting. If this feature has not been enabled, the customer only "
+"receives an order confirmation."
 msgstr ""
-"Según tu tipo de negocio (B2B o B2C), quizá quieras emitir una factura. "
-"Puedes generar una factura de forma automática (para B2B) o bajo solicitud "
-"del cliente (para B2C). Este proceso se automatiza si el pago en línea "
-"queda :ref:`confirmado <handling/sales>`. Para automatizar la facturación, "
-"activa la función :ref:`Factura automática <handling/legal>`; de lo "
-"contrario, el cliente solo recibirá la confirmación de su orden."
 
 #: ../../content/applications/websites/ecommerce/b2b_b2c.rst:120
 msgid "B2B fields at checkout"
@@ -1330,18 +1316,11 @@ msgstr "Información adicional"
 msgid ""
 "You can add an :guilabel:`Extra Info` step in the checkout process to "
 "collect additional customer information through an online form, which is "
-"then included in the :ref:`sales order <handling/sales>`. To do "
+"then included in the :ref:`sales order <ecommerce/handling/sales>`. To do "
 "so, :ref:`enable <ecommerce/checkout/customize_steps>` the :guilabel:`Extra "
 "Step` option in the website editor. The form can be :ref:`customized "
 "<website/building_blocks/form>` as needed."
 msgstr ""
-"Puedes agregar el paso de :guilabel:`información adicional` al proceso de "
-"pago para recopilar información adicional sobre el cliente mediante un "
-"formulario en el sitio web que después formará parte de las :ref:`órdenes de "
-"venta <handling/sales>`. Para hacerlo, :ref:`activa <ecommerce/checkout/"
-"customize_steps>` la opción :guilabel:`Paso adicional` en el editor del "
-"sitio web y podrás :ref:`personalizar <website/building_blocks/form>` el "
-"formulario con los elementos que necesites."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:217
 msgid "Payment"
@@ -1448,19 +1427,14 @@ msgstr "Confirmación de la orden"
 msgid ""
 "The final step of the checkout process is the :guilabel:`Order "
 "confirmation`, which provides a summary of the customer's purchase details. "
-"If the :guilabel:`Automatic Invoice` setting has been activated in the "
-"**Sales** app's configuration settings, a sales order and invoice will "
-"automatically be created by Odoo."
+"A sales order is automatically created in the backend. Enable "
+"the :ref:`Automatic Invoice <ecommerce/handling/invoices>` setting to "
+"automatically send an invoice to the customer."
 msgstr ""
-"El paso final del proceso de pago es la :guilabel:`confirmación de la "
-"orden`, que muestra un resumen de los detalles de la compra del cliente. "
-"Odoo creará una orden de venta y una factura de forma automática si activas "
-"la función :guilabel:`Factura automática` en los ajustes de configuración de "
-"la aplicación **Ventas**."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:267
-msgid ":doc:`Order handling documentation <order_handling>`"
-msgstr ":doc:`Documentación de gestión de órdenes <order_handling>`"
+msgid ":doc:`Order handling <order_handling>`"
+msgstr ""
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:5
 msgid ""
@@ -1811,8 +1785,8 @@ msgid ""
 "shopping experience."
 msgstr ""
 "Personaliza el diseño de las :doc:`páginas de producto <../ecommerce/"
-"ecommerce_design/product_page>`, estructura el :doc:`catálogo de producto <"
-"../ecommerce/ecommerce_design/catalog>` y utiliza :doc:`las funciones "
+"ecommerce_design/product_page>`, estructura el :doc:`catálogo de producto "
+"<../ecommerce/ecommerce_design/catalog>` y utiliza :doc:`las funciones "
 "adicionales <../ecommerce/ecommerce_design/additional_features>` para "
 "mejorar la experiencia de compra del cliente."
 
@@ -2534,9 +2508,9 @@ msgid ""
 "Design`, click the :icon:`fa-paint-brush` :guilabel:`(paint brush)` icon "
 "next to it to:"
 msgstr ""
-"Para personalizar el diseño de las tarjetas de producto, elige una opción en "
-":guilabel:`Diseño de los productos` y haz clic en el icono :icon:`fa-paint-"
-"brush` :guilabel:`(pincel)` que aparece junto a él para:"
+"Para personalizar el diseño de las tarjetas de producto, elige una opción "
+"en :guilabel:`Diseño de los productos` y haz clic en el icono :icon:`fa-"
+"paint-brush` :guilabel:`(pincel)` que aparece junto a él para:"
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/catalog.rst:156
 msgid "Choose a :guilabel:`Preset` layout;"
@@ -2573,8 +2547,8 @@ msgid ""
 "heart` :ref:`Wishlist <ecommerce/products/additional_features/wishlists>`) "
 "and customize their placement."
 msgstr ""
-"Activar algunas :guilabel:`acciones` (por ejemplo, :icon:`fa-shopping-cart` "
-":ref:`Agregar al carrito <ecommerce/checkout/add-to-cart>`, :icon:`fa-"
+"Activar algunas :guilabel:`acciones` (por ejemplo, :icon:`fa-shopping-"
+"cart` :ref:`Agregar al carrito <ecommerce/checkout/add-to-cart>`, :icon:`fa-"
 "exchange` :ref:`Comparar <ecommerce/products/additional_features/product-"
 "comparison>` o :icon:`fa-heart` :ref:`Lista de deseos <ecommerce/products/"
 "additional_features/wishlists>`) y personalizar su ubicación."
@@ -2666,9 +2640,9 @@ msgid ""
 "E-commerce categories can also be added as :ref:`mega menu items <website/"
 "header_footer/mega-menus>` for quick access."
 msgstr ""
-"También puedes agregar categorías de comercio electrónico como :ref:`"
-"elementos de mega menú <website/header_footer/mega-menus>` para acceder a "
-"ellas con rapidez."
+"También puedes agregar categorías de comercio electrónico "
+"como :ref:`elementos de mega menú <website/header_footer/mega-menus>` para "
+"acceder a ellas con rapidez."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/catalog.rst:201
 msgid ""
@@ -2726,9 +2700,9 @@ msgid ""
 "products-design>` it using the :icon:`fa-paint-brush` :guilabel:`(paint "
 "brush)` icon."
 msgstr ""
-"Seleccionar un :guilabel:`diseño de tarjetas` y :ref:`configurarlo <"
-"ecommerce/catalog/products-design>` con el icono :icon:`fa-paint-brush` "
-":guilabel:`(pincel)`."
+"Seleccionar un :guilabel:`diseño de tarjetas` y :ref:`configurarlo "
+"<ecommerce/catalog/products-design>` con el icono :icon:`fa-paint-"
+"brush` :guilabel:`(pincel)`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/catalog.rst:226
 msgid ""
@@ -2736,24 +2710,24 @@ msgid ""
 "relevant :guilabel:`Filter` option, e.g., :guilabel:`Newest Products` to "
 "show the latest arrivals."
 msgstr ""
-"Definir qué artículos aparecen en el bloque al seleccionar la opción "
-":guilabel:`Filtro` correspondiente, por ejemplo, :guilabel:`Productos más "
-"recientes` para mostrar las novedades."
+"Definir qué artículos aparecen en el bloque al seleccionar la "
+"opción :guilabel:`Filtro` correspondiente, por ejemplo, :guilabel:`Productos "
+"más recientes` para mostrar las novedades."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/catalog.rst:228
 msgid ""
 "Select a specific product category in the :guilabel:`Category` dropdown list."
 msgstr ""
-"Seleccionar una categoría de producto específica en la lista desplegable "
-":guilabel:`Categoría`."
+"Seleccionar una categoría de producto específica en la lista "
+"desplegable :guilabel:`Categoría`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/catalog.rst:229
 msgid ""
 "Filter products by toggling the :guilabel:`Tags` and/or :guilabel:`Show "
 "variants` options."
 msgstr ""
-"Filtrar productos al activar las opciones :guilabel:`Etiquetas` y :guilabel:`"
-"Mostrar variantes`."
+"Filtrar productos al activar las opciones :guilabel:`Etiquetas` "
+"y :guilabel:`Mostrar variantes`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/catalog.rst:234
 msgid "E-commerce-specific website footer"
@@ -2797,15 +2771,15 @@ msgid ""
 msgstr ""
 "Las páginas de producto de comercio electrónico demuestran todos los "
 "detalles del producto y elementos audiovisuales relacionados a los productos "
-"relevantes. Puedes personalizar la :ref:`sección de imágenes y videos <"
-"ecommerce/product_page/image-customization>`, seleccionar :ref:`qué "
+"relevantes. Puedes personalizar la :ref:`sección de imágenes y videos "
+"<ecommerce/product_page/image-customization>`, seleccionar :ref:`qué "
 "información de producto mostrar <ecommerce_design/product_page/"
 "customization>`, mostrar :ref:`botones <ecommerce_design/product_page/"
 "buttons>` específicos, personalizar la :ref:`sección de detalles de los "
-"atributos <ecommerce_design/product_page/attributes>`, activar :ref:`"
-"funciones de organización adicionales <ecommerce_design/product_page/page-"
-"features>` y agregar contenido usando :ref:`los bloques de creación <"
-"ecommerce_design/product_page/building_blocks>`."
+"atributos <ecommerce_design/product_page/attributes>`, "
+"activar :ref:`funciones de organización adicionales <ecommerce_design/"
+"product_page/page-features>` y agregar contenido usando :ref:`los bloques de "
+"creación <ecommerce_design/product_page/building_blocks>`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:17
 #: ../../content/applications/websites/ecommerce/products.rst:88
@@ -2821,9 +2795,9 @@ msgid ""
 "click :guilabel:`Edit` in the upper-right corner, and navigate to "
 "the :guilabel:`Style` tab."
 msgstr ""
-"Después de :ref:`agregar elementos audiovisuales al formulario del producto <"
-"ecommerce/products/images>` o al :ref:`crear productos en el frontend <"
-"ecommerce/products/create-products>`, puedes personalizarlos en el frontend "
+"Después de :ref:`agregar elementos audiovisuales al formulario del producto "
+"<ecommerce/products/images>` o al :ref:`crear productos en el frontend "
+"<ecommerce/products/create-products>`, puedes personalizarlos en el frontend "
 "de las páginas del producto. Para hacerlo, ve a la página de producto "
 "relevante en la tienda en línea, haz clic en :guilabel:`Editar` en la "
 "esquina superior derecha y ve a la pestaña :guilabel:`Estilo`."
@@ -2853,14 +2827,14 @@ msgid ""
 msgstr ""
 "Para gestionar elementos audiovisuales individuales, haz clic en el elemento "
 "en la página del producto y deslízate a la sección :guilabel:`Imagen` del "
-"editor de sitio web. Aquí puedes :guilabel:`Reemplzar` o :guilabel:`Eliminar`"
-" la imagen o el video y :guilabel:`Volver a ordenar` los elementos. Usa los "
-"iconos :icon:`fa-angle-double-left` (:guilabel:`flecha doble a la izquierda`)"
-" o :icon:`fa-angle-double-right` (:guilabel:`flecha doble a la derecha`) "
-"para mover el elemento audiovisual a la primera o a la última posición; usa "
-"los iconos :icon:`fa-angle-left` (:guilabel:`flecha a la izquierda`) o :icon"
-":`fa-angle-right` (:guilabel:`flecha a la derecha`) para moverlos una "
-"posición."
+"editor de sitio web. Aquí puedes :guilabel:`Reemplzar` "
+"o :guilabel:`Eliminar` la imagen o el video y :guilabel:`Volver a ordenar` "
+"los elementos. Usa los iconos :icon:`fa-angle-double-left` "
+"(:guilabel:`flecha doble a la izquierda`) o :icon:`fa-angle-double-right` "
+"(:guilabel:`flecha doble a la derecha`) para mover el elemento audiovisual a "
+"la primera o a la última posición; usa los iconos :icon:`fa-angle-left` "
+"(:guilabel:`flecha a la izquierda`) o :icon:`fa-angle-right` "
+"(:guilabel:`flecha a la derecha`) para moverlos una posición."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:37
 msgid ""
@@ -2869,10 +2843,10 @@ msgid ""
 "and :guilabel:`Position`. Then, navigate to the :guilabel:`Images` section, "
 "and use the following options to customize this section:"
 msgstr ""
-"Para ajustar el diseño de la sección de imágenes y videos, ve al :guilabel:`"
-"área de las imágenes` y define el tamaño de la imagen y su "
-":guilabel:`posición`. Después ve a la sección :guilabel:`imágenes` y usa las "
-"opciones a continuación para personalizar esta sección:"
+"Para ajustar el diseño de la sección de imágenes y videos, ve "
+"al :guilabel:`área de las imágenes` y define el tamaño de la imagen y "
+"su :guilabel:`posición`. Después ve a la sección :guilabel:`imágenes` y usa "
+"las opciones a continuación para personalizar esta sección:"
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:41
 msgid ""
@@ -2913,12 +2887,12 @@ msgid ""
 "and adapt the corner :guilabel:`Roundness` of the images."
 msgstr ""
 ":guilabel:`Carrusel`: Esta opción permite que los visitantes naveguen de una "
-"imagen a la otra usando el icono :icon:`fa-angle-left` "
-"(:guilabel:`flecha a la izquierda`) o :icon:`fa-angle-right` "
-"(:guilabel:`flecha a la derecha`). Muestra las :guilabel:`Miniaturas` a la "
-":icon:`fa-long-arrow-left` (:guilabel:`izquierda`) o hasta :icon:`fa-long-"
-"arrow-down` (:guilabel:`abajo`) y adapta el :guilabel:`redondeo` de las "
-"esquinas de la imagen."
+"imagen a la otra usando el icono :icon:`fa-angle-left` (:guilabel:`flecha a "
+"la izquierda`) o :icon:`fa-angle-right` (:guilabel:`flecha a la derecha`). "
+"Muestra las :guilabel:`Miniaturas` a la :icon:`fa-long-arrow-left` "
+"(:guilabel:`izquierda`) o hasta :icon:`fa-long-arrow-down` "
+"(:guilabel:`abajo`) y adapta el :guilabel:`redondeo` de las esquinas de la "
+"imagen."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:56
 msgid ""
@@ -2927,9 +2901,9 @@ msgid ""
 "between the images in the grid, if necessary."
 msgstr ""
 ":guilabel:`Cuadrícula`: Este diseño muestra los elementos multimedia en "
-"formato cuadrado. Ajusta el número de :guilabel:`columnas` y define el "
-":guilabel:`espaciado` entre las imágenes de la cuadrícula en caso de que sea "
-"necesario."
+"formato cuadrado. Ajusta el número de :guilabel:`columnas` y define "
+"el :guilabel:`espaciado` entre las imágenes de la cuadrícula en caso de que "
+"sea necesario."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:60
 msgid ""
@@ -2938,9 +2912,9 @@ msgid ""
 "<website/visibility/mobile-and-computer>`."
 msgstr ""
 ":guilabel:`Corte automático`: Selecciona un tamaño al que cortar o recortar "
-"las imágenes y que encaje con el diseño de la página. Esto es útil al crear "
-":ref:`el diseño <website/visibility/mobile-and-computer>` para :guilabel:`"
-"dispositivos móviles`."
+"las imágenes y que encaje con el diseño de la página. Esto es útil al "
+"crear :ref:`el diseño <website/visibility/mobile-and-computer>` "
+"para :guilabel:`dispositivos móviles`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:62
 msgid ""
@@ -2962,17 +2936,17 @@ msgid ""
 msgstr ""
 "Para personalizar el diseño de las páginas de producto, accede a cualquier "
 "página de producto, haz clic en :guilabel:`Editar` en la esquina superior "
-"derecha y ve a la pestaña :guilabel:`Estilo`. Después, ve al ajuste "
-":guilabel:`Ancho de la página` y selecciona la opción :guilabel:`Regular` o "
-":guilabel:`Ancho completo`."
+"derecha y ve a la pestaña :guilabel:`Estilo`. Después, ve al "
+"ajuste :guilabel:`Ancho de la página` y selecciona la "
+"opción :guilabel:`Regular` o :guilabel:`Ancho completo`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:74
 msgid ""
 "You can choose a different width for the :ref:`shop page <ecommerce/catalog/"
 "customize-layout>`."
 msgstr ""
-"Puedes elegir un ancho diferente para la :ref:`página de la tienda <"
-"ecommerce/catalog/customize-layout>`."
+"Puedes elegir un ancho diferente para la :ref:`página de la tienda "
+"<ecommerce/catalog/customize-layout>`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:76
 msgid ""
@@ -2987,11 +2961,11 @@ msgstr ""
 "Selecciona qué información del producto aparecerá en las páginas del "
 "producto usando las opciones disponibles en la sección :guilabel:`Detalles "
 "del producto`. Puedes configurar :ref:`botones <ecommerce_design/"
-"product_page/buttons>`, definir :ref:`cómo se muestran los atributos <"
-"ecommerce_design/product_page/attributes>`, organizar la página usando :ref:`"
-"las funciones de personalización de la página <ecommerce_design/product_page/"
-"page-features>` y agregar contenido usando los :ref:`bloques de creación <"
-"ecommerce_design/product_page/building_blocks>`."
+"product_page/buttons>`, definir :ref:`cómo se muestran los atributos "
+"<ecommerce_design/product_page/attributes>`, organizar la página "
+"usando :ref:`las funciones de personalización de la página <ecommerce_design/"
+"product_page/page-features>` y agregar contenido usando los :ref:`bloques de "
+"creación <ecommerce_design/product_page/building_blocks>`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:86
 #: ../../content/applications/websites/website/web_design/elements.rst:44
@@ -3014,8 +2988,8 @@ msgid ""
 ":guilabel:`Purchase Options`: (De)activate the :ref:`Buy Now <ecommerce/"
 "checkout/buy-now>` button and/or the :guilabel:`Quantity` selector."
 msgstr ""
-":guilabel:`Opciones de compra`: Desactiva el botón :ref:`Comprar ahora <"
-"ecommerce/checkout/buy-now>` o el selector de :guilabel:`cantidad`."
+":guilabel:`Opciones de compra`: Desactiva el botón :ref:`Comprar ahora "
+"<ecommerce/checkout/buy-now>` o el selector de :guilabel:`cantidad`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:93
 msgid ""
@@ -3023,8 +2997,8 @@ msgid ""
 "additional_features/wishlists>` and the :ref:`product comparison <ecommerce/"
 "products/additional_features/product-comparison>` features."
 msgstr ""
-":guilabel:`Acciones`: Activa las funciones de :ref:`lista de deseos <"
-"ecommerce/products/additional_features/wishlists>` y :ref:`comparación de "
+":guilabel:`Acciones`: Activa las funciones de :ref:`lista de deseos "
+"<ecommerce/products/additional_features/wishlists>` y :ref:`comparación de "
 "productos <ecommerce/products/additional_features/product-comparison>`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:102
@@ -3061,9 +3035,9 @@ msgid ""
 "<ecommerce/categories_variants/product-variants>` are enabled, and at least "
 "one attribute has been defined for the product."
 msgstr ""
-"La sección de especificaciones solo se muestra cuando se activan las :ref:`"
-"variantes de producto <ecommerce/categories_variants/product-variants>` y "
-"después de que se defina al menos un atributo para el producto."
+"La sección de especificaciones solo se muestra cuando se activan "
+"las :ref:`variantes de producto <ecommerce/categories_variants/product-"
+"variants>` y después de que se defina al menos un atributo para el producto."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:115
 msgid ""
@@ -3113,8 +3087,8 @@ msgid ""
 "catalog/filters>` on product pages and enable customers to filter products "
 "by those tags."
 msgstr ""
-":guilabel:`Etiquetas`: Muestra las etiquetas creadas en el :ref:`backend <"
-"ecommerce/catalog/filters>` en las páginas de los productos y permite que "
+":guilabel:`Etiquetas`: Muestra las etiquetas creadas en el :ref:`backend "
+"<ecommerce/catalog/filters>` en las páginas de los productos y permite que "
 "los clientes filtren los productos usando esas etiquetas."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:132
@@ -3123,8 +3097,8 @@ msgid ""
 "conditions </applications/finance/accounting/customer_invoices/"
 "terms_conditions>`."
 msgstr ""
-":guilabel:`Términos y condiciones`: Agrega un enlace que redireccione a tus "
-":doc:`términos y condiciones </applications/finance/accounting/"
+":guilabel:`Términos y condiciones`: Agrega un enlace que redireccione a "
+"tus :doc:`términos y condiciones </applications/finance/accounting/"
 "customer_invoices/terms_conditions>`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:134
@@ -3143,9 +3117,9 @@ msgstr ""
 "la sección :guilabel:`Reseñas de los clientes` en la parte inferior de la "
 "página y haz clic en el icono :icon:`fa-plus` (:guilabel:`más`). Pueden "
 "agregar una calificación con los iconos de :icon:`fa-star-o` "
-"(:guilabel:`estrella`) y pueden dejar un comentario. La calificación :icon"
-":`fa-star` (:guilabel:`estrella`) se muestra directamente abajo del nombre "
-"del producto."
+"(:guilabel:`estrella`) y pueden dejar un comentario. La "
+"calificación :icon:`fa-star` (:guilabel:`estrella`) se muestra directamente "
+"abajo del nombre del producto."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:140
 msgid ""
@@ -3161,8 +3135,8 @@ msgid ""
 ":ref:`Ribbon <ecommerce/products/additional_features/product-highlight>` (or "
 "badge): Highlight a specific product."
 msgstr ""
-":ref:`Listón <ecommerce/products/additional_features/product-highlight>` "
-"(o insignia): Resalta un producto específico."
+":ref:`Listón <ecommerce/products/additional_features/product-highlight>` (o "
+"insignia): Resalta un producto específico."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:146
 msgid ""
@@ -3239,10 +3213,10 @@ msgid ""
 "inventory>`: Customers can insert their email address to receive a "
 "notification when the item is back in stock."
 msgstr ""
-":ref:`Recibe una notificación cuando el producto vuelva a estar disponible <"
-"ecommerce/products/stock-management/inventory>`: Los clientes pueden agregar "
-"su dirección de correo para recibir una notificación cuando el producto "
-"vuelva a estar disponible."
+":ref:`Recibe una notificación cuando el producto vuelva a estar disponible "
+"<ecommerce/products/stock-management/inventory>`: Los clientes pueden "
+"agregar su dirección de correo para recibir una notificación cuando el "
+"producto vuelva a estar disponible."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:166
 msgid ""
@@ -3255,13 +3229,13 @@ msgid ""
 "of the product."
 msgstr ""
 ":guilabel:`Campos adicionales en la página del producto`: Para activar "
-"campos adicionales específicos para la página del producto, activa el :doc:`"
-"modo de desarrollador </applications/general/developer_mode>`. Después, ve a "
-":menuselection:`Sitio web --> Configuración --> Sitios web`, selecciona el "
-"sitio web relevante, va a la pestaña :guilabel:`Campos adicionales de la "
-"página del producto` y en :guilabel:`Campo` haz clic en :guilabel:`Agregar "
-"una línea` para agregar todos los campos adicionales necesarios, por "
-"ejemplo, el número de código de barras del producto."
+"campos adicionales específicos para la página del producto, activa "
+"el :doc:`modo de desarrollador </applications/general/developer_mode>`. "
+"Después, ve a :menuselection:`Sitio web --> Configuración --> Sitios web`, "
+"selecciona el sitio web relevante, va a la pestaña :guilabel:`Campos "
+"adicionales de la página del producto` y en :guilabel:`Campo` haz clic "
+"en :guilabel:`Agregar una línea` para agregar todos los campos adicionales "
+"necesarios, por ejemplo, el número de código de barras del producto."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:176
 #: ../../content/applications/websites/website/web_design.rst:16
@@ -3309,8 +3283,8 @@ msgid ""
 "These building blocks do not appear on the :ref:`shop page <ecommerce/"
 "catalog/customize-layout>`."
 msgstr ""
-"Estos bloques de creación no aparecen en la :ref:`página de tienda <"
-"ecommerce/catalog/customize-layout>`."
+"Estos bloques de creación no aparecen en la :ref:`página de tienda "
+"<ecommerce/catalog/customize-layout>`."
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:195
 msgid ":doc:`../../../websites/website/web_design`"
@@ -3319,15 +3293,10 @@ msgstr ":doc:`../../../websites/website/web_design`"
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:5
 msgid ""
 "Google Merchant Center is a tool that allows e-commerce retailers to manage "
-"and submit product data to Google. It serves as a central hub to upload and "
-"maintain product details, such as images, prices, and descriptions so that "
-"products can appear across Google's platforms."
+"and submit product data to Google. It serves as a central hub for uploading "
+"and maintaining product details, such as images, prices, and descriptions so "
+"that products can appear across Google's platforms."
 msgstr ""
-"Google Merchant Center es una herramienta que permite que los comercios "
-"electrónicos gestionen y envíen datos de productos a Google. Funciona como "
-"una central para subir y conservar los detalles de los productos, como "
-"imágenes, precios y descripciones, para que los productos aparezcan en las "
-"plataformas de Google."
 
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:10
 msgid ""
@@ -3344,16 +3313,9 @@ msgid ""
 "google_search_console>`, :ref:`Google Analytics <analytics/google-"
 "analytics>` or :ref:`Google Tag Manager <analytics/google-tag-manager>` to "
 "obtain detailed reports on product listing issues, improve marketing "
-"strategies, increase your products' online visibility, and enhance the "
-"overall sales performance."
+"strategies, increase your products' online visibility, and enhance overall "
+"sales performance."
 msgstr ""
-"Te recomendamos usar esta herramienta junto con otros servicios de Google, "
-"como :doc:`Google Search Console <../website/configuration/"
-"google_search_console>`, :ref:`Google Analytics <analytics/google-"
-"analytics>` o :ref:`Google Tag Manager <analytics/google-tag-manager>`, para "
-"obtener reportes detallados sobre problemas en la publicación de productos, "
-"mejorar las estrategias de marketing, aumentar la visibilidad de tus "
-"productos en línea y mejorar el rendimiento de tus ventas."
 
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:20
 msgid "Google Merchant Center setup"
@@ -3489,12 +3451,9 @@ msgstr ""
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:62
 msgid ""
 "Navigate to :menuselection:`Website --> Configuration --> Settings`, scroll "
-"to the :guilabel:`Tracking & SEO` section, and enable :guilabel:`Google "
-"Merchant Center`, and :guilabel:`Save`."
+"to the :guilabel:`Tracking & SEO` section, enable :guilabel:`Google Merchant "
+"Center`, and :guilabel:`Save`."
 msgstr ""
-"Ve a :menuselection:`Sitio web --> Configuración --> Ajustes`, ve a la "
-"sección :guilabel:`Rastreo y SEO`, activa el :guilabel:`Google Merchant "
-"Center` y :guilabel:`Guarda` los cambios."
 
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:67
 msgid ""
@@ -3513,14 +3472,10 @@ msgstr "Haz clic en :guilabel:`Gestionar feeds`."
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:71
 msgid ""
 "In the :guilabel:`Product Feeds` pop-up window, select a :ref:`pricelist "
-"<ecommerce/prices/pricelists>`, a :ref:`language <language/add>` "
+"<ecommerce/prices/pricelists>`, a :ref:`language <language/add>`, "
 "and :ref:`categories <ecommerce/categories_variants/categories>`, "
 "and :guilabel:`Save`."
 msgstr ""
-"Selecciona una :ref:`lista de precios <ecommerce/prices/pricelists>`, "
-"un :ref:`idioma <language/add>` y :ref:`categorías <ecommerce/"
-"categories_variants/categories>` en la ventana emergente :guilabel:`Feeds de "
-"productos` y haz clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:76
 msgid ""
@@ -3571,10 +3526,8 @@ msgstr ""
 "lo necesitas, también agrega una :guilabel:`etiqueta de feed`."
 
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:0
-msgid "Select countries, purpose and feed label in GMC."
+msgid "Select countries, purpose, and feed label in GMC."
 msgstr ""
-"Captura de pantalla para la selección de países, propósito y etiqueta del "
-"feed en Google Merchant Center."
 
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:95
 msgid "Click :guilabel:`Continue`."
@@ -3582,20 +3535,15 @@ msgstr "Haz clic en :guilabel:`Continuar`."
 
 #: ../../content/applications/websites/ecommerce/google_merchant_center.rst:98
 msgid ""
-"Create as many feeds as needed, and on the :abbr:`GMC (Google Merchant "
-"Center)` dashboard, create several :guilabel:`Product sources`. To do so, "
-"expand the :icon:`fa-caret-down` :guilabel:`Products & store` menu, go "
-"to :guilabel:`Products`, click the :icon:`fa-caret-down` :guilabel:`Add "
-"products` dropdown menu, and select :guilabel:`Add another product source`."
+"It is also possible to connect Odoo eCommerce to other platforms such as "
+"`TikTok <https://ads.tiktok.com/help/article/create-manage-catalogs?"
+"lang=en>`_, `Facebook, and Instagram <https://www.facebook.com/business/help/"
+"125074381480892?id=725943027795860>`_. To do so, copy the :abbr:`GMC (Google "
+"Merchant Center)` the product feed URL and add it to the relevant section of "
+"the selected platform."
 msgstr ""
-"Crea tantos feeds como necesites y en el tablero de :abbr:`GMC (Google "
-"Merchant Center)` crea varios :guilabel:`orígenes de producto`. Para "
-"hacerlo, expande el menú :icon:`fa-caret-down`:guilabel:`Productos y "
-"tienda`, ve a :guilabel:`Productos`, haz clic en el menú "
-"desplegable :icon:`fa-caret-down`:guilabel:`Agregar productos` y "
-"selecciona :guilabel:`Agregar otro origen de producto`."
 
-#: ../../content/applications/websites/ecommerce/google_merchant_center.rst:102
+#: ../../content/applications/websites/ecommerce/google_merchant_center.rst:103
 msgid ""
 "To manually change the currency of the feed, go to the :guilabel:`Products` "
 "tab in :abbr:`GMC (Google Merchant Center)`, click :guilabel:`Manage product "
@@ -3610,272 +3558,385 @@ msgstr ""
 "pestaña :guilabel:`Configuración de fuentes de datos`, haz clic "
 "en :guilabel:`Mostrar opciones avanzadas` y elige una :guilabel:`moneda`."
 
-#: ../../content/applications/websites/ecommerce/google_merchant_center.rst:108
+#: ../../content/applications/websites/ecommerce/google_merchant_center.rst:107
+msgid ""
+"Create as many feeds as needed, and on the :abbr:`GMC (Google Merchant "
+"Center)` dashboard, create several :guilabel:`Product sources`. To do so, "
+"expand the :icon:`fa-caret-down` :guilabel:`Products & store` menu, go "
+"to :guilabel:`Products`, click the :icon:`fa-caret-down` :guilabel:`Add "
+"products` dropdown menu, and select :guilabel:`Add another product source`."
+msgstr ""
+"Crea tantos feeds como necesites y en el tablero de :abbr:`GMC (Google "
+"Merchant Center)` crea varios :guilabel:`orígenes de producto`. Para "
+"hacerlo, expande el menú :icon:`fa-caret-down`:guilabel:`Productos y "
+"tienda`, ve a :guilabel:`Productos`, haz clic en el menú "
+"desplegable :icon:`fa-caret-down`:guilabel:`Agregar productos` y "
+"selecciona :guilabel:`Agregar otro origen de producto`."
+
+#: ../../content/applications/websites/ecommerce/google_merchant_center.rst:113
 msgid ""
 "`Google Merchant Center Product Feed Specifications <https://"
-"support.google.com/merchants/answer/7052112>`_."
+"support.google.com/merchants/answer/7052112>`_"
 msgstr ""
-"`Especificaciones de datos de productos de Google Merchant Center <https://"
-"support.google.com/merchants/answer/7052112>`_."
+
+#: ../../content/applications/websites/ecommerce/google_merchant_center.rst:114
+msgid ":doc:`/applications/sales/sales/amazon_connector`"
+msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:5
 msgid ""
-"When a customer orders on your e-commerce, there are **three** record types "
-"required to be handle in Odoo:"
+"In Odoo's e-commerce workflow, an online purchase typically goes through "
+"three main steps: :ref:`sale <ecommerce/handling/sales>`, :ref:`delivery "
+"<ecommerce/handling/delivery>`, and :ref:`invoicing <ecommerce/handling/"
+"invoices>`. Each step generates key documents, including sales orders upon "
+"order confirmation, delivery orders to manage :doc:`picking </applications/"
+"inventory_and_mrp/inventory/shipping_receiving/"
+"picking_methods>`, :doc:`packing </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/multipack>`, and :doc:`shipping "
+"<shipping>`, and invoices. Odoo eCommerce also offers additional tools to "
+"send :ref:`abandoned cart emails <ecommerce/handling/abandoned_cart>`, "
+"ensure :ref:`stock availability <ecommerce/handling/stock-management>`, and "
+"handle product :ref:`returns and refunds <ecommerce/handling/returns>`."
 msgstr ""
-"Cuando un cliente crea una orden en tu comercio electrónico, Odoo requiere "
-"**tres** tipos de registros para gestionarla:"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:8
-msgid ":ref:`Sales orders <handling/sales>`;"
-msgstr ":ref:`Órdenes de venta <handling/sales>`;"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:9
-msgid ":ref:`Delivery orders <handling/delivery>`;"
-msgstr ":ref:`Órdenes de entrega <handling/delivery>`;"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:10
-msgid ":ref:`Invoices & legal requirements <handling/legal>`."
-msgstr ":ref:`Facturas y requisitos legales <handling/legal>`."
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:15
-msgid "Sales orders"
-msgstr "Órdenes de venta"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:18
-msgid "Order and payment status"
-msgstr "Estado de la orden y del pago"
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:20
-msgid ""
-"The first step when a customer adds a product to his cart is the creation of "
-"a quotation. Orders can be managed either from the **Website** "
-"or :doc:`Sales </applications/sales/sales>` app. E-commerce orders can "
-"automatically be assigned to a specific sales team by going "
-"to :menuselection:`Website --> Configuration --> Settings`. In the **Shop - "
-"Checkout Process** section, select a :guilabel:`Sales Team` "
-"or :guilabel:`Salesperson` to handle e-commerce orders."
+msgid "Sale"
 msgstr ""
-"El primer paso cuando un cliente agrega un producto a su carrito es la "
-"creación de una cotización. Puedes gestionar las órdenes desde las "
-"aplicaciones **Sitio web** o :doc:`Ventas </applications/sales/sales>`. "
-"También puedes asignar las órdenes de comercio electrónico a un equipo de "
-"ventas específico desde :menuselection:`Sitio web --> Configuración --> "
-"Ajustes`. En la sección **Tienda - Proceso de pago**, selecciona "
-"un :guilabel:`equipo de ventas` o un :guilabel:`vendedor` para gestionar las "
-"órdenes de comercio electrónico."
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:None
-msgid "Assignment of online orders to a sales team or salesperson"
-msgstr "Asignación de las órdenes en línea a equipos de venta o a un vendedor"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:30
+#: ../../content/applications/websites/ecommerce/order_handling.rst:22
 msgid ""
-"Orders can be found under :menuselection:`Website --> eCommerce --> Orders/"
-"Unpaid Orders`. Each order goes through a different status:"
+"To view all quotations and orders, navigate to :menuselection:`Website --> "
+"eCommerce --> Orders`, and select one to open it. The status bar at the top "
+"of the order shows its current status:"
 msgstr ""
-"Puede encontrar las órdenes en :menuselection:`Sitio web --> Comercio "
-"electrónico --> Órdenes sin pagar`. Cada orden tiene un estado diferente:"
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:33
+#: ../../content/applications/websites/ecommerce/order_handling.rst:25
 msgid ""
-"**Quotation**: a new product is added to the cart, but the customer has "
-"*not* gone through the checkout process yet;"
+":guilabel:`Quotation`: A product has been :ref:`added to the cart <ecommerce/"
+"checkout/add-to-cart>`, but the customer has not yet completed "
+"the :ref:`checkout process <ecommerce/checkout/steps>`. If the customer is "
+"not logged in, the quotation is assigned to the default *Public User* "
+"contact."
 msgstr ""
-"**Cotización**: se agrega un nuevo producto al carrito, pero el cliente *no* "
-"ha pasado por el proceso de cambio todavía;"
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:35
+#: ../../content/applications/websites/ecommerce/order_handling.rst:29
 msgid ""
-"**Quotation sent**: the customer has gone through the checkout process and "
-"confirmed the order, but the payment is not yet confirmed;"
+":guilabel:`Quotation Sent`: The customer has completed the :ref:`checkout "
+"process <ecommerce/checkout/steps>` and confirmed the order, but "
+"the :ref:`payment <ecommerce/checkout/payment>` has not yet been confirmed."
 msgstr ""
-"**Cotización enviada**: el cliente ya pasó el proceso de pago y confirmó la "
-"orden, pero el pago no se ha confirmado todavía;"
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:32
+msgid ""
+":guilabel:`Sales Order`: The customer has completed the :ref:`checkout "
+"process <ecommerce/checkout/steps>`, confirmed the order, and "
+"the :ref:`payment <ecommerce/checkout/payment>` has been successfully "
+"received."
+msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:37
 msgid ""
-"**Order**: the customer has gone through the checkout process, confirmed the "
-"order, and the payment is received."
+"The :guilabel:`Confirmed` filter is enabled by default in "
+"the :guilabel:`Orders` list. To view *all* quotations and orders, remove the "
+"filter."
 msgstr ""
-"**Orden**: el cliente ya pasó por el proceso de pago, ya confirmó la orden y "
-"el pago se recibió."
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:None
-msgid "Statuses of e-commerce orders"
-msgstr "Estados de las órdenes de comercio electrónico"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:45
-msgid "Abandoned cart"
-msgstr "Carrito abandonado"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:47
+#: ../../content/applications/websites/ecommerce/order_handling.rst:39
 msgid ""
-"An **abandoned cart** represents an order for which the customer did **not "
-"finish** the checkout confirmation process. For these orders, it is possible "
-"to send an **email reminder** to the customer automatically. To enable that "
-"feature, go to :menuselection:`Website --> Configuration --> Settings` and "
-"in the :guilabel:`Email & Marketing` section, "
-"enable :guilabel:`Automatically send abandoned checkout emails`. Once "
-"enabled, you can set the **time-lapse** after which the email is sent and "
-"customize the **email template** used."
+"To view only orders in the :guilabel:`Quotation Sent` stage, go "
+"to :menuselection:`Website --> eCommerce --> Orders` and remove "
+"the :guilabel:`Confirmed` filter. Then, open the :icon:`fa-caret-down` "
+"dropdown menu and, under :guilabel:`Filters`, select :guilabel:`Unpaid`."
 msgstr ""
-"Un **carrito abandonado** representa una orden en la que un cliente **no "
-"terminó** el proceso de confirmación de pago, así que en estas órdenes puede "
-"enviarle un **correo de recordatorio** al cliente. Para activar esta "
-"función, vaya a :menuselection:`Sitio web --> Configuración --> Ajustes` y, "
-"en la sección :guilabel:`Marketing por correo`, seleccione :guilabel:`Envío "
-"automático de correos electrónicos por carritos abandonados`. Una vez que "
-"active esta opción podrá configurar **cuánto tiempo** debe pasar para enviar "
-"el correo y personalizar la **plantilla de correo** a utilizar."
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:55
+#: ../../content/applications/websites/ecommerce/order_handling.rst:42
 msgid ""
-"For abandoned cart emails, the customer must either have entered their "
-"contact details during the checkout process; or be logged-in when they added "
-"the product to their cart."
+"E-commerce orders can be automatically assigned to a specific sales team or "
+"salesperson. To do so, go to :menuselection:`Website --> Configuration --> "
+"Settings`. In the :guilabel:`eCommerce` section, under :guilabel:`Orders "
+"Assignment`, select the relevant :guilabel:`Sales Team` "
+"or :guilabel:`Salesperson`."
 msgstr ""
-"Para correos de carritos abandonados, el cliente deben haber ingresado sus "
-"detalles de contacto durante el proceso de pago, o debe haber iniciado "
-"sesión cuando agregó el producto a su carrito."
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:61
-msgid "Delivery orders"
-msgstr "Órdenes de entrega"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:64
-msgid "Delivery flow"
-msgstr "Flujo de entrega"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:66
+#: ../../content/applications/websites/ecommerce/order_handling.rst:48
 msgid ""
-"Once a quotation has been confirmed, a delivery order is automatically "
-"created. The next step is to process this delivery."
+"This three-step process is not visible to customers. However, they can view "
+"their orders and check their status through the customer :doc:`portal </"
+"applications/general/users/user_portals>`."
 msgstr ""
-"Una vez que se confirmó la cotización, se creará una orden de entrega de "
-"manera automática. El siguiente paso es procesar la entrega."
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:69
+#: ../../content/applications/websites/ecommerce/order_handling.rst:51
 msgid ""
-"Packing e-commerce orders usually requires picking the product, preparing "
-"the packaging, printing the shipping label(s) and shipping to the customer. "
-"Depending on the number of orders, strategy, or resources, those steps can "
-"be considered as one or multiple actions in Odoo."
+"If the customer pays via :ref:`wire transfer <payment_providers/"
+"bank_payments/wire_transfer>`, the quotation is *not* automatically "
+"confirmed. In this case, the customer receives a notification on "
+"the :guilabel:`My account` page of their :doc:`customer account "
+"<customer_accounts>` to review and pay for the order. After the payment is "
+"received, the order must be manually confirmed in the backend."
 msgstr ""
-"Empacar las órdenes de comercio electrónico suele requerir la recolección "
-"del producto, la preparación del embalaje, la impresión de las etiquetas de "
-"envío y el envío al cliente. Dependiendo del número de órdenes, la "
-"estrategia o los recursos, es posible considerar estos pasos como una o "
-"varias acciones dentro de Odoo."
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:73
-msgid ""
-"An automatic email can be sent to the customer when the transfer status in "
-"Odoo is “done”. To do so, enable the feature in the settings of "
-"the :doc:`Inventory </applications/inventory_and_mrp/inventory>` app."
-msgstr ""
-"Se le puede enviar un correo electrónico automático al cliente cuando el "
-"estado de transferencia en Odoo sea \"listo\". Para hacerlo, active la "
-"función en los ajustes de la aplicación :doc:`Inventario </applications/"
-"inventory_and_mrp/inventory>`."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:58
+msgid ":doc:`checkout`"
+msgstr ":doc:`checkout`"
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:78
-msgid ""
-"If customers are allowed to pay when picking up their order in stores or by "
-"wire transfer, the quotation is **not** be confirmed and the stock is "
-"**not** be reserved. Orders must be confirmed manually to reserve products "
-"in stock."
-msgstr ""
-"Si los clientes pueden realizar su pago al recoger su orden en tiendas o por "
-"transferencia bancaria, la cotización **no** se confirmará y el inventario "
-"**no** se reservará. Las órdenes se deben confirmar de manera manual para "
-"reservar los productos en el inventario."
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:83
-msgid ""
-":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
-"setup_configuration/invoicing`"
-msgstr ""
-":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
-"setup_configuration/invoicing`"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:84
-msgid ""
-":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
-"setup_configuration/labels`"
-msgstr ""
-":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
-"setup_configuration/labels`"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:85
-msgid ""
-":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
-"setup_configuration/multipack`"
-msgstr ""
-":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
-"setup_configuration/multipack`"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:88
-msgid "Returns and refunds"
-msgstr "Devoluciones y reembolsos"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:90
-msgid ""
-"Customers can only return an order through an online form. It may not be "
-"possible to return products depending on the return strategy or type of "
-"product."
-msgstr ""
-"Los clientes solo pueden realizar la devolución de una orden mediante un "
-"formulario en línea. Es posible que no puedan regresar los productos según "
-"la estrategia de devolución o el tipo de producto."
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:93
-msgid ""
-"Full refunds can be directly sent to customers from within the order "
-"interface. A refund-compatible payment provider needs to be enabled first."
-msgstr ""
-"Los reembolsos completos se pueden enviar directamente a los clientes desde "
-"la interfaz de la orden. Primero debe activar un proveedor de pago que sea "
-"compatible con el reembolso."
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:97
-msgid ":doc:`/applications/sales/sales/products_prices/returns`"
-msgstr ":doc:`/applications/sales/sales/products_prices/returns`"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:98
-msgid ":doc:`/applications/services/helpdesk/advanced/after_sales`"
-msgstr ":doc:`/applications/services/helpdesk/advanced/after_sales`"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:99
+#: ../../content/applications/websites/ecommerce/order_handling.rst:59
 msgid ":doc:`/applications/finance/payment_providers`"
 msgstr ":doc:`/applications/finance/payment_providers`"
 
+#: ../../content/applications/websites/ecommerce/order_handling.rst:64
+msgid "Abandoned carts"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:66
+msgid ""
+"An abandoned cart is created when a customer adds products to the cart but "
+"does not go through the :ref:`checkout process <ecommerce/checkout/steps>` "
+"or leaves the website before completing it. It is possible to automatically "
+"send an email reminder to the customer for these pending orders."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:70
+msgid "To enable abandoned cart reminders:"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:72
+#: ../../content/applications/websites/ecommerce/order_handling.rst:185
+#: ../../content/applications/websites/ecommerce/products/categories_variants.rst:20
+#: ../../content/applications/websites/ecommerce/shipping.rst:104
+#: ../../content/applications/websites/website/configuration/multi_website.rst:26
+#: ../../content/applications/websites/website/configuration/multi_website.rst:136
+#: ../../content/applications/websites/website/configuration/translate.rst:14
+msgid "Go to :menuselection:`Website --> Configuration --> Settings`."
+msgstr "Vaya a :menuselection:`Sitio web --> Configuración --> Ajustes`."
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:73
+msgid ""
+"In the :guilabel:`eCommerce` section, enable :guilabel:`Follow up abandoned "
+"carts`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:74
+msgid ""
+"Set the time delay after which the reminder email is sent in "
+"the :guilabel:`Send after` field, then click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:76
+msgid ""
+"If needed, click the :icon:`fa-arrow-right` :guilabel:`Customize Abandoned "
+"Email Template` link to customize the :doc:`email template </applications/"
+"general/companies/email_template>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:79
+msgid ""
+"To view all abandoned carts, go to :menuselection:`Website --> eCommerce --> "
+"Orders` and remove the :guilabel:`Confirmed` filter. Open the :icon:`fa-"
+"caret-down` dropdown menu and, under :guilabel:`Filters`, "
+"select :guilabel:`Abandoned`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:84
+msgid ""
+"To receive reminders, customers must have entered their contact details "
+"during checkout or be logged in when adding items to the cart. Without the "
+"customer details, it remains a :ref:`quotation <ecommerce/handling/sales>` "
+"with no follow-up."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:87
+msgid ""
+"Abandoned cart reminders are only sent for carts created after the feature "
+"is enabled. Existing abandoned carts are not affected."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:96
+msgid ""
+"The :doc:`Inventory app </applications/inventory_and_mrp/inventory>` must be "
+"installed to process deliveries."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:98
+msgid ""
+"Delivery orders are not generated for :guilabel:`Service` "
+"or :doc:`subscription </applications/sales/subscriptions>` products."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:101
+msgid ""
+"Once a sales order is confirmed, a delivery order is automatically created. "
+"To access it, click the :icon:`fa-truck` :guilabel:`Delivery` smart button "
+"on the sales order."
+msgstr ""
+
 #: ../../content/applications/websites/ecommerce/order_handling.rst:104
-msgid "Invoice and legal requirements"
-msgstr "Facturación y requerimientos legales"
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:106
 msgid ""
-"The final step of an e-commerce order is to generate the invoice and send it "
-"to the customer. Depending on your needs, an invoice can either be generated "
-"automatically or on demand of the customer. This process can be automated if "
-"(and when) the online payment is :ref:`confirmed <handling/sales>`."
+"The next step is preparing e-commerce orders in the warehouse. Depending on "
+"order volume, refill and stock management strategies, or available "
+"resources, different :doc:`stock handling flows for receipts and deliveries "
+"</applications/inventory_and_mrp/inventory/shipping_receiving/"
+"daily_operations>` can be implemented. These flows may involve manually "
+"receiving, :doc:`picking </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/picking_methods>`, and :doc:`packing </applications/"
+"inventory_and_mrp/inventory/shipping_receiving/setup_configuration/"
+"multipack>` products, printing :doc:`shipping labels </applications/"
+"inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>`, "
+"and :doc:`shipping  <shipping>` orders to customers, or handling these "
+"processes through :doc:`dropshipping </applications/inventory_and_mrp/"
+"inventory/shipping_receiving/daily_operations/dropshipping>` "
+"or :doc:`consignment flows </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/daily_operations/owned_stock>`."
 msgstr ""
-"El paso final de una orden de comercio electrónico consiste en generar la "
-"factura y enviársela al cliente. Dependiendo de tus necesidades, puedes "
-"generar la factura de forma automática o cuando el cliente te la pida. Este "
-"proceso se automatiza luego de :ref:`confirmar <handling/sales>` el pago en "
-"línea."
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:111
+#: ../../content/applications/websites/ecommerce/order_handling.rst:119
 msgid ""
-"To automate invoicing, go to :menuselection:`Website --> Configuration --> "
-"Settings` and in the :guilabel:`Invoicing` section, "
-"enable :guilabel:`Automatic Invoice`."
+"After completing the warehouse operations, return to the delivery order and "
+"click :guilabel:`Validate` once the order has been shipped."
 msgstr ""
-"Para automatizar la facturación vaya a :menuselection:`Sitio web --> "
-"Configuración --> Ajustes` y en la sección :guilabel:`Facturación` active la "
-"opción :guilabel:`Factura automática`."
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:123
+msgid ""
+"To enable automatic confirmation emails for completed delivery orders "
+"(:guilabel:`Done` status), go to :menuselection:`Inventory --> Configuration "
+"--> Settings`, scroll to the :guilabel:`Shipping` section, and "
+"enable :guilabel:`Email Confirmation`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:130
+#: ../../content/applications/websites/ecommerce/products.rst:184
+msgid "Stock management"
+msgstr "Gestión de existencias"
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:132
+msgid ""
+"To ensure that products ordered by customers are reserved in stock, go "
+"to :menuselection:`Inventory --> Configuration --> Operation Types`, click "
+"the :guilabel:`Delivery Orders` operation type, and set "
+"the :guilabel:`Reservation Method` field to :doc:`At Confirmation </"
+"applications/inventory_and_mrp/inventory/shipping_receiving/"
+"reservation_methods/at_confirmation>`. When enabled, product quantities are "
+"automatically reserved once the order is confirmed, preventing items from "
+"becoming unavailable after the order is placed."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:140
+msgid ""
+"If the customer pays by :ref:`wire transfer <payment_providers/bank_payments/"
+"wire_transfer>`, products are not reserved in stock until the payment is "
+"received and the order is manually confirmed."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:145
+msgid ":doc:`shipping`"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:150
+msgid "Returns and refunds"
+msgstr "Devoluciones y reembolsos"
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:152
+msgid ""
+"Customers can :doc:`return </applications/sales/sales/products_prices/"
+"returns>` products through the :doc:`customer portal </applications/general/"
+"users/user_portals>` by navigating to the :guilabel:`Your Orders` section, "
+"selecting the relevant order, and clicking the :guilabel:`Return` button. A "
+"return document is automatically generated."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:None
+msgid "Return button in the portal."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:160
+msgid ""
+"Once the returned items are received, initiate the :doc:`return and refund "
+"process </applications/sales/sales/products_prices/returns>` in the backend."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:164
+msgid ""
+":doc:`Returning </applications/sales/sales/products_prices/returns>` "
+"products may not be possible depending on the :doc:`product type </"
+"applications/inventory_and_mrp/inventory/product_management/configure/type>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:167
+msgid ""
+"To issue :doc:`refunds </applications/finance/accounting/customer_invoices/"
+"credit_notes>`, the payment must have been made through a :ref:`refund-"
+"compatible payment provider <payment_providers/supported_providers>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:172
+msgid ":doc:`/applications/services/helpdesk/advanced/after_sales`"
+msgstr ":doc:`/applications/services/helpdesk/advanced/after_sales`"
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:177
+msgid "Invoicing"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:179
+msgid ""
+"The final step of an e-commerce order is generating and sending "
+"the :doc:`customer invoice </applications/finance/accounting/"
+"customer_invoices>`. Depending on your needs, invoices can be generated "
+"manually or automatically."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:183
+msgid "To automate invoicing:"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:186
+msgid ""
+"In the :guilabel:`eCommerce` section, enable :guilabel:`Automatic Invoice`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:187
+msgid ""
+"Select the relevant :guilabel:`Email Template`, then click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:188
+msgid ""
+"If needed, click the :icon:`fa-arrow-right` icon next to the template name "
+"to customize the :doc:`email template </applications/general/companies/"
+"email_template>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:192
+msgid ""
+"Customers can view their invoices under :guilabel:`Your Invoices` in "
+"the :doc:`portal </applications/general/users/user_portals>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:194
+msgid ""
+"Invoices are only sent automatically if (and when) the :doc:`payment </"
+"applications/finance/payment_providers>` is registered."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:196
+msgid ""
+"When automatic invoicing is disabled and invoices are created manually, they "
+"appear as :doc:`pro-forma invoices </applications/sales/sales/invoicing/"
+"proforma>` in the customer portal until they are manually :ref:`sent to the "
+"customer <accounting/invoice/sending>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:201
+msgid ":doc:`/applications/finance/accounting/payments`"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:202
+msgid ":doc:`/applications/sales/sales/invoicing/invoicing_policy`"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:203
+msgid ""
+"`Create a customer invoice from a sales order <https://www.youtube.com/watch?"
+"v=14AIEJ_B7rA>`_"
+msgstr ""
 
 #: ../../content/applications/websites/ecommerce/performance.rst:5
 msgid ""
@@ -4035,13 +4096,13 @@ msgid ""
 "files>`, :ref:`translate <ecommerce/products/translation>` the product page "
 "content, and :ref:`manage the stock <ecommerce/products/stock-management>`."
 msgstr ""
-"**Comercio electrónico de Odoo** te permite :ref:`agregar productos <"
-"ecommerce/products/add-products>` y gestionar tus :doc:`páginas de productos "
-"<../ecommerce/ecommerce_design/product_page>` desde la aplicación Sitio web. "
-"Esto te permite agregar :ref:`archivos digitales <ecommerce/products/digital-"
-"files>`, :ref:`traducir <ecommerce/products/translation>` el contenido de la "
-"pagina de producto y :ref:`gestionar las existencias <ecommerce/products/"
-"stock-management>`."
+"**Comercio electrónico de Odoo** te permite :ref:`agregar productos "
+"<ecommerce/products/add-products>` y gestionar tus :doc:`páginas de "
+"productos <../ecommerce/ecommerce_design/product_page>` desde la aplicación "
+"Sitio web. Esto te permite agregar :ref:`archivos digitales <ecommerce/"
+"products/digital-files>`, :ref:`traducir <ecommerce/products/translation>` "
+"el contenido de la pagina de producto y :ref:`gestionar las existencias "
+"<ecommerce/products/stock-management>`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:16
 msgid "Add products"
@@ -4062,13 +4123,14 @@ msgid ""
 "page is automatically published."
 msgstr ""
 "Para crear un producto desde el frontend, haz clic en :guilabel:`+ Nuevo` en "
-"la esquina superior derecha, luego en :guilabel:`Producto`. Ingresa el "
-":guilabel:`nombre del producto`, el :guilabel:`precio de venta`, los "
-":guilabel:`impuestos de clientes` predeterminados para transacciones locales "
-"y, después, :guilabel:`guarda` los cambios. Puedes actualizar los detalles "
-"del producto, agregar una imagen y :ref:`personalizar <ecommerce_design/"
-"product_page/customization>` la página del producto. Cuando "
-":guilabel:`guardes`, la página del producto se publicará en automático."
+"la esquina superior derecha, luego en :guilabel:`Producto`. Ingresa "
+"el :guilabel:`nombre del producto`, el :guilabel:`precio de venta`, "
+"los :guilabel:`impuestos de clientes` predeterminados para transacciones "
+"locales y, después, :guilabel:`guarda` los cambios. Puedes actualizar los "
+"detalles del producto, agregar una imagen y :ref:`personalizar "
+"<ecommerce_design/product_page/customization>` la página del producto. "
+"Cuando :guilabel:`guardes`, la página del producto se publicará en "
+"automático."
 
 #: ../../content/applications/websites/ecommerce/products.rst:30
 msgid ""
@@ -4248,10 +4310,10 @@ msgid ""
 "product_page/image-customization>` product images and videos using the "
 "website editor."
 msgstr ""
-"Haz clic en el botón inteligente :icon:`fa-globe` :guilabel:`Ir al sitio web`"
-" para acceder a la página del producto en el sitio web y :ref:`personalizar <"
-"ecommerce/product_page/image-customization>` las imágenes y videos del "
-"producto usando el editor de sitio web."
+"Haz clic en el botón inteligente :icon:`fa-globe` :guilabel:`Ir al sitio "
+"web` para acceder a la página del producto en el sitio web "
+"y :ref:`personalizar <ecommerce/product_page/image-customization>` las "
+"imágenes y videos del producto usando el editor de sitio web."
 
 #: ../../content/applications/websites/ecommerce/products.rst:105
 msgid "Digital files"
@@ -4436,10 +4498,6 @@ msgstr ""
 "Presiona el botón :guilabel:`Está publicado` para asegurarte de que el "
 "producto esté disponible para los visitantes del sitio web."
 
-#: ../../content/applications/websites/ecommerce/products.rst:184
-msgid "Stock management"
-msgstr "Gestión de existencias"
-
 #: ../../content/applications/websites/ecommerce/products.rst:186
 msgid ""
 "To enable and configure inventory management options, go "
@@ -4540,9 +4598,10 @@ msgid ""
 msgstr ""
 "Para informarle a los clientes que un producto no tiene existencias, "
 "configura un :guilabel:`Mensaje que aparecerá cuando no haya existencias`. "
-"Para hacerlo, ve al formulario del producto y abre la pestaña "
-":guilabel:`Ventas`. En la sección :guilabel:`Tienda de Comercio electrónico`"
-", escribe el :guilabel:`mensaje que aparecerá cuando no haya existencias`."
+"Para hacerlo, ve al formulario del producto y abre la "
+"pestaña :guilabel:`Ventas`. En la sección :guilabel:`Tienda de Comercio "
+"electrónico`, escribe el :guilabel:`mensaje que aparecerá cuando no haya "
+"existencias`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:None
 msgid "Out-of-stock message on the product page."
@@ -4570,9 +4629,9 @@ msgid ""
 "product_management/tracking-inventory>` must be enabled on the product form."
 msgstr ""
 "Para crea un :guilabel:`mensaje que aparecerá cuando no haya existencias` y "
-"hacer que la opción de notificaciones esté disponible, debes activar :ref:`"
-"el ajuste para monitorear el inventario <inventory/product_management/"
-"tracking-inventory>` en el formulario del producto."
+"hacer que la opción de notificaciones esté disponible, debes "
+"activar :ref:`el ajuste para monitorear el inventario <inventory/"
+"product_management/tracking-inventory>` en el formulario del producto."
 
 #: ../../content/applications/websites/ecommerce/products.rst:236
 msgid "Packagings"
@@ -4614,13 +4673,13 @@ msgid ""
 "product variant. Under :guilabel:`Sales`, add as many package types as "
 "needed in the :guilabel:`Packagings` field."
 msgstr ""
-"También es posible agregar embalajes a una :ref:`variante de producto <"
-"ecommerce/categories_variants/product-variants>` específica. Para hacerlo, "
-"ve al formulario del producto, haz clic en el :ref:`botón inteligente <"
-"products/variants/variants-smart-button>` :icon:`fa-sitemap` "
-":guilabel:`Variantes` y selecciona la variante del producto que necesites. "
-"En :guilabel:`Ventas` agrega todos los tipos de embalaje que necesites en el "
-"campo :guilabel:`Embalajes`."
+"También es posible agregar embalajes a una :ref:`variante de producto "
+"<ecommerce/categories_variants/product-variants>` específica. Para hacerlo, "
+"ve al formulario del producto, haz clic en el :ref:`botón inteligente "
+"<products/variants/variants-smart-button>` :icon:`fa-"
+"sitemap` :guilabel:`Variantes` y selecciona la variante del producto que "
+"necesites. En :guilabel:`Ventas` agrega todos los tipos de embalaje que "
+"necesites en el campo :guilabel:`Embalajes`."
 
 #: ../../content/applications/websites/ecommerce/products/categories_variants.rst:3
 msgid "Categories and variants"
@@ -4633,10 +4692,11 @@ msgid ""
 "customers while organizing products by category for a better overview and "
 "smoother navigation."
 msgstr ""
-"Comercio electrónico de Odoo ofrece varias formas de configurar, :doc:`"
-"presentar <../../ecommerce/ecommerce_design/catalog>` y vender diferentes "
-"opciones de productos a clientes. Además, organiza los productos por "
-"categoría para tener un mejor resumen y una navegación más sencilla."
+"Comercio electrónico de Odoo ofrece varias formas de "
+"configurar, :doc:`presentar <../../ecommerce/ecommerce_design/catalog>` y "
+"vender diferentes opciones de productos a clientes. Además, organiza los "
+"productos por categoría para tener un mejor resumen y una navegación más "
+"sencilla."
 
 #: ../../content/applications/websites/ecommerce/products/categories_variants.rst:12
 msgid "Product variants"
@@ -4659,21 +4719,13 @@ msgstr ""
 msgid "To configure product variants for a product:"
 msgstr "Para configurar las variantes de un producto:"
 
-#: ../../content/applications/websites/ecommerce/products/categories_variants.rst:20
-#: ../../content/applications/websites/ecommerce/shipping.rst:104
-#: ../../content/applications/websites/website/configuration/multi_website.rst:26
-#: ../../content/applications/websites/website/configuration/multi_website.rst:136
-#: ../../content/applications/websites/website/configuration/translate.rst:14
-msgid "Go to :menuselection:`Website --> Configuration --> Settings`."
-msgstr "Vaya a :menuselection:`Sitio web --> Configuración --> Ajustes`."
-
 #: ../../content/applications/websites/ecommerce/products/categories_variants.rst:21
 msgid ""
 "Scroll down to the :guilabel:`eCommerce` section and enable "
 "the :guilabel:`Product Variants` feature."
 msgstr ""
-"Dirígete a la sección :guilabel:`Comercio electrónico` y activa la función "
-":guilabel:`Variantes de producto`."
+"Dirígete a la sección :guilabel:`Comercio electrónico` y activa la "
+"función :guilabel:`Variantes de producto`."
 
 #: ../../content/applications/websites/ecommerce/products/categories_variants.rst:23
 msgid ""
@@ -4696,8 +4748,8 @@ msgid ""
 "The product variants are created automatically (or not) based on "
 "the :ref:`attribute's configuration <products/variants/attributes>`."
 msgstr ""
-"Las variantes de producto se crean de forma automática (o no) según la :ref:`"
-"configuración del atributo <products/variants/attributes>`."
+"Las variantes de producto se crean de forma automática (o no) según "
+"la :ref:`configuración del atributo <products/variants/attributes>`."
 
 #: ../../content/applications/websites/ecommerce/products/categories_variants.rst:32
 msgid ":doc:`/applications/sales/sales/products_prices/products/variants`"
@@ -4730,9 +4782,9 @@ msgid ""
 ":guilabel:`eCommerce Filter`: Set the field to :guilabel:`Visible` to make "
 "the attribute available in the shop's filter section."
 msgstr ""
-":guilabel:`Filtro de comercio electrónico`: Configura el campo como "
-":guilabel:`Visible` para que el atributo aparezca en la sección de filtros "
-"de la tienda."
+":guilabel:`Filtro de comercio electrónico`: Configura el campo "
+"como :guilabel:`Visible` para que el atributo aparezca en la sección de "
+"filtros de la tienda."
 
 #: ../../content/applications/websites/ecommerce/products/categories_variants.rst:50
 msgid ""
@@ -4769,11 +4821,11 @@ msgid ""
 msgstr ""
 "También puedes agregar una imagen de variante en la tarjeta del producto en "
 "la página de la tienda. Para hacerlo, ve al formulario del producto, haz "
-"clic en el :ref:`botón inteligente <products/variants/variants-smart-button>`"
-" :icon:`fa-sitemap` :guilabel:`Variantes`, selecciona una variante y haz "
-"clic en el icono :icon:`fa-pencil` :guilabel:`(Editar)` para agregar una "
-"imagen a cada variante. Asegúrate de que la opción :ref:`Mostrar miniaturas <"
-"ecommerce/categories_variants/attributes>` esté seleccionada en el "
+"clic en el :ref:`botón inteligente <products/variants/variants-smart-"
+"button>` :icon:`fa-sitemap` :guilabel:`Variantes`, selecciona una variante y "
+"haz clic en el icono :icon:`fa-pencil` :guilabel:`(Editar)` para agregar una "
+"imagen a cada variante. Asegúrate de que la opción :ref:`Mostrar miniaturas "
+"<ecommerce/categories_variants/attributes>` esté seleccionada en el "
 "formulario del atributo."
 
 #: ../../content/applications/websites/ecommerce/products/categories_variants.rst:None
@@ -10631,10 +10683,10 @@ msgstr ""
 "Para publicar la página web `livechat`, regresa a la lista de páginas web "
 "desde :menuselection:`Sitio --> Contenido --> Páginas`. Selecciona la "
 "casilla ubicada a la izquierda de `livechat` para elegir la página y "
-"resaltar la línea. Luego, haz clic en la casilla de la columna :guilabel:`"
-"Está publicado`. El campo con la casilla aparecerá resaltado en blanco. "
-"Vuelve a hacer clic en la casilla para activar :guilabel:`Está publicado`. "
-"La página web quedará publicada."
+"resaltar la línea. Luego, haz clic en la casilla de la "
+"columna :guilabel:`Está publicado`. El campo con la casilla aparecerá "
+"resaltado en blanco. Vuelve a hacer clic en la casilla para "
+"activar :guilabel:`Está publicado`. La página web quedará publicada."
 
 #: ../../content/applications/websites/livechat/ratings.rst:None
 msgid ""
@@ -14529,8 +14581,8 @@ msgid ""
 "Under the :guilabel:`General` section, click :icon:`oi-arrow-"
 "right` :guilabel:`Install new languages`."
 msgstr ""
-"En la sección :guilabel:`General`, haz clic en :icon:`oi-arrow-right` "
-":guilabel:`Instalar nuevos idiomas`."
+"En la sección :guilabel:`General`, haz clic en :icon:`oi-arrow-"
+"right` :guilabel:`Instalar nuevos idiomas`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:17
 msgid ""
@@ -14614,8 +14666,8 @@ msgstr "En la barra lateral, ve a la sección :guilabel:`Selector de idioma`."
 msgid ""
 "Set the :guilabel:`Style` to :guilabel:`Dropdown` or :guilabel:`Inline`."
 msgstr ""
-"Elige entre :guilabel:`Desplegable` o :guilabel:`En línea` en "
-":guilabel:`Estilo`."
+"Elige entre :guilabel:`Desplegable` o :guilabel:`En línea` "
+"en :guilabel:`Estilo`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:48
 #: ../../content/applications/websites/website/configuration/translate.rst:61
@@ -14624,9 +14676,9 @@ msgid ""
 "to :guilabel:`Text`, :guilabel:`Flag`, :guilabel:`Flag and "
 "Text`, :guilabel:`Code`, or :guilabel:`Flag and Code`."
 msgstr ""
-"Configura el campo :guilabel:`Etiqueta` como :guilabel:`Texto`, "
-":guilabel:`Bandera`, :guilabel:`Bandera y texto`, :guilabel:`Código` o "
-":guilabel:`Bandera y código`."
+"Configura el campo :guilabel:`Etiqueta` "
+"como :guilabel:`Texto`, :guilabel:`Bandera`, :guilabel:`Bandera y "
+"texto`, :guilabel:`Código` o :guilabel:`Bandera y código`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:53
 msgid ""
@@ -14648,8 +14700,8 @@ msgid ""
 "Set the :guilabel:`Language selector` field "
 "to :guilabel:`Dropdown`, :guilabel:`Inline`, or :guilabel:`None`."
 msgstr ""
-"Elige entre :guilabel:`Desplegable`, :guilabel:`En línea` o "
-":guilabel:`Ninguno` en el campo :guilabel:`Selector de idioma`."
+"Elige entre :guilabel:`Desplegable`, :guilabel:`En línea` "
+"o :guilabel:`Ninguno` en el campo :guilabel:`Selector de idioma`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:66
 msgid ""
@@ -14744,8 +14796,8 @@ msgstr ""
 msgid ""
 "Some elements can also be translated from the backend (e.g., product names)."
 msgstr ""
-"Algunos elementos también puedes traducirlos desde el backend "
-"(como los nombres de productos)."
+"Algunos elementos también puedes traducirlos desde el backend (como los "
+"nombres de productos)."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:104
 msgid "Translate SEO-related elements"
@@ -16152,8 +16204,8 @@ msgstr ""
 "una lista simple de submenús, muestran un panel dividido en grupos de "
 "opciones de navegación. Esto hace que sean ideales para sitios web con un "
 "gran volumen de contenido o :doc:`sitios web de comercio electrónico <../../"
-"ecommerce>`, ya que ayudan a incluir todas tus páginas web o :ref:`"
-"categorías de comercio electrónico <ecommerce/categories_variants/"
+"ecommerce>`, ya que ayudan a incluir todas tus páginas web "
+"o :ref:`categorías de comercio electrónico <ecommerce/categories_variants/"
 "categories>` en el menú y a mostrar todos los elementos al mismo tiempo."
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:None
@@ -17766,21 +17818,17 @@ msgstr ""
 "y :guilabel:`Contenido interno`. Los bloques de :guilabel:`contenido "
 "interno` solo pueden estar dentro de bloques de :guilabel:`categorías`."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:24
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:25
 msgid ""
-"When clicking on a category block, a popup appears, allowing you to select "
+"When clicking a category block, a popup appears, allowing you to select "
 "between multiple templates for each category."
 msgstr ""
-"Al hacer clic en un bloque de categoría aparecerá una ventana emergente para "
-"que elijas de entre varias plantillas de cada categoría."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:28
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:29
 msgid ""
-"You can also search for a specific block in the :guilabel:`Insert a block` "
-"popup using the search bar."
+"Search for a specific block in the :guilabel:`Insert a block` popup using "
+"the search bar."
 msgstr ""
-"También puedes buscar un bloque específico en la ventana "
-"emergente :guilabel:`Inserta un bloque` si utilizas la barra de búsqueda."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:0
 msgid "Pop-up block selection"
@@ -17801,14 +17849,17 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:39
 msgid ""
-"Access to certain blocks requires the installation of their respective "
-"application or module (e.g., eCommerce for the :guilabel:`Products` block)."
+"You can also add a building block on the login page. To do so, navigate to "
+"the website's homepage, add `/web/login` to the URL and press `Enter`."
 msgstr ""
-"Solo podrás acceder a ciertos bloques si isntalas sus respectivas "
-"aplicaciones o módulos (por ejemplo, necesitas instalar Comercio electrónico "
-"para usar el bloque :guilabel:`Productos`)."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:43
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:41
+msgid ""
+"Access to certain blocks requires installing their respective application or "
+"module (e.g., eCommerce for the :guilabel:`Products` block)."
+msgstr ""
+
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:45
 msgid ""
 "Add all your social media accounts in one place with the inner "
 "content :guilabel:`Social Media` block. Toggle the switch on or off next to "
@@ -17824,61 +17875,49 @@ msgid "Social Media inner content block"
 msgstr ""
 "Captura de pantalla del bloque de contenido interno para redes sociales"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:52
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:54
 msgid "Form"
 msgstr "Formulario"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:54
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:56
 msgid ""
 "The :guilabel:`Form` block is used to collect information from website "
-"visitors and create records in your database, if applicable. To add a form "
-"to a website page, drag and drop the :guilabel:`Contact & Forms` category, "
-"then select the :guilabel:`Form block`."
+"visitors and, if applicable, create records in your database. To add a form "
+"to a website page, drag and drop the :guilabel:`Contact & Forms` category "
+"block, then select a block in the popup."
 msgstr ""
-"El bloque de :guilabel:`formulario` sirve para recopilar información de los "
-"visitantes del sitio web y crear registros en tu base de datos, si "
-"corresponde. Para agregar un formulario a una página del sitio web, arrastra "
-"y suelta la categoría :guilabel:`Contacto y formularios` y luego selecciona "
-"el :guilabel:`bloque de formulario`."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:None
 msgid "Example of a form block"
 msgstr "Ejemplo de un bloque de formulario"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:64
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:66
 msgid "Action"
 msgstr "Acción"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:66
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:68
 msgid ""
 "By default, when the form is submitted, an email containing the information "
 "entered by the visitor is automatically sent. Depending on the apps "
 "installed on your database, additional actions that can automatically create "
 "records may become available. To choose a different action, "
-"click :guilabel:`Edit`, click the form, navigate to "
-"the :guilabel:`Customize` tab, and select the desired :guilabel:`Action`:"
+"click :guilabel:`Edit`, click the form, navigate to the :guilabel:`Style` "
+"tab, and select the desired :guilabel:`Action`:"
 msgstr ""
-"De forma predeterminada, envíar el formulario ocasiona el envío automático "
-"de un correo con la información que ingresó el visitante. Es posible que, "
-"según las aplicaciones que tengas instaladas en tu base de datos, haya otras "
-"acciones disponibles que te permitan crear registros de manera automática. "
-"Para elegir una acción distinta, haz clic en :guilabel:`Editar`, selecciona "
-"el formulario, ve a la pestaña :guilabel:`Personalizar` y elige "
-"la :guilabel:`acción` que prefieras:"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:72
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:74
 msgid ""
 ":guilabel:`Apply for a Job` (:doc:`Recruitment </applications/hr/"
 "recruitment>`)"
 msgstr ""
 ":guilabel:`Postular` (:doc:`Reclutamiento </applications/hr/recruitment>`)"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:73
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:75
 msgid ":guilabel:`Create a Customer` (:doc:`eCommerce <../../ecommerce>`)"
 msgstr ""
 ":guilabel:`Crear un cliente` (:doc:`Comercio electrónico <../../ecommerce>`)"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:74
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:76
 msgid ""
 ":guilabel:`Create a Ticket` (:doc:`Helpdesk </applications/services/"
 "helpdesk>`)"
@@ -17886,13 +17925,13 @@ msgstr ""
 ":guilabel:`Crear un ticket` (:doc:`Soporte al cliente </applications/"
 "services/helpdesk>`)"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:75
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:77
 msgid ""
 ":guilabel:`Create an Opportunity` (:doc:`CRM </applications/sales/crm>`)"
 msgstr ""
 ":guilabel:`Crear una oportunidad` (:doc:`CRM </applications/sales/crm>`)"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:76
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:78
 msgid ""
 ":guilabel:`Subscribe to Newsletter` (:doc:`Email Marketing </applications/"
 "marketing/email_marketing>`)"
@@ -17900,16 +17939,16 @@ msgstr ""
 ":guilabel:`Suscribir al boletín` (:doc:`Marketing por correo </applications/"
 "marketing/email_marketing>`)"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:77
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:79
 msgid ""
 ":guilabel:`Create a Task` (:doc:`Project </applications/services/project>`)"
 msgstr ""
 ":guilabel:`Crear una tarea` (:doc:`Proyectos </applications/services/"
 "project>`)"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:None
-msgid "Editing a form to change its action"
-msgstr "Editar un formulario para cambiar su acción"
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:80
+msgid ":guilabel:`More models`: to generate other types of records"
+msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:82
 msgid ""
@@ -17932,19 +17971,12 @@ msgstr "Campos"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:90
 msgid ""
-"To add a new field to the form, navigate to the :guilabel:`Customize tab` "
-"and click the :guilabel:`+ Field` button next to the :guilabel:`Form` "
-"or :guilabel:`Field` section. To modify the new (or any other) field on the "
-"form, select the field, then use the options available in "
-"the :guilabel:`Field` section of the :guilabel:`Customize` tab. For example, "
-"you can:"
+"To add a new field to the form, navigate to the :guilabel:`Style` tab and "
+"click the :guilabel:`+ Field` button next to the :guilabel:`Form` "
+"or :guilabel:`Field` section. To modify any field on the form, select the "
+"field, then use the options available in the :guilabel:`Field` section of "
+"the :guilabel:`Style` tab. For example, you can:"
 msgstr ""
-"Para agregar un nuevo campo al formulario, abre la :guilabel:`pestaña "
-"Personalizar` y haz clic en el botón :guilabel:`+ Campo` que se encuentra "
-"junto a la sección :guilabel:`Formulario` o :guilabel:`Campo`. Para "
-"modificar el nuevo campo (o cualquier otro) del formulario, seleccionalo y "
-"usa las opciones disponibles en la sección :guilabel:`Campo` de la "
-"pestaña :guilabel:`Personalizar`. Por ejemplo, puedes:"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:95
 msgid "Change the field :guilabel:`Type`."
@@ -17980,42 +18012,40 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:110
 msgid ""
-"Enable a field :guilabel:`Description`. Click the default description on the "
-"form to modify it."
+"Enable a field :guilabel:`Description`. Toggle the switch on and click the "
+"default description on the form to modify it."
 msgstr ""
-"Activar el campo :guilabel:`Descripción`. Haz clic en la descripción "
-"predeterminada del formulario para modificarla."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:111
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:112
 msgid "Add a :guilabel:`Placeholder` or :guilabel:`Default value`."
 msgstr ""
 "Agregar un :guilabel:`marcador de posición` o :guilabel:`valor "
 "predeterminado`."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:112
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:113
 msgid "Specify if the field is :guilabel:`Required`."
 msgstr "Especificar si el campo es :guilabel:`obligatorio`."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:113
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:114
 msgid "Edit the field's :doc:`visibility <visibility>` settings."
 msgstr "Editar los ajustes de :doc:`visibilidad <visibility>` del campo."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:114
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:115
 msgid "Add an :ref:`animation <website/elements/animations>`."
 msgstr "Agregar una :ref:`animación <website/elements/animations>`."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:116
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:117
 msgid "Once you have made the desired changes, click :guilabel:`Save`."
 msgstr ""
 "Haz clic en :guilabel:`Guardar` una vez que hayas hecho todos los cambios "
 "necesarios."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:119
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:120
 msgid "Add an Odoo contact form on a non-Odoo website"
 msgstr ""
 "Agregar un formulario de contacto de Odoo a un sitio web que no sea de Odoo"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:121
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:122
 msgid ""
 "You can display an Odoo contact form on another website using an iframe. To "
 "do so, follow these steps:"
@@ -18023,7 +18053,7 @@ msgstr ""
 "Puedes mostrar un formulario de contacto de Odoo en otro sitio web mediante "
 "un iframe. Sigue estos pasos para hacerlo:"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:124
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:125
 msgid ""
 "**Prepare the Odoo form:** Create a contact form on a page in Odoo Website "
 "and remove the :ref:`header design <website/header_footer/header-design>` "
@@ -18036,7 +18066,7 @@ msgstr ""
 "<website/header_footer/footer-design>`. Asegúrate de que solo quede el "
 "formulario de contacto en la página."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:127
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:128
 msgid ""
 "**Generate an embeddable code:** Copy the URL of the Odoo form page and "
 "paste it into an iframe generator, such as `La Digitale.dev <https://"
@@ -18050,7 +18080,7 @@ msgstr ""
 "www.iframe-generator.com/>`_. Ajusta el ancho y la altura para que se "
 "muestre correctamente."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:131
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:132
 msgid ""
 "**Add the embedded code to the non-Odoo website:** Open the relevant page’s "
 "HTML (in the code editor or CMS) and insert the embedded code where the form "
@@ -18060,7 +18090,7 @@ msgstr ""
 "HTML de la página correspondiente (en el editor de código o CMS) e inserta "
 "el código incrustable donde quieras que aparezca el formulario."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:135
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:136
 msgid "Example of an embedded code:"
 msgstr "Ejemplo de un código incrustable:"
 
@@ -18080,19 +18110,17 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:160
 msgid ""
-"After adding the block to a page, click the block, then go to "
-"the :guilabel:`Customize` tab and click :guilabel:`Edit`. Replace the "
+"After dragging and dropping the :guilabel:`Embed Code` block from "
+"the :guilabel:`Inner Content` section into a page, click the block, then go "
+"to the :guilabel:`Style` tab and click :guilabel:`Edit`. Replace the "
 "placeholder code with your custom embed code."
 msgstr ""
-"Después de agregar un bloque a la página, haz clic en él, ve a la "
-"pestaña :guilabel:`Personalizar` y haz clic en :guilabel:`Editar`. Reemplaza "
-"el código del marcador de posición con tu código personalizado."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:None
 msgid "Add the link to the embedded code you want to point to"
 msgstr "Agregue el enlace al código insertado que quiere resaltar"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:167
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:168
 msgid ""
 "Do not copy/paste code you do not understand, as it could put your data at "
 "risk."
@@ -18100,11 +18128,11 @@ msgstr ""
 "No copies ni pegues código que no entiendes, ya que podrías poner tu "
 "información en riesgo."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:172
-msgid "Move, switch, or delete a building block"
-msgstr "Mober, cambiar o eliminar un bloque de creación"
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:173
+msgid "Move, switch, duplicate or delete a building block"
+msgstr ""
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:174
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:175
 msgid ""
 "Pull the turquoise borders on the block to reduce or increase the space at "
 "the top or bottom of it."
@@ -18112,7 +18140,7 @@ msgstr ""
 "Tira de los bordes turquesa del bloque para reducir o aumentar el espacio en "
 "la parte superior o inferior."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:176
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:177
 msgid ""
 "Change the block order by clicking :icon:`fa-chevron-up` (:guilabel:`chevron "
 "up`) or :icon:`fa-chevron-down` (:guilabel:`chevron down`) and move the "
@@ -18131,7 +18159,20 @@ msgstr ""
 "(:guilabel:`flecha hacia la izquierda`) o :icon:`fa-chevron-right` "
 "(:guilabel:`flecha hacia la derecha`)."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:183
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:184
+msgid ""
+"To duplicate a building block, click :icon:`fa-clone` "
+"(:guilabel:`duplicate`). Once duplicated, the new block appears on the page "
+"beneath the original one."
+msgstr ""
+
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:188
+msgid ""
+"Alternatively, click the :icon:`fa-clone` (:guilabel:`duplicate`) icon at "
+"the top of the :guilabel:`Style` tab to duplicate the selected block."
+msgstr ""
+
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:191
 msgid "To delete a block, click :icon:`fa-trash` (:guilabel:`trash`)."
 msgstr ""
 "Haz clic en :icon:`fa-trash` (:guilabel:`papelera`) para eliminar un bloque."
@@ -18142,55 +18183,39 @@ msgstr ""
 "Una captura de pantalla en la que aparece la ampliación de los márgenes del "
 "bloque de creación"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:189
-msgid ""
-"Quickly change the block category by clicking :icon:`fa-exchange` "
-"(:guilabel:`exchange`)."
-msgstr ""
-"Haz clic en :icon:`fa-exchange` (:guilabel:`cambio`) para cambiar la "
-"categoría del bloque con rapidez."
-
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:194
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:199
 msgid "Edit a building block"
 msgstr "Editar un bloque de creación"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:196
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:201
 msgid ""
-"To edit the content of a building block, click on it and go to "
-"the :guilabel:`Customize` tab. Available customization options vary "
-"depending on the type of block selected."
+"To edit the content of a building block, click it and go to "
+"the :guilabel:`Style` tab. Available customization options vary depending on "
+"the type of block selected."
 msgstr ""
-"Para editar el contenido de un bloque de creación, haz clic en él y abre la "
-"pestaña :guilabel:`Personalizar`. Las opciones de personalización "
-"disponibles variarán según el tipo de bloque que hayas seleccionado."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:200
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:205
 msgid ":doc:`Web design elements <elements>`"
 msgstr ":doc:`Elementos de diseño web <elements>`"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:201
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:206
 msgid ":doc:`Visibility <visibility>`"
 msgstr ":doc:`Visibilidad <visibility>`"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:204
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:209
 msgid "Background"
 msgstr "Fondo"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:206
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:211
 msgid ""
 "To modify the background of a building block, select the block, go to "
-"the :guilabel:`Customize` tab, and click the color dot or "
+"the :guilabel:`Style` tab, and click the color dot or "
 "another :guilabel:`Background` option. You can change the color and/or add "
 "an image, video, and/or shape. Once you've selected a shape, new fields "
 "appear to allow you to customize the shape."
 msgstr ""
-"Para modificar el fondo de un bloque de creación, seleccionalo, ve a la "
-"pestaña :guilabel:`Personalizar` y haz clic en el punto de color o en otra "
-"opción para el :guilabel:`fondo`. Puedes cambiar el color y agregar una "
-"imagen, video o forma. Una vez que hayas seleccionado una forma aparecerán "
-"otros campos para que puedas personalizarla."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:212
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:217
 msgid ""
 "Position an element (image, text, etc.) behind or in front of another one by "
 "using the :guilabel:`Send to back` or :guilabel:`Bring to front` icons."
@@ -18202,7 +18227,7 @@ msgstr ""
 msgid "Change block position"
 msgstr "Captura de pantalla del cambio de posición de un bloque"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:218
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:223
 msgid ""
 "To resize a block, click and drag the dots around its edges to adjust it as "
 "needed."
@@ -18214,34 +18239,28 @@ msgstr ""
 msgid "Adapt block size"
 msgstr "Captura de pantalla del cambio de tamaño de un bloque"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:224
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:229
 msgid ":doc:`General theme <themes>`"
 msgstr ":doc:`Tema general <themes>`"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:227
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:232
 msgid "Layout: grid and columns"
 msgstr "Diseño: Cuadrículas y columnas"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:229
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:234
 msgid ""
 "For most building blocks, you can choose between two layout "
 "styles: :ref:`grid <website/building_blocks/grid>` or :ref:`columns (cols) "
 "<website/building_blocks/cols>`. To change the default layout style, click "
-"the block, go to the :guilabel:`Customize` tab, and set "
-"the :guilabel:`Layout` field to :guilabel:`Grid` or :guilabel:`Cols`."
+"the block, go to the :guilabel:`Style` tab, and set the :guilabel:`Layout` "
+"field to :guilabel:`Grid` or :guilabel:`Cols`."
 msgstr ""
-"En la mayoría de los bloques de creación puedes elegir entre dos estilos de "
-"diseño: :ref:`cuadrícula <website/building_blocks/grid>` o :ref:`columnas "
-"(cols) <website/building_blocks/cols>`. Haz clic en un bloque para cambiar "
-"su estilo de diseño predeterminado, ve a la pestaña :guilabel:`Personalizar` "
-"y selecciona :guilabel:`Cuadrícula` o :guilabel:`Columnas` en el "
-"campo :guilabel:`Diseño`."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:237
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:242
 msgid "Grid"
 msgstr "Cuadrícula"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:239
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:244
 msgid ""
 "The :guilabel:`Grid` layout allows you to reposition and resize elements, "
 "such as images or text, by dragging and dropping them. When :guilabel:`Grid` "
@@ -18262,26 +18281,20 @@ msgstr ""
 "Al seleccionar el diseño de cuadrícula, elige una imagen y arrástrala y "
 "suéltala donde sea necesaria."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:249
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:254
 msgid "Cols"
 msgstr "Columnas"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:251
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:256
 msgid ""
 "Choosing the :guilabel:`Cols` layout allows you to determine the number of "
 "elements per line within the block. To do so, select the block to modify, "
 "click the dropdown next to the :guilabel:`Cols` field, and adjust the "
 "number. You can then modify a specific column's settings using the options "
-"in the :guilabel:`Column` section of the :guilabel:`Customize` tab."
+"in the :guilabel:`Column` section of the :guilabel:`Style` tab."
 msgstr ""
-"Seleccionar el diseño de :guilabel:`columnas` te permite determinar el "
-"número de elementos por línea dentro del bloque. Para ello, selecciona el "
-"bloque a modificar, haz clic en la lista desplegable junto al "
-"campo :guilabel:`Columnas` y cambia el número. Después podrás modificar los "
-"ajustes de una columna en específico con las opciones de la "
-"sección :guilabel:`Columna` de la pestaña :guilabel:`Personalizar`."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:257
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:262
 msgid ""
 "By default, :doc:`on mobile devices <visibility>`, only one element (column) "
 "is visible per line to ensure that content remains easily readable and "
@@ -18297,41 +18310,19 @@ msgstr ""
 "sitio web y modifica el número de columnas. Las formas están ocultas de "
 "forma predeterminada para los celulares."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:265
-msgid "Duplicate a building block"
-msgstr "Duplicar un bloque de creación"
-
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:267
-msgid ""
-"To duplicate a building block, click the :icon:`fa-clone` "
-"(:guilabel:`duplicate`) icon at the top of the :guilabel:`Customize` tab. "
-"Once duplicated, the new block appears on the page beneath the original one."
-msgstr ""
-"Para duplicar un bloque de creación, haz clic en el icono :icon:`fa-clone` "
-"(:guilabel:`duplicar`) que se encuentra en la parte superior de la "
-"pestaña :guilabel:`Personalizar`. Una vez que lo hayas duplicado aparecerá "
-"en la página abajo del bloque original."
-
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:274
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:270
 msgid "Save a custom building block"
 msgstr "Guardar un bloque de creación personalizado"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:276
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:272
 msgid ""
 "You can save a customized building block to reuse it elsewhere. To do so, "
-"select it, navigate to the :guilabel:`Customize` tab, and click "
-"the :icon:`fa-floppy-o` (:guilabel:`floppy disk`) icon. Click "
-"the :guilabel:`Save and reload` button in the popup to confirm saving your "
-"custom block."
+"select it, navigate to the :guilabel:`Style` tab, and click the :icon:`fa-"
+"floppy-o` (:guilabel:`floppy disk`) icon. Click the :guilabel:`Save` button "
+"in the popup to confirm saving your custom block."
 msgstr ""
-"Puedes guardar un bloque de creación personalizado para volver a utilizarlo "
-"en otro lado. Para ello, selecciónalo, ve a la "
-"pestaña :guilabel:`Personalizar` y haz clic en el :icon:`fa-floppy-o` "
-"(:guilabel:`disquete`). Haz clic en el botón :guilabel:`Guardar y "
-"actualizar` de la ventana emergente para confirmar que quieres guardar el "
-"bloque."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:280
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:276
 msgid ""
 "To add a saved building block to the page, navigate to "
 "the :guilabel:`Blocks` tab and drag and drop the :guilabel:`Custom` block "
@@ -18344,7 +18335,7 @@ msgstr ""
 "acción abrirá una ventana emergente, allí haz clic en el bloque que quieres "
 "en la categoría :guilabel:`Personalizado`."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:285
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:281
 msgid ""
 "In the :guilabel:`Insert a block` popup, click :icon:`fa-pencil` "
 "(:guilabel:`edit`) to rename the custom block or :icon:`fa-trash` "
@@ -18354,11 +18345,11 @@ msgstr ""
 "pencil` (:guilabel:`editar`) para cambiar el nombre del bloque personalizado "
 "o en :icon:`fa-trash` (:guilabel:`papelera`) para eliminarlo."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:291
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:287
 msgid "Create an anchor link"
 msgstr "Crear un enlace ancla"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:293
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:289
 msgid ""
 "Anchor links are hyperlinks that direct users to a **specific section** of a "
 "page. To create an anchor link for a block, follow these steps:"
@@ -18366,20 +18357,18 @@ msgstr ""
 "Los enlaces ancla son hipervínculos que dirigen a los usuarios a una "
 "**sección específica** de una página. Sigue estos pasos para crear uno:"
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:296
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:292
 msgid "Click :guilabel:`Edit` and select the block you want to link to."
 msgstr ""
 "Haz clic en :guilabel:`Editar` y selecciona el bloque que quieres vincular."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:297
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:293
 msgid ""
-"Click :icon:`fa-link` (:guilabel:`link`) at the top of "
-"the :guilabel:`Customize` tab."
+"Click :icon:`fa-link` (:guilabel:`link`) at the top of the :guilabel:`Style` "
+"tab."
 msgstr ""
-"Haz clic en el icono :icon:`fa-link` (:guilabel:`enlace`) que se encuentra "
-"en la parte superior de la pestaña :guilabel:`Personalizar`."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:298
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:294
 msgid ""
 "To edit the default anchor name, click :guilabel:`Edit` in the green popup "
 "message that opens."
@@ -18387,12 +18376,12 @@ msgstr ""
 "Para editar el nombre de ancla predeterminado, haz clic "
 "en :guilabel:`Editar` en el mensaje emergente verde que aparecerá."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:299
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:295
 msgid "Replace the anchor name and click :guilabel:`Save & copy`."
 msgstr ""
 "Reemplaza el nombre de ancla y haz clic en :guilabel:`Guardar y copiar`."
 
-#: ../../content/applications/websites/website/web_design/building_blocks.rst:301
+#: ../../content/applications/websites/website/web_design/building_blocks.rst:297
 msgid ""
 "Once the anchor is saved, you can :ref:`link to it <website/elements/links>` "
 "from anywhere on your website."
@@ -19538,6 +19527,537 @@ msgid ""
 msgstr ""
 "Aparecen bloques y elementos con configuración de visibilidad personalizada "
 "en la parte inferior del editor."
+
+#~ msgid ""
+#~ "You can assign tags created on a contact form "
+#~ "under :menuselection:`Website --> Configuration --> Customers` to "
+#~ "identify what kind of customers have submitted the form. To do so, select "
+#~ "a field in the form while in :guilabel:`Edit` mode, click "
+#~ "the :guilabel:`+ Field` button under the :guilabel:`Customize` tab, and "
+#~ "set the field's :guilabel:`Type` to :guilabel:`Tags`. Toggle the tags "
+#~ "that should be automatically assigned when a customer fills in the form "
+#~ "and set the field's :guilabel:`Visibility` to :guilabel:`Hidden`."
+#~ msgstr ""
+#~ "Puedes asignar las etiquetas creadas en un formulario de contacto "
+#~ "desde :menuselection:`Sitio web --> Configuración --> Clientes` para "
+#~ "identificar qué tipo de clientes enviaron el formulario. Para hacerlo, "
+#~ "selecciona un campo en el formulario en el modo de :guilabel:`edición`, "
+#~ "haz clic en el botón :guilabel:`+ Campo` en la "
+#~ "pestaña :guilabel:`Personalizar` y modifica el :guilabel:`tipo` del campo "
+#~ "a :guilabel:`Etiquetas`. Elige las etiquetas a asignar de forma "
+#~ "automática cuando un cliente completa el formulario y cambia "
+#~ "la :guilabel:`visibilidad` del campo a :guilabel:`Oculto`."
+
+#~ msgid ""
+#~ "Depending on the type of business (B2B or B2C), you might want to issue "
+#~ "an invoice. An invoice can either be generated automatically (for B2B) or "
+#~ "on demand of the customer (for B2C). This process can be automated if "
+#~ "(and when) the online payment is :ref:`confirmed <handling/sales>`. To "
+#~ "automate invoicing, enable the :ref:`Automatic Invoice <handling/legal>` "
+#~ "setting. If this feature has not been enabled, the customer only receives "
+#~ "an order confirmation."
+#~ msgstr ""
+#~ "Según tu tipo de negocio (B2B o B2C), quizá quieras emitir una factura. "
+#~ "Puedes generar una factura de forma automática (para B2B) o bajo "
+#~ "solicitud del cliente (para B2C). Este proceso se automatiza si el pago "
+#~ "en línea queda :ref:`confirmado <handling/sales>`. Para automatizar la "
+#~ "facturación, activa la función :ref:`Factura automática <handling/"
+#~ "legal>`; de lo contrario, el cliente solo recibirá la confirmación de su "
+#~ "orden."
+
+#~ msgid ""
+#~ "You can add an :guilabel:`Extra Info` step in the checkout process to "
+#~ "collect additional customer information through an online form, which is "
+#~ "then included in the :ref:`sales order <handling/sales>`. To do "
+#~ "so, :ref:`enable <ecommerce/checkout/customize_steps>` "
+#~ "the :guilabel:`Extra Step` option in the website editor. The form can "
+#~ "be :ref:`customized <website/building_blocks/form>` as needed."
+#~ msgstr ""
+#~ "Puedes agregar el paso de :guilabel:`información adicional` al proceso de "
+#~ "pago para recopilar información adicional sobre el cliente mediante un "
+#~ "formulario en el sitio web que después formará parte de las :ref:`órdenes "
+#~ "de venta <handling/sales>`. Para hacerlo, :ref:`activa <ecommerce/"
+#~ "checkout/customize_steps>` la opción :guilabel:`Paso adicional` en el "
+#~ "editor del sitio web y podrás :ref:`personalizar <website/building_blocks/"
+#~ "form>` el formulario con los elementos que necesites."
+
+#~ msgid ""
+#~ "The final step of the checkout process is the :guilabel:`Order "
+#~ "confirmation`, which provides a summary of the customer's purchase "
+#~ "details. If the :guilabel:`Automatic Invoice` setting has been activated "
+#~ "in the **Sales** app's configuration settings, a sales order and invoice "
+#~ "will automatically be created by Odoo."
+#~ msgstr ""
+#~ "El paso final del proceso de pago es la :guilabel:`confirmación de la "
+#~ "orden`, que muestra un resumen de los detalles de la compra del cliente. "
+#~ "Odoo creará una orden de venta y una factura de forma automática si "
+#~ "activas la función :guilabel:`Factura automática` en los ajustes de "
+#~ "configuración de la aplicación **Ventas**."
+
+#~ msgid ":doc:`Order handling documentation <order_handling>`"
+#~ msgstr ":doc:`Documentación de gestión de órdenes <order_handling>`"
+
+#~ msgid ""
+#~ "Google Merchant Center is a tool that allows e-commerce retailers to "
+#~ "manage and submit product data to Google. It serves as a central hub to "
+#~ "upload and maintain product details, such as images, prices, and "
+#~ "descriptions so that products can appear across Google's platforms."
+#~ msgstr ""
+#~ "Google Merchant Center es una herramienta que permite que los comercios "
+#~ "electrónicos gestionen y envíen datos de productos a Google. Funciona "
+#~ "como una central para subir y conservar los detalles de los productos, "
+#~ "como imágenes, precios y descripciones, para que los productos aparezcan "
+#~ "en las plataformas de Google."
+
+#~ msgid ""
+#~ "We recommend using the tool alongside other Google services, such "
+#~ "as :doc:`Google Search Console <../website/configuration/"
+#~ "google_search_console>`, :ref:`Google Analytics <analytics/google-"
+#~ "analytics>` or :ref:`Google Tag Manager <analytics/google-tag-manager>` "
+#~ "to obtain detailed reports on product listing issues, improve marketing "
+#~ "strategies, increase your products' online visibility, and enhance the "
+#~ "overall sales performance."
+#~ msgstr ""
+#~ "Te recomendamos usar esta herramienta junto con otros servicios de "
+#~ "Google, como :doc:`Google Search Console <../website/configuration/"
+#~ "google_search_console>`, :ref:`Google Analytics <analytics/google-"
+#~ "analytics>` o :ref:`Google Tag Manager <analytics/google-tag-manager>`, "
+#~ "para obtener reportes detallados sobre problemas en la publicación de "
+#~ "productos, mejorar las estrategias de marketing, aumentar la visibilidad "
+#~ "de tus productos en línea y mejorar el rendimiento de tus ventas."
+
+#~ msgid ""
+#~ "Navigate to :menuselection:`Website --> Configuration --> Settings`, "
+#~ "scroll to the :guilabel:`Tracking & SEO` section, and "
+#~ "enable :guilabel:`Google Merchant Center`, and :guilabel:`Save`."
+#~ msgstr ""
+#~ "Ve a :menuselection:`Sitio web --> Configuración --> Ajustes`, ve a la "
+#~ "sección :guilabel:`Rastreo y SEO`, activa el :guilabel:`Google Merchant "
+#~ "Center` y :guilabel:`Guarda` los cambios."
+
+#~ msgid ""
+#~ "In the :guilabel:`Product Feeds` pop-up window, select a :ref:`pricelist "
+#~ "<ecommerce/prices/pricelists>`, a :ref:`language <language/add>` "
+#~ "and :ref:`categories <ecommerce/categories_variants/categories>`, "
+#~ "and :guilabel:`Save`."
+#~ msgstr ""
+#~ "Selecciona una :ref:`lista de precios <ecommerce/prices/pricelists>`, "
+#~ "un :ref:`idioma <language/add>` y :ref:`categorías <ecommerce/"
+#~ "categories_variants/categories>` en la ventana emergente :guilabel:`Feeds "
+#~ "de productos` y haz clic en :guilabel:`Guardar`."
+
+#~ msgid "Select countries, purpose and feed label in GMC."
+#~ msgstr ""
+#~ "Captura de pantalla para la selección de países, propósito y etiqueta del "
+#~ "feed en Google Merchant Center."
+
+#~ msgid ""
+#~ "`Google Merchant Center Product Feed Specifications <https://"
+#~ "support.google.com/merchants/answer/7052112>`_."
+#~ msgstr ""
+#~ "`Especificaciones de datos de productos de Google Merchant Center "
+#~ "<https://support.google.com/merchants/answer/7052112>`_."
+
+#~ msgid ""
+#~ "When a customer orders on your e-commerce, there are **three** record "
+#~ "types required to be handle in Odoo:"
+#~ msgstr ""
+#~ "Cuando un cliente crea una orden en tu comercio electrónico, Odoo "
+#~ "requiere **tres** tipos de registros para gestionarla:"
+
+#~ msgid ":ref:`Sales orders <handling/sales>`;"
+#~ msgstr ":ref:`Órdenes de venta <handling/sales>`;"
+
+#~ msgid ":ref:`Delivery orders <handling/delivery>`;"
+#~ msgstr ":ref:`Órdenes de entrega <handling/delivery>`;"
+
+#~ msgid ":ref:`Invoices & legal requirements <handling/legal>`."
+#~ msgstr ":ref:`Facturas y requisitos legales <handling/legal>`."
+
+#~ msgid "Sales orders"
+#~ msgstr "Órdenes de venta"
+
+#~ msgid "Order and payment status"
+#~ msgstr "Estado de la orden y del pago"
+
+#~ msgid ""
+#~ "The first step when a customer adds a product to his cart is the creation "
+#~ "of a quotation. Orders can be managed either from the **Website** "
+#~ "or :doc:`Sales </applications/sales/sales>` app. E-commerce orders can "
+#~ "automatically be assigned to a specific sales team by going "
+#~ "to :menuselection:`Website --> Configuration --> Settings`. In the **Shop "
+#~ "- Checkout Process** section, select a :guilabel:`Sales Team` "
+#~ "or :guilabel:`Salesperson` to handle e-commerce orders."
+#~ msgstr ""
+#~ "El primer paso cuando un cliente agrega un producto a su carrito es la "
+#~ "creación de una cotización. Puedes gestionar las órdenes desde las "
+#~ "aplicaciones **Sitio web** o :doc:`Ventas </applications/sales/sales>`. "
+#~ "También puedes asignar las órdenes de comercio electrónico a un equipo de "
+#~ "ventas específico desde :menuselection:`Sitio web --> Configuración --> "
+#~ "Ajustes`. En la sección **Tienda - Proceso de pago**, selecciona "
+#~ "un :guilabel:`equipo de ventas` o un :guilabel:`vendedor` para gestionar "
+#~ "las órdenes de comercio electrónico."
+
+#~ msgid "Assignment of online orders to a sales team or salesperson"
+#~ msgstr ""
+#~ "Asignación de las órdenes en línea a equipos de venta o a un vendedor"
+
+#~ msgid ""
+#~ "Orders can be found under :menuselection:`Website --> eCommerce --> "
+#~ "Orders/Unpaid Orders`. Each order goes through a different status:"
+#~ msgstr ""
+#~ "Puede encontrar las órdenes en :menuselection:`Sitio web --> Comercio "
+#~ "electrónico --> Órdenes sin pagar`. Cada orden tiene un estado diferente:"
+
+#~ msgid ""
+#~ "**Quotation**: a new product is added to the cart, but the customer has "
+#~ "*not* gone through the checkout process yet;"
+#~ msgstr ""
+#~ "**Cotización**: se agrega un nuevo producto al carrito, pero el cliente "
+#~ "*no* ha pasado por el proceso de cambio todavía;"
+
+#~ msgid ""
+#~ "**Quotation sent**: the customer has gone through the checkout process "
+#~ "and confirmed the order, but the payment is not yet confirmed;"
+#~ msgstr ""
+#~ "**Cotización enviada**: el cliente ya pasó el proceso de pago y confirmó "
+#~ "la orden, pero el pago no se ha confirmado todavía;"
+
+#~ msgid ""
+#~ "**Order**: the customer has gone through the checkout process, confirmed "
+#~ "the order, and the payment is received."
+#~ msgstr ""
+#~ "**Orden**: el cliente ya pasó por el proceso de pago, ya confirmó la "
+#~ "orden y el pago se recibió."
+
+#~ msgid "Statuses of e-commerce orders"
+#~ msgstr "Estados de las órdenes de comercio electrónico"
+
+#~ msgid "Abandoned cart"
+#~ msgstr "Carrito abandonado"
+
+#~ msgid ""
+#~ "An **abandoned cart** represents an order for which the customer did "
+#~ "**not finish** the checkout confirmation process. For these orders, it is "
+#~ "possible to send an **email reminder** to the customer automatically. To "
+#~ "enable that feature, go to :menuselection:`Website --> Configuration --> "
+#~ "Settings` and in the :guilabel:`Email & Marketing` section, "
+#~ "enable :guilabel:`Automatically send abandoned checkout emails`. Once "
+#~ "enabled, you can set the **time-lapse** after which the email is sent and "
+#~ "customize the **email template** used."
+#~ msgstr ""
+#~ "Un **carrito abandonado** representa una orden en la que un cliente **no "
+#~ "terminó** el proceso de confirmación de pago, así que en estas órdenes "
+#~ "puede enviarle un **correo de recordatorio** al cliente. Para activar "
+#~ "esta función, vaya a :menuselection:`Sitio web --> Configuración --> "
+#~ "Ajustes` y, en la sección :guilabel:`Marketing por correo`, "
+#~ "seleccione :guilabel:`Envío automático de correos electrónicos por "
+#~ "carritos abandonados`. Una vez que active esta opción podrá configurar "
+#~ "**cuánto tiempo** debe pasar para enviar el correo y personalizar la "
+#~ "**plantilla de correo** a utilizar."
+
+#~ msgid ""
+#~ "For abandoned cart emails, the customer must either have entered their "
+#~ "contact details during the checkout process; or be logged-in when they "
+#~ "added the product to their cart."
+#~ msgstr ""
+#~ "Para correos de carritos abandonados, el cliente deben haber ingresado "
+#~ "sus detalles de contacto durante el proceso de pago, o debe haber "
+#~ "iniciado sesión cuando agregó el producto a su carrito."
+
+#~ msgid "Delivery orders"
+#~ msgstr "Órdenes de entrega"
+
+#~ msgid "Delivery flow"
+#~ msgstr "Flujo de entrega"
+
+#~ msgid ""
+#~ "Once a quotation has been confirmed, a delivery order is automatically "
+#~ "created. The next step is to process this delivery."
+#~ msgstr ""
+#~ "Una vez que se confirmó la cotización, se creará una orden de entrega de "
+#~ "manera automática. El siguiente paso es procesar la entrega."
+
+#~ msgid ""
+#~ "Packing e-commerce orders usually requires picking the product, preparing "
+#~ "the packaging, printing the shipping label(s) and shipping to the "
+#~ "customer. Depending on the number of orders, strategy, or resources, "
+#~ "those steps can be considered as one or multiple actions in Odoo."
+#~ msgstr ""
+#~ "Empacar las órdenes de comercio electrónico suele requerir la recolección "
+#~ "del producto, la preparación del embalaje, la impresión de las etiquetas "
+#~ "de envío y el envío al cliente. Dependiendo del número de órdenes, la "
+#~ "estrategia o los recursos, es posible considerar estos pasos como una o "
+#~ "varias acciones dentro de Odoo."
+
+#~ msgid ""
+#~ "An automatic email can be sent to the customer when the transfer status "
+#~ "in Odoo is “done”. To do so, enable the feature in the settings of "
+#~ "the :doc:`Inventory </applications/inventory_and_mrp/inventory>` app."
+#~ msgstr ""
+#~ "Se le puede enviar un correo electrónico automático al cliente cuando el "
+#~ "estado de transferencia en Odoo sea \"listo\". Para hacerlo, active la "
+#~ "función en los ajustes de la aplicación :doc:`Inventario </applications/"
+#~ "inventory_and_mrp/inventory>`."
+
+#~ msgid ""
+#~ "If customers are allowed to pay when picking up their order in stores or "
+#~ "by wire transfer, the quotation is **not** be confirmed and the stock is "
+#~ "**not** be reserved. Orders must be confirmed manually to reserve "
+#~ "products in stock."
+#~ msgstr ""
+#~ "Si los clientes pueden realizar su pago al recoger su orden en tiendas o "
+#~ "por transferencia bancaria, la cotización **no** se confirmará y el "
+#~ "inventario **no** se reservará. Las órdenes se deben confirmar de manera "
+#~ "manual para reservar los productos en el inventario."
+
+#~ msgid ""
+#~ ":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
+#~ "setup_configuration/invoicing`"
+#~ msgstr ""
+#~ ":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
+#~ "setup_configuration/invoicing`"
+
+#~ msgid ""
+#~ ":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
+#~ "setup_configuration/labels`"
+#~ msgstr ""
+#~ ":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
+#~ "setup_configuration/labels`"
+
+#~ msgid ""
+#~ ":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
+#~ "setup_configuration/multipack`"
+#~ msgstr ""
+#~ ":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
+#~ "setup_configuration/multipack`"
+
+#~ msgid ""
+#~ "Customers can only return an order through an online form. It may not be "
+#~ "possible to return products depending on the return strategy or type of "
+#~ "product."
+#~ msgstr ""
+#~ "Los clientes solo pueden realizar la devolución de una orden mediante un "
+#~ "formulario en línea. Es posible que no puedan regresar los productos "
+#~ "según la estrategia de devolución o el tipo de producto."
+
+#~ msgid ""
+#~ "Full refunds can be directly sent to customers from within the order "
+#~ "interface. A refund-compatible payment provider needs to be enabled first."
+#~ msgstr ""
+#~ "Los reembolsos completos se pueden enviar directamente a los clientes "
+#~ "desde la interfaz de la orden. Primero debe activar un proveedor de pago "
+#~ "que sea compatible con el reembolso."
+
+#~ msgid ":doc:`/applications/sales/sales/products_prices/returns`"
+#~ msgstr ":doc:`/applications/sales/sales/products_prices/returns`"
+
+#~ msgid "Invoice and legal requirements"
+#~ msgstr "Facturación y requerimientos legales"
+
+#~ msgid ""
+#~ "The final step of an e-commerce order is to generate the invoice and send "
+#~ "it to the customer. Depending on your needs, an invoice can either be "
+#~ "generated automatically or on demand of the customer. This process can be "
+#~ "automated if (and when) the online payment is :ref:`confirmed <handling/"
+#~ "sales>`."
+#~ msgstr ""
+#~ "El paso final de una orden de comercio electrónico consiste en generar la "
+#~ "factura y enviársela al cliente. Dependiendo de tus necesidades, puedes "
+#~ "generar la factura de forma automática o cuando el cliente te la pida. "
+#~ "Este proceso se automatiza luego de :ref:`confirmar <handling/sales>` el "
+#~ "pago en línea."
+
+#~ msgid ""
+#~ "To automate invoicing, go to :menuselection:`Website --> Configuration --"
+#~ "> Settings` and in the :guilabel:`Invoicing` section, "
+#~ "enable :guilabel:`Automatic Invoice`."
+#~ msgstr ""
+#~ "Para automatizar la facturación vaya a :menuselection:`Sitio web --> "
+#~ "Configuración --> Ajustes` y en la sección :guilabel:`Facturación` active "
+#~ "la opción :guilabel:`Factura automática`."
+
+#~ msgid ""
+#~ "When clicking on a category block, a popup appears, allowing you to "
+#~ "select between multiple templates for each category."
+#~ msgstr ""
+#~ "Al hacer clic en un bloque de categoría aparecerá una ventana emergente "
+#~ "para que elijas de entre varias plantillas de cada categoría."
+
+#~ msgid ""
+#~ "You can also search for a specific block in the :guilabel:`Insert a "
+#~ "block` popup using the search bar."
+#~ msgstr ""
+#~ "También puedes buscar un bloque específico en la ventana "
+#~ "emergente :guilabel:`Inserta un bloque` si utilizas la barra de búsqueda."
+
+#~ msgid ""
+#~ "Access to certain blocks requires the installation of their respective "
+#~ "application or module (e.g., eCommerce for the :guilabel:`Products` "
+#~ "block)."
+#~ msgstr ""
+#~ "Solo podrás acceder a ciertos bloques si isntalas sus respectivas "
+#~ "aplicaciones o módulos (por ejemplo, necesitas instalar Comercio "
+#~ "electrónico para usar el bloque :guilabel:`Productos`)."
+
+#~ msgid ""
+#~ "The :guilabel:`Form` block is used to collect information from website "
+#~ "visitors and create records in your database, if applicable. To add a "
+#~ "form to a website page, drag and drop the :guilabel:`Contact & Forms` "
+#~ "category, then select the :guilabel:`Form block`."
+#~ msgstr ""
+#~ "El bloque de :guilabel:`formulario` sirve para recopilar información de "
+#~ "los visitantes del sitio web y crear registros en tu base de datos, si "
+#~ "corresponde. Para agregar un formulario a una página del sitio web, "
+#~ "arrastra y suelta la categoría :guilabel:`Contacto y formularios` y luego "
+#~ "selecciona el :guilabel:`bloque de formulario`."
+
+#~ msgid ""
+#~ "By default, when the form is submitted, an email containing the "
+#~ "information entered by the visitor is automatically sent. Depending on "
+#~ "the apps installed on your database, additional actions that can "
+#~ "automatically create records may become available. To choose a different "
+#~ "action, click :guilabel:`Edit`, click the form, navigate to "
+#~ "the :guilabel:`Customize` tab, and select the desired :guilabel:`Action`:"
+#~ msgstr ""
+#~ "De forma predeterminada, envíar el formulario ocasiona el envío "
+#~ "automático de un correo con la información que ingresó el visitante. Es "
+#~ "posible que, según las aplicaciones que tengas instaladas en tu base de "
+#~ "datos, haya otras acciones disponibles que te permitan crear registros de "
+#~ "manera automática. Para elegir una acción distinta, haz clic "
+#~ "en :guilabel:`Editar`, selecciona el formulario, ve a la "
+#~ "pestaña :guilabel:`Personalizar` y elige la :guilabel:`acción` que "
+#~ "prefieras:"
+
+#~ msgid "Editing a form to change its action"
+#~ msgstr "Editar un formulario para cambiar su acción"
+
+#~ msgid ""
+#~ "To add a new field to the form, navigate to the :guilabel:`Customize tab` "
+#~ "and click the :guilabel:`+ Field` button next to the :guilabel:`Form` "
+#~ "or :guilabel:`Field` section. To modify the new (or any other) field on "
+#~ "the form, select the field, then use the options available in "
+#~ "the :guilabel:`Field` section of the :guilabel:`Customize` tab. For "
+#~ "example, you can:"
+#~ msgstr ""
+#~ "Para agregar un nuevo campo al formulario, abre la :guilabel:`pestaña "
+#~ "Personalizar` y haz clic en el botón :guilabel:`+ Campo` que se encuentra "
+#~ "junto a la sección :guilabel:`Formulario` o :guilabel:`Campo`. Para "
+#~ "modificar el nuevo campo (o cualquier otro) del formulario, seleccionalo "
+#~ "y usa las opciones disponibles en la sección :guilabel:`Campo` de la "
+#~ "pestaña :guilabel:`Personalizar`. Por ejemplo, puedes:"
+
+#~ msgid ""
+#~ "Enable a field :guilabel:`Description`. Click the default description on "
+#~ "the form to modify it."
+#~ msgstr ""
+#~ "Activar el campo :guilabel:`Descripción`. Haz clic en la descripción "
+#~ "predeterminada del formulario para modificarla."
+
+#~ msgid ""
+#~ "After adding the block to a page, click the block, then go to "
+#~ "the :guilabel:`Customize` tab and click :guilabel:`Edit`. Replace the "
+#~ "placeholder code with your custom embed code."
+#~ msgstr ""
+#~ "Después de agregar un bloque a la página, haz clic en él, ve a la "
+#~ "pestaña :guilabel:`Personalizar` y haz clic en :guilabel:`Editar`. "
+#~ "Reemplaza el código del marcador de posición con tu código personalizado."
+
+#~ msgid "Move, switch, or delete a building block"
+#~ msgstr "Mober, cambiar o eliminar un bloque de creación"
+
+#~ msgid ""
+#~ "Quickly change the block category by clicking :icon:`fa-exchange` "
+#~ "(:guilabel:`exchange`)."
+#~ msgstr ""
+#~ "Haz clic en :icon:`fa-exchange` (:guilabel:`cambio`) para cambiar la "
+#~ "categoría del bloque con rapidez."
+
+#~ msgid ""
+#~ "To edit the content of a building block, click on it and go to "
+#~ "the :guilabel:`Customize` tab. Available customization options vary "
+#~ "depending on the type of block selected."
+#~ msgstr ""
+#~ "Para editar el contenido de un bloque de creación, haz clic en él y abre "
+#~ "la pestaña :guilabel:`Personalizar`. Las opciones de personalización "
+#~ "disponibles variarán según el tipo de bloque que hayas seleccionado."
+
+#~ msgid ""
+#~ "To modify the background of a building block, select the block, go to "
+#~ "the :guilabel:`Customize` tab, and click the color dot or "
+#~ "another :guilabel:`Background` option. You can change the color and/or "
+#~ "add an image, video, and/or shape. Once you've selected a shape, new "
+#~ "fields appear to allow you to customize the shape."
+#~ msgstr ""
+#~ "Para modificar el fondo de un bloque de creación, seleccionalo, ve a la "
+#~ "pestaña :guilabel:`Personalizar` y haz clic en el punto de color o en "
+#~ "otra opción para el :guilabel:`fondo`. Puedes cambiar el color y agregar "
+#~ "una imagen, video o forma. Una vez que hayas seleccionado una forma "
+#~ "aparecerán otros campos para que puedas personalizarla."
+
+#~ msgid ""
+#~ "For most building blocks, you can choose between two layout "
+#~ "styles: :ref:`grid <website/building_blocks/grid>` or :ref:`columns "
+#~ "(cols) <website/building_blocks/cols>`. To change the default layout "
+#~ "style, click the block, go to the :guilabel:`Customize` tab, and set "
+#~ "the :guilabel:`Layout` field to :guilabel:`Grid` or :guilabel:`Cols`."
+#~ msgstr ""
+#~ "En la mayoría de los bloques de creación puedes elegir entre dos estilos "
+#~ "de diseño: :ref:`cuadrícula <website/building_blocks/grid>` "
+#~ "o :ref:`columnas (cols) <website/building_blocks/cols>`. Haz clic en un "
+#~ "bloque para cambiar su estilo de diseño predeterminado, ve a la "
+#~ "pestaña :guilabel:`Personalizar` y selecciona :guilabel:`Cuadrícula` "
+#~ "o :guilabel:`Columnas` en el campo :guilabel:`Diseño`."
+
+#~ msgid ""
+#~ "Choosing the :guilabel:`Cols` layout allows you to determine the number "
+#~ "of elements per line within the block. To do so, select the block to "
+#~ "modify, click the dropdown next to the :guilabel:`Cols` field, and adjust "
+#~ "the number. You can then modify a specific column's settings using the "
+#~ "options in the :guilabel:`Column` section of the :guilabel:`Customize` "
+#~ "tab."
+#~ msgstr ""
+#~ "Seleccionar el diseño de :guilabel:`columnas` te permite determinar el "
+#~ "número de elementos por línea dentro del bloque. Para ello, selecciona el "
+#~ "bloque a modificar, haz clic en la lista desplegable junto al "
+#~ "campo :guilabel:`Columnas` y cambia el número. Después podrás modificar "
+#~ "los ajustes de una columna en específico con las opciones de la "
+#~ "sección :guilabel:`Columna` de la pestaña :guilabel:`Personalizar`."
+
+#~ msgid "Duplicate a building block"
+#~ msgstr "Duplicar un bloque de creación"
+
+#~ msgid ""
+#~ "To duplicate a building block, click the :icon:`fa-clone` "
+#~ "(:guilabel:`duplicate`) icon at the top of the :guilabel:`Customize` tab. "
+#~ "Once duplicated, the new block appears on the page beneath the original "
+#~ "one."
+#~ msgstr ""
+#~ "Para duplicar un bloque de creación, haz clic en el icono :icon:`fa-"
+#~ "clone` (:guilabel:`duplicar`) que se encuentra en la parte superior de la "
+#~ "pestaña :guilabel:`Personalizar`. Una vez que lo hayas duplicado "
+#~ "aparecerá en la página abajo del bloque original."
+
+#~ msgid ""
+#~ "You can save a customized building block to reuse it elsewhere. To do so, "
+#~ "select it, navigate to the :guilabel:`Customize` tab, and click "
+#~ "the :icon:`fa-floppy-o` (:guilabel:`floppy disk`) icon. Click "
+#~ "the :guilabel:`Save and reload` button in the popup to confirm saving "
+#~ "your custom block."
+#~ msgstr ""
+#~ "Puedes guardar un bloque de creación personalizado para volver a "
+#~ "utilizarlo en otro lado. Para ello, selecciónalo, ve a la "
+#~ "pestaña :guilabel:`Personalizar` y haz clic en el :icon:`fa-floppy-o` "
+#~ "(:guilabel:`disquete`). Haz clic en el botón :guilabel:`Guardar y "
+#~ "actualizar` de la ventana emergente para confirmar que quieres guardar el "
+#~ "bloque."
+
+#~ msgid ""
+#~ "Click :icon:`fa-link` (:guilabel:`link`) at the top of "
+#~ "the :guilabel:`Customize` tab."
+#~ msgstr ""
+#~ "Haz clic en el icono :icon:`fa-link` (:guilabel:`enlace`) que se "
+#~ "encuentra en la parte superior de la pestaña :guilabel:`Personalizar`."
 
 #~ msgid ""
 #~ "**Odoo eCommerce** allows you to :ref:`add products <ecommerce/products/"
@@ -22786,9 +23306,6 @@ msgstr ""
 
 #~ msgid ":doc:`/applications/sales/sales/products_prices/ewallets_giftcards`"
 #~ msgstr ":doc:`/applications/sales/sales/products_prices/ewallets_giftcards`"
-
-#~ msgid ":doc:`checkout`"
-#~ msgstr ":doc:`checkout`"
 
 #~ msgid ""
 #~ "To set up payment providers on the eCommerce app, go "
