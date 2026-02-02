@@ -11,4 +11,5 @@ Inventory valuation
    inventory_valuation/landed_costs
    inventory_valuation/valuation_by_lots
    inventory_valuation/scrapped_inventory_valuation
+   inventory_valuation/operation_based_value
 
