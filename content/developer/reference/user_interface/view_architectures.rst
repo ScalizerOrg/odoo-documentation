@@ -4138,6 +4138,14 @@ take the following attributes:
   If set to true, the time appears in the pill label when the scale is set on week or month. (e.g.
   `7:00 AM - 11:00 AM (4h) - DST Task 1`)
 
+``buffer_start``
+  Name of the field containing the duration (as a float in hours) to be displayed before the record's start time.
+  Renders a distinct pre-task margin adjacent to the main pill.
+
+``buffer_stop``
+  Name of the field containing the duration (as a float in hours) to be displayed after the record's end time.
+  Renders a distinct post-task margin adjacent to the main pill.
+
 ``thumbnails``
   This allows to display a thumbnail next to groups name if the group is a relationnal field.
   This expects a python dict which keys are the name of the field on the active model.
