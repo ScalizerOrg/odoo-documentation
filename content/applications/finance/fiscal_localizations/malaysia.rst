@@ -61,13 +61,15 @@ and select it. Then configure the following fields:
 E-invoicing integration with MyInvois
 =====================================
 
-The MyInvois Portal is a platform provided by the :abbr:`IRBM (Inland Revenue Board of Malaysia)`
+The MyInvois portal is a platform provided by the :abbr:`IRBM (Inland Revenue Board of Malaysia)`
 that facilitates the implementation of e-invoices for Malaysian taxpayers.
 Odoo supports integration with MyInvois to submit the invoices generated in Odoo.
 
 .. note::
-   The :guilabel:`Malaysia - E-invoicing module` must be installed to submit invoices to MyInvois.
-
+   - The :guilabel:`Malaysia - E-invoicing module` (`l10n_my_edi`) must be installed to submit
+     invoices to MyInvois.
+   - Each company in the database requires an individual connection to the MyInvois portal using
+     its own :abbr:`TIN (tax identification number)`.
 .. _malaysia/myinvois/setup:
 
 Set-up
@@ -184,6 +186,12 @@ Access the contact's form and fill in the following fields:
    - :guilabel:`Identification`: the :guilabel:`ID Type` and the corresponding
      :guilabel:`Identification number` of the contact registered on MyTax.
 
+.. note::
+   For specific use cases—such as transactions with buyers without a
+   :abbr:`TIN (tax identification number)` or foreign customers—refer to the list of general TINs
+   provided in the **Appendix** of the `e-Invoice Specific Guideline
+   <https://www.hasil.gov.my/en/e-invoice/reference-for-the-implementation-of-e-invoice/guidelines/>`_.
+
 .. _malaysia/myinvois/setup/odoo/product:
 
 Products
@@ -219,6 +227,10 @@ Send invoices to MyInvois
 
 Invoices can be sent to MyInvois once they have been confirmed. To do so, click
 :guilabel:`Send to MyInvois`.
+
+.. note::
+   For invoices in foreign currencies, the exchange rate applied to the invoice is sent to
+   :guilabel:`MyInvois`.
 
 Send bills to MyInvois
 ~~~~~~~~~~~~~~~~~~~~~~
