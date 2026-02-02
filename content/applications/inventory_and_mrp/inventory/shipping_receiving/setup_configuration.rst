@@ -81,6 +81,19 @@ the warehouse delivery form. To add or change the delivery method on the deliver
 .. image:: setup_configuration/delivery-order.png
    :alt: Shipping carrier information on the delivery form.
 
+Supported hardware
+==================
+
+.. image:: setup_configuration/label-printer.png
+   :alt: The Zebra ZD411 works best to print labels from Odoo.
+
+For label printers, Odoo recommends the `Zebra ZD411
+<https://www.zebra.com/us/en/products/spec-sheets/printers/desktop/zd411-series.html>`__, as Odoo
+supports the ZPL protocol for automatic printing from a point of sale.
+
+This printer has been tested on most label formats (PDF, PNG, ZPL) for all carriers that Odoo
+supports.
+
 .. toctree::
    :titlesonly:
 
