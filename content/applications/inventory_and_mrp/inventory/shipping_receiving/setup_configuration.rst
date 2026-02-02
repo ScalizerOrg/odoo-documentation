@@ -26,7 +26,6 @@ Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in the :g
 bar. After finding the :guilabel:`Delivery Costs` module, click :guilabel:`Activate` to install it.
 
 .. image:: setup_configuration/install-module.png
-   :align: center
    :alt: Install the Delivery Costs module.
 
 Add shipping method
@@ -44,7 +43,6 @@ Methods`.
       by checking the corresponding checkbox.
 
    .. image:: setup_configuration/enable-delivery.png
-      :align: center
       :alt: Enable the *Delivery Methods* feature by checking the box in Configuration > Settings.
 
 On the :guilabel:`Shipping Methods` page, add a method by clicking :guilabel:`New`. Doing so opens
@@ -101,7 +99,6 @@ To enable free shipping if the amount of the order exceeds a specified amount, c
    - :guilabel:`Delivery Product`: `[SHIP] Flat`
 
    .. image:: setup_configuration/new-shipping-method.png
-      :align: center
       :alt: Example of filling out a shipping method.
 
 .. _inventory/shipping/rules:
@@ -128,7 +125,6 @@ Once finished, click either :guilabel:`Save & New` to add another rule, or :guil
    :guilabel:`Condition` to `Quantity <= 5.00`, and the :guilabel:`Delivery Cost` to `$20`.
 
    .. image:: setup_configuration/pricing-rule.png
-      :align: center
       :alt: Display window to add a pricing rule. Set a condition and delivery cost.
 
 To restrict shipping to specific destinations on the eCommerce website, in the shipping method form,
@@ -154,7 +150,6 @@ Shipping cost is the :guilabel:`Delivery cost` specified in the rule that satisf
    :guilabel:`Margin on Rate` is `10%` and :guilabel:`Additional margin` is `$9.00`.
 
    .. image:: setup_configuration/delivery-cost-example.png
-      :align: center
       :alt: Show example of "Based on rules" shipping method with margins configured.
 
    When the first rule is applied, the delivery cost is $31 (20 + (0.1 * 20) + 9). When the second
@@ -204,7 +199,6 @@ On the route form, in the :guilabel:`Applicable On` section, tick the :guilabel:
 checkbox.
 
 .. figure:: setup_configuration/shipping-route.png
-   :align: center
    :alt: Routes form with the Shipping Methods checkbox selected.
 
    Routes form with the Shipping Methods checkbox ticked.
@@ -220,7 +214,6 @@ routes from the drop-down menu.
    the route's *Applicable On* section.
 
 .. figure:: setup_configuration/set-routes.png
-   :align: center
    :alt: Show set routes on shipping method form.
 
    By default, most shipping methods are created with two routes available for standard or express
@@ -254,7 +247,6 @@ the shipping method form.
    `S00088`.
 
      .. image:: setup_configuration/delivery-product.png
-        :align: center
         :alt: Show delivery order on the sales order line.
 
 Delivery order
@@ -265,8 +257,20 @@ delivery order. To add or change the delivery method on the delivery itself, go 
 :guilabel:`Additional Info` tab and modify the :guilabel:`Carrier` field.
 
 .. image:: setup_configuration/delivery-order.png
-   :align: center
    :alt: Shipping carrier information on the delivery form.
+
+Supported hardware
+==================
+
+.. image:: setup_configuration/label-printer.png
+   :alt: The Zebra ZD411 works best to print labels from Odoo.
+
+For label printers, Odoo recommends the `Zebra ZD411
+<https://www.zebra.com/us/en/products/spec-sheets/printers/desktop/zd411-series.html>`__, as Odoo
+supports the ZPL protocol for automatic printing from a point of sale.
+
+This printer has been tested on most label formats (PDF, PNG, ZPL) for all carriers that Odoo
+supports.
 
 .. toctree::
    :titlesonly:
