@@ -38,6 +38,8 @@ event form.
    These are just *additional* elements that can be used for an event. They are **not** required to
    create, host, and manage an event with Odoo *Events*.
 
+.. _events/event-form:
+
 Event form
 ==========
 
