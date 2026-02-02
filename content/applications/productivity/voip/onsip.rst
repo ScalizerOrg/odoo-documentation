@@ -1,167 +1,125 @@
-====================================
-Use VoIP services in Odoo with OnSIP
-====================================
+.. |VOIP| replace:: :abbr:`VoIP (Voice over Internet Protocol)`
+
+=====================
+Odoo Phone with OnSIP
+=====================
+
+`OnSIP <https://info.onsip.com/odoo/>`__ is a |VoIP| provider that can be set up to work with *Odoo
+Phone*. An OnSIP account is required to use this service.
 
 .. important::
-   OnSIP :abbr:`VoIP (voice over internet protocol)` services are only available in the **United
-   States** (US). OnSIP :abbr:`VoIP (voice over internet protocol)` services are widely available in
-   the lower-48, contiguous United States. In Alaska or Hawaii, charges for service can be higher.
+   Before setting up an account with OnSIP, verify the following requirements:
 
-   Additionally, a :abbr:`US (United States)` billing address, and :abbr:`US (United States)` credit
-   card are required to use the service.
+   - The business phone numbers are portable to OnSIP. Some providers may be unable to release the
+     phone number due to local or regional guidelines.
+   - The locations of the company and its call recipients are covered by OnSIP services.
 
-   Before setting up an account with OnSIP, the business will need to make sure the business
-   telephone numbers are portable to OnSIP.
+   OnSIP |VOIP| services are available in the United States (US) only. A :abbr:`US (United States)`
+   billing address and :abbr:`US (United States)` credit card are required to use the service.
+   Pricing may vary in Alaska or Hawaii.
 
-   OnSIP makes every attempt to work with all telephone service providers. However, certain local or
-   regional guidelines may preclude the company's current provider from releasing the number.
+Configure OnSIP in Odoo
+=======================
 
-Introduction
-============
+To configure OnSIP services in the Odoo database, first :ref:`install <general/install>` the *Phone*
+app.
 
-Odoo *VoIP* can be set up to work together with `OnSIP (Odoo Landing Page)
-<https://info.onsip.com/odoo/>`_. OnSIP is a VoIP provider. An account is needed with OnSIP in order
-to use this service.
+.. _productivity/voip/view-onsip-credentials:
 
-Before setting up an account with OnSIP, make sure the company's home area, and the areas that will
-be called, are covered by OnSIP services.
+View credentials in OnSIP
+-------------------------
 
-After opening an OnSIP account, follow the configuration procedure below to configure it on an Odoo
-database.
+To view the necessary OnSIP credentials, navigate to `OnSIP <https://www.onsip.com/>`__ and log in,
+then click the :guilabel:`Administrators` link in the top-right corner of the page.
 
-Configuration
-=============
+Next, in the menu on the left-hand side, click :guilabel:`Users` and select the user to be
+configured. The :guilabel:`USER INFO` tab opens to the right.
 
-To configure the Odoo database to connect to OnSIP services, first navigate to the
-:menuselection:`Apps application` from the main Odoo dashboard. Then, remove the default `Apps`
-filter from the :guilabel:`Search...` bar, and search for `OnSIP`.
+Click on the :guilabel:`Phone Settings` tab to view OnSIP configuration credentials.
 
-Next, activate the :guilabel:`VOIP OnSIP` module.
-
-.. image:: onsip/install-onsip.png
+.. image:: onsip/domain-setting.png
    :align: center
-   :alt: View of OnSIP app in the app search results.
+   :alt: Domain setting revealed (highlighted) on administrative panel of OnSIP management
+         console.
 
-Odoo VoIP setting
------------------
+Add OnSIP credentials
+---------------------
 
-After installing the *VOIP OnSIP* module, go to the :menuselection:`Settings app`, scroll down to
-the :guilabel:`Integrations` section, and locate the :guilabel:`VoIP` fields. Then, proceed to fill
-in those three fields with the following information:
+After :ref:`installing <general/install>` the *Phone - OnSIP* module, go to the
+:menuselection:`Phone app --> Configuration --> Providers`. Locate the *OnSIP* provider entry, and
+enter the following information:
 
 - :guilabel:`OnSIP Domain`: the domain that was assigned when creating an account on `OnSIP
-  <https://www.onsip.com/>`_.
-- :guilabel:`WebSocket`: `wss://edge.sip.onsip.com`
-- :guilabel:`VoIP Environment`: :guilabel:`Production`
+  <https://www.onsip.com/>`__. Replace `YOURACCOUNT` with the company account name.
+- :guilabel:`VoIP Environment`: select :guilabel:`Production`.
 
-.. image:: onsip/voip-setting.png
-   :align: center
-   :alt: VoIP configuration settings in Odoo Settings app.
+.. image:: onsip/onsip-provider-config.png
+   :alt: OnSIP configuration settings in the *Odoo Phone* app.
 
-.. tip::
-   To access the OnSIP domain, navigate to `OnSIP <https://www.onsip.com/>`_ and log in. Then, click
-   the :guilabel:`Administrators` link in the top-right of the page.
+Configure user settings
+-----------------------
 
-   Next, in the left menu, click :guilabel:`Users`, and then select any user. By default, the
-   selected user opens on the :guilabel:`User Info` tab.
+Next, each user's OnSIP credentials must be configured in Odoo. Navigate to :menuselection:`Settings
+app --> Users & Companies --> Users` select the user, and click the *VoIP* tab.
 
-   Click on the :guilabel:`Phone Settings` tab to reveal OnSIP configuration credentials (first
-   column).
+Add the following :ref:`OnSIP credentials <productivity/voip/view-onsip-credentials>` for the user:
 
-   .. image:: onsip/domain-setting.png
-      :align: center
-      :alt: Domain setting revealed (highlighted) on administrative panel of OnSIP management
-            console.
+- :guilabel:`Provider`: select :guilabel:`OnSIP`.
+- :guilabel:`Username`: the user's :guilabel:`OnSIP username`.
+- :guilabel:`OnSIP Auth Username`: the user's :guilabel:`Auth Username`.
+- :guilabel:`Secret`: the user's :guilabel:`SIP Password`.
 
-Odoo user setting
------------------
-
-Next, the user needs to be set up in Odoo. Every user associated with an OnSIP user **must** also be
-configured in the Odoo user's settings/preferences.
-
-To do that, navigate to :menuselection:`Settings app --> Manage Users --> Select the User`.
-
-On the user form, click :guilabel:`Edit` to configure the user's OnSIP account. Then, click the
-:guilabel:`Preferences` tab, and scroll to the :guilabel:`VoIP Configuration` section.
-
-In this section, fill in the fields with OnSIP credentials.
-
-Fill in the following fields with the associated credentials listed below:
-
-- :guilabel:`Voip Username` = OnSIP :guilabel:`Username`
-- :guilabel:`OnSIP Auth Username` = OnSIP :guilabel:`Auth Username`
-- :guilabel:`VoIP Secret` = OnSIP :guilabel:`SIP Password`
-
-.. tip::
-   The OnSIP extension can be found in the *User* banner line above the tabs.
-
-When these steps are complete, navigate away from the user form in Odoo to save the configurations.
-
-Once saved, Odoo users can make phone calls by clicking the :guilabel:`☎️ (phone)` icon in the
-top-right corner of Odoo.
+Once the OnSIP credentials have been saved, the user can make calls with Odoo **Phone** by clicking
+the :icon:`oi-voip` :guilabel:`(Phone)` icon in the top-right corner of Odoo.
 
 .. seealso::
-   Additional setup and troubleshooting steps can be found on `OnSIP's knowledge base
-   <https://support.onsip.com/hc/en-us>`_.
+   For additional setup and troubleshooting steps, see `OnSIP's knowledge base
+   <https://support.onsip.com/hc/en-us>`__.
 
-Incoming calls
---------------
+Handle incoming calls
+=====================
 
-The Odoo database also receives incoming calls that produce pop-up windows in Odoo. When those call
-pop-up windows appear, click the green :guilabel:`📞 (phone)` icon to answer the call.
-
-To ignore the call, click the red :guilabel:`📞 (phone)` icon.
+Incoming calls appear in the :doc:`*Phone* widget <voip_widget>`. Click the green :guilabel:`📞
+(phone)` icon to answer the call, or click the red :guilabel:`📞 (phone)` icon to ignore the call.
 
 
 .. image:: onsip/incoming-call.png
    :align: center
-   :alt: Incoming call shown in the Odoo VoIP widget.
-
-.. seealso::
-   :doc:`voip_widget`
+   :alt: Incoming call in the Odoo **Phone** widget.
 
 Troubleshooting
----------------
+===============
 
 Missing parameters
-~~~~~~~~~~~~~~~~~~
+------------------
 
-If a *Missing Parameters* message appears in the Odoo widget, make sure to refresh the Odoo browser
-window (or tab), and try again.
+If a *Missing Parameters* message appears in the Odoo **Phone** widget, refresh the browser and try
+again.
 
 .. image:: onsip/onsip04.png
-   :align: center
-   :alt: Missing parameter message in the Odoo VoIP widget.
+   :alt: Missing parameter message in the *Odoo Phone* widget.
 
 Incorrect number
-~~~~~~~~~~~~~~~~
+----------------
 
-If an *Incorrect Number* message appears in the Odoo widget, make sure to use the international
-format for the number. This means leading with the international country code.
-
-A country code is a locator code that allows access to the desired country's phone system. The
-country code is dialed first, prior to the target number. Each country in the world has its own
-specific country code.
-
-For example, `16505555555` (where `1` is the international prefix for the United States).
+If an *Incorrect Number* message appears in the Odoo **Phone** widget, make sure to include the
+phone number's international country code. For example: in the phone number `16505555555`, `1` is
+the international country code for the United States.
 
 .. image:: onsip/onsip05.png
-   :align: center
-   :alt: Incorrect number message populated in the Odoo VoIP widget.
+   :alt: Incorrect number message in the Odoo **Phone** widget.
 
 .. seealso::
    For a list of comprehensive country codes, visit: `https://countrycode.org
    <https://countrycode.org>`_.
 
-OnSIP on mobile phone
-=====================
+OnSIP smartphone app
+====================
 
-In order to make and receive phone calls when the user is not in front of Odoo on their computer, a
-softphone app on a mobile phone can be used in parallel with Odoo *VoIP*.
-
-This is useful for convenient, on-the-go calls, and to make sure incoming calls are heard. Any SIP
-softphone will work.
+To make and receive phone calls outside of Odoo, users can use any SIP softphone app in parallel
+with Odoo **Phone**. The OnSIP softphone app is available on Windows, macOS, Linux, iOS, and
+Android.
 
 .. seealso::
    - :doc:`devices_integrations`
-   - `OnSIP App Download <https://www.onsip.com/app/download>`_
+   - `OnSIP app download <https://www.onsip.com/app/download>`_
