@@ -1,74 +1,74 @@
-=================================
-VoIP services in Odoo with Axivox
-=================================
+.. |VOIP| replace:: :abbr:`VoIP (Voice over Internet Protocol)`
 
-Introduction
-============
+======================
+Odoo Phone with Axivox
+======================
 
-Odoo VoIP (Voice over Internet Protocol) can be set up to work together with `Axivox
-<https://www.axivox.com/>`_. In that case, a VoIP server is **not** necessary, as the
-infrastructure is hosted and managed by Axivox.
+`Axivox <https://www.axivox.com/>`__ is a |VOIP| provider that can be set up to work with Odoo
+**Phone**. An Axivox account is required to use this service.
 
 To use this service, `contact Axivox <https://www.axivox.com/en/contact>`_ to open an account.
 Before doing so, verify that Axivox covers the company's area, along with the areas the company's
 users wish to call.
 
+.. important::
+   Before setting up an account with Axivox, verify the following requirements:
+
+   - The business phone numbers are portable to Axivox. Some providers may be unable to release the
+     phone number due to local or regional guidelines.
+   - The locations of the company and its call recipients are covered by Axivox services. Axivox
+     services are based in Europe, so international call performance may vary.
+
 Configuration
 =============
 
-To configure Axivox in Odoo, go to the :menuselection:`Apps` application, and search for `VoIP`.
-Then, install the :guilabel:`VoIP` module.
+To configure Axivox services in the Odoo database, first :ref:`install <general/install>` the
+**Phone** app.
 
-Next, go to :menuselection:`Settings app --> General Settings --> Integrations section --> VoIP`.
-Click :guilabel:`Manage Providers`, then :guilabel:`New`. Fill in the following information:
+.. _productivity/voip/view-axivox-credentials:
 
-- :guilabel:`Name`: type `Axivox`
-- :guilabel:`WebSocket`: type in `wss://pabx.axivox.com:3443`
-- :guilabel:`OnSIP Domain`: set the domain created by Axivox for the account (e.g.,
-  `yourcompany.axivox.com`)
-- :guilabel:`VoIP Environment`: set as :guilabel:`Production`
+View credentials in Axivox
+--------------------------
 
-.. image:: axivox_config/voip-configuration.png
-   :align: center
-   :alt: Integration of Axivox as VoIP provider in an Odoo database.
+To view the necessary Axivox credentials, navigate to `manage.axivox.com
+<https://manage.axivox.com/>`_ and log in, then go to :menuselection:`Users --> Edit`. Click the
+**SIP Identifiers** tab to see the domain, SIP username, and SIP password.
 
-.. tip::
-   Access the domain on the Axivox administrative panel by navigating to `https://manage.axivox.com/
-   <https://manage.axivox.com/>`_. After logging into the portal, go to :menuselection:`Users -->
-   Edit (next to any user) --> SIP Identifiers tab --> Domain`.
+.. image:: axivox_config/manager-sip.png
+   :alt: SIP credentials in the Axivox manager.
 
-Configure VoIP user in Odoo
----------------------------
+Add Axivox credentials
+----------------------
 
-Next, the user is configured in Odoo, which **must** take place for every Axivox/Odoo user using
-VoIP.
+After :ref:`instaling <general/install>` the *Phone - Axivox* module, go to the
+:menuselection:`Phone app --> Configuration --> Providers`. Locate the *Axivox* provider entry, and
+enter the following information:
 
-In Odoo, go to :menuselection:`Settings app --> Users & Companies --> Users`, then open the desired
-user's form to configure :abbr:`VoIP (Voice over Internet Protocol)`. Under the
-:guilabel:`Preferences` tab, fill out the :guilabel:`VOIP Configuration` section:
+- :guilabel:`OnSIP Domain`: the domain that was assigned when creating an account on `Axivox
+  <https://manage.axivox.com/>`__. Replace `YOURACCOUNT` with the company account name.
+- :guilabel:`VoIP Environment`: select :guilabel:`Production`.
 
-- :guilabel:`VoIP username` / :guilabel:`Extension number`: (Axivox) :guilabel:`SIP username`
-- :guilabel:`OnSip Auth Username`: (Axivox) :guilabel:`SIP username`
-- :guilabel:`VoIP Secret`: (Axivox) :guilabel:`SIP Password`
-- :guilabel:`Call from another device`: option to always transfer phone calls to handset
-- :guilabel:`External device number`: SIP external phone extension
-- :guilabel:`Reject incoming calls`: option to reject all incoming calls
-- :guilabel:`How to place calls on mobile`: method to make calls on a mobile device
+.. image:: axivox_config/axivox-provider-config.png
+   :alt: Axivox configuration settings in the *Odoo Phone* app.
 
-.. image:: axivox_config/odoo-user.png
-   :align: center
-   :alt: Integration of Axivox user in the Odoo user preference.
+Add user credentials
+--------------------
 
-.. tip::
-   Access the domain on the Axivox administrative panel by navigating to `https://manage.axivox.com/
-   <https://manage.axivox.com/>`_. After logging into the portal, go to :menuselection:`Users -->
-   Edit (next to the user) --> SIP Identifiers tab --> SIP username / SIP password`.
+Next, each user's Axivox credentials must be configured in Odoo. Navigate to
+:menuselection:`Settings app --> Users & Companies --> Users` select the user, and click the
+:guilabel:`VoIP` tab.
 
-   .. image:: axivox_config/manager-sip.png
-      :align: center
-      :alt: SIP credentials in the Axivox manager.
+Add the following :ref:`Axivox credentials <productivity/voip/view-axivox-credentials>` for the
+user:
+
+- :guilabel:`Provider`: select :guilabel:`Axivox`.
+- :guilabel:`Username`: the Axivox :guilabel:`SIP username`.
+- :guilabel:`OnSip Auth Username`: the Axivox :guilabel:`SIP username`.
+- :guilabel:`Secret`: the Axivox :guilabel:`SIP password`.
 
 .. important::
-   When entering the :guilabel:`SIP Password` into the user's :guilabel:`Preferences` tab, this
-   value **must** be typed out manually and **not** pasted in. Pasting in causes a `401 server
-   rejection error`.
+   Make sure to manually type the :guilabel:`SIP password` into the user's :guilabel:`Preferences`
+   tab. Pasting the value causes a `401 server rejection error`.
+
+.. image:: axivox_config/axivox-user.png
+   :alt: Axivox credentials in the user profile.
