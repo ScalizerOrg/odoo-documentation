@@ -7,10 +7,11 @@ Employees
 Odoo **Employees** centralizes :doc:`personnel files <employees/new_employee>`, employment
 :doc:`contracts <payroll/contracts>`, and :doc:`departmental hierarchies <employees/departments>` in
 one system. In addition, each employee record tracks :doc:`certifications
-<employees/certifications>` and training, earned :doc:`badges <employees/badges>`, and all assigned
-:doc:`equipment <employees/equipment>`. Customizable :doc:`onboarding <employees/onboarding>` and
-:doc:`offboarding <employees/offboarding>` programs ensure all employees are trained and ready for
-work, and all required steps are taken when they leave.
+<employees/certifications>` and :doc:`training <employees/learning>`, earned :doc:`badges
+<employees/badges>`, and all assigned :doc:`equipment <employees/equipment>`. Customizable
+:doc:`onboarding <employees/onboarding>` and :doc:`offboarding <employees/offboarding>` programs
+ensure all employees are trained and ready for work, and all required steps are taken when they
+leave.
 
 Properly configuring the settings in the **Employees** app ensures the dashboard shows each
 employee's real-time attendance and work location—data that drives payroll accuracy, capacity
@@ -32,6 +33,11 @@ planning, and compliance reporting.
       :target: employees/departments
 
       Create and manage the departments employees are a part of.
+
+   .. card:: Learning
+      :target: employees/learning
+
+      Create and manage virtual and in-person employee training.
 
    .. card:: Contracts
       :target: payroll/contracts
@@ -141,6 +147,7 @@ This field only appears if the **Salary Configurator** module is installed.
    employees/new_employee
    employees/onboarding
    employees/departments
+   employees/learning
    employees/certifications
    employees/badges
    employees/equipment
