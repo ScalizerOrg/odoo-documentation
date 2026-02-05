@@ -1,15 +1,15 @@
-======================
- Sales calls with VoIP
-======================
-
 .. |VOIP| replace:: :abbr:`VoIP (Voice over Internet Protocol)`
 
-Using |VOIP| increases call efficiency, reduces costs, and allows a salesperson to access the Odoo
-database while on a call. Instead of relying on a separate phone for sales calls, a salesperson can
-make calls directly from the Odoo database.
+============================
+ Sales calls with Odoo Phone
+============================
 
-This article goes over setting up Odoo |VOIP| for a sales team that already has |VOIP| configured.
-If |VOIP| is **not** configured, refer to the :doc:`configure VoIP <../voip>` documentation
+Using Odoo **Phone** increases call efficiency, reduces costs, and allows a salesperson to access the
+Odoo database while on a call. Instead of relying on a separate phone for sales calls, a salesperson
+can make calls directly from the Odoo database.
+
+This article goes over setting up Odoo **Phone** for a sales team that already has the **Phone** app
+configured. If it is **not** configured, refer to the :doc:`Phone <../voip>` documentation
 to get started.
 
 .. seealso::
@@ -34,10 +34,10 @@ From here, there are three ways to begin a phone call with the customer:
   :icon:`fa-phone` :guilabel:`(phone)` icon near the bottom of the widget.
 
 Work during a call
-------------------
+==================
 
 Once the call with the customer begins, the salesperson can still move about the Odoo database.
-Also, there are shortcut icons in the |VOIP| widget that the salesperson can use to access common
+Also, there are shortcut icons in the *Phone* widget that the salesperson can use to access common
 actions, like sending an email to the customer, or pulling up their profile. Learn more about
 :doc:`the documents a salesperson can access <voip_widget>` during a call.
 
@@ -48,15 +48,16 @@ The salesperson can also take some actions during the call:
 - :icon:`fa-pause` :guilabel:`(pause)`: Place the caller on hold.
 
 .. image:: sales_calls/voip-widget-call.png
-   :alt: The VoIP widget opened to a call, showing the shortcut icons a salesperson has access to.
+   :alt: The *Phone* widget opened to a call, showing the shortcut icons a salesperson has access
+    to.
 
 Handle call follow-ups
-----------------------
+======================
 
-The |VOIP| widget can handle some common follow-up tasks, but salespeople can still navigate Odoo
+The *Phone* widget can handle some common follow-up tasks, but salespeople can still navigate Odoo
 for tasks not available in the widget.
 
-Here are some of the common follow-up tasks that can be managed from the |VOIP| widget:
+Here are some of the common follow-up tasks that can be managed from the *Phone* widget:
 
 - Send a follow-up email sharing new product offerings to the customer using the :icon:`fa-envelope`
   :guilabel:`(envelope)` icon.
@@ -67,7 +68,7 @@ Here are some of the common follow-up tasks that can be managed from the |VOIP| 
   rest of the form.
 
 Send a quotation while on a call
---------------------------------
+================================
 
 If the customer is ready to see a sales quotation while on the call, the salesperson can send that
 quotation without leaving the call.
@@ -80,13 +81,13 @@ An added benefit of being on the call with the customer while the salesperson is
 quotation is that any specific questions are answered in real-time.
 
 End the sales call
-------------------
+==================
 
 When it is time to end the call, the salesperson clicks the red :icon:`fa-phone` :guilabel:`(phone)`
-icon in the lower-right corner of the |VOIP| widget. When they do, the call is logged in the
+icon in the lower-right corner of the *Phone* widget. When they do, the call is logged in the
 opportunity's chatter.
 
 If they have not done so already, the salesperson then marks the phone call activity as done. To do
 so, navigate to the opportunity's chatter and find the :guilabel:`Planned Activities` section, then
 click :icon:`fa-check` :guilabel:`Mark Done` on the planned call to remove it from the
-:guilabel:`Next Activities` tab in the |VOIP| widget.
+:guilabel:`Next Activities` tab in the *Phone* widget.
