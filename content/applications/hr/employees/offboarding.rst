@@ -10,8 +10,8 @@ specific departments or divisions, that have different requirements and steps fr
 offboarding plan.
 
 In addition to an offboarding plan, the employee record must be :ref:`updated to reflect their
-departure <employees/archive>`, log the reason why they left, close any open activities associated
-with the employee, and :ref:`provide them with any important documents <employees/send-link>`.
+departure <employees/archive>`, log the reason why they left, and close any open activities
+associated with the employee.
 
 .. _employees/offboarding:
 
@@ -20,22 +20,24 @@ View offboarding plan
 
 Before offboarding can begin, it is recommended to check the default offboarding plan that comes
 preconfigured with the **Employees** app. To view the current default plan, navigate to
-:menuselection:`Employees app --> Configuration --> Activity Plan`. Click :guilabel:`Offboarding` to
-view the detailed offboarding plan form.
+:menuselection:`Employees app --> Configuration --> Onboarding / Offboarding`. Click
+:guilabel:`Offboarding` to view the detailed offboarding plan form.
+
+.. _employees/offb-plan-form:
 
 Offboarding plan steps
 ----------------------
 
 The default :guilabel:`Offboarding` plan is minimal, with two default steps (three if the **Fleet**
-app is installed). All steps are :guilabel:`To-Do` activities, and are scheduled for the day the
-offboarding plan is launched (:guilabel:`0 days Before Plan Date`).
+app is installed). All steps are *To-Do* activities, and are scheduled for the day the offboarding
+plan is launched (:guilabel:`0 days Before Plan Date`). The default steps are:
 
 - :guilabel:`Organize knowledge transfer inside the team`: The manager must ensure all knowledge the
-  employee has relating to their job position, is either documented or shared with colleagues so
+  employee has relating to their job position is either documented or shared with colleagues so
   there is no knowledge gap.
 - :guilabel:`Take Back Fleet`: The fleet manager ensures any vehicles assigned to the employee are
-  either unassigned (available for other employees) or the next driver is assigned. This step only
-  appears if the **Fleet** app is installed.
+  either :ref:`unassigned (available for other employees) or the next driver is assigned
+  <fleet/new_vehicle/new-driver>`. This step only appears if the **Fleet** app is installed.
 - :guilabel:`Take Back HR Materials`: The manager must obtain any documents and materials the HR
   department requires. It is recommended to check with the HR department to ensure everything
   required for this step is completed.
@@ -51,15 +53,15 @@ company's offboarding needs. Every company has different requirements, therefore
 add the required steps to the offboarding plan.
 
 If the offboarding plan is universal, add or modify the default offboarding plan. If the offboarding
-plan needed is only for a specific department, then a new plan should be created, specifically for
-that department.
+plan needed is only for a specific department, then :ref:`a new plan should be created
+<employees/new-offboarding>`, specifically for that department.
 
 To modify the default plan, first navigate to :menuselection:`Employees app --> Configuration -->
-Activity Plan`, then click on :guilabel:`Offboarding`.
+Onboarding / Offboarding`, then click on :guilabel:`Offboarding`.
 
-To modify a step, click on the step and an :guilabel:`Open: Activities` pop-up window appears. Make
-any desired modifications to the step, then click :guilabel:`Save` to accept the changes and close
-the pop-up window.
+To modify a step, click on the step and an *Open: Activities* pop-up window appears. Make any
+desired modifications to the step, then click :guilabel:`Save` to accept the changes and close the
+pop-up window.
 
 To add a new step, click :guilabel:`Add a line` at the bottom of the listed activities in the
 :guilabel:`Activities To Create` tab, and a blank :guilabel:`Create Activities` pop-up window
@@ -68,34 +70,42 @@ there are no other steps to add, or click :guilabel:`Save & New` if more steps a
 
 Configure all the desired steps for the offboarding plan.
 
+.. _employees/new-offboarding:
+
 Create offboarding plan
 =======================
 
 For some companies, specific offboarding plans may be necessary for some departments. For these
 cases, a new department-specific offboarding plan may be needed.
 
-To create a new offboarding plan, first navigate to :menuselection:`Employees app -->
-Configuration --> Activity Plan`. Click the :guilabel:`New` button in the upper-left corner, and a
-blank plan form loads.
+To create a new onboarding plan, navigate to :menuselection:`Employees app --> Configuration -->
+Onboarding / Offboarding`. Click the :guilabel:`New` button in the upper-left corner, and a blank
+*Employee Plans* form loads.
+
+Enter the :guilabel:`Plan Name`, and select the :guilabel:`Department` using the drop-down menu.
+This creates a plan *exclusively* for that department.
+
+Add the various offboarding activities by clicking :guilabel:`Add a line` in the *Activities To
+Create* tab, and :ref:`configure each activity <employees/offb-plan-form>`.
 
 Enter the following information on the form:
 
-- :guilabel:`Plan Name`: the specific name for the plan.
+- :guilabel:`Plan Name`: The specific name for the plan.
 - :guilabel:`Model`: This field specifies where this plan can be used. In this case, in the
   **Employees** app. This field is not able to be modified.
-- :guilabel:`Department`: if left blank (the default setting) the plan is available for all
+- :guilabel:`Department`: If left blank (the default setting) the plan is available for all
   departments. To make the plan department-specific, select a department using the drop-down menu.
 
 Next, add the various steps for the plan by clicking :guilabel:`Add a line` at the bottom of the
-listed activities in the :guilabel:`Activities To Create` tab, and a blank :guilabel:`Create
-Activities` pop-up window appears.
+listed activities in the *Activities To Create* tab, and a blank *Create Activities* pop-up window
+appears.
 
 Enter the following information in the pop-up window:
 
 - :guilabel:`Activity Type`: Using the drop-down menu, select the specific activity to be scheduled.
-  The default options are :guilabel:`Email`, :guilabel:`Call`, :guilabel:`Meeting`,
-  :guilabel:`To-Do`, or :guilabel:`Upload Document`. If the **Sign** app is installed, a
-  :guilabel:`Request Signature` option is available.
+  The default options are :guilabel:`To-Do`, :guilabel:`Email`, :guilabel:`Call`,
+  :guilabel:`Meeting`, :guilabel:`Document`, or :guilabel:`Certifications`. If the **Sign** app is
+  installed, a :guilabel:`Signature` option is available.
 - :guilabel:`Summary`: Enter a short description for the step.
 - :guilabel:`Assignment`: Using the drop-down menu, select the person assigned to perform the
   activity. The default options are: :guilabel:`Ask at launch`, :guilabel:`Default user`,
@@ -114,8 +124,8 @@ Enter the following information in the pop-up window:
   configure when the due date should be created; (`#`) of :guilabel:`days`, :guilabel:`weeks`, or
   :guilabel:`months`, either :guilabel:`Before Plan Date` or :guilabel:`After Plan Date`.
 
-When the :guilabel:`Create Activities` for is completed, click :guilabel:`Save & Close` if there are
-no other steps to add, or click :guilabel:`Save & New` to add more steps, as needed.
+When the :guilabel:`Create Activities` form is completed, click :guilabel:`Save & Close` if there
+are no other steps to add, or click :guilabel:`Save & New` to add more steps, as needed.
 
 .. example::
    A company specializing in after-school art programs has two separate offboarding plans, one for
@@ -135,21 +145,21 @@ Launch offboarding plan
 After an employee has given notice (typically two weeks) or once the company has decided to
 terminate the working relationship with the employee, the offboarding plan should be launched.
 Navigate to the :menuselection:`Employees app` and click on the departing employee profile. Click
-the :guilabel:`Launch Plan` button, and a blank :guilabel:`Launch Plan` pop-up window loads.
+the :guilabel:`Launch Plan` button, and a blank *Launch Plan* pop-up window loads.
 
 .. image:: offboarding/launch-plan-button.png
    :alt: The Launch Plan button on the employee profile.
 
-Using the drop-down menu, select the desired offboarding plan in the :guilabel:`Plan` field. Then,
-using the calendar selector, set a date in the :guilabel:`Plan Date` field. This is typically the
-day the employee gave notice, but any date can be selected.
+The top of the screen displays a button for each available plan, as well as a button for the various
+available activities. Click the desired offboarding plan to select it. Then, using the calendar
+selector, set a date in the :guilabel:`Due Date` field. This is typically the employee's last day,
+but any date can be selected.
 
-The right-side of the :guilabel:`Launch Plan` pop-up window displays all the steps in the selected
-plan, grouped by what was selected in the :guilabel:`Assignment` fields for the various plan steps.
+The *Plan Summary* section of the *Launch Plan* pop-up window displays all the steps in the selected
+plan, along with the user icon for the person assigned to each activity.
 
-Once the :guilabel:`Plan` and :guilabel:`Plan Date` fields are configured, click the
-:guilabel:`Schedule` button, and Odoo schedules everything in the plan, according to their
-respective due dates. All scheduled activities appear in the chatter of the employee profile.
+Click the :guilabel:`Schedule` button, and Odoo schedules everything in the plan, according to their
+respective due dates.
 
 .. _employees/archive:
 
@@ -163,11 +173,12 @@ on their employee card.
 
 The employee form loads, displaying all their information. Click the :icon:`fa-gear`
 :guilabel:`(gear)` icon in the top-left corner, and a drop-down menu appears. Click
-:icon:`oi-archive` :guilabel:`Archive`, and an :guilabel:`Employee Termination` pop-up window
-appears.
+:icon:`oi-archive` :guilabel:`Archive`, and an *Employee Termination* pop-up window appears.
 
 Fill out the following fields on the form:
 
+- :guilabel:`Employees`: The selected employee populates this field by default. Multiple employees
+  can be archived at once by adding the additional employees to archive in this field.
 - :guilabel:`Departure Reason`: Select a reason the employee is leaving from the drop-down menu. The
   default options are:
 
@@ -175,79 +186,38 @@ Fill out the following fields on the form:
     given notice.
   - :guilabel:`Resigned`: Select this option when the employee no longer wishes to be employed, and
     the employee has given notice.
-  - :guilabel:`Resigned: Retired`: Select this option when the employee is retiring.
-  - :guilabel:`Became Freelance`: Select this option when the employee is no longer working for the
-    company, but is becoming a freelance worker instead.
-  - :guilabel:`Mutual Agreement`: Select this option when both parties have agreed to terminate
-    their working relationship.
+  - :guilabel:`Retired`: Select this option when the employee is retiring.
+
+  .. note::
+     If a new departure reason is needed, a new one can be created. Close the *Employee Termination*
+     pop-up window, and navigate to :menuselection:`Employees app --> Configuration --> Departure
+     Reasons`. Click the :guilabel:`New` button, and a blank line appears at the bottom of the list.
+     Enter the new reason, and click :guilabel:`Save`.
 
 - :guilabel:`Contract End Date`: Using the calendar selector, select the last day the employee is
   working for the company.
 - :guilabel:`Detailed Reason`: Enter a short description for the employee's departure in this field.
-- :guilabel:`Close Activities`: Tick the checkbox next to each type of activity to close or delete
-  any open activities associated with it. It is recommended to tick **all** checkboxes that are
+- :guilabel:`Close Activities`: Click the checkbox next to each type of activity to close or delete
+  any open activities associated with it. It is recommended to click **all** checkboxes that are
   applicable. The available options are:
 
-  - :guilabel:`Appraisals`: cancels all appraisals scheduled after the contract end date.
-  - :guilabel:`Contract`: applies an end date for the current contract.
-  - :guilabel:`Company Car`: removes the employee as the driver for their current company car, and
+  - :guilabel:`Contract`: Applies an end date for the current contract.
+  - :guilabel:`Company Car`: Removes the employee as the driver for their current company car, and
     :ref:`assigns the next driver <fleet/new_vehicle/new-driver>`, if applicable.
-  - :guilabel:`Equipment`: unassigns the employee from any assigned equipment.
+  - :guilabel:`Equipment`: Unassigns the employee from any assigned equipment.
+  - :guilabel:`Appraisals`: Cancels all appraisals scheduled after the contract end date.
 
-- :guilabel:`HR Info`: Tick the checkbox next to :guilabel:`Send Access Link` to send a download
-  link to the employee's personal email address, containing all their personal HR files.
-- :guilabel:`Private Email`: This field appears if the :guilabel:`HR Info` checkbox is ticked. If
-  there is a private email listed on the employee profile, this field is automatically populated. If
-  no private email address is on their record, enter the private email address for the employee.
-
-When the form is complete, click :guilabel:`Apply`. The employee record is archived, an email with a
-download link to their personal documents is sent to the employee's private email address (if
-selected), and a red :guilabel:`Archived` banner appears in the top-right corner of the employee
-form. The chatter logs the :guilabel:`Departure Date` and :guilabel:`Departure Reason`, and if an
-access link was emailed.
+When the form is complete, click :guilabel:`Apply`. The employee record is archived, and a red
+:guilabel:`Archived` banner appears in the top-right corner of the employee form. The chatter logs
+the various details, including the :guilabel:`Departure Date`, :guilabel:`Departure Reason`,
+:guilabel:`Contract End Date`, the dates for the last work entries, and the employee version that
+was archived.
 
 .. image:: offboarding/termination.png
    :alt: The employee termination form with all fields filled out.
 
 .. note::
-   While attempting to send the HR documents access link, an :guilabel:`Invalid Operation` pop-up
-   window may appear, displaying the following error message:
-
-   :guilabel:`Employee's related user and private email must be set to use "Send Access Link"
-   function: (Employee Name)`
-
-   If this error appears, click :guilabel:`Close` to close the pop-up window, then tick the
-   :guilabel:`Send Access Link` checkbox to deselect it on the :guilabel:`Employee Termination`
-   pop-up window.
-
-   Click :guilabel:`Apply` to archive the employee and close the selected activities on the
-   :guilabel:`Employee Termination` pop-up window, returning to the employee form.
-
-   Once the employee form, ensure the following fields are populated:
-
-   - :guilabel:`Private Information` tab: Ensure an email address is entered in the
-     :guilabel:`Email` field.
-   - :guilabel:`HR Settings` tab: Ensure a :guilabel:`Related User` is selected in the corresponding
-     field.
-
-   After the necessary information is entered, :ref:`resend the HR documents access link
-   <employees/send-link>`
-
-.. _employees/send-link:
-
-Send HR documents access link
------------------------------
-
-If the access link was not sent when first archiving the employee on the *Employee Termination*
-form, it can be sent after the employee is archived at any point.
-
-After an employee is archived, they are no longer visible on the main **Employees** app dashboard.
-To view the archived employees, navigate to the :menuselection:`Employees app` dashboard, and click
-the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar to reveal a drop-down menu.
-Select :guilabel:`Archived`, towards the bottom of the :icon:`fa-filter` :guilabel:`Filters` column,
-then click away from the drop-down window to close it.
-
-Now, only archived employees appear on the dashboard. Click on the desired employee to open their
-employee form. On this form, click the :icon:`fa-gear` :guilabel:`(gear)` icon in the top-left
-corner, then click :guilabel:`Send HR Documents Access Link` from the resulting drop-down menu. The
-chatter logs that the link was sent.
+   If any issues exist that prevent Odoo from archiving the employee, the detailed reasons appear in
+   a red warning box in the *Employee Termination* pop-up window. The warning states `The plan
+   "(Plan Name)" cannot be launched`, then lists the various steps that must be done before
+   archiving the employee.
