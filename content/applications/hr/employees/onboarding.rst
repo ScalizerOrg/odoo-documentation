@@ -9,50 +9,53 @@ necessary steps for the business are assigned to the correct individuals.
 Proper onboarding ensures that new employees are given all the information and tools needed to be
 successful in their roles and have a smooth transition to their new job.
 
+.. note::
+   Depending on the installed applications, additional steps may appear in the onboarding plan.
+
 View onboarding plan
 ====================
 
 Before onboarding can begin, it is recommended to check the default onboarding plan that comes
 preconfigured with the **Employees** app. To view the current default plan, navigate to
-:menuselection:`Employees app --> Configuration --> Activity Plan`. Click :guilabel:`Onboarding` to
-view the detailed onboarding plan form.
+:menuselection:`Employees app --> Configuration --> Onboarding / Offboarding`, then click
+:guilabel:`Onboarding` to view the detailed onboarding plan form.
 
 .. _onboarding/plan-form:
 
 The plan form displays the following information:
 
-- :guilabel:`Plan Name`: the specific name for the onboarding plan.
-- :guilabel:`Model`: specifies where this plan can be used. In this case, in the **Employees** app.
-- :guilabel:`Department`: if left blank (the default setting) this plan is available for all
+- :guilabel:`Plan Name`: The specific name for the onboarding plan.
+- :guilabel:`Model`: Specifies where this plan can be used. In this case, in the **Employees** app.
+  This field cannot be modified.
+- :guilabel:`Department`: If left blank (the default setting) this plan is available for all
   departments. Limit the use of the plan to a specific department by selecting the department using
   the drop-down menu.
-- :guilabel:`Activities To Create`: this tab lists all the onboarding steps. Each row displays:
+- :guilabel:`Activities To Create`: This tab lists all the onboarding steps. Each row displays:
 
-  - :guilabel:`Activity Type`: the specific activity for the step. The default options are
-    :guilabel:`Email`, :guilabel:`Call`, :guilabel:`Meeting`, :guilabel:`To-Do`, or
-    :guilabel:`Upload Document`. If the **Sign** app is installed, a :guilabel:`Request Signature`
-    option is available.
-  - :guilabel:`Summary`: a one line description of the step.
-  - :guilabel:`Assignment`: chooses who completes the activity, relative to the new hire:
+  - :guilabel:`Activity Type`: The specific activity for the step. The default options are
+    :guilabel:`To-Do`, :guilabel:`Email`, :guilabel:`Call`, :guilabel:`Meeting`,
+    :guilabel:`Document`, and :guilabel:`Certifications`. If the **Sign** app is installed, a
+    :guilabel:`Signature` option is available.
+  - :guilabel:`Summary`: A one line description of the step.
+  - :guilabel:`Assignment`: Chooses who completes the activity, relative to the new hire:
 
-    - :guilabel:`Ask at launch`: choose the user in the :guilabel:`Assigned To` field when
+    - :guilabel:`Ask at launch`: Choose the user in the :guilabel:`Assigned To` field when
       :ref:`launching the onboarding plan <employees/launch-plan>`.
-    - :guilabel:`Default user`: choose a user who always handles this activity. Defined in the
+    - :guilabel:`Default user`: Choose a user who always handles this activity. Defined in the
       :guilabel:`Assigned to` field.
-    - :guilabel:`Manager`: assigns the employee's manager as defined on the employee record.
-    - :guilabel:`Coach`:  assigns the employee's coach as defined on the employee record.
-    - :guilabel:`Employee`: the new hire completes the activity.
-    - :guilabel:`Fleet Manager`: assigns the designated **Fleet** app manager. This option is only
+    - :guilabel:`Coach`:  Assigns the employee's coach as defined on the employee record.
+    - :guilabel:`Manager`: Assigns the employee's manager as defined on the employee record.
+    - :guilabel:`Employee`: The new hire completes the activity.
+    - :guilabel:`Fleet Manager`: Assigns the designated **Fleet** app manager. This option is only
       available if the **Fleet** app is installed.
 
-  - :guilabel:`Assigned to`: this field remains blank, unless :guilabel:`Default user` is selected
+  - :guilabel:`Assigned to`: This field remains blank, unless :guilabel:`Default user` is selected
     for the :guilabel:`Assignment` field. If :guilabel:`Default user` is selected, this field is
     populated with the selected user.
-  - :guilabel:`Document to sign`: the corresponding document requiring a signature.
-  - :guilabel:`Interval`: the time when the activity is active.
-  - :guilabel:`Unit`: the set time interval, either :guilabel:`days`, :guilabel:`weeks`, or
+  - :guilabel:`Interval`: The time when the activity is active.
+  - :guilabel:`Unit`: The set time interval, either :guilabel:`days`, :guilabel:`weeks`, or
     :guilabel:`months`.
-  - :guilabel:`Trigger`: how scheduling is determined for the activity. Options are either
+  - :guilabel:`Trigger`: How scheduling is determined for the activity. Options are either
     :guilabel:`Before Plan Date` or :guilabel:`After Plan Date`.
 
     .. example::
@@ -68,6 +71,10 @@ The plan form displays the following information:
        .. image:: onboarding/activity-plan.png
           :alt: An activity configured to assign a laoptop the day before an employee starts work.
 
+.. note::
+   In a multi-company database, a :guilabel:`Company` field also appears. Selecting a company for an
+   onboarding plan restricts the plan to *only* that company.
+
 Onboarding plan steps
 ---------------------
 
@@ -75,9 +82,9 @@ The default :guilabel:`Onboarding` plan includes three default steps. All steps 
 :guilabel:`To-Do` activities, and are scheduled for the day the onboarding plan is launched
 (:guilabel:`0 days Before Plan Date`).
 
-- :guilabel:`Setup IT Materials`: the manager must gather and configure all IT materials.
-- :guilabel:`Plan Training`: the manager must plan the training for the new employee.
-- :guilabel:`Training`: the new employee must complete the training planned by the manager.
+- :guilabel:`Setup IT Materials`: The manager must gather and configure all IT materials.
+- :guilabel:`Plan Training`: The manager must plan the training for the new employee.
+- :guilabel:`Training`: The new employee must complete the training planned by the manager.
 
 .. image:: onboarding/onboarding.png
    :alt: The three default steps in the Onboarding plan.
@@ -92,18 +99,18 @@ A single onboarding plan works only if the flow works for the entire company.
 .. note::
    If the onboarding plan is universal, add to or modify the default onboarding plan. If
    department-specific onboarding plans are needed, :ref:`create a new onboarding plan
-   <employees/create-plan>`.
+   <employees/create-plan>` and limit the plan to a department.
 
 To modify the default plan, first navigate to :menuselection:`Employees app --> Configuration -->
-Activity Plan`, then click on :guilabel:`Onboarding`.
+Onboarding / Offboarding`, then click on :guilabel:`Onboarding`.
 
-To modify a step, click on it. In the :guilabel:`Open: Activities` pop-up window, make any desired
+To modify a step, click on it. In the *Open: Activities* pop-up window, make any desired
 modifications to the step, then click :guilabel:`Save`.
 
 To add a new step, click :guilabel:`Add a line` at the bottom of the listed activities in the
-:guilabel:`Activities To Create` tab, and a blank :guilabel:`Create Activities` pop-up window
-appears. Enter all the information in the pop-up window, then click :guilabel:`Save & Close` if
-there are no other steps to add, or click :guilabel:`Save & New` if more steps are needed.
+*Activities To Create* tab, and a blank *Create Activities* pop-up window appears. Enter all the
+information in the pop-up window, then click :guilabel:`Save & Close` if there are no other steps to
+add, or click :guilabel:`Save & New` if more steps are needed.
 
 .. _employees/create-plan:
 
@@ -114,8 +121,15 @@ Some companies require different onboarding plans, when there are department-spe
 procedures that do not apply to the whole company. For these cases, a new department-specific
 onboarding plan must be created.
 
-To create a new onboarding plan, :ref:`navigate to the desired plan and configure all the desired
-steps <employees/modify-plan>`.
+To create a new onboarding plan, navigate to :menuselection:`Employees app --> Configuration -->
+Onboarding / Offboarding`. Click the :guilabel:`New` button in the upper-left corner, and a blank
+*Employee Plans* form loads.
+
+Enter the :guilabel:`Plan Name`, and select the :guilabel:`Department` using the drop-down menu.
+This creates a plan *exclusively* for that department.
+
+Add the various onboarding activities by clicking :guilabel:`Add a line` in the *Activities To
+Create* tab, and :ref:`configure each activity <onboarding/plan-form>`.
 
 .. example::
    A company specializing in the manufacturing and selling of outdoor metal furniture may have a
@@ -138,27 +152,31 @@ Launch onboarding plan
 After an employee has been hired and their employee profile :ref:`is created
 <recruitment/new-employee>`, navigate to the desired employee's profile by clicking on their Kanban
 card on the **Employees** app dashboard, then click the :guilabel:`Launch Plan` button on their
-employee profile, and a blank :guilabel:`Launch Plan` pop-up window loads.
+employee profile, and a blank *Launch Plan* pop-up window loads.
 
-In the :guilabel:`Plan` field, choose the desired onboarding plan. Then, using the calendar
-selector, set a date in the :guilabel:`Plan Date` field. This is typically the employee's first day,
+The top of the screen displays a button for each available plan, as well as a button for the various
+available activities. Click the desired onboarding plan to select it. Then, using the calendar
+selector, set a date in the :guilabel:`Due Date` field. This is typically the employee's first day,
 but any date can be selected.
 
-The right side of the :guilabel:`Launch Plan` pop-up window displays all the steps in the selected
-plan, grouped by what was selected in the :guilabel:`Assignment` fields on the :ref:`plan form
-<onboarding/plan-form>`.
+The *Plan Summary* section of the *Launch Plan* pop-up window displays all the steps in the selected
+plan, along with the user icon for the person assigned to each activity.
 
-Once the :guilabel:`Plan` and :guilabel:`Plan Date` fields are configured, click the
-:guilabel:`Schedule` button, and Odoo schedules everything in the plan, according to their
+Click the :guilabel:`Schedule` button, and Odoo schedules everything in the plan according to their
 respective due dates.
 
 All scheduled activities appear in the both chatter of the employee profile, and in the chatter of
-the user's with assignments relating to the plan.
+the users with assignments relating to the plan.
 
 .. note::
    If any activity assignments were configured to :guilabel:`Ask at launch`, an :guilabel:`Assigned
-   to` field appears on the :guilabel:`Launch Plan` pop-up window. Using the drop-down menu, select
-   the user responsible for all the unassigned activities.
+   to` field appears on the *Launch Plan* pop-up window. Using the drop-down menu, select the user
+   responsible for all the unassigned activities.
 
 .. image:: onboarding/onboarding-chatter.png
    :alt: All onboarding tasks scheduled in the chatter.
+
+.. important::
+   Onboarding can only be launched for :doc:`users <../../general/users>` of the database. If there
+   is any missing information on the employee's profile, a warning listing the information needed
+   appears.
