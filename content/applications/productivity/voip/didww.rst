@@ -1,19 +1,24 @@
-================================
-VoIP services in Odoo with DIDWW
-================================
+.. |VOIP| replace:: :abbr:`VoIP (Voice over Internet Protocol)`
+.. |SIP| replace:: :abbr:`SIP (Session Initiation Protocol)`
 
-*DIDWW* is a global *VoIP* and SIP trunking provider. An active account with DIDWW is required to
-use this service.
+=====================
+Odoo Phone with DIDWW
+=====================
 
-Before creating an account with DIDWW, make sure that the company's location and the applicable
-regions are supported by DIDWW's services.
+`DIDWW <https://www.didww.com/>`_ is a global |VoIP| and |SIP| trunking provider that can be set up
+to work with Odoo **Phone**. A DIDWW account is required to use this service.
 
-DIDWW setup
-===========
+.. important::
+   Before setting up an account with DIDWW, verify the following requirements:
 
-After verifying country coverage and availability, create an account with `DIDWW
-<https://www.didww.com/>`_. Then navigate to the `DIDWW Dashboard
-<https://my.didww.com/#/dashboard>`_.
+   - The business phone numbers are portable to DIDWW. Some providers may be unable to release the
+     phone number due to local or regional guidelines.
+   - The locations of the company and its call recipients are covered by DIDWW services.
+
+Configure credentials in DIDWW
+==============================
+
+Navigate to the `DIDWW Dashboard <https://my.didww.com/#/dashboard>`_.
 
 To transfer existing numbers from an existing telephone network service provider, follow the steps
 outlined on the `DIDWW website <https://doc.didww.com/phone-numbers/number-porting/index.html>`_.
@@ -55,7 +60,7 @@ Configure or add the following parameters:
 - :guilabel:`Transport protocol`: `UDP`, `TCP`, `WSS`, `TLS`
 
 .. important::
-   The SRTP media encryption and TLS SIP transport are disabled by default in DIDWW. Contact the
+   The SRTP media encryption and TLS |SIP| transport are disabled by default in DIDWW. Contact the
    DIDWW sales team sales@didww.com to allow traffic encryption for your account.
 
 .. image:: didww/sip-device-route.png
@@ -67,28 +72,42 @@ Configure or add the following parameters:
    then click :guilabel:`My Numbers`. Scroll to :guilabel:`Configuration`. In the :guilabel:`Inbound
    voice trunk` field, select :guilabel:`phone.systems`.
 
-Lastly, verify that the DID number is selected in the *Inbound Calls* section of the SIP Device
+Lastly, verify that the DID number is selected in the *Inbound Calls* section of the |SIP| Device
 Route settings.
 
 .. image:: didww/did-number.png
    :alt: The DID numbers field in DIDWW.
 
-Odoo setup
-==========
+Configure DIDWW in Odoo
+=======================
 
-In *Odoo*, navigate to :menuselection:`Settings app --> Integrations --> VoIP --> Manage Providers`.
-Click :guilabel:`New`.
+Add DIDWW credentials
+---------------------
 
-Enter the name, `DIDWW`, then update the :guilabel:`WebSocket` field with `wss://sip.phone.systems`.
-Under :guilabel:`PBX Server IP`, enter `sip.phone.systems`.
+To set up DIDWW as a |VOIP| provider in Odoo, navigate to :menuselection:`Phone app -->
+Configuration --> Providers`. Locate the *DIDWW* provider entry, and verify the following settings:
 
-.. image:: didww/new-provider.png
-   :alt: The VoIP providers page in Odoo.
+- :guilabel:`OnSIP Domain`: should already be set to `sip.phone.systems`.
+- :guilabel:`WebSocket`: should already be set to `wss://sip.phone.systems`.
+- :guilabel:`VoIP Environment`: select :guilabel:`Production`.
 
-To configure a user's VoIP provider, click the user avatar icon in the top-right corner of the
-database, and then choose :guilabel:`My Preferences` from the sub-menu. Then click into the
-:guilabel:`VoIP` tab, and under the :guilabel:`Voip Provider` field, select :guilabel:`DIDWW`.
-Finally, enter the :guilabel:`Voip Username` and :guilabel:`Voip Secret`, then save.
+.. image:: didww/didww-provider-config.png
+   :alt: DIDWW configuration settings in the *Odoo Phone* app.
 
-.. image:: didww/odoo-credentials.png
-   :alt: DIDWW provider, username, and secret credentials entered.
+Configure user settings
+-----------------------
+
+Next, each user's OnSIP credentials must be configured in Odoo. Navigate to :menuselection:`Settings
+app --> Users & Companies --> Users` select the user, and click the **VoIP** tab.
+
+Add the following credentials for the user:
+
+- :guilabel:`Username`: the user's DIDWW username.
+- :guilabel:`Secret`: the user's password.
+
+Once the DIDWW credentials have been saved, the user can make calls with Odoo **Phone** by clicking
+the :icon:`oi-voip` :guilabel:`(Show Softphone)` icon in the top-right corner of Odoo.
+
+.. seealso::
+   For additional setup and troubleshooting steps, see `DIDWW's documentation
+   <https://doc.didww.com/>`_.
