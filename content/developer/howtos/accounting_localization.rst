@@ -244,7 +244,7 @@ The first fiscal position that matches the company's country is considered the d
   .. literalinclude:: {ODOO_RELPATH}/addons/l10n_es/data/template/account.fiscal.position-es_common_mainland.csv
     :condition: odoo_dir_in_path
     :language: csv
-    :end-at: account_common_7051
+    :end-at: account.europe_vat","",""
 
 Final steps
 ===========
