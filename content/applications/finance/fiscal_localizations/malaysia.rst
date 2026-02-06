@@ -306,10 +306,48 @@ bill is confirmed, click :guilabel:`Send To MyInvois`.
      MyInvois number. If a reference is entered in the :guilabel:`Bill Reference` field, that
      reference is used instead.
 
+.. _malaysia/myinvois/workflow/consolidation:
+
+Send consolidated e-invoices to MyInvois
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consolidated e-Invoicing simplifies compliance for high-volume B2C transactions.
+
+To track all document submissions linked to a specific journal, including consolidated invoices,
+credit notes, and refund notes, go to the :guilabel:`Accounting Dashboard`, click the
+:icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon of the :guilabel:`Sales` or
+:guilabel:`Purchase` journal, then :guilabel:`MyInvois Documents` under the :guilabel:`View`
+section.
+
+.. image:: malaysia/myinvois-myinvoisdocuments.png
+   :alt: MyInvoisdocuments journal
+
+To create a consolidated invoice:
+
+#. From the :guilabel:`MyInvois Documents` list view, click :guilabel:`Consolidate Invoices`.
+#. In the pop-up window, set the :guilabel:`Date From` and :guilabel:`Date To` to cover the
+   specific period.
+#. Click :guilabel:`Create Consolidated Invoices`.
+
+To submit the consolidated invoice, click :guilabel:`Submit to MyInvois` on the form view.
+
+For multiple consolidated invoices, select the relevant consolidated invoices in the list view.
+Then, click :guilabel:`Submit to MyInvois`.
+
+.. note::
+   Documents within a defined period are aggregated into consolidated invoices based on the following
+   criteria:
+
+   - :guilabel:`Document Type`: Separated by invoices, vendor bills, and their respective credit or
+     refund notes.
+   - :guilabel:`Currency`: Grouped by transaction currency.
+   - :guilabel:`Contact`: Applies to contacts where the :guilabel:`TIN` and :guilabel:`Malaysian TIN`
+     are empty or contain the General Public TIN ``EI00000000010``.
+
 .. _malaysia/myinvois/workflow/sending/status:
 
 MyInvois status
-***************
+~~~~~~~~~~~~~~~
 
 The current MyInvois status of an invoice or bill is shown in the :guilabel:`MyInvois State` field
 within the :guilabel:`MyInvois` tab.
