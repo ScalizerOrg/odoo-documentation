@@ -62,6 +62,62 @@ and select it. Then configure the following fields:
 - :guilabel:`TTx`: Malaysian Tourism Tax Number, if applicable
 - :guilabel:`Phone`
 
+.. _malaysia/sst:
+
+Sales and Service Tax (SST)
+===========================
+
+The **Sales and Service Tax (SST)** is a single-stage tax regime in Malaysia. Default taxes are
+created automatically when the :guilabel:`Malaysia - Accounting` (`l10n_my`) and
+:guilabel:`Malaysia - Accounting Reports` (`l10n_my_reports`) modules are :ref:`installed
+<general/install>`. These :ref:`taxes <malaysia/sst/taxes>` are used to generate the :ref:`tax
+report <malaysia/sst/tax_reports>`.
+
+.. _malaysia/sst/taxes:
+
+Taxes
+-----
+
+The following categories of :doc:`taxes <../accounting/taxes>` are installed and linked to the
+relevant account:
+
+- :guilabel:`Sales and Purchase Goods`: 5% and 10%
+- :guilabel:`Sales and Purchase Services`: 6% and 8%
+- :guilabel:`Exempt`: Sales exempted from tax (e.g., export or specific schedules)
+- :guilabel:`Not Applicable`: 0% NA
+
+.. note::
+   - **Sales and Purchase Services** taxes can be configured for
+     :doc:`Cash Basis <../../finance/accounting/taxes/cash_basis>`.
+   - **0% NA** is applied to transactions where tax is not applicable (out of scope), distinct from
+     legally exempted transactions, but for which an e-invoice is still required.
+
+.. _malaysia/sst/products:
+
+Product
+-------
+
+The :ref:`SST-02 report (Section B1) <malaysia/sst/tax_reports>` uses the Malaysian Tariff or
+Service Code to group transactions. Ensure to configure products correctly:
+
+- For :guilabel:`Goods`: In the :guilabel:`General Information` tab, enter the relevant :abbr:`HS
+  (Harmonized System)` code in the :guilabel:`Malaysian Customs Tariff Code` field.
+- For :guilabel:`Services`: In the :guilabel:`General Information` tab, enter the code corresponding
+  to the service type in the :guilabel:`Malaysian Service Type Code` field.
+
+.. _malaysia/sst/tax_reports:
+
+Tax reports
+-----------
+
+The following tax reports are available under Malaysia localization:
+
+- SST-02 (B1);
+- SST-02 (B2, C, D, E);
+- SST-02A.
+
+To access them, navigate to :menuselection:`Accounting --> Reporting --> Tax Report`.
+
 E-invoicing integration with MyInvois
 =====================================
 
