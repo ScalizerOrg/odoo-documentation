@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-30 18:30+0000\n"
-"PO-Revision-Date: 2026-02-04 23:21+0000\n"
+"PO-Revision-Date: 2026-02-06 23:21+0000\n"
 "Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/hr/es_419/>\n"
@@ -3048,6 +3048,13 @@ msgid ""
 "an :ref:`approver <attendances/approvers>` for specific employees, those "
 "employees' attendance logs also appear on the :guilabel:`Overview` dashboard."
 msgstr ""
+"Al ingresar a la aplicación **Asistencias**, verás el tablero "
+":guilabel:`Resumen` de forma predeterminada, donde se muestran los registros "
+"de asistencia del empleado (su información de registro de entradas y salidas)"
+" del día en curso. Si el usuario solicitó :ref:`permisos de acceso <"
+"attendances/access-rights>` o es un :ref:`aprobador <attendances/approvers>` "
+"para empleados específicos, los registros de asistencia de esos empleados "
+"también aparecen en el tablero :guilabel:`Resumen`."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:11
 msgid ""
@@ -3059,6 +3066,13 @@ msgid ""
 "gray. This allows managers to visually determine if an employee is working "
 "outside of their working hours."
 msgstr ""
+"El tablero :guilabel:`Resumen` muestra el día en curso, segmentado por "
+"horas, con la hora en curso resaltada en amarillo. Que aparezca o no el "
+"tablero :guilabel:`Resumen` depende del :ref:`horario laboral <employees/"
+"schedule>` configurado en el registro del empleado. Cada hora laboral del "
+"empleado aparece en blanco, mientras que todas las demás horas aparecen en "
+"gris. Esto permite que los gerentes determinen si un empleado está fuera de "
+"sus horas laborales solo con un vistazo."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:17
 msgid ""
@@ -3066,22 +3080,33 @@ msgid ""
 "log displays the total hours along with the specific check in and check out "
 "times. The log colors indicate the following statuses:"
 msgstr ""
+"El nombre de los empleados aparece en las filas, ordenados de forma "
+"alfabética y empezando por primer nombre. Cada registro de asistencia "
+"muestra el total de horas y los horarios específicos en los que se registró "
+"la entrada o la salida. Los colores del registro indican los estados a "
+"continuación:"
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:21
 msgid "Gray: Completed entries where the employee has checked in and out."
 msgstr ""
+"Gris: Asistencias completas en las que el empleado ya registró su entrada y "
+"salida."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:22
 msgid ""
 "Green: Active entries where the employee checked in but has not yet checked "
 "out."
 msgstr ""
+"Verde: Asistencias activas en las que el empleado ya registró su entrada, "
+"pero no ha registrado su salida."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:23
 msgid ""
 "Red: Entries with any errors (e.g. employees have double entries, or forget "
 "to check out)."
 msgstr ""
+"Rojo: Asistencias con errores (por ejemplo, el empleado tiene un registro "
+"doble u olvidó registrar su salida)."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:None
 msgid ""
@@ -3103,6 +3128,14 @@ msgid ""
 "attendance logs (records with a check in and check out time) appear in the "
 "summary of the logged time."
 msgstr ""
+"Una barra de color indica cuántas horas del total de horas esperadas el "
+"empleado ha registrado durante el día. Pasa el cursor por la barra de color "
+"para ver los detalles del empleado en el día en curso. Los colores sólidos "
+"indican las horas registradas (con el tiempo de inicio y fin), mientras que "
+"los colores pálidos indican que el empleado registró su entrada, pero "
+"todavía no ha registrado su salida. Solo los registros de asistencia "
+"*completados* (registros con un horario de entrada y salida registrados) "
+"aparecen en el resumen del tiempo registrado."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:36
 msgid ""
@@ -3110,6 +3143,10 @@ msgid ""
 "one-hour lunch break from 12:00 PM to 1:00 PM, then work from 1:00 PM to "
 "6:00 PM, for a total of eight hours."
 msgstr ""
+"Abigail Peterson tiene previsto trabajar de 9:00 a. m. a 12:00 p. m., luego "
+"se tomará una hora de descanso para comer de 12:00 p. m. a 1:00 p. m. y, a "
+"continuación, trabajará de 1:00 p. m. a 6:00 p. m., lo que suma un total de "
+"ocho horas registradas."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:39
 msgid ""
@@ -3120,12 +3157,21 @@ msgid ""
 "summary block, indicating she checked in at 1:00 PM, but has not yet checked "
 "out. The length of the pale green line indicates the time worked."
 msgstr ""
+"Abigail registra su entrada a las 9:00 a. m. y sale a las 12:00 p. m. Vuelve "
+"a registrar una entrada a la 1:00 p. m. y ahora son las 2:15 p. m. La "
+"información de transferencia muestra `3 h / 8 h`, lo que indica que Abigail "
+"ha registrado tres horas de trabajo completas de un total de ocho. Hay una "
+"línea verde pálida que se extiende más allá del bloque de resumen, lo que "
+"indica que registró su entrada a la 1:00 p. m., pero aún no ha salido. La "
+"longitud de la línea verde pálida indica el tiempo trabajado."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:0
 msgid ""
 "The rollover green bar indicating Abigail logged 3 hours, and is currently "
 "logged in."
 msgstr ""
+"La barra verde que indica que Abigail ha registrado 3 horas y que "
+"actualmente está trabajando."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:48
 msgid ""
@@ -3134,6 +3180,11 @@ msgid ""
 "or a custom time period. To instantly return the dashboard to the present "
 "date, click the :guilabel:`Today` button at any time."
 msgstr ""
+"El tablero de **Asistencias** permite cambiar el periodo de tiempo mostrado, "
+"ya sea :guilabel:`día`, :guilabel:`semana`, :guilabel:`mes`, "
+":guilabel:`trimestre`, :guilabel:`año` o un periodo de tiempo personalizado. "
+"Para regresar el tablero a la fecha actual al instante, haz clic en el botón "
+":guilabel:`Hoy` en cualquier momento."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:54
 msgid ""
@@ -3142,6 +3193,10 @@ msgid ""
 "access-rights>` or are :ref:`approvers <attendances/approvers>` for the "
 "employees with the errors."
 msgstr ""
+"Todos los registros de asistencia que tengan errores aparecerán en rojo, lo "
+"cual indica que los debe resolver un usuario con los :ref:`permisos de "
+"acceso <attendances/access-rights>` adecuados o que sea el :ref:`aprobador <"
+"attendances/approvers>` de los empleados con errores."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:61
 msgid "Filters and groups"
@@ -3259,6 +3314,7 @@ msgstr "Empleado"
 #: ../../content/applications/hr/attendances/attendance_logs.rst:106
 msgid "Review individual attendance logs during a 1:1 meeting."
 msgstr ""
+"Revisar registros de asistencia individuales durante reuniones individuales."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:107
 msgid "Department"
@@ -3328,6 +3384,10 @@ msgid ""
 "the :guilabel:`Overview` dashboard, and the attendance log appears in a pop-"
 "up window. This log displays a summary, including the following information:"
 msgstr ""
+"Para ver un registro de asistencia, haz clic en cualquier registro de "
+"asistencia en el tablero :guilabel:`Resumen` y el registro de asistencia "
+"aparecerá en la ventana emergente. Este registro mostrará el resumen, "
+"incluyendo la información a continuación:"
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:130
 msgid ":guilabel:`Employee`: The name of the employee."
@@ -3352,6 +3412,9 @@ msgid ""
 ":guilabel:`Worked Time`: The amount of time the employee logged for that "
 "specific entry, in an hour and minute format (HH:MM)."
 msgstr ""
+":guilabel:`Tiempo trabajado`: La cantidad de tiempo que el empleado ha "
+"registrado para la entrada en específico, en un formato de hora y minutos "
+"(HH:MM)."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:136
 msgid ""
@@ -3359,6 +3422,10 @@ msgid ""
 "expected working schedule for that specific entry (shows **only** when "
 "present for the employee)."
 msgstr ""
+":guilabel:`Horas extra trabajadas`: Las horas extra trabajadas sin "
+"remuneración que salen del horario laboral esperado para ese registro "
+"específico "
+"(se muestra **solo** cuando las horas están presentes para el empleado)."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:138
 msgid ""
@@ -3366,10 +3433,15 @@ msgid ""
 "(the :guilabel:`Worked Time` minus the approved :guilabel:`Worked Extra "
 "Hours`."
 msgstr ""
+":guilabel:`Horas extra`: Las horas extra aprobadas para ese registro "
+"específico (las :guilabel:`horas trabajadas` menos :guilabel:`las horas "
+"extra trabajadas` aprobadas)."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:None
 msgid "The details on the attendance log pop-up window."
 msgstr ""
+"Captura de pantalla de los detalles en la ventana emergente del registro de "
+"asistencia."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:145
 msgid "Check in/check out details"
@@ -3381,30 +3453,43 @@ msgid ""
 "log is available. Click the :icon:`fa-expand` :guilabel:`(expand)` icon in "
 "the upper-right corner of the attendance log, and the detailed record loads."
 msgstr ""
+"Hay información detallada disponible sobre el registro de la entrada y la "
+"salida en el registro de asistencia. Haz clic en el icono :icon:`fa-expand` "
+":guilabel:`(expandir)` en la esquina superior derecha del registro de "
+"asistencia y se cargará el registro detallado."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:151
 msgid ""
 "The following additional information appears for both the *Check In* and "
 "*Check Out* sections, which appear in the expanded attendance log."
 msgstr ""
+"La siguiente información adicional aparece para las secciones *Registro de "
+"entrada* y *Registro de salida*, que aparecen en el registro de asistencia "
+"expandido."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:154
 msgid ""
 ":guilabel:`Mode`: The attendance submission method. The available options "
 "are:"
 msgstr ""
+":guilabel:`Modo`: El método con el que se registró la asistencia. Las "
+"opciones disponibles son:"
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:156
 msgid ""
 ":guilabel:`Systray`: The employee checked in or out :doc:`directly from the "
 "database <../attendances/check_in_check_out>`."
 msgstr ""
+":guilabel:`Systray`: El empleado registró su entrada o salida :doc:`"
+"directamente desde la base de datos <../attendances/check_in_check_out>`."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:158
 msgid ""
 ":guilabel:`Kiosk`: The employee checked in or out using an :ref:`attendance "
 "kiosk <attendances/kiosk-mode-entry>`."
 msgstr ""
+":guilabel:`Quiosco`: El empleado registró su entrada y salida usando el "
+":ref:`quiosco de asistencia <attendances/kiosk-mode-entry>`."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:160
 msgid ""
@@ -3413,16 +3498,24 @@ msgid ""
 "create-records>`. This typically occurs when an employee forgets to check in "
 "or check out."
 msgstr ""
+":guilabel:`Manual`: El gerente del empleado o un administrador de la "
+"aplicación **Asistencias** :ref:`creó el registro de asistencia de forma "
+"manual <attendances/create-records>`. Esto suele ocurrir cuando el empleado "
+"olvida registrar su entrada o su salida."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:164
 msgid ""
 ":guilabel:`IP Address`: The device's IP address used to check in or out."
 msgstr ""
+":guilabel:`Dirección IP:` La dirección IP del dispositivo utilizado para "
+"registrar la entrada o la salida."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:165
 msgid ""
 ":guilabel:`Browser`: The web browser the employee used to check in or out."
 msgstr ""
+":guilabel:`Navegador`: El navegador que el empleado usó para registrar su "
+"entrada o su salida."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:166
 msgid ""
@@ -3440,6 +3533,11 @@ msgid ""
 "Coordinates`. This opens a map in a new browser tab, with the specific "
 "location pointed out."
 msgstr ""
+":guilabel:`Coordenadas de GPS`: Las coordenadas específicas cuando el "
+"usuario haya registrado su entrada o salida. Para ver coordenadas "
+"específicas en un mapa, haz clic en el botón :icon:`oi-arrow-right` "
+":guilabel:`Ver en Maps` abajo de :guilabel:`Coordenadas GPS`. Esto abrirá un "
+"mapa en una nueva pestaña de navegador, con la ubicación específica indicada."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:None
 msgid "The detailed information for an attendance entry."
@@ -3480,6 +3578,14 @@ msgid ""
 "the time selector beneath the calendar to select the specific time for the "
 "entry. When the information is correct, click :guilabel:`Apply.`"
 msgstr ""
+"Para corregir el error debes modificar o eliminar la entrada de asistencia. "
+"Haz clic en ella para abrir una ventana emergente con sus detalles. Para "
+"modificar la información de :guilabel:`entrada` o :guilabel:`salida`, haz "
+"clic en el campo :guilabel:`Entrada` o :guilabel:`Salida` y aparecerá un "
+"selector de calendario. Haz clic en la fecha deseada y luego usa el selector "
+"de hora ubicado abajo del calendario para elegir la hora exacta de la "
+"entrada. Haz clic en :guilabel:`Aplicar` una vez que la información sea "
+"correcta."
 
 #: ../../content/applications/hr/attendances/attendance_logs.rst:192
 msgid ""
@@ -3582,6 +3688,8 @@ msgid ""
 "To present different information, adjust the filters and groups in the same "
 "way as in the :guilabel:`Overview` dashboard."
 msgstr ""
+"Para presentar información diferente, ajusta los filtros en grupos de la "
+"misma forma que en el tablero :guilabel:`Resumen`."
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:None
 msgid ""
@@ -13432,6 +13540,9 @@ msgid ""
 "employees. The currency format is determined by the localization setting of "
 "the company."
 msgstr ""
+":guilabel:`Sobregiro para almuerzos`: Ingresa el sobregiro máximo para "
+"empleados. El formato de moneda se determina por los ajustes de localización "
+"de la empresa."
 
 #: ../../content/applications/hr/lunch.rst:29
 msgid ""
@@ -13440,10 +13551,14 @@ msgid ""
 "`Your lunch has been delivered. Enjoy your meal!` populates this field, but "
 "can be modified, if desired."
 msgstr ""
+":guilabel:`Notificación de recepción`: En este campo debes configurar el "
+"mensaje que los usuarios reciben mediante la aplicación **Conversaciones** "
+"cuando les entregan su comida. El mensaje predeterminado es `Se entregó tu "
+"almuerzo. ¡Disfruta tu comida!`, pero puedes modificarlo si así lo deseas."
 
 #: ../../content/applications/hr/lunch.rst:34
 msgid "Translation support"
-msgstr ""
+msgstr "Compatible con traducciones"
 
 #: ../../content/applications/hr/lunch.rst:36
 msgid ""
@@ -13472,6 +13587,8 @@ msgid ""
 "The image below is an example for the :guilabel:`Reception notification` "
 "field in the settings menu."
 msgstr ""
+"La imagen a continuación es un ejemplo para el campo :guilabel:`Notificación "
+"de recepción` en el menú de ajustes."
 
 #: ../../content/applications/hr/lunch.rst:45
 msgid ""
@@ -13481,6 +13598,12 @@ msgid ""
 "company_lunch_notify_message` pop-up window loads with the option to enter a "
 "translation for the other languages used by the database."
 msgstr ""
+"Ve a :menuselection:`la aplicación Almuerzo --> Configuración --> Ajustes`. "
+"Haz clic en el botón :guilabel:`ES` ubicado en la esquina superior derecha "
+"del cuadro de texto dentro de la sección :guilabel:`Notificación de "
+"recepción`. Esta acción abrirá la ventana emergente :guilabel:`Traducir: "
+"company_lunch_notify_message` que te permitirá agregar una traducción para "
+"los otros idiomas que utilizas en la base de datos."
 
 #: ../../content/applications/hr/lunch.rst:50
 msgid ""
@@ -13507,6 +13630,8 @@ msgid ""
 "The translation text box with the current language at the top and "
 "translations below."
 msgstr ""
+"El texto de la traducción con el idioma actual en la parte de arriba y las "
+"traducciones en la parte de abajo."
 
 #: ../../content/applications/hr/lunch.rst:62
 msgid "Locations"
@@ -13588,10 +13713,14 @@ msgid ""
 "descriptive, such as `New Lunch Vendor` or `Order by 11:00 AM`. This field "
 "is **required**."
 msgstr ""
+":guilabel:`Nombre de la alerta`: Escribe un nombre para la alerta. El nombre "
+"debe ser breve y descriptivo, como `Nuevo proveedor de almuerzo` u `Ordena "
+"antes de las 11:00 a. m`. Este campo es **obligatorio**."
 
 #: ../../content/applications/hr/lunch.rst:92
 msgid ":guilabel:`Display`: Select how the alert is shown. The options are:"
 msgstr ""
+":guilabel:`Diseño`: Selecciona cómo se muestra la alerta. Las opciones son:"
 
 #: ../../content/applications/hr/lunch.rst:94
 msgid ""
@@ -13599,6 +13728,9 @@ msgid ""
 "dashboard, in an orange box, above the user's name on the right side of the "
 "dashboard."
 msgstr ""
+":guilabel:`Alerta en la aplicación`: La alerta se puede ver en el tablero "
+"principal de la aplicación **Almuerzo** en un recuadro naranja, arriba del "
+"nombre del usuario en el lado derecho del tablero."
 
 #: ../../content/applications/hr/lunch.rst:96
 msgid ""
@@ -13606,6 +13738,9 @@ msgid ""
 "**Discuss** app in a chat window. If this option is selected, the following "
 "additional field appears:"
 msgstr ""
+":guilabel:`Notificación por chat`: La alerta se envía a los usuarios a "
+"través de la aplicación **Conversaciones**, en una pestaña de chat. Si se "
+"selecciona esta opción, aparecen los siguientes campos adicionales:"
 
 #: ../../content/applications/hr/lunch.rst:99
 msgid ""
@@ -13614,6 +13749,10 @@ msgid ""
 "week`, :guilabel:`Employee who ordered last month`, or :guilabel:`Employee "
 "who ordered last year`."
 msgstr ""
+":guilabel:`Destinatarios`: Selecciona quién recibe la alerta de chat. Las "
+"opciones son: :guilabel:`Todos`, :guilabel:`Empleado que ordenó la semana "
+"pasada`, :guilabel:`Empleado que ordenó el mes pasado`, o :guilabel:`"
+"Empleado que ordenó el año pasado`."
 
 #: ../../content/applications/hr/lunch.rst:103
 msgid ""
@@ -13623,18 +13762,28 @@ msgid ""
 "the locations from the drop-down menu. If this field is left blank, the "
 "alert will **not** be displayed."
 msgstr ""
+":guilabel:`Ubicación`: Selecciona las ubicaciones para las que aparece la "
+"alerta usando el menú desplegable; puedes seleccionar varias ubicaciones. "
+"Este campo es **obligatorio**, por lo tanto, si la alerta se aplica a todas "
+"las ubicaciones, selecciónalas en el menú desplegable. Si este campo se deja "
+"vacío, la alerta **no** se mostrará."
 
 #: ../../content/applications/hr/lunch.rst:107
 msgid ""
 ":guilabel:`Show Until`: If the alert should expire on a specific date, "
 "select the date from the calendar picker."
 msgstr ""
+":guilabel:`Mostrar hasta`: Si la alerta debe caducar en una fecha "
+"específica, selecciona la fecha de la ventana emergente del calendario."
 
 #: ../../content/applications/hr/lunch.rst:109
 msgid ""
 ":guilabel:`Active`: This option is enabled (appears green) by default. To "
 "turn off the alert, click the toggle so that it no longer appears green."
 msgstr ""
+":guilabel:`Activo`: Esta opción se habilita (aparece en verde) de forma "
+"predeterminada. Desactiva la alerta y haz clic en el botón para que ya no "
+"aparezca en verde."
 
 #: ../../content/applications/hr/lunch.rst:111
 msgid ""
@@ -13650,6 +13799,10 @@ msgid ""
 "visible or sent. By default, all seven days are active. Click on a checkbox "
 "to change the setting from active to inactive."
 msgstr ""
+":guilabel:`Tiempo de la notificación`: Selecciona los días de la semana en "
+"la que la alerta es visible o se envía. De forma predeterminada, todos los "
+"siete días estarán activos. Haz clic en la casilla de verificación para "
+"activar o desactivar este ajuste."
 
 #: ../../content/applications/hr/lunch.rst:117
 msgid ""
@@ -13659,6 +13812,12 @@ msgid ""
 "either :guilabel:`AM` or :guilabel:`PM` using the drop-down menu to the "
 "right of the time field."
 msgstr ""
+"Si se seleccionó :guilabel:`Notificación del chat` para la opción "
+":guilabel:`Mostrar`, aparecerá un campo de tiempo abajo del bloque "
+":guilabel:`Tiempo de notificación`, donde se debe ingresar la hora a la que "
+"se envía el mensaje. Después, selecciona si esa hora es en :guilabel:`a. m.` "
+"o :guilabel:`p. m.` usando el menú desplegable a la derecha del campo de "
+"hora."
 
 #: ../../content/applications/hr/lunch.rst:None
 msgid ""
@@ -14148,6 +14307,9 @@ msgid ""
 "The **Lunch** app lets employees place lunch orders, see what is available "
 "each day, and check their account balance, all from one place."
 msgstr ""
+"La aplicación **Almuerzo** permite que los empleados orden su almuerzo, vean "
+"qué está disponible en el día y revisen el balance de su cuenta, todo desde "
+"un solo lugar."
 
 #: ../../content/applications/hr/lunch/orders.rst:10
 msgid ""
@@ -14181,6 +14343,11 @@ msgid ""
 "shows only products that can be purchased that day, based on "
 "the :ref:`vendor's availability <lunch/availability>`."
 msgstr ""
+"En el tablero :guilabel:`Ordena tu almuerzo` principal, podrás ver toda la "
+"información necesaria paran realizar una orden. El filtro predeterminado es "
+"para el día en curso (ejemplo: :icon:`fa-filter` :guilabel:`Miércoles`), "
+"para mostrar solo los productos que se puedan comprar ese día, según la "
+":ref:`según la disponibilidad del proveedor <lunch/availability>`."
 
 #: ../../content/applications/hr/lunch/orders.rst:24
 msgid ""
@@ -14189,6 +14356,10 @@ msgid ""
 "products. To the right of each line is a number, indicating how many "
 "products are associated with that category or vendor."
 msgstr ""
+"El lado izquierdo del tablero muestra varias :guilabel:`Categorías` de "
+"productos disponibles, junto con los :guilabel:`Proveedores` que suministran "
+"los productos. A la derecha de cada línea hay un número que indica cuántos "
+"productos están asociados con esa categoría o proveedor."
 
 #: ../../content/applications/hr/lunch/orders.rst:28
 msgid ""
@@ -14196,6 +14367,10 @@ msgid ""
 "the desired category or vendor to view only items within those selections. "
 "Multiple selections can be made in each section."
 msgstr ""
+"Para filtrar los productos por categorías o proveedores, haz clic en la "
+"casilla de verificación a un lado de la categoría o proveedor deseados para "
+"solo ver los artículos dentro de esas selecciones. Puedes realizar varias "
+"selecciones por cada sección."
 
 #: ../../content/applications/hr/lunch/orders.rst:32
 msgid ""
@@ -14212,6 +14387,10 @@ msgid ""
 "in the :icon:`fa-money` :guilabel:`Available Balance` field), and order "
 "details for the current day, if any orders have been placed."
 msgstr ""
+"El lado derecho del tablero, que actúa como el centro de la cuenta, muestra "
+"el usuario, su ubicación, la fecha actual, su balance "
+"(ubicado en el campo :icon:`fa-money` :guilabel:`Balance disponible`) y los "
+"detalles de la orden del día, si es que se realizó."
 
 #: ../../content/applications/hr/lunch/orders.rst:39
 msgid ""
@@ -14220,6 +14399,10 @@ msgid ""
 "product. If the product is configured as new, it also displays a "
 "green :guilabel:`New` tag."
 msgstr ""
+"La sección media muestra todos los productos en una vista kanban "
+"predeterminada. Cada tarjeta de producto muestra el nombre, costo, "
+"proveedor, foto y descripción del producto. Si el producto se configura como "
+"nuevo, también se mostrará la etiqueta verde :guilabel:`Nuevo`."
 
 #: ../../content/applications/hr/lunch/orders.rst:None
 msgid "The Lunch app dashboard."
@@ -14244,10 +14427,13 @@ msgid ""
 "dashboard by either opening the **Lunch** app or by navigating "
 "to :menuselection:`Lunch app --> My Lunch --> New Order`."
 msgstr ""
+"Ve al tablero principal :guilabel:`Ordena tu almuerzo` para hacer una orden. "
+"Abre la aplicación **Almuerzo** o ve a :menuselection:`Almuerzo --> Mi "
+"almuerzo --> Nueva orden`."
 
 #: ../../content/applications/hr/lunch/orders.rst:57
 msgid "Select the location"
-msgstr ""
+msgstr "Seleccionar la ubicación"
 
 #: ../../content/applications/hr/lunch/orders.rst:59
 msgid ""
@@ -14257,6 +14443,11 @@ msgid ""
 "and select the user's current location (or the location the user wants their "
 "lunch delivered to)."
 msgstr ""
+"Asegúrate de que la ubicación seleccionada en la cuenta del lado derecho del "
+"tablero :guilabel:`Ordena tu almuerzo` sea correcta. Haz clic en "
+":guilabel:`Ubicación` en el menú deplegable para ver todas las ubicaciones "
+"de la aplicación **Almuerzo** y selecciona la ubicación actual del usuario "
+"(o la ubicación en la que el usuario quiere recibir el almuerzo)."
 
 #: ../../content/applications/hr/lunch/orders.rst:65
 msgid ""
@@ -14267,6 +14458,12 @@ msgid ""
 "way, users can order lunch and have it delivered to the location where they "
 "*will be* during lunchtime."
 msgstr ""
+"El horario laboral del usuario, que indica dónde trabaja cada día, **no** se "
+"refleja en el campo :guilabel:`Ubicación`. Todas las ubicaciones disponibles "
+"se deben configurar en la aplicación **Almuerzo** y todas las ubicaciones "
+"estarán disponibles para todos los usuarios, sin importar su ubicación de "
+"trabajo. De esta forma, los usuarios pueden ordenar el almuerzo para que se "
+"los entreguen en la ubicación en la que *ellos estarán* durante el almuerzo."
 
 #: ../../content/applications/hr/lunch/orders.rst:71
 msgid ""
@@ -14275,10 +14472,15 @@ msgid ""
 "the main office as their location in the **Lunch** app, and their order is "
 "delivered to the main office rather than the factory."
 msgstr ""
+"Por ejemplo, un empleado trabaja en la fábrica y tiene una reunión de "
+"almuerzo con su supervisor en la oficina principal, que está a dos calles de "
+"distancia. El empleado selecciona la oficina principal como su ubicación en "
+"la aplicación **Almuerzo** para que su orden se entregue en la oficina "
+"principal y no en la fábrica."
 
 #: ../../content/applications/hr/lunch/orders.rst:76
 msgid "Select the date"
-msgstr ""
+msgstr "Seleccionar una fecha"
 
 #: ../../content/applications/hr/lunch/orders.rst:78
 msgid ""
@@ -14286,6 +14488,10 @@ msgid ""
 "but also for ordering future meals. This feature allows users to plan meals "
 "in advance, without having to place daily orders."
 msgstr ""
+"La aplicación **Almuerzo** permite realizar órdenes no solo para el día en "
+"curso, sino que también para comidas futuras. Esta función permite que los "
+"usuarios planeen comidas con anticipación, sin tener que realizar órdenes "
+"diarias."
 
 #: ../../content/applications/hr/lunch/orders.rst:82
 msgid ""
@@ -14293,12 +14499,18 @@ msgid ""
 "dashboard to open a calendar pop-up window. Click on the desired date to "
 "select it. Any products added are for delivery on the selected date."
 msgstr ""
+"Haz clic en la fecha del lado derecho del tablero :guilabel:`Ordena tu "
+"almuerzo` para abrir una ventana emergente de calendario. Haz clic en la "
+"fecha deseada para seleccionada. Todos los productos agregados se entregarán "
+"en la fecha seleccionada."
 
 #: ../../content/applications/hr/lunch/orders.rst:86
 msgid ""
 "Multiple products with multiple delivery dates can be ordered at once; each "
 "day does not need to be processed separately."
 msgstr ""
+"Se pueden ordenar varios productos con diferentes fechas de entrega al mismo "
+"tiempo. No se debe procesar cada día por separado."
 
 #: ../../content/applications/hr/lunch/orders.rst:90
 msgid "Add products to an order"
@@ -14310,6 +14522,9 @@ msgid ""
 "to add it to an order; it appears in the *Configure Your Order* pop-up "
 "window."
 msgstr ""
+"En el tablero :guilabel:`Ordena tu almuerzo`, haz clic en el producto "
+"deseado y agrégalo a la orden. Aparecerá en la ventana emergente *Configura "
+"tu orden*."
 
 #: ../../content/applications/hr/lunch/orders.rst:95
 msgid ""
@@ -14319,6 +14534,12 @@ msgid ""
 "drinks. Click the checkbox next to any desired extras present in "
 "the :guilabel:`Extras` fields to add them to the order."
 msgstr ""
+"En la parte superior de la ventana emergente está la imagen, el nombre y el "
+"precio del producto. Abajo de eso, hay posibles campos "
+":guilabel:`adicionales` que muestran cualquier :ref:`artículo u opción "
+"adicional <lunch/extras>`, como algún aderezo o bebida. Haz clic en la "
+"casilla de verificación a un lado de cualquier extra deseado en los campos "
+":guilabel:`adicionales` para agregarlo a la orden."
 
 #: ../../content/applications/hr/lunch/orders.rst:100
 msgid ""
@@ -14338,6 +14559,10 @@ msgid ""
 "is used to enter vital information that is then sent to the vendor regarding "
 "the order, such as any special requests or food allergies."
 msgstr ""
+"Abajo del campo :guilabel:`Extras` está la :guilabel:`Descripción` del "
+"producto, seguida del campo :guilabel:`Notas`. El campo :guilabel:`Notas` se "
+"usa para ingresar información muy importante que se envía al proveedor sobre "
+"la orden, como solicitudes especiales o alergias."
 
 #: ../../content/applications/hr/lunch/orders.rst:108
 msgid ""
@@ -14363,10 +14588,14 @@ msgid ""
 "incomplete>`, or being outside the vendors :ref:`operating hours <lunch/"
 "outside-hours>`."
 msgstr ""
+"Hay muchos motivos por los que no se puede realizar una orden: :ref:`no se "
+"tienen los fondos suficientes <lunch/insufficient-funds>`, hay :ref:`una "
+"orden incompleta <lunch/incomplete>` o no es el :ref:`horario laboral <lunch/"
+"outside-hours>` del proveedor."
 
 #: ../../content/applications/hr/lunch/orders.rst:124
 msgid "Insufficient funds"
-msgstr ""
+msgstr "No hay fondos suficientes"
 
 #: ../../content/applications/hr/lunch/orders.rst:126
 msgid ""
@@ -14374,18 +14603,25 @@ msgid ""
 "window exceeds the :guilabel:`Available Balance` for the user, the following "
 "error appears:"
 msgstr ""
+"Si el precio de un artículo en la ventana emergente :guilabel:`Configura tu "
+"orden` excede el :guilabel:`Balance disponible` de un usuario, aparece el "
+"error a continuación:"
 
 #: ../../content/applications/hr/lunch/orders.rst:129
 msgid ""
 "`Your wallet does not contain enough money to order that. To add some money "
 "to your wallet, please contact your lunch manager.`"
 msgstr ""
+"`No cuentas con suficiente dinero en tu billetera para ordenar eso. Contacta "
+"a tu gerente de almuerzo para agregar fondos.`"
 
 #: ../../content/applications/hr/lunch/orders.rst:132
 msgid ""
 "Additionally, the :guilabel:`Add To Cart` button is hidden, and only "
 "the :guilabel:`Discard` button appears."
 msgstr ""
+"Además, el botón :guilabel:`Agregar al carrito` está oculto y solo aparece "
+"el botón :guilabel:`Descartar`."
 
 #: ../../content/applications/hr/lunch/orders.rst:135
 msgid ""
@@ -14393,10 +14629,13 @@ msgid ""
 "<user-accounts>` through a **Lunch** app administrator before placing the "
 "order."
 msgstr ""
+"Si este mensaje de error aparece, el usuario debe :doc:`agregar fondos a su "
+"cuenta de almuerzo <user-accounts>` con la ayuda de un administrador de la "
+"aplicación **Almuerzo** antes de poder realizar la orden."
 
 #: ../../content/applications/hr/lunch/orders.rst:141
 msgid "Incomplete orders"
-msgstr ""
+msgstr "Órdenes incompletas"
 
 #: ../../content/applications/hr/lunch/orders.rst:143
 msgid ""
@@ -14413,6 +14652,9 @@ msgid ""
 "An error occurs when a configured product **requires** the user to select an "
 "option in the :guilabel:`Extras` field, but the user neglects to make one."
 msgstr ""
+"Si un producto configurado **requiere** que un usuario seleccione una opción "
+"en el campo :guilabel:`Extras` pero el usuario no hace una selección, "
+"aparecerá un error."
 
 #: ../../content/applications/hr/lunch/orders.rst:149
 msgid ""
@@ -14458,7 +14700,7 @@ msgstr ""
 
 #: ../../content/applications/hr/lunch/orders.rst:168
 msgid "Outside vendor hours"
-msgstr ""
+msgstr "Fuera del horario laboral del proveedor"
 
 #: ../../content/applications/hr/lunch/orders.rst:170
 msgid ""
@@ -14466,6 +14708,9 @@ msgid ""
 "availability>` configured, with both their operating hours as well as the "
 "deadline for sending orders via email."
 msgstr ""
+"Cada proveedor en la aplicación **Almuerzo** tiene una :ref:`disponibilidad <"
+"lunch/availability>` configurada, con sus horas laborales y su horario "
+"límite para enviar órdenes por correo."
 
 #: ../../content/applications/hr/lunch/orders.rst:173
 msgid ""
@@ -14473,16 +14718,22 @@ msgid ""
 "order window is closed, the following message appears on the *Configure Your "
 "Product* pop-up window: `The orders for this vendor have already been sent.`"
 msgstr ""
+"Si el usuario hace clic en un producto de un proveedor que no está en "
+"horario laboral o cuyo horario para tomar órdenes ya terminó, aparecerá el "
+"mensaje a continuación en la ventana emergente *Configura tu producto*: `La "
+"orden para este proveedor ya se envió.`"
 
 #: ../../content/applications/hr/lunch/orders.rst:177
 msgid ""
 "Click the :guilabel:`Discard` button, and make a selection from another "
 "vendor."
 msgstr ""
+"Haz clic en el botón :guilabel:`Descartar` para seleccionar un producto de "
+"otro proveedor."
 
 #: ../../content/applications/hr/lunch/orders.rst:180
 msgid "Order summary"
-msgstr ""
+msgstr "Resumen de la orden"
 
 #: ../../content/applications/hr/lunch/orders.rst:182
 msgid ""
@@ -14490,6 +14741,9 @@ msgid ""
 "Order` summary, located on the right-side of the :guilabel:`Order Your "
 "Lunch` dashboard."
 msgstr ""
+"Cuando los artículos se agregan a una orden, estos aparecen en el resumen "
+":guilabel:`Tu orden`, ubicado a la derecha del tablero :guilabel:`Ordena tu "
+"almuerzo`."
 
 #: ../../content/applications/hr/lunch/orders.rst:185
 msgid ""
@@ -14497,18 +14751,26 @@ msgid ""
 "user's location, any extras added, the quantity, a status tag, the delivery "
 "date for the order, and the total amount."
 msgstr ""
+"Cada producto se muestra en su propia tarjeta de kanban, con el nombre del "
+"producto, la ubicación del usuario y cualquier extra que se haya agregado, "
+"la cantidad, la etiqueta de estado, la fecha de entrega de la orden y el "
+"monto total."
 
 #: ../../content/applications/hr/lunch/orders.rst:188
 msgid ""
 "The available tags that can be displayed for each item in "
 "the :guilabel:`Your Order` section are:"
 msgstr ""
+"Las etiquetas disponibles que se pueden mostrar para cada elemento en la "
+"sección :guilabel:`Tu orden` son:"
 
 #: ../../content/applications/hr/lunch/orders.rst:190
 msgid ""
 ":guilabel:`To Order`: The product has been added to the cart, but has not "
 "been purchased yet by the user yet. This tag appears in gray."
 msgstr ""
+":guilabel:`Por ordenar`: El producto se agregó al carrito, pero el usuario "
+"todavía no lo ha comprado. Esta etiqueta aparece en gris."
 
 #: ../../content/applications/hr/lunch/orders.rst:192
 msgid ""
@@ -14516,6 +14778,9 @@ msgid ""
 "waiting to be sent to the vendor by a **Lunch** app manager. This tag "
 "appears in purple."
 msgstr ""
+":guilabel:`Ordenado`: El usuario compró el producto y está esperando a que "
+"el gerente de la aplicación **Almuerzo** lo envíe al proveedor. Esta "
+"etiqueta aparece en morado."
 
 #: ../../content/applications/hr/lunch/orders.rst:195
 msgid ""
@@ -14524,6 +14789,11 @@ msgid ""
 "beneath the listed product. The product price adjusts in real-time to "
 "reflect the cost for the currently selected quantity of the product."
 msgstr ""
+"Las cantidades de los productos se pueden ajuster si haces clic en los "
+"iconos :icon:`fa-plus` :guilabel:`(plus)` o :icon:`fa-minus` :guilabel:`"
+"(menos)` abajo del producto enlistado. El precio del producto se ajusta en "
+"tiempo real para reflejar los costos de la cantidad seleccionada del "
+"producto."
 
 #: ../../content/applications/hr/lunch/orders.rst:None
 msgid ""
@@ -14537,6 +14807,8 @@ msgid ""
 "Beneath the :guilabel:`Your Order` section is a summary of the purchasing "
 "information, including the following:"
 msgstr ""
+"Abajo de la sección :guilabel:`Tu orden` hay un resumen de la información de "
+"compra, que incluye:"
 
 #: ../../content/applications/hr/lunch/orders.rst:205
 msgid ""
@@ -14544,12 +14816,17 @@ msgid ""
 "lunch order, including all items already ordered, received, and all pending "
 "orders."
 msgstr ""
+":guilabel:`Total`: Este campo muestra el monto total de la orden completa "
+"del día, incluyendo todos los artículos ordenados, recibidos y órdenes "
+"pendientes."
 
 #: ../../content/applications/hr/lunch/orders.rst:207
 msgid ""
 ":guilabel:`Already Paid`: This field indicates how much has been paid that "
 "day towards the :guilabel:`Total` amount."
 msgstr ""
+":guilabel:`Pagado`: Este campo indica cuánto del monto :guilabel:`total` del "
+"día se ha pagado."
 
 #: ../../content/applications/hr/lunch/orders.rst:209
 msgid ""
@@ -14557,10 +14834,13 @@ msgid ""
 "remaining :guilabel:`Total` amount must be paid in order to place the "
 "currently configured order (items with a tag of :guilabel:`To Order`)."
 msgstr ""
+":guilabel:`Por pagar`: Este campo muestra cuánto del monto :guilabel:`total` "
+"se debe pagar para realizar la orden "
+"(con los artículos con la etiqueta :guilabel:`Por ordenar`)."
 
 #: ../../content/applications/hr/lunch/orders.rst:None
 msgid "The various account totals for the user's account."
-msgstr ""
+msgstr "Los diferentes totales para la cuenta del usuario."
 
 #: ../../content/applications/hr/lunch/orders.rst:216
 msgid ""
@@ -14570,6 +14850,11 @@ msgid ""
 "multiple meals available for purchase for the office (not just lunch), and "
 "so on."
 msgstr ""
+"Los usuarios pueden realizar diferentes órdenes a lo largo del día, no están "
+"restringidos a solo una orden por día. Es posible que se deban realizar "
+"varios pedidos, pues los usuarios pueden olvidar artículos a una orden, o "
+"porque hay varias comidas disponibles para comprar en la oficina "
+"(no solo el almuerzo), etc."
 
 #: ../../content/applications/hr/lunch/orders.rst:221
 msgid ""
@@ -14577,10 +14862,13 @@ msgid ""
 "configured, it is possible to order breakfast, lunch, dinner, coffee, and "
 "snacks."
 msgstr ""
+"Dependiendo de los distintos proveedores y de cómo estén configurados ellos "
+"y sus productos, es posible ordenar desayunos, almuerzos, cenas, café y "
+"bocadillos."
 
 #: ../../content/applications/hr/lunch/orders.rst:225
 msgid "Cancel an order"
-msgstr ""
+msgstr "Cancelar una orden"
 
 #: ../../content/applications/hr/lunch/orders.rst:227
 msgid ""
@@ -14589,12 +14877,19 @@ msgid ""
 "section can be cancelled. All orders that have been sent appear in "
 "the :guilabel:`Passed orders` section, and are ineligible for cancellation."
 msgstr ""
+"Las órdenes se pueden cancelar en cualquier momento, siempre y cuando **no** "
+"se hayan enviado al proveedor. Todas las órdenes que aparecen en la sección "
+":guilabel:`Tu orden` se pueden cancelar. Todas las órdenes que se han "
+"enviado aparecen en la sección :guilabel:`Órdenes aprobadas` y se pueden "
+"cancelar."
 
 #: ../../content/applications/hr/lunch/orders.rst:231
 msgid ""
 "Orders can be cancelled in two ways, :ref:`individually <lunch/cancel-one>`, "
 "or :ref:`in bulk <lunch/cancel-all>`."
 msgstr ""
+"Las órdenes se pueden cancelar de dos formas, de forma :ref:`individual <"
+"lunch/cancel-one>` o :ref:`en lote <lunch/cancel-all>`."
 
 #: ../../content/applications/hr/lunch/orders.rst:235
 msgid ""
@@ -14602,10 +14897,14 @@ msgid ""
 "app --> My Lunch --> My Order History`. A gray :guilabel:`Cancelled` icon "
 "appears next to any cancelled orders."
 msgstr ""
+"Para revisar y asegurar que la orden se haya cancelado, ve a :menuselection:`"
+"la aplicación Almuerzo --> Mi almuerzo --> Mi historial de la orden`. "
+"Aparece un icono gris de :guilabel:`Cancelado` a un lado de todas las "
+"órdenes canceladas."
 
 #: ../../content/applications/hr/lunch/orders.rst:241
 msgid "Cancel an individual item"
-msgstr ""
+msgstr "Cancelar un artículo individual"
 
 #: ../../content/applications/hr/lunch/orders.rst:243
 msgid ""
@@ -14615,10 +14914,14 @@ msgid ""
 "cancelled, and the product disappears from the :guilabel:`Your Order` "
 "section."
 msgstr ""
+"En el tablero :guilabel:`Ordena tu almuerzo` haz clic en el icono :icon:`fa-"
+"minus` :guilabel:`(menos)` abajo del producto deseado en la sección "
+":guilabel:`Tu orden`, hasta que la cantidad sea cero. La orden se cancela y "
+"el producto desaparece de la sección :guilabel:`Tu orden`."
 
 #: ../../content/applications/hr/lunch/orders.rst:250
 msgid "Cancel all items"
-msgstr ""
+msgstr "Cancelar todos los artículos"
 
 #: ../../content/applications/hr/lunch/orders.rst:252
 msgid ""
@@ -14627,6 +14930,10 @@ msgid ""
 "Order` button at the bottom of the right-side of the dashboard, and all "
 "products are cancelled."
 msgstr ""
+"Todos los artículos en la sección :guilabel:`Tu orden` del tablero "
+":guilabel:`Ordena tu almuerzo` se pueden cancelar al mismo tiempo. Haz clic "
+"en el botón :guilabel:`Eliminar orden` en la parte inferior derecha del "
+"tablero para cancelar todos los productos."
 
 #: ../../content/applications/hr/lunch/orders.rst:257
 msgid "Submit an order"
@@ -49753,6 +50060,10 @@ msgid ""
 "report in a default stacked (:icon:`fa-database`) bar chart (:icon:`fa-bar-"
 "chart`)."
 msgstr ""
+"Para ver el reporte de *análisis de recompensas*, ve a :menuselection:`"
+"Referidos --> Reportes --> Recompensas`. Esta acción abre el reporte de "
+":guilabel:`análisis de recompensas` en un gráfico de barras apilado "
+"(:icon:`fa-database`) (:icon:`fa-bar-chart`)."
 
 #: ../../content/applications/hr/referrals/rewards_report.rst:21
 msgid ""
@@ -49773,11 +50084,20 @@ msgid ""
 "and :guilabel:`Electric Bicycle`; therefore, inventory for those items does "
 "not need to be as high as the :guilabel:`Chocolate Covered Nuts`."
 msgstr ""
+"Este reporte muestra que las :guilabel:`nueces cubiertas de chocolate` son "
+"la recompensa más deseada, con 23 unidades entregadas a empleados. También "
+"puedes ver que los empleados casi no solicitan la :guilabel:`sudadera`, la "
+":guilabel:`mochila`, la :guilabel:`tableta` ni la :guilabel:`bicicleta "
+"eléctrica`. Por este motivo no es necesario mantener tantos artículos de "
+"estos en el inventario a diferencia de las :guilabel:`nueces cubiertas de "
+"chocolate`."
 
 #: ../../content/applications/hr/referrals/rewards_report.rst:None
 msgid ""
 "The rewards report showing the chocolate covered nuts as the most requested."
 msgstr ""
+"El reporte de recompensas que muestra las nueces cubiertas de chocolate como "
+"la opción más solicitada."
 
 #: ../../content/applications/hr/referrals/share_jobs.rst:3
 msgid "Share job positions"

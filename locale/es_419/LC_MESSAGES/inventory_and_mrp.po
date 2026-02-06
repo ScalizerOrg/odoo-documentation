@@ -30,8 +30,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-30 18:30+0000\n"
-"PO-Revision-Date: 2026-02-03 23:20+0000\n"
-"Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
+"PO-Revision-Date: 2026-02-05 23:24+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/inventory_and_mrp/es_419/>\n"
 "Language: es_419\n"
@@ -8820,7 +8820,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:3
 msgid "Pack-in-pack"
-msgstr ""
+msgstr "Paquete dentro de otro paquete"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:5
 msgid ""
@@ -8832,6 +8832,13 @@ msgid ""
 "This makes it possible to move the entire group with a single scan, rather "
 "than scanning each pallet individually."
 msgstr ""
+"Para operaciones de almacén más complejas a veces es necesario gestionar "
+"grupos de contenedores (por ejemplo, agrupar pallets juntos). Estos "
+"contenedores se pueden combinar de forma física, o agruparlos de forma "
+"lógica a nivel de base de datos para que se gestionen como una misma unidad "
+"para algunos movimientos de stock sin perder la visibilidad de su estructura "
+"interna. Esto hace que sea posible mover el grupo completo con un escaneo, "
+"en lugar de escanear cada pallet de forma individual."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:14
 msgid ""
@@ -8840,41 +8847,58 @@ msgid ""
 "the :guilabel:`Packages` setting. Be sure to click :guilabel:`Save` before "
 "exiting this page."
 msgstr ""
+"Antes de trabajar con diferentes ajustes de paquetes dentro de un paquete, "
+"abre :menuselection:`la aplicación Inventario --> Configuración --> Ajustes` "
+"y habilita la opción :guilabel:`Paquetes`. Asegúrate de hacer clic en "
+":guilabel:`Guardar` antes de salir de esta página."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
 msgid "Enable Packages in the Inventory configuration settings."
 msgstr ""
+"Activa los paquetes en la configuración de los ajustes de la aplicación "
+"Inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:22
 msgid "Set package type"
-msgstr ""
+msgstr "Establecer el tipo de paquete"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:24
 msgid ""
 "The *Set Package Type* setting must be enabled for all operations that "
 "require pack-in-pack functionality."
 msgstr ""
+"El ajuste *Establecer tipo de paquete* se debe activar para todas las "
+"operaciones que requieran la función paquetes dentro de un paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:27
 msgid ""
 "Open :menuselection:`Inventory app --> Configuration --> Operation Types`. "
 "The :guilabel:`Operation Types` page opens. Open an operation type."
 msgstr ""
+"Abre la :menuselection:`aplicación Inventario --> Configuración --> Tipos de "
+"operación`. Se abrirá la página :guilabel:`Tipos de operación`. Abre el tipo "
+"de operación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:30
 msgid ""
 "On the operation type form, in the :guilabel:`Packages` section, "
 "select :guilabel:`Set Package Type`."
 msgstr ""
+"En el formulario del tipo de operación, en la sección :guilabel:`Paquetes`, "
+"selecciona :guilabel:`Establecer tipo de paquete`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:34
 msgid ""
 ":guilabel:`Set Package Type` is enabled for the `Receipts` operation type."
 msgstr ""
+":guilabel:`Establecer tipo de paquete` está habilitado para el tipo de "
+"operación `Recepciones`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:0
 msgid "Update the Set Package Type setting on the operation type form."
 msgstr ""
+"Actualiza la opción Establecer tipo de paquete en el formulario del tipo de "
+"operación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:40
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:125
@@ -8907,17 +8931,23 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:49
 msgid ":guilabel:`Package Type` (required): Define the package type's name."
 msgstr ""
+":guilabel:`Tipo de paquete` (obligatorio): Define el nombre del tipo de "
+"paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:50
 msgid ""
 ":guilabel:`Size`: Define the package dimensions in millimeters (mm). The "
 "fields, from left to right, define the Length, Width, and Height."
 msgstr ""
+":guilabel:`Tamaño`: Define las dimensiones del paquete en milímetros (mm). "
+"Los campos, de izquierda a derecha, definen la longitud, ancho y altura."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:52
 msgid ""
 ":guilabel:`Weight`: weight of an empty package (e.g., an empty box, pallet)."
 msgstr ""
+":guilabel:`Peso`: El peso de un paquete vacío "
+"(por ejemplo, una caja vacía, un pallet)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:55
 msgid ""
@@ -8926,6 +8956,10 @@ msgid ""
 "the :guilabel:`Weight` field, in the :guilabel:`Inventory` tab, of each "
 "product form."
 msgstr ""
+"Odoo calcula el peso del paquete, para esto suma el peso del paquete vacío "
+"más el peso de los artículos. Esta información se puede encontrar en el "
+"campo :guilabel:`Peso`, en la pestaña :guilabel:`Inventario` de cada "
+"formulario de producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:148
@@ -8947,12 +8981,16 @@ msgid ""
 ":guilabel:`Sequence Prefix`: Specify a prefix to use when a new package name "
 "is created by Odoo."
 msgstr ""
+":guilabel:`Prefijo de secuencia`: Especifica el prefijo que se usará cuando "
+"Odoo cree un nuevo nombre de paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:64
 msgid ""
 "Use `PAL` for the `Pallet` package type. When the first package of the "
 "`Pallet` type is created, it is named `PAL0000001`."
 msgstr ""
+"Usa `PAL` para el tipo de paquete `Pallet`. Cuando se cree el primer paquete "
+"de tipo `Pallet`, se llamará `PAL0000001`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:67
 msgid ""
@@ -8960,6 +8998,9 @@ msgid ""
 "only within that company. Leave the field blank if it is available at all "
 "companies."
 msgstr ""
+":guilabel:`Empresa`: Especifica una empresa si quieres que el tipo de "
+"paquete solo esté disponible dentro de esa empresa. Deja el campo en blanco "
+"si debe estar disponible para todas las empresas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:69
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
@@ -8980,17 +9021,20 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
 msgid "Create a custom package type."
-msgstr ""
+msgstr "Crea un tipo de paquete personalizado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:76
 msgid "Pack-in-pack process"
-msgstr ""
+msgstr "Proceso de paquetes dentro de un paquete"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:78
 msgid ""
 "After :guilabel:`Set Package Type` is enabled in the operation type form, "
 "pack-in-pack can be used from that operation type."
 msgstr ""
+"Después de activar :guilabel:`Establecer tipo de paquete` en el formulario "
+"de tipo de operación, se podrá usar la opción paquetes dentro de paquete "
+"para ese tipo de operación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:81
 msgid ""
@@ -8998,18 +9042,25 @@ msgid ""
 "operations for that operation type displays. Open an operation from that "
 "list."
 msgstr ""
+"Abre el tipo de operación desde el menú :guilabel:`Operaciones`. Se mostrará "
+"la lista de operaciones para ese tipo de operación. Abre una operación de "
+"esa lista."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:84
 msgid ""
 "To put the contents of a line into a single package, click "
 "the :guilabel:`Details` link on the far right of the product line."
 msgstr ""
+"Para poner los contenidos de una línea dentro de un mismo paquete, haz clic "
+"en el enlace :guilabel:`Detalles` a la derecha de la línea del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
 msgid ""
 "Use the Details link to open the Detailed Operations window and specify a "
 "package."
 msgstr ""
+"Usa el enlace Detalles para abrir la ventana Operaciones detalladas y "
+"especificar un paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:90
 msgid ""
@@ -9021,14 +9072,25 @@ msgid ""
 "the total :guilabel:`Demand`. Click :guilabel:`Save` to create the package "
 "in Odoo."
 msgstr ""
+"Se abrirá la ventana *Operaciones detalladas*, en la que se puede "
+"especificar una ubicación de :guilabel:`almacenamiento`, el nombre del "
+":guilabel:`paquete de destino` y la :guilabel:`Cantidad` de artículos que se "
+"pondrán en ese paquete. Para separar el inventario en varios paquetes, haz "
+"clic en :guilabel:`Agregar una línea`. Asegúrate de que, al sumar la "
+":guilabel:`cantidad` de cada línea, se sume el total de la "
+":guilabel:`demanda`. Haz clic en :guilabel:`Guardar` para crear el paquete "
+"en Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
 msgid "Specify a Destination Package in the Detailed Operations form."
 msgstr ""
+"Especifica un paquete de destino en el formulario de Operaciones detalladas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:99
 msgid "Repeat this process for all product lines on the operation form."
 msgstr ""
+"Repite este proceso para todas las líneas de producto en el formulario de la "
+"operación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:101
 msgid ""
@@ -9036,6 +9098,10 @@ msgid ""
 "form to put all items with a :guilabel:`Quantity` greater than `0.00` into a "
 "package. The *Put in Pack* pop-up window opens."
 msgstr ""
+"También puedes hacer clic en el botón :guilabel:`Poner en el paquete` en el "
+"fomulario de operación para poner todos los artículos cuya "
+":guilabel:`cantidad` sea más que `0.00` en un paquete. Se abrirá la ventana "
+"emergente *Incluir en el paquete*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:104
 msgid ""
@@ -9044,10 +9110,15 @@ msgid ""
 "create a new package. Then click the :guilabel:`Put in Pack` button. The "
 "package name appears in the product line's :guilabel:`Packages` field."
 msgstr ""
+"En la ventana *Incluir en el paquete* debes especificar el :guilabel:`Tipo "
+"de paquete` y el :guilabel:`Paquete`, o deja el campo :guilabel:`Paquete` "
+"para crear un paquete nuevo. Después, haz clic en el botón :guilabel:`"
+"Incluir en el paquete`. El nombre del paquete aparecerá en el campo "
+":guilabel:`Paquetes` de la línea del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
 msgid "Specify a Package Type and, optionally, a package name."
-msgstr ""
+msgstr "Especifica el tipo y, de forma opcional, el nombre del paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:112
 msgid ""
@@ -9055,16 +9126,21 @@ msgid ""
 "`Orange Juice Cans`, `Sparkling Water Cans`, and `Soda Cans`. When the order "
 "arrives, each product arrives in its own box of 20 cans."
 msgstr ""
+"Una empresa realizó una orden de `20` unidades de `latas de jugo de manzana`"
+", `latas de jugo de naranja`, `latas de agua mineral` y `latas de refresco`. "
+"Cuando la orden llega, cada producto llega en su respectiva caja de 20 latas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:116
 msgid ""
 "The warehouse manager specifies a separate package for each product line on "
 "the receipt."
 msgstr ""
+"El gerente del almacén especifica un paquete separado por cada línea de "
+"producto en la recepción."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:0
 msgid "Four packages are created on the receipt form."
-msgstr ""
+msgstr "Se crean cuatro paquetes en el formulario de recepción."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:121
 msgid ""
@@ -9074,6 +9150,12 @@ msgid ""
 "the :guilabel:`Packages` field for the product lines in the greater package "
 "updates with the new package name."
 msgstr ""
+"Después, para organizar todos los paquetes en una misma unidad grande "
+"(por ejemplo, para guardar varias cajas de soda en un mismo pallet), haz "
+"clic en el botón :guilabel:`Incluir en el paquete`. Después de cerrar la "
+"ventana *Incluir en el paquete*, el campo :guilabel:`Paquetes` de las líneas "
+"de productos en los paquetes más grandes se actualiza con el nuevo nombre "
+"del paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:127
 msgid ""
@@ -9084,20 +9166,28 @@ msgid ""
 "The :guilabel:`Packages` field for all product lines updates to show the "
 "pallet package name, `PAL0000001`."
 msgstr ""
+"Siguiendo el ejemplo anterior, el gerente del almacén quiere empaquetar "
+"todos los productos en un mismo pallet para almacenarlos en el almacén. Hace "
+"clic en el botón :guilabel:`Incluir en el paquete` y luego, en la ventana *"
+"Incluir en el paquete*, especifican `Pallet` como :guilabel:`Tipo de paquete`"
+". El campo :guilabel:`Paquetes` de todas las líneas de productos se "
+"actualiza para mostrar el nombre del paquete, `PAL0000001`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:0
 msgid "The Packages field updates with a new package name."
-msgstr ""
+msgstr "El campo Paquetes se actualiza con un nuevo nombre de paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:136
 msgid ""
 "Be sure to :guilabel:`Validate` the operation to process its move in "
 "inventory."
 msgstr ""
+"Asegúrate de :guilabel:`Validar` la operación para procesar el movimiento en "
+"Inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:139
 msgid "Viewing the packages in an operation"
-msgstr ""
+msgstr "Ver los paquetes en una operación"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:141
 msgid ""
@@ -9107,14 +9197,20 @@ msgid ""
 "largest package assigned to the operation. To view all packages, remove "
 "the :guilabel:`Main Packages` filter."
 msgstr ""
+"Para ver los paquetes creados a partir de una operación, haz clic en el "
+"botón inteligente :icon:`fa-cubes` :guilabel:`Paquetes` en la parte superior "
+"del formulario de operación. De forma predeterminada, esta lista se filtra "
+"por los :guilabel:`Paquetes principales`, o el paquete más grande asignado a "
+"la operación. Para ver todos los paquetes, elimina el filtro :guilabel:`"
+"Paquetes principales`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
 msgid "Show all packages on the Packages list."
-msgstr ""
+msgstr "Mostrar todos los paquetes en la lista Paquetes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:150
 msgid "Removing packages from parent packages"
-msgstr ""
+msgstr "Eliminar paquetes de otros paquetes principales"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:152
 msgid ""
@@ -9124,22 +9220,32 @@ msgid ""
 "largest package assigned to the operation. To view all packages, remove "
 "the :guilabel:`Main Packages` filter."
 msgstr ""
+"Para eliminar paquetes más pequeños de los paquetes principales, haz clic en "
+"el botón inteligente :icon:`fa-cubes` :guilabel:`Paquetes` en la parte "
+"superior del formulario de la operación. De forma predeterminada, se filtra "
+"por el :guilabel:`Paquete principal`, o el paquete más grande asignado a la "
+"operación. Para ver todos los paquetes, elimina el filtro :guilabel:`"
+"Paquetes principales`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:157
 msgid ""
 "Select the check boxes next to the packages that you want to remove, then "
 "click the :guilabel:`Remove` button."
 msgstr ""
+"Selecciona las cajas de verificación a un lado de los paquetes que quieras "
+"eliminar y después haz clic en el botón :guilabel:`Eliminar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:161
 msgid "Viewing packages in inventory"
-msgstr ""
+msgstr "Ver paquetes en el inventario"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:163
 msgid ""
 "Open :menuselection:`Inventory app --> Products --> Packages`. All packages "
 "in inventory are listed here."
 msgstr ""
+"Abre :menuselection:`la aplicación Inventario --> Productos --> Paquetes`. "
+"Todos los paquetes en el inventario se muestra aquí."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:166
 msgid ""
@@ -9147,10 +9253,15 @@ msgid ""
 "packages. The products in the package, including the child packages they are "
 "stored in, are listed on the package form."
 msgstr ""
+"Para ver los contenidos de una página, abre el paquete de una lista de "
+"paquetes. Los productos en el paquete, incluyendo los paquetes secundarios "
+"en los que están almacenados, se muestran en el formulario del paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:None
 msgid "Child packages are listed on the package reference form."
 msgstr ""
+"Los paquetes secundarios se muestran en el formulario de referencia del "
+"paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:7
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:32
@@ -9454,8 +9565,8 @@ msgstr ""
 msgid ""
 ":guilabel:`Weight`: weight of an empty package (e.g. an empty box, pallet)."
 msgstr ""
-":guilabel:`Peso`: el peso de un paquete vacío (por ejemplo, una caja vacía, "
-"un palé)."
+":guilabel:`Peso`: El peso de un paquete vacío "
+"(por ejemplo, una caja vacía, un pallet)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:144
 msgid ""
