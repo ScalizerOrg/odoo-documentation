@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 18:30+0000\n"
+"POT-Creation-Date: 2026-02-06 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -19183,6 +19183,7 @@ msgstr ""
 #: ../../content/applications/sales/rental.rst:40
 #: ../../content/applications/sales/rental/products.rst:10
 #: ../../content/applications/sales/rental/service_products.rst:16
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:34
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
 #: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
@@ -20759,6 +20760,171 @@ msgstr ""
 msgid "Amazon Connector"
 msgstr "Amazon Connector"
 
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:3
+msgid "Tracking lot or serial number products with FBA orders"
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:7
+msgid ""
+"When selling products tracked by lots or unique serial numbers via the "
+"Fulfilled By Amazon :abbr:`FBA (Fulfilled by Amazon)` feature, Amazon's API "
+"does not send the specific lot or unique serial number used for the sale. "
+"The lack of information triggers a synchronization failure in Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:11
+msgid ""
+"To successfully set up an Amazon :abbr:`FBA (Fulfilled by Amazon)` order, "
+"configure a :ref:`product kit <amazon_connector/fba/product-kit>` in Odoo "
+"based on the original Amazon product. When a new |FBA| order syncs, Odoo "
+"sells the product kit, which prevents the error that occurs with the tracked "
+"product."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:16
+msgid ""
+"When :ref:`resupplying the Amazon Fulfillment center <amazon_connector/fba/"
+"follow-deliveries>`, transfer the tracked product to the `WH/Amazon` "
+"location. This records the movement in traceability reports and accounts for "
+"inventory consumption at the point of transfer rather than the point of sale."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:22
+msgid ""
+"The `WH/Amazon` location is automatically created as a default location when "
+"the first Amazon account is linked."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:25
+msgid ""
+"Under this system, the quantity of the product kits remains negative "
+"indefinitely. Treat this as a standard byproduct of the bypass, as the "
+"actual stock levels are managed through the initial fulfillment center "
+"transfer."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:30
+msgid ""
+"This setup does not track the specific lot or unique serial number used for "
+"the sale. It only ensures that the |FBA| order can be processed without "
+"synchronization failures."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:36
+msgid "The following apps are essential for the product kit workflow:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:38
+msgid ""
+"**Sales app**: Enables :ref:`connecting an Amazon Seller account to Odoo "
+"<amazon/setup>`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:39
+msgid ""
+"**Inventory app**: Allows for product replenishment by :ref:`warehouse "
+"location <use_locations/configuration>`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:41
+msgid ""
+"**Manufacturing app**: Enables :ref:`BoM creation <manufacturing/basic_setup/"
+"bom-setup>` for products and product kits."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:47
+msgid "Create a product kit"
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:49
+msgid ""
+"To enable accurate tracking, create a product kit for the existing Amazon "
+"product. When a new |FBA| order syncs, Odoo sells the kit, which prevents "
+"the error that occurs with the tracked product."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:52
+msgid ""
+"Navigate to :menuselection:`Sales app --> Products --> Products` and "
+"click :guilabel:`New`. Then, :ref:`create a kit as a product <manufacturing/"
+"advanced_configuration/kits>` that represents the Amazon item."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:57
+msgid "*Never* enable :guilabel:`Track Inventory` for the product kit."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:None
+msgid "Example of a product form configured to be a kit in the Inventory app."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:65
+msgid "Link the Amazon item SKU to the product kit"
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:67
+msgid ""
+"Next, go to the :menuselection:`Sales app --> Configuration --> Offers` and "
+"click :guilabel:`New`. Enter the desired :ref:`Amazon market <amazon/"
+"supported-marketplaces>` in the :guilabel:`Marketplace` column, and select "
+"the product kit in the :guilabel:`Product` column. In the :guilabel:`Amazon "
+"SKU` column, enter the SKU of the existing Amazon product."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:73
+msgid ""
+"This method removes the link between the Amazon SKU and the tracked product. "
+"Breaking this connection is necessary because Odoo cannot automatically "
+"assign specific tracking numbers during the sync process."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:77
+msgid ""
+"Keeping this link active causes a synchronization failure for every |FBA| "
+"order. By disconnecting them, the system bypasses the tracking requirement "
+"and allows the sync to complete."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:None
+msgid ""
+"Example of a kit product linked to an Amazon SKU in the Offers page in the "
+"Sales app."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:86
+msgid "Create the BoM for the product kit"
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:88
+msgid ""
+"Navigate to the product kit by clicking the :menuselection:`Sales app --> "
+"Products --> Products` and select the product kit. Click the :icon:`fa-"
+"flask` :guilabel:`Bill of Materials` smart button and :ref:`create a kit BoM "
+"<manufacturing/advanced_configuration/kit-bom>`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:92
+msgid ""
+"In the :guilabel:`Components` tab, click :guilabel:`Add a line` and type in "
+"the name of the Amazon product that is tracked by lots or a unique serial "
+"number."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:96
+msgid "The Amazon product must be **the sole component** of the kit BoM."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:None
+msgid ""
+"Example of the kit BoM for the kit product to represent the Amazon listing."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/fba.rst:101
+msgid ""
+"Now the Amazon product can be processed and tracked accurately in the "
+"**Sales** app by using the kit product and its associated BoM."
+msgstr ""
+
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:3
 msgid "Amazon Connector features"
 msgstr "Funktioner för Amazon Connector"
@@ -21058,7 +21224,7 @@ msgid "Amazon.nl"
 msgstr "Amazon.nl"
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:112
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:188
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:190
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:199
 msgid ":doc:`setup`"
 msgstr ":doc:`setup`"
@@ -21298,11 +21464,11 @@ msgstr ""
 "synkronisera dessa order, eller klicka på :guilabel:`Recover Order` och ange "
 "den relevanta Amazon Order Reference."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:94
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:96
 msgid "Follow deliveries in FBA"
 msgstr "Följ leveranser i FBA"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:96
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:98
 msgid ""
 "When an FBA (Fulfilled by Amazon) order is synchronized in Odoo, a stock "
 "move is recorded in the *Inventory* app for each sales order item. That way, "
@@ -21312,7 +21478,7 @@ msgstr ""
 "lagerflytt i appen *Inventory* för varje försäljningsorderartikel. På så "
 "sätt sparas den i systemet."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:99
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:101
 msgid ""
 "Inventory managers can access these stock moves by navigating "
 "to :menuselection:`Inventory app --> Reporting --> Moves History`."
@@ -21320,7 +21486,7 @@ msgstr ""
 "Lageransvariga kan komma åt dessa lagerflyttar genom att navigera "
 "till :menuselection:`Inventory app --> Reporting --> Moves History`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:102
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:104
 msgid ""
 "For FBA orders, the stock move is automatically created in Odoo by the "
 "Amazon connector, thanks to the shipping status of Amazon. When sending new "
@@ -21333,7 +21499,7 @@ msgstr ""
 "Amazon bör användaren manuellt skapa en plockning (leveransorder) för att "
 "överföra dessa produkter från sitt lager till Amazon-platsen."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:107
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:109
 msgid ""
 "To follow *Amazon (FBA)* stock in Odoo, make an inventory adjustment after "
 "replenishing stock. An automated replenishment from reordering rules can "
@@ -21343,7 +21509,7 @@ msgstr ""
 "påfyllning av lager. En automatiserad påfyllning från ombeställningsregler "
 "kan också utlösas på Amazon-platsen."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:110
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:112
 msgid ""
 "The Amazon location is configurable by accessing the Amazon account managed "
 "in Odoo. To access Amazon accounts in Odoo navigate to :menuselection:`Sales "
@@ -21355,7 +21521,7 @@ msgstr ""
 "till :menuselection:`Sales app --> Configuration --> Settings --> Connectors "
 "--> Amazon Sync --> Amazon Accounts`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:114
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:116
 msgid ""
 "All accounts of the same company use the same Amazon location, by default. "
 "However, it is possible to follow the stock filtered by marketplace."
@@ -21363,7 +21529,7 @@ msgstr ""
 "Alla konton för samma företag använder som standard samma Amazon-plats. Det "
 "är dock möjligt att följa lagret filtrerat efter marknadsplats."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:117
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:119
 msgid ""
 "To do that, first remove the marketplace, where the desired stock to follow "
 "separately can be found, from the list of synchronized marketplaces, which "
@@ -21375,7 +21541,7 @@ msgstr ""
 "hittas genom att navigera till :menuselection:`Sales app --> Configuration --"
 "> Settings --> Connectors --> Amazon Sync --> Amazon Accounts`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:122
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:124
 msgid ""
 "Next, create another registration for this account, and remove all "
 "marketplaces--- **except** the marketplace this is desired to be isolated "
@@ -21385,7 +21551,7 @@ msgstr ""
 "marknadsplatser--- **except** den marknadsplats som önskas isoleras från de "
 "andra."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:125
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:127
 msgid ""
 "Lastly, assign another stock location to the second registration of the "
 "account."
@@ -21393,15 +21559,15 @@ msgstr ""
 "Slutligen, tilldela en annan lagerplats till den andra registreringen av "
 "kontot."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:128
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:130
 msgid "Invoice and register payments"
 msgstr "Fakturera och registrera betalningar"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:131
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:133
 msgid "Issue invoices"
 msgstr "Utfärda fakturor"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:133
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:135
 msgid ""
 "Due to Amazon's policy of not sharing customer email addresses, it is "
 "**not** possible to send invoices directly to Amazon customers from Odoo. "
@@ -21413,7 +21579,7 @@ msgstr ""
 "Odoo. Det **är** dock möjligt att manuellt ladda upp de genererade "
 "fakturorna från Odoo till Amazons back-end."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:137
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:139
 msgid ""
 "Additionally, for B2B clients, it is currently required to manually retrieve "
 "VAT numbers from the Amazon back-end **before** creating an invoice in Odoo."
@@ -21421,12 +21587,12 @@ msgstr ""
 "För B2B-kunder är det för närvarande dessutom nödvändigt att manuellt hämta "
 "momsnummer från Amazons back-end **innan** man skapar en faktura i Odoo."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:141
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:143
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:155
 msgid "Register payments"
 msgstr "Registrera betalningar"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:143
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:145
 msgid ""
 "Since customers pay Amazon as an intermediary, creating a dedicated *Bank* "
 "journal (e.g. named `Amazon Payments`), with a dedicated *Bank and Cash* "
@@ -21436,7 +21602,7 @@ msgstr ""
 "en särskild *Bank*-journal (t.ex. med namnet `Amazon Payments`), med ett "
 "särskilt *Bank and Cash*-mellanhandskonto."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:146
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:148
 msgid ""
 "Additionally, as Amazon makes a single monthly payment, selecting all the "
 "invoices linked to a single payment is necessary when registering payments."
@@ -21445,7 +21611,7 @@ msgstr ""
 "välja alla fakturor som är kopplade till en enda betalning när betalningar "
 "registreras."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:149
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:151
 msgid ""
 "To do that, use the appropriate :guilabel:`Journal` dedicated to Amazon "
 "payments, and select :guilabel:`Batch Deposit` as the :guilabel:`Payment "
@@ -21455,7 +21621,7 @@ msgstr ""
 "Amazon-betalningar och välj :guilabel:`Batch Deposit` som :guilabel:`Payment "
 "Method`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:152
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:154
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:166
 msgid ""
 "Then, select all the generated payments, and click :menuselection:`Actions --"
@@ -21464,7 +21630,7 @@ msgstr ""
 "Markera sedan alla genererade betalningar och klicka "
 "på :menuselection:`Actions --> Create batch payment --> Validate`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:156
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:158
 msgid ""
 "This same action can be performed with vendor bills from Amazon dedicated to "
 "commissions."
@@ -21472,7 +21638,7 @@ msgstr ""
 "Samma åtgärd kan utföras med leverantörsräkningar från Amazon dedikerade "
 "till provisioner."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:158
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:160
 msgid ""
 "When the balance is received in the bank account at the end of the month, "
 "and the bank statements are recorded, credit the Amazon intermediary account "
@@ -21482,11 +21648,11 @@ msgstr ""
 "kontoutdragen har registrerats, krediterar du Amazons förmedlingskonto med "
 "det mottagna beloppet."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:162
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:164
 msgid "Follow Amazon sales in sales reporting"
 msgstr "Följ Amazon-försäljningen i försäljningsrapporteringen"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:164
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:166
 msgid ""
 "On the Amazon account profile in Odoo, a sales team is set under "
 "the :guilabel:`Order Follow-up` tab."
@@ -21494,7 +21660,7 @@ msgstr ""
 "På Amazon-kontoprofilen i Odoo är ett säljteam inställt under "
 "fliken :guilabel:`Orderuppföljning`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:167
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:169
 msgid ""
 "This gives quick access to important metrics related to sales reporting. By "
 "default, the Amazon account's sales team is shared between all of the "
@@ -21504,7 +21670,7 @@ msgstr ""
 "försäljningsrapportering. Som standard delas Amazon-kontots säljteam mellan "
 "företagets alla konton."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:170
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:172
 msgid ""
 "If desired, the sales team on the account can be changed for another, in "
 "order to perform a separate reporting for the sales of this account."
@@ -21512,11 +21678,11 @@ msgstr ""
 "Om så önskas kan säljteamet på kontot bytas ut mot ett annat, för att utföra "
 "en separat rapportering för försäljningen av detta konto."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:174
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:176
 msgid "It is also possible to perform reporting on a per-marketplace basis."
 msgstr "Det är också möjligt att utföra rapportering per marknadsplats."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:176
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:178
 msgid ""
 "First, remove the desired marketplace from the list of synchronized "
 "marketplaces."
@@ -21524,7 +21690,7 @@ msgstr ""
 "Ta först bort den önskade marknadsplatsen från listan över synkroniserade "
 "marknadsplatser."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:178
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:180
 msgid ""
 "To access the list of synchronized marketplaces in Odoo, navigate "
 "to :menuselection:`Sales app --> Configuration --> Settings --> Connectors --"
@@ -21534,7 +21700,7 @@ msgstr ""
 "till :menuselection:`Sales app --> Configuration --> Settings --> Connectors "
 "--> Amazon Sync --> Amazon Accounts`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:181
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:183
 msgid ""
 "Then, create another registration for this account, and remove all other "
 "marketplaces **except** the one to isolate."
@@ -21542,7 +21708,7 @@ msgstr ""
 "Skapa sedan en ny registrering för detta konto och ta bort alla andra "
 "marknadsplatser ** utom** den som ska isoleras."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:184
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:186
 msgid ""
 "Lastly, assign another sales team to one of the two registrations of the "
 "account."
@@ -21550,7 +21716,7 @@ msgstr ""
 "Slutligen, tilldela ett annat säljteam till en av de två registreringarna av "
 "kontot."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:187
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:189
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:154
 msgid ":doc:`features`"
 msgstr ":doc:`egenskaper`"

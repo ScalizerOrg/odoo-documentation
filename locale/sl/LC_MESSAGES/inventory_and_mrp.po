@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 18:30+0000\n"
+"POT-Creation-Date: 2026-02-06 18:30+0000\n"
 "PO-Revision-Date: 2025-11-20 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -32,7 +32,7 @@ msgstr "Črtna koda"
 #: ../../content/applications/inventory_and_mrp/barcode.rst:10
 msgid ""
 "**Odoo Barcode** allows users to assign barcodes to individual products and "
-"product categories, and track inventory movements using those barcodes. By "
+"product packagings, and track inventory movements using those barcodes. By "
 "connecting a barcode scanner, certain inventory processes can be triggered "
 "by scanning barcodes."
 msgstr ""
@@ -115,7 +115,7 @@ msgstr ""
 msgid ""
 "To view a requested inventory count, navigate to the :menuselection:`Barcode "
 "app` dashboard. If a count has been requested, the number of products to be "
-"counted is listed on the :guilabel:`Inventory count` button."
+"counted is listed on the :guilabel:`Count Inventory` button."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:None
@@ -145,7 +145,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:48
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:36
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:49
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:36
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:17
@@ -160,7 +160,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:229
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
@@ -187,9 +187,9 @@ msgstr "Nastavitve"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:51
 msgid ""
 "Before an inventory adjustment can be performed with the **Barcode** app, "
-"the app has to be installed, and configured. Navigate "
+"the app has to be installed and configured. Navigate "
 "to :menuselection:`Inventory app --> Configuration --> Settings`, and scroll "
-"to the :guilabel:`Barcode` section. Tick the checkbox next "
+"to the :guilabel:`Barcode` section. Select the checkbox next "
 "to :guilabel:`Barcode Scanner`, and click :guilabel:`Save` to save any "
 "changes. If necessary, click :guilabel:`Confirm` on the pop-up."
 msgstr ""
@@ -234,7 +234,7 @@ msgstr ""
 msgid ""
 "To perform an inventory adjustment, first navigate to "
 "the :menuselection:`Barcode app`. If assigned counts exist, "
-"tap :guilabel:`Inventory Count` to view pending tasks."
+"tap :guilabel:`Count Inventory` to view pending tasks."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:None
@@ -288,7 +288,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:0
-msgid "Barcode Inventory Client Action page with inventory adjustment."
+msgid "Barcode Physical Inventory page with inventory adjustment."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:116
@@ -306,84 +306,101 @@ msgid ""
 "location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:124
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:125
 msgid ""
-"To enable this feature, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and scroll to the :guilabel:`Barcode` section. "
-"Tick the :guilabel:`Count Entire Locations` checkbox, then "
-"click :guilabel:`Save`."
+"You can only count entire locations if :guilabel:`Storage Locations` is "
+"enabled in the Inventory settings, found at :menuselection:`Inventory app --"
+"> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:129
-msgid ""
-"This setting is only visible if the :guilabel:`Storage Locations` checkbox "
-"is ticked."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:131
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:128
 msgid ""
 "To perform an inventory count of an entire location, navigate "
-"to :menuselection:`Barcode app --> Inventory Count`. Scan the desired "
-"location barcode. The app then displays all assigned products in that "
+"to :menuselection:`Barcode app --> Count Inventory`. Tap the :icon:`fa-"
+"cog` :guilabel:`(actions)` icon. Enter or scan a location barcode, and "
+"select the :guilabel:`Count Entire Locations` check box. "
+"Tap :guilabel:`Apply`. The app then displays all assigned products in that "
 "location. :ref:`Proceed with the count <inventory/barcode/perform-count>` as "
 "normal."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:136
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:135
 msgid "Show quantity to count"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:138
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:137
 msgid ""
-"When conducting an inventory count, the expected quantity of products is "
-"displayed by default, to provide the user with a baseline to use when "
-"performing the count. However, as this can result in users relying on this "
-"count instead of performing a new count, this quantity can be hidden."
+"When conducting an inventory count, the expected quantity of products is not "
+"displayed by default, as displaying expected quantities can result in users "
+"relying on this count instead of performing a new count."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:142
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:141
 msgid ""
-"Navigate to :menuselection:`Inventory app --> Configuration --> Settings`. "
-"In the :guilabel:`Barcode` section, clear the :guilabel:`Show Quantity to "
-"Count` checkbox, then click :guilabel:`Save`."
+"To show the expected quantity, navigate to :menuselection:`Inventory app --> "
+"Operations --> Physical Inventory`. Request a count by selecting the check "
+"boxes to the left of the products to count, then clicking "
+"the :guilabel:`Request a Count` button. The *Inventory Request* window opens."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:None
-msgid "An inventory count without the show quantity to count feature enabled."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:145
+msgid ""
+"Specify a user to assign the count to in the :guilabel:`Assign to` field. "
+"Specify the date to perform the count in the :guilabel:`Scheduled at` field. "
+"Select the :guilabel:`Show Expected Quantity` check box to show the expected "
+"quantity on the *Barcode* :guilabel:`Count Inventory` page."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:150
+msgid ""
+"Warehouse managers have requested a count of all `Cable Management Box` "
+"products in inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:0
+msgid ""
+"An inventory request with the Show Expected Quantity check box selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:155
+msgid ""
+"When the assigned user opens the :guilabel:`Count Inventory` page in the "
+"*Barcode* app, the expected quantity of `90` units of the `Cable Management "
+"Box` product is displayed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:0
+msgid "The expected quantity is displayed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:162
 msgid "Manually add products to an inventory count"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:152
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:164
 msgid ""
 "When barcodes for location or products are not available, Odoo **Barcode** "
 "can still be used to perform inventory counts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:155
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:167
 msgid ""
-"To do this, navigate to the :menuselection:`Barcode app --> Inventory Count`."
+"To do this, navigate to :menuselection:`Barcode app --> Count Inventory`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:157
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:169
 msgid ""
 "To manually add products to this adjustment, click the white :guilabel:`Add "
 "Product` button at the bottom of the screen."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:160
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:172
 msgid ""
 "This navigates to a new, blank page where the desired product, quantity, and "
 "source location must be chosen."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:None
-msgid "Keypad to add products on Barcode Inventory Client Action page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:166
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:175
 msgid ""
 "First, click the :guilabel:`Product` line, and choose the product whose "
 "stock count should be adjusted. Then, manually enter the quantity of that "
@@ -392,36 +409,39 @@ msgid ""
 "quantity of the product. The number pad can be used to add quantity, as well."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:171
-msgid ""
-"Below the number pad is the :guilabel:`location` line, which should read `WH/"
-"Stock` by default. Click this line to reveal a drop-down menu of locations "
-"to choose from, and choose the :guilabel:`source location` for this "
-"inventory adjustment."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:175
-msgid "Click :guilabel:`Confirm` to confirm the changes."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:178
-msgid "Finalizing an inventory count"
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:180
 msgid ""
-"After counting all of the products, review the entries to ensure all the "
-"counted quantities are accurately entered. To complete the inventory "
-"adjustment, click :guilabel:`Apply`."
+"Below the number pad is the :guilabel:`Location` line, which should read `WH/"
+"Stock` by default. Click this line to reveal a list of locations to choose "
+"from, and choose the location for this inventory adjustment."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:184
-msgid ""
-"The :guilabel:`Validate` barcode can be scanned in place of clicking "
-"the :guilabel:`Apply` button."
+msgid "Click :guilabel:`Confirm` to confirm the changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:187
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:None
+msgid "Keypad to add products on Barcode Inventory Client Action page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:190
+msgid "Finalizing an inventory count"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:192
+msgid ""
+"After counting all of the products, review the entries to ensure all the "
+"counted quantities are accurately entered. To complete the inventory "
+"adjustment, click :guilabel:`Confirm`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:196
+msgid ""
+"The :guilabel:`Validate` barcode can be scanned in place of clicking "
+"the :guilabel:`Confirm` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:199
 msgid ""
 "Odoo then navigates back to the :guilabel:`Barcode Scanning` screen. A small "
 "green banner appears in the top-right corner, confirming the inventory count "
@@ -3862,7 +3882,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:152
 #: ../../content/applications/inventory_and_mrp/barcode/setup/serial_numbers_lots.rst:71
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:87
 msgid "Operations"
 msgstr "Operacije"
 
@@ -6300,7 +6320,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:42
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:303
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:102
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:159
 msgid "Packages"
 msgstr "Pakiranja"
@@ -8931,7 +8951,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:191
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:181
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ""
 
@@ -14439,9 +14459,9 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:12
 msgid ""
 "The following columns in the table below list the removal strategies "
-"available in Odoo, and detail how pickings are determined along with the "
-"picking order. Leverage these removal strategies to have Odoo automatically "
-"select how products are selected for orders:"
+"available in Odoo, and detail how pickings are determined and the picking "
+"order. Leverage these removal strategies to have Odoo automatically select "
+"how products are selected for orders:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:21
@@ -14511,23 +14531,29 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:39
 msgid ""
-"For comprehensive examples for how to use each removal strategy, refer to "
+"For comprehensive examples of how to use each removal strategy, refer to "
 "each individual documentation page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:43
 msgid ""
-"Removal strategies are set on either the product category or storage "
-"location."
+"FIFO is the default removal strategy. When a removal strategy is not set for "
+"the location or the product category, FIFO is used."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:51
+msgid ""
+"Removal strategies are set at either the product category or the storage "
+"location level."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:None
 msgid ""
-"Change the Force Removal Strategy for either the Product Categories or "
-"Locations."
+"Change the Force Removal Strategy for either the product categories or "
+"locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:56
 msgid ""
 "Configure removal strategies on the location by going "
 "to :menuselection:`Inventory --> Configuration --> Locations`, and selecting "
@@ -14535,41 +14561,40 @@ msgid ""
 "the :guilabel:`Removal Strategy` field's drop-down menu options."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:61
 msgid ""
 "To set a removal strategy on a location, the :guilabel:`Storage Locations` "
 "and :guilabel:`Multi-Step Routes` settings **must** be enabled "
 "in :menuselection:`Inventory --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:65
 msgid ""
-"These features are **only** necessary when setting the removal strategy on a "
-"location."
+"These features are **only** necessary when setting the removal strategy for "
+"a location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:67
 msgid ""
 "Configure removal strategies on product categories by going "
-"to :menuselection:`Inventory --> Configuration --> Product Categories` and "
+"to :menuselection:`Inventory --> Configuration --> Categories`, then "
 "selecting the intended product category. Next, choose a removal strategy "
 "from the :guilabel:`Force Removal Strategy` drop-down menu options."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:72
 msgid ""
-"When there are different removal strategies applied on both the location and "
-"product category for a product, the value set on the :guilabel:`Force "
-"Removal Strategy` field set on a :guilabel:`Product Category` form is "
-"applied as top priority."
+"When different removal strategies are applied to both the location and "
+"product category for a product, the value set in the :guilabel:`Force "
+"Removal Strategy` field on the category form takes priority."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:74
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:97
 msgid "Required features"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:79
 msgid ""
 "While some removal strategies are available by default, some additional "
 "features **must** be enabled in :menuselection:`Inventory --> Configuration "
@@ -14578,64 +14603,64 @@ msgid ""
 "Strategy` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:84
 msgid ""
 "Refer to the table below for a summary of required features. Otherwise, "
 "refer to the dedicated sections for the removal strategy for more details on "
 "requirements and usage."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:92
 msgid "FIFO"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:93
 msgid "LIFO"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:94
 msgid "FEFO"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:95
 msgid "Closest Location"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:96
 msgid "Least Packages"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:95
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:99
 msgid "Lots & Serial Numbers"
 msgstr "Loti & Serijske številke"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:100
 msgid "Lots & Serial Numbers, Expiration Date"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:101
 msgid "Storage Locations, Multi-Step Routes"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:107
 msgid "Lots and serial numbers"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:109
 msgid ""
 "Lots and serial numbers differentiate identical products and track "
 "information like arrival or expiration dates. To enable this feature, "
 "navigate to :menuselection:`Inventory --> Configuration --> Settings`. Under "
-"the :guilabel:`Traceability` heading, check the box beside :guilabel:`Lots & "
-"Serial Numbers` to enable the feature."
+"the *Traceability* heading, check the box beside :guilabel:`Lots & Serial "
+"Numbers` to enable the feature."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:None
 msgid "Enable lots and serial numbers."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:117
 msgid ""
 "Next, ensure the intended product is tracked by lots or serial numbers by "
 "navigating to the product form through :menuselection:`Inventory --> "
@@ -14645,7 +14670,7 @@ msgid ""
 "Serial Number` or :guilabel:`By Lots` options."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:123
 msgid ""
 "After enabling the features, assign lot or serial numbers to products using "
 "an :doc:`inventory adjustment <../warehouses_storage/inventory_management/"
@@ -14653,22 +14678,22 @@ msgid ""
 "product_management/assign-lots>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:128
 msgid "Locations and routes"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:130
 msgid ""
 "**Storage locations** and **multi-step routes** are necessary features for "
 "setting **all** types of removal strategies on a location. However, these "
-"features are specifically required for the closest location removal strategy "
-"since it is only applied at the location level."
+"features are specifically required for the closest location removal "
+"strategy, as it is applied at the location level."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:134
 msgid ""
 "To activate these features, navigate to :menuselection:`Inventory --> "
-"Configuration --> Settings`. Under the :guilabel:`Warehouse` heading, enable "
+"Configuration --> Settings`. Under the *Warehouse* heading, enable "
 "the :guilabel:`Storage Location` and :guilabel:`Multi-Step Routes` features."
 msgstr ""
 
@@ -14676,22 +14701,22 @@ msgstr ""
 msgid "Enable the locations and route features."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:144
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fefo.rst:166
 msgid "Expiration date"
 msgstr "Datum izteka"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:146
 msgid ""
-"Enable the **expiration date** feature to track expiration dates, best "
+"Enable the **expiration date** feature to track expiration dates, best-"
 "before dates, removal dates, and alert dates on a lot or serial number by "
 "navigating to :menuselection:`Inventory --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:150
 msgid ""
-"Under the :guilabel:`Traceability` heading, ensure the :guilabel:`Lots & "
-"Serial Numbers` feature is selected, and then select the check box "
+"Under the *Traceability* heading, ensure the :guilabel:`Lots & Serial "
+"Numbers` feature is selected, and then select the check box "
 "for :guilabel:`Expiration Dates` to enable the feature."
 msgstr ""
 
@@ -14715,15 +14740,15 @@ msgstr ""
 msgid "Enable the packages feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:171
 msgid ":doc:`Packages <../product_management/configure/package>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:172
 msgid ":doc:`2-step delivery <daily_operations/receipts_delivery_two_steps>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:173
 msgid ":doc:`3-step delivery <daily_operations/delivery_three_steps>`"
 msgstr ""
 
@@ -24213,7 +24238,7 @@ msgid ""
 "room, aisle, etc."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
@@ -24221,7 +24246,7 @@ msgid ""
 "Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:15
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -24232,11 +24257,11 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:25
 msgid "Create new location"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:27
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
 "Configuration --> Locations`."
@@ -24246,17 +24271,17 @@ msgstr ""
 msgid "List of internal locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
 msgid ""
 "On this page, click :guilabel:`New`. The new location form can then be "
 "configured as follows:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
 msgid ":guilabel:`Location Name`: recognizable name of the location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:36
 msgid ""
 ":guilabel:`Parent Location`: the location within which the new location "
 "exists. After the location is created, it is listed on "
@@ -24264,24 +24289,24 @@ msgid ""
 "a specific location fits within larger areas of the warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:41
 msgid ""
 "In `WH/Stock/Zone A/Refrigerator 1`, `Refrigerator 1` is the location name, "
 "`Zone A` is the parent location, and everything before it is the path "
 "showing where this spot is within the warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
 msgid "Additional Information section"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:49
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:51
 msgid ""
 ":guilabel:`Location Type`: from the drop-down menu, "
 "choose :guilabel:`Vendor`, :guilabel:`Virtual`, :guilabel:`Internal`, :guilabel:`Customer`, :guilabel:`Inventory "
@@ -24290,7 +24315,7 @@ msgid ""
 "Types section <inventory/warehouses_storage/location-type>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:56
 msgid ""
 ":guilabel:`Storage Category`: only available with the :doc:`Storage "
 "Categories <../../shipping_receiving/daily_operations/storage_category>` "
@@ -24298,18 +24323,18 @@ msgid ""
 "Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:59
 msgid ":guilabel:`Company`: the company the location belongs to."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
 msgid ""
 ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
 "to :ref:`identify actions <barcode/setup/location>` at this location when "
 "scanned."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
 msgid ""
 ":guilabel:`Replenishments`: used for :doc:`configuring routes <../../"
 "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
@@ -24322,7 +24347,7 @@ msgstr ""
 msgid "Additional Information section of new location creation form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:70
 msgid ""
 "In the :guilabel:`Cyclic Counting` section, change the value in "
 "the :guilabel:`Inventory Frequency` field from the default `0`, if necessary."
@@ -24332,13 +24357,13 @@ msgstr ""
 msgid "Cyclic Counting section of new location creation form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:76
 msgid ""
 "When different than `0`, the inventory count dates for products stored at "
 "this location are automatically set at the defined frequency."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
 "field, click the drop-down menu and select the :doc:`removal strategy <../../"
@@ -24346,25 +24371,25 @@ msgid ""
 "this location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
 msgid "Cyclic Counting section"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:88
 msgid ""
 "To schedule regular inventory counts at this location, set "
 "the :guilabel:`Inventory Frequency` field to the desired interval. By "
 "default, it is set to `0` (no scheduled counts)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:91
 msgid ""
 "For example, setting this field to `30` schedules a count every thirty days. "
 "For more specifics on setting up and using this feature, refer to "
 "the :doc:`Cycle Counts documentation <cycle_counts>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:94
 msgid ""
 "The :guilabel:`Last Inventory` field displays the date the last inventory "
 "count at this location occurred. When scheduled inventory counts are "
@@ -24372,7 +24397,7 @@ msgid ""
 "inventory count."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid ""
 "With inventory counts scheduled to occur every `30` days, and "
 "the :guilabel:`Last Inventory` count occurring on November 13, "
@@ -24383,11 +24408,11 @@ msgstr ""
 msgid "Show Cyclic Count section of the locations form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Logistics section"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
 msgid ""
 "In the :guilabel:`Logistics` section of the locations form, optionally "
 "select a :guilabel:`Removal Strategy` to determine the order and priority of "
@@ -24397,24 +24422,24 @@ msgid ""
 "(FEFO)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:117
 msgid "Current stock at location"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
 msgid ""
 "To view the current stock at a single location, go "
 "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
 "select the desired location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:122
 msgid ""
 "Next, click the :guilabel:`Products` smart button to get a list of all "
 "products at the location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:125
 msgid ""
 "A list of current stock at `Shelf 2` consists of `90` cable management boxes."
 msgstr ""
@@ -30419,23 +30444,23 @@ msgid ""
 "and :guilabel:`Inventory` apps need to be installed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:14
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:16
 msgid "Create the kit as a product"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:16
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:18
 msgid ""
 "To use a kit as a sellable product, or as a component organization tool, the "
 "kit should first be created as a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:19
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:21
 msgid ""
-"To create a kit product, go to :menuselection:`Inventory app --> Products --"
-"> Products`, and then click :guilabel:`New`."
+"To create a kit product, go to :menuselection:`Manufacturing app --> "
+"Products --> Products`, and then click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:22
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:24
 msgid ""
 "Then, assign a name to the new kit product. Next, set the kit's product type "
 "depending on inventory tracking needs and accounting requirements. To do "
@@ -30445,44 +30470,44 @@ msgid ""
 "it unchecked if inventory tracking for the kit is not necessary."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:29
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:31
 msgid ""
 "Learn more about :doc:`tracked versus untracked products <../../inventory/"
 "product_management/configure/type>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:34
 msgid ""
 "The kit's components must also be configured as products "
 "via :menuselection:`Inventory app --> Products --> Products`. These "
 "components require no specific configuration."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:38
 msgid "Untracked kit inventory setup details"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:40
 msgid ""
 "Consider leaving tracking for the kit's inventory untracked when the kit is "
 "used in other manufacturing processes or when tracking inventory for the kit "
 "itself is not needed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:43
 msgid ""
 "**Recommended for Continental Accounting**: If costs are expensed "
 "immediately upon purchase, then leaving the kit's inventory as untracked is "
 "recommended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:45
 msgid ""
 "**Replenishment via Components**: Inventory count is managed at the "
 "component level, so reordering rules must be set to individual components."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:47
 msgid ""
 "**Selling & Stock Constraints**: Kits cannot be sold if any required "
 "component is out of stock. Since availability depends on individual "
@@ -30490,87 +30515,87 @@ msgid ""
 "components are unavailable."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:52
 msgid "Tracked kit inventory setup details"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:52
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:54
 msgid ""
 "Consider turning on tracking for the kit's inventory when the kit is a "
 "tangible product or warehouse and inventory tracking is essential."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:55
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:57
 msgid ""
 "**Recommended for Angle-Saxon Accounting**: If the Cost of Goods Sold (COGS) "
 "needs to be recorded in journals, then tracking the kit's inventory is "
 "recommended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:59
 msgid ""
 "**Component Purchase Constraints**: Only the kit's minimum required "
 "components can be added to an **eCommerce** cart unless the option "
 "to :doc:`continue selling<../../../websites/ecommerce/products>` is disabled."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:62
 msgid ""
 "**No Kit Serial Numbers**: Serial number tracking does not track the kit, "
 "only its shipped components."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:62
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:64
 msgid ""
 "**Reordering Rule Recommendation**: Reordering rules should be set at the "
 "component-level."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:65
 msgid ""
 "**Stock Replenishment Recommendation**: Stock replenishment should also be "
 "done at the component-level."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:67
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:69
 msgid "Kit setup similarities"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:71
 msgid ""
 "Regardless of which setup is used, there are some similarities between the "
 "two options."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:71
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:73
 msgid ""
 "**No Kit-Level Stock Adjustments**: Stock adjustments cannot be handled at "
 "the kit-level."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:72
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:74
 msgid ""
 "**Kit Value Does Not Change**: The stock's value is the same whether the "
 "kit's is tracked."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:73
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:75
 msgid ""
 "**Kit Internal Transfers**: An internal transfer for the kit breaks it into "
 "components."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:76
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:80
 msgid "Set up the kit BoM"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:82
 msgid ""
 "After fully configuring the kit product and its components, a new :abbr:`BoM "
 "(bill of materials)` can be created for the kit product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:81
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:85
 msgid ""
 "To do so, go to :menuselection:`Manufacturing app --> Products --> Bills of "
 "Materials`, and then click :guilabel:`New`. Next to the :guilabel:`Product` "
@@ -30578,7 +30603,7 @@ msgid ""
 "select the previously configured kit product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:89
 msgid ""
 "Then, for the :guilabel:`BoM Type` field, click the :guilabel:`Kit` option. "
 "Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a line`, "
@@ -30586,7 +30611,7 @@ msgid ""
 "the :guilabel:`Quantity` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:89
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:93
 msgid ""
 "Once ready, click :guilabel:`Save` to save the newly created :abbr:`BoM "
 "(bill of materials)`."
@@ -30596,25 +30621,25 @@ msgstr ""
 msgid "Kit selection on the bill of materials."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:94
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:98
 msgid ""
 "If the kit is solely being used as a sellable product, then only components "
 "need to be added under the :guilabel:`Components` tab, and configuring "
 "manufacturing operations is not necessary."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:98
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:102
 msgid ""
 "When a kit is sold as a product, it appears as a single line item on the "
 "quotation and sales order. However, on delivery orders, each component of "
 "the kit is listed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:102
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:106
 msgid "Use kits to manage complex BoMs"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:104
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:108
 msgid ""
 "Kits can also be used for complex :abbr:`BoMs (Bills of Materials)`. This "
 "method nests BoMs within other BoMs, organizing complex products while "
@@ -30622,13 +30647,13 @@ msgid ""
 "separately."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:108
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:112
 msgid ""
 "Sublevel BoMs (subassemblies or semi-finished products) streamline these "
 "workflows, helping with traceability efforts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:116
 msgid ":doc:`sub_assemblies`"
 msgstr ""
 
@@ -32032,29 +32057,29 @@ msgid ""
 "as well."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:15
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:17
 msgid "BoM setup"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:17
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:19
 msgid ""
 "To create a |BOM|, go to :menuselection:`Manufacturing app --> Products --> "
 "Bills of Materials` and click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:20
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:22
 msgid ""
 "Next, set the :guilabel:`BoM Type` to :guilabel:`Manufacture this Product`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:22
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:24
 msgid ""
 "Then, specify :ref:`required components <manufacturing/basic_setup/setup-"
 "components>` and, if necessary, define any :ref:`manufacturing operations "
 "<manufacturing/basic_setup/setup-operations>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:26
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:28
 msgid ""
 "Individual |BOMs| can also be quickly accessed or created by clicking "
 "the :guilabel:`Bill of Materials` smart button on any product form, as "
@@ -32063,27 +32088,27 @@ msgid ""
 "a field or a line item)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:37
 msgid "Show BoM for a product, with components listed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:37
 msgid "BoM for `Drawer`, displaying the **Components** tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:40
 msgid ":doc:`../advanced_configuration/kit_shipping`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:41
 msgid ":doc:`../subcontracting/subcontracting_basic`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:46
 msgid "Components"
 msgstr "Sestavni deli"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:48
 msgid ""
 "In the :guilabel:`Components` tab of a |BOM|, specify components used to "
 "manufacture the product by clicking :guilabel:`Add a line`. From "
@@ -32098,7 +32123,7 @@ msgstr ""
 msgid "Add a component by selecting it from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:58
 msgid ""
 "Optionally, access additional fields by clicking the :icon:`oi-settings-"
 "adjust` :guilabel:`(settings adjust)` icon to the far-right of "
@@ -32106,21 +32131,21 @@ msgid ""
 "features to enable these columns:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:62
 msgid ""
 ":guilabel:`Apply on Variants`: specify which :doc:`product variant <../"
 "advanced_configuration/product_variants>` each component is used in. When "
 "the field is left blank, the component is used in all product variants."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:66
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:68
 msgid ""
 ":guilabel:`Consumed in Operation`: specify the operation using the "
 "component. Useful for determining :ref:`manufacturing readiness "
 "<manufacturing/basic_setup/manufacturing-readiness>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:70
 msgid ""
 ":guilabel:`Manual Consumption`: tick the checkbox to force operators to "
 "check the :guilabel:`Consumed` checkbox on a manufacturing order (MO)."
@@ -32130,7 +32155,7 @@ msgstr ""
 msgid "Show a manufacturing order, highlighting the *Consumed* field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:77
 msgid ""
 "Not doing so triggers the :guilabel:`Consumption Warning` error message, "
 "where the consumed component quantity must be manually inputted. Otherwise, "
@@ -32141,7 +32166,7 @@ msgstr ""
 msgid "Show the consumption warning error message."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:87
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:89
 msgid ""
 "Add an *operation* to a |BOM| to specify instructions for production and "
 "register time spent on an operation. To use this feature, first enable the "
@@ -32150,7 +32175,7 @@ msgid ""
 "the :guilabel:`Work Orders` checkbox to enable the feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:95
 msgid ":doc:`../advanced_configuration/work_order_dependencies`"
 msgstr ""
 
@@ -32158,7 +32183,7 @@ msgstr ""
 msgid "\"Work Orders\" feature in the Settings page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:99
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:101
 msgid ""
 "Next, navigate to the |BOM| by going to :menuselection:`Manufacturing app --"
 "> Products --> Bill of Materials` and selecting the desired |BOM|. To add a "
@@ -32166,37 +32191,37 @@ msgid ""
 "click :guilabel:`Add a line`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:103
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:105
 msgid ""
 "Doing so opens the :guilabel:`Create Operations` pop-up window, where the "
 "various fields of the operation are configured:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:108
 msgid ":guilabel:`Operation`: name of the operation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:109
 msgid ""
 ":guilabel:`Work Center`: select existing locations to perform the operation, "
 "or create a new work center by typing the name and selecting "
 "the :guilabel:`Create \" \"` option."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:111
 msgid ""
 ":guilabel:`Apply on Variants`: specify if this operation is only available "
 "for certain product variants. If the operation applies to all product "
 "variants, leave this field blank."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:115
 msgid ""
 ":doc:`Configuring BoMs for product variants <../advanced_configuration/"
 "product_variants>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:117
 msgid ""
 ":guilabel:`Duration Computation`: choose how time spent on the operation is "
 "tracked. Opt for :guilabel:`Compute based on tracked time` to use the "
@@ -32204,7 +32229,7 @@ msgid ""
 "can record and modify time themselves."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:121
 msgid ""
 "Choosing the :guilabel:`Compute based on tracked time` option enables "
 "the :guilabel:`Based on last __ work orders` option, which automatically "
@@ -32213,7 +32238,7 @@ msgid ""
 "the :guilabel:`Default Duration` field instead."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:125
 msgid ""
 ":guilabel:`Default Duration`: estimated amount of time to complete the "
 "operation; used for `planning manufacturing orders <https://www.youtube.com/"
@@ -32221,11 +32246,11 @@ msgid ""
 "www.youtube.com/watch?v=3YwFlD97Bio>`_."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:126
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:128
 msgid ":guilabel:`Company`: specify the company the |BOM| is available in."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:128
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:130
 msgid ""
 "Include operation details in the :guilabel:`Work Sheet` tab. "
 "Choose :guilabel:`PDF` to attach a file or :guilabel:`Google Slide` with "
@@ -32233,7 +32258,7 @@ msgid ""
 "instructions in the :guilabel:`Description` text field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:133
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:135
 msgid ""
 "Type `/` for a list of formatting options and features, including ChatGPT."
 msgstr ""
@@ -32246,19 +32271,19 @@ msgstr ""
 msgid "Fill out the Create Operations pop-up window."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:143
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:145
 msgid ""
 "Finally, click :guilabel:`Save \\& Close` to close the pop-up window. To add "
 "more operations, click :guilabel:`Save & New` and repeat the same steps "
 "above to configure another operation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:149
 msgid ""
 "Each operation is unique, as it is always exclusively linked to one |BOM|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:150
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:152
 msgid ""
 "After creating an operation, click the :guilabel:`Copy Existing Operations` "
 "button to choose an operation to duplicate."
@@ -32269,17 +32294,17 @@ msgid ""
 "Show Operation tab, highlighting the \"Copy Existing Operations\" field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:158
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:160
 msgid "Instructions"
 msgstr "Navodila"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:161
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:163
 msgid ""
 "To add detailed instructions to operations, the *Quality* app must be "
 "installed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:163
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:165
 msgid ""
 "Add specific instructions to an existing operation by clicking the "
 "operation's :icon:`fa-list-ul` :guilabel:`(list)` icon in "
@@ -32292,7 +32317,7 @@ msgstr ""
 msgid "Show the Instructions column, and list icon."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:172
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:174
 msgid ""
 "On the :guilabel:`Steps` dashboard, click :guilabel:`New` to open a blank "
 "quality control point form where the new manufacturing step can be created. "
@@ -32302,7 +32327,7 @@ msgid ""
 "the step in the operation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:178
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:180
 msgid ""
 "Further customizations can be made here on this form, beyond ordinary "
 "instructions, to also include specific types of quality control points that "
@@ -32315,18 +32340,18 @@ msgstr ""
 msgid "Show the page to add a quality check."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:188
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:190
 msgid "Miscellaneous"
 msgstr "Razno"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:190
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:192
 msgid ""
 "The :guilabel:`Miscellaneous` tab contains more |BoM| configurations to "
 "customize procurement, calculate costs, and define how components are "
 "consumed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:195
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:197
 msgid ""
 ":guilabel:`Manufacturing Readiness`: choosing :guilabel:`When components for "
 "the 1st operation are available` shows the :guilabel:`Component Status` as a "
@@ -32338,7 +32363,7 @@ msgid ""
 "components are in available."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:203
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:205
 msgid ""
 "Specify which operation consumes each component on the |BoM| in "
 "the :ref:`Manual Consumption field <manufacturing/basic_setup/consumed-in-"
@@ -32349,13 +32374,13 @@ msgstr ""
 msgid "Show the *Component Status* field on the manufacturing order dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:210
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:212
 msgid ""
 ":guilabel:`Version`: displays the current |BoM| version, visible with the "
 "Odoo *PLM* app installed for managing |BoM| changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:214
 msgid ""
 ":guilabel:`Flexible Consumption`: specifies if components used can deviate "
 "from the quantity defined on the |BoM|. Choose :guilabel:`Blocked` if "
@@ -32363,14 +32388,14 @@ msgid ""
 "choose :guilabel:`Allowed` or :guilabel:`Allowed with Warning`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:215
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:217
 msgid ""
 ":guilabel:`Routing`: select the preferred warehouse's manufacturing "
 "operation type for products produced in multiple warehouses. If left blank, "
 "this warehouse's `Manufacturing` operation type is used by default."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:218
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:220
 msgid ""
 ":guilabel:`Analytic Distribution`: select pre-created :doc:`analytic "
 "distribution models <../../../finance/accounting/reporting/"
@@ -32378,25 +32403,25 @@ msgid ""
 "manufacturing products in the chosen journal."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:221
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:223
 msgid ""
 ":guilabel:`Manuf Lead Time`: define the number of days needed to complete a |"
 "MO| from the date of confirmation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:223
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:225
 msgid ""
 ":guilabel:`Days to prepare Manufacturing Order`: number of days needed to "
 "replenish components, or manufacture sub-assemblies of the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:227
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:229
 msgid ""
 ":doc:`Analytic distribution <../../../finance/accounting/reporting/"
 "analytic_accounting>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:228
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:230
 msgid ""
 ":doc:`Lead times <../../inventory/warehouses_storage/replenishment/"
 "lead_times>`"
@@ -32406,18 +32431,18 @@ msgstr ""
 msgid "Show the *Miscellaneous* tab of the BoM."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:235
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:237
 msgid "Add by-products to BoMs"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:237
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:239
 msgid ""
 "A *by-product* is a residual product that is created during production in "
 "addition to the main product of a |BOM|. Unlike the primary product, there "
 "can be more than one by-product on a |BOM|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:240
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:242
 msgid ""
 "To add by-products to a |BOM|, first enable the *By-Products* feature "
 "in :menuselection:`Manufacturing app --> Configuration --> Settings`. In "
@@ -32429,7 +32454,7 @@ msgstr ""
 msgid "\"By Products\" feature in the settings page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:248
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:250
 msgid ""
 "Once the feature is enabled, add by-products to a |BOM| by clicking "
 "the :guilabel:`By-products` tab. Click :guilabel:`Add a line`, and fill in "
@@ -32438,7 +32463,7 @@ msgid ""
 "product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:256
 msgid ""
 "The by-product, `Mush`, is created in the `Grind grapes` operation when "
 "producing `Red Wine`."
@@ -33055,13 +33080,13 @@ msgid ""
 "configure-manufacturing-product>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:38
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:35
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:36
 msgid "Create manufacturing order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:40
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:37
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:38
 msgid ""
@@ -33070,14 +33095,14 @@ msgid ""
 "and then click :guilabel:`New` to create a new |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:42
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:44
 msgid ""
 "On the new |MO|, select the product to be produced from "
 "the :guilabel:`Product` drop-down menu. The :guilabel:`Bill of Material` "
 "field auto-populates with the associated bill of materials (BoM)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:47
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:44
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:45
 msgid ""
@@ -33086,7 +33111,7 @@ msgid ""
 "the :guilabel:`Product` field auto-populates with the associated product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:49
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:51
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:48
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:49
 msgid ""
@@ -33098,19 +33123,19 @@ msgid ""
 "clicking :guilabel:`Add a line`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:56
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:53
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:54
 msgid "Finally, click :guilabel:`Confirm` to confirm the |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:59
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:80
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:77
 msgid "Process manufacturing order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:61
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:82
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:79
 msgid ""
@@ -33119,13 +33144,13 @@ msgid ""
 "from the work order tablet view."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:65
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:86
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:83
 msgid "Basic workflow"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:67
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:85
 msgid ""
 "To complete work orders from the |MO| itself, begin by navigating "
@@ -33133,7 +33158,7 @@ msgid ""
 "and then select an |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:70
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:91
 msgid ""
 "On the |MO| page, select the :guilabel:`Work Orders` tab. Once work begins "
@@ -33146,7 +33171,7 @@ msgstr ""
 msgid "The Start button for an operation on a manufacturing order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:76
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:78
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:99
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:96
 msgid ""
@@ -33159,7 +33184,7 @@ msgstr ""
 msgid "The Done button for an operation on a manufacturing order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:85
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:106
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:103
 msgid ""
@@ -33168,13 +33193,13 @@ msgid ""
 "manufactured product(s) into inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:87
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:89
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:110
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:107
 msgid "Shop Floor workflow"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:89
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:91
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:112
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:109
 msgid ""
@@ -33183,7 +33208,7 @@ msgid ""
 "Manufacturing Orders`, and then select an |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:92
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:94
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:115
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:112
 msgid ""
@@ -33194,7 +33219,7 @@ msgid ""
 "order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:97
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:99
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:120
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:117
 msgid ""
@@ -33208,7 +33233,7 @@ msgstr ""
 msgid "The Open Shop Floor button for a work order on a manufacturing order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:104
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:106
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:127
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:124
 msgid ""
@@ -33225,7 +33250,7 @@ msgstr ""
 msgid "A work order card on a work center page in the Shop Floor module."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:115
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:133
 msgid ""
 "A work order is processed by completing each step listed on its card. This "
@@ -33234,7 +33259,7 @@ msgid ""
 "click :guilabel:`Next` to move on to the next step, if any are required."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:117
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:119
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:140
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:137
 msgid ""
@@ -33244,7 +33269,7 @@ msgid ""
 "without a pop-up window appearing."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:123
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:144
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:141
 msgid ""
@@ -33255,7 +33280,7 @@ msgid ""
 "automatically register that number as the quantity produced."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:126
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:128
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:149
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:146
 msgid ""
@@ -33265,7 +33290,7 @@ msgid ""
 "register that number."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:131
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:133
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:154
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:151
 msgid ""
@@ -33274,7 +33299,7 @@ msgid ""
 "step appears as already completed for each remaining work order in the |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:135
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:137
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:158
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:155
 msgid ""
@@ -33285,7 +33310,7 @@ msgid ""
 "titled :guilabel:`Close Production`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:140
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:142
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:163
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:160
 msgid ""
@@ -33297,7 +33322,7 @@ msgid ""
 "detailed in this section."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:146
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:148
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:169
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:166
 msgid ""
@@ -33306,7 +33331,7 @@ msgid ""
 "product that were produced are entered into inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:150
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:152
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:173
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:170
 msgid ""
@@ -33316,7 +33341,7 @@ msgid ""
 "the work order open."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:155
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:157
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:178
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:175
 msgid ""

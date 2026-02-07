@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 18:30+0000\n"
+"POT-Creation-Date: 2026-02-06 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -1416,6 +1416,115 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/server-actions.rst:146
 msgid "No constraints were enforced at the tool level."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:3
+msgid "AI voice transcription"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:7
+msgid ""
+"Odoo |AI| can transcribe spoken audio into text and generate summaries from "
+"that transcript. This feature supports both meeting recordings and real-time "
+"dictation, making it easier to capture notes, decisions, and action items "
+"without manual typing."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:11
+msgid ""
+"Voice transcription converts spoken audio into a written transcript. Once a "
+"transcript is available, Odoo |AI| can generate a summary that highlights "
+"key information, such as:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:14
+msgid "key discussion points"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:15
+msgid "decisions"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:16
+msgid "action items"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:17
+msgid "next steps"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:19
+msgid ""
+"Transcription and summarization can be used for meetings, calls, quick "
+"dictations, and internal notes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:23
+msgid ""
+"Voice transcripts can be created in the *Description* and *Notes* fields of "
+"most records, as well as in **Knowledge** articles."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:0
+msgid "The powerbox in the description tab of a task in the Projects app."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:29
+msgid ""
+"Voice transcription works by temporarily recording audio during the session, "
+"replaying it for transcription, and generating a written transcript and "
+"summary. Once the transcription process is complete, the audio recording is "
+"automatically discarded. The recorded audio is not stored, replayable, or "
+"accessible from the database."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:35
+msgid "Transcribe a meeting"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:37
+msgid ""
+"To create a voice transcript, type `/` to open the :ref:`powerbox "
+"<essentials/html_editor/commands>`. Select :guilabel:`Voice Transcript` from "
+"the drop-down list. This creates a new text block. Click :icon:`fa-"
+"bars` :guilabel:`Notes` to add notes and details regarding the meeting. This "
+"is where information, such as a meeting agenda and attendees, can be added. "
+"Click :icon:`fa-microphone` :guilabel:`Transcript` to switch to a live view "
+"of the transcript being created in real-time."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:44
+msgid ""
+"When the meeting is ready to begin, click :icon:`fa-circle` :guilabel:`Start "
+"Recording`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:47
+msgid ""
+"Clicking :icon:`fa-circle` :guilabel:`Start Recording` may cause a pop-up in "
+"the browser, requesting access to a microphone. If permission is not given, "
+"the recording stops, and an error message appears. To combat this error, "
+"refresh the page and allow Odoo access to the microphone."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:51
+msgid ""
+"When the meeting has ended, click :icon:`fa-stop` :guilabel:`Stop "
+"Recording`. The recorded audio is then processed to generate a transcript "
+"and an |AI| summary. Once processing is complete, the audio recording is "
+"automatically discarded, leaving only the transcript and summary available."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:None
+msgid "The AI summary of a meeting transctipt."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:58
+msgid ""
+"The |AI| summary can be manually edited to provide additional insight, such "
+"as identifying meeting attendees by name, or specifying key points. The "
+"meeting notes can then be converted into an email recap, or shared directly "
+"via email by clicking the :guilabel:`Share by email` button."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/webpage.rst:3
@@ -23736,36 +23845,77 @@ msgid ""
 "user can navigate through their Odoo apps."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:57
-msgid ""
-"Using |VOIP| also requires a service provider. The next section explains how "
-"to connect a service provider to the Odoo database."
+#: ../../content/applications/productivity/voip.rst:58
+msgid "Assign user permissions"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:61
-msgid "VoIP providers"
+#: ../../content/applications/productivity/voip.rst:60
+msgid ""
+"By default, users can receive their own calls, and managers can receive "
+"calls for their team members. To grant additional |VOIP| permissions to a "
+"user, go to :menuselection:`Settings app --> Users \\& Companies --> Users` "
+"and search for the user. Open the user's contact card and navigate to the "
+"*Access Rights* tab. Go to the *Productivity* section, and in the |VOIP| "
+"field select the desired access level."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:63
-msgid ""
-"While |VOIP| setup is minimal in Odoo, most configuration happens in the "
-"external |VOIP| service provider. Two verified providers are :doc:`OnSIP "
-"<voip/onsip>` and :doc:`Axivox <voip/axivox>`. Click on the cards below to "
-"learn how to configure these service providers in the Odoo database. If "
-"these providers cannot be used, an alternate provider must meet these "
-"requirements to connect with Odoo:"
+#: ../../content/applications/productivity/voip.rst:66
+msgid "There are three access roles for |VOIP|:"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:68
+msgid ":guilabel:`No`: cannot access |VOIP| features."
 msgstr ""
 
 #: ../../content/applications/productivity/voip.rst:69
+msgid ":guilabel:`Officer`: can view and report on all calls."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:70
+msgid ":guilabel:`Administrator`: can view, report, and manage call settings."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:0
+msgid ""
+"Database administrators are not automatically granted administrator rights "
+"for |VOIP|."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:0
+msgid "Make sure to set the correct access level for each |VOIP| user."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:76
+msgid ""
+"To modify these roles or add custom roles, see :ref:`Create and modify "
+"groups <access-rights/groups>`."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:80
+msgid "Add a VoIP provider"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:82
+msgid ""
+"In order to use |VOIP|, a service provider must be connected to the Odoo "
+"database. While |VOIP| setup is minimal in Odoo, most configuration happens "
+"in the external |VOIP| service provider. Two verified providers "
+"are :doc:`OnSIP <voip/onsip>` and :doc:`Axivox <voip/axivox>`. Click on the "
+"cards below to learn how to configure these service providers in the Odoo "
+"database. If these providers cannot be used, an alternate provider must meet "
+"these requirements to connect with Odoo:"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:88
 msgid ""
 "|VOIP| host must provide access to a SIP server via a websocket connection"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:70
+#: ../../content/applications/productivity/voip.rst:89
 msgid "|VOIP| host must support WebRTC protocol"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:72
+#: ../../content/applications/productivity/voip.rst:91
 msgid ""
 "To add the credentials for the alternate provider, go to the **Settings** "
 "app and search for `VoIP`. In the :guilabel:`Integrations` section "
@@ -23775,7 +23925,7 @@ msgid ""
 "domain created by the alternate provider goes."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:77
+#: ../../content/applications/productivity/voip.rst:96
 msgid ""
 "If any issues with the |VOIP| service provider are encountered, then reach "
 "out to their support team. If any issues when setting up the |VOIP| service "
@@ -23783,60 +23933,60 @@ msgid ""
 "troubleshooting steps <voip/voip_widget/troubleshooting_voip>`."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:82
+#: ../../content/applications/productivity/voip.rst:101
 msgid ""
 "Odoo **cannot** verify that every alternate provider is compatible with "
 "Odoo's systems. However, if the above requirements are met, then no issues "
 "should be found."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:86
+#: ../../content/applications/productivity/voip.rst:105
 #: ../../content/applications/productivity/voip/axivox.rst:5
 msgid "Axivox configuration"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:86
+#: ../../content/applications/productivity/voip.rst:105
 msgid ""
 "Learn how to set up Axivox in Odoo. This includes adding users to Axivox, "
 "setting up call queues, and more."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:93
+#: ../../content/applications/productivity/voip.rst:112
 msgid "OnSIP configuration"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:93
+#: ../../content/applications/productivity/voip.rst:112
 msgid ""
 "Learn how to set up OnSIP in Odoo. This includes entering OnSIP credentials "
 "into Odoo and handling troubleshooting."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:101
+#: ../../content/applications/productivity/voip.rst:120
 msgid "VoIP workflows"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:103
+#: ../../content/applications/productivity/voip.rst:122
 msgid ""
 "Here are a few commonly used workflows for Odoo |VOIP|. This technology is "
 "especially popular with sales teams and support teams, but can be useful for "
 "other teams as well."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:107
+#: ../../content/applications/productivity/voip.rst:126
 msgid "Sales teams and VoIP"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:107
+#: ../../content/applications/productivity/voip.rst:126
 msgid ""
 "Learn how to use VoIP for a sales team. This includes making sales calls, "
 "handling follow-ups, and sending a sales quotation while on a call."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:114
+#: ../../content/applications/productivity/voip.rst:133
 msgid "Support queues and VoIP"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:114
+#: ../../content/applications/productivity/voip.rst:133
 msgid ""
 "Learn how to use VoIP for a support team. This includes joining a call queue "
 "as an agent and handling support tickets that require calls."
