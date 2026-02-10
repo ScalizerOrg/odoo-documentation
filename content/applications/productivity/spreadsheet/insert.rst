@@ -66,12 +66,13 @@ Clicking on a data source opens the related properties in a panel on the right o
      :icon:`oi-view-pivot` :guilabel:`See pivot properties`, or by clicking the :icon:`fa-bars`
      :guilabel:`(menu)` icon at the top right of an inserted chart, then clicking
      :icon:`fa-pencil-square-o` :guilabel:`Edit`.
-   - Once the properties of a specific data source are open, they remain open even when navigating
-     between spreadsheet tabs. To close the properties panel, click the :icon:`fa-times`
+   - Once the properties panel of a specific data source is open, it remains open even when
+     navigating between spreadsheet tabs. To close the properties panel, click the :icon:`fa-times`
      :guilabel:`(close)` icon at the top right of the panel.
-   - Click :icon:`fa-thumb-tack` :guilabel:`(pin)` at the top of the properties panel to allow
-     another panel, such as the :doc:`global filters <work_with_data/global_filters>` panel, to
-     open beside it.
+   - To pin the properties panel so another panel, such as the :doc:`global
+     filters <work_with_data/global_filters>` panel, can be opened beside it, click
+     :menuselection:`View -->` :icon:`fa-thumb-tack` :menuselection:`Pin the side panel` from the
+     menu bar.
 
 .. note::
    Deleting an inserted list or pivot table, or deleting the sheet into which it was inserted, does
@@ -101,7 +102,8 @@ The underlying data of an inserted list, pivot table, or chart can be accessed a
 
 .. tip::
    Use the middle mouse button or `Ctrl` + left-click (Microsoft/Linux), or `Command` + left-click
-   (Mac OS) to open the results in a new browser tab.
+   (Mac OS) to click :icon:`fa-eye` :guilabel:`See record`, :icon:`fa-eye` :guilabel:`See records`,
+   or a chart data point to open the results in a new browser tab.
 
 To return to the spreadsheet after viewing the underlying data, click the name of the spreadsheet in
 the breadcrumbs at the top of the page.
