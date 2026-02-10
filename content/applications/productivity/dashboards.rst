@@ -84,11 +84,15 @@ help tailor the view to answer specific business questions.
 
 .. _dashboards/use-dashboards/global-filters:
 
-Apply filters
-~~~~~~~~~~~~~
+Apply global filters
+~~~~~~~~~~~~~~~~~~~~
 
-If :doc:`global filters <spreadsheet/work_with_data/global_filters>` are available for a dashboard,
-a search bar above the dashboard allows you to filter the entire dashboard for the selected values.
+If :doc:`global filters <spreadsheet/work_with_data/global_filters>` have been configured for a
+dashboard, a search bar is available above the dashboard.
+
+.. image:: dashboards/use-global-filters.png
+   :alt: Global filters on the Project dashboard
+   :scale: 80%
 
 .. tip::
    - Global filters are available for all :ref:`standard dashboards <dashboards/standard>`.
@@ -98,16 +102,12 @@ a search bar above the dashboard allows you to filter the entire dashboard for t
    - It is also possible to :ref:`search for values <search/values>` by typing directly in the
      search bar; the search categories shown reflect the available global filters.
 
-.. image:: dashboards/global-filters.png
-   :alt: Global filters on the Warehouse Daily Operations dashboard
-   :scale: 80%
-
 To apply global filters:
 
 #. Click within the search bar or click on the :icon:`fa-caret-down` :guilabel:`(dropdown)` icon to
    access all filters available for that dashboard.
 #. For the relevant filter, select a conditional operator from the first dropdown, e.g.,
-   :guilabel:`is in`, then select the desired value from the second dropdown.
+   :guilabel:`is in`, then, as relevant, enter or select the appropriate value.
 #. Click :guilabel:`Filter`.
 
 For dashboards with a date filter, this filter can be set via the search bar or via the button
