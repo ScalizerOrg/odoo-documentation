@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-06 18:30+0000\n"
-"PO-Revision-Date: 2026-02-09 23:21+0000\n"
+"PO-Revision-Date: 2026-02-10 23:21+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
 "productivity/ko/>\n"
@@ -1451,13 +1451,15 @@ msgstr ":doc:`AI 에이전트 <agents>`"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:3
 msgid "AI server actions"
-msgstr "AI 서버 작업"
+msgstr "AI 서버 액션"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:7
 msgid ""
 "|AI| server actions extend Odoo's automation framework by allowing "
 "artificial intelligence to make decisions during a workflow."
 msgstr ""
+"|AI| 서버 액션을 통해 Odoo의 자동화 프레임워크 범위를 확장할 수 있습니다. 업"
+"무 프로세스에서 필요한 다양한 의사결정에 인공지능을 활용할 수 있습니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:10
 msgid ""
@@ -1465,10 +1467,12 @@ msgid ""
 "fixed conditions, but still requires controlled execution through standard "
 "server actions."
 msgstr ""
+"이 기능은 주어진 조건만으로는 복잡한 로직을 모두 표현할 수 없는 상황에서도, "
+"표준 서버 액션을 통해 실행 관리를 해야 하는 경우를 위해 제작되었습니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:14
 msgid "How AI server actions work"
-msgstr ""
+msgstr "AI 서버 액션이 작동하는 방식"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:16
 msgid ""
@@ -1476,10 +1480,12 @@ msgid ""
 "responsibilities between the |AI| server action, or *the Manager*, and the "
 "tool, or *the Worker*."
 msgstr ""
+"Odoo에서 AI 기반 워크플로우는 |AI| 서버 액션(또는 *관리자*)과 그 도구(또는 *"
+"작업자*) 간의 명확한 책임 분리를 전제로 구축되어 있습니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:20
 msgid "AI server action: the manager"
-msgstr ""
+msgstr "AI 서버 액션: 관리자"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:22
 msgid ""
@@ -1487,6 +1493,9 @@ msgid ""
 "record and its context. It interprets the |AI| prompt. And it decides which "
 "tool to call, and what arguments to use."
 msgstr ""
+"|AI| 서버 액션은 의사결정권자, 즉 관리자의 역할을 수행합니다. 레코드와 그 컨"
+"텍스트를 읽고 파악하며, |AI| 프롬프트를 해석하며, 어떤 도구를 호출하고 어떤 "
+"인수를 적용할지 판단합니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:25
 msgid ""
@@ -1494,10 +1503,13 @@ msgid ""
 "or guarantee the correctness of the operation. Its role is limited to "
 "decision-making."
 msgstr ""
+"서버 액션에서는 비즈니스 규칙에 대한 강제 적용, 레코드에 대한 직접 수정 및 작"
+"업의 정확성이 보장되지 않습니다. 서버 액션은 의사결정을 하는 역할로만 한정되"
+"어 있습니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:29
 msgid "AI tool: the worker"
-msgstr ""
+msgstr "AI 도구: 작업자"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:31
 msgid ""
@@ -1506,40 +1518,45 @@ msgid ""
 "updates, moves, or writes. Tools **must** enforce business rules explicitly "
 "in Python code."
 msgstr ""
+"도구는 표준 서버 액션의 하나로 *사용* 탭에서 *AI에서 사용하기* 옵션을 활성화"
+"하면 실행할 수 있습니다. 도구에는 모든 실행 로직이 포함되어 있으며 레코드 업"
+"데이트, 이동, 작성 작업을 수행합니다. 도구는 **반드시** 파이썬 코드를 통해 명"
+"시적으로 비즈니스 규칙을 구현하고 실행해야 합니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:35
 msgid ""
 "If a tool is called by the |AI| server action, it will execute "
 "unconditionally, unless the code itself prevents it."
-msgstr ""
+msgstr "|AI| 서버 액션에서 도구를 호출할 경우, 코드 자체에서 실행이 제한되는 경우를 "
+"제외하고는 도구가 무조건 실행됩니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:39
 msgid "AI server action workflow"
-msgstr ""
+msgstr "AI 서버 액션 워크플로우"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:41
 msgid "The |AI| server action workflow follows this sequence:"
-msgstr ""
+msgstr "|AI| 서버 액션은 다음과 같은 순서로 진행됩니다:"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:43
 msgid "A record triggers an |AI| server action."
-msgstr ""
+msgstr "레코드에서 |AI| 서버 액션이 트리거됩니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:44
 msgid "The |AI| prompt is evaluated, using the record as context."
-msgstr ""
+msgstr "|AI| 프롬프트에 대한 평가가 진행되며, 레코드가 컨텍스트가 됩니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:45
 msgid "The |AI| selects one of the available tools."
-msgstr ""
+msgstr "|AI| 가 사용 가능한 도구 중 하나를 선택합니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:46
 msgid "The |AI| provides arguments expected by the tool."
-msgstr ""
+msgstr "|AI| 가 도구에 필요한 인수를 제공합니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:47
 msgid "The selected tool executes its Python code."
-msgstr ""
+msgstr "선택된 도구가 파이썬 코드를 실행합니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:50
 msgid ""
@@ -1547,10 +1564,13 @@ msgid ""
 "behavior already exists in Odoo, such as moving a document to a folder. In "
 "these cases, the |AI| selects parameters, and Odoo executes the action."
 msgstr ""
+"Odoo에서 이미 존재하는 기본 동작(예: 문서를 폴더로 이동하기)의 경우에는 로직"
+"을 사용자 지정하지 않고도 |AI| 서버 액션을 작동할 수 있습니다. 이 경우 |AI| "
+"에서 매개변수를 선택하면 Odoo에서 액션이 실행됩니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:55
 msgid "Use case walkthrough"
-msgstr "사례 검토"
+msgstr "단계별 사례 보기"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:57
 msgid ""
@@ -1558,6 +1578,9 @@ msgid ""
 "Action pattern. Navigate to the *Server Actions* menu by going "
 "to :menuselection:`Settings --> Technical --> Server Actions`."
 msgstr ""
+"*받은 편지함 문서 자동 분류하기* 예시를 통해 전체적인 |AI| 서버 액션의 패턴을"
+" 확인할 수 있습니다. :menuselection:`설정 --> 기술 --> 서버 액션` 을 통해 *서"
+"버 액션* 메뉴로 이동합니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:62
 msgid ""
@@ -1826,7 +1849,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/webpage.rst:3
 msgid "AI webpage generator"
-msgstr "AI 웹페이지 생성기"
+msgstr "AI 웹페이지 생성 도구"
 
 #: ../../content/applications/productivity/ai/webpage.rst:7
 msgid ""
@@ -1836,35 +1859,41 @@ msgid ""
 msgstr ""
 "Odoo **웹사이트** 애플리케이션에서 |AI| 를 활용하여 독창적인 웹페이지를 생성"
 "할 수 있습니다. Odoo에 프롬프트를 입력하면 |AI| 에이전트가 비즈니스의 요구 사"
-"항, 스타일 및 톤에 맞는 디자인과 콘텐츠를 만들어냅니다."
+"항, 스타일 및 톤에 맞는 디자인과 콘텐츠를 생성해 냅니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:12
 msgid ""
 "The **AI** application does **not** need to be installed on the database to "
 "use the webpage generator, only the **Website** app."
 msgstr ""
+"웹페이지 생성 도구는 **AI** 애플리케이션이 데이터베이스에 **설치되어 있지 않"
+"더라도** 사용이 가능합니다. **웹사이트** 앱만 설치하면 즉시 활용할 수 있습니"
+"다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:16
 msgid "Generating a new webpage"
-msgstr "신규 웹 페이지 생성하기"
+msgstr "신규 웹페이지 생성하기"
 
 #: ../../content/applications/productivity/ai/webpage.rst:18
 msgid ""
 "First, navigate to the :menuselection:`Website app`. In the top-right of the "
 "page, click :guilabel:`New`, then click :guilabel:`Page`."
 msgstr ""
+"먼저 :menuselection:`웹사이트 앱` 으로 이동합니다. 페이지 오른쪽 상단에 있는 "
+":guilabel:`신규` 버튼을 클릭한 후 :guilabel:`페이지` 를 선택합니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:None
 msgid "Adding a new page to a website in Odoo."
-msgstr "Odoo에서 웹사이트에 새 페이지를 추가합니다."
+msgstr "Odoo에서 웹사이트에 새 페이지가 추가된 모습입니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:24
 msgid "On the :guilabel:`New Page` pop-up, select the desired page type."
-msgstr ":guilabel:`새 페이지` 팝업에서 원하는 페이지 유형을 선택합니다."
+msgstr ":guilabel:`새 페이지` 팝업창에서 원하는 페이지 유형을 선택합니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:27
 msgid "The |AI| webpage generator is not available on the *Blank* page type."
-msgstr ""
+msgstr "|AI| 웹페이지 생성기는 내용이 없는 *기본* 페이지 유형에서는 사용할 수 없습니"
+"다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:29
 msgid ""
@@ -1874,6 +1903,11 @@ msgid ""
 "description of the page being created. This should include a few important "
 "keywords that help define the focus and scope of the page."
 msgstr ""
+"페이지 유형을 클릭하면 :guilabel:`새 페이지` 팝업창이 열립니다. :guilabel:`페"
+"이지 제목` 을 입력한 다음 :guilabel:`AI 텍스트 생성` 토클을 활성화하면 :guila"
+"bel:`지침` 필드가 나타납니다. 생성할 페이지에 대한 간단할 설명을 여기에 입력"
+"합니다. 설명 내용에는 페이지에서 중점적으로 다루는 내용과 범위를 정의하기 위"
+"한 주요 키워드가 포함되어 있어야 합니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:34
 msgid "Next, select one of the tone options for the page:"
@@ -1881,27 +1915,27 @@ msgstr "이어서 페이지의 색상 옵션 중 하나를 선택합니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:36
 msgid ":guilabel:`Concise`"
-msgstr ":guilabel:`요약`"
+msgstr ":guilabel:`요약형`"
 
 #: ../../content/applications/productivity/ai/webpage.rst:37
 msgid ":guilabel:`Professional`"
-msgstr ":guilabel:`전문적`"
+msgstr ":guilabel:`전문형`"
 
 #: ../../content/applications/productivity/ai/webpage.rst:38
 msgid ":guilabel:`Friendly`"
-msgstr ":guilabel:`친절함`"
+msgstr ":guilabel:`친근형`"
 
 #: ../../content/applications/productivity/ai/webpage.rst:39
 msgid ":guilabel:`Persuasive`"
-msgstr ":guilabel:`설득력있게`"
+msgstr ":guilabel:`설득형`"
 
 #: ../../content/applications/productivity/ai/webpage.rst:40
 msgid ":guilabel:`Informative`"
-msgstr ":guilabel:`유용한`"
+msgstr ":guilabel:`정보형`"
 
 #: ../../content/applications/productivity/ai/webpage.rst:None
 msgid "The new page pop-up with the Generate AI text options visible."
-msgstr ""
+msgstr "새 페이지 팝업창에 AI 텍스트 생성 옵션이 나타나 있는 모습입니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:45
 msgid ""
@@ -1911,18 +1945,25 @@ msgid ""
 "then click on a block of text to make changes. Click :guilabel:`Save` when "
 "finished."
 msgstr ""
+"선택을 완료한 후에는 :guilabel:`AI로 생성하기` 를 클릭합니다. 웹페이지 로드에"
+" 잠시 시간이 걸릴 수 있습니다. |AI| 생성기로 제작된 콘텐츠는 편집할 수 있습니"
+"다. 페이지 오른쪽 도구 모음에서 :guilabel:`편집` 을 클릭한 후 텍스트 블록을 "
+"클릭하여 변경합니다. 완료 후 :guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:51
 msgid ""
 "The webpage generator may have created buttons. Before publishing the "
 "webpage, confirm that all buttons are linked to an active webpage."
 msgstr ""
+"웹페이지 생성기에서 버튼이 생성되는 경우도 있습니다. 웹페이지를 게시하기 전에"
+", 모든 버튼이 실제 페이지에 연결되어 활성화 상태인지 확인하세요."
 
 #: ../../content/applications/productivity/ai/webpage.rst:54
 msgid ""
 "After reviewing the page, slide the :guilabel:`Unpublished` toggle to active "
 "to publish the page."
-msgstr ""
+msgstr "페이지를 검토한 후 `게시되지 않음` 토글을 슬라이드로 활성화하면 페이지가 게시"
+"됩니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:57
 msgid ":doc:`Web design <../../websites/website/web_design>`"
