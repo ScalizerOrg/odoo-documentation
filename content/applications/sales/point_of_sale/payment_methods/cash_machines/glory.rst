@@ -4,6 +4,10 @@ Glory
 
 **Glory** :doc:`cash machines <../cash_machines>` enable the automation of cash transactions.
 
+.. important::
+   - Odoo supports the Glory CI-5, CI-10, and CI-10X models.
+   - The Glory machine must run firmware version ISP-K05H/B v18.40 or later. Any version starting with ISP-K35 is **not supported**.
+
 .. note::
    - The integration with the Glory cash machine only supports basic functions, such as cash
      transactions and cash count checks.
@@ -58,7 +62,7 @@ Cash machine settings
    - If **multiple POS** are connected to the same cash machine, go to :guilabel:`App
      Configuration`, scroll down to the :guilabel:`SOAP IF Setting`, and ensure :guilabel:`Session
      mode` and :guilabel:`Occupy mode` are both set to :guilabel:`Enable`.
-   - If **a dedicated user** has been set up on the cash machine for Odoo, go to :guilabel:`App
+   - If **a dedicated user** has been set up on the cash machine for Odoo, which is recommended, go to :guilabel:`App
      Configuration`, scroll down to the :guilabel:`SOAP IF Setting` section, and :guilabel:`Enable`
      the :guilabel:`User check` setting.
 #. Restart the cash machine to apply the new settings.
