@@ -87,6 +87,7 @@ Below are some common requests that the *Ask AI* agent can assist with:
 
    ai/apikeys
    ai/agents
+   ai/document_sort
    ai/fields
    ai/webpage
    ai/live-chat
