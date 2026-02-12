@@ -1,10 +1,11 @@
-========================
-Referral analysis report
-========================
+===========================
+Employees referral analysis
+===========================
 
-The reporting function in the **Referrals** app helps recruiters and managers learn where applicants
-are applying from, when referred by a current employee. Additionally, the reporting feature shows
-the number of applicants hired, refused, and still in the recruitment pipeline, for each medium.
+The *Employees Referral Analysis* report in the **Referrals** app helps recruiters and managers
+learn where applicants are applying from, when referred by a current employee. Additionally, the
+*Employees Referral Analysis* report shows the number of applicants hired, refused, and still in the
+recruitment pipeline, for each medium.
 
 .. important::
    Only users with *Administrator* rights for the **Recruitment** app have access to the reporting
@@ -14,8 +15,8 @@ Employees referral analysis report
 ==================================
 
 To access the *Employees Referral Analysis* report, navigate to :menuselection:`Referrals app -->
-Reporting`. This loads the :guilabel:`Employees Referral Analysis` report, in a default
-:icon:`fa-bar-chart` :guilabel:`Bar Chart`.
+Reporting --> Referral Analysis`. This loads the :guilabel:`Employees Referral Analysis` report in a
+default :icon:`fa-bar-chart` :guilabel:`Bar Chart`.
 
 The graph is presented in a :icon:`fa-database` :guilabel:`Stacked` view, with the number of
 referrals on the y-axis, and the source, referred to as the :guilabel:`Medium`, of the applicant
@@ -51,11 +52,11 @@ upper-right corner. Next, remove the current filter in the search bar.
 Click the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar to reveal a drop-down
 menu. Click :guilabel:`Date` in the :icon:`fa-filter` :guilabel:`Filters` column, revealing a
 drop-down menu of available time periods, and click the current year (in this example,
-:guilabel:`2024`).
+:guilabel:`2024`), then click away to close the window.
 
-Next, click :guilabel:`Measures` :icon:`fa-caret-down`, then deselect :guilabel:`Earned Points` and
-:guilabel:`Employee Referral Refused` to hide those metrics. Click anywhere on the screen to close
-the drop-down menu.
+Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the upper-left corner, then
+deselect :guilabel:`Earned Points` and :guilabel:`Employee Referral Refused` to hide those metrics.
+Click anywhere on the screen to close the drop-down menu.
 
 The information displayed shows how many total applicants each employee referred, and how many of
 those applicants were hired, for the current year.
