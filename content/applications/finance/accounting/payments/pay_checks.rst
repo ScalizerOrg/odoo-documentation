@@ -9,6 +9,8 @@ sent to suppliers with actual bank statements.
 Configuration
 =============
 
+.. _accounting/pay-checks/activate-methods:
+
 Activate checks payment methods
 -------------------------------
 
@@ -34,6 +36,8 @@ For the United States, Odoo supports by default the check formats of:
 - **Quickbooks & Quicken**: check on top, stubs in the middle and bottom;
 - **Peachtree**: check in the middle, stubs on top and bottom;
 - **ADP**: check in the bottom, and stubs on the top.
+
+.. _accounting/pay-checks/pay-bill-check:
 
 Pay a supplier bill with a check
 ================================
