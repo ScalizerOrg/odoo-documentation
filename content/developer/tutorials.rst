@@ -9,7 +9,6 @@ Tutorials
    tutorials/setup_guide
    tutorials/server_framework_101
    tutorials/discover_js_framework
-   tutorials/master_odoo_web_framework
    tutorials/define_module_data
    tutorials/restrict_data_access
    tutorials/unit_tests
@@ -42,13 +41,6 @@ Learn the server and web frameworks
 
       This tutorial will teach the basics of the web framework and how to work with Owl components
       by customizing the web client.
-
-   .. card:: Master the web framework
-      :target: tutorials/master_odoo_web_framework
-      :tag: Advanced
-
-      Become an expert in the web framework. A large variety of features are covered such as fields,
-      views, and even the kitten mode.
 
 Expand your knowledge on the server framework
 =============================================
