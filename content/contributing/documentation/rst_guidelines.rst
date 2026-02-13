@@ -876,6 +876,17 @@ the rows and the second level represents the columns.
                - France
                - Turquoise
 
+.. tip::
+   Use specific parameters to adjust the appearance and layout of list tables:
+
+   - `:class: table-striped`: Apply alternating row colors.
+   - `:class: table-sticky-header`: Keep the header row fixed while scrolling.
+   - ``:widths:``: Define column proportions. Avoid using `auto`. For example: ``:widths: 25 25 50``.
+
+.. seealso::
+   `Docutils documentation on reStructuredText tables
+   <https://docutils.sourceforge.io/docs/ref/rst/directives.html#tables>`_
+
 Grid tables
 -----------
 
