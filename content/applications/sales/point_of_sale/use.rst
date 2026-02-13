@@ -43,7 +43,7 @@ Settings`. Then, open the :guilabel:`Point of Sale` dropdown menu and select the
 
    - :doc:`Enable multiple employees to log in. <employee_login>`
    - :doc:`Connect and set up an IoT sytem. <configuration/pos_iot>`
-   - :doc:`Connect and set up an ePOS printer. <configuration/epos_ssc>`
+   - :doc:`Connect and set up an ePOS printer. <configuration/epos_printers>`
 
 .. _pos/use/open-register:
 
