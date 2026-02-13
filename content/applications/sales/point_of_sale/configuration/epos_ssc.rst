@@ -4,19 +4,19 @@
 Self-signed certificate for ePOS printers
 =========================================
 
+.. important::
+   Since the `Chromium 142 update <https://developer.chrome.com/release-notes/142>`_, using a
+   self-signed certificate is no longer required. The recommended approach is to use the
+   :doc:`Local Network Access <pos_lna>` method instead.
+
 To work with Odoo, some printer models that can be used without an
 :doc:`IoT system </applications/general/iot>` may require the HTTPS protocol to establish a secure
 connection between the browser and the printer. However, trying to reach the printer's IP address
-using HTTPS leads to a warning page on most web browsers. In that case, you can temporarily
-:ref:`force the connection <epos_ssc/instructions>`, which allows you to reach the page in HTTPS and
-use the ePOS printer in Odoo as long as the browser window stays open.
+using HTTPS leads to a warning page on most web browsers.
 
-.. warning::
-   The connection is lost after closing the browser window. Therefore, this method should only be
-   used as a **workaround** or as a pre-requisite for the :ref:`following instructions
-   <epos_ssc/instructions>`.
 
-.. _epos_ssc/instructions:
+.. seealso::
+   :doc:`pos_lna`
 
 Generate, export, and import self-signed certificates
 =====================================================
