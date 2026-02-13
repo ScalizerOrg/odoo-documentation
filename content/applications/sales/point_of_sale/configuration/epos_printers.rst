@@ -1,52 +1,61 @@
+.. |LNA| replace:: :abbr:`LNA (Local Network Access)`
+
 =============
 ePOS printers
 =============
 
-ePOS printers are designed to work seamlessly with Point of Sale systems. Once connected, these
-devices automatically share information, allowing for direct printing of tickets from the POS system
-to the ePOS printer.
+ePOS printers are designed to integrate with Point of Sale systems and can receive print jobs
+directly from the POS once they are properly configured and connected.
+
+.. _pos/epos_printers/configuration:
 
 Configuration
 =============
 
 To use an ePos printer in Point of Sale:
 
-#. :ref:`Access the POS settings <pos/use/settings>`.
-#. Activate the :guilabel:`ePos Printer` feature.
-#. Fill in the field with your ePos IP address.
-
-.. image:: epos_printers/setting.png
-   :alt: setting to enable the ePos printer feature
+#. Go to :menuselection:`Point of Sale --> Configuration --> Settings`.
+#. Scroll down to the :guilabel:`Connected Devices` section and enable :guilabel:`Receipt Printers`.
+#. Click the :guilabel:`Printers` field, then select :guilabel:`Create`.
+#. In the :guilabel:`Create Receipt Printers` popup, enter the printer's :guilabel:`Name`.
+#. Specify the printer's purpose by selecting either :guilabel:`Preparation` or :guilabel:`Receipt`.
+#. Set the :guilabel:`Printer Type` to :ref:`IP address <pos/epos_printers/supported-printers>` or
+   :ref:`IoT <pos/epos_printers/iot-supported-printers>`.
+#. Depending on the selected :guilabel:`Printer Type`, enter the :guilabel:`Epson Printer IP
+   Address` or select the relevant :guilabel:`IoT Device`.
+#. Enable :guilabel:`Use Local Network Access` to allow the printer to be detected through
+   :doc:`Local Network Access (LNA) <pos_lna>`.
+#. Click :guilabel:`Save`.
 
 .. note::
-   When the printer connects to a network, it automatically prints a ticket with its IP address.
+   - When the printer connects to a network, it automatically prints a receipt with its IP address.
+   - Once configured, printers can be managed from :menuselection:`Point of Sale -->
+     Configuration --> Printers`.
+
+.. _pos/epos_printers/supported-printers:
 
 Directly supported ePOS printers
 ================================
 
-The following ePOS printers are directly compatible with Odoo without needing an :doc:`IoT system
-</applications/general/iot/devices/printer>`.
+The **Epson TM-m30 i/ii/iii (Wi-Fi or Ethernet only) models** are strongly recommended, as they have
+been fully tested with Odoo Point of Sale.
 
-- Epson TM-m30 i/ii/iii (Wi-Fi/Ethernet models only; Recommended)
-- Epson TM-H6000IV-DT (Receipt printer only)
-- Epson TM-T70II-DT
-- Epson TM-T88V-DT
-- Epson TM-L90-i
-- Epson TM-T70-i
-- Epson TM-T82II-i
-- Epson TM-T83II-i
-- Epson TM-U220-i
-- Epson TM-m10
-- Epson TM-P20 (Wi-Fi® model)
-- Epson TM-P60II (Receipt: Wi-Fi® model)
-- Epson TM-P60II (Peeler: Wi-Fi® model)
-- Epson TM-P80 (Wi-Fi® model)
+Other Wi-Fi or Ethernet Epson printer models that support the **ePoS protocol** should also be
+compatible.
+
+.. important::
+   - The ePoS printer must be capable of operating in HTTP mode.
+   - When using :doc:`Local Network Access <pos_lna>`, the ePOS printer must have a
+     **static IP address**; otherwise, it may become unreachable. The static IP should be configured
+     through the router.
+
+.. _pos/epos_printers/iot-supported-printers:
 
 ePOS printers with IoT system integration
 =========================================
 
-The following printers require an :doc:`IoT system </applications/general/iot/devices/printer>` to
-be compatible with Odoo:
+The following printers require an :doc:`IoT system </applications/general/iot>` to be compatible
+with Odoo:
 
 - Epson TM-T20 family (incompatible ePOS software)
 - Epson TM-T88 family (incompatible ePOS software)
@@ -64,4 +73,6 @@ be compatible with Odoo:
    - Epson printers that connect via Bluetooth are **not compatible**.
 
 .. seealso::
-   :doc:`epos_ssc`
+   - :doc:`pos_lna`
+   - :doc:`epos_ssc`
+   - :doc:`/applications/general/iot/devices/printer`
