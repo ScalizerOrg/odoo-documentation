@@ -70,14 +70,14 @@ The following modules are installed automatically with the Italian localization:
 Company
 -------
 
-Configuring the company's information ensures your Accounting database is properly set up. To add
-information, open the Settings app, navigate to the :guilabel:`Companies` section, and click
-:icon:`oi-arrow-right` :guilabel:`Update info`. Then, fill out the fields:
+To use all the features of this fiscal localization, the following fields are required on the
+:ref:`company record <general/companies/company>`:
 
-- :guilabel:`Address`: the address of the company;
-- :guilabel:`VAT`: VAT of the company;
-- :guilabel:`Codice Fiscale`: the fiscal code of the company;
-- :guilabel:`Tax System`: the tax system under which the company falls;
+- :guilabel:`Company Name`
+- :guilabel:`Address`: the address of the company.
+- :guilabel:`VAT`: VAT of the company.
+- :guilabel:`Codice Fiscale`: the fiscal code of the company.
+- :guilabel:`Tax System`: the tax system under which the company falls.
 
 .. image:: italy/company.png
    :alt: Company information to be provided
@@ -158,12 +158,12 @@ configurations.
 Vendor bills
 ------------
 
-Italian companies subjected to Reverse Charge must send the information in the bill received to the
-:abbr:`AdE (Agenzia delle Entrate)`.
+Italian companies subjected to **reverse charge** must send the information in the bill received to
+the :abbr:`AdE (Agenzia delle Entrate)`.
 
 .. note::
    Self-reported VAT XML files must be issued and sent to the :abbr:`AdE (Agenzia Delle Entrate)`
-   for reverse charged bills.
+   for **reverse charged** bills.
 
 When creating a vendor bill, **reverse charge** taxes are available to be added in the
 :guilabel:`Taxes` field. You can check which taxes are available by going to
@@ -189,7 +189,8 @@ E-invoicing
 ===========
 
 .. note::
-   Make sure all the Italian-specific e-invoicing modules are :ref:`installed <general/install>`.
+   Make sure all the Italian-specific e-invoicing :ref:`modules <localizations/italy/modules>` are
+   :ref:`installed <general/install>`.
 
 The :abbr:`SdI (Sistema di Interscambio)` is the :doc:`electronic invoicing
 <../accounting/customer_invoices/electronic_invoicing>` system used in Italy. It enables the sending
@@ -199,59 +200,43 @@ system before being delivered.
 
 To be able to receive invoices and notifications, the :abbr:`SdI (Sistema di Interscambio)` service
 must be notified that the user's files need to be sent to Odoo and processed on their behalf. To do
-so, you must set up Odoo's :guilabel:`Destination Code` on the :abbr:`AdE (Agenzia Delle
-Entrate)` portal.
+so, set up Odoo's :guilabel:`Destination Code` on the :abbr:`AdE (Agenzia Delle Entrate)` portal.
 
-#. Go to `Italian authorities portal <https://ivaservizi.agenziaentrate.gov.it/portale>`_ and
-   authenticate;
-#. Go to section :guilabel:`Fatture e Corrispettivi`;
-#. Set the user as Legal Party for the VAT number you wish to configure the electronic address;
+#. Go to the `Italian authorities portal <https://ivaservizi.agenziaentrate.gov.it/portale>`_ and
+   authenticate.
+#. Go to the :guilabel:`Fatture e Corrispettivi` section.
+#. Set the user as Legal Party for the VAT number you wish to configure the electronic address.
 #. In :menuselection:`Servizi Disponibili --> Fatturazione Elettronica --> Registrazione
    dell’indirizzo telematico dove ricevere tutte le fatture elettroniche`, insert Odoo's
    :guilabel:`Destination Code` `K95IV18`, and confirm.
 
-.. _localizations/italy/edi-mode:
+.. _localizations/italy/demo-prod-modes:
 
-EDI Mode and authorization
---------------------------
-
-Since the files are transmitted through Odoo's server before being sent to the :abbr:`SdI (Sistema
-di Interscambio)` or received by your database, you need to authorize Odoo to process your files
-from your database. To do so, go to :menuselection:`Accounting --> Configuration --> Settings` and
-scroll to the :guilabel:`Italian Electronic Invoicing` section.
-
-There are three modes available:
-
-- | :guilabel:`Demo`
-  | This mode simulates an environment in which invoices are sent to the government. In this mode,
-    invoices need to be *manually* downloaded as XML files and uploaded to the :abbr:`AdE
-    (Agenzia delle Entrate)`'s website.
-- | :guilabel:`Test (experimental)`
-  | This mode sends invoices to a non-production (i.e., test) service made available by the
-    :abbr:`AdE (Agenzia delle Entrate)`. Saving this change directs all companies on the database to
-    use this configuration.
-- | :guilabel:`Official`
-  | This is a production mode that sends your invoices directly to the :abbr:`AdE (Agenzia delle
-    Entrate)`.
-
-Once a mode is selected, you need to accept the **terms and conditions** by ticking :guilabel:`Allow
-Odoo to process invoices`, and then :guilabel:`Save`. You can now record your transactions in Odoo
-Accounting.
-
-.. warning::
-   Selecting either :guilabel:`Test (experimental)` or :guilabel:`Official` is **irreversible**.
-   For example, once in :guilabel:`Official` mode, it is not possible to select :guilabel:`Test
-   (experimental)` or :guilabel:`Demo`. We recommend creating a **separate database** for testing
-   purposes only.
+Demo and production modes
+-------------------------
 
 .. note::
-   When in :guilabel:`Test (Experimental)` mode, all invoices sent *must* have a partner using one
-   of the following fake :guilabel:`Destination Code` given by the :abbr:`AdE (Agenzia Delle
-   Entrate)`: `0803HR0` - `N8MIMM9` - `X9XX79Z`. Any real production :guilabel:`Codice Destinario`
-   of your customers will not be recognized as valid by the test service.
+   - Demo mode is enabled by default and remains active until the option :guilabel:`By checking this
+     box, I authorize Odoo to send and receive my invoices through the Sistema di Interscambio
+     (SDI)` is enabled in the :guilabel:`Fattura Electronica (FatturaPA)` section. Once this option
+     is activated, production mode is enabled and cannot be disabled.
+   - Demo mode simulates an environment in which invoices are sent to the government. In this mode,
+     invoices must be *manually* downloaded as XML files and uploaded to the :abbr:`AdE (Agenzia
+     delle Entrate)`'s website.
 
-.. image:: italy/edi.png
-   :alt: Electronic document invoicing settings
+Since files are transmitted through Odoo's server before being sent to the :abbr:`SdI (Sistema di
+Interscambio)` or received by your database, authorization is required for Odoo to process them. To
+activate production mode and enable transmission to the :abbr:`SdI (Sistema di Interscambio)`,
+follow these steps:
+
+#. Make sure the :guilabel:`Codice Fiscale` field is completed in the :ref:`Company information
+   <localizations/italy/company>`.
+#. Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the
+   :guilabel:`Italian Electronic Invoicing` section.
+#. In the :guilabel:`Fattura Electronica (FatturaPA)` section, enable the option :guilabel:`By
+   checking this box, I authorize Odoo to send and receive my invoices through the Sistema di
+   Interscambio (SDI)`.
+#. Click :guilabel:`Save`.
 
 .. _localizations/italy/e-invoicing-process:
 
@@ -339,7 +324,7 @@ take up to three days. The invoice status is :guilabel:`Accepted by SDI, Forward
 
 .. _localizations/italy/possible-rejection:
 
-Possible Rejection
+Possible rejection
 ~~~~~~~~~~~~~~~~~~
 
 The :abbr:`SdI (Sistema di Interscambio)` may find inaccuracies in the compilation, possibly even
@@ -357,7 +342,7 @@ issue, it is sufficient to delete the attachments of the invoice, return the inv
 
 .. _localizations/italy/forwarding completed:
 
-Forwarding Completed
+Forwarding completed
 ~~~~~~~~~~~~~~~~~~~~
 
 The invoice has been delivered to the customer; however, you can still send a copy to the customer
@@ -370,7 +355,7 @@ Partner Delivery Failed` state.
 
 .. _localizations/italy/tax-integration:
 
-Tax Integration
+Tax integration
 ---------------
 
 When you receive a vendor bill, either from :abbr:`SdI (Sistema di Interscambio)`, from paper or
@@ -408,7 +393,7 @@ integration, as detailed in the :ref:`localizations/italy/document-types` sectio
 
 .. _localizations/italy/document-types:
 
-Document Types
+Document types
 --------------
 
 The :abbr:`SdI (Sistema di Interscambio)` requires businesses to send customer invoices and other
@@ -418,7 +403,7 @@ The following :guilabel:`Document Type` codes all technically identify different
 
 .. _localizations/italy/invoices:
 
-TD01 - Invoices
+TD01 - invoices
 ~~~~~~~~~~~~~~~
 
 This represents the standard **domestic** scenario for all invoices exchanged through the :abbr:`SdI
@@ -427,7 +412,7 @@ is categorized as a regular invoice, identified by the :guilabel:`Document Type`
 
 .. _localizations/italy/down-payments:
 
-TD02 - Down payments
+TD02 - down payments
 ~~~~~~~~~~~~~~~~~~~~
 
 **Down payment** invoices are imported/exported with a different :guilabel:`Document Type` code
@@ -435,12 +420,12 @@ TD02 - Down payments
 
 Odoo exports transactions as `TD02` if the following conditions are met:
 
-#. It is an invoice;
+#. It is an invoice.
 #. All invoice lines are related to down payment sales order lines.
 
 .. _localizations/italy/credit-notes:
 
-TD04 - Credit notes
+TD04 - credit notes
 ~~~~~~~~~~~~~~~~~~~
 
 It is the standard scenario for all **credit notes** issued to **domestic** clients, when we need to
@@ -450,7 +435,7 @@ sent to the :abbr:`SdI (Sistema di Interscambio)`, their :guilabel:`Document Typ
 
 .. _localizations/italy/simplified-invoicing:
 
-TD07, TD08, TD09 - Simplified Invoicing
+TD07, TD08, TD09 - simplified Invoicing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Simplified invoices (`TD07`), credit notes (`TD08`), and debit notes (`TD09`) can be used to certify
@@ -459,19 +444,19 @@ invoice, but with fewer information requirements.
 
 For a simplified invoice to be established, it must include:
 
-#. :guilabel:`Customer Invoice` reference: **unique** numbering sequence with **no gaps**;
-#. :guilabel:`Invoice Date`: issue **date** of the invoice;
+#. :guilabel:`Customer Invoice` reference: **unique** numbering sequence with **no gaps**.
+#. :guilabel:`Invoice Date`: issue **date** of the invoice.
 #. :ref:`Company Info <general/companies/company>`: the **seller**'s full credentials (VAT/TIN
-   number, name, full address);
-#. :guilabel:`VAT`: the **buyer**'s VAT/TIN number (on the partner form);
+   number, name, full address).
+#. :guilabel:`VAT`: the **buyer**'s VAT/TIN number (on the partner form).
 #. :guilabel:`Total`: the total **amount** (VAT included) of the invoice.
 
 In the :abbr:`EDI (Electronic Data Interchange)`, Odoo exports invoices as simplified if:
 
-#. It is a domestic transaction (i.e., the partner is from Italy);
+#. It is a domestic transaction (i.e., the partner is from Italy).
 #. Your company's **required fields** (:guilabel:`VAT Number` or :guilabel:`Codice Fiscale`,
-   :guilabel:`Fiscal Regime`, and full **address**) are provided;
-#. The partner's address is not fully specified (i.e., it misses the City or the ZipCode);
+   :guilabel:`Fiscal Regime`, and full **address**) are provided.
+#. The partner's address is not fully specified (i.e., it misses the City or the ZipCode).
 #. The total amount of VAT included is **less** than **400 EUR**.
 
 .. note::
@@ -481,20 +466,20 @@ In the :abbr:`EDI (Electronic Data Interchange)`, Odoo exports invoices as simpl
 
 .. _localizations/italy/internal-reverse-charge:
 
-TD16 - Internal Reverse Charge
+TD16 - internal Reverse Charge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Internal reverse charge transactions (see :ref:`localizations/italy/tax-exemption` and
 :ref:`localizations/italy/reverse-charge`) are exported as `TD16` if the following conditions are
 met:
 
-- It is a vendor bill;
+- It is a vendor bill.
 - It has at least **one tax** on the invoice lines that targets one of these :ref:`tax grids
   <localizations/italy/grids>`: `VJ6`, `VJ7`, `VJ8`, `VJ12`, `VJ13`, `VJ14`, `VJ15`, `VJ16`, `VJ17`
 
 .. _localizations/italy/services-abroad:
 
-TD17 - Buying services from abroad
+TD17 - buying services from abroad
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When buying **services** from **EU** and **non-EU** countries, the foreign *seller* invoices a
@@ -502,20 +487,20 @@ service with a **VAT-excluded** price, as it is not taxable in Italy. The VAT is
 in Italy.
 
 - Within the EU: the *buyer* integrates the invoice received with the **VAT information** due in
-  Italy (i.e., **vendor bill tax integration**);
+  Italy (i.e., **vendor bill tax integration**).
 - Non-EU: the *buyer* sends themselves an invoice (i.e., **self-billing**).
 
 Odoo exports a transaction as `TD17` if the following conditions are met:
 
-- It is a vendor bill;
+- It is a vendor bill.
 - It has at least **one tax** on the invoice lines that targets the tax grid :ref:`VJ3
-  <localizations/italy/grids>`;
+  <localizations/italy/grids>`.
 - All invoice lines either have :guilabel:`Services` as **products**, or a tax with the
   :guilabel:`Services` as **tax scope**.
 
 .. _localizations/italy/goods-eu:
 
-TD18 - Buying goods from EU
+TD18 - buying goods from EU
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Invoices issued within the EU follow a **standard format**, therefore only an integration of the
@@ -523,36 +508,36 @@ existing invoice is required.
 
 Odoo exports a transaction as `TD18` if the following conditions are met:
 
-- It is a vendor bill;
-- The **partner** is from an **EU** country;
+- It is a vendor bill.
+- The **partner** is from an **EU** country.
 - It has at least one tax on the invoice lines that targets the tax grid :ref:`VJ9
-  <localizations/italy/grids>`;
+  <localizations/italy/grids>`.
 - All invoice lines either have :guilabel:`Consumable` as **products**, or a tax with
   :guilabel:`Goods` as **tax scope**.
 
 .. _localizations/italy/goods-vat-deposit:
 
-TD19 - Buying goods from VAT deposit
+TD19 - buying goods from VAT deposit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Buying **goods** from a **foreign** vendor, but the **goods** are already in **Italy** in a **VAT
 deposit**.
 
 - From the EU: the *buyer* integrates the invoice received with the **VAT information** due in
-  Italy (i.e., **vendor bill tax integration**);
+  Italy (i.e., **vendor bill tax integration**).
 - Non-EU: the *buyer* sends an invoice to *themselves* (i.e., **self-billing**).
 
 Odoo exports a transaction as a `TD19` if the following conditions are met:
 
-- It is a vendor bill;
+- It is a vendor bill.
 - It has at least one tax on the invoice lines that targets the tax grid :ref:`VJ3
-  <localizations/italy/grids>`;
+  <localizations/italy/grids>`.
 - All invoice lines either have :guilabel:`Consumables` as products, or a tax with
   :guilabel:`Goods` as **tax scope**.
 
 .. _localizations/italy/deferred-invoices:
 
-TD24 - Deferred invoices
+TD24 - deferred invoices
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The **deferred invoice** is an invoice that is **issued at a later time** than the sale of goods or
@@ -575,7 +560,7 @@ all the **DDTs** information for better tracing.
 
 Odoo exports transactions as `TD24` if the following conditions are met:
 
-#. It is an invoice;
+#. It is an invoice.
 #. It is associated with deliveries whose **DDTs** have a **different** date than the issue date of
    the invoice.
 
@@ -594,14 +579,14 @@ the regular **reverse charge** rules. You can use the proper :guilabel:`Document
 the invoice type: `TD01`, `TD04`, `TD05`, `TD24`, `TD25`. Additional requirements are not enforced
 by Odoo. However, the user is requested by the **State** to:
 
-- Select a tax with the :guilabel:`Tax Exemption Kind` set to `N3.3`;
+- Select a tax with the :guilabel:`Tax Exemption Kind` set to `N3.3`.
 - Use the generic :abbr:`SdI (Sistema di Interscambio)` :guilabel:`Destination Code` `2R4GTO8`.
 
 The invoice is then routed by a dedicated office in San Marino to the correct business.
 
 .. _localizations/italy/san-marino-vendor-bills:
 
-Vendor Bills
+Vendor bills
 ************
 
 When a **paper bill** is received from San Marino, any Italian company **must** submit that invoice
@@ -610,14 +595,14 @@ field with the special value `TD28`.
 
 Odoo exports a transaction as `TD28` if the following conditions are met:
 
-#. It is a vendor bill;
+#. It is a vendor bill.
 #. It has at least one tax on the invoice lines that targets the tax grids :ref:`VJ
-   <localizations/italy/grids>`;
+   <localizations/italy/grids>`.
 #. The **country** of the partner is **San Marino**.
 
 .. _localizations/italy/b2g:
 
-Public Administration Businesses (B2G)
+Public administration businesses (B2G)
 ======================================
 
 :abbr:`PA (Public Administration)` businesses are subjected to more control than private businesses
@@ -643,7 +628,7 @@ To ensure the effective traceability of payments by public administrations, elec
 issued to public administrations must contain:
 
 - The :abbr:`CIG (Codice Identificativo Gara)`, except in cases of exclusion from traceability
-  obligations provided by law n. 136 of August 13, 2010;
+  obligations provided by law n. 136 of August 13, 2010.
 - The :abbr:`CUP (Codice Unico di Progetto)`, in case of invoices related to public works.
 
 If the XML file requires it, the :abbr:`AdE (Agenzia Delle Entrate)` can *only* proceed payments of
@@ -661,7 +646,7 @@ electronic invoices when the XML file contains a :abbr:`CIG (Codice Identificati
 
 .. _localizations/italy/split-payment:
 
-Split Payment
+Split payment
 -------------
 
 The :guilabel:`Split Payment` mechanism behaves much like :ref:`localizations/italy/reverse-charge`.
@@ -697,7 +682,7 @@ when the invoice's partner has a 6-digit long :guilabel:`Destination Code` (whic
 
 .. _localizations/italy/acceptance-refusal:
 
-Acceptance or Refusal
+Acceptance or refusal
 ~~~~~~~~~~~~~~~~~~~~~
 
 After receiving the invoice through the :abbr:`SdI (Sistema di Interscambio)`, the :abbr:`PA (Public
@@ -708,7 +693,7 @@ note to compensate and send it to the :abbr:`SdI (Sistema di Interscambio)`.
 
 .. _localizations/italy/expired-terms:
 
-Expired Terms
+Expired terms
 ~~~~~~~~~~~~~
 
 If the :abbr:`PA (Public Administration)` business doesn't reply within 15 days, you need to contact
@@ -718,7 +703,7 @@ correct :guilabel:`SdI State` on your invoice.
 
 .. _localizations/italy/pos-printers:
 
-Point of Sale fiscal printers
+Point of sale fiscal printers
 =============================
 
 .. warning::
