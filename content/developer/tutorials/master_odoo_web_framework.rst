@@ -1,8 +1,12 @@
 :show-content:
+:orphan:
 
 ========================
 Master the web framework
 ========================
+
+.. danger::
+   This tutorial is outdated.
 
 .. toctree::
     :titlesonly:
