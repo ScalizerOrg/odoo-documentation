@@ -20,12 +20,9 @@ Emirates** localization:
      - `l10n_ae`
      - Default :doc:`fiscal localization package </applications/finance/fiscal_localizations>`.
        Includes all accounts, taxes, and reports.
-   * - :guilabel:`United Arab Emirates - Corporate Tax Report`
-     - `l10n_ae_corporate_tax_report`
-     - Adds the Corporate Tax report.
    * - :guilabel:`United Arab Emirates - Accounting Reports`
      - `l10n_ae_reports`
-     - Accounting reports for UAE.
+     - Adds VAT and corporate tax reporting capabilities.
 
 .. note::
    In some cases, such as when upgrading to a version with additional modules, it is possible that
