@@ -21,9 +21,10 @@ Automatic scheduling
 To ensure no appraisal is missed, enable automatic scheduling by going to :menuselection:`Appraisals
 app --> Configuration --> Settings`.
 
-The :guilabel:`Appraisals Plan` settings determines the frequency that appraisals are scheduled.
+The :guilabel:`Appraisals Plan` settings determine the frequency with which appraisals are
+scheduled.
 
-.. image:: schedule_appraisals/appraisals-setting.png
+.. image:: schedule_appraisals/appraisal-settings.png
    :alt: The appraisals sections with the timeline filled in and 360 feedback enabled.
 
 .. _appraisals/appraisal-plan:
@@ -47,7 +48,7 @@ To modify this schedule, change the number of months in the blank fields under t
 Appraisals automation
 ---------------------
 
-Tick the checkbox next to :guilabel:`Appraisals Automation` to have Odoo automatically schedule
+Click the checkbox next to :guilabel:`Appraisals Automation` to have Odoo automatically schedule
 *and* confirm appraisals.
 
 Appraisals are scheduled according to the :ref:`appraisal plan <appraisals/appraisal-plan>`.
@@ -65,28 +66,35 @@ appraisal is scheduled to assess performance in the current role.
 To create a new appraisal, open the :menuselection:`Appraisals` app, and click the :guilabel:`New`
 button in the upper-left corner. This opens a blank :guilabel:`Appraisals` form.
 
-First, using the drop-down menu, select the employee being evaluated, in the first field on the
-form. Once an employee is selected, the employee's :guilabel:`Manager`, :guilabel:`Job Position`,
-and :guilabel:`Department` fields are populated according to the information on the employee record.
+First, select the employee being evaluated in the :guilabel:`Employee to review` field using the
+drop-down menu. Once an employee is selected, their manager populates the :guilabel:`Appraisers`
+field. The :guilabel:`Job` and :guilabel:`Department` fields are populated according to the
+information on the employee record.
 
-The current date populates the :guilabel:`Appraisal Date` field, which is the date the appraisal is
-scheduled to be completed. Using the calendar selector, adjust the date, if desired. This field is
-typically updated when the manager submits their final rating at the end of the appraisal process.
+The :guilabel:`Appraisal Date` is when the appraisal is scheduled to be completed. The default
+deadline is one month from the current date, but can be adjusted using the calendar selector.
 
-If there is an :ref:`appraisal plan <appraisals/appraisal-plan>` configured, the :guilabel:`Next
-Appraisal Date` field displays :guilabel:`Ongoing`. This indicates that the following appraisal will
-be scheduled according to the appraisal schedule. Once the appraisal is marked as complete, the
-:guilabel:`Next Appraisal Date` is updated with the date of the next appraisal.
+Once the appraisal is marked as complete, a :guilabel:`Next Appraisal Date` field appears, and is
+populated with the date of the next appraisal. If there is an :ref:`appraisal plan
+<appraisals/appraisal-plan>` configured, the :guilabel:`Next Appraisal Date` field displays
+:guilabel:`Ongoing`. This indicates that the following appraisal will be scheduled according to the
+appraisal schedule.
 
-Last, select the desired :guilabel:`Appraisal Template`. The :guilabel:`Default Template` populates
-this field, by default, and is created when the **Appraisals** app is installed. Using the drop-down
-menu, select a different template, if desired.
+Last, select the desired :guilabel:`Template`. The :guilabel:`Default` template populates this field
+by default, and is created when the **Appraisals** app is installed. Using the drop-down menu,
+select a different template, if desired.
 
 Once the information in the top-half of the :guilabel:`Appraisals` form is complete, click the
-:guilabel:`Confirm` button in the upper-left corner, and the appraisal is scheduled, and the
-employee is notified.
+:guilabel:`Confirm` button in the upper-left corner. The appraisal is scheduled, the employee and
+any other appraisers are notified, and both the employee and appraisers can start to fill out the
+appraisal.
 
-Once the appraisal is confirmed, both the employee and manager can start to fill out the appraisal.
+Two additional fields appear once the appraisal is confirmed: a :guilabel:`Target Job` and a
+:guilabel:`Final Rating` field. The :guilabel:`Target Job` allows the manager to select a job
+position the employee may be working towards. When a job position is selected in this field, any
+required skills for the job appear in the *Skills* tab. This aids in seeing where the employee
+stands in regards to the job requirements :doc:`during the appraisal <new_appraisals>`. The
+:guilabel:`Final Rating` field is only populated after the appraisal is complete.
 
 .. image:: schedule_appraisals/new-appraisal.png
    :alt: A new appraisal form with the top half filled out.
