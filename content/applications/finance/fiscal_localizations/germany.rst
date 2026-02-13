@@ -155,7 +155,7 @@ application.
   regular backups can be downloaded and backed up on external systems.
 
   .. seealso::
-     `Odoo Cloud Hosting - Service Level Agreement <https://www.odooo.com/cloud-sla>`_
+     `Odoo Cloud Hosting - Service Level Agreement <https://www.odoo.com/cloud-sla>`_
 
 - If the server is operated locally, the user is responsible for creating the necessary backup
   infrastructure.
