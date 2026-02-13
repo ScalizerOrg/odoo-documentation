@@ -21,26 +21,25 @@ To use an ePos printer in Point of Sale:
 .. note::
    When the printer connects to a network, it automatically prints a ticket with its IP address.
 
+.. _pos/epos_printers/supported-printers:
+
 Directly supported ePOS printers
 ================================
 
-The following ePOS printers are directly compatible with Odoo without needing an :doc:`IoT system
-</applications/general/iot/devices/printer>`.
+The **Epson TM-m30 i/ii/iii (Wi-Fi or Ethernet only) models** are strongly recommended, as they have
+been fully tested with Odoo Point of Sale.
 
-- Epson TM-m30 i/ii/iii (Wi-Fi/Ethernet models only; Recommended)
-- Epson TM-H6000IV-DT (Receipt printer only)
-- Epson TM-T70II-DT
-- Epson TM-T88V-DT
-- Epson TM-L90-i
-- Epson TM-T70-i
-- Epson TM-T82II-i
-- Epson TM-T83II-i
-- Epson TM-U220-i
-- Epson TM-m10
-- Epson TM-P20 (Wi-Fi® model)
-- Epson TM-P60II (Receipt: Wi-Fi® model)
-- Epson TM-P60II (Peeler: Wi-Fi® model)
-- Epson TM-P80 (Wi-Fi® model)
+Other Wi-Fi or Ethernet Epson printer models that support the **ePoS protocol** should also be
+compatible.
+
+.. important::
+   - The ePoS printer must be capable of operating in HTTP mode.
+   - When using :doc:`Local Network Access (LNA)
+     </applications/sales/point_of_sale/configuration/pos_lna>`, the ePOS printer must have a
+     **static IP address**; otherwise, it may become unreachable. The static IP should be configured
+     through the router.
+
+.. _pos/epos_printers/iot-supported-printers:
 
 ePOS printers with IoT system integration
 =========================================
@@ -64,4 +63,5 @@ be compatible with Odoo:
    - Epson printers that connect via Bluetooth are **not compatible**.
 
 .. seealso::
-   :doc:`epos_ssc`
+   - :doc:`pos_lna`
+   - :doc:`epos_ssc`
