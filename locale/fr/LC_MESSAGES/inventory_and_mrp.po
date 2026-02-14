@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-06 18:30+0000\n"
+"POT-Creation-Date: 2026-02-13 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:20+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -17582,6 +17582,27 @@ msgstr ""
 msgid "Shipping carrier information on the delivery form."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:85
+msgid "Supported hardware"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:None
+msgid "The Zebra ZD411 works best to print labels from Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:90
+msgid ""
+"For label printers, Odoo recommends the `Zebra ZD411 <https://www.zebra.com/"
+"us/en/products/spec-sheets/printers/desktop/zd411-series.html>`__, as Odoo "
+"supports the ZPL protocol for automatic printing from a point of sale."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:94
+msgid ""
+"This printer has been tested on most label formats (PDF, PNG, ZPL) for all "
+"carriers that Odoo supports."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:3
 msgid "Bpost integration"
 msgstr ""
@@ -25137,9 +25158,9 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:15
 msgid ""
-"Scrapping inventory in a database helps stock counts remain accurate, by "
-"removing scrapped products from physical inventory, and placing it in a "
-"virtual scrap location (*Virtual Locations/Scrap*)."
+"Scrapping inventory in a database helps stock counts remain accurate by "
+"removing scrapped products from physical inventory and placing them in a "
+"virtual *Inventory Loss* location."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:19
@@ -25157,17 +25178,76 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:27
-msgid "Scrap from stock"
+msgid "Create a scrap location"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:29
+msgid ""
+"By default, scrap operations are recorded in the :guilabel:`Inventory "
+"adjustment` virtual location. However, if the scrapped products need to be "
+"recorded in the *Profit and Loss* accounting report, it is possible to "
+"create an :guilabel:`Inventory Loss` location specifically for tracking "
+"scrapped goods. If scrapped goods don't need to be tracked for reporting "
+"purposes, :ref:`create a scrap order from stock <inventory/scrap-from-"
+"stock>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:35
+msgid ""
+"To create a new :guilabel:`Inventory Loss` location specifically for "
+"scrapped goods, first, open :menuselection:`Inventory app --> Configuration "
+"--> Settings`. In the :guilabel:`Warehouse` section, "
+"enable :guilabel:`Storage Locations`. Be sure to click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:39
+msgid ""
+"To create a new scrap location, open :menuselection:`Inventory app --> "
+"Configuration --> Locations`. By default, this list is filtered "
+"by :guilabel:`Internal` locations. To see all locations, remove "
+"the :guilabel:`Internal` filter. Click the :guilabel:`New` button to create "
+"a new location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:43
+msgid ""
+"The location form opens. Specify a :guilabel:`Location Name` "
+"and :guilabel:`Parent Location`. Update the :guilabel:`Location Type` "
+"to :guilabel:`Inventory Loss`. If working in a multi-company database, "
+"specify a :guilabel:`Company`. Optionally, specify a :guilabel:`Loss "
+"Account` to ensure that products scrapped to this location show up in the "
+"*Profit and Loss* accounting report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:49
+msgid ""
+"A company creates a new `Scrapped Goods` location, with the parent location "
+"being `Inventory adjustment`. The :guilabel:`Location Type` is set "
+"to :guilabel:`Inventory Loss`. To ensure the scrapped products show up in "
+"the *Profit and Loss* accounting report, they specify `600000 Expenses` as "
+"the :guilabel:`Loss Account`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:0
+msgid "Optionally create a Scrapped Goods inventory loss location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:58
+msgid ":doc:`../../inventory_valuation/scrapped_inventory_valuation`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:63
+msgid "Scrap from stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:65
 msgid ""
 "To create a new scrap order (SP) for an in-stock product, navigate "
 "to :menuselection:`Inventory app --> Operations --> Scrap`, and "
 "click :guilabel:`New`. This opens a new |SP| form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:68
 msgid ""
 "Click the drop-down menu in the :guilabel:`Product` field, and select the "
 "product that should be scrapped from inventory. In the :guilabel:`Quantity` "
@@ -25175,79 +25255,71 @@ msgid ""
 "scrapped (by default, this value is set to `1.00`)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Filled out new scrap order form with product details."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:72
 msgid ""
 "The :guilabel:`Source Location` defaults to the location where the product "
-"is currently stored. The :guilabel:`Scrap Location` defaults to the "
-"designated scrap location (:guilabel:`Virtual Locations/Scrap`). Either of "
-"these locations can be changed by selecting a different location from their "
-"respective drop-down menus."
+"is currently stored. The :guilabel:`Scrap Location` defaults "
+"to :guilabel:`Inventory adjustment`. Either of these locations can be "
+"changed by selecting a different location from their respective drop-down "
+"menus."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:76
 msgid ""
 "If the scrapping is tied to a specific existing operation, specify the "
 "operation in the :guilabel:`Source Document` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:79
 msgid ""
 "The :guilabel:`Company` field displays the company whose warehouse this "
 "product belongs to. If a replenishment rule is set up for the product being "
-"scrapped, and if the product should be replenished, tick the checkbox "
+"scrapped, and if the product should be replenished, select the checkbox "
 "for :guilabel:`Replenish Quantities`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:52
-msgid ""
-"Once ready, click :guilabel:`Validate` to complete the new |SP|. Once "
-"validated, a :guilabel:`Product Moves` smart button appears at the top of "
-"the form. Click the smart button to view the details of the scrap operation."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:83
+msgid "Optionally specify a :guilabel:`Scrap Reason`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:85
+msgid "Once ready, click :guilabel:`Validate` to complete the new |SP|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Product Moves smart button on new scrap order form."
+msgid "Filled out new scrap order form with product details."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:90
+msgid ""
+"Once validated, a :icon:`fa-exchange` :guilabel:`Product Moves` smart button "
+"appears at the top of the form. Click the smart button to view the details "
+"of the scrap operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:94
 msgid ""
 "To view the all-time total quantities of scrapped items, navigate "
-"to :menuselection:`Inventory app --> Configuration --> Locations`. Click "
-"the :guilabel:`x (remove)` button on the :guilabel:`Internal` filter in "
-"the :guilabel:`Search...` bar, to display virtual locations."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:65
-msgid ""
-"Select the :guilabel:`Virtual Locations/Scrap` location. From "
-"the :guilabel:`Scrap` location's form, click the :guilabel:`Current Stock` "
-"smart button, at the top of the form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:68
-msgid "A list of all scrapped products, and their quantities, is displayed."
+"to :menuselection:`Inventory app --> Operations --> Scrap Orders`. A list of "
+"all scrapped products, and their quantities, is displayed."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:0
-msgid "Current Stock list of all scrapped products in virtual scrap location."
+msgid "List of all scrapped products in inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:102
 msgid "Scrap from an existing operation"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:104
 msgid ""
 "Scrap orders (SPs) can *also* be created from existing operations, such as "
 "receipts, delivery orders, and internal transfers, before they are entered "
 "into, or removed from, stock for an operation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:108
 msgid ""
 "To scrap a product during an operation, navigate to "
 "the :menuselection:`Inventory app`. From the :guilabel:`Inventory Overview`, "
@@ -25256,57 +25328,59 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "# To Process button on Receipts task card on Inventory Overview page."
+msgid "# To Receive button on Receipts task card on Inventory Overview page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:115
 msgid ""
 "Then, select an operation to process from the resulting list of existing "
 "orders. Doing so opens that operation's form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:118
 msgid ""
-"Click the :icon:`fa-cog` :guilabel:`(cog)` icon, and "
+"Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and "
 "select :guilabel:`Scrap` from the resulting drop-down menu. This opens "
 "a :guilabel:`Scrap Products` pop-up window."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Scrap Products pop-up window on operation form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:121
 msgid ""
 "From this pop-up window, click the drop-down menu in the :guilabel:`Product` "
 "field, and select the products from the operation that should be scrapped. "
-"Adjust the value in the :guilabel:`Quantity` field, if necessary."
+"Adjust the value in the :guilabel:`Quantity` field, if necessary. Optionally "
+"specify a :guilabel:`Scrap Reason`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:125
 msgid ""
 "If the :guilabel:`Product` selected is tracked using a lot or serial number, "
 "a :guilabel:`Lot/Serial` field appears. Specify the tracking number in that "
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:128
 msgid ""
 "The :guilabel:`Source Location` and :guilabel:`Scrap Location` can be "
 "changed, if needed. If a replenishment rule is set up for the product being "
-"scrapped, and if the product should be replenished, tick the checkbox "
+"scrapped, and if the product should be replenished, select the checkbox "
 "for :guilabel:`Replenish Quantities`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:110
-msgid ""
-"Once ready, click :guilabel:`Scrap Products`. A :guilabel:`Scraps` smart "
-"button appears at the top of the operation form. Click this smart button to "
-"view the details of all scrap orders created from this specific operation."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:132
+msgid "Once ready, click :guilabel:`Scrap Products`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Scraps smart button showing all scrap orders from operation."
+msgid "Scrap Products pop-up window on operation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:137
+msgid ""
+"After products have been scrapped from an operation, a :icon:`oi-arrows-"
+"v` :guilabel:`Scraps` smart button appears at the top of the operation form. "
+"Click this smart button to view the details of all scrap orders created from "
+"this specific operation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
@@ -31697,7 +31771,8 @@ msgstr ""
 msgid ""
 "**Component Purchase Constraints**: Only the kit's minimum required "
 "components can be added to an **eCommerce** cart unless the option "
-"to :doc:`continue selling<../../../websites/ecommerce/products>` is disabled."
+"to :doc:`continue selling <../../../websites/ecommerce/configuration/"
+"products>` is disabled."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:62

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-06 18:30+0000\n"
+"POT-Creation-Date: 2026-02-13 18:30+0000\n"
 "PO-Revision-Date: 2026-02-10 23:21+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -920,6 +920,124 @@ msgstr ""
 "`Gemini API 요금제 <https://ai.google.dev/gemini-api/docs/pricing>`_ 페이지"
 "를 참고하세요."
 
+#: ../../content/applications/productivity/ai/email-templates.rst:3
+msgid "AI in email templates"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:7
+msgid "Odoo allows |AI| prompts to be embedded directly into email templates."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:9
+msgid ""
+"When an email is sent, the prompt is evaluated in context, and the generated "
+"content is inserted into the message automatically. This feature makes it "
+"possible to create dynamic, personalized emails at scale, while keeping "
+"templates concise and reusable."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:13
+msgid ""
+"An AI-enabled email template contains one or more AI prompts that are "
+"evaluated at send time. Unlike static templates, AI prompts:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:16
+msgid "Adapt the message content to the current record"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:17
+msgid ""
+"Use available context such as customer data, document content, or related "
+"records"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:18
+msgid "Generate natural language text automatically"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:21
+msgid "How AI prompts are evaluated in email templates"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:23
+msgid ""
+"When the database creates an email based on a template with an AI prompt, "
+"the prompt uses the current record as context to complete the prompt's "
+"objective. If the email is sent in bulk, the prompt is evaluated separately "
+"for each record. This allows a single template to produce personalized "
+"content for multiple recipients."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:29
+msgid "Adding an AI prompt to an email template"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:31
+msgid ""
+"First, navigate to :menuselection:`Settings --> Technical --> Email "
+"Templates`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:34
+msgid ""
+":ref:`Developer mode <developer-mode/activation>` needs to be activated to "
+"view the *Technical* menu."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:37
+msgid ""
+"Select an existing template, or click :guilabel:`New` to create a new one. "
+"In the body of the template, type `/`, to open the :ref:`powerbox "
+"<essentials/html_editor/commands>`. Select :guilabel:`Prompt` from the drop-"
+"down menu. This adds a banner to the template. In the  banner, enter a "
+"prompt describing the expected output."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:42
+msgid ""
+"To utilize :ref:`dynamic placeholders <email_template/dynamic-placeholders>` "
+"within the prompt, type `/`, then select :guilabel:`Dynamic Placeholder` "
+"from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:0
+msgid "An email template with an AI prompt."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:49
+msgid ""
+"Dynamic placeholders reference specific fields within the database to "
+"produce unique data in the template. Adding these placeholders is what "
+"allows the database to customize the email based on the record referenced."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:54
+msgid "Example use cases"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:56
+msgid ""
+"Sales follow-ups: Automatically generate tailored follow-up emails based on "
+"opportunity stage, customer activity, or recent communication."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:58
+msgid ""
+"HR communication: Generate personalized onboarding or interview emails based "
+"on application or employee data."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:60
+msgid ""
+"Project updates: Create progress summaries using task descriptions and "
+"recent activity."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:63
+msgid ":doc:`../../general/companies/email_template`"
+msgstr ""
+
 #: ../../content/applications/productivity/ai/fields.rst:3
 msgid "AI fields"
 msgstr "AI 필드"
@@ -1152,11 +1270,9 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/fields.rst:98
 msgid ""
-"Additionally, a scheduled action runs once a day to fill all |AI| fields "
-"that are currently empty. This action is active by default."
+"Additionally, a scheduled action runs once a day to fill text and property |"
+"AI| fields that are currently empty. This action is active by default."
 msgstr ""
-"또한, 예약된 작업이 하루에 한 번씩 정기적으로 실행되어 현재 내용이 비어 있는 "
-"모든 |AI| 필득 채워집니다. 이 작업은 활성화가 기본값으로 되어 있습니다."
 
 #: ../../content/applications/productivity/ai/fields.rst:102
 msgid ""
@@ -1168,6 +1284,145 @@ msgstr ""
 "예약된 작업을 수동으로 실행하려면 :menuselection:`설정 앱 --> 기술 --> 자동"
 "화 --> 예약된 작업` 으로 이동합니다.:guilabel:`AI 필드\\:\\ AI 필드 계산` 을 "
 "클릭하여 연 다음 :guilabel:`수동 실행` 을 클릭합니다."
+
+#: ../../content/applications/productivity/ai/improve_text.rst:3
+msgid "Write and improve text with AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:7
+msgid ""
+"Odoo |AI| can assist with writing and refining text across the database. "
+"This makes it easier to draft emails, improve existing content, and quickly "
+"extract key information from discussions or notes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:11
+msgid ""
+"|AI| writing features are available in most rich-text environments in Odoo, "
+"including:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:13
+msgid "*Description* and *Notes* fields on records"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:14
+msgid "Email composers and email templates"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:15
+msgid "**Knowledge** articles"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:17
+msgid ""
+"These features are accessible through the text editor and the :ref:`powerbox "
+"<essentials/html_editor/commands>`, depending on the context."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:None
+msgid "A knowledge article with the AI improve text option visible."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:24
+msgid "Writing with AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:26
+msgid ""
+"|AI| can generate new text based on a short prompt or partial input. This is "
+"useful for drafting content such as emails, task descriptions, or internal "
+"notes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:29
+msgid ""
+"To generate text, either click the |AI| icon, or type `/` to open the "
+"powerbox, and select :guilabel:`AI` from the drop-down menu. Both options "
+"open a conversation window. Enter a short prompt describing the desired "
+"content, then click the :icon:`fa-paper-plane-o` :guilabel:`(paper plane)` "
+"icon. After the text is generated, hover over the response and "
+"click :guilabel:`Use this` to add the content to the desired field or "
+"document. Alternatively, click the :icon:`fa-copy` :guilabel:`(copy)` icon "
+"to copy the text to the clipboard."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:None
+msgid "A conversation window with an AI agent generating content."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:39
+msgid ""
+"If unsatisfied with the content, send a follow-up message to the agent with "
+"an expanded prompt or suggested changes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:43
+msgid "Improving existing text"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:45
+msgid ""
+"|AI| can also be used to rewrite or improve existing text. This includes:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:47
+msgid "Making text clearer or more concise"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:48
+msgid "Adjusting tone or structure"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:49
+msgid "Correcting grammar or phrasing"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:51
+msgid ""
+"Select the text to improve, then click the |AI| icon to open a conversation "
+"window. Click the :guilabel:`Rewrite selected` prompt. After the text is "
+"generated, hover over the response and click :guilabel:`Use this` to add the "
+"content to the desired field or document. Alternatively, click the :icon:`fa-"
+"copy` :guilabel:`(copy)` icon to copy the text to the clipboard."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:None
+msgid "The rewrite selected text in a conversation window."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:60
+msgid ""
+"To add custom instructions to the prompt, such as suggestions on tone or "
+"content, write the prompt directly in the conversation window. For example, "
+"`Rewrite the selected text in a more professional tone`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:65
+msgid "Best practices for AI-assisted writing"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:67
+msgid "For best results when using |AI| to write or improve text:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:69
+msgid "Provide clear and specific context in prompts"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:70
+msgid "Review AI-generated content before saving or sending"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:71
+msgid "Adjust wording to match the company's tone and communication standards"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:73
+msgid ""
+"|AI|-assisted writing is designed to support productivity, while final "
+"review and validation remain essential."
+msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:3
 msgid "AI live chat"
@@ -1527,7 +1782,8 @@ msgstr ""
 msgid ""
 "If a tool is called by the |AI| server action, it will execute "
 "unconditionally, unless the code itself prevents it."
-msgstr "|AI| 서버 액션에서 도구를 호출할 경우, 코드 자체에서 실행이 제한되는 경우를 "
+msgstr ""
+"|AI| 서버 액션에서 도구를 호출할 경우, 코드 자체에서 실행이 제한되는 경우를 "
 "제외하고는 도구가 무조건 실행됩니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:39
@@ -1578,9 +1834,9 @@ msgid ""
 "Action pattern. Navigate to the *Server Actions* menu by going "
 "to :menuselection:`Settings --> Technical --> Server Actions`."
 msgstr ""
-"*받은 편지함 문서 자동 분류하기* 예시를 통해 전체적인 |AI| 서버 액션의 패턴을"
-" 확인할 수 있습니다. :menuselection:`설정 --> 기술 --> 서버 액션` 을 통해 *서"
-"버 액션* 메뉴로 이동합니다."
+"*받은 편지함 문서 자동 분류하기* 예시를 통해 전체적인 |AI| 서버 액션의 패턴"
+"을 확인할 수 있습니다. :menuselection:`설정 --> 기술 --> 서버 액션` 을 통해 *"
+"서버 액션* 메뉴로 이동합니다."
 
 #: ../../content/applications/productivity/ai/server-actions.rst:62
 msgid ""
@@ -1879,8 +2135,8 @@ msgid ""
 "First, navigate to the :menuselection:`Website app`. In the top-right of the "
 "page, click :guilabel:`New`, then click :guilabel:`Page`."
 msgstr ""
-"먼저 :menuselection:`웹사이트 앱` 으로 이동합니다. 페이지 오른쪽 상단에 있는 "
-":guilabel:`신규` 버튼을 클릭한 후 :guilabel:`페이지` 를 선택합니다."
+"먼저 :menuselection:`웹사이트 앱` 으로 이동합니다. 페이지 오른쪽 상단에 있"
+"는 :guilabel:`신규` 버튼을 클릭한 후 :guilabel:`페이지` 를 선택합니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:None
 msgid "Adding a new page to a website in Odoo."
@@ -1892,7 +2148,8 @@ msgstr ":guilabel:`새 페이지` 팝업창에서 원하는 페이지 유형을 
 
 #: ../../content/applications/productivity/ai/webpage.rst:27
 msgid "The |AI| webpage generator is not available on the *Blank* page type."
-msgstr "|AI| 웹페이지 생성기는 내용이 없는 *기본* 페이지 유형에서는 사용할 수 없습니"
+msgstr ""
+"|AI| 웹페이지 생성기는 내용이 없는 *기본* 페이지 유형에서는 사용할 수 없습니"
 "다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:29
@@ -1904,10 +2161,10 @@ msgid ""
 "keywords that help define the focus and scope of the page."
 msgstr ""
 "페이지 유형을 클릭하면 :guilabel:`새 페이지` 팝업창이 열립니다. :guilabel:`페"
-"이지 제목` 을 입력한 다음 :guilabel:`AI 텍스트 생성` 토클을 활성화하면 :guila"
-"bel:`지침` 필드가 나타납니다. 생성할 페이지에 대한 간단할 설명을 여기에 입력"
-"합니다. 설명 내용에는 페이지에서 중점적으로 다루는 내용과 범위를 정의하기 위"
-"한 주요 키워드가 포함되어 있어야 합니다."
+"이지 제목` 을 입력한 다음 :guilabel:`AI 텍스트 생성` 토클을 활성화하"
+"면 :guilabel:`지침` 필드가 나타납니다. 생성할 페이지에 대한 간단할 설명을 여"
+"기에 입력합니다. 설명 내용에는 페이지에서 중점적으로 다루는 내용과 범위를 정"
+"의하기 위한 주요 키워드가 포함되어 있어야 합니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:34
 msgid "Next, select one of the tone options for the page:"
@@ -1945,24 +2202,25 @@ msgid ""
 "then click on a block of text to make changes. Click :guilabel:`Save` when "
 "finished."
 msgstr ""
-"선택을 완료한 후에는 :guilabel:`AI로 생성하기` 를 클릭합니다. 웹페이지 로드에"
-" 잠시 시간이 걸릴 수 있습니다. |AI| 생성기로 제작된 콘텐츠는 편집할 수 있습니"
-"다. 페이지 오른쪽 도구 모음에서 :guilabel:`편집` 을 클릭한 후 텍스트 블록을 "
-"클릭하여 변경합니다. 완료 후 :guilabel:`저장` 을 클릭합니다."
+"선택을 완료한 후에는 :guilabel:`AI로 생성하기` 를 클릭합니다. 웹페이지 로드"
+"에 잠시 시간이 걸릴 수 있습니다. |AI| 생성기로 제작된 콘텐츠는 편집할 수 있습"
+"니다. 페이지 오른쪽 도구 모음에서 :guilabel:`편집` 을 클릭한 후 텍스트 블록"
+"을 클릭하여 변경합니다. 완료 후 :guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:51
 msgid ""
 "The webpage generator may have created buttons. Before publishing the "
 "webpage, confirm that all buttons are linked to an active webpage."
 msgstr ""
-"웹페이지 생성기에서 버튼이 생성되는 경우도 있습니다. 웹페이지를 게시하기 전에"
-", 모든 버튼이 실제 페이지에 연결되어 활성화 상태인지 확인하세요."
+"웹페이지 생성기에서 버튼이 생성되는 경우도 있습니다. 웹페이지를 게시하기 전"
+"에, 모든 버튼이 실제 페이지에 연결되어 활성화 상태인지 확인하세요."
 
 #: ../../content/applications/productivity/ai/webpage.rst:54
 msgid ""
 "After reviewing the page, slide the :guilabel:`Unpublished` toggle to active "
 "to publish the page."
-msgstr "페이지를 검토한 후 `게시되지 않음` 토글을 슬라이드로 활성화하면 페이지가 게시"
+msgstr ""
+"페이지를 검토한 후 `게시되지 않음` 토글을 슬라이드로 활성화하면 페이지가 게시"
 "됩니다."
 
 #: ../../content/applications/productivity/ai/webpage.rst:57
@@ -26551,114 +26809,113 @@ msgid ""
 "among your project tasks."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:5
-msgid "VoIP (Voice over Internet Protocol)"
-msgstr "VoIP (인터넷 전화)"
+#: ../../content/applications/productivity/voip.rst:7
+#: ../../content/applications/productivity/whatsapp.rst:274
+msgid "Phone"
+msgstr "전화번호"
 
-#: ../../content/applications/productivity/voip.rst:9
-msgid ""
-"|VOIP| in Odoo enables businesses to handle calls over the internet by "
-"integrating directly with Odoo apps like **CRM**, **Helpdesk**, and more. "
-"Calls and messages are logged within these apps, keeping records linked to "
-"customer interactions."
+#: ../../content/applications/productivity/voip.rst:10
+msgid "As of Odoo 19.0, the *VoIP* module has been renamed to *Odoo Phone*."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:14
+#: ../../content/applications/productivity/voip.rst:12
 msgid ""
-"`Odoo Tutorials: VoIP <https://www.odoo.com/slides/voip-voice-over-ip-315>`_"
-msgstr ""
-"`Odoo 튜토리얼: VoIP <https://www.odoo.com/slides/voip-voice-over-ip-315>`_"
-
-#: ../../content/applications/productivity/voip.rst:16
-msgid ""
-"Users can make and receive calls, track communication history, and automate "
-"call routing based on predefined rules. Features like call recording and "
-"analytics provide insights into call volume and response times, helping "
-"teams track communication efficiency."
+"The Odoo **Phone** app enables businesses to handle calls over the internet "
+"by integrating directly with Odoo apps like **CRM** and **Helpdesk**. The "
+"**Phone** app can link calls and messages to customer interactions, log "
+"communication history, and automate call routing based on predefined rules. "
+"Features like call recording and analytics provide insights into call volume "
+"and response times, helping businesses streamline external communication and "
+"track team performance."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:21
-#: ../../content/applications/productivity/voip/voip_widget.rst:3
-msgid "VoIP actions"
-msgstr "VoIP 작업"
-
-#: ../../content/applications/productivity/voip.rst:21
+#: ../../content/applications/productivity/voip.rst:19
 msgid ""
-"Get oriented with the features of the VoIP widget, like what actions can be "
+"Phone\n"
+"\n"
+" widget"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:19
+msgid ""
+"Get started with the Phone widget essentials, including actions that can be "
 "taken during a call."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:28
+#: ../../content/applications/productivity/voip.rst:26
 #: ../../content/applications/productivity/voip/devices_integrations.rst:3
 msgid "Devices and integrations"
 msgstr "장치 및 통합"
 
-#: ../../content/applications/productivity/voip.rst:28
+#: ../../content/applications/productivity/voip.rst:26
 msgid ""
-"Learn about accessing the VoIP widget from different devices (like phones) "
+"Learn how to access the Phone widget from different devices (like phones) "
 "and apps (like Linphone)."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:36
-msgid "VoIP terms"
-msgstr "VoIP 용어"
-
-#: ../../content/applications/productivity/voip.rst:38
+#: ../../content/applications/productivity/voip.rst:34
 msgid ""
-"**VoIP**: Voice over Internet Protocol. Technology that is used to handle "
+"`Odoo Tutorials: Phone <https://www.odoo.com/slides/voip-voice-over-ip-315>`_"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:37
+msgid "About VoIP"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:39
+msgid ""
+"The **Phone** app uses the following technologies to make and receive calls "
+"in Odoo:"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:41
+msgid ""
+"**Voice over Internet Protocol (VoIP)**: Technology that is used to handle "
 "calls that are not made from a phone line."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:40
+#: ../../content/applications/productivity/voip.rst:43
 msgid ""
-"**SIP**: Session Initiation Protocol. Technology included in |VOIP| that "
+"**Session Initiation Protocol (SIP)**: Technology included in |VOIP| that "
 "specifically handles the setup, management, and termination of calls."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:42
+#: ../../content/applications/productivity/voip.rst:45
 msgid ""
 "**Call queue**: A system to route calls (usually in a support team). This "
 "allows customers to wait for help if no support agents are available."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:44
+#: ../../content/applications/productivity/voip.rst:47
 msgid ""
 "**Dial plans**: A system to define how |VOIP| calls are routed, based on set "
 "rules."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:47
-msgid "Configure VoIP"
-msgstr "VoIP 환경설정"
-
-#: ../../content/applications/productivity/voip.rst:49
-msgid ""
-"To use |VOIP|, first :ref:`install <general/install>` the :guilabel:`VoIP` "
-"module."
+#: ../../content/applications/productivity/voip.rst:50
+msgid "Configure the Phone app"
 msgstr ""
-"|VOIP| 를 사용하려면 먼저 :guilabel:`VoIP` 모듈을 :ref:`설치 <general/"
-"install>` 하세요."
 
-#: ../../content/applications/productivity/voip.rst:51
+#: ../../content/applications/productivity/voip.rst:52
 msgid ""
-"Once the module is installed, a :icon:`oi-voip` (:guilabel:`VoIP`) icon will "
-"appear at the top of the screen. This is where phone calls are made from "
-"within Odoo. When this icon is clicked, a |VOIP| pop-up widget appears on "
-"the screen, and is where emails can be sent, user and employee info can be "
-"edited, and activities can be managed. While this pop-up widget is open, the "
-"user can navigate through their Odoo apps."
+"To make |VOIP| calls in Odoo, first :ref:`install <general/install>` the "
+"**Phone** app."
 msgstr ""
-"모듈이 설치되면 화면 상단에 :icon:`oi-voip` (:guilabel:`VoIP`) 아이콘이 나타"
-"납니다. 이를 통해 Odoo에서 전화를 걸 수 있습니다. 이 아이콘을 클릭하면 |"
-"VOIP| 팝업 위젯이 화면에 나타나며, 여기서 이메일 전송, 사용자 및 직원 정보 편"
-"집 및 활동 관리를 할 수 있습니다. 이 팝업 위젯을 열어놓고 사용자는 Odoo 앱을 "
-"오가며 작업할 수 있습니다."
 
-#: ../../content/applications/productivity/voip.rst:58
-msgid "Assign user permissions"
+#: ../../content/applications/productivity/voip.rst:54
+msgid ""
+"Once the app is installed, a :icon:`oi-voip` (:guilabel:`Phone`) icon will "
+"appear at the top of the screen. When this icon is clicked, a **Phone** pop-"
+"up widget appears on the screen. This is where users can make and receive "
+"calls, send emails, edit user and employee info, and manage activities. The "
+"pop-up widget stays open when navigating other Odoo apps."
 msgstr ""
 
 #: ../../content/applications/productivity/voip.rst:60
+msgid "Assign user permissions"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:62
 msgid ""
 "By default, users can receive their own calls, and managers can receive "
 "calls for their team members. To grant additional |VOIP| permissions to a "
@@ -26668,19 +26925,19 @@ msgid ""
 "field select the desired access level."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:66
+#: ../../content/applications/productivity/voip.rst:68
 msgid "There are three access roles for |VOIP|:"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:68
+#: ../../content/applications/productivity/voip.rst:70
 msgid ":guilabel:`No`: cannot access |VOIP| features."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:69
+#: ../../content/applications/productivity/voip.rst:71
 msgid ":guilabel:`Officer`: can view and report on all calls."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:70
+#: ../../content/applications/productivity/voip.rst:72
 msgid ":guilabel:`Administrator`: can view, report, and manage call settings."
 msgstr ""
 
@@ -26694,118 +26951,125 @@ msgstr ""
 msgid "Make sure to set the correct access level for each |VOIP| user."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:76
+#: ../../content/applications/productivity/voip.rst:78
 msgid ""
 "To modify these roles or add custom roles, see :ref:`Create and modify "
 "groups <access-rights/groups>`."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:80
-msgid "Add a VoIP provider"
-msgstr ""
-
 #: ../../content/applications/productivity/voip.rst:82
-msgid ""
-"In order to use |VOIP|, a service provider must be connected to the Odoo "
-"database. While |VOIP| setup is minimal in Odoo, most configuration happens "
-"in the external |VOIP| service provider. Two verified providers "
-"are :doc:`OnSIP <voip/onsip>` and :doc:`Axivox <voip/axivox>`. Click on the "
-"cards below to learn how to configure these service providers in the Odoo "
-"database. If these providers cannot be used, an alternate provider must meet "
-"these requirements to connect with Odoo:"
+msgid "Connect to a VoIP provider"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:88
+#: ../../content/applications/productivity/voip.rst:84
 msgid ""
-"|VOIP| host must provide access to a SIP server via a websocket connection"
-msgstr ""
-"|VOIP| 호스트는 반드시 웹소켓 연결을 통해 SIP 서버에 대한 액세스를 제공해야 "
-"합니다"
-
-#: ../../content/applications/productivity/voip.rst:89
-msgid "|VOIP| host must support WebRTC protocol"
-msgstr "|VOIP| 호스트가 반드시 WebRTC 프로토콜 지원"
-
-#: ../../content/applications/productivity/voip.rst:91
-msgid ""
-"To add the credentials for the alternate provider, go to the **Settings** "
-"app and search for `VoIP`. In the :guilabel:`Integrations` section "
-"under :guilabel:`VoIP`, click :guilabel:`Manage Providers`. And then, "
-"click :guilabel:`New` and enter the requested information (like the "
-"websocket's URL). Note that the :guilabel:`OnSIP Domain` field is where the "
-"domain created by the alternate provider goes."
-msgstr ""
-"다른 공급업체의 자격 증명을 대체용으로 추가하려는 경우에는, **설정** 앱으로 "
-"이동하여 `VoIP` 를 검색합니다. :guilabel:`통합` 섹션에서 :guilabel:`VoIP` 아"
-"래에 있는 :guilabel:`공급업체 관리` 를 클릭합니다. 그런 다음 :guilabel:`신규"
-"` 를 클릭하고 요청된 정보(예: 웹소켓의 URL)를 입력합니다. :guilabel:`OnSIP 도"
-"메인` 필드는 대체 공급업체에서 생성한 도메인을 입력하는 필드입니다."
-
-#: ../../content/applications/productivity/voip.rst:96
-msgid ""
-"If any issues with the |VOIP| service provider are encountered, then reach "
-"out to their support team. If any issues when setting up the |VOIP| service "
-"provider are encountered in Odoo, then follow the :ref:`relevant "
-"troubleshooting steps <voip/voip_widget/troubleshooting_voip>`."
+"Making calls through the **Phone** app also requires a |VOIP| service "
+"provider. Odoo supports three verified providers by default: :doc:`Axivox "
+"<voip/axivox>`, :doc:`DIDWW <voip/didww>`, and :doc:`OnSIP <voip/onsip>`. "
+"Click on the cards below to learn how to configure these service providers "
+"in the Odoo database:"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:101
-msgid ""
-"Odoo **cannot** verify that every alternate provider is compatible with "
-"Odoo's systems. However, if the above requirements are met, then no issues "
-"should be found."
-msgstr ""
-
-#: ../../content/applications/productivity/voip.rst:105
+#: ../../content/applications/productivity/voip.rst:90
 #: ../../content/applications/productivity/voip/axivox.rst:5
 msgid "Axivox configuration"
 msgstr "Axivox 환경설정"
 
-#: ../../content/applications/productivity/voip.rst:105
+#: ../../content/applications/productivity/voip.rst:90
 msgid ""
 "Learn how to set up Axivox in Odoo. This includes adding users to Axivox, "
 "setting up call queues, and more."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:112
+#: ../../content/applications/productivity/voip.rst:97
 msgid "OnSIP configuration"
 msgstr "OnSIP 환경설정"
 
-#: ../../content/applications/productivity/voip.rst:112
+#: ../../content/applications/productivity/voip.rst:97
 msgid ""
 "Learn how to set up OnSIP in Odoo. This includes entering OnSIP credentials "
 "into Odoo and handling troubleshooting."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:120
+#: ../../content/applications/productivity/voip.rst:104
+msgid "DIDWW configuration"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:104
+msgid ""
+"Learn how to set up DIDWW in Odoo. This includes entering DIDWW credentials "
+"into Odoo and purchasing new numbers."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:111
+msgid "Other providers must meet two requirements to connect with Odoo:"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:113
+msgid ""
+"The |VOIP| host must provide access to a SIP server via a websocket "
+"connection."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:114
+msgid "The |VOIP| host must support WebRTC protocol."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:117
+msgid ""
+"If these requirements are met, it should be possible to add the alternate "
+"provider to Odoo. However, Odoo recommends using a verified provider, and "
+"cannot guarantee that every alternate provider is compatible with the "
+"**Phone** app."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:121
+msgid ""
+"To add credentials for an alternate provider, go to "
+"the :menuselection:`Phone app --> Configuration --> Settings`. "
+"Click :guilabel:`New` and enter the provider information (like the "
+"websocket's URL). Enter the domain created by the alternate provider in "
+"the :guilabel:`OnSIP Domain` field."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:125
+msgid ""
+"For issues setting up the |VOIP| service provider in Odoo, follow "
+"the :ref:`relevant troubleshooting steps <voip/voip_widget/"
+"troubleshooting_voip>`. For any other issues with the |VOIP| service "
+"provider, reach out directly to their support team."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:130
 msgid "VoIP workflows"
 msgstr "VoIP 작업 절차"
 
-#: ../../content/applications/productivity/voip.rst:122
+#: ../../content/applications/productivity/voip.rst:132
 msgid ""
-"Here are a few commonly used workflows for Odoo |VOIP|. This technology is "
-"especially popular with sales teams and support teams, but can be useful for "
-"other teams as well."
+"Odoo **Phone** is popular with sales teams and support teams, but can be "
+"useful for other teams as well. Click the cards below to learn about |VOIP| "
+"workflows in Odoo:"
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:126
+#: ../../content/applications/productivity/voip.rst:136
 msgid "Sales teams and VoIP"
 msgstr "영업팀 및 VoIP"
 
-#: ../../content/applications/productivity/voip.rst:126
+#: ../../content/applications/productivity/voip.rst:136
 msgid ""
-"Learn how to use VoIP for a sales team. This includes making sales calls, "
-"handling follow-ups, and sending a sales quotation while on a call."
+"Learn how to use Odoo Phone for a sales team workflow. This includes making "
+"sales calls, handling follow-ups, and sending a sales quotation while on a "
+"call."
 msgstr ""
 
-#: ../../content/applications/productivity/voip.rst:133
+#: ../../content/applications/productivity/voip.rst:143
 msgid "Support queues and VoIP"
 msgstr "고객 지원 대기열 및 VoIP"
 
-#: ../../content/applications/productivity/voip.rst:133
+#: ../../content/applications/productivity/voip.rst:143
 msgid ""
-"Learn how to use VoIP for a support team. This includes joining a call queue "
-"as an agent and handling support tickets that require calls."
+"Learn how to use Odoo Phone for a support team workflow. This includes "
+"joining a call queue as an agent and handling live phone support tickets."
 msgstr ""
 
 #: ../../content/applications/productivity/voip/axivox/axivox_config.rst:3
@@ -32095,6 +32359,10 @@ msgid ""
 "here, the agent will no longer receive support calls until they log back in."
 msgstr ""
 
+#: ../../content/applications/productivity/voip/voip_widget.rst:3
+msgid "VoIP actions"
+msgstr "VoIP 작업"
+
 #: ../../content/applications/productivity/voip/voip_widget.rst:7
 msgid ""
 "The |VOIP| widget is an add-on made available to Odoo users by installing "
@@ -33025,10 +33293,6 @@ msgstr "메타 콘솔"
 #: ../../content/applications/productivity/whatsapp.rst:273
 msgid "Odoo Interface"
 msgstr "Odoo 인터페이스"
-
-#: ../../content/applications/productivity/whatsapp.rst:274
-msgid "Phone"
-msgstr "전화번호"
 
 #: ../../content/applications/productivity/whatsapp.rst:275
 msgid ":guilabel:`Phone number ID`"
@@ -34226,6 +34490,74 @@ msgid ""
 "<https://developers.facebook.com/documentation/business-messaging/whatsapp/"
 "support/error-codes>`__."
 msgstr ""
+
+#~ msgid ""
+#~ "Additionally, a scheduled action runs once a day to fill all |AI| fields "
+#~ "that are currently empty. This action is active by default."
+#~ msgstr ""
+#~ "또한, 예약된 작업이 하루에 한 번씩 정기적으로 실행되어 현재 내용이 비어 있"
+#~ "는 모든 |AI| 필득 채워집니다. 이 작업은 활성화가 기본값으로 되어 있습니다."
+
+#~ msgid "VoIP (Voice over Internet Protocol)"
+#~ msgstr "VoIP (인터넷 전화)"
+
+#~ msgid ""
+#~ "`Odoo Tutorials: VoIP <https://www.odoo.com/slides/voip-voice-over-"
+#~ "ip-315>`_"
+#~ msgstr ""
+#~ "`Odoo 튜토리얼: VoIP <https://www.odoo.com/slides/voip-voice-over-"
+#~ "ip-315>`_"
+
+#~ msgid "VoIP terms"
+#~ msgstr "VoIP 용어"
+
+#~ msgid "Configure VoIP"
+#~ msgstr "VoIP 환경설정"
+
+#~ msgid ""
+#~ "To use |VOIP|, first :ref:`install <general/install>` "
+#~ "the :guilabel:`VoIP` module."
+#~ msgstr ""
+#~ "|VOIP| 를 사용하려면 먼저 :guilabel:`VoIP` 모듈을 :ref:`설치 <general/"
+#~ "install>` 하세요."
+
+#~ msgid ""
+#~ "Once the module is installed, a :icon:`oi-voip` (:guilabel:`VoIP`) icon "
+#~ "will appear at the top of the screen. This is where phone calls are made "
+#~ "from within Odoo. When this icon is clicked, a |VOIP| pop-up widget "
+#~ "appears on the screen, and is where emails can be sent, user and employee "
+#~ "info can be edited, and activities can be managed. While this pop-up "
+#~ "widget is open, the user can navigate through their Odoo apps."
+#~ msgstr ""
+#~ "모듈이 설치되면 화면 상단에 :icon:`oi-voip` (:guilabel:`VoIP`) 아이콘이 나"
+#~ "타납니다. 이를 통해 Odoo에서 전화를 걸 수 있습니다. 이 아이콘을 클릭하면 |"
+#~ "VOIP| 팝업 위젯이 화면에 나타나며, 여기서 이메일 전송, 사용자 및 직원 정"
+#~ "보 편집 및 활동 관리를 할 수 있습니다. 이 팝업 위젯을 열어놓고 사용자는 "
+#~ "Odoo 앱을 오가며 작업할 수 있습니다."
+
+#~ msgid ""
+#~ "|VOIP| host must provide access to a SIP server via a websocket connection"
+#~ msgstr ""
+#~ "|VOIP| 호스트는 반드시 웹소켓 연결을 통해 SIP 서버에 대한 액세스를 제공해"
+#~ "야 합니다"
+
+#~ msgid "|VOIP| host must support WebRTC protocol"
+#~ msgstr "|VOIP| 호스트가 반드시 WebRTC 프로토콜 지원"
+
+#~ msgid ""
+#~ "To add the credentials for the alternate provider, go to the **Settings** "
+#~ "app and search for `VoIP`. In the :guilabel:`Integrations` section "
+#~ "under :guilabel:`VoIP`, click :guilabel:`Manage Providers`. And then, "
+#~ "click :guilabel:`New` and enter the requested information (like the "
+#~ "websocket's URL). Note that the :guilabel:`OnSIP Domain` field is where "
+#~ "the domain created by the alternate provider goes."
+#~ msgstr ""
+#~ "다른 공급업체의 자격 증명을 대체용으로 추가하려는 경우에는, **설정** 앱으"
+#~ "로 이동하여 `VoIP` 를 검색합니다. :guilabel:`통합` 섹션에"
+#~ "서 :guilabel:`VoIP` 아래에 있는 :guilabel:`공급업체 관리` 를 클릭합니다. "
+#~ "그런 다음 :guilabel:`신규` 를 클릭하고 요청된 정보(예: 웹소켓의 URL)를 입"
+#~ "력합니다. :guilabel:`OnSIP 도메인` 필드는 대체 공급업체에서 생성한 도메인"
+#~ "을 입력하는 필드입니다."
 
 #~ msgid "VoIP providers"
 #~ msgstr "VoIP 공급업체"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-06 18:30+0000\n"
+"POT-Creation-Date: 2026-02-13 18:30+0000\n"
 "PO-Revision-Date: 2026-02-02 23:21+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -19495,6 +19495,27 @@ msgstr ""
 msgid "Shipping carrier information on the delivery form."
 msgstr "배송 양식의 배송업체 정보입니다."
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:85
+msgid "Supported hardware"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:None
+msgid "The Zebra ZD411 works best to print labels from Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:90
+msgid ""
+"For label printers, Odoo recommends the `Zebra ZD411 <https://www.zebra.com/"
+"us/en/products/spec-sheets/printers/desktop/zd411-series.html>`__, as Odoo "
+"supports the ZPL protocol for automatic printing from a point of sale."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:94
+msgid ""
+"This printer has been tested on most label formats (PDF, PNG, ZPL) for all "
+"carriers that Odoo supports."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:3
 msgid "Bpost integration"
 msgstr "Bpost 통합"
@@ -27913,13 +27934,10 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:15
 msgid ""
-"Scrapping inventory in a database helps stock counts remain accurate, by "
-"removing scrapped products from physical inventory, and placing it in a "
-"virtual scrap location (*Virtual Locations/Scrap*)."
+"Scrapping inventory in a database helps stock counts remain accurate by "
+"removing scrapped products from physical inventory and placing them in a "
+"virtual *Inventory Loss* location."
 msgstr ""
-"데이터베이스에서 재고를 폐기하면 재고 수를 정확하게 유지할 수 있으며, 폐기된 "
-"품목을 실제 재고에서 제거하고 가상 폐기 위치(*가상 위치/폐기*)에 배치하게 됩"
-"니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:19
 msgid ""
@@ -27939,10 +27957,69 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:27
+msgid "Create a scrap location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:29
+msgid ""
+"By default, scrap operations are recorded in the :guilabel:`Inventory "
+"adjustment` virtual location. However, if the scrapped products need to be "
+"recorded in the *Profit and Loss* accounting report, it is possible to "
+"create an :guilabel:`Inventory Loss` location specifically for tracking "
+"scrapped goods. If scrapped goods don't need to be tracked for reporting "
+"purposes, :ref:`create a scrap order from stock <inventory/scrap-from-"
+"stock>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:35
+msgid ""
+"To create a new :guilabel:`Inventory Loss` location specifically for "
+"scrapped goods, first, open :menuselection:`Inventory app --> Configuration "
+"--> Settings`. In the :guilabel:`Warehouse` section, "
+"enable :guilabel:`Storage Locations`. Be sure to click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:39
+msgid ""
+"To create a new scrap location, open :menuselection:`Inventory app --> "
+"Configuration --> Locations`. By default, this list is filtered "
+"by :guilabel:`Internal` locations. To see all locations, remove "
+"the :guilabel:`Internal` filter. Click the :guilabel:`New` button to create "
+"a new location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:43
+msgid ""
+"The location form opens. Specify a :guilabel:`Location Name` "
+"and :guilabel:`Parent Location`. Update the :guilabel:`Location Type` "
+"to :guilabel:`Inventory Loss`. If working in a multi-company database, "
+"specify a :guilabel:`Company`. Optionally, specify a :guilabel:`Loss "
+"Account` to ensure that products scrapped to this location show up in the "
+"*Profit and Loss* accounting report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:49
+msgid ""
+"A company creates a new `Scrapped Goods` location, with the parent location "
+"being `Inventory adjustment`. The :guilabel:`Location Type` is set "
+"to :guilabel:`Inventory Loss`. To ensure the scrapped products show up in "
+"the *Profit and Loss* accounting report, they specify `600000 Expenses` as "
+"the :guilabel:`Loss Account`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:0
+msgid "Optionally create a Scrapped Goods inventory loss location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:58
+msgid ":doc:`../../inventory_valuation/scrapped_inventory_valuation`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:63
 msgid "Scrap from stock"
 msgstr "재고에서 폐기"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:65
 msgid ""
 "To create a new scrap order (SP) for an in-stock product, navigate "
 "to :menuselection:`Inventory app --> Operations --> Scrap`, and "
@@ -27952,7 +28029,7 @@ msgstr ""
 "재고 관리 앱 --> 작업 --> 폐기` 로 이동한 다음 :guilabel:`신규` 를 클릭합니"
 "다. 그러면 새 |SP| 양식이 열립니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:68
 msgid ""
 "Click the drop-down menu in the :guilabel:`Product` field, and select the "
 "product that should be scrapped from inventory. In the :guilabel:`Quantity` "
@@ -27963,85 +28040,64 @@ msgstr ""
 "을 선택합니다. :guilabel:`수량` 필드에서 값을 폐기할 품목 수량으로 변경합니"
 "다 (기본적으로 이 값은 `1.00` 으로 설정되어 있음)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Filled out new scrap order form with product details."
-msgstr "품목 세부 정보가 있는 새로운 폐기 주문서 양식을 작성했습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:72
 msgid ""
 "The :guilabel:`Source Location` defaults to the location where the product "
-"is currently stored. The :guilabel:`Scrap Location` defaults to the "
-"designated scrap location (:guilabel:`Virtual Locations/Scrap`). Either of "
-"these locations can be changed by selecting a different location from their "
-"respective drop-down menus."
+"is currently stored. The :guilabel:`Scrap Location` defaults "
+"to :guilabel:`Inventory adjustment`. Either of these locations can be "
+"changed by selecting a different location from their respective drop-down "
+"menus."
 msgstr ""
-":guilabel:`출고지` 의 기본값은 품목이 현재 저장되어 있는 위치입니"
-"다. :guilabel:`폐기 위치` 는 지정된 폐기 위치(:guilabel:`가상 위치/폐기`)가 "
-"기본값으로 설정됩니다. 두 가지 위치 모두 드롭다운 메뉴에서 다른 위치를 선택하"
-"여 변경할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:76
 msgid ""
 "If the scrapping is tied to a specific existing operation, specify the "
 "operation in the :guilabel:`Source Document` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:79
 msgid ""
 "The :guilabel:`Company` field displays the company whose warehouse this "
 "product belongs to. If a replenishment rule is set up for the product being "
-"scrapped, and if the product should be replenished, tick the checkbox "
+"scrapped, and if the product should be replenished, select the checkbox "
 "for :guilabel:`Replenish Quantities`."
 msgstr ""
-":guilabel:`회사` 필드에는 이 품목이 속해 있는 창고의 회사가 표시됩니다. 폐기"
-"되는 품목에 대한 보충 규칙이 설정되는 상황에서 품목을 보충해야 하는 경"
-"우 :guilabel:`수량 보충` 확인란에 표시합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:52
-msgid ""
-"Once ready, click :guilabel:`Validate` to complete the new |SP|. Once "
-"validated, a :guilabel:`Product Moves` smart button appears at the top of "
-"the form. Click the smart button to view the details of the scrap operation."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:83
+msgid "Optionally specify a :guilabel:`Scrap Reason`."
 msgstr ""
-"준비가 끝나면 :guilabel:`승인` 을 클릭하여 새로운 |SP| 를 완성합니다. 승인이 "
-"되면 :guilabel:`품목 이동` 스마트 버튼이 양식 상단에 나타납니다. 스마트 버튼"
-"을 클릭하시면 폐기 작업에 대한 세부 내용을 볼 수 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:85
+msgid "Once ready, click :guilabel:`Validate` to complete the new |SP|."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Product Moves smart button on new scrap order form."
-msgstr "품목 이동 스마트 버튼이 새로운 폐기 주문서 양식에 있는 모습입니다."
+msgid "Filled out new scrap order form with product details."
+msgstr "품목 세부 정보가 있는 새로운 폐기 주문서 양식을 작성했습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:90
+msgid ""
+"Once validated, a :icon:`fa-exchange` :guilabel:`Product Moves` smart button "
+"appears at the top of the form. Click the smart button to view the details "
+"of the scrap operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:94
 msgid ""
 "To view the all-time total quantities of scrapped items, navigate "
-"to :menuselection:`Inventory app --> Configuration --> Locations`. Click "
-"the :guilabel:`x (remove)` button on the :guilabel:`Internal` filter in "
-"the :guilabel:`Search...` bar, to display virtual locations."
+"to :menuselection:`Inventory app --> Operations --> Scrap Orders`. A list of "
+"all scrapped products, and their quantities, is displayed."
 msgstr ""
-"여태까지 폐기된 품목의 총 수량을 보려면 :menuselection:`재고 관리 앱 --> 환"
-"경 설정 --> 위치` 로 이동합니다. :guilabel:`검색...` 표시줄의 :guilabel:`내부"
-"` 필터에서 :guilabel:`x (삭제)` 버튼을 클릭하여 가상 위치를 표시합니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:65
-msgid ""
-"Select the :guilabel:`Virtual Locations/Scrap` location. From "
-"the :guilabel:`Scrap` location's form, click the :guilabel:`Current Stock` "
-"smart button, at the top of the form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:68
-msgid "A list of all scrapped products, and their quantities, is displayed."
-msgstr "모든 폐기 품목의 목록으로, 수량과 함께 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:0
-msgid "Current Stock list of all scrapped products in virtual scrap location."
-msgstr "모든 폐기 품목의 현재 재고 목록으로 가상 폐기 위치에 있습니다."
+msgid "List of all scrapped products in inventory."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:102
 msgid "Scrap from an existing operation"
 msgstr "기존 작업에서 폐기하기"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:104
 msgid ""
 "Scrap orders (SPs) can *also* be created from existing operations, such as "
 "receipts, delivery orders, and internal transfers, before they are entered "
@@ -28051,7 +28107,7 @@ msgstr ""
 "에서 생성할 수 있으며, 작업을 위해 재고로 입력되거나 재고에서 삭제되기 전에 "
 "진행합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:108
 msgid ""
 "To scrap a product during an operation, navigate to "
 "the :menuselection:`Inventory app`. From the :guilabel:`Inventory Overview`, "
@@ -28063,68 +28119,60 @@ msgstr ""
 "` 작업 카드)에 있는 :guilabel:`처리할 숫자` 버튼을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "# To Process button on Receipts task card on Inventory Overview page."
+msgid "# To Receive button on Receipts task card on Inventory Overview page."
 msgstr ""
-"처리할 작업 수 버튼이 재고 전체보기 페이지의 입고 작업 카드에 나타나 있는 모"
-"습입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:115
 msgid ""
 "Then, select an operation to process from the resulting list of existing "
 "orders. Doing so opens that operation's form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:118
 msgid ""
-"Click the :icon:`fa-cog` :guilabel:`(cog)` icon, and "
+"Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and "
 "select :guilabel:`Scrap` from the resulting drop-down menu. This opens "
 "a :guilabel:`Scrap Products` pop-up window."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Scrap Products pop-up window on operation form."
-msgstr "작업 양식의 품목 폐기 팝업창입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:121
 msgid ""
 "From this pop-up window, click the drop-down menu in the :guilabel:`Product` "
 "field, and select the products from the operation that should be scrapped. "
-"Adjust the value in the :guilabel:`Quantity` field, if necessary."
+"Adjust the value in the :guilabel:`Quantity` field, if necessary. Optionally "
+"specify a :guilabel:`Scrap Reason`."
 msgstr ""
-"이 팝업 창에서 :guilabel:`품목` 에 있는 드롭다운 메뉴를 클릭하여 작업에서 폐"
-"기할 제품을 선택합니다. 필요한 경우 :guilabel:`수량` 필드의 값을 조정합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:125
 msgid ""
 "If the :guilabel:`Product` selected is tracked using a lot or serial number, "
 "a :guilabel:`Lot/Serial` field appears. Specify the tracking number in that "
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:128
 msgid ""
 "The :guilabel:`Source Location` and :guilabel:`Scrap Location` can be "
 "changed, if needed. If a replenishment rule is set up for the product being "
-"scrapped, and if the product should be replenished, tick the checkbox "
+"scrapped, and if the product should be replenished, select the checkbox "
 "for :guilabel:`Replenish Quantities`."
 msgstr ""
-"필요한 경우 :guilabel:`출고지` 및 :guilabel:`폐기 위치` 를 변경할 수 있습니"
-"다. 폐기되는 품목에 대해 보충 규칙이 설정되어 있는 상태에서 품목을 보충하는 "
-"경우에는 :guilabel:`보충 수량` 확인란을 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:110
-msgid ""
-"Once ready, click :guilabel:`Scrap Products`. A :guilabel:`Scraps` smart "
-"button appears at the top of the operation form. Click this smart button to "
-"view the details of all scrap orders created from this specific operation."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:132
+msgid "Once ready, click :guilabel:`Scrap Products`."
 msgstr ""
-"준비가 되면 :guilabel:`폐기 품목` 을 클릭합니다. :guilabel:`폐기` 스마트 버튼"
-"이 작업 양식 상단에 나타납니다. 스마트 버튼을 클릭하면 이와 같은 특정 작업으"
-"로 생성된 모든 폐기 주문서의 세부 정보를 볼 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Scraps smart button showing all scrap orders from operation."
-msgstr "작업 중인 모든 폐기 주문을 보여주는 폐기 스마트 버튼입니다."
+msgid "Scrap Products pop-up window on operation form."
+msgstr "작업 양식의 품목 폐기 팝업창입니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:137
+msgid ""
+"After products have been scrapped from an operation, a :icon:`oi-arrows-"
+"v` :guilabel:`Scraps` smart button appears at the top of the operation form. "
+"Click this smart button to view the details of all scrap orders created from "
+"this specific operation."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
@@ -35429,7 +35477,8 @@ msgstr ""
 msgid ""
 "**Component Purchase Constraints**: Only the kit's minimum required "
 "components can be added to an **eCommerce** cart unless the option "
-"to :doc:`continue selling<../../../websites/ecommerce/products>` is disabled."
+"to :doc:`continue selling <../../../websites/ecommerce/configuration/"
+"products>` is disabled."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:62
@@ -55756,6 +55805,107 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Scrapping inventory in a database helps stock counts remain accurate, by "
+#~ "removing scrapped products from physical inventory, and placing it in a "
+#~ "virtual scrap location (*Virtual Locations/Scrap*)."
+#~ msgstr ""
+#~ "데이터베이스에서 재고를 폐기하면 재고 수를 정확하게 유지할 수 있으며, 폐기"
+#~ "된 품목을 실제 재고에서 제거하고 가상 폐기 위치(*가상 위치/폐기*)에 배치하"
+#~ "게 됩니다."
+
+#~ msgid ""
+#~ "The :guilabel:`Source Location` defaults to the location where the "
+#~ "product is currently stored. The :guilabel:`Scrap Location` defaults to "
+#~ "the designated scrap location (:guilabel:`Virtual Locations/Scrap`). "
+#~ "Either of these locations can be changed by selecting a different "
+#~ "location from their respective drop-down menus."
+#~ msgstr ""
+#~ ":guilabel:`출고지` 의 기본값은 품목이 현재 저장되어 있는 위치입니"
+#~ "다. :guilabel:`폐기 위치` 는 지정된 폐기 위치(:guilabel:`가상 위치/폐기`)"
+#~ "가 기본값으로 설정됩니다. 두 가지 위치 모두 드롭다운 메뉴에서 다른 위치를 "
+#~ "선택하여 변경할 수 있습니다."
+
+#~ msgid ""
+#~ "The :guilabel:`Company` field displays the company whose warehouse this "
+#~ "product belongs to. If a replenishment rule is set up for the product "
+#~ "being scrapped, and if the product should be replenished, tick the "
+#~ "checkbox for :guilabel:`Replenish Quantities`."
+#~ msgstr ""
+#~ ":guilabel:`회사` 필드에는 이 품목이 속해 있는 창고의 회사가 표시됩니다. 폐"
+#~ "기되는 품목에 대한 보충 규칙이 설정되는 상황에서 품목을 보충해야 하는 경"
+#~ "우 :guilabel:`수량 보충` 확인란에 표시합니다."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Validate` to complete the new |SP|. Once "
+#~ "validated, a :guilabel:`Product Moves` smart button appears at the top of "
+#~ "the form. Click the smart button to view the details of the scrap "
+#~ "operation."
+#~ msgstr ""
+#~ "준비가 끝나면 :guilabel:`승인` 을 클릭하여 새로운 |SP| 를 완성합니다. 승인"
+#~ "이 되면 :guilabel:`품목 이동` 스마트 버튼이 양식 상단에 나타납니다. 스마"
+#~ "트 버튼을 클릭하시면 폐기 작업에 대한 세부 내용을 볼 수 있습니다."
+
+#~ msgid "Product Moves smart button on new scrap order form."
+#~ msgstr "품목 이동 스마트 버튼이 새로운 폐기 주문서 양식에 있는 모습입니다."
+
+#~ msgid ""
+#~ "To view the all-time total quantities of scrapped items, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`. Click "
+#~ "the :guilabel:`x (remove)` button on the :guilabel:`Internal` filter in "
+#~ "the :guilabel:`Search...` bar, to display virtual locations."
+#~ msgstr ""
+#~ "여태까지 폐기된 품목의 총 수량을 보려면 :menuselection:`재고 관리 앱 --> "
+#~ "환경 설정 --> 위치` 로 이동합니다. :guilabel:`검색...` 표시줄"
+#~ "의 :guilabel:`내부` 필터에서 :guilabel:`x (삭제)` 버튼을 클릭하여 가상 위"
+#~ "치를 표시합니다."
+
+#~ msgid "A list of all scrapped products, and their quantities, is displayed."
+#~ msgstr "모든 폐기 품목의 목록으로, 수량과 함께 표시됩니다."
+
+#~ msgid ""
+#~ "Current Stock list of all scrapped products in virtual scrap location."
+#~ msgstr "모든 폐기 품목의 현재 재고 목록으로 가상 폐기 위치에 있습니다."
+
+#~ msgid ""
+#~ "# To Process button on Receipts task card on Inventory Overview page."
+#~ msgstr ""
+#~ "처리할 작업 수 버튼이 재고 전체보기 페이지의 입고 작업 카드에 나타나 있는 "
+#~ "모습입니다."
+
+#~ msgid ""
+#~ "From this pop-up window, click the drop-down menu in "
+#~ "the :guilabel:`Product` field, and select the products from the operation "
+#~ "that should be scrapped. Adjust the value in the :guilabel:`Quantity` "
+#~ "field, if necessary."
+#~ msgstr ""
+#~ "이 팝업 창에서 :guilabel:`품목` 에 있는 드롭다운 메뉴를 클릭하여 작업에서 "
+#~ "폐기할 제품을 선택합니다. 필요한 경우 :guilabel:`수량` 필드의 값을 조정합"
+#~ "니다."
+
+#~ msgid ""
+#~ "The :guilabel:`Source Location` and :guilabel:`Scrap Location` can be "
+#~ "changed, if needed. If a replenishment rule is set up for the product "
+#~ "being scrapped, and if the product should be replenished, tick the "
+#~ "checkbox for :guilabel:`Replenish Quantities`."
+#~ msgstr ""
+#~ "필요한 경우 :guilabel:`출고지` 및 :guilabel:`폐기 위치` 를 변경할 수 있습"
+#~ "니다. 폐기되는 품목에 대해 보충 규칙이 설정되어 있는 상태에서 품목을 보충"
+#~ "하는 경우에는 :guilabel:`보충 수량` 확인란을 선택합니다."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Scrap Products`. A :guilabel:`Scraps` smart "
+#~ "button appears at the top of the operation form. Click this smart button "
+#~ "to view the details of all scrap orders created from this specific "
+#~ "operation."
+#~ msgstr ""
+#~ "준비가 되면 :guilabel:`폐기 품목` 을 클릭합니다. :guilabel:`폐기` 스마트 "
+#~ "버튼이 작업 양식 상단에 나타납니다. 스마트 버튼을 클릭하면 이와 같은 특정 "
+#~ "작업으로 생성된 모든 폐기 주문서의 세부 정보를 볼 수 있습니다."
+
+#~ msgid "Scraps smart button showing all scrap orders from operation."
+#~ msgstr "작업 중인 모든 폐기 주문을 보여주는 폐기 스마트 버튼입니다."
 
 #~ msgid ""
 #~ "**Odoo Barcode** allows users to assign barcodes to individual products "

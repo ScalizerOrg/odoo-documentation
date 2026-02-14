@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-06 18:30+0000\n"
+"POT-Creation-Date: 2026-02-13 18:30+0000\n"
 "PO-Revision-Date: 2026-02-12 23:20+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
@@ -38,8 +38,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
-" ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
+"0) ? 1 : 2);\n"
 "X-Generator: Weblate 5.14.3\n"
 
 #: ../../content/applications/productivity.rst:5
@@ -1005,6 +1005,124 @@ msgstr ""
 "apikeys/gemini>`, consulta `los precios de API de Gemini <https://"
 "ai.google.dev/gemini-api/docs/pricing>`_."
 
+#: ../../content/applications/productivity/ai/email-templates.rst:3
+msgid "AI in email templates"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:7
+msgid "Odoo allows |AI| prompts to be embedded directly into email templates."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:9
+msgid ""
+"When an email is sent, the prompt is evaluated in context, and the generated "
+"content is inserted into the message automatically. This feature makes it "
+"possible to create dynamic, personalized emails at scale, while keeping "
+"templates concise and reusable."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:13
+msgid ""
+"An AI-enabled email template contains one or more AI prompts that are "
+"evaluated at send time. Unlike static templates, AI prompts:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:16
+msgid "Adapt the message content to the current record"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:17
+msgid ""
+"Use available context such as customer data, document content, or related "
+"records"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:18
+msgid "Generate natural language text automatically"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:21
+msgid "How AI prompts are evaluated in email templates"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:23
+msgid ""
+"When the database creates an email based on a template with an AI prompt, "
+"the prompt uses the current record as context to complete the prompt's "
+"objective. If the email is sent in bulk, the prompt is evaluated separately "
+"for each record. This allows a single template to produce personalized "
+"content for multiple recipients."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:29
+msgid "Adding an AI prompt to an email template"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:31
+msgid ""
+"First, navigate to :menuselection:`Settings --> Technical --> Email "
+"Templates`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:34
+msgid ""
+":ref:`Developer mode <developer-mode/activation>` needs to be activated to "
+"view the *Technical* menu."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:37
+msgid ""
+"Select an existing template, or click :guilabel:`New` to create a new one. "
+"In the body of the template, type `/`, to open the :ref:`powerbox "
+"<essentials/html_editor/commands>`. Select :guilabel:`Prompt` from the drop-"
+"down menu. This adds a banner to the template. In the  banner, enter a "
+"prompt describing the expected output."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:42
+msgid ""
+"To utilize :ref:`dynamic placeholders <email_template/dynamic-placeholders>` "
+"within the prompt, type `/`, then select :guilabel:`Dynamic Placeholder` "
+"from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:0
+msgid "An email template with an AI prompt."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:49
+msgid ""
+"Dynamic placeholders reference specific fields within the database to "
+"produce unique data in the template. Adding these placeholders is what "
+"allows the database to customize the email based on the record referenced."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:54
+msgid "Example use cases"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:56
+msgid ""
+"Sales follow-ups: Automatically generate tailored follow-up emails based on "
+"opportunity stage, customer activity, or recent communication."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:58
+msgid ""
+"HR communication: Generate personalized onboarding or interview emails based "
+"on application or employee data."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:60
+msgid ""
+"Project updates: Create progress summaries using task descriptions and "
+"recent activity."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/email-templates.rst:63
+msgid ":doc:`../../general/companies/email_template`"
+msgstr ""
+
 #: ../../content/applications/productivity/ai/fields.rst:3
 msgid "AI fields"
 msgstr "Campos de IA"
@@ -1253,12 +1371,9 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/fields.rst:98
 msgid ""
-"Additionally, a scheduled action runs once a day to fill all |AI| fields "
-"that are currently empty. This action is active by default."
+"Additionally, a scheduled action runs once a day to fill text and property |"
+"AI| fields that are currently empty. This action is active by default."
 msgstr ""
-"Además, una vez al día se ejecuta una acción programada para llenar todos "
-"los campos de IA que están vacíos. Esta acción está activa de forma "
-"predeterminada."
 
 #: ../../content/applications/productivity/ai/fields.rst:102
 msgid ""
@@ -1271,6 +1386,145 @@ msgstr ""
 "aplicación Ajustes--> Técnico --> Automatización --> Acciones programadas`. "
 "Haz clic en :guilabel:`Campos IA\\:\\ Calcular campos IA` para abrirlo y "
 "después haz clic en :guilabel:`Ejecutar de forma manual`."
+
+#: ../../content/applications/productivity/ai/improve_text.rst:3
+msgid "Write and improve text with AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:7
+msgid ""
+"Odoo |AI| can assist with writing and refining text across the database. "
+"This makes it easier to draft emails, improve existing content, and quickly "
+"extract key information from discussions or notes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:11
+msgid ""
+"|AI| writing features are available in most rich-text environments in Odoo, "
+"including:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:13
+msgid "*Description* and *Notes* fields on records"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:14
+msgid "Email composers and email templates"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:15
+msgid "**Knowledge** articles"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:17
+msgid ""
+"These features are accessible through the text editor and the :ref:`powerbox "
+"<essentials/html_editor/commands>`, depending on the context."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:None
+msgid "A knowledge article with the AI improve text option visible."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:24
+msgid "Writing with AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:26
+msgid ""
+"|AI| can generate new text based on a short prompt or partial input. This is "
+"useful for drafting content such as emails, task descriptions, or internal "
+"notes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:29
+msgid ""
+"To generate text, either click the |AI| icon, or type `/` to open the "
+"powerbox, and select :guilabel:`AI` from the drop-down menu. Both options "
+"open a conversation window. Enter a short prompt describing the desired "
+"content, then click the :icon:`fa-paper-plane-o` :guilabel:`(paper plane)` "
+"icon. After the text is generated, hover over the response and "
+"click :guilabel:`Use this` to add the content to the desired field or "
+"document. Alternatively, click the :icon:`fa-copy` :guilabel:`(copy)` icon "
+"to copy the text to the clipboard."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:None
+msgid "A conversation window with an AI agent generating content."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:39
+msgid ""
+"If unsatisfied with the content, send a follow-up message to the agent with "
+"an expanded prompt or suggested changes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:43
+msgid "Improving existing text"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:45
+msgid ""
+"|AI| can also be used to rewrite or improve existing text. This includes:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:47
+msgid "Making text clearer or more concise"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:48
+msgid "Adjusting tone or structure"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:49
+msgid "Correcting grammar or phrasing"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:51
+msgid ""
+"Select the text to improve, then click the |AI| icon to open a conversation "
+"window. Click the :guilabel:`Rewrite selected` prompt. After the text is "
+"generated, hover over the response and click :guilabel:`Use this` to add the "
+"content to the desired field or document. Alternatively, click the :icon:`fa-"
+"copy` :guilabel:`(copy)` icon to copy the text to the clipboard."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:None
+msgid "The rewrite selected text in a conversation window."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:60
+msgid ""
+"To add custom instructions to the prompt, such as suggestions on tone or "
+"content, write the prompt directly in the conversation window. For example, "
+"`Rewrite the selected text in a more professional tone`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:65
+msgid "Best practices for AI-assisted writing"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:67
+msgid "For best results when using |AI| to write or improve text:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:69
+msgid "Provide clear and specific context in prompts"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:70
+msgid "Review AI-generated content before saving or sending"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:71
+msgid "Adjust wording to match the company's tone and communication standards"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/improve_text.rst:73
+msgid ""
+"|AI|-assisted writing is designed to support productivity, while final "
+"review and validation remain essential."
+msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:3
 msgid "AI live chat"
@@ -2013,21 +2267,22 @@ msgid ""
 "of the transcript being created in real-time."
 msgstr ""
 "Para crear una transcripción de voz, escribe `/` para abrir la :ref:`paleta "
-"de comandos <essentials/html_editor/commands>`. Selecciona :guilabel:`"
-"Transcripción de voz` de la lista desplegable, lo cual creará un nuevo "
-"bloque de texto. Haz clic en :icon:`fa-bars` :guilabel:`Notas` para agregar "
-"notas y detalles sobre la reunión. Aquí es donde se puede agregar "
-"información sobre la agenda de la reunión y los asistentes. Haz clic en :icon"
-":`fa-microphone` :guilabel:`Transcripción` para cambiar a una vista en vivo "
-"de la transcripción que se está creando en tiempo real."
+"de comandos <essentials/html_editor/commands>`. "
+"Selecciona :guilabel:`Transcripción de voz` de la lista desplegable, lo cual "
+"creará un nuevo bloque de texto. Haz clic en :icon:`fa-"
+"bars` :guilabel:`Notas` para agregar notas y detalles sobre la reunión. Aquí "
+"es donde se puede agregar información sobre la agenda de la reunión y los "
+"asistentes. Haz clic en :icon:`fa-microphone` :guilabel:`Transcripción` para "
+"cambiar a una vista en vivo de la transcripción que se está creando en "
+"tiempo real."
 
 #: ../../content/applications/productivity/ai/voice.rst:44
 msgid ""
 "When the meeting is ready to begin, click :icon:`fa-circle` :guilabel:`Start "
 "Recording`."
 msgstr ""
-"Cuando la reunión está por comenzar, haz clic en :icon:`fa-circle` "
-":guilabel:`Comenzar a grabar`."
+"Cuando la reunión está por comenzar, haz clic en :icon:`fa-"
+"circle` :guilabel:`Comenzar a grabar`."
 
 #: ../../content/applications/productivity/ai/voice.rst:47
 msgid ""
@@ -3711,9 +3966,8 @@ msgid ""
 "log into the Google account."
 msgstr ""
 "Crea un nuevo proyecto de la API de Google y activa la API del calendario de "
-"Google. Primero ve a `Google API Console "
-"<https://console.developers.google.com>`_ e inicia sesión con tu cuenta de "
-"Google."
+"Google. Primero ve a `Google API Console <https://"
+"console.developers.google.com>`_ e inicia sesión con tu cuenta de Google."
 
 #: ../../content/applications/productivity/calendar/google.rst:22
 msgid ""
@@ -14602,8 +14856,8 @@ msgid ""
 "see the overall :guilabel:`Status` of the signature request, "
 "e.g., :guilabel:`To Sign`, :guilabel:`Signed`, :guilabel:`Cancelled`"
 msgstr ""
-"Ver el :guilabel:`estado` general de la solicitud de firma, por ejemplo, "
-":guilabel:`Por firmar`, :guilabel:`Firmado`, :guilabel:`Cancelado`."
+"Ver el :guilabel:`estado` general de la solicitud de firma, por "
+"ejemplo, :guilabel:`Por firmar`, :guilabel:`Firmado`, :guilabel:`Cancelado`."
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:600
 msgid ":icon:`fa-refresh` :guilabel:`Resend` a signature request manually"
@@ -14629,8 +14883,8 @@ msgid ""
 "for a cancelled signature request, click :icon:`fa-info` :guilabel:`Details` "
 "to see the details of the cancelled request"
 msgstr ""
-"Para una solicitud de firma cancelada, haz clic en :icon:`fa-info` "
-":guilabel:`Detalles` para ver la información de la solicitud cancelada."
+"Para una solicitud de firma cancelada, haz clic en :icon:`fa-"
+"info` :guilabel:`Detalles` para ver la información de la solicitud cancelada."
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:607
 msgid ""
@@ -14640,8 +14894,8 @@ msgid ""
 "the :doc:`Odoo model <../../studio/models_modules_apps>` the template is "
 "linked to."
 msgstr ""
-"Haz clic en el icono :icon:`oi-settings-adjust` :guilabel:`"
-"(ajustes adicionales)` ubicado en la esquina superior derecha para ver más "
+"Haz clic en el icono :icon:`oi-settings-adjust` :guilabel:`(ajustes "
+"adicionales)` ubicado en la esquina superior derecha para ver más "
 "información de cada solicitud, como cada documento incluido, las etiquetas "
 "y, en el caso de documentos enviados con una plantilla, el :doc:`modelo de "
 "Odoo <../../studio/models_modules_apps>` al que está vinculada la plantilla."
@@ -14691,9 +14945,9 @@ msgid ""
 "click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in the "
 "top-right of the card to reveal more options:"
 msgstr ""
-"Haz clic en el icono :icon:`fa-ellipsis-v` :guilabel:`"
-"(tres puntos verticales)` en la esquina superior derecha de la tarjeta para "
-"mostrar más opciones:"
+"Haz clic en el icono :icon:`fa-ellipsis-v` :guilabel:`(tres puntos "
+"verticales)` en la esquina superior derecha de la tarjeta para mostrar más "
+"opciones:"
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:626
 msgid ""
@@ -14749,9 +15003,10 @@ msgid ""
 "v` :guilabel:`(vertical ellipsis)` in the top-right corner of the card, then "
 "click :guilabel:`Details`."
 msgstr ""
-"Coloca el cursor sobre la tarjeta correspondiente, haz clic en el icono :icon"
-":`fa-ellipsis-v` :guilabel:`(tres puntos verticales)` ubicado en la esquina "
-"superior derecha de la tarjeta y después haz clic en :guilabel:`Detalles`."
+"Coloca el cursor sobre la tarjeta correspondiente, haz clic en el "
+"icono :icon:`fa-ellipsis-v` :guilabel:`(tres puntos verticales)` ubicado en "
+"la esquina superior derecha de la tarjeta y después haz clic "
+"en :guilabel:`Detalles`."
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:644
 msgid ""
@@ -14799,8 +15054,8 @@ msgid ""
 "a :ref:`certificate of completion <sign/security/certificate-of-completion>` "
 "that provides details of the signing process"
 msgstr ""
-"Un :ref:`certificado de conclusión <sign/security/certificate-of-completion>`"
-" que aporta detalles del proceso de firma."
+"Un :ref:`certificado de conclusión <sign/security/certificate-of-"
+"completion>` que aporta detalles del proceso de firma."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:15
 msgid "Additional security can be ensured by:"
@@ -14812,9 +15067,9 @@ msgid ""
 "authentication>`, such as SMS, Aadhaar eSign (India) or itsme® (European "
 "Union, United Kingdom, Norway and Iceland)"
 msgstr ""
-"Otros métodos de :ref:`identificación segura <sign/security/authentication>`"
-", como SMS, Aadhaar eSign (India) o itsme® "
-"(Unión Europea, Reino Unido, Noruega e Islandia)"
+"Otros métodos de :ref:`identificación segura <sign/security/"
+"authentication>`, como SMS, Aadhaar eSign (India) o itsme® (Unión Europea, "
+"Reino Unido, Noruega e Islandia)"
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:19
 msgid ""
@@ -14952,8 +15207,8 @@ msgid ""
 "Timestamped, IP, and geographically traceable records of :guilabel:`Signing "
 "Events` and :guilabel:`Access Logs`."
 msgstr ""
-"Registros con marca de tiempo, IP y ubicación geográfica de los :guilabel:`"
-"eventos de firma` y de los :guilabel:`registros de acceso`."
+"Registros con marca de tiempo, IP y ubicación geográfica de "
+"los :guilabel:`eventos de firma` y de los :guilabel:`registros de acceso`."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:79
 msgid ""
@@ -14976,9 +15231,9 @@ msgid ""
 "Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in the "
 "top-right of the card of a document, then click :guilabel:`Details`."
 msgstr ""
-"Haz clic en el icono :icon:`fa-ellipsis-v` :guilabel:`"
-"(tres puntos verticales)` ubicado en la esquina superior derecha de la "
-"tarjeta de un documento y luego haz clic en :guilabel:`Detalles`."
+"Haz clic en el icono :icon:`fa-ellipsis-v` :guilabel:`(tres puntos "
+"verticales)` ubicado en la esquina superior derecha de la tarjeta de un "
+"documento y luego haz clic en :guilabel:`Detalles`."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:85
 msgid "Click :guilabel:`Download` then :guilabel:`Certificate`."
@@ -15025,16 +15280,16 @@ msgid ""
 ":ref:`Via itsme® <sign/security/authentication-itsme>` (available in the "
 "European Union, the United Kingdom, Norway and Iceland)"
 msgstr ""
-":ref:`Mediante itsme® <sign/security/authentication-itsme>` "
-"(disponible en la Unión Europea, Reino Unido, Noruega e Islandia)"
+":ref:`Mediante itsme® <sign/security/authentication-itsme>` (disponible en "
+"la Unión Europea, Reino Unido, Noruega e Islandia)"
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:105
 msgid ""
 "These authentication methods require :ref:`buying credits <in_app_purchase/"
 "credits>`. If you do not have any credits left, authentication is skipped."
 msgstr ""
-"Estos métodos de autenticación requieren que :ref:`compres créditos <"
-"in_app_purchase/credits>`. Si no tienes créditos, el sistema omitirá la "
+"Estos métodos de autenticación requieren que :ref:`compres créditos "
+"<in_app_purchase/credits>`. Si no tienes créditos, el sistema omitirá la "
 "autenticación."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:109
@@ -15082,10 +15337,10 @@ msgid ""
 msgstr ""
 "Antes de poder enviar mensajes SMS, registra tu número de celular. Para "
 "hacerlo, ve a :menuselection:`Firma electrónica --> Configuración --> "
-"Ajustes` y, en :guilabel:`Autenticar por SMS`, haz clic en :guilabel:`"
-"Gestionar servicio y comprar créditos`. En la siguiente pantalla, haz clic "
-"en :icon:`fa-arrow-right` :guilabel:`Registrar` y continúa con el registro "
-"de tu número telefónico."
+"Ajustes` y, en :guilabel:`Autenticar por SMS`, haz clic "
+"en :guilabel:`Gestionar servicio y comprar créditos`. En la siguiente "
+"pantalla, haz clic en :icon:`fa-arrow-right` :guilabel:`Registrar` y "
+"continúa con el registro de tu número telefónico."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:128
 msgid "To require signer authentication via SMS:"
@@ -15098,17 +15353,17 @@ msgid ""
 "relevant signer, then click :guilabel:`Edit`."
 msgstr ""
 "Con el documento o el sobre de documentos abierto, en el panel izquierdo, "
-"haz clic en el icono :icon:`fa-ellipsis-v` :guilabel:`"
-"(tres puntos verticales)` junto al signatario correspondiente y luego haz "
-"clic en :guilabel:`Editar`."
+"haz clic en el icono :icon:`fa-ellipsis-v` :guilabel:`(tres puntos "
+"verticales)` junto al signatario correspondiente y luego haz clic "
+"en :guilabel:`Editar`."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:132
 msgid ""
 "In the pop-up, select :guilabel:`Unique Code via SMS` "
 "as :guilabel:`Authentication`."
 msgstr ""
-"En la ventana emergente, selecciona :guilabel:`Código único por SMS` como "
-":guilabel:`autenticación`."
+"En la ventana emergente, selecciona :guilabel:`Código único por SMS` "
+"como :guilabel:`autenticación`."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:135
 msgid ""
@@ -15116,9 +15371,10 @@ msgid ""
 "displayed where the signer enters first their phone number, then the one-"
 "time code received."
 msgstr ""
-"Al firmar el documento aparece una ventana adicional de :guilabel:`"
-"validación final` donde el signatario primero deberá introducir su número de "
-"teléfono y luego el código de un solo uso que recibió."
+"Al firmar el documento aparece una ventana adicional "
+"de :guilabel:`validación final` donde el signatario primero deberá "
+"introducir su número de teléfono y luego el código de un solo uso que "
+"recibió."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:None
 msgid "Pop-up where signer enters phone number and one-time code"
@@ -15138,10 +15394,9 @@ msgid ""
 "Sign."
 msgstr ""
 "Aadhaar eSign permite que los signatarios en **India** firmen documentos de "
-"forma digital con su número Aadhaar y una verificación por OTP "
-"(contraseña de un solo uso). Este método ofrece una forma segura y con "
-"validez legal para completar firmas desde la aplicación Firma electrónica de "
-"Odoo."
+"forma digital con su número Aadhaar y una verificación por OTP (contraseña "
+"de un solo uso). Este método ofrece una forma segura y con validez legal "
+"para completar firmas desde la aplicación Firma electrónica de Odoo."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:151
 msgid ""
@@ -15184,24 +15439,25 @@ msgid ""
 "relevant signer."
 msgstr ""
 "Con el documento o el sobre de documentos abierto, en el panel izquierdo, "
-"haz clic en el icono :icon:`fa-ellipsis-v` :guilabel:`"
-"(tres puntos verticales)` junto al signatario correspondiente."
+"haz clic en el icono :icon:`fa-ellipsis-v` :guilabel:`(tres puntos "
+"verticales)` junto al signatario correspondiente."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:165
 msgid ""
 "In the pop-up, select :guilabel:`Via Aadhaar eSign` "
 "under :guilabel:`Authentication`."
 msgstr ""
-"En la ventana emergente, selecciona :guilabel:`Mediante Aadhaar eSign` en "
-":guilabel:`Autenticación`."
+"En la ventana emergente, selecciona :guilabel:`Mediante Aadhaar eSign` "
+"en :guilabel:`Autenticación`."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:168
 msgid ""
 "Upon signing the document, an extra :guilabel:`Final verification` page is "
 "displayed where authentication via Aadhaar is required."
 msgstr ""
-"Luego de firmar el documento aparece una página adicional de :guilabel:`"
-"verificación final` que solicita la autenticación mediante Aadhaar."
+"Luego de firmar el documento aparece una página adicional "
+"de :guilabel:`verificación final` que solicita la autenticación mediante "
+"Aadhaar."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:172
 msgid ""
@@ -15230,8 +15486,8 @@ msgid ""
 "Configuration --> Settings`, then enable :guilabel:`Identify with itsme®`."
 msgstr ""
 "Para activar la autenticación con itsme®, ve a :menuselection:`Firma "
-"electrónica --> Configuración --> Ajustes` y selecciona :guilabel:`"
-"Identificarse con itsme®`."
+"electrónica --> Configuración --> Ajustes` y "
+"selecciona :guilabel:`Identificarse con itsme®`."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:185
 msgid "To require signer authentication via itsme®:"
@@ -15242,16 +15498,16 @@ msgid ""
 "In the pop-up, select :guilabel:`Via itsme®` "
 "under :guilabel:`Authentication`."
 msgstr ""
-"En la ventana emergente, selecciona :guilabel:`Mediante itsme®` en "
-":guilabel:`Autenticación`."
+"En la ventana emergente, selecciona :guilabel:`Mediante itsme®` "
+"en :guilabel:`Autenticación`."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:192
 msgid ""
 "Upon signing the document, an extra :guilabel:`Final verification` page is "
 "displayed where authentication via itsme® is required."
 msgstr ""
-"Al firmar el documento, el sistema mostrará otra página de :guilabel:`"
-"verificación final` donde deberás autenticarte con itsme®."
+"Al firmar el documento, el sistema mostrará otra página "
+"de :guilabel:`verificación final` donde deberás autenticarte con itsme®."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:198
 msgid "Cryptographic signature"
@@ -15338,8 +15594,8 @@ msgid ""
 msgstr ""
 "También puedes generar tu propio certificado. `Adobe Acrobat <https://"
 "helpx.adobe.com/be_en/acrobat/desktop/protect-documents/manage-digital-ids/"
-"create-self-signed-id.html>`_ y `Microsoft <https://support.microsoft.com/"
-"en-us/office/obtain-a-digital-certificate-and-create-a-digital-signature-"
+"create-self-signed-id.html>`_ y `Microsoft <https://support.microsoft.com/en-"
+"us/office/obtain-a-digital-certificate-and-create-a-digital-signature-"
 "e3d9d813-3305-4164-a820-2e063d86e512>`_, por ejemplo, permiten crear "
 "certificados digitales."
 
@@ -15351,10 +15607,9 @@ msgid ""
 "urgently or for less official situations."
 msgstr ""
 "Los certificados digitales que generas por tu cuenta no ofrecen el mismo "
-"nivel de confianza que un certificado emitido por una :abbr:`CA "
-"(Autoridad de certificación)` de confianza. Sin embargo, pueden ser útiles "
-"si necesitas una firma digital con urgencia o para situaciones menos "
-"formales."
+"nivel de confianza que un certificado emitido por una :abbr:`CA (Autoridad "
+"de certificación)` de confianza. Sin embargo, pueden ser útiles si necesitas "
+"una firma digital con urgencia o para situaciones menos formales."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:237
 msgid ""
@@ -15382,8 +15637,8 @@ msgid ""
 "Under :guilabel:`Cryptographic signature`, click the :guilabel:`Signing "
 "certificate` dropdown and click :guilabel:`Create`."
 msgstr ""
-"En :guilabel:`Firma criptográfica`, haz clic en el menú desplegable "
-":guilabel:`Certificado de firma` y luego en :guilabel:`Crear`."
+"En :guilabel:`Firma criptográfica`, haz clic en el menú "
+"desplegable :guilabel:`Certificado de firma` y luego en :guilabel:`Crear`."
 
 #: ../../content/applications/productivity/sign/security_authentication.rst:250
 msgid "In the pop-up, complete the relevant fields:"
@@ -15443,10 +15698,10 @@ msgid ""
 "electronic signature using Odoo Sign <sign/sign-document/signature-"
 "request>`; or"
 msgstr ""
-"Un solo documento o un :ref:`sobre con varios documentos <sign/"
-"prepare-document/create-envelope>` que tú u otra persona :ref:`prepararon "
-"para su firma electrónica con la aplicación Firma electrónica de Odoo <sign/"
-"sign-document/signature-request>`."
+"Un solo documento o un :ref:`sobre con varios documentos <sign/prepare-"
+"document/create-envelope>` que tú u otra persona :ref:`prepararon para su "
+"firma electrónica con la aplicación Firma electrónica de Odoo <sign/sign-"
+"document/signature-request>`."
 
 #: ../../content/applications/productivity/sign/sign_document.rst:10
 msgid ""
@@ -15477,10 +15732,10 @@ msgid ""
 "the document is opened."
 msgstr ""
 "Los campos con fondo de color son obligatorios, mientras que los campos con "
-"bordes punteados y fondo blanco son opcionales. Los campos que el sistema "
-":ref:`completa de forma automática <sign/sign-document/auto-complete>` y "
-"marca como solo de lectura tienen borde sólido y fondo blanco; además, los "
-"completa en cuanto abres el documento."
+"bordes punteados y fondo blanco son opcionales. Los campos que el "
+"sistema :ref:`completa de forma automática <sign/sign-document/auto-"
+"complete>` y marca como solo de lectura tienen borde sólido y fondo blanco; "
+"además, los completa en cuanto abres el documento."
 
 #: ../../content/applications/productivity/sign/sign_document.rst:28
 msgid ""
@@ -15538,8 +15793,8 @@ msgid ""
 "When all required fields have been completed, click :guilabel:`Validate & "
 "Send Completed Document` at the bottom of the document."
 msgstr ""
-"Una vez que hayas completado todos los campos obligatorios, haz clic en "
-":guilabel:`Validar y enviar documento completado` al final del documento."
+"Una vez que hayas completado todos los campos obligatorios, haz clic "
+"en :guilabel:`Validar y enviar documento completado` al final del documento."
 
 #: ../../content/applications/productivity/sign/sign_document.rst:52
 msgid ""
@@ -31679,92 +31934,78 @@ msgstr ""
 "identificarlas con mayor rapidez, esto le permitirá distinguirlas de sus "
 "tareas del proyecto."
 
-#: ../../content/applications/productivity/voip.rst:5
-msgid "VoIP (Voice over Internet Protocol)"
-msgstr "VoIP (Voz sobre protocolo de internet)"
+#: ../../content/applications/productivity/voip.rst:7
+#: ../../content/applications/productivity/whatsapp.rst:274
+msgid "Phone"
+msgstr "Teléfono"
 
-#: ../../content/applications/productivity/voip.rst:9
-msgid ""
-"|VOIP| in Odoo enables businesses to handle calls over the internet by "
-"integrating directly with Odoo apps like **CRM**, **Helpdesk**, and more. "
-"Calls and messages are logged within these apps, keeping records linked to "
-"customer interactions."
+#: ../../content/applications/productivity/voip.rst:10
+msgid "As of Odoo 19.0, the *VoIP* module has been renamed to *Odoo Phone*."
 msgstr ""
-"El VoIP se integra con las aplicaciones de Odoo como **CRM**, **Soporte al "
-"cliente** y más para permitir que las empresas gestionen sus llamadas en "
-"internet. Las llamadas y mensajes se registran en estas aplicaciones y se "
-"mantiene un historial de ellas vinculado a las interacciones con el cliente."
 
-#: ../../content/applications/productivity/voip.rst:14
+#: ../../content/applications/productivity/voip.rst:12
 msgid ""
-"`Odoo Tutorials: VoIP <https://www.odoo.com/slides/voip-voice-over-ip-315>`_"
+"The Odoo **Phone** app enables businesses to handle calls over the internet "
+"by integrating directly with Odoo apps like **CRM** and **Helpdesk**. The "
+"**Phone** app can link calls and messages to customer interactions, log "
+"communication history, and automate call routing based on predefined rules. "
+"Features like call recording and analytics provide insights into call volume "
+"and response times, helping businesses streamline external communication and "
+"track team performance."
 msgstr ""
-"`Tutoriales de Odoo: VoIP <https://www.odoo.com/slides/voip-voice-over-"
-"ip-315>`_"
 
-#: ../../content/applications/productivity/voip.rst:16
+#: ../../content/applications/productivity/voip.rst:19
 msgid ""
-"Users can make and receive calls, track communication history, and automate "
-"call routing based on predefined rules. Features like call recording and "
-"analytics provide insights into call volume and response times, helping "
-"teams track communication efficiency."
+"Phone\n"
+"\n"
+" widget"
 msgstr ""
-"Los usuarios pueden hacer y recibir llamadas, monitorear el historial de "
-"comunicación y automatizar el enrutamiento de llamadas de acuerdo con reglas "
-"predefinidas. Las funciones como la grabación de llamadas y datos analíticos "
-"le darán información detallada sobre el volumen de llamadas y el tiempo de "
-"respuestas para que sea más fácil monitorear la eficacia de comunicación de "
-"los equipos."
 
-#: ../../content/applications/productivity/voip.rst:21
-#: ../../content/applications/productivity/voip/voip_widget.rst:3
-msgid "VoIP actions"
-msgstr "Acciones del VoIP"
-
-#: ../../content/applications/productivity/voip.rst:21
+#: ../../content/applications/productivity/voip.rst:19
 msgid ""
-"Get oriented with the features of the VoIP widget, like what actions can be "
+"Get started with the Phone widget essentials, including actions that can be "
 "taken during a call."
 msgstr ""
-"Conoce las funciones del widget de VoIP, como las acciones que puedes "
-"realizar durante una llamada."
 
-#: ../../content/applications/productivity/voip.rst:28
+#: ../../content/applications/productivity/voip.rst:26
 #: ../../content/applications/productivity/voip/devices_integrations.rst:3
 msgid "Devices and integrations"
 msgstr "Dispositivos e integraciones"
 
-#: ../../content/applications/productivity/voip.rst:28
+#: ../../content/applications/productivity/voip.rst:26
 msgid ""
-"Learn about accessing the VoIP widget from different devices (like phones) "
+"Learn how to access the Phone widget from different devices (like phones) "
 "and apps (like Linphone)."
 msgstr ""
-"Aprende a acceder al widget de VoIP desde distintos dispositivos (como "
-"teléfonos) y aplicaciones (como Linphone)."
 
-#: ../../content/applications/productivity/voip.rst:36
-msgid "VoIP terms"
-msgstr "Definiciones de términos relacionados al VoIP"
-
-#: ../../content/applications/productivity/voip.rst:38
+#: ../../content/applications/productivity/voip.rst:34
 msgid ""
-"**VoIP**: Voice over Internet Protocol. Technology that is used to handle "
+"`Odoo Tutorials: Phone <https://www.odoo.com/slides/voip-voice-over-ip-315>`_"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:37
+msgid "About VoIP"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:39
+msgid ""
+"The **Phone** app uses the following technologies to make and receive calls "
+"in Odoo:"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:41
+msgid ""
+"**Voice over Internet Protocol (VoIP)**: Technology that is used to handle "
 "calls that are not made from a phone line."
 msgstr ""
-"**VoIP**: Son las siglas en inglés de Voz sobre protocolo de internet. Esta "
-"es una tecnología que se usa para gestionar llamadas que no se realizan "
-"desde una línea telefónica."
 
-#: ../../content/applications/productivity/voip.rst:40
+#: ../../content/applications/productivity/voip.rst:43
 msgid ""
-"**SIP**: Session Initiation Protocol. Technology included in |VOIP| that "
+"**Session Initiation Protocol (SIP)**: Technology included in |VOIP| that "
 "specifically handles the setup, management, and termination of calls."
 msgstr ""
-"**SIP**: Son las siglas en inglés de Protocolo de inicio de sesión. Esta es "
-"una tecnología que se incluye en el VoIP para poder configurar, gestionar y "
-"terminar llamadas."
 
-#: ../../content/applications/productivity/voip.rst:42
+#: ../../content/applications/productivity/voip.rst:45
 msgid ""
 "**Call queue**: A system to route calls (usually in a support team). This "
 "allows customers to wait for help if no support agents are available."
@@ -31773,7 +32014,7 @@ msgstr ""
 "utiliza en equipos de soporte). De esta forma los clientes pueden esperar "
 "para recibir ayuda si no hay ningún agente de soporte disponible."
 
-#: ../../content/applications/productivity/voip.rst:44
+#: ../../content/applications/productivity/voip.rst:47
 msgid ""
 "**Dial plans**: A system to define how |VOIP| calls are routed, based on set "
 "rules."
@@ -31781,40 +32022,30 @@ msgstr ""
 "**Planes de marcación**: Sistema con el que se define cómo se enrutarán las "
 "llamadas VoIP según un conjunto de reglas."
 
-#: ../../content/applications/productivity/voip.rst:47
-msgid "Configure VoIP"
-msgstr "Configuración del VoIP"
-
-#: ../../content/applications/productivity/voip.rst:49
-msgid ""
-"To use |VOIP|, first :ref:`install <general/install>` the :guilabel:`VoIP` "
-"module."
+#: ../../content/applications/productivity/voip.rst:50
+msgid "Configure the Phone app"
 msgstr ""
-"Para poder usar el VoIP primero debe :ref:`instalar <general/install>` el "
-"módulo :guilabel:`VoIP`."
 
-#: ../../content/applications/productivity/voip.rst:51
+#: ../../content/applications/productivity/voip.rst:52
 msgid ""
-"Once the module is installed, a :icon:`oi-voip` (:guilabel:`VoIP`) icon will "
-"appear at the top of the screen. This is where phone calls are made from "
-"within Odoo. When this icon is clicked, a |VOIP| pop-up widget appears on "
-"the screen, and is where emails can be sent, user and employee info can be "
-"edited, and activities can be managed. While this pop-up widget is open, the "
-"user can navigate through their Odoo apps."
+"To make |VOIP| calls in Odoo, first :ref:`install <general/install>` the "
+"**Phone** app."
 msgstr ""
-"Después de haber instalado el módulo, aparecerá un icono de :icon:`oi-voip` "
-"(:guilabel:`VoIP`) en la parte superior de la pantalla. Aquí es el lugar del "
-"que se hacen llamadas dentro de Odoo. Cuando se haga clic en este icono, "
-"aparecerá un widget emergente de VoIP. Este widget es el lugar donde puede "
-"enviar correos electrónicos, editar información del usuario y empleado y "
-"gestionar actividades. El usuario puede seguir navegando por las "
-"aplicaciones de Odoo mientras el widget emergente esté abierto."
 
-#: ../../content/applications/productivity/voip.rst:58
+#: ../../content/applications/productivity/voip.rst:54
+msgid ""
+"Once the app is installed, a :icon:`oi-voip` (:guilabel:`Phone`) icon will "
+"appear at the top of the screen. When this icon is clicked, a **Phone** pop-"
+"up widget appears on the screen. This is where users can make and receive "
+"calls, send emails, edit user and employee info, and manage activities. The "
+"pop-up widget stays open when navigating other Odoo apps."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:60
 msgid "Assign user permissions"
 msgstr "Asignar permisos de usuario"
 
-#: ../../content/applications/productivity/voip.rst:60
+#: ../../content/applications/productivity/voip.rst:62
 msgid ""
 "By default, users can receive their own calls, and managers can receive "
 "calls for their team members. To grant additional |VOIP| permissions to a "
@@ -31825,26 +32056,26 @@ msgid ""
 msgstr ""
 "De forma predeterminada, los usuarios pueden recibir sus propias llamadas y "
 "los gerentes pueden recibir llamadas de los miembros de su equipo. Para "
-"otorgar permisos adicionales de VoIP a un usuario, ve a :menuselection:`"
-"Ajustes --> Usuarios y empresas --> Usuarios` y busca al usuario. Abre la "
-"tarjeta de contacto del usuario , ve a la pestaña *Permisos de acceso*, "
-"dirígete a la sección *Productividad* y, en el campo VoIP, selecciona el "
-"nivel de acceso adecuado."
+"otorgar permisos adicionales de VoIP a un usuario, ve "
+"a :menuselection:`Ajustes --> Usuarios y empresas --> Usuarios` y busca al "
+"usuario. Abre la tarjeta de contacto del usuario , ve a la pestaña *Permisos "
+"de acceso*, dirígete a la sección *Productividad* y, en el campo VoIP, "
+"selecciona el nivel de acceso adecuado."
 
-#: ../../content/applications/productivity/voip.rst:66
+#: ../../content/applications/productivity/voip.rst:68
 msgid "There are three access roles for |VOIP|:"
 msgstr "Existen tres roles de acceso para VoIP:"
 
-#: ../../content/applications/productivity/voip.rst:68
+#: ../../content/applications/productivity/voip.rst:70
 msgid ":guilabel:`No`: cannot access |VOIP| features."
 msgstr ":guilabel:`No`: No puede acceder a las funciones de VoIP."
 
-#: ../../content/applications/productivity/voip.rst:69
+#: ../../content/applications/productivity/voip.rst:71
 msgid ":guilabel:`Officer`: can view and report on all calls."
 msgstr ""
 ":guilabel:`Encargado`: Puede ver y generar reportes de todas las llamadas."
 
-#: ../../content/applications/productivity/voip.rst:70
+#: ../../content/applications/productivity/voip.rst:72
 msgid ":guilabel:`Administrator`: can view, report, and manage call settings."
 msgstr ""
 ":guilabel:`Administrador`: Puede ver, generar reportes y gestionar los "
@@ -31863,92 +32094,33 @@ msgid "Make sure to set the correct access level for each |VOIP| user."
 msgstr ""
 "Asegúrate de definir el nivel de acceso correcto para cada usuario de VoIP."
 
-#: ../../content/applications/productivity/voip.rst:76
+#: ../../content/applications/productivity/voip.rst:78
 msgid ""
 "To modify these roles or add custom roles, see :ref:`Create and modify "
 "groups <access-rights/groups>`."
 msgstr ""
-"Para modificar estos roles o agregar roles personalizados, consulta :ref:`"
-"Crear y modificar grupos <access-rights/groups>`."
-
-#: ../../content/applications/productivity/voip.rst:80
-msgid "Add a VoIP provider"
-msgstr "Agregar un proveedor de VoIP"
+"Para modificar estos roles o agregar roles personalizados, "
+"consulta :ref:`Crear y modificar grupos <access-rights/groups>`."
 
 #: ../../content/applications/productivity/voip.rst:82
-msgid ""
-"In order to use |VOIP|, a service provider must be connected to the Odoo "
-"database. While |VOIP| setup is minimal in Odoo, most configuration happens "
-"in the external |VOIP| service provider. Two verified providers "
-"are :doc:`OnSIP <voip/onsip>` and :doc:`Axivox <voip/axivox>`. Click on the "
-"cards below to learn how to configure these service providers in the Odoo "
-"database. If these providers cannot be used, an alternate provider must meet "
-"these requirements to connect with Odoo:"
+msgid "Connect to a VoIP provider"
 msgstr ""
-"Para usar VoIP deber conectar un proveedor de servicios a la base de datos "
-"de Odoo. La configuración de VoIP en Odoo es básica, pero debes realizar la "
-"mayor parte en el proveedor externo. Dos de los proveedores verificados son "
-":doc:`OnSIP <voip/onsip>` y :doc:`Axivox <voip/axivox>`. Haz clic en los "
-"cuadros de abajo para conocer cómo configurar estos proveedores en la base "
-"de datos de Odoo. Si no puedes usar estos proveedores, el proveedor "
-"alternativo debe cumplir con estos requisitos para conectarse con Odoo:"
 
-#: ../../content/applications/productivity/voip.rst:88
+#: ../../content/applications/productivity/voip.rst:84
 msgid ""
-"|VOIP| host must provide access to a SIP server via a websocket connection"
+"Making calls through the **Phone** app also requires a |VOIP| service "
+"provider. Odoo supports three verified providers by default: :doc:`Axivox "
+"<voip/axivox>`, :doc:`DIDWW <voip/didww>`, and :doc:`OnSIP <voip/onsip>`. "
+"Click on the cards below to learn how to configure these service providers "
+"in the Odoo database:"
 msgstr ""
-"El VoIP debe brindar acceso a un servidor SIP a través de una conexión "
-"WebSocket."
 
-#: ../../content/applications/productivity/voip.rst:89
-msgid "|VOIP| host must support WebRTC protocol"
-msgstr "El host del VoIP debe ser compatible con el protocolo WebRTC."
-
-#: ../../content/applications/productivity/voip.rst:91
-msgid ""
-"To add the credentials for the alternate provider, go to the **Settings** "
-"app and search for `VoIP`. In the :guilabel:`Integrations` section "
-"under :guilabel:`VoIP`, click :guilabel:`Manage Providers`. And then, "
-"click :guilabel:`New` and enter the requested information (like the "
-"websocket's URL). Note that the :guilabel:`OnSIP Domain` field is where the "
-"domain created by the alternate provider goes."
-msgstr ""
-"Para agregar las credenciales de un proveedor alternativo, vaya a la "
-"aplicación **Ajustes** y busque `VoIP`. Haga clic en :guilabel:`Gestionar "
-"proveedores` en la sección :guilabel:`Integraciones` de :guilabel:`VoIP` y "
-"después haga clic en :guilabel:`Nuevo` para ingresar la información "
-"solicitada (como la URL del WebSocket). Especifique el dominio creado por el "
-"proveedor alternativo en el campo :guilabel:`Dominio OnSIP`."
-
-#: ../../content/applications/productivity/voip.rst:96
-msgid ""
-"If any issues with the |VOIP| service provider are encountered, then reach "
-"out to their support team. If any issues when setting up the |VOIP| service "
-"provider are encountered in Odoo, then follow the :ref:`relevant "
-"troubleshooting steps <voip/voip_widget/troubleshooting_voip>`."
-msgstr ""
-"En caso de que tenga problemas con el proveedor de servicios VoIP, póngase "
-"en contacto con su respectivo equipo de soporte. Siga :ref:`los pasos "
-"necesarios para solucionar su problema <voip/voip_widget/"
-"troubleshooting_voip>` en caso de que tenga dificultades al configurar el "
-"proveedor de servicios VoIP en Odoo."
-
-#: ../../content/applications/productivity/voip.rst:101
-msgid ""
-"Odoo **cannot** verify that every alternate provider is compatible with "
-"Odoo's systems. However, if the above requirements are met, then no issues "
-"should be found."
-msgstr ""
-"Odoo **no** puede verificar que todos los proveedores alternativos son "
-"compatibles con los sistemas de Odoo. Sin embargo, si cumplen con los "
-"requisitos antes mencionados, no debería tener ningún problema."
-
-#: ../../content/applications/productivity/voip.rst:105
+#: ../../content/applications/productivity/voip.rst:90
 #: ../../content/applications/productivity/voip/axivox.rst:5
 msgid "Axivox configuration"
 msgstr "Configuración de Axivox"
 
-#: ../../content/applications/productivity/voip.rst:105
+#: ../../content/applications/productivity/voip.rst:90
 msgid ""
 "Learn how to set up Axivox in Odoo. This includes adding users to Axivox, "
 "setting up call queues, and more."
@@ -31956,11 +32128,11 @@ msgstr ""
 "Aprende a configurar Axivox en Odoo. Esto incluye agregar usuarios a Axivox, "
 "configurar colas de llamadas y más."
 
-#: ../../content/applications/productivity/voip.rst:112
+#: ../../content/applications/productivity/voip.rst:97
 msgid "OnSIP configuration"
 msgstr "Configuración de OnSIP"
 
-#: ../../content/applications/productivity/voip.rst:112
+#: ../../content/applications/productivity/voip.rst:97
 msgid ""
 "Learn how to set up OnSIP in Odoo. This includes entering OnSIP credentials "
 "into Odoo and handling troubleshooting."
@@ -31968,45 +32140,86 @@ msgstr ""
 "Aprende a configurar OnSIP en Odoo. Esto incluye ingresar las credenciales "
 "de OnSIP en Odoo y gestionar la solución de problemas."
 
-#: ../../content/applications/productivity/voip.rst:120
+#: ../../content/applications/productivity/voip.rst:104
+msgid "DIDWW configuration"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:104
+msgid ""
+"Learn how to set up DIDWW in Odoo. This includes entering DIDWW credentials "
+"into Odoo and purchasing new numbers."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:111
+msgid "Other providers must meet two requirements to connect with Odoo:"
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:113
+msgid ""
+"The |VOIP| host must provide access to a SIP server via a websocket "
+"connection."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:114
+msgid "The |VOIP| host must support WebRTC protocol."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:117
+msgid ""
+"If these requirements are met, it should be possible to add the alternate "
+"provider to Odoo. However, Odoo recommends using a verified provider, and "
+"cannot guarantee that every alternate provider is compatible with the "
+"**Phone** app."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:121
+msgid ""
+"To add credentials for an alternate provider, go to "
+"the :menuselection:`Phone app --> Configuration --> Settings`. "
+"Click :guilabel:`New` and enter the provider information (like the "
+"websocket's URL). Enter the domain created by the alternate provider in "
+"the :guilabel:`OnSIP Domain` field."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:125
+msgid ""
+"For issues setting up the |VOIP| service provider in Odoo, follow "
+"the :ref:`relevant troubleshooting steps <voip/voip_widget/"
+"troubleshooting_voip>`. For any other issues with the |VOIP| service "
+"provider, reach out directly to their support team."
+msgstr ""
+
+#: ../../content/applications/productivity/voip.rst:130
 msgid "VoIP workflows"
 msgstr "Flujos de trabajo de VoIP"
 
-#: ../../content/applications/productivity/voip.rst:122
+#: ../../content/applications/productivity/voip.rst:132
 msgid ""
-"Here are a few commonly used workflows for Odoo |VOIP|. This technology is "
-"especially popular with sales teams and support teams, but can be useful for "
-"other teams as well."
+"Odoo **Phone** is popular with sales teams and support teams, but can be "
+"useful for other teams as well. Click the cards below to learn about |VOIP| "
+"workflows in Odoo:"
 msgstr ""
-"A continuación encontrará algunos flujos de trabajo que se suelen utilizar "
-"con VoIP de Odoo. Esta tecnología es muy popular entre los equipos de ventas "
-"y de soporte, aunque también puede ser útil para otros equipos."
 
-#: ../../content/applications/productivity/voip.rst:126
+#: ../../content/applications/productivity/voip.rst:136
 msgid "Sales teams and VoIP"
 msgstr "Equipos de ventas y VoIP"
 
-#: ../../content/applications/productivity/voip.rst:126
+#: ../../content/applications/productivity/voip.rst:136
 msgid ""
-"Learn how to use VoIP for a sales team. This includes making sales calls, "
-"handling follow-ups, and sending a sales quotation while on a call."
+"Learn how to use Odoo Phone for a sales team workflow. This includes making "
+"sales calls, handling follow-ups, and sending a sales quotation while on a "
+"call."
 msgstr ""
-"Aprende a usar VoIP en un equipo de ventas. Esto incluye realizar llamadas "
-"de ventas, gestionar seguimientos y enviar una cotización de ventas durante "
-"una llamada."
 
-#: ../../content/applications/productivity/voip.rst:133
+#: ../../content/applications/productivity/voip.rst:143
 msgid "Support queues and VoIP"
 msgstr "Colas de soporte y VoIP"
 
-#: ../../content/applications/productivity/voip.rst:133
+#: ../../content/applications/productivity/voip.rst:143
 msgid ""
-"Learn how to use VoIP for a support team. This includes joining a call queue "
-"as an agent and handling support tickets that require calls."
+"Learn how to use Odoo Phone for a support team workflow. This includes "
+"joining a call queue as an agent and handling live phone support tickets."
 msgstr ""
-"Aprende a usar VoIP en un equipo de soporte. Esto incluye unirte a una cola "
-"de llamadas como agente y gestionar tickets de soporte que requieren "
-"llamadas."
 
 #: ../../content/applications/productivity/voip/axivox/axivox_config.rst:3
 msgid "VoIP services in Odoo with Axivox"
@@ -38171,6 +38384,10 @@ msgstr ""
 "agente*. A partir de ese momento ya no recibirá llamadas de soporte hasta "
 "que vuelva a iniciar sesión."
 
+#: ../../content/applications/productivity/voip/voip_widget.rst:3
+msgid "VoIP actions"
+msgstr "Acciones del VoIP"
+
 #: ../../content/applications/productivity/voip/voip_widget.rst:7
 msgid ""
 "The |VOIP| widget is an add-on made available to Odoo users by installing "
@@ -39382,10 +39599,6 @@ msgstr "Consola de Meta"
 #: ../../content/applications/productivity/whatsapp.rst:273
 msgid "Odoo Interface"
 msgstr "Interfaz de Odoo"
-
-#: ../../content/applications/productivity/whatsapp.rst:274
-msgid "Phone"
-msgstr "Teléfono"
 
 #: ../../content/applications/productivity/whatsapp.rst:275
 msgid ":guilabel:`Phone number ID`"
@@ -40922,6 +41135,201 @@ msgstr ""
 "Para otros errores, consulta los `códigos de error de WhatsApp <https://"
 "developers.facebook.com/documentation/business-messaging/whatsapp/support/"
 "error-codes>`__ en Meta Developer Suite."
+
+#~ msgid ""
+#~ "Additionally, a scheduled action runs once a day to fill all |AI| fields "
+#~ "that are currently empty. This action is active by default."
+#~ msgstr ""
+#~ "Además, una vez al día se ejecuta una acción programada para llenar todos "
+#~ "los campos de IA que están vacíos. Esta acción está activa de forma "
+#~ "predeterminada."
+
+#~ msgid "VoIP (Voice over Internet Protocol)"
+#~ msgstr "VoIP (Voz sobre protocolo de internet)"
+
+#~ msgid ""
+#~ "|VOIP| in Odoo enables businesses to handle calls over the internet by "
+#~ "integrating directly with Odoo apps like **CRM**, **Helpdesk**, and more. "
+#~ "Calls and messages are logged within these apps, keeping records linked "
+#~ "to customer interactions."
+#~ msgstr ""
+#~ "El VoIP se integra con las aplicaciones de Odoo como **CRM**, **Soporte "
+#~ "al cliente** y más para permitir que las empresas gestionen sus llamadas "
+#~ "en internet. Las llamadas y mensajes se registran en estas aplicaciones y "
+#~ "se mantiene un historial de ellas vinculado a las interacciones con el "
+#~ "cliente."
+
+#~ msgid ""
+#~ "`Odoo Tutorials: VoIP <https://www.odoo.com/slides/voip-voice-over-"
+#~ "ip-315>`_"
+#~ msgstr ""
+#~ "`Tutoriales de Odoo: VoIP <https://www.odoo.com/slides/voip-voice-over-"
+#~ "ip-315>`_"
+
+#~ msgid ""
+#~ "Users can make and receive calls, track communication history, and "
+#~ "automate call routing based on predefined rules. Features like call "
+#~ "recording and analytics provide insights into call volume and response "
+#~ "times, helping teams track communication efficiency."
+#~ msgstr ""
+#~ "Los usuarios pueden hacer y recibir llamadas, monitorear el historial de "
+#~ "comunicación y automatizar el enrutamiento de llamadas de acuerdo con "
+#~ "reglas predefinidas. Las funciones como la grabación de llamadas y datos "
+#~ "analíticos le darán información detallada sobre el volumen de llamadas y "
+#~ "el tiempo de respuestas para que sea más fácil monitorear la eficacia de "
+#~ "comunicación de los equipos."
+
+#~ msgid ""
+#~ "Get oriented with the features of the VoIP widget, like what actions can "
+#~ "be taken during a call."
+#~ msgstr ""
+#~ "Conoce las funciones del widget de VoIP, como las acciones que puedes "
+#~ "realizar durante una llamada."
+
+#~ msgid ""
+#~ "Learn about accessing the VoIP widget from different devices (like "
+#~ "phones) and apps (like Linphone)."
+#~ msgstr ""
+#~ "Aprende a acceder al widget de VoIP desde distintos dispositivos (como "
+#~ "teléfonos) y aplicaciones (como Linphone)."
+
+#~ msgid "VoIP terms"
+#~ msgstr "Definiciones de términos relacionados al VoIP"
+
+#~ msgid ""
+#~ "**VoIP**: Voice over Internet Protocol. Technology that is used to handle "
+#~ "calls that are not made from a phone line."
+#~ msgstr ""
+#~ "**VoIP**: Son las siglas en inglés de Voz sobre protocolo de internet. "
+#~ "Esta es una tecnología que se usa para gestionar llamadas que no se "
+#~ "realizan desde una línea telefónica."
+
+#~ msgid ""
+#~ "**SIP**: Session Initiation Protocol. Technology included in |VOIP| that "
+#~ "specifically handles the setup, management, and termination of calls."
+#~ msgstr ""
+#~ "**SIP**: Son las siglas en inglés de Protocolo de inicio de sesión. Esta "
+#~ "es una tecnología que se incluye en el VoIP para poder configurar, "
+#~ "gestionar y terminar llamadas."
+
+#~ msgid "Configure VoIP"
+#~ msgstr "Configuración del VoIP"
+
+#~ msgid ""
+#~ "To use |VOIP|, first :ref:`install <general/install>` "
+#~ "the :guilabel:`VoIP` module."
+#~ msgstr ""
+#~ "Para poder usar el VoIP primero debe :ref:`instalar <general/install>` el "
+#~ "módulo :guilabel:`VoIP`."
+
+#~ msgid ""
+#~ "Once the module is installed, a :icon:`oi-voip` (:guilabel:`VoIP`) icon "
+#~ "will appear at the top of the screen. This is where phone calls are made "
+#~ "from within Odoo. When this icon is clicked, a |VOIP| pop-up widget "
+#~ "appears on the screen, and is where emails can be sent, user and employee "
+#~ "info can be edited, and activities can be managed. While this pop-up "
+#~ "widget is open, the user can navigate through their Odoo apps."
+#~ msgstr ""
+#~ "Después de haber instalado el módulo, aparecerá un icono de :icon:`oi-"
+#~ "voip` (:guilabel:`VoIP`) en la parte superior de la pantalla. Aquí es el "
+#~ "lugar del que se hacen llamadas dentro de Odoo. Cuando se haga clic en "
+#~ "este icono, aparecerá un widget emergente de VoIP. Este widget es el "
+#~ "lugar donde puede enviar correos electrónicos, editar información del "
+#~ "usuario y empleado y gestionar actividades. El usuario puede seguir "
+#~ "navegando por las aplicaciones de Odoo mientras el widget emergente esté "
+#~ "abierto."
+
+#~ msgid "Add a VoIP provider"
+#~ msgstr "Agregar un proveedor de VoIP"
+
+#~ msgid ""
+#~ "In order to use |VOIP|, a service provider must be connected to the Odoo "
+#~ "database. While |VOIP| setup is minimal in Odoo, most configuration "
+#~ "happens in the external |VOIP| service provider. Two verified providers "
+#~ "are :doc:`OnSIP <voip/onsip>` and :doc:`Axivox <voip/axivox>`. Click on "
+#~ "the cards below to learn how to configure these service providers in the "
+#~ "Odoo database. If these providers cannot be used, an alternate provider "
+#~ "must meet these requirements to connect with Odoo:"
+#~ msgstr ""
+#~ "Para usar VoIP deber conectar un proveedor de servicios a la base de "
+#~ "datos de Odoo. La configuración de VoIP en Odoo es básica, pero debes "
+#~ "realizar la mayor parte en el proveedor externo. Dos de los proveedores "
+#~ "verificados son :doc:`OnSIP <voip/onsip>` y :doc:`Axivox <voip/axivox>`. "
+#~ "Haz clic en los cuadros de abajo para conocer cómo configurar estos "
+#~ "proveedores en la base de datos de Odoo. Si no puedes usar estos "
+#~ "proveedores, el proveedor alternativo debe cumplir con estos requisitos "
+#~ "para conectarse con Odoo:"
+
+#~ msgid ""
+#~ "|VOIP| host must provide access to a SIP server via a websocket connection"
+#~ msgstr ""
+#~ "El VoIP debe brindar acceso a un servidor SIP a través de una conexión "
+#~ "WebSocket."
+
+#~ msgid "|VOIP| host must support WebRTC protocol"
+#~ msgstr "El host del VoIP debe ser compatible con el protocolo WebRTC."
+
+#~ msgid ""
+#~ "To add the credentials for the alternate provider, go to the **Settings** "
+#~ "app and search for `VoIP`. In the :guilabel:`Integrations` section "
+#~ "under :guilabel:`VoIP`, click :guilabel:`Manage Providers`. And then, "
+#~ "click :guilabel:`New` and enter the requested information (like the "
+#~ "websocket's URL). Note that the :guilabel:`OnSIP Domain` field is where "
+#~ "the domain created by the alternate provider goes."
+#~ msgstr ""
+#~ "Para agregar las credenciales de un proveedor alternativo, vaya a la "
+#~ "aplicación **Ajustes** y busque `VoIP`. Haga clic en :guilabel:`Gestionar "
+#~ "proveedores` en la sección :guilabel:`Integraciones` de :guilabel:`VoIP` "
+#~ "y después haga clic en :guilabel:`Nuevo` para ingresar la información "
+#~ "solicitada (como la URL del WebSocket). Especifique el dominio creado por "
+#~ "el proveedor alternativo en el campo :guilabel:`Dominio OnSIP`."
+
+#~ msgid ""
+#~ "If any issues with the |VOIP| service provider are encountered, then "
+#~ "reach out to their support team. If any issues when setting up the |VOIP| "
+#~ "service provider are encountered in Odoo, then follow the :ref:`relevant "
+#~ "troubleshooting steps <voip/voip_widget/troubleshooting_voip>`."
+#~ msgstr ""
+#~ "En caso de que tenga problemas con el proveedor de servicios VoIP, "
+#~ "póngase en contacto con su respectivo equipo de soporte. Siga :ref:`los "
+#~ "pasos necesarios para solucionar su problema <voip/voip_widget/"
+#~ "troubleshooting_voip>` en caso de que tenga dificultades al configurar el "
+#~ "proveedor de servicios VoIP en Odoo."
+
+#~ msgid ""
+#~ "Odoo **cannot** verify that every alternate provider is compatible with "
+#~ "Odoo's systems. However, if the above requirements are met, then no "
+#~ "issues should be found."
+#~ msgstr ""
+#~ "Odoo **no** puede verificar que todos los proveedores alternativos son "
+#~ "compatibles con los sistemas de Odoo. Sin embargo, si cumplen con los "
+#~ "requisitos antes mencionados, no debería tener ningún problema."
+
+#~ msgid ""
+#~ "Here are a few commonly used workflows for Odoo |VOIP|. This technology "
+#~ "is especially popular with sales teams and support teams, but can be "
+#~ "useful for other teams as well."
+#~ msgstr ""
+#~ "A continuación encontrará algunos flujos de trabajo que se suelen "
+#~ "utilizar con VoIP de Odoo. Esta tecnología es muy popular entre los "
+#~ "equipos de ventas y de soporte, aunque también puede ser útil para otros "
+#~ "equipos."
+
+#~ msgid ""
+#~ "Learn how to use VoIP for a sales team. This includes making sales calls, "
+#~ "handling follow-ups, and sending a sales quotation while on a call."
+#~ msgstr ""
+#~ "Aprende a usar VoIP en un equipo de ventas. Esto incluye realizar "
+#~ "llamadas de ventas, gestionar seguimientos y enviar una cotización de "
+#~ "ventas durante una llamada."
+
+#~ msgid ""
+#~ "Learn how to use VoIP for a support team. This includes joining a call "
+#~ "queue as an agent and handling support tickets that require calls."
+#~ msgstr ""
+#~ "Aprende a usar VoIP en un equipo de soporte. Esto incluye unirte a una "
+#~ "cola de llamadas como agente y gestionar tickets de soporte que requieren "
+#~ "llamadas."
 
 #~ msgid ""
 #~ "Using |VOIP| also requires a service provider. The next section explains "

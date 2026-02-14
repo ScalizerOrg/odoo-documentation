@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-06 18:30+0000\n"
+"POT-Creation-Date: 2026-02-13 18:30+0000\n"
 "PO-Revision-Date: 2026-01-20 23:22+0000\n"
 "Last-Translator: \"Thi Huong Nguyen (thng)\" <thng@odoo.com>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -19131,6 +19131,27 @@ msgstr ""
 msgid "Shipping carrier information on the delivery form."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:85
+msgid "Supported hardware"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:None
+msgid "The Zebra ZD411 works best to print labels from Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:90
+msgid ""
+"For label printers, Odoo recommends the `Zebra ZD411 <https://www.zebra.com/"
+"us/en/products/spec-sheets/printers/desktop/zd411-series.html>`__, as Odoo "
+"supports the ZPL protocol for automatic printing from a point of sale."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:94
+msgid ""
+"This printer has been tested on most label formats (PDF, PNG, ZPL) for all "
+"carriers that Odoo supports."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:3
 msgid "Bpost integration"
 msgstr "Tích hợp Bpost"
@@ -26799,13 +26820,10 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:15
 msgid ""
-"Scrapping inventory in a database helps stock counts remain accurate, by "
-"removing scrapped products from physical inventory, and placing it in a "
-"virtual scrap location (*Virtual Locations/Scrap*)."
+"Scrapping inventory in a database helps stock counts remain accurate by "
+"removing scrapped products from physical inventory and placing them in a "
+"virtual *Inventory Loss* location."
 msgstr ""
-"Việc loại bỏ hàng tồn kho trong cơ sở dữ liệu giúp số lượng tồn kho được duy "
-"trì chính xác, bằng cách loại các phế phẩm khỏi tồn kho vật lý và đặt chúng "
-"vào một vị trí phê phẩm ảo (*Vị trí ảo/Phế phẩm*)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:19
 msgid ""
@@ -26827,10 +26845,69 @@ msgstr ""
 "trí <inventory/warehouses_storage/location-type>` khác nhau."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:27
+msgid "Create a scrap location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:29
+msgid ""
+"By default, scrap operations are recorded in the :guilabel:`Inventory "
+"adjustment` virtual location. However, if the scrapped products need to be "
+"recorded in the *Profit and Loss* accounting report, it is possible to "
+"create an :guilabel:`Inventory Loss` location specifically for tracking "
+"scrapped goods. If scrapped goods don't need to be tracked for reporting "
+"purposes, :ref:`create a scrap order from stock <inventory/scrap-from-"
+"stock>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:35
+msgid ""
+"To create a new :guilabel:`Inventory Loss` location specifically for "
+"scrapped goods, first, open :menuselection:`Inventory app --> Configuration "
+"--> Settings`. In the :guilabel:`Warehouse` section, "
+"enable :guilabel:`Storage Locations`. Be sure to click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:39
+msgid ""
+"To create a new scrap location, open :menuselection:`Inventory app --> "
+"Configuration --> Locations`. By default, this list is filtered "
+"by :guilabel:`Internal` locations. To see all locations, remove "
+"the :guilabel:`Internal` filter. Click the :guilabel:`New` button to create "
+"a new location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:43
+msgid ""
+"The location form opens. Specify a :guilabel:`Location Name` "
+"and :guilabel:`Parent Location`. Update the :guilabel:`Location Type` "
+"to :guilabel:`Inventory Loss`. If working in a multi-company database, "
+"specify a :guilabel:`Company`. Optionally, specify a :guilabel:`Loss "
+"Account` to ensure that products scrapped to this location show up in the "
+"*Profit and Loss* accounting report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:49
+msgid ""
+"A company creates a new `Scrapped Goods` location, with the parent location "
+"being `Inventory adjustment`. The :guilabel:`Location Type` is set "
+"to :guilabel:`Inventory Loss`. To ensure the scrapped products show up in "
+"the *Profit and Loss* accounting report, they specify `600000 Expenses` as "
+"the :guilabel:`Loss Account`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:0
+msgid "Optionally create a Scrapped Goods inventory loss location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:58
+msgid ":doc:`../../inventory_valuation/scrapped_inventory_valuation`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:63
 msgid "Scrap from stock"
 msgstr "Phế phẩm từ tồn kho"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:65
 msgid ""
 "To create a new scrap order (SP) for an in-stock product, navigate "
 "to :menuselection:`Inventory app --> Operations --> Scrap`, and "
@@ -26840,7 +26917,7 @@ msgstr ""
 "trong kho, truy cập :menuselection:`ứng dụng Tồn kho --> Hoạt động --> Loại "
 "bỏ`, và nhấp vào :guilabel:`Mới`. Thao tác này sẽ mở một biểu mẫu |SP| mới."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:68
 msgid ""
 "Click the drop-down menu in the :guilabel:`Product` field, and select the "
 "product that should be scrapped from inventory. In the :guilabel:`Quantity` "
@@ -26851,25 +26928,16 @@ msgstr ""
 "cần loại bỏ khỏi kho. Trong trường :guilabel:`Số lượng`, thay đổi giá trị "
 "thành số lượng sản phẩm cần loại bỏ (mặc định, giá trị này được đặt là `1`)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Filled out new scrap order form with product details."
-msgstr ""
-"Đã điền đầy đủ biểu mẫu lệnh loại bỏ hàng tồn kho mới với thông tin sản phẩm."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:72
 msgid ""
 "The :guilabel:`Source Location` defaults to the location where the product "
-"is currently stored. The :guilabel:`Scrap Location` defaults to the "
-"designated scrap location (:guilabel:`Virtual Locations/Scrap`). Either of "
-"these locations can be changed by selecting a different location from their "
-"respective drop-down menus."
+"is currently stored. The :guilabel:`Scrap Location` defaults "
+"to :guilabel:`Inventory adjustment`. Either of these locations can be "
+"changed by selecting a different location from their respective drop-down "
+"menus."
 msgstr ""
-"Trường :guilabel:`Vị trí nguồn` mặc định là vị trí mà sản phẩm đang được lưu "
-"trữ. Trường :guilabel:`Vị trí loại bỏ` mặc định là vị trí loại bỏ được chỉ "
-"định (:guilabel:`Vị trí ảo/Loại bỏ`). Cả hai vị trí này đều có thể được thay "
-"đổi bằng cách chọn một vị trí khác từ menu thả xuống tương ứng."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:76
 msgid ""
 "If the scrapping is tied to a specific existing operation, specify the "
 "operation in the :guilabel:`Source Document` field."
@@ -26877,71 +26945,50 @@ msgstr ""
 "Nếu việc loại bỏ hàng tồn kho liên quan đến một thao tác hiện có cụ thể, hãy "
 "chỉ định thao tác đó trong trường :guilabel:`Vị trí nguồn`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:79
 msgid ""
 "The :guilabel:`Company` field displays the company whose warehouse this "
 "product belongs to. If a replenishment rule is set up for the product being "
-"scrapped, and if the product should be replenished, tick the checkbox "
+"scrapped, and if the product should be replenished, select the checkbox "
 "for :guilabel:`Replenish Quantities`."
 msgstr ""
-"Trường :guilabel:`Công ty` hiển thị công ty sở hữu kho chứa sản phẩm này. "
-"Nếu có thiết lập quy tắc bổ sung hàng cho sản phẩm bị loại bỏ, và sản phẩm "
-"cần được bổ sung, hãy đánh dấu vào ô :guilabel:`Số lượng bổ sung`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:52
-msgid ""
-"Once ready, click :guilabel:`Validate` to complete the new |SP|. Once "
-"validated, a :guilabel:`Product Moves` smart button appears at the top of "
-"the form. Click the smart button to view the details of the scrap operation."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:83
+msgid "Optionally specify a :guilabel:`Scrap Reason`."
 msgstr ""
-"Khi đã sẵn sàng, nhấp vào :guilabel:`Xác thực` để hoàn tất lệnh |SP| mới. "
-"Sau khi xác thực, một nút thông minh :guilabel:`Điều chuyển sản phẩm` xuất "
-"hiện ở đầu biểu mẫu. Nhấp vào nút này để xem chi tiết của thao tác loại bỏ "
-"hàng."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:85
+msgid "Once ready, click :guilabel:`Validate` to complete the new |SP|."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Product Moves smart button on new scrap order form."
-msgstr "Nút thông minh Điều chuyển sản phẩm trên biểu mẫu lệnh loại bỏ mới."
+msgid "Filled out new scrap order form with product details."
+msgstr ""
+"Đã điền đầy đủ biểu mẫu lệnh loại bỏ hàng tồn kho mới với thông tin sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:90
+msgid ""
+"Once validated, a :icon:`fa-exchange` :guilabel:`Product Moves` smart button "
+"appears at the top of the form. Click the smart button to view the details "
+"of the scrap operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:94
 msgid ""
 "To view the all-time total quantities of scrapped items, navigate "
-"to :menuselection:`Inventory app --> Configuration --> Locations`. Click "
-"the :guilabel:`x (remove)` button on the :guilabel:`Internal` filter in "
-"the :guilabel:`Search...` bar, to display virtual locations."
+"to :menuselection:`Inventory app --> Operations --> Scrap Orders`. A list of "
+"all scrapped products, and their quantities, is displayed."
 msgstr ""
-"Để xem tổng số lượng hàng bị loại bỏ theo mọi thời điểm, truy "
-"cập :menuselection:`Ứng dụng Tồn kho --> Cấu hình --> Vị trí`. Nhấp vào "
-"nút :guilabel:`x (xoá)` trên bộ lọc :guilabel:`Nội bộ` trong "
-"thanh :guilabel:`Tìm kiếm...` để hiển thị các vị trí ảo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:65
-msgid ""
-"Select the :guilabel:`Virtual Locations/Scrap` location. From "
-"the :guilabel:`Scrap` location's form, click the :guilabel:`Current Stock` "
-"smart button, at the top of the form."
-msgstr ""
-"Chọn vị trí :guilabel:`Vị trí ảo/Loại bỏ`. Từ biểu mẫu của vị "
-"trí :guilabel:`Loại bỏ`, nhấp vào nút thông minh :guilabel:`Tồn kho hiện "
-"tại` ở đầu biểu mẫu."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:68
-msgid "A list of all scrapped products, and their quantities, is displayed."
-msgstr ""
-"Danh sách tất cả sản phẩm đã bị loại bỏ cùng với số lượng của chúng được "
-"hiển thị."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:0
-msgid "Current Stock list of all scrapped products in virtual scrap location."
+msgid "List of all scrapped products in inventory."
 msgstr ""
-"Danh sách Tồn kho hiện tại của tất cả sản phẩm đã bị loại bỏ trong vị trí "
-"loại bỏ ảo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:102
 msgid "Scrap from an existing operation"
 msgstr "Loại bỏ hàng từ một hoạt động hiện có"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:104
 msgid ""
 "Scrap orders (SPs) can *also* be created from existing operations, such as "
 "receipts, delivery orders, and internal transfers, before they are entered "
@@ -26951,7 +26998,7 @@ msgstr ""
 "có, chẳng hạn như phiếu nhập kho, lệnh giao hàng, và chuyển kho nội bộ, "
 "trước khi chúng được nhập vào hoặc loại khỏi kho cho một hoạt động."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:108
 msgid ""
 "To scrap a product during an operation, navigate to "
 "the :menuselection:`Inventory app`. From the :guilabel:`Inventory Overview`, "
@@ -26964,11 +27011,10 @@ msgstr ""
 "thẻ nhiệm vụ :guilabel:`Phiếu nhập kho`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "# To Process button on Receipts task card on Inventory Overview page."
+msgid "# To Receive button on Receipts task card on Inventory Overview page."
 msgstr ""
-"Nút # cần xử lý trên thẻ nhiệm vụ Phiếu nhập kho ở trang Tổng quan tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:115
 msgid ""
 "Then, select an operation to process from the resulting list of existing "
 "orders. Doing so opens that operation's form."
@@ -26976,31 +27022,22 @@ msgstr ""
 "Tiếp theo, chọn một hoạt động để xử lý từ danh sách các đơn hàng hiện có "
 "hiển thị. Thao tác này sẽ mở biểu mẫu của hoạt động đó."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:118
 msgid ""
-"Click the :icon:`fa-cog` :guilabel:`(cog)` icon, and "
+"Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and "
 "select :guilabel:`Scrap` from the resulting drop-down menu. This opens "
 "a :guilabel:`Scrap Products` pop-up window."
 msgstr ""
-"Nhấp vào biểu tượng :icon:`fa-cog` :guilabel:`(bánh răng)`, và "
-"chọn :guilabel:`Loại bỏ` từ menu thả xuống xuất hiện. Thao tác này sẽ mở cửa "
-"sổ bật lên :guilabel:`Loại bỏ sản phẩm`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Scrap Products pop-up window on operation form."
-msgstr "Cửa sổ bật lên Loại bỏ sản phẩm trên biểu mẫu hoạt động."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:121
 msgid ""
 "From this pop-up window, click the drop-down menu in the :guilabel:`Product` "
 "field, and select the products from the operation that should be scrapped. "
-"Adjust the value in the :guilabel:`Quantity` field, if necessary."
+"Adjust the value in the :guilabel:`Quantity` field, if necessary. Optionally "
+"specify a :guilabel:`Scrap Reason`."
 msgstr ""
-"Từ cửa sổ bật lên này, nhấp vào menu thả xuống trong trường :guilabel:`Sản "
-"phẩm`, và chọn các sản phẩm trong hoạt động cần được loại bỏ. Nếu cần, điều "
-"chỉnh giá trị trong trường :guilabel:`Số lượng`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:125
 msgid ""
 "If the :guilabel:`Product` selected is tracked using a lot or serial number, "
 "a :guilabel:`Lot/Serial` field appears. Specify the tracking number in that "
@@ -27010,33 +27047,29 @@ msgstr ""
 "số lô hoặc số sê-ri, một trường :guilabel:`Lô/sê-ri` sẽ xuất hiện. Nhập số "
 "theo dõi vào trường này."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:128
 msgid ""
 "The :guilabel:`Source Location` and :guilabel:`Scrap Location` can be "
 "changed, if needed. If a replenishment rule is set up for the product being "
-"scrapped, and if the product should be replenished, tick the checkbox "
+"scrapped, and if the product should be replenished, select the checkbox "
 "for :guilabel:`Replenish Quantities`."
 msgstr ""
-"Trường :guilabel:`Vị trí nguồn` và :guilabel:`Vị trí loại bỏ` có thể được "
-"thay đổi nếu cần. Nếu có thiết lập quy tắc bổ sung hàng cho sản phẩm bị loại "
-"bỏ, và sản phẩm cần được bổ sung, hãy đánh dấu vào ô :guilabel:`Số lượng bổ "
-"sung`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:110
-msgid ""
-"Once ready, click :guilabel:`Scrap Products`. A :guilabel:`Scraps` smart "
-"button appears at the top of the operation form. Click this smart button to "
-"view the details of all scrap orders created from this specific operation."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:132
+msgid "Once ready, click :guilabel:`Scrap Products`."
 msgstr ""
-"Khi đã sẵn sàng, nhấp vào :guilabel:`Loại bỏ sản phẩm`. Một nút thông "
-"minh :guilabel:`Loại bỏ` sẽ xuất hiện ở đầu biểu mẫu hoạt động. Nhấp vào nút "
-"thông minh này để xem chi tiết tất cả các lệnh loại bỏ hàng được tạo từ hoạt "
-"động cụ thể này."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
-msgid "Scraps smart button showing all scrap orders from operation."
+msgid "Scrap Products pop-up window on operation form."
+msgstr "Cửa sổ bật lên Loại bỏ sản phẩm trên biểu mẫu hoạt động."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:137
+msgid ""
+"After products have been scrapped from an operation, a :icon:`oi-arrows-"
+"v` :guilabel:`Scraps` smart button appears at the top of the operation form. "
+"Click this smart button to view the details of all scrap orders created from "
+"this specific operation."
 msgstr ""
-"Nút thông minh Loại bỏ hiển thị tất cả các lệnh loại bỏ hàng từ hoạt động."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
@@ -34962,7 +34995,8 @@ msgstr ""
 msgid ""
 "**Component Purchase Constraints**: Only the kit's minimum required "
 "components can be added to an **eCommerce** cart unless the option "
-"to :doc:`continue selling<../../../websites/ecommerce/products>` is disabled."
+"to :doc:`continue selling <../../../websites/ecommerce/configuration/"
+"products>` is disabled."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:62
@@ -52877,6 +52911,135 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Scrapping inventory in a database helps stock counts remain accurate, by "
+#~ "removing scrapped products from physical inventory, and placing it in a "
+#~ "virtual scrap location (*Virtual Locations/Scrap*)."
+#~ msgstr ""
+#~ "Việc loại bỏ hàng tồn kho trong cơ sở dữ liệu giúp số lượng tồn kho được "
+#~ "duy trì chính xác, bằng cách loại các phế phẩm khỏi tồn kho vật lý và đặt "
+#~ "chúng vào một vị trí phê phẩm ảo (*Vị trí ảo/Phế phẩm*)."
+
+#~ msgid ""
+#~ "The :guilabel:`Source Location` defaults to the location where the "
+#~ "product is currently stored. The :guilabel:`Scrap Location` defaults to "
+#~ "the designated scrap location (:guilabel:`Virtual Locations/Scrap`). "
+#~ "Either of these locations can be changed by selecting a different "
+#~ "location from their respective drop-down menus."
+#~ msgstr ""
+#~ "Trường :guilabel:`Vị trí nguồn` mặc định là vị trí mà sản phẩm đang được "
+#~ "lưu trữ. Trường :guilabel:`Vị trí loại bỏ` mặc định là vị trí loại bỏ "
+#~ "được chỉ định (:guilabel:`Vị trí ảo/Loại bỏ`). Cả hai vị trí này đều có "
+#~ "thể được thay đổi bằng cách chọn một vị trí khác từ menu thả xuống tương "
+#~ "ứng."
+
+#~ msgid ""
+#~ "The :guilabel:`Company` field displays the company whose warehouse this "
+#~ "product belongs to. If a replenishment rule is set up for the product "
+#~ "being scrapped, and if the product should be replenished, tick the "
+#~ "checkbox for :guilabel:`Replenish Quantities`."
+#~ msgstr ""
+#~ "Trường :guilabel:`Công ty` hiển thị công ty sở hữu kho chứa sản phẩm này. "
+#~ "Nếu có thiết lập quy tắc bổ sung hàng cho sản phẩm bị loại bỏ, và sản "
+#~ "phẩm cần được bổ sung, hãy đánh dấu vào ô :guilabel:`Số lượng bổ sung`."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Validate` to complete the new |SP|. Once "
+#~ "validated, a :guilabel:`Product Moves` smart button appears at the top of "
+#~ "the form. Click the smart button to view the details of the scrap "
+#~ "operation."
+#~ msgstr ""
+#~ "Khi đã sẵn sàng, nhấp vào :guilabel:`Xác thực` để hoàn tất lệnh |SP| mới. "
+#~ "Sau khi xác thực, một nút thông minh :guilabel:`Điều chuyển sản phẩm` "
+#~ "xuất hiện ở đầu biểu mẫu. Nhấp vào nút này để xem chi tiết của thao tác "
+#~ "loại bỏ hàng."
+
+#~ msgid "Product Moves smart button on new scrap order form."
+#~ msgstr "Nút thông minh Điều chuyển sản phẩm trên biểu mẫu lệnh loại bỏ mới."
+
+#~ msgid ""
+#~ "To view the all-time total quantities of scrapped items, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Locations`. Click "
+#~ "the :guilabel:`x (remove)` button on the :guilabel:`Internal` filter in "
+#~ "the :guilabel:`Search...` bar, to display virtual locations."
+#~ msgstr ""
+#~ "Để xem tổng số lượng hàng bị loại bỏ theo mọi thời điểm, truy "
+#~ "cập :menuselection:`Ứng dụng Tồn kho --> Cấu hình --> Vị trí`. Nhấp vào "
+#~ "nút :guilabel:`x (xoá)` trên bộ lọc :guilabel:`Nội bộ` trong "
+#~ "thanh :guilabel:`Tìm kiếm...` để hiển thị các vị trí ảo."
+
+#~ msgid ""
+#~ "Select the :guilabel:`Virtual Locations/Scrap` location. From "
+#~ "the :guilabel:`Scrap` location's form, click the :guilabel:`Current "
+#~ "Stock` smart button, at the top of the form."
+#~ msgstr ""
+#~ "Chọn vị trí :guilabel:`Vị trí ảo/Loại bỏ`. Từ biểu mẫu của vị "
+#~ "trí :guilabel:`Loại bỏ`, nhấp vào nút thông minh :guilabel:`Tồn kho hiện "
+#~ "tại` ở đầu biểu mẫu."
+
+#~ msgid "A list of all scrapped products, and their quantities, is displayed."
+#~ msgstr ""
+#~ "Danh sách tất cả sản phẩm đã bị loại bỏ cùng với số lượng của chúng được "
+#~ "hiển thị."
+
+#~ msgid ""
+#~ "Current Stock list of all scrapped products in virtual scrap location."
+#~ msgstr ""
+#~ "Danh sách Tồn kho hiện tại của tất cả sản phẩm đã bị loại bỏ trong vị trí "
+#~ "loại bỏ ảo."
+
+#~ msgid ""
+#~ "# To Process button on Receipts task card on Inventory Overview page."
+#~ msgstr ""
+#~ "Nút # cần xử lý trên thẻ nhiệm vụ Phiếu nhập kho ở trang Tổng quan tồn "
+#~ "kho."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-cog` :guilabel:`(cog)` icon, and "
+#~ "select :guilabel:`Scrap` from the resulting drop-down menu. This opens "
+#~ "a :guilabel:`Scrap Products` pop-up window."
+#~ msgstr ""
+#~ "Nhấp vào biểu tượng :icon:`fa-cog` :guilabel:`(bánh răng)`, và "
+#~ "chọn :guilabel:`Loại bỏ` từ menu thả xuống xuất hiện. Thao tác này sẽ mở "
+#~ "cửa sổ bật lên :guilabel:`Loại bỏ sản phẩm`."
+
+#~ msgid ""
+#~ "From this pop-up window, click the drop-down menu in "
+#~ "the :guilabel:`Product` field, and select the products from the operation "
+#~ "that should be scrapped. Adjust the value in the :guilabel:`Quantity` "
+#~ "field, if necessary."
+#~ msgstr ""
+#~ "Từ cửa sổ bật lên này, nhấp vào menu thả xuống trong "
+#~ "trường :guilabel:`Sản phẩm`, và chọn các sản phẩm trong hoạt động cần "
+#~ "được loại bỏ. Nếu cần, điều chỉnh giá trị trong trường :guilabel:`Số "
+#~ "lượng`."
+
+#~ msgid ""
+#~ "The :guilabel:`Source Location` and :guilabel:`Scrap Location` can be "
+#~ "changed, if needed. If a replenishment rule is set up for the product "
+#~ "being scrapped, and if the product should be replenished, tick the "
+#~ "checkbox for :guilabel:`Replenish Quantities`."
+#~ msgstr ""
+#~ "Trường :guilabel:`Vị trí nguồn` và :guilabel:`Vị trí loại bỏ` có thể được "
+#~ "thay đổi nếu cần. Nếu có thiết lập quy tắc bổ sung hàng cho sản phẩm bị "
+#~ "loại bỏ, và sản phẩm cần được bổ sung, hãy đánh dấu vào ô :guilabel:`Số "
+#~ "lượng bổ sung`."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Scrap Products`. A :guilabel:`Scraps` smart "
+#~ "button appears at the top of the operation form. Click this smart button "
+#~ "to view the details of all scrap orders created from this specific "
+#~ "operation."
+#~ msgstr ""
+#~ "Khi đã sẵn sàng, nhấp vào :guilabel:`Loại bỏ sản phẩm`. Một nút thông "
+#~ "minh :guilabel:`Loại bỏ` sẽ xuất hiện ở đầu biểu mẫu hoạt động. Nhấp vào "
+#~ "nút thông minh này để xem chi tiết tất cả các lệnh loại bỏ hàng được tạo "
+#~ "từ hoạt động cụ thể này."
+
+#~ msgid "Scraps smart button showing all scrap orders from operation."
+#~ msgstr ""
+#~ "Nút thông minh Loại bỏ hiển thị tất cả các lệnh loại bỏ hàng từ hoạt động."
 
 #~ msgid ""
 #~ "Before an inventory adjustment can be performed with the **Barcode** app, "

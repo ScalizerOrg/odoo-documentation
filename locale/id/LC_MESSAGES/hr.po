@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-06 18:30+0000\n"
+"POT-Creation-Date: 2026-02-13 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -2198,10 +2198,14 @@ msgid ":doc:`attendances/attendance_logs`"
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:156
-msgid ":doc:`attendances/hardware`"
+msgid ":doc:`attendances/overtime`"
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:157
+msgid ":doc:`attendances/hardware`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:158
 msgid ":doc:`attendances/attendance_reporting`"
 msgstr ""
 
@@ -2621,7 +2625,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:3
-#: ../../content/applications/hr/employees.rst:26
+#: ../../content/applications/hr/employees.rst:27
 #: ../../content/applications/hr/employees/onboarding.rst:3
 #: ../../content/applications/hr/referrals.rst:28
 msgid "Onboarding"
@@ -3206,7 +3210,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:35
-#: ../../content/applications/hr/employees.rst:46
+#: ../../content/applications/hr/employees.rst:52
 #: ../../content/applications/hr/employees/badges.rst:3
 msgid "Badges"
 msgstr "Lencana"
@@ -3939,8 +3943,340 @@ msgid ""
 "2026."
 msgstr ""
 
+#: ../../content/applications/hr/attendances/overtime.rst:3
+msgid "Overtime rulesets"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:5
+msgid ""
+"Odoo's **Attendances** app allows for the configuration of overtime rules to "
+"determine if and when employees earn overtime, and at what rate."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:9
+msgid ""
+"No overtime rulesets come preconfigured in the **Attendances** app; all "
+"overtime rulesets must be created."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:13
+msgid "Create an overtime ruleset"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:15
+msgid ""
+"To create an overtime ruleset, navigate to :menuselection:`Attendances app --"
+"> Configuration --> Overtime Rulesets`. Any existing overtime rulesets "
+"appear in a default list view, and display the ruleset :guilabel:`Name`, "
+"the :guilabel:`Rate Mode`, and the :guilabel:`Rules Count` (the number of "
+"rules configured for the ruleset)."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:20
+msgid ""
+"Click the :guilabel:`New` button, and a blank :guilabel:`Rulesets` form "
+"loads. Enter the following information on the top half of the form:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:23
+msgid ":guilabel:`Ruleset Name`: Enter a name for the ruleset."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:24
+msgid ""
+":guilabel:`Rate Combination Mode`: Using the drop-down menu, select how the "
+"overtime rate is calculated. The options are:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:27
+msgid ""
+":guilabel:`Maximum Rate`: The highest rate is used to determine the overtime "
+"pay. For example, if there are two available rates of 150% and 125%, the "
+"highest available rate, 150%, is applied."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:29
+msgid ""
+":guilabel:`Sum of all rates`: A combination of all applicable overtime rates "
+"is used to calculate the overtime pay. Odoo calculates the rate by adding "
+"the *extra* pay rates (above 100%)."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:34
+msgid ""
+"Two overtime rates are cteated, one for 150% and the other for 120%. "
+"The :guilabel:`Sum of all rates` option is selected. The overtime rate "
+"applied is 170%."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:37
+msgid ""
+"The calculation used to determine this rate is: 100% (baseline) + (150-100)% "
+"+ (120-100)% = 170%."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:40
+msgid ":guilabel:`Description`: Enter a brief description for the ruleset."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:41
+msgid ""
+":guilabel:`Country`: Using the drop-down menu, select the country the "
+"ruleset applies to."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:44
+msgid "Overtime rules"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:46
+msgid ""
+"Once the main information of the ruleset is created, the next step is to add "
+"the individual rules. Click :guilabel:`Add a line` at the bottom of the "
+"*Overtime Rules* tab of the :guilabel:`Ruleset` form, and a *Create Rule* "
+"pop-up window loads."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:50
+msgid ""
+"Enter the :guilabel:`Rule Name` in the corresponding field. Next, enter the "
+"following information in the *Definition* tab:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:54
+msgid "Condition section"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:56
+msgid ""
+"This section determines what logged time counts as overtime. Rules can be "
+"based on :ref:`quantity <attendnaces/quantity>` or :ref:`timing <attendnaces/"
+"timing>`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:62
+msgid "Based on quantity"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:64
+msgid ""
+"If overtime is accrued when the total logged hours for a day or week exceed "
+"what is expected, select the :guilabel:`Quantity` radio button for "
+"the :guilabel:`The rule is based on` field. Configure the rest of the fields "
+"in the *Condition* section as follows:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:68
+msgid ""
+":guilabel:`If the worked hours on a (Day/Week) differs`: First, select if "
+"the total expected time is calculated by the :guilabel:`Day` "
+"or :guilabel:`Week`, using the drop-down menu. Next, select if the "
+"difference is compared:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:72
+msgid ""
+":guilabel:`from the amount defined on the contract`: Select this option if "
+"the overtime is based on the working hours :ref:`defined on the employees "
+"contract <payroll/gen-info>`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:74
+msgid ""
+":guilabel:`from a specific duration`: Select this option if the overtime is "
+"based on a specified amount of time. If this is selected, "
+"a :guilabel:`Duration to exceed` field appears. Enter the number "
+"of :guilabel:`hours` in an `HH:MM` format the employee must exceed "
+"each :guilabel:`Day` or :guilabel:`Week`, depending on what is selected in "
+"the :guilabel:`If the worked hours on a (Day/Week) differs` field."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:80
+msgid ""
+":guilabel:`With a tolerance in favor of the employer of`: This field defines "
+"a buffer of time that is *not* considered overtime. Enter the amount in a "
+"`HH:MM` format. For example, if this field is set to `00:15`, and an "
+"employee logs an 8 hour and 13 minute workday, the extra 13 minutes is "
+"**not** counted as overtime."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:84
+msgid ""
+":guilabel:`With a tolerance in favor of the employee of`: Enter the amount "
+"of extra time given to an employee as overtime, in a `HH:MM` format. For "
+"example, if this field is set to `00:15`, and an employee logs an 8 hour and "
+"48 minute workday, the missing 12 minutes **are** counted as overtime, for a "
+"total of one full hour of overtime (instead of only 48 minutes of overtime)."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:92
+msgid "Based on timing"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:94
+msgid ""
+"If overtime is accrued only on specific days or at specific times, select "
+"the :guilabel:`Timing` radio button for the :guilabel:`The rule is based on` "
+"field. Configure the rest of the fields in the *Condition* section as "
+"follows:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:98
+msgid ""
+":guilabel:`With a tolerance in favor of the employer of`: This field defines "
+"a buffer of time that is *not* considered overtime. Enter the amount in a "
+"`HH:MM` format. For example, if this field is set to `00:15`, and an "
+"employee logs a 40 hour and 13 minute workweek, the extra 13 minutes is "
+"**not** counted as overtime."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:102
+msgid ""
+":guilabel:`With a tolerance in favor of the employee of`: Enter the amount "
+"of extra time given to an employee as overtime, in a `HH:MM` format. For "
+"example, if this field is set to `00:15`, and an employee logs a 40 hour and "
+"48 minute workweek, the missing 12 minutes **is** counted as overtime, for a "
+"total of one full hour of overtime (instead of only 48 minutes of overtime)."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:106
+msgid ""
+":guilabel:`If the employee works`: Click the radio button to select the "
+"period of time defined for accruing overtime. The options are:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:109
+msgid ""
+":guilabel:`On any working day`: Select this option if overtime is accrued if "
+"an employee works outside of a specified set of hours for any working day. "
+"When selected, a :guilabel:`Between` field appears, listing `00:00` and "
+"`24:00` hours, by default. Adjust the working times in an `HH:MM` for both "
+"fields, defining the specific working hours an employee earns overtime for."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:115
+msgid ""
+"The :guilabel:`Between` hours are set to `09:00` and `17:00`. An employee "
+"works from 7:00 AM until 4:00 PM. The employee earns 2 hours of overtime, "
+"for the hours between 7:00 AM and 9:00 AM."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:119
+msgid ""
+":guilabel:`On any non-working day`: Select this option if overtime is "
+"accrued if an employee works outside of a specified set of hours for any non-"
+"working day. When selected, a :guilabel:`Between` field appears, listing "
+"`00:00` and `24:00` hours, by default. Adjust the working times in an "
+"`HH:MM` for both fields, defining the specific working hours an employee "
+"earns overtime for."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:124
+msgid ""
+":guilabel:`When employee is off`: Select this option if overtime is accrued "
+"on any day the employee is *not* scheduled to work."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:126
+msgid ""
+":guilabel:`Outside of a specific schedule`: Select this option if overtime "
+"is accrued when employees work outside of a selected :doc:`working schedule "
+"<../payroll/working_schedules>`. When selected, a :guilabel:`Schedule` field "
+"appears. Using the drop-down menu, select the working schedule used to "
+"determine overtime."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:132
+msgid "Action section"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:134
+msgid ""
+"Once the criteria set in the *Condition* section are met, the *Action* "
+"section determines how any approved extra time is handled."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:137
+msgid ""
+":guilabel:`Pay extra hours`: Enable this checkbox if overtime hours are paid "
+"out. If enabled, a percentage field appears to the right of the checkmark, "
+"populated with the rate defined on the overtime :ref:`work entry type "
+"<payroll/work-entry-types>`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:140
+msgid ""
+":guilabel:`Work entry type to use`: This field only appears if "
+"the :guilabel:`Pay extra hours` field is enabled. Using the drop-down menu, "
+"select what :ref:`work entry type <payroll/work-entry-types>` is created for "
+"the overtime. By default, :guilabel:`Overtime Hours` is selected."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:144
+msgid ""
+":guilabel:`Give back as time off`: Enable this checkbox if the overtime "
+"should be converted to time off, instead of being paid out."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:148
+msgid "Example overtime ruleset"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:150
+msgid ""
+"A United States-based company wants to grant time and a half overtime to all "
+"employees who work more than their 40-hour work week, or work on any non-"
+"working day. To configure this, they create a ruleset called `Overtime`, "
+"with a :guilabel:`Rate Combination Mode` set to :guilabel:`Maximum Rate`. "
+"The country is set to :guilabel:`United States`, and "
+"a :guilabel:`Description` is entered explaining the overtime rules."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:None
+msgid "The top half of the overtime ruleset for the example."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:159
+msgid ""
+"Two rules are configured in the *Overtime Rules* tab: :ref:`Employee "
+"Schedule Rule <attendnaces/schedule-rule>` and :ref:`Non Working Days Rule "
+"<attendnaces/hours-rule>`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:165
+msgid "Employee schedule rule"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:167
+msgid ""
+"The *Employee Schedule Rule* is based on :guilabel:`Quantity`, and employees "
+"accrue overtime if they work more than the :guilabel:`amount defined on the "
+"contract` on any given :guilabel:`Day`. No tolerance set for either the "
+"employee or the employer. If the employee works overtime, they are paid at a "
+"rate of :guilabel:`150%`, and the time is logged as :guilabel:`Overtime "
+"Hours` on their attendance log."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:None
+msgid ""
+"The rule set for an employee who works more than their scheduled work day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:179
+msgid "Non-working days rule"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/overtime.rst:181
+msgid ""
+"The *Non-Working Days Rule* is based on :guilabel:`Timing`, and employees "
+"accrue overtime if they work :guilabel:`on any non-working day`, regardless "
+"of the time. No tolerance is set for either the employee or the employer. If "
+"the employee works overtime, they are paid at a rate of :guilabel:`150%`, "
+"and the time is logged as :guilabel:`Overtime Hours` on their attendance log."
+msgstr ""
+
 #: ../../content/applications/hr/employees.rst:5
-#: ../../content/applications/hr/employees.rst:75
+#: ../../content/applications/hr/employees.rst:81
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:67
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:86
@@ -3957,94 +4293,104 @@ msgid ""
 "new_employee>`, employment :doc:`contracts <payroll/contracts>`, "
 "and :doc:`departmental hierarchies <employees/departments>` in one system. "
 "In addition, each employee record tracks :doc:`certifications <employees/"
-"certifications>` and training, earned :doc:`badges <employees/badges>`, and "
-"all assigned :doc:`equipment <employees/equipment>`. "
-"Customizable :doc:`onboarding <employees/onboarding>` and :doc:`offboarding "
-"<employees/offboarding>` programs ensure all employees are trained and ready "
-"for work, and all required steps are taken when they leave."
+"certifications>` and :doc:`training <employees/learning>`, "
+"earned :doc:`badges <employees/badges>`, and all assigned :doc:`equipment "
+"<employees/equipment>`. Customizable :doc:`onboarding <employees/"
+"onboarding>` and :doc:`offboarding <employees/offboarding>` programs ensure "
+"all employees are trained and ready for work, and all required steps are "
+"taken when they leave."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:15
+#: ../../content/applications/hr/employees.rst:16
 msgid ""
 "Properly configuring the settings in the **Employees** app ensures the "
 "dashboard shows each employee's real-time attendance and work location—data "
 "that drives payroll accuracy, capacity planning, and compliance reporting."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:21
+#: ../../content/applications/hr/employees.rst:22
 #: ../../content/applications/hr/employees/new_employee.rst:3
 msgid "New employees"
 msgstr "Karyawan baru"
 
-#: ../../content/applications/hr/employees.rst:21
+#: ../../content/applications/hr/employees.rst:22
 msgid "Set up new employee records."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:26
+#: ../../content/applications/hr/employees.rst:27
 msgid "Ensure new employees are properly trained and ready to work."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:31
+#: ../../content/applications/hr/employees.rst:32
 #: ../../content/applications/hr/employees/departments.rst:3
 msgid "Departments"
 msgstr "Departemen"
 
-#: ../../content/applications/hr/employees.rst:31
+#: ../../content/applications/hr/employees.rst:32
 msgid "Create and manage the departments employees are a part of."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:36
+#: ../../content/applications/hr/employees.rst:37
+#: ../../content/applications/hr/employees/learning.rst:3
+msgid "Learning"
+msgstr ""
+
+#: ../../content/applications/hr/employees.rst:37
+msgid "Create and manage virtual and in-person employee training."
+msgstr ""
+
+#: ../../content/applications/hr/employees.rst:42
 #: ../../content/applications/hr/payroll/contracts.rst:3
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:77
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:52
 msgid "Contracts"
 msgstr "Kontrak"
 
-#: ../../content/applications/hr/employees.rst:36
+#: ../../content/applications/hr/employees.rst:42
 msgid "Manage and create employee contracts."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:41
+#: ../../content/applications/hr/employees.rst:47
 #: ../../content/applications/hr/employees/certifications.rst:3
 msgid "Certifications"
 msgstr "Sertifikat-Sertifikat"
 
-#: ../../content/applications/hr/employees.rst:41
+#: ../../content/applications/hr/employees.rst:47
 msgid "Certify employees as subject-matter experts with certifications."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:46
+#: ../../content/applications/hr/employees.rst:52
 msgid "Grant badges to employees for performance and achievements."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:51
+#: ../../content/applications/hr/employees.rst:57
 #: ../../content/applications/hr/employees/equipment.rst:3
 msgid "Equipment"
 msgstr "Peralatan"
 
-#: ../../content/applications/hr/employees.rst:51
+#: ../../content/applications/hr/employees.rst:57
 msgid "Manage and track employee equipment."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:56
+#: ../../content/applications/hr/employees.rst:62
 #: ../../content/applications/hr/employees/offboarding.rst:3
 msgid "Offboarding"
 msgstr "Offboarding"
 
-#: ../../content/applications/hr/employees.rst:56
+#: ../../content/applications/hr/employees.rst:62
 msgid "Take care of employee records when collaboration ends."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:61
+#: ../../content/applications/hr/employees.rst:67
 #: ../../content/applications/hr/employees/retention_report.rst:3
 msgid "Employee retention report"
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:61
+#: ../../content/applications/hr/employees.rst:67
 msgid "Gain insight into a company's retention rate."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:69
+#: ../../content/applications/hr/employees.rst:75
 #: ../../content/applications/hr/fleet/new_vehicle.rst:16
 #: ../../content/applications/hr/lunch.rst:19
 #: ../../content/applications/hr/payroll.rst:38
@@ -4052,37 +4398,37 @@ msgstr ""
 msgid "Settings"
 msgstr "Pengaturan"
 
-#: ../../content/applications/hr/employees.rst:71
+#: ../../content/applications/hr/employees.rst:77
 msgid ""
 "To view and configure the available settings, navigate "
 "to :menuselection:`Employees app --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:77
+#: ../../content/applications/hr/employees.rst:83
 msgid ""
 ":guilabel:`Presence Display`: Select how the employee's availability status "
 "is calculated."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:79
+#: ../../content/applications/hr/employees.rst:85
 msgid ""
 ":guilabel:`Based on attendances`: Employees are marked available "
 "when :ref:`checked into <attendances/check-in>` the **Attendances** app."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:81
+#: ../../content/applications/hr/employees.rst:87
 msgid ""
 ":guilabel:`Based on user status in system`: Employees are marked available "
 "when they :doc:`log in to Odoo <attendances/check_in_check_out>`."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:84
+#: ../../content/applications/hr/employees.rst:90
 msgid ""
 ":guilabel:`Advanced Presence Control`: When enabled, presence status can be "
 "calculated from operational signals rather than check-ins or logins:"
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:87
+#: ../../content/applications/hr/employees.rst:93
 msgid ""
 ":guilabel:`Based on number of emails sent`: An employee is marked present if "
 "they send at least # emails per hour; otherwise, they are marked absent. "
@@ -4090,7 +4436,7 @@ msgid ""
 "Emails` field."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:90
+#: ../../content/applications/hr/employees.rst:96
 msgid ""
 ":guilabel:`Based on IP Address`: An employee is marked present only when "
 "connected from one of the specified corporate IP addresses. Enter the IP "
@@ -4098,7 +4444,7 @@ msgid ""
 "with a comma."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:94
+#: ../../content/applications/hr/employees.rst:100
 msgid ""
 ":guilabel:`Skills Management`: Enable this option to display "
 "the :ref:`resumé tab <employees/resume>` on employee profiles. This allows "
@@ -4106,18 +4452,18 @@ msgid ""
 "<employees/skills>`, and :doc:`certifications <employees/certifications>`."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:100
+#: ../../content/applications/hr/employees.rst:106
 msgid "Work organization"
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:102
+#: ../../content/applications/hr/employees.rst:108
 msgid ""
 "Using the drop-down menu, select the default :guilabel:`Company Working "
 "Hours`. The default options are a :guilabel:`Standard 40 hours/week` or "
 "an :guilabel:`Appointment Resource Default Calendar`."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:105
+#: ../../content/applications/hr/employees.rst:111
 msgid ""
 "The available working hours listed are the same as the "
 "configured :doc:`working schedules <payroll/working_schedules>` in the "
@@ -4125,12 +4471,12 @@ msgid ""
 "**Payroll** and **Employees** apps."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:110
+#: ../../content/applications/hr/employees.rst:116
 #: ../../content/applications/hr/fleet/new_vehicle.rst:230
 msgid "Contract"
 msgstr "Kontrak"
 
-#: ../../content/applications/hr/employees.rst:112
+#: ../../content/applications/hr/employees.rst:118
 msgid ""
 "Define the number of days in advance that a manager is notified about an "
 "upcoming contract or work permit expiration in the "
@@ -4138,28 +4484,28 @@ msgid ""
 "Permit Expiration Notice Period` fields."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:117
+#: ../../content/applications/hr/employees.rst:123
 msgid "Salary configurator"
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:119
+#: ../../content/applications/hr/employees.rst:125
 msgid ""
 "Define how long an offer remains valid when extending a job offer or "
 "changing a salary. Enter the duration, in days, in the :guilabel:`Salary "
 "Package Configurator` field."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:122
-#: ../../content/applications/hr/employees.rst:135
+#: ../../content/applications/hr/employees.rst:128
+#: ../../content/applications/hr/employees.rst:141
 msgid ""
 "This field only appears if the **Salary Configurator** module is installed."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:125
+#: ../../content/applications/hr/employees.rst:131
 msgid "Extra time off allocation"
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:127
+#: ../../content/applications/hr/employees.rst:133
 msgid ""
 "During salary package negotiations, enable the checkbox in this section if "
 "additional time off requests are allowed. When enabled, select "
@@ -4167,7 +4513,7 @@ msgid ""
 "additional days using the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/hr/employees.rst:131
+#: ../../content/applications/hr/employees.rst:137
 msgid ""
 "The default available options are :guilabel:`Paid Time "
 "Off`, :guilabel:`Compensatory Days`, and :guilabel:`Extra Time Off`. If "
@@ -4317,90 +4663,161 @@ msgstr ""
 
 #: ../../content/applications/hr/employees/certifications.rst:5
 msgid ""
-"When jobs require specific knowledge, it is necessary to track employee "
-"certifications to ensure the necessary knowledge and certifications are in "
-"place."
+"When jobs require specific knowledge, training, or certifications, it is "
+"necessary to track employees' certifications to ensure they are properly "
+"trained and that the necessary documentation is in place."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:8
+#: ../../content/applications/hr/employees/certifications.rst:9
 msgid ""
 "When jobs require specific knowledge, track employee certifications (e.g., "
 "classes, tests, seminars) to verify required skills. Odoo accepts any "
 "certification type without restriction."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:12
+#: ../../content/applications/hr/employees/certifications.rst:13
 msgid ""
-"To add certifications to an employee profile, and to access the *Employee "
-"Certifications* report, the **Surveys** app **must** be installed."
+"To add certifications to an employee profile and to access the "
+"*Certifications* report, the **Surveys** app **must** be installed."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:16
-msgid "View certifications"
+#: ../../content/applications/hr/employees/certifications.rst:17
+msgid "Create certifications"
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:18
+#: ../../content/applications/hr/employees/certifications.rst:19
 msgid ""
-"To view a full list of all employee certifications, navigate "
-"to :menuselection:`Employees app --> Reporting --> Certifications`."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:21
-msgid ""
-"All certifications appear in a list view, grouped by employee. Each "
-"certification entry displays the following:"
+"No certifications are preconfigured in Odoo's **Employees** app; therefore, "
+"all certifications must be added to the database. To create a certification, "
+"navigate to the :menuselection:`Employees app --> Configuration --> Skill "
+"Types`. Click the :guilabel:`New` button in the upper-left corner, and a "
+"blank *Skill Types* form loads."
 msgstr ""
 
 #: ../../content/applications/hr/employees/certifications.rst:24
-msgid ""
-":guilabel:`Employee`: the employee's name, along with their avatar image."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:25
-msgid ":guilabel:`Name`: the title of the certification."
+#: ../../content/applications/hr/employees/offboarding.rst:81
+#: ../../content/applications/hr/fleet/accidents.rst:48
+#: ../../content/applications/hr/frontdesk.rst:35
+#: ../../content/applications/hr/lunch/products.rst:12
+#: ../../content/applications/hr/time_off.rst:252
+msgid "Enter the following information on the form:"
 msgstr ""
 
 #: ../../content/applications/hr/employees/certifications.rst:26
 msgid ""
-":guilabel:`Validity Start`: when the employee received the certification."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:27
-msgid ":guilabel:`Validity End`: when the certification expires."
+":guilabel:`Skill Type`: Enter the type of certification being added. This "
+"acts as the *category*, and individual certifications are nested beneath it."
 msgstr ""
 
 #: ../../content/applications/hr/employees/certifications.rst:28
 msgid ""
-":guilabel:`Certification`: the corresponding course in the **Surveys** app "
-"that was completed by the employee, if applicable."
+":guilabel:`Color`: Click on the existing color to view the available colors. "
+"Click the desired color to select it."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:31
+#: ../../content/applications/hr/employees/certifications.rst:30
 msgid ""
-"The entries are also color-coded. Current certifications that are still "
-"valid appear in black, expired certifications appear in red, and "
-"certifications that are going to expire within the next 90 days appear in "
-"orange."
+":guilabel:`Certification`: Click the toggle to indicate the skill is a "
+"certification. The toggle turns green when it is active."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:32
+msgid ""
+":guilabel:`Skills`: Click :guilabel:`Add a line` and enter "
+"the :guilabel:`Name` for the specific certification."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:34
+msgid ""
+":guilabel:`Levels`: Click :guilabel:`Add a line`, and enter "
+"a :guilabel:`Name` and :guilabel:`Progress` percentage (`0`-`100`) for each "
+"level. Set a :guilabel:`Default Level` by clicking the toggle on the desired "
+"line (only one level can be selected)."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:39
+msgid ""
+"A United States-based company requires its employees to complete "
+"various :abbr:`OSHA (Occupational Safety and Health Administration)` "
+"training and certify that the training is complete."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:43
+msgid ""
+"The company creates a new skill type and enters :guilabel:`OSHA Training` in "
+"the :guilabel:`Skill Type` field."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:46
+msgid ""
+"The various courses are entered in the *Skills* section, "
+"including :guilabel:`OSHA 3115 - Fall Protection`, :guilabel:`OSHA 3095 - "
+"Electrical Standards`, and more."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:49
+msgid ""
+"There is only one level in the *Levels* section, :guilabel:`Certified`, "
+"which is set to :guilabel:`100%`."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:0
+msgid "The skill type form configured for various OSHA training courses."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:56
+msgid "View certifications"
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:58
+msgid ""
+"To view a full list of all employee certifications, navigate to "
+"the :menuselection:`Employees app --> Learning --> Certifications`."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:61
+msgid ""
+"All certifications appear in a list view, grouped by certification *type*. "
+"Each certification entry displays the following:"
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:64
+#: ../../content/applications/hr/employees/certifications.rst:141
+msgid ""
+":guilabel:`Employee`: The employee's name, along with their avatar image."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:65
+#: ../../content/applications/hr/employees/certifications.rst:144
+msgid ":guilabel:`Certification`: The name of the certification."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:66
+msgid ":guilabel:`From`: When the employee received the certification."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:67
+msgid ""
+":guilabel:`To`: The date the certification expires. If the certification has "
+"no expiration date, :guilabel:`Indefinite` appears in this field."
 msgstr ""
 
 #: ../../content/applications/hr/employees/certifications.rst:None
 msgid "The list of employee certifications."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:39
+#: ../../content/applications/hr/employees/certifications.rst:74
 msgid ""
-"**Only** certification records with the *Display Type* set to "
-"*Certification* on their :ref:`certification form <employees/certifications-"
-"form>` appear on the :guilabel:`Employee Certifications` report. All other "
-"certifications appear in the resume section of the :ref:`employee form "
-"<employees/resume>`."
+"**Only** skill type records with the *Certification* toggle set to active "
+"appear on the :guilabel:`Certifications` report. All other certifications "
+"appear in the resume section of the :ref:`employee form <employees/resume>`."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:45
+#: ../../content/applications/hr/employees/certifications.rst:79
 msgid "View certifications by expiration status"
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:47
+#: ../../content/applications/hr/employees/certifications.rst:81
 msgid ""
 "When managing a large number of employees with a variety of certifications, "
 "it can be difficult to determine which employees need to keep necessary "
@@ -4408,188 +4825,144 @@ msgid ""
 "beneficial to view the certifications by expiration status."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:51
+#: ../../content/applications/hr/employees/certifications.rst:85
 msgid ""
-"To do so, navigate to :menuselection:`Employees app --> Reporting --> "
-"Certifications`. Next, click the :icon:`fa-caret-down` :guilabel:`(Toggle "
-"Search Panel)` icon in the search bar, then click :guilabel:`Add Custom "
-"Group`  :icon:`fa-caret-down`, revealing a drop-down menu. "
-"Click :guilabel:`Expiration Status`, then click away from the drop-down menu "
-"to close it."
+"To do so, navigate to the :menuselection:`Employees app --> Learning --> "
+"Certifications`. Next, clear the default :icon:`oi-group` :guilabel:`Type` "
+"grouping in the search bar. Next, click the :icon:`fa-caret-"
+"down` :guilabel:`(Toggle Search Panel)` icon, then click :guilabel:`Custom "
+"Group` :icon:`fa-caret-down`, to reveal a drop-down menu. "
+"Click :guilabel:`Validity Stop`, then click away from the drop-down menu to "
+"close it."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:56
+#: ../../content/applications/hr/employees/certifications.rst:91
 msgid ""
-"After doing so, all the certifications are organized by status, starting "
-"with :guilabel:`Expired` certifications, then certifications that "
-"are :guilabel:`Expiring` soon (within the next 90 days), and lastly, "
-"certifications that are still :guilabel:`Valid`."
+"After doing so, all the certifications are grouped by expiration month, in "
+"descending order, with the oldest at the top."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:60
+#: ../../content/applications/hr/employees/certifications.rst:94
 msgid ""
-"Filter certifications by expiration status to identify certifications "
-"expiring soon, and identify employees who must renew."
+"The entries are color-coded. Current certifications that are still valid "
+"appear in black, expired certifications appear in gray, and certifications "
+"that are going to expire within the next 90 days appear in orange."
 msgstr ""
 
 #: ../../content/applications/hr/employees/certifications.rst:None
 msgid "The list of employee certifications, grouped by status."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:69
+#: ../../content/applications/hr/employees/certifications.rst:102
+msgid ""
+"The time frame can be set to "
+"either :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Week`, "
+"or :guilabel:`Day`. To change the presented time frame groups, click the "
+"search bar, then click :icon:`fa-check` :guilabel:`Validity Stop` :icon:`fa-"
+"caret-down`, and select the desired time frame."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:110
 msgid "Log a certification"
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:71
+#: ../../content/applications/hr/employees/certifications.rst:112
 msgid ""
-"To log a certification for an employee, navigate "
-"to :menuselection:`Employees app --> Learning --> Certifications`. "
-"Click :guilabel:`New`, and a blank certification form loads. Enter the "
+"To log a certification for an employee, navigate to "
+"the :menuselection:`Employees app --> Learning --> Certifications`. "
+"Click :guilabel:`New` to load a blank certification form. Enter the "
 "following information on the form:"
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:75
+#: ../../content/applications/hr/employees/certifications.rst:116
 msgid ""
-":guilabel:`Title`: Enter a short description for the certification in this "
-"field."
+":guilabel:`Employee`: Select the employee who received the certification "
+"using the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:76
-msgid ""
-":guilabel:`Employee`: Using the drop-down menu, select the employee who "
-"received the certification."
+#: ../../content/applications/hr/employees/certifications.rst:117
+msgid ":guilabel:`Category`: Click the *type* of certification received."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:78
+#: ../../content/applications/hr/employees/certifications.rst:118
 msgid ""
-":guilabel:`Type`: Using the drop-down menu, select the type of certification "
-"received. This field determines where on the employee's resume the "
-"certification appears. To create a new :guilabel:`Type`, enter the type in "
-"the field, then click :guilabel:`Create [type]`."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:82
-msgid "The default options are:"
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:84
-msgid ""
-":guilabel:`Experience`: Select this option to have the certification appear "
-"in the *Experience* section of the *Resume* tab on the :doc:`employee form "
-"<new_employee>`. Experience entries are typically previous jobs or "
-"internships."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:87
-msgid ""
-":guilabel:`Education`: Select this option to have the certification appear "
-"in the *Education* section of the *Resume* tab on the :doc:`employee form "
-"<new_employee>`."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:89
-msgid ""
-":guilabel:`Social Media`: Select this option to have the certification "
-"appear in the *Social Media* section of the *Resume* tab on "
-"the :doc:`employee form <new_employee>`. Social Media entries typically "
-"relate to certifications relating to digital marketing, social media "
-"management, and specific trainings from social media platforms."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:93
-msgid ""
-":guilabel:`Internal Certification`: Select this option to have the "
-"certification appear in the *Internal Certification* section of the *Resume* "
-"tab on the :doc:`employee form <new_employee>`. Internal certifications "
-"entries are tied to courses, training, or programs created by the company, "
-"that once completed, have a certification associated with it."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:97
-msgid ""
-":guilabel:`Completed Internal Training`: Select this option to have the "
-"certification appear in the *Completed Internal Training* section of the "
-"*Resume* tab on the :doc:`employee form <new_employee>`. Completed internal "
-"training entries are typically associated with trainings created by the "
-"company, for company-specific processes. These do not result in any "
-"certifications, but are logged on the employee profile to indicate completed "
-"training."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:103
-msgid ""
-":guilabel:`Display Type`: Select the visibility of the certification in this "
-"field. The default options are:"
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:106
-msgid ""
-":guilabel:`Classic`: Select this option to have the certification appear in "
-"the *Resume* section of the employee form, and **not** appear on the "
-"*Employee Certifications* report."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:108
-msgid ""
-":guilabel:`Certification`: select this option to have the certification "
-"appear in the *Resume* section of the employee form, **and** appear on the "
-"*Employee Certifications* report. Once this is selected, "
-"a :guilabel:`Certification` field appears beneath the :guilabel:`Display "
-"Type` field. Using the drop-down menu, select the corresponding **Surveys** "
-"app certification the employee took. This field **only** appears if the "
-"**Surveys** app is installed."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:113
-msgid ""
-":guilabel:`Course`: Select this option to have the certification appear in "
-"the *Resume* section of the employee form, and **not** appear on the "
-"*Employee Certifications* report. Once this option is selected, "
-"a :guilabel:`Course` field appears beneath the :guilabel:`Display Type` "
-"field. Using the drop-down menu, select the corresponding **eLearning** "
-"course the employee took. This field **only** appears if the **eLearning** "
-"app is installed."
-msgstr ""
-
-#: ../../content/applications/hr/employees/certifications.rst:119
-msgid ""
-":guilabel:`Description`: Enter a description for the certification in this "
-"field."
+":guilabel:`Skill`: Select the specific certification received. The presented "
+"options change if the :guilabel:`Category` is changed."
 msgstr ""
 
 #: ../../content/applications/hr/employees/certifications.rst:120
 msgid ""
-":guilabel:`Duration`: Click into the first field, and a calendar pop-over "
-"window appears. Click on the start and end dates for the certification "
-"validity period. When the correct dates are selected, click :icon:`fa-"
-"check` :guilabel:`Apply`, and both fields are populated."
+":guilabel:`Skill Level`: If the selected certification has a set of *skill "
+"levels*, those levels appear in this section. Click on a level to select the "
+"level achieved from the certification."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:122
+msgid ""
+":guilabel:`Validity`: Set the validity start and end dates in the two "
+"fields. The current date is populated in the first field, "
+"and :guilabel:`indefinite` is populated in the :guilabel:`To` field, by "
+"default."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:126
+msgid ""
+"Once all the fields are configured, click the :guilabel:`Save` button. The "
+"certification is logged for the employee, and appears on the "
+"*Certifications* report and the employee record."
 msgstr ""
 
 #: ../../content/applications/hr/employees/certifications.rst:None
-msgid ""
-"A certification form filled out for an OSHA certificate for construction."
+msgid "A certification form filled out for a 10-hour OSHA safety course."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:128
-msgid ""
-"Once a certification is logged for an employee, a new certification of the "
-"*same type* (i.e. :guilabel:`Education` or  :guilabel:`Internal "
-"Certification`) can be added directly from the employee form, instead of "
-"the :guilabel:`Employee Certifications` dashboard."
+#: ../../content/applications/hr/employees/certifications.rst:133
+msgid "Certifications Report"
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:132
+#: ../../content/applications/hr/employees/certifications.rst:135
 msgid ""
-"In the main **Employees** app dashboard, click on an employee profile to "
-"open their employee form. In the :guilabel:`RESUME` tab, click "
-"the :guilabel:`ADD` button at the end of the corresponding certification "
-"line."
+"To view a report of all employee certifications, navigate to "
+"the :menuselection:`Employees app --> Reporting --> Certifications`."
 msgstr ""
 
-#: ../../content/applications/hr/employees/certifications.rst:136
+#: ../../content/applications/hr/employees/certifications.rst:138
 msgid ""
-"This :guilabel:`ADD` button **only** appears on employee profiles that "
-"already have a certification."
+"All certifications appear in a list view, grouped by employee. Each "
+"certification entry displays the following:"
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:142
+msgid ""
+":guilabel:`Certification Type`: The *skill type* configured for the "
+"certification. This can be thought of as the certification *category*."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:145
+msgid ""
+":guilabel:`Validity Start`: When the employee received the certification."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:146
+msgid ""
+":guilabel:`Certification Level`: The level the employee achieved for the "
+"certification. This is determined by the configured levels on the *skill "
+"type*."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:148
+msgid ""
+":guilabel:`Current Level`: The corresponding percentage for "
+"the :guilabel:`Certification Level` the employee achieved."
+msgstr ""
+
+#: ../../content/applications/hr/employees/certifications.rst:155
+msgid ""
+"**Only** certification records with the *Display Type* set to "
+"*Certification* on their :ref:`certification form <employees/certifications-"
+"form>` appear on the :guilabel:`Employee Certifications` report. All other "
+"certifications appear in the resume section of the :ref:`employee form "
+"<employees/resume>`."
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:5
@@ -4986,6 +5359,265 @@ msgstr ""
 msgid ""
 "A duplicate equipment form with all the information filled out except the "
 "serial number."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:5
+msgid ""
+"The **Employees** app tracks two kinds of learning: virtual :ref:`eLearning "
+"<employees/elearning>` courses, or :ref:`onsite <employees/onsite>` in-"
+"person training. Both certifications and training attendance records are "
+"kept in the **Employees** app, and all completed courses and certifications "
+"are logged in the *Resume* tab of each :ref:`employee record <employees/"
+"resume>`."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:13
+msgid "eLearning"
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:15
+msgid ""
+"To train employees using eLearning courses, the **eLearning** app must "
+"be :ref:`installed <general/install>`."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:19
+msgid ""
+"Courses can be :ref:`created <employees/create>` either through the "
+"**Employees** app *or* the **eLearning** app."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:22
+msgid ""
+"First, navigate to :menuselection:`Employees app --> Learning --> "
+"eLearning`, and the :guilabel:`eLearning Courses` dashboard loads. All "
+"currently configured courses appear in a list view. Each course displays the "
+"following information:"
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:26
+msgid ":guilabel:`Name`: The name of the course."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:27
+msgid ":guilabel:`Tags`: Add relevant tags, such as level, topic, etc."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:28
+msgid ""
+":guilabel:`Responsible`: The user responsible for the course, including "
+"inviting participants and updating the course as needed. The creator of the "
+"course does **not** have to be the :guilabel:`Responsible` person."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:31
+msgid ""
+":guilabel:`Course Type`: This field determines the format of the course. The "
+"two available options are:"
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:34
+msgid ":guilabel:`Training`: The content must be viewed *in order*."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:35
+msgid ""
+":guilabel:`Documentation`: The employee can view the content in the order "
+"they choose."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:None
+msgid "The default list view of the eLearning courses in the Employees app."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:43
+msgid "Create an eLearning course"
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:45
+msgid ""
+"No courses come preconfigured in the **Employees** app. Courses must be "
+"created, in either the **Empoyees** app or the **eLearning** app."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:49
+msgid "Once a course is available, it is accessible from both apps."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:51
+msgid ""
+"To create an eLearning course, navigate to :menuselection:`Employees app --> "
+"Learning --> eLearning`. Click the :guilabel:`New` button in the upper-left "
+"corner, and a blank *eLearning Course* form loads."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:55
+msgid ""
+"Follow the directions for :ref:`creating a course <elearning/course-"
+"creation>`, including adding the :ref:`content <elearning/"
+"content>`, :ref:`description <elearning/description>`, :ref:`options "
+"<elearning/options>`, and :ref:`karma <elearning/karma>` tabs."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:60
+msgid ""
+"Only users with the proper :doc:`access rights <../../general/users/"
+"access_rights>` can view, modify, or create any learning course."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:67
+#: ../../content/applications/hr/employees/learning.rst:144
+msgid "Invite employees"
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:69
+msgid ""
+"From the :guilabel:`eLearning Courses` dashboard, invite employees to take a "
+"course. Navigate to :menuselection:`Employees app --> Learning --> "
+"eLearning`, click on the desired course from the list, and the course form "
+"loads. Click the :guilabel:`Add Attendees` button and an *Enroll Attendees "
+"to (Course Title)* pop-up window loads."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:74
+msgid ""
+"Add all desired employees to the :guilabel:`Recipients` field using the drop-"
+"down menu. All employees in the database are available in this list."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:78
+msgid ""
+"To filter only employees, click into the :guilabel:`Recipients` field, then "
+"click :guilabel:`Search more...`."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:81
+msgid ""
+"In the *Search: Recipients* pop-up window that loads, filter the results by "
+"clicking into the search box and selecting :guilabel:`Employees` in "
+"the :icon:`fa-filter` :guilabel:`Filters` column. Only employees are "
+"presented, excluding other companies or vendors. Click the checkbox to the "
+"left of the :guilabel:`Name` column to select all employees."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:86
+msgid ""
+"The email uses the default `Elearning: Add Attendees to "
+"Course` :guilabel:`Mail Template`, which includes a dynamic subject line "
+"that includes the course's name."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:89
+msgid ""
+"Make any desired changes to the email, attach any necessary files, then "
+"click :guilabel:`Send` to invite the employees."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:92
+msgid ""
+"Once the invitation is sent, the recipients appear in the attendees list. "
+"Click the :icon:`fa-graduation-cap` :guilabel:`Attendees` smart button to "
+"view all invited attendees."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:95
+msgid ""
+"Once the employee completes the eLearning course, the training appears on "
+"their employee record, in the :ref:`Resume <employees/resume>` tab."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:99
+msgid ""
+"Alternatively, click the :guilabel:`Invite` button, and an *Invite Attendees "
+"to (Course Name)* pop-up window loads. Copy the course link by clicking "
+"the :icon:`fa-clipboard` :guilabel:`(Copy)` icon to copy the link and send "
+"it to employees. Or, click the :guilabel:`Send Email` toggle to :ref:`email "
+"employees <employees/invite>`."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:None
+msgid "The invitation email to send employees the course."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:110
+msgid "Onsite"
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:112
+msgid ""
+"The **Employees** app can also track in-person training. These can take any "
+"format, from lectures to interactive training. To create onsite training "
+"courses, the **Events** app must be :ref:`installed <general/install>`."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:116
+msgid ""
+"Onsite training can be created either through the **Employees** app *or* the "
+"**Events** app. All courses created appear in both apps."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:120
+msgid "Once an onsite training is available, it is accessible from both apps."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:122
+msgid ""
+"To view all currently configured onsite courses navigate "
+"to :menuselection:`Employees app --> Learning --> Onsite`, and "
+"the :guilabel:`Onsite Courses` dashboard loads. All onsite courses appear in "
+"a default Kanban view, organized by stage."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:126
+msgid "Click on an onsite training card to view the details."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:131
+msgid "Create an onsite course"
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:133
+msgid ""
+"To create a new onsite training, navigate to :menuselection:`Employees app --"
+"> Learning --> Onsite`. Click the :guilabel:`New` button in the top-left "
+"corner and a blank *Onsite Courses* event form loads."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:137
+msgid ""
+":ref:`Fill out the event form <events/event-form>` to configure the onsite "
+"training course. When completed, the option to publish it to the website is "
+"available, if desired. This option is only available if the **Website** app "
+"is installed."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:146
+msgid ""
+"Once the onsite training is configured, the next step is to invite "
+"employees. Navigate to :menuselection:`Employees app --> Learning --> "
+"Onsite` and click on the course Kanban card. Click the :guilabel:`Invite` "
+"button in the upper-left corner, and a blank mailing form loads."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:150
+msgid ""
+"The form only allows for inviting employees via :guilabel:`Email`. "
+"The :guilabel:`Subject` is `Event: (Event Title)` by default, and can be "
+"changed if desired."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:153
+msgid ""
+"Next, add the employees to the :ref:`Recipients <email_marketing/"
+"recipients>` in the respective field, then create the :ref:`body of the "
+"email <email_marketing/mail_body>`."
+msgstr ""
+
+#: ../../content/applications/hr/employees/learning.rst:156
+msgid ""
+"Click :guilabel:`Send`, and a confirmation pop-up window loads. "
+"Click :guilabel:`Send to all` on the pop-up window and the invitations are "
+"sent."
 msgstr ""
 
 #: ../../content/applications/hr/employees/new_employee.rst:5
@@ -6335,14 +6967,6 @@ msgid ""
 "to :menuselection:`Employees app --> Configuration --> Activity Plan`. Click "
 "the :guilabel:`New` button in the upper-left corner, and a blank plan form "
 "loads."
-msgstr ""
-
-#: ../../content/applications/hr/employees/offboarding.rst:81
-#: ../../content/applications/hr/fleet/accidents.rst:48
-#: ../../content/applications/hr/frontdesk.rst:35
-#: ../../content/applications/hr/lunch/products.rst:12
-#: ../../content/applications/hr/time_off.rst:252
-msgid "Enter the following information on the form:"
 msgstr ""
 
 #: ../../content/applications/hr/employees/offboarding.rst:83
