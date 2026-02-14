@@ -23,22 +23,15 @@ along with various information related to that particular appraisal.
 
 Each appraisal includes the following information:
 
-- :guilabel:`Survey Name`: the name of the specific survey.
-- :guilabel:`Responsible`: the employee responsible for the survey, including the month and year
+- :guilabel:`Survey Name`: The name of the specific survey.
+- :guilabel:`Responsible`: The employee responsible for the survey, including the month and year
   they were given that designation.
-- :guilabel:`Questions`: the number of questions in that particular survey.
-- :guilabel:`Average Duration`: the average time a user spends completing the survey.
-- :guilabel:`Registered`: the number of people who have been sent the survey.
-- :guilabel:`Completed`: the number of people who have completed the survey.
-- :guilabel:`Certified`: if the survey is for a certification, the percentage of users who have
-  passed the certification.
+- :guilabel:`Questions`: The number of questions in that particular survey.
+- :guilabel:`Completed`: The number of people who have completed the survey.
 
-Each appraisal row offers two actions:
-
-- :guilabel:`Test`: Opens the appraisal in a new tab to preview the questions without submitting
-  answers. Close the tab to return to the list, or click :icon:`oi-arrow-right` :guilabel:`Go to
-  Survey`/:guilabel:`Go to Appraisal` for the full form.
-- :guilabel:`See Results`: :ref:`View response analytics <appraisals/360-view-results>`.
+To test the survey, click the :guilabel:`Test` button on the right side of the survey line. This
+opens the appraisal in a new tab to preview the questions without submitting answers. Close the tab
+to return to the list.
 
 .. _appraisals/360-request-feedback:
 
@@ -48,15 +41,22 @@ Request feedback
 To request feedback from a colleague, navigate to the **Appraisals** app, and click on the appraisal
 card to open it.
 
-Click the :guilabel:`Ask Feedback` button, and an :guilabel:`Ask Feedback` email pop-up window
-appears, using the :guilabel:`Appraisal: Ask Feedback` email template.
+Click the :guilabel:`Ask Feedback` button, and an *Ask Feedback* email pop-up window appears, using
+the :guilabel:`Appraisal: Ask Feedback` email template.
+
+.. note::
+   Only confirmed appraisals display the :guilabel:`Ask Feedback` button.
 
 First, using the drop-down menu, select the employees being asked to provide feedback in the
-:guilabel:`Recipients` field. Multiple employees may be selected. Next, make any desired changes to
-the default message, and attach any relevant documents.
+:guilabel:`Recipients` field. Multiple employees may be selected. The :guilabel:`Answer Deadline`
+date is automatically set to the day the appraisal is due. Use the calendar selector to modify the
+date, if desired.
 
-The :guilabel:`Answer Deadline` date is automatically set to the day after the :guilabel:`Appraisal
-Date` on the appraisal form. Using the calendar selector, modify the date, if desired.
+The :guilabel:`Subject` is populated with `Take part in (Employee Name) appraisal`, but can be
+modified if desired.
+
+Type in any additional comments in the space provided, if desired. The email template copy is *not*
+displayed in the pop-up window.
 
 Click :guilabel:`Send`, and the feedback requests are sent to the specified employees.
 
@@ -68,18 +68,49 @@ Click :guilabel:`Send`, and the feedback requests are sent to the specified empl
 View results
 ============
 
-To view the results from everyone who has completed a survey, click the :guilabel:`See Results`
-button at the end of the corresponding survey line in the :ref:`360 Feedback dashboard
-<appraisals/360-dashboard>`. This presents all the answers for the survey in a new tab. Each
-question provides information on how many people responded to a question, and how many people
-skipped it. All answers for each question are visible.
+To view the results, click the :icon:`fa-pencil-square-o` :guilabel:`Feedbacks` button on the survey
+form. The *Feedback Surveys* dashboard loads, and presents a list of everyone requested to submit
+feedback. Each line displays the following information:
 
-To save a PDF version of the survey results, click the :icon:`fa-print` :guilabel:`(Print)` icon at
-the top of the page. To exit, close the tab.
+- :guilabel:`Employee`: The name of the employee who was requested to submit feedback.
+- :guilabel:`Status`: An icon indicating if the feedback was :ref:`completed
+  <appraisals/completed-360>` or :ref:`new <appraisals/new-360>`.
+- :guilabel:`Deadline`: The date and time the survey must be completed.
+- :guilabel:`Survey`: The name of the survey, which is :guilabel:`Employee Opinion Form` by
+  default.
 
-In addition to viewing the responses from past appraisals and surveys, new surveys can also be
-created from the :guilabel:`360 Feedback` page. Click the :guilabel:`New` button in the top-left of
-the page to create a new survey.
+.. image:: 360/results.png
+   :alt: The list of all feedback requests on the Feedback Surveys dashboard.
 
-For more information on how to create a survey, refer to the :doc:`../../marketing/surveys/create`
-document.
+.. note::
+   Feedback requests that have been sent but have **not** been completed are referred to as *new*.
+
+To view all responses, click the :guilabel:`See results` button, and a *Choose Survey* pop-up window
+loads. Using the dropdown menu, select :guilabel:`360 Feedback` in the :guilabel:`Survey` field,
+then click :guilabel:`See Results`. The combined feedback loads in a new tab.
+
+.. _appraisals/completed-360:
+
+Completed 360 feedback
+----------------------
+
+Feedback requests that have been completed display a green :guilabel:`Completed` status tag on the
+*Feedback Surveys* dashboard.
+
+To view the individual responses of a completed feedback form, click :icon:`fa-check-square-o`
+:guilabel:`See Answers` at the end of the line, and the employee's individual responses load in a
+new tab.
+
+Close the tab when the review is complete.
+
+.. _appraisals/new-360:
+
+New 360 feedback
+----------------
+
+Feedback requests that were sent but have not been completed display a blue :guilabel:`New` status
+tag on the *Feedback Surveys* dashboard.
+
+If necessary, the request can be resent. Click :icon:`fa-check-square-o` :guilabel:`Resend` at the
+end of the line, and an *Ask Feedback* pop-up window loads. Click :guilabel:`Send` to resend the
+feedback request.
