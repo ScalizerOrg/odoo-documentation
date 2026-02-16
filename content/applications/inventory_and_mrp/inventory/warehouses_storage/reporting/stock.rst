@@ -116,8 +116,8 @@ Search options
         <../../product_management/configure/type>`.
       - :guilabel:`Product Category`: group items by product category. To configure these, go to
         :menuselection:`Inventory app --> Configuration --> Products: Product Categories`.
-      - :guilabel:`POS Product Category`: group items by :doc:`point of sale product categories
-        <../../../../sales/point_of_sale/configuration>`.
+      - :guilabel:`POS Product Category`: group items by :ref:`point of sale product categories
+        <pos/products/categories>`.
 
    .. tab:: Favorites
 

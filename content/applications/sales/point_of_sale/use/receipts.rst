@@ -37,7 +37,7 @@ the :guilabel:`Bills & Receipts` section.
 .. seealso::
    - :ref:`pos/restaurant/bills`
    - :doc:`pos_invoices`
-   - :doc:`../configuration/epos_printers`
+   - :doc:`../hardware_network/receipt_printers`
 
 Reprint a receipt
 =================
