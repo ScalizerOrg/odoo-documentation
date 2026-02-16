@@ -1392,10 +1392,10 @@ and creating global invoices.
 Point of sale flow
 ------------------
 
-On top of the standard :doc:`Point of Sale configuration <../../sales/point_of_sale/configuration>`,
-the Mexican localization requires each payment method to be configured with a correct
-:guilabel:`Payment Way` as well as a :guilabel:`Re-invoicing account` to handle the accounting for
-invoices with the invoicing portal.
+On top of the standard :ref:`Point of Sale configuration <pos/use/settings>`, the Mexican
+localization requires each payment method to be configured with a correct :guilabel:`Payment Way`
+as well as a :guilabel:`Re-invoicing account` to handle the accounting for invoices with the
+invoicing portal.
 
 .. tip::
    By default, Odoo creates pre-configured payment methods for cash, credit card, and debit card and

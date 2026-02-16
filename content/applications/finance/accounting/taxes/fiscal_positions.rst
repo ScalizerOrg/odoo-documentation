@@ -10,7 +10,7 @@ taxes and accounts for a transaction might be necessary.
 accounts used for a transaction automatically.
 
 They can be applied :ref:`automatically <fiscal_positions/automatic>`, :ref:`manually
-<fiscal_positions/manual>`, or :ref:`assigned to a partner <fiscal_positions/partner>`.
+<fiscal_positions/manual>`, or :ref:`assigned to a partner <accounting/fiscal_positions/partner>`.
 
 .. note::
    Several default fiscal positions are available as part of your :ref:`fiscal localization
@@ -98,7 +98,7 @@ product lines.
 .. image:: fiscal_positions/fiscal-positions-manual.png
    :alt: Selection of a fiscal position on a sales order, invoice, or bill
 
-.. _fiscal_positions/partner:
+.. _accounting/fiscal_positions/partner:
 
 Assign to a partner
 -------------------

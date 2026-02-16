@@ -686,7 +686,7 @@ Point of sale fiscal printers
 
 .. warning::
    Fiscal printers are distinct from :doc:`ePOS printers
-   </applications/sales/point_of_sale/configuration/epos_printers>`. The IP address for a fiscal
+   </applications/sales/point_of_sale/hardware_network/receipt_printers>`. The IP address for a fiscal
    printer should not be entered in the ePOS IP address settings.
 
 Fiscal regulations mandate using certified RT devices, such as RT printers or RT servers, to ensure
