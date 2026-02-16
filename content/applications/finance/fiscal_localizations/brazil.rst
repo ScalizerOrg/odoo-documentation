@@ -693,7 +693,7 @@ Security Code) fields:
 Product configuration
 ---------------------
 
-Access the relevant :doc:`product form in POS <../../sales/point_of_sale/configuration>`, then
+Access the relevant :doc:`product form in POS <../../sales/point_of_sale/products>`, then
 configure the :ref:`product <localizations/brazil/products>`'s :guilabel:`Brazil Accounting`
 fields.
 
@@ -703,9 +703,8 @@ Point of sale
 -------------
 
 Go to :menuselection:`Point of Sale --> Configuration --> Settings` and make sure that the relevant
-Point of Sale is :doc:`selected at the top of the screen <../../sales/point_of_sale/configuration>`.
-Then, scroll to the :guilabel:`Accounting` section and configure the :guilabel:`Brazilian EDI`
-fields:
+Point of Sale is :ref:`selected at the top of the screen <pos/use/settings>`. Then, scroll to the
+:guilabel:`Accounting` section and configure the :guilabel:`Brazilian EDI` fields:
 
 - :guilabel:`Series`
 - :guilabel:`Next number`: the next NFC-e number in the sequence to be issued, for instance, if the
