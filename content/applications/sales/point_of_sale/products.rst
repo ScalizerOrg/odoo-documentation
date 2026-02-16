@@ -17,12 +17,14 @@ to return to the POS register.
 
 .. tip::
    To temporarily make the product unavailable for sale in the POS register or :doc:`self-ordering
-   menu <../point_of_sale/self_order>`, click :guilabel:`Snooze`, select the desired duration, and
+   menu <extra/self_order>`, click :guilabel:`Snooze`, select the desired duration, and
    click :guilabel:`Apply`. To reactivate the product before the set period ends, long-click the
    product in the register, click the countdown timer, then click :guilabel:`Yes` to confirm.
 
 .. seealso::
    `Product creation (video tutorial) <https://youtu.be/b5eVusXHEvg?si=Xn3EBMmRfJ35mqyu>`_
+
+.. _pos/products/categories:
 
 POS product categories
 ======================
@@ -145,3 +147,51 @@ To apply combos, follow these steps:
 
       .. image:: products/office-combo.png
          :scale: 60%
+
+.. _pos/products/sn:
+
+Serial numbers and lots
+=======================
+
+Using **lots** and **serial numbers** allows you to track product movements throughout their
+lifecycle. When traceability is enabled, Odoo identifies a product's location based on its last
+recorded movement.
+
+To track products by lots or serial numbers:
+
+#. :ref:`Enable the Lots & Serial Numbers setting
+   <inventory/product_management/traceability-setting>`.
+#. :ref:`Configure your products and assign tracking numbers
+   <inventory/product_management/assign-sn>`.
+
+Selling tracked product
+-----------------------
+
+Adding a tracked product to the cart from the POS register imports its serial number or lot number
+automatically.
+
+When you :ref:`load a quotation/SO <pos/shop/so>` containing tracked products, a pop-up window asks
+to confirm if the numbers linked to the :abbr:`SO (sales order)` should be imported. Click
+:guilabel:`Ok` to proceed. Once imported, the tracking numbers appear in the cart below the
+corresponding products, next to the :icon:`fa-list` (:guilabel:`Valid product lot`) icon.
+
+Tracking status and manual changes
+----------------------------------
+
+Tracking numbers can be monitored and modified using the :icon:`fa-list` (:guilabel:`product lot`)
+icon:
+
+- **Green** :icon:`fa-list` (:guilabel:`Valid product lot`) **icon**: The tracking number was
+  successfully imported or assigned.
+- **Red** :icon:`fa-list` (:guilabel:`Invalid product lot`) **icon**: The tracking number is
+  missing or incorrect.
+- **Modification:** To change a tracking number, click the :icon:`fa-list` (:guilabel:`Valid
+  product lot`) icon and select a different lot or serial number from the pop-up window.
+
+.. note::
+   An invalid or missing tracking number does not block a sale. However, it triggers a warning
+   pop-up that must be acknowledged before proceeding to the payment screen.
+
+.. seealso::
+   - :doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers`
+   - :doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots`
