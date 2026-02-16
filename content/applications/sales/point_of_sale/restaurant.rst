@@ -1,3 +1,5 @@
+:show-content:
+
 ===================
 Restaurant features
 ===================
@@ -9,7 +11,7 @@ Odoo Point of Sale provides various features to manage a restaurant or a bar:
 - :ref:`Notifying the kitchen or bar through the POS <pos/restaurant/orders-printing>`;
 - :ref:`Printing and splitting bills <pos/restaurant/bills>`;
 - :ref:`Collecting tips <pos/restaurant/tips>`;
-- :doc:`Setting different taxes for takeout orders <pricing/fiscal_position>`.
+- :ref:`Setting different taxes for takeout orders <pos/pricing/taxes>`.
 
 To :ref:`create a restaurant <pos/use/create-pos>` from scratch, go to the :ref:`POS settings
 <pos/use/settings>` and click :guilabel:`+ New Shop`. Enter a name and enable the :guilabel:`Is a
@@ -82,9 +84,9 @@ buttons:
    - Selecting a table on the :guilabel:`Floor plan` view or accessing it through the
      :guilabel:`Table Selector` automatically confirms the table's occupancy.
    - To order free physical QR codes adapted to the floor plan, activate the :doc:`QR menu
-     <self_order>` setting, then click :guilabel:`Get QR Codes` in the :guilabel:`Floor plan` view.
-     This `offer <https://www.odoo.com/app/point-of-sale-restaurant-qr-code>`_ is available
-     worldwide and for all subscription types.
+     <extra/self_order>` setting, then click  :icon:`fa-qrcode` :guilabel:`Get QR Codes` in the
+     :guilabel:`Floor plan` view. This `offer <https://www.odoo.com/app/point-of-sale-restaurant-qr-code>`_
+     is available worldwide and for all subscription types.
 
 .. example::
    .. image:: restaurant/floor-plan.png
@@ -316,8 +318,8 @@ section. Set the :guilabel:`Default` field to the preferred preset, then save. F
 
 .. seealso::
    - `Manage presets (video tutorial) <https://youtu.be/mTXTgpBuLBY?si=4AVWH4CQedq6Jel8>`_
-   - :doc:`/applications/sales/point_of_sale/preparation`
-   - :doc:`/applications/sales/point_of_sale/online_food_delivery`
+   - :doc:`extra/preparation`
+   - :doc:`restaurant/online_food_delivery`
 
 .. _pos/restaurant/orders/courses:
 
@@ -351,7 +353,7 @@ Order printing
 ==============
 
 To enable sending orders to a kitchen or a bar printer, :doc:`connect a printer
-<configuration/epos_printers>` to Odoo, go to the :ref:`POS settings <pos/use/settings>`, and
+<hardware_network/receipt_printers>` to Odoo, go to the :ref:`POS settings <pos/use/settings>`, and
 follow these steps:
 
 #. Scroll down to the :guilabel:`Preparation` section and enable the :guilabel:`Preparation
@@ -359,9 +361,9 @@ follow these steps:
 #. Type the printer's name in the :guilabel:`Printers` field and click :guilabel:`Create and edit`.
 #. Set the :guilabel:`Type` field to :guilabel:`Preparation`.
 #. Enter the :guilabel:`Printer IP Address`.
-#. Optionally, enable the :doc:`Use Local Network Access <configuration/pos_lna>` setting to allow
+#. Optionally, enable the :doc:`Use Local Network Access <hardware_network/pos_lna>` setting to allow
    connecting the printer to the browser without requiring an :doc:`SSL certificate
-   <configuration/epos_ssc>`.
+   <hardware_network/epos_ssc>`.
 #. Select the relevant categories in the :guilabel:`Printed Product Categories` field.
 #. Click :guilabel:`Save`.
 #. In the :ref:`POS settings <pos/use/settings>`, click :guilabel:`Save`.
@@ -388,11 +390,11 @@ The printer is then connected to the point of sale and can print preparation tic
      :guilabel:`Payment` to reprint a duplicate of the last kitchen order.
 
 .. seealso::
-   - :doc:`Connect an IoT system to a POS <configuration/pos_iot>`
-   - :doc:`configuration/epos_printers`
+   - :doc:`Connect an IoT system to a POS <hardware_network/pos_iot>`
+   - :doc:`hardware_network/receipt_printers`
    - :doc:`/applications/general/iot/devices/printer`
    - :doc:`/applications/general/iot/connect`
-   - :doc:`/applications/sales/point_of_sale/preparation`
+   - :doc:`extra/preparation`
 
 .. _pos/restaurant/bills:
 
@@ -451,7 +453,7 @@ After a successful :ref:`order payment <pos/restaurant/bills/payment>`, click :i
 :guilabel:`Print` to generate and print a bill.
 
 .. important::
-   If a printer is :doc:`configured and linked <configuration/epos_printers>` to a point of sale,
+   If a printer is :doc:`configured and linked <hardware_network/receipt_printers>` to a point of sale,
    the receipt is automatically printed upon payment confirmation.
 
 .. seealso::
@@ -515,3 +517,8 @@ after payment, follow these steps:
    - :guilabel:`No Tip`.
    - :guilabel:`Tip Amount`: Enter the relevant amount in the field.
 #. Click :guilabel:`Settle` to validate.
+
+.. toctree::
+   :titlesonly:
+
+   restaurant/online_food_delivery
