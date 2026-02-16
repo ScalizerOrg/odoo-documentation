@@ -137,8 +137,8 @@ Comprehensive or branch-specific view
 
 All configurations, except for :ref:`accounting <accounting/branches>` settings inherited from the
 parent company, must be set individually per branch. This allows for branch-specific setups such as
-:doc:`loyalty programs <../sales/point_of_sale/pricing/loyalty>`, :doc:`price lists
-<../sales/point_of_sale/pricing/pricelists>`, or :doc:`inventory locations
+:doc:`loyalty programs <../sales/sales/products_prices/loyalty_discount>`, :doc:`pricelists
+<../sales/sales/products_prices/prices/pricing>`, or :doc:`inventory locations
 <../inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations>`.
 
 .. _general/companies/branches/user-access:

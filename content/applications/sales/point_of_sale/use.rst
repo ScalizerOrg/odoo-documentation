@@ -41,16 +41,16 @@ Settings`. Then, open the :guilabel:`Point of Sale` dropdown menu and select the
    (:guilabel:`vertical ellipsis`) icon on the relevant POS card, then select :guilabel:`Edit`.
    In the popup window, you can:
 
-   - :doc:`Enable multiple employees to log in. <employee_login>`
-   - :doc:`Connect and set up an IoT sytem. <configuration/pos_iot>`
-   - :doc:`Connect and set up an ePOS printer. <configuration/epos_ssc>`
+   - :doc:`Enable multiple employees to log in. <extra/employee_login>`
+   - :doc:`Connect and set up an IoT sytem. <hardware_network/pos_iot>`
+   - :doc:`Connect and set up an ePOS printer. <hardware_network/epos_ssc>`
 
 .. _pos/use/open-register:
 
 Open the POS register
 =====================
 
-Once the POS is fully :doc:`configured <configuration>`, access the POS interface by opening the
+Once the POS is fully :doc:`configured <hardware_network>`, access the POS interface by opening the
 register. Navigate to :menuselection:`Point of Sale --> Dashboard` and:
 
 #. On the relevant POS card, click :guilabel:`Open Register`.
@@ -60,7 +60,7 @@ register. Navigate to :menuselection:`Point of Sale --> Dashboard` and:
 .. note::
    - Once the register is open, :guilabel:`Open Register` is replaced by :guilabel:`Continue
      Selling` on the POS card.
-   - You can switch between :doc:`multiple users <employee_login>` from an open POS register,
+   - You can switch between :doc:`multiple users <extra/employee_login>` from an open POS register,
      provided :ref:`multi-employee management is enabled <pos/employee_login/use>`.
 
 From the POS interface header:
@@ -112,9 +112,9 @@ discounts, set customers, etc., and the list of products. To make sales:
 Set customers
 =============
 
-Registering customers is necessary to :doc:`collect their loyalty points and grant them rewards
-<pricing/loyalty>`, automatically apply an :doc:`attributed pricelist
-<pricing/pricelists>`, or :ref:`generate and print invoices <pos_invoices/invoices>`.
+Registering customers is necessary to :ref:`collect their loyalty points and grant them rewards
+<pos/pricing/loyalty>`, automatically apply an :ref:`attributed pricelist
+<pos/pricing/pricelists>`, or :ref:`generate and print invoices <pos_invoices/invoices>`.
 
 To create customers from :ref:`the POS register <pos/use/open-register>`:
 
@@ -275,8 +275,8 @@ button. Click :guilabel:`Customer Note`, then add the note's content in the popu
 
 .. note::
    - If no item is selected, the note applies for the whole order.
-   - Product notes from an :doc:`imported SO <shop/sales_order>` are displayed identically in the
-     cart.
+   - Product notes from an :ref:`imported SO <pos/shop/so>` are displayed identically in
+     the cart.
 
 .. image:: use/customer-notes.png
    :alt: Customer note button and notes (SO and POS register) on products in the cart
