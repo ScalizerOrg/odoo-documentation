@@ -39,8 +39,8 @@ Methods`, click :guilabel:`New`, and follow the next steps:
 
 .. note::
    - The :guilabel:`Delivery Payment` option links a payment method to online orders placed through
-     :doc:`Urban Piper <online_food_delivery>`. Select the appropriate :guilabel:`Delivery Provider`
-     to associate with the payment method.
+     :doc:`Urban Piper <restaurant/online_food_delivery>`. Select the appropriate
+     :guilabel:`Delivery Provider` to associate with the payment method.
    - If the Accounting app is installed, use the :guilabel:`Intermediary Account` field, if needed,
      to record transactions for this payment method in a specific receivable account for
      better traceability. Leave the field empty to use the company's default :ref:`receivable
