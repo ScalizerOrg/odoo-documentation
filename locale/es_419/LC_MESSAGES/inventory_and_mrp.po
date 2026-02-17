@@ -30,7 +30,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-13 18:30+0000\n"
-"PO-Revision-Date: 2026-02-16 23:21+0000\n"
+"PO-Revision-Date: 2026-02-17 23:21+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/inventory_and_mrp/es_419/>\n"
@@ -29601,8 +29601,8 @@ msgid ""
 msgstr ""
 "En la pestaña :guilabel:`Configuración`, completa los campos de credenciales "
 "de la API (por ejemplo, clave de API, contraseña, número de cuenta, etc.). "
-"Dependiendo del transportista externo que elijas en el "
-"campo :guilabel:`Proveedor`, la pestaña :guilabel:`Configuración` mostrará "
+"Dependiendo del transportista externo que elijas en el campo "
+":guilabel:`Proveedor`, la pestaña :guilabel:`Configuración` mostrará "
 "distintos campos obligatorios. Para conocer más detalles sobre cómo "
 "configurar las credenciales de cada transportista, consulta la siguientes "
 "documentación:"
@@ -32739,6 +32739,9 @@ msgid ""
 "removing scrapped products from physical inventory and placing them in a "
 "virtual *Inventory Loss* location."
 msgstr ""
+"Desechar inventario en una base de datos te ayuda a mantener tus conteos "
+"precisos, ya que puedes eliminar los productos descartados del inventario "
+"físico y colocarlos en una ubicación virtual de *pérdida de inventario*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:19
 msgid ""
@@ -32762,7 +32765,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:27
 msgid "Create a scrap location"
-msgstr ""
+msgstr "Crear una ubicación de desecho"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:29
 msgid ""
@@ -32774,6 +32777,13 @@ msgid ""
 "purposes, :ref:`create a scrap order from stock <inventory/scrap-from-"
 "stock>`."
 msgstr ""
+"De forma predeterminada, el sistema registra las operaciones de desecho en "
+"la ubicación virtual :guilabel:`Ajuste de inventario`, pero si necesitas que "
+"los productos descartados aparezcan en el reporte contable del *estado de "
+"resultados*, entonces deberás crear una ubicación de :guilabel:`pérdida de "
+"inventario` para registrar estos bienes. Si no necesitas realizar este "
+"seguimiento para colocarlo en los reportes, :ref:`crea una orden de desecho "
+"desde las existencias <inventory/scrap-from-stock>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:35
 msgid ""
@@ -32782,6 +32792,11 @@ msgid ""
 "--> Settings`. In the :guilabel:`Warehouse` section, "
 "enable :guilabel:`Storage Locations`. Be sure to click :guilabel:`Save`."
 msgstr ""
+"Para crear una nueva ubicación de :guilabel:`pérdida de inventario` para los "
+"bienes desechados, abre :menuselection:`Inventario --> Configuración --> "
+"Ajustes`. Dirígete a la sección :guilabel:`Almacén`, activa la función "
+":guilabel:`Ubicaciones de almacenamiento` y luego haz clic en "
+":guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:39
 msgid ""
@@ -32791,6 +32806,11 @@ msgid ""
 "the :guilabel:`Internal` filter. Click the :guilabel:`New` button to create "
 "a new location."
 msgstr ""
+"Para crear una nueva ubicación de desecho, abre :menuselection:`Inventario --"
+"> Configuración --> Ubicaciones`. De forma predeterminada, esta lista está "
+"filtrada por ubicaciones :guilabel:`internas`. Para ver todas las "
+"ubicaciones, elimina el filtro :guilabel:`Interno`. Haz clic en el botón "
+":guilabel:`Nuevo` para crear una ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:43
 msgid ""
@@ -32801,6 +32821,12 @@ msgid ""
 "Account` to ensure that products scrapped to this location show up in the "
 "*Profit and Loss* accounting report."
 msgstr ""
+"Esta acción abre el formulario de ubicación. Ingresa el :guilabel:`nombre de "
+"la ubicación` y la :guilabel:`ubicación principal`. Cambia el :guilabel:`"
+"tipo de ubicación` a :guilabel:`Pérdida de inventario`. Si trabajas con una "
+"base de datos multiempresa, especifica una :guilabel:`empresa`. Si lo "
+"necesitas, indica una :guilabel:`cuenta de pérdidas` para que los productos "
+"desechados aparezcan en el reporte contable del *estado de resultados*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:49
 msgid ""
@@ -32810,14 +32836,21 @@ msgid ""
 "the *Profit and Loss* accounting report, they specify `600000 Expenses` as "
 "the :guilabel:`Loss Account`."
 msgstr ""
+"Una empresa crea una nueva ubicación llamada `Bienes desechados`, con `"
+"Ajuste de inventario` como ubicación principal. El :guilabel:`tipo de "
+"ubicación` es :guilabel:`Pérdida de inventario`. Para que los productos "
+"desechados aparezcan en el reporte contable del *estado de resultados*, "
+"especifica `600000 Gastos` como la :guilabel:`cuenta de pérdidas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:0
 msgid "Optionally create a Scrapped Goods inventory loss location."
 msgstr ""
+"Creación opcional de una ubicación de pérdida de inventario para bienes "
+"desechados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:58
 msgid ":doc:`../../inventory_valuation/scrapped_inventory_valuation`"
-msgstr ""
+msgstr ":doc:`../../inventory_valuation/scrapped_inventory_valuation`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:63
 msgid "Scrap from stock"
@@ -32853,6 +32886,10 @@ msgid ""
 "changed by selecting a different location from their respective drop-down "
 "menus."
 msgstr ""
+"La :guilabel:`ubicación de origen` muestra la ubicación donde el producto "
+"está almacenado en ese momento. La :guilabel:`Ubicación de desecho` es "
+":guilabel:`Ajuste de inventario` de forma predeterminada, pero puedes "
+"cambiar cualquiera de estas ubicaciones desde sus menús desplegables."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:76
 msgid ""
@@ -32869,14 +32906,20 @@ msgid ""
 "scrapped, and if the product should be replenished, select the checkbox "
 "for :guilabel:`Replenish Quantities`."
 msgstr ""
+"El campo :guilabel:`Empresa` muestra la empresa a la que pertenece el "
+"almacén de este producto. Si configuras una regla de reabastecimiento para "
+"el producto a desechar y es necesario reponerlo, selecciona la casilla "
+":guilabel:`Reabastecer cantidades`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:83
 msgid "Optionally specify a :guilabel:`Scrap Reason`."
-msgstr ""
+msgstr "Si es necesario, especifica un :guilabel:`motivo de desecho`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:85
 msgid "Once ready, click :guilabel:`Validate` to complete the new |SP|."
 msgstr ""
+"Una vez que todo esté listo, haz clic en :guilabel:`Validar` para completar "
+"la nueva orden de desecho."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
 msgid "Filled out new scrap order form with product details."
@@ -32890,6 +32933,9 @@ msgid ""
 "appears at the top of the form. Click the smart button to view the details "
 "of the scrap operation."
 msgstr ""
+"Después de validarla aparece el botón inteligente :icon:`fa-exchange` "
+":guilabel:`Movimientos de producto` en la parte superior del formulario. Haz "
+"clic en este botón para ver los detalles de la operación de desecho."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:94
 msgid ""
@@ -32897,10 +32943,13 @@ msgid ""
 "to :menuselection:`Inventory app --> Operations --> Scrap Orders`. A list of "
 "all scrapped products, and their quantities, is displayed."
 msgstr ""
+"Para ver el total histórico de cantidades desechadas, ve a :menuselection:`"
+"Inventario --> Operaciones --> Órdenes de desecho`. El sistema mostrará una "
+"lista con todos los productos desechados y sus cantidades."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:0
 msgid "List of all scrapped products in inventory."
-msgstr ""
+msgstr "Lista de todos los productos desechados en inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:102
 msgid "Scrap from an existing operation"
@@ -32931,6 +32980,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
 msgid "# To Receive button on Receipts task card on Inventory Overview page."
 msgstr ""
+"Botón \"# por recibir\" en la tarjeta de la tarea Recepciones en la página "
+"Resumen de inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:115
 msgid ""
@@ -32946,6 +32997,9 @@ msgid ""
 "select :guilabel:`Scrap` from the resulting drop-down menu. This opens "
 "a :guilabel:`Scrap Products` pop-up window."
 msgstr ""
+"Haz clic en el icono :icon:`fa-cog` :guilabel:`(Acciones)` y selecciona "
+":guilabel:`Desechar` en el menú desplegable. Esta acción abrirá la ventana "
+"emergente :guilabel:`Desechar productos`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:121
 msgid ""
@@ -32954,6 +33008,10 @@ msgid ""
 "Adjust the value in the :guilabel:`Quantity` field, if necessary. Optionally "
 "specify a :guilabel:`Scrap Reason`."
 msgstr ""
+"Desde esta ventana emergente, haz clic en el menú desplegable del campo "
+":guilabel:`Producto` y selecciona los productos de la operación que quieres "
+"descartar. Ajusta el valor del campo :guilabel:`Cantidad` en caso de que sea "
+"necesario. Si lo deseas, indica un :guilabel:`motivo de desecho`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:125
 msgid ""
@@ -32972,10 +33030,15 @@ msgid ""
 "scrapped, and if the product should be replenished, select the checkbox "
 "for :guilabel:`Replenish Quantities`."
 msgstr ""
+"Puedes cambiar la :guilabel:`ubicación de origen` y la :guilabel:`ubicación "
+"de desecho` en caso de que sea necesario. Si hay una regla de "
+"reabastecimiento para el producto descartado y deseas reponerlo, selecciona "
+"la casilla :guilabel:`Reabastecer cantidades`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:132
 msgid "Once ready, click :guilabel:`Scrap Products`."
 msgstr ""
+"Una vez que todo esté listo, haz clic en :guilabel:`Desechar productos`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:None
 msgid "Scrap Products pop-up window on operation form."
@@ -32989,6 +33052,10 @@ msgid ""
 "Click this smart button to view the details of all scrap orders created from "
 "this specific operation."
 msgstr ""
+"Después de desechar productos desde una operación aparece el botón "
+"inteligente :icon:`oi-arrows-v` :guilabel:`Desechos` en la parte superior "
+"del formulario de la operación. Haz clic en él para ver los detalles de "
+"todas las órdenes de desecho creadas desde esta operación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
@@ -41788,6 +41855,10 @@ msgid ""
 "to :doc:`continue selling <../../../websites/ecommerce/configuration/"
 "products>` is disabled."
 msgstr ""
+"**Restricciones de compra de componentes**: Solo puedes agregar los "
+"componentes mínimos requeridos del kit al carrito de **Comercio electrónico**"
+", a menos que la opción para :doc:`continuar vendiendo <../../../websites/"
+"ecommerce/configuration/products>` esté deshabilitada."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:62
 msgid ""
