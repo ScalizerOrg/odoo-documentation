@@ -98,7 +98,7 @@ Feature access by stage and role
      - |green|
    * - Staging
      - Connect + / Connect as
-     - |green|
+     - |red|
      - |green|
      - |green|
    * -
@@ -148,8 +148,8 @@ Feature access by stage and role
      - |green|
    * - Production
      - Connect + / Connect as
-     - |green|
-     - |green|
+     - |red|
+     - |red|
      - |green|
    * -
      - :ref:`History <odoo-sh/branches/tabs/history>`
