@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-12 18:30+0000\n"
-"PO-Revision-Date: 2026-02-16 23:11+0000\n"
+"PO-Revision-Date: 2026-02-18 23:10+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-doc/sales/es_419/>\n"
@@ -20833,6 +20833,8 @@ msgstr "Conector de Amazon"
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:3
 msgid "Tracking lot or serial number products with FBA orders"
 msgstr ""
+"Rastrear productos con lote o número de serie en órdenes de logística por "
+"Amazon"
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:7
 msgid ""
@@ -20841,6 +20843,11 @@ msgid ""
 "does not send the specific lot or unique serial number used for the sale. "
 "The lack of information triggers a synchronization failure in Odoo."
 msgstr ""
+"Al vender productos con seguimiento por lotes o números de serie únicos a "
+"través de la función Logística por Amazon :abbr:`FBA (Logística por Amazon)`"
+", la API de Amazon no envía el lote o número de serie específico utilizado "
+"en la venta. Esta falta de información provoca un error de sincronización en "
+"Odoo."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:11
 msgid ""
@@ -20850,6 +20857,11 @@ msgid ""
 "sells the product kit, which prevents the error that occurs with the tracked "
 "product."
 msgstr ""
+"Para configurar una orden de Amazon :abbr:`FBA (Logística por Amazon)` sin "
+"errores, configura un :ref:`kit de producto <amazon_connector/fba/product-"
+"kit>` en Odoo basado en el producto original de Amazon. Al sincronizar una "
+"nueva orden FBA, Odoo vende el kit, lo que evita el error que ocurre con el "
+"producto con seguimiento."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:16
 msgid ""
@@ -20858,12 +20870,19 @@ msgid ""
 "location. This records the movement in traceability reports and accounts for "
 "inventory consumption at the point of transfer rather than the point of sale."
 msgstr ""
+"Al :ref:`reabastecer el centro de cumplimiento de Amazon <amazon_connector/"
+"fba/follow-deliveries>`, traslada el producto con seguimiento a la ubicación "
+"`WH/Amazon`. Así registras el movimiento en los reportes de trazabilidad y "
+"contabilizas el consumo de inventario al momento del traslado y no al "
+"momento de la venta."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:22
 msgid ""
 "The `WH/Amazon` location is automatically created as a default location when "
 "the first Amazon account is linked."
 msgstr ""
+"La ubicación `WH/Amazon` se crea de forma automática como ubicación "
+"predeterminada cuando vinculas la primera cuenta de Amazon."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:25
 msgid ""
@@ -20872,6 +20891,10 @@ msgid ""
 "actual stock levels are managed through the initial fulfillment center "
 "transfer."
 msgstr ""
+"Con este sistema, la cantidad de los kits de producto permanece en negativo "
+"de forma indefinida. Trátalo como un resultado esperado de este ajuste, ya "
+"que el nivel real de existencias se gestiona con el traslado inicial al "
+"centro de cumplimiento."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:30
 msgid ""
@@ -20879,32 +20902,43 @@ msgid ""
 "the sale. It only ensures that the |FBA| order can be processed without "
 "synchronization failures."
 msgstr ""
+"Esta configuración no rastrea el lote específico ni el número de serie único "
+"que usas en la venta. Solo garantiza que la orden FBA se procese sin errores "
+"de sincronización."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:36
 msgid "The following apps are essential for the product kit workflow:"
 msgstr ""
+"Las siguientes aplicaciones son indispensables para el flujo de los kits de "
+"producto:"
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:38
 msgid ""
 "**Sales app**: Enables :ref:`connecting an Amazon Seller account to Odoo "
 "<amazon/setup>`."
 msgstr ""
+"**Ventas**: Te permite :ref:`conectar una cuenta de vendedor de Amazon a "
+"Odoo <amazon/setup>`."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:39
 msgid ""
 "**Inventory app**: Allows for product replenishment by :ref:`warehouse "
 "location <use_locations/configuration>`."
 msgstr ""
+"**Inventario**: Te permite reabastecer productos por :ref:`ubicación de "
+"almacén <use_locations/configuration>`."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:41
 msgid ""
 "**Manufacturing app**: Enables :ref:`BoM creation <manufacturing/basic_setup/"
 "bom-setup>` for products and product kits."
 msgstr ""
+"**Manufactura**: Te permite :ref:`crear listas de materiales <manufacturing/"
+"basic_setup/bom-setup>` para productos y kits de producto."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:47
 msgid "Create a product kit"
-msgstr ""
+msgstr "Crear un kit de producto"
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:49
 msgid ""
@@ -20912,6 +20946,9 @@ msgid ""
 "product. When a new |FBA| order syncs, Odoo sells the kit, which prevents "
 "the error that occurs with the tracked product."
 msgstr ""
+"Para habilitar un rastreo preciso, crea un kit de producto para el producto "
+"de Amazon existente. Al sincronizar una nueva orden FBA , Odoo vende el kit "
+"y evita el error que ocurre con el producto rastreado."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:52
 msgid ""
@@ -20919,18 +20956,24 @@ msgid ""
 "click :guilabel:`New`. Then, :ref:`create a kit as a product <manufacturing/"
 "advanced_configuration/kits>` that represents the Amazon item."
 msgstr ""
+"Ve a :menuselection:`Ventas --> Productos --> Productos` y haz clic en "
+":guilabel:`Nuevo`. Después, :ref:`crea un kit como producto <manufacturing/"
+"advanced_configuration/kits>` que represente el artículo de Amazon."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:57
 msgid "*Never* enable :guilabel:`Track Inventory` for the product kit."
 msgstr ""
+"*Nunca* actives :guilabel:`Rastrear inventario` para el kit de producto."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:None
 msgid "Example of a product form configured to be a kit in the Inventory app."
 msgstr ""
+"Ejemplo de un formulario de producto configurado como kit en la aplicación "
+"Inventario."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:65
 msgid "Link the Amazon item SKU to the product kit"
-msgstr ""
+msgstr "Vincular el SKU del artículo de Amazon al kit de producto"
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:67
 msgid ""
@@ -20940,6 +20983,12 @@ msgid ""
 "the product kit in the :guilabel:`Product` column. In the :guilabel:`Amazon "
 "SKU` column, enter the SKU of the existing Amazon product."
 msgstr ""
+"Después, ve a :menuselection:`Ventas --> Configuración --> Ofertas` y haz "
+"clic en :guilabel:`Nuevo`. Ingresa el :ref:`mercado de Amazon <amazon/"
+"supported-marketplaces>` que desees en la columna :guilabel:`Marketplace` y "
+"selecciona el kit de producto en la columna :guilabel:`Producto`. En la "
+"columna :guilabel:`SKU de Amazon`, ingresa el SKU del producto de Amazon "
+"existente."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:73
 msgid ""
@@ -20947,6 +20996,10 @@ msgid ""
 "Breaking this connection is necessary because Odoo cannot automatically "
 "assign specific tracking numbers during the sync process."
 msgstr ""
+"Este método elimina el vínculo entre el SKU de Amazon y el producto "
+"rastreado. Debes deshacerte de esta conexión porque Odoo no puede asignar "
+"números de rastreo específicos de forma automática durante el proceso de "
+"sincronización."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:77
 msgid ""
@@ -20954,16 +21007,21 @@ msgid ""
 "order. By disconnecting them, the system bypasses the tracking requirement "
 "and allows the sync to complete."
 msgstr ""
+"Si mantienes este vínculo activo, cada orden FBA generará un error de "
+"sincronización por cada orden FBA. Cuando los desconectas, el sistema omite "
+"el requisito de rastreo y permite que la sincronización finalice."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:None
 msgid ""
 "Example of a kit product linked to an Amazon SKU in the Offers page in the "
 "Sales app."
 msgstr ""
+"Ejemplo de un kit de producto vinculado a un SKU de Amazon en la página "
+"Ofertas de la aplicación Ventas."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:86
 msgid "Create the BoM for the product kit"
-msgstr ""
+msgstr "Crear la lista de materiales para el kit de producto"
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:88
 msgid ""
@@ -20972,6 +21030,10 @@ msgid ""
 "flask` :guilabel:`Bill of Materials` smart button and :ref:`create a kit BoM "
 "<manufacturing/advanced_configuration/kit-bom>`."
 msgstr ""
+"Ve al kit de producto desde :menuselection:`Ventas --> Productos --> "
+"Productos` y selecciona el kit. Haz clic en el botón inteligente :icon:`fa-"
+"flask` :guilabel:`Lista de materiales` y :ref:`crea una lista de materiales "
+"para el kit <manufacturing/advanced_configuration/kit-bom>`."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:92
 msgid ""
@@ -20979,21 +21041,31 @@ msgid ""
 "the name of the Amazon product that is tracked by lots or a unique serial "
 "number."
 msgstr ""
+"En la pestaña :guilabel:`Componentes`, haz clic en :guilabel:`Agregar una "
+"línea` y escribe el nombre del producto de Amazon rastreado por lotes o por "
+"número de serie único."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:96
 msgid "The Amazon product must be **the sole component** of the kit BoM."
 msgstr ""
+"El producto de Amazon debe ser **el único componente** de la lista de "
+"materiales del kit."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:None
 msgid ""
 "Example of the kit BoM for the kit product to represent the Amazon listing."
 msgstr ""
+"Ejemplo de la lista de materiales del kit que representa el anuncio de "
+"Amazon."
 
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:101
 msgid ""
 "Now the Amazon product can be processed and tracked accurately in the "
 "**Sales** app by using the kit product and its associated BoM."
 msgstr ""
+"Ahora puedes procesar y rastrear el producto de Amazon con precisión en la "
+"aplicación **Ventas** al usar el kit de producto y su respectiva lista de "
+"materiales."
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:3
 msgid "Amazon Connector features"
