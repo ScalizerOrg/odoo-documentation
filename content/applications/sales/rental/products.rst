@@ -224,43 +224,12 @@ To request a signature, open the **Rental** app and select the desired rental or
 .. image:: products/request-signature.png
    :alt: The Request Signature option in the Odoo Rental application.
 
-A :guilabel:`Sign Documents` pop-up window displays. Select the desired document from the
-:guilabel:`Template` drop-down menu.
+In the *Sign Documents* pop-up window, either :ref:`select an existing document template
+<sign/templates/use-odoo-record>`  or :ref:`create a new one
+<sign/request-signatures/one-off-record>`.
 
-.. image:: products/sign-documents-popup.png
-   :alt: The Sign Documents pop-up window that appears in the Odoo Rental application.
-
-Doing so reveals a *New Signature Request* pop-up window. Confirm the information in the *New
-Signature Request* pop-up window, then click :guilabel:`Send` to initiate the signing process.
-
-.. image:: products/new-signature-request-form.png
-   :alt: The New Signature Request pop-up window that appears in the Odoo Rental application.
-
-.. tip::
-   If the agreement is configured to require a signature from the rental company, a :guilabel:`Sign
-   Now` button displays on the pop-up window. The user can add a signature via the **Sign** app
-   integration before sending it to the customer.
-
-A link to the signature request will appear in the chatter. The document is accessible to the
-customer via the customer portal or email.
-
-Signing a document from an email link
--------------------------------------
-
-When the customer clicks :guilabel:`Sign document`, the document displays in a new webpage. The
-customer uses the :guilabel:`Click to start` button to begin the process. The app guides the
-customer to the required signature locations and allows them to create electronic signatures to
-complete the form.
-
-.. image:: products/adopt-signature-popup.png
-   :alt: The adopt your signature pop-up window that appears in the Odoo Rental application.
-
-Once the document has been signed and completed, click :guilabel:`Validate & Send Completed
-Document` at the bottom of the document. The signed document can be downloaded for record-keeping
-purposes, if necessary.
-
-.. image:: products/validate-send-doc-button.png
-   :alt: The validate and send completed document button in the Odoo Rental application.
+After sending the request, a link to the signature request appears in the record's chatter. The
+document is accessible to the customer via the customer portal or email.
 
 .. seealso::
    `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_
