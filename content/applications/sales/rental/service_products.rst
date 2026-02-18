@@ -250,69 +250,30 @@ email the quotation to the customer. When the customer approves the quotation, c
 
 .. _rental/service_products/customer-signature:
 
-Request a customer signature
-============================
-
-Before the date of the service, Odoo can request that the customer sign a service agreement. Service
-agreements detail the business relationship and mutual duties. These agreements protect both the
-provider and the customer by creating clear, enforceable guidelines.
+Odoo has the ability to request the customer sign a rental agreement, outlining the arrangement
+between the company and customer, *before* they pick up the rental products. Such documents can
+ensure everything is returned on-time and in its original condition.
 
 .. note::
-   The customer signature can be requested during any stage of the order. This feature also requires
-   the :doc:`Sign <../../productivity/sign>` app.
+   Requesting a signature can be done during any stage of the order. This feature also requires the
+   :doc:`Sign <../../productivity/sign>` app.
 
-To request a signature, open the **Rental** app and select the desired rental order. Click the
-:icon:`fa-cog` :guilabel:`(Actions)` icon, then click :guilabel:`Request Signature`.
+If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
+dashboard, select the desired rental order. To go the :icon:`fa-cog` :guilabel:`(Actions)` icon, and
+click :guilabel:`Request Signature`.
 
-.. image:: service_products/request-signature.png
-   :alt: The Action drop-down menu for requesting a signature in the Rental app.
+.. image:: products/request-signature.png
+   :alt: The Request Signature option in the Odoo Rental application.
 
-A *New Signature Request* pop-up window displays. Select the desired document from the
-:guilabel:`Template` drop-down menu.
+A *Sign Documents* pop-up window displays. Either :ref:`select an existing document template
+<sign/templates/use-odoo-record>`  or :ref:`create a new one
+<sign/request-signatures/one-off-record>`.
 
-.. image:: service_products/new-signature-request.png
-   :alt: Sample of the New Signature Request pop-up window in the Rental app.
-
-Doing so reveals another *New Signature Request* pop-up window. Confirm the information in the *New
-Signature Request* pop-up window, then click :guilabel:`Send` to initiate the signing process.
-
-.. image:: service_products/new-signature-request-message.png
-   :alt: Sample of the New Signature Request message in the Rental app.
-
-A link to the signature request will appear in the chatter of the rental order. The document is
-accessible to the customer via the customer portal or email.
-
-.. tip::
-   If the agreement is configured to require a signature from the rental company, a :guilabel:`Sign
-   Now` button displays on the pop-up window. The user can add a signature via the **Sign** app
-   integration before sending it to the customer.
-
-A link to the signature request will appear in the :doc:`../../productivity/discuss/chatter`. The
+After sending the request, a link to the signature request appears in the record's chatter. The
 document is accessible to the customer via the customer portal or email.
 
-.. _rental/service_products/sign-with-email:
-
-Signing a document from an email link
--------------------------------------
-
-When a customer clicks :guilabel:`Sign document`, a separate page is then revealed, showcasing the
-document to be signed. The customer begins the process by clicking :guilabel:`Click to start`.
-
-The app guides the signer to the required signature locations and allows them to create electronic
-signatures to complete the form.
-
-.. image:: service_products/adopt-signature-popup.png
-   :alt: Sample of a customer signature with the Auto option chosen.
-
-Once the document has been signed and completed, click :guilabel:`Validate & Send Completed
-Document` at the bottom of the document. The signed document can be downloaded for record-keeping
-purposes, if necessary.
-
-.. image:: service_products/validate-send-doc-button.png
-   :alt: Sample of a signed document with the Validate & Send Completed Document button.
-
 .. seealso::
-   `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_.
+   `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_
 
 Managing the project created from the rental order
 ==================================================
