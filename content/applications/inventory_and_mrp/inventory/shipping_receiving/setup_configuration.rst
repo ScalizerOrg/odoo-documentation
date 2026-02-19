@@ -102,7 +102,12 @@ supports.
    setup_configuration/labels
    setup_configuration/bpost
    setup_configuration/dhl_credentials
+<<<<<<< 68bfa1bd26a918fe890c283535c44ef73ee5084b
    setup_configuration/envia_shipping
+||||||| 779a72ee6e21e6f5a01cdf12fe38b2bda4e6ac4d
+=======
+   setup_configuration/easypost
+>>>>>>> ca4c4d0086680bcb4d5310f9ae0943de14d93f72
    setup_configuration/fedex
    setup_configuration/sendcloud_shipping
    setup_configuration/starshipit_shipping

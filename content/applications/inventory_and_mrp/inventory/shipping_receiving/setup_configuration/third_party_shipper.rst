@@ -42,7 +42,7 @@ The following is a list of available shipping connectors in Odoo:
      - Some European countries (see details below)
    * - :doc:`Bpost <bpost>`
      - Belgium
-   * - Easypost
+   * - :doc:`Easypost <easypost>`
      - North America
    * - Shiprocket
      - India
