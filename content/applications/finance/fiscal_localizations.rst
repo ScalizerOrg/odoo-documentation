@@ -138,7 +138,7 @@ Fiscal localization modules are available for the countries listed below.
 - Tanzania
 - :doc:`Thailand <fiscal_localizations/thailand>`
 - Tunisia
-- Türkiye
+- :doc:`Türkiye <fiscal_localizations/turkiye>`
 - Uganda
 - Ukraine
 - :doc:`United Arab Emirates <fiscal_localizations/united_arab_emirates>`
