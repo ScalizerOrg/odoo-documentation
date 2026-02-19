@@ -95,3 +95,4 @@ Below are some common requests that the *Ask AI* agent can assist with:
    ai/email-templates
    ai/voice
    ai/improve_text
+   ai/support_operations
