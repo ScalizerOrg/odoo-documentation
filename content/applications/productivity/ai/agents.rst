@@ -108,6 +108,8 @@ or opening a view. Tools extend the purpose of the agent beyond conversations, t
 actions. The available tools in a database vary based on the applications installed. Multiple
 :guilabel:`AI Tools` can be assigned to a single topic.
 
+.. _ai/sources:
+
 Sources
 -------
 
