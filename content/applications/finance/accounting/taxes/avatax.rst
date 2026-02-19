@@ -38,7 +38,7 @@ Set up on AvaTax
 
 To use *AvaTax*, an account with Avalara is required for the setup. If one has not been set up yet,
 connect with Avalara to purchase a license: `Avalara: Let's Talk
-<https://www.avalara.com/us/en/get-started.html>`_.
+<https://www.avalara.com/us/en/get-started.html?campaignID=701Uz00000kcMwLIAU&utm_campaign=AMER_PROS_Unpaid-Synd_General-Contact_07_2025_ODOO-Page---Contact-Us&marketing_channel=web_referral&vendor=partner&paid_unpaid=unpaid&target_audience=prospect>`_.
 
 .. tip::
    Upon account setup, take note of the *AvaTax* :guilabel:`Account ID`. This will be needed in the
