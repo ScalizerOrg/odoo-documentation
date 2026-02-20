@@ -102,6 +102,7 @@ supports.
    setup_configuration/labels
    setup_configuration/bpost
    setup_configuration/dhl_credentials
+   setup_configuration/easypost
    setup_configuration/envia_shipping
    setup_configuration/fedex
    setup_configuration/sendcloud_shipping
