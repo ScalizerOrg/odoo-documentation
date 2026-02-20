@@ -1187,15 +1187,56 @@ Radio (`radio`)
 
             <field name="recommended_activity_type_id" widget="radio" options="{'horizontal': true}"/>
 
-Badge Selection (`selection_badge`)
-    This is a subfield of `selection` field, but specialized to display all the
-    valid choices as rectangular badges.
+Badges Selection (``badges_selection``)
+    Widget displaying selection field values as a set of clickable badges.
 
-    - Supported field types: `selection`, `many2one`
+    - Supported field types: ``selection``
+
+    Options:
+
+    - ``badgeLimit``: maximum number of badges to display before collapsing into a
+      dropdown.
+
+    - ``icon_mapping``: a dictionary mapping each selection value to an icon class
+      string, e.g. ``{'draft': 'fa-pencil', 'done': 'fa-check'}``
+
+    - ``default_icon``: fallback icon class applied to badges that have no entry in
+      ``icon_mapping``
+
+    - ``allowed_selection_field``: name of another field on the same record whose
+      value is a list of selection keys; only the matching options are shown as badges
 
     .. code-block:: xml
 
-        <field name="recommended_activity_type_id" widget="selection_badge" />
+        <field name="state" widget="badges_selection"
+            options="{'badgeLimit': 5,
+                      'icon_mapping': {'draft': 'fa-pencil', 'done': 'fa-check'},
+                      'allowed_selection_field': 'available_states'}" />
+
+
+Badges Many2one (``badges_many2one``)
+    Widget displaying many2one field values as a set of clickable badges, loading
+    available records from the co-model.
+
+    - Supported field types: ``many2one``
+
+    Options:
+
+    - ``badgeLimit``: maximum number of badges to display before collapsing into a
+      dropdown.
+
+    - ``related_icon_field``: name of a field on the co-model that holds an icon
+      class string; when set, badges are rendered with that icon
+
+    - ``default_icon``: fallback icon class used when ``related_icon_field`` is not
+      set or the co-model record has no value for it
+
+    .. code-block:: xml
+
+        <field name="category_id" widget="badges_many2one"
+            options="{'badgeLimit': 4,
+                      'related_icon_field': 'icon',
+                      'default_icon': 'fa fa-tag'}" />
 
 Many2one (`many2one`)
     Default widget for many2one fields.
