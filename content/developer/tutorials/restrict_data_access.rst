@@ -87,11 +87,14 @@ As simple example `can be found here <https://github.com/odoo/odoo/blob/532c083c
 
     #. If not already, add a ``'category'`` field to your ``__manifest__.py`` with value ``Real Estate/Brokerage``.
 
-    #. Add a record creating a group with the id ``estate_group_user``, the name "Agent"
+    #. Add a record creating a group privilege with the id ``groups_privilege_real_estate``, the name "Real Estate"
        and the category ``base.module_category_real_estate_brokerage``.
 
+    #. Add a record creating a group with the id ``estate_group_user``, the name "Agent"
+       and the group privilege ``groups_privilege_real_estate``.
+
     #. Below that, add a record creating a group with the id ``estate_group_manager``,
-       the name "Manager" and the category ``base.module_category_real_estate_brokerage``.
+       the name "Manager" and the group privilege ``groups_privilege_real_estate``.
        The ``estate_group_manager`` group needs to imply ``estate_group_user``.
 
     .. note::
