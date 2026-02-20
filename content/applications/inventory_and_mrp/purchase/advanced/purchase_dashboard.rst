@@ -2,7 +2,7 @@
 Purchase & Vendor analysis dashboard
 ====================================
 
-The :guilabel:`Purchase & Vendor analysis` dashboard, available in the :doc:`Odoo Dashboards
+The *Purchase & Vendor analysis* dashboard, available in the :doc:`Odoo Dashboards
 <../../../productivity/dashboards>` app, offers various metrics to evaluate purchasing performance
 and vendor reliability.
 
@@ -11,22 +11,22 @@ purchase orders. It also provides KPIs for supplier performance, such as the ave
 products and the percentage of quantities received on time. This makes it possible to rank vendors
 and optimize procurement strategy accordingly.
 
-To access the :guilabel:`Purchase & Vendor analysis` dashboard, go to the Dashboards app, then, in
+To access the *Purchase & Vendor analysis* dashboard, go to the **Dashboards** app, then, in
 the left panel, navigate to the :guilabel:`Logistics` section and click the name of the dashboard.
 The dashboard opens in the main view.
 
 .. image:: purchase_dashboard/purchase-vendor-analysis.png
-   :alt: Purchase & Vendor analysis dashboard
+   :alt: Purchase & Vendor analysis dashboard.
 
 .. seealso::
    - :ref:`Using Odoo dashboards <dashboards/use-dashboards>`
    - :ref:`Customizing Odoo dashboards <build_and_customize_dashboards/customize>`
 
 .. note::
-   - The :ref:`access rights <dashboards/access-and-sharing>` for Odoo dashboards are based on user
-     groups, and are managed within the Dashboards app. By default, the :guilabel:`Purchase & Vendor
-     analysis` dashboard is only visible to, and can only be accessed by, users with admin access to
-     the **Inventory** app.
+   The :ref:`access rights <dashboards/access-and-sharing>` for Odoo dashboards are based on user
+   groups, and are managed within the Dashboards app. By default, the :guilabel:`Purchase & Vendor
+   analysis` dashboard is only visible to, and can only be accessed by, users with admin access to
+   the **Inventory** app.
 
 .. _purchase/dashboards/navigate:
 
@@ -89,4 +89,4 @@ The following charts are available:
   receipt date.
 - :guilabel:`Top purchased products`: lists the ten products with the highest total purchase amount,
   in descending order.
-- :guilabel:`Supplier Dependency Chart`: shows the percentage of purchases by buyer.
+- :guilabel:`Purchase Orders by Buyer`: shows the percentage of purchases by buyer.
