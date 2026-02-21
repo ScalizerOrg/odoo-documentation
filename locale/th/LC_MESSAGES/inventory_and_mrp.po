@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-12 18:30+0000\n"
+"POT-Creation-Date: 2026-02-20 18:30+0000\n"
 "PO-Revision-Date: 2025-11-13 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -147,7 +147,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:48
@@ -1041,6 +1040,7 @@ msgstr ""
 "เมื่อ :guilabel:`รูปแบบบาร์โค้ด` มี `.*` แสดงว่าสามารถมีอักขระได้เป็นจำนวนหรือประเภทใดก็ได้"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:50
 msgid ":doc:`gs1_nomenclature`"
 msgstr ":doc:`gs1_nomenclature`"
@@ -2326,271 +2326,198 @@ msgstr ""
 msgid "Process receipts and deliveries with barcodes"
 msgstr "ดำเนินการรับและส่งมอบสินค้าด้วยบาร์โค้ด"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:7
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
 msgid ""
-"The *Barcode* app can be used to process receipts, deliveries, and other "
+"The **Barcode** app can be used to process receipts, deliveries, and other "
 "types of operations in real time using a barcode scanner or the Odoo mobile "
 "app."
 msgstr ""
-"แอป *บาร์โค้ด* ใช้ในการประมวลผลใบเสร็จ การจัดส่ง และการดำเนินการประเภทอื่นๆ "
-"แบบเรียลไทม์โดยใช้เครื่องสแกนบาร์โค้ดหรือแอปมือถือ Odoo"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:13
 msgid ""
 "This makes it possible to process operations on the warehouse floor when "
 "they happen, instead of having to wait to validate transfers from a "
-"computer. Processing operations this way can help to properly attribute "
-"barcodes to the appropriate products, pickings, locations, and more."
+"computer. This real-time processing ensures barcodes are accurately assigned "
+"to the correct products, packaging, transfers, locations, and more, reducing "
+"errors and keeping inventory data in sync."
 msgstr ""
-"การดำเนินการดังกล่าวทำให้สามารถประมวลผลการดำเนินการพื้นที่คลังสินค้าได้เมื่อการดำเนินการเกิดขึ้น "
-"แทนที่จะต้องรอการตรวจสอบการโอนย้ายจากคอมพิวเตอร์ "
-"การดำเนินการในลักษณะนี้จะช่วยให้สามารถกำหนดรหัสบาร์โค้ดให้กับผลิตภัณฑ์ การเลือก สถานที่และอื่นๆ "
-"ได้อย่างเหมาะสม"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:19
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:13
 msgid "Enable Barcode app"
 msgstr "เปิดใช้งานแอปบาร์โค้ด"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:17
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:21
 msgid ""
-"To use the *Barcode* app to process transfers, it must be installed by "
-"enabling the feature from the settings of the *Inventory* app."
+"To use the **Barcode** app to process transfers, it must be installed by "
+"enabling the feature from the settings of the **Inventory** app."
 msgstr ""
-"หากต้องการใช้แอป *บาร์โค้ด* เพื่อดำเนินการการโอนย้าย "
-"จะต้องติดตั้งโดยเปิดใช้ฟีเจอร์จากการตั้งค่าของแอป *สินค้าคงคลัง*"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:20
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
-msgid ""
-"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
-"the checkbox next to the :guilabel:`Barcode Scanner` feature."
-msgstr ""
-"ในการดำเนินการดังกล่าว ให้ไปที่ :menuselection:`แอปสินค้าคงคลัง --> การกำหนดค่า --> "
-"การตั้งค่า` จากนั้นเลื่อนลงไปที่ส่วน :guilabel:`บาร์โค้ด` "
-"แล้วคลิกช่องทำเครื่องหมายข้างฟีเจอร์ :guilabel:`เครื่องสแกนบาร์โค้ด`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:24
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
 msgid ""
-"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
-"to save changes."
+"To do so, navigate to :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the *Barcode* section, and select the "
+"checkbox next to the :guilabel:`Barcode Scanner` feature."
 msgstr ""
-"เมื่อทำเครื่องหมายในช่องกาเครื่องหมายแล้ว คลิก :guilabel:`บันทึก` "
-"ที่ด้านบนของหน้าเพื่อบันทึกการเปลี่ยนแปลง"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:26
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:28
 msgid ""
-"Once the page has refreshed, new options will be displayed under "
-"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
-"(with a corresponding drop-down menu), where either :guilabel:`Default "
-"Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+"After the checkbox is selected, click :guilabel:`Save` at the top of the "
+"page to save changes."
 msgstr ""
-"เมื่อหน้ารีเฟรชแล้ว "
-"ตัวเลือกใหม่จะปรากฏภายใต้คุณลักษณะ :guilabel:`เครื่องสแกนบาร์โค้ด` :guilabel:`การตั้งชื่อบาร์โค้ด` "
-"(พร้อมเมนูแบบดรอปดาวน์ที่เกี่ยวข้อง) โดยสามารถเลือก :guilabel:`การตั้งชื่อเริ่มต้น` "
-"หรือ :guilabel:`การตั้งชื่อ GS1 เริ่มต้น` ก็ได้"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:30
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"After the page has refreshed, a new option is displayed under "
+"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+"(with a corresponding drop-down menu). Select either:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:33
+msgid ""
+":guilabel:`Default Nomenclature`: The barcode actions using UPC and EAN, "
+"detailed in the default nomenclature list, are available for use. By "
+"default, Odoo automatically handles UPC/EAN conversion."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:36
+msgid ""
+":guilabel:`Default GS1 Nomenclature`: Scan barcodes of sealed boxes and "
+"identify essential product information, such as Global Trade Item Numbers "
+"(GTINs), lot number, quantity information, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:40
 msgid ""
 "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
-"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
-"barcode demo sheet."
+"and a set of :guilabel:`Print` buttons for printing barcode commands and "
+"operation types, as well as a barcode demo sheet."
 msgstr ""
-"นอกจากนี้ยังมีลูกศรลิงก์ภายใน :guilabel:`กำหนดค่าบาร์โค้ดผลิตภัณฑ์` "
-"และชุดปุ่ม :guilabel:`พิมพ์` สำหรับพิมพ์คำสั่งบาร์โค้ดและแผ่นตัวอย่างบาร์โค้ดอีกด้วย"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:37
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
-msgid ""
-"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
-"the :doc:`Set up your barcode scanner <../setup/hardware>` "
-"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
-"pages."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:48
+msgid ":doc:`barcode_nomenclature`"
 msgstr ""
-"หากต้องการข้อมูลเพิ่มเติมเกี่ยวกับการตั้งค่าและกำหนดค่าแอป :guilabel:`บาร์โค้ด` "
-"โปรดดูหน้าเอกสาร :doc:`ตั้งค่าเครื่องสแกนบาร์โค้ดของคุณ <../setup/hardware>` "
-"และ :doc:`เปิดใช้งานบาร์โค้ดใน Odoo <../setup/software>`"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:44
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:50
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
+msgid ":doc:`../setup/hardware`"
+msgstr ":doc:`../setup/hardware`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:51
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+msgid ":doc:`../setup/software`"
+msgstr ":doc:`../setup/software`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:56
 msgid "Scan barcodes for receipts"
 msgstr "สแกนบาร์โค้ดเพื่อรับใบเสร็จ"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:46
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:58
 msgid ""
-"To process warehouse receipts for incoming products, there first needs to be "
-"a purchase order (PO) created, and a receipt operation to process."
+"Purchase orders (POs) are used to process warehouse receipts for incoming "
+"products and product packagings. First, create a request for quotation, then "
+"confirm it to create a |PO|."
 msgstr ""
-"ในการประมวลผลการรับสินค้าจากคลังสินค้าสำหรับสินค้าขาเข้า จำเป็นต้องสร้างใบสั่งซื้อ (PO) ก่อน "
-"จากนั้นจึงดำเนินการรับสินค้าเพื่อประมวลผลได้"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
-msgid ""
-"To create a :abbr:`PO (purchase order)`, navigate to "
-"the :menuselection:`Purchase app --> Create` to create a new request for "
-"quotation (RFQ)."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:62
+msgid ":doc:`../../purchase/manage_deals/rfq`"
 msgstr ""
-"ในการสร้าง :abbr:`PO (ใบสั่งซื้อ)` ให้ไปที่ :menuselection:`แอปการจัดซื้อ --> สร้าง` "
-"เพื่อสร้างคำขอใบเสนอราคา (RFQ) ใหม่"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:52
-msgid ""
-"From the blank :abbr:`RFQ (request for quotation)` form, click the drop-down "
-"menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Products` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"จากแบบฟอร์ม :abbr:`RFQ (คำขอใบเสนอราคา)` ที่ว่างเปล่า "
-"ให้คลิกเมนูแบบเลื่อนลงถัดจากฟิลด์ :guilabel:`ผู้ขาย` เพื่อเพิ่มผู้ขาย จากนั้น "
-"บนบรรทัด :guilabel:`ผลิตภัณฑ์` ภายใต้แท็บ :guilabel:`ผลิตภัณฑ์` "
-"ให้คลิก :guilabel:`เพิ่มผลิตภัณฑ์` และเลือกผลิตภัณฑ์ที่ต้องการเพิ่มในใบเสนอราคา"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:57
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, then "
-"click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
-"quotation)` to a :abbr:`PO (purchase order)`."
-msgstr ""
-"เมื่อพร้อมแล้ว คลิก :guilabel:`บันทึก` ที่ด้านบนของแบบฟอร์ม "
-"จากนั้นคลิก :guilabel:`ยืนยันการสั่งซื้อ` เพื่อยืนยัน :abbr:`RFQ (คำขอใบเสนอราคา)` "
-"ไปยัง :abbr:`PO (ใบสั่งซื้อ)`"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed purchase order for barcode product."
-msgstr "เสร็จสิ้นการสั่งซื้อสำหรับผลิตภัณฑ์บาร์โค้ด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:64
 msgid ""
-"To process and scan barcodes for warehouse receipts, navigate to "
-"the :menuselection:`Barcode app`."
+"To process and scan barcodes for warehouse receipts, navigate to the "
+"**Barcode** app."
 msgstr ""
-"ในการประมวลผลและสแกนบาร์โค้ดสำหรับใบเสร็จจากคลังสินค้า "
-"ให้ไปที่ :menuselection:`แอปบาร์โค้ด`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:66
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process receipts, click "
-"on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :menuselection:`Operations` overview page."
+"Once inside the **Barcode** app, a :guilabel:`Barcode Scanner` screen "
+"displaying different options is presented."
 msgstr ""
-"เมื่ออยู่ใน :guilabel:`แอปบาร์โค้ด` แล้ว จะมีหน้าจอ :guilabel:`สแกนบาร์โค้ด` "
-"แสดงตัวเลือกต่างๆ ขึ้นมา หากต้องการประมวลผลใบเสร็จ ให้คลิกที่ปุ่ม :guilabel:`การดำเนินงาน` "
-"ที่ด้านล่างของหน้าจอ ซึ่งจะนำทางไปยังหน้าภาพรวม :menuselection:`การดำเนินงาน`"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:74
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:72
 msgid ""
-"From this page, locate the :guilabel:`Receipts` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding receipts. Then, "
-"select the desired receipt operation to process. This navigates to the "
-"barcode transfer screen."
+"To process receipts, click the :guilabel:`Operations` button at the bottom "
+"of the screen. The :guilabel:`Operations` overview page opens."
 msgstr ""
-"จากหน้านี้ ให้ค้นหาการ์ด :guilabel:`ใบเสร็จ` แล้วคลิกปุ่ม :guilabel:`# เพื่อดำเนินการ` "
-"เพื่อดูใบเสร็จที่ค้างชำระทั้งหมด จากนั้นเลือกการดำเนินการใบเสร็จที่ต้องการดำเนินการ "
-"จากนั้นไปที่หน้าจอบาร์โค้ดการโอนย้าย"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:75
+msgid ""
+"From this page, tap the :guilabel:`Receipts` card to view all outstanding "
+"receipts. Then, select the desired receipt operation to process. This "
+"navigates to the barcode transfer screen."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:79
 msgid ""
-"If *only* using a barcode scanner or the Odoo mobile app, the barcodes for "
-"each transfer of a corresponding operation type can be scanned to be "
-"processed easily. Once scanned, the products that are part of an existing "
-"transfer can be scanned, and new products can be added to the transfer, as "
-"well. Once all products have been scanned, validate the transfer to proceed "
-"with the stock moves."
+"If *only* using a barcode scanner or the Odoo mobile app, scan each barcode "
+"transfer for the corresponding operation type to process them. Once scanned, "
+"the products that are part of an existing transfer can be scanned, and new "
+"products can be added to the transfer, as well. Once all products have been "
+"scanned, validate the transfer to proceed with the stock moves."
 msgstr ""
-"หากใช้เครื่องสแกนบาร์โค้ดหรือแอป Odoo บนมือถือ *เท่านั้น* "
-"บาร์โค้ดสำหรับการถ่ายโอนประเภทการดำเนินการที่เกี่ยวข้องแต่ละครั้งจะสามารถสแกนเพื่อประมวลผลได้อย่างง่ายดาย "
-"เมื่อสแกนแล้ว จะสามารถสแกนผลิตภัณฑ์ที่เป็นส่วนหนึ่งของการถ่ายโอนที่มีอยู่ได้ "
-"และสามารถเพิ่มผลิตภัณฑ์ใหม่ลงในการถ่ายโอนได้เช่นกัน เมื่อสแกนผลิตภัณฑ์ทั้งหมดแล้ว "
-"ให้ตรวจสอบการโอนเพื่อดำเนินการย้ายสต็อกต่อไป"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:85
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:84
 msgid ""
 "From this screen, an overview of all receipts to process within that "
 "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once. If the *Packages* setting is enabled "
+"in the Inventory settings, the :guilabel:`Put in Pack` button is also "
+"available."
 msgstr ""
-"จากหน้าจอนี้ จะแสดงภาพรวมของใบเสร็จทั้งหมดที่ต้องดำเนินการภายในการโอนนั้น (**WH/IN/"
-"000XX**) ที่ด้านล่างของหน้าจอ จะมีตัวเลือกสำหรับ :guilabel:`เพิ่มผลิตภัณฑ์` "
-"หรือ :guilabel:`ตรวจสอบ` ขึ้นอยู่กับว่าจำเป็นต้องเพิ่มผลิตภัณฑ์ลงในการดำเนินการหรือไม่ "
-"หรือต้องตรวจสอบการดำเนินการทั้งหมดพร้อมกัน"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:None
 msgid "Overview of receipts in transfer to scan."
 msgstr "ภาพรวมใบเสร็จรับเงินในการโอนเงินเพื่อสแกน"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:94
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:93
 msgid ""
-"To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
-"clicked to indicate receipt of that product, or the :guilabel:`pencil` icon "
-"can be clicked to open a new screen to edit that product line."
+"To process and scan each product individually, scan a product or product "
+"packaging, or choose a specific product line. Click the :guilabel:`+#` "
+"button (for example, `+10`) to indicate receipt of that product."
 msgstr ""
-"หากต้องการประมวลผลและสแกนผลิตภัณฑ์แต่ละชิ้นทีละรายการ ให้เลือกกลุ่มผลิตภัณฑ์ที่ต้องการ "
-"โดยสามารถคลิกปุ่ม :guilabel:`+#` (ในกรณีนี้คือ :guilabel:`+10`) เพื่อระบุการรับผลิตภัณฑ์นั้น "
-"หรือคลิกไอคอน :guilabel:`ดินสอ` เพื่อเปิดหน้าจอใหม่เพื่อแก้ไขกลุ่มผลิตภัณฑ์ดังกล่าว"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:98
-msgid ""
-"From this screen, the product that's being received is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`PO (purchase order)`."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:173
+msgid "Editing a product line"
 msgstr ""
-"จากหน้าจอนี้ จะแสดงผลิตภัณฑ์ที่กำลังได้รับ ภายใต้ชื่อผลิตภัณฑ์ "
-"คุณสามารถแก้ไขบรรทัด :guilabel:`จำนวน` ได้ โดยเปลี่ยน `0` ในบรรทัดเป็นจำนวนที่ต้องการ "
-"หรือคลิกปุ่ม :guilabel:`/# หน่วย` (ในกรณีนี้คือ :guilabel:`/10 หน่วย`) "
-"เพื่อกรอกจำนวนที่สั่งซื้อจาก :abbr:`PO (ใบสั่งซื้อ)` โดยอัตโนมัติ"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:104
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:100
 msgid ""
-"In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
-"Product` is expected to be received. `[BARCODE_PROD]` is "
-"the :guilabel:`Internal Reference` set on the product form. Scan the barcode "
-"of the `Barcode Product` to receive one unit. Afterwards, click "
-"the :guilabel:`pencil` icon to manually enter the received quantities."
+"To manually adjust received quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"ในการดำเนินการรับสินค้า `WH/IN/00019` คาดว่าจะรับสินค้า `บาร์โค้ดสินค้า` จำนวน `10 หน่วย` "
-"`[BARCODE_PROD]` คือ :guilabel:`รหัสอ้างอิงภายใน` ที่กำหนดไว้ในแบบฟอร์มสินค้า "
-"สแกนบาร์โค้ดของ `บาร์โค้ดสินค้า` เพื่อรับสินค้า 1 หน่วย จากนั้นคลิกไอคอน :guilabel:`ดินสอ` "
-"เพื่อป้อนปริมาณสินค้าที่รับด้วยตนเอง"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
-msgid "Product line editor for individual transfer in Barcode app."
-msgstr "เครื่องมือแก้ไขสายผลิตภัณฑ์สำหรับการโอนแต่ละรายการในแอปบาร์โค้ด"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:113
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:179
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:103
 msgid ""
-"Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be clicked "
-"to add or subtract quantity of the product, and the :guilabel:`number keys` "
-"can be used to add quantity, as well."
+"On this screen, the product that's being received is listed. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+12`) to automatically fill the quantity ordered from the |PO|."
 msgstr ""
-"นอกจากนี้ ยังสามารถคลิกปุ่ม :guilabel:`+1` และ :guilabel:`-1` "
-"เพื่อเพิ่มหรือลบจำนวนผลิตภัณฑ์ได้ และใช้ปุ่ม :guilabel:`ตัวเลข` เพื่อเพิ่มจำนวนได้เช่นกัน"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:116
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:107
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another *location* is listed on the "
-"product itself. Click this line to reveal a drop-down menu of additional "
-"locations to choose from."
+"Additionally, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or "
+"subtract quantity of the product. Click the product packaging button (for "
+"example, `6-pack`) to add a product packaging. Click the number keys to add "
+"quantity."
 msgstr ""
-"ด้านล่างของ :guilabel:`ปุ่มตัวเลข` คือบรรทัด :guilabel:`ตำแหน่ง` ซึ่งระบุว่า `คลังสินค้า/"
-"สต็อก` ตามค่าเริ่มต้น เว้นแต่จะมี *ตำแหน่ง* อื่นแสดงอยู่ในผลิตภัณฑ์นั้นเอง "
-"คลิกบรรทัดนี้เพื่อแสดงเมนูแบบดรอปดาวน์ของตำแหน่งเพิ่มเติมที่สามารถเลือกได้"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:120
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
+msgid ""
+"Below the quantity buttons is the :guilabel:`Location` line, which reads `WH/"
+"Stock` by default, unless another *location* is listed on the product "
+"itself. Click this line to reveal a drop-down menu of additional locations "
+"to choose from."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:115
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:215
 msgid ""
@@ -2599,179 +2526,159 @@ msgid ""
 msgstr ""
 "เมื่อพร้อมแล้ว คลิก :guilabel:`ยืนยัน` เพื่อยืนยันการเปลี่ยนแปลงที่เกิดขึ้นกับกลุ่มของผลิตภัณฑ์"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:122
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:118
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"receipt has now been processed, and the :guilabel:`Barcode app` can be "
-"closed out."
+"In the reception operation `WH/IN/00013`, `12 Units` of the `Soda Can` "
+"product is expected to be received. `[SODA-SINGLE-CAN]` is the barcode set "
+"on the product form. Warehouse employees can scan the barcode of the `Soda "
+"Can` product to receive one unit, or because they can be purchased in 6-pack "
+"packaging, they can scan the packaging barcode. Alternatively, they can "
+"click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to manually enter the "
+"received quantities."
 msgstr ""
-"จากนั้น จากหน้าภาพรวมพร้อมใบเสร็จทั้งหมดที่ต้องดำเนินการภายในการโอนนั้น (**WH/IN/000XX**) "
-"ให้คลิกปุ่ม :guilabel:`+#` บนสายผลิตภัณฑ์สำหรับผลิตภัณฑ์ที่ได้รับ "
-"และคลิก :guilabel:`ตรวจสอบ` ตอนนี้ใบเสร็จได้รับการดำเนินการแล้ว "
-"และสามารถปิด :guilabel:`แอปบาร์โค้ด` ได้"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
+msgid "Product line editor for individual transfer in Barcode app."
+msgstr "เครื่องมือแก้ไขสายผลิตภัณฑ์สำหรับการโอนแต่ละรายการในแอปบาร์โค้ด"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:128
+msgid "Validating the transfer"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:130
+msgid ""
+"If not all products were scanned or manually entered from the pencil icon, "
+"click the :guilabel:`+#` button on the product line for the products being "
+"received, or scan the product or product packaging barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+msgid ""
+"Finally, click :guilabel:`Validate`. The receipt is processed, and the "
+"**Barcode** app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of receipts in transfer to validate."
 msgstr "ภาพรวมการรับเงินในการโอนเพื่อการตรวจสอบ"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:132
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:141
 msgid "Scan barcodes for delivery orders"
 msgstr "สแกนบาร์โค้ดสำหรับคำสั่งซื้อการจัดส่ง"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:143
 msgid ""
-"To process warehouse deliveries for outgoing products, there first needs to "
-"be a sales order (SO) created, and a delivery operation to process."
+"To process warehouse deliveries for outgoing products, a sales order (SO) "
+"must be created to create a delivery operation to process. First, create a "
+"quotation, then confirm it to create the |SO|."
 msgstr ""
-"ในการประมวลผลการจัดส่งสินค้าออกจากคลังสินค้าสำหรับสินค้าขาออก จำเป็นต้องสร้างใบสั่งขาย (SO) "
-"ก่อน และดำเนินการจัดส่งที่ต้องประมวลผล"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:137
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
+msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:149
 msgid ""
-"To create a :abbr:`SO (sales order)`, navigate to the :menuselection:`Sales "
-"app --> Create` to create a new quotation."
+"To process and scan barcodes for warehouse deliveries, navigate to "
+"the :menuselection:`Barcode` app."
 msgstr ""
-"ในการสร้าง :abbr:`SO (ใบสั่งขาย)` ให้ไปที่ :menuselection:`แอปการขาย --> สร้าง` "
-"เพื่อสร้างใบเสนอราคาใหม่"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:140
-msgid ""
-"From the blank quotation form, click the drop-down menu next to "
-"the :guilabel:`Customer` field to add a customer. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"จากแบบฟอร์มใบเสนอราคาเปล่า ให้คลิกเมนูแบบดรอปดาวน์ถัดจากฟิลด์ :guilabel:`ลูกค้า` "
-"เพื่อเพิ่มลูกค้า จากนั้น บนบรรทัด :guilabel:`ผลิตภัณฑ์` "
-"ภายใต้แท็บ :guilabel:`บรรทัดการสั่งซื้อ` ให้คลิก :guilabel:`เพิ่มผลิตภัณฑ์` "
-"และเลือกผลิตภัณฑ์ที่ต้องการเพิ่มในใบเสนอราคา"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:144
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, and "
-"click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
-"(sales order)`."
-msgstr ""
-"เมื่อพร้อมแล้ว คลิก :guilabel:`บันทึก` ที่ด้านบนของแบบฟอร์ม "
-"และคลิก :guilabel:`ยืนยันการสั่งซื้อ` เพื่อยืนยันใบเสนอราคาไปยัง :abbr:`SO (ใบสั่งขาย)`"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed sales order for barcode product."
-msgstr "ดำเนินการสั่งซื้อสินค้าบาร์โค้ดเสร็จสิ้น"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
 msgid ""
-"To process and scan barcodes for warehouse deliveries, navigate to "
-"the :menuselection:`Barcode app`."
+"In the **Barcode** app, a :guilabel:`Barcode Scanner` screen displaying "
+"different options opens. To process deliveries, click "
+"the :guilabel:`Operations` button at the bottom of the screen. This opens "
+"an :guilabel:`Operations` overview page."
 msgstr ""
-"หากต้องการประมวลผลและสแกนบาร์โค้ดสำหรับการจัดส่งไปยังคลังสินค้า "
-"ให้ไปที่ :menuselection:`แอปบาร์โค้ด`"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:153
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:155
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process deliveries, "
-"click on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :guilabel:`Operations` overview page."
+"On this page, click the :guilabel:`Delivery Orders` card to view all "
+"outstanding deliveries."
 msgstr ""
-"เมื่ออยู่ใน :guilabel:`แอปบาร์โค้ด` แล้ว หน้าจอ :guilabel:`สแกนบาร์โค้ด` "
-"จะแสดงตัวเลือกต่างๆ หากต้องการประมวลผลการจัดส่ง ให้คลิกที่ปุ่ม :guilabel:`Operations` "
-"ที่ด้านล่างของหน้าจอ ซึ่งจะนำทางไปยังหน้าภาพรวม :guilabel:`การดำเนินงาน`"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:157
-msgid ""
-"From this page, locate the :guilabel:`Delivery Orders` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding deliveries. "
-"Then, select the desired delivery order to process. This navigates to the "
-"barcode transfer screen."
-msgstr ""
-"จากหน้านี้ ให้ค้นหาการ์ด :guilabel:`ใบสั่งการจัดส่ง` แล้วคลิกปุ่ม :guilabel:`# "
-"ที่กำลังดำเนินการ` เพื่อดูการจัดส่งที่ค้างอยู่ทั้งหมด จากนั้นเลือกใบสั่งจัดส่งที่ต้องการดำเนินการ "
-"จากนั้นไปที่หน้าจอการโอนบาร์โค้ด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Operations overview page in Barcode app dashboard."
 msgstr "หน้าภาพรวมการดำเนินงานในแดชบอร์ดแอปบาร์โค้ด"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:160
 msgid ""
-"From this screen, an overview of all deliveries to process within that "
-"transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"Select the desired delivery order to process. This navigates to the barcode "
+"transfer screen."
 msgstr ""
-"จากหน้าจอนี้ จะแสดงภาพรวมของการจัดส่งทั้งหมดที่ต้องดำเนินการภายในการโอนนั้น (**WH/OUT/"
-"000XX**) ที่ด้านล่างของหน้าจอ จะมีตัวเลือกสำหรับ :guilabel:`เพิ่มผลิตภัณฑ์` "
-"หรือ :guilabel:`ตรวจสอบ` ขึ้นอยู่กับว่าจำเป็นต้องเพิ่มผลิตภัณฑ์ลงในการดำเนินการหรือไม่ "
-"หรือต้องตรวจสอบการดำเนินการทั้งหมดพร้อมกัน"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:170
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:162
+msgid ""
+"On this screen, first scan the source location of the products to deliver. "
+"Then, review the overview of all products and packagings to process within "
+"that transfer (**WH/OUT/000XX**). At the bottom of the screen, there are "
+"buttons to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:168
 msgid ""
 "To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+1` button can be clicked to indicate delivery of that "
-"product, or the :guilabel:`pencil icon` can be clicked to open a new screen "
-"to edit that product line."
+"line. Scan a product or product packaging, or click the :guilabel:`+#` (for "
+"example, `+6`) button to indicate delivery of that product."
 msgstr ""
-"หากต้องการประมวลผลและสแกนผลิตภัณฑ์แต่ละรายการ ให้เลือกกลุ่มผลิตภัณฑ์ที่ต้องการ "
-"สามารถคลิกปุ่ม :guilabel:`+1` เพื่อระบุการจัดส่งผลิตภัณฑ์นั้น "
-"หรือคลิก :guilabel:`ไอคอนดินสอ` เพื่อเปิดหน้าจอใหม่เพื่อแก้ไขกลุ่มผลิตภัณฑ์นั้น"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:174
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:175
 msgid ""
-"From this screen, the product that's being delivered is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`SO (sales order)`."
+"To manually adjust quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"จากหน้าจอนี้ จะแสดงรายชื่อผลิตภัณฑ์ที่กำลังจัดส่ง ภายใต้ชื่อผลิตภัณฑ์ "
-"คุณสามารถแก้ไขบรรทัด :guilabel:`จำนวน` ได้ โดยเปลี่ยน `0` ในบรรทัดเป็นจำนวนที่ต้องการ "
-"หรือคลิกปุ่ม :guilabel:`/# หน่วย` (ในกรณีนี้คือ :guilabel:`/10 หน่วย`) "
-"เพื่อกรอกจำนวนที่สั่งจาก :abbr:`SO (ใบสั่งขาย)` โดยอัตโนมัติ"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:182
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:178
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another location is listed on the "
-"product itself."
+"The product that's being delivered is listed on this screen. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+6`) to automatically fill the quantity ordered from the |SO|. If "
+"the product is sold in a packaging, click the packaging button (for example, "
+"`6-pack`). Alternatively, click the :guilabel:`+1` and :guilabel:`-1` "
+"buttons to add or subtract quantity of the product."
 msgstr ""
-"ด้านล่างของ :guilabel:`ปุ่มตัวเลข` คือบรรทัด :guilabel:`ตำแหน่ง` ซึ่งอ่านว่า `คลังสินค้า/"
-"สต็อก` ตามค่าเริ่มต้น เว้นแต่จะมีการระบุตำแหน่งอื่นในผลิตภัณฑ์นั้นเอง"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:185
 msgid ""
-"This is the location that the product is being pulled from for delivery. "
-"Click this line to reveal a drop-down menu of additional locations to choose "
+"Below the quantity buttons is the :guilabel:`Source Location` line, which "
+"reads `WH/Stock` by default, unless the product is stored in a different "
+"location. This is the location that the product is being pulled from for "
+"delivery. Click this line to reveal a menu of additional locations to choose "
 "from (if this product is stored in multiple locations in the warehouse)."
 msgstr ""
-"นี่คือตำแหน่งที่ผลิตภัณฑ์จะถูกดึงออกมาเพื่อจัดส่ง "
-"คลิกบรรทัดนี้เพื่อแสดงเมนูแบบเลื่อนลงของตำแหน่งเพิ่มเติมที่สามารถเลือกได้ "
-"(หากผลิตภัณฑ์นี้ถูกเก็บไว้ในหลายตำแหน่งในคลังสินค้า)"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:191
 msgid ""
 "For warehouses that have multiple different storage locations, putaway "
 "rules, and removal strategies, additional steps can be added for various "
-"operation types, while using the *Barcode* app."
+"operation types, while using the **Barcode** app."
 msgstr ""
-"สำหรับคลังสินค้าที่มีสถานที่จัดเก็บที่แตกต่างกันหลายแห่ง กฎการจัดเก็บ และกลยุทธ์การเคลื่อนย้าย "
-"สามารถเพิ่มขั้นตอนเพิ่มเติมสำหรับประเภทการดำเนินการต่างๆ ได้ในขณะที่ใช้แอป *บาร์โค้ด*"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:196
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:195
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"delivery has now been processed, and the *Barcode* app can be closed out."
+"When ready, click :guilabel:`Confirm` to confirm the changes made to the "
+"product line."
 msgstr ""
-"จากนั้น จากหน้าภาพรวมพร้อมใบเสร็จทั้งหมดที่ต้องดำเนินการภายในการโอนนั้น (**WH/OUT/"
-"000XX**) ให้คลิกปุ่ม :guilabel:`+#` บนกลุ่มผลิตภัณฑ์สำหรับผลิตภัณฑ์ที่กำลังรับ "
-"และคลิก :guilabel:`ตรวจสอบ` ตอนนี้การจัดส่งได้รับการดำเนินการแล้ว และสามารถปิดแอป "
-"*บาร์โค้ด* ได้"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:198
+msgid "Validating the delivery"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:200
+msgid ""
+"If not all products or product packagings have been scanned or entered on "
+"the overview page, scan the products or packagings, or click "
+"the :guilabel:`+#` button on the product line for the products. Finally, "
+"click :guilabel:`Validate`. The delivery is processed, and the **Barcode** "
+"app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of deliveries in transfer to validate."
@@ -2971,6 +2878,32 @@ msgstr ""
 "*สินค้าคงคลัง* โปรดดูที่หน้า 'Odoo สินค้าคงคลัง • ฮาร์ดแวร์ <https://www.odoo.com/app/"
 "inventory-hardware>`_."
 
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+msgid ""
+"To use the *Barcode* app to process transfers, it must be installed by "
+"enabling the feature from the settings of the *Inventory* app."
+msgstr ""
+"หากต้องการใช้แอป *บาร์โค้ด* เพื่อดำเนินการการโอนย้าย "
+"จะต้องติดตั้งโดยเปิดใช้ฟีเจอร์จากการตั้งค่าของแอป *สินค้าคงคลัง*"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
+msgid ""
+"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
+"the checkbox next to the :guilabel:`Barcode Scanner` feature."
+msgstr ""
+"ในการดำเนินการดังกล่าว ให้ไปที่ :menuselection:`แอปสินค้าคงคลัง --> การกำหนดค่า --> "
+"การตั้งค่า` จากนั้นเลื่อนลงไปที่ส่วน :guilabel:`บาร์โค้ด` "
+"แล้วคลิกช่องทำเครื่องหมายข้างฟีเจอร์ :guilabel:`เครื่องสแกนบาร์โค้ด`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
+msgid ""
+"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
+"to save changes."
+msgstr ""
+"เมื่อทำเครื่องหมายในช่องกาเครื่องหมายแล้ว คลิก :guilabel:`บันทึก` "
+"ที่ด้านบนของหน้าเพื่อบันทึกการเปลี่ยนแปลง"
+
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:24
 msgid ""
 "When the page has refreshed, new options are displayed under "
@@ -2984,6 +2917,26 @@ msgstr ""
 "(พร้อมเมนูแบบเลื่อนลงที่เกี่ยวข้อง) โดยสามารถเลือก :guilabel:`การตั้งชื่อเริ่มต้น` "
 "หรือ :guilabel:`การตั้งชื่อ GS1 แบบเริ่มต้น` ได้ "
 "การตั้งชื่อที่เลือกจะเปลี่ยนวิธีที่เครื่องสแกนตีความบาร์โค้ดใน Odoo"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
+"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
+"barcode demo sheet."
+msgstr ""
+"นอกจากนี้ยังมีลูกศรลิงก์ภายใน :guilabel:`กำหนดค่าบาร์โค้ดผลิตภัณฑ์` "
+"และชุดปุ่ม :guilabel:`พิมพ์` สำหรับพิมพ์คำสั่งบาร์โค้ดและแผ่นตัวอย่างบาร์โค้ดอีกด้วย"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
+msgid ""
+"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
+"the :doc:`Set up your barcode scanner <../setup/hardware>` "
+"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
+"pages."
+msgstr ""
+"หากต้องการข้อมูลเพิ่มเติมเกี่ยวกับการตั้งค่าและกำหนดค่าแอป :guilabel:`บาร์โค้ด` "
+"โปรดดูหน้าเอกสาร :doc:`ตั้งค่าเครื่องสแกนบาร์โค้ดของคุณ <../setup/hardware>` "
+"และ :doc:`เปิดใช้งานบาร์โค้ดใน Odoo <../setup/software>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:41
 msgid "Scan barcodes for internal transfers"
@@ -3945,15 +3898,6 @@ msgid ""
 msgstr ""
 "เมื่อสแกนรหัสดังกล่าวแล้ว ตรวจสอบให้แน่ใจว่าเครื่องสแกน NETUM มีการกำหนดค่าแป้นพิมพ์ที่ถูกต้อง "
 "และทำงานได้ตามที่คาดหมายไว้"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
-msgid ":doc:`../setup/hardware`"
-msgstr ":doc:`../setup/hardware`"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
-msgid ":doc:`../setup/software`"
-msgstr ":doc:`../setup/software`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:3
 msgid "Barcode scanner setup"
@@ -14346,30 +14290,33 @@ msgstr "ตำแหน่งคลังสินค้าเริ่มต้
 msgid ""
 "A *storage category* is used with :doc:`putaway rules <putaway>` to assign a "
 "storage location to incoming products while accounting for the capacity of "
-"that location."
+"that location. Assigning categories to storage locations tells Odoo these "
+"locations meet specific requirements, such as temperature or accessibility. "
+"Odoo then evaluates these locations, based on defined capacity, and "
+"recommends the best one on the warehouse transfer form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
 msgid "Follow these steps to complete the setup:"
 msgstr "ปฏิบัติตามขั้นตอนต่อไปนี้เพื่อทำการตั้งค่าให้เสร็จสมบูรณ์:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
 msgid ""
 ":ref:`Enable features in the settings <inventory/routes/enable-storage-"
 "categories>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:14
 msgid ":ref:`Define capacity limitations <inventory/routes/define-storage>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:15
 msgid ""
 "Assign a :ref:`category to storage locations <inventory/routes/assign-"
 "location>`"
 msgstr "กำหนดหมวดหมู่ :ref:` ให้กับตำแหน่งจัดเก็บ <inventory/routes/assign-location>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:16
 msgid ""
 "Add the storage category as an attribute to a :ref:`putaway rule <inventory/"
 "routes/set-putaway-attribute>`"
@@ -14377,38 +14324,27 @@ msgstr ""
 "เพิ่มหมวดหมู่ที่เก็บข้อมูลเป็นแอตทริบิวต์ให้กับ :ref:`กฎการจัดเก็บ <inventory/routes/set-"
 "putaway-attribute>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
 msgid ":doc:`putaway`"
 msgstr ":doc:`การเก็บ`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
-msgid ""
-"Assigning categories to storage locations tells Odoo these locations meet "
-"specific requirements, such as temperature or accessibility. Odoo then "
-"evaluates these locations, based on defined capacity, and recommends the "
-"best one on the warehouse transfer form."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:25
+msgid "Enable storage categories"
 msgstr ""
-"การกำหนดหมวดหมู่ให้กับสถานที่จัดเก็บจะทำให้ Odoo ทราบว่าสถานที่เหล่านี้ตรงตามข้อกำหนดเฉพาะ "
-"เช่น อุณหภูมิหรือการเข้าถึง จากนั้น Odoo จะประเมินสถานที่เหล่านี้โดยอิงตามความจุที่กำหนดไว้ "
-"และแนะนำสถานที่ที่ดีที่สุดบนแบบฟอร์มการโอนย้ายคลังสินค้า"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 msgid ""
 "To enable storage categories, go to :menuselection:`Inventory app --> "
-"Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
-"ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
-"features are enabled."
+"Configuration --> Settings`. Then, in the *Warehouse* section, ensure "
+"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` features "
+"are enabled."
 msgstr ""
-"หากต้องการเปิดใช้งานหมวดหมู่การจัดเก็บ ให้ไปที่ :menuselection:`แอปสินค้าคงคลัง --> "
-"การกำหนดค่า --> การตั้งค่า` จากนั้นในส่วน :guilabel:`คลังสินค้า` "
-"ให้แน่ใจว่าได้เปิดใช้งานฟีเจอร์ :guilabel:`สถานที่จัดเก็บสินค้า` "
-"และ :guilabel:`เส้นทางหลายขั้นตอน` แล้ว"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:31
 msgid ""
-"If intending to set capacities by :ref:`package type <inventory/routes/set-"
-"capacity-package>`, also make sure :guilabel:`Packages` is enabled. "
-"Click :guilabel:`Save`."
+"To set capacities by :ref:`package type <inventory/routes/set-capacity-"
+"package>`, also make sure :guilabel:`Packages` is enabled in the "
+"*Operations* section. Click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:None
@@ -14416,26 +14352,79 @@ msgid ""
 "Enable Storage Locations and Multi-Step Routes to enable storage categories."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:42
-msgid "Define storage category"
-msgstr "กำหนดหมวดหมู่การจัดเก็บข้อมูล"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:44
-msgid ""
-"A storage category with specific limitations **must** be created first, "
-"before it is applied to locations, in order to decide the optimal storage "
-"location."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:38
+msgid "Storage location setup"
 msgstr ""
-"ต้องสร้างหมวดหมู่การจัดเก็บที่มีข้อจำกัดเฉพาะก่อนที่จะนำไปใช้กับสถานที่ต่างๆ "
-"เพื่อที่จะตัดสินใจเลือกตำแหน่งจัดเก็บที่เหมาะสมที่สุด"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:40
+msgid ""
+"Set up storage locations to work with the storage category. A parent "
+"location must be set up, with child locations (or *sublocations*) assigned "
+"to it. This is because the putaway rule's :ref:`Store to <inventory/routes/"
+"set-putaway-attribute>` location will be set to the parent location, and "
+"the :ref:`storage category <inventory/routes/assign-location>` will be set "
+"to the child location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:45
+msgid "Go to :menuselection:`Inventory app --> Configuration --> Locations`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:47
+msgid ""
+"First, set up a parent location. This can be as simple as the default `WH/"
+"Stock` location. Alternatively, create a new parent location by clicking "
+"the :guilabel:`New` button on the :guilabel:`Locations` page. On this parent "
+"location form, specify a :guilabel:`Location Name` and :guilabel:`Parent "
+"Location`. Select :guilabel:`Internal Location` as the :guilabel:`Location "
+"Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:52
+msgid ""
+"Then, create *sublocations* of this parent location by clicking "
+"the :guilabel:`New` button. On the location form, specify "
+"a :guilabel:`Location Name`, and set the :guilabel:`Parent Location` to the "
+"parent location that was just created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:57
+msgid ""
+"A beverage company stores all of its cans of lemonade on pallets in one "
+"section of its warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+msgid ""
+"First, they create a location named `Pallets` in the `WH/Stock` location. "
+"Then, they create two sublocations, named `PAL1` and `PAL2`. Both have `WH/"
+"Stock/Pallets` set as the parent location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
+msgid "Create a sublocation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:68
+msgid "Define storage category limitations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:70
+msgid ""
+"A storage category with specific limitations **must** be created first, "
+"before it is applied to Before a storage category is applied to locations, "
+"it must be configured with specific limitations in order to decide the "
+"optimal storage location. Capacity can be limited by weight, product, and "
+"package type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:75
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories`, and click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:78
 msgid ""
 "On the storage category form, type a name for the category in "
 "the :guilabel:`Storage Category` field."
@@ -14443,12 +14432,7 @@ msgstr ""
 "ในแบบฟอร์มประเภทการจัดเก็บ "
 "ให้พิมพ์ชื่อสำหรับประเภทในฟิลด์ :guilabel:`ประเภทการจัดเก็บข้อมูล`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:53
-msgid ""
-"Options are available to limit capacity by weight, product, and package type."
-msgstr "มีตัวเลือกในการจำกัดความจุตามน้ำหนัก ผลิตภัณฑ์ และประเภทบรรจุภัณฑ์"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
 msgid ""
 "Weight limits can be combined with capacity by package or product (e.g. a "
 "maximum of one hundred products with a total weight of two hundred "
@@ -14457,33 +14441,29 @@ msgstr ""
 "สามารถกำหนดขีดจำกัดน้ำหนักร่วมกับความจุตามบรรจุภัณฑ์หรือผลิตภัณฑ์ได้ (เช่น "
 "ผลิตภัณฑ์สูงสุดหนึ่งร้อยชิ้น โดยมีน้ำหนักรวมสองร้อยกิโลกรัม)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:85
 msgid ""
 "While it is possible to limit capacity by product and package type at the "
 "same location, it may be more practical to store items in different amounts "
-"across various locations, as shown in this example of :ref:`capacity by "
-"package <inventory/routes/set-capacity-package>`."
+"across various locations, as shown in the :ref:`limit capacity by package "
+"<inventory/routes/set-capacity-package>` example."
 msgstr ""
-"แม้ว่าจะเป็นไปได้ที่จะจำกัดความจุตามผลิตภัณฑ์และประเภทบรรจุภัณฑ์ในสถานที่เดียวกัน "
-"แต่การจัดเก็บรายการในปริมาณต่างกันในสถานที่ต่างๆ อาจเป็นวิธีที่ได้ผลจริงมากกว่า "
-"ดังที่แสดงในตัวอย่างของ :ref:`ความจุตามบรรจุภัณฑ์ <inventory/routes/set-capacity-"
-"package>` นี้"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:89
 msgid ""
 "The :guilabel:`Allow New Product` field defines when the location is "
 "considered available to store a product:"
 msgstr ""
 "ฟิลด์ :guilabel:`อนุญาตผลิตภัณฑ์ใหม่` กำหนดว่าเมื่อใดตำแหน่งนี้จึงจะพร้อมสำหรับจัดเก็บผลิตภัณฑ์:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
 msgstr ""
 ":guilabel:`ถ้าตำแหน่งว่างเปล่า`: สามารถเพิ่มผลิตภัณฑ์ได้ที่นั่นเฉพาะเมื่อตำแหน่งว่างเปล่าเท่านั้น"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:93
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
@@ -14491,7 +14471,7 @@ msgstr ""
 ":guilabel:`ถ้าผลิตภัณฑ์เหมือนกัน`: "
 "สามารถเพิ่มผลิตภัณฑ์ที่นั่นได้เฉพาะในกรณีที่มีผลิตภัณฑ์เดียวกันอยู่แล้ว"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
@@ -14499,14 +14479,8 @@ msgstr ""
 ":guilabel:`อนุญาตให้มีผลิตภัณฑ์ผสม`: สามารถจัดเก็บผลิตภัณฑ์ต่างๆ "
 "หลายรายการได้ในตำแหน่งนี้ในเวลาเดียวกัน"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:73
-msgid ""
-"When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button "
-"shows which storage locations the category has been assigned to."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:164
 msgid ""
 "Odoo does **not** automatically split quantities across multiple storage "
 "locations. If an incoming receipt contains several units or packages and the "
@@ -14514,18 +14488,18 @@ msgid ""
 "to that same location instead of selecting another one with available space."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
 msgid ""
 "*(Example: If a location can hold 10 units and 12 units arrive, all 12 are "
 "still assigned to that location.)*"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:86
-msgid "Capacity by weight"
-msgstr "ความจุตามน้ำหนัก"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:108
+msgid "Limit capacity by weight"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:110
 msgid ""
 "On a storage category form (:menuselection:`Inventory app --> Configuration "
 "--> Storage Categories`), set a maximum product weight in the :guilabel:`Max "
@@ -14536,67 +14510,75 @@ msgstr ""
 "หมวดหมู่การจัดเก็บ`) ให้กำหนดน้ำหนักผลิตภัณฑ์สูงสุดในช่อง :guilabel:`น้ำหนักสูงสุด` "
 "ขีดจำกัดนี้จะใช้กับแต่ละตำแหน่งที่กำหนดหมวดหมู่การจัดเก็บนี้"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:114
 msgid ""
-"This value must be set to greater than `0` if a product weight is defined."
+"A maximum product weight can be set in the :guilabel:`Max Weight` field. "
+"This limit applies to each location assigned this storage category. If a "
+"product weight is defined, the value must be set to greater than `0`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
-msgid "Capacity by product"
-msgstr "กำลังการผลิตตามผลิตภัณฑ์"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:119
+msgid "Limit capacity by product"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:121
 msgid ""
 "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
-"input items, and enter their capacities in the :guilabel:`Quantity` field."
+"input items, and enter In the :guilabel:`Capacity by Product` tab, "
+"click :guilabel:`Add a Line` to enter a product, and set the maximum "
+"capacity that should be stored at each location in the :guilabel:`Quantity` "
+"field."
 msgstr ""
-"ในแท็บ :guilabel:`ความจุตามผลิตภัณฑ์` ให้คลิก :guilabel:`เพิ่มบรรทัด` เพื่อป้อนรายการ "
-"และป้อนความจุของรายการเหล่านั้นในฟิลด์ :guilabel:`ปริมาณ`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
 msgid ""
 "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
-"Sit` are stored at a single storage location, by specifying those amounts in "
-"the :guilabel:`Capacity by Product` tab of a storage category form."
+"Sit` are stored at a single storage location by specifying those amounts in "
+"the :guilabel:`Capacity by Product` tab. To ensure only a maximum of five "
+"`Large Cabinets` and two `Corner Desk Right Sit` are stored at a single "
+"storage location, specify those amounts in the :guilabel:`Capacity by "
+"Product` tab."
 msgstr ""
-"ให้แน่ใจว่าจัดเก็บ 'ตู้เก็บของขนาดใหญ่' สูงสุด 5 ตู้ และ 'โต๊ะทำงานมุมนั่งด้านขวา' 2 ตู้ "
-"ในตำแหน่งจัดเก็บเดียว โดยระบุจำนวนเหล่านี้ในแท็บ :guilabel:`ความจุตามผลิตภัณฑ์` "
-"ของแบบฟอร์มหมวดหมู่การจัดเก็บ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Show storage category limiting by product count."
 msgstr "แสดงหมวดหมู่การจัดเก็บที่จำกัดตามจำนวนผลิตภัณฑ์"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
-msgid "Capacity by package"
-msgstr "ความจุตามแพ็คเกจ"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:137
+msgid "Limit capacity by package type"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:139
 msgid ""
 "For companies using :doc:`packages <../../product_management/configure/"
 "package>`, it becomes possible to ensure real-time storage capacity checks, "
-"based on package types (e.g., crates, bins, boxes, etc.)."
+"based on package types (e.g., crates, bins, Limiting capacity "
+"by :doc:`package <../../product_management/configure/package>` makes it "
+"possible to enforce real-time storage capacity checks based on package type "
+"(e.g., crates, bins, boxes, etc.)."
 msgstr ""
-"สำหรับบริษัทที่ใช้ :doc:`แพ็คเกจ <../../product_management/configure/package>` นั้น "
-"สามารถตรวจสอบความจุในการจัดเก็บข้อมูลแบบเรียลไทม์ได้โดยอิงตามประเภทของแพ็คเกจ (เช่น ลัง "
-"ถัง กล่อง ฯลฯ)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:145
 msgid ""
 "Create the :ref:`package type <inventory/warehouses_storage/package-type>` "
 "before assigning it to a storage category. Create it on "
 "the :guilabel:`Inventory` tab of the product form (in "
 "the :guilabel:`Packaging` section), or create it from the :guilabel:`Product "
-"Packagings` page. Be sure to set the :guilabel:`Package Type`."
+"Packagings` page. Be sure Click :guilabel:`Add a line` to add "
+"a :ref:`package type <inventory/warehouses_storage/package-type>` to the "
+"storage category. Alternatively, create a new package type on "
+"the :guilabel:`Inventory` tab of the product form (in "
+"the :guilabel:`Packaging` section), or from the :guilabel:`Product "
+"Packagings` page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:154
 msgid ""
-"Create putaway rules for pallet-stored items, by creating the `High "
+"To help create putaway rules for pallet-stored items, create the `High "
 "frequency pallets` storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:157
 msgid ""
 "In the :guilabel:`Capacity by Package` tab, specify the number of packages "
 "for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
@@ -14610,27 +14592,23 @@ msgstr ""
 msgid "Create a storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
-msgid "Assign to location"
-msgstr "มอบหมายไปยังตำแหน่ง"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+msgid "Assign storage locations"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:177
 msgid ""
-"Once the storage category is created, assign it to a location. Navigate to "
-"the location by going to :menuselection:`Inventory app --> Configuration --> "
-"Locations`, and select the desired location. Then, select the created "
+"After the storage category is created, it can be assigned to the "
+"sublocations. Go to :menuselection:`Inventory app --> Configuration --> "
+"Locations`, and open the desired sublocation. Then, select the created "
 "category in the :guilabel:`Storage Category` field."
 msgstr ""
-"เมื่อสร้างหมวดหมู่การจัดเก็บแล้ว ให้กำหนดไปยังตำแหน่งใดตำแหน่งหนึ่ง "
-"ไปที่ตำแหน่งดังกล่าวโดยไปที่ :menuselection:`แอปสินค้าคงคลัง --> การกำหนดค่า --> "
-"ตำแหน่ง` แล้วเลือกตำแหน่งที่ต้องการ "
-"จากนั้นเลือกหมวดหมู่ที่สร้างขึ้นในฟิลด์ :guilabel:`หมวดหมู่การจัดเก็บ`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:182
 msgid ""
 "Assign the `High frequency pallets` storage category (which limits pallets "
-"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-"
-"location."
+"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` "
+"sublocation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
@@ -14638,35 +14616,43 @@ msgid ""
 "When a Storage Category is created, it can be linked to a warehouse location."
 msgstr "เมื่อมีการสร้างหมวดหมู่การจัดเก็บ จะสามารถเชื่อมโยงไปยังตำแหน่งคลังสินค้าได้"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
-msgid "Putaway rule"
-msgstr "กฎการจัดเก็บ"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:188
+msgid ""
+"Repeat this step for all sublocations to which the storage category should "
+"apply."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:191
+msgid ""
+"On the storage category form, the :icon:`oi-arrows-v` :guilabel:`Locations` "
+"smart button shows which storage locations the category has been assigned to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
+msgid "Create a putaway rule"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:199
 msgid ""
 "With the :ref:`storage category <inventory/routes/define-storage>` "
-"and :ref:`location <inventory/routes/assign-location>` set up, create "
+"and :ref:`locations <inventory/routes/assign-location>` set up, create "
 "the :doc:`putaway rule <putaway>` by navigating to :menuselection:`Inventory "
 "app --> Configuration --> Putaway Rules`."
 msgstr ""
-"เมื่อตั้งค่า :ref:`หมวดหมู่การจัดเก็บ <inventory/routes/define-storage>` "
-"และ :ref:`ตำแหน่ง <inventory/routes/assign-location>` เรียบร้อยแล้ว "
-"ให้สร้าง :doc:`กฎการจัดเก็บ <putaway>` โดยไปที่ :menuselection:`แอปสินค้าคงคลัง --> "
-"การกำหนดค่า --> กฎการจัดเก็บ`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
 msgid ""
 "Click the :guilabel:`New` button to create the putaway rule. Specify a "
-"location to store to in the :guilabel:`Store to` field."
+"location in the :guilabel:`Store to` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
 msgid ""
 "Use the :guilabel:`Sublocation` field to specify that you want to use a "
-"sublocation with the storage category:"
+"storage category on the sublocations of the :guilabel:`Store to` field:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
 msgid ""
 ":guilabel:`Last Used`: The last location that had a move associated with it "
 "for that product or product category is used. If there is no last location "
@@ -14674,14 +14660,16 @@ msgid ""
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:212
 msgid ""
 ":guilabel:`Closest Location`: The locations specified as part of the storage "
 "category are used. A storage category is mandatory in the :guilabel:`Having "
-"Category` field."
+"Category` field. The locations in the storage category must be sublocations "
+"of the location in the :guilabel:`Store to` field. If the closest locations "
+"in the storage category are full, the :guilabel:`Store to` location is used."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:218
 msgid ""
 "Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the putaway rule directing pallets of lemonade to "
@@ -14693,18 +14681,18 @@ msgstr ""
 msgid "Storage Categories used in putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:226
 msgid ""
 "If products are not routing to secondary locations for a storage category "
 "and a product weight is defined, verify that the storage "
 "category's :guilabel:`Max Weight` value is set to a number greater than `0`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:192
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:231
 msgid "Use case: limit capacity by package"
 msgstr "กรณีการใช้งาน: จำกัดความจุตามแพ็คเกจ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:233
 msgid ""
 "To limit the capacity of a storage location by a specific number of "
 "packages, :ref:`create a storage category with a Capacity By Package "
@@ -14714,13 +14702,13 @@ msgstr ""
 "ให้ :ref:`สร้างหมวดหมู่ที่เก็บข้อมูลที่มีความจุตามแพ็คเกจ <inventory/routes/set-capacity-"
 "package>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:236
 msgid ""
-"Continuing the example from above, the `High frequency pallets` storage "
+"Continuing the examples from above, the `High frequency pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:200
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:239
 msgid ""
 "Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
 "any pallets received in the warehouse are directed to be stored in `PAL1` "
@@ -14729,31 +14717,31 @@ msgstr ""
 "จากนั้น :ref:`กฎการจัดเก็บ <inventory/routes/putaway-rule>` จะถูกตั้งค่า "
 "เพื่อให้พาเลทที่ได้รับในคลังสินค้าจะถูกกำหนดให้จัดเก็บในตำแหน่ง `PAL1` และ `PAL2`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:242
 msgid ""
 "Depending on the number of pallets on-hand at each of the storage locations, "
 "when two pallets of lemonade cans is received, the following scenarios "
 "happen:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:245
 msgid ""
 "If `PAL1` and `PAL2` are empty, the pallet is redirected to `WH/Stock/"
 "Pallets/PAL1`."
 msgstr ""
 "หาก `PAL1` และ `PAL2` ว่างเปล่า พาเลทจะถูกส่งต่อไปยัง `WH/Stock/Pallets/PAL1`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:246
 msgid "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr "หาก `PAL1` เต็ม พาเลทจะถูกส่งต่อไปยัง `WH/Stock/Pallets/PAL2`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:247
 msgid ""
 "If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/"
 "Pallets`."
 msgstr "หาก `PAL1` และ `PAL2` เต็ม พาเลทจะถูกส่งต่อไปยัง `WH/Stock/Pallets`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:248
 msgid ""
 "If `PAL1` is partially full (for example, with one pallet), Odoo treats more "
 "than one received pallet as a single pallet on the receipt. You must "
@@ -33507,11 +33495,6 @@ msgid ""
 "**eCommerce** store."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
-msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
 msgid ":doc:`../../../websites/ecommerce/products/catalog`"
 msgstr ""
@@ -49455,6 +49438,442 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ""
+
+#~ msgid ""
+#~ "The *Barcode* app can be used to process receipts, deliveries, and other "
+#~ "types of operations in real time using a barcode scanner or the Odoo "
+#~ "mobile app."
+#~ msgstr ""
+#~ "แอป *บาร์โค้ด* ใช้ในการประมวลผลใบเสร็จ การจัดส่ง และการดำเนินการประเภทอื่นๆ "
+#~ "แบบเรียลไทม์โดยใช้เครื่องสแกนบาร์โค้ดหรือแอปมือถือ Odoo"
+
+#~ msgid ""
+#~ "This makes it possible to process operations on the warehouse floor when "
+#~ "they happen, instead of having to wait to validate transfers from a "
+#~ "computer. Processing operations this way can help to properly attribute "
+#~ "barcodes to the appropriate products, pickings, locations, and more."
+#~ msgstr ""
+#~ "การดำเนินการดังกล่าวทำให้สามารถประมวลผลการดำเนินการพื้นที่คลังสินค้าได้เมื่อการดำเนินการเกิดขึ้น "
+#~ "แทนที่จะต้องรอการตรวจสอบการโอนย้ายจากคอมพิวเตอร์ "
+#~ "การดำเนินการในลักษณะนี้จะช่วยให้สามารถกำหนดรหัสบาร์โค้ดให้กับผลิตภัณฑ์ การเลือก "
+#~ "สถานที่และอื่นๆ ได้อย่างเหมาะสม"
+
+#~ msgid ""
+#~ "Once the page has refreshed, new options will be displayed under "
+#~ "the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+#~ "(with a corresponding drop-down menu), where either :guilabel:`Default "
+#~ "Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+#~ msgstr ""
+#~ "เมื่อหน้ารีเฟรชแล้ว "
+#~ "ตัวเลือกใหม่จะปรากฏภายใต้คุณลักษณะ :guilabel:`เครื่องสแกนบาร์โค้ด` :guilabel:`การตั้งชื่อบาร์โค้ด` "
+#~ "(พร้อมเมนูแบบดรอปดาวน์ที่เกี่ยวข้อง) โดยสามารถเลือก :guilabel:`การตั้งชื่อเริ่มต้น` "
+#~ "หรือ :guilabel:`การตั้งชื่อ GS1 เริ่มต้น` ก็ได้"
+
+#~ msgid ""
+#~ "To process warehouse receipts for incoming products, there first needs to "
+#~ "be a purchase order (PO) created, and a receipt operation to process."
+#~ msgstr ""
+#~ "ในการประมวลผลการรับสินค้าจากคลังสินค้าสำหรับสินค้าขาเข้า จำเป็นต้องสร้างใบสั่งซื้อ (PO) "
+#~ "ก่อน จากนั้นจึงดำเนินการรับสินค้าเพื่อประมวลผลได้"
+
+#~ msgid ""
+#~ "To create a :abbr:`PO (purchase order)`, navigate to "
+#~ "the :menuselection:`Purchase app --> Create` to create a new request for "
+#~ "quotation (RFQ)."
+#~ msgstr ""
+#~ "ในการสร้าง :abbr:`PO (ใบสั่งซื้อ)` ให้ไปที่ :menuselection:`แอปการจัดซื้อ --> สร้าง` "
+#~ "เพื่อสร้างคำขอใบเสนอราคา (RFQ) ใหม่"
+
+#~ msgid ""
+#~ "From the blank :abbr:`RFQ (request for quotation)` form, click the drop-"
+#~ "down menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Products` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "จากแบบฟอร์ม :abbr:`RFQ (คำขอใบเสนอราคา)` ที่ว่างเปล่า "
+#~ "ให้คลิกเมนูแบบเลื่อนลงถัดจากฟิลด์ :guilabel:`ผู้ขาย` เพื่อเพิ่มผู้ขาย จากนั้น "
+#~ "บนบรรทัด :guilabel:`ผลิตภัณฑ์` ภายใต้แท็บ :guilabel:`ผลิตภัณฑ์` "
+#~ "ให้คลิก :guilabel:`เพิ่มผลิตภัณฑ์` และเลือกผลิตภัณฑ์ที่ต้องการเพิ่มในใบเสนอราคา"
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, then "
+#~ "click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
+#~ "quotation)` to a :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "เมื่อพร้อมแล้ว คลิก :guilabel:`บันทึก` ที่ด้านบนของแบบฟอร์ม "
+#~ "จากนั้นคลิก :guilabel:`ยืนยันการสั่งซื้อ` เพื่อยืนยัน :abbr:`RFQ (คำขอใบเสนอราคา)` "
+#~ "ไปยัง :abbr:`PO (ใบสั่งซื้อ)`"
+
+#~ msgid "Completed purchase order for barcode product."
+#~ msgstr "เสร็จสิ้นการสั่งซื้อสำหรับผลิตภัณฑ์บาร์โค้ด"
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse receipts, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "ในการประมวลผลและสแกนบาร์โค้ดสำหรับใบเสร็จจากคลังสินค้า "
+#~ "ให้ไปที่ :menuselection:`แอปบาร์โค้ด`"
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process receipts, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :menuselection:`Operations` overview page."
+#~ msgstr ""
+#~ "เมื่ออยู่ใน :guilabel:`แอปบาร์โค้ด` แล้ว จะมีหน้าจอ :guilabel:`สแกนบาร์โค้ด` "
+#~ "แสดงตัวเลือกต่างๆ ขึ้นมา หากต้องการประมวลผลใบเสร็จ "
+#~ "ให้คลิกที่ปุ่ม :guilabel:`การดำเนินงาน` ที่ด้านล่างของหน้าจอ "
+#~ "ซึ่งจะนำทางไปยังหน้าภาพรวม :menuselection:`การดำเนินงาน`"
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Receipts` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding receipts. "
+#~ "Then, select the desired receipt operation to process. This navigates to "
+#~ "the barcode transfer screen."
+#~ msgstr ""
+#~ "จากหน้านี้ ให้ค้นหาการ์ด :guilabel:`ใบเสร็จ` แล้วคลิกปุ่ม :guilabel:`# เพื่อดำเนินการ` "
+#~ "เพื่อดูใบเสร็จที่ค้างชำระทั้งหมด จากนั้นเลือกการดำเนินการใบเสร็จที่ต้องการดำเนินการ "
+#~ "จากนั้นไปที่หน้าจอบาร์โค้ดการโอนย้าย"
+
+#~ msgid ""
+#~ "If *only* using a barcode scanner or the Odoo mobile app, the barcodes "
+#~ "for each transfer of a corresponding operation type can be scanned to be "
+#~ "processed easily. Once scanned, the products that are part of an existing "
+#~ "transfer can be scanned, and new products can be added to the transfer, "
+#~ "as well. Once all products have been scanned, validate the transfer to "
+#~ "proceed with the stock moves."
+#~ msgstr ""
+#~ "หากใช้เครื่องสแกนบาร์โค้ดหรือแอป Odoo บนมือถือ *เท่านั้น* "
+#~ "บาร์โค้ดสำหรับการถ่ายโอนประเภทการดำเนินการที่เกี่ยวข้องแต่ละครั้งจะสามารถสแกนเพื่อประมวลผลได้อย่างง่ายดาย "
+#~ "เมื่อสแกนแล้ว จะสามารถสแกนผลิตภัณฑ์ที่เป็นส่วนหนึ่งของการถ่ายโอนที่มีอยู่ได้ "
+#~ "และสามารถเพิ่มผลิตภัณฑ์ใหม่ลงในการถ่ายโอนได้เช่นกัน เมื่อสแกนผลิตภัณฑ์ทั้งหมดแล้ว "
+#~ "ให้ตรวจสอบการโอนเพื่อดำเนินการย้ายสต็อกต่อไป"
+
+#~ msgid ""
+#~ "From this screen, an overview of all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "จากหน้าจอนี้ จะแสดงภาพรวมของใบเสร็จทั้งหมดที่ต้องดำเนินการภายในการโอนนั้น (**WH/IN/"
+#~ "000XX**) ที่ด้านล่างของหน้าจอ จะมีตัวเลือกสำหรับ :guilabel:`เพิ่มผลิตภัณฑ์` "
+#~ "หรือ :guilabel:`ตรวจสอบ` ขึ้นอยู่กับว่าจำเป็นต้องเพิ่มผลิตภัณฑ์ลงในการดำเนินการหรือไม่ "
+#~ "หรือต้องตรวจสอบการดำเนินการทั้งหมดพร้อมกัน"
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
+#~ "clicked to indicate receipt of that product, or the :guilabel:`pencil` "
+#~ "icon can be clicked to open a new screen to edit that product line."
+#~ msgstr ""
+#~ "หากต้องการประมวลผลและสแกนผลิตภัณฑ์แต่ละชิ้นทีละรายการ ให้เลือกกลุ่มผลิตภัณฑ์ที่ต้องการ "
+#~ "โดยสามารถคลิกปุ่ม :guilabel:`+#` (ในกรณีนี้คือ :guilabel:`+10`) "
+#~ "เพื่อระบุการรับผลิตภัณฑ์นั้น หรือคลิกไอคอน :guilabel:`ดินสอ` "
+#~ "เพื่อเปิดหน้าจอใหม่เพื่อแก้ไขกลุ่มผลิตภัณฑ์ดังกล่าว"
+
+#~ msgid ""
+#~ "From this screen, the product that's being received is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "จากหน้าจอนี้ จะแสดงผลิตภัณฑ์ที่กำลังได้รับ ภายใต้ชื่อผลิตภัณฑ์ "
+#~ "คุณสามารถแก้ไขบรรทัด :guilabel:`จำนวน` ได้ โดยเปลี่ยน `0` "
+#~ "ในบรรทัดเป็นจำนวนที่ต้องการ หรือคลิกปุ่ม :guilabel:`/# หน่วย` (ในกรณีนี้คือ :guilabel:`/"
+#~ "10 หน่วย`) เพื่อกรอกจำนวนที่สั่งซื้อจาก :abbr:`PO (ใบสั่งซื้อ)` โดยอัตโนมัติ"
+
+#~ msgid ""
+#~ "In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
+#~ "Product` is expected to be received. `[BARCODE_PROD]` is "
+#~ "the :guilabel:`Internal Reference` set on the product form. Scan the "
+#~ "barcode of the `Barcode Product` to receive one unit. Afterwards, click "
+#~ "the :guilabel:`pencil` icon to manually enter the received quantities."
+#~ msgstr ""
+#~ "ในการดำเนินการรับสินค้า `WH/IN/00019` คาดว่าจะรับสินค้า `บาร์โค้ดสินค้า` จำนวน `10 "
+#~ "หน่วย` `[BARCODE_PROD]` คือ :guilabel:`รหัสอ้างอิงภายใน` ที่กำหนดไว้ในแบบฟอร์มสินค้า "
+#~ "สแกนบาร์โค้ดของ `บาร์โค้ดสินค้า` เพื่อรับสินค้า 1 หน่วย "
+#~ "จากนั้นคลิกไอคอน :guilabel:`ดินสอ` เพื่อป้อนปริมาณสินค้าที่รับด้วยตนเอง"
+
+#~ msgid ""
+#~ "Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be "
+#~ "clicked to add or subtract quantity of the product, and "
+#~ "the :guilabel:`number keys` can be used to add quantity, as well."
+#~ msgstr ""
+#~ "นอกจากนี้ ยังสามารถคลิกปุ่ม :guilabel:`+1` และ :guilabel:`-1` "
+#~ "เพื่อเพิ่มหรือลบจำนวนผลิตภัณฑ์ได้ และใช้ปุ่ม :guilabel:`ตัวเลข` เพื่อเพิ่มจำนวนได้เช่นกัน"
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another *location* is listed on the "
+#~ "product itself. Click this line to reveal a drop-down menu of additional "
+#~ "locations to choose from."
+#~ msgstr ""
+#~ "ด้านล่างของ :guilabel:`ปุ่มตัวเลข` คือบรรทัด :guilabel:`ตำแหน่ง` ซึ่งระบุว่า `คลังสินค้า/"
+#~ "สต็อก` ตามค่าเริ่มต้น เว้นแต่จะมี *ตำแหน่ง* อื่นแสดงอยู่ในผลิตภัณฑ์นั้นเอง "
+#~ "คลิกบรรทัดนี้เพื่อแสดงเมนูแบบดรอปดาวน์ของตำแหน่งเพิ่มเติมที่สามารถเลือกได้"
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The receipt has now been processed, and "
+#~ "the :guilabel:`Barcode app` can be closed out."
+#~ msgstr ""
+#~ "จากนั้น จากหน้าภาพรวมพร้อมใบเสร็จทั้งหมดที่ต้องดำเนินการภายในการโอนนั้น (**WH/IN/"
+#~ "000XX**) ให้คลิกปุ่ม :guilabel:`+#` บนสายผลิตภัณฑ์สำหรับผลิตภัณฑ์ที่ได้รับ "
+#~ "และคลิก :guilabel:`ตรวจสอบ` ตอนนี้ใบเสร็จได้รับการดำเนินการแล้ว "
+#~ "และสามารถปิด :guilabel:`แอปบาร์โค้ด` ได้"
+
+#~ msgid ""
+#~ "To process warehouse deliveries for outgoing products, there first needs "
+#~ "to be a sales order (SO) created, and a delivery operation to process."
+#~ msgstr ""
+#~ "ในการประมวลผลการจัดส่งสินค้าออกจากคลังสินค้าสำหรับสินค้าขาออก จำเป็นต้องสร้างใบสั่งขาย "
+#~ "(SO) ก่อน และดำเนินการจัดส่งที่ต้องประมวลผล"
+
+#~ msgid ""
+#~ "To create a :abbr:`SO (sales order)`, navigate to "
+#~ "the :menuselection:`Sales app --> Create` to create a new quotation."
+#~ msgstr ""
+#~ "ในการสร้าง :abbr:`SO (ใบสั่งขาย)` ให้ไปที่ :menuselection:`แอปการขาย --> สร้าง` "
+#~ "เพื่อสร้างใบเสนอราคาใหม่"
+
+#~ msgid ""
+#~ "From the blank quotation form, click the drop-down menu next to "
+#~ "the :guilabel:`Customer` field to add a customer. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "จากแบบฟอร์มใบเสนอราคาเปล่า ให้คลิกเมนูแบบดรอปดาวน์ถัดจากฟิลด์ :guilabel:`ลูกค้า` "
+#~ "เพื่อเพิ่มลูกค้า จากนั้น บนบรรทัด :guilabel:`ผลิตภัณฑ์` "
+#~ "ภายใต้แท็บ :guilabel:`บรรทัดการสั่งซื้อ` ให้คลิก :guilabel:`เพิ่มผลิตภัณฑ์` "
+#~ "และเลือกผลิตภัณฑ์ที่ต้องการเพิ่มในใบเสนอราคา"
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, and "
+#~ "click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
+#~ "(sales order)`."
+#~ msgstr ""
+#~ "เมื่อพร้อมแล้ว คลิก :guilabel:`บันทึก` ที่ด้านบนของแบบฟอร์ม "
+#~ "และคลิก :guilabel:`ยืนยันการสั่งซื้อ` เพื่อยืนยันใบเสนอราคาไปยัง :abbr:`SO (ใบสั่งขาย)`"
+
+#~ msgid "Completed sales order for barcode product."
+#~ msgstr "ดำเนินการสั่งซื้อสินค้าบาร์โค้ดเสร็จสิ้น"
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse deliveries, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "หากต้องการประมวลผลและสแกนบาร์โค้ดสำหรับการจัดส่งไปยังคลังสินค้า "
+#~ "ให้ไปที่ :menuselection:`แอปบาร์โค้ด`"
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process deliveries, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :guilabel:`Operations` overview page."
+#~ msgstr ""
+#~ "เมื่ออยู่ใน :guilabel:`แอปบาร์โค้ด` แล้ว หน้าจอ :guilabel:`สแกนบาร์โค้ด` "
+#~ "จะแสดงตัวเลือกต่างๆ หากต้องการประมวลผลการจัดส่ง ให้คลิกที่ปุ่ม :guilabel:`Operations` "
+#~ "ที่ด้านล่างของหน้าจอ ซึ่งจะนำทางไปยังหน้าภาพรวม :guilabel:`การดำเนินงาน`"
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Delivery Orders` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding deliveries. "
+#~ "Then, select the desired delivery order to process. This navigates to the "
+#~ "barcode transfer screen."
+#~ msgstr ""
+#~ "จากหน้านี้ ให้ค้นหาการ์ด :guilabel:`ใบสั่งการจัดส่ง` แล้วคลิกปุ่ม :guilabel:`# "
+#~ "ที่กำลังดำเนินการ` เพื่อดูการจัดส่งที่ค้างอยู่ทั้งหมด จากนั้นเลือกใบสั่งจัดส่งที่ต้องการดำเนินการ "
+#~ "จากนั้นไปที่หน้าจอการโอนบาร์โค้ด"
+
+#~ msgid ""
+#~ "From this screen, an overview of all deliveries to process within that "
+#~ "transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "จากหน้าจอนี้ จะแสดงภาพรวมของการจัดส่งทั้งหมดที่ต้องดำเนินการภายในการโอนนั้น (**WH/OUT/"
+#~ "000XX**) ที่ด้านล่างของหน้าจอ จะมีตัวเลือกสำหรับ :guilabel:`เพิ่มผลิตภัณฑ์` "
+#~ "หรือ :guilabel:`ตรวจสอบ` ขึ้นอยู่กับว่าจำเป็นต้องเพิ่มผลิตภัณฑ์ลงในการดำเนินการหรือไม่ "
+#~ "หรือต้องตรวจสอบการดำเนินการทั้งหมดพร้อมกัน"
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+1` button can be clicked to indicate delivery of "
+#~ "that product, or the :guilabel:`pencil icon` can be clicked to open a new "
+#~ "screen to edit that product line."
+#~ msgstr ""
+#~ "หากต้องการประมวลผลและสแกนผลิตภัณฑ์แต่ละรายการ ให้เลือกกลุ่มผลิตภัณฑ์ที่ต้องการ "
+#~ "สามารถคลิกปุ่ม :guilabel:`+1` เพื่อระบุการจัดส่งผลิตภัณฑ์นั้น "
+#~ "หรือคลิก :guilabel:`ไอคอนดินสอ` เพื่อเปิดหน้าจอใหม่เพื่อแก้ไขกลุ่มผลิตภัณฑ์นั้น"
+
+#~ msgid ""
+#~ "From this screen, the product that's being delivered is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`SO (sales order)`."
+#~ msgstr ""
+#~ "จากหน้าจอนี้ จะแสดงรายชื่อผลิตภัณฑ์ที่กำลังจัดส่ง ภายใต้ชื่อผลิตภัณฑ์ "
+#~ "คุณสามารถแก้ไขบรรทัด :guilabel:`จำนวน` ได้ โดยเปลี่ยน `0` "
+#~ "ในบรรทัดเป็นจำนวนที่ต้องการ หรือคลิกปุ่ม :guilabel:`/# หน่วย` (ในกรณีนี้คือ :guilabel:`/"
+#~ "10 หน่วย`) เพื่อกรอกจำนวนที่สั่งจาก :abbr:`SO (ใบสั่งขาย)` โดยอัตโนมัติ"
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another location is listed on the "
+#~ "product itself."
+#~ msgstr ""
+#~ "ด้านล่างของ :guilabel:`ปุ่มตัวเลข` คือบรรทัด :guilabel:`ตำแหน่ง` ซึ่งอ่านว่า `คลังสินค้า/"
+#~ "สต็อก` ตามค่าเริ่มต้น เว้นแต่จะมีการระบุตำแหน่งอื่นในผลิตภัณฑ์นั้นเอง"
+
+#~ msgid ""
+#~ "This is the location that the product is being pulled from for delivery. "
+#~ "Click this line to reveal a drop-down menu of additional locations to "
+#~ "choose from (if this product is stored in multiple locations in the "
+#~ "warehouse)."
+#~ msgstr ""
+#~ "นี่คือตำแหน่งที่ผลิตภัณฑ์จะถูกดึงออกมาเพื่อจัดส่ง "
+#~ "คลิกบรรทัดนี้เพื่อแสดงเมนูแบบเลื่อนลงของตำแหน่งเพิ่มเติมที่สามารถเลือกได้ "
+#~ "(หากผลิตภัณฑ์นี้ถูกเก็บไว้ในหลายตำแหน่งในคลังสินค้า)"
+
+#~ msgid ""
+#~ "For warehouses that have multiple different storage locations, putaway "
+#~ "rules, and removal strategies, additional steps can be added for various "
+#~ "operation types, while using the *Barcode* app."
+#~ msgstr ""
+#~ "สำหรับคลังสินค้าที่มีสถานที่จัดเก็บที่แตกต่างกันหลายแห่ง กฎการจัดเก็บ และกลยุทธ์การเคลื่อนย้าย "
+#~ "สามารถเพิ่มขั้นตอนเพิ่มเติมสำหรับประเภทการดำเนินการต่างๆ ได้ในขณะที่ใช้แอป *บาร์โค้ด*"
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The delivery has now been processed, and the "
+#~ "*Barcode* app can be closed out."
+#~ msgstr ""
+#~ "จากนั้น จากหน้าภาพรวมพร้อมใบเสร็จทั้งหมดที่ต้องดำเนินการภายในการโอนนั้น (**WH/OUT/"
+#~ "000XX**) ให้คลิกปุ่ม :guilabel:`+#` บนกลุ่มผลิตภัณฑ์สำหรับผลิตภัณฑ์ที่กำลังรับ "
+#~ "และคลิก :guilabel:`ตรวจสอบ` ตอนนี้การจัดส่งได้รับการดำเนินการแล้ว และสามารถปิดแอป "
+#~ "*บาร์โค้ด* ได้"
+
+#~ msgid ""
+#~ "Assigning categories to storage locations tells Odoo these locations meet "
+#~ "specific requirements, such as temperature or accessibility. Odoo then "
+#~ "evaluates these locations, based on defined capacity, and recommends the "
+#~ "best one on the warehouse transfer form."
+#~ msgstr ""
+#~ "การกำหนดหมวดหมู่ให้กับสถานที่จัดเก็บจะทำให้ Odoo "
+#~ "ทราบว่าสถานที่เหล่านี้ตรงตามข้อกำหนดเฉพาะ เช่น อุณหภูมิหรือการเข้าถึง จากนั้น Odoo "
+#~ "จะประเมินสถานที่เหล่านี้โดยอิงตามความจุที่กำหนดไว้ "
+#~ "และแนะนำสถานที่ที่ดีที่สุดบนแบบฟอร์มการโอนย้ายคลังสินค้า"
+
+#~ msgid ""
+#~ "To enable storage categories, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
+#~ "ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
+#~ "Routes` features are enabled."
+#~ msgstr ""
+#~ "หากต้องการเปิดใช้งานหมวดหมู่การจัดเก็บ ให้ไปที่ :menuselection:`แอปสินค้าคงคลัง --> "
+#~ "การกำหนดค่า --> การตั้งค่า` จากนั้นในส่วน :guilabel:`คลังสินค้า` "
+#~ "ให้แน่ใจว่าได้เปิดใช้งานฟีเจอร์ :guilabel:`สถานที่จัดเก็บสินค้า` "
+#~ "และ :guilabel:`เส้นทางหลายขั้นตอน` แล้ว"
+
+#~ msgid "Define storage category"
+#~ msgstr "กำหนดหมวดหมู่การจัดเก็บข้อมูล"
+
+#~ msgid ""
+#~ "A storage category with specific limitations **must** be created first, "
+#~ "before it is applied to locations, in order to decide the optimal storage "
+#~ "location."
+#~ msgstr ""
+#~ "ต้องสร้างหมวดหมู่การจัดเก็บที่มีข้อจำกัดเฉพาะก่อนที่จะนำไปใช้กับสถานที่ต่างๆ "
+#~ "เพื่อที่จะตัดสินใจเลือกตำแหน่งจัดเก็บที่เหมาะสมที่สุด"
+
+#~ msgid ""
+#~ "Options are available to limit capacity by weight, product, and package "
+#~ "type."
+#~ msgstr "มีตัวเลือกในการจำกัดความจุตามน้ำหนัก ผลิตภัณฑ์ และประเภทบรรจุภัณฑ์"
+
+#~ msgid ""
+#~ "While it is possible to limit capacity by product and package type at the "
+#~ "same location, it may be more practical to store items in different "
+#~ "amounts across various locations, as shown in this example "
+#~ "of :ref:`capacity by package <inventory/routes/set-capacity-package>`."
+#~ msgstr ""
+#~ "แม้ว่าจะเป็นไปได้ที่จะจำกัดความจุตามผลิตภัณฑ์และประเภทบรรจุภัณฑ์ในสถานที่เดียวกัน "
+#~ "แต่การจัดเก็บรายการในปริมาณต่างกันในสถานที่ต่างๆ อาจเป็นวิธีที่ได้ผลจริงมากกว่า "
+#~ "ดังที่แสดงในตัวอย่างของ :ref:`ความจุตามบรรจุภัณฑ์ <inventory/routes/set-capacity-"
+#~ "package>` นี้"
+
+#~ msgid "Capacity by weight"
+#~ msgstr "ความจุตามน้ำหนัก"
+
+#~ msgid "Capacity by product"
+#~ msgstr "กำลังการผลิตตามผลิตภัณฑ์"
+
+#~ msgid ""
+#~ "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` "
+#~ "to input items, and enter their capacities in the :guilabel:`Quantity` "
+#~ "field."
+#~ msgstr ""
+#~ "ในแท็บ :guilabel:`ความจุตามผลิตภัณฑ์` ให้คลิก :guilabel:`เพิ่มบรรทัด` เพื่อป้อนรายการ "
+#~ "และป้อนความจุของรายการเหล่านั้นในฟิลด์ :guilabel:`ปริมาณ`"
+
+#~ msgid ""
+#~ "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
+#~ "Sit` are stored at a single storage location, by specifying those amounts "
+#~ "in the :guilabel:`Capacity by Product` tab of a storage category form."
+#~ msgstr ""
+#~ "ให้แน่ใจว่าจัดเก็บ 'ตู้เก็บของขนาดใหญ่' สูงสุด 5 ตู้ และ 'โต๊ะทำงานมุมนั่งด้านขวา' 2 ตู้ "
+#~ "ในตำแหน่งจัดเก็บเดียว โดยระบุจำนวนเหล่านี้ในแท็บ :guilabel:`ความจุตามผลิตภัณฑ์` "
+#~ "ของแบบฟอร์มหมวดหมู่การจัดเก็บ"
+
+#~ msgid "Capacity by package"
+#~ msgstr "ความจุตามแพ็คเกจ"
+
+#~ msgid ""
+#~ "For companies using :doc:`packages <../../product_management/configure/"
+#~ "package>`, it becomes possible to ensure real-time storage capacity "
+#~ "checks, based on package types (e.g., crates, bins, boxes, etc.)."
+#~ msgstr ""
+#~ "สำหรับบริษัทที่ใช้ :doc:`แพ็คเกจ <../../product_management/configure/package>` "
+#~ "นั้น สามารถตรวจสอบความจุในการจัดเก็บข้อมูลแบบเรียลไทม์ได้โดยอิงตามประเภทของแพ็คเกจ "
+#~ "(เช่น ลัง ถัง กล่อง ฯลฯ)"
+
+#~ msgid "Assign to location"
+#~ msgstr "มอบหมายไปยังตำแหน่ง"
+
+#~ msgid ""
+#~ "Once the storage category is created, assign it to a location. Navigate "
+#~ "to the location by going to :menuselection:`Inventory app --> "
+#~ "Configuration --> Locations`, and select the desired location. Then, "
+#~ "select the created category in the :guilabel:`Storage Category` field."
+#~ msgstr ""
+#~ "เมื่อสร้างหมวดหมู่การจัดเก็บแล้ว ให้กำหนดไปยังตำแหน่งใดตำแหน่งหนึ่ง "
+#~ "ไปที่ตำแหน่งดังกล่าวโดยไปที่ :menuselection:`แอปสินค้าคงคลัง --> การกำหนดค่า --> "
+#~ "ตำแหน่ง` แล้วเลือกตำแหน่งที่ต้องการ "
+#~ "จากนั้นเลือกหมวดหมู่ที่สร้างขึ้นในฟิลด์ :guilabel:`หมวดหมู่การจัดเก็บ`"
+
+#~ msgid "Putaway rule"
+#~ msgstr "กฎการจัดเก็บ"
+
+#~ msgid ""
+#~ "With the :ref:`storage category <inventory/routes/define-storage>` "
+#~ "and :ref:`location <inventory/routes/assign-location>` set up, create "
+#~ "the :doc:`putaway rule <putaway>` by navigating "
+#~ "to :menuselection:`Inventory app --> Configuration --> Putaway Rules`."
+#~ msgstr ""
+#~ "เมื่อตั้งค่า :ref:`หมวดหมู่การจัดเก็บ <inventory/routes/define-storage>` "
+#~ "และ :ref:`ตำแหน่ง <inventory/routes/assign-location>` เรียบร้อยแล้ว "
+#~ "ให้สร้าง :doc:`กฎการจัดเก็บ <putaway>` โดยไปที่ :menuselection:`แอปสินค้าคงคลัง --"
+#~ "> การกำหนดค่า --> กฎการจัดเก็บ`"
 
 #~ msgid ""
 #~ "**Odoo Barcode** allows users to assign barcodes to individual products "

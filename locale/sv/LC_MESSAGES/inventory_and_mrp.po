@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-12 18:30+0000\n"
+"POT-Creation-Date: 2026-02-20 18:30+0000\n"
 "PO-Revision-Date: 2025-11-13 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -157,7 +157,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:48
@@ -1084,6 +1083,7 @@ msgstr ""
 "innehålla vilket antal eller typ av tecken som helst."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:50
 msgid ":doc:`gs1_nomenclature`"
 msgstr ":doc:`gs1_nomenclature`"
@@ -2424,286 +2424,198 @@ msgstr ""
 msgid "Process receipts and deliveries with barcodes"
 msgstr "Hantera kvitton och leveranser med streckkoder"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:7
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
 msgid ""
-"The *Barcode* app can be used to process receipts, deliveries, and other "
+"The **Barcode** app can be used to process receipts, deliveries, and other "
 "types of operations in real time using a barcode scanner or the Odoo mobile "
 "app."
 msgstr ""
-"Appen *Barcode* kan användas för att hantera kvitton, leveranser och andra "
-"typer av transaktioner i realtid med hjälp av en streckkodsläsare eller Odoo "
-"mobilapp."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:13
 msgid ""
 "This makes it possible to process operations on the warehouse floor when "
 "they happen, instead of having to wait to validate transfers from a "
-"computer. Processing operations this way can help to properly attribute "
-"barcodes to the appropriate products, pickings, locations, and more."
+"computer. This real-time processing ensures barcodes are accurately assigned "
+"to the correct products, packaging, transfers, locations, and more, reducing "
+"errors and keeping inventory data in sync."
 msgstr ""
-"Detta gör det möjligt att bearbeta transaktioner på lagergolvet när de sker, "
-"istället för att behöva vänta på att validera överföringar från en dator. "
-"Genom att bearbeta transaktioner på detta sätt kan streckkoder tillskrivas "
-"rätt produkter, plockningar, platser och mycket mer."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:19
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:13
 msgid "Enable Barcode app"
 msgstr "Aktivera streckkodsapp"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:17
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:21
 msgid ""
-"To use the *Barcode* app to process transfers, it must be installed by "
-"enabling the feature from the settings of the *Inventory* app."
+"To use the **Barcode** app to process transfers, it must be installed by "
+"enabling the feature from the settings of the **Inventory** app."
 msgstr ""
-"För att kunna använda appen *Barcode* för att hantera överföringar måste den "
-"installeras genom att aktivera funktionen i inställningarna för appen "
-"*Inventory*."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:20
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
-msgid ""
-"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
-"the checkbox next to the :guilabel:`Barcode Scanner` feature."
-msgstr ""
-"Gå till :menuselection:`Inventory app --> Configuration --> Settings`. "
-"Bläddra sedan ner till avsnittet :guilabel:`Barcode` och klicka på "
-"kryssrutan bredvid funktionen :guilabel:`Barcode Scanner`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:24
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
 msgid ""
-"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
-"to save changes."
+"To do so, navigate to :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the *Barcode* section, and select the "
+"checkbox next to the :guilabel:`Barcode Scanner` feature."
 msgstr ""
-"När kryssrutan är markerad klickar du på :guilabel:`Save` högst upp på sidan "
-"för att spara ändringarna."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:26
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:28
 msgid ""
-"Once the page has refreshed, new options will be displayed under "
-"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
-"(with a corresponding drop-down menu), where either :guilabel:`Default "
-"Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+"After the checkbox is selected, click :guilabel:`Save` at the top of the "
+"page to save changes."
 msgstr ""
-"När sidan har uppdaterats visas nya alternativ under "
-"funktionen :guilabel:`Barcode Scanner`: :guilabel:`Barcode Nomenclature` "
-"(med en motsvarande rullgardinsmeny), där antingen :guilabel:`Default "
-"Nomenclature` eller :guilabel:`Default GS1 Nomenclature` kan väljas."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:30
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"After the page has refreshed, a new option is displayed under "
+"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+"(with a corresponding drop-down menu). Select either:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:33
+msgid ""
+":guilabel:`Default Nomenclature`: The barcode actions using UPC and EAN, "
+"detailed in the default nomenclature list, are available for use. By "
+"default, Odoo automatically handles UPC/EAN conversion."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:36
+msgid ""
+":guilabel:`Default GS1 Nomenclature`: Scan barcodes of sealed boxes and "
+"identify essential product information, such as Global Trade Item Numbers "
+"(GTINs), lot number, quantity information, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:40
 msgid ""
 "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
-"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
-"barcode demo sheet."
+"and a set of :guilabel:`Print` buttons for printing barcode commands and "
+"operation types, as well as a barcode demo sheet."
 msgstr ""
-"Det finns också en :guilabel:`Configure Product Barcodes` intern länkpil, "
-"och en uppsättning :guilabel:`Print` knappar för utskrift av "
-"streckkodskommandon och ett streckkodsdemoark."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:37
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
-msgid ""
-"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
-"the :doc:`Set up your barcode scanner <../setup/hardware>` "
-"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
-"pages."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:48
+msgid ":doc:`barcode_nomenclature`"
 msgstr ""
-"Mer information om hur du installerar och konfigurerar "
-"appen :guilabel:`Barcode` finns på dokumentationssidorna :doc:`Set up your "
-"barcode scanner <../setup/hardware>` och :doc:`Activate the Barcodes in Odoo "
-"<../setup/software>`."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:44
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:50
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
+msgid ":doc:`../setup/hardware`"
+msgstr ":doc:`../setup/hardware`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:51
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+msgid ":doc:`../setup/software`"
+msgstr ":doc:`../setup/software`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:56
 msgid "Scan barcodes for receipts"
 msgstr "Skanna streckkoder för kvitton"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:46
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:58
 msgid ""
-"To process warehouse receipts for incoming products, there first needs to be "
-"a purchase order (PO) created, and a receipt operation to process."
+"Purchase orders (POs) are used to process warehouse receipts for incoming "
+"products and product packagings. First, create a request for quotation, then "
+"confirm it to create a |PO|."
 msgstr ""
-"För att bearbeta lagerkvitton för inkommande produkter måste det först "
-"skapas en inköpsorder (PO) och en kvittooperation som ska bearbetas."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
-msgid ""
-"To create a :abbr:`PO (purchase order)`, navigate to "
-"the :menuselection:`Purchase app --> Create` to create a new request for "
-"quotation (RFQ)."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:62
+msgid ":doc:`../../purchase/manage_deals/rfq`"
 msgstr ""
-"För att skapa en :abbr:`PO (inköpsorder)`, gå till :menuselection:`Inköpsapp "
-"--> Skapa` för att skapa en ny offertförfrågan (RFQ)."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:52
-msgid ""
-"From the blank :abbr:`RFQ (request for quotation)` form, click the drop-down "
-"menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Products` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"Från det tomma formuläret :abbr:`RFQ (request for quotation)` klickar du på "
-"rullgardinsmenyn bredvid fältet :guilabel:`Vendor` för att lägga till en "
-"leverantör. På raden :guilabel:`Product` under fliken :guilabel:`Products` "
-"klickar du sedan på :guilabel:`Add a product` och väljer den eller de "
-"produkter som du vill lägga till i offerten."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:57
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, then "
-"click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
-"quotation)` to a :abbr:`PO (purchase order)`."
-msgstr ""
-"När du är klar klickar du på :guilabel:`Save` högst upp i formuläret och "
-"sedan på :guilabel:`Confirm Order` för att bekräfta :abbr:`RFQ (request for "
-"quotation)` till en :abbr:`PO (purchase order)`."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed purchase order for barcode product."
-msgstr "Färdig inköpsorder för streckkodsprodukt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:64
 msgid ""
-"To process and scan barcodes for warehouse receipts, navigate to "
-"the :menuselection:`Barcode app`."
+"To process and scan barcodes for warehouse receipts, navigate to the "
+"**Barcode** app."
 msgstr ""
-"För att bearbeta och skanna streckkoder för lagerkvitton, navigera "
-"till :menuselection:`Barcode app`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:66
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process receipts, click "
-"on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :menuselection:`Operations` overview page."
+"Once inside the **Barcode** app, a :guilabel:`Barcode Scanner` screen "
+"displaying different options is presented."
 msgstr ""
-"När du är inne i :guilabel:`Barcode app` visas en :guilabel:`Barcode "
-"Scanning` skärm med olika alternativ. För att hantera kvitton klickar du på "
-"knappen :guilabel:`Operations` längst ned på skärmen. Detta navigerar till "
-"en :menuselection:`Operations` översiktssida."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:74
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:72
 msgid ""
-"From this page, locate the :guilabel:`Receipts` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding receipts. Then, "
-"select the desired receipt operation to process. This navigates to the "
-"barcode transfer screen."
+"To process receipts, click the :guilabel:`Operations` button at the bottom "
+"of the screen. The :guilabel:`Operations` overview page opens."
 msgstr ""
-"På den här sidan letar du upp kortet :guilabel:`Receipts` och klickar på "
-"knappen :guilabel:`# To Process` för att se alla utestående kvitton. Välj "
-"sedan önskad kvittooperation som ska bearbetas. Detta navigerar till skärmen "
-"för streckkodsöverföring."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:75
+msgid ""
+"From this page, tap the :guilabel:`Receipts` card to view all outstanding "
+"receipts. Then, select the desired receipt operation to process. This "
+"navigates to the barcode transfer screen."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:79
 msgid ""
-"If *only* using a barcode scanner or the Odoo mobile app, the barcodes for "
-"each transfer of a corresponding operation type can be scanned to be "
-"processed easily. Once scanned, the products that are part of an existing "
-"transfer can be scanned, and new products can be added to the transfer, as "
-"well. Once all products have been scanned, validate the transfer to proceed "
-"with the stock moves."
+"If *only* using a barcode scanner or the Odoo mobile app, scan each barcode "
+"transfer for the corresponding operation type to process them. Once scanned, "
+"the products that are part of an existing transfer can be scanned, and new "
+"products can be added to the transfer, as well. Once all products have been "
+"scanned, validate the transfer to proceed with the stock moves."
 msgstr ""
-"Om du *bara* använder en streckkodsläsare eller Odoos mobilapp, kan "
-"streckkoderna för varje överföring av en motsvarande operationstyp skannas "
-"för att enkelt bearbetas. När de har skannats kan de produkter som ingår i "
-"en befintlig överföring skannas, och nya produkter kan också läggas till i "
-"överföringen. När alla produkter har skannats validerar du överföringen för "
-"att fortsätta med lagerflyttarna."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:85
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:84
 msgid ""
 "From this screen, an overview of all receipts to process within that "
 "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once. If the *Packages* setting is enabled "
+"in the Inventory settings, the :guilabel:`Put in Pack` button is also "
+"available."
 msgstr ""
-"Från denna skärm visas en översikt över alla kvitton som ska behandlas inom "
-"denna överföring (**WH/IN/000XX**). Längst ner på skärmen finns "
-"alternativen :guilabel:`Add Product` eller :guilabel:`Validate`, beroende på "
-"om produkter behöver läggas till i transaktionen, eller om hela "
-"transaktionen ska bekräftas på en gång."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:None
 msgid "Overview of receipts in transfer to scan."
 msgstr "Översikt över kvitton i överföring till skanning."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:94
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:93
 msgid ""
-"To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
-"clicked to indicate receipt of that product, or the :guilabel:`pencil` icon "
-"can be clicked to open a new screen to edit that product line."
+"To process and scan each product individually, scan a product or product "
+"packaging, or choose a specific product line. Click the :guilabel:`+#` "
+"button (for example, `+10`) to indicate receipt of that product."
 msgstr ""
-"För att bearbeta och skanna varje produkt individuellt, välj en specifik "
-"produktlinje. Knappen :guilabel:`+#` (i detta fall :guilabel:`+10`) kan "
-"klickas för att ange att produkten tagits emot, eller "
-"ikonen :guilabel:`pencil` kan klickas för att öppna en ny skärm för "
-"redigering av den produktlinjen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:98
-msgid ""
-"From this screen, the product that's being received is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`PO (purchase order)`."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:173
+msgid "Editing a product line"
 msgstr ""
-"På denna skärm listas den produkt som tas emot. Under produktnamnet kan "
-"raden :guilabel:`Kvantitet` redigeras. Ändra antingen `0` i raden till "
-"önskad kvantitet, eller klicka på knappen :guilabel:`/# Units` (i detta "
-"fall :guilabel:`/10 Units`) för att automatiskt fylla i den kvantitet som "
-"beställts från :abbr:`PO (inköpsorder)`."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:104
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:100
 msgid ""
-"In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
-"Product` is expected to be received. `[BARCODE_PROD]` is "
-"the :guilabel:`Internal Reference` set on the product form. Scan the barcode "
-"of the `Barcode Product` to receive one unit. Afterwards, click "
-"the :guilabel:`pencil` icon to manually enter the received quantities."
+"To manually adjust received quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"I mottagningsoperationen `WH/IN/00019` förväntas `10 Units` av `Barcode "
-"Product` tas emot. `[BARCODE_PROD]` är den :guilabel:`Intern referens` som "
-"anges på produktformuläret. Skanna streckkoden på `Barcode Product` för att "
-"ta emot en enhet. Klicka sedan på :guilabel:`pencil`-ikonen för att manuellt "
-"ange de mottagna kvantiteterna."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
-msgid "Product line editor for individual transfer in Barcode app."
-msgstr "Produktlinjeeditor för individuell överföring i streckkodsappen."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:113
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:179
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:103
 msgid ""
-"Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be clicked "
-"to add or subtract quantity of the product, and the :guilabel:`number keys` "
-"can be used to add quantity, as well."
+"On this screen, the product that's being received is listed. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+12`) to automatically fill the quantity ordered from the |PO|."
 msgstr ""
-"Dessutom kan du klicka på knapparna :guilabel:`+1` och :guilabel:`-1` för "
-"att lägga till eller dra ifrån mängd av produkten, och :guilabel:`number "
-"keys` kan också användas för att lägga till mängd."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:116
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:107
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another *location* is listed on the "
-"product itself. Click this line to reveal a drop-down menu of additional "
-"locations to choose from."
+"Additionally, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or "
+"subtract quantity of the product. Click the product packaging button (for "
+"example, `6-pack`) to add a product packaging. Click the number keys to add "
+"quantity."
 msgstr ""
-"Under :guilabel:`number keys` finns raden :guilabel:`location`, där det som "
-"standard står `WH/Stock`, om inte en annan *location* anges på själva "
-"produkten. Klicka på denna rad för att visa en rullgardinsmeny med "
-"ytterligare platser att välja mellan."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:120
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
+msgid ""
+"Below the quantity buttons is the :guilabel:`Location` line, which reads `WH/"
+"Stock` by default, unless another *location* is listed on the product "
+"itself. Click this line to reveal a drop-down menu of additional locations "
+"to choose from."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:115
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:215
 msgid ""
@@ -2713,188 +2625,159 @@ msgstr ""
 "När du är klar klickar du på :guilabel:`Confirm` för att bekräfta de "
 "ändringar som gjorts i produktlinjen."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:122
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:118
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"receipt has now been processed, and the :guilabel:`Barcode app` can be "
-"closed out."
+"In the reception operation `WH/IN/00013`, `12 Units` of the `Soda Can` "
+"product is expected to be received. `[SODA-SINGLE-CAN]` is the barcode set "
+"on the product form. Warehouse employees can scan the barcode of the `Soda "
+"Can` product to receive one unit, or because they can be purchased in 6-pack "
+"packaging, they can scan the packaging barcode. Alternatively, they can "
+"click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to manually enter the "
+"received quantities."
 msgstr ""
-"Från översiktssidan med alla kvitton som ska behandlas inom den överföringen "
-"(**WH/IN/000XX**) klickar du sedan på knappen :guilabel:`+#` på produktraden "
-"för de produkter som tas emot och klickar på :guilabel:`Validera`. Kvittot "
-"har nu behandlats och :guilabel:`Barcode app` kan stängas."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
+msgid "Product line editor for individual transfer in Barcode app."
+msgstr "Produktlinjeeditor för individuell överföring i streckkodsappen."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:128
+msgid "Validating the transfer"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:130
+msgid ""
+"If not all products were scanned or manually entered from the pencil icon, "
+"click the :guilabel:`+#` button on the product line for the products being "
+"received, or scan the product or product packaging barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+msgid ""
+"Finally, click :guilabel:`Validate`. The receipt is processed, and the "
+"**Barcode** app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of receipts in transfer to validate."
 msgstr "Översikt över kvitton i överföring för att validera."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:132
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:141
 msgid "Scan barcodes for delivery orders"
 msgstr "Skanna streckkoder för leveransorder"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:143
 msgid ""
-"To process warehouse deliveries for outgoing products, there first needs to "
-"be a sales order (SO) created, and a delivery operation to process."
+"To process warehouse deliveries for outgoing products, a sales order (SO) "
+"must be created to create a delivery operation to process. First, create a "
+"quotation, then confirm it to create the |SO|."
 msgstr ""
-"För att bearbeta lagerleveranser för utgående produkter måste det först "
-"skapas en försäljningsorder (SO) och en leveransoperation att bearbeta."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:137
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
+msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:149
 msgid ""
-"To create a :abbr:`SO (sales order)`, navigate to the :menuselection:`Sales "
-"app --> Create` to create a new quotation."
+"To process and scan barcodes for warehouse deliveries, navigate to "
+"the :menuselection:`Barcode` app."
 msgstr ""
-"För att skapa en :abbr:`SO (försäljningsorder)`, navigera "
-"till :menuselection:`Sales app --> Create` för att skapa en ny offert."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:140
-msgid ""
-"From the blank quotation form, click the drop-down menu next to "
-"the :guilabel:`Customer` field to add a customer. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"Klicka på rullgardinsmenyn bredvid fältet :guilabel:`Kund` i det tomma "
-"offertformuläret för att lägga till en kund. Klicka sedan "
-"på :guilabel:`Produkt` under fliken :guilabel:`Orderrader` "
-"på :guilabel:`Lägg till en produkt` och välj den eller de produkter som du "
-"vill lägga till i offerten."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:144
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, and "
-"click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
-"(sales order)`."
-msgstr ""
-"När du är klar klickar du på :guilabel:`Save` högst upp i formuläret och "
-"sedan på :guilabel:`Confirm Order` för att bekräfta offerten till "
-"en :abbr:`SO (sales order)`."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed sales order for barcode product."
-msgstr "Färdig försäljningsorder för streckkodsprodukt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
 msgid ""
-"To process and scan barcodes for warehouse deliveries, navigate to "
-"the :menuselection:`Barcode app`."
+"In the **Barcode** app, a :guilabel:`Barcode Scanner` screen displaying "
+"different options opens. To process deliveries, click "
+"the :guilabel:`Operations` button at the bottom of the screen. This opens "
+"an :guilabel:`Operations` overview page."
 msgstr ""
-"För att bearbeta och skanna streckkoder för lagerleveranser, navigera "
-"till :menuselection:`Barcode app`."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:153
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:155
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process deliveries, "
-"click on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :guilabel:`Operations` overview page."
+"On this page, click the :guilabel:`Delivery Orders` card to view all "
+"outstanding deliveries."
 msgstr ""
-"Väl inne i :guilabel:`Barcode app` visas en :guilabel:`Barcode Scanning` "
-"skärm med olika alternativ. För att hantera leveranser klickar du på "
-"knappen :guilabel:`Operations` längst ned på skärmen. Detta navigerar till "
-"en :guilabel:`Operations` översiktssida."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:157
-msgid ""
-"From this page, locate the :guilabel:`Delivery Orders` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding deliveries. "
-"Then, select the desired delivery order to process. This navigates to the "
-"barcode transfer screen."
-msgstr ""
-"På den här sidan letar du upp kortet :guilabel:`Leveransorder` och klickar "
-"på knappen :guilabel:`# Att bearbeta` för att se alla utestående leveranser. "
-"Välj sedan önskad leveransorder att bearbeta. Detta navigerar till skärmen "
-"för streckkodsöverföring."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Operations overview page in Barcode app dashboard."
 msgstr "Översiktssida för verksamheten i Barcode-appens instrumentpanel."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:160
 msgid ""
-"From this screen, an overview of all deliveries to process within that "
-"transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"Select the desired delivery order to process. This navigates to the barcode "
+"transfer screen."
 msgstr ""
-"Från denna skärm visas en översikt över alla leveranser som ska bearbetas "
-"inom denna överföring (**WH/OUT/000XX**). Längst ner på skärmen finns "
-"alternativen :guilabel:`Add Product` eller :guilabel:`Validate`, beroende på "
-"om produkter behöver läggas till i transaktionen eller om hela transaktionen "
-"ska bekräftas på en gång."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:170
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:162
+msgid ""
+"On this screen, first scan the source location of the products to deliver. "
+"Then, review the overview of all products and packagings to process within "
+"that transfer (**WH/OUT/000XX**). At the bottom of the screen, there are "
+"buttons to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:168
 msgid ""
 "To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+1` button can be clicked to indicate delivery of that "
-"product, or the :guilabel:`pencil icon` can be clicked to open a new screen "
-"to edit that product line."
+"line. Scan a product or product packaging, or click the :guilabel:`+#` (for "
+"example, `+6`) button to indicate delivery of that product."
 msgstr ""
-"För att bearbeta och skanna varje produkt individuellt, välj en specifik "
-"produktlinje. Knappen :guilabel:`+1` kan klickas för att indikera leverans "
-"av den produkten, eller :guilabel:`pencil icon` kan klickas för att öppna en "
-"ny skärm för att redigera den produktlinjen."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:174
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:175
 msgid ""
-"From this screen, the product that's being delivered is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`SO (sales order)`."
+"To manually adjust quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"På den här skärmen visas den produkt som ska levereras. Under produktnamnet "
-"kan raden :guilabel:`Kvantitet` redigeras. Ändra antingen `0` i raden till "
-"önskad kvantitet, eller klicka på knappen :guilabel:`/# Units` (i detta "
-"fall :guilabel:`/10 Units`) för att automatiskt fylla i den kvantitet som "
-"beställts från :abbr:`SO (försäljningsorder)`."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:182
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:178
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another location is listed on the "
-"product itself."
+"The product that's being delivered is listed on this screen. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+6`) to automatically fill the quantity ordered from the |SO|. If "
+"the product is sold in a packaging, click the packaging button (for example, "
+"`6-pack`). Alternatively, click the :guilabel:`+1` and :guilabel:`-1` "
+"buttons to add or subtract quantity of the product."
 msgstr ""
-"Under :guilabel:`number keys` finns raden :guilabel:`location`, där det som "
-"standard står `WH/Stock`, såvida ingen annan plats anges på själva produkten."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:185
 msgid ""
-"This is the location that the product is being pulled from for delivery. "
-"Click this line to reveal a drop-down menu of additional locations to choose "
+"Below the quantity buttons is the :guilabel:`Source Location` line, which "
+"reads `WH/Stock` by default, unless the product is stored in a different "
+"location. This is the location that the product is being pulled from for "
+"delivery. Click this line to reveal a menu of additional locations to choose "
 "from (if this product is stored in multiple locations in the warehouse)."
 msgstr ""
-"Detta är den plats som produkten hämtas från för leverans. Klicka på denna "
-"rad för att visa en rullgardinsmeny med ytterligare platser att välja mellan "
-"(om denna produkt lagras på flera platser i lagret)."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:191
 msgid ""
 "For warehouses that have multiple different storage locations, putaway "
 "rules, and removal strategies, additional steps can be added for various "
-"operation types, while using the *Barcode* app."
+"operation types, while using the **Barcode** app."
 msgstr ""
-"För lager som har flera olika lagringsplatser, regler för inlagring och "
-"strategier för bortforsling kan ytterligare steg läggas till för olika "
-"operationstyper, medan du använder *Barcode*-appen."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:196
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:195
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"delivery has now been processed, and the *Barcode* app can be closed out."
+"When ready, click :guilabel:`Confirm` to confirm the changes made to the "
+"product line."
 msgstr ""
-"Från översiktssidan med alla kvitton som ska behandlas inom den överföringen "
-"(**WH/OUT/000XX**) klickar du sedan på knappen :guilabel:`+#` på "
-"produktraden för de produkter som tas emot och klickar "
-"på :guilabel:`Validera`. Leveransen har nu behandlats och appen *Barcode* "
-"kan stängas."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:198
+msgid "Validating the delivery"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:200
+msgid ""
+"If not all products or product packagings have been scanned or entered on "
+"the overview page, scan the products or packagings, or click "
+"the :guilabel:`+#` button on the product line for the products. Finally, "
+"click :guilabel:`Validate`. The delivery is processed, and the **Barcode** "
+"app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of deliveries in transfer to validate."
@@ -3094,6 +2977,33 @@ msgstr ""
 "*Inventory* finns på sidan `Odoo Inventory - Hardware page <https://"
 "www.odoo.com/app/inventory-hardware>`_."
 
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+msgid ""
+"To use the *Barcode* app to process transfers, it must be installed by "
+"enabling the feature from the settings of the *Inventory* app."
+msgstr ""
+"För att kunna använda appen *Barcode* för att hantera överföringar måste den "
+"installeras genom att aktivera funktionen i inställningarna för appen "
+"*Inventory*."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
+msgid ""
+"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
+"the checkbox next to the :guilabel:`Barcode Scanner` feature."
+msgstr ""
+"Gå till :menuselection:`Inventory app --> Configuration --> Settings`. "
+"Bläddra sedan ner till avsnittet :guilabel:`Barcode` och klicka på "
+"kryssrutan bredvid funktionen :guilabel:`Barcode Scanner`."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
+msgid ""
+"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
+"to save changes."
+msgstr ""
+"När kryssrutan är markerad klickar du på :guilabel:`Save` högst upp på sidan "
+"för att spara ändringarna."
+
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:24
 msgid ""
 "When the page has refreshed, new options are displayed under "
@@ -3107,6 +3017,28 @@ msgstr ""
 "(med en motsvarande rullgardinsmeny), där antingen :guilabel:`Default "
 "Nomenclature` eller :guilabel:`Default GS1 Nomenclature` kan väljas. Den "
 "valda nomenklaturen ändrar hur skannrar tolkar streckkoder i Odoo."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
+"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
+"barcode demo sheet."
+msgstr ""
+"Det finns också en :guilabel:`Configure Product Barcodes` intern länkpil, "
+"och en uppsättning :guilabel:`Print` knappar för utskrift av "
+"streckkodskommandon och ett streckkodsdemoark."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
+msgid ""
+"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
+"the :doc:`Set up your barcode scanner <../setup/hardware>` "
+"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
+"pages."
+msgstr ""
+"Mer information om hur du installerar och konfigurerar "
+"appen :guilabel:`Barcode` finns på dokumentationssidorna :doc:`Set up your "
+"barcode scanner <../setup/hardware>` och :doc:`Activate the Barcodes in Odoo "
+"<../setup/software>`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:41
 msgid "Scan barcodes for internal transfers"
@@ -4119,15 +4051,6 @@ msgid ""
 msgstr ""
 "När koden har skannats ska du kontrollera att NETUM-skannern har rätt "
 "tangentbordskonfiguration och att den fungerar som avsett."
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
-msgid ":doc:`../setup/hardware`"
-msgstr ":doc:`../setup/hardware`"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
-msgid ":doc:`../setup/software`"
-msgstr ":doc:`../setup/software`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:3
 msgid "Barcode scanner setup"
@@ -15290,24 +15213,27 @@ msgstr "Förvald lagerplats på medarbetarformulär."
 msgid ""
 "A *storage category* is used with :doc:`putaway rules <putaway>` to assign a "
 "storage location to incoming products while accounting for the capacity of "
-"that location."
+"that location. Assigning categories to storage locations tells Odoo these "
+"locations meet specific requirements, such as temperature or accessibility. "
+"Odoo then evaluates these locations, based on defined capacity, and "
+"recommends the best one on the warehouse transfer form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
 msgid "Follow these steps to complete the setup:"
 msgstr "Följ dessa steg för att slutföra installationen:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
 msgid ""
 ":ref:`Enable features in the settings <inventory/routes/enable-storage-"
 "categories>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:14
 msgid ":ref:`Define capacity limitations <inventory/routes/define-storage>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:15
 msgid ""
 "Assign a :ref:`category to storage locations <inventory/routes/assign-"
 "location>`"
@@ -15315,7 +15241,7 @@ msgstr ""
 "Tilldela en :ref:`-kategori till lagringsplatser <inventory/routes/assign-"
 "location>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:16
 msgid ""
 "Add the storage category as an attribute to a :ref:`putaway rule <inventory/"
 "routes/set-putaway-attribute>`"
@@ -15323,39 +15249,27 @@ msgstr ""
 "Lägg till förvaringskategorin som ett attribut till en :ref:`putaway-regel "
 "<inventory/routes/set-putaway-attribute>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
 msgid ":doc:`putaway`"
 msgstr ":doc:`avlägsnande`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
-msgid ""
-"Assigning categories to storage locations tells Odoo these locations meet "
-"specific requirements, such as temperature or accessibility. Odoo then "
-"evaluates these locations, based on defined capacity, and recommends the "
-"best one on the warehouse transfer form."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:25
+msgid "Enable storage categories"
 msgstr ""
-"Genom att tilldela kategorier till lagerplatser berättar Odoo att dessa "
-"platser uppfyller specifika krav, t.ex. temperatur eller tillgänglighet. "
-"Odoo utvärderar sedan dessa platser, baserat på definierad kapacitet, och "
-"rekommenderar den bästa platsen i formuläret för lageröverföring."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 msgid ""
 "To enable storage categories, go to :menuselection:`Inventory app --> "
-"Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
-"ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
-"features are enabled."
+"Configuration --> Settings`. Then, in the *Warehouse* section, ensure "
+"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` features "
+"are enabled."
 msgstr ""
-"För att aktivera lagringskategorier, gå till :menuselection:`Inventory app --"
-"> Configuration --> Settings`. Kontrollera sedan i "
-"avsnittet :guilabel:`Warehouse` att funktionerna :guilabel:`Storage "
-"Locations` och :guilabel:`Multi-Step Routes` är aktiverade."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:31
 msgid ""
-"If intending to set capacities by :ref:`package type <inventory/routes/set-"
-"capacity-package>`, also make sure :guilabel:`Packages` is enabled. "
-"Click :guilabel:`Save`."
+"To set capacities by :ref:`package type <inventory/routes/set-capacity-"
+"package>`, also make sure :guilabel:`Packages` is enabled in the "
+"*Operations* section. Click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:None
@@ -15363,27 +15277,79 @@ msgid ""
 "Enable Storage Locations and Multi-Step Routes to enable storage categories."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:42
-msgid "Define storage category"
-msgstr "Definiera lagringskategori"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:44
-msgid ""
-"A storage category with specific limitations **must** be created first, "
-"before it is applied to locations, in order to decide the optimal storage "
-"location."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:38
+msgid "Storage location setup"
 msgstr ""
-"En förvaringskategori med specifika begränsningar **måste** skapas först, "
-"innan den tillämpas på platser, för att bestämma den optimala "
-"förvaringsplatsen."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:40
+msgid ""
+"Set up storage locations to work with the storage category. A parent "
+"location must be set up, with child locations (or *sublocations*) assigned "
+"to it. This is because the putaway rule's :ref:`Store to <inventory/routes/"
+"set-putaway-attribute>` location will be set to the parent location, and "
+"the :ref:`storage category <inventory/routes/assign-location>` will be set "
+"to the child location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:45
+msgid "Go to :menuselection:`Inventory app --> Configuration --> Locations`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:47
+msgid ""
+"First, set up a parent location. This can be as simple as the default `WH/"
+"Stock` location. Alternatively, create a new parent location by clicking "
+"the :guilabel:`New` button on the :guilabel:`Locations` page. On this parent "
+"location form, specify a :guilabel:`Location Name` and :guilabel:`Parent "
+"Location`. Select :guilabel:`Internal Location` as the :guilabel:`Location "
+"Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:52
+msgid ""
+"Then, create *sublocations* of this parent location by clicking "
+"the :guilabel:`New` button. On the location form, specify "
+"a :guilabel:`Location Name`, and set the :guilabel:`Parent Location` to the "
+"parent location that was just created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:57
+msgid ""
+"A beverage company stores all of its cans of lemonade on pallets in one "
+"section of its warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+msgid ""
+"First, they create a location named `Pallets` in the `WH/Stock` location. "
+"Then, they create two sublocations, named `PAL1` and `PAL2`. Both have `WH/"
+"Stock/Pallets` set as the parent location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
+msgid "Create a sublocation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:68
+msgid "Define storage category limitations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:70
+msgid ""
+"A storage category with specific limitations **must** be created first, "
+"before it is applied to Before a storage category is applied to locations, "
+"it must be configured with specific limitations in order to decide the "
+"optimal storage location. Capacity can be limited by weight, product, and "
+"package type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:75
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories`, and click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:78
 msgid ""
 "On the storage category form, type a name for the category in "
 "the :guilabel:`Storage Category` field."
@@ -15391,14 +15357,7 @@ msgstr ""
 "På formuläret för lagringskategori skriver du ett namn för kategorin i "
 "fältet :guilabel:`Storage Category`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:53
-msgid ""
-"Options are available to limit capacity by weight, product, and package type."
-msgstr ""
-"Det finns alternativ för att begränsa kapaciteten efter vikt, produkt och "
-"kollityp."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
 msgid ""
 "Weight limits can be combined with capacity by package or product (e.g. a "
 "maximum of one hundred products with a total weight of two hundred "
@@ -15407,19 +15366,15 @@ msgstr ""
 "Viktgränser kan kombineras med kapacitet per kolli eller produkt (t.ex. "
 "högst hundra produkter med en totalvikt på tvåhundra kilo)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:85
 msgid ""
 "While it is possible to limit capacity by product and package type at the "
 "same location, it may be more practical to store items in different amounts "
-"across various locations, as shown in this example of :ref:`capacity by "
-"package <inventory/routes/set-capacity-package>`."
+"across various locations, as shown in the :ref:`limit capacity by package "
+"<inventory/routes/set-capacity-package>` example."
 msgstr ""
-"Det är möjligt att begränsa kapaciteten per produkt och förpackningstyp på "
-"samma plats, men det kan vara mer praktiskt att lagra artiklar i olika "
-"mängder på olika platser, vilket visas i detta exempel på :ref:`kapacitet "
-"per förpackning <inventory/routes/set-capacity-package>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:89
 msgid ""
 "The :guilabel:`Allow New Product` field defines when the location is "
 "considered available to store a product:"
@@ -15427,7 +15382,7 @@ msgstr ""
 "Fältet :guilabel:`Allow New Product` definierar när platsen anses vara "
 "tillgänglig för att lagra en produkt:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
@@ -15435,7 +15390,7 @@ msgstr ""
 ":guilabel:`Om platsen är tom`: en produkt kan läggas till där endast om "
 "platsen är tom."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:93
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
@@ -15443,7 +15398,7 @@ msgstr ""
 ":guilabel:`Om produkterna är desamma`: en produkt kan läggas till där endast "
 "om samma produkt redan finns där."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
@@ -15451,14 +15406,8 @@ msgstr ""
 ":guilabel:`Allow mixed products`: flera olika produkter kan lagras på denna "
 "plats samtidigt."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:73
-msgid ""
-"When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button "
-"shows which storage locations the category has been assigned to."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:164
 msgid ""
 "Odoo does **not** automatically split quantities across multiple storage "
 "locations. If an incoming receipt contains several units or packages and the "
@@ -15466,18 +15415,18 @@ msgid ""
 "to that same location instead of selecting another one with available space."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
 msgid ""
 "*(Example: If a location can hold 10 units and 12 units arrive, all 12 are "
 "still assigned to that location.)*"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:86
-msgid "Capacity by weight"
-msgstr "Kapacitet i vikt"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:108
+msgid "Limit capacity by weight"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:110
 msgid ""
 "On a storage category form (:menuselection:`Inventory app --> Configuration "
 "--> Storage Categories`), set a maximum product weight in the :guilabel:`Max "
@@ -15489,69 +15438,75 @@ msgstr ""
 "fältet :guilabel:`Max Weight`. Denna gräns gäller för varje plats som "
 "tilldelats denna lagerkategori."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:114
 msgid ""
-"This value must be set to greater than `0` if a product weight is defined."
+"A maximum product weight can be set in the :guilabel:`Max Weight` field. "
+"This limit applies to each location assigned this storage category. If a "
+"product weight is defined, the value must be set to greater than `0`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
-msgid "Capacity by product"
-msgstr "Kapacitet per produkt"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:119
+msgid "Limit capacity by product"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:121
 msgid ""
 "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
-"input items, and enter their capacities in the :guilabel:`Quantity` field."
+"input items, and enter In the :guilabel:`Capacity by Product` tab, "
+"click :guilabel:`Add a Line` to enter a product, and set the maximum "
+"capacity that should be stored at each location in the :guilabel:`Quantity` "
+"field."
 msgstr ""
-"På fliken :guilabel:`Capacity by Product` klickar du på :guilabel:`Add a "
-"Line` för att mata in artiklar och ange deras kapacitet i "
-"fältet :guilabel:`Quantity`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
 msgid ""
 "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
-"Sit` are stored at a single storage location, by specifying those amounts in "
-"the :guilabel:`Capacity by Product` tab of a storage category form."
+"Sit` are stored at a single storage location by specifying those amounts in "
+"the :guilabel:`Capacity by Product` tab. To ensure only a maximum of five "
+"`Large Cabinets` and two `Corner Desk Right Sit` are stored at a single "
+"storage location, specify those amounts in the :guilabel:`Capacity by "
+"Product` tab."
 msgstr ""
-"Se till att endast högst fem \"stora skåp\" och två \"hörndiskar med höger "
-"sittplats\" förvaras på en enda förvaringsplats genom att ange dessa mängder "
-"på fliken :guilabel:`Kapacitet per produkt` i formuläret för "
-"förvaringskategori."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Show storage category limiting by product count."
 msgstr "Visa begränsning av förvaringskategori efter antal produkter."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
-msgid "Capacity by package"
-msgstr "Kapacitet per paket"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:137
+msgid "Limit capacity by package type"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:139
 msgid ""
 "For companies using :doc:`packages <../../product_management/configure/"
 "package>`, it becomes possible to ensure real-time storage capacity checks, "
-"based on package types (e.g., crates, bins, boxes, etc.)."
+"based on package types (e.g., crates, bins, Limiting capacity "
+"by :doc:`package <../../product_management/configure/package>` makes it "
+"possible to enforce real-time storage capacity checks based on package type "
+"(e.g., crates, bins, boxes, etc.)."
 msgstr ""
-"För företag som använder :doc:`packages <../../product_management/configure/"
-"package>` blir det möjligt att kontrollera lagringskapaciteten i realtid "
-"baserat på förpackningstyper (t.ex. lådor, backar, boxar etc.)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:145
 msgid ""
 "Create the :ref:`package type <inventory/warehouses_storage/package-type>` "
 "before assigning it to a storage category. Create it on "
 "the :guilabel:`Inventory` tab of the product form (in "
 "the :guilabel:`Packaging` section), or create it from the :guilabel:`Product "
-"Packagings` page. Be sure to set the :guilabel:`Package Type`."
+"Packagings` page. Be sure Click :guilabel:`Add a line` to add "
+"a :ref:`package type <inventory/warehouses_storage/package-type>` to the "
+"storage category. Alternatively, create a new package type on "
+"the :guilabel:`Inventory` tab of the product form (in "
+"the :guilabel:`Packaging` section), or from the :guilabel:`Product "
+"Packagings` page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:154
 msgid ""
-"Create putaway rules for pallet-stored items, by creating the `High "
+"To help create putaway rules for pallet-stored items, create the `High "
 "frequency pallets` storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:157
 msgid ""
 "In the :guilabel:`Capacity by Package` tab, specify the number of packages "
 "for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
@@ -15565,27 +15520,23 @@ msgstr ""
 msgid "Create a storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
-msgid "Assign to location"
-msgstr "Tilldela till plats"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+msgid "Assign storage locations"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:177
 msgid ""
-"Once the storage category is created, assign it to a location. Navigate to "
-"the location by going to :menuselection:`Inventory app --> Configuration --> "
-"Locations`, and select the desired location. Then, select the created "
+"After the storage category is created, it can be assigned to the "
+"sublocations. Go to :menuselection:`Inventory app --> Configuration --> "
+"Locations`, and open the desired sublocation. Then, select the created "
 "category in the :guilabel:`Storage Category` field."
 msgstr ""
-"När lagringskategorin har skapats kan du tilldela den till en plats. "
-"Navigera till platsen genom att gå till :menuselection:`Inventory app --> "
-"Configuration --> Locations`, och välj önskad plats. Välj sedan den skapade "
-"kategorin i fältet :guilabel:`Storage Category`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:182
 msgid ""
 "Assign the `High frequency pallets` storage category (which limits pallets "
-"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-"
-"location."
+"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` "
+"sublocation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
@@ -15593,35 +15544,43 @@ msgid ""
 "When a Storage Category is created, it can be linked to a warehouse location."
 msgstr "När en lagerkategori skapas kan den kopplas till en lagerplats."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
-msgid "Putaway rule"
-msgstr "Putaway-regel"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:188
+msgid ""
+"Repeat this step for all sublocations to which the storage category should "
+"apply."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:191
+msgid ""
+"On the storage category form, the :icon:`oi-arrows-v` :guilabel:`Locations` "
+"smart button shows which storage locations the category has been assigned to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
+msgid "Create a putaway rule"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:199
 msgid ""
 "With the :ref:`storage category <inventory/routes/define-storage>` "
-"and :ref:`location <inventory/routes/assign-location>` set up, create "
+"and :ref:`locations <inventory/routes/assign-location>` set up, create "
 "the :doc:`putaway rule <putaway>` by navigating to :menuselection:`Inventory "
 "app --> Configuration --> Putaway Rules`."
 msgstr ""
-"När :ref:`förvaringskategori <inventory/routes/define-storage>` "
-"och :ref:`plats <inventory/routes/assign-location>` har konfigurerats skapar "
-"du :doc:`putaway-regeln <putaway>` genom att navigera "
-"till :menuselection:`Inventory app --> Configuration --> Putaway Rules`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
 msgid ""
 "Click the :guilabel:`New` button to create the putaway rule. Specify a "
-"location to store to in the :guilabel:`Store to` field."
+"location in the :guilabel:`Store to` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
 msgid ""
 "Use the :guilabel:`Sublocation` field to specify that you want to use a "
-"sublocation with the storage category:"
+"storage category on the sublocations of the :guilabel:`Store to` field:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
 msgid ""
 ":guilabel:`Last Used`: The last location that had a move associated with it "
 "for that product or product category is used. If there is no last location "
@@ -15629,14 +15588,16 @@ msgid ""
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:212
 msgid ""
 ":guilabel:`Closest Location`: The locations specified as part of the storage "
 "category are used. A storage category is mandatory in the :guilabel:`Having "
-"Category` field."
+"Category` field. The locations in the storage category must be sublocations "
+"of the location in the :guilabel:`Store to` field. If the closest locations "
+"in the storage category are full, the :guilabel:`Store to` location is used."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:218
 msgid ""
 "Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the putaway rule directing pallets of lemonade to "
@@ -15648,18 +15609,18 @@ msgstr ""
 msgid "Storage Categories used in putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:226
 msgid ""
 "If products are not routing to secondary locations for a storage category "
 "and a product weight is defined, verify that the storage "
 "category's :guilabel:`Max Weight` value is set to a number greater than `0`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:192
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:231
 msgid "Use case: limit capacity by package"
 msgstr "Användningsfall: begränsa kapaciteten per paket"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:233
 msgid ""
 "To limit the capacity of a storage location by a specific number of "
 "packages, :ref:`create a storage category with a Capacity By Package "
@@ -15669,13 +15630,13 @@ msgstr ""
 "paket, :ref:`skapa en lagringskategori med en Capacity By Package <inventory/"
 "routes/set-capacity-package>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:236
 msgid ""
-"Continuing the example from above, the `High frequency pallets` storage "
+"Continuing the examples from above, the `High frequency pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:200
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:239
 msgid ""
 "Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
 "any pallets received in the warehouse are directed to be stored in `PAL1` "
@@ -15685,14 +15646,14 @@ msgstr ""
 "alla pallar som tas emot i lagret styrs till att lagras på platserna `PAL1` "
 "och `PAL2`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:242
 msgid ""
 "Depending on the number of pallets on-hand at each of the storage locations, "
 "when two pallets of lemonade cans is received, the following scenarios "
 "happen:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:245
 msgid ""
 "If `PAL1` and `PAL2` are empty, the pallet is redirected to `WH/Stock/"
 "Pallets/PAL1`."
@@ -15700,18 +15661,18 @@ msgstr ""
 "Om `PAL1` och `PAL2` är tomma, omdirigeras pallen till `WH/Stock/Pallets/"
 "PAL1`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:246
 msgid "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr "Om `PAL1` är full, omdirigeras pallen till `WH/Stock/Pallets/PAL2`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:247
 msgid ""
 "If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/"
 "Pallets`."
 msgstr ""
 "Om `PAL1` och `PAL2` är fulla, omdirigeras pallen till `WH/Stock/Pallets`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:248
 msgid ""
 "If `PAL1` is partially full (for example, with one pallet), Odoo treats more "
 "than one received pallet as a single pallet on the receipt. You must "
@@ -37565,11 +37526,6 @@ msgid ""
 "**eCommerce** store."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
-msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
 msgid ":doc:`../../../websites/ecommerce/products/catalog`"
 msgstr ""
@@ -57790,6 +57746,469 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/produkter_priser/returer`"
+
+#~ msgid ""
+#~ "The *Barcode* app can be used to process receipts, deliveries, and other "
+#~ "types of operations in real time using a barcode scanner or the Odoo "
+#~ "mobile app."
+#~ msgstr ""
+#~ "Appen *Barcode* kan användas för att hantera kvitton, leveranser och "
+#~ "andra typer av transaktioner i realtid med hjälp av en streckkodsläsare "
+#~ "eller Odoo mobilapp."
+
+#~ msgid ""
+#~ "This makes it possible to process operations on the warehouse floor when "
+#~ "they happen, instead of having to wait to validate transfers from a "
+#~ "computer. Processing operations this way can help to properly attribute "
+#~ "barcodes to the appropriate products, pickings, locations, and more."
+#~ msgstr ""
+#~ "Detta gör det möjligt att bearbeta transaktioner på lagergolvet när de "
+#~ "sker, istället för att behöva vänta på att validera överföringar från en "
+#~ "dator. Genom att bearbeta transaktioner på detta sätt kan streckkoder "
+#~ "tillskrivas rätt produkter, plockningar, platser och mycket mer."
+
+#~ msgid ""
+#~ "Once the page has refreshed, new options will be displayed under "
+#~ "the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+#~ "(with a corresponding drop-down menu), where either :guilabel:`Default "
+#~ "Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+#~ msgstr ""
+#~ "När sidan har uppdaterats visas nya alternativ under "
+#~ "funktionen :guilabel:`Barcode Scanner`: :guilabel:`Barcode Nomenclature` "
+#~ "(med en motsvarande rullgardinsmeny), där antingen :guilabel:`Default "
+#~ "Nomenclature` eller :guilabel:`Default GS1 Nomenclature` kan väljas."
+
+#~ msgid ""
+#~ "To process warehouse receipts for incoming products, there first needs to "
+#~ "be a purchase order (PO) created, and a receipt operation to process."
+#~ msgstr ""
+#~ "För att bearbeta lagerkvitton för inkommande produkter måste det först "
+#~ "skapas en inköpsorder (PO) och en kvittooperation som ska bearbetas."
+
+#~ msgid ""
+#~ "To create a :abbr:`PO (purchase order)`, navigate to "
+#~ "the :menuselection:`Purchase app --> Create` to create a new request for "
+#~ "quotation (RFQ)."
+#~ msgstr ""
+#~ "För att skapa en :abbr:`PO (inköpsorder)`, gå "
+#~ "till :menuselection:`Inköpsapp --> Skapa` för att skapa en ny "
+#~ "offertförfrågan (RFQ)."
+
+#~ msgid ""
+#~ "From the blank :abbr:`RFQ (request for quotation)` form, click the drop-"
+#~ "down menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Products` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "Från det tomma formuläret :abbr:`RFQ (request for quotation)` klickar du "
+#~ "på rullgardinsmenyn bredvid fältet :guilabel:`Vendor` för att lägga till "
+#~ "en leverantör. På raden :guilabel:`Product` under "
+#~ "fliken :guilabel:`Products` klickar du sedan på :guilabel:`Add a product` "
+#~ "och väljer den eller de produkter som du vill lägga till i offerten."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, then "
+#~ "click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
+#~ "quotation)` to a :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "När du är klar klickar du på :guilabel:`Save` högst upp i formuläret och "
+#~ "sedan på :guilabel:`Confirm Order` för att bekräfta :abbr:`RFQ (request "
+#~ "for quotation)` till en :abbr:`PO (purchase order)`."
+
+#~ msgid "Completed purchase order for barcode product."
+#~ msgstr "Färdig inköpsorder för streckkodsprodukt."
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse receipts, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "För att bearbeta och skanna streckkoder för lagerkvitton, navigera "
+#~ "till :menuselection:`Barcode app`."
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process receipts, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :menuselection:`Operations` overview page."
+#~ msgstr ""
+#~ "När du är inne i :guilabel:`Barcode app` visas en :guilabel:`Barcode "
+#~ "Scanning` skärm med olika alternativ. För att hantera kvitton klickar du "
+#~ "på knappen :guilabel:`Operations` längst ned på skärmen. Detta navigerar "
+#~ "till en :menuselection:`Operations` översiktssida."
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Receipts` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding receipts. "
+#~ "Then, select the desired receipt operation to process. This navigates to "
+#~ "the barcode transfer screen."
+#~ msgstr ""
+#~ "På den här sidan letar du upp kortet :guilabel:`Receipts` och klickar på "
+#~ "knappen :guilabel:`# To Process` för att se alla utestående kvitton. Välj "
+#~ "sedan önskad kvittooperation som ska bearbetas. Detta navigerar till "
+#~ "skärmen för streckkodsöverföring."
+
+#~ msgid ""
+#~ "If *only* using a barcode scanner or the Odoo mobile app, the barcodes "
+#~ "for each transfer of a corresponding operation type can be scanned to be "
+#~ "processed easily. Once scanned, the products that are part of an existing "
+#~ "transfer can be scanned, and new products can be added to the transfer, "
+#~ "as well. Once all products have been scanned, validate the transfer to "
+#~ "proceed with the stock moves."
+#~ msgstr ""
+#~ "Om du *bara* använder en streckkodsläsare eller Odoos mobilapp, kan "
+#~ "streckkoderna för varje överföring av en motsvarande operationstyp "
+#~ "skannas för att enkelt bearbetas. När de har skannats kan de produkter "
+#~ "som ingår i en befintlig överföring skannas, och nya produkter kan också "
+#~ "läggas till i överföringen. När alla produkter har skannats validerar du "
+#~ "överföringen för att fortsätta med lagerflyttarna."
+
+#~ msgid ""
+#~ "From this screen, an overview of all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "Från denna skärm visas en översikt över alla kvitton som ska behandlas "
+#~ "inom denna överföring (**WH/IN/000XX**). Längst ner på skärmen finns "
+#~ "alternativen :guilabel:`Add Product` eller :guilabel:`Validate`, beroende "
+#~ "på om produkter behöver läggas till i transaktionen, eller om hela "
+#~ "transaktionen ska bekräftas på en gång."
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
+#~ "clicked to indicate receipt of that product, or the :guilabel:`pencil` "
+#~ "icon can be clicked to open a new screen to edit that product line."
+#~ msgstr ""
+#~ "För att bearbeta och skanna varje produkt individuellt, välj en specifik "
+#~ "produktlinje. Knappen :guilabel:`+#` (i detta fall :guilabel:`+10`) kan "
+#~ "klickas för att ange att produkten tagits emot, eller "
+#~ "ikonen :guilabel:`pencil` kan klickas för att öppna en ny skärm för "
+#~ "redigering av den produktlinjen."
+
+#~ msgid ""
+#~ "From this screen, the product that's being received is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "På denna skärm listas den produkt som tas emot. Under produktnamnet kan "
+#~ "raden :guilabel:`Kvantitet` redigeras. Ändra antingen `0` i raden till "
+#~ "önskad kvantitet, eller klicka på knappen :guilabel:`/# Units` (i detta "
+#~ "fall :guilabel:`/10 Units`) för att automatiskt fylla i den kvantitet som "
+#~ "beställts från :abbr:`PO (inköpsorder)`."
+
+#~ msgid ""
+#~ "In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
+#~ "Product` is expected to be received. `[BARCODE_PROD]` is "
+#~ "the :guilabel:`Internal Reference` set on the product form. Scan the "
+#~ "barcode of the `Barcode Product` to receive one unit. Afterwards, click "
+#~ "the :guilabel:`pencil` icon to manually enter the received quantities."
+#~ msgstr ""
+#~ "I mottagningsoperationen `WH/IN/00019` förväntas `10 Units` av `Barcode "
+#~ "Product` tas emot. `[BARCODE_PROD]` är den :guilabel:`Intern referens` "
+#~ "som anges på produktformuläret. Skanna streckkoden på `Barcode Product` "
+#~ "för att ta emot en enhet. Klicka sedan på :guilabel:`pencil`-ikonen för "
+#~ "att manuellt ange de mottagna kvantiteterna."
+
+#~ msgid ""
+#~ "Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be "
+#~ "clicked to add or subtract quantity of the product, and "
+#~ "the :guilabel:`number keys` can be used to add quantity, as well."
+#~ msgstr ""
+#~ "Dessutom kan du klicka på knapparna :guilabel:`+1` och :guilabel:`-1` för "
+#~ "att lägga till eller dra ifrån mängd av produkten, och :guilabel:`number "
+#~ "keys` kan också användas för att lägga till mängd."
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another *location* is listed on the "
+#~ "product itself. Click this line to reveal a drop-down menu of additional "
+#~ "locations to choose from."
+#~ msgstr ""
+#~ "Under :guilabel:`number keys` finns raden :guilabel:`location`, där det "
+#~ "som standard står `WH/Stock`, om inte en annan *location* anges på själva "
+#~ "produkten. Klicka på denna rad för att visa en rullgardinsmeny med "
+#~ "ytterligare platser att välja mellan."
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The receipt has now been processed, and "
+#~ "the :guilabel:`Barcode app` can be closed out."
+#~ msgstr ""
+#~ "Från översiktssidan med alla kvitton som ska behandlas inom den "
+#~ "överföringen (**WH/IN/000XX**) klickar du sedan på knappen :guilabel:`+#` "
+#~ "på produktraden för de produkter som tas emot och klickar "
+#~ "på :guilabel:`Validera`. Kvittot har nu behandlats och :guilabel:`Barcode "
+#~ "app` kan stängas."
+
+#~ msgid ""
+#~ "To process warehouse deliveries for outgoing products, there first needs "
+#~ "to be a sales order (SO) created, and a delivery operation to process."
+#~ msgstr ""
+#~ "För att bearbeta lagerleveranser för utgående produkter måste det först "
+#~ "skapas en försäljningsorder (SO) och en leveransoperation att bearbeta."
+
+#~ msgid ""
+#~ "To create a :abbr:`SO (sales order)`, navigate to "
+#~ "the :menuselection:`Sales app --> Create` to create a new quotation."
+#~ msgstr ""
+#~ "För att skapa en :abbr:`SO (försäljningsorder)`, navigera "
+#~ "till :menuselection:`Sales app --> Create` för att skapa en ny offert."
+
+#~ msgid ""
+#~ "From the blank quotation form, click the drop-down menu next to "
+#~ "the :guilabel:`Customer` field to add a customer. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "Klicka på rullgardinsmenyn bredvid fältet :guilabel:`Kund` i det tomma "
+#~ "offertformuläret för att lägga till en kund. Klicka sedan "
+#~ "på :guilabel:`Produkt` under fliken :guilabel:`Orderrader` "
+#~ "på :guilabel:`Lägg till en produkt` och välj den eller de produkter som "
+#~ "du vill lägga till i offerten."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, and "
+#~ "click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
+#~ "(sales order)`."
+#~ msgstr ""
+#~ "När du är klar klickar du på :guilabel:`Save` högst upp i formuläret och "
+#~ "sedan på :guilabel:`Confirm Order` för att bekräfta offerten till "
+#~ "en :abbr:`SO (sales order)`."
+
+#~ msgid "Completed sales order for barcode product."
+#~ msgstr "Färdig försäljningsorder för streckkodsprodukt."
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse deliveries, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "För att bearbeta och skanna streckkoder för lagerleveranser, navigera "
+#~ "till :menuselection:`Barcode app`."
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process deliveries, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :guilabel:`Operations` overview page."
+#~ msgstr ""
+#~ "Väl inne i :guilabel:`Barcode app` visas en :guilabel:`Barcode Scanning` "
+#~ "skärm med olika alternativ. För att hantera leveranser klickar du på "
+#~ "knappen :guilabel:`Operations` längst ned på skärmen. Detta navigerar "
+#~ "till en :guilabel:`Operations` översiktssida."
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Delivery Orders` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding deliveries. "
+#~ "Then, select the desired delivery order to process. This navigates to the "
+#~ "barcode transfer screen."
+#~ msgstr ""
+#~ "På den här sidan letar du upp kortet :guilabel:`Leveransorder` och "
+#~ "klickar på knappen :guilabel:`# Att bearbeta` för att se alla utestående "
+#~ "leveranser. Välj sedan önskad leveransorder att bearbeta. Detta navigerar "
+#~ "till skärmen för streckkodsöverföring."
+
+#~ msgid ""
+#~ "From this screen, an overview of all deliveries to process within that "
+#~ "transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "Från denna skärm visas en översikt över alla leveranser som ska bearbetas "
+#~ "inom denna överföring (**WH/OUT/000XX**). Längst ner på skärmen finns "
+#~ "alternativen :guilabel:`Add Product` eller :guilabel:`Validate`, beroende "
+#~ "på om produkter behöver läggas till i transaktionen eller om hela "
+#~ "transaktionen ska bekräftas på en gång."
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+1` button can be clicked to indicate delivery of "
+#~ "that product, or the :guilabel:`pencil icon` can be clicked to open a new "
+#~ "screen to edit that product line."
+#~ msgstr ""
+#~ "För att bearbeta och skanna varje produkt individuellt, välj en specifik "
+#~ "produktlinje. Knappen :guilabel:`+1` kan klickas för att indikera "
+#~ "leverans av den produkten, eller :guilabel:`pencil icon` kan klickas för "
+#~ "att öppna en ny skärm för att redigera den produktlinjen."
+
+#~ msgid ""
+#~ "From this screen, the product that's being delivered is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`SO (sales order)`."
+#~ msgstr ""
+#~ "På den här skärmen visas den produkt som ska levereras. Under "
+#~ "produktnamnet kan raden :guilabel:`Kvantitet` redigeras. Ändra antingen "
+#~ "`0` i raden till önskad kvantitet, eller klicka på knappen :guilabel:`/# "
+#~ "Units` (i detta fall :guilabel:`/10 Units`) för att automatiskt fylla i "
+#~ "den kvantitet som beställts från :abbr:`SO (försäljningsorder)`."
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another location is listed on the "
+#~ "product itself."
+#~ msgstr ""
+#~ "Under :guilabel:`number keys` finns raden :guilabel:`location`, där det "
+#~ "som standard står `WH/Stock`, såvida ingen annan plats anges på själva "
+#~ "produkten."
+
+#~ msgid ""
+#~ "This is the location that the product is being pulled from for delivery. "
+#~ "Click this line to reveal a drop-down menu of additional locations to "
+#~ "choose from (if this product is stored in multiple locations in the "
+#~ "warehouse)."
+#~ msgstr ""
+#~ "Detta är den plats som produkten hämtas från för leverans. Klicka på "
+#~ "denna rad för att visa en rullgardinsmeny med ytterligare platser att "
+#~ "välja mellan (om denna produkt lagras på flera platser i lagret)."
+
+#~ msgid ""
+#~ "For warehouses that have multiple different storage locations, putaway "
+#~ "rules, and removal strategies, additional steps can be added for various "
+#~ "operation types, while using the *Barcode* app."
+#~ msgstr ""
+#~ "För lager som har flera olika lagringsplatser, regler för inlagring och "
+#~ "strategier för bortforsling kan ytterligare steg läggas till för olika "
+#~ "operationstyper, medan du använder *Barcode*-appen."
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The delivery has now been processed, and the "
+#~ "*Barcode* app can be closed out."
+#~ msgstr ""
+#~ "Från översiktssidan med alla kvitton som ska behandlas inom den "
+#~ "överföringen (**WH/OUT/000XX**) klickar du sedan på "
+#~ "knappen :guilabel:`+#` på produktraden för de produkter som tas emot och "
+#~ "klickar på :guilabel:`Validera`. Leveransen har nu behandlats och appen "
+#~ "*Barcode* kan stängas."
+
+#~ msgid ""
+#~ "Assigning categories to storage locations tells Odoo these locations meet "
+#~ "specific requirements, such as temperature or accessibility. Odoo then "
+#~ "evaluates these locations, based on defined capacity, and recommends the "
+#~ "best one on the warehouse transfer form."
+#~ msgstr ""
+#~ "Genom att tilldela kategorier till lagerplatser berättar Odoo att dessa "
+#~ "platser uppfyller specifika krav, t.ex. temperatur eller tillgänglighet. "
+#~ "Odoo utvärderar sedan dessa platser, baserat på definierad kapacitet, och "
+#~ "rekommenderar den bästa platsen i formuläret för lageröverföring."
+
+#~ msgid ""
+#~ "To enable storage categories, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
+#~ "ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
+#~ "Routes` features are enabled."
+#~ msgstr ""
+#~ "För att aktivera lagringskategorier, gå till :menuselection:`Inventory "
+#~ "app --> Configuration --> Settings`. Kontrollera sedan i "
+#~ "avsnittet :guilabel:`Warehouse` att funktionerna :guilabel:`Storage "
+#~ "Locations` och :guilabel:`Multi-Step Routes` är aktiverade."
+
+#~ msgid "Define storage category"
+#~ msgstr "Definiera lagringskategori"
+
+#~ msgid ""
+#~ "A storage category with specific limitations **must** be created first, "
+#~ "before it is applied to locations, in order to decide the optimal storage "
+#~ "location."
+#~ msgstr ""
+#~ "En förvaringskategori med specifika begränsningar **måste** skapas först, "
+#~ "innan den tillämpas på platser, för att bestämma den optimala "
+#~ "förvaringsplatsen."
+
+#~ msgid ""
+#~ "Options are available to limit capacity by weight, product, and package "
+#~ "type."
+#~ msgstr ""
+#~ "Det finns alternativ för att begränsa kapaciteten efter vikt, produkt och "
+#~ "kollityp."
+
+#~ msgid ""
+#~ "While it is possible to limit capacity by product and package type at the "
+#~ "same location, it may be more practical to store items in different "
+#~ "amounts across various locations, as shown in this example "
+#~ "of :ref:`capacity by package <inventory/routes/set-capacity-package>`."
+#~ msgstr ""
+#~ "Det är möjligt att begränsa kapaciteten per produkt och förpackningstyp "
+#~ "på samma plats, men det kan vara mer praktiskt att lagra artiklar i olika "
+#~ "mängder på olika platser, vilket visas i detta exempel på :ref:`kapacitet "
+#~ "per förpackning <inventory/routes/set-capacity-package>`."
+
+#~ msgid "Capacity by weight"
+#~ msgstr "Kapacitet i vikt"
+
+#~ msgid "Capacity by product"
+#~ msgstr "Kapacitet per produkt"
+
+#~ msgid ""
+#~ "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` "
+#~ "to input items, and enter their capacities in the :guilabel:`Quantity` "
+#~ "field."
+#~ msgstr ""
+#~ "På fliken :guilabel:`Capacity by Product` klickar du på :guilabel:`Add a "
+#~ "Line` för att mata in artiklar och ange deras kapacitet i "
+#~ "fältet :guilabel:`Quantity`."
+
+#~ msgid ""
+#~ "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
+#~ "Sit` are stored at a single storage location, by specifying those amounts "
+#~ "in the :guilabel:`Capacity by Product` tab of a storage category form."
+#~ msgstr ""
+#~ "Se till att endast högst fem \"stora skåp\" och två \"hörndiskar med "
+#~ "höger sittplats\" förvaras på en enda förvaringsplats genom att ange "
+#~ "dessa mängder på fliken :guilabel:`Kapacitet per produkt` i formuläret "
+#~ "för förvaringskategori."
+
+#~ msgid "Capacity by package"
+#~ msgstr "Kapacitet per paket"
+
+#~ msgid ""
+#~ "For companies using :doc:`packages <../../product_management/configure/"
+#~ "package>`, it becomes possible to ensure real-time storage capacity "
+#~ "checks, based on package types (e.g., crates, bins, boxes, etc.)."
+#~ msgstr ""
+#~ "För företag som använder :doc:`packages <../../product_management/"
+#~ "configure/package>` blir det möjligt att kontrollera lagringskapaciteten "
+#~ "i realtid baserat på förpackningstyper (t.ex. lådor, backar, boxar etc.)."
+
+#~ msgid "Assign to location"
+#~ msgstr "Tilldela till plats"
+
+#~ msgid ""
+#~ "Once the storage category is created, assign it to a location. Navigate "
+#~ "to the location by going to :menuselection:`Inventory app --> "
+#~ "Configuration --> Locations`, and select the desired location. Then, "
+#~ "select the created category in the :guilabel:`Storage Category` field."
+#~ msgstr ""
+#~ "När lagringskategorin har skapats kan du tilldela den till en plats. "
+#~ "Navigera till platsen genom att gå till :menuselection:`Inventory app --> "
+#~ "Configuration --> Locations`, och välj önskad plats. Välj sedan den "
+#~ "skapade kategorin i fältet :guilabel:`Storage Category`."
+
+#~ msgid "Putaway rule"
+#~ msgstr "Putaway-regel"
+
+#~ msgid ""
+#~ "With the :ref:`storage category <inventory/routes/define-storage>` "
+#~ "and :ref:`location <inventory/routes/assign-location>` set up, create "
+#~ "the :doc:`putaway rule <putaway>` by navigating "
+#~ "to :menuselection:`Inventory app --> Configuration --> Putaway Rules`."
+#~ msgstr ""
+#~ "När :ref:`förvaringskategori <inventory/routes/define-storage>` "
+#~ "och :ref:`plats <inventory/routes/assign-location>` har konfigurerats "
+#~ "skapar du :doc:`putaway-regeln <putaway>` genom att navigera "
+#~ "till :menuselection:`Inventory app --> Configuration --> Putaway Rules`."
 
 #~ msgid ""
 #~ "When shipping products to customers, the landed cost is the total price "

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-12 18:30+0000\n"
+"POT-Creation-Date: 2026-02-20 18:30+0000\n"
 "PO-Revision-Date: 2026-02-20 23:11+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -165,7 +165,6 @@ msgstr "지정 수량이 표시되어 있는 바코드 현황판."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:48
@@ -1102,6 +1101,7 @@ msgstr ""
 "있다는 의미입니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:50
 msgid ":doc:`gs1_nomenclature`"
 msgstr ":doc:`gs1_nomenclature`"
@@ -2407,271 +2407,198 @@ msgstr "선택할 품목이 바코드 보기에 나타나 있는 모습입니다
 msgid "Process receipts and deliveries with barcodes"
 msgstr "바코드로 입고 및 배송 처리하기"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:7
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
 msgid ""
-"The *Barcode* app can be used to process receipts, deliveries, and other "
+"The **Barcode** app can be used to process receipts, deliveries, and other "
 "types of operations in real time using a barcode scanner or the Odoo mobile "
 "app."
 msgstr ""
-"*바코드* 앱은 바코드 스캐너 또는 Odoo 모바일 앱을 사용하여 입고, 배송 및 기"
-"타 다양한 유형의 작업을 실시간으로 처리할 수 있도록 설계되었습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:13
 msgid ""
 "This makes it possible to process operations on the warehouse floor when "
 "they happen, instead of having to wait to validate transfers from a "
-"computer. Processing operations this way can help to properly attribute "
-"barcodes to the appropriate products, pickings, locations, and more."
+"computer. This real-time processing ensures barcodes are accurately assigned "
+"to the correct products, packaging, transfers, locations, and more, reducing "
+"errors and keeping inventory data in sync."
 msgstr ""
-"이 기능을 사용하면 창고 현장에서 작업이 발생하면 즉시 처리할 수 있으므로 컴퓨"
-"터에서 전송의 유효성을 검사할 때까지 기다릴 필요가 없습니다. 이러한 방식으로 "
-"작업을 수행하면 관련 제품, 피킹, 위치 등에 바코드를 정확하게 할당하는 데 도움"
-"이 됩니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:19
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:13
 msgid "Enable Barcode app"
 msgstr "바코드 앱 활성화하기"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:17
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:21
 msgid ""
-"To use the *Barcode* app to process transfers, it must be installed by "
-"enabling the feature from the settings of the *Inventory* app."
+"To use the **Barcode** app to process transfers, it must be installed by "
+"enabling the feature from the settings of the **Inventory** app."
 msgstr ""
-"*바코드* 앱을 사용하여 이송을 처리하려면 먼저 *재고 관리* 앱 내 설정에서 해"
-"당 기능을 활성화하여 설치해야 합니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:20
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
-msgid ""
-"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
-"the checkbox next to the :guilabel:`Barcode Scanner` feature."
-msgstr ""
-"이렇게 하려면 :menuselection:`재고 관리 앱 --> 환경설정 --> 설정`으로 이동합"
-"니다. 그런 다음 :guilabel:`바코드` 섹션까지 아래로 스크롤하여 :guilabel:`바코"
-"드 스캐너` 기능 옆에 있는 확인란을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:24
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
 msgid ""
-"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
-"to save changes."
+"To do so, navigate to :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the *Barcode* section, and select the "
+"checkbox next to the :guilabel:`Barcode Scanner` feature."
 msgstr ""
-"확인란에 표시를 했으면, 페이지 상단의 :guilabel:`저장` 을 클릭하여 변경 사항"
-"을 적용합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:26
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:28
 msgid ""
-"Once the page has refreshed, new options will be displayed under "
-"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
-"(with a corresponding drop-down menu), where either :guilabel:`Default "
-"Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+"After the checkbox is selected, click :guilabel:`Save` at the top of the "
+"page to save changes."
 msgstr ""
-"페이지를 새로고침하면 :guilabel:`바코드 스캐너` 기능 아래에 추가 옵션이 나타"
-"납니다: :guilabel:`바코드 명명법` (해당 드롭다운 메뉴 포함)에서 :guilabel:`기"
-"본 명명법` 또는 :guilabel:`기본 GS1 명명법` 중 하나를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:30
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"After the page has refreshed, a new option is displayed under "
+"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+"(with a corresponding drop-down menu). Select either:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:33
+msgid ""
+":guilabel:`Default Nomenclature`: The barcode actions using UPC and EAN, "
+"detailed in the default nomenclature list, are available for use. By "
+"default, Odoo automatically handles UPC/EAN conversion."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:36
+msgid ""
+":guilabel:`Default GS1 Nomenclature`: Scan barcodes of sealed boxes and "
+"identify essential product information, such as Global Trade Item Numbers "
+"(GTINs), lot number, quantity information, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:40
 msgid ""
 "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
-"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
-"barcode demo sheet."
+"and a set of :guilabel:`Print` buttons for printing barcode commands and "
+"operation types, as well as a barcode demo sheet."
 msgstr ""
-"또한 바코드 명령 및 바코드 데모 시트를 인쇄할 수 있는 :guilabel:`제품 바코드 "
-"설정` 내부 링크 화살표와 :guilabel:`인쇄` 버튼 세트가 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:37
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
-msgid ""
-"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
-"the :doc:`Set up your barcode scanner <../setup/hardware>` "
-"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
-"pages."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:48
+msgid ":doc:`barcode_nomenclature`"
 msgstr ""
-":guilabel:`바코드` 앱에 대한 설정 및 환경설정과 관련된 종합적인 지침은 :doc:`"
-"바코드 스캐너 설정하기 <../setup/hardware>` 및 :doc:`Odoo에서 바코드 활성화하"
-"기 <../setup/software>` 문서 페이지를 참조하세요."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:44
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:50
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
+msgid ":doc:`../setup/hardware`"
+msgstr ":doc:`../setup/hardware`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:51
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+msgid ":doc:`../setup/software`"
+msgstr ":doc:`../setup/software`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:56
 msgid "Scan barcodes for receipts"
 msgstr "입고에 대한 바코드 스캔"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:46
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:58
 msgid ""
-"To process warehouse receipts for incoming products, there first needs to be "
-"a purchase order (PO) created, and a receipt operation to process."
+"Purchase orders (POs) are used to process warehouse receipts for incoming "
+"products and product packagings. First, create a request for quotation, then "
+"confirm it to create a |PO|."
 msgstr ""
-"입고 제품에 대한 창고 입고 내역을 처리하려면 먼저 구매 주문(PO)과 해당 입고 "
-"작업을 생성해야 합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
-msgid ""
-"To create a :abbr:`PO (purchase order)`, navigate to "
-"the :menuselection:`Purchase app --> Create` to create a new request for "
-"quotation (RFQ)."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:62
+msgid ":doc:`../../purchase/manage_deals/rfq`"
 msgstr ""
-":abbr:`PO (발주서)`를 생성하려면 :menuselection:`구매 앱 --> 생성`으로 이동하"
-"여 새 견적 요청(RFQ) 생성을 시작합니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:52
-msgid ""
-"From the blank :abbr:`RFQ (request for quotation)` form, click the drop-down "
-"menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Products` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"비어 있는 :abbr:`견적 요청(RFQ)` 양식에서 :guilabel:`공급업체` 필드 옆의 드롭"
-"다운 메뉴를 클릭하여 공급업체를 지정합니다. 그런 다음 :guilabel:`품목` 탭"
-"의 :guilabel:`품목` 항목에서 :guilabel:`품목 추가`를 클릭하고 견적에 포함할 "
-"원하는 제품을 선택합니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:57
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, then "
-"click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
-"quotation)` to a :abbr:`PO (purchase order)`."
-msgstr ""
-"준비가 완료되면 양식 상단의 :guilabel:`저장`을 클릭합니다. 그런 다"
-"음 :guilabel:`주문 확인`을 클릭하여 :abbr:`RFQ(견적 요청)`를 확인하"
-"고 :abbr:`PO(발주서)`로 변환합니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed purchase order for barcode product."
-msgstr "바코드 제품에 대한 구매 주문이 완료되었습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:64
 msgid ""
-"To process and scan barcodes for warehouse receipts, navigate to "
-"the :menuselection:`Barcode app`."
+"To process and scan barcodes for warehouse receipts, navigate to the "
+"**Barcode** app."
 msgstr ""
-"창고 입고에 대한 바코드 처리 및 스캔을 시작하려면 :menuselection:`바코드 앱`"
-"으로 이동합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:66
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process receipts, click "
-"on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :menuselection:`Operations` overview page."
+"Once inside the **Barcode** app, a :guilabel:`Barcode Scanner` screen "
+"displaying different options is presented."
 msgstr ""
-":guilabel:`바코드 앱`으로 들어가면 다양한 옵션이 있는 :guilabel:`바코드 스캔"
-"` 화면이 나타납니다. 입고를 처리하려면 화면 하단에 있는 :guilabel:`작업` 버튼"
-"을 클릭합니다. 이 작업은 :menuselection:`작업` 개요 페이지로 이어집니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:74
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:72
 msgid ""
-"From this page, locate the :guilabel:`Receipts` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding receipts. Then, "
-"select the desired receipt operation to process. This navigates to the "
-"barcode transfer screen."
+"To process receipts, click the :guilabel:`Operations` button at the bottom "
+"of the screen. The :guilabel:`Operations` overview page opens."
 msgstr ""
-"이 페이지에서 :guilabel:`입고` 카드를 찾은 다음 :guilabel:`# 진행 대기` 버튼"
-"을 클릭하여 모든 미결 입고 내역을 확인합니다. 그런 다음 처리할 특정 입고 작업"
-"을 선택합니다. 이 작업을 선택하면 바코드 전송 화면으로 이동합니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:75
+msgid ""
+"From this page, tap the :guilabel:`Receipts` card to view all outstanding "
+"receipts. Then, select the desired receipt operation to process. This "
+"navigates to the barcode transfer screen."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:79
 msgid ""
-"If *only* using a barcode scanner or the Odoo mobile app, the barcodes for "
-"each transfer of a corresponding operation type can be scanned to be "
-"processed easily. Once scanned, the products that are part of an existing "
-"transfer can be scanned, and new products can be added to the transfer, as "
-"well. Once all products have been scanned, validate the transfer to proceed "
-"with the stock moves."
+"If *only* using a barcode scanner or the Odoo mobile app, scan each barcode "
+"transfer for the corresponding operation type to process them. Once scanned, "
+"the products that are part of an existing transfer can be scanned, and new "
+"products can be added to the transfer, as well. Once all products have been "
+"scanned, validate the transfer to proceed with the stock moves."
 msgstr ""
-"바코드 스캐너 또는 Odoo 모바일 앱*만* 사용하는 경우, 해당 작업 유형과 관련된 "
-"바코드를 스캔하여 각 이송을 쉽게 처리할 수 있습니다. 스캔 후 기존 전송에 관련"
-"된 제품을 스캔하고 필요한 경우 새 제품을 이송에 추가합니다. 모든 품목을 스캔"
-"한 후 이송을 승인하여 재고 이동을 진행합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:85
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:84
 msgid ""
 "From this screen, an overview of all receipts to process within that "
 "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once. If the *Packages* setting is enabled "
+"in the Inventory settings, the :guilabel:`Put in Pack` button is also "
+"available."
 msgstr ""
-"이 화면에서 해당 전송(**WH/IN/000XX**) 내에서 처리할 모든 입고에 대한 개요가 "
-"표시됩니다. 화면 하단에는 제품을 작업에 추가해야 하는지 또는 전체 작업을 한 "
-"번에 승인해야 하는지에 따라 :guilabel:`품목 추가` 또는 :guilabel:`승인` 옵션"
-"이 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:None
 msgid "Overview of receipts in transfer to scan."
 msgstr "스캔할 이송 중인 입고 내역 개요."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:94
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:93
 msgid ""
-"To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
-"clicked to indicate receipt of that product, or the :guilabel:`pencil` icon "
-"can be clicked to open a new screen to edit that product line."
+"To process and scan each product individually, scan a product or product "
+"packaging, or choose a specific product line. Click the :guilabel:`+#` "
+"button (for example, `+10`) to indicate receipt of that product."
 msgstr ""
-"각 제품을 개별적으로 처리하고 스캔하려면 특정 품목 라인을 선택합니"
-"다. :guilabel:`+#` 버튼 (이 경우 :guilabel:`+10`)을 클릭하여 해당 품목의 입고"
-"를 확인하거나 :guilabel:`연필` 아이콘을 클릭하여 해당 특정 품목 라인을 편집"
-"할 수 있는 새 화면을 열 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:98
-msgid ""
-"From this screen, the product that's being received is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`PO (purchase order)`."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:173
+msgid "Editing a product line"
 msgstr ""
-"이 화면에는 입고 중인 상품이 표시되며, 품목명 아래에서 :guilabel:`수량`을 수"
-"정할 수 있습니다. 해당 줄의 `0`을 원하는 수량으로 수동으로 변경하거"
-"나 :guilabel:`/#단위` 버튼 (이 경우 :guilabel:`/10단위`)을 클릭하"
-"여 :abbr:`PO(발주서)`에서 주문한 수량을 자동으로 채울 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:104
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:100
 msgid ""
-"In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
-"Product` is expected to be received. `[BARCODE_PROD]` is "
-"the :guilabel:`Internal Reference` set on the product form. Scan the barcode "
-"of the `Barcode Product` to receive one unit. Afterwards, click "
-"the :guilabel:`pencil` icon to manually enter the received quantities."
+"To manually adjust received quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"`WH/IN/00019` 입고 작업의 경우 `바코드 제품`의 예상 입고 수량이 `10개`로 설정"
-"되어 있습니다. 이 제품의 :guilabel:`내부 참조`는 `[BARCODE_PROD]`입니다. 하나"
-"의 단위를 받으려면 `바코드 제품`의 바코드를 스캔합니다. 이후 입고 수량을 수동"
-"으로 입력하려면 :guilabel:`연필` 아이콘을 클릭합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
-msgid "Product line editor for individual transfer in Barcode app."
-msgstr "바코드 앱에서 개별 이송을 위한 품목 라인 편집기."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:113
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:179
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:103
 msgid ""
-"Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be clicked "
-"to add or subtract quantity of the product, and the :guilabel:`number keys` "
-"can be used to add quantity, as well."
+"On this screen, the product that's being received is listed. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+12`) to automatically fill the quantity ordered from the |PO|."
 msgstr ""
-":guilabel:`+1` 및 :guilabel:`-1` 버튼을 사용하여 제품 수량을 늘리거나 줄일 "
-"수 있습니다. 또는 :guilabel:` 숫자 키`를 사용하여 원하는 수량을 추가할 수 있"
-"습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:116
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:107
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another *location* is listed on the "
-"product itself. Click this line to reveal a drop-down menu of additional "
-"locations to choose from."
+"Additionally, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or "
+"subtract quantity of the product. Click the product packaging button (for "
+"example, `6-pack`) to add a product packaging. Click the number keys to add "
+"quantity."
 msgstr ""
-":guilabel:`번호 키` 아래에는 제품 자체에 다른 *위치*가 지정되어 있지 않는 한 "
-"기본적으로 `WH/재고`으로 설정되는 :guilabel:`위치`가 있습니다. 이 항목을 클릭"
-"하면 선택할 수 있는 추가 위치가 포함된 드롭다운 메뉴가 표시됩니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:120
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
+msgid ""
+"Below the quantity buttons is the :guilabel:`Location` line, which reads `WH/"
+"Stock` by default, unless another *location* is listed on the product "
+"itself. Click this line to reveal a drop-down menu of additional locations "
+"to choose from."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:115
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:215
 msgid ""
@@ -2680,180 +2607,159 @@ msgid ""
 msgstr ""
 "완료했으면 :guilabel:`확인`을 클릭하여 품목에 적용된 변경 사항을 확인합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:122
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:118
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"receipt has now been processed, and the :guilabel:`Barcode app` can be "
-"closed out."
+"In the reception operation `WH/IN/00013`, `12 Units` of the `Soda Can` "
+"product is expected to be received. `[SODA-SINGLE-CAN]` is the barcode set "
+"on the product form. Warehouse employees can scan the barcode of the `Soda "
+"Can` product to receive one unit, or because they can be purchased in 6-pack "
+"packaging, they can scan the packaging barcode. Alternatively, they can "
+"click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to manually enter the "
+"received quantities."
 msgstr ""
-"다음으로, 해당 이송(**WH/IN/000XX**) 내에서 처리할 모든 입고 내역이 포함된 개"
-"요 페이지에서 수신 중인 제품의 제품 항목에 있는 :guilabel:`+#` 버튼을 클릭한 "
-"다음 :guilabel:`승인`을 클릭합니다. 이 작업으로 입고 처리가 완료되었으며 이"
-"제 :guilabel:`바코드 앱`을 닫을 수 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
+msgid "Product line editor for individual transfer in Barcode app."
+msgstr "바코드 앱에서 개별 이송을 위한 품목 라인 편집기."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:128
+msgid "Validating the transfer"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:130
+msgid ""
+"If not all products were scanned or manually entered from the pencil icon, "
+"click the :guilabel:`+#` button on the product line for the products being "
+"received, or scan the product or product packaging barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+msgid ""
+"Finally, click :guilabel:`Validate`. The receipt is processed, and the "
+"**Barcode** app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of receipts in transfer to validate."
 msgstr "이송 중인 입고 내역 개요."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:132
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:141
 msgid "Scan barcodes for delivery orders"
 msgstr "배송 주문의 바코드 스캔"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:143
 msgid ""
-"To process warehouse deliveries for outgoing products, there first needs to "
-"be a sales order (SO) created, and a delivery operation to process."
+"To process warehouse deliveries for outgoing products, a sales order (SO) "
+"must be created to create a delivery operation to process. First, create a "
+"quotation, then confirm it to create the |SO|."
 msgstr ""
-"출고 제품에 대한 창고 배송을 처리하려면 먼저 판매주문서 (SO)를 생성하고 배송 "
-"작업을 처리해야 합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:137
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
+msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
+msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:149
 msgid ""
-"To create a :abbr:`SO (sales order)`, navigate to the :menuselection:`Sales "
-"app --> Create` to create a new quotation."
+"To process and scan barcodes for warehouse deliveries, navigate to "
+"the :menuselection:`Barcode` app."
 msgstr ""
-":abbr:`SO (판매주문서)`를 생성하려면 :menuselection:`판매 앱 --> 생성`으로 이"
-"동하여 새 견적을 생성합니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:140
-msgid ""
-"From the blank quotation form, click the drop-down menu next to "
-"the :guilabel:`Customer` field to add a customer. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"빈 견적 양식에서 :guilabel:`고객` 필드 옆에 있는 드롭다운 메뉴를 클릭하여 고"
-"객을 지정합니다. 그런 다음 :guilabel:`주문 항목` 탭의 :guilabel:`품목` 항목에"
-"서 :guilabel:`품목 추가`를 클릭하고 견적에 포함할 원하는 제품을 선택합니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:144
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, and "
-"click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
-"(sales order)`."
-msgstr ""
-"모두 완료되면 양식 상단의 :guilabel:`저장`을 클릭합니다. 그런 다"
-"음 :guilabel:`주문 확인`을 클릭하여 견적을 확인하고 이를 :abbr:`SO (판매주문"
-"서)`로 변환합니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed sales order for barcode product."
-msgstr "바코드 제품에 대한 판매 주문이 완료되었습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
 msgid ""
-"To process and scan barcodes for warehouse deliveries, navigate to "
-"the :menuselection:`Barcode app`."
+"In the **Barcode** app, a :guilabel:`Barcode Scanner` screen displaying "
+"different options opens. To process deliveries, click "
+"the :guilabel:`Operations` button at the bottom of the screen. This opens "
+"an :guilabel:`Operations` overview page."
 msgstr ""
-"창고 배송용 바코드 처리 및 스캔을 시작하려면 :menuselection:`바코드 앱`으로 "
-"이동합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:153
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:155
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process deliveries, "
-"click on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :guilabel:`Operations` overview page."
+"On this page, click the :guilabel:`Delivery Orders` card to view all "
+"outstanding deliveries."
 msgstr ""
-":guilabel:`바코드 앱`으로 들어가면 다양한 옵션이 있는 :guilabel:`바코드 스캔"
-"` 화면이 나타납니다. 배송을 처리하려면 화면 하단에 있는 :guilabel:`작업` 버튼"
-"을 클릭합니다. 이 작업을 수행하면 :guilabel:`작업` 개요 페이지로 연결됩니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:157
-msgid ""
-"From this page, locate the :guilabel:`Delivery Orders` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding deliveries. "
-"Then, select the desired delivery order to process. This navigates to the "
-"barcode transfer screen."
-msgstr ""
-"이 페이지에서 :guilabel:`배달 주문` 카드를 찾은 다음 :guilabel:`# 처리 대기` "
-"버튼을 클릭하여 보류 중인 모든 배송 주문을 확인합니다. 그런 다음 처리할 배송 "
-"주문을 선택합니다. 이 작업을 수행하면 바코드 전송 화면으로 이동합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Operations overview page in Barcode app dashboard."
 msgstr "바코드 앱 대시보드의 작업 개요 페이지."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:160
 msgid ""
-"From this screen, an overview of all deliveries to process within that "
-"transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"Select the desired delivery order to process. This navigates to the barcode "
+"transfer screen."
 msgstr ""
-"이 화면에는 해당 전송 내에서 처리할 모든 배송에 대한 개요가 표시됩니다(**WH/"
-"OUT/000XX**). 화면 하단에는 '제품 추가' 또는 '유효성 검사' 옵션이 있습니다. "
-"작업에 :guilabel:`제품 추가`를 해야 하는지 또는 전체 작업을 한 번"
-"에 :guilabel:`승인`해야 하는지 여부에 따라 적절한 옵션을 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:170
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:162
+msgid ""
+"On this screen, first scan the source location of the products to deliver. "
+"Then, review the overview of all products and packagings to process within "
+"that transfer (**WH/OUT/000XX**). At the bottom of the screen, there are "
+"buttons to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:168
 msgid ""
 "To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+1` button can be clicked to indicate delivery of that "
-"product, or the :guilabel:`pencil icon` can be clicked to open a new screen "
-"to edit that product line."
+"line. Scan a product or product packaging, or click the :guilabel:`+#` (for "
+"example, `+6`) button to indicate delivery of that product."
 msgstr ""
-"각 품목을 개별적으로 처리하고 스캔하려면 특정 제품 항목을 선택합니"
-"다. :guilabel:`+1` 버튼을 클릭하여 해당 품목의 배송을 확인하거나 :guilabel:`"
-"연필 아이콘`을 클릭하여 해당 특정 제품 항목을 편집할 수 있는 새 화면을 열 수 "
-"있습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:174
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:175
 msgid ""
-"From this screen, the product that's being delivered is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`SO (sales order)`."
+"To manually adjust quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"이 화면에는 배송 중인 상품이 표시되며, 상품명 아래에서 :guilabel:`수량` 줄을 "
-"수정할 수 있습니다. 해당 줄의 `0`을 원하는 수량으로 변경하거나 :guilabel:`/#"
-"단위` 버튼 (이 경우 :guilabel:`/10단위`)을 클릭하여 :abbr:`SO (판매 주문)`에"
-"서 주문한 수량을 자동으로 채울 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:182
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:178
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another location is listed on the "
-"product itself."
+"The product that's being delivered is listed on this screen. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+6`) to automatically fill the quantity ordered from the |SO|. If "
+"the product is sold in a packaging, click the packaging button (for example, "
+"`6-pack`). Alternatively, click the :guilabel:`+1` and :guilabel:`-1` "
+"buttons to add or subtract quantity of the product."
 msgstr ""
-":guilabel:`번호 키` 아래에는 제품 자체에 다른 위치가 지정되어 있지 않는 한 기"
-"본적으로 `WH/재고`로 표시되는 :guilabel:`위치` 항목이 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:185
 msgid ""
-"This is the location that the product is being pulled from for delivery. "
-"Click this line to reveal a drop-down menu of additional locations to choose "
+"Below the quantity buttons is the :guilabel:`Source Location` line, which "
+"reads `WH/Stock` by default, unless the product is stored in a different "
+"location. This is the location that the product is being pulled from for "
+"delivery. Click this line to reveal a menu of additional locations to choose "
 "from (if this product is stored in multiple locations in the warehouse)."
 msgstr ""
-"배송을 위해 제품을 가져오는 위치를 나타냅니다. 이 항목을 클릭하면 선택할 수 "
-"있는 추가 위치가 포함된 드롭다운 메뉴가 표시됩니다. (특히 제품이 창고 내 여"
-"러 위치에 저장된 경우)"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:191
 msgid ""
 "For warehouses that have multiple different storage locations, putaway "
 "rules, and removal strategies, additional steps can be added for various "
-"operation types, while using the *Barcode* app."
+"operation types, while using the **Barcode** app."
 msgstr ""
-"보관 위치, 입고 규칙, 반출 전략이 여러 가지인 창고의 경우 *바코드* 앱을 사용"
-"할 때 다양한 작업 유형에 대해 추가 단계를 포함할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:196
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:195
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"delivery has now been processed, and the *Barcode* app can be closed out."
+"When ready, click :guilabel:`Confirm` to confirm the changes made to the "
+"product line."
 msgstr ""
-"다음으로, 해당 전송(**WH/OUT/000XX**) 내에서 처리할 모든 배송이 포함된 개요 "
-"페이지에서 배송 중인 제품의 제품 항목에 있는 :guilabel:`+#` 버튼을 선택한 다"
-"음 :guilabel:`승인`을 클릭합니다. 이제 배송이 처리되었으며 *바코드* 앱을 닫"
-"을 수 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:198
+msgid "Validating the delivery"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:200
+msgid ""
+"If not all products or product packagings have been scanned or entered on "
+"the overview page, scan the products or packagings, or click "
+"the :guilabel:`+#` button on the product line for the products. Finally, "
+"click :guilabel:`Validate`. The delivery is processed, and the **Barcode** "
+"app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of deliveries in transfer to validate."
@@ -3059,6 +2965,32 @@ msgstr ""
 "가 필요한 경우 `Odoo 재고 관리 - 하드웨어 페이지 <https://www.odoo.com/app/"
 "inventory-hardware>`_를 참조하세요."
 
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+msgid ""
+"To use the *Barcode* app to process transfers, it must be installed by "
+"enabling the feature from the settings of the *Inventory* app."
+msgstr ""
+"*바코드* 앱을 사용하여 이송을 처리하려면 먼저 *재고 관리* 앱 내 설정에서 해"
+"당 기능을 활성화하여 설치해야 합니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
+msgid ""
+"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
+"the checkbox next to the :guilabel:`Barcode Scanner` feature."
+msgstr ""
+"이렇게 하려면 :menuselection:`재고 관리 앱 --> 환경설정 --> 설정`으로 이동합"
+"니다. 그런 다음 :guilabel:`바코드` 섹션까지 아래로 스크롤하여 :guilabel:`바코"
+"드 스캐너` 기능 옆에 있는 확인란을 선택합니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
+msgid ""
+"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
+"to save changes."
+msgstr ""
+"확인란에 표시를 했으면, 페이지 상단의 :guilabel:`저장` 을 클릭하여 변경 사항"
+"을 적용합니다."
+
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:24
 msgid ""
 "When the page has refreshed, new options are displayed under "
@@ -3072,6 +3004,26 @@ msgstr ""
 "여기서 :guilabel:`기본 명명법` 또는 :guilabel:`기본 GS1 명명법`을 선택할 수 "
 "있습니다. 선택한 명명법에 따라 스캐너가 Odoo에서 바코드를 해석하는 방식이 결"
 "정됩니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
+"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
+"barcode demo sheet."
+msgstr ""
+"또한 바코드 명령 및 바코드 데모 시트를 인쇄할 수 있는 :guilabel:`제품 바코드 "
+"설정` 내부 링크 화살표와 :guilabel:`인쇄` 버튼 세트가 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
+msgid ""
+"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
+"the :doc:`Set up your barcode scanner <../setup/hardware>` "
+"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
+"pages."
+msgstr ""
+":guilabel:`바코드` 앱에 대한 설정 및 환경설정과 관련된 종합적인 지침은 :doc:`"
+"바코드 스캐너 설정하기 <../setup/hardware>` 및 :doc:`Odoo에서 바코드 활성화하"
+"기 <../setup/software>` 문서 페이지를 참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:41
 msgid "Scan barcodes for internal transfers"
@@ -4044,15 +3996,6 @@ msgid ""
 msgstr ""
 "코드를 스캔한 후 NETUM 스캐너에서 키보드 환경 설정이 알맞게 되어 있는지 여부 "
 "및 의도한 대로 작동하는지 확인합니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
-msgid ":doc:`../setup/hardware`"
-msgstr ":doc:`../setup/hardware`"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
-msgid ":doc:`../setup/software`"
-msgstr ":doc:`../setup/software`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:3
 msgid "Barcode scanner setup"
@@ -15209,14 +15152,17 @@ msgstr "직원 양식의 기본 창고 위치."
 msgid ""
 "A *storage category* is used with :doc:`putaway rules <putaway>` to assign a "
 "storage location to incoming products while accounting for the capacity of "
-"that location."
+"that location. Assigning categories to storage locations tells Odoo these "
+"locations meet specific requirements, such as temperature or accessibility. "
+"Odoo then evaluates these locations, based on defined capacity, and "
+"recommends the best one on the warehouse transfer form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
 msgid "Follow these steps to complete the setup:"
 msgstr "다음 단계에 따라 설정을 완료합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
 msgid ""
 ":ref:`Enable features in the settings <inventory/routes/enable-storage-"
 "categories>`"
@@ -15224,18 +15170,18 @@ msgstr ""
 ":ref:`설정 메뉴에서 기능 활성화하기 <inventory/routes/enable-storage-"
 "categories>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:14
 msgid ":ref:`Define capacity limitations <inventory/routes/define-storage>`"
 msgstr ":ref:`수용량 제한 지정 <inventory/routes/define-storage>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:15
 msgid ""
 "Assign a :ref:`category to storage locations <inventory/routes/assign-"
 "location>`"
 msgstr ""
 ":ref:`보관 위치에 대한 카테고리 <inventory/routes/assign-location>` 지정하기"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:16
 msgid ""
 "Add the storage category as an attribute to a :ref:`putaway rule <inventory/"
 "routes/set-putaway-attribute>`"
@@ -15243,38 +15189,27 @@ msgstr ""
 "보관 카테고리를 :ref:`보관 규칙 <inventory/routes/set-putaway-attribute>` 에 "
 "속성으로 추가합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
 msgid ":doc:`putaway`"
 msgstr ":doc:`적치`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
-msgid ""
-"Assigning categories to storage locations tells Odoo these locations meet "
-"specific requirements, such as temperature or accessibility. Odoo then "
-"evaluates these locations, based on defined capacity, and recommends the "
-"best one on the warehouse transfer form."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:25
+msgid "Enable storage categories"
 msgstr ""
-"저장 위치에 카테고리를 지정하면 해당 위치가 온도나 접근성 등 특정 요건을 충족"
-"하는지 여부를 Odoo에서 확인할 수 있습니다. 그런 다음 Odoo에서는 지정한 수용량"
-"을 기준으로 위치에 대해 평가하여 창고 이전 양식에서 가장 적합한 위치를 추천합"
-"니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 msgid ""
 "To enable storage categories, go to :menuselection:`Inventory app --> "
-"Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
-"ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
-"features are enabled."
+"Configuration --> Settings`. Then, in the *Warehouse* section, ensure "
+"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` features "
+"are enabled."
 msgstr ""
-"저장소 카테고리를 활성화하려면 :menuselection:`재고 관리 앱 --> 환경설정 --> "
-"설정` 으로 이동합니다. 그런 다음 :guilabel:`창고` 섹션에서 :guilabel:`저장소 "
-"위치` 및 :guilabel:`다단계 경로` 기능이 활성화되어 있는지 확인합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:31
 msgid ""
-"If intending to set capacities by :ref:`package type <inventory/routes/set-"
-"capacity-package>`, also make sure :guilabel:`Packages` is enabled. "
-"Click :guilabel:`Save`."
+"To set capacities by :ref:`package type <inventory/routes/set-capacity-"
+"package>`, also make sure :guilabel:`Packages` is enabled in the "
+"*Operations* section. Click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:None
@@ -15283,24 +15218,79 @@ msgid ""
 msgstr ""
 "저장소 위치 및 다단계 경로를 활성화하여 저장소 카테고리를 활성화합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:42
-msgid "Define storage category"
-msgstr "창고 카테고리 지정하기"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:38
+msgid "Storage location setup"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:40
 msgid ""
-"A storage category with specific limitations **must** be created first, "
-"before it is applied to locations, in order to decide the optimal storage "
-"location."
+"Set up storage locations to work with the storage category. A parent "
+"location must be set up, with child locations (or *sublocations*) assigned "
+"to it. This is because the putaway rule's :ref:`Store to <inventory/routes/"
+"set-putaway-attribute>` location will be set to the parent location, and "
+"the :ref:`storage category <inventory/routes/assign-location>` will be set "
+"to the child location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:45
+msgid "Go to :menuselection:`Inventory app --> Configuration --> Locations`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:47
+msgid ""
+"First, set up a parent location. This can be as simple as the default `WH/"
+"Stock` location. Alternatively, create a new parent location by clicking "
+"the :guilabel:`New` button on the :guilabel:`Locations` page. On this parent "
+"location form, specify a :guilabel:`Location Name` and :guilabel:`Parent "
+"Location`. Select :guilabel:`Internal Location` as the :guilabel:`Location "
+"Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:52
+msgid ""
+"Then, create *sublocations* of this parent location by clicking "
+"the :guilabel:`New` button. On the location form, specify "
+"a :guilabel:`Location Name`, and set the :guilabel:`Parent Location` to the "
+"parent location that was just created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:57
+msgid ""
+"A beverage company stores all of its cans of lemonade on pallets in one "
+"section of its warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+msgid ""
+"First, they create a location named `Pallets` in the `WH/Stock` location. "
+"Then, they create two sublocations, named `PAL1` and `PAL2`. Both have `WH/"
+"Stock/Pallets` set as the parent location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
+msgid "Create a sublocation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:68
+msgid "Define storage category limitations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:70
+msgid ""
+"A storage category with specific limitations **must** be created first, "
+"before it is applied to Before a storage category is applied to locations, "
+"it must be configured with specific limitations in order to decide the "
+"optimal storage location. Capacity can be limited by weight, product, and "
+"package type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:75
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories`, and click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:78
 msgid ""
 "On the storage category form, type a name for the category in "
 "the :guilabel:`Storage Category` field."
@@ -15308,12 +15298,7 @@ msgstr ""
 "저장 카테고리 양식에 있는 :guilabel:`저장 카테고리` 필드에 카테고리 이름을 입"
 "력합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:53
-msgid ""
-"Options are available to limit capacity by weight, product, and package type."
-msgstr "중량, 품목 및 패키지 유형별로 용량을 제한하도록 선택할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
 msgid ""
 "Weight limits can be combined with capacity by package or product (e.g. a "
 "maximum of one hundred products with a total weight of two hundred "
@@ -15322,18 +15307,15 @@ msgstr ""
 "중량 제한을 할 때 패키지나 품목 기준 수용량을 조합하여 적용할 수 있습니다"
 "(예: 총 무게가 200kg인 최대 100개의 제품)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:85
 msgid ""
 "While it is possible to limit capacity by product and package type at the "
 "same location, it may be more practical to store items in different amounts "
-"across various locations, as shown in this example of :ref:`capacity by "
-"package <inventory/routes/set-capacity-package>`."
+"across various locations, as shown in the :ref:`limit capacity by package "
+"<inventory/routes/set-capacity-package>` example."
 msgstr ""
-"동일한 위치에서 품목 및 패키지 유형별로 수용량을 제한할 수 있으나, :ref:`패키"
-"지별 수용량 <inventory/routes/set-capacity-package>` 의 예시와 같이 여러 위치"
-"에 다양한 수량으로 품목을 보관하는 것이 더 실용적일 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:89
 msgid ""
 "The :guilabel:`Allow New Product` field defines when the location is "
 "considered available to store a product:"
@@ -15341,7 +15323,7 @@ msgstr ""
 ":guilabel:`새 품목 허용` 필드에는 해당 위치에서 품목을 보관할 준비가 되는 시"
 "기가 지정되어 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
@@ -15349,7 +15331,7 @@ msgstr ""
 ":guilabel:`위치가 비어 있는 경우`: 해당 위치가 비어 있는 경우에만 품목을 추가"
 "할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:93
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
@@ -15357,7 +15339,7 @@ msgstr ""
 ":guilabel:`품목이 동일한 경우`: 해당 위치에 동일한 제품이 이미 있는 경우에만 "
 "품목을 추가할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
@@ -15365,14 +15347,8 @@ msgstr ""
 ":guilabel:`혼합 제품 허용`: 이 위치에 여러 가지 제품을 동시에 저장할 수 있습"
 "니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:73
-msgid ""
-"When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button "
-"shows which storage locations the category has been assigned to."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:164
 msgid ""
 "Odoo does **not** automatically split quantities across multiple storage "
 "locations. If an incoming receipt contains several units or packages and the "
@@ -15380,18 +15356,18 @@ msgid ""
 "to that same location instead of selecting another one with available space."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
 msgid ""
 "*(Example: If a location can hold 10 units and 12 units arrive, all 12 are "
 "still assigned to that location.)*"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:86
-msgid "Capacity by weight"
-msgstr "중량별 수용량"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:108
+msgid "Limit capacity by weight"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:110
 msgid ""
 "On a storage category form (:menuselection:`Inventory app --> Configuration "
 "--> Storage Categories`), set a maximum product weight in the :guilabel:`Max "
@@ -15402,62 +15378,75 @@ msgstr ""
 "리`)에서 :guilabel:`최대 중량` 항목에 품목의 최대 중량을 설정합니다. 해당 제"
 "한 사항은 저장 카테고리에 지정되어 있는 각 위치에 적용됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:114
 msgid ""
-"This value must be set to greater than `0` if a product weight is defined."
+"A maximum product weight can be set in the :guilabel:`Max Weight` field. "
+"This limit applies to each location assigned this storage category. If a "
+"product weight is defined, the value must be set to greater than `0`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
-msgid "Capacity by product"
-msgstr "품목별 용량"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:119
+msgid "Limit capacity by product"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:121
 msgid ""
 "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
-"input items, and enter their capacities in the :guilabel:`Quantity` field."
+"input items, and enter In the :guilabel:`Capacity by Product` tab, "
+"click :guilabel:`Add a Line` to enter a product, and set the maximum "
+"capacity that should be stored at each location in the :guilabel:`Quantity` "
+"field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
 msgid ""
 "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
-"Sit` are stored at a single storage location, by specifying those amounts in "
-"the :guilabel:`Capacity by Product` tab of a storage category form."
+"Sit` are stored at a single storage location by specifying those amounts in "
+"the :guilabel:`Capacity by Product` tab. To ensure only a maximum of five "
+"`Large Cabinets` and two `Corner Desk Right Sit` are stored at a single "
+"storage location, specify those amounts in the :guilabel:`Capacity by "
+"Product` tab."
 msgstr ""
-"단일 저장 위치에 최대 5개의 `대형 캐비닛`과 2개의 `코너 데스크 오른쪽 좌석` "
-"만 보관할 수 있도록 저장 카테고리 양식의 :guilabel:`품목별 수용량` 탭에 해당"
-"하는 수량을 지정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Show storage category limiting by product count."
 msgstr "품목 수를 기준으로 보관 카테고리 제한을 표시합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
-msgid "Capacity by package"
-msgstr "패키지별 용량"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:137
+msgid "Limit capacity by package type"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:139
 msgid ""
 "For companies using :doc:`packages <../../product_management/configure/"
 "package>`, it becomes possible to ensure real-time storage capacity checks, "
-"based on package types (e.g., crates, bins, boxes, etc.)."
+"based on package types (e.g., crates, bins, Limiting capacity "
+"by :doc:`package <../../product_management/configure/package>` makes it "
+"possible to enforce real-time storage capacity checks based on package type "
+"(e.g., crates, bins, boxes, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:145
 msgid ""
 "Create the :ref:`package type <inventory/warehouses_storage/package-type>` "
 "before assigning it to a storage category. Create it on "
 "the :guilabel:`Inventory` tab of the product form (in "
 "the :guilabel:`Packaging` section), or create it from the :guilabel:`Product "
-"Packagings` page. Be sure to set the :guilabel:`Package Type`."
+"Packagings` page. Be sure Click :guilabel:`Add a line` to add "
+"a :ref:`package type <inventory/warehouses_storage/package-type>` to the "
+"storage category. Alternatively, create a new package type on "
+"the :guilabel:`Inventory` tab of the product form (in "
+"the :guilabel:`Packaging` section), or from the :guilabel:`Product "
+"Packagings` page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:154
 msgid ""
-"Create putaway rules for pallet-stored items, by creating the `High "
+"To help create putaway rules for pallet-stored items, create the `High "
 "frequency pallets` storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:157
 msgid ""
 "In the :guilabel:`Capacity by Package` tab, specify the number of packages "
 "for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
@@ -15470,27 +15459,23 @@ msgstr ""
 msgid "Create a storage category."
 msgstr "저장소 카테고리를 생성합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
-msgid "Assign to location"
-msgstr "위치에 배정"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+msgid "Assign storage locations"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:177
 msgid ""
-"Once the storage category is created, assign it to a location. Navigate to "
-"the location by going to :menuselection:`Inventory app --> Configuration --> "
-"Locations`, and select the desired location. Then, select the created "
+"After the storage category is created, it can be assigned to the "
+"sublocations. Go to :menuselection:`Inventory app --> Configuration --> "
+"Locations`, and open the desired sublocation. Then, select the created "
 "category in the :guilabel:`Storage Category` field."
 msgstr ""
-"저장소 카테고리가 생성되면 해당 위치에 배정을 시작합니다. :menuselection:`재"
-"고 관리 앱 --> 환경설정 --> 위치` 를 통해 위치 메뉴로 가서 원하는 위치를 선택"
-"합니다. 그런 다음 :guilabel:`저장소 카테고리` 에서 생성된 카테고리를 선택합니"
-"다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:182
 msgid ""
 "Assign the `High frequency pallets` storage category (which limits pallets "
-"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-"
-"location."
+"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` "
+"sublocation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
@@ -15498,31 +15483,43 @@ msgid ""
 "When a Storage Category is created, it can be linked to a warehouse location."
 msgstr "보관 카테고리를 생성하면 창고 위치와의 연결을 설정할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
-msgid "Putaway rule"
-msgstr "보관 규칙"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:188
+msgid ""
+"Repeat this step for all sublocations to which the storage category should "
+"apply."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:191
+msgid ""
+"On the storage category form, the :icon:`oi-arrows-v` :guilabel:`Locations` "
+"smart button shows which storage locations the category has been assigned to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
+msgid "Create a putaway rule"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:199
 msgid ""
 "With the :ref:`storage category <inventory/routes/define-storage>` "
-"and :ref:`location <inventory/routes/assign-location>` set up, create "
+"and :ref:`locations <inventory/routes/assign-location>` set up, create "
 "the :doc:`putaway rule <putaway>` by navigating to :menuselection:`Inventory "
 "app --> Configuration --> Putaway Rules`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
 msgid ""
 "Click the :guilabel:`New` button to create the putaway rule. Specify a "
-"location to store to in the :guilabel:`Store to` field."
+"location in the :guilabel:`Store to` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
 msgid ""
 "Use the :guilabel:`Sublocation` field to specify that you want to use a "
-"sublocation with the storage category:"
+"storage category on the sublocations of the :guilabel:`Store to` field:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
 msgid ""
 ":guilabel:`Last Used`: The last location that had a move associated with it "
 "for that product or product category is used. If there is no last location "
@@ -15530,14 +15527,16 @@ msgid ""
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:212
 msgid ""
 ":guilabel:`Closest Location`: The locations specified as part of the storage "
 "category are used. A storage category is mandatory in the :guilabel:`Having "
-"Category` field."
+"Category` field. The locations in the storage category must be sublocations "
+"of the location in the :guilabel:`Store to` field. If the closest locations "
+"in the storage category are full, the :guilabel:`Store to` location is used."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:218
 msgid ""
 "Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the putaway rule directing pallets of lemonade to "
@@ -15549,45 +15548,45 @@ msgstr ""
 msgid "Storage Categories used in putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:226
 msgid ""
 "If products are not routing to secondary locations for a storage category "
 "and a product weight is defined, verify that the storage "
 "category's :guilabel:`Max Weight` value is set to a number greater than `0`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:192
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:231
 msgid "Use case: limit capacity by package"
 msgstr "사용 사례: 패키지별 수용량 제한하기"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:233
 msgid ""
 "To limit the capacity of a storage location by a specific number of "
 "packages, :ref:`create a storage category with a Capacity By Package "
 "<inventory/routes/set-capacity-package>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:236
 msgid ""
-"Continuing the example from above, the `High frequency pallets` storage "
+"Continuing the examples from above, the `High frequency pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:200
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:239
 msgid ""
 "Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
 "any pallets received in the warehouse are directed to be stored in `PAL1` "
 "and `PAL2` locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:242
 msgid ""
 "Depending on the number of pallets on-hand at each of the storage locations, "
 "when two pallets of lemonade cans is received, the following scenarios "
 "happen:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:245
 msgid ""
 "If `PAL1` and `PAL2` are empty, the pallet is redirected to `WH/Stock/"
 "Pallets/PAL1`."
@@ -15595,19 +15594,19 @@ msgstr ""
 "`PAL1` 및 `PAL2`가 비어 있으면 팔레트가 `창고/재고/팔레트/PAL1` 로 리디렉션됩"
 "니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:246
 msgid "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr ""
 "`PAL1`이 가득 차게 되면, 팔레트가 `창고/재고/팔레트/PAL2` 로 리디렉션됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:247
 msgid ""
 "If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/"
 "Pallets`."
 msgstr ""
 "`PAL1` 및 `PAL2`가 가득 차면 팔레트가 `창고/재고/팔레트` 로 리디렉션됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:248
 msgid ""
 "If `PAL1` is partially full (for example, with one pallet), Odoo treats more "
 "than one received pallet as a single pallet on the receipt. You must "
@@ -36931,11 +36930,6 @@ msgstr ""
 "위 제품을 기재하거나 공급업체를 통해 자동 조달 또는 제조가 시작되도록 할 수 "
 "있으며, 최상위 제품을 **이커머스** 상점에 넣을 수도 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
-msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
-msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
 msgid ":doc:`../../../websites/ecommerce/products/catalog`"
 msgstr ":doc:`../../../websites/ecommerce/products/catalog`"
@@ -55960,6 +55954,409 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "The *Barcode* app can be used to process receipts, deliveries, and other "
+#~ "types of operations in real time using a barcode scanner or the Odoo "
+#~ "mobile app."
+#~ msgstr ""
+#~ "*바코드* 앱은 바코드 스캐너 또는 Odoo 모바일 앱을 사용하여 입고, 배송 및 "
+#~ "기타 다양한 유형의 작업을 실시간으로 처리할 수 있도록 설계되었습니다."
+
+#~ msgid ""
+#~ "This makes it possible to process operations on the warehouse floor when "
+#~ "they happen, instead of having to wait to validate transfers from a "
+#~ "computer. Processing operations this way can help to properly attribute "
+#~ "barcodes to the appropriate products, pickings, locations, and more."
+#~ msgstr ""
+#~ "이 기능을 사용하면 창고 현장에서 작업이 발생하면 즉시 처리할 수 있으므로 "
+#~ "컴퓨터에서 전송의 유효성을 검사할 때까지 기다릴 필요가 없습니다. 이러한 방"
+#~ "식으로 작업을 수행하면 관련 제품, 피킹, 위치 등에 바코드를 정확하게 할당하"
+#~ "는 데 도움이 됩니다."
+
+#~ msgid ""
+#~ "Once the page has refreshed, new options will be displayed under "
+#~ "the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+#~ "(with a corresponding drop-down menu), where either :guilabel:`Default "
+#~ "Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+#~ msgstr ""
+#~ "페이지를 새로고침하면 :guilabel:`바코드 스캐너` 기능 아래에 추가 옵션이 나"
+#~ "타납니다: :guilabel:`바코드 명명법` (해당 드롭다운 메뉴 포함)에"
+#~ "서 :guilabel:`기본 명명법` 또는 :guilabel:`기본 GS1 명명법` 중 하나를 선택"
+#~ "합니다."
+
+#~ msgid ""
+#~ "To process warehouse receipts for incoming products, there first needs to "
+#~ "be a purchase order (PO) created, and a receipt operation to process."
+#~ msgstr ""
+#~ "입고 제품에 대한 창고 입고 내역을 처리하려면 먼저 구매 주문(PO)과 해당 입"
+#~ "고 작업을 생성해야 합니다."
+
+#~ msgid ""
+#~ "To create a :abbr:`PO (purchase order)`, navigate to "
+#~ "the :menuselection:`Purchase app --> Create` to create a new request for "
+#~ "quotation (RFQ)."
+#~ msgstr ""
+#~ ":abbr:`PO (발주서)`를 생성하려면 :menuselection:`구매 앱 --> 생성`으로 이"
+#~ "동하여 새 견적 요청(RFQ) 생성을 시작합니다."
+
+#~ msgid ""
+#~ "From the blank :abbr:`RFQ (request for quotation)` form, click the drop-"
+#~ "down menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Products` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "비어 있는 :abbr:`견적 요청(RFQ)` 양식에서 :guilabel:`공급업체` 필드 옆의 "
+#~ "드롭다운 메뉴를 클릭하여 공급업체를 지정합니다. 그런 다음 :guilabel:`품목"
+#~ "` 탭의 :guilabel:`품목` 항목에서 :guilabel:`품목 추가`를 클릭하고 견적에 "
+#~ "포함할 원하는 제품을 선택합니다."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, then "
+#~ "click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
+#~ "quotation)` to a :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "준비가 완료되면 양식 상단의 :guilabel:`저장`을 클릭합니다. 그런 다"
+#~ "음 :guilabel:`주문 확인`을 클릭하여 :abbr:`RFQ(견적 요청)`를 확인하"
+#~ "고 :abbr:`PO(발주서)`로 변환합니다."
+
+#~ msgid "Completed purchase order for barcode product."
+#~ msgstr "바코드 제품에 대한 구매 주문이 완료되었습니다."
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse receipts, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "창고 입고에 대한 바코드 처리 및 스캔을 시작하려면 :menuselection:`바코드 "
+#~ "앱`으로 이동합니다."
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process receipts, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :menuselection:`Operations` overview page."
+#~ msgstr ""
+#~ ":guilabel:`바코드 앱`으로 들어가면 다양한 옵션이 있는 :guilabel:`바코드 스"
+#~ "캔` 화면이 나타납니다. 입고를 처리하려면 화면 하단에 있는 :guilabel:`작업"
+#~ "` 버튼을 클릭합니다. 이 작업은 :menuselection:`작업` 개요 페이지로 이어집"
+#~ "니다."
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Receipts` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding receipts. "
+#~ "Then, select the desired receipt operation to process. This navigates to "
+#~ "the barcode transfer screen."
+#~ msgstr ""
+#~ "이 페이지에서 :guilabel:`입고` 카드를 찾은 다음 :guilabel:`# 진행 대기` 버"
+#~ "튼을 클릭하여 모든 미결 입고 내역을 확인합니다. 그런 다음 처리할 특정 입"
+#~ "고 작업을 선택합니다. 이 작업을 선택하면 바코드 전송 화면으로 이동합니다."
+
+#~ msgid ""
+#~ "If *only* using a barcode scanner or the Odoo mobile app, the barcodes "
+#~ "for each transfer of a corresponding operation type can be scanned to be "
+#~ "processed easily. Once scanned, the products that are part of an existing "
+#~ "transfer can be scanned, and new products can be added to the transfer, "
+#~ "as well. Once all products have been scanned, validate the transfer to "
+#~ "proceed with the stock moves."
+#~ msgstr ""
+#~ "바코드 스캐너 또는 Odoo 모바일 앱*만* 사용하는 경우, 해당 작업 유형과 관련"
+#~ "된 바코드를 스캔하여 각 이송을 쉽게 처리할 수 있습니다. 스캔 후 기존 전송"
+#~ "에 관련된 제품을 스캔하고 필요한 경우 새 제품을 이송에 추가합니다. 모든 품"
+#~ "목을 스캔한 후 이송을 승인하여 재고 이동을 진행합니다."
+
+#~ msgid ""
+#~ "From this screen, an overview of all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "이 화면에서 해당 전송(**WH/IN/000XX**) 내에서 처리할 모든 입고에 대한 개요"
+#~ "가 표시됩니다. 화면 하단에는 제품을 작업에 추가해야 하는지 또는 전체 작업"
+#~ "을 한 번에 승인해야 하는지에 따라 :guilabel:`품목 추가` 또는 :guilabel:`승"
+#~ "인` 옵션이 있습니다."
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
+#~ "clicked to indicate receipt of that product, or the :guilabel:`pencil` "
+#~ "icon can be clicked to open a new screen to edit that product line."
+#~ msgstr ""
+#~ "각 제품을 개별적으로 처리하고 스캔하려면 특정 품목 라인을 선택합니"
+#~ "다. :guilabel:`+#` 버튼 (이 경우 :guilabel:`+10`)을 클릭하여 해당 품목의 "
+#~ "입고를 확인하거나 :guilabel:`연필` 아이콘을 클릭하여 해당 특정 품목 라인"
+#~ "을 편집할 수 있는 새 화면을 열 수 있습니다."
+
+#~ msgid ""
+#~ "From this screen, the product that's being received is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "이 화면에는 입고 중인 상품이 표시되며, 품목명 아래에서 :guilabel:`수량`을 "
+#~ "수정할 수 있습니다. 해당 줄의 `0`을 원하는 수량으로 수동으로 변경하거"
+#~ "나 :guilabel:`/#단위` 버튼 (이 경우 :guilabel:`/10단위`)을 클릭하"
+#~ "여 :abbr:`PO(발주서)`에서 주문한 수량을 자동으로 채울 수 있습니다."
+
+#~ msgid ""
+#~ "In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
+#~ "Product` is expected to be received. `[BARCODE_PROD]` is "
+#~ "the :guilabel:`Internal Reference` set on the product form. Scan the "
+#~ "barcode of the `Barcode Product` to receive one unit. Afterwards, click "
+#~ "the :guilabel:`pencil` icon to manually enter the received quantities."
+#~ msgstr ""
+#~ "`WH/IN/00019` 입고 작업의 경우 `바코드 제품`의 예상 입고 수량이 `10개`로 "
+#~ "설정되어 있습니다. 이 제품의 :guilabel:`내부 참조`는 `[BARCODE_PROD]`입니"
+#~ "다. 하나의 단위를 받으려면 `바코드 제품`의 바코드를 스캔합니다. 이후 입고 "
+#~ "수량을 수동으로 입력하려면 :guilabel:`연필` 아이콘을 클릭합니다."
+
+#~ msgid ""
+#~ "Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be "
+#~ "clicked to add or subtract quantity of the product, and "
+#~ "the :guilabel:`number keys` can be used to add quantity, as well."
+#~ msgstr ""
+#~ ":guilabel:`+1` 및 :guilabel:`-1` 버튼을 사용하여 제품 수량을 늘리거나 줄"
+#~ "일 수 있습니다. 또는 :guilabel:` 숫자 키`를 사용하여 원하는 수량을 추가할 "
+#~ "수 있습니다."
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another *location* is listed on the "
+#~ "product itself. Click this line to reveal a drop-down menu of additional "
+#~ "locations to choose from."
+#~ msgstr ""
+#~ ":guilabel:`번호 키` 아래에는 제품 자체에 다른 *위치*가 지정되어 있지 않는 "
+#~ "한 기본적으로 `WH/재고`으로 설정되는 :guilabel:`위치`가 있습니다. 이 항목"
+#~ "을 클릭하면 선택할 수 있는 추가 위치가 포함된 드롭다운 메뉴가 표시됩니다."
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The receipt has now been processed, and "
+#~ "the :guilabel:`Barcode app` can be closed out."
+#~ msgstr ""
+#~ "다음으로, 해당 이송(**WH/IN/000XX**) 내에서 처리할 모든 입고 내역이 포함"
+#~ "된 개요 페이지에서 수신 중인 제품의 제품 항목에 있는 :guilabel:`+#` 버튼"
+#~ "을 클릭한 다음 :guilabel:`승인`을 클릭합니다. 이 작업으로 입고 처리가 완료"
+#~ "되었으며 이제 :guilabel:`바코드 앱`을 닫을 수 있습니다."
+
+#~ msgid ""
+#~ "To process warehouse deliveries for outgoing products, there first needs "
+#~ "to be a sales order (SO) created, and a delivery operation to process."
+#~ msgstr ""
+#~ "출고 제품에 대한 창고 배송을 처리하려면 먼저 판매주문서 (SO)를 생성하고 배"
+#~ "송 작업을 처리해야 합니다."
+
+#~ msgid ""
+#~ "To create a :abbr:`SO (sales order)`, navigate to "
+#~ "the :menuselection:`Sales app --> Create` to create a new quotation."
+#~ msgstr ""
+#~ ":abbr:`SO (판매주문서)`를 생성하려면 :menuselection:`판매 앱 --> 생성`으"
+#~ "로 이동하여 새 견적을 생성합니다."
+
+#~ msgid ""
+#~ "From the blank quotation form, click the drop-down menu next to "
+#~ "the :guilabel:`Customer` field to add a customer. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "빈 견적 양식에서 :guilabel:`고객` 필드 옆에 있는 드롭다운 메뉴를 클릭하여 "
+#~ "고객을 지정합니다. 그런 다음 :guilabel:`주문 항목` 탭의 :guilabel:`품목` "
+#~ "항목에서 :guilabel:`품목 추가`를 클릭하고 견적에 포함할 원하는 제품을 선택"
+#~ "합니다."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, and "
+#~ "click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
+#~ "(sales order)`."
+#~ msgstr ""
+#~ "모두 완료되면 양식 상단의 :guilabel:`저장`을 클릭합니다. 그런 다"
+#~ "음 :guilabel:`주문 확인`을 클릭하여 견적을 확인하고 이를 :abbr:`SO (판매주"
+#~ "문서)`로 변환합니다."
+
+#~ msgid "Completed sales order for barcode product."
+#~ msgstr "바코드 제품에 대한 판매 주문이 완료되었습니다."
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse deliveries, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "창고 배송용 바코드 처리 및 스캔을 시작하려면 :menuselection:`바코드 앱`으"
+#~ "로 이동합니다."
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process deliveries, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :guilabel:`Operations` overview page."
+#~ msgstr ""
+#~ ":guilabel:`바코드 앱`으로 들어가면 다양한 옵션이 있는 :guilabel:`바코드 스"
+#~ "캔` 화면이 나타납니다. 배송을 처리하려면 화면 하단에 있는 :guilabel:`작업"
+#~ "` 버튼을 클릭합니다. 이 작업을 수행하면 :guilabel:`작업` 개요 페이지로 연"
+#~ "결됩니다."
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Delivery Orders` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding deliveries. "
+#~ "Then, select the desired delivery order to process. This navigates to the "
+#~ "barcode transfer screen."
+#~ msgstr ""
+#~ "이 페이지에서 :guilabel:`배달 주문` 카드를 찾은 다음 :guilabel:`# 처리 대"
+#~ "기` 버튼을 클릭하여 보류 중인 모든 배송 주문을 확인합니다. 그런 다음 처리"
+#~ "할 배송 주문을 선택합니다. 이 작업을 수행하면 바코드 전송 화면으로 이동합"
+#~ "니다."
+
+#~ msgid ""
+#~ "From this screen, an overview of all deliveries to process within that "
+#~ "transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "이 화면에는 해당 전송 내에서 처리할 모든 배송에 대한 개요가 표시됩니다"
+#~ "(**WH/OUT/000XX**). 화면 하단에는 '제품 추가' 또는 '유효성 검사' 옵션이 있"
+#~ "습니다. 작업에 :guilabel:`제품 추가`를 해야 하는지 또는 전체 작업을 한 번"
+#~ "에 :guilabel:`승인`해야 하는지 여부에 따라 적절한 옵션을 선택합니다."
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+1` button can be clicked to indicate delivery of "
+#~ "that product, or the :guilabel:`pencil icon` can be clicked to open a new "
+#~ "screen to edit that product line."
+#~ msgstr ""
+#~ "각 품목을 개별적으로 처리하고 스캔하려면 특정 제품 항목을 선택합니"
+#~ "다. :guilabel:`+1` 버튼을 클릭하여 해당 품목의 배송을 확인하거"
+#~ "나 :guilabel:`연필 아이콘`을 클릭하여 해당 특정 제품 항목을 편집할 수 있"
+#~ "는 새 화면을 열 수 있습니다."
+
+#~ msgid ""
+#~ "From this screen, the product that's being delivered is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`SO (sales order)`."
+#~ msgstr ""
+#~ "이 화면에는 배송 중인 상품이 표시되며, 상품명 아래에서 :guilabel:`수량` 줄"
+#~ "을 수정할 수 있습니다. 해당 줄의 `0`을 원하는 수량으로 변경하거"
+#~ "나 :guilabel:`/#단위` 버튼 (이 경우 :guilabel:`/10단위`)을 클릭하"
+#~ "여 :abbr:`SO (판매 주문)`에서 주문한 수량을 자동으로 채울 수 있습니다."
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another location is listed on the "
+#~ "product itself."
+#~ msgstr ""
+#~ ":guilabel:`번호 키` 아래에는 제품 자체에 다른 위치가 지정되어 있지 않는 "
+#~ "한 기본적으로 `WH/재고`로 표시되는 :guilabel:`위치` 항목이 있습니다."
+
+#~ msgid ""
+#~ "This is the location that the product is being pulled from for delivery. "
+#~ "Click this line to reveal a drop-down menu of additional locations to "
+#~ "choose from (if this product is stored in multiple locations in the "
+#~ "warehouse)."
+#~ msgstr ""
+#~ "배송을 위해 제품을 가져오는 위치를 나타냅니다. 이 항목을 클릭하면 선택할 "
+#~ "수 있는 추가 위치가 포함된 드롭다운 메뉴가 표시됩니다. (특히 제품이 창고 "
+#~ "내 여러 위치에 저장된 경우)"
+
+#~ msgid ""
+#~ "For warehouses that have multiple different storage locations, putaway "
+#~ "rules, and removal strategies, additional steps can be added for various "
+#~ "operation types, while using the *Barcode* app."
+#~ msgstr ""
+#~ "보관 위치, 입고 규칙, 반출 전략이 여러 가지인 창고의 경우 *바코드* 앱을 사"
+#~ "용할 때 다양한 작업 유형에 대해 추가 단계를 포함할 수 있습니다."
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The delivery has now been processed, and the "
+#~ "*Barcode* app can be closed out."
+#~ msgstr ""
+#~ "다음으로, 해당 전송(**WH/OUT/000XX**) 내에서 처리할 모든 배송이 포함된 개"
+#~ "요 페이지에서 배송 중인 제품의 제품 항목에 있는 :guilabel:`+#` 버튼을 선택"
+#~ "한 다음 :guilabel:`승인`을 클릭합니다. 이제 배송이 처리되었으며 *바코드* "
+#~ "앱을 닫을 수 있습니다."
+
+#~ msgid ""
+#~ "Assigning categories to storage locations tells Odoo these locations meet "
+#~ "specific requirements, such as temperature or accessibility. Odoo then "
+#~ "evaluates these locations, based on defined capacity, and recommends the "
+#~ "best one on the warehouse transfer form."
+#~ msgstr ""
+#~ "저장 위치에 카테고리를 지정하면 해당 위치가 온도나 접근성 등 특정 요건을 "
+#~ "충족하는지 여부를 Odoo에서 확인할 수 있습니다. 그런 다음 Odoo에서는 지정"
+#~ "한 수용량을 기준으로 위치에 대해 평가하여 창고 이전 양식에서 가장 적합한 "
+#~ "위치를 추천합니다."
+
+#~ msgid ""
+#~ "To enable storage categories, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
+#~ "ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
+#~ "Routes` features are enabled."
+#~ msgstr ""
+#~ "저장소 카테고리를 활성화하려면 :menuselection:`재고 관리 앱 --> 환경설정 "
+#~ "--> 설정` 으로 이동합니다. 그런 다음 :guilabel:`창고` 섹션에서 :guilabel:`"
+#~ "저장소 위치` 및 :guilabel:`다단계 경로` 기능이 활성화되어 있는지 확인합니"
+#~ "다."
+
+#~ msgid "Define storage category"
+#~ msgstr "창고 카테고리 지정하기"
+
+#~ msgid ""
+#~ "Options are available to limit capacity by weight, product, and package "
+#~ "type."
+#~ msgstr "중량, 품목 및 패키지 유형별로 용량을 제한하도록 선택할 수 있습니다."
+
+#~ msgid ""
+#~ "While it is possible to limit capacity by product and package type at the "
+#~ "same location, it may be more practical to store items in different "
+#~ "amounts across various locations, as shown in this example "
+#~ "of :ref:`capacity by package <inventory/routes/set-capacity-package>`."
+#~ msgstr ""
+#~ "동일한 위치에서 품목 및 패키지 유형별로 수용량을 제한할 수 있으나, :ref:`"
+#~ "패키지별 수용량 <inventory/routes/set-capacity-package>` 의 예시와 같이 여"
+#~ "러 위치에 다양한 수량으로 품목을 보관하는 것이 더 실용적일 수 있습니다."
+
+#~ msgid "Capacity by weight"
+#~ msgstr "중량별 수용량"
+
+#~ msgid "Capacity by product"
+#~ msgstr "품목별 용량"
+
+#~ msgid ""
+#~ "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
+#~ "Sit` are stored at a single storage location, by specifying those amounts "
+#~ "in the :guilabel:`Capacity by Product` tab of a storage category form."
+#~ msgstr ""
+#~ "단일 저장 위치에 최대 5개의 `대형 캐비닛`과 2개의 `코너 데스크 오른쪽 좌석"
+#~ "` 만 보관할 수 있도록 저장 카테고리 양식의 :guilabel:`품목별 수용량` 탭에 "
+#~ "해당하는 수량을 지정합니다."
+
+#~ msgid "Capacity by package"
+#~ msgstr "패키지별 용량"
+
+#~ msgid "Assign to location"
+#~ msgstr "위치에 배정"
+
+#~ msgid ""
+#~ "Once the storage category is created, assign it to a location. Navigate "
+#~ "to the location by going to :menuselection:`Inventory app --> "
+#~ "Configuration --> Locations`, and select the desired location. Then, "
+#~ "select the created category in the :guilabel:`Storage Category` field."
+#~ msgstr ""
+#~ "저장소 카테고리가 생성되면 해당 위치에 배정을 시작합니다. :menuselection:`"
+#~ "재고 관리 앱 --> 환경설정 --> 위치` 를 통해 위치 메뉴로 가서 원하는 위치"
+#~ "를 선택합니다. 그런 다음 :guilabel:`저장소 카테고리` 에서 생성된 카테고리"
+#~ "를 선택합니다."
+
+#~ msgid "Putaway rule"
+#~ msgstr "보관 규칙"
 
 #~ msgid ""
 #~ "When shipping products to customers, the landed cost is the total price "
