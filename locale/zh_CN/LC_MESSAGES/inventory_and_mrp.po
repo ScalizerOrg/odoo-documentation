@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-12 18:30+0000\n"
+"POT-Creation-Date: 2026-02-20 18:30+0000\n"
 "PO-Revision-Date: 2026-02-14 23:10+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -108,7 +108,7 @@ msgstr ""
 ":doc:`../../inventory/warehouses_storage/inventory_management/count_products`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:22
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:19
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:13
 msgid "Enable Barcode app"
 msgstr "启用条码应用程序"
@@ -133,7 +133,6 @@ msgstr ""
 "选框。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:31
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:24
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
 msgid ""
 "Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
@@ -491,7 +490,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:57
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -1023,6 +1022,7 @@ msgstr ""
 "当 :guilabel:`条形码模式` 包含`.*`时，表示它可以包含任何数量或类型的字符。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:48
 msgid ":doc:`gs1_nomenclature`"
 msgstr ":doc:`gs1_nomenclature`"
 
@@ -2163,56 +2163,63 @@ msgstr "创下了 52.1 公斤桃子的库存记录。"
 msgid "Process receipts and deliveries with barcodes"
 msgstr "使用条形码处理收据和交付货物"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:7
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
 msgid ""
-"The *Barcode* app can be used to process receipts, deliveries, and other "
+"The **Barcode** app can be used to process receipts, deliveries, and other "
 "types of operations in real time using a barcode scanner or the Odoo mobile "
 "app."
 msgstr ""
-"*条形码*应用程序可用于使用条码扫描仪或 Odoo 移动应用程序，实时处理收据、交付"
-"和其他类型的操作。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:13
 msgid ""
 "This makes it possible to process operations on the warehouse floor when "
 "they happen, instead of having to wait to validate transfers from a "
-"computer. Processing operations this way can help to properly attribute "
-"barcodes to the appropriate products, pickings, locations, and more."
+"computer. This real-time processing ensures barcodes are accurately assigned "
+"to the correct products, packaging, transfers, locations, and more, reducing "
+"errors and keeping inventory data in sync."
 msgstr ""
-"这样就可以在仓库发生操作时对其进行处理，而不必等待计算机对传输进行验证。通过"
-"这种方式处理业务有助于将条形码正确归属到相应的产品、拣选、位置等。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:17
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:21
 msgid ""
-"To use the *Barcode* app to process transfers, it must be installed by "
-"enabling the feature from the settings of the *Inventory* app."
+"To use the **Barcode** app to process transfers, it must be installed by "
+"enabling the feature from the settings of the **Inventory** app."
 msgstr ""
-"要使用 *条形码* 应用程序处理转账，必须在 *库存* 应用程序的设置中启用该功能。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:20
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:24
 msgid ""
-"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
-"the checkbox next to the :guilabel:`Barcode Scanner` feature."
+"To do so, navigate to :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the *Barcode* section, and select the "
+"checkbox next to the :guilabel:`Barcode Scanner` feature."
 msgstr ""
-"要执行此操作，请进入 :menuselection:`库存应用程序 --> 配置 --> 设置`。然后向"
-"下滚动到 :guilabel:`条形码` 部分，点击 :guilabel:`条形码扫描器` 功能旁边的复"
-"选框。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:26
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:28
 msgid ""
-"Once the page has refreshed, new options will be displayed under "
-"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
-"(with a corresponding drop-down menu), where either :guilabel:`Default "
-"Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+"After the checkbox is selected, click :guilabel:`Save` at the top of the "
+"page to save changes."
 msgstr ""
-"页面刷新后，:guilabel:`条码扫描仪`功能下将显示新选项：:guilabel:`条码命名法`"
-"（有相应的下拉菜单），可选择:guilabel:`默认命名法`或:guilabel:`默认 GS1 命名"
-"法`。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:30
+msgid ""
+"After the page has refreshed, a new option is displayed under "
+"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+"(with a corresponding drop-down menu). Select either:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:33
+msgid ""
+":guilabel:`Default Nomenclature`: The barcode actions using UPC and EAN, "
+"detailed in the default nomenclature list, are available for use. By "
+"default, Odoo automatically handles UPC/EAN conversion."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:36
+msgid ""
+":guilabel:`Default GS1 Nomenclature`: Scan barcodes of sealed boxes and "
+"identify essential product information, such as Global Trade Item Numbers "
+"(GTINs), lot number, quantity information, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
 msgid ""
 "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
@@ -2222,91 +2229,62 @@ msgstr ""
 "还有一个 :guilabel:`配置产品条形码` 内部链接箭头和一组 :guilabel:`打印` 按"
 "钮，用于打印条形码命令和条形码演示表。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:37
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
-msgid ""
-"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
-"the :doc:`Set up your barcode scanner <../setup/hardware>` "
-"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
-"pages."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:47
+msgid ":doc:`barcode_nomenclature`"
 msgstr ""
-"有关设置和配置 :guilabel:`条形码` 应用程序的更多信息，请参阅 :doc:`设置条形码"
-"扫描仪 <../setup/hardware>` 和 :doc:`激活 Odoo 中的条形码 <../setup/"
-"software>` 文档页面。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:44
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
+msgid ":doc:`../setup/hardware`"
+msgstr ":doc:`../setup/hardware`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:50
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+msgid ":doc:`../setup/software`"
+msgstr ":doc:`../setup/software`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:55
 msgid "Scan barcodes for receipts"
 msgstr "扫描收据条形码"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:46
-msgid ""
-"To process warehouse receipts for incoming products, there first needs to be "
-"a purchase order (PO) created, and a receipt operation to process."
-msgstr "要处理入库产品的仓库收据，首先需要创建采购订单 (PO)，并处理收据操作。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
-msgid ""
-"To create a :abbr:`PO (purchase order)`, navigate to "
-"the :menuselection:`Purchase app --> Create` to create a new request for "
-"quotation (RFQ)."
-msgstr ""
-"要创建一个:abbr:`PO（采购订单）`，请导航至 :menuselection:`采购应用程序 --> "
-"创建` 以创建一个新的报价单（RFQ）。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:52
-msgid ""
-"From the blank :abbr:`RFQ (request for quotation)` form, click the drop-down "
-"menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Products` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"在空白的:abbr:`RFQ（询价）`表单中，单击 :guilabel:`供应商` 字段旁边的下拉菜"
-"单，添加供应商。然后，在 :guilabel:`产品` 标签下的 :guilabel:`产品` 行，单"
-"击 :guilabel:`添加产品`，选择要添加到报价单中的所需产品。"
-
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:57
 msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, then "
-"click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
-"quotation)` to a :abbr:`PO (purchase order)`."
+"Purchase orders (POs) are used to process warehouse receipts for incoming "
+"products and product packagings. First, create a request for quotation, then "
+"confirm it to create a |PO|."
 msgstr ""
-"准备就绪后，单击表单顶部的 :guilabel:`保存`，然后单击 :guilabel:`确认订单`，"
-"将 :abbr:`RFQ（询价）'确认为 :abbr:`PO（采购订单）`。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed purchase order for barcode product."
-msgstr "完成条形码产品采购订单。"
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:61
+msgid ":doc:`../../purchase/manage_deals/rfq`"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:64
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:63
 msgid ""
 "To process and scan barcodes for warehouse receipts, navigate to "
-"the :menuselection:`Barcode app`."
+"the :menuselection:`Barcode` app."
 msgstr ""
-"要处理和扫描仓库收据的条形码，请导航至 :menuselection:`条形码应用程序`。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:66
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:65
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process receipts, click "
-"on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :menuselection:`Operations` overview page."
+"Once inside the **Barcode** app, a :guilabel:`Barcode Scanning` screen "
+"displaying different options is presented."
 msgstr ""
-"进入 :guilabel:`条形码应用程序` 后，会出现一个显示不同选项的 :guilabel:`条形"
-"码扫描` 屏幕。要处理收据，请单击屏幕底部的 :guilabel:`操作` 按钮。这将导航"
-"到 :menuselection:`操作` 概览页面。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:71
+msgid ""
+"To process receipts, click the :guilabel:`Operations` button at the bottom "
+"of the screen. The :guilabel:`Operations` overview page opens."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:74
 msgid ""
-"From this page, locate the :guilabel:`Receipts` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding receipts. Then, "
-"select the desired receipt operation to process. This navigates to the "
-"barcode transfer screen."
+"From this page, tap the :guilabel:`Receipts` card to view all outstanding "
+"receipts. Then, select the desired receipt operation to process. This "
+"navigates to the barcode transfer screen."
 msgstr ""
-"在此页面，找到 :guilabel:`收据` 卡，并单击 :guilabel:`# 待处理` 按钮，查看所"
-"有未处理的收据。然后，选择要处理的收据操作。这将导航到条形码传输屏幕。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:79
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:78
 msgid ""
 "If *only* using a barcode scanner or the Odoo mobile app, the barcodes for "
 "each transfer of a corresponding operation type can be scanned to be "
@@ -2319,256 +2297,213 @@ msgstr ""
 "调拨所需的条形码进行处理。一旦扫描完成，可以继续扫描已存在调拨中的产品，并添"
 "加新的产品到调拨中。当所有产品都被扫描后，验证调拨以进行库存移动。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:85
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:84
 msgid ""
 "From this screen, an overview of all receipts to process within that "
 "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once."
 msgstr ""
-"在该屏幕上，将显示在该转账（**WH/IN/000XX**）中要处理的所有收据的概览。屏幕底"
-"部有 :guilabel:`添加产品` 或 :guilabel:`验证` 选项，这取决于是否需要在操作中"
-"添加产品，或是否需要一次性验证整个操作。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:None
 msgid "Overview of receipts in transfer to scan."
 msgstr "扫描传输中的收据概览。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:94
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:92
 msgid ""
-"To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
-"clicked to indicate receipt of that product, or the :guilabel:`pencil` icon "
-"can be clicked to open a new screen to edit that product line."
+"To process and scan each product individually, scan a product or product "
+"packaging, or choose a specific product line. Click the :guilabel:`+#` "
+"button (for example, `+10`) to indicate receipt of that product."
 msgstr ""
-"要单独处理和扫描每个产品，请选择特定的产品系列。点击 :guilabel:`+#` 按钮（本"
-"例中为 :guilabel:`+10`）表示收到该产品，或点击 :guilabel:`铅笔` 图标打开新屏"
-"幕编辑该产品系列。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:98
-msgid ""
-"From this screen, the product that's being received is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`PO (purchase order)`."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:97
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:171
+msgid "Editing a product line"
 msgstr ""
-"在此屏幕中，将列出正在接收的产品。在产品名称下，:guilabel:`数量`行可以编辑。"
-"将该行中的`0`改为所需的数量，或点击 :guilabel:`/# 单元` 按钮（本例中"
-"为 :guilabel:`/10 单元`），自动填写从 :abbr:`PO（采购订单）` 中订购的数量。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:104
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:99
 msgid ""
-"In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
-"Product` is expected to be received. `[BARCODE_PROD]` is "
-"the :guilabel:`Internal Reference` set on the product form. Scan the barcode "
-"of the `Barcode Product` to receive one unit. Afterwards, click "
-"the :guilabel:`pencil` icon to manually enter the received quantities."
+"To manually adjust received quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"在接收操作`WH/IN/00019`中，预计将接收`条码产品`的`10 个单位`。"
-"`[BARCODE_PROD]`是产品表单上设置的 :guilabel:`内部参考`。扫描`条形码产品`的条"
-"形码以接收一个单位。然后，点击 :guilabel:`铅笔` 图标，手动输入收到的数量。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:102
+msgid ""
+"On this screen, the product that's being received is listed. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0` in the line "
+"to the desired quantity, or click the :guilabel:`/# Units` button (for "
+"example, `/12 Units`) to automatically fill the quantity ordered from the |"
+"PO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:107
+msgid ""
+"Additionally, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or "
+"subtract quantity of the product. Click the :guilabel:`+# Units` button to "
+"add a product packaging. Click the number keys to add quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
+msgid ""
+"Below the number keys is the :guilabel:`Location` line, which reads `WH/"
+"Stock` by default, unless another *location* is listed on the product "
+"itself. Click this line to reveal a drop-down menu of additional locations "
+"to choose from."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:115
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:192
+msgid ""
+"When ready, click :guilabel:`Confirm` to confirm the changes made to the "
+"product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:118
+msgid ""
+"In the reception operation `WH/IN/00012`, `12 Units` of `Soda Can` are "
+"expected to be received. Warehouse employees can scan the barcode of the "
+"`Soda Can` product to receive one unit, or because they can be purchased in "
+"6-pack packaging, they can scan the packaging barcode. Alternatively, they "
+"can click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to manually enter "
+"the received quantities."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
 msgid "Product line editor for individual transfer in Barcode app."
 msgstr "产品线编辑器，可在条形码应用程序中进行单独传输。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:113
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:179
-msgid ""
-"Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be clicked "
-"to add or subtract quantity of the product, and the :guilabel:`number keys` "
-"can be used to add quantity, as well."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:128
+msgid "Validating the transfer"
 msgstr ""
-"此外，点击 :guilabel:`+1` 和 :guilabel:`-1` 按钮可添加或减少产品数量，还可使"
-"用 :guilabel:`数字键` 添加数量。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:116
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:130
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another *location* is listed on the "
-"product itself. Click this line to reveal a drop-down menu of additional "
-"locations to choose from."
+"If not all products were scanned or manually entered from the pencil icon, "
+"click the :guilabel:`+#` button on the product line for the products being "
+"received."
 msgstr ""
-"在 :guilabel:`数字键` 下方是 :guilabel:`位置` 行，默认为 `WH/Stock`，除非产品"
-"本身列出了其他*位置*。点击该行可显示一个下拉菜单，其中有更多位置供您选择。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:120
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:211
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:133
 msgid ""
-"Once ready, click :guilabel:`Confirm` to confirm the changes made to the "
-"product line."
-msgstr "准备就绪后，单击 :guilabel:`确认`，以确认对产品系列所做的更改。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:122
-msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"receipt has now been processed, and the :guilabel:`Barcode app` can be "
-"closed out."
+"Finally, click :guilabel:`Validate`. The receipt is processed, and the "
+"**Barcode** app can be closed."
 msgstr ""
-"然后，在包含该转账（**WH/IN/000XX**）中要处理的所有收据的概览页面中，点击收据"
-"产品线上的 :guilabel:`+#` 按钮，然后点击 :guilabel:`验证`。收据现已处理完毕，"
-"可关闭 :guilabel:`条码应用程序`。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of receipts in transfer to validate."
 msgstr "转移验证的收据概览。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:132
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:140
 msgid "Scan barcodes for delivery orders"
 msgstr "扫描送货单的条形码"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:142
 msgid ""
-"To process warehouse deliveries for outgoing products, there first needs to "
-"be a sales order (SO) created, and a delivery operation to process."
+"To process warehouse deliveries for outgoing products, a sales order (SO) "
+"must be created to create a delivery operation to process. First, create a "
+"quotation, then confirm it to create the |SO|."
 msgstr ""
-"要处理出库产品的仓库交付，首先需要创建一个销售订单（SO），并处理一个交付操"
-"作。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:137
-msgid ""
-"To create a :abbr:`SO (sales order)`, navigate to the :menuselection:`Sales "
-"app --> Create` to create a new quotation."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:146
+msgid ":doc:`../../../sales/sales/send_quotations/create_quotations`"
 msgstr ""
-"要创建一个:abbr:`SO（销售订单）`，请导航至 :menuselection:`销售应用程序 --> "
-"创建` 以创建一个新的报价单。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:140
-msgid ""
-"From the blank quotation form, click the drop-down menu next to "
-"the :guilabel:`Customer` field to add a customer. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"在空白报价表中，单击 :guilabel:`客户` 字段旁边的下拉菜单，添加客户。然后，"
-"在:guilabel:`订单行'选项卡下的:guilabel:`产品`行，单击:guilabel:`添加产品`，"
-"选择要添加到报价单的所需产品。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:144
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, and "
-"click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
-"(sales order)`."
-msgstr ""
-"准备就绪后，单击表单顶部的:guilabel:`保存`，然后单击 :guilabel:`确认订单`，将"
-"报价确认为:abbr:`SO（销售订单）`。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed sales order for barcode product."
-msgstr "完成条形码产品销售订单。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:148
 msgid ""
 "To process and scan barcodes for warehouse deliveries, navigate to "
-"the :menuselection:`Barcode app`."
+"the :menuselection:`Barcode` app."
 msgstr ""
-"要处理和扫描仓库交货的条形码，请导航至 :menuselection:`条形码应用程序`。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:153
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:150
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process deliveries, "
-"click on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :guilabel:`Operations` overview page."
+"In the **Barcode** app, a :guilabel:`Barcode Scanning` screen displaying "
+"different options opens. To process deliveries, click "
+"the :guilabel:`Operations` button at the bottom of the screen. This opens "
+"an :guilabel:`Operations` overview page."
 msgstr ""
-"进入 :guilabel:`条形码应用程序` 后，会出现一个显示不同选项的 :guilabel:`条形"
-"码扫描` 屏幕。要处理交货，请单击屏幕底部的 :guilabel:`操作` 按钮。这将导航"
-"到 :guilabel:`操作` 概览页面。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:157
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:154
 msgid ""
-"From this page, locate the :guilabel:`Delivery Orders` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding deliveries. "
-"Then, select the desired delivery order to process. This navigates to the "
-"barcode transfer screen."
+"On this page, click the :guilabel:`Delivery Orders` card to view all "
+"outstanding deliveries."
 msgstr ""
-"在此页面，找到 :guilabel:`送货订单` 卡，然后单击 :guilabel:`#待处理` 按钮，查"
-"看所有未处理的送货单。然后，选择需要处理的交货单。这将导航到条形码传输屏幕。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Operations overview page in Barcode app dashboard."
 msgstr "条形码应用程序仪表板中的操作概览页面。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:159
 msgid ""
-"From this screen, an overview of all deliveries to process within that "
-"transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"Select the desired delivery order to process. This navigates to the barcode "
+"transfer screen."
 msgstr ""
-"在该屏幕上，将显示在该传送（**WH/OUT/000XX**）内要处理的所有交货的概览。屏幕"
-"底部有 :guilabel:`添加产品` 或 :guilabel:`验证` 选项，这取决于是否需要在操作"
-"中添加产品，或是否需要一次性验证整个操作。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:170
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:161
+msgid ""
+"On this screen, review the overview of all products and packagings to "
+"process within that transfer (**WH/OUT/000XX**). At the bottom of the "
+"screen, there are buttons to :guilabel:`Add Product` "
+"or :guilabel:`Validate`, depending on whether products need to be added to "
+"the operation, or if the whole operation should be validated at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:166
 msgid ""
 "To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+1` button can be clicked to indicate delivery of that "
-"product, or the :guilabel:`pencil icon` can be clicked to open a new screen "
-"to edit that product line."
+"line. Scan a product or product packaging, or click the :guilabel:`+#` (for "
+"example, `+6`) button to indicate delivery of that product."
 msgstr ""
-"要单独处理和扫描每个产品，请选择特定的产品系列。点击 :guilabel:`+1` 按钮，表"
-"示已交付该产品，或点击 :guilabel:`铅笔图标`，打开新屏幕编辑该产品系列。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:174
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:173
 msgid ""
-"From this screen, the product that's being delivered is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`SO (sales order)`."
+"To manually adjust quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"在此屏幕中，将列出正在交付的产品。在产品名称下，可以编辑 :guilabel:`数量` "
-"行。将该行中的`0`改为所需的数量，或点击 :guilabel:`/# Units` 按钮（本例中"
-"为 :guilabel:`/10 Units`），自动填写从 :abbr:`SO （销售订单）` 中订购的数量。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:176
+msgid ""
+"The product that's being delivered is listed on this screen. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`/# Units` button (for "
+"example, :guilabel:`/6 Units`) to automatically fill the quantity ordered "
+"from the |SO|. Alternatively, click the :guilabel:`+1` and :guilabel:`-1` "
+"buttons to add or subtract quantity of the product, and the number keys can "
+"be used to add quantity, as well."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:182
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another location is listed on the "
-"product itself."
-msgstr ""
-"在 :guilabel:`数字键` 下方是 :guilabel:`位置` 行，默认为`WH/Stock`，除非产品"
-"本身列出了其他位置。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:185
-msgid ""
+"Below the number keys is the :guilabel:`Location` line, which reads `WH/"
+"Stock` by default, unless the product is stored in a different location. "
 "This is the location that the product is being pulled from for delivery. "
-"Click this line to reveal a drop-down menu of additional locations to choose "
-"from (if this product is stored in multiple locations in the warehouse)."
+"Click this line to reveal a menu of additional locations to choose from (if "
+"this product is stored in multiple locations in the warehouse)."
 msgstr ""
-"这是产品被用于交货而被取出的位置。点击这一行可以弹出下拉菜单，显示其他可供选"
-"择的库存位置（如果该产品在仓库中存放于多个位置）。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:188
 msgid ""
 "For warehouses that have multiple different storage locations, putaway "
 "rules, and removal strategies, additional steps can be added for various "
-"operation types, while using the *Barcode* app."
+"operation types, while using the **Barcode** app."
 msgstr ""
-"对于有多个不同存储位置、入库规则和移库策略的仓库，在使用*条形码*应用程序时，"
-"可为各种操作类型添加额外的步骤。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:196
-msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"delivery has now been processed, and the *Barcode* app can be closed out."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:195
+msgid "Validating the delivery"
 msgstr ""
-"然后，在包含该转账（**WH/OUT/000XX**）中所有待处理收据的总览页面中，点击收货"
-"产品线上的 :guilabel:`+#` 按钮，然后点击 :guilabel:`验证`。至此，交货已处理完"
-"毕，*条形码* 应用程序可以关闭。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:197
+msgid ""
+"If not all products or product packagings have been scanned or entered on "
+"the overview page, scan the products or packagings, or click "
+"the :guilabel:`+#` button on the product line for the products. Finally, "
+"click :guilabel:`Validate`. The delivery is processed, and the **Barcode** "
+"app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of deliveries in transfer to validate."
@@ -2597,6 +2532,23 @@ msgstr ""
 "有关与 Odoo 兼容的条形码移动扫描仪以及 *库存* 应用程序的其他硬件列表，请参阅 "
 "`Odoo 库存 - 硬件页面 <https://www.odoo.com/app/inventory-hardware>`_。"
 
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+msgid ""
+"To use the *Barcode* app to process transfers, it must be installed by "
+"enabling the feature from the settings of the *Inventory* app."
+msgstr ""
+"要使用 *条形码* 应用程序处理转账，必须在 *库存* 应用程序的设置中启用该功能。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
+msgid ""
+"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
+"the checkbox next to the :guilabel:`Barcode Scanner` feature."
+msgstr ""
+"要执行此操作，请进入 :menuselection:`库存应用程序 --> 配置 --> 设置`。然后向"
+"下滚动到 :guilabel:`条形码` 部分，点击 :guilabel:`条形码扫描器` 功能旁边的复"
+"选框。"
+
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:24
 msgid ""
 "When the page has refreshed, new options are displayed under "
@@ -2608,6 +2560,17 @@ msgstr ""
 "页面刷新后，:guilabel:`条码扫描仪`功能下将显示新选项：:guilabel:`条码命名法`"
 "（有相应的下拉菜单），可选择:guilabel:`默认命名法`或:guilabel:`默认 GS1 命名"
 "法`。所选术语将改变扫描仪在 Odoo 中如何解析条形码。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
+msgid ""
+"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
+"the :doc:`Set up your barcode scanner <../setup/hardware>` "
+"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
+"pages."
+msgstr ""
+"有关设置和配置 :guilabel:`条形码` 应用程序的更多信息，请参阅 :doc:`设置条形码"
+"扫描仪 <../setup/hardware>` 和 :doc:`激活 Odoo 中的条形码 <../setup/"
+"software>` 文档页面。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:41
 msgid "Scan barcodes for internal transfers"
@@ -2859,6 +2822,13 @@ msgstr ""
 "在数字键的下方有两个:guilabel:`位置`行，显示了之前在内部调拨表单中指定的位"
 "置，此例是`WH/Stock` and `WH/Stock/Shelf 1`。点击这些行可以显示一个下拉菜单，"
 "提供其他可供选择的位置。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:211
+msgid ""
+"Once ready, click :guilabel:`Confirm` to confirm the changes made to the "
+"product line."
+msgstr "准备就绪后，单击 :guilabel:`确认`，以确认对产品系列所做的更改。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:160
 msgid ""
@@ -3433,15 +3403,6 @@ msgid ""
 "Once that code has been scanned, ensure the NETUM scanner has the correct "
 "keyboard configuration, and is working as intended."
 msgstr "扫描代码后，确保 NETUM 扫描仪的键盘配置正确，并能正常工作。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
-msgid ":doc:`../setup/hardware`"
-msgstr ":doc:`../setup/hardware`"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
-msgid ":doc:`../setup/software`"
-msgstr ":doc:`../setup/software`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:3
 msgid "Barcode scanner setup"
@@ -8516,7 +8477,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:226
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:189
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:135
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
 msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
@@ -23387,7 +23348,7 @@ msgid ""
 "room, aisle, etc."
 msgstr "*位置*是仓库内的一个特定空间。可以是货架、房间、过道等。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:12
 msgid ""
 "To create specific storage locations, enable the *Storage Locations* feature "
 "by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
@@ -23398,7 +23359,7 @@ msgstr ""
 "启用 *存储位置* 功能。在 :guilabel:`仓库` 部分，勾选 :guilabel:`存储位置` 复"
 "选框。然后，点击 :guilabel:`保存`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:15
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:17
 msgid ""
 "Typically, the :guilabel:`Storage Locations` feature is used "
 "with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/"
@@ -23412,11 +23373,11 @@ msgstr ""
 msgid "Show Storage Locations feature."
 msgstr "显示存储位置功能。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
 msgid "Create new location"
 msgstr "创建新位置"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:28
 msgid ""
 "After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
 "Configuration --> Locations`."
@@ -23427,17 +23388,17 @@ msgstr ""
 msgid "List of internal locations."
 msgstr "内部位置清单。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
 msgid ""
 "On this page, click :guilabel:`New`. The new location form can then be "
 "configured as follows:"
 msgstr "在此页面中，点击 :guilabel:`新建`。然后可以对新位置表单进行如下配置："
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
 msgid ":guilabel:`Location Name`: recognizable name of the location."
 msgstr ":guilabel:`位置名称`：可识别的位置名称。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
 msgid ""
 ":guilabel:`Parent Location`: the location within which the new location "
 "exists. After the location is created, it is listed on "
@@ -23447,7 +23408,7 @@ msgstr ""
 ":guilabel:`母位置`：新位置所在的位置。位置创建后，将在 :guilabel:`位置` 页面"
 "上使用 *位置层次结构* 列出，以描述特定位置如何与仓库的更大区域相匹配。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:43
 msgid ""
 "In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
 "name, \"Zone A\" is the parent location, and everything before it is the "
@@ -23456,18 +23417,18 @@ msgstr ""
 "在 `WH/Stock/Zone A/Refrigerator 1`中，“冰箱 1” 是位置名称，“A 区” 是母位置，"
 "前面的所有内容都是显示该位置在仓库中位置的路径。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
 msgid "Additional Information section"
 msgstr "其他信息部分"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
 msgid ""
 "In addition to the required fields above, configure the following location "
 "fields to ensure the location serves its intended purpose in the database:"
 msgstr ""
 "除上述必填字段外，还需配置以下位置字段，以确保位置在数据库中达到预期目的："
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:53
 msgid ""
 ":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor "
 "Location`, :guilabel:`View`, :guilabel:`Internal "
@@ -23482,7 +23443,7 @@ msgstr ""
 "的详细信息，请参阅 :ref:`位置类型部分 <inventory/warehouses_storage/location-"
 "type>`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
 msgid ""
 ":guilabel:`Storage Category`: only available with the :doc:`Storage "
 "Categories <../../shipping_receiving/daily_operations/storage_category>` "
@@ -23493,26 +23454,26 @@ msgstr ""
 "daily_operations/storage_category>` 功能在 :menuselection:`库存应用程序 --> "
 "配置 --> 设置` 中启用后才可用。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
 msgid ":guilabel:`Company`: the company the location belongs to."
 msgstr ":guilabel:`公司`：位置所属的公司。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:60
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
 msgid ""
 ":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/"
 "damaged goods to be stored in this location."
 msgstr ""
 ":guilabel:`是报废地点吗？`：勾选该复选框，允许在此地点存放报废/损坏货物。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
 msgid ""
 ":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
 "be returned to this location."
 msgstr ":guilabel:`是退回位置吗？`：勾选该复选框，允许将产品退回到该位置。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
 msgid ""
 ":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode "
 "to :ref:`identify actions <barcode/setup/location>` at this location when "
@@ -23521,7 +23482,7 @@ msgstr ""
 ":guilabel:`条形码`：与 *条形码* 应用程序一起使用，扫描时输入条形码，以"
 "便 :ref:`识别此位置的操作<barcode/setup/location>`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:68
 msgid ""
 ":guilabel:`Replenish Location`: used for :doc:`configuring routes <../../"
 "shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set "
@@ -23537,30 +23498,30 @@ msgstr ""
 msgid "Additional Information section of new location creation form."
 msgstr "新地点创建表的 “附加信息” 部分。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
 msgid ""
 "Configure the remaining fields in the :guilabel:`Additional Information` "
 "section as follows:"
 msgstr "配置 :guilabel:`其他信息` 部分中的其余字段如下："
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
 ":guilabel:`Company`: the company whose warehouse the location is inside of. "
 "Leave this field blank if this location is shared between companies."
 msgstr ""
 ":guilabel:`公司`：位置所在仓库的公司。如果该位置由公司共享，则此字段留空。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:85
 msgid ":guilabel:`Barcode`: the barcode assigned to the location."
 msgstr ":guilabel:`条形码`：指定给位置的条形码。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:86
 msgid ""
 ":guilabel:`Replenish Location`: tick this checkbox to get all quantities to "
 "replenish at this location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:89
 msgid ""
 "In the :guilabel:`Cyclic Counting` section, change the value in "
 "the :guilabel:`Inventory Frequency (Days)` field from the default `0`, if "
@@ -23571,13 +23532,13 @@ msgstr ""
 msgid "Cyclic Counting section of new location creation form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:96
 msgid ""
 "When different than `0`, the inventory count dates for products stored at "
 "this location are automatically set at the defined frequency."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:99
 msgid ""
 "In the :guilabel:`Logistics` section, in the :guilabel:`Removal Strategy` "
 "field, click the drop-down menu and select the :doc:`removal strategy <../../"
@@ -23585,11 +23546,11 @@ msgid ""
 "this location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
 msgid "Cyclic Counting section"
 msgstr "循环计数部分"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
 msgid ""
 "To schedule regular inventory counts at this location, set "
 "the :guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
@@ -23598,7 +23559,7 @@ msgstr ""
 "要在此位置安排定期库存盘点，请将 :guilabel:`库存频率（天）` 字段设置为所需的"
 "时间间隔。默认设置为 `0`（无计划清点）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
 msgid ""
 "For example, setting this field to `30`, schedules a count every thirty "
 "days. For more specifics on setting up and using this feature, refer to "
@@ -23607,7 +23568,7 @@ msgstr ""
 "例如，将此字段设置为 `30`，则每三十天进行一次计数。有关设置和使用此功能的更多"
 "细节，请参阅 :doc:`周期计数说明文档<cycle_counts>`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:114
 msgid ""
 "The :guilabel:`Last Effective Inventory` field displays the date the last "
 "inventory count at this location occurred. When scheduled inventory counts "
@@ -23617,7 +23578,7 @@ msgstr ""
 "在 :guilabel:`最近一次有效库存` 字段中，显示该位置上次库存盘点的日期。启用计"
 "划库存盘点后，:guilabel:`下一次预计库存盘点`字段将显示下一次库存盘点的日期。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:119
 msgid ""
 "With inventory counts scheduled to occur every `30` days, and "
 "the :guilabel:`Last Effective Inventory` count occurring on July 16, "
@@ -23630,11 +23591,11 @@ msgstr ""
 msgid "Show Cyclic Count section of the locations form."
 msgstr "显示位置表格的循环计数部分。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
 msgid "Logistics section"
 msgstr "物流部分"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:129
 msgid ""
 "In the :guilabel:`Logistics` section of the locations form, optionally "
 "select a :guilabel:`Removal Strategy` to determine the order and priority of "
@@ -23647,11 +23608,11 @@ msgstr ""
 "`、:guilabel:`后进先出（LIFO）`、:guilabel:`最近位置` 和 :guilabel:`先到期先"
 "出（FEFO）`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
 msgid "Current stock at location"
 msgstr "当前库存位置"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:140
 msgid ""
 "To view the current stock at a single location, go "
 "to :menuselection:`Inventory app --> Configuration --> Locations`, and "
@@ -23660,13 +23621,13 @@ msgstr ""
 "要查看单个位置的当前库存，请转到 :menuselection:`库存应用程序 --> 配置 --> 位"
 "置`，然后选择所需的位置。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:143
 msgid ""
 "Next, click the :guilabel:`Current Stock` smart button to get a list of all "
 "products at the location."
 msgstr "然后，点击 :guilabel:`当前库存` 智能按钮，获取该位置的所有产品列表。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:147
 msgid ""
 "A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
 "desks."
@@ -29685,23 +29646,23 @@ msgstr ""
 "要使用、制造和销售工具包，需要同时安装 :guilabel:`制造` 和 :guilabel:`库存` "
 "应用程序。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:14
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:16
 msgid "Create the kit as a product"
 msgstr "将套件创建为产品"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:16
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:18
 msgid ""
 "To use a kit as a sellable product, or as a component organization tool, the "
 "kit should first be created as a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:19
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:21
 msgid ""
 "To create a kit product, go to :menuselection:`Inventory app --> Products --"
 "> Products`, and then click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:22
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:24
 msgid ""
 "Then, assign a name to the new kit product. Next, set the kit's product type "
 "depending on inventory tracking needs and accounting requirements. To do "
@@ -29710,7 +29671,7 @@ msgid ""
 "or :guilabel:`Storable`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:26
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:28
 msgid ""
 "The kit's components must also be configured as products "
 "via :menuselection:`Inventory app --> Products --> Products`. These "
@@ -29719,31 +29680,31 @@ msgstr ""
 "套件组件也必须通过 :menuselection:`库存应用程序 --> 产品 --> 产品` 配置为产"
 "品。这些组件无需特殊配置。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:32
 msgid "Consumable kit setup details"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:34
 msgid ""
 "Consumable products do not have inventory tracking. Consider setting the kit "
 "as a consumable product when the kit is used in other manufacturing "
 "processes or when tracking inventory for the kit itself is not needed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:38
 msgid ""
 "**Recommended for Continental Accounting**: If costs are expensed "
 "immediately upon purchase, then setting the kit's type to *consumable* is "
 "recommended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:40
 msgid ""
 "**Replenishment via Components**: Inventory count is managed at the "
 "component level, so reordering rules must be set to individual components."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:40
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:42
 msgid ""
 "**Selling & Stock Constraints**: Kits cannot be sold if any required "
 "component is out of stock. Since availability depends on individual "
@@ -29751,11 +29712,11 @@ msgid ""
 "components are unavailable."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:47
 msgid "Storable kit setup details"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:47
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:49
 msgid ""
 "Storable products have detailed tracking and inventory management since they "
 "are expected to be *stored* once they are created. Consider setting the kit "
@@ -29763,71 +29724,71 @@ msgid ""
 "inventory tracking is essential."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:53
 msgid ""
 "**Recommended for Angle-Saxon Accounting**: If the Cost of Goods Sold (COGS) "
 "needs to be recorded in journals, then setting the kit's type to *storable* "
 "is recommended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:53
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:55
 msgid ""
 "**Component Purchase Constraints**: Only the kit's minimum required "
 "components can be added to an **eCommerce** cart unless the option "
 "to :doc:`continue selling<../../../websites/ecommerce/products>` is disabled."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:58
 msgid ""
 "**No Kit Serial Numbers**: Serial number tracking does not track the kit, "
 "only its shipped components."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:58
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:60
 msgid ""
 "**Reordering Rule Recommendation**: Reordering rules should be set at the "
 "component-level."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:61
 msgid ""
 "**Stock Replenishment Recommendation**: Stock replenishment should also be "
 "done at the component-level."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:65
 msgid "Kit setup similarities"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:67
 msgid ""
 "Regardless of which setup is used, there are some similarities between the "
 "two options."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:67
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:69
 msgid ""
 "**No Kit-Level Stock Adjustments**: Stock adjustments cannot be handled at "
 "the kit-level."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:70
 msgid ""
 "**Kit Value Does Not Change**: The stock's value is the same whether the kit "
 "is consumable or storable."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:72
 msgid ""
 "**Kit Internal Transfers**: An internal transfer for the kit breaks it into "
 "components."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:73
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:77
 msgid "Set up the kit BoM"
 msgstr "设置套件 BoM"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:79
 msgid ""
 "After fully configuring the kit product and its components, a new :abbr:`BoM "
 "(bill of materials)` can be created for the kit product."
@@ -29835,7 +29796,7 @@ msgstr ""
 "在对套件产品及其组件进行全面配置后，可为套件产品创建一个新的:abbr:`BoM（物料"
 "清单）`。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:82
 msgid ""
 "To do so, go to :menuselection:`Manufacturing app --> Products --> Bills of "
 "Materials`, and then click :guilabel:`New`. Next to the :guilabel:`Product` "
@@ -29843,7 +29804,7 @@ msgid ""
 "select the previously configured kit product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:82
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:86
 msgid ""
 "Then, for the :guilabel:`BoM Type` field, click the :guilabel:`Kit` option. "
 "Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a line`, "
@@ -29851,7 +29812,7 @@ msgid ""
 "the :guilabel:`Quantity` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:90
 msgid ""
 "Once ready, click :guilabel:`Save` to save the newly created :abbr:`BoM "
 "(bill of materials)`."
@@ -29861,7 +29822,7 @@ msgstr ""
 msgid "Kit selection on the bill of materials."
 msgstr "材料清单上的套件选择。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:95
 msgid ""
 "If the kit is solely being used as a sellable product, then only components "
 "need to be added under the :guilabel:`Components` tab, and configuring "
@@ -29870,7 +29831,7 @@ msgstr ""
 "如果套件仅用作可销售产品，则只需在 :guilabel:`组件` 选项卡下添加组件，无需配"
 "置生产操作。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:99
 msgid ""
 "When a kit is sold as a product, it appears as a single line item on the "
 "quotation and sales order. However, on delivery orders, each component of "
@@ -29879,11 +29840,11 @@ msgstr ""
 "当套件作为产品销售时，它在报价单和销售订单上显示为一个单独的细列项目。但是，"
 "在交货单上，套件的每个组件都会列出。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:99
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:103
 msgid "Use kits to manage complex BoMs"
 msgstr "使用套件管理复杂的 BoM"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:105
 msgid ""
 "Kits can also be used for complex :abbr:`BoMs (Bills of Materials)`. This "
 "method nests BoMs within other BoMs, organizing complex products while "
@@ -29891,13 +29852,13 @@ msgid ""
 "separately."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:105
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:109
 msgid ""
 "Sublevel BoMs (subassemblies or semi-finished products) streamline these "
 "workflows, helping with traceability efforts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:113
 msgid ":doc:`sub_assemblies`"
 msgstr ""
 
@@ -31020,11 +30981,11 @@ msgid ""
 "as well."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:15
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:17
 msgid "BoM setup"
 msgstr "BoM 设置"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:17
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:19
 msgid ""
 "To create a |BOM|, go to :menuselection:`Manufacturing app --> Products --> "
 "Bills of Materials` and click :guilabel:`New`."
@@ -31032,12 +30993,12 @@ msgstr ""
 "要创建 |BOM| ，请转到 :menuselection:`制造应用程序 --> 产品 --> 物料清单`，并"
 "点击 :guilabel:`新建`。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:20
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:22
 msgid ""
 "Next, set the :guilabel:`BoM Type` to :guilabel:`Manufacture this Product`."
 msgstr "然后，将 :guilabel:`BoM 类型` 设为 :guilabel:`制造该产品`。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:22
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:24
 msgid ""
 "Then, specify :ref:`required components <manufacturing/basic_setup/setup-"
 "components>` and, if necessary, define any :ref:`manufacturing operations "
@@ -31046,7 +31007,7 @@ msgstr ""
 "然后，指定 :ref:`所需组件 <manufacturing/basic_setup/setup-components>`，如有"
 "必要，定义任何 :ref:`制造操作 <manufacturing/basic_setup/setup-operations>`。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:26
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:28
 msgid ""
 "Individual |BOMs| can also be quickly accessed or created by clicking "
 "the :guilabel:`Bill of Materials` smart button on any product form, as "
@@ -31058,27 +31019,27 @@ msgstr ""
 "|BOM| ，这些表单可通过 *销售*、*库存* 和 *制造* 应用程序访问，也可通过任何引"
 "用产品的内部链接（如在字段或行项目中）访问。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:37
 msgid "Show BoM for a product, with components listed."
 msgstr "显示产品的 BoM，并列出组件。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:37
 msgid "BoM for `Drawer`, displaying the **Components** tab."
 msgstr "`抽屉`的 BoM，显示 **组件** 选项卡。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:40
 msgid ":doc:`../advanced_configuration/kit_shipping`"
 msgstr ":doc:`../advanced_configuration/kit_shipping`"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:41
 msgid ":doc:`../subcontracting/subcontracting_basic`"
 msgstr ":doc:`../subcontracting/subcontracting_basic`"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:46
 msgid "Components"
 msgstr "组件"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:48
 msgid ""
 "In the :guilabel:`Components` tab of a |BOM|, specify components used to "
 "manufacture the product by clicking :guilabel:`Add a line`. From "
@@ -31097,7 +31058,7 @@ msgstr ""
 msgid "Add a component by selecting it from the drop-down menu."
 msgstr "从下拉菜单中选择一个组件，添加该组件。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:58
 msgid ""
 "Optionally, access additional fields by clicking the :icon:`oi-settings-"
 "adjust` :guilabel:`(settings adjust)` icon to the far-right of "
@@ -31108,7 +31069,7 @@ msgstr ""
 "adjust` :guilabel:`（设置调整）` 图标访问其他字段。勾选以下功能的复选框以启用"
 "这些列："
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:62
 msgid ""
 ":guilabel:`Apply on Variants`: specify which :doc:`product variant <../"
 "advanced_configuration/product_variants>` each component is used in. When "
@@ -31118,7 +31079,7 @@ msgstr ""
 "advanced_configuration/product_variants>` 中使用。如果该字段留空，则在所有产"
 "品变体中使用该组件。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:66
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:68
 msgid ""
 ":guilabel:`Consumed in Operation`: specify the operation using the "
 "component. Useful for determining :ref:`manufacturing readiness "
@@ -31127,7 +31088,7 @@ msgstr ""
 ":guilabel:`消耗于操作`：指定使用该组件的操作。有助于确定 :ref:`制造准备 "
 "<manufacturing/basic_setup/manufacturing-readiness>`。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:70
 msgid ""
 ":guilabel:`Manual Consumption`: tick the checkbox to force operators to "
 "check the :guilabel:`Consumed` checkbox on a manufacturing order (MO)."
@@ -31139,7 +31100,7 @@ msgstr ""
 msgid "Show a manufacturing order, highlighting the *Consumed* field."
 msgstr "显示生产订单，突出显示 *已消耗* 字段。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:77
 msgid ""
 "Not doing so triggers the :guilabel:`Consumption Warning` error message, "
 "where the consumed component quantity must be manually inputted. Otherwise, "
@@ -31152,11 +31113,11 @@ msgstr ""
 msgid "Show the consumption warning error message."
 msgstr "显示消耗量警告错误信息。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:87
 msgid "Operations"
 msgstr "操作"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:87
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:89
 msgid ""
 "Add an *operation* to a |BOM| to specify instructions for production and "
 "register time spent on an operation. To use this feature, first enable the "
@@ -31168,7 +31129,7 @@ msgstr ""
 "先进入 :menuselection:`生产应用程序 --> 配置 --> 设置`，启用 *工作订单* 功"
 "能。在 :guilabel:`操作` 部分，勾选 :guilabel:`工作订单` 复选框以启用该功能。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:95
 msgid ":doc:`../advanced_configuration/work_order_dependencies`"
 msgstr ":doc:`../advanced_configuration/work_order_dependencies`"
 
@@ -31176,7 +31137,7 @@ msgstr ":doc:`../advanced_configuration/work_order_dependencies`"
 msgid "\"Work Orders\" feature in the Settings page."
 msgstr "设置页面中的“工单”功能。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:99
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:101
 msgid ""
 "Next, navigate to the |BOM| by going to :menuselection:`Manufacturing app --"
 "> Products --> Bill of Materials` and selecting the desired |BOM|. To add a "
@@ -31187,17 +31148,17 @@ msgstr ""
 "|BOM|，导航到 |BOM|。要添加新操作，请转到 :guilabel:`操作` 选项卡，然后点"
 "击 :guilabel:`添加行`。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:103
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:105
 msgid ""
 "Doing so opens the :guilabel:`Create Operations` pop-up window, where the "
 "various fields of the operation are configured:"
 msgstr "打开 :guilabel:`创建业务` 弹出窗口，在此配置操作的各个字段："
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:108
 msgid ":guilabel:`Operation`: name of the operation."
 msgstr ":guilabel:`操作`：操作名称。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:109
 msgid ""
 ":guilabel:`Work Center`: select existing locations to perform the operation, "
 "or create a new work center by typing the name and selecting "
@@ -31206,7 +31167,7 @@ msgstr ""
 ":guilabel:`工作中心`：选择现有位置执行操作，或输入名称并选择 :guilabel:`创建 "
 "\" \"`选项，创建新的工作中心。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:111
 msgid ""
 ":guilabel:`Apply on Variants`: specify if this operation is only available "
 "for certain product variants. If the operation applies to all product "
@@ -31215,13 +31176,13 @@ msgstr ""
 ":guilabel:`应用于变体`：指定此操作是否仅适用于某些产品变体。如果该操作适用于"
 "所有产品变体，则此字段留空。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:115
 msgid ""
 ":doc:`Configuring BoMs for product variants <../advanced_configuration/"
 "product_variants>`"
 msgstr ":doc:`为产品变体配置 BoM <../advanced_configuration/product_variants>`"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:117
 msgid ""
 ":guilabel:`Duration Computation`: choose how time spent on the operation is "
 "tracked. Opt for :guilabel:`Compute based on tracked time` to use the "
@@ -31232,7 +31193,7 @@ msgstr ""
 "和修改时间，则选择 :guilabel:`根据追踪时间计算` 使用操作的时间追踪器，或选"
 "择 :guilabel:`手动设置持续时间`。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:121
 msgid ""
 "Choosing the :guilabel:`Compute based on tracked time` option enables "
 "the :guilabel:`Based on last __ work orders` option, which automatically "
@@ -31244,7 +31205,7 @@ msgstr ""
 "选项，该选项会根据最近几次操作自动估算完成此操作的时间。选择 :guilabel:`手动"
 "设置持续时间` 可启用 :guilabel:`默认持续时间` 字段。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:125
 msgid ""
 ":guilabel:`Default Duration`: estimated amount of time to complete the "
 "operation; used for `planning manufacturing orders <https://www.youtube.com/"
@@ -31255,11 +31216,11 @@ msgstr ""
 "<https://www.youtube.com/watch?v=TK55jIq00pc>`_和确定`工作中心可用性 "
 "<https://www.youtube.com/watch?v=3YwFlD97Bio>`_。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:126
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:128
 msgid ":guilabel:`Company`: specify the company the |BOM| is available in."
 msgstr ":guilabel:`公司`：指定 |BOM| 可用的公司。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:128
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:130
 msgid ""
 "Include operation details in the :guilabel:`Work Sheet` tab. "
 "Choose :guilabel:`PDF` to attach a file or :guilabel:`Google Slide` with "
@@ -31270,7 +31231,7 @@ msgstr ""
 "或选择 :guilabel:`Google 幻灯片` 以共享链接。选择 :guilabel:`文本` "
 "在 :guilabel:`说明` 文本字段中输入说明。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:133
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:135
 msgid ""
 "Type `/` for a list of formatting options and features, including ChatGPT."
 msgstr "输入 `/`，查看格式化选项和功能列表，包括 ChatGPT。"
@@ -31283,7 +31244,7 @@ msgstr "显示 ChatGPT 功能，为工单生成说明。"
 msgid "Fill out the Create Operations pop-up window."
 msgstr "填写弹出的 “创建操作” 窗口。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:143
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:145
 msgid ""
 "Finally, click :guilabel:`Save \\& Close` to close the pop-up window. To add "
 "more operations, click :guilabel:`Save & New` and repeat the same steps "
@@ -31292,12 +31253,12 @@ msgstr ""
 "最后，点击 :guilabel:`保存\\&关闭` 关闭弹出窗口。要添加更多操作，请点"
 "击 :guilabel:`保存并新建` 并重复上述步骤配置另一个操作。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:149
 msgid ""
 "Each operation is unique, as it is always exclusively linked to one |BOM|."
 msgstr "每个操作都是唯一的，因为它总是只与一个 |BOM| 关联。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:150
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:152
 msgid ""
 "After creating an operation, click the :guilabel:`Copy Existing Operations` "
 "button to choose an operation to duplicate."
@@ -31308,17 +31269,17 @@ msgid ""
 "Show Operation tab, highlighting the \"Copy Existing Operations\" field."
 msgstr "显示操作选项卡，高亮显示 “复制现有操作” 字段。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:158
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:160
 msgid "Instructions"
 msgstr "说明"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:161
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:163
 msgid ""
 "To add detailed instructions to operations, the *Quality* app must be "
 "installed."
 msgstr "要为操作添加详细说明，必须安装 *品控* 应用程序。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:163
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:165
 msgid ""
 "Add specific instructions to an existing operation by clicking the "
 "operation's :icon:`fa-list-ul` :guilabel:`(list)` icon in "
@@ -31334,7 +31295,7 @@ msgstr ""
 msgid "Show the Instructions column, and list icon."
 msgstr "显示说明栏和列表图标。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:172
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:174
 msgid ""
 "On the :guilabel:`Steps` dashboard, click :guilabel:`New` to open a blank "
 "quality control point form where the new manufacturing step can be created. "
@@ -31348,7 +31309,7 @@ msgstr ""
 "将 :guilabel:`类型` 设为 :guilabel:`说明`。在表格的 :guilabel:`说明` 选项卡"
 "中，写出操作步骤的说明。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:178
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:180
 msgid ""
 "Further customizations can be made here on this form, beyond ordinary "
 "instructions, to also include specific types of quality control points that "
@@ -31365,11 +31326,11 @@ msgstr ""
 msgid "Show the page to add a quality check."
 msgstr "显示添加质量检查的页面。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:188
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:190
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:190
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:192
 msgid ""
 "The :guilabel:`Miscellaneous` tab contains more |BoM| configurations to "
 "customize procurement, calculate costs, and define how components are "
@@ -31378,7 +31339,7 @@ msgstr ""
 ":guilabel:`杂项`选项卡包含更多 |BoM| 配置，用于自定义采购、计算成本和定义组件"
 "的消耗方式。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:195
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:197
 msgid ""
 ":guilabel:`Manufacturing Readiness`: choosing :guilabel:`When components for "
 "the 1st operation are available` shows the :guilabel:`Component Status` as a "
@@ -31395,7 +31356,7 @@ msgstr ""
 "选择 :guilabel:`当所有组件都可用时` 则显示**红色** :guilabel:`不可用` 组件状"
 "态，除非所有组件都有库存。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:203
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:205
 msgid ""
 "Specify which operation consumes each component on the |BoM| in "
 "the :ref:`Manual Consumption field <manufacturing/basic_setup/consumed-in-"
@@ -31408,13 +31369,13 @@ msgstr ""
 msgid "Show the *Component Status* field on the manufacturing order dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:210
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:212
 msgid ""
 ":guilabel:`Version`: displays the current |BoM| version, visible with the "
 "Odoo *PLM* app installed for managing |BoM| changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:214
 msgid ""
 ":guilabel:`Flexible Consumption`: specifies if components used can deviate "
 "from the quantity defined on the |BoM|. Choose :guilabel:`Blocked` if "
@@ -31422,14 +31383,14 @@ msgid ""
 "choose :guilabel:`Allowed` or :guilabel:`Allowed with Warning`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:215
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:217
 msgid ""
 ":guilabel:`Routing`: select the preferred warehouse's manufacturing "
 "operation type for products produced in multiple warehouses. If left blank, "
 "this warehouse's `Manufacturing` operation type is used by default."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:218
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:220
 msgid ""
 ":guilabel:`Analytic Distribution`: select pre-created :doc:`analytic "
 "distribution models <../../../finance/accounting/reporting/"
@@ -31437,25 +31398,25 @@ msgid ""
 "manufacturing products in the chosen journal."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:221
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:223
 msgid ""
 ":guilabel:`Manuf Lead Time`: define the number of days needed to complete a |"
 "MO| from the date of confirmation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:223
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:225
 msgid ""
 ":guilabel:`Days to prepare Manufacturing Order`: number of days needed to "
 "replenish components, or manufacture sub-assemblies of the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:227
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:229
 msgid ""
 ":doc:`Analytic distribution <../../../finance/accounting/reporting/"
 "analytic_accounting>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:228
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:230
 msgid ""
 ":doc:`Lead times <../../inventory/warehouses_storage/replenishment/"
 "lead_times>`"
@@ -31465,18 +31426,18 @@ msgstr ""
 msgid "Show the *Miscellaneous* tab of the BoM."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:235
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:237
 msgid "Add by-products to BoMs"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:237
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:239
 msgid ""
 "A *by-product* is a residual product that is created during production in "
 "addition to the main product of a |BOM|. Unlike the primary product, there "
 "can be more than one by-product on a |BOM|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:240
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:242
 msgid ""
 "To add by-products to a |BOM|, first enable the *By-Products* feature "
 "in :menuselection:`Manufacturing app --> Configuration --> Settings`. In "
@@ -31491,7 +31452,7 @@ msgstr ""
 msgid "\"By Products\" feature in the settings page."
 msgstr "设置页面中的“副产品”功能。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:248
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:250
 msgid ""
 "Once the feature is enabled, add by-products to a |BOM| by clicking "
 "the :guilabel:`By-products` tab. Click :guilabel:`Add a line`, and fill in "
@@ -31503,7 +31464,7 @@ msgstr ""
 "击 :guilabel:`添加行`，填写 :guilabel:`副产品`、:guilabel:`数量` "
 "和:guilabel:`计量单位`。可选择为副产品指定 :guilabel:`操作中生产`。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:256
 msgid ""
 "The by-product, `Mush`, is created in the `Grind grapes` operation when "
 "producing `Red Wine`."
@@ -47644,6 +47605,298 @@ msgstr "处理完交货并将产品退还给客户后，点击 :guilabel:`验证
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "The *Barcode* app can be used to process receipts, deliveries, and other "
+#~ "types of operations in real time using a barcode scanner or the Odoo "
+#~ "mobile app."
+#~ msgstr ""
+#~ "*条形码*应用程序可用于使用条码扫描仪或 Odoo 移动应用程序，实时处理收据、交"
+#~ "付和其他类型的操作。"
+
+#~ msgid ""
+#~ "This makes it possible to process operations on the warehouse floor when "
+#~ "they happen, instead of having to wait to validate transfers from a "
+#~ "computer. Processing operations this way can help to properly attribute "
+#~ "barcodes to the appropriate products, pickings, locations, and more."
+#~ msgstr ""
+#~ "这样就可以在仓库发生操作时对其进行处理，而不必等待计算机对传输进行验证。通"
+#~ "过这种方式处理业务有助于将条形码正确归属到相应的产品、拣选、位置等。"
+
+#~ msgid ""
+#~ "Once the page has refreshed, new options will be displayed under "
+#~ "the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+#~ "(with a corresponding drop-down menu), where either :guilabel:`Default "
+#~ "Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+#~ msgstr ""
+#~ "页面刷新后，:guilabel:`条码扫描仪`功能下将显示新选项：:guilabel:`条码命名"
+#~ "法`（有相应的下拉菜单），可选择:guilabel:`默认命名法`或:guilabel:`默认 "
+#~ "GS1 命名法`。"
+
+#~ msgid ""
+#~ "To process warehouse receipts for incoming products, there first needs to "
+#~ "be a purchase order (PO) created, and a receipt operation to process."
+#~ msgstr ""
+#~ "要处理入库产品的仓库收据，首先需要创建采购订单 (PO)，并处理收据操作。"
+
+#~ msgid ""
+#~ "To create a :abbr:`PO (purchase order)`, navigate to "
+#~ "the :menuselection:`Purchase app --> Create` to create a new request for "
+#~ "quotation (RFQ)."
+#~ msgstr ""
+#~ "要创建一个:abbr:`PO（采购订单）`，请导航至 :menuselection:`采购应用程序 --"
+#~ "> 创建` 以创建一个新的报价单（RFQ）。"
+
+#~ msgid ""
+#~ "From the blank :abbr:`RFQ (request for quotation)` form, click the drop-"
+#~ "down menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Products` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "在空白的:abbr:`RFQ（询价）`表单中，单击 :guilabel:`供应商` 字段旁边的下拉"
+#~ "菜单，添加供应商。然后，在 :guilabel:`产品` 标签下的 :guilabel:`产品` 行，"
+#~ "单击 :guilabel:`添加产品`，选择要添加到报价单中的所需产品。"
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, then "
+#~ "click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
+#~ "quotation)` to a :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "准备就绪后，单击表单顶部的 :guilabel:`保存`，然后单击 :guilabel:`确认订单"
+#~ "`，将 :abbr:`RFQ（询价）'确认为 :abbr:`PO（采购订单）`。"
+
+#~ msgid "Completed purchase order for barcode product."
+#~ msgstr "完成条形码产品采购订单。"
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse receipts, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "要处理和扫描仓库收据的条形码，请导航至 :menuselection:`条形码应用程序`。"
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process receipts, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :menuselection:`Operations` overview page."
+#~ msgstr ""
+#~ "进入 :guilabel:`条形码应用程序` 后，会出现一个显示不同选项的 :guilabel:`条"
+#~ "形码扫描` 屏幕。要处理收据，请单击屏幕底部的 :guilabel:`操作` 按钮。这将导"
+#~ "航到 :menuselection:`操作` 概览页面。"
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Receipts` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding receipts. "
+#~ "Then, select the desired receipt operation to process. This navigates to "
+#~ "the barcode transfer screen."
+#~ msgstr ""
+#~ "在此页面，找到 :guilabel:`收据` 卡，并单击 :guilabel:`# 待处理` 按钮，查看"
+#~ "所有未处理的收据。然后，选择要处理的收据操作。这将导航到条形码传输屏幕。"
+
+#~ msgid ""
+#~ "From this screen, an overview of all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "在该屏幕上，将显示在该转账（**WH/IN/000XX**）中要处理的所有收据的概览。屏"
+#~ "幕底部有 :guilabel:`添加产品` 或 :guilabel:`验证` 选项，这取决于是否需要在"
+#~ "操作中添加产品，或是否需要一次性验证整个操作。"
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
+#~ "clicked to indicate receipt of that product, or the :guilabel:`pencil` "
+#~ "icon can be clicked to open a new screen to edit that product line."
+#~ msgstr ""
+#~ "要单独处理和扫描每个产品，请选择特定的产品系列。点击 :guilabel:`+#` 按钮"
+#~ "（本例中为 :guilabel:`+10`）表示收到该产品，或点击 :guilabel:`铅笔` 图标打"
+#~ "开新屏幕编辑该产品系列。"
+
+#~ msgid ""
+#~ "From this screen, the product that's being received is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "在此屏幕中，将列出正在接收的产品。在产品名称下，:guilabel:`数量`行可以编"
+#~ "辑。将该行中的`0`改为所需的数量，或点击 :guilabel:`/# 单元` 按钮（本例中"
+#~ "为 :guilabel:`/10 单元`），自动填写从 :abbr:`PO（采购订单）` 中订购的数"
+#~ "量。"
+
+#~ msgid ""
+#~ "In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
+#~ "Product` is expected to be received. `[BARCODE_PROD]` is "
+#~ "the :guilabel:`Internal Reference` set on the product form. Scan the "
+#~ "barcode of the `Barcode Product` to receive one unit. Afterwards, click "
+#~ "the :guilabel:`pencil` icon to manually enter the received quantities."
+#~ msgstr ""
+#~ "在接收操作`WH/IN/00019`中，预计将接收`条码产品`的`10 个单位`。"
+#~ "`[BARCODE_PROD]`是产品表单上设置的 :guilabel:`内部参考`。扫描`条形码产品`"
+#~ "的条形码以接收一个单位。然后，点击 :guilabel:`铅笔` 图标，手动输入收到的数"
+#~ "量。"
+
+#~ msgid ""
+#~ "Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be "
+#~ "clicked to add or subtract quantity of the product, and "
+#~ "the :guilabel:`number keys` can be used to add quantity, as well."
+#~ msgstr ""
+#~ "此外，点击 :guilabel:`+1` 和 :guilabel:`-1` 按钮可添加或减少产品数量，还可"
+#~ "使用 :guilabel:`数字键` 添加数量。"
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another *location* is listed on the "
+#~ "product itself. Click this line to reveal a drop-down menu of additional "
+#~ "locations to choose from."
+#~ msgstr ""
+#~ "在 :guilabel:`数字键` 下方是 :guilabel:`位置` 行，默认为 `WH/Stock`，除非"
+#~ "产品本身列出了其他*位置*。点击该行可显示一个下拉菜单，其中有更多位置供您选"
+#~ "择。"
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The receipt has now been processed, and "
+#~ "the :guilabel:`Barcode app` can be closed out."
+#~ msgstr ""
+#~ "然后，在包含该转账（**WH/IN/000XX**）中要处理的所有收据的概览页面中，点击"
+#~ "收据产品线上的 :guilabel:`+#` 按钮，然后点击 :guilabel:`验证`。收据现已处"
+#~ "理完毕，可关闭 :guilabel:`条码应用程序`。"
+
+#~ msgid ""
+#~ "To process warehouse deliveries for outgoing products, there first needs "
+#~ "to be a sales order (SO) created, and a delivery operation to process."
+#~ msgstr ""
+#~ "要处理出库产品的仓库交付，首先需要创建一个销售订单（SO），并处理一个交付操"
+#~ "作。"
+
+#~ msgid ""
+#~ "To create a :abbr:`SO (sales order)`, navigate to "
+#~ "the :menuselection:`Sales app --> Create` to create a new quotation."
+#~ msgstr ""
+#~ "要创建一个:abbr:`SO（销售订单）`，请导航至 :menuselection:`销售应用程序 --"
+#~ "> 创建` 以创建一个新的报价单。"
+
+#~ msgid ""
+#~ "From the blank quotation form, click the drop-down menu next to "
+#~ "the :guilabel:`Customer` field to add a customer. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "在空白报价表中，单击 :guilabel:`客户` 字段旁边的下拉菜单，添加客户。然后，"
+#~ "在:guilabel:`订单行'选项卡下的:guilabel:`产品`行，单击:guilabel:`添加产品"
+#~ "`，选择要添加到报价单的所需产品。"
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, and "
+#~ "click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
+#~ "(sales order)`."
+#~ msgstr ""
+#~ "准备就绪后，单击表单顶部的:guilabel:`保存`，然后单击 :guilabel:`确认订单"
+#~ "`，将报价确认为:abbr:`SO（销售订单）`。"
+
+#~ msgid "Completed sales order for barcode product."
+#~ msgstr "完成条形码产品销售订单。"
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse deliveries, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "要处理和扫描仓库交货的条形码，请导航至 :menuselection:`条形码应用程序`。"
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process deliveries, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :guilabel:`Operations` overview page."
+#~ msgstr ""
+#~ "进入 :guilabel:`条形码应用程序` 后，会出现一个显示不同选项的 :guilabel:`条"
+#~ "形码扫描` 屏幕。要处理交货，请单击屏幕底部的 :guilabel:`操作` 按钮。这将导"
+#~ "航到 :guilabel:`操作` 概览页面。"
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Delivery Orders` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding deliveries. "
+#~ "Then, select the desired delivery order to process. This navigates to the "
+#~ "barcode transfer screen."
+#~ msgstr ""
+#~ "在此页面，找到 :guilabel:`送货订单` 卡，然后单击 :guilabel:`#待处理` 按"
+#~ "钮，查看所有未处理的送货单。然后，选择需要处理的交货单。这将导航到条形码传"
+#~ "输屏幕。"
+
+#~ msgid ""
+#~ "From this screen, an overview of all deliveries to process within that "
+#~ "transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "在该屏幕上，将显示在该传送（**WH/OUT/000XX**）内要处理的所有交货的概览。屏"
+#~ "幕底部有 :guilabel:`添加产品` 或 :guilabel:`验证` 选项，这取决于是否需要在"
+#~ "操作中添加产品，或是否需要一次性验证整个操作。"
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+1` button can be clicked to indicate delivery of "
+#~ "that product, or the :guilabel:`pencil icon` can be clicked to open a new "
+#~ "screen to edit that product line."
+#~ msgstr ""
+#~ "要单独处理和扫描每个产品，请选择特定的产品系列。点击 :guilabel:`+1` 按钮，"
+#~ "表示已交付该产品，或点击 :guilabel:`铅笔图标`，打开新屏幕编辑该产品系列。"
+
+#~ msgid ""
+#~ "From this screen, the product that's being delivered is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`SO (sales order)`."
+#~ msgstr ""
+#~ "在此屏幕中，将列出正在交付的产品。在产品名称下，可以编辑 :guilabel:`数量` "
+#~ "行。将该行中的`0`改为所需的数量，或点击 :guilabel:`/# Units` 按钮（本例中"
+#~ "为 :guilabel:`/10 Units`），自动填写从 :abbr:`SO （销售订单）` 中订购的数"
+#~ "量。"
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another location is listed on the "
+#~ "product itself."
+#~ msgstr ""
+#~ "在 :guilabel:`数字键` 下方是 :guilabel:`位置` 行，默认为`WH/Stock`，除非产"
+#~ "品本身列出了其他位置。"
+
+#~ msgid ""
+#~ "This is the location that the product is being pulled from for delivery. "
+#~ "Click this line to reveal a drop-down menu of additional locations to "
+#~ "choose from (if this product is stored in multiple locations in the "
+#~ "warehouse)."
+#~ msgstr ""
+#~ "这是产品被用于交货而被取出的位置。点击这一行可以弹出下拉菜单，显示其他可供"
+#~ "选择的库存位置（如果该产品在仓库中存放于多个位置）。"
+
+#~ msgid ""
+#~ "For warehouses that have multiple different storage locations, putaway "
+#~ "rules, and removal strategies, additional steps can be added for various "
+#~ "operation types, while using the *Barcode* app."
+#~ msgstr ""
+#~ "对于有多个不同存储位置、入库规则和移库策略的仓库，在使用*条形码*应用程序"
+#~ "时，可为各种操作类型添加额外的步骤。"
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The delivery has now been processed, and the "
+#~ "*Barcode* app can be closed out."
+#~ msgstr ""
+#~ "然后，在包含该转账（**WH/OUT/000XX**）中所有待处理收据的总览页面中，点击收"
+#~ "货产品线上的 :guilabel:`+#` 按钮，然后点击 :guilabel:`验证`。至此，交货已"
+#~ "处理完毕，*条形码* 应用程序可以关闭。"
 
 #~ msgid ""
 #~ "When shipping products to customers, the landed cost is the total price "
