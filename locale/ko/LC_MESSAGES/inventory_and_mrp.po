@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-13 18:30+0000\n"
+"POT-Creation-Date: 2026-02-20 18:30+0000\n"
 "PO-Revision-Date: 2026-02-20 23:21+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -155,7 +155,6 @@ msgstr "지정 수량이 표시되어 있는 바코드 현황판."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:48
@@ -6830,11 +6829,11 @@ msgid ""
 "Ledger`."
 msgstr ""
 "정확한 폐기 위치에 품목을 폐기한 후 손익보고서에서 해당 위치로 폐기된 품목을 "
-"확인할 수 있습니다. :menuselection:`회계 앱 --> 보고 --> 손익계산서` 를 열고,"
-" :guilabel:`총손익` 섹션에서 :guilabel:`경비` 카테고리를 펼치면 보고서에서 폐"
-"기 주문이 확인됩니다 . 목록에서 폐기 전표를 검색한 뒤 폐기 계정 옆에 있는 "
-":icon:`fa-ellipsis-v` :guilabel:`(세로 줄임표)` 아이콘을 클릭한 후 "
-":guilabel:`일반 원장` 을 선택합니다."
+"확인할 수 있습니다. :menuselection:`회계 앱 --> 보고 --> 손익계산서` 를 열"
+"고, :guilabel:`총손익` 섹션에서 :guilabel:`경비` 카테고리를 펼치면 보고서에"
+"서 폐기 주문이 확인됩니다 . 목록에서 폐기 전표를 검색한 뒤 폐기 계정 옆에 있"
+"는 :icon:`fa-ellipsis-v` :guilabel:`(세로 줄임표)` 아이콘을 클릭한 "
+"후 :guilabel:`일반 원장` 을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:109
 msgid ""
@@ -14720,14 +14719,17 @@ msgstr "직원 양식의 기본 창고 위치."
 msgid ""
 "A *storage category* is used with :doc:`putaway rules <putaway>` to assign a "
 "storage location to incoming products while accounting for the capacity of "
-"that location."
+"that location. Assigning categories to storage locations tells Odoo these "
+"locations meet specific requirements, such as temperature or accessibility. "
+"Odoo then evaluates these locations, based on defined capacity, and "
+"recommends the best one on the warehouse transfer form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
 msgid "Follow these steps to complete the setup:"
 msgstr "다음 단계에 따라 설정을 완료합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
 msgid ""
 ":ref:`Enable features in the settings <inventory/routes/enable-storage-"
 "categories>`"
@@ -14735,18 +14737,18 @@ msgstr ""
 ":ref:`설정 메뉴에서 기능 활성화하기 <inventory/routes/enable-storage-"
 "categories>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:14
 msgid ":ref:`Define capacity limitations <inventory/routes/define-storage>`"
 msgstr ":ref:`수용량 제한 지정 <inventory/routes/define-storage>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:15
 msgid ""
 "Assign a :ref:`category to storage locations <inventory/routes/assign-"
 "location>`"
 msgstr ""
 ":ref:`보관 위치에 대한 카테고리 <inventory/routes/assign-location>` 지정하기"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:16
 msgid ""
 "Add the storage category as an attribute to a :ref:`putaway rule <inventory/"
 "routes/set-putaway-attribute>`"
@@ -14754,38 +14756,27 @@ msgstr ""
 "보관 카테고리를 :ref:`보관 규칙 <inventory/routes/set-putaway-attribute>` 에 "
 "속성으로 추가합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
 msgid ":doc:`putaway`"
 msgstr ":doc:`적치`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
-msgid ""
-"Assigning categories to storage locations tells Odoo these locations meet "
-"specific requirements, such as temperature or accessibility. Odoo then "
-"evaluates these locations, based on defined capacity, and recommends the "
-"best one on the warehouse transfer form."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:25
+msgid "Enable storage categories"
 msgstr ""
-"저장 위치에 카테고리를 지정하면 해당 위치가 온도나 접근성 등 특정 요건을 충족"
-"하는지 여부를 Odoo에서 확인할 수 있습니다. 그런 다음 Odoo에서는 지정한 수용량"
-"을 기준으로 위치에 대해 평가하여 창고 이전 양식에서 가장 적합한 위치를 추천합"
-"니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 msgid ""
 "To enable storage categories, go to :menuselection:`Inventory app --> "
-"Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
-"ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
-"features are enabled."
+"Configuration --> Settings`. Then, in the *Warehouse* section, ensure "
+"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` features "
+"are enabled."
 msgstr ""
-"저장소 카테고리를 활성화하려면 :menuselection:`재고 관리 앱 --> 환경설정 --> "
-"설정` 으로 이동합니다. 그런 다음 :guilabel:`창고` 섹션에서 :guilabel:`저장소 "
-"위치` 및 :guilabel:`다단계 경로` 기능이 활성화되어 있는지 확인합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:31
 msgid ""
-"If intending to set capacities by :ref:`package type <inventory/routes/set-"
-"capacity-package>`, also make sure :guilabel:`Packages` is enabled. "
-"Click :guilabel:`Save`."
+"To set capacities by :ref:`package type <inventory/routes/set-capacity-"
+"package>`, also make sure :guilabel:`Packages` is enabled in the "
+"*Operations* section. Click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:None
@@ -14794,24 +14785,76 @@ msgid ""
 msgstr ""
 "저장소 위치 및 다단계 경로를 활성화하여 저장소 카테고리를 활성화합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:42
-msgid "Define storage category"
-msgstr "창고 카테고리 지정하기"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:38
+msgid "Storage location setup"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:40
 msgid ""
-"A storage category with specific limitations **must** be created first, "
-"before it is applied to locations, in order to decide the optimal storage "
-"location."
+"Set up storage locations to work with the storage category. A parent "
+"location must be set up, with child locations (or *sublocations*) assigned "
+"to it. This is because the putaway rule's :ref:`Store to <inventory/routes/"
+"set-putaway-attribute>` location will be set to the parent location, and "
+"the :ref:`storage category <inventory/routes/assign-location>` will be set "
+"to the child location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:45
+msgid "Go to :menuselection:`Inventory app --> Configuration --> Locations`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:47
+msgid ""
+"First, set up a parent location. This can be as simple as the default `WH/"
+"Stock` location. Alternatively, create a new parent location by clicking "
+"the :guilabel:`New` button on the :guilabel:`Locations` page. On this parent "
+"location form, specify a :guilabel:`Location Name` and :guilabel:`Parent "
+"Location`. Select :guilabel:`Internal` as the :guilabel:`Location Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:52
+msgid ""
+"Then, create *sublocations* of this parent location by clicking "
+"the :guilabel:`New` button. On the location form, specify "
+"a :guilabel:`Location Name`, and set the :guilabel:`Parent Location` to the "
+"parent location that was just created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:57
+msgid ""
+"A beverage company stores all of its cans of lemonade on pallets in one "
+"section of its warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+msgid ""
+"First, they create a location named `Pallets` in the `WH/Stock` location. "
+"Then, they create two sublocations, named `PAL1` and `PAL2`. Both have `WH/"
+"Stock/Pallets` set as the parent location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
+msgid "Create a sublocation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:68
+msgid "Define storage category limitations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:70
+msgid ""
+"Before a storage category is applied to locations, it must be configured "
+"with specific limitations in order to decide the optimal storage location. "
+"Capacity can be limited by weight, product, and package type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:74
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories`, and click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
 msgid ""
 "On the storage category form, type a name for the category in "
 "the :guilabel:`Storage Category` field."
@@ -14819,12 +14862,7 @@ msgstr ""
 "저장 카테고리 양식에 있는 :guilabel:`저장 카테고리` 필드에 카테고리 이름을 입"
 "력합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:53
-msgid ""
-"Options are available to limit capacity by weight, product, and package type."
-msgstr "중량, 품목 및 패키지 유형별로 용량을 제한하도록 선택할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:81
 msgid ""
 "Weight limits can be combined with capacity by package or product (e.g. a "
 "maximum of one hundred products with a total weight of two hundred "
@@ -14833,18 +14871,15 @@ msgstr ""
 "중량 제한을 할 때 패키지나 품목 기준 수용량을 조합하여 적용할 수 있습니다"
 "(예: 총 무게가 200kg인 최대 100개의 제품)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:84
 msgid ""
 "While it is possible to limit capacity by product and package type at the "
 "same location, it may be more practical to store items in different amounts "
-"across various locations, as shown in this example of :ref:`capacity by "
-"package <inventory/routes/set-capacity-package>`."
+"across various locations, as shown in the :ref:`limit capacity by package "
+"<inventory/routes/set-capacity-package>` example."
 msgstr ""
-"동일한 위치에서 품목 및 패키지 유형별로 수용량을 제한할 수 있으나, :ref:`패키"
-"지별 수용량 <inventory/routes/set-capacity-package>` 의 예시와 같이 여러 위치"
-"에 다양한 수량으로 품목을 보관하는 것이 더 실용적일 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:88
 msgid ""
 "The :guilabel:`Allow New Product` field defines when the location is "
 "considered available to store a product:"
@@ -14852,7 +14887,7 @@ msgstr ""
 ":guilabel:`새 품목 허용` 필드에는 해당 위치에서 품목을 보관할 준비가 되는 시"
 "기가 지정되어 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:91
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
@@ -14860,7 +14895,7 @@ msgstr ""
 ":guilabel:`위치가 비어 있는 경우`: 해당 위치가 비어 있는 경우에만 품목을 추가"
 "할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
@@ -14868,7 +14903,7 @@ msgstr ""
 ":guilabel:`품목이 동일한 경우`: 해당 위치에 동일한 제품이 이미 있는 경우에만 "
 "품목을 추가할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:94
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
@@ -14876,14 +14911,8 @@ msgstr ""
 ":guilabel:`혼합 제품 허용`: 이 위치에 여러 가지 제품을 동시에 저장할 수 있습"
 "니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:73
-msgid ""
-"When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button "
-"shows which storage locations the category has been assigned to."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
 msgid ""
 "Odoo does **not** automatically split quantities across multiple storage "
 "locations. If an incoming receipt contains several units or packages and the "
@@ -14891,84 +14920,73 @@ msgid ""
 "to that same location instead of selecting another one with available space."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:156
 msgid ""
 "*(Example: If a location can hold 10 units and 12 units arrive, all 12 are "
 "still assigned to that location.)*"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:86
-msgid "Capacity by weight"
-msgstr "중량별 수용량"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:88
-msgid ""
-"On a storage category form (:menuselection:`Inventory app --> Configuration "
-"--> Storage Categories`), set a maximum product weight in the :guilabel:`Max "
-"Weight` field. This limit applies to each location assigned this storage "
-"category."
-msgstr ""
-"저장 카테고리 양식 (:menuselection:`재고 관리 앱 --> 환경설정 --> 저장 카테고"
-"리`)에서 :guilabel:`최대 중량` 항목에 품목의 최대 중량을 설정합니다. 해당 제"
-"한 사항은 저장 카테고리에 지정되어 있는 각 위치에 적용됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
-msgid ""
-"This value must be set to greater than `0` if a product weight is defined."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:107
+msgid "Limit capacity by weight"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
-msgid "Capacity by product"
-msgstr "품목별 용량"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:109
+msgid ""
+"A maximum product weight can be set in the :guilabel:`Max Weight` field. "
+"This limit applies to each location assigned this storage category. If a "
+"product weight is defined, the value must be set to greater than `0`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:114
+msgid "Limit capacity by product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:116
 msgid ""
 "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
-"input items, and enter their capacities in the :guilabel:`Quantity` field."
+"enter a product, and set the maximum capacity that should be stored at each "
+"location in the :guilabel:`Quantity` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:120
 msgid ""
-"Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
-"Sit` are stored at a single storage location, by specifying those amounts in "
-"the :guilabel:`Capacity by Product` tab of a storage category form."
+"To ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
+"Sit` are stored at a single storage location, specify those amounts in "
+"the :guilabel:`Capacity by Product` tab."
 msgstr ""
-"단일 저장 위치에 최대 5개의 `대형 캐비닛`과 2개의 `코너 데스크 오른쪽 좌석` "
-"만 보관할 수 있도록 저장 카테고리 양식의 :guilabel:`품목별 수용량` 탭에 해당"
-"하는 수량을 지정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Show storage category limiting by product count."
 msgstr "품목 수를 기준으로 보관 카테고리 제한을 표시합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
-msgid "Capacity by package"
-msgstr "패키지별 용량"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:113
-msgid ""
-"For companies using :doc:`packages <../../product_management/configure/"
-"package>`, it becomes possible to ensure real-time storage capacity checks, "
-"based on package types (e.g., crates, bins, boxes, etc.)."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:129
+msgid "Limit capacity by package type"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
 msgid ""
-"Create the :ref:`package type <inventory/warehouses_storage/package-type>` "
-"before assigning it to a storage category. Create it on "
-"the :guilabel:`Inventory` tab of the product form (in "
-"the :guilabel:`Packaging` section), or create it from the :guilabel:`Product "
-"Packagings` page. Be sure to set the :guilabel:`Package Type`."
+"Limiting capacity by :doc:`package <../../product_management/configure/"
+"package>` makes it possible to enforce real-time storage capacity checks "
+"based on package type (e.g., crates, bins, boxes, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:135
 msgid ""
-"Create putaway rules for pallet-stored items, by creating the `High "
+"Click :guilabel:`Add a line` to add a :ref:`package type <inventory/"
+"warehouses_storage/package-type>` to the storage category. Alternatively, "
+"create a new package type on the :guilabel:`Inventory` tab of the product "
+"form (in the :guilabel:`Packaging` section), or from the :guilabel:`Product "
+"Packagings` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:141
+msgid ""
+"To help create putaway rules for pallet-stored items, create the `High "
 "frequency pallets` storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
 msgid ""
 "In the :guilabel:`Capacity by Package` tab, specify the number of packages "
 "for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
@@ -14981,27 +14999,23 @@ msgstr ""
 msgid "Create a storage category."
 msgstr "저장소 카테고리를 생성합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
-msgid "Assign to location"
-msgstr "위치에 배정"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
+msgid "Assign storage locations"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:164
 msgid ""
-"Once the storage category is created, assign it to a location. Navigate to "
-"the location by going to :menuselection:`Inventory app --> Configuration --> "
-"Locations`, and select the desired location. Then, select the created "
+"After the storage category is created, it can be assigned to the "
+"sublocations. Go to :menuselection:`Inventory app --> Configuration --> "
+"Locations`, and open the desired sublocation. Then, select the created "
 "category in the :guilabel:`Storage Category` field."
 msgstr ""
-"저장소 카테고리가 생성되면 해당 위치에 배정을 시작합니다. :menuselection:`재"
-"고 관리 앱 --> 환경설정 --> 위치` 를 통해 위치 메뉴로 가서 원하는 위치를 선택"
-"합니다. 그런 다음 :guilabel:`저장소 카테고리` 에서 생성된 카테고리를 선택합니"
-"다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
 msgid ""
 "Assign the `High frequency pallets` storage category (which limits pallets "
-"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-"
-"location."
+"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` "
+"sublocation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
@@ -15009,31 +15023,43 @@ msgid ""
 "When a Storage Category is created, it can be linked to a warehouse location."
 msgstr "보관 카테고리를 생성하면 창고 위치와의 연결을 설정할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
-msgid "Putaway rule"
-msgstr "보관 규칙"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+msgid ""
+"Repeat this step for all sublocations to which the storage category should "
+"apply."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:178
+msgid ""
+"On the storage category form, the :icon:`oi-arrows-v` :guilabel:`Locations` "
+"smart button shows which storage locations the category has been assigned to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:184
+msgid "Create a putaway rule"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:186
 msgid ""
 "With the :ref:`storage category <inventory/routes/define-storage>` "
-"and :ref:`location <inventory/routes/assign-location>` set up, create "
+"and :ref:`locations <inventory/routes/assign-location>` set up, create "
 "the :doc:`putaway rule <putaway>` by navigating to :menuselection:`Inventory "
 "app --> Configuration --> Putaway Rules`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:190
 msgid ""
 "Click the :guilabel:`New` button to create the putaway rule. Specify a "
-"location to store to in the :guilabel:`Store to` field."
+"location in the :guilabel:`Store to` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:193
 msgid ""
 "Use the :guilabel:`Sublocation` field to specify that you want to use a "
-"sublocation with the storage category:"
+"storage category on the sublocations of the :guilabel:`Store to` field:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:196
 msgid ""
 ":guilabel:`Last Used`: The last location that had a move associated with it "
 "for that product or product category is used. If there is no last location "
@@ -15041,14 +15067,16 @@ msgid ""
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:199
 msgid ""
 ":guilabel:`Closest Location`: The locations specified as part of the storage "
 "category are used. A storage category is mandatory in the :guilabel:`Having "
-"Category` field."
+"Category` field. The locations in the storage category must be sublocations "
+"of the location in the :guilabel:`Store to` field. If the closest locations "
+"in the storage category are full, the :guilabel:`Store to` location is used."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:205
 msgid ""
 "Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the putaway rule directing pallets of lemonade to "
@@ -15060,45 +15088,45 @@ msgstr ""
 msgid "Storage Categories used in putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:213
 msgid ""
 "If products are not routing to secondary locations for a storage category "
 "and a product weight is defined, verify that the storage "
 "category's :guilabel:`Max Weight` value is set to a number greater than `0`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:192
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:218
 msgid "Use case: limit capacity by package"
 msgstr "사용 사례: 패키지별 수용량 제한하기"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:220
 msgid ""
 "To limit the capacity of a storage location by a specific number of "
 "packages, :ref:`create a storage category with a Capacity By Package "
 "<inventory/routes/set-capacity-package>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:223
 msgid ""
-"Continuing the example from above, the `High frequency pallets` storage "
+"Continuing the examples from above, the `High frequency pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:200
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:226
 msgid ""
 "Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
 "any pallets received in the warehouse are directed to be stored in `PAL1` "
 "and `PAL2` locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:229
 msgid ""
 "Depending on the number of pallets on-hand at each of the storage locations, "
 "when two pallets of lemonade cans is received, the following scenarios "
 "happen:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:232
 msgid ""
 "If `PAL1` and `PAL2` are empty, the pallet is redirected to `WH/Stock/"
 "Pallets/PAL1`."
@@ -15106,19 +15134,19 @@ msgstr ""
 "`PAL1` 및 `PAL2`가 비어 있으면 팔레트가 `창고/재고/팔레트/PAL1` 로 리디렉션됩"
 "니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:233
 msgid "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr ""
 "`PAL1`이 가득 차게 되면, 팔레트가 `창고/재고/팔레트/PAL2` 로 리디렉션됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:234
 msgid ""
 "If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/"
 "Pallets`."
 msgstr ""
 "`PAL1` 및 `PAL2`가 가득 차면 팔레트가 `창고/재고/팔레트` 로 리디렉션됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:235
 msgid ""
 "If `PAL1` is partially full (for example, with one pallet), Odoo treats more "
 "than one received pallet as a single pallet on the receipt. You must "
@@ -55818,6 +55846,91 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Assigning categories to storage locations tells Odoo these locations meet "
+#~ "specific requirements, such as temperature or accessibility. Odoo then "
+#~ "evaluates these locations, based on defined capacity, and recommends the "
+#~ "best one on the warehouse transfer form."
+#~ msgstr ""
+#~ "저장 위치에 카테고리를 지정하면 해당 위치가 온도나 접근성 등 특정 요건을 "
+#~ "충족하는지 여부를 Odoo에서 확인할 수 있습니다. 그런 다음 Odoo에서는 지정"
+#~ "한 수용량을 기준으로 위치에 대해 평가하여 창고 이전 양식에서 가장 적합한 "
+#~ "위치를 추천합니다."
+
+#~ msgid ""
+#~ "To enable storage categories, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
+#~ "ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
+#~ "Routes` features are enabled."
+#~ msgstr ""
+#~ "저장소 카테고리를 활성화하려면 :menuselection:`재고 관리 앱 --> 환경설정 "
+#~ "--> 설정` 으로 이동합니다. 그런 다음 :guilabel:`창고` 섹션에서 :guilabel:`"
+#~ "저장소 위치` 및 :guilabel:`다단계 경로` 기능이 활성화되어 있는지 확인합니"
+#~ "다."
+
+#~ msgid "Define storage category"
+#~ msgstr "창고 카테고리 지정하기"
+
+#~ msgid ""
+#~ "Options are available to limit capacity by weight, product, and package "
+#~ "type."
+#~ msgstr "중량, 품목 및 패키지 유형별로 용량을 제한하도록 선택할 수 있습니다."
+
+#~ msgid ""
+#~ "While it is possible to limit capacity by product and package type at the "
+#~ "same location, it may be more practical to store items in different "
+#~ "amounts across various locations, as shown in this example "
+#~ "of :ref:`capacity by package <inventory/routes/set-capacity-package>`."
+#~ msgstr ""
+#~ "동일한 위치에서 품목 및 패키지 유형별로 수용량을 제한할 수 있으나, :ref:`"
+#~ "패키지별 수용량 <inventory/routes/set-capacity-package>` 의 예시와 같이 여"
+#~ "러 위치에 다양한 수량으로 품목을 보관하는 것이 더 실용적일 수 있습니다."
+
+#~ msgid "Capacity by weight"
+#~ msgstr "중량별 수용량"
+
+#~ msgid ""
+#~ "On a storage category form (:menuselection:`Inventory app --> "
+#~ "Configuration --> Storage Categories`), set a maximum product weight in "
+#~ "the :guilabel:`Max Weight` field. This limit applies to each location "
+#~ "assigned this storage category."
+#~ msgstr ""
+#~ "저장 카테고리 양식 (:menuselection:`재고 관리 앱 --> 환경설정 --> 저장 카"
+#~ "테고리`)에서 :guilabel:`최대 중량` 항목에 품목의 최대 중량을 설정합니다. "
+#~ "해당 제한 사항은 저장 카테고리에 지정되어 있는 각 위치에 적용됩니다."
+
+#~ msgid "Capacity by product"
+#~ msgstr "품목별 용량"
+
+#~ msgid ""
+#~ "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
+#~ "Sit` are stored at a single storage location, by specifying those amounts "
+#~ "in the :guilabel:`Capacity by Product` tab of a storage category form."
+#~ msgstr ""
+#~ "단일 저장 위치에 최대 5개의 `대형 캐비닛`과 2개의 `코너 데스크 오른쪽 좌석"
+#~ "` 만 보관할 수 있도록 저장 카테고리 양식의 :guilabel:`품목별 수용량` 탭에 "
+#~ "해당하는 수량을 지정합니다."
+
+#~ msgid "Capacity by package"
+#~ msgstr "패키지별 용량"
+
+#~ msgid "Assign to location"
+#~ msgstr "위치에 배정"
+
+#~ msgid ""
+#~ "Once the storage category is created, assign it to a location. Navigate "
+#~ "to the location by going to :menuselection:`Inventory app --> "
+#~ "Configuration --> Locations`, and select the desired location. Then, "
+#~ "select the created category in the :guilabel:`Storage Category` field."
+#~ msgstr ""
+#~ "저장소 카테고리가 생성되면 해당 위치에 배정을 시작합니다. :menuselection:`"
+#~ "재고 관리 앱 --> 환경설정 --> 위치` 를 통해 위치 메뉴로 가서 원하는 위치"
+#~ "를 선택합니다. 그런 다음 :guilabel:`저장소 카테고리` 에서 생성된 카테고리"
+#~ "를 선택합니다."
+
+#~ msgid "Putaway rule"
+#~ msgstr "보관 규칙"
 
 #~ msgid ""
 #~ "Scrapping inventory in a database helps stock counts remain accurate, by "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-13 18:30+0000\n"
+"POT-Creation-Date: 2026-02-20 18:30+0000\n"
 "PO-Revision-Date: 2026-01-20 23:22+0000\n"
 "Last-Translator: \"Thi Huong Nguyen (thng)\" <thng@odoo.com>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -147,7 +147,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:48
@@ -14615,17 +14614,17 @@ msgstr "Vị trí kho hàng mặc định trên biểu mẫu nhân viên."
 msgid ""
 "A *storage category* is used with :doc:`putaway rules <putaway>` to assign a "
 "storage location to incoming products while accounting for the capacity of "
-"that location."
+"that location. Assigning categories to storage locations tells Odoo these "
+"locations meet specific requirements, such as temperature or accessibility. "
+"Odoo then evaluates these locations, based on defined capacity, and "
+"recommends the best one on the warehouse transfer form."
 msgstr ""
-"*Danh mục lưu kho* được sử dụng cùng với :doc:`quy tắc lưu kho <putaway>` để "
-"gán vị trí lưu kho cho các sản phẩm nhập về, đồng thời xét đến sức chứa của "
-"vị trí đó."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
 msgid "Follow these steps to complete the setup:"
 msgstr "Thực hiện theo các bước sau để hoàn tất thiết lập:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
 msgid ""
 ":ref:`Enable features in the settings <inventory/routes/enable-storage-"
 "categories>`"
@@ -14633,12 +14632,12 @@ msgstr ""
 ":ref:`Bật các tính năng trong phần cài đặt <inventory/routes/enable-storage-"
 "categories>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:14
 msgid ":ref:`Define capacity limitations <inventory/routes/define-storage>`"
 msgstr ""
 ":ref:`Xác định các giới hạn sức chứa <inventory/routes/define-storage>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:15
 msgid ""
 "Assign a :ref:`category to storage locations <inventory/routes/assign-"
 "location>`"
@@ -14646,7 +14645,7 @@ msgstr ""
 "Gán một :ref:`danh mục cho các vị trí lưu kho <inventory/routes/assign-"
 "location>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:16
 msgid ""
 "Add the storage category as an attribute to a :ref:`putaway rule <inventory/"
 "routes/set-putaway-attribute>`"
@@ -14654,43 +14653,28 @@ msgstr ""
 "Thêm danh mục lưu kho làm một thuộc tính cho :ref:`quy tắc lưu kho "
 "<inventory/routes/set-putaway-attribute>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
 msgid ":doc:`putaway`"
 msgstr ":doc:`lưu kho`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
-msgid ""
-"Assigning categories to storage locations tells Odoo these locations meet "
-"specific requirements, such as temperature or accessibility. Odoo then "
-"evaluates these locations, based on defined capacity, and recommends the "
-"best one on the warehouse transfer form."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:25
+msgid "Enable storage categories"
 msgstr ""
-"Việc gán danh mục lưu kho cho các vị trí lưu kho cho Odoo biết rằng những vị "
-"trí này đáp ứng các yêu cầu cụ thể, chẳng hạn như nhiệt độ hoặc khả năng "
-"tiếp cận. Sau đó, Odoo sẽ đánh giá các vị trí này dựa trên sức chứa đã được "
-"thiết lập và đề xuất vị trí phù hợp nhất trên biểu mẫu điều chuyển kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 msgid ""
 "To enable storage categories, go to :menuselection:`Inventory app --> "
-"Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
-"ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
-"features are enabled."
+"Configuration --> Settings`. Then, in the *Warehouse* section, ensure "
+"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` features "
+"are enabled."
 msgstr ""
-"Để bật danh mục lưu kho, hãy vào :menuselection:`Ứng dụng Tồn kho --> Cấu "
-"hình --> Cài đặt`. Sau đó, trong phần :guilabel:`Kho hàng`, đảm bảo rằng các "
-"tính năng :guilabel:`Vị trí lưu kho` và :guilabel:`Tuyến cung ứng nhiều "
-"bước` đã được bật."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:31
 msgid ""
-"If intending to set capacities by :ref:`package type <inventory/routes/set-"
-"capacity-package>`, also make sure :guilabel:`Packages` is enabled. "
-"Click :guilabel:`Save`."
+"To set capacities by :ref:`package type <inventory/routes/set-capacity-"
+"package>`, also make sure :guilabel:`Packages` is enabled in the "
+"*Operations* section. Click :guilabel:`Save`."
 msgstr ""
-"Nếu dự định đặt sức chứa theo :ref:`loại kiện hàng <inventory/routes/set-"
-"capacity-package>`, hãy đảm bảo rằng tính năng :guilabel:`Kiện hàng` đã được "
-"bật. Sau đó, nhấp :guilabel:`Lưu`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:None
 msgid ""
@@ -14699,20 +14683,70 @@ msgstr ""
 "Bật Vị trí lưu kho và Tuyến cung ứng nhiều bước để kích hoạt danh mục lưu "
 "kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:42
-msgid "Define storage category"
-msgstr "Xác định danh mục lưu kho"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:44
-msgid ""
-"A storage category with specific limitations **must** be created first, "
-"before it is applied to locations, in order to decide the optimal storage "
-"location."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:38
+msgid "Storage location setup"
 msgstr ""
-"Một danh mục lưu kho với các giới hạn cụ thể **phải** được tạo trước, trước "
-"khi áp dụng cho các vị trí, nhằm xác định vị trí lưu kho tối ưu."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:40
+msgid ""
+"Set up storage locations to work with the storage category. A parent "
+"location must be set up, with child locations (or *sublocations*) assigned "
+"to it. This is because the putaway rule's :ref:`Store to <inventory/routes/"
+"set-putaway-attribute>` location will be set to the parent location, and "
+"the :ref:`storage category <inventory/routes/assign-location>` will be set "
+"to the child location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:45
+msgid "Go to :menuselection:`Inventory app --> Configuration --> Locations`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:47
+msgid ""
+"First, set up a parent location. This can be as simple as the default `WH/"
+"Stock` location. Alternatively, create a new parent location by clicking "
+"the :guilabel:`New` button on the :guilabel:`Locations` page. On this parent "
+"location form, specify a :guilabel:`Location Name` and :guilabel:`Parent "
+"Location`. Select :guilabel:`Internal` as the :guilabel:`Location Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:52
+msgid ""
+"Then, create *sublocations* of this parent location by clicking "
+"the :guilabel:`New` button. On the location form, specify "
+"a :guilabel:`Location Name`, and set the :guilabel:`Parent Location` to the "
+"parent location that was just created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:57
+msgid ""
+"A beverage company stores all of its cans of lemonade on pallets in one "
+"section of its warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+msgid ""
+"First, they create a location named `Pallets` in the `WH/Stock` location. "
+"Then, they create two sublocations, named `PAL1` and `PAL2`. Both have `WH/"
+"Stock/Pallets` set as the parent location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
+msgid "Create a sublocation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:68
+msgid "Define storage category limitations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:70
+msgid ""
+"Before a storage category is applied to locations, it must be configured "
+"with specific limitations in order to decide the optimal storage location. "
+"Capacity can be limited by weight, product, and package type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:74
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories`, and click :guilabel:`New`."
@@ -14720,7 +14754,7 @@ msgstr ""
 "Để tạo một danh mục lưu kho, hãy vào :menuselection:`Ứng dụng Tồn kho --> "
 "Cấu hình --> Danh mục lưu kho`, rồi nhấp :guilabel:`Mới`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
 msgid ""
 "On the storage category form, type a name for the category in "
 "the :guilabel:`Storage Category` field."
@@ -14728,14 +14762,7 @@ msgstr ""
 "Trên biểu mẫu danh mục lưu kho, nhập tên cho danh mục trong "
 "trường :guilabel:`Danh mục lưu kho`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:53
-msgid ""
-"Options are available to limit capacity by weight, product, and package type."
-msgstr ""
-"Có các tùy chọn cho phép giới hạn sức chứa theo khối lượng, theo sản phẩm và "
-"theo loại kiện hàng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:81
 msgid ""
 "Weight limits can be combined with capacity by package or product (e.g. a "
 "maximum of one hundred products with a total weight of two hundred "
@@ -14745,19 +14772,15 @@ msgstr ""
 "theo sản phẩm (ví dụ: tối đa một trăm sản phẩm với tổng khối lượng là hai "
 "trăm kilôgam)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:84
 msgid ""
 "While it is possible to limit capacity by product and package type at the "
 "same location, it may be more practical to store items in different amounts "
-"across various locations, as shown in this example of :ref:`capacity by "
-"package <inventory/routes/set-capacity-package>`."
+"across various locations, as shown in the :ref:`limit capacity by package "
+"<inventory/routes/set-capacity-package>` example."
 msgstr ""
-"Mặc dù có thể giới hạn sức chứa theo sản phẩm và loại kiện hàng tại cùng một "
-"vị trí, nhưng trong thực tế, việc lưu trữ hàng hóa với số lượng khác nhau ở "
-"nhiều vị trí khác nhau có thể sẽ thuận tiện hơn, như minh họa trong ví dụ "
-"về :ref:`sức chứa theo kiện hàng <inventory/routes/set-capacity-package>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:88
 msgid ""
 "The :guilabel:`Allow New Product` field defines when the location is "
 "considered available to store a product:"
@@ -14765,7 +14788,7 @@ msgstr ""
 "Trường :guilabel:`Cho phép sản phẩm mới` xác định khi nào một vị trí được "
 "xem là khả dụng để lưu trữ một sản phẩm:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:91
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
@@ -14773,7 +14796,7 @@ msgstr ""
 ":guilabel:`Nếu vị trí trống`: chỉ có thể đưa một sản phẩm vào đó khi vị trí "
 "này đang trống."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
@@ -14781,7 +14804,7 @@ msgstr ""
 ":guilabel:`Nếu sản phẩm giống nhau`: chỉ có thể thêm một sản phẩm vào đó nếu "
 "cùng loại sản phẩm đó đã có sẵn tại vị trí này."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:94
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
@@ -14789,16 +14812,8 @@ msgstr ""
 ":guilabel:`Cho phép kết hợp sản phẩm`: có thể lưu trữ nhiều sản phẩm khác "
 "nhau cùng lúc tại vị trí này."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:73
-msgid ""
-"When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button "
-"shows which storage locations the category has been assigned to."
-msgstr ""
-"Khi nhấp, nút thông minh :icon:`oi-arrows-v` :guilabel:`Vị trí` sẽ hiển thị "
-"những vị trí lưu kho mà nhóm này đã được gán."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
 msgid ""
 "Odoo does **not** automatically split quantities across multiple storage "
 "locations. If an incoming receipt contains several units or packages and the "
@@ -14810,8 +14825,8 @@ msgstr ""
 "đề xuất đầu tiên vượt quá sức chứa, Odoo vẫn điều hướng toàn bộ hàng hóa vào "
 "cùng vị trí đó, thay vì chọn một vị trí khác còn chỗ trống."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:156
 msgid ""
 "*(Example: If a location can hold 10 units and 12 units arrive, all 12 are "
 "still assigned to that location.)*"
@@ -14819,91 +14834,66 @@ msgstr ""
 "*(Ví dụ: Nếu một vị trí có thể chứa 10 đơn vị và 12 đơn vị được đưa vào, thì "
 "cả 12 đơn vị vẫn sẽ được gán cho vị trí đó.)*"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:86
-msgid "Capacity by weight"
-msgstr "Sức chứa theo khối lượng"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:88
-msgid ""
-"On a storage category form (:menuselection:`Inventory app --> Configuration "
-"--> Storage Categories`), set a maximum product weight in the :guilabel:`Max "
-"Weight` field. This limit applies to each location assigned this storage "
-"category."
-msgstr ""
-"Trên biểu mẫu danh mục lưu kho (:menuselection:`Ứng dụng Tồn kho --> Cấu "
-"hình --> Danh mục lưu kho`), thiết lập khối lượng sản phẩm tối đa trong "
-"trường :guilabel:`Khối lượng tối đa`. Giới hạn này được áp dụng cho từng vị "
-"trí được gán danh mục lưu kho này."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
-msgid ""
-"This value must be set to greater than `0` if a product weight is defined."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:107
+msgid "Limit capacity by weight"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
-msgid "Capacity by product"
-msgstr "Sức chứa theo sản phẩm"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:109
+msgid ""
+"A maximum product weight can be set in the :guilabel:`Max Weight` field. "
+"This limit applies to each location assigned this storage category. If a "
+"product weight is defined, the value must be set to greater than `0`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:114
+msgid "Limit capacity by product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:116
 msgid ""
 "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
-"input items, and enter their capacities in the :guilabel:`Quantity` field."
+"enter a product, and set the maximum capacity that should be stored at each "
+"location in the :guilabel:`Quantity` field."
 msgstr ""
-"Trong tab :guilabel:`Sức chứa theo sản phẩm`, nhấp :guilabel:`Thêm một dòng` "
-"để nhập các mặt hàng, và điền sức chứa của chúng trong trường :guilabel:`Số "
-"lượng`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:120
 msgid ""
-"Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
-"Sit` are stored at a single storage location, by specifying those amounts in "
-"the :guilabel:`Capacity by Product` tab of a storage category form."
+"To ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
+"Sit` are stored at a single storage location, specify those amounts in "
+"the :guilabel:`Capacity by Product` tab."
 msgstr ""
-"Đảm bảo rằng tại mỗi vị trí lưu kho chỉ lưu trữ tối đa năm `Large Cabinets` "
-"và hai `Corner Desk Right Sit` bằng cách chỉ định các số lượng này trong "
-"tab :guilabel:`Sức chứa theo sản phẩm` của biểu mẫu danh mục lưu kho."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Show storage category limiting by product count."
 msgstr "Hiển thị danh mục lưu kho giới hạn theo số lượng sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
-msgid "Capacity by package"
-msgstr "Sức chứa theo kiện hàng"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:113
-msgid ""
-"For companies using :doc:`packages <../../product_management/configure/"
-"package>`, it becomes possible to ensure real-time storage capacity checks, "
-"based on package types (e.g., crates, bins, boxes, etc.)."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:129
+msgid "Limit capacity by package type"
 msgstr ""
-"Đối với các doanh nghiệp sử dụng :doc:`kiện hàng <../../product_management/"
-"configure/package>`, việc kiểm tra sức chứa lưu kho theo thời gian thực trở "
-"nên khả thi, dựa trên các loại kiện hàng (ví dụ: thùng, khay, hộp, v.v.)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
 msgid ""
-"Create the :ref:`package type <inventory/warehouses_storage/package-type>` "
-"before assigning it to a storage category. Create it on "
-"the :guilabel:`Inventory` tab of the product form (in "
-"the :guilabel:`Packaging` section), or create it from the :guilabel:`Product "
-"Packagings` page. Be sure to set the :guilabel:`Package Type`."
+"Limiting capacity by :doc:`package <../../product_management/configure/"
+"package>` makes it possible to enforce real-time storage capacity checks "
+"based on package type (e.g., crates, bins, boxes, etc.)."
 msgstr ""
-"Tạo :ref:`loại kiện hàng <inventory/warehouses_storage/package-type>` trước "
-"khi gán cho một danh mục lưu kho. Bạn có thể tạo loại kiện hàng này trong "
-"tab :guilabel:`Tồn kho` trên biểu mẫu sản phẩm (trong phần :guilabel:`Bao "
-"bì`), hoặc tạo từ trang :guilabel:`Bao bì sản phẩm`. Hãy đảm bảo thiết "
-"lập :guilabel:`Loại kiện hàng`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:135
 msgid ""
-"Create putaway rules for pallet-stored items, by creating the `High "
+"Click :guilabel:`Add a line` to add a :ref:`package type <inventory/"
+"warehouses_storage/package-type>` to the storage category. Alternatively, "
+"create a new package type on the :guilabel:`Inventory` tab of the product "
+"form (in the :guilabel:`Packaging` section), or from the :guilabel:`Product "
+"Packagings` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:141
+msgid ""
+"To help create putaway rules for pallet-stored items, create the `High "
 "frequency pallets` storage category."
 msgstr ""
-"Tạo các quy tắc lưu kho cho những mặt hàng được lưu trữ theo pallet bằng "
-"cách tạo danh mục lưu kho `High frequency pallets`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
 msgid ""
 "In the :guilabel:`Capacity by Package` tab, specify the number of packages "
 "for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
@@ -14917,30 +14907,24 @@ msgstr ""
 msgid "Create a storage category."
 msgstr "Tạo một danh mục lưu kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
-msgid "Assign to location"
-msgstr "Gán vào vị trí"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
+msgid "Assign storage locations"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:164
 msgid ""
-"Once the storage category is created, assign it to a location. Navigate to "
-"the location by going to :menuselection:`Inventory app --> Configuration --> "
-"Locations`, and select the desired location. Then, select the created "
+"After the storage category is created, it can be assigned to the "
+"sublocations. Go to :menuselection:`Inventory app --> Configuration --> "
+"Locations`, and open the desired sublocation. Then, select the created "
 "category in the :guilabel:`Storage Category` field."
 msgstr ""
-"Sau khi tạo xong danh mục lưu kho, hãy gán nhóm này cho một vị trí. Truy cập "
-"vị trí bằng cách vào :menuselection:`Ứng dụng Tồn kho --> Cấu hình --> Vị "
-"trí`, rồi chọn vị trí mong muốn. Sau đó, chọn nhóm đã tạo trong "
-"trường :guilabel:`Danh mục lưu kho`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
 msgid ""
 "Assign the `High frequency pallets` storage category (which limits pallets "
-"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-"
-"location."
+"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` "
+"sublocation."
 msgstr ""
-"Gán danh mục lưu kho `High frequency pallets` (giới hạn tối đa hai pallet "
-"được lưu trữ tại mỗi vị trí) cho vị trí phụ `WH/Stock/Pallets/PAL1`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid ""
@@ -14949,39 +14933,43 @@ msgstr ""
 "Khi một Danh mục lưu kho được tạo, nó có thể được liên kết với một vị trí "
 "kho hàng."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
-msgid "Putaway rule"
-msgstr "Quy tắc lưu kho"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+msgid ""
+"Repeat this step for all sublocations to which the storage category should "
+"apply."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:178
+msgid ""
+"On the storage category form, the :icon:`oi-arrows-v` :guilabel:`Locations` "
+"smart button shows which storage locations the category has been assigned to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:184
+msgid "Create a putaway rule"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:186
 msgid ""
 "With the :ref:`storage category <inventory/routes/define-storage>` "
-"and :ref:`location <inventory/routes/assign-location>` set up, create "
+"and :ref:`locations <inventory/routes/assign-location>` set up, create "
 "the :doc:`putaway rule <putaway>` by navigating to :menuselection:`Inventory "
 "app --> Configuration --> Putaway Rules`."
 msgstr ""
-"Sau khi đã thiết lập :ref:`danh mục lưu kho <inventory/routes/define-"
-"storage>` và :ref:`vị trí <inventory/routes/assign-location>`, hãy "
-"tạo :doc:`quy tắc lưu kho <putaway>` bằng cách vào :menuselection:`Ứng dụng "
-"Tồn kho --> Cấu hình --> Quy tắc lưu kho`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:190
 msgid ""
 "Click the :guilabel:`New` button to create the putaway rule. Specify a "
-"location to store to in the :guilabel:`Store to` field."
+"location in the :guilabel:`Store to` field."
 msgstr ""
-"Nhấp nút :guilabel:`Mới` để tạo quy tắc lưu kho. Chỉ định vị trí lưu kho "
-"trong trường :guilabel:`Lưu kho tại`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:193
 msgid ""
 "Use the :guilabel:`Sublocation` field to specify that you want to use a "
-"sublocation with the storage category:"
+"storage category on the sublocations of the :guilabel:`Store to` field:"
 msgstr ""
-"Sử dụng trường :guilabel:`Vị trí phụ` để chỉ định rằng bạn muốn sử dụng một "
-"vị trí phụ với danh mục lưu kho:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:196
 msgid ""
 ":guilabel:`Last Used`: The last location that had a move associated with it "
 "for that product or product category is used. If there is no last location "
@@ -14993,17 +14981,16 @@ msgstr ""
 "có vị trí sử dụng gần nhất, vị trí đích sẽ là vị trí được chỉ định trong "
 "trường :guilabel:`Lưu kho tại`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:199
 msgid ""
 ":guilabel:`Closest Location`: The locations specified as part of the storage "
 "category are used. A storage category is mandatory in the :guilabel:`Having "
-"Category` field."
+"Category` field. The locations in the storage category must be sublocations "
+"of the location in the :guilabel:`Store to` field. If the closest locations "
+"in the storage category are full, the :guilabel:`Store to` location is used."
 msgstr ""
-":guilabel:`Vị trí gần nhất`: các vị trí được chỉ định trong danh mục lưu kho "
-"sẽ được sử dụng. Trường :guilabel:`Có danh mục` bắt buộc phải được thiết lập "
-"danh mục lưu kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:205
 msgid ""
 "Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the putaway rule directing pallets of lemonade to "
@@ -15019,18 +15006,18 @@ msgstr ""
 msgid "Storage Categories used in putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:213
 msgid ""
 "If products are not routing to secondary locations for a storage category "
 "and a product weight is defined, verify that the storage "
 "category's :guilabel:`Max Weight` value is set to a number greater than `0`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:192
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:218
 msgid "Use case: limit capacity by package"
 msgstr "Trường hợp vận dụng: giới hạn sức chứa theo kiện hàng"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:220
 msgid ""
 "To limit the capacity of a storage location by a specific number of "
 "packages, :ref:`create a storage category with a Capacity By Package "
@@ -15040,15 +15027,13 @@ msgstr ""
 "hãy :ref:`tạo một danh mục lưu kho với Sức chứa theo kiện hàng <inventory/"
 "routes/set-capacity-package>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:223
 msgid ""
-"Continuing the example from above, the `High frequency pallets` storage "
+"Continuing the examples from above, the `High frequency pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
-"Tiếp tục ví dụ ở trên, danh mục lưu kho `High frequency pallets` được gán "
-"cho các vị trí `PAL1` và `PAL2`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:200
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:226
 msgid ""
 "Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
 "any pallets received in the warehouse are directed to be stored in `PAL1` "
@@ -15058,7 +15043,7 @@ msgstr ""
 "để mọi pallet được nhận vào kho đều được điều hướng lưu trữ tại các vị trí "
 "`PAL1` và `PAL2`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:229
 msgid ""
 "Depending on the number of pallets on-hand at each of the storage locations, "
 "when two pallets of lemonade cans is received, the following scenarios "
@@ -15067,7 +15052,7 @@ msgstr ""
 "Tùy theo số lượng pallet hiện có tại từng vị trí lưu kho, khi nhận hai "
 "pallet lon nước chanh, các tình huống sau đây sẽ xảy ra:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:232
 msgid ""
 "If `PAL1` and `PAL2` are empty, the pallet is redirected to `WH/Stock/"
 "Pallets/PAL1`."
@@ -15075,12 +15060,12 @@ msgstr ""
 "Nếu `PAL1` và `PAL2` đều trống, pallet sẽ được điều hướng đến `WH/Stock/"
 "Pallets/PAL1`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:233
 msgid "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr ""
 "Nếu `PAL1` đã đầy, pallet sẽ được điều hướng đến `WH/Stock/Pallets/PAL2`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:234
 msgid ""
 "If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/"
 "Pallets`."
@@ -15088,7 +15073,7 @@ msgstr ""
 "Nếu `PAL1` và `PAL2` đều đã đầy, pallet sẽ được điều hướng đến `WH/Stock/"
 "Pallets`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:235
 msgid ""
 "If `PAL1` is partially full (for example, with one pallet), Odoo treats more "
 "than one received pallet as a single pallet on the receipt. You must "
@@ -52911,6 +52896,220 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "A *storage category* is used with :doc:`putaway rules <putaway>` to "
+#~ "assign a storage location to incoming products while accounting for the "
+#~ "capacity of that location."
+#~ msgstr ""
+#~ "*Danh mục lưu kho* được sử dụng cùng với :doc:`quy tắc lưu kho <putaway>` "
+#~ "để gán vị trí lưu kho cho các sản phẩm nhập về, đồng thời xét đến sức "
+#~ "chứa của vị trí đó."
+
+#~ msgid ""
+#~ "Assigning categories to storage locations tells Odoo these locations meet "
+#~ "specific requirements, such as temperature or accessibility. Odoo then "
+#~ "evaluates these locations, based on defined capacity, and recommends the "
+#~ "best one on the warehouse transfer form."
+#~ msgstr ""
+#~ "Việc gán danh mục lưu kho cho các vị trí lưu kho cho Odoo biết rằng những "
+#~ "vị trí này đáp ứng các yêu cầu cụ thể, chẳng hạn như nhiệt độ hoặc khả "
+#~ "năng tiếp cận. Sau đó, Odoo sẽ đánh giá các vị trí này dựa trên sức chứa "
+#~ "đã được thiết lập và đề xuất vị trí phù hợp nhất trên biểu mẫu điều "
+#~ "chuyển kho."
+
+#~ msgid ""
+#~ "To enable storage categories, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
+#~ "ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
+#~ "Routes` features are enabled."
+#~ msgstr ""
+#~ "Để bật danh mục lưu kho, hãy vào :menuselection:`Ứng dụng Tồn kho --> Cấu "
+#~ "hình --> Cài đặt`. Sau đó, trong phần :guilabel:`Kho hàng`, đảm bảo rằng "
+#~ "các tính năng :guilabel:`Vị trí lưu kho` và :guilabel:`Tuyến cung ứng "
+#~ "nhiều bước` đã được bật."
+
+#~ msgid ""
+#~ "If intending to set capacities by :ref:`package type <inventory/routes/"
+#~ "set-capacity-package>`, also make sure :guilabel:`Packages` is enabled. "
+#~ "Click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Nếu dự định đặt sức chứa theo :ref:`loại kiện hàng <inventory/routes/set-"
+#~ "capacity-package>`, hãy đảm bảo rằng tính năng :guilabel:`Kiện hàng` đã "
+#~ "được bật. Sau đó, nhấp :guilabel:`Lưu`."
+
+#~ msgid "Define storage category"
+#~ msgstr "Xác định danh mục lưu kho"
+
+#~ msgid ""
+#~ "A storage category with specific limitations **must** be created first, "
+#~ "before it is applied to locations, in order to decide the optimal storage "
+#~ "location."
+#~ msgstr ""
+#~ "Một danh mục lưu kho với các giới hạn cụ thể **phải** được tạo trước, "
+#~ "trước khi áp dụng cho các vị trí, nhằm xác định vị trí lưu kho tối ưu."
+
+#~ msgid ""
+#~ "Options are available to limit capacity by weight, product, and package "
+#~ "type."
+#~ msgstr ""
+#~ "Có các tùy chọn cho phép giới hạn sức chứa theo khối lượng, theo sản phẩm "
+#~ "và theo loại kiện hàng."
+
+#~ msgid ""
+#~ "While it is possible to limit capacity by product and package type at the "
+#~ "same location, it may be more practical to store items in different "
+#~ "amounts across various locations, as shown in this example "
+#~ "of :ref:`capacity by package <inventory/routes/set-capacity-package>`."
+#~ msgstr ""
+#~ "Mặc dù có thể giới hạn sức chứa theo sản phẩm và loại kiện hàng tại cùng "
+#~ "một vị trí, nhưng trong thực tế, việc lưu trữ hàng hóa với số lượng khác "
+#~ "nhau ở nhiều vị trí khác nhau có thể sẽ thuận tiện hơn, như minh họa "
+#~ "trong ví dụ về :ref:`sức chứa theo kiện hàng <inventory/routes/set-"
+#~ "capacity-package>`."
+
+#~ msgid ""
+#~ "When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button "
+#~ "shows which storage locations the category has been assigned to."
+#~ msgstr ""
+#~ "Khi nhấp, nút thông minh :icon:`oi-arrows-v` :guilabel:`Vị trí` sẽ hiển "
+#~ "thị những vị trí lưu kho mà nhóm này đã được gán."
+
+#~ msgid "Capacity by weight"
+#~ msgstr "Sức chứa theo khối lượng"
+
+#~ msgid ""
+#~ "On a storage category form (:menuselection:`Inventory app --> "
+#~ "Configuration --> Storage Categories`), set a maximum product weight in "
+#~ "the :guilabel:`Max Weight` field. This limit applies to each location "
+#~ "assigned this storage category."
+#~ msgstr ""
+#~ "Trên biểu mẫu danh mục lưu kho (:menuselection:`Ứng dụng Tồn kho --> Cấu "
+#~ "hình --> Danh mục lưu kho`), thiết lập khối lượng sản phẩm tối đa trong "
+#~ "trường :guilabel:`Khối lượng tối đa`. Giới hạn này được áp dụng cho từng "
+#~ "vị trí được gán danh mục lưu kho này."
+
+#~ msgid "Capacity by product"
+#~ msgstr "Sức chứa theo sản phẩm"
+
+#~ msgid ""
+#~ "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` "
+#~ "to input items, and enter their capacities in the :guilabel:`Quantity` "
+#~ "field."
+#~ msgstr ""
+#~ "Trong tab :guilabel:`Sức chứa theo sản phẩm`, nhấp :guilabel:`Thêm một "
+#~ "dòng` để nhập các mặt hàng, và điền sức chứa của chúng trong "
+#~ "trường :guilabel:`Số lượng`."
+
+#~ msgid ""
+#~ "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
+#~ "Sit` are stored at a single storage location, by specifying those amounts "
+#~ "in the :guilabel:`Capacity by Product` tab of a storage category form."
+#~ msgstr ""
+#~ "Đảm bảo rằng tại mỗi vị trí lưu kho chỉ lưu trữ tối đa năm `Large "
+#~ "Cabinets` và hai `Corner Desk Right Sit` bằng cách chỉ định các số lượng "
+#~ "này trong tab :guilabel:`Sức chứa theo sản phẩm` của biểu mẫu danh mục "
+#~ "lưu kho."
+
+#~ msgid "Capacity by package"
+#~ msgstr "Sức chứa theo kiện hàng"
+
+#~ msgid ""
+#~ "For companies using :doc:`packages <../../product_management/configure/"
+#~ "package>`, it becomes possible to ensure real-time storage capacity "
+#~ "checks, based on package types (e.g., crates, bins, boxes, etc.)."
+#~ msgstr ""
+#~ "Đối với các doanh nghiệp sử dụng :doc:`kiện hàng <../../"
+#~ "product_management/configure/package>`, việc kiểm tra sức chứa lưu kho "
+#~ "theo thời gian thực trở nên khả thi, dựa trên các loại kiện hàng (ví dụ: "
+#~ "thùng, khay, hộp, v.v.)."
+
+#~ msgid ""
+#~ "Create the :ref:`package type <inventory/warehouses_storage/package-"
+#~ "type>` before assigning it to a storage category. Create it on "
+#~ "the :guilabel:`Inventory` tab of the product form (in "
+#~ "the :guilabel:`Packaging` section), or create it from "
+#~ "the :guilabel:`Product Packagings` page. Be sure to set "
+#~ "the :guilabel:`Package Type`."
+#~ msgstr ""
+#~ "Tạo :ref:`loại kiện hàng <inventory/warehouses_storage/package-type>` "
+#~ "trước khi gán cho một danh mục lưu kho. Bạn có thể tạo loại kiện hàng này "
+#~ "trong tab :guilabel:`Tồn kho` trên biểu mẫu sản phẩm (trong "
+#~ "phần :guilabel:`Bao bì`), hoặc tạo từ trang :guilabel:`Bao bì sản phẩm`. "
+#~ "Hãy đảm bảo thiết lập :guilabel:`Loại kiện hàng`."
+
+#~ msgid ""
+#~ "Create putaway rules for pallet-stored items, by creating the `High "
+#~ "frequency pallets` storage category."
+#~ msgstr ""
+#~ "Tạo các quy tắc lưu kho cho những mặt hàng được lưu trữ theo pallet bằng "
+#~ "cách tạo danh mục lưu kho `High frequency pallets`."
+
+#~ msgid "Assign to location"
+#~ msgstr "Gán vào vị trí"
+
+#~ msgid ""
+#~ "Once the storage category is created, assign it to a location. Navigate "
+#~ "to the location by going to :menuselection:`Inventory app --> "
+#~ "Configuration --> Locations`, and select the desired location. Then, "
+#~ "select the created category in the :guilabel:`Storage Category` field."
+#~ msgstr ""
+#~ "Sau khi tạo xong danh mục lưu kho, hãy gán nhóm này cho một vị trí. Truy "
+#~ "cập vị trí bằng cách vào :menuselection:`Ứng dụng Tồn kho --> Cấu hình --"
+#~ "> Vị trí`, rồi chọn vị trí mong muốn. Sau đó, chọn nhóm đã tạo trong "
+#~ "trường :guilabel:`Danh mục lưu kho`."
+
+#~ msgid ""
+#~ "Assign the `High frequency pallets` storage category (which limits "
+#~ "pallets stored at any location to two pallets) to the `WH/Stock/Pallets/"
+#~ "PAL1` sub-location."
+#~ msgstr ""
+#~ "Gán danh mục lưu kho `High frequency pallets` (giới hạn tối đa hai pallet "
+#~ "được lưu trữ tại mỗi vị trí) cho vị trí phụ `WH/Stock/Pallets/PAL1`."
+
+#~ msgid "Putaway rule"
+#~ msgstr "Quy tắc lưu kho"
+
+#~ msgid ""
+#~ "With the :ref:`storage category <inventory/routes/define-storage>` "
+#~ "and :ref:`location <inventory/routes/assign-location>` set up, create "
+#~ "the :doc:`putaway rule <putaway>` by navigating "
+#~ "to :menuselection:`Inventory app --> Configuration --> Putaway Rules`."
+#~ msgstr ""
+#~ "Sau khi đã thiết lập :ref:`danh mục lưu kho <inventory/routes/define-"
+#~ "storage>` và :ref:`vị trí <inventory/routes/assign-location>`, hãy "
+#~ "tạo :doc:`quy tắc lưu kho <putaway>` bằng cách vào :menuselection:`Ứng "
+#~ "dụng Tồn kho --> Cấu hình --> Quy tắc lưu kho`."
+
+#~ msgid ""
+#~ "Click the :guilabel:`New` button to create the putaway rule. Specify a "
+#~ "location to store to in the :guilabel:`Store to` field."
+#~ msgstr ""
+#~ "Nhấp nút :guilabel:`Mới` để tạo quy tắc lưu kho. Chỉ định vị trí lưu kho "
+#~ "trong trường :guilabel:`Lưu kho tại`."
+
+#~ msgid ""
+#~ "Use the :guilabel:`Sublocation` field to specify that you want to use a "
+#~ "sublocation with the storage category:"
+#~ msgstr ""
+#~ "Sử dụng trường :guilabel:`Vị trí phụ` để chỉ định rằng bạn muốn sử dụng "
+#~ "một vị trí phụ với danh mục lưu kho:"
+
+#~ msgid ""
+#~ ":guilabel:`Closest Location`: The locations specified as part of the "
+#~ "storage category are used. A storage category is mandatory in "
+#~ "the :guilabel:`Having Category` field."
+#~ msgstr ""
+#~ ":guilabel:`Vị trí gần nhất`: các vị trí được chỉ định trong danh mục lưu "
+#~ "kho sẽ được sử dụng. Trường :guilabel:`Có danh mục` bắt buộc phải được "
+#~ "thiết lập danh mục lưu kho."
+
+#~ msgid ""
+#~ "Continuing the example from above, the `High frequency pallets` storage "
+#~ "category is assigned to the `PAL1` and `PAL2` locations."
+#~ msgstr ""
+#~ "Tiếp tục ví dụ ở trên, danh mục lưu kho `High frequency pallets` được gán "
+#~ "cho các vị trí `PAL1` và `PAL2`."
 
 #~ msgid ""
 #~ "Scrapping inventory in a database helps stock counts remain accurate, by "
