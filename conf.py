@@ -233,6 +233,7 @@ sphinx.transforms.i18n.docname_to_domain = (
 versions_names = {
     'master': "Master",
     'saas-19.2': "Odoo 19.2",
+    'saas-19.1': "Odoo 19.1",
     '19.0': "Odoo 19",
     'saas-18.4': "Odoo 18.4",
     'saas-18.3': "Odoo 18.3",
