@@ -251,12 +251,13 @@ count the number of lines of code.
 Shell script
 ------------
 
-A typical way to :ref:`run the server <reference/cmdline/server>` would be to add all command line arguments to a `.sh` script.
+A typical way to :ref:`run the server <reference/cmdline/server>` would be to add all command line
+arguments to a `.sh` script.
 
 .. example::
    .. code-block:: xml
 
-      ./odoo-bin --addons-path=../enterprise,addons --db-filter=<database> -d <database> -i website --dev=xml
+      ./odoo-bin --addons-path=../enterprise,addons --db-filter=<database> -d <database> -i website --dev=xml --without-demo=True
 
 .. list-table::
    :header-rows: 1
@@ -282,9 +283,14 @@ A typical way to :ref:`run the server <reference/cmdline/server>` would be to ad
 
        :option:`--update <odoo-bin --update>`
      - Comma-separated list of modules to update before running the server. (requires `-d`)
+
+   * - :option:`--reinit <odoo-bin --reinit>`
+     - A comma-separated list of modules to reinitialize before starting the server. (requires `-d`)
    * - :option:`--dev <odoo-bin --dev>`
      - Comma-separated list of features. For development purposes only. :ref:`More info
        <reference/cmdline/dev>`
+   * - :option:`--without-demo <odoo-bin --without-demo>`
+     - Prevents server from loading demo data.
 
 .. _website_themes/setup/getting_started/signin :
 
