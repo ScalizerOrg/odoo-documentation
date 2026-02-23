@@ -659,15 +659,17 @@ Time (`float_time`)
 
             <field name="float_value" options="{'numeric': true}" />
 
-    - `show_seconds`: display the seconds (`true` by default)
+    - `show_seconds`: display the seconds (`false` by default)
 
         .. code-block:: xml
 
-            <field name="float_value" options="{'show_seconds': false}" />
+            <field name="float_value" options="{'show_seconds': true}" />
 
     - `unit`: specify what is the unit of time of the float value (`"hours"` by default)
 
         The units of time available are: `"hours"`, `"minutes"` and `"seconds"`.
+        The unit will always be shown in the result. if `"seconds"`, then `show_seconds`
+        is ignored because the seconds will always be shown.
 
         .. code-block:: xml
 
