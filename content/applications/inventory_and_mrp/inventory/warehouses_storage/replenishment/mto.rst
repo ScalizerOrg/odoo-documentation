@@ -8,15 +8,15 @@ Replenish on order (MTO)
 .. |PO| replace:: :abbr:`PO (purchase order)`
 .. |MTO| replace:: :abbr:`MTO (make to order)`
 .. |RFQ| replace:: :abbr:`RFQ (request for quotation)`
-.. |BOM| replace:: :abbr:`BOM (bill of materials)`
+.. |BOM| replace:: :abbr:`BoM (bill of materials)`
 
 *Replenish on order*, also known as *MTO* (make to order), is a replenishment strategy that creates
 a draft order every time a product is needed to fulfill a sales order (SO) or as a component in a
 manufacturing order (MO).
 
-- For :doc:`purchased products <../../../purchase/manage_deals/rfq>`, Odoo creates a |RFQ|
+- For :doc:`purchased products <../../../purchase/manage_deals/rfq>`, Odoo creates an |RFQ|
 - For :doc:`manufactured products
-  <../../../manufacturing/basic_setup/configure_manufacturing_product>`, it creates a |MO|
+  <../../../manufacturing/basic_setup/configure_manufacturing_product>`, it creates an |MO|
 
 If stock is available, no |RFQ| or |MO| is generated and the sale proceeds normally. Otherwise, the
 |RFQ| or |MO| is generated and directly linked to the originating |SO| through a smart button.
@@ -141,7 +141,7 @@ Products` button now appears above the |PO|. Once the products are received, cli
 products into inventory.
 
 Return to the |SO| by clicking the :guilabel:`SO` breadcrumb, or by navigating to
-:menuselection:`Sales app --> Orders --> Orders`, and selecting the|SO|.
+:menuselection:`Sales app --> Orders --> Orders`, and selecting the |SO|.
 
 Finally, click the :guilabel:`Delivery` smart button at the top of the order to open the delivery
 order. Once the products have been shipped to the customer, click :guilabel:`Validate` to confirm
