@@ -5,9 +5,9 @@ Delivery methods
 ================
 
 In Odoo, *delivery methods* make it possible to calculate shipping costs directly on sales orders
-and e-commerce carts, providing customers and sales teams with accurate shipping fee information.
-This transparency helps close sales by showing customers the exact cost for each shipping carrier or
-delivery timeframe.
+and :doc:`e-commerce </applications/websites/ecommerce/shipping>` carts, providing customers and
+sales teams with accurate shipping fee information. This transparency helps close sales by showing
+customers the exact cost for each shipping carrier or delivery timeframe.
 
 When activated in Odoo, the *Delivery Methods* setting adds the option of calculating the cost of
 shipping on sales orders and e-commerce shopping carts.

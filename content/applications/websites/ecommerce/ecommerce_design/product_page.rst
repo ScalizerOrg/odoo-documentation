@@ -147,7 +147,8 @@ Toggle the following options on/off to enable or disable features across all pro
    backend:
 
    - :ref:`Click & Collect <ecommerce/shipping/instore-pickup>`: Show the order pick-up location
-     and delivery availability on the product page.
+     and delivery availability on the product page, and allow customers to select the desired
+     pick-up point.
    - :ref:`Description <ecommerce/products/description>`: Display an e-commerce-specific product
      description right under the product name.
    - :ref:`Packagings <ecommerce/products/stock-management/packagings>`: Offer different types of
