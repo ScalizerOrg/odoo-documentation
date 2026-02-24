@@ -53,11 +53,12 @@ category in the sidebar.
 Toolbar
 -------
 
-It is possible to display a search bar or sort-by options in the toolbar of the shop page by
-clicking the :guilabel:`Sort By` and/or :guilabel:`Search` buttons next to the :guilabel:`Toolbar`
-label. Toggle the :guilabel:`Floating` switch on to always display the search bar, the
-:ref:`pricelist selector <ecommerce/prices/pricelists>` (if any), and sort-by options at the bottom
-of the window, even when scrolling, and select a :guilabel:`Default Sort` option.
+It is possible to display a search bar, sort-by options or a date selector for :doc:`rental products
+<../../../sales/rental>` in the toolbar of the shop page by clicking the :guilabel:`Sort By`,
+:guilabel:`Search` and/or :guilabel:`Rental` buttons next to the :guilabel:`Toolbar` label. Toggle
+the :guilabel:`Floating` switch on to always display the search bar, the :ref:`pricelist selector
+<ecommerce/prices/pricelists>` (if any), and sort-by options at the bottom of the window, even when
+scrolling, and select a :guilabel:`Default Sort` option.
 
 .. note::
    The default sort applies to *all* :ref:`categories <ecommerce/categories_variants/categories>`.
@@ -80,17 +81,16 @@ By default, two :guilabel:`Filters` are enabled:
     allows customers to filter products according to a specific price range by dragging adjustable
     handles.
   - :guilabel:`Tags`: Toggle the switch to display product :guilabel:`Tags` on the shop page, and
-    allow customers to filter products using those tags by going to the
-    :guilabel:`Tags` section.
+    allow customers to filter products using those tags by going to the :guilabel:`Tags` section.
 
     .. tip::
        To create product tags on your e-commerce, go to :menuselection:`Website --> eCommerce
-       --> Product Tags`, and click :guilabel:`New`. Add a :guilabel:`Tag` name, toggle the
-       :guilabel:`Visible to customers` switch, and select a :guilabel:`Color`. Optionally, add an
-       image. Then go to the product form, and assign the relevant tags where needed.
-
-For :doc:`rental products <../../../sales/rental>`, you can also add a :guilabel:`Rental Date`
-option to display a date range calendar to check their availability over a specific period.
+       --> Products`, and select the product you want to create a tag for. On the product form,
+       navigate to the :guilabel:`eCommerce` tab, then, in the :guilabel:`Tags` field, select a tag
+       or :guilabel:`Create and edit` one. On the :guilabel:`Create Tags` pop-up, add a
+       :guilabel:`Tag` name, toggle the :guilabel:`Visible to customers` switch on/off, and select a
+       :guilabel:`Color`. Optionally, add an image. Then go to the product form, and assign the
+       relevant tags where needed.
 
 .. _ecommerce/catalog/attributes:
 
@@ -160,7 +160,7 @@ To customize the product cards' design, choose a :guilabel:`Products Design`, cl
 - Customize the :guilabel:`Images`' layout (e.g., enable :guilabel:`Secondary
   Image` to show a second image when hovering over the product image on the shop or category page);
 - Enable some :guilabel:`Actions` (e.g., :icon:`fa-shopping-cart`
-  :ref:`Add to cart <ecommerce/checkout/add-to-cart>`, :icon:`fa-exchange` :ref:`Compare
+  :ref:`Add to Cart <ecommerce/checkout/add-to-cart>`, :icon:`fa-exchange` :ref:`Compare
   <ecommerce/products/additional_features/product-comparison>`, or :icon:`fa-heart` :ref:`Wishlist
   <ecommerce/products/additional_features/wishlists>`) and customize their placement.
 

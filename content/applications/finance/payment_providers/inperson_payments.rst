@@ -32,9 +32,5 @@ and enable :guilabel:`Cash on Delivery`. The **Cash on Delivery** payment provid
 enabled and published. To edit the default instructions shown to customers, :ref:`access the payment
 provider form <payment_providers/supported_providers>` and go to the :guilabel:`Messages` tab.
 
-.. note::
-   This method is only available at checkout for customers who select a delivery method with the
-   :guilabel:`Cash on Delivery` feature enabled.
-
 .. seealso::
    :doc:`../payment_providers`

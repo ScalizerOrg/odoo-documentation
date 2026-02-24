@@ -95,7 +95,7 @@ to access more customization options.
 
 .. tip::
    - Customers can move products from their cart to their wishlist by clicking the :guilabel:`Save
-     for later` button in the :guilabel:`Order summary` :ref:`checkout step
+     for Later` button in the :guilabel:`Order summary` :ref:`checkout step
      <ecommerce/checkout/review_order>`.
    - On the :guilabel:`My Wishlist` page, customers can move products from their wishlist to the
      cart.
@@ -106,10 +106,9 @@ Product highlight
 =================
 
 The eCommerce app allows you to highlight products to increase their visibility. To do so, go to
-:menuselection:`Website --> eCommerce --> Product Ribbons`. You can either use one of the
-preconfigured ribbons (:guilabel:`Sold out`, :guilabel:`Sale`, :guilabel:`Out of stock` or
-:guilabel:`New!`) or create a :guilabel:`New` one. Add a ribbon name, and select the method to
-:guilabel:`Assign` it:
+:menuselection:`Website --> eCommerce --> Ribbons`. You can either use one of the preconfigured
+ribbons (:guilabel:`Sold out`, :guilabel:`Sale`, :guilabel:`Out of stock` or :guilabel:`New!`) or
+create a :guilabel:`New` one. Add a ribbon name, and select the method to :guilabel:`Assign` it:
 
 - :guilabel:`Manually`: assign the ribbon manually.
 - :guilabel:`On Sale`: the ribbon is displayed when the product is on sale, e.g., when using a
@@ -130,8 +129,8 @@ the e-commerce products.
 .. tip::
    - There are other ways to create a new product ribbon:
 
-     - Access the product form, and under the :guilabel:`Sales` tab, change or create the ribbon in
-       the :guilabel:`Ribbon` field.
+     - Access the product form, and under the :guilabel:`eCommerce` tab, change or create the ribbon
+       in the :guilabel:`Ribbon` field.
      - Edit/create ribbons from the :doc:`website editor <../../website/web_design>`.
        To do so, go to the :guilabel:`Style` tab, and navigate to the :guilabel:`Product Details`
        section. Click the green :icon:`fa-plus` (:guilabel:`Create`) icon next to the
@@ -144,6 +143,6 @@ the e-commerce products.
 
    - It is also possible to add ribbons for specific :ref:`product variants
      <ecommerce/categories_variants/product-variants>`. To do so, go to :menuselection:`Website -->
-     eCommerce --> Products` and select a product. Click the :guilabel:`Variants` smart button,
-     choose a variant, and add a ribbon in the :guilabel:`Variant Ribbon` field of the
+     eCommerce --> Products` and select a product. Click the :icon:`fa-sitemap` :guilabel:`Variants`
+     smart button, choose a variant, and add a ribbon in the :guilabel:`Ribbon` field of the
      :guilabel:`Sales` section.
