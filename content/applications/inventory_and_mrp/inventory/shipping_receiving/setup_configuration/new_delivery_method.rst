@@ -33,7 +33,8 @@ a form to provide details about the shipping provider, including:
 
 - :guilabel:`Delivery Method` (*Required field*): the name of the delivery method (e.g. `flat-rate
   shipping`, `same day delivery`, etc.).
-- :guilabel:`Website`: configure shipping methods for an **eCommerce** page. Select the applicable
+- :guilabel:`Website`: configure shipping methods for an :doc:`e-commerce
+  </applications/websites/ecommerce/shipping>` page. Select the applicable
   website from the drop-down menu, or leave it blank to apply the method to all web pages. This
   field only appears when the **eCommerce** app is enabled.
 - :guilabel:`Provider` (*Required field*): choose the delivery service, like FedEx, if using a
@@ -144,6 +145,8 @@ Once finished, click either :guilabel:`Save & New` to add another rule, or :guil
 To restrict shipping to specific destinations on the **eCommerce** website, in the shipping method
 form, navigate to the :guilabel:`Destination Availability` tab and define the :guilabel:`Countries`,
 :guilabel:`States`, and :guilabel:`Zip Prefixes`. Leave these fields empty if all locations apply.
+
+.. _inventory/shipping/calculate-delivery-cost:
 
 Calculate delivery cost
 ~~~~~~~~~~~~~~~~~~~~~~~
