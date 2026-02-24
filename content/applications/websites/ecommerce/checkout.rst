@@ -30,11 +30,14 @@ Default add to cart behavior
 When clicking the :guilabel:`Add to cart` button, different actions can be triggered. To configure
 them, go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
 :guilabel:`eCommerce` section, and select one of the following options for the :guilabel:`Add to
-cart` feature:
+Cart` feature:
 
-- :guilabel:`Stay on Product Page`: The customer can choose if they want to :guilabel:`Add to cart`
-  and continue shopping or :guilabel:`Go to the Checkout`.
-- :guilabel:`Go to cart`: The customer is immediately redirected to the cart.
+- :guilabel:`Stay on Product Page`: The customer remains on the product page after adding a product
+  to the cart. If the added product has linked :ref:`optional products
+  <ecommerce/products/cross_upselling>`, the customer can choose between :guilabel:`Add to cart` (to
+  stay on the product page) and :guilabel:`Go to Checkout` :icon:`fa-chevron-right` (to be
+  redirected to the cart).
+- :guilabel:`Go to cart`: The customer is redirected to the cart immediately.
 
 .. _ecommerce/checkout/prevent-sale:
 
@@ -48,55 +51,48 @@ redirects users to the default contact form.
    Removing the ability to add products to the cart is often used by businesses that want to display
    an online catalog but cannot share prices publicly (e.g., to offer custom or variable pricing).
 
-To display the :guilabel:`Contact Us` button and a note saying `Not Available For Sale` , you need
-to :ref:`hide prices <ecommerce/prices/hide-prices>` on the product page. When the customer clicks
-the :guilabel:`Contact Us` button, they are redirected to the contact form where the
-:guilabel:`Subject` field is already auto-filled with the requested product's name.
-
-.. image:: checkout/cart-contact-us.png
-   :alt: Contact us button on product page
-
-.. note::
-   The :guilabel:`Contact Us` button label, URL, and the *Not Available For Sale* text beneath the
-   product title and description can be modified on the product's page while in :guilabel:`Edit`
-   mode.
+To display the :guilabel:`Contact Us` button, you need to :ref:`hide the Add to cart button
+<ecommerce/prices/hide-prices>` for zero-priced products or specific categories on the relevant
+product page(s). When the customer clicks the :guilabel:`Contact Us` button, by default, they are
+redirected to the contact form where the :guilabel:`Subject` field is already auto-filled with the
+requested product's name.
 
 Additional add to cart buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can add additional :guilabel:`Add to Cart` buttons and link them to specific products on any
-website page.
-
-To add them, open the website editor and place the :guilabel:`Add to Cart Button` inner content
-building block. Once placed, click the button, scroll to the :guilabel:`Add to Cart Button` section,
-and configure the following:
+website page. To add them, open the website editor and place the :guilabel:`Add to Cart Button`
+inner content building block. Once placed, click the button, scroll to the :guilabel:`Add to Cart
+Button` section, and configure the following:
 
 - :guilabel:`Product`: Select the product to link the button with.
-- :guilabel:`Action`: Choose if it should be an :guilabel:`Add to Cart` or :ref:`Buy Now
+- :guilabel:`Action`: Choose whether to use an :guilabel:`Add to Cart` or :ref:`Buy Now
   <ecommerce/checkout/buy-now>` button.
 
 .. note::
-   - If the product has variants, either choose one or leave the option on :guilabel:`Visitor's
-     Choice`, which prompts the customer to select a variant and then :guilabel:`Add to Cart` and
-     continue shopping or :guilabel:`Go to Checkout`.
-   - The default :guilabel:`Add to Cart` button does not offer those options, but its label can be
+   - If the product has variants, either choose one or leave the option set to :guilabel:`Visitor's
+     Choice`, which prompts the customer to select a variant before choosing to :guilabel:`Add to
+     cart` and continue shopping or to :guilabel:`Go to Checkout`.
+   - The default :guilabel:`Add to cart` button does not offer those options, but its label can be
      changed.
 
 .. tip::
    In the website editor, it is also possible to show or hide the :icon:`fa-shopping-cart`
-   (:guilabel:`cart`) icon in the page's header. Click the header and then the
-   :icon:`fa-shopping-cart` (:guilabel:`cart`) button next to the :guilabel:`Show Empty` option
-   under the :guilabel:`Style` tab.
+   (:guilabel:`cart`) icon in the page's header. To do so, click the header, go to the
+   :guilabel:`Style`, navigate to the :guilabel:`Show/Hide Elements` section, and toggle the
+   :icon:`fa-shopping-cart` (:guilabel:`cart`) button next to the :guilabel:`Show Empty` option. If
+   it is not enabled, the cart icon appears only when an item is added to the cart. The number of
+   items in the cart is also displayed next to the icon.
 
 .. _ecommerce/checkout/buy-now:
 
 Buy now
 -------
 
-To let customers choose to go to the :ref:`Order summary <ecommerce/checkout/review_order>` step
-directly, you can add an additional :guilabel:`Buy now` button. To do so, go to any product's page,
-open the website editor, go to the :guilabel:`Style` tab, and click the :icon:`fa-bolt`
-:guilabel:`Buy Now` button next to the :guilabel:`Purchase Options`.
+To let customers choose to go directly to the :ref:`Order summary <ecommerce/checkout/review_order>`
+step, add an additional :guilabel:`Buy now` button. To do so, go to any product's page, open the
+website editor, go to the :guilabel:`Style` tab, and click the :icon:`fa-bolt` :guilabel:`Buy Now`
+button next to the :guilabel:`Purchase Options`.
 
 .. image:: checkout/cart-buy-now.png
    :alt: Buy now button
@@ -112,7 +108,7 @@ Customers can reorder items from a previous sales order:
   selected order are automatically added to the cart, and customers can then :guilabel:`Remove` any
   items they don't want to reorder.
 
-  .. image:: checkout/order-again-button.png
+  .. image:: checkout/order-again.png
      :alt: Reorder button
 
 - from the cart, by clicking :guilabel:`Quick reorder` at the :ref:`Order summary step
@@ -127,11 +123,11 @@ Customers can reorder items from a previous sales order:
 Checkout steps
 ==============
 
-During the checkout process, customers are taken through the following steps:
+During checkout, customers are taken through the following steps:
 
 - :ref:`Order summary <ecommerce/checkout/review_order>`
-- :ref:`Address and delivery <ecommerce/checkout/delivery>`
-- :ref:`Extra info (if enabled) <ecommerce/checkout/extra_step>`
+- :ref:`Address <ecommerce/checkout/delivery>`
+- :ref:`Extra Info (if enabled) <ecommerce/checkout/extra_step>`
 - :ref:`Payment <ecommerce/checkout/payment>`
 - :ref:`Order confirmation <ecommerce/checkout/order_confirmation>`
 
@@ -156,9 +152,9 @@ Order summary
 
 The :guilabel:`Order summary` step allows customers to see the items they added to their cart,
 adjust quantities, :guilabel:`Remove` products, and :ref:`reorder products from a previous order
-<ecommerce/checkout/reorder>`. Information related to the product prices and taxes applied are also
-displayed. Customers can then click the :guilabel:`Checkout` button to continue to the :ref:`Address
-and delivery <ecommerce/checkout/delivery>` step.
+<ecommerce/checkout/reorder>`. Information on product prices and the taxes applied is also
+displayed. Customers can then click the :guilabel:`Checkout` :icon:`fa-chevron-right` button to
+continue to the :ref:`Address <ecommerce/checkout/delivery>` step.
 
 Open the website editor to :ref:`enable <ecommerce/checkout/customize_steps>` checkout options such
 as:
@@ -166,10 +162,11 @@ as:
 - :guilabel:`Suggested Accessories`: to showcase :ref:`accessory products
   <ecommerce/products/cross_upselling>`;
 - :guilabel:`Promo Code`: to allow customers to redeem :ref:`gift cards <ewallet_gift/gift-cards>`
-  or apply :doc:`discount codes <../../sales/sales/products_prices/loyalty_discount>`;
+  and apply :doc:`discount codes <../../sales/sales/products_prices/loyalty_discount>` or
+  :ref:`promotional codes <ecommerce/prices/promotional-code>`;
 - :guilabel:`Add to Wishlist`: :ref:`Enable wishlists
   <ecommerce/products/additional_features/wishlists>` to allow signed-in users to remove a product
-  from their cart and add it to their wishlist using the :guilabel:`Save for later` option.
+  from their cart and add it to their wishlist using the :guilabel:`Save for Later` option.
 
 .. note::
    - If a :doc:`fiscal position <../../finance/accounting/taxes/fiscal_positions>` is detected
@@ -181,13 +178,13 @@ as:
 
 .. _ecommerce/checkout/delivery:
 
-Address and delivery
---------------------
+Address
+-------
 
 Once they have reviewed their order:
 
-- Unsigned-in customers are prompted to :guilabel:`Sign in` or enter their :guilabel:`Email
-  address`, along with their delivery address and phone details;
+- Unsigned-in customers are prompted to :guilabel:`Sign in` or enter their :guilabel:`Name` and
+  :guilabel:`Email` address, along with their delivery address and phone details;
 - Signed-in customers can select the appropriate :guilabel:`Delivery address`.
 
 They can then :doc:`choose a delivery method <shipping>`, select or enter their :guilabel:`Billing
@@ -201,6 +198,9 @@ addresses are identical), and click :guilabel:`Confirm` to proceed to the next s
      to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
      :guilabel:`eCommerce` section, enable the :guilabel:`Newsletter` feature, and select a
      :guilabel:`Newsletter List`.
+   - When the :ref:`Pick up in store <ecommerce/shipping/instore-pickup>` delivery method is
+     selected, the customer can :guilabel:`Choose a pick-up point` and, if applicable, filter them
+     by country, provided several pick-up points are available.
 
 .. _ecommerce/checkout/extra_step:
 
@@ -218,8 +218,15 @@ information through an online form, which is then included in the :ref:`sales or
 Payment
 -------
 
-At the :guilabel:`Payment` step, customers can :guilabel:`Choose a payment method`, enter their
+At the :guilabel:`Payment` step, customers can choose a :guilabel:`Payment method`, enter their
 payment details, and click :guilabel:`Pay now`.
+
+.. note::
+   - The :guilabel:`Pay now` button label can be customized using the :doc:`website editor
+     <../website/web_design>`.
+   - When the :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>`
+     payment option is enabled, the customer must click the :guilabel:`Confirm` button and pay upon
+     delivery.
 
 To make payment methods available to customers, configure and enable one or more :doc:`payment
 provider(s) </applications/finance/payment_providers>`. To do so, go to :menuselection:`Website -->
@@ -234,7 +241,7 @@ Configuration --> Payment Providers`, :guilabel:`Activate` the relevant payment 
 
    To display an :ref:`availability <payment_providers/availability>` report for payment providers
    and payment methods and help diagnose potential availability issues on the payment form, enable
-   the :ref:`developer mode <developer-mode>` and click the :icon:`fa-bug` (:guilabel:`bug)` icon.
+   the :ref:`developer mode <developer-mode>`, and click the :icon:`fa-bug` (:guilabel:`bug)` icon.
 
 Terms and conditions
 ~~~~~~~~~~~~~~~~~~~~
@@ -260,7 +267,7 @@ eCommerce --> Gift cards & eWallet` and :doc:`create a gift card and/or eWallet 
 Order confirmation
 ------------------
 
-The final step of the checkout process is the :guilabel:`Order confirmation`, which provides a
+The final step of the checkout process is the order confirmation page, which provides a
 summary of the customer's purchase details. A sales order is automatically created in the backend.
 Enable the :ref:`Automatic Invoice <ecommerce/handling/invoices>` setting to automatically send
 an invoice to the customer.
