@@ -293,10 +293,10 @@ E-commerce promotional code
 To offer a discounted pricelist for customers with a specific discount code, access the relevant
 :ref:`pricelist form <ecommerce/prices/pricelists>`, go to the :guilabel:`Ecommerce` tab, and add
 an :guilabel:`E-commerce Promotional Code`, e.g., `SUMMERSALE10%`. Then, go to the :guilabel:`Sales
-Price` tab, click :guilabel:`Add a line`, and :ref:`configure the discount
+Prices` tab, click :guilabel:`Add a line`, and :ref:`configure the discount
 <sales/products/price-rules>`. When a customer inserts the code during the :ref:`checkout process
 <ecommerce/checkout/review_order>`, this discount is granted according to the :guilabel:`Sales
-Price` configuration.
+Prices` configuration.
 
 .. note::
    Make sure that the :ref:`Promo Code <ecommerce/checkout/review_order>` option
