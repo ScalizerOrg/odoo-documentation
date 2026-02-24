@@ -24,13 +24,10 @@ Delete default menu items.
 .. code-block:: xml
    :caption: ``/website_airproof/data/menu.xml``
 
-   <!-- Contact us -->
-   <delete model="website.menu" search="[('url','in', ['/', '/contactus']),
-   ('website_id', '=', 1)]"/>
-
-   <!-- Shop -->
-   <delete model="website.menu" search="[('url','in', ['/', '/shop']),
-   ('website_id', '=', 1)]"/>
+   <!-- Delete: Contact us and Shop menu items -->
+   <delete
+      model="website.menu"
+      search="[('url','in', ['/contactus', '/shop']), ('website_id', '=', 1)]" />
 
 .. _website_themes/navigation/menu:
 
@@ -46,8 +43,8 @@ Menu item
        <field name="name">About us</field>
        <field name="url">/about-us</field>
        <field name="parent_id" search="[
-           ('url', '=', '/default-main-menu'),
-           ('website_id', '=', 1)]"/>
+           ('url', '=', '#'),
+           ('website_id', '=', 1)]" />
        <field name="website_id">1</field>
        <field name="sequence" type="int">10</field>
    </record>
@@ -80,7 +77,7 @@ Open the link's URL in a new tab.
 .. code-block:: xml
 
    <record id="..." model="website.menu">
-       <field name="new_window" eval="True"/>
+       <field name="new_window" eval="True" />
    </record>
 
 .. _website_themes/navigation/menu/external_links:
@@ -123,8 +120,8 @@ Dropdown menu
        <field name="name">Services</field>
        <field name="website_id">1</field>
        <field name="parent_id" search="[
-           ('url', '=', '/default-main-menu'),
-           ('website_id', '=', 1)]"/>
+           ('url', '=', '#'),
+           ('website_id', '=', 1)]" />
        <field name="sequence" type="int">...</field>
    </record>
 
@@ -136,7 +133,7 @@ Add an item to a dropdown menu.
        <field name="name">Item 1</field>
        <field name="url">/dropdown/item-1</field>
        <field name="website_id">1</field>
-       <field name="parent_id" ref="website_airproof.menu_services"/>
+       <field name="parent_id" ref="website_airproof.menu_services" />
        <field name="sequence" type="int">...</field>
    </record>
 
@@ -166,56 +163,56 @@ can re-use the template structure in the `mega_menu_content` field like any stat
 .. code-block:: xml
    :caption: ``/website_airproof/data/menu.xml``
 
-    <record id="menu_mega_menu" model="website.menu">
-        <field name="name">Mega Menu</field>
-        <field name="parent_id" search="[
-            ('url', '=', '/default-main-menu'),
-            ('website_id', '=', 1)]"/>
-        <field name="website_id">1</field>
-        <field name="sequence" type="int">..</field>
-        <field name="is_mega_menu" eval="True"/>
-        <field name="mega_menu_classes">...</field>
-        <field name="mega_menu_content" type="html">
-            <section class="s_mega_menu_multi_menus py-4 o_colored_level o_cc o_cc1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm py-2 text-center">
-                            <h4 class="o_default_snippet_text">First Menu</h4>
-                            <nav class="nav flex-column">
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
-                            </nav>
-                        </div>
-                        <div class="col-12 col-sm py-2 text-center">
-                            <h4 class="o_default_snippet_text">Second Menu</h4>
-                            <nav class="nav flex-column">
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
-                            </nav>
-                        </div>
-                        <div class="col-12 col-sm py-2 text-center">
-                            <h4 class="o_default_snippet_text">Third Menu</h4>
-                            <nav class="nav flex-column">
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
-                            </nav>
-                        </div>
-                        <div class="col-12 col-sm py-2 text-center">
-                            <h4 class="o_default_snippet_text">Last Menu</h4>
-                            <nav class="nav flex-column">
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
-                                <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </field>
-    </record>
+   <record id="menu_mega_menu" model="website.menu">
+      <field name="name">Mega Menu</field>
+      <field name="parent_id" search="[
+         ('url', '=', '#'),
+         ('website_id', '=', 1)]" />
+      <field name="website_id">1</field>
+      <field name="sequence" type="int">..</field>
+      <field name="is_mega_menu" eval="True" />
+      <field name="mega_menu_classes">...</field>
+      <field name="mega_menu_content" type="html">
+         <section class="s_mega_menu_multi_menus py-4 o_colored_level o_cc o_cc1">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12 col-sm py-2 text-center">
+                           <h4 class="o_default_snippet_text">First Menu</h4>
+                           <nav class="nav flex-column">
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
+                           </nav>
+                     </div>
+                     <div class="col-12 col-sm py-2 text-center">
+                           <h4 class="o_default_snippet_text">Second Menu</h4>
+                           <nav class="nav flex-column">
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
+                           </nav>
+                     </div>
+                     <div class="col-12 col-sm py-2 text-center">
+                           <h4 class="o_default_snippet_text">Third Menu</h4>
+                           <nav class="nav flex-column">
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
+                           </nav>
+                     </div>
+                     <div class="col-12 col-sm py-2 text-center">
+                           <h4 class="o_default_snippet_text">Last Menu</h4>
+                           <nav class="nav flex-column">
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 1</a>
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 2</a>
+                              <a href="#" class="nav-link o_default_snippet_text" data-name="Menu Item">Menu Item 3</a>
+                           </nav>
+                     </div>
+                  </div>
+               </div>
+         </section>
+      </field>
+   </record>
 
 .. list-table::
    :header-rows: 1
@@ -248,9 +245,9 @@ Create your own template and add it to the list.
    :caption: ``/website_airproof/views/website_templates.xml``
 
    <template id="s_mega_menu_airproof" name="Airproof" groups="base.group_user">
-       <section class="s_mega_menu_airproof o_cc o_cc1 pt40">
-           <!-- Content -->
-       </section>
+      <section class="s_mega_menu_airproof o_cc o_cc1 pt40">
+         <!-- Content -->
+      </section>
    </template>
 
 **Option**
@@ -260,15 +257,18 @@ Use the following code to add an option for your new custom mega menu on the Web
 .. code-block:: xml
    :caption: ``/website_airproof/static/src/website_builder/mega_menu_option.xml``
 
-    <t t-inherit="website.MegaMenuOption" t-inherit-mode="extension">
-        <xpath expr="//BuilderRow[@label.translate='Template']//BuilderSelect" position="inside">
+   <?xml version="1.0" encoding="UTF-8" ?>
+   <templates xml:space="preserve">
+      <t t-name="website_airproof.MegaMenuOption" t-inherit="website.MegaMenuOption" t-inherit-mode="extension">
+         <xpath expr="//BuilderSelect[@id=&quot;'mega_menu_template_opt'&quot;]" position="inside">
             <BuilderSelectItem
-                title.translate="Airproof"
-                actionParam="{
-                    view: 'website_airproof.s_mega_menu_airproof',
-                    templateClass: 's_mega_menu_airproof',
-                }">
-                <Img class="'w-75 m-auto'" style="'margin-block: -0.25em !important;'" src="'/website_airproof/static/src/img/builder/header_opt.svg'"/>
+               title.translate="Airproof"
+               actionParam="{
+                  view: `website_airproof.s_mega_menu_airproof`,
+                  templateClass: 's_mega_menu_airproof',
+               }">
+               <Img class="'w-75 mx-auto my-3'" src="'/website_airproof/static/src/img/wbuilder/template-header-opt.svg'" />
             </BuilderSelectItem>
-        </xpath>
-    </t>
+         </xpath>
+      </t>
+   </templates>
