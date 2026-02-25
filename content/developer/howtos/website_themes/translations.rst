@@ -25,7 +25,6 @@ manually is highlighted in yellow.
 
 .. image:: translations/translate-button.png
    :alt: Translate button
-   :width: 570
 
 However, you have to understand what's happening under the hood when you translate something
 through the Website Builder.
@@ -64,7 +63,7 @@ possible.
 
 **Example**
 
-To write “Hello *username*”, you can do it in the following way:
+To write "Hello *username*", you can do it in the following way:
 
 .. code-block:: xml
 
@@ -89,7 +88,7 @@ could write something like this:
 
 .. code-block:: xml
 
-   <t t-set=”additional_title”>My Page Title Shown in the Browser Tab</t>
+   <t t-set="additional_title">My Page Title Shown in the Browser Tab</t>
 
 As we are writing XML context, text located between two XML tags are translatable.
 
@@ -103,18 +102,33 @@ place:
 
 .. code-block:: xml
 
-   <t t-set=”title”>Foo</t>
+   <t t-set="label">Foo</t>
 
 And then we need to call it in different locations:
 
 .. code-block:: xml
 
-    <div t-att-title=”label” />
-    ...
-    <nav t-att-title=”label” />
+   <div t-att-title="label" />
+   ...
+   <nav t-att-title="label" />
 
 Here we just called the translatable content into a non-translatable attribute (`t-att-title`). So
 the `t-att-title` is not translatable but the casted variable is.
+
+.. _website_themes/translations/frontend/strings/t-call:
+
+t-call
+~~~~~~
+
+As parameters can be passed to a `t-call` , the `*.translate` function can be called to make its
+value translatable.
+
+.. code-block:: xml
+
+    <t t-call="website.layout" additional_title.translate="My Page" />
+
+.. seealso::
+   :ref:`Set parameters of a t-call <website_themes/layout/qweb>`
 
 .. _website_themes/translations/backend:
 
@@ -127,7 +141,7 @@ the name of the page you want to translate, and click the :guilabel:`Edit Transl
 
 .. image:: translations/edit-translations.png
    :alt: Edit translations
-   :width: 718
+
 
 .. _website_themes/translations/export:
 
@@ -152,7 +166,7 @@ You can translate directly by editing a :file:`.po` file or creating the file yo
 the :doc:`translating modules documentation <../translations>` to write your translations.
 
 .. code-block:: po
-   :caption: ``/website_coconuts/i18n/fr_BE.po``
+   :caption: ``/website_airproof/i18n/fr_BE.po``
 
    #. module: website_airproof
    #: model_terms:ir.ui.view,arch_db:website_airproof.s_custom_snippet
