@@ -2,12 +2,12 @@
 Devices and integrations
 ========================
 
-The **Phone** app can be used on many different devices, such as a computer, tablet, mobile phone, and
-many more. This is helpful in that it reduces costs, and employees can work from anywhere in the
+The **Phone** app can be used on many different devices, such as a computer, tablet, mobile phone,
+and many more. This is helpful in that it reduces costs, and employees can work from anywhere in the
 world, so long as they have a broadband internet connection.
 
-Odoo **Phone** is SIP (Session Initiation Protocol) compatible, which means it can be used with *any*
-:abbr:`SIP (Session Initiation Protocol)` compatible application.
+Odoo **Phone** is SIP (Session Initiation Protocol) compatible, which means it can be used with
+*any* :abbr:`SIP (Session Initiation Protocol)` compatible application.
 
 This document covers the process of setting up *Odoo Phone* across different devices and
 integrations.
@@ -23,7 +23,8 @@ schedule a call as an activity in the chatter.
 
    Once they click :guilabel:`Save`, an activity shows up in the chatter.
 
-   Should the :guilabel:`Due Date` be for today's date, the activity shows up in the **Phone** widget.
+   Should the :guilabel:`Due Date` be for today's date, the activity shows up in the **Phone**
+   widget.
 
    .. image:: devices_integrations/crm-voip-widget.png
       :align: center
@@ -47,13 +48,12 @@ Use Odoo Phone on a mobile device
    While outgoing calls can be placed using Odoo on a mobile device, the Odoo **Phone** app does
    **not** ring on incoming calls. If the user needs to be reachable on a mobile device at all
    times, an app, like Zoiper, should be used. Apps like that stay connected in the background at
-   all times. calls. If the user needs to be reachable on a mobile device at all times, an app, like
-   Zoiper, should be used. Apps like that stay connected in the background at all times.
+   all times.
 
    For more information, see :ref:`the Zoiper Lite section <voip/zoiper>`.
 
-The Odoo **Phone** app can be used on tablets and mobile phones, through the Odoo Android or Apple iOS
-applications. Additionally, a mobile web browser can be used to access the database.
+The Odoo **Phone** app can be used on tablets and mobile phones, through the Odoo Android or Apple
+iOS applications. Additionally, a mobile web browser can be used to access the database.
 
 .. warning::
    Odoo Android and Apple iOS applications are no longer being maintained by Odoo on the Android and
@@ -153,8 +153,8 @@ Once this account information is entered, click the green :guilabel:`Register` b
 the screen. Once the registration information is checked, *Zoiper* populates a message, stating
 :guilabel:`Registration Status: OK`.
 
-At this point, Zoiper can now make phone calls using the :abbr:`VoIP (Voice over Internet
-Protocol)` service.
+At this point, Zoiper can now make phone calls using the :abbr:`VoIP (Voice over Internet Protocol)`
+service.
 
 .. image:: devices_integrations/sip-options-zoiper.png
    :align: center
