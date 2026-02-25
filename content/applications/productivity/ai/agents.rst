@@ -171,6 +171,8 @@ the default prompts to use them, or enter a custom one in the message window.
 In this case, the agent’s responses are grounded in the file currently being previewed, in
 combination with any other sources assigned to the agent.
 
+.. _ai/create-agent:
+
 Create a new agent
 ==================
 
