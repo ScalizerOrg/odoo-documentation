@@ -19,8 +19,8 @@ Activation
 ==========
 
 |LNA| is enabled by default and automatically used for compatible devices, such as
-:ref:`ePOS printers <pos/epos_printers/supported-printers>`, when the :guilabel:`Use Local
-Network Access` checkbox is enabled on the :ref:`printer form <pos/epos_printers/configuration>`.
+:ref:`ePOS printers <pos/epos-printers/supported-printers>`, when the :guilabel:`Use Local
+Network Access` checkbox is enabled on the :ref:`printer form <pos/epos-printers/configuration>`.
 
 .. important::
    The ePOS printer must have a **static IP address**; otherwise, it may become unreachable. The
@@ -30,7 +30,7 @@ Browser permission
 ==================
 
 Once a device with local access, such as an :ref:`ePOS printer
-<pos/epos_printers/supported-printers>`, is configured, the browser displays a popup requesting
+<pos/epos-printers/supported-printers>`, is configured, the browser displays a popup requesting
 permission to communicate with the devices on the local network.
 
 .. image:: pos_lna/pos-lna.png
