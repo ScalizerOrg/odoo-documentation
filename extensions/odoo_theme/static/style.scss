@@ -973,6 +973,29 @@ span.viewcode-link {
 }
 
 //------------------------------------------------------------------------------
+// Ref target highlighting
+//------------------------------------------------------------------------------
+
+span:target + h1,
+span:target + h2,
+span:target + h3,
+span:target + h4 {
+    animation: highlight-fade 5s ease-out 0s 1;
+}
+
+@keyframes highlight-fade {
+    0% {
+        background-color: lighten($warning, 15%);
+    }
+    50% {
+        background-color: lighten($warning, 15%);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+//------------------------------------------------------------------------------
 // Alerts
 //------------------------------------------------------------------------------
 
