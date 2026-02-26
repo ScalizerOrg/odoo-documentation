@@ -17,8 +17,8 @@ templates, etc.
 Article creation
 ================
 
-Knowledge articles can be created from scratch or a pre-configured template. When an article
-is created under another, the original one is the **parent article**, while the new one is called a
+Knowledge articles can be created from scratch or a pre-configured template. When an article is
+created under another, the original one is the **parent article**, while the new one is called a
 **child** or **nested article**, indicating its subordinate position. This structure helps organize
 content by establishing clear relationships between related articles.
 
@@ -42,9 +42,8 @@ suggested options:
 - :guilabel:`Generate an Article with AI`: Generate content based on a prompt.
 
 .. tip::
-   After writing the header, click or hover over :guilabel:`Untitled` in the top bar to
-   automatically name the article after the header. This action does not apply if the article is
-   already titled.
+   After writing the header, click on :guilabel:`Untitled` in the top bar to automatically name the
+   article after the header. This action does not apply if the article is already titled.
 
 From a template
 ---------------
@@ -61,8 +60,8 @@ Article editing
 ===============
 
 To edit an article, select it in the sidebar tree, then edit its content and format it using the
-:ref:`text editor toolbar <knowledge/articles_editing/text-editor>`, typing :ref:`powerbox
-commands <knowledge/articles_editing/commands>`, and adding a :ref:`cover picture
+:ref:`text editor toolbar <knowledge/articles_editing/text-editor>`, typing :ref:`powerbox commands
+<knowledge/articles_editing/commands>`, and adding a :ref:`cover picture
 <knowledge/articles_editing/cover>` with a :ref:`title emoji <knowledge/articles_editing/emoji>`.
 
 .. tip::
@@ -74,8 +73,8 @@ commands <knowledge/articles_editing/commands>`, and adding a :ref:`cover pictur
 Text editor toolbar
 -------------------
 
-To edit a word, sentence, or paragraph, select or double-click it to display the text editor
-toolbar and apply the desired :doc:`formatting options </applications/essentials/html_editor>`.
+To edit a word, sentence, or paragraph, select or double-click it to display the text editor toolbar
+and apply the desired :doc:`formatting options </applications/essentials/html_editor>`.
 
 .. tip::
    Click :icon:`fa-commenting-o` :guilabel:`Comment` to add a comment to the selected text.
@@ -150,8 +149,8 @@ To manage the cover picture, hover the mouse over it and select the preferred op
 .. note::
    - After clicking :guilabel:`Add Cover`, a cover picture is automatically attributed to the
      article based on the title.
-   - A removed cover picture can be retrieved in the database library. To delete it, hover the
-     mouse over it and click the :icon:`fa-trash` (:guilabel:`trash`) icon.
+   - A removed cover picture can be retrieved in the database library. To delete it, hover the mouse
+     over it and click the :icon:`fa-trash` (:guilabel:`trash`) icon.
 
 .. _knowledge/articles_editing/emoji:
 
@@ -162,8 +161,8 @@ To add a title emoji to the article's name and header:
 
 - Click the :icon:`fa-ellipsis-v` (:guilabel:`More actions`) icon, then :guilabel:`Add Icon` to
   generate a random emoji. Click the emoji to select a different one.
-- Alternatively, click the :icon:`fa-file-text-o` :guilabel:`(page)` icon next to the article's
-  name in the sidebar or the top bar and select the preferred emoji.
+- Alternatively, click the :icon:`fa-file-text-o` :guilabel:`(page)` icon next to the article's name
+  in the sidebar or the top bar and select the preferred emoji.
 
 .. _knowledge/articles_editing/views:
 
@@ -182,10 +181,14 @@ To insert a view or a view link into an article, follow these steps:
 
    - Users without access to the view cannot see it in Knowledge, even if they can access the
      article.
-   - Clicking the inserted link opens a pop-up with the view's name next to the
-     :icon:`fa-clipboard` (:guilabel:`Copy Link`), :icon:`fa-pencil-square-o` (:guilabel:`Edit
-     Link`), and :icon:`fa-chain-broken` (:guilabel:`Remove Link`) icons. Click the name inside the
-     pop-up to open the linked view.
+   - Clicking the inserted link opens a pop-up with the view's name next to the :icon:`fa-clipboard`
+     (:guilabel:`Copy Link`), :icon:`fa-pencil-square-o` (:guilabel:`Edit Link`), and
+     :icon:`fa-chain-broken` (:guilabel:`Remove Link`) icons. Click the name inside the pop-up to
+     open the linked view.
+   - When multiple views are added to an article, the :icon:`oi-draggable` (:guilabel:`drag handle`)
+     icon may disappear, preventing the views from being reordered. To restore it, click the
+     :icon:`fa-ellipsis-v` (:guilabel:`More actions`) icon, then toggle the :icon:`oi-arrows-h`
+     :guilabel:`Full Width` off.
 
 Article management
 ==================
@@ -352,8 +355,8 @@ To generate a URL and share an article, click :guilabel:`Share` and activate the
 web` toggle. Click :guilabel:`Copy Link` to copy the article's URL.
 
 .. note::
-   - If an article contains :ref:`inserted views <knowledge/articles_editing/views>`, users with
-     the URL do not see them unless they can access the inserted content.
+   - If an article contains :ref:`inserted views <knowledge/articles_editing/views>`, users with the
+     URL do not see them unless they can access the inserted content.
    - Having the Website app is necessary to share an article's URL.
 
 .. _knowledge/articles_editing/remove:
@@ -367,12 +370,13 @@ Delete an article
 ~~~~~~~~~~~~~~~~~
 
 Select an article in the sidebar tree and click the :icon:`fa-ellipsis-v` (:guilabel:`More actions`)
-icon, then :guilabel:`Send to Trash`. Alternatively, drag and drop the article under
-:guilabel:`Drop here to delete this article` at the bottom left corner. The article is moved to the
-trash for 30 days before being permanently deleted.
+icon, then :guilabel:`Send to Trash`. Alternatively, drag and drop the article under :guilabel:`Drop
+here to delete this article` at the bottom left corner. The article is moved to the trash for 30
+days before being permanently deleted.
 
-To permanently delete an article, click :guilabel:`Articles` in the top-left menu, select an article,
-and click :menuselection:`Actions --> Delete --> Delete`.
+To permanently delete an article, click :guilabel:`Articles` in the top-left menu, select an
+article, and click :menuselection:`Actions --> Delete`. In the pop-up window, click
+:guilabel:`Delete` to confirm the deletion of the article.
 
 .. note::
    To restore a trashed article, click :guilabel:`Open the Trash` at the bottom of the sidebar
@@ -383,8 +387,8 @@ and click :menuselection:`Actions --> Delete --> Delete`.
 Archive an article
 ~~~~~~~~~~~~~~~~~~
 
-Click :guilabel:`Articles`, select an article, and click :menuselection:`Actions --> Archive -->
-Archive`.
+Click :guilabel:`Articles`, select an article, and click :menuselection:`Actions --> Archive`. In
+the pop-up window, click :guilabel:`Archive` to confirm the article's archival.
 
 .. note::
    To restore an archived article, click :guilabel:`Articles`. In the search bar, click
@@ -403,8 +407,8 @@ Access articles from Odoo apps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowledge articles are accessible from the :ref:`form view <studio/views/general/form>` of various
-apps. Click the :icon:`fa-bookmark` :guilabel:`(Knowledge)` icon in the top right corner to open
-the command palette, then choose one of the following search methods:
+apps. Click the :icon:`fa-bookmark` :guilabel:`(Knowledge)` icon in the top right corner to open the
+command palette, then choose one of the following search methods:
 
 - :guilabel:`Search for an article`: start typing the text to execute a semantic search that
   identifies relevant article information.
@@ -415,8 +419,8 @@ Version history
 ~~~~~~~~~~~~~~~
 
 To retrieve a previous version of an article, select it in the sidebar tree and click the
-:icon:`fa-ellipsis-v` (:guilabel:`More actions`) icon, then :guilabel:`Open Version History`.
-Select a version and click :guilabel:`Restore history`.
+:icon:`fa-ellipsis-v` (:guilabel:`More actions`) icon, then :guilabel:`Open Version History`. Select
+a version and click :guilabel:`Restore history`.
 
 .. note::
    In the version history, the :guilabel:`Content` tab shows the selected version, while the
