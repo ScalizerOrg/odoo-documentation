@@ -100,7 +100,7 @@ Alternatively, replace the default content of these pages using XPath.
 
    <template id="404" inherit_id="http_routing.404">
        <xpath expr="//*[@id='wrap']" position="replace">
-           <t t-set="additional_title" t-value="'404 - Not found'"/>
+           <t t-set="additional_title">404 - Not found</t>
 
            <div id="wrap" class="oe_structure">
                <!-- Content -->
