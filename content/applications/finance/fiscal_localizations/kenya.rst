@@ -190,14 +190,14 @@ per branch.
 .. example::
    If you have a parent company with two branches, the invoice sequence would be the following:
 
-   - Creating an invoice on **branch 1**: INV/2024/00001;
-   - Creating an invoice on **branch 2**: INV/2024/00002;
+   - Creating an invoice on **branch 1**: INV/2024/00001.
+   - Creating an invoice on **branch 2**: INV/2024/00002.
    - Creating an invoice on the **parent company**: INV/2024/00003.
 
    This is how Odoo manages sequences to be compliant with the KRA regulations:
 
-   - Creating an invoice on **branch 1**: INV/2024/00001;
-   - Creating an invoice on **branch 2**: INV/2024/00001;
+   - Creating an invoice on **branch 1**: INV/2024/00001.
+   - Creating an invoice on **branch 2**: INV/2024/00001.
    - Creating an invoice on the **parent company**: INV/2024/00001.
 
 Insurance
@@ -218,15 +218,19 @@ The KRA requires **products to be registered** first before conducting business 
 stock movements, :abbr:`BOM (Bill of Materials)`, customer invoices, etc.). For a product to be
 registered, the following fields must be defined on the product form:
 
-- In the :guilabel:`General Information` tab: :guilabel:`Cost`.
+- In the :guilabel:`General Information` tab:
+
+  - :guilabel:`Cost`
+  - :guilabel:`Sales taxes`
+
 - In the :guilabel:`Accounting` tab:
 
-  - :guilabel:`Packaging Unit`;
-  - :guilabel:`Packaging Quantity`;
-  - :guilabel:`Origin Country`;
-  - :guilabel:`eTIMS Product Type`;
-  - :guilabel:`Insurance Applicable`;
-  - :ref:`UNSPSC Category <etims/unspsc>`.
+  - :guilabel:`Packaging Unit`
+  - :guilabel:`Packaging Quantity`
+  - :guilabel:`Origin Country`
+  - :guilabel:`eTIMS Product Type`
+  - :guilabel:`Insurance Applicable`
+  - :ref:`UNSPSC Category <etims/unspsc>`
 
 If the elements above are defined, the product is automatically registered while sending the
 operation to the KRA. If not, you will be alerted by a yellow banner at the top of the screen
@@ -286,7 +290,7 @@ are the following:
    :guilabel:`Create Purchase Order` and create a purchase order based on the unmatched line(s).
    :guilabel:`Validate` the resulting stock move and :guilabel:`Confirm` the bill.
 
-#. Set a method in the :guilabel:`eTIMS Payment Method` field..
+#. Set a method in the :guilabel:`eTIMS Payment Method` field.
 #. Once all steps are completed, click :guilabel:`Send to eTIMS` to send the vendor bill. When the
    vendor bill has been confirmed on eTIMS, the **KRA invoice number** can be found in the
    :guilabel:`eTIMS Details` tab.
@@ -311,10 +315,10 @@ This is the **advised sales flow** in Odoo when selling:
 Once the invoice has been sent and signed by the KRA, the following information can be found on
 it:
 
-- **KRA invoice number**;
+- **KRA invoice number**
 - Mandatory KRA invoice fields, such as **SCU information**, **date**, **SCU ID**, **receipt
-  number**, **item count**, **internal date**, and **receipt signature**;
-- The **KRA tax table**;
+  number**, **item count**, **internal date**, and **receipt signature**.
+- The **KRA tax table**
 - A unique **KRA QR code** for the signed invoice.
 
 Imports
