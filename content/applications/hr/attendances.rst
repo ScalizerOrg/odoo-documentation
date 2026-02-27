@@ -238,10 +238,9 @@ sections.
 - :guilabel:`IP Address`: the IP address for the computer the employee used to log in or out.
 - :guilabel:`Browser`: the web browser the employee used to log in or out.
 - :guilabel:`Localization`: the city and country associated with the computer's IP address.
-- :guilabel:`GPS Coordinates`: the specific coordinates when the user logged in or out. To view the
-  specific coordinates on a map, click the :guilabel:`→ View on Maps` button beneath the
-  :guilabel:`GPS Coordinates`. This opens a map in a new browser tab, with the specific location
-  pointed out.
+- :guilabel:`GPS Coordinates`: the coordinates when the user logged in or out. To view the
+  coordinates on a map, click the :guilabel:`→ View on Maps` button beneath the GPS coordinates.
+  This opens a map in a new browser tab, with the location pointed out.
 
 .. image:: attendances/details.png
    :align: center
