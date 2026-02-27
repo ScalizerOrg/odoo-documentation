@@ -1,57 +1,80 @@
 :show-content:
 
 ============
-Mail Plugins
+Mail plugins
 ============
+
+Mail plugins are connectors that bridge your mailbox with your Odoo database. With them, you can
+interact with your Odoo database directly from your mailbox by:
+
+- Search for and create opportunities, tickets, and tasks.
+- Log emails in the chatter of related Odoo records.
+- Open related Odoo records from your mailbox.
+- Add email addressses to Odoo contacts.
+
+.. _integrations/mail_plugins/features:
+
+Mail plugin features
+====================
+
+.. note::
+   The options available in mail plugins will vary based on the applications installed in the
+   database.
+
+Create a contact
+----------------
+
+To create a contact record in Odoo from an email, click the :icon:`fa-plus-circle` :guilabel:`(New)`
+icon.
+
+.. note::
+   A contact record **must** be created before a lead/opportunity can be created.
+
+Create an opportunity
+---------------------
+
+To create an opportunity from an email, click the :icon:`fa-plus` :guilabel:`(New)` icon next to
+:guilabel:`Opportunities`. Doing so opens a new opportunity record in Odoo in a new tab. The subject
+of the email is used as the opportunity title, and the content of the email is added to the
+:guilabel:`Notes` tab of the opportunity.
+
+Create a task
+-------------
+
+To create a task from an email, click the :icon:`fa-plus` :guilabel:`(New)` icon next to
+:guilabel:`Tasks`. Then, enter the title of the project where the task should be created in the
+resulting field, and select the appropriate project from the resulting list. This opens a new task
+record in Odoo in a new tab. The subject of the email is used as the task title, and the content of
+the email is added to the :guilabel:`Description` tab.
+
+Create a ticket
+---------------
+
+To create a ticket from an email, click the :icon:`fa-plus` :guilabel:`(New)` icon next to
+:guilabel:`Tickets`. Doing so opens a new ticket record in Odoo in a new tab. The subject of the
+email is used as the ticket title, and the content of the email is added to the
+:guilabel:`Description` tab of the ticket.
+
+Email providers
+===============
+
+Mail plugins are available for Outlook and Gmail:
+
+.. cards::
+   .. card:: Outlook plugin
+      :target: mail_plugins/outlook
+      :large:
+
+      Learn how to set up the Outlook plugin and connect it to an Odoo database.
+
+   .. card:: Gmail plugin
+      :target: mail_plugins/gmail
+      :large:
+
+      Learn how to set up the Gmail plugin and connect it to an Odoo database.
 
 .. toctree::
    :titlesonly:
 
    mail_plugins/outlook
    mail_plugins/gmail
-
-Mail Plugins are connectors that bridge your mailbox with your Odoo database. With them, you can
-interact with your Odoo database directly from your mailbox by:
-
-- Creating leads and centralizing prospects' emails into the CRM app.
-- Generating tasks in any Odoo project.
-- Creating tickets in the Helpdesk app.
-- Searching and storing insights on your contacts.
-
-Mail Plugins are available for :doc:`Outlook <mail_plugins/outlook>` and :doc:`Gmail
-<mail_plugins/gmail>`.
-
-.. _mail_plugins/pricing:
-
-Pricing
-=======
-
-Mail Plugins are **free** to install and use.
-
-However, they can provide **Lead Enrichment**, which is part of a paid service known as **Lead
-Generation**.
-
-Mail plugins allow you to test Lead Enrichment for free, whether you connect the plugins to a
-database or not. After a while, the plugins ask you to buy :doc:`../../essentials/in_app_purchase`
-credits if you would like to keep using this service.
-
-.. _mail_plugins/lead-generation:
-
-Lead Generation IAP service
----------------------------
-
-Lead Enrichment uses the *Lead Generation IAP service*. Each request consumes one *Lead Generation
-credit*.
-
-To buy credits, go to :menuselection:`Settings --> CRM --> Lead Enrichment --> Buy credits` and
-select a package.
-
-.. note::
-   - If you are out of credits, the only information populated when clicking on the suggested
-     company is its website link and logo.
-   - Check out the `Lead Generation IAP service Privacy Policy
-     <https://iap.odoo.com/privacy#header_3>`_.
-
-.. seealso::
-   - :doc:`../../essentials/in_app_purchase`
-   - `Odoo Tutorials: Lead Enrichment <https://www.odoo.com/r/p73>`_
