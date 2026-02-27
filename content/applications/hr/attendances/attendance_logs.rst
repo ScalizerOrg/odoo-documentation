@@ -164,10 +164,9 @@ appear in the expanded attendance log.
 - :guilabel:`IP Address`: The device's IP address used to check in or out.
 - :guilabel:`Browser`: The web browser the employee used to check in or out.
 - :guilabel:`Localisation`: The city and country associated with the computer's IP address.
-- :guilabel:`GPS Coordinates`: The specific coordinates when the user checked in or out. To view the
-  specific coordinates on a map, click the :icon:`oi-arrow-right` :guilabel:`View on Maps` button
-  beneath the :guilabel:`GPS Coordinates`. This opens a map in a new browser tab, with the specific
-  location pointed out.
+- :guilabel:`GPS Coordinates`: The coordinates when the user checked in or out. To view the
+  coordinates on a map, click the :icon:`oi-arrow-right` :guilabel:`View on Maps` button
+  beneath the GPS coordinates. This opens a map in a new browser tab, with the location pointed out.
 
 .. image:: attendance_logs/details.png
    :alt: The detailed information for an attendance entry.
