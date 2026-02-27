@@ -661,7 +661,7 @@ This is a non-exhaustive list of the frequently used bundles for a website:
    * - website.assets_wysiwyg
      - Add your JS files related to the Website Builder options behaviors (for instance, a custom
        method for your custom building block)
-   * - website.assets_wysiwyg
+   * - website._assets_bootstrap
      - If you need to extend Boostrap through the Bootstrap Utilities API, for example
 
 .. _theming/assets/styles:
@@ -738,7 +738,7 @@ brings the benefit of a better developer experience with better integration with
 
 .. tip::
    - Use a linter (JSHint, ...).
-   - Never add minified JavaScript libraries.
+   - Always add minified JavaScript libraries.
    - Add `'use strict';` at the top of every old-style module (this is automatic for new-style
      modules).
    - Use `js_` prefixed CSS classes on elements you target with JavaScript.
