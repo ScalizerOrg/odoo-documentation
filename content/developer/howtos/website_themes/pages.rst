@@ -256,7 +256,7 @@ Make the header background transparent and stand on top of the page content.
 
 .. note::
    To create the content of a static page, use the Odoo way of doing things in order to remain
-   editable by the Website Builder. Please note that Odoo takes advantage of Bootstrap framework (5.1.3).
+   editable by the Website Builder. Please note that Odoo takes advantage of Bootstrap framework (5.3).
 
    Find the available classes and components:
 
