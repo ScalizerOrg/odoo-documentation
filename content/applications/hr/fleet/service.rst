@@ -9,14 +9,20 @@ vehicles are in good working order when they are needed.
 Services, such as regular maintenance, like oil changes or tire rotations, can be logged in advance.
 Other repairs are logged as they occur.
 
-.. _fleet/service-form:
-
 Create service records
 ======================
 
-To log a service for a vehicle, go to the main :guilabel:`Services` dashboard by navigating to
-:menuselection:`Fleet app --> Fleet --> Services`. Open a new service form by clicking the
-:guilabel:`New` button in the top-left corner.
+Create a service record in one of two ways: :ref:`directly in the Fleet app <fleet/service-form>`,
+or from a :ref:`vendor bill in the Accounting app <fleet/link-bills>`.
+
+.. _fleet/service-form:
+
+From the Fleet app
+------------------
+
+To log a service for a vehicle in the **Fleet** app, go to the main :guilabel:`Services` dashboard
+by navigating to :menuselection:`Fleet app --> Fleet --> Services`. Open a new service form by
+clicking the :guilabel:`New` button in the top-left corner.
 
 Fill out the information on the form. The only two fields that are required to be populated are
 :guilabel:`Service Type` and :guilabel:`Vehicle`.
@@ -65,10 +71,55 @@ The fields on the form are:
 .. image:: service/new-service.png
    :alt: Enter the information for a new service. The required fields are Service Type and Vehicle.
 
+.. _fleet/link-bills:
+
+From the Accounting app
+-----------------------
+
+Sometimes repairs are performed and billed *before* service records are created. This is a common
+situation when repairs are unexpected, such as towing broken down vehicles or performing emergency
+repairs on the side of the road. In these circumstances, service records can be created directly
+from a :doc:`vendor bill <../../finance/accounting/vendor_bills>` in the **Accounting** app.
+
+To link a vendor bill to a service and create a service record, first open the **Accounting** app
+and click :guilabel:`Purchases` on the dashboard. Click the vendor bill for the repair to open the
+bill details.
+
+In the *Invoice Lines* tab, click the :icon:`oi-settings-adjust` :guilabel:`(additional options)`
+icon to reveal a drop-down menu. Click the checkbox next to :guilabel:`Vehicle`, then click away to
+close the drop-down menu.
+
+Click into the :guilabel:`Vehicle` field and select the vehicle the service was done on.
+
+.. important::
+   To add a vehicle to a bill, the :guilabel:`Status` of the bill on the accounting dashboard must
+   be :guilabel:`Draft`. If the bill has been confirmed, click the :guilabel:`Reset to Draft` button
+   on the bill, then add the vehicle.
+
+.. image:: service/vendor-bill.png
+   :alt: A vendor bill with the vehicle selected on it.
+
+Once the :guilabel:`Vehicle` field is populated, open the *Services* dashboard by navigating to
+:menuselection:`Fleet app --> Fleet --> Services`. The :guilabel:`Service Type` is listed as
+:guilabel:`Vendor Bill`, by default. The record must be updated to keep accurate service records.
+
+Click on the new :guilabel:`Vendor Bill` record to view the service details. Click the
+:guilabel:`Service Type` field to reveal a drop-down menu of all available service types, and select
+the correct type of service. If necessary, :ref:`create a new service type <fleet/new-type>`.
+
+On the service record, a :icon:`fa-pencil-square-o` :guilabel:`Service's Bill` smart button appears
+at the top. Click the :icon:`fa-pencil-square-o` :guilabel:`Service's Bill` smart button to view the
+corresponding vendor bill.
+
+.. tip::
+   The text color in the :icon:`fa-pencil-square-o` :guilabel:`Service's Bill` smart button
+   indicates the *status* of the bill. Green text indicates the bill is confirmed or paid, orange
+   text indicates it is still a draft.
+
 .. _fleet/new-type:
 
 Create service type
--------------------
+===================
 
 The **only** method to create service types is from a :ref:`service form <fleet/service-form>`.
 
@@ -92,7 +143,7 @@ When done, click :guilabel:`Save & Close`.
 .. _fleet/new-vendor:
 
 Create vendor
--------------
+=============
 
 When a service is performed for the first time, typically, the vendor's record has not yet been
 added to the database. It is best practice to add the full details for a vendor in the database, so
@@ -119,19 +170,19 @@ each service type appears in parentheses after the name of the service type.
 
 Each service listed displays the following information:
 
-- :guilabel:`Date`: the date that the service, or repair, was performed (or requested to be
+- :guilabel:`Date`: The date that the service, or repair, was performed (or requested to be
   performed).
-- :guilabel:`Description`: a short description of the specific type of service, or repair, performed
+- :guilabel:`Description`: A short description of the specific type of service, or repair, performed
   to clarify the specific service.
-- :guilabel:`Service Type`: the type of service, or repair, performed. This is selected from a list
+- :guilabel:`Service Type`: The type of service, or repair, performed. This is selected from a list
   of services that :ref:`must be configured <fleet/new-type>`.
-- :guilabel:`Vehicle`: the specific vehicle the service was performed on.
-- :guilabel:`Driver`: the current driver for the vehicle.
-- :guilabel:`Vendor`: the specific vendor who performed the service, or repair.
-- :guilabel:`Notes`: any information associated with the service, or repair, that is documented to
+- :guilabel:`Vehicle`: The specific vehicle the service was performed on.
+- :guilabel:`Driver`: The current driver for the vehicle.
+- :guilabel:`Vendor`: The specific vendor who performed the service, or repair.
+- :guilabel:`Notes`: Any information associated with the service, or repair, that is documented to
   add clarification.
-- :guilabel:`Cost`: the total cost of the service, or repair.
-- :guilabel:`Stage`: the status of the service, or repair. Options are :guilabel:`New`,
+- :guilabel:`Cost`: The total cost of the service, or repair.
+- :guilabel:`Stage`: The status of the service, or repair. Options are :guilabel:`New`,
   :guilabel:`Running`, :guilabel:`Done`, or :guilabel:`Cancelled`.
 
 At the bottom of the :guilabel:`Cost` column, the total cost of all services and repairs are listed.
