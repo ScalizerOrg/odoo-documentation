@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 18:30+0000\n"
+"POT-Creation-Date: 2026-02-27 18:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -701,6 +701,7 @@ msgid "When the :guilabel:`Barcode Pattern` contains `.*`, it means it can conta
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:71
 msgid ":doc:`gs1_nomenclature`"
 msgstr ""
@@ -1548,90 +1549,96 @@ msgstr ""
 msgid "Process receipts and deliveries with barcodes"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:7
-msgid "The *Barcode* app can be used to process receipts, deliveries, and other types of operations in real time using a barcode scanner or the Odoo mobile app."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
-msgid "This makes it possible to process operations on the warehouse floor when they happen, instead of having to wait to validate transfers from a computer. Processing operations this way can help to properly attribute barcodes to the appropriate products, pickings, locations, and more."
+msgid "The **Barcode** app can be used to process receipts, deliveries, and other types of operations in real time using a barcode scanner or the Odoo mobile app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:13
+msgid "This makes it possible to process operations on the warehouse floor when they happen, instead of having to wait to validate transfers from a computer. This real-time processing ensures barcodes are accurately assigned to the correct products, packaging, transfers, locations, and more, reducing errors and keeping inventory data in sync."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:19
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:13
 msgid "Enable Barcode app"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:17
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
-msgid "To use the *Barcode* app to process transfers, it must be installed by enabling the feature from the settings of the *Inventory* app."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:20
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
-msgid "To do so, go to the :menuselection:`Inventory app --> Configuration --> Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click the checkbox next to the :guilabel:`Barcode Scanner` feature."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:21
+msgid "To use the **Barcode** app to process transfers, it must be installed by enabling the feature from the settings of the **Inventory** app."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:24
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
-msgid "Once the checkbox is ticked, click :guilabel:`Save` at the top of the page to save changes."
+msgid "To do so, navigate to :menuselection:`Inventory app --> Configuration --> Settings`. Then, scroll down to the *Barcode* section, and select the checkbox next to the :guilabel:`Barcode Scanner` feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:26
-msgid "Once the page has refreshed, new options will be displayed under the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` (with a corresponding drop-down menu), where either :guilabel:`Default Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:28
+msgid "After the checkbox is selected, click :guilabel:`Save` at the top of the page to save changes."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:30
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
-msgid "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, and a set of :guilabel:`Print` buttons for printing barcode commands and a barcode demo sheet."
+msgid "After the page has refreshed, a new option is displayed under the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` (with a corresponding drop-down menu). Select either:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:37
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
-msgid "For more on setting up and configuring the :guilabel:`Barcode` app, refer to the :doc:`Set up your barcode scanner <../setup/hardware>` and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation pages."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:33
+msgid ":guilabel:`Default Nomenclature`: The barcode actions using UPC and EAN, detailed in the default nomenclature list, are available for use. By default, Odoo automatically handles UPC/EAN conversion."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:44
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:36
+msgid ":guilabel:`Default GS1 Nomenclature`: Scan barcodes of sealed boxes and identify essential product information, such as Global Trade Item Numbers (GTINs), lot number, quantity information, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:40
+msgid "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, and a set of :guilabel:`Print` buttons for printing barcode commands and operation types, as well as a barcode demo sheet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:48
+msgid ":doc:`barcode_nomenclature`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:50
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
+msgid ":doc:`../setup/hardware`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:51
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+msgid ":doc:`../setup/software`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:56
 msgid "Scan barcodes for receipts"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:46
-msgid "To process warehouse receipts for incoming products, there first needs to be a purchase order (PO) created, and a receipt operation to process."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:58
+msgid "Purchase orders (POs) are used to process warehouse receipts for incoming products and product packagings. First, create a request for quotation, then confirm it to create a |PO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
-msgid "To create a :abbr:`PO (purchase order)`, navigate to the :menuselection:`Purchase app --> Create` to create a new request for quotation (RFQ)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:52
-msgid "From the blank :abbr:`RFQ (request for quotation)` form, click the drop-down menu next to the :guilabel:`Vendor` field to add a vendor. Then, on the :guilabel:`Product` line under the :guilabel:`Products` tab, click :guilabel:`Add a product`, and select the desired product(s) to add to the quotation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:57
-msgid "Once ready, click :guilabel:`Save` at the top of the form, then click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for quotation)` to a :abbr:`PO (purchase order)`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed purchase order for barcode product."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:62
+msgid ":doc:`../../purchase/manage_deals/rfq`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:64
-msgid "To process and scan barcodes for warehouse receipts, navigate to the :menuselection:`Barcode app`."
+msgid "To process and scan barcodes for warehouse receipts, navigate to the **Barcode** app."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:66
-msgid "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` screen displaying different options is presented. To process receipts, click on the :guilabel:`Operations` button at the bottom of the screen. This navigates to an :menuselection:`Operations` overview page."
+msgid "Once inside the **Barcode** app, a :guilabel:`Barcode Scanner` screen displaying different options is presented."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:74
-msgid "From this page, locate the :guilabel:`Receipts` card, and click the :guilabel:`# To Process` button to view all outstanding receipts. Then, select the desired receipt operation to process. This navigates to the barcode transfer screen."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:72
+msgid "To process receipts, click the :guilabel:`Operations` button at the bottom of the screen. The :guilabel:`Operations` overview page opens."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:75
+msgid "From this page, tap the :guilabel:`Receipts` card to view all outstanding receipts. Then, select the desired receipt operation to process. This navigates to the barcode transfer screen."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:79
-msgid "If *only* using a barcode scanner or the Odoo mobile app, the barcodes for each transfer of a corresponding operation type can be scanned to be processed easily. Once scanned, the products that are part of an existing transfer can be scanned, and new products can be added to the transfer, as well. Once all products have been scanned, validate the transfer to proceed with the stock moves."
+msgid "If *only* using a barcode scanner or the Odoo mobile app, scan each barcode transfer for the corresponding operation type to process them. Once scanned, the products that are part of an existing transfer can be scanned, and new products can be added to the transfer, as well. Once all products have been scanned, validate the transfer to proceed with the stock moves."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:85
-msgid "From this screen, an overview of all receipts to process within that transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if products need to be added to the operation, or if the whole operation should be validated at once."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:84
+msgid "From this screen, an overview of all receipts to process within that transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on whether products need to be added to the operation, or if the whole operation should be validated at once. If the *Packages* setting is enabled in the Inventory settings, the :guilabel:`Put in Pack` button is also available."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
@@ -1639,16 +1646,39 @@ msgstr ""
 msgid "Overview of receipts in transfer to scan."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:94
-msgid "To process and scan each product individually, choose a specific product line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be clicked to indicate receipt of that product, or the :guilabel:`pencil` icon can be clicked to open a new screen to edit that product line."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:93
+msgid "To process and scan each product individually, scan a product or product packaging, or choose a specific product line. Click the :guilabel:`+#` button (for example, `+10`) to indicate receipt of that product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:98
-msgid "From this screen, the product that's being received is listed. Under the product name, the :guilabel:`Quantity` line can be edited. Either change the `0` in the line to the desired quantity, or click the :guilabel:`/# Units` button (in this case, :guilabel:`/10 Units`) to automatically fill the quantity ordered from the :abbr:`PO (purchase order)`."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:173
+msgid "Editing a product line"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:104
-msgid "In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode Product` is expected to be received. `[BARCODE_PROD]` is the :guilabel:`Internal Reference` set on the product form. Scan the barcode of the `Barcode Product` to receive one unit. Afterwards, click the :guilabel:`pencil` icon to manually enter the received quantities."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:100
+msgid "To manually adjust received quantities for a product, click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:103
+msgid "On this screen, the product that's being received is listed. Under the product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the line to the desired quantity, or click the :guilabel:`+#` button (for example, `+12`) to automatically fill the quantity ordered from the |PO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:107
+msgid "Additionally, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or subtract quantity of the product. Click the product packaging button (for example, `6-pack`) to add a product packaging. Click the number keys to add quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
+msgid "Below the quantity buttons is the :guilabel:`Location` line, which reads `WH/Stock` by default, unless another *location* is listed on the product itself. Click this line to reveal a drop-down menu of additional locations to choose from."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:115
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:215
+msgid "Once ready, click :guilabel:`Confirm` to confirm the changes made to the product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:118
+msgid "In the reception operation `WH/IN/00013`, `12 Units` of the `Soda Can` product is expected to be received. `[SODA-SINGLE-CAN]` is the barcode set on the product form. Warehouse employees can scan the barcode of the `Soda Can` product to receive one unit, or because they can be purchased in 6-pack packaging, they can scan the packaging barcode. Alternatively, they can click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to manually enter the received quantities."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
@@ -1656,96 +1686,90 @@ msgstr ""
 msgid "Product line editor for individual transfer in Barcode app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:113
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:179
-msgid "Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be clicked to add or subtract quantity of the product, and the :guilabel:`number keys` can be used to add quantity, as well."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:128
+msgid "Validating the transfer"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:116
-msgid "Below the :guilabel:`number keys` is the :guilabel:`location` line, which reads `WH/Stock` by default, unless another *location* is listed on the product itself. Click this line to reveal a drop-down menu of additional locations to choose from."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:130
+msgid "If not all products were scanned or manually entered from the pencil icon, click the :guilabel:`+#` button on the product line for the products being received, or scan the product or product packaging barcode."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:120
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:215
-msgid "Once ready, click :guilabel:`Confirm` to confirm the changes made to the product line."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:122
-msgid "Then, from the overview page with all receipts to process within that transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the product line for the products being received, and click :guilabel:`Validate`. The receipt has now been processed, and the :guilabel:`Barcode app` can be closed out."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+msgid "Finally, click :guilabel:`Validate`. The receipt is processed, and the **Barcode** app can be closed."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of receipts in transfer to validate."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:132
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:141
 msgid "Scan barcodes for delivery orders"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
-msgid "To process warehouse deliveries for outgoing products, there first needs to be a sales order (SO) created, and a delivery operation to process."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:143
+msgid "To process warehouse deliveries for outgoing products, a sales order (SO) must be created to create a delivery operation to process. First, create a quotation, then confirm it to create the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:137
-msgid "To create a :abbr:`SO (sales order)`, navigate to the :menuselection:`Sales app --> Create` to create a new quotation."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
+msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:140
-msgid "From the blank quotation form, click the drop-down menu next to the :guilabel:`Customer` field to add a customer. Then, on the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select the desired product(s) to add to the quotation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:144
-msgid "Once ready, click :guilabel:`Save` at the top of the form, and click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO (sales order)`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed sales order for barcode product."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:149
+msgid "To process and scan barcodes for warehouse deliveries, navigate to the :menuselection:`Barcode` app."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
-msgid "To process and scan barcodes for warehouse deliveries, navigate to the :menuselection:`Barcode app`."
+msgid "In the **Barcode** app, a :guilabel:`Barcode Scanner` screen displaying different options opens. To process deliveries, click the :guilabel:`Operations` button at the bottom of the screen. This opens an :guilabel:`Operations` overview page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:153
-msgid "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` screen displaying different options is presented. To process deliveries, click on the :guilabel:`Operations` button at the bottom of the screen. This navigates to an :guilabel:`Operations` overview page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:157
-msgid "From this page, locate the :guilabel:`Delivery Orders` card, and click the :guilabel:`# To Process` button to view all outstanding deliveries. Then, select the desired delivery order to process. This navigates to the barcode transfer screen."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:155
+msgid "On this page, click the :guilabel:`Delivery Orders` card to view all outstanding deliveries."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Operations overview page in Barcode app dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:165
-msgid "From this screen, an overview of all deliveries to process within that transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if products need to be added to the operation, or if the whole operation should be validated at once."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:160
+msgid "Select the desired delivery order to process. This navigates to the barcode transfer screen."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:170
-msgid "To process and scan each product individually, choose a specific product line. The :guilabel:`+1` button can be clicked to indicate delivery of that product, or the :guilabel:`pencil icon` can be clicked to open a new screen to edit that product line."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:162
+msgid "On this screen, first scan the source location of the products to deliver. Then, review the overview of all products and packagings to process within that transfer (**WH/OUT/000XX**). At the bottom of the screen, there are buttons to :guilabel:`Add Product` or :guilabel:`Validate`, depending on whether products need to be added to the operation, or if the whole operation should be validated at once."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:174
-msgid "From this screen, the product that's being delivered is listed. Under the product name, the :guilabel:`Quantity` line can be edited. Either change the `0` in the line to the desired quantity, or click the :guilabel:`/# Units` button (in this case, :guilabel:`/10 Units`) to automatically fill the quantity ordered from the :abbr:`SO (sales order)`."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:168
+msgid "To process and scan each product individually, choose a specific product line. Scan a product or product packaging, or click the :guilabel:`+#` (for example, `+6`) button to indicate delivery of that product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:182
-msgid "Below the :guilabel:`number keys` is the :guilabel:`location` line, which reads `WH/Stock` by default, unless another location is listed on the product itself."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:175
+msgid "To manually adjust quantities for a product, click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:178
+msgid "The product that's being delivered is listed on this screen. Under the product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the line to the desired quantity, or click the :guilabel:`+#` button (for example, `+6`) to automatically fill the quantity ordered from the |SO|. If the product is sold in a packaging, click the packaging button (for example, `6-pack`). Alternatively, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or subtract quantity of the product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:185
-msgid "This is the location that the product is being pulled from for delivery. Click this line to reveal a drop-down menu of additional locations to choose from (if this product is stored in multiple locations in the warehouse)."
+msgid "Below the quantity buttons is the :guilabel:`Source Location` line, which reads `WH/Stock` by default, unless the product is stored in a different location. This is the location that the product is being pulled from for delivery. Click this line to reveal a menu of additional locations to choose from (if this product is stored in multiple locations in the warehouse)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
-msgid "For warehouses that have multiple different storage locations, putaway rules, and removal strategies, additional steps can be added for various operation types, while using the *Barcode* app."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:191
+msgid "For warehouses that have multiple different storage locations, putaway rules, and removal strategies, additional steps can be added for various operation types, while using the **Barcode** app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:196
-msgid "Then, from the overview page with all receipts to process within that transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the product line for the products being received, and click :guilabel:`Validate`. The delivery has now been processed, and the *Barcode* app can be closed out."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:195
+msgid "When ready, click :guilabel:`Confirm` to confirm the changes made to the product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:198
+msgid "Validating the delivery"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:200
+msgid "If not all products or product packagings have been scanned or entered on the overview page, scan the products or packagings, or click the :guilabel:`+#` button on the product line for the products. Finally, click :guilabel:`Validate`. The delivery is processed, and the **Barcode** app can be closed."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
@@ -1920,8 +1944,28 @@ msgstr ""
 msgid "For a list of Odoo-compatible barcode mobile scanners, and other hardware for the *Inventory* app, refer to the `Odoo Inventory • Hardware page <https://www.odoo.com/app/inventory-hardware>`_."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+msgid "To use the *Barcode* app to process transfers, it must be installed by enabling the feature from the settings of the *Inventory* app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
+msgid "To do so, go to the :menuselection:`Inventory app --> Configuration --> Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click the checkbox next to the :guilabel:`Barcode Scanner` feature."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
+msgid "Once the checkbox is ticked, click :guilabel:`Save` at the top of the page to save changes."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:24
 msgid "When the page has refreshed, new options are displayed under the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` (with a corresponding drop-down menu), where either :guilabel:`Default Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected. The nomenclature selected changes how scanners interpret barcodes in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, and a set of :guilabel:`Print` buttons for printing barcode commands and a barcode demo sheet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
+msgid "For more on setting up and configuring the :guilabel:`Barcode` app, refer to the :doc:`Set up your barcode scanner <../setup/hardware>` and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation pages."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:41
@@ -2421,15 +2465,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:207
 msgid "Once that code has been scanned, ensure the NETUM scanner has the correct keyboard configuration, and is working as intended."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
-msgid ":doc:`../setup/hardware`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
-msgid ":doc:`../setup/software`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:3
@@ -11746,6 +11781,7 @@ msgid ":doc:`ups_credentials`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:26
 msgid "Account setup"
 msgstr ""
 
@@ -12461,6 +12497,162 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:None
 msgid "Show Google Map route."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:3
+msgid "EasyPost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:5
+msgid "Set up the EasyPost delivery connector in Odoo to manage EasyPost shipments to clients directly within Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:8
+msgid "EasyPost is a service that allows users to connect with multiple carriers, like UPS, USPS, FedEx, DHL, and more. Odoo can then connect to EasyPost to purchase labels from those carriers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:11
+msgid "To configure it, complete these steps:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:13
+msgid ":ref:`Create an EasyPost account <inventory/shipping_receiving/easypost-account>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:14
+msgid ":ref:`Integrate carrier accounts if the carrier is not enabled on the EasyPost account <inventory/shipping_receiving/integrate-easypost-carrier>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:16
+msgid ":ref:`Obtain Test and Production API keys <inventory/shipping_receiving/easypost-api-keys>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:17
+msgid ":ref:`Set up the delivery method in Odoo <inventory/shipping_receiving/easypost-method>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:19
+msgid "Upon completion, it is possible to calculate shipping costs based on package size and weight, have the charges applied directly to an EasyPost business account, and automatically print EasyPost tracking labels in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:28
+msgid "To begin, go to the `EasyPost <https://www.easypost.com>`__ website to create or log into the company's EasyPost business account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:31
+msgid "Follow the website's steps to complete registration and sign up for shipping services. Some shipping services (like USPS and DHL Express) are automatically enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:37
+msgid "Integrating other carrier accounts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:39
+msgid "To use a different carrier, it is possible to `enable Wallet Carrier Accounts <https://support.easypost.com/hc/en-us/articles/21336276718605-Enabling-Wallet-Carriers-Using-the-EasyPost-Dashboard>`__ to purchase labels from EasyPost. Alternatively, if a user has their own carrier account, they can `enable it on EasyPost <https://support.easypost.com/hc/en-us/articles/25246240687373-Bring-Your-Own-Carrier-Account-to-EasyPost>`__. Then, after these accounts are enabled, Odoo can integrate with the EasyPost account and manage labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:50
+msgid "Obtain Test and Production API keys"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:52
+msgid "After completing the setup, create Test and Production API keys. On the EasyPost website, click the :guilabel:`Account Settings` link, then open the :guilabel:`API Keys` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:55
+msgid "If these API keys have not yet been created, click :guilabel:`Add Additional API Key`. Select either :guilabel:`Production` or :guilabel:`Test`. The API key is automatically created. Follow the same process to create both keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Create API keys on the EasyPost API Keys page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:65
+msgid "Delivery method configuration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:67
+msgid "With those necessary credentials, configure the EasyPost delivery method in Odoo by going to :menuselection:`Inventory app --> Configuration --> Delivery Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:70
+msgid "On the *Delivery Methods* page, click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:72
+msgid "In the :guilabel:`Provider` field, select :guilabel:`Easypost` from the drop-down menu. Doing so reveals the *Easypost Configuration* tab at the bottom of the form, where the EasyPost API keys should be entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:76
+msgid "For details on configuring the other fields on the delivery method, such as :guilabel:`Delivery Product`, refer to the :doc:`new_delivery_method` documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:80
+msgid "To generate EasyPost shipping labels through Odoo, ensure the :guilabel:`Integration Level` option is set to :guilabel:`Get Rate and Create Shipment`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:83
+msgid "In the *Easypost Configuration* tab, complete the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:85
+msgid ":guilabel:`Test API Key`: the Test API key in the EasyPost Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:86
+msgid ":guilabel:`Production API Key`: the Production API key in the EasyPost Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:87
+msgid ":guilabel:`Label Format`: Choose :guilabel:`PNG`, :guilabel:`PDF`, :guilabel:`ZPL`, or :guilabel:`EPL2` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:89
+msgid ":guilabel:`Generate Return Label`: Select to automatically generate a return label when validating the delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:92
+msgid "Save the delivery method by clicking the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:94
+msgid "Click the :guilabel:`Load your Easypost carrier accounts` link under the API keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Load the EasyPost carrier accounts into Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:99
+msgid "The *Select a carrier* pop-up window opens. Select a shipping carrier from the drop-down menu, then click :guilabel:`Select`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:102
+msgid "After the carrier type has been selected, complete the :guilabel:`Default Package Type` and :guilabel:`Default Service Level` fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Select a package type and service level that should be used for the carrier."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:109
+msgid "Turn on the Easypost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:111
+msgid "After the EasyPost connection is set up, use the smart buttons at the top of the form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:114
+msgid ":guilabel:`Unpublished/Published`: determines if this delivery method is available on the user's **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:116
+msgid ":guilabel:`Test Environment/Production Environment`: determines whether label creation is for testing and cancelled immediately (Test) or generating a real shipping label that is charged to the EasyPost account (Production)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:119
+msgid ":guilabel:`No Debug/Debug Requests`: determines whether API requests and responses are logged in Odoo (turn on **developer mode** and go to :menuselection:`Settings app --> Technical --> Logging`)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:3
@@ -15102,7 +15294,7 @@ msgid "Belgium"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:45
-msgid "Easypost"
+msgid ":doc:`EasyPost <easypost>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:46
@@ -21611,11 +21803,6 @@ msgstr ""
 msgid "At the end of this process, the multilevel |BOM| is configured, and the top-level product has its inventory counts, procurement method set, procurement lead times, and manufacturing operations configured. From here, sales orders can include the top-level product, automatic procurement through vendors or manufacturing can begin, the top-level product can be included in an **eCommerce** store."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
-msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
 msgid ":doc:`../../../websites/ecommerce/ecommerce_design/catalog`"
 msgstr ""
@@ -27854,12 +28041,11 @@ msgid "To save this report as a *favorite*, see :ref:`search/favorites`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:3
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:None
 msgid "Purchase & Vendor analysis dashboard"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:5
-msgid "The :guilabel:`Purchase & Vendor analysis` dashboard, available in the :doc:`Odoo Dashboards <../../../productivity/dashboards>` app, offers various metrics to evaluate purchasing performance and vendor reliability."
+msgid "The *Purchase & Vendor analysis* dashboard, available in the :doc:`Odoo Dashboards <../../../productivity/dashboards>` app, offers various metrics to evaluate purchasing performance and vendor reliability."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:9
@@ -27867,7 +28053,11 @@ msgid "The dashboard tracks financial data like total and average purchase amoun
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:14
-msgid "To access the :guilabel:`Purchase & Vendor analysis` dashboard, go to the Dashboards app, then, in the left panel, navigate to the :guilabel:`Logistics` section and click the name of the dashboard. The dashboard opens in the main view."
+msgid "To access the *Purchase & Vendor analysis* dashboard, go to the **Dashboards** app, then, in the left panel, navigate to the :guilabel:`Logistics` section and click the name of the dashboard. The dashboard opens in the main view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:None
+msgid "Purchase & Vendor analysis dashboard."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:26
@@ -27956,7 +28146,7 @@ msgid ":guilabel:`Top purchased products`: lists the ten products with the highe
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:92
-msgid ":guilabel:`Supplier Dependency Chart`: shows the percentage of purchases by buyer."
+msgid ":guilabel:`Purchase Orders by Buyer`: shows the percentage of purchases by buyer."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:3
