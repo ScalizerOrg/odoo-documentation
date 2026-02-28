@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 18:30+0000\n"
+"POT-Creation-Date: 2026-02-27 18:30+0000\n"
 "PO-Revision-Date: 2026-02-25 23:11+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -4473,7 +4473,7 @@ msgid "A prompt to print demo data or barcodes for operations."
 msgstr "작업용 데모 데이터 또는 바코드 인쇄용 프롬프트."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:86
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:110
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:115
 msgid "From Inventory settings"
 msgstr "재고 관리 설정 시"
 
@@ -5187,25 +5187,32 @@ msgstr "제품 및 위치 바코드"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:7
 msgid ""
-"Inventory operations like product configuration can be streamlined by taking "
-"advantage of barcode scanning features. Assigning barcodes to products and "
-"locations is a key step in using the **Barcode** app, and users can "
-"conveniently populate fields with a barcode scanner. This reduces manual "
-"entry, minimizes errors, and speeds up common tasks like product selection, "
-"location assignment, and inventory adjustments."
+"Inventory operations, like product configuration, can be streamlined by "
+"taking advantage of barcode scanning features. Assigning barcodes to "
+"products, product packagings, and locations is a key step in using the "
+"**Barcode** app, and users can conveniently enter values using a barcode "
+"scanner. This reduces manual entry, minimizes errors, and speeds up common "
+"tasks like product selection, location assignment, and inventory adjustments."
 msgstr ""
-"바코드 스캔 기능을 활용하여 품목 환경설정과 같은 재고 관리 작업을 간소화할 "
-"수 있습니다. **바코드** 앱을 사용하는 데 있어 품목 및 위치에 바코드를 지정하"
-"는 작업이 가장 중요하며, 이와 같은 작업을 거쳐 바코드 스캐너를 통해 필드를 편"
-"리하게 자동 입력되도록 할 수 있습니다. 이를 통해 수동 입력 작업을 줄이고 오류"
-"를 최소화하며 품목 선택, 위치 지정, 재고 조정과 같은 일반적인 작업을 신속하"
-"게 수행할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:17
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:16
+msgid ""
+"To enable the **Barcode** app, you must first enable it in the *Inventory* "
+"settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:18
+msgid ""
+"Navigate to :menuselection:`Inventory app --> Configuration --> Settings`. "
+"In the *Barcode* section, select the :guilabel:`Barcode Scanner` option. Be "
+"sure to click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:22
 msgid "Barcode nomenclature"
 msgstr "바코드 분류법"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:19
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:24
 msgid ""
 "Most retail products use EAN-13 barcodes, also known as Global Trade "
 "Identification Numbers (GTIN). To create a new |GTIN| for a product, a "
@@ -5217,18 +5224,18 @@ msgstr ""
 "하려면 회사에 반드시 GS1 회사 접두사가 있어야 합니다. 해당 시스템에 대한 자세"
 "한 내용은 :doc:`GS1 분류법 <../operations/gs1_nomenclature>` 을 참조하세요."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:23
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:28
 msgid ""
 "Odoo supports using any string as a barcode, so users can also create custom "
-"internal references to use with barcode scanners. See :doc:`Default "
-"nomenclature <../operations/barcode_nomenclature>` to learn about optional "
-"conventions around barcodes and default values in Odoo"
+"internal references for barcode scanners. See the :doc:`Default nomenclature "
+"<../operations/barcode_nomenclature>` to learn about optional conventions "
+"around barcodes and default values in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:27
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:32
 msgid ""
-"To change the barcode nomenclature, go to :menuselection:`Inventory app --> "
-"Configuration --> Settings` and scroll down to the :guilabel:`Barcode` "
+"To change the barcode nomenclature, go to the :menuselection:`Inventory app "
+"--> Configuration --> Settings` and scroll down to the :guilabel:`Barcode` "
 "section to select the nomenclature under :guilabel:`Barcode Scanner`."
 msgstr ""
 
@@ -5236,11 +5243,11 @@ msgstr ""
 msgid "Changing barcode nomenclature in Inventory app settings."
 msgstr "재고 관리 앱 설정에서 바코드 분류법을 변경합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:37
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:42
 msgid "Barcode lookup"
 msgstr "바코드 찾기"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:39
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:44
 msgid ""
 "Odoo can automatically add product information using the :guilabel:`Stock "
 "Barcode Database` setting for any :abbr:`UPC (Universal Product "
@@ -5248,63 +5255,56 @@ msgid ""
 "Standard Book Number)` barcode."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:43
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:48
 msgid ""
-"To enable automatic barcode look up, go to :menuselection:`Inventory app --> "
-"Configuration --> Settings` and scroll down to the :guilabel:`Barcode` "
-"section to tick the box for :guilabel:`Stock Barcode Database`."
+"To enable automatic barcode look-up, go to the :menuselection:`Inventory app "
+"--> Configuration --> Settings` and scroll down to the :guilabel:`Barcode` "
+"section to select the :guilabel:`Stock Barcode Database` checkbox."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:48
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:53
 msgid ":doc:`Barcode Lookup <barcodelookup>`"
 msgstr ":doc:`바코드 조회 <barcodelookup>`"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:53
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:58
 msgid "Set product barcodes"
 msgstr "제품 바코드 설정"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:55
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:60
 msgid ""
 "Barcodes can be assigned to existing products from the *Product Barcodes* "
 "configuration page or from any product form in the **Inventory**, "
-"**Manufacturing** or **Purchase** apps. The barcode field can be populated "
-"either by typing or using scanner input."
+"**Manufacturing**, or **Purchase** apps. The barcode field can be populated "
+"either by typing or by scanning."
 msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:59
-msgid ""
-"When adding a new product, the :ref:`barcode lookup feature <barcode/setup/"
-"barcodelookup>` can be used to automatically find information about a "
-"product based on its barcode, and new products can be added to the database "
-"directly from the **Barcode** app by scanning a barcode."
-msgstr ""
-"새 품목을 추가할 때 :ref:`바코드 조회 기능 <barcode/setup/barcodelookup>` 을 "
-"활용하면 바코드를 기준으로 품목 정보를 자동 검색할 수 있으며, **바코드** 앱에"
-"서 바코드만 스캔하면 새 품목을 데이터베이스에 직접 추가할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:64
-msgid "From Barcode app"
-msgstr "바코드 앱"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:66
 msgid ""
-"New products definitions can be added to the database product lists as well "
-"as having their on-hand inventory tracked from the **Barcode** app, if "
+"When adding a new product, the :ref:`barcode lookup feature <barcode/setup/"
+"barcodelookup>` can automatically find product information by its barcode, "
+"and new products can be added to the database directly from the **Barcode** "
+"app by scanning a barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:69
+msgid "From the Barcode app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:71
+msgid ""
+"New product definitions can be added to the database product lists, and "
+"their on-hand inventory can be tracked from the **Barcode** app if "
 "the :ref:`Barcode Lookup feature <barcode/setup/barcodelookup>` is enabled. "
 "To create a new receipt for scanning new products, choose one of two methods:"
 msgstr ""
-"새로운 품목에 대해 정의한 내용을 데이터베이스 품목 목록에 추가할 수 있으며, "
-"보유 중인 재고 역시 :ref:`바코드 조회 기능 <barcode/setup/barcodelookup>` 이 ​​"
-"활성화되어 있으면 **바코드** 앱에서 추적이 가능합니다. 새로 품목을 스캔할 수 "
-"있도록 신규 입고 항목을 생성하려면 다음의 두 가지 방법 중에서 선택합니다:"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:71
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:76
 msgid ""
 "From the **Barcode** front page, tap :guilabel:`Operations`, "
 "tap :guilabel:`Receipts`, and then tap the :guilabel:`New` button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:73
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:78
 msgid "Scan a printed :guilabel:`Receipts (WHIN)` inventory command barcode."
 msgstr "인쇄된 :guilabel:`입고(WHIN)` 재고 관리 명령어 바코드를 스캔합니다."
 
@@ -5312,68 +5312,58 @@ msgstr "인쇄된 :guilabel:`입고(WHIN)` 재고 관리 명령어 바코드를 
 msgid "Empty new receipt form."
 msgstr "내용이 비어있는 새 영수증 양식."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:78
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:83
 msgid ""
-"Scanning a product that is not currently in inventory prompts a message that "
-"the product does not exist, with a button option to :guilabel:`Create New "
-"Product`. Pressing this button will search the `Barcode Lookup <https://"
+"Scanning a product that is not currently in inventory displays a message "
+"that the product does not exist, with a :guilabel:`Create New Product` "
+"button. Pressing this button will search the `Barcode Lookup <https://"
 "www.barcodelookup.com/>`_ database for a product matching the code and "
-"format, create a new product definition in the Odoo database with the "
-"available information, and add that product to the receipt to track the "
-"quantity on hand in inventory."
+"format, create a new product definition in the Odoo database using the "
+"available information, and add that product to the receipt to track its "
+"quantity on hand."
 msgstr ""
-"현재 재고가 없는 품목을 스캔할 경우 품목이 존재하지 않는다는 메시지와 함"
-"께 :guilabel:`새 품목 만들기` 버튼 옵션이 표시됩니다. 이 버튼을 누르면 `바코"
-"드 조회 <https://www.barcodelookup.com/>` 데이터베이스에서 코드 및 형식이 일"
-"치하는 품목을 검색하고, 사용 가능한 정보를 활용하여 Odoo 데이터베이스에 새로"
-"운 품목에 대한 내용을 생성한 후, 해당 품목을 영수증에 추가하여 재고 수량을 추"
-"적합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:None
 msgid "New product confirmation dialog."
 msgstr "신제품 확인 대화 상자."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:88
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:93
 msgid ""
 "Even if a transfer order with a product created through **Barcode** is "
 "cancelled, the product remains available in the products list in the "
 "**Inventory** app unless it is deleted."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:92
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:97
 msgid "From a product form"
 msgstr "품목 양식 관련"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:94
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:99
 msgid ""
 "Barcodes can be added to both existing products and new products as they are "
-"created through the products configuration form. To access a product's form, "
-"go to :menuselection:`Inventory app --> Products --> Products` and select "
-"the product to add a barcode to."
+"created through the product's configuration form. To access a product's "
+"form, go to the :menuselection:`Inventory app --> Products --> Products` and "
+"select the product to add a barcode to."
 msgstr ""
-"바코드는 품목 설정 양식을 통해 기존 품목과 새 품목 모두에 추가할 수 있습니"
-"다. 품목 양식에 액세스하려면 :menuselection:`재고 관리 앱 --> 품목 --> 품목` "
-"으로 이동하여 바코드를 추가할 품목을 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:98
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:103
 msgid ""
-"In the :guilabel:`General Information` tab, click the :guilabel:`Barcode` "
-"field to either type in the barcode or use a scanner to input the barcode "
-"value."
+"In the *General Information* tab, click the :guilabel:`Barcode` field to "
+"either type in the barcode or use a scanner to input the barcode value."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:None
 msgid "The 'Barcode' field on a product form with an active cursor."
 msgstr "품목 양식의 '바코드' 필드에 활성 커서가 위치해 있는 모습."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:105
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:110
 msgid ""
 "If using :doc:`product variants <../../../sales/sales/products_prices/"
-"products/variants>`, configure barcodes on individual variants and not the "
-"product template to allow scanning to retrieve the variants."
+"products/variants>`, configure barcodes on individual variants, **not** on "
+"the product template, to allow scanning to retrieve the variants."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:112
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:117
 msgid ""
 "To access the *Product Barcodes* configuration page, go "
 "to :menuselection:`Inventory app --> Configuration --> Settings`. In "
@@ -5394,43 +5384,133 @@ msgstr ""
 msgid "Selecting the Barcode field in the Product Configuration form."
 msgstr "품목 환경설정 양식에서 바코드 필드를 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:122
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:127
 msgid ""
-"To filter for the products that do not have barcodes yet, click "
-"the :icon:`fa-sort-desc` :guilabel:`(Toggle Search Panel)` icon to add a "
-"custom filter where the :guilabel:`Barcode` property is :guilabel:`is not "
-"set`."
+"To filter for products that do not have barcodes yet, click the :icon:`fa-"
+"sort-desc` :guilabel:`(Toggle Search Panel)` icon to add a custom filter "
+"where the :guilabel:`Barcode` property :guilabel:`is not set`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:0
 msgid "'Add Custom Filter' pop-up with 'Barcode is not set' configured."
 msgstr "사용자 지정 필터 추가’가 ‘바코드 미설정'으로 지정되어 있는 팝업창."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:132
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:137
+msgid "Set product packaging barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:139
+msgid ""
+"If :guilabel:`Product Packagings` is enabled in the **Inventory** settings, "
+"barcodes can be set for product packagings. To enable this feature, navigate "
+"to :menuselection:`Inventory app --> Configuration --> Settings`. In the "
+"*Products* section, select :guilabel:`Product Packagings`. Be sure "
+"to :guilabel:`Save` the changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:144
+msgid ""
+"Barcodes can be assigned to product packagings from the *Product Packagings* "
+"page or from any product form in the **Inventory** app. The barcode field "
+"can be populated either by typing or by scanning."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:148
+msgid ""
+"After the barcode is assigned to the packaging, it can be used for warehouse "
+"operations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:151
+msgid "From the Product Packagings page"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:153
+msgid ""
+"Navigate to :menuselection:`Inventory app --> Configuration --> Product "
+"Packagings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:155
+msgid ""
+"On this page, ensure that the :guilabel:`Barcode` column appears by clicking "
+"the :icon:`oi-settings-adjust` :guilabel:`(additional options)` icon and "
+"selecting :guilabel:`Barcode`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:158
+msgid ""
+"Select an existing packaging, or create a new one by "
+"clicking :guilabel:`New`. Be sure to specify the product, its packaging, and "
+"the :guilabel:`Contained Quantity`. Specify whether it is available "
+"for :guilabel:`Sales` or :guilabel:`Purchase`. Specify a :guilabel:`Barcode`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:None
+msgid "Specify a barcode on the Product Packagings page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:39
+msgid "From product form"
+msgstr "품목 양식에서 만들기"
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:168
+msgid ""
+"Navigate to :menuselection:`Inventory app --> Products --> Products`. Open "
+"an existing product, or create a new one by clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:171
+msgid ""
+"After specifying product information in the *General Information* tab, open "
+"the *Inventory* tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:173
+msgid ""
+"In the *Packaging* section, show the :guilabel:`Barcode` field by clicking "
+"the :icon:`oi-settings-adjust` :guilabel:`(additional options)` icon and "
+"selecting :guilabel:`Barcode`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:176
+msgid ""
+"Add a :guilabel:`Barcode` to an existing packaging, or create a new one by "
+"clicking :guilabel:`Add a line`. Be sure to specify a packaging name and "
+"the :guilabel:`Contained Quantity`. Specify whether the packaging is "
+"available for :guilabel:`Sales` or :guilabel:`Purchase`. Finally, specify "
+"a :guilabel:`Barcode`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:None
+msgid "Set a barcode in the Inventory tab of a product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:185
+msgid ":doc:`../../inventory/product_management/configure/packaging`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:190
 msgid "Print location barcodes"
 msgstr "위치 바코드 인쇄"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:192
 msgid ""
-"Barcodes can be assigned to locations to track of where products are stored "
-"and manage transfers, and are automatically available if the :doc:`Storage "
+"Barcodes can be assigned to locations to track where products are stored and "
+"manage transfers, and are automatically available if the :doc:`Storage "
 "Locations <../../inventory/warehouses_storage/inventory_management/"
 "use_locations>` feature is enabled."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:138
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:196
 msgid ""
-"To print barcodes for locations, go to :menuselection:`Inventory app --> "
+"To print barcodes for locations, go to the :menuselection:`Inventory app --> "
 "Configuration --> Settings`, scroll down to the :guilabel:`Warehouse` "
-"section and click :icon:`fa-arrow-right` :guilabel:`Locations`. Tick the "
-"boxes for locations and the :guilabel:`Print` button will appear, "
-"downloading a PDF with barcodes for all selected locations."
+"section and click :icon:`fa-arrow-right` :guilabel:`Locations`. Select the "
+"boxes for locations, and the :guilabel:`Print` button will appear, allowing "
+"the download of a PDF with barcodes for all selected locations."
 msgstr ""
-"위치에 대한 바코드를 인쇄하려면 :menuselection:`재고 관리 앱 --> 환경설정 --"
-"> 설정` 으로 이동하여 :guilabel:`창고` 섹션까지 아래로 스크롤한 후 :icon:`fa-"
-"arrow-right` :guilabel:`위치` 를 클릭합니다. 위치 상자를 선택하면 선택한 모"
-"든 위치에 대한 바코드가 들어있는 PDF를 다운로드할 수 있도록 :guilabel:`인쇄` "
-"버튼이 나타납니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:None
 msgid ""
@@ -6435,10 +6515,6 @@ msgid ""
 msgstr ""
 "포장은 직접 품목 양식이나 :guilabel:`품목 포장` 페이지에서 생성할 수 있습니"
 "다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:39
-msgid "From product form"
-msgstr "품목 양식에서 만들기"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:41
 msgid ""
@@ -15617,11 +15693,12 @@ msgid ""
 "into separate locations, then click :guilabel:`Save`."
 msgstr ""
 "`PAL1` 에 일부만 적재된 경우(예: 팔레트가 하나인 경우), Odoo에서는 입고 시 여"
-"러 개의 팔레트를 하나의 팔레트로 처리합니다. 따라서 두 개의 팔레트를 수동으로"
-" 별도의 보관 위치에 분리하여 보관해야 합니다. :guilabel:`단위` 필드 오른쪽에 "
-"있는 :icon:`fa-list`:guilabel:`작업 열기` 아이콘을 클릭한 다음, :guilabel:`열"
-"기: 재고 작업` 상자에서 :guilabel:`항목 추가` 를 클릭합니다. 마지막으로 수량"
-"별로 입고를 분리하여 별도의 위치에 :guilabel:`저장` 합니다."
+"러 개의 팔레트를 하나의 팔레트로 처리합니다. 따라서 두 개의 팔레트를 수동으"
+"로 별도의 보관 위치에 분리하여 보관해야 합니다. :guilabel:`단위` 필드 오른쪽"
+"에 있는 :icon:`fa-list`:guilabel:`작업 열기` 아이콘을 클릭한 다"
+"음, :guilabel:`열기: 재고 작업` 상자에서 :guilabel:`항목 추가` 를 클릭합니"
+"다. 마지막으로 수량별로 입고를 분리하여 별도의 위치에 :guilabel:`저장` 합니"
+"다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid ""
@@ -19842,6 +19919,7 @@ msgid ":doc:`ups_credentials`"
 msgstr ":doc:`ups_credentials`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:26
 msgid "Account setup"
 msgstr "계정 설정"
 
@@ -21024,6 +21102,236 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:None
 msgid "Show Google Map route."
 msgstr "Google 지도 경로 표시"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:3
+msgid "EasyPost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:5
+msgid ""
+"Set up the EasyPost delivery connector in Odoo to manage EasyPost shipments "
+"to clients directly within Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:8
+msgid ""
+"EasyPost is a service that allows users to connect with multiple carriers, "
+"like UPS, USPS, FedEx, DHL, and more. Odoo can then connect to EasyPost to "
+"purchase labels from those carriers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:11
+msgid "To configure it, complete these steps:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:13
+msgid ""
+":ref:`Create an EasyPost account <inventory/shipping_receiving/easypost-"
+"account>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:14
+msgid ""
+":ref:`Integrate carrier accounts if the carrier is not enabled on the "
+"EasyPost account <inventory/shipping_receiving/integrate-easypost-carrier>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:16
+msgid ""
+":ref:`Obtain Test and Production API keys <inventory/shipping_receiving/"
+"easypost-api-keys>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:17
+msgid ""
+":ref:`Set up the delivery method in Odoo <inventory/shipping_receiving/"
+"easypost-method>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:19
+msgid ""
+"Upon completion, it is possible to calculate shipping costs based on package "
+"size and weight, have the charges applied directly to an EasyPost business "
+"account, and automatically print EasyPost tracking labels in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:28
+msgid ""
+"To begin, go to the `EasyPost <https://www.easypost.com>`__ website to "
+"create or log into the company's EasyPost business account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:31
+msgid ""
+"Follow the website's steps to complete registration and sign up for shipping "
+"services. Some shipping services (like USPS and DHL Express) are "
+"automatically enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:37
+msgid "Integrating other carrier accounts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:39
+msgid ""
+"To use a different carrier, it is possible to `enable Wallet Carrier "
+"Accounts <https://support.easypost.com/hc/en-us/articles/21336276718605-"
+"Enabling-Wallet-Carriers-Using-the-EasyPost-Dashboard>`__ to purchase labels "
+"from EasyPost. Alternatively, if a user has their own carrier account, they "
+"can `enable it on EasyPost <https://support.easypost.com/hc/en-us/articles/"
+"25246240687373-Bring-Your-Own-Carrier-Account-to-EasyPost>`__. Then, after "
+"these accounts are enabled, Odoo can integrate with the EasyPost account and "
+"manage labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:50
+msgid "Obtain Test and Production API keys"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:52
+msgid ""
+"After completing the setup, create Test and Production API keys. On the "
+"EasyPost website, click the :guilabel:`Account Settings` link, then open "
+"the :guilabel:`API Keys` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:55
+msgid ""
+"If these API keys have not yet been created, click :guilabel:`Add Additional "
+"API Key`. Select either :guilabel:`Production` or :guilabel:`Test`. The API "
+"key is automatically created. Follow the same process to create both keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Create API keys on the EasyPost API Keys page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:65
+msgid "Delivery method configuration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:67
+msgid ""
+"With those necessary credentials, configure the EasyPost delivery method in "
+"Odoo by going to :menuselection:`Inventory app --> Configuration --> "
+"Delivery Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:70
+msgid "On the *Delivery Methods* page, click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:72
+msgid ""
+"In the :guilabel:`Provider` field, select :guilabel:`Easypost` from the drop-"
+"down menu. Doing so reveals the *Easypost Configuration* tab at the bottom "
+"of the form, where the EasyPost API keys should be entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:76
+msgid ""
+"For details on configuring the other fields on the delivery method, such "
+"as :guilabel:`Delivery Product`, refer to the :doc:`new_delivery_method` "
+"documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:80
+msgid ""
+"To generate EasyPost shipping labels through Odoo, ensure "
+"the :guilabel:`Integration Level` option is set to :guilabel:`Get Rate and "
+"Create Shipment`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:83
+msgid "In the *Easypost Configuration* tab, complete the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:85
+msgid ""
+":guilabel:`Test API Key`: the Test API key in the EasyPost Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:86
+msgid ""
+":guilabel:`Production API Key`: the Production API key in the EasyPost "
+"Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:87
+msgid ""
+":guilabel:`Label Format`: "
+"Choose :guilabel:`PNG`, :guilabel:`PDF`, :guilabel:`ZPL`, "
+"or :guilabel:`EPL2` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:89
+msgid ""
+":guilabel:`Generate Return Label`: Select to automatically generate a return "
+"label when validating the delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:92
+msgid ""
+"Save the delivery method by clicking the :icon:`fa-cloud-"
+"upload` :guilabel:`(Save manually)` icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:94
+msgid ""
+"Click the :guilabel:`Load your Easypost carrier accounts` link under the API "
+"keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Load the EasyPost carrier accounts into Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:99
+msgid ""
+"The *Select a carrier* pop-up window opens. Select a shipping carrier from "
+"the drop-down menu, then click :guilabel:`Select`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:102
+msgid ""
+"After the carrier type has been selected, complete the :guilabel:`Default "
+"Package Type` and :guilabel:`Default Service Level` fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid ""
+"Select a package type and service level that should be used for the carrier."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:109
+msgid "Turn on the Easypost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:111
+msgid ""
+"After the EasyPost connection is set up, use the smart buttons at the top of "
+"the form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:114
+msgid ""
+":guilabel:`Unpublished/Published`: determines if this delivery method is "
+"available on the user's **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:116
+msgid ""
+":guilabel:`Test Environment/Production Environment`: determines whether "
+"label creation is for testing and cancelled immediately (Test) or generating "
+"a real shipping label that is charged to the EasyPost account (Production)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:119
+msgid ""
+":guilabel:`No Debug/Debug Requests`: determines whether API requests and "
+"responses are logged in Odoo (turn on **developer mode** and go "
+"to :menuselection:`Settings app --> Technical --> Logging`)."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:3
 msgid "Envia.com integration"
@@ -25303,8 +25611,8 @@ msgid "Belgium"
 msgstr "벨기에"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:45
-msgid "Easypost"
-msgstr "Easypost"
+msgid ":doc:`EasyPost <easypost>`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:46
 msgid "North America"
@@ -55960,6 +56268,90 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Inventory operations like product configuration can be streamlined by "
+#~ "taking advantage of barcode scanning features. Assigning barcodes to "
+#~ "products and locations is a key step in using the **Barcode** app, and "
+#~ "users can conveniently populate fields with a barcode scanner. This "
+#~ "reduces manual entry, minimizes errors, and speeds up common tasks like "
+#~ "product selection, location assignment, and inventory adjustments."
+#~ msgstr ""
+#~ "바코드 스캔 기능을 활용하여 품목 환경설정과 같은 재고 관리 작업을 간소화"
+#~ "할 수 있습니다. **바코드** 앱을 사용하는 데 있어 품목 및 위치에 바코드를 "
+#~ "지정하는 작업이 가장 중요하며, 이와 같은 작업을 거쳐 바코드 스캐너를 통해 "
+#~ "필드를 편리하게 자동 입력되도록 할 수 있습니다. 이를 통해 수동 입력 작업"
+#~ "을 줄이고 오류를 최소화하며 품목 선택, 위치 지정, 재고 조정과 같은 일반적"
+#~ "인 작업을 신속하게 수행할 수 있습니다."
+
+#~ msgid ""
+#~ "When adding a new product, the :ref:`barcode lookup feature <barcode/"
+#~ "setup/barcodelookup>` can be used to automatically find information about "
+#~ "a product based on its barcode, and new products can be added to the "
+#~ "database directly from the **Barcode** app by scanning a barcode."
+#~ msgstr ""
+#~ "새 품목을 추가할 때 :ref:`바코드 조회 기능 <barcode/setup/barcodelookup>` "
+#~ "을 활용하면 바코드를 기준으로 품목 정보를 자동 검색할 수 있으며, **바코드"
+#~ "** 앱에서 바코드만 스캔하면 새 품목을 데이터베이스에 직접 추가할 수 있습니"
+#~ "다."
+
+#~ msgid "From Barcode app"
+#~ msgstr "바코드 앱"
+
+#~ msgid ""
+#~ "New products definitions can be added to the database product lists as "
+#~ "well as having their on-hand inventory tracked from the **Barcode** app, "
+#~ "if the :ref:`Barcode Lookup feature <barcode/setup/barcodelookup>` is "
+#~ "enabled. To create a new receipt for scanning new products, choose one of "
+#~ "two methods:"
+#~ msgstr ""
+#~ "새로운 품목에 대해 정의한 내용을 데이터베이스 품목 목록에 추가할 수 있으"
+#~ "며, 보유 중인 재고 역시 :ref:`바코드 조회 기능 <barcode/setup/"
+#~ "barcodelookup>` 이 ​​활성화되어 있으면 **바코드** 앱에서 추적이 가능합니다. "
+#~ "새로 품목을 스캔할 수 있도록 신규 입고 항목을 생성하려면 다음의 두 가지 방"
+#~ "법 중에서 선택합니다:"
+
+#~ msgid ""
+#~ "Scanning a product that is not currently in inventory prompts a message "
+#~ "that the product does not exist, with a button option "
+#~ "to :guilabel:`Create New Product`. Pressing this button will search the "
+#~ "`Barcode Lookup <https://www.barcodelookup.com/>`_ database for a product "
+#~ "matching the code and format, create a new product definition in the Odoo "
+#~ "database with the available information, and add that product to the "
+#~ "receipt to track the quantity on hand in inventory."
+#~ msgstr ""
+#~ "현재 재고가 없는 품목을 스캔할 경우 품목이 존재하지 않는다는 메시지와 함"
+#~ "께 :guilabel:`새 품목 만들기` 버튼 옵션이 표시됩니다. 이 버튼을 누르면 `바"
+#~ "코드 조회 <https://www.barcodelookup.com/>` 데이터베이스에서 코드 및 형식"
+#~ "이 일치하는 품목을 검색하고, 사용 가능한 정보를 활용하여 Odoo 데이터베이스"
+#~ "에 새로운 품목에 대한 내용을 생성한 후, 해당 품목을 영수증에 추가하여 재"
+#~ "고 수량을 추적합니다."
+
+#~ msgid ""
+#~ "Barcodes can be added to both existing products and new products as they "
+#~ "are created through the products configuration form. To access a "
+#~ "product's form, go to :menuselection:`Inventory app --> Products --> "
+#~ "Products` and select the product to add a barcode to."
+#~ msgstr ""
+#~ "바코드는 품목 설정 양식을 통해 기존 품목과 새 품목 모두에 추가할 수 있습니"
+#~ "다. 품목 양식에 액세스하려면 :menuselection:`재고 관리 앱 --> 품목 --> 품"
+#~ "목` 으로 이동하여 바코드를 추가할 품목을 선택합니다."
+
+#~ msgid ""
+#~ "To print barcodes for locations, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Settings`, scroll down to the :guilabel:`Warehouse` "
+#~ "section and click :icon:`fa-arrow-right` :guilabel:`Locations`. Tick the "
+#~ "boxes for locations and the :guilabel:`Print` button will appear, "
+#~ "downloading a PDF with barcodes for all selected locations."
+#~ msgstr ""
+#~ "위치에 대한 바코드를 인쇄하려면 :menuselection:`재고 관리 앱 --> 환경설정 "
+#~ "--> 설정` 으로 이동하여 :guilabel:`창고` 섹션까지 아래로 스크롤한 "
+#~ "후 :icon:`fa-arrow-right` :guilabel:`위치` 를 클릭합니다. 위치 상자를 선택"
+#~ "하면 선택한 모든 위치에 대한 바코드가 들어있는 PDF를 다운로드할 수 있도"
+#~ "록 :guilabel:`인쇄` 버튼이 나타납니다."
+
+#~ msgid "Easypost"
+#~ msgstr "Easypost"
 
 #~ msgid ""
 #~ "The *Barcode* app can be used to process receipts, deliveries, and other "
