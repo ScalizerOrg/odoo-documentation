@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 18:30+0000\n"
+"POT-Creation-Date: 2026-02-27 18:30+0000\n"
 "PO-Revision-Date: 2025-11-20 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -1167,6 +1167,7 @@ msgstr ""
 "conține orice număr sau tip de caractere."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:71
 msgid ":doc:`gs1_nomenclature`"
 msgstr ":doc:`gs1_nomenclature`"
@@ -2545,296 +2546,198 @@ msgstr "Produse de preluat în vizualizarea cu coduri de bare."
 msgid "Process receipts and deliveries with barcodes"
 msgstr "Procesați chitanțele și livrările cu coduri de bare"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:7
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
 msgid ""
-"The *Barcode* app can be used to process receipts, deliveries, and other "
+"The **Barcode** app can be used to process receipts, deliveries, and other "
 "types of operations in real time using a barcode scanner or the Odoo mobile "
 "app."
 msgstr ""
-"Aplicația *Cod de bare* poate fi utilizată pentru a procesa chitanțe, "
-"livrări și alte tipuri de operațiuni în timp real, folosind un scaner de "
-"coduri de bare sau aplicația mobilă Odoo."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:13
 msgid ""
 "This makes it possible to process operations on the warehouse floor when "
 "they happen, instead of having to wait to validate transfers from a "
-"computer. Processing operations this way can help to properly attribute "
-"barcodes to the appropriate products, pickings, locations, and more."
+"computer. This real-time processing ensures barcodes are accurately assigned "
+"to the correct products, packaging, transfers, locations, and more, reducing "
+"errors and keeping inventory data in sync."
 msgstr ""
-"Acest lucru face posibilă procesarea operațiunilor la nivelul depozitului "
-"atunci când au loc, în loc să fie nevoie să aștepte pentru a valida "
-"transferurile de pe un computer. Operațiunile de procesare în acest fel pot "
-"ajuta la atribuirea corectă a codurilor de bare produselor, picking-urilor, "
-"locațiilor adecvate și multe altele."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:19
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:13
 msgid "Enable Barcode app"
 msgstr "Activați aplicația Barcode"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:17
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:21
 msgid ""
-"To use the *Barcode* app to process transfers, it must be installed by "
-"enabling the feature from the settings of the *Inventory* app."
+"To use the **Barcode** app to process transfers, it must be installed by "
+"enabling the feature from the settings of the **Inventory** app."
 msgstr ""
-"Pentru a utiliza aplicația *Cod de bare* pentru a procesa transferurile, "
-"aceasta trebuie instalată activând caracteristica din setările aplicației "
-"*Inventar*."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:20
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
-msgid ""
-"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
-"the checkbox next to the :guilabel:`Barcode Scanner` feature."
-msgstr ""
-"Pentru a face acest lucru, accesați :menuselection:`Aplicația Inventory --> "
-"Configuration --> Settings`. Apoi, derulați în jos la "
-"secțiunea :guilabel:`Cod de bare` și faceți clic pe caseta de selectare de "
-"lângă caracteristica :guilabel:`Scanner de coduri de bare`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:24
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
 msgid ""
-"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
-"to save changes."
+"To do so, navigate to :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the *Barcode* section, and select the "
+"checkbox next to the :guilabel:`Barcode Scanner` feature."
 msgstr ""
-"Odată ce caseta este bifată, faceți clic pe :guilabel:`Salvare` în partea de "
-"sus a paginii pentru a salva modificările."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:26
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:28
 msgid ""
-"Once the page has refreshed, new options will be displayed under "
-"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
-"(with a corresponding drop-down menu), where either :guilabel:`Default "
-"Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+"After the checkbox is selected, click :guilabel:`Save` at the top of the "
+"page to save changes."
 msgstr ""
-"Odată ce pagina s-a reîmprospătat, vor fi afișate noi opțiuni sub "
-"caracteristica :guilabel:`Scanner cod de bare`: :guilabel:`Nomenclatură cod "
-"de bare` (cu un meniu derulant corespunzător), unde "
-"fie :guilabel:`Nomenclatură implicită` sau : guilabel:`Default GS1 "
-"Nomenclature` poate fi selectat."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:30
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"After the page has refreshed, a new option is displayed under "
+"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+"(with a corresponding drop-down menu). Select either:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:33
+msgid ""
+":guilabel:`Default Nomenclature`: The barcode actions using UPC and EAN, "
+"detailed in the default nomenclature list, are available for use. By "
+"default, Odoo automatically handles UPC/EAN conversion."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:36
+msgid ""
+":guilabel:`Default GS1 Nomenclature`: Scan barcodes of sealed boxes and "
+"identify essential product information, such as Global Trade Item Numbers "
+"(GTINs), lot number, quantity information, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:40
 msgid ""
 "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
-"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
-"barcode demo sheet."
+"and a set of :guilabel:`Print` buttons for printing barcode commands and "
+"operation types, as well as a barcode demo sheet."
 msgstr ""
-"Există, de asemenea, o săgeată de legătură internă :guilabel:`Configurare "
-"coduri de bare de produs` și un set de butoane :guilabel:`Print` pentru "
-"tipărirea comenzilor codurilor de bare și o foaie de demonstrație a "
-"codurilor de bare."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:37
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
-msgid ""
-"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
-"the :doc:`Set up your barcode scanner <../setup/hardware>` "
-"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
-"pages."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:48
+msgid ":doc:`barcode_nomenclature`"
 msgstr ""
-"Pentru mai multe despre configurarea și configurarea "
-"aplicației :guilabel:`Cod de bare`, consultați :doc:`Configurați scanerul de "
-"coduri de bare <../setup/hardware>` și :doc:`Activați codurile de bare în "
-"Odoo <.. /setup/software>` pagini de documentație."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:44
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:50
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
+msgid ":doc:`../setup/hardware`"
+msgstr ":doc:`../setup/hardware`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:51
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+msgid ":doc:`../setup/software`"
+msgstr ":doc:`../setup/software`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:56
 msgid "Scan barcodes for receipts"
 msgstr "Scanați coduri de bare pentru chitanțe"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:46
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:58
 msgid ""
-"To process warehouse receipts for incoming products, there first needs to be "
-"a purchase order (PO) created, and a receipt operation to process."
+"Purchase orders (POs) are used to process warehouse receipts for incoming "
+"products and product packagings. First, create a request for quotation, then "
+"confirm it to create a |PO|."
 msgstr ""
-"Pentru a procesa chitanțe de depozit pentru produsele primite, mai întâi "
-"trebuie să fie creată o comandă de achiziție (PO) și o operațiune de primire "
-"de procesat."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
-msgid ""
-"To create a :abbr:`PO (purchase order)`, navigate to "
-"the :menuselection:`Purchase app --> Create` to create a new request for "
-"quotation (RFQ)."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:62
+msgid ":doc:`../../purchase/manage_deals/rfq`"
 msgstr ""
-"Pentru a crea un :abbr:`PO (comandă de cumpărare)`, navigați "
-"la :menuselection:`Aplicația Cumpărare --> Creare` pentru a crea o nouă "
-"cerere de ofertă (RFQ)."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:52
-msgid ""
-"From the blank :abbr:`RFQ (request for quotation)` form, click the drop-down "
-"menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Products` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"Din formularul necompletat :abbr:`RFQ (cerere de ofertă)`, faceți clic pe "
-"meniul drop-down de lângă câmpul :guilabel:`Vendor` pentru a adăuga un "
-"furnizor. Apoi, pe linia :guilabel:`Produs` de sub fila :guilabel:`Produse`, "
-"faceți clic pe :guilabel:`Adăugați un produs` și selectați produsul(ele) "
-"dorit(e) pentru a le adăuga la cotație."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:57
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, then "
-"click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
-"quotation)` to a :abbr:`PO (purchase order)`."
-msgstr ""
-"Odată gata, faceți clic pe :guilabel:`Salvați` în partea de sus a "
-"formularului, apoi faceți clic pe :guilabel:`Confirmați comanda` pentru a "
-"confirma :abbr:`RFQ (cerere de ofertă)` la un :abbr:`PO (comanda de "
-"achiziție). )`."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed purchase order for barcode product."
-msgstr "Comanda de achiziție finalizată pentru produsul cu coduri de bare."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:64
 msgid ""
-"To process and scan barcodes for warehouse receipts, navigate to "
-"the :menuselection:`Barcode app`."
+"To process and scan barcodes for warehouse receipts, navigate to the "
+"**Barcode** app."
 msgstr ""
-"Pentru a procesa și a scana coduri de bare pentru chitanțe de depozit, "
-"navigați la :menuselection:`aplicația de coduri de bare`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:66
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process receipts, click "
-"on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :menuselection:`Operations` overview page."
+"Once inside the **Barcode** app, a :guilabel:`Barcode Scanner` screen "
+"displaying different options is presented."
 msgstr ""
-"Odată intrat în aplicația :guilabel:`Barcode`, este prezentat un "
-"ecran :guilabel:`Barcode Scanning` care afișează diferite opțiuni. Pentru a "
-"procesa chitanțele, faceți clic pe butonul :guilabel:`Operațiuni` din partea "
-"de jos a ecranului. Aceasta navighează la o pagină de prezentare "
-"generală :menuselection:`Operations`."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:74
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:72
 msgid ""
-"From this page, locate the :guilabel:`Receipts` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding receipts. Then, "
-"select the desired receipt operation to process. This navigates to the "
-"barcode transfer screen."
+"To process receipts, click the :guilabel:`Operations` button at the bottom "
+"of the screen. The :guilabel:`Operations` overview page opens."
 msgstr ""
-"Din această pagină, găsiți cardul :guilabel:`Chitanțe` și faceți clic pe "
-"butonul :guilabel:`# To Process` pentru a vedea toate chitanțele restante. "
-"Apoi, selectați operațiunea de primire dorită de procesat. Aceasta "
-"navighează la ecranul de transfer cod de bare."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:75
+msgid ""
+"From this page, tap the :guilabel:`Receipts` card to view all outstanding "
+"receipts. Then, select the desired receipt operation to process. This "
+"navigates to the barcode transfer screen."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:79
 msgid ""
-"If *only* using a barcode scanner or the Odoo mobile app, the barcodes for "
-"each transfer of a corresponding operation type can be scanned to be "
-"processed easily. Once scanned, the products that are part of an existing "
-"transfer can be scanned, and new products can be added to the transfer, as "
-"well. Once all products have been scanned, validate the transfer to proceed "
-"with the stock moves."
+"If *only* using a barcode scanner or the Odoo mobile app, scan each barcode "
+"transfer for the corresponding operation type to process them. Once scanned, "
+"the products that are part of an existing transfer can be scanned, and new "
+"products can be added to the transfer, as well. Once all products have been "
+"scanned, validate the transfer to proceed with the stock moves."
 msgstr ""
-"Dacă *numai* utilizați un scaner de coduri de bare sau aplicația mobilă "
-"Odoo, codurile de bare pentru fiecare transfer al unui tip de operațiune "
-"corespunzător pot fi scanate pentru a fi procesate cu ușurință. Odată "
-"scanate, produsele care fac parte dintr-un transfer existent pot fi scanate "
-"și pot fi adăugate produse noi la transfer. Odată ce toate produsele au fost "
-"scanate, validați transferul pentru a continua cu mutarea stocului."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:85
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:84
 msgid ""
 "From this screen, an overview of all receipts to process within that "
 "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once. If the *Packages* setting is enabled "
+"in the Inventory settings, the :guilabel:`Put in Pack` button is also "
+"available."
 msgstr ""
-"Din acest ecran, este afișată o prezentare generală a tuturor chitanțelor de "
-"procesat în cadrul acelui transfer (**WH/IN/000XX**). În partea de jos a "
-"ecranului, există opțiuni pentru :guilabel:`Add Product` "
-"sau :guilabel:`Validate`, în funcție de dacă produsele trebuie adăugate la "
-"operație sau dacă întreaga operațiune ar trebui validată deodată."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:None
 msgid "Overview of receipts in transfer to scan."
 msgstr "Prezentare generală a chitanțelor în transfer spre scanare."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:94
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:93
 msgid ""
-"To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
-"clicked to indicate receipt of that product, or the :guilabel:`pencil` icon "
-"can be clicked to open a new screen to edit that product line."
+"To process and scan each product individually, scan a product or product "
+"packaging, or choose a specific product line. Click the :guilabel:`+#` "
+"button (for example, `+10`) to indicate receipt of that product."
 msgstr ""
-"Pentru a procesa și scana fiecare produs individual, alegeți o anumită linie "
-"de produse. Se poate face clic pe butonul :guilabel:`+#` (în acest "
-"caz, :guilabel:`+10`) pentru a indica primirea acelui produs, sau se poate "
-"face clic pe pictograma :guilabel:`creion` pentru a deschide un nou ecran "
-"pentru editați acea linie de produse."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:98
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:173
+msgid "Editing a product line"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:100
 msgid ""
-"From this screen, the product that's being received is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`PO (purchase order)`."
+"To manually adjust received quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"Din acest ecran, este listat produsul care este primit. Sub numele "
-"produsului, linia :guilabel:`Cantitate` poate fi editată. Fie modificați `0` "
-"din rând la cantitatea dorită, fie faceți clic pe butonul :guilabel:`/# "
-"Units` (în acest caz, :guilabel:`/10 Units`) pentru a completa automat "
-"cantitatea comandată de la :abbr :`PO (comandă de cumpărare)`."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:104
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:103
 msgid ""
-"In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
-"Product` is expected to be received. `[BARCODE_PROD]` is "
-"the :guilabel:`Internal Reference` set on the product form. Scan the barcode "
-"of the `Barcode Product` to receive one unit. Afterwards, click "
-"the :guilabel:`pencil` icon to manually enter the received quantities."
+"On this screen, the product that's being received is listed. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+12`) to automatically fill the quantity ordered from the |PO|."
 msgstr ""
-"În operațiunea de recepție `WH/IN/00019`, se așteaptă să fie primite `10 "
-"unități` din `Produs cu coduri de bare`. `[BARCODE_PROD]` "
-"este :guilabel:`Referința internă` stabilită pe formularul produsului. "
-"Scanați codul de bare al „Produsului cu coduri de bare” pentru a primi o "
-"unitate. Apoi, faceți clic pe pictograma :guilabel:`creion` pentru a "
-"introduce manual cantitățile primite."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
-msgid "Product line editor for individual transfer in Barcode app."
-msgstr ""
-"Editor de linie de produse pentru transfer individual în aplicația Barcode."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:113
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:179
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:107
 msgid ""
-"Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be clicked "
-"to add or subtract quantity of the product, and the :guilabel:`number keys` "
-"can be used to add quantity, as well."
+"Additionally, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or "
+"subtract quantity of the product. Click the product packaging button (for "
+"example, `6-pack`) to add a product packaging. Click the number keys to add "
+"quantity."
 msgstr ""
-"În plus, butoanele :guilabel:`+1` și :guilabel:`-1` pot fi făcute clic "
-"pentru a adăuga sau scădea cantitatea de produs, iar :guilabel:`tastele "
-"numerice` pot fi folosite și pentru a adăuga cantitatea."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:116
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another *location* is listed on the "
-"product itself. Click this line to reveal a drop-down menu of additional "
-"locations to choose from."
+"Below the quantity buttons is the :guilabel:`Location` line, which reads `WH/"
+"Stock` by default, unless another *location* is listed on the product "
+"itself. Click this line to reveal a drop-down menu of additional locations "
+"to choose from."
 msgstr ""
-"Sub :guilabel:`tastele numerice` se află linia :guilabel:`location`, care "
-"citește implicit `WH/Stock`, cu excepția cazului în care o altă *locație* "
-"este listată pe produsul însuși. Faceți clic pe această linie pentru a afișa "
-"un meniu derulant cu locații suplimentare din care să alegeți."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:120
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:115
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:215
 msgid ""
@@ -2844,106 +2747,80 @@ msgstr ""
 "Odată gata, faceți clic pe :guilabel:`Confirm` pentru a confirma "
 "modificările aduse liniei de produse."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:122
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:118
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"receipt has now been processed, and the :guilabel:`Barcode app` can be "
-"closed out."
+"In the reception operation `WH/IN/00013`, `12 Units` of the `Soda Can` "
+"product is expected to be received. `[SODA-SINGLE-CAN]` is the barcode set "
+"on the product form. Warehouse employees can scan the barcode of the `Soda "
+"Can` product to receive one unit, or because they can be purchased in 6-pack "
+"packaging, they can scan the packaging barcode. Alternatively, they can "
+"click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to manually enter the "
+"received quantities."
 msgstr ""
-"Apoi, din pagina de prezentare generală cu toate chitanțele de procesat în "
-"cadrul acelui transfer (**WH/IN/000XX**), faceți clic pe "
-"butonul :guilabel:`+#` de pe linia de produse pentru produsele primite și "
-"faceți clic pe :guilabel :`Validați`. Chitanța a fost acum procesată, iar "
-"aplicația :guilabel:`Barcode` poate fi închisă."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
+msgid "Product line editor for individual transfer in Barcode app."
+msgstr ""
+"Editor de linie de produse pentru transfer individual în aplicația Barcode."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:128
+msgid "Validating the transfer"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:130
+msgid ""
+"If not all products were scanned or manually entered from the pencil icon, "
+"click the :guilabel:`+#` button on the product line for the products being "
+"received, or scan the product or product packaging barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+msgid ""
+"Finally, click :guilabel:`Validate`. The receipt is processed, and the "
+"**Barcode** app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of receipts in transfer to validate."
 msgstr "Prezentare generală a chitanțelor în transfer pentru validare."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:132
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:141
 msgid "Scan barcodes for delivery orders"
 msgstr "Scanați coduri de bare pentru comenzile de livrare"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:143
 msgid ""
-"To process warehouse deliveries for outgoing products, there first needs to "
-"be a sales order (SO) created, and a delivery operation to process."
+"To process warehouse deliveries for outgoing products, a sales order (SO) "
+"must be created to create a delivery operation to process. First, create a "
+"quotation, then confirm it to create the |SO|."
 msgstr ""
-"Pentru a procesa livrările în depozit pentru produsele care ies, mai întâi "
-"trebuie să fie creată o comandă de vânzare (SO) și o operațiune de livrare "
-"de procesat."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:137
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
+msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
+msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:149
 msgid ""
-"To create a :abbr:`SO (sales order)`, navigate to the :menuselection:`Sales "
-"app --> Create` to create a new quotation."
+"To process and scan barcodes for warehouse deliveries, navigate to "
+"the :menuselection:`Barcode` app."
 msgstr ""
-"Pentru a crea un :abbr:`SO (comandă de vânzare)`, navigați "
-"la :menuselection:`Aplicația de vânzări --> Creare` pentru a crea o nouă "
-"ofertă."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:140
-msgid ""
-"From the blank quotation form, click the drop-down menu next to "
-"the :guilabel:`Customer` field to add a customer. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"Din formularul de ofertă necompletat, faceți clic pe meniul derulant de "
-"lângă câmpul :guilabel:`Client` pentru a adăuga un client. Apoi, pe "
-"linia :guilabel:`Produs` de sub fila :guilabel:`Linii de comandă`, faceți "
-"clic pe :guilabel:`Adăugați un produs` și selectați produsul (produsele) "
-"dorit(e) pentru a le adăuga la cotație."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:144
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, and "
-"click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
-"(sales order)`."
-msgstr ""
-"Odată gata, faceți clic pe :guilabel:`Salvați` în partea de sus a "
-"formularului și faceți clic pe :guilabel:`Confirmați comanda` pentru a "
-"confirma oferta către un :abbr:`SO (comandă de vânzare)`."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed sales order for barcode product."
-msgstr "Comanda de vânzare finalizată pentru produsul cu cod de bare."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
 msgid ""
-"To process and scan barcodes for warehouse deliveries, navigate to "
-"the :menuselection:`Barcode app`."
+"In the **Barcode** app, a :guilabel:`Barcode Scanner` screen displaying "
+"different options opens. To process deliveries, click "
+"the :guilabel:`Operations` button at the bottom of the screen. This opens "
+"an :guilabel:`Operations` overview page."
 msgstr ""
-"Pentru a procesa și scana coduri de bare pentru livrările în depozit, "
-"navigați la :menuselection:`aplicația de coduri de bare`."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:153
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:155
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process deliveries, "
-"click on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :guilabel:`Operations` overview page."
+"On this page, click the :guilabel:`Delivery Orders` card to view all "
+"outstanding deliveries."
 msgstr ""
-"Odată intrat în aplicația :guilabel:`Barcode`, este prezentat un "
-"ecran :guilabel:`Barcode Scanning` care afișează diferite opțiuni. Pentru a "
-"procesa livrările, faceți clic pe butonul :guilabel:`Operațiuni` din partea "
-"de jos a ecranului. Aceasta navighează la o pagină de prezentare "
-"generală :guilabel:`Operations`."
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:157
-msgid ""
-"From this page, locate the :guilabel:`Delivery Orders` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding deliveries. "
-"Then, select the desired delivery order to process. This navigates to the "
-"barcode transfer screen."
-msgstr ""
-"Din această pagină, găsiți cardul :guilabel:`Comenzi de livrare` și faceți "
-"clic pe butonul :guilabel:`# To Process` pentru a vedea toate livrările "
-"restante. Apoi, selectați comanda de livrare dorită pentru procesare. "
-"Aceasta navighează la ecranul de transfer cod de bare."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Operations overview page in Barcode app dashboard."
@@ -2951,90 +2828,81 @@ msgstr ""
 "Pagina de prezentare generală a operațiunilor din tabloul de bord al "
 "aplicației Cod de bare."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:160
 msgid ""
-"From this screen, an overview of all deliveries to process within that "
-"transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"Select the desired delivery order to process. This navigates to the barcode "
+"transfer screen."
 msgstr ""
-"Din acest ecran, este afișată o prezentare generală a tuturor livrărilor de "
-"procesat în cadrul acelui transfer (**WH/OUT/000XX**). În partea de jos a "
-"ecranului, există opțiuni pentru :guilabel:`Add Product` "
-"sau :guilabel:`Validate`, în funcție de dacă produsele trebuie adăugate la "
-"operație sau dacă întreaga operațiune ar trebui validată deodată."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:170
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:162
+msgid ""
+"On this screen, first scan the source location of the products to deliver. "
+"Then, review the overview of all products and packagings to process within "
+"that transfer (**WH/OUT/000XX**). At the bottom of the screen, there are "
+"buttons to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:168
 msgid ""
 "To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+1` button can be clicked to indicate delivery of that "
-"product, or the :guilabel:`pencil icon` can be clicked to open a new screen "
-"to edit that product line."
+"line. Scan a product or product packaging, or click the :guilabel:`+#` (for "
+"example, `+6`) button to indicate delivery of that product."
 msgstr ""
-"Pentru a procesa și scana fiecare produs individual, alegeți o anumită linie "
-"de produse. Se poate face clic pe butonul :guilabel:`+1` pentru a indica "
-"livrarea acelui produs, sau se poate face clic pe :guilabel:`pictograma "
-"creion` pentru a deschide un nou ecran pentru a edita acea linie de produse."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:174
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:175
 msgid ""
-"From this screen, the product that's being delivered is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`SO (sales order)`."
+"To manually adjust quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"Din acest ecran, este listat produsul care este livrat. Sub numele "
-"produsului, linia :guilabel:`Cantitate` poate fi editată. Fie modificați `0` "
-"din rând la cantitatea dorită, fie faceți clic pe butonul :guilabel:`/# "
-"Units` (în acest caz, :guilabel:`/10 Units`) pentru a completa automat "
-"cantitatea comandată de la :abbr :`SO (comandă de vânzare)`."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:182
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:178
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another location is listed on the "
-"product itself."
+"The product that's being delivered is listed on this screen. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+6`) to automatically fill the quantity ordered from the |SO|. If "
+"the product is sold in a packaging, click the packaging button (for example, "
+"`6-pack`). Alternatively, click the :guilabel:`+1` and :guilabel:`-1` "
+"buttons to add or subtract quantity of the product."
 msgstr ""
-"Sub :guilabel:`tastele numerice` se află linia :guilabel:`location`, care "
-"citește implicit `WH/Stock`, cu excepția cazului în care o altă locație este "
-"listată pe produs în sine."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:185
 msgid ""
-"This is the location that the product is being pulled from for delivery. "
-"Click this line to reveal a drop-down menu of additional locations to choose "
+"Below the quantity buttons is the :guilabel:`Source Location` line, which "
+"reads `WH/Stock` by default, unless the product is stored in a different "
+"location. This is the location that the product is being pulled from for "
+"delivery. Click this line to reveal a menu of additional locations to choose "
 "from (if this product is stored in multiple locations in the warehouse)."
 msgstr ""
-"Aceasta este locația din care este scos produsul pentru livrare. Faceți clic "
-"pe această linie pentru a afișa un meniu derulant cu locații suplimentare "
-"din care să alegeți (dacă acest produs este stocat în mai multe locații din "
-"depozit)."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:191
 msgid ""
 "For warehouses that have multiple different storage locations, putaway "
 "rules, and removal strategies, additional steps can be added for various "
-"operation types, while using the *Barcode* app."
+"operation types, while using the **Barcode** app."
 msgstr ""
-"Pentru depozitele care au mai multe locații de stocare diferite, reguli de "
-"depozitare și strategii de eliminare, pot fi adăugați pași suplimentari "
-"pentru diferite tipuri de operațiuni, în timp ce utilizați aplicația *Cod de "
-"bare*."
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:196
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:195
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"delivery has now been processed, and the *Barcode* app can be closed out."
+"When ready, click :guilabel:`Confirm` to confirm the changes made to the "
+"product line."
 msgstr ""
-"Apoi, din pagina de prezentare generală cu toate chitanțele de procesat în "
-"cadrul acelui transfer (**WH/OUT/000XX**), faceți clic pe "
-"butonul :guilabel:`+#` de pe linia de produse pentru produsele primite și "
-"faceți clic pe :guilabel :`Validați`. Livrarea a fost acum procesată, iar "
-"aplicația *Cod de bare* poate fi închisă."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:198
+msgid "Validating the delivery"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:200
+msgid ""
+"If not all products or product packagings have been scanned or entered on "
+"the overview page, scan the products or packagings, or click "
+"the :guilabel:`+#` button on the product line for the products. Finally, "
+"click :guilabel:`Validate`. The delivery is processed, and the **Barcode** "
+"app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of deliveries in transfer to validate."
@@ -3281,6 +3149,34 @@ msgstr ""
 "alte componente hardware pentru aplicația *Inventory*, consultați pagina "
 "„Odoo Inventory • Hardware” <https://www.odoo.com/app/inventory-hardware>`_."
 
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+msgid ""
+"To use the *Barcode* app to process transfers, it must be installed by "
+"enabling the feature from the settings of the *Inventory* app."
+msgstr ""
+"Pentru a utiliza aplicația *Cod de bare* pentru a procesa transferurile, "
+"aceasta trebuie instalată activând caracteristica din setările aplicației "
+"*Inventar*."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
+msgid ""
+"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
+"the checkbox next to the :guilabel:`Barcode Scanner` feature."
+msgstr ""
+"Pentru a face acest lucru, accesați :menuselection:`Aplicația Inventory --> "
+"Configuration --> Settings`. Apoi, derulați în jos la "
+"secțiunea :guilabel:`Cod de bare` și faceți clic pe caseta de selectare de "
+"lângă caracteristica :guilabel:`Scanner de coduri de bare`."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
+msgid ""
+"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
+"to save changes."
+msgstr ""
+"Odată ce caseta este bifată, faceți clic pe :guilabel:`Salvare` în partea de "
+"sus a paginii pentru a salva modificările."
+
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:24
 msgid ""
 "When the page has refreshed, new options are displayed under "
@@ -3295,6 +3191,29 @@ msgstr ""
 "fie :guilabel:`Nomenclatură implicită` sau :guilabel :`Default GS1 "
 "Nomenclature` poate fi selectat. Nomenclatura selectată modifică modul în "
 "care scanerele interpretează codurile de bare în Odoo."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
+"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
+"barcode demo sheet."
+msgstr ""
+"Există, de asemenea, o săgeată de legătură internă :guilabel:`Configurare "
+"coduri de bare de produs` și un set de butoane :guilabel:`Print` pentru "
+"tipărirea comenzilor codurilor de bare și o foaie de demonstrație a "
+"codurilor de bare."
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
+msgid ""
+"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
+"the :doc:`Set up your barcode scanner <../setup/hardware>` "
+"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
+"pages."
+msgstr ""
+"Pentru mai multe despre configurarea și configurarea "
+"aplicației :guilabel:`Cod de bare`, consultați :doc:`Configurați scanerul de "
+"coduri de bare <../setup/hardware>` și :doc:`Activați codurile de bare în "
+"Odoo <.. /setup/software>` pagini de documentație."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:41
 msgid "Scan barcodes for internal transfers"
@@ -4327,15 +4246,6 @@ msgid ""
 msgstr ""
 "Odată ce codul respectiv a fost scanat, asigurați-vă că scanerul NETUM are "
 "configurația corectă a tastaturii și funcționează conform intenției."
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
-msgid ":doc:`../setup/hardware`"
-msgstr ":doc:`../setup/hardware`"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
-msgid ":doc:`../setup/software`"
-msgstr ":doc:`../setup/software`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:3
 msgid "Barcode scanner setup"
@@ -21271,6 +21181,7 @@ msgid ":doc:`ups_credentials`"
 msgstr ":doc:`ups_credentiele`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:26
 msgid "Account setup"
 msgstr "Configurare cont"
 
@@ -22618,6 +22529,236 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:None
 msgid "Show Google Map route."
 msgstr "Afișează ruta pe Google Maps."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:3
+msgid "EasyPost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:5
+msgid ""
+"Set up the EasyPost delivery connector in Odoo to manage EasyPost shipments "
+"to clients directly within Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:8
+msgid ""
+"EasyPost is a service that allows users to connect with multiple carriers, "
+"like UPS, USPS, FedEx, DHL, and more. Odoo can then connect to EasyPost to "
+"purchase labels from those carriers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:11
+msgid "To configure it, complete these steps:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:13
+msgid ""
+":ref:`Create an EasyPost account <inventory/shipping_receiving/easypost-"
+"account>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:14
+msgid ""
+":ref:`Integrate carrier accounts if the carrier is not enabled on the "
+"EasyPost account <inventory/shipping_receiving/integrate-easypost-carrier>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:16
+msgid ""
+":ref:`Obtain Test and Production API keys <inventory/shipping_receiving/"
+"easypost-api-keys>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:17
+msgid ""
+":ref:`Set up the delivery method in Odoo <inventory/shipping_receiving/"
+"easypost-method>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:19
+msgid ""
+"Upon completion, it is possible to calculate shipping costs based on package "
+"size and weight, have the charges applied directly to an EasyPost business "
+"account, and automatically print EasyPost tracking labels in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:28
+msgid ""
+"To begin, go to the `EasyPost <https://www.easypost.com>`__ website to "
+"create or log into the company's EasyPost business account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:31
+msgid ""
+"Follow the website's steps to complete registration and sign up for shipping "
+"services. Some shipping services (like USPS and DHL Express) are "
+"automatically enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:37
+msgid "Integrating other carrier accounts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:39
+msgid ""
+"To use a different carrier, it is possible to `enable Wallet Carrier "
+"Accounts <https://support.easypost.com/hc/en-us/articles/21336276718605-"
+"Enabling-Wallet-Carriers-Using-the-EasyPost-Dashboard>`__ to purchase labels "
+"from EasyPost. Alternatively, if a user has their own carrier account, they "
+"can `enable it on EasyPost <https://support.easypost.com/hc/en-us/articles/"
+"25246240687373-Bring-Your-Own-Carrier-Account-to-EasyPost>`__. Then, after "
+"these accounts are enabled, Odoo can integrate with the EasyPost account and "
+"manage labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:50
+msgid "Obtain Test and Production API keys"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:52
+msgid ""
+"After completing the setup, create Test and Production API keys. On the "
+"EasyPost website, click the :guilabel:`Account Settings` link, then open "
+"the :guilabel:`API Keys` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:55
+msgid ""
+"If these API keys have not yet been created, click :guilabel:`Add Additional "
+"API Key`. Select either :guilabel:`Production` or :guilabel:`Test`. The API "
+"key is automatically created. Follow the same process to create both keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Create API keys on the EasyPost API Keys page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:65
+msgid "Delivery method configuration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:67
+msgid ""
+"With those necessary credentials, configure the EasyPost delivery method in "
+"Odoo by going to :menuselection:`Inventory app --> Configuration --> "
+"Delivery Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:70
+msgid "On the *Delivery Methods* page, click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:72
+msgid ""
+"In the :guilabel:`Provider` field, select :guilabel:`Easypost` from the drop-"
+"down menu. Doing so reveals the *Easypost Configuration* tab at the bottom "
+"of the form, where the EasyPost API keys should be entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:76
+msgid ""
+"For details on configuring the other fields on the delivery method, such "
+"as :guilabel:`Delivery Product`, refer to the :doc:`new_delivery_method` "
+"documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:80
+msgid ""
+"To generate EasyPost shipping labels through Odoo, ensure "
+"the :guilabel:`Integration Level` option is set to :guilabel:`Get Rate and "
+"Create Shipment`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:83
+msgid "In the *Easypost Configuration* tab, complete the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:85
+msgid ""
+":guilabel:`Test API Key`: the Test API key in the EasyPost Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:86
+msgid ""
+":guilabel:`Production API Key`: the Production API key in the EasyPost "
+"Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:87
+msgid ""
+":guilabel:`Label Format`: "
+"Choose :guilabel:`PNG`, :guilabel:`PDF`, :guilabel:`ZPL`, "
+"or :guilabel:`EPL2` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:89
+msgid ""
+":guilabel:`Generate Return Label`: Select to automatically generate a return "
+"label when validating the delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:92
+msgid ""
+"Save the delivery method by clicking the :icon:`fa-cloud-"
+"upload` :guilabel:`(Save manually)` icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:94
+msgid ""
+"Click the :guilabel:`Load your Easypost carrier accounts` link under the API "
+"keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Load the EasyPost carrier accounts into Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:99
+msgid ""
+"The *Select a carrier* pop-up window opens. Select a shipping carrier from "
+"the drop-down menu, then click :guilabel:`Select`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:102
+msgid ""
+"After the carrier type has been selected, complete the :guilabel:`Default "
+"Package Type` and :guilabel:`Default Service Level` fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid ""
+"Select a package type and service level that should be used for the carrier."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:109
+msgid "Turn on the Easypost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:111
+msgid ""
+"After the EasyPost connection is set up, use the smart buttons at the top of "
+"the form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:114
+msgid ""
+":guilabel:`Unpublished/Published`: determines if this delivery method is "
+"available on the user's **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:116
+msgid ""
+":guilabel:`Test Environment/Production Environment`: determines whether "
+"label creation is for testing and cancelled immediately (Test) or generating "
+"a real shipping label that is charged to the EasyPost account (Production)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:119
+msgid ""
+":guilabel:`No Debug/Debug Requests`: determines whether API requests and "
+"responses are logged in Odoo (turn on **developer mode** and go "
+"to :menuselection:`Settings app --> Technical --> Logging`)."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:3
 msgid "Envia.com integration"
@@ -27415,8 +27556,8 @@ msgid "Belgium"
 msgstr "Belgia"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:45
-msgid "Easypost"
-msgstr "Easypost"
+msgid ":doc:`EasyPost <easypost>`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:46
 msgid "North America"
@@ -40171,11 +40312,6 @@ msgstr ""
 "De aici, comenzile de vânzare pot include produsul de nivel superior, poate "
 "începe aprovizionarea automată prin furnizori sau producție, iar produsul de "
 "nivel superior poate fi inclus într-un magazin **eCommerce**."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
-msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
-msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
 msgid ":doc:`../../../websites/ecommerce/ecommerce_design/catalog`"
@@ -54180,15 +54316,14 @@ msgstr ""
 "favorite`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:3
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:None
 msgid "Purchase & Vendor analysis dashboard"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:5
 msgid ""
-"The :guilabel:`Purchase & Vendor analysis` dashboard, available in "
-"the :doc:`Odoo Dashboards <../../../productivity/dashboards>` app, offers "
-"various metrics to evaluate purchasing performance and vendor reliability."
+"The *Purchase & Vendor analysis* dashboard, available in the :doc:`Odoo "
+"Dashboards <../../../productivity/dashboards>` app, offers various metrics "
+"to evaluate purchasing performance and vendor reliability."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:9
@@ -54202,10 +54337,14 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:14
 msgid ""
-"To access the :guilabel:`Purchase & Vendor analysis` dashboard, go to the "
-"Dashboards app, then, in the left panel, navigate to "
+"To access the *Purchase & Vendor analysis* dashboard, go to the "
+"**Dashboards** app, then, in the left panel, navigate to "
 "the :guilabel:`Logistics` section and click the name of the dashboard. The "
 "dashboard opens in the main view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:None
+msgid "Purchase & Vendor analysis dashboard."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:26
@@ -54342,7 +54481,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:92
 msgid ""
-":guilabel:`Supplier Dependency Chart`: shows the percentage of purchases by "
+":guilabel:`Purchase Orders by Buyer`: shows the percentage of purchases by "
 "buyer."
 msgstr ""
 
@@ -61761,6 +61900,368 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "The *Barcode* app can be used to process receipts, deliveries, and other "
+#~ "types of operations in real time using a barcode scanner or the Odoo "
+#~ "mobile app."
+#~ msgstr ""
+#~ "Aplicația *Cod de bare* poate fi utilizată pentru a procesa chitanțe, "
+#~ "livrări și alte tipuri de operațiuni în timp real, folosind un scaner de "
+#~ "coduri de bare sau aplicația mobilă Odoo."
+
+#~ msgid ""
+#~ "This makes it possible to process operations on the warehouse floor when "
+#~ "they happen, instead of having to wait to validate transfers from a "
+#~ "computer. Processing operations this way can help to properly attribute "
+#~ "barcodes to the appropriate products, pickings, locations, and more."
+#~ msgstr ""
+#~ "Acest lucru face posibilă procesarea operațiunilor la nivelul depozitului "
+#~ "atunci când au loc, în loc să fie nevoie să aștepte pentru a valida "
+#~ "transferurile de pe un computer. Operațiunile de procesare în acest fel "
+#~ "pot ajuta la atribuirea corectă a codurilor de bare produselor, picking-"
+#~ "urilor, locațiilor adecvate și multe altele."
+
+#~ msgid ""
+#~ "Once the page has refreshed, new options will be displayed under "
+#~ "the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+#~ "(with a corresponding drop-down menu), where either :guilabel:`Default "
+#~ "Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+#~ msgstr ""
+#~ "Odată ce pagina s-a reîmprospătat, vor fi afișate noi opțiuni sub "
+#~ "caracteristica :guilabel:`Scanner cod de bare`: :guilabel:`Nomenclatură "
+#~ "cod de bare` (cu un meniu derulant corespunzător), unde "
+#~ "fie :guilabel:`Nomenclatură implicită` sau : guilabel:`Default GS1 "
+#~ "Nomenclature` poate fi selectat."
+
+#~ msgid ""
+#~ "To process warehouse receipts for incoming products, there first needs to "
+#~ "be a purchase order (PO) created, and a receipt operation to process."
+#~ msgstr ""
+#~ "Pentru a procesa chitanțe de depozit pentru produsele primite, mai întâi "
+#~ "trebuie să fie creată o comandă de achiziție (PO) și o operațiune de "
+#~ "primire de procesat."
+
+#~ msgid ""
+#~ "To create a :abbr:`PO (purchase order)`, navigate to "
+#~ "the :menuselection:`Purchase app --> Create` to create a new request for "
+#~ "quotation (RFQ)."
+#~ msgstr ""
+#~ "Pentru a crea un :abbr:`PO (comandă de cumpărare)`, navigați "
+#~ "la :menuselection:`Aplicația Cumpărare --> Creare` pentru a crea o nouă "
+#~ "cerere de ofertă (RFQ)."
+
+#~ msgid ""
+#~ "From the blank :abbr:`RFQ (request for quotation)` form, click the drop-"
+#~ "down menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Products` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "Din formularul necompletat :abbr:`RFQ (cerere de ofertă)`, faceți clic pe "
+#~ "meniul drop-down de lângă câmpul :guilabel:`Vendor` pentru a adăuga un "
+#~ "furnizor. Apoi, pe linia :guilabel:`Produs` de sub "
+#~ "fila :guilabel:`Produse`, faceți clic pe :guilabel:`Adăugați un produs` "
+#~ "și selectați produsul(ele) dorit(e) pentru a le adăuga la cotație."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, then "
+#~ "click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
+#~ "quotation)` to a :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "Odată gata, faceți clic pe :guilabel:`Salvați` în partea de sus a "
+#~ "formularului, apoi faceți clic pe :guilabel:`Confirmați comanda` pentru a "
+#~ "confirma :abbr:`RFQ (cerere de ofertă)` la un :abbr:`PO (comanda de "
+#~ "achiziție). )`."
+
+#~ msgid "Completed purchase order for barcode product."
+#~ msgstr "Comanda de achiziție finalizată pentru produsul cu coduri de bare."
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse receipts, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "Pentru a procesa și a scana coduri de bare pentru chitanțe de depozit, "
+#~ "navigați la :menuselection:`aplicația de coduri de bare`."
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process receipts, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :menuselection:`Operations` overview page."
+#~ msgstr ""
+#~ "Odată intrat în aplicația :guilabel:`Barcode`, este prezentat un "
+#~ "ecran :guilabel:`Barcode Scanning` care afișează diferite opțiuni. Pentru "
+#~ "a procesa chitanțele, faceți clic pe butonul :guilabel:`Operațiuni` din "
+#~ "partea de jos a ecranului. Aceasta navighează la o pagină de prezentare "
+#~ "generală :menuselection:`Operations`."
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Receipts` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding receipts. "
+#~ "Then, select the desired receipt operation to process. This navigates to "
+#~ "the barcode transfer screen."
+#~ msgstr ""
+#~ "Din această pagină, găsiți cardul :guilabel:`Chitanțe` și faceți clic pe "
+#~ "butonul :guilabel:`# To Process` pentru a vedea toate chitanțele "
+#~ "restante. Apoi, selectați operațiunea de primire dorită de procesat. "
+#~ "Aceasta navighează la ecranul de transfer cod de bare."
+
+#~ msgid ""
+#~ "If *only* using a barcode scanner or the Odoo mobile app, the barcodes "
+#~ "for each transfer of a corresponding operation type can be scanned to be "
+#~ "processed easily. Once scanned, the products that are part of an existing "
+#~ "transfer can be scanned, and new products can be added to the transfer, "
+#~ "as well. Once all products have been scanned, validate the transfer to "
+#~ "proceed with the stock moves."
+#~ msgstr ""
+#~ "Dacă *numai* utilizați un scaner de coduri de bare sau aplicația mobilă "
+#~ "Odoo, codurile de bare pentru fiecare transfer al unui tip de operațiune "
+#~ "corespunzător pot fi scanate pentru a fi procesate cu ușurință. Odată "
+#~ "scanate, produsele care fac parte dintr-un transfer existent pot fi "
+#~ "scanate și pot fi adăugate produse noi la transfer. Odată ce toate "
+#~ "produsele au fost scanate, validați transferul pentru a continua cu "
+#~ "mutarea stocului."
+
+#~ msgid ""
+#~ "From this screen, an overview of all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "Din acest ecran, este afișată o prezentare generală a tuturor chitanțelor "
+#~ "de procesat în cadrul acelui transfer (**WH/IN/000XX**). În partea de jos "
+#~ "a ecranului, există opțiuni pentru :guilabel:`Add Product` "
+#~ "sau :guilabel:`Validate`, în funcție de dacă produsele trebuie adăugate "
+#~ "la operație sau dacă întreaga operațiune ar trebui validată deodată."
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
+#~ "clicked to indicate receipt of that product, or the :guilabel:`pencil` "
+#~ "icon can be clicked to open a new screen to edit that product line."
+#~ msgstr ""
+#~ "Pentru a procesa și scana fiecare produs individual, alegeți o anumită "
+#~ "linie de produse. Se poate face clic pe butonul :guilabel:`+#` (în acest "
+#~ "caz, :guilabel:`+10`) pentru a indica primirea acelui produs, sau se "
+#~ "poate face clic pe pictograma :guilabel:`creion` pentru a deschide un nou "
+#~ "ecran pentru editați acea linie de produse."
+
+#~ msgid ""
+#~ "From this screen, the product that's being received is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "Din acest ecran, este listat produsul care este primit. Sub numele "
+#~ "produsului, linia :guilabel:`Cantitate` poate fi editată. Fie modificați "
+#~ "`0` din rând la cantitatea dorită, fie faceți clic pe butonul :guilabel:`/"
+#~ "# Units` (în acest caz, :guilabel:`/10 Units`) pentru a completa automat "
+#~ "cantitatea comandată de la :abbr :`PO (comandă de cumpărare)`."
+
+#~ msgid ""
+#~ "In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
+#~ "Product` is expected to be received. `[BARCODE_PROD]` is "
+#~ "the :guilabel:`Internal Reference` set on the product form. Scan the "
+#~ "barcode of the `Barcode Product` to receive one unit. Afterwards, click "
+#~ "the :guilabel:`pencil` icon to manually enter the received quantities."
+#~ msgstr ""
+#~ "În operațiunea de recepție `WH/IN/00019`, se așteaptă să fie primite `10 "
+#~ "unități` din `Produs cu coduri de bare`. `[BARCODE_PROD]` "
+#~ "este :guilabel:`Referința internă` stabilită pe formularul produsului. "
+#~ "Scanați codul de bare al „Produsului cu coduri de bare” pentru a primi o "
+#~ "unitate. Apoi, faceți clic pe pictograma :guilabel:`creion` pentru a "
+#~ "introduce manual cantitățile primite."
+
+#~ msgid ""
+#~ "Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be "
+#~ "clicked to add or subtract quantity of the product, and "
+#~ "the :guilabel:`number keys` can be used to add quantity, as well."
+#~ msgstr ""
+#~ "În plus, butoanele :guilabel:`+1` și :guilabel:`-1` pot fi făcute clic "
+#~ "pentru a adăuga sau scădea cantitatea de produs, iar :guilabel:`tastele "
+#~ "numerice` pot fi folosite și pentru a adăuga cantitatea."
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another *location* is listed on the "
+#~ "product itself. Click this line to reveal a drop-down menu of additional "
+#~ "locations to choose from."
+#~ msgstr ""
+#~ "Sub :guilabel:`tastele numerice` se află linia :guilabel:`location`, care "
+#~ "citește implicit `WH/Stock`, cu excepția cazului în care o altă *locație* "
+#~ "este listată pe produsul însuși. Faceți clic pe această linie pentru a "
+#~ "afișa un meniu derulant cu locații suplimentare din care să alegeți."
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The receipt has now been processed, and "
+#~ "the :guilabel:`Barcode app` can be closed out."
+#~ msgstr ""
+#~ "Apoi, din pagina de prezentare generală cu toate chitanțele de procesat "
+#~ "în cadrul acelui transfer (**WH/IN/000XX**), faceți clic pe "
+#~ "butonul :guilabel:`+#` de pe linia de produse pentru produsele primite și "
+#~ "faceți clic pe :guilabel :`Validați`. Chitanța a fost acum procesată, iar "
+#~ "aplicația :guilabel:`Barcode` poate fi închisă."
+
+#~ msgid ""
+#~ "To process warehouse deliveries for outgoing products, there first needs "
+#~ "to be a sales order (SO) created, and a delivery operation to process."
+#~ msgstr ""
+#~ "Pentru a procesa livrările în depozit pentru produsele care ies, mai "
+#~ "întâi trebuie să fie creată o comandă de vânzare (SO) și o operațiune de "
+#~ "livrare de procesat."
+
+#~ msgid ""
+#~ "To create a :abbr:`SO (sales order)`, navigate to "
+#~ "the :menuselection:`Sales app --> Create` to create a new quotation."
+#~ msgstr ""
+#~ "Pentru a crea un :abbr:`SO (comandă de vânzare)`, navigați "
+#~ "la :menuselection:`Aplicația de vânzări --> Creare` pentru a crea o nouă "
+#~ "ofertă."
+
+#~ msgid ""
+#~ "From the blank quotation form, click the drop-down menu next to "
+#~ "the :guilabel:`Customer` field to add a customer. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "Din formularul de ofertă necompletat, faceți clic pe meniul derulant de "
+#~ "lângă câmpul :guilabel:`Client` pentru a adăuga un client. Apoi, pe "
+#~ "linia :guilabel:`Produs` de sub fila :guilabel:`Linii de comandă`, faceți "
+#~ "clic pe :guilabel:`Adăugați un produs` și selectați produsul (produsele) "
+#~ "dorit(e) pentru a le adăuga la cotație."
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, and "
+#~ "click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
+#~ "(sales order)`."
+#~ msgstr ""
+#~ "Odată gata, faceți clic pe :guilabel:`Salvați` în partea de sus a "
+#~ "formularului și faceți clic pe :guilabel:`Confirmați comanda` pentru a "
+#~ "confirma oferta către un :abbr:`SO (comandă de vânzare)`."
+
+#~ msgid "Completed sales order for barcode product."
+#~ msgstr "Comanda de vânzare finalizată pentru produsul cu cod de bare."
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse deliveries, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "Pentru a procesa și scana coduri de bare pentru livrările în depozit, "
+#~ "navigați la :menuselection:`aplicația de coduri de bare`."
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process deliveries, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :guilabel:`Operations` overview page."
+#~ msgstr ""
+#~ "Odată intrat în aplicația :guilabel:`Barcode`, este prezentat un "
+#~ "ecran :guilabel:`Barcode Scanning` care afișează diferite opțiuni. Pentru "
+#~ "a procesa livrările, faceți clic pe butonul :guilabel:`Operațiuni` din "
+#~ "partea de jos a ecranului. Aceasta navighează la o pagină de prezentare "
+#~ "generală :guilabel:`Operations`."
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Delivery Orders` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding deliveries. "
+#~ "Then, select the desired delivery order to process. This navigates to the "
+#~ "barcode transfer screen."
+#~ msgstr ""
+#~ "Din această pagină, găsiți cardul :guilabel:`Comenzi de livrare` și "
+#~ "faceți clic pe butonul :guilabel:`# To Process` pentru a vedea toate "
+#~ "livrările restante. Apoi, selectați comanda de livrare dorită pentru "
+#~ "procesare. Aceasta navighează la ecranul de transfer cod de bare."
+
+#~ msgid ""
+#~ "From this screen, an overview of all deliveries to process within that "
+#~ "transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "Din acest ecran, este afișată o prezentare generală a tuturor livrărilor "
+#~ "de procesat în cadrul acelui transfer (**WH/OUT/000XX**). În partea de "
+#~ "jos a ecranului, există opțiuni pentru :guilabel:`Add Product` "
+#~ "sau :guilabel:`Validate`, în funcție de dacă produsele trebuie adăugate "
+#~ "la operație sau dacă întreaga operațiune ar trebui validată deodată."
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+1` button can be clicked to indicate delivery of "
+#~ "that product, or the :guilabel:`pencil icon` can be clicked to open a new "
+#~ "screen to edit that product line."
+#~ msgstr ""
+#~ "Pentru a procesa și scana fiecare produs individual, alegeți o anumită "
+#~ "linie de produse. Se poate face clic pe butonul :guilabel:`+1` pentru a "
+#~ "indica livrarea acelui produs, sau se poate face clic "
+#~ "pe :guilabel:`pictograma creion` pentru a deschide un nou ecran pentru a "
+#~ "edita acea linie de produse."
+
+#~ msgid ""
+#~ "From this screen, the product that's being delivered is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`SO (sales order)`."
+#~ msgstr ""
+#~ "Din acest ecran, este listat produsul care este livrat. Sub numele "
+#~ "produsului, linia :guilabel:`Cantitate` poate fi editată. Fie modificați "
+#~ "`0` din rând la cantitatea dorită, fie faceți clic pe butonul :guilabel:`/"
+#~ "# Units` (în acest caz, :guilabel:`/10 Units`) pentru a completa automat "
+#~ "cantitatea comandată de la :abbr :`SO (comandă de vânzare)`."
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another location is listed on the "
+#~ "product itself."
+#~ msgstr ""
+#~ "Sub :guilabel:`tastele numerice` se află linia :guilabel:`location`, care "
+#~ "citește implicit `WH/Stock`, cu excepția cazului în care o altă locație "
+#~ "este listată pe produs în sine."
+
+#~ msgid ""
+#~ "This is the location that the product is being pulled from for delivery. "
+#~ "Click this line to reveal a drop-down menu of additional locations to "
+#~ "choose from (if this product is stored in multiple locations in the "
+#~ "warehouse)."
+#~ msgstr ""
+#~ "Aceasta este locația din care este scos produsul pentru livrare. Faceți "
+#~ "clic pe această linie pentru a afișa un meniu derulant cu locații "
+#~ "suplimentare din care să alegeți (dacă acest produs este stocat în mai "
+#~ "multe locații din depozit)."
+
+#~ msgid ""
+#~ "For warehouses that have multiple different storage locations, putaway "
+#~ "rules, and removal strategies, additional steps can be added for various "
+#~ "operation types, while using the *Barcode* app."
+#~ msgstr ""
+#~ "Pentru depozitele care au mai multe locații de stocare diferite, reguli "
+#~ "de depozitare și strategii de eliminare, pot fi adăugați pași "
+#~ "suplimentari pentru diferite tipuri de operațiuni, în timp ce utilizați "
+#~ "aplicația *Cod de bare*."
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The delivery has now been processed, and the "
+#~ "*Barcode* app can be closed out."
+#~ msgstr ""
+#~ "Apoi, din pagina de prezentare generală cu toate chitanțele de procesat "
+#~ "în cadrul acelui transfer (**WH/OUT/000XX**), faceți clic pe "
+#~ "butonul :guilabel:`+#` de pe linia de produse pentru produsele primite și "
+#~ "faceți clic pe :guilabel :`Validați`. Livrarea a fost acum procesată, iar "
+#~ "aplicația *Cod de bare* poate fi închisă."
+
+#~ msgid "Easypost"
+#~ msgstr "Easypost"
 
 #~ msgid ""
 #~ "Assigning categories to storage locations tells Odoo these locations meet "

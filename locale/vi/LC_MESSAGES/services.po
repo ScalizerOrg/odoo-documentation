@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 18:30+0000\n"
+"POT-Creation-Date: 2026-02-27 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -332,6 +332,7 @@ msgstr ":doc:`../../inventory_and_mrp/inventory`"
 #: ../../content/applications/services/project/project_management.rst:17
 #: ../../content/applications/services/project/project_management/project_milestones.rst:15
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:13
+#: ../../content/applications/services/timesheets.rst:17
 #: ../../content/applications/services/timesheets/billing_rates.rst:19
 #: ../../content/applications/services/timesheets/billing_rates.rst:54
 #: ../../content/applications/services/timesheets/time_off.rst:12
@@ -6296,7 +6297,7 @@ msgstr ""
 "profitability."
 
 #: ../../content/applications/services/project.rst:14
-#: ../../content/applications/services/timesheets.rst:11
+#: ../../content/applications/services/timesheets.rst:174
 msgid ""
 "`Odoo Tutorials: Project and Timesheets <https://www.odoo.com/slides/project-"
 "and-timesheets-21>`_"
@@ -8547,9 +8548,325 @@ msgstr ""
 "or :guilabel:`Canceled`, it is closed. If needed, it can be reopened by "
 "changing its status."
 
-#: ../../content/applications/services/timesheets.rst:8
+#: ../../content/applications/services/timesheets.rst:5
 msgid "Timesheets"
 msgstr "Bảng chấm công"
+
+#: ../../content/applications/services/timesheets.rst:7
+msgid ""
+"Odoo Timesheets lets you log, view, and validate working time across "
+"projects and employees. Timesheets enable accurate time tracking and "
+"productivity monitoring, and in the case of :doc:`services invoiced on a "
+"time-and-material basis </applications/sales/sales/invoicing/"
+"time_materials>`, they are essential for invoicing clients."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:13
+msgid ""
+"Timesheets are also :ref:`integrated into Project and Helpdesk <timesheets/"
+"timesheets/project-helpdesk>`."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:20
+msgid "Access rights"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:23
+msgid ""
+"Odoo users must be registered as :doc:`employees </applications/hr/employees/"
+"new_employee>` to log timesheets."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:26
+msgid ""
+"To define what a user can view and edit in the Timesheets application, "
+"configure their access rights. To do so, open the Settings app, go "
+"to :menuselection:`Settings --> Users & Companies --> Users`, and select the "
+"relevant user. Then, under the :guilabel:`Services` section, set "
+"the :guilabel:`Timesheets` field to one of the following:"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:31
+msgid ""
+":guilabel:`No` (blank): The user cannot see the Timesheets app and cannot "
+"log time."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:32
+msgid ""
+":guilabel:`User: own timesheets only`: The user can log their own time, but "
+"cannot view anyone else's entries."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:34
+msgid ""
+":guilabel:`User: all timesheets`: The user can log their own time and view, "
+"edit, and validate all employees' timesheets."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:36
+msgid ""
+":guilabel:`Administrator`: The user can log their own time and view, edit, "
+"and validate all employees' timesheets. They can also access the "
+"Timesheets :guilabel:`Configuration` menu."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:40
+msgid ":doc:`/applications/general/users/access_rights`"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:43
+msgid "Projects"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:45
+msgid ""
+"Employees can only log time if the project itself allows it. To enable "
+"timesheets for a project, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:48
+msgid "Go to the Project app."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:49
+msgid ""
+"Click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon on the "
+"relevant project's card and select :guilabel:`Settings`."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:51
+msgid ""
+"Go to the :guilabel:`Settings` tab and scroll down to the :guilabel:`Time "
+"management` section."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:52
+msgid "Enable :guilabel:`Timesheets`."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:55
+msgid ":ref:`Project configuration <project_management/configuration>`"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:58
+msgid "Viewing timesheets"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:60
+msgid ""
+"By default, the Timesheets app opens to the :guilabel:`My Timesheets` screen "
+"in grid view, displaying the time spent on projects, per day, in each cell; "
+"and per period, in the :guilabel:`Time Spent` column."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:64
+msgid ""
+"To change the displayed period, click on :guilabel:`Week`, then "
+"select :guilabel:`Day` or :guilabel:`Month` in the dropdown menu. Use "
+"the :icon:`fa-arrow-left` (:guilabel:`left arrow`) and :icon:`fa-arrow-"
+"right` (:guilabel:`right arrow`) buttons next to it to view previous or "
+"upcoming timesheets."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:69
+msgid "Click :guilabel:`Today` to return to the current day."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:None
+msgid "Grid view in Timesheets."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:75
+msgid ""
+"Timesheets displayed in italics are suggested entries. They represent "
+"projects for which the user has not yet logged time during the selected "
+"period, but may need to, based on task assignments, deadlines, and "
+"historical timesheet data."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:79
+msgid ""
+"Hover your mouse over a cell in the grid and click the :icon:`fa-search` "
+"(:guilabel:`fa-search`) icon to view and edit the entry's details, including "
+"the :guilabel:`Date`, :guilabel:`Project`, :guilabel:`Task`, :guilabel:`Description`, :guilabel:`Sales "
+"Order Item` (if the project is billable), and :guilabel:`Time Spent`."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:85
+msgid "Daily totals"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:87
+msgid ""
+"At the bottom of each column, the logged time is color-coded based on "
+"the :ref:`Working Hours defined for the employee <employees/schedule>`:"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:90
+msgid "**Green**: Logged time matches the expected amount exactly."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:91
+msgid "**Brown**: Logged time exceeds the expected amount."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:92
+msgid "**Red**: Logged time is less than the expected amount."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:95
+msgid ""
+"Hover over the purple section below the bottom line to view the overtime/"
+"undertime recorded for that specific day."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:99
+msgid "Period totals"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:101
+msgid ""
+"The value in the color-coded cell at the bottom of the :guilabel:`Time "
+"Spent` column represents the total time logged for the period:"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:104
+msgid ""
+"**Green**: Total time matches the expected amount for the period exactly."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:105
+msgid "**Orange**: Total time exceeds the expected amount for the period."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:106
+msgid "**Red**: Total time is less than the expected amount for the period."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:109
+msgid "Logging timesheets"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:111
+msgid "Odoo offers multiple ways to log timesheets:"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:113
+msgid ":ref:`Using the timer <timesheets/timesheets/timer>`"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:114
+msgid ":ref:`Manually <timesheets/timesheets/log-manually>`"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:115
+msgid ""
+":ref:`From Project tasks and Helpdesk tickets <timesheets/timesheets/project-"
+"helpdesk>`"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:120
+msgid "Using the timer"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:122
+msgid "To record the time spent on a project in real time, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:124
+msgid "Go to the Timesheets app."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:125
+msgid "Click :guilabel:`Start` to launch the timer."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:126
+msgid ""
+"By default, the project most frequently used in the last five timesheet "
+"entries is automatically selected. To log time for another project, type or "
+"select it in the :guilabel:`Project` field."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:128
+msgid ""
+"Optionally, select a :guilabel:`Task` in the project and :guilabel:`Describe "
+"your activity`."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:129
+msgid ""
+"Click :guilabel:`Stop` to stop the timer. The time spent is automatically "
+"added to the chosen timesheet."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:134
+msgid "You can also press **Enter** to start and stop the timer."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:135
+msgid ""
+"To edit an entry, click the relevant cell in the grid and modify the time."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:137
+msgid ""
+"Alternatively, locate the project you want to log time for in the grid and "
+"click or press the letter displayed next to it on the keyboard to start the "
+"timer. Click or press the letter again to stop it. To add time in 15-minute "
+"increments, press Shift + [letter]."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:144
+msgid "Manually"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:146
+msgid ""
+"To log time manually, click the cell corresponding to the relevant project "
+"and day in the grid, then enter the time spent."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:149
+msgid ""
+"If the project is not visible in the grid, click :guilabel:`Add a line`. In "
+"the popup, select the :guilabel:`Project`, change the :guilabel:`Date` if "
+"needed, and enter the :guilabel:`Time spent`. "
+"Optionally, :guilabel:`Describe your activity` and select a "
+"specific :guilabel:`Task`. For timesheets linked to billable projects, "
+"include a :guilabel:`Sales Order Item` so the logged time can be invoiced to "
+"the customer."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:155
+msgid "Click :guilabel:`Save` when finished."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:160
+msgid "From Project tasks and Helpdesk tickets"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:162
+msgid ""
+"Timesheets can also be logged directly within the Project and Helpdesk apps. "
+"To do so, access the relevant task or ticket, then:"
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:165
+msgid ""
+"Either click the :guilabel:`Start` button to start recording time on the "
+"task, then click :guilabel:`Stop` to stop the timer. In the popup, edit "
+"the :guilabel:`Time Spent` if needed, then :guilabel:`Describe your "
+"activity` and click :guilabel:`Log Time` to record the entry "
+"or :guilabel:`Resume Timer` to continue tracking time on the task or ticket."
+msgstr ""
+
+#: ../../content/applications/services/timesheets.rst:170
+msgid ""
+"Or go to the :guilabel:`Timesheets` tab, click :guilabel:`Add a line`, "
+"and :ref:`fill in the fields <timesheets/timesheets/log-manually>`."
+msgstr ""
 
 #: ../../content/applications/services/timesheets/billing_rates.rst:5
 msgid "Timesheet billing rates and leaderboard"

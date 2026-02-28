@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 18:30+0000\n"
+"POT-Creation-Date: 2026-02-27 18:30+0000\n"
 "PO-Revision-Date: 2026-02-02 23:21+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -1143,6 +1143,7 @@ msgstr ""
 "類の文字が含まれていることを意味します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:71
 msgid ":doc:`gs1_nomenclature`"
 msgstr ":doc:`gs1_nomenclature`"
@@ -2470,279 +2471,198 @@ msgstr "バーコードビューでのピッキングするプロダクト"
 msgid "Process receipts and deliveries with barcodes"
 msgstr "バーコードで入荷や配送を処理する"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:7
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
 msgid ""
-"The *Barcode* app can be used to process receipts, deliveries, and other "
+"The **Barcode** app can be used to process receipts, deliveries, and other "
 "types of operations in real time using a barcode scanner or the Odoo mobile "
 "app."
 msgstr ""
-"*バーコード* アプリは、バーコードスキャナまたはOdooモバイルアプリを使用して、"
-"入荷や配送などの処理をリアルタイムで行うことができます。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:13
 msgid ""
 "This makes it possible to process operations on the warehouse floor when "
 "they happen, instead of having to wait to validate transfers from a "
-"computer. Processing operations this way can help to properly attribute "
-"barcodes to the appropriate products, pickings, locations, and more."
+"computer. This real-time processing ensures barcodes are accurately assigned "
+"to the correct products, packaging, transfers, locations, and more, reducing "
+"errors and keeping inventory data in sync."
 msgstr ""
-"これにより、コンピュータからの転送を検証するのを待つ代わりに、倉庫の現場でオ"
-"ペレーションが発生したときに処理することが可能になります。このようにオペレー"
-"ションを処理することで、バーコードを適切なプロダクト、ピッキング、ロケーショ"
-"ンなどに適切に割当てることができます。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:19
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:13
 msgid "Enable Barcode app"
 msgstr "バーコードアプリを有効にする"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:17
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:21
 msgid ""
-"To use the *Barcode* app to process transfers, it must be installed by "
-"enabling the feature from the settings of the *Inventory* app."
+"To use the **Barcode** app to process transfers, it must be installed by "
+"enabling the feature from the settings of the **Inventory** app."
 msgstr ""
-"転送処理に *バーコード* アプリを使用するには、*在庫* アプリの設定から機能を有"
-"効にしてインストールする必要があります。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:20
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
-msgid ""
-"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
-"the checkbox next to the :guilabel:`Barcode Scanner` feature."
-msgstr ""
-"これを行うには、 :menuselection:`在庫アプリ --> 設定 --> 管理設定` に進みま"
-"す。次に、 :guilabel:`バーコード` セクションまでスクロールダウン"
-"し、 :guilabel:`バーコードスキャナ` 機能の横にあるチェックボックスをクリック"
-"します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:24
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
 msgid ""
-"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
-"to save changes."
+"To do so, navigate to :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the *Barcode* section, and select the "
+"checkbox next to the :guilabel:`Barcode Scanner` feature."
 msgstr ""
-"チェックボックスにチェックを入れたら、ページ上部の :guilabel:`保存` をクリッ"
-"クして変更を保存します。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:26
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:28
 msgid ""
-"Once the page has refreshed, new options will be displayed under "
-"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
-"(with a corresponding drop-down menu), where either :guilabel:`Default "
-"Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+"After the checkbox is selected, click :guilabel:`Save` at the top of the "
+"page to save changes."
 msgstr ""
-"ページがリフレッシュされると、新しいオプションが :guilabel:`バーコードスキャ"
-"ナ` 機能の下に表示されます: :guilabel:`バーコード表現規則` (対応するドロップ"
-"ダウンメニュー付き)。ここで :guilabel:`デフォルト表現規則` または :guilabel:`"
-"デフォルトGS1表現規則` のどちらかを選択できます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:30
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"After the page has refreshed, a new option is displayed under "
+"the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+"(with a corresponding drop-down menu). Select either:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:33
+msgid ""
+":guilabel:`Default Nomenclature`: The barcode actions using UPC and EAN, "
+"detailed in the default nomenclature list, are available for use. By "
+"default, Odoo automatically handles UPC/EAN conversion."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:36
+msgid ""
+":guilabel:`Default GS1 Nomenclature`: Scan barcodes of sealed boxes and "
+"identify essential product information, such as Global Trade Item Numbers "
+"(GTINs), lot number, quantity information, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:40
 msgid ""
 "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
-"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
-"barcode demo sheet."
+"and a set of :guilabel:`Print` buttons for printing barcode commands and "
+"operation types, as well as a barcode demo sheet."
 msgstr ""
-"また、:guilabel:`プロダクトバーコードを設定` の内部リンク矢印と、バーコードコ"
-"マンドとバーコードデモシートを印刷するための一連の :guilabel:`印刷` ボタンが"
-"あります。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:37
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
-msgid ""
-"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
-"the :doc:`Set up your barcode scanner <../setup/hardware>` "
-"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
-"pages."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:48
+msgid ":doc:`barcode_nomenclature`"
 msgstr ""
-":guilabel:`バーコード` アプリのセットアップと設定については、 :doc:`バーコー"
-"ドスキャナのセットアップ <../setup/hardware>` と :doc:`Odooでバーコードを有効"
-"にする <../setup/software>` のドキュメントページを参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:44
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:50
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
+msgid ":doc:`../setup/hardware`"
+msgstr ":doc:`../setup/hardware`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:51
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+msgid ":doc:`../setup/software`"
+msgstr ":doc:`../setup/software`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:56
 msgid "Scan barcodes for receipts"
 msgstr "入荷用にバーコードをスキャンする"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:46
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:58
 msgid ""
-"To process warehouse receipts for incoming products, there first needs to be "
-"a purchase order (PO) created, and a receipt operation to process."
+"Purchase orders (POs) are used to process warehouse receipts for incoming "
+"products and product packagings. First, create a request for quotation, then "
+"confirm it to create a |PO|."
 msgstr ""
-"入荷するプロダクトの入荷を処理するには、まず購買オーダ(PO)を作成し、入荷オペ"
-"レーションを処理する必要があります。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
-msgid ""
-"To create a :abbr:`PO (purchase order)`, navigate to "
-"the :menuselection:`Purchase app --> Create` to create a new request for "
-"quotation (RFQ)."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:62
+msgid ":doc:`../../purchase/manage_deals/rfq`"
 msgstr ""
-":abbr:`PO(購買オーダ)` を作成するには、 :menuselection:`購買アプリ --> 作成` "
-"に移動し、新しい見積依頼(RFQ)を作成します。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:52
-msgid ""
-"From the blank :abbr:`RFQ (request for quotation)` form, click the drop-down "
-"menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Products` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"空白の :abbr:`RFQ(見積依頼)` フォームから、 :guilabel:`仕入先` フィールドの隣"
-"にあるドロップダウンメニューをクリックして仕入先を追加します。次"
-"に、 :guilabel:`プロダクト` タブの :guilabel:`プロダクト` 明細"
-"で、 :guilabel:`プロダクト追加` をクリックし、見積に追加したいプロダクトを選"
-"択します。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:57
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, then "
-"click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
-"quotation)` to a :abbr:`PO (purchase order)`."
-msgstr ""
-"準備ができたら、フォーム上部の :guilabel:`保存` をクリックし、続け"
-"て :guilabel:`オーダ確定` をクリックして、:abbr:`RFQ(見積依頼)` "
-"を :abbr:`PO(購買オーダ)` に変換します。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed purchase order for barcode product."
-msgstr "バーコードプロダクトの購買オーダ完了。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:64
 msgid ""
-"To process and scan barcodes for warehouse receipts, navigate to "
-"the :menuselection:`Barcode app`."
+"To process and scan barcodes for warehouse receipts, navigate to the "
+"**Barcode** app."
 msgstr ""
-"倉庫の入荷用にバーコードを処理しスキャンするには、 :menuselection:`バーコード"
-"アプリ` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:66
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process receipts, click "
-"on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :menuselection:`Operations` overview page."
+"Once inside the **Barcode** app, a :guilabel:`Barcode Scanner` screen "
+"displaying different options is presented."
 msgstr ""
-":guilabel:`バーコードアプリ` の中に入ると、様々なオプションを表示す"
-"る :guilabel:`バーコードスキャニング` 画面が表示されます。入荷を処理するに"
-"は、画面下部の :guilabel:`オペレーション` ボタンをクリックします。これによ"
-"り :menuselection:`オペレーション` の概要ページに移動します。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:74
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:72
 msgid ""
-"From this page, locate the :guilabel:`Receipts` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding receipts. Then, "
-"select the desired receipt operation to process. This navigates to the "
-"barcode transfer screen."
+"To process receipts, click the :guilabel:`Operations` button at the bottom "
+"of the screen. The :guilabel:`Operations` overview page opens."
 msgstr ""
-"このページから :guilabel:`入荷` カードを探し、 :guilabel:`# 未処理` ボタンを"
-"クリックすると、未処理の入荷が全て表示されます。次に、処理したい入荷オペレー"
-"ションを選択します。これでバーコード転送画面に移動します。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:75
+msgid ""
+"From this page, tap the :guilabel:`Receipts` card to view all outstanding "
+"receipts. Then, select the desired receipt operation to process. This "
+"navigates to the barcode transfer screen."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:79
 msgid ""
-"If *only* using a barcode scanner or the Odoo mobile app, the barcodes for "
-"each transfer of a corresponding operation type can be scanned to be "
-"processed easily. Once scanned, the products that are part of an existing "
-"transfer can be scanned, and new products can be added to the transfer, as "
-"well. Once all products have been scanned, validate the transfer to proceed "
-"with the stock moves."
+"If *only* using a barcode scanner or the Odoo mobile app, scan each barcode "
+"transfer for the corresponding operation type to process them. Once scanned, "
+"the products that are part of an existing transfer can be scanned, and new "
+"products can be added to the transfer, as well. Once all products have been "
+"scanned, validate the transfer to proceed with the stock moves."
 msgstr ""
-"バーコードスキャナまたはOdooモバイルアプリのみを使用する場合、対応するオペ"
-"レーションタイプの各振込のバーコードをスキャンして簡単に処理することができま"
-"す。一度スキャンすると、既存の転送に含まれるプロダクトをスキャンしたり、新し"
-"いプロダクトを転送に追加することができます。全てのプロダクトがスキャンされた"
-"ら、在庫移動を進めるために転送を検証します。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:85
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:84
 msgid ""
 "From this screen, an overview of all receipts to process within that "
 "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once. If the *Packages* setting is enabled "
+"in the Inventory settings, the :guilabel:`Put in Pack` button is also "
+"available."
 msgstr ""
-"この画面から、その転送(**WH/IN/000XXX**)内で処理する全ての入荷の概要が表示さ"
-"れます。画面下部には、プロダクトをオペレーションに追加する必要があるか、オペ"
-"レーション全体を一度に検証する必要があるかによって、 :guilabel:`プロダクト追"
-"加` または :guilabel:`検証` のオプションがあります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:None
 msgid "Overview of receipts in transfer to scan."
 msgstr "スキャン転送中の入荷の概要。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:94
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:93
 msgid ""
-"To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
-"clicked to indicate receipt of that product, or the :guilabel:`pencil` icon "
-"can be clicked to open a new screen to edit that product line."
+"To process and scan each product individually, scan a product or product "
+"packaging, or choose a specific product line. Click the :guilabel:`+#` "
+"button (for example, `+10`) to indicate receipt of that product."
 msgstr ""
-"各プロダクトを個別に処理してスキャンするには、特定のプロダクト明細を選択しま"
-"す。:guilabel:`+#` ボタン (この場合、:guilabel:`+10`)をクリックすると、そのプ"
-"ロダクトの入荷を表示でき、:guilabel:`鉛筆` アイコンをクリックすると、そのプロ"
-"ダクト明細を編集するための新しい画面を開くことができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:98
-msgid ""
-"From this screen, the product that's being received is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`PO (purchase order)`."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:173
+msgid "Editing a product line"
 msgstr ""
-"この画面から、入荷するプロダクトがリスト表示されます。プロダクト名の下にあ"
-"る  :guilabel:`数量` 行を編集することができます。この行の`0`を希望の数量に変"
-"更するか、 :guilabel:`/# 単位`ボタン(この場合は :guilabel:`/10単位`)をクリッ"
-"クすると、 :abbr:`PO(購買オーダ)` からオーダされた数量が自動的に入力されま"
-"す。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:104
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:100
 msgid ""
-"In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
-"Product` is expected to be received. `[BARCODE_PROD]` is "
-"the :guilabel:`Internal Reference` set on the product form. Scan the barcode "
-"of the `Barcode Product` to receive one unit. Afterwards, click "
-"the :guilabel:`pencil` icon to manually enter the received quantities."
+"To manually adjust received quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"入荷オペレーション `WH/IN/00019` では、`バーコードプロダクト` の `10個` を入"
-"荷する予定です。`[BARCODE_PROD]` はプロダクトフォームに設定されてい"
-"る :guilabel:`内部参照` です。バーコードプロダクト`のバーコードをスキャンして"
-"1個を入荷します。その後、:guilabel:`鉛筆` アイコンをクリックして、入荷済数量"
-"を手入力します。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
-msgid "Product line editor for individual transfer in Barcode app."
-msgstr "バーコードアプリの個別転送用プロダクトラインエディタ。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:113
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:179
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:103
 msgid ""
-"Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be clicked "
-"to add or subtract quantity of the product, and the :guilabel:`number keys` "
-"can be used to add quantity, as well."
+"On this screen, the product that's being received is listed. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+12`) to automatically fill the quantity ordered from the |PO|."
 msgstr ""
-"さらに :guilabel:`+1` と :guilabel:`-1` のボタンをクリックすると、プロダクト"
-"の数量を追加または減らすことができ、:guilabel:`数字キー` を使用して数量を追加"
-"することもできます。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:116
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:107
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another *location* is listed on the "
-"product itself. Click this line to reveal a drop-down menu of additional "
-"locations to choose from."
+"Additionally, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or "
+"subtract quantity of the product. Click the product packaging button (for "
+"example, `6-pack`) to add a product packaging. Click the number keys to add "
+"quantity."
 msgstr ""
-":guilabel:`数字キー` の下には :guilabel:`ロケーション` という行があり、プロダ"
-"クトに別のロケーションが記載されていない限り、デフォルトでは `WH/在庫` と表示"
-"されます。この行をクリックすると、ドロップダウンメニューが表示されます。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:120
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
+msgid ""
+"Below the quantity buttons is the :guilabel:`Location` line, which reads `WH/"
+"Stock` by default, unless another *location* is listed on the product "
+"itself. Click this line to reveal a drop-down menu of additional locations "
+"to choose from."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:115
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:215
 msgid ""
@@ -2752,185 +2672,159 @@ msgstr ""
 "準備ができたら、:guilabel:`確認` をクリックしてプロダクト明細の変更を確認しま"
 "す。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:122
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:118
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"receipt has now been processed, and the :guilabel:`Barcode app` can be "
-"closed out."
+"In the reception operation `WH/IN/00013`, `12 Units` of the `Soda Can` "
+"product is expected to be received. `[SODA-SINGLE-CAN]` is the barcode set "
+"on the product form. Warehouse employees can scan the barcode of the `Soda "
+"Can` product to receive one unit, or because they can be purchased in 6-pack "
+"packaging, they can scan the packaging barcode. Alternatively, they can "
+"click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to manually enter the "
+"received quantities."
 msgstr ""
-"次に、その転送 (**WH/IN/000XX**) 内で処理する全ての入荷が表示された概要ページ"
-"から、入荷するプロダクトの :guilabel:`+#` ボタンをクリックし、 :guilabel:`検"
-"証` をクリックします。これで入荷が処理され、 :guilabel:`バーコードアプリ` を"
-"終了することができます。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
+msgid "Product line editor for individual transfer in Barcode app."
+msgstr "バーコードアプリの個別転送用プロダクトラインエディタ。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:128
+msgid "Validating the transfer"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:130
+msgid ""
+"If not all products were scanned or manually entered from the pencil icon, "
+"click the :guilabel:`+#` button on the product line for the products being "
+"received, or scan the product or product packaging barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+msgid ""
+"Finally, click :guilabel:`Validate`. The receipt is processed, and the "
+"**Barcode** app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of receipts in transfer to validate."
 msgstr "未検証の転送の入荷の概要。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:132
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:141
 msgid "Scan barcodes for delivery orders"
 msgstr "出荷オーダ用にバーコードをスキャンする"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:143
 msgid ""
-"To process warehouse deliveries for outgoing products, there first needs to "
-"be a sales order (SO) created, and a delivery operation to process."
+"To process warehouse deliveries for outgoing products, a sales order (SO) "
+"must be created to create a delivery operation to process. First, create a "
+"quotation, then confirm it to create the |SO|."
 msgstr ""
-"出荷プロダクトの倉庫配送を処理するには、まず販売オーダを作成し、配送オペレー"
-"ションを処理する必要があります。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:137
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
+msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
+msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:149
 msgid ""
-"To create a :abbr:`SO (sales order)`, navigate to the :menuselection:`Sales "
-"app --> Create` to create a new quotation."
+"To process and scan barcodes for warehouse deliveries, navigate to "
+"the :menuselection:`Barcode` app."
 msgstr ""
-":abbr:`SO(販売オーダ)` を作成するには、 :menuselection:`販売アプリ --> 作成` "
-"に移動し、新しい見積を作成します。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:140
-msgid ""
-"From the blank quotation form, click the drop-down menu next to "
-"the :guilabel:`Customer` field to add a customer. Then, on "
-"the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
-"click :guilabel:`Add a product`, and select the desired product(s) to add to "
-"the quotation."
-msgstr ""
-"空白の見積フォームから、 :guilabel:`顧客` フィールドの横にあるドロップダウン"
-"メニューをクリックして顧客を追加します。次に、 :guilabel:`オーダ明細` タブ"
-"の :guilabel:`プロダクト` 明細で、 :guilabel:`プロダクトを追加` をクリック"
-"し、見積に追加したいプロダクトを選択します。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:144
-msgid ""
-"Once ready, click :guilabel:`Save` at the top of the form, and "
-"click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
-"(sales order)`."
-msgstr ""
-"準備ができたら、フォーム上部の :guilabel:`保存` をクリックし、続け"
-"て :guilabel:`オーダ確定` をクリックして、見積を :abbr:`SO(販売オーダ)` に変"
-"換します。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
-msgid "Completed sales order for barcode product."
-msgstr "バーコードプロダクトの完了済販売オーダ。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
 msgid ""
-"To process and scan barcodes for warehouse deliveries, navigate to "
-"the :menuselection:`Barcode app`."
+"In the **Barcode** app, a :guilabel:`Barcode Scanner` screen displaying "
+"different options opens. To process deliveries, click "
+"the :guilabel:`Operations` button at the bottom of the screen. This opens "
+"an :guilabel:`Operations` overview page."
 msgstr ""
-"倉庫配送用のバーコードを処理しスキャンするには、 :menuselection:`バーコードア"
-"プリ` に移動します。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:153
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:155
 msgid ""
-"Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
-"screen displaying different options is presented. To process deliveries, "
-"click on the :guilabel:`Operations` button at the bottom of the screen. This "
-"navigates to an :guilabel:`Operations` overview page."
+"On this page, click the :guilabel:`Delivery Orders` card to view all "
+"outstanding deliveries."
 msgstr ""
-":guilabel:`バーコードアプリ` の中に入ると、様々なオプションを表示す"
-"る :guilabel:`バーコードスキャニング` 画面が表示されます。配送を処理するに"
-"は、画面下部の :guilabel:`オペレーション` ボタンをクリックします。これによ"
-"り :guilabel:`オペレーション` の概要ページに移動します。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:157
-msgid ""
-"From this page, locate the :guilabel:`Delivery Orders` card, and click "
-"the :guilabel:`# To Process` button to view all outstanding deliveries. "
-"Then, select the desired delivery order to process. This navigates to the "
-"barcode transfer screen."
-msgstr ""
-"このページから :guilabel:`出荷オーダ` カードを探し、 :guilabel:`# 未処理` ボ"
-"タンをクリックすると、未処理の配達が全て表示されます。次に、処理したい出荷"
-"オーダを選択します。するとバーコード転送画面に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Operations overview page in Barcode app dashboard."
 msgstr "バーコードアプリのダッシュボードにあるオペレーション概要ページ。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:160
 msgid ""
-"From this screen, an overview of all deliveries to process within that "
-"transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there are "
-"options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on if "
-"products need to be added to the operation, or if the whole operation should "
-"be validated at once."
+"Select the desired delivery order to process. This navigates to the barcode "
+"transfer screen."
 msgstr ""
-"この画面では、その転送(**WH/OUT/000XXX**)内で処理する全ての配送の概要が表示さ"
-"れます。画面下部には、プロダクトをオペレーションに追加する必要があるか、オペ"
-"レーション全体を一度に検証する必要があるかによって、 :guilabel:`プロダクト追"
-"加` または :guilabel:`検証` のオプションがあります。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:170
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:162
+msgid ""
+"On this screen, first scan the source location of the products to deliver. "
+"Then, review the overview of all products and packagings to process within "
+"that transfer (**WH/OUT/000XX**). At the bottom of the screen, there are "
+"buttons to :guilabel:`Add Product` or :guilabel:`Validate`, depending on "
+"whether products need to be added to the operation, or if the whole "
+"operation should be validated at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:168
 msgid ""
 "To process and scan each product individually, choose a specific product "
-"line. The :guilabel:`+1` button can be clicked to indicate delivery of that "
-"product, or the :guilabel:`pencil icon` can be clicked to open a new screen "
-"to edit that product line."
+"line. Scan a product or product packaging, or click the :guilabel:`+#` (for "
+"example, `+6`) button to indicate delivery of that product."
 msgstr ""
-"各プロダクトを個別に処理しスキャンするには、特定のプロダクト明細を選択しま"
-"す。:guilabel:`+1` ボタンをクリックすると、そのプロダクトの配送を示すことがで"
-"き、:guilabel:`鉛筆アイコン` をクリックすると、そのプロダクト明細を編集するた"
-"めの新しい画面を開くことができます。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:174
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:175
 msgid ""
-"From this screen, the product that's being delivered is listed. Under the "
-"product name, the :guilabel:`Quantity` line can be edited. Either change the "
-"`0` in the line to the desired quantity, or click the :guilabel:`/# Units` "
-"button (in this case, :guilabel:`/10 Units`) to automatically fill the "
-"quantity ordered from the :abbr:`SO (sales order)`."
+"To manually adjust quantities for a product, click the :icon:`fa-"
+"pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product "
+"line."
 msgstr ""
-"この画面では、配送するプロダクトがリスト表示されます。プロダクト名の下にあ"
-"る :guilabel:`数量` 行を編集することができます。この行の`0` を希望の数量に変"
-"更するか、 :guilabel:`/#単位` ボタン(この場合は :guilabel:`/10単位`)をクリッ"
-"クすると、 :abbr:`SO(販売オーダ)` からオーダされた数量が自動的に入力されま"
-"す。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:182
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:178
 msgid ""
-"Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
-"reads `WH/Stock` by default, unless another location is listed on the "
-"product itself."
+"The product that's being delivered is listed on this screen. Under the "
+"product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the "
+"line to the desired quantity, or click the :guilabel:`+#` button (for "
+"example, `+6`) to automatically fill the quantity ordered from the |SO|. If "
+"the product is sold in a packaging, click the packaging button (for example, "
+"`6-pack`). Alternatively, click the :guilabel:`+1` and :guilabel:`-1` "
+"buttons to add or subtract quantity of the product."
 msgstr ""
-":guilabel:`数字キー` の下には :guilabel:`ロケーション` 明細があり、プロダクト"
-"自体に別のロケーションが記載されていない限り、デフォルトでは `WH/在庫` と表示"
-"されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:185
 msgid ""
-"This is the location that the product is being pulled from for delivery. "
-"Click this line to reveal a drop-down menu of additional locations to choose "
+"Below the quantity buttons is the :guilabel:`Source Location` line, which "
+"reads `WH/Stock` by default, unless the product is stored in a different "
+"location. This is the location that the product is being pulled from for "
+"delivery. Click this line to reveal a menu of additional locations to choose "
 "from (if this product is stored in multiple locations in the warehouse)."
 msgstr ""
-"これは、配送のためにプロダクトが引き出される場所です。この明細をクリックする"
-"と、追加のロケーションを選択するドロップダウンメニューが表示されます(このプロ"
-"ダクトが倉庫内の複数のロケーションに保管されている場合）。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:191
 msgid ""
 "For warehouses that have multiple different storage locations, putaway "
 "rules, and removal strategies, additional steps can be added for various "
-"operation types, while using the *Barcode* app."
+"operation types, while using the **Barcode** app."
 msgstr ""
-"複数の異なる保管場所、入庫規則、廃棄戦略を持つ倉庫の場合、*バーコード*　アプ"
-"リを使用しながら、様々なオペレーションタイプに追加のステップを追加することが"
-"できます。"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:196
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:195
 msgid ""
-"Then, from the overview page with all receipts to process within that "
-"transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the product "
-"line for the products being received, and click :guilabel:`Validate`. The "
-"delivery has now been processed, and the *Barcode* app can be closed out."
+"When ready, click :guilabel:`Confirm` to confirm the changes made to the "
+"product line."
 msgstr ""
-"次に、その運送 (**WH/OUT/000XXX**)内で処理する全ての入荷が表示された概要ペー"
-"ジから、入荷するプロダクトの :guilabel:`+#` ボタンをクリックし、 :guilabel:`"
-"検証` をクリックします。これで配送が処理され、*バーコード* アプリを終了できま"
-"す。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:198
+msgid "Validating the delivery"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:200
+msgid ""
+"If not all products or product packagings have been scanned or entered on "
+"the overview page, scan the products or packagings, or click "
+"the :guilabel:`+#` button on the product line for the products. Finally, "
+"click :guilabel:`Validate`. The delivery is processed, and the **Barcode** "
+"app can be closed."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
 msgid "Overview of deliveries in transfer to validate."
@@ -3176,6 +3070,33 @@ msgstr ""
 "ハードウェアのリストは、`Odoo在庫 - ハードウエアページ <https://www.odoo.com/"
 "app/inventory-hardware>`_ をご参照下さい。"
 
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
+msgid ""
+"To use the *Barcode* app to process transfers, it must be installed by "
+"enabling the feature from the settings of the *Inventory* app."
+msgstr ""
+"転送処理に *バーコード* アプリを使用するには、*在庫* アプリの設定から機能を有"
+"効にしてインストールする必要があります。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
+msgid ""
+"To do so, go to the :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
+"the checkbox next to the :guilabel:`Barcode Scanner` feature."
+msgstr ""
+"これを行うには、 :menuselection:`在庫アプリ --> 設定 --> 管理設定` に進みま"
+"す。次に、 :guilabel:`バーコード` セクションまでスクロールダウン"
+"し、 :guilabel:`バーコードスキャナ` 機能の横にあるチェックボックスをクリック"
+"します。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:22
+msgid ""
+"Once the checkbox is ticked, click :guilabel:`Save` at the top of the page "
+"to save changes."
+msgstr ""
+"チェックボックスにチェックを入れたら、ページ上部の :guilabel:`保存` をクリッ"
+"クして変更を保存します。"
+
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:24
 msgid ""
 "When the page has refreshed, new options are displayed under "
@@ -3189,6 +3110,27 @@ msgstr ""
 "ウンメニューつき)ここでは、:guilabel:`デフォルト表現規則` または :guilabel:`"
 "デフォルトGS1表現規則` を選択できます。選択した表現規則によって、スキャナが"
 "Odooでバーコードを解釈する方法が変わります。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
+msgid ""
+"There is also a :guilabel:`Configure Product Barcodes` internal link arrow, "
+"and a set of :guilabel:`Print` buttons for printing barcode commands and a "
+"barcode demo sheet."
+msgstr ""
+"また、:guilabel:`プロダクトバーコードを設定` の内部リンク矢印と、バーコードコ"
+"マンドとバーコードデモシートを印刷するための一連の :guilabel:`印刷` ボタンが"
+"あります。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
+msgid ""
+"For more on setting up and configuring the :guilabel:`Barcode` app, refer to "
+"the :doc:`Set up your barcode scanner <../setup/hardware>` "
+"and :doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
+"pages."
+msgstr ""
+":guilabel:`バーコード` アプリのセットアップと設定については、 :doc:`バーコー"
+"ドスキャナのセットアップ <../setup/hardware>` と :doc:`Odooでバーコードを有効"
+"にする <../setup/software>` のドキュメントページを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:41
 msgid "Scan barcodes for internal transfers"
@@ -4184,15 +4126,6 @@ msgid ""
 msgstr ""
 "コードがスキャンされたら、NETUM スキャナが正しいキーボード設定を持ち、意図し"
 "たとおりに動作していることを確認して下さい。"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
-msgid ":doc:`../setup/hardware`"
-msgstr ":doc:`../setup/hardware`"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
-msgid ":doc:`../setup/software`"
-msgstr ":doc:`../setup/software`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:3
 msgid "Barcode scanner setup"
@@ -20448,6 +20381,7 @@ msgid ":doc:`ups_credentials`"
 msgstr ":doc:`ups_credentials`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:26
 msgid "Account setup"
 msgstr "アカウント設定"
 
@@ -21752,6 +21686,236 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:None
 msgid "Show Google Map route."
 msgstr "Googleマップのルートを表示します。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:3
+msgid "EasyPost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:5
+msgid ""
+"Set up the EasyPost delivery connector in Odoo to manage EasyPost shipments "
+"to clients directly within Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:8
+msgid ""
+"EasyPost is a service that allows users to connect with multiple carriers, "
+"like UPS, USPS, FedEx, DHL, and more. Odoo can then connect to EasyPost to "
+"purchase labels from those carriers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:11
+msgid "To configure it, complete these steps:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:13
+msgid ""
+":ref:`Create an EasyPost account <inventory/shipping_receiving/easypost-"
+"account>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:14
+msgid ""
+":ref:`Integrate carrier accounts if the carrier is not enabled on the "
+"EasyPost account <inventory/shipping_receiving/integrate-easypost-carrier>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:16
+msgid ""
+":ref:`Obtain Test and Production API keys <inventory/shipping_receiving/"
+"easypost-api-keys>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:17
+msgid ""
+":ref:`Set up the delivery method in Odoo <inventory/shipping_receiving/"
+"easypost-method>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:19
+msgid ""
+"Upon completion, it is possible to calculate shipping costs based on package "
+"size and weight, have the charges applied directly to an EasyPost business "
+"account, and automatically print EasyPost tracking labels in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:28
+msgid ""
+"To begin, go to the `EasyPost <https://www.easypost.com>`__ website to "
+"create or log into the company's EasyPost business account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:31
+msgid ""
+"Follow the website's steps to complete registration and sign up for shipping "
+"services. Some shipping services (like USPS and DHL Express) are "
+"automatically enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:37
+msgid "Integrating other carrier accounts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:39
+msgid ""
+"To use a different carrier, it is possible to `enable Wallet Carrier "
+"Accounts <https://support.easypost.com/hc/en-us/articles/21336276718605-"
+"Enabling-Wallet-Carriers-Using-the-EasyPost-Dashboard>`__ to purchase labels "
+"from EasyPost. Alternatively, if a user has their own carrier account, they "
+"can `enable it on EasyPost <https://support.easypost.com/hc/en-us/articles/"
+"25246240687373-Bring-Your-Own-Carrier-Account-to-EasyPost>`__. Then, after "
+"these accounts are enabled, Odoo can integrate with the EasyPost account and "
+"manage labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:50
+msgid "Obtain Test and Production API keys"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:52
+msgid ""
+"After completing the setup, create Test and Production API keys. On the "
+"EasyPost website, click the :guilabel:`Account Settings` link, then open "
+"the :guilabel:`API Keys` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:55
+msgid ""
+"If these API keys have not yet been created, click :guilabel:`Add Additional "
+"API Key`. Select either :guilabel:`Production` or :guilabel:`Test`. The API "
+"key is automatically created. Follow the same process to create both keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Create API keys on the EasyPost API Keys page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:65
+msgid "Delivery method configuration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:67
+msgid ""
+"With those necessary credentials, configure the EasyPost delivery method in "
+"Odoo by going to :menuselection:`Inventory app --> Configuration --> "
+"Delivery Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:70
+msgid "On the *Delivery Methods* page, click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:72
+msgid ""
+"In the :guilabel:`Provider` field, select :guilabel:`Easypost` from the drop-"
+"down menu. Doing so reveals the *Easypost Configuration* tab at the bottom "
+"of the form, where the EasyPost API keys should be entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:76
+msgid ""
+"For details on configuring the other fields on the delivery method, such "
+"as :guilabel:`Delivery Product`, refer to the :doc:`new_delivery_method` "
+"documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:80
+msgid ""
+"To generate EasyPost shipping labels through Odoo, ensure "
+"the :guilabel:`Integration Level` option is set to :guilabel:`Get Rate and "
+"Create Shipment`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:83
+msgid "In the *Easypost Configuration* tab, complete the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:85
+msgid ""
+":guilabel:`Test API Key`: the Test API key in the EasyPost Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:86
+msgid ""
+":guilabel:`Production API Key`: the Production API key in the EasyPost "
+"Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:87
+msgid ""
+":guilabel:`Label Format`: "
+"Choose :guilabel:`PNG`, :guilabel:`PDF`, :guilabel:`ZPL`, "
+"or :guilabel:`EPL2` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:89
+msgid ""
+":guilabel:`Generate Return Label`: Select to automatically generate a return "
+"label when validating the delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:92
+msgid ""
+"Save the delivery method by clicking the :icon:`fa-cloud-"
+"upload` :guilabel:`(Save manually)` icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:94
+msgid ""
+"Click the :guilabel:`Load your Easypost carrier accounts` link under the API "
+"keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Load the EasyPost carrier accounts into Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:99
+msgid ""
+"The *Select a carrier* pop-up window opens. Select a shipping carrier from "
+"the drop-down menu, then click :guilabel:`Select`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:102
+msgid ""
+"After the carrier type has been selected, complete the :guilabel:`Default "
+"Package Type` and :guilabel:`Default Service Level` fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid ""
+"Select a package type and service level that should be used for the carrier."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:109
+msgid "Turn on the Easypost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:111
+msgid ""
+"After the EasyPost connection is set up, use the smart buttons at the top of "
+"the form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:114
+msgid ""
+":guilabel:`Unpublished/Published`: determines if this delivery method is "
+"available on the user's **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:116
+msgid ""
+":guilabel:`Test Environment/Production Environment`: determines whether "
+"label creation is for testing and cancelled immediately (Test) or generating "
+"a real shipping label that is charged to the EasyPost account (Production)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:119
+msgid ""
+":guilabel:`No Debug/Debug Requests`: determines whether API requests and "
+"responses are logged in Odoo (turn on **developer mode** and go "
+"to :menuselection:`Settings app --> Technical --> Logging`)."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:3
 msgid "Envia.com integration"
@@ -26335,8 +26499,8 @@ msgid "Belgium"
 msgstr "ベルギー"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:45
-msgid "Easypost"
-msgstr "Easypost"
+msgid ":doc:`EasyPost <easypost>`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:46
 msgid "North America"
@@ -38457,11 +38621,6 @@ msgstr ""
 "販売オーダに最上位のプロダクトを含めることができ、仕入先からの自動調達または"
 "製造を開始したり、最上位のプロダクトを **eコマース** ストアに含めることができ"
 "ます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
-msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
-msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
 msgid ":doc:`../../../websites/ecommerce/ecommerce_design/catalog`"
@@ -51684,15 +51843,14 @@ msgstr ""
 "覧下さい。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:3
-#: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:None
 msgid "Purchase & Vendor analysis dashboard"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:5
 msgid ""
-"The :guilabel:`Purchase & Vendor analysis` dashboard, available in "
-"the :doc:`Odoo Dashboards <../../../productivity/dashboards>` app, offers "
-"various metrics to evaluate purchasing performance and vendor reliability."
+"The *Purchase & Vendor analysis* dashboard, available in the :doc:`Odoo "
+"Dashboards <../../../productivity/dashboards>` app, offers various metrics "
+"to evaluate purchasing performance and vendor reliability."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:9
@@ -51706,10 +51864,14 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:14
 msgid ""
-"To access the :guilabel:`Purchase & Vendor analysis` dashboard, go to the "
-"Dashboards app, then, in the left panel, navigate to "
+"To access the *Purchase & Vendor analysis* dashboard, go to the "
+"**Dashboards** app, then, in the left panel, navigate to "
 "the :guilabel:`Logistics` section and click the name of the dashboard. The "
 "dashboard opens in the main view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:None
+msgid "Purchase & Vendor analysis dashboard."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:26
@@ -51846,7 +52008,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/purchase_dashboard.rst:92
 msgid ""
-":guilabel:`Supplier Dependency Chart`: shows the percentage of purchases by "
+":guilabel:`Purchase Orders by Buyer`: shows the percentage of purchases by "
 "buyer."
 msgstr ""
 
@@ -58917,6 +59079,344 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "The *Barcode* app can be used to process receipts, deliveries, and other "
+#~ "types of operations in real time using a barcode scanner or the Odoo "
+#~ "mobile app."
+#~ msgstr ""
+#~ "*バーコード* アプリは、バーコードスキャナまたはOdooモバイルアプリを使用し"
+#~ "て、入荷や配送などの処理をリアルタイムで行うことができます。"
+
+#~ msgid ""
+#~ "This makes it possible to process operations on the warehouse floor when "
+#~ "they happen, instead of having to wait to validate transfers from a "
+#~ "computer. Processing operations this way can help to properly attribute "
+#~ "barcodes to the appropriate products, pickings, locations, and more."
+#~ msgstr ""
+#~ "これにより、コンピュータからの転送を検証するのを待つ代わりに、倉庫の現場で"
+#~ "オペレーションが発生したときに処理することが可能になります。このようにオペ"
+#~ "レーションを処理することで、バーコードを適切なプロダクト、ピッキング、ロ"
+#~ "ケーションなどに適切に割当てることができます。"
+
+#~ msgid ""
+#~ "Once the page has refreshed, new options will be displayed under "
+#~ "the :guilabel:`Barcode Scanner` feature: :guilabel:`Barcode Nomenclature` "
+#~ "(with a corresponding drop-down menu), where either :guilabel:`Default "
+#~ "Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
+#~ msgstr ""
+#~ "ページがリフレッシュされると、新しいオプションが :guilabel:`バーコードス"
+#~ "キャナ` 機能の下に表示されます: :guilabel:`バーコード表現規則` (対応するド"
+#~ "ロップダウンメニュー付き)。ここで :guilabel:`デフォルト表現規則` また"
+#~ "は :guilabel:`デフォルトGS1表現規則` のどちらかを選択できます。"
+
+#~ msgid ""
+#~ "To process warehouse receipts for incoming products, there first needs to "
+#~ "be a purchase order (PO) created, and a receipt operation to process."
+#~ msgstr ""
+#~ "入荷するプロダクトの入荷を処理するには、まず購買オーダ(PO)を作成し、入荷オ"
+#~ "ペレーションを処理する必要があります。"
+
+#~ msgid ""
+#~ "To create a :abbr:`PO (purchase order)`, navigate to "
+#~ "the :menuselection:`Purchase app --> Create` to create a new request for "
+#~ "quotation (RFQ)."
+#~ msgstr ""
+#~ ":abbr:`PO(購買オーダ)` を作成するには、 :menuselection:`購買アプリ --> 作"
+#~ "成` に移動し、新しい見積依頼(RFQ)を作成します。"
+
+#~ msgid ""
+#~ "From the blank :abbr:`RFQ (request for quotation)` form, click the drop-"
+#~ "down menu next to the :guilabel:`Vendor` field to add a vendor. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Products` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "空白の :abbr:`RFQ(見積依頼)` フォームから、 :guilabel:`仕入先` フィールド"
+#~ "の隣にあるドロップダウンメニューをクリックして仕入先を追加します。次"
+#~ "に、 :guilabel:`プロダクト` タブの :guilabel:`プロダクト` 明細"
+#~ "で、 :guilabel:`プロダクト追加` をクリックし、見積に追加したいプロダクトを"
+#~ "選択します。"
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, then "
+#~ "click :guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for "
+#~ "quotation)` to a :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "準備ができたら、フォーム上部の :guilabel:`保存` をクリックし、続け"
+#~ "て :guilabel:`オーダ確定` をクリックして、:abbr:`RFQ(見積依頼)` "
+#~ "を :abbr:`PO(購買オーダ)` に変換します。"
+
+#~ msgid "Completed purchase order for barcode product."
+#~ msgstr "バーコードプロダクトの購買オーダ完了。"
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse receipts, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "倉庫の入荷用にバーコードを処理しスキャンするには、 :menuselection:`バー"
+#~ "コードアプリ` に移動します。"
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process receipts, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :menuselection:`Operations` overview page."
+#~ msgstr ""
+#~ ":guilabel:`バーコードアプリ` の中に入ると、様々なオプションを表示す"
+#~ "る :guilabel:`バーコードスキャニング` 画面が表示されます。入荷を処理するに"
+#~ "は、画面下部の :guilabel:`オペレーション` ボタンをクリックします。これによ"
+#~ "り :menuselection:`オペレーション` の概要ページに移動します。"
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Receipts` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding receipts. "
+#~ "Then, select the desired receipt operation to process. This navigates to "
+#~ "the barcode transfer screen."
+#~ msgstr ""
+#~ "このページから :guilabel:`入荷` カードを探し、 :guilabel:`# 未処理` ボタン"
+#~ "をクリックすると、未処理の入荷が全て表示されます。次に、処理したい入荷オペ"
+#~ "レーションを選択します。これでバーコード転送画面に移動します。"
+
+#~ msgid ""
+#~ "If *only* using a barcode scanner or the Odoo mobile app, the barcodes "
+#~ "for each transfer of a corresponding operation type can be scanned to be "
+#~ "processed easily. Once scanned, the products that are part of an existing "
+#~ "transfer can be scanned, and new products can be added to the transfer, "
+#~ "as well. Once all products have been scanned, validate the transfer to "
+#~ "proceed with the stock moves."
+#~ msgstr ""
+#~ "バーコードスキャナまたはOdooモバイルアプリのみを使用する場合、対応するオペ"
+#~ "レーションタイプの各振込のバーコードをスキャンして簡単に処理することができ"
+#~ "ます。一度スキャンすると、既存の転送に含まれるプロダクトをスキャンしたり、"
+#~ "新しいプロダクトを転送に追加することができます。全てのプロダクトがスキャン"
+#~ "されたら、在庫移動を進めるために転送を検証します。"
+
+#~ msgid ""
+#~ "From this screen, an overview of all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "この画面から、その転送(**WH/IN/000XXX**)内で処理する全ての入荷の概要が表示"
+#~ "されます。画面下部には、プロダクトをオペレーションに追加する必要があるか、"
+#~ "オペレーション全体を一度に検証する必要があるかによって、 :guilabel:`プロダ"
+#~ "クト追加` または :guilabel:`検証` のオプションがあります。"
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+#` button (in this case, :guilabel:`+10`) can be "
+#~ "clicked to indicate receipt of that product, or the :guilabel:`pencil` "
+#~ "icon can be clicked to open a new screen to edit that product line."
+#~ msgstr ""
+#~ "各プロダクトを個別に処理してスキャンするには、特定のプロダクト明細を選択し"
+#~ "ます。:guilabel:`+#` ボタン (この場合、:guilabel:`+10`)をクリックすると、"
+#~ "そのプロダクトの入荷を表示でき、:guilabel:`鉛筆` アイコンをクリックする"
+#~ "と、そのプロダクト明細を編集するための新しい画面を開くことができます。"
+
+#~ msgid ""
+#~ "From this screen, the product that's being received is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`PO (purchase order)`."
+#~ msgstr ""
+#~ "この画面から、入荷するプロダクトがリスト表示されます。プロダクト名の下にあ"
+#~ "る  :guilabel:`数量` 行を編集することができます。この行の`0`を希望の数量に"
+#~ "変更するか、 :guilabel:`/# 単位`ボタン(この場合は :guilabel:`/10単位`)をク"
+#~ "リックすると、 :abbr:`PO(購買オーダ)` からオーダされた数量が自動的に入力さ"
+#~ "れます。"
+
+#~ msgid ""
+#~ "In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode "
+#~ "Product` is expected to be received. `[BARCODE_PROD]` is "
+#~ "the :guilabel:`Internal Reference` set on the product form. Scan the "
+#~ "barcode of the `Barcode Product` to receive one unit. Afterwards, click "
+#~ "the :guilabel:`pencil` icon to manually enter the received quantities."
+#~ msgstr ""
+#~ "入荷オペレーション `WH/IN/00019` では、`バーコードプロダクト` の `10個` を"
+#~ "入荷する予定です。`[BARCODE_PROD]` はプロダクトフォームに設定されてい"
+#~ "る :guilabel:`内部参照` です。バーコードプロダクト`のバーコードをスキャン"
+#~ "して1個を入荷します。その後、:guilabel:`鉛筆` アイコンをクリックして、入荷"
+#~ "済数量を手入力します。"
+
+#~ msgid ""
+#~ "Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be "
+#~ "clicked to add or subtract quantity of the product, and "
+#~ "the :guilabel:`number keys` can be used to add quantity, as well."
+#~ msgstr ""
+#~ "さらに :guilabel:`+1` と :guilabel:`-1` のボタンをクリックすると、プロダク"
+#~ "トの数量を追加または減らすことができ、:guilabel:`数字キー` を使用して数量"
+#~ "を追加することもできます。"
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another *location* is listed on the "
+#~ "product itself. Click this line to reveal a drop-down menu of additional "
+#~ "locations to choose from."
+#~ msgstr ""
+#~ ":guilabel:`数字キー` の下には :guilabel:`ロケーション` という行があり、プ"
+#~ "ロダクトに別のロケーションが記載されていない限り、デフォルトでは `WH/在庫"
+#~ "` と表示されます。この行をクリックすると、ドロップダウンメニューが表示され"
+#~ "ます。"
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/IN/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The receipt has now been processed, and "
+#~ "the :guilabel:`Barcode app` can be closed out."
+#~ msgstr ""
+#~ "次に、その転送 (**WH/IN/000XX**) 内で処理する全ての入荷が表示された概要"
+#~ "ページから、入荷するプロダクトの :guilabel:`+#` ボタンをクリック"
+#~ "し、 :guilabel:`検証` をクリックします。これで入荷が処理され、 :guilabel:`"
+#~ "バーコードアプリ` を終了することができます。"
+
+#~ msgid ""
+#~ "To process warehouse deliveries for outgoing products, there first needs "
+#~ "to be a sales order (SO) created, and a delivery operation to process."
+#~ msgstr ""
+#~ "出荷プロダクトの倉庫配送を処理するには、まず販売オーダを作成し、配送オペ"
+#~ "レーションを処理する必要があります。"
+
+#~ msgid ""
+#~ "To create a :abbr:`SO (sales order)`, navigate to "
+#~ "the :menuselection:`Sales app --> Create` to create a new quotation."
+#~ msgstr ""
+#~ ":abbr:`SO(販売オーダ)` を作成するには、 :menuselection:`販売アプリ --> 作"
+#~ "成` に移動し、新しい見積を作成します。"
+
+#~ msgid ""
+#~ "From the blank quotation form, click the drop-down menu next to "
+#~ "the :guilabel:`Customer` field to add a customer. Then, on "
+#~ "the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, "
+#~ "click :guilabel:`Add a product`, and select the desired product(s) to add "
+#~ "to the quotation."
+#~ msgstr ""
+#~ "空白の見積フォームから、 :guilabel:`顧客` フィールドの横にあるドロップダウ"
+#~ "ンメニューをクリックして顧客を追加します。次に、 :guilabel:`オーダ明細` タ"
+#~ "ブの :guilabel:`プロダクト` 明細で、 :guilabel:`プロダクトを追加` をクリッ"
+#~ "クし、見積に追加したいプロダクトを選択します。"
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Save` at the top of the form, and "
+#~ "click :guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO "
+#~ "(sales order)`."
+#~ msgstr ""
+#~ "準備ができたら、フォーム上部の :guilabel:`保存` をクリックし、続け"
+#~ "て :guilabel:`オーダ確定` をクリックして、見積を :abbr:`SO(販売オーダ)` に"
+#~ "変換します。"
+
+#~ msgid "Completed sales order for barcode product."
+#~ msgstr "バーコードプロダクトの完了済販売オーダ。"
+
+#~ msgid ""
+#~ "To process and scan barcodes for warehouse deliveries, navigate to "
+#~ "the :menuselection:`Barcode app`."
+#~ msgstr ""
+#~ "倉庫配送用のバーコードを処理しスキャンするには、 :menuselection:`バーコー"
+#~ "ドアプリ` に移動します。"
+
+#~ msgid ""
+#~ "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
+#~ "screen displaying different options is presented. To process deliveries, "
+#~ "click on the :guilabel:`Operations` button at the bottom of the screen. "
+#~ "This navigates to an :guilabel:`Operations` overview page."
+#~ msgstr ""
+#~ ":guilabel:`バーコードアプリ` の中に入ると、様々なオプションを表示す"
+#~ "る :guilabel:`バーコードスキャニング` 画面が表示されます。配送を処理するに"
+#~ "は、画面下部の :guilabel:`オペレーション` ボタンをクリックします。これによ"
+#~ "り :guilabel:`オペレーション` の概要ページに移動します。"
+
+#~ msgid ""
+#~ "From this page, locate the :guilabel:`Delivery Orders` card, and click "
+#~ "the :guilabel:`# To Process` button to view all outstanding deliveries. "
+#~ "Then, select the desired delivery order to process. This navigates to the "
+#~ "barcode transfer screen."
+#~ msgstr ""
+#~ "このページから :guilabel:`出荷オーダ` カードを探し、 :guilabel:`# 未処理` "
+#~ "ボタンをクリックすると、未処理の配達が全て表示されます。次に、処理したい出"
+#~ "荷オーダを選択します。するとバーコード転送画面に移動します。"
+
+#~ msgid ""
+#~ "From this screen, an overview of all deliveries to process within that "
+#~ "transfer (**WH/OUT/000XX**) is shown. At the bottom of the screen, there "
+#~ "are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending "
+#~ "on if products need to be added to the operation, or if the whole "
+#~ "operation should be validated at once."
+#~ msgstr ""
+#~ "この画面では、その転送(**WH/OUT/000XXX**)内で処理する全ての配送の概要が表"
+#~ "示されます。画面下部には、プロダクトをオペレーションに追加する必要がある"
+#~ "か、オペレーション全体を一度に検証する必要があるかによって、 :guilabel:`プ"
+#~ "ロダクト追加` または :guilabel:`検証` のオプションがあります。"
+
+#~ msgid ""
+#~ "To process and scan each product individually, choose a specific product "
+#~ "line. The :guilabel:`+1` button can be clicked to indicate delivery of "
+#~ "that product, or the :guilabel:`pencil icon` can be clicked to open a new "
+#~ "screen to edit that product line."
+#~ msgstr ""
+#~ "各プロダクトを個別に処理しスキャンするには、特定のプロダクト明細を選択しま"
+#~ "す。:guilabel:`+1` ボタンをクリックすると、そのプロダクトの配送を示すこと"
+#~ "ができ、:guilabel:`鉛筆アイコン` をクリックすると、そのプロダクト明細を編"
+#~ "集するための新しい画面を開くことができます。"
+
+#~ msgid ""
+#~ "From this screen, the product that's being delivered is listed. Under the "
+#~ "product name, the :guilabel:`Quantity` line can be edited. Either change "
+#~ "the `0` in the line to the desired quantity, or click the :guilabel:`/# "
+#~ "Units` button (in this case, :guilabel:`/10 Units`) to automatically fill "
+#~ "the quantity ordered from the :abbr:`SO (sales order)`."
+#~ msgstr ""
+#~ "この画面では、配送するプロダクトがリスト表示されます。プロダクト名の下にあ"
+#~ "る :guilabel:`数量` 行を編集することができます。この行の`0` を希望の数量に"
+#~ "変更するか、 :guilabel:`/#単位` ボタン(この場合は :guilabel:`/10単位`)をク"
+#~ "リックすると、 :abbr:`SO(販売オーダ)` からオーダされた数量が自動的に入力さ"
+#~ "れます。"
+
+#~ msgid ""
+#~ "Below the :guilabel:`number keys` is the :guilabel:`location` line, which "
+#~ "reads `WH/Stock` by default, unless another location is listed on the "
+#~ "product itself."
+#~ msgstr ""
+#~ ":guilabel:`数字キー` の下には :guilabel:`ロケーション` 明細があり、プロダ"
+#~ "クト自体に別のロケーションが記載されていない限り、デフォルトでは `WH/在庫"
+#~ "` と表示されます。"
+
+#~ msgid ""
+#~ "This is the location that the product is being pulled from for delivery. "
+#~ "Click this line to reveal a drop-down menu of additional locations to "
+#~ "choose from (if this product is stored in multiple locations in the "
+#~ "warehouse)."
+#~ msgstr ""
+#~ "これは、配送のためにプロダクトが引き出される場所です。この明細をクリックす"
+#~ "ると、追加のロケーションを選択するドロップダウンメニューが表示されます(こ"
+#~ "のプロダクトが倉庫内の複数のロケーションに保管されている場合）。"
+
+#~ msgid ""
+#~ "For warehouses that have multiple different storage locations, putaway "
+#~ "rules, and removal strategies, additional steps can be added for various "
+#~ "operation types, while using the *Barcode* app."
+#~ msgstr ""
+#~ "複数の異なる保管場所、入庫規則、廃棄戦略を持つ倉庫の場合、*バーコード*　ア"
+#~ "プリを使用しながら、様々なオペレーションタイプに追加のステップを追加するこ"
+#~ "とができます。"
+
+#~ msgid ""
+#~ "Then, from the overview page with all receipts to process within that "
+#~ "transfer (**WH/OUT/000XX**), click the :guilabel:`+#` button on the "
+#~ "product line for the products being received, and "
+#~ "click :guilabel:`Validate`. The delivery has now been processed, and the "
+#~ "*Barcode* app can be closed out."
+#~ msgstr ""
+#~ "次に、その運送 (**WH/OUT/000XXX**)内で処理する全ての入荷が表示された概要"
+#~ "ページから、入荷するプロダクトの :guilabel:`+#` ボタンをクリック"
+#~ "し、 :guilabel:`検証` をクリックします。これで配送が処理され、*バーコード"
+#~ "* アプリを終了できます。"
+
+#~ msgid "Easypost"
+#~ msgstr "Easypost"
 
 #~ msgid ""
 #~ "Assigning categories to storage locations tells Odoo these locations meet "
