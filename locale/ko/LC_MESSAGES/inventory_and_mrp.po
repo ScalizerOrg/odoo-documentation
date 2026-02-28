@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 18:30+0000\n"
-"PO-Revision-Date: 2026-02-19 23:06+0000\n"
+"POT-Creation-Date: 2026-02-27 18:30+0000\n"
+"PO-Revision-Date: 2026-02-28 23:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-17-doc/"
 "inventory_and_mrp/ko/>\n"
@@ -478,7 +478,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:41
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:14
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:21
@@ -2316,7 +2316,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:47
 msgid ":doc:`barcode_nomenclature`"
-msgstr ""
+msgstr ":doc:`barcode_nomenclature`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
@@ -2342,7 +2342,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:61
 msgid ":doc:`../../purchase/manage_deals/rfq`"
-msgstr ""
+msgstr ":doc:`../../purchase/manage_deals/rfq`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:63
 msgid ""
@@ -3873,120 +3873,177 @@ msgstr ""
 "에서 제대로 작동하는지 확인합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:3
-msgid "Activate the Barcodes in Odoo"
-msgstr "Odoo에서 바코드 활성화"
+msgid "Activate barcodes in Odoo"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:7
 msgid ""
-"The barcode scanning features can save you a lot of time usually lost "
-"switching between the keyboard, the mouse and the scanner. Properly "
-"attributing barcodes to products, pickings locations, etc. allows you to "
-"work more efficiently by controlling the software almost exclusively with "
-"the barcode scanner."
+"The barcode scanning features can save a lot of time usually lost switching "
+"between mouse and keyboard and the scanner. Properly attributing barcodes to "
+"products, product packagings, pickings, and locations helps ensure efficient "
+"workflows by controlling software almost exclusively with the barcode "
+"scanner."
 msgstr ""
-"바코드 스캔 기능을 활용하면 키보드, 마우스, 스캐너 사이를 전환할 필요가 없어 "
-"시간을 크게 절약할 수 있습니다. 바코드를 제품, 피킹 위치 등에 정확하게 할당하"
-"면 바코드 스캐너로 소프트웨어를 주로 제어할 수 있어 작업 효율성이 높아집니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:16
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:15
 msgid ""
-"To use this feature, you first need to activate the *Barcode* functionality "
-"via :menuselection:`Inventory --> Settings --> Barcode Scanner`. Once you "
-"have ticked the feature, you can hit save."
+"To use this feature, navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`. In the *Barcode* section, "
+"select :guilabel:`Barcode Scanner`. Be sure to click :guilabel:`Save`."
 msgstr ""
-"이 기능을 사용하려면 먼저 :menuselectio:`재고 관리 --> 설정 --> 바코드 스캐너"
-"`를 통해 *바코드* 기능을 활성화해야 합니다. 이 기능을 선택한 후 변경 사항을 "
-"저장합니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:None
+msgid "Enable Barcode Scanner in the Inventory settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:22
+msgid "Barcode formats"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:24
-msgid "Set Product Barcodes"
-msgstr "제품 바코드 설정"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:26
 msgid ""
-"You can easily assign barcodes to your different products via the "
-"*Inventory* app. To do so, go to :menuselection:`Settings --> Configure "
-"Products Barcodes`."
+"It is possible to use *default nomenclature* for the barcodes in the "
+"database. Default nomenclature supports barcode actions using product "
+"universal product codes (UPCs) and European Article Number (EAN) barcodes."
 msgstr ""
-"*재고 관리* 앱을 통해 다양한 제품에 손쉽게 바코드를 할당할 수 있습니다. 그러"
-"려면 :menuselection:`설정 --> 제품 바코드 구성`으로 이동합니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:32
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:28
 msgid ""
-"Then, you have the possibility to assign barcodes to your products directly "
-"at creation on the product form."
+"It is also possible to use *default GS1 nomenclature*. GS1 nomenclature "
+"consolidates various product and supply chain data into a single barcode. "
+"Most retail products use EAN-13 barcodes, also known as GTIN (Global Trade "
+"Identification Numbers). GTINs are used by companies to uniquely identify "
+"their products and services. While GTIN and UPC are often used synonymously, "
+"GTIN refers to the number a barcode represents, while UPC refers to the "
+"barcode itself. More information about GTINs can be found on the `GS1 "
+"website <https://www.gs1.org/standards/get-barcodes>`__."
 msgstr ""
-"그런 다음 품목 양식에서 품목을 생성할 때 직접 바코드를 할당할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:42
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:35
 msgid ""
-"Be careful to add barcodes directly on the product variants and not on the "
-"template product. Otherwise, you won’t be able to differentiate them."
+"In order to create GTINs for items, a company must have a GS1 company "
+"prefix. This prefix is the number that appears at the beginning of each "
+"GTIN, and identifies the company as the owner of the barcode. To learn more "
+"about GS1 company prefixes, or purchase a license for a prefix, visit the "
+"`GS1 Company Prefix <https://www.gs1.org/standards/id-keys/company-"
+"prefix>`__ page."
 msgstr ""
-"품목 양식이 아닌 품목 세부사항에 직접 바코드를 추가하도록 주의하세요. 그렇지 "
-"않으면 품목을 구분할 수 없습니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:41
+msgid ""
+"Odoo supports GTIN barcodes to identify products. However, since Odoo "
+"supports any numeric string as a barcode, it is also possible to define a "
+"custom barcode for internal use."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:45
+msgid ":doc:`../operations/gs1_nomenclature`"
+msgstr ":doc:`../operations/gs1_nomenclature`"
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:46
+msgid ":doc:`../operations/barcode_nomenclature`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:49
-msgid "Set Locations Barcodes"
-msgstr "위치 바코드 설정"
+msgid "Set product barcodes"
+msgstr "제품 바코드 설정"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:51
 msgid ""
-"If you manage multiple locations, you will find useful to attribute a "
-"barcode to each location and stick it on the location. You can configure the "
-"locations barcodes in :menuselection:`Inventory --> Configuration --> "
-"Locations`."
+"Assign barcodes to products via the *Inventory* app. Navigate "
+"to :menuselection:`Inventory app --> Products --> Products`. Open the "
+"product to which a barcode should be added, or create a new product by "
+"clicking :guilabel:`New`."
 msgstr ""
-"여러 위치를 효율적으로 관리하려면 각 위치에 바코드를 할당하고 해당 물리적 위"
-"치에 부착하는 것이 좋습니다. 위치 바코드는 :menuselection:`재고 관리 --> 설"
-"정 --> 위치`로 이동하여 구성할 수 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:55
+msgid ""
+"On the product form, make sure the *General Information* tab is open. Enter "
+"a barcode in the :guilabel:`Barcode` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:None
+msgid "Assign a barcode on the product form."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:62
 msgid ""
-"You can easily print the barcode you allocate to the locations via the "
-"*Print* menu."
-msgstr "*인쇄* 메뉴를 사용하여 위치에 할당된 바코드를 쉽게 인쇄할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:66
-msgid "Barcode Formats"
-msgstr "바코드 양식"
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:68
-msgid ""
-"Most retail products use EAN-13 barcodes, also known as GTIN (Global Trade "
-"Identification Numbers). GTIN are used by companies to uniquely identify "
-"their products and services. While GTIN and UPC are often used synonymously, "
-"GTIN refers to the number a barcode represents, while UPC refers to the "
-"barcode itself. More information about GTIN can be found on the GS1 website."
+"Be sure to add barcodes directly on the product variants and not on the "
+"product. To set a barcode for a product variant, create the variant in the "
+"*Attributes & Variants* tab. Then, navigate to :menuselection:`Inventory app "
+"--> Products --> Product Variants`. Select the variant. On its product "
+"variant form, in the *General Information* tab, enter a barcode in "
+"the :guilabel:`Barcode` field."
 msgstr ""
-"많은 리테일 제품에는 GTIN(국제거래단품식별코드)으로도 알려진 EAN-13 바코드가 "
-"사용됩니다. GTIN은 제품 및 서비스에 대한 고유 식별자 역할을 합니다. GTIN과 "
-"UPC는 종종 같은 의미로 사용되지만, GTIN은 바코드에 표시된 번호를 의미하고 UPC"
-"는 바코드 자체를 의미합니다. GTIN에 대한 자세한 정보는 GS1 웹사이트에서 확인"
-"할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:73
-msgid ""
-"In order to create GTIN for items, a company must have a GS1 Company Prefix. "
-"This prefix is the number that will appear at the beginning of each GTIN, "
-"and will identify the company as the owner of the barcode any the products "
-"it appears on. To learn more about GS1 Company Prefixes, or purchase a "
-"license for a prefix, visit the GS1 Company Prefix page."
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:0
+msgid "Assign a barcode to individual product variants."
 msgstr ""
-"품목에 대한 GTIN을 생성하려면 회사는 GS1 회사 접두사가 필요합니다. 각 GTIN의 "
-"시작 부분에 표시되는 이 코드는 바코드와 바코드가 나타내는 제품의 소유자인 회"
-"사를 식별합니다. GS1 업체 코드에 대한 자세한 내용을 확인하거나 업체 코드 라이"
-"선스를 획득하려면 GS1 업체 코드 페이지를 방문하십시오."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:78
-msgid ""
-"Odoo users are able to use GTIN barcodes to identify their products. "
-"However, since Odoo supports any numeric string as a barcode, it is also "
-"possible to define a custom barcode for internal use."
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:74
+msgid "Set product packaging barcodes"
 msgstr ""
-"Odoo 사용자는 GTIN 바코드를 사용하여 품목을 식별할 수 있습니다. 그러나 Odoo"
-"는 모든 숫자 문자열을 바코드로 사용할 수 있으므로 내부용으로 사용자 정의 바코"
-"드를 정의할 수도 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:76
+msgid ""
+"Assign barcodes for product packagings to ensure that they can be used for "
+"receipts, deliveries, and more. Product packagings must be enabled before "
+"you can create packagings or assign barcodes to those packagings. Navigate "
+"to :menuselection:`Inventory app --> Configuration --> Setttings`. In the "
+"*Products* section, select :guilabel:`Product Packagings`. Be sure to "
+"click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:81
+msgid ""
+"Add barcodes for packagings in the *Inventory* app. Navigate "
+"to :menuselection:`Inventory app --> Products --> Products`. Open the "
+"product to which a packaging barcode must be added, or create a new product "
+"by clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:85
+msgid ""
+"On the product form, after you have specified a product name and other "
+"information in the *General Information* tab, open the *Inventory* tab. In "
+"the *Packaging* section, click the :icon:`oi-settings-"
+"adjust` :guilabel:`(additional options)` icon, then "
+"select :guilabel:`Barcode`. Then, add a barcode to existing packagings, or "
+"click :guilabel:`Add a line` to create a new packaging and add a barcode to "
+"it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:None
+msgid "Add a packaging barcode in the Inventory tab of the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:95
+msgid ":doc:`../../inventory/product_management/configure/packaging`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:100
+msgid "Set location barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:102
+msgid ""
+"If you manage multiple locations, attribute a barcode to each location and "
+"print it to display on the physical location in the warehouse. You can "
+"configure the locations barcodes in :menuselection:`Inventory app --> "
+"Configuration --> Locations`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:None
+msgid "Set a location barcode in the location form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:110
+msgid ""
+"Print the barcode for the location by clicking the :icon:`fa-"
+"cog` :guilabel:`(Actions)` icon and selecting :icon:`fa-"
+"print` :guilabel:`Location Barcode`. The barcode saves to the computer, and "
+"it can be opened to print from the computer."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory.rst:8
 msgid "Inventory"
@@ -18292,6 +18349,7 @@ msgid ":doc:`ups_credentials`"
 msgstr ":doc:`ups_credentials`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:26
 msgid "Account setup"
 msgstr "계정 설정"
 
@@ -18344,6 +18402,7 @@ msgid "In the *Admin* tab, show the Account ID and Passphrase."
 msgstr "*관리자* 탭에서 계정 ID와 암호를 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:65
 msgid "Shipping method configuration"
 msgstr "배송 방법 환경설정"
 
@@ -18931,6 +18990,232 @@ msgid ""
 "requests and responses are logged in Odoo (turn on :ref:`developer mode "
 "<developer-mode>` and go to :menuselection:`Settings app --> Technical --> "
 "Logging`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:3
+msgid "EasyPost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:5
+msgid ""
+"Set up the EasyPost shipping connector in Odoo to manage EasyPost shipments "
+"to clients directly within Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:8
+msgid ""
+"EasyPost is a service that allows users to connect with multiple carriers, "
+"like UPS, USPS, FedEx, DHL, and more. Odoo can then connect to EasyPost to "
+"purchase labels from those carriers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:11
+msgid "To configure it, complete these steps:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:13
+msgid ""
+":ref:`Create an EasyPost account <inventory/shipping_receiving/easypost-"
+"account>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:14
+msgid ""
+":ref:`Integrate carrier accounts if the carrier is not enabled on the "
+"EasyPost account <inventory/shipping_receiving/integrate-easypost-carrier>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:16
+msgid ""
+":ref:`Obtain Test and Production API keys <inventory/shipping_receiving/"
+"easypost-api-keys>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:17
+msgid ""
+":ref:`Set up the shipping method in Odoo <inventory/shipping_receiving/"
+"easypost-method>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:19
+msgid ""
+"Upon completion, it is possible to calculate shipping costs based on package "
+"size and weight, have the charges applied directly to an EasyPost business "
+"account, and automatically print EasyPost tracking labels in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:28
+msgid ""
+"To begin, go to the `EasyPost <https://www.easypost.com>`__ website to "
+"create or log into the company's EasyPost business account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:31
+msgid ""
+"Follow the website's steps to complete registration and sign up for shipping "
+"services. Some shipping services (like USPS and DHL Express) are "
+"automatically enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:37
+msgid "Integrating other carrier accounts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:39
+msgid ""
+"To use a different carrier, it is possible to `enable Wallet Carrier "
+"Accounts <https://support.easypost.com/hc/en-us/articles/21336276718605-"
+"Enabling-Wallet-Carriers-Using-the-EasyPost-Dashboard>`__ to purchase labels "
+"from EasyPost. Alternatively, if a user has their own carrier account, they "
+"can `enable it on EasyPost <https://support.easypost.com/hc/en-us/articles/"
+"25246240687373-Bring-Your-Own-Carrier-Account-to-EasyPost>`__. Then, after "
+"these accounts are enabled, Odoo can integrate with the EasyPost account and "
+"manage labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:50
+msgid "Obtain Test and Production API keys"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:52
+msgid ""
+"After completing the setup, create Test and Production API keys. On the "
+"EasyPost website, click the :guilabel:`Account Settings` link, then open "
+"the :guilabel:`API Keys` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:55
+msgid ""
+"If these API keys have not yet been created, click :guilabel:`Add Additional "
+"API Key`. Select either :guilabel:`Production` or :guilabel:`Test`. The API "
+"key is automatically created. Follow the same process to create both keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Create API keys on the EasyPost API Keys page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:67
+msgid ""
+"With those necessary credentials, configure the EasyPost shipping method in "
+"Odoo by going to :menuselection:`Inventory app --> Configuration --> "
+"Shipping Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:70
+msgid "On the *Shipping Methods* page, click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:72
+msgid ""
+"In the :guilabel:`Provider` field, select :guilabel:`Easypost` from the drop-"
+"down menu. Doing so reveals the *Easypost Configuration* tab at the bottom "
+"of the form, where the EasyPost API keys should be entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:76
+msgid ""
+"For details on configuring the other fields on the shipping method, such "
+"as :guilabel:`Delivery Product`, refer to the :ref:`Delivery method "
+"<inventory/shipping_receiving/shipping-methods-details>` documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:81
+msgid ""
+"To generate EasyPost shipping labels through Odoo, ensure "
+"the :guilabel:`Integration Level` option is set to :guilabel:`Get Rate and "
+"Create Shipment`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:84
+msgid "In the *Easypost Configuration* tab, complete the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:86
+msgid ""
+":guilabel:`Test API Key`: the Test API key in the EasyPost Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:87
+msgid ""
+":guilabel:`Production API Key`: the Production API key in the EasyPost "
+"Account Settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:88
+msgid ""
+":guilabel:`Label Format`: "
+"Choose :guilabel:`PNG`, :guilabel:`PDF`, :guilabel:`ZPL`, "
+"or :guilabel:`EPL2` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:90
+msgid ""
+":guilabel:`Generate Return Label`: Select to automatically generate a return "
+"label when validating the delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:93
+msgid ""
+"Save the shipping method by clicking the :icon:`fa-cloud-"
+"upload` :guilabel:`(Save manually)` icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:95
+msgid ""
+"Click the :guilabel:`Load your Easypost carrier accounts` link under the API "
+"keys."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid "Load the Easypost carrier accounts into Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:100
+msgid ""
+"The *Select a carrier* pop-up window opens. Select a shipping carrier from "
+"the drop-down menu, then click :guilabel:`Select`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:103
+msgid ""
+"After the carrier type has been selected, complete the :guilabel:`Default "
+"Package Type` and :guilabel:`Default Service Level` fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:None
+msgid ""
+"Select a package type and service level that should be used for the carrier."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:110
+msgid "Turn on the Easypost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:112
+msgid ""
+"After the EasyPost connection is set up, use the smart buttons at the top of "
+"the form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:115
+msgid ""
+":guilabel:`Unpublished/Published`: determines if this shipping method is "
+"available on the user's **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:117
+msgid ""
+":guilabel:`Test Environment/Production Environment`: determines whether "
+"label creation is for testing and cancelled immediately (Test) or generating "
+"a real shipping label that is charged to the EasyPost account (Production)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/easypost.rst:120
+msgid ""
+":guilabel:`No Debug/Debug Requests`: determines whether API requests and "
+"responses are logged in Odoo (turn on **developer mode** and go "
+"to :menuselection:`Settings app --> Technical --> Logging`)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:3
@@ -22144,8 +22429,8 @@ msgid "Belgium"
 msgstr "벨기에"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:43
-msgid "Easypost"
-msgstr "Easypost"
+msgid ":doc:`Easypost <easypost>`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:44
 msgid "North America"
@@ -26394,18 +26679,14 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:17
 msgid ""
 "For :doc:`purchased products <../../../purchase/manage_deals/rfq>`, Odoo "
-"creates a |RFQ|"
+"creates an |RFQ|"
 msgstr ""
-":doc:`매입품 <../../../purchase/manage_deals/rfq>` 의 경우, Odoo에서 |RFQ| "
-"가 생성됩니다"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:18
 msgid ""
 "For :doc:`manufactured products <../../../manufacturing/basic_setup/"
-"configure_manufacturing_product>`, it creates a |MO|"
+"configure_manufacturing_product>`, it creates an |MO|"
 msgstr ""
-":doc:`제조 제품 <../../../manufacturing/basic_setup/"
-"configure_manufacturing_product>` 의 경우, |MO| 가 생성됩니다"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:21
 msgid ""
@@ -26669,7 +26950,7 @@ msgstr ""
 msgid ""
 "Return to the |SO| by clicking the :guilabel:`SO` breadcrumb, or by "
 "navigating to :menuselection:`Sales app --> Orders --> Orders`, and "
-"selecting the|SO|."
+"selecting the |SO|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:146
@@ -50828,6 +51109,128 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid "Activate the Barcodes in Odoo"
+#~ msgstr "Odoo에서 바코드 활성화"
+
+#~ msgid ""
+#~ "The barcode scanning features can save you a lot of time usually lost "
+#~ "switching between the keyboard, the mouse and the scanner. Properly "
+#~ "attributing barcodes to products, pickings locations, etc. allows you to "
+#~ "work more efficiently by controlling the software almost exclusively with "
+#~ "the barcode scanner."
+#~ msgstr ""
+#~ "바코드 스캔 기능을 활용하면 키보드, 마우스, 스캐너 사이를 전환할 필요가 없"
+#~ "어 시간을 크게 절약할 수 있습니다. 바코드를 제품, 피킹 위치 등에 정확하게 "
+#~ "할당하면 바코드 스캐너로 소프트웨어를 주로 제어할 수 있어 작업 효율성이 높"
+#~ "아집니다."
+
+#~ msgid ""
+#~ "To use this feature, you first need to activate the *Barcode* "
+#~ "functionality via :menuselection:`Inventory --> Settings --> Barcode "
+#~ "Scanner`. Once you have ticked the feature, you can hit save."
+#~ msgstr ""
+#~ "이 기능을 사용하려면 먼저 :menuselectio:`재고 관리 --> 설정 --> 바코드 스"
+#~ "캐너`를 통해 *바코드* 기능을 활성화해야 합니다. 이 기능을 선택한 후 변경 "
+#~ "사항을 저장합니다."
+
+#~ msgid "Set Product Barcodes"
+#~ msgstr "제품 바코드 설정"
+
+#~ msgid ""
+#~ "You can easily assign barcodes to your different products via the "
+#~ "*Inventory* app. To do so, go to :menuselection:`Settings --> Configure "
+#~ "Products Barcodes`."
+#~ msgstr ""
+#~ "*재고 관리* 앱을 통해 다양한 제품에 손쉽게 바코드를 할당할 수 있습니다. 그"
+#~ "러려면 :menuselection:`설정 --> 제품 바코드 구성`으로 이동합니다."
+
+#~ msgid ""
+#~ "Then, you have the possibility to assign barcodes to your products "
+#~ "directly at creation on the product form."
+#~ msgstr ""
+#~ "그런 다음 품목 양식에서 품목을 생성할 때 직접 바코드를 할당할 수 있습니다."
+
+#~ msgid ""
+#~ "Be careful to add barcodes directly on the product variants and not on "
+#~ "the template product. Otherwise, you won’t be able to differentiate them."
+#~ msgstr ""
+#~ "품목 양식이 아닌 품목 세부사항에 직접 바코드를 추가하도록 주의하세요. 그렇"
+#~ "지 않으면 품목을 구분할 수 없습니다."
+
+#~ msgid "Set Locations Barcodes"
+#~ msgstr "위치 바코드 설정"
+
+#~ msgid ""
+#~ "If you manage multiple locations, you will find useful to attribute a "
+#~ "barcode to each location and stick it on the location. You can configure "
+#~ "the locations barcodes in :menuselection:`Inventory --> Configuration --> "
+#~ "Locations`."
+#~ msgstr ""
+#~ "여러 위치를 효율적으로 관리하려면 각 위치에 바코드를 할당하고 해당 물리적 "
+#~ "위치에 부착하는 것이 좋습니다. 위치 바코드는 :menuselection:`재고 관리 --"
+#~ "> 설정 --> 위치`로 이동하여 구성할 수 있습니다."
+
+#~ msgid ""
+#~ "You can easily print the barcode you allocate to the locations via the "
+#~ "*Print* menu."
+#~ msgstr ""
+#~ "*인쇄* 메뉴를 사용하여 위치에 할당된 바코드를 쉽게 인쇄할 수 있습니다."
+
+#~ msgid "Barcode Formats"
+#~ msgstr "바코드 양식"
+
+#~ msgid ""
+#~ "Most retail products use EAN-13 barcodes, also known as GTIN (Global "
+#~ "Trade Identification Numbers). GTIN are used by companies to uniquely "
+#~ "identify their products and services. While GTIN and UPC are often used "
+#~ "synonymously, GTIN refers to the number a barcode represents, while UPC "
+#~ "refers to the barcode itself. More information about GTIN can be found on "
+#~ "the GS1 website."
+#~ msgstr ""
+#~ "많은 리테일 제품에는 GTIN(국제거래단품식별코드)으로도 알려진 EAN-13 바코드"
+#~ "가 사용됩니다. GTIN은 제품 및 서비스에 대한 고유 식별자 역할을 합니다. "
+#~ "GTIN과 UPC는 종종 같은 의미로 사용되지만, GTIN은 바코드에 표시된 번호를 의"
+#~ "미하고 UPC는 바코드 자체를 의미합니다. GTIN에 대한 자세한 정보는 GS1 웹사"
+#~ "이트에서 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "In order to create GTIN for items, a company must have a GS1 Company "
+#~ "Prefix. This prefix is the number that will appear at the beginning of "
+#~ "each GTIN, and will identify the company as the owner of the barcode any "
+#~ "the products it appears on. To learn more about GS1 Company Prefixes, or "
+#~ "purchase a license for a prefix, visit the GS1 Company Prefix page."
+#~ msgstr ""
+#~ "품목에 대한 GTIN을 생성하려면 회사는 GS1 회사 접두사가 필요합니다. 각 GTIN"
+#~ "의 시작 부분에 표시되는 이 코드는 바코드와 바코드가 나타내는 제품의 소유자"
+#~ "인 회사를 식별합니다. GS1 업체 코드에 대한 자세한 내용을 확인하거나 업체 "
+#~ "코드 라이선스를 획득하려면 GS1 업체 코드 페이지를 방문하십시오."
+
+#~ msgid ""
+#~ "Odoo users are able to use GTIN barcodes to identify their products. "
+#~ "However, since Odoo supports any numeric string as a barcode, it is also "
+#~ "possible to define a custom barcode for internal use."
+#~ msgstr ""
+#~ "Odoo 사용자는 GTIN 바코드를 사용하여 품목을 식별할 수 있습니다. 그러나 "
+#~ "Odoo는 모든 숫자 문자열을 바코드로 사용할 수 있으므로 내부용으로 사용자 정"
+#~ "의 바코드를 정의할 수도 있습니다."
+
+#~ msgid "Easypost"
+#~ msgstr "Easypost"
+
+#~ msgid ""
+#~ "For :doc:`purchased products <../../../purchase/manage_deals/rfq>`, Odoo "
+#~ "creates a |RFQ|"
+#~ msgstr ""
+#~ ":doc:`매입품 <../../../purchase/manage_deals/rfq>` 의 경우, Odoo에서 |"
+#~ "RFQ| 가 생성됩니다"
+
+#~ msgid ""
+#~ "For :doc:`manufactured products <../../../manufacturing/basic_setup/"
+#~ "configure_manufacturing_product>`, it creates a |MO|"
+#~ msgstr ""
+#~ ":doc:`제조 제품 <../../../manufacturing/basic_setup/"
+#~ "configure_manufacturing_product>` 의 경우, |MO| 가 생성됩니다"
 
 #~ msgid ""
 #~ "The *Barcode* app can be used to process receipts, deliveries, and other "
