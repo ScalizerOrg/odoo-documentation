@@ -110,8 +110,7 @@ total number of scheduled activities.
    regardless of the activity type, or the view.
 
 To schedule an activity for a record, hover over the corresponding field. Click the :icon:`fa-plus`
-:guilabel:`(plus)` icon, and then :ref:`fill out the Schedule Activity form
-<activities/form>`.
+:guilabel:`(plus)` icon, and then :ref:`fill out the Schedule Activity form <activities/form>`.
 
 .. image:: activities/activity-view.png
    :alt: Activity view of the CRM pipeline and the option to schedule an activity.
@@ -175,8 +174,7 @@ All scheduled activities
 To view a consolidated list of activities, organized by application, click the |clock| in the header
 menu, located in the top-right corner.
 
-If any activities are scheduled, the number of activities appears in a red bubble on the
-|clock|.
+If any activities are scheduled, the number of activities appears in a red bubble on the |clock|.
 
 All activities for each application are further divided into subsections, indicating where in the
 application the activity is to be completed. Each sub-section lists the number of scheduled
@@ -243,8 +241,10 @@ Activity Settings section
 
   - :guilabel:`Upload Document`: If selected, a link to upload a document is automatically added to
     the planned activity in the chatter.
-  - :guilabel:`Call` or :guilabel:`Meeting`: If selected, users have the option to open their
-    calendar to select a date and time for the activity.
+  - :guilabel:`Call`: If selected, call information is logged in the chatter and displayed on
+    relevant records.
+  - :guilabel:`Meeting`: If selected, a meeting is created in the chatter and displayed on relevant
+    records.
   - :guilabel:`Request Signature`: If selected, a link to open a signature request pop-up window is
     automatically added to the planned activity in the chatter. This requires the Odoo **Sign**
     application to be installed.
