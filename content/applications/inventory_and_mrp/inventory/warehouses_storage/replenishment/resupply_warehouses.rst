@@ -81,8 +81,8 @@ MTO
 ~~~
 
 To replenish products using the make-to-order method, go to the product form and ensure the
-:ref:`MTO route is unarchived <inventory/warehouses_storage/unarchive-mto>`, so it appears in the
-:guilabel:`Routes` section of the :guilabel:`Inventory` tab.
+:ref:`MTO route is unarchived <inventory/mto/enable-mto>`, so it appears in the :guilabel:`Routes`
+section of the :guilabel:`Inventory` tab.
 
 With the resupply and |MTO| routes ticked, jump to the section titled: :ref:`Replenish from another
 warehouse <inventory/warehouses_storage/resupply-workflow>`.
