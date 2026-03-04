@@ -2,29 +2,51 @@
 Outlook plugin
 ==============
 
-Outlook allows for third-party applications to connect in order to execute database actions from
-emails. Odoo has a plugin for Outlook that allows for the creation of an opportunity from the email
-panel.
+The Outlook plugin connects an Odoo database to an Outlook inbox, which enables users to create Odoo
+records (such as opportunities, tasks, and tickets) directly in Outlook.
+
+.. note::
+   The Outlook plugin is available for both the desktop and web versions of Outlook. See
+   `Microsoft's add-in article
+   <https://support.microsoft.com/en-us/office/use-add-ins-in-outlook-1ee261f9-49bf-4ba6-b3e2-2ba7bcab64c8>`_.
 
 .. _mail-plugin/outlook/install-plugin:
 
 Install the Outlook plugin
 ==========================
 
+.. important::
+   Make sure to check the database version in the :menuselection:`Settings app --> General
+   Settings`, at the bottom of the page.
+
+   For database versions earlier than 19.2, see the `19.0 documentation
+   <https://www.odoo.com/documentation/19.0/applications/general/integrations/mail_plugins/outlook.html>`_
+   for installation instructions.
+
+From the Microsoft Marketplace
+------------------------------
+
 To install the Odoo Outlook plugin, go to the `Odoo Inbox Addin
 <https://marketplace.microsoft.com/en-us/product/WA200009923?tab=Overview>`_ page in the Microsoft
-Marketplace and click :guilabel:`Get it now` to install the plugin. Sign in to the Outlook account
-to be connected to Odoo. Fill out the :guilabel:`Name` and :guilabel:`Country / region` fields, then
-click :guilabel:`Get it now` one more time to grant the necessary permissions, and the page
-redirects to the Outlook inbox. Click :guilabel:`Add`
+Marketplace and click :guilabel:`Get it now`. Sign in to the Outlook account to be connected to
+Odoo. Fill out the :guilabel:`Name` and :guilabel:`Country / region` fields, then click
+:guilabel:`Get it now` one more time to grant the necessary permissions, and the page redirects to
+the Outlook inbox. Click :guilabel:`Add` to confirm the installation of the plugin.
+
+From the Outlook inbox
+----------------------
 
 Alternatively, the plugin can be installed directly from the Outlook inbox. To do so, open an email
 in the Outlook inbox, click on the :guilabel:`Apps` button in the top-right corner of the email,
 then click :guilabel:`Get add-ins`. Click :guilabel:`Search add-ins`, then type `Odoo` and press
-Enter. Click :guilabel:`Odoo Inbox Addin`, then click :guilabel:`Add` to install the plugin.
+Enter. Click :guilabel:`Odoo Inbox Addin`, then click :guilabel:`Add` to confirm the installation of
+the plugin.
 
 .. image:: outlook/more-actions.png
-   :alt: Apps button in Outlook
+   :alt: Apps button in the Outlook inbox.
+
+Connect an Odoo database
+========================
 
 To open the plugin, click on the :guilabel:`Apps` button in the top-right corner of any email, and
 select :guilabel:`Odoo`. The plugin panel opens to the right of the email.
