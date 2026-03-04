@@ -120,7 +120,7 @@ justify the exemption operated on an invoice line.
    If you need to use a different kind of exoneration, go to :menuselection:`Accounting -->
    Configuration --> Taxes`, select a similar tax, then click on the cog icon and select
    :guilabel:`Duplicate`. In the :guilabel:`Advanced Options` tab, add the :guilabel:`Exoneration`
-   and :guilabel:`Law Reference`. To confirm click on :guilabel:`Save`.
+   and :guilabel:`Law Reference`. To confirm click :guilabel:`Save`.
 
 .. tip::
    **Rename** your taxes in the :guilabel:`Name` field according to their :guilabel:`Exoneration` to
@@ -260,32 +260,28 @@ XML Documents creation
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Odoo generates the required XML files as attachments to invoices in the `FatturaPA` format required
-by the :abbr:`AdE (Agenzia delle Entrate)`. Once the invoices needed are selected, go to
-:guilabel:`Action` and click on :guilabel:`Send and Print`.
-
-.. image:: italy/edi-menu.png
-   :alt: Send and Print menu
+by the :abbr:`AdE (Agenzia delle Entrate)`. Once the invoices needed are selected, click the
+:guilabel:`Send` button.
 
 When the pop-up window opens there is a selection of actions that can be taken. :guilabel:`Generate
 XML File` generates the attachments.
-
-.. image:: italy/edi-send-and-print.png
-   :alt: Send and Print dialog
 
 The XML file as well as the PDF once can be found attached to the invoice.
 
 .. image:: italy/edi-attachments.png
    :alt: EDI Attachments
 
+After choosing the desired actions, click :guilabel:`send`.
+
 .. _localizations/italy/sdi-submission:
 
 Submission to SDI
 ~~~~~~~~~~~~~~~~~
 
-The :guilabel:`Send to Tax Agency` option in the :guilabel:`Send and Print` dialog sends the
-attachment to the :guilabel:`Proxy Server`, which gathers all requests and then forwards them via a
-WebServices channel to the :abbr:`SdI (Sistema di Interscambio)`. Check the sending status of the
-invoice through the :guilabel:`Check Sending` button at the top of the invoice's view.
+The :guilabel:`Send to Tax Agency` sends the attachment to the :guilabel:`Proxy Server`, which
+gathers all requests and then forwards them via a WebServices channel to the
+:abbr:`SdI (Sistema di Interscambio)`. Check the sending status of the invoice through the
+:guilabel:`Check Sending` button at the top of the invoice's view.
 
 .. _localizations/italy/sdi-processing:
 
