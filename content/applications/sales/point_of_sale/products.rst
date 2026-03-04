@@ -76,26 +76,25 @@ To create the combo choices that will be added to the :ref:`product combo
 #. Go to :menuselection:`Point of Sale --> Products --> Combo Choices` and click :guilabel:`New`.
 #. Enter a name for the :guilabel:`Combo Choice`.
 #. Set the maximum selectable items for the combo choice using the :guilabel:`Maximum items` field.
-#. Set the number of items included in the combo choice using the :guilabel:`Includes items` field.
-#. Optionally, enable the :guilabel:`Is Upsell` option if the combo choice is an upsell in the
-   :ref:`POS register <pos/use/open-register>`.
+#. Choose between the following options:
+
+   - Set the number of items included in the combo choice using the :guilabel:`Includes items`
+     field.
+   - Enable the :guilabel:`Is Upsell` option if the combo choice is optional and offered as an
+     additional paid upgrade.
 #. Click :guilabel:`Add a line` under the :guilabel:`Options` section to add the products that
    constitute the :guilabel:`Combo Choices`.
 #. If needed, click a product to add an :guilabel:`Extra Price`.
 
 .. admonition:: Combo Price vs. Extra Price
 
-  - The :guilabel:`Combo Price` field shows the price applied to any additional product a customer
-    might select (i.e., when the :guilabel:`Maximum items` field is set to `2` or higher). This
-    price is automatically calculated based on the price of the least expensive product defined in
-    the :guilabel:`Combo Choice`.
+  - The :guilabel:`Combo Price` field defines the price charged for any additional product selected
+    by the customer. It is applied when the :guilabel:`Maximum items` field is set to `2` or more,
+    or when a combo choice is configured as an optional upsell. The price is automatically
+    calculated based on the least expensive product in in the combo choice.
   - The :guilabel:`Extra Price` field is used to set an additional charge for a specific product in
     the combo choice, e.g., to cover higher costs or encourage upselling. This extra price is
     applied each time a customer selects that product within the combo choice.
-
-.. note::
-   Enabling the :guilabel:`Is Upsell` option removes the :guilabel:`Includes items` field, which
-   prevents from including items for free.
 
 .. _pos/products/combo-creation:
 
@@ -130,8 +129,9 @@ To apply combos, follow these steps:
 .. note::
    The total price of the product combo, as displayed in the :ref:`POS register
    <pos/use/open-register>`, is based on the :guilabel:`Sales Price` defined on the :ref:`product
-   combo's form <pos/products/combo-creation>`. Selecting several products in the combo choices and
-   selecting a product with an :guilabel:`Extra Price` influences the total price.
+   combo's form <pos/products/combo-creation>`. Selecting several products in the combo choices,
+   a product with an :guilabel:`Extra Price`, and/or products in a combo choice configured as an
+   upsell all affect the total price.
 
    .. example::
       The :guilabel:`Office Combo` has a :guilabel:`Sales Price` of **300** € and offers a
