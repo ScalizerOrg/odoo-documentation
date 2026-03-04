@@ -99,7 +99,7 @@ left empty, the mandate remains active until it is closed or revoked. To close o
 go to :menuselection:`Accounting --> Customers --> Direct Debit Mandates`, select the relevant
 mandate, and click :guilabel:`Close` or :guilabel:`Revoke`.
 
-**Closing** a mandate updates the mandate's end day to the current day. Invoices issued after the
+**Closing** a mandate updates the mandate's end date to the current day. Invoices issued after the
 present day will not be processed with an |sdd| payment. **Revoking** a mandate disables the
 mandate immediately. No |sdd| payment can be registered anymore, regardless of the invoice's
 date. However, payments that have already been registered are still included in the next :ref:`SDD
@@ -135,7 +135,7 @@ of all posted |sdd| payments to your online banking interface. To do so, follow 
    - To view the payments and invoices linked to a specific |sdd| mandate, click the
      :guilabel:`Collections` and :guilabel:`Invoices Paid` smart button on the :ref:`Direct Debit
      Mandate <accounting/batch_sdd/sdd_mandates>` form.
-   - Click :guilabel:`Re-generate Export file` to regenerate the XML file.
+   - Click :guilabel:`Re-generate Export file` in the batch payment form to regenerate the XML file.
 
 .. seealso::
    - :doc:`batch`
