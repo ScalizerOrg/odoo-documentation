@@ -123,6 +123,9 @@ To allow customers to reserve products online and collect them in-store, follow 
      selector on the product page.
    - Each warehouse must have a **complete address** to ensure its location is accurately displayed
      to customers. Incomplete addresses prevent the warehouse from being shown.
+   - In a multi-company environment, the company assigned to the warehouse must match the company
+     assigned to the website on which the delivery method is used. If the companies differ, the
+     pickup location cannot be selected.
    - The :guilabel:`Click & Collect` option is not available for services.
    - By default, the :ref:`Pay on Site <payment_providers/inperson_payments/pay_on_site>` payment
      method is :ref:`enabled and published <payment_providers/add_new>` when the :guilabel:`Click &
