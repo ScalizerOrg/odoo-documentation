@@ -4,13 +4,13 @@
 Mail plugins
 ============
 
-Mail plugins are connectors that bridge your mailbox with your Odoo database. With them, you can
-interact with your Odoo database directly from your mailbox by:
+Mail plugins are connectors that bridge an Odoo database with email inboxes. With plugins, interact
+with an Odoo database directly from an email inbox in the following ways:
 
-- Search for and create opportunities, tickets, and tasks.
 - Log emails in the chatter of related Odoo records.
-- Open related Odoo records from your mailbox.
-- Add email addressses to Odoo contacts.
+- Search for and create opportunities, tickets, and tasks.
+- Open related Odoo records from an email inbox.
+- Create Odoo contacts.
 
 .. _integrations/mail_plugins/features:
 
