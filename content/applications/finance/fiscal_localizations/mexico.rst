@@ -473,7 +473,7 @@ instead.
    terms` that imply changing the due month (i.e., :guilabel:`30 Days`, or :guilabel:`15 Days`, as
    long as they fall on the next month).
 
-After clicking on :guilabel:`Confirm` in the customer invoice, click on the :guilabel:`Send` button
+After clicking :guilabel:`Confirm` in the customer invoice, click the :guilabel:`Send` button
 to process the invoice with the government. Make sure that the :guilabel:`CFDI` checkbox is marked.
 
 .. image:: mexico/mx-send-cfdi.png
@@ -695,7 +695,7 @@ Cancellation reason 01
    with errors (with related document)` from the :guilabel:`Reason` field and click
    :guilabel:`Create Replacement Invoice` to create a new draft invoice. This new draft invoice
    replaces the previous invoice, along with the related |CFDI|.
-#. :guilabel:`Confirm` the draft and :guilabel:`Send & Print` the invoice.
+#. :guilabel:`Confirm` the draft and :guilabel:`Send` the invoice.
 #. Return to the initial invoice (i.e., the invoice from which you first requested the
    cancellation). Notice the :guilabel:`Substituted By` field appears with a reference to the new
    replacement invoice.
@@ -1692,8 +1692,8 @@ After configuring the product, follow the standard :doc:`purchase flow
 <../../inventory_and_mrp/purchase>`.
 
 Create a purchase order from :menuselection:`Purchase --> Orders --> Purchase Order`. Then, confirm
-the order to display a :guilabel:`Receipt` smart button. Click on the :guilabel:`Receipt` smart
-button, add the lots or serial numbers and :guilabel:`Validate`.
+the order to display a :guilabel:`Receipt` smart button. Click the :guilabel:`Receipt` smart
+button and :guilabel:`Validate` the receipt.
 
 Go to :menuselection:`Inventory --> Operations --> Landed Costs`, and create a new record. In the
 :guilabel:`Transfer`, add the receipt that was just validated, and add the :guilabel:`Customs
@@ -1719,7 +1719,7 @@ Cost` field can be edited at any time to fix any mistakes that could have occurr
 the landed cost. Editing the :guilabel:`L10N Mx Edi Landed Cost` field automatically updates the
 :guilabel:`Customs number` and the name of the lot or serial number.
 
-Next, create a sales order and confirm it. Click on the :guilabel:`Delivery` smart button that
+Next, create a sales order and confirm it. Click the :guilabel:`Delivery` smart button that
 appears, and carefully review the assigned lots/serial numbers to make sure they are the desired
 values, after that :guilabel:`Validate` the delivery order.
 
