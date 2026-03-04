@@ -261,5 +261,6 @@ Gain invaluable insight into event-related revenues with customizable reports an
    events/event_templates
    events/event_booths
    events/event_tracks
+   events/event_sponsors
    events/registration_desk
    events/revenues_report
