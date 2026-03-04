@@ -186,8 +186,8 @@ Sending invoices to SInvoice
 ----------------------------
 
 Invoices can be sent to SInvoice once they have been confirmed. To do so, follow the
-:ref:`invoice sending <accounting/invoice/sending>` steps. In the :guilabel:`Send` popup, enable
-:guilabel:`Send to SInvoice` and click :guilabel:`Send & Print`.
+:ref:`invoice sending <accounting/invoice/sending>` steps. In the popup window, enable
+:guilabel:`Send to SInvoice` and click :guilabel:`Send`.
 
 Once the invoice has been successfully submitted to SInvoice, the :guilabel:`SInvoice Status` field
 in the :guilabel:`SInvoice` tab of the invoice is updated to :guilabel:`Sent`. The

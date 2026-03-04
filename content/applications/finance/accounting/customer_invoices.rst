@@ -135,14 +135,13 @@ To send the invoice to the customer, navigate back to the invoice record and fol
 Sending multiple invoices
 -------------------------
 
-To send and print multiple invoices, go to :menuselection:`Accounting --> Customers --> Invoices`,
+To send multiple invoices, go to :menuselection:`Accounting --> Customers --> Invoices`,
 select them in the :guilabel:`Invoices` list view and click :guilabel:`Send`. The
-:guilabel:`Send` window displays the selected invoice sending methods based on the preferred
-method set.
+:guilabel:`Send` window displays the number of selected invoice to send by email.
 
-A banner is added to the selected invoices to indicate they are part of an ongoing send and print
-batch. This helps prevent the process from being triggered manually again, as it may take some time
-to complete for exceptionally large batches.
+After clicking :guilabel:`Send`, a banner is added to the selected invoices to indicate they are
+part of an ongoing send batch. This helps prevent the process from being triggered manually again,
+as it may take some time to complete for exceptionally large batches.
 
 To check all invoices that have not yet been sent, go to :menuselection:`Accounting --> Customers
 --> Invoices`. In the :guilabel:`Invoices` list view, click into the search bar and filter on
