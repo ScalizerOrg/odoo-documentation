@@ -226,7 +226,7 @@ For new taxes, set these fields in :menuselection:`Accounting --> Configuration 
 Options` tab, fill :guilabel:`SAT Tax Type` and :guilabel:`Factor Type` fields.
 
 Odoo supports four groups of :guilabel:`SAT Tax Types`: :guilabel:`IVA`, :guilabel:`ISR`,
-:guilabel:`IEPS`, and :guilabel:`Local Taxes`.
+:guilabel:`IEPS`, and :guilabel:`Local`.
 
 If the factor type is :guilabel:`Quota`, standard calculation methods cannot be used. Instead, set
 the tax calculation computation to :guilabel:`Custom Formula`.
@@ -464,7 +464,7 @@ instead.
    terms` that imply changing the due month (i.e., :guilabel:`30 Days`, or :guilabel:`15 Days`, as
    long as they fall on the next month).
 
-After clicking on :guilabel:`Confirm` in the customer invoice, click on the :guilabel:`Send` button
+After clicking on :guilabel:`Confirm` in the customer invoice, click the :guilabel:`Send` button
 to process the invoice with the government. Make sure that the :guilabel:`CFDI` checkbox is marked.
 
 .. image:: mexico/mx-send-cfdi.png
@@ -657,7 +657,7 @@ Cancellation reason 01
    with errors (with related document)` from the :guilabel:`Reason` field and click
    :guilabel:`Create Replacement Invoice` to create a new draft invoice. This new draft invoice
    replaces the previous invoice, along with the related |CFDI|.
-#. :guilabel:`Confirm` the draft and :guilabel:`Send & Print` the invoice.
+#. :guilabel:`Confirm` the draft and :guilabel:`Send` the invoice.
 #. Return to the initial invoice (i.e., the invoice from which you first requested the
    cancellation). Notice the :guilabel:`Substituted By` field appears with a reference to the new
    replacement invoice.
@@ -1573,7 +1573,7 @@ After configuring the product, follow the standard :doc:`purchase flow
 <../../inventory_and_mrp/purchase>`.
 
 Create a purchase order from :menuselection:`Purchase --> Orders --> Purchase Order`. Then, confirm
-the order to display a :guilabel:`Receipt` smart button. Click on the :guilabel:`Receipt` smart
+the order to display a :guilabel:`Receipt` smart button. Click the :guilabel:`Receipt` smart
 button and :guilabel:`Validate` the receipt.
 
 Go to :menuselection:`Inventory --> Operations --> Landed Costs`, and create a new record. In the
@@ -1590,7 +1590,7 @@ Once :guilabel:`Posted`, all products related to that receipt have the customs n
 .. image:: mexico/mx-landing-inventory.png
    :alt: Customs number on a landed costs Inventory record.
 
-Next, create a sales order and confirm it. Click on the :guilabel:`Delivery` smart button that
+Next, create a sales order and confirm it. Click the :guilabel:`Delivery` smart button that
 appears, and :guilabel:`Validate` the delivery order.
 
 Finally, :ref:`create an invoice from the sales order <accounting/inv-process/so>`, and confirm it.
