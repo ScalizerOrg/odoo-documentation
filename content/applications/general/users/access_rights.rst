@@ -36,7 +36,7 @@ Manage user permissions
 The access rights for :ref:`individual users <users/add-individual>` are set when the user is added
 to the database, but they can be adjusted at any point in the user's profile.
 
-To make changes to a user's rights, click on the desired user to edit their profile.
+To make changes to a user's rights, click the desired user to edit their profile.
 
 .. image:: access_rights/navigate-to-users-menu.png
    :alt: Users menu in the Users & Companies section of the Settings app of Odoo.
@@ -63,8 +63,8 @@ While access rights are typically assigned in bundles under specific roles, they
 explicit permissions.
 
 .. example::
-   For example, giving a user the :guilabel:`Administrator` permission for **Timesheets**
-   gives them full access to that app. That user, while holding full access, can *still* have their
+   When a user is assigned the :guilabel:`Administrator` permission for **Timesheets**, it gives
+   them full access to that app. That user, while holding full access, can *still* have their
    ability to manage *their own* timesheets restricted — such as in the case of a salaried payroll
    administrator who does not need to track time.
 
@@ -87,14 +87,14 @@ are made to these groups, then their permissions will mirror the selections made
    :alt: The technical access rights tab opened up for a user profile.
 
 .. example::
-   When the *Sales Administrator* permission set is assigned to a user, then the *Canned Responses
+   When the *Sales Administrator* permission set is assigned to a user, the *Canned Responses
    Administrator* permissions are inherited automatically. These assignments are reflected across
    the values listed in the :guilabel:`Selected Groups` and :guilabel:`Groups added automatically`
    tables, respectively.
 
 To add a permission to this user profile, click :guilabel:`Add a line` in the :guilabel:`Selected
 groups` table, and then add permissions to this user profile. To remove a permission, click the
-:icon:`fa-times` :guilabel:`(cancel)` at the end of that permission's row.
+:icon:`fa-times` :guilabel:`(cancel)` icon at the end of that permission's row.
 
 .. warning::
    Removing permissions from the :guilabel:`Selected Groups` list can impact what permissions are
@@ -104,7 +104,7 @@ groups` table, and then add permissions to this user profile. To remove a permis
 Clicking on the permission itself will open a group management form. Learn more about :ref:`managing
 groups <access-rights/groups>`.
 
-Any permission in the :guilabel:`Groups added automatically` section are implied or required by the
+Any permission in the :guilabel:`Groups added automatically` section is implied or required by the
 permission shown in the :guilabel:`Selected groups` section. These cannot be removed, but more users
 can be given these permissions by clicking on the permission itself, and then adding the user to
 that permission's group.
@@ -114,7 +114,7 @@ that permission's group.
      :guilabel:`Website` app's permission to :guilabel:`Editor and Designer` will also give that
      user the :guilabel:`Restricted Editor` permission).
    - Any permissions in red are conflicting and cannot be active at the same time.
-   - Any permissions in *italics* is implied by a :guilabel:`Selected group` (these are usually
+   - Any permissions in *italics* are implied by a :guilabel:`Selected group` (these are usually
      found in the :guilabel:`Groups added automatically`).
 
 .. _access-rights/groups:
@@ -135,7 +135,7 @@ To access groups, first activate Odoo's :ref:`developer mode <developer-mode>`, 
 To create a new group from the :guilabel:`Groups` page, click :guilabel:`Create`. Then, from the
 blank group form, select an :guilabel:`Application`, and complete the group form (detailed below).
 
-To modify existing groups, click on an existing group from the list displayed on the
+To modify an existing group, click an existing group from the list displayed on the
 :guilabel:`Groups` page, and edit the contents of the form.
 
 Enter a :guilabel:`Name` for the group and tick the checkbox next to :guilabel:`Share Group`, if
@@ -162,8 +162,8 @@ The group form contains multiple tabs for managing all elements of the group. In
      its :guilabel:`Inherited` tab, then any users added to the *Sales/Administrator* group
      automatically receive access to the *Website/Restricted Editor* group, as well.
 
-- :guilabel:`Menus` tab: defines which models the group can have access to. Click
-  :guilabel:`Add a line` to add a specific menu.
+- :guilabel:`Menus` tab: defines which models the group can have access to. Click :guilabel:`Add a
+  line` to add a specific menu.
 - :guilabel:`Views` tab: lists which views in Odoo the group has access to. Click :guilabel:`Add a
   line` to add a view to the group.
 - :guilabel:`Access Rights` tab: lists the first level of rights (models) that this group has. The
@@ -215,6 +215,48 @@ The group form contains multiple tabs for managing all elements of the group. In
      domains (and domain expressions) should consult an Odoo Business Analyst, or the Odoo Support
      Team, before making changes.
 
+.. _general/users/access_rights/timeouts:
+
+Session and inactivity timeouts
+-------------------------------
+
+When the `auth_timeout` module is installed, administrators can configure automatic logout rules for
+users assigned to a specific user group. This module may be installed automatically by certain
+localizations (for example, the Australian Payroll localization).
+
+Once installed, a *Timeouts* tab appears on user group forms. This tab allows administrators to
+define how long users can remain logged in under different conditions.
+
+Two types of timeouts can be configured:
+
+Inactivity timeout
+~~~~~~~~~~~~~~~~~~
+
+*Inactivity timeout* controls whether users are automatically logged out after a period of
+inactivity.
+
+To enable inactivity timeout, click the :guilabel:`Timeouts` tab and tick the :guilabel:`Inactivity`
+checkbox. Next, choose either :guilabel:`Screen lock` or :guilabel:`Screen lock with two-factor
+authentication` from the drop-down menu. This determines whether the user must to complete 2FA
+verification when logging back in.
+
+Then, enter the desired amount of time before enforcing screen lock, and select a unit of measure
+from the drop-down menu. Inactivity can be measured in minutes, hours, or days.
+
+Session timeout
+~~~~~~~~~~~~~~~
+
+*Session timeout* controls whether users are logged out after a fixed session duration, regardless
+of activity.
+
+To enable session timeout, click on the :guilabel:`Timeouts` tab, and tick the :guilabel:`Session`
+checkbox. Next, choose either :guilabel:`Logout` or :guilabel:`Logout with two-factor
+authentication` from the drop-down menu. This determines whether the user must to complete 2FA
+verification when logging back in.
+
+Then, enter the desired amount of time before the user is logged out, and select a unit of measure
+from the drop-down menu. Session timeouts can be measured in minutes, hours, or days.
+
 .. _access-rights/superuser:
 
 Superuser mode
@@ -245,7 +287,7 @@ To leave *Superuser mode*, log out of the account, by navigating to the upper-ri
 clicking on the :guilabel:`OdooBot` username. Then, select the :guilabel:`Log out` option.
 
 .. tip::
-   An alternative way to activate *Superuser mode* is to login as a superuser. To do that, navigate
+   An alternative way to activate *Superuser mode* is to log in as a superuser. To do that, navigate
    to the login screen, and enter the appropriate :guilabel:`Email` and :guilabel:`Password`.
 
    Instead of clicking :guilabel:`Login`, click :guilabel:`Log in as superuser`.
