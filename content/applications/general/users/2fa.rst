@@ -113,3 +113,11 @@ Click :guilabel:`Save` to commit any unsaved changes.
 
 .. image:: 2fa/enforce-settings.png
    :alt: The enforce two factor setting in the Settings application.
+
+.. note::
+   If users are frequently required to log in again and complete two-factor authentication, it may
+   be due to session or inactivity timeout policies configured for one or more of their user groups.
+
+   Administrators can configure these policies using the *Timeouts* settings available on user
+   groups when the *auth_timeout* module is installed. See :ref:`Session and inactivity timeouts
+   <general/users/access_rights/timeouts>` for more information.
