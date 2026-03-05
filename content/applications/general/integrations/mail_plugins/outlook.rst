@@ -5,10 +5,46 @@ Outlook plugin
 The Outlook plugin connects an Odoo database to an Outlook inbox, which enables users to create Odoo
 records (such as opportunities, tasks, and tickets) directly in Outlook.
 
+<<<<<<< 224426f7001d7b5dfd0cb4d55018360053b1a449
 .. note::
    The Outlook plugin is available for both the desktop and web versions of Outlook. See
    `Microsoft's add-in article
    <https://support.microsoft.com/en-us/office/use-add-ins-in-outlook-1ee261f9-49bf-4ba6-b3e2-2ba7bcab64c8>`_.
+||||||| e1104b3064728c99d13762d083a6ab16761f54f7
+Configuration
+=============
+
+The Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on Odoo and Outlook.
+
+.. _mail-plugin/outlook/enable-mail-plugin:
+
+Enable Mail Plugin
+------------------
+
+First, enable the *Mail Plugin* module in the database. Go to :menuselection:`Settings --> General
+Settings --> Integrations`, enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration.
+=======
+.. important::
+   Make sure to check the database version in the :guilabel:`Settings app --> General Settings`, at
+   the bottom of the page.
+
+   For database versions 19.2 and later, see the `latest documentation
+   <https://www.odoo.com/documentation/master/applications/general/integrations/mail_plugins/outlook.html>`_
+   for installation instructions.
+
+Configuration
+=============
+
+The Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on Odoo and Outlook.
+
+.. _mail-plugin/outlook/enable-mail-plugin:
+
+Enable Mail Plugin
+------------------
+
+First, enable the *Mail Plugin* module in the database. Go to :menuselection:`Settings --> General
+Settings --> Integrations`, enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration.
+>>>>>>> 94fb4abc1958ae9d9c943db02ffb94e1d5a50bdc
 
 .. _mail-plugin/outlook/install-plugin:
 
