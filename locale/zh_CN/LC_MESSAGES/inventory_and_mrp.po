@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-27 18:30+0000\n"
-"PO-Revision-Date: 2026-03-05 23:20+0000\n"
+"PO-Revision-Date: 2026-03-06 23:20+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/inventory_and_mrp/zh_Hans/>\n"
@@ -3549,31 +3549,36 @@ msgid ""
 "If your database is hosted on **Odoo Online**, you can use Barcode Lookup "
 "without configuration."
 msgstr ""
+"从 |GS1| :ref:`获取 <barcode/operations/retrieve_epcs_gs1>` EPC 后，需将其 "
+":ref:`编码 <barcode/operations/write_epcs>`至 RFID 标签，随后将标签应用于产品"
+"，并在整个库存流程中使用。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:19
 msgid ""
 "If your database is hosted on **Odoo.sh** or **on-premise**, proceed as "
 "follows:"
-msgstr ""
+msgstr "如果您的数据库托管在 **Odoo.sh** 或 **本地部署** 环境中，请按以下步骤操作："
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:21
 msgid ""
 "Visit the `Barcode Lookup website <https://www.barcodelookup.com/api>`_ and "
 "click :guilabel:`Sign Up for the API`."
 msgstr ""
+"访问 `条形码查询网站 <https://www.barcodelookup.com/api>`_，点击 "
+":guilabel:`注册API`。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:23
 msgid ""
 "Choose the appropriate plan based on the number of barcodes you need to scan."
-msgstr ""
+msgstr "根据您需要扫描的条形码数量选择合适的方案。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:24
 msgid "Fill in the required details and complete the registration process."
-msgstr ""
+msgstr "填写所需信息并完成注册流程。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:25
 msgid "Copy the API key."
-msgstr ""
+msgstr "复制 API 密钥。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:26
 msgid ""
@@ -3581,6 +3586,8 @@ msgid ""
 "section, and, under :guilabel:`Barcode Database`, paste the Barcode "
 "Lookup :guilabel:`API Key`."
 msgstr ""
+"在 Odoo 中，打开设置应用，向下滚动至 :guilabel:`整合`部分，在 :guilabel:`条码"
+"数据库`下粘贴条码查询 :guilabel:`API 密钥`。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:30
 msgid "Use"
@@ -3595,12 +3602,19 @@ msgid ""
 "category`, and :guilabel:`Volume`. You can then modify any field(s) as "
 "needed."
 msgstr ""
+"要使用条码查询功能填写产品信息，请创建新产品并填写 :guilabel:`条形码` 字段。"
+"系统将自动从条形码查询导入产品详情，更新以下字段： :guilabel:`名称`、 "
+":guilabel:`价格`、 :guilabel:`描述`、 :guilabel:`税费`、 :guilabel:`图片`、 "
+":guilabel:`重量`、 :guilabel:`属性`、 :guilabel:`产品类别`及 :guilabel:`体"
+"积`。随后可根据需要修改任意字段。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:39
 msgid ""
 ":ref:`Create new products during internal transfers using the Barcode Lookup "
 "database <barcode/setup/barcodelookup>`."
 msgstr ""
+":ref:`在内部转移过程中使用条形码查询数据库创建新产品 <barcode/setup/"
+"barcodelookup>`。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:3
 msgid "Barcode device troubleshooting"
@@ -4459,6 +4473,9 @@ msgid ""
 "feature is enabled, but the *Pick (WHPICK)* operation will only be added if "
 "*Multi-Step Routes* are configured to have a picking step."
 msgstr ""
+"`print_inventory_commands_and_operation_types` 文档将始终显示 :guilabel:`放入"
+"包装` 命令，无论 *包装* 功能是否启用。但 *拣货（WHPICK）* 操作仅在 *多步骤路"
+"线* 配置包含拣货步骤时才会被添加。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:70
 msgid ""
@@ -4664,12 +4681,16 @@ msgid ""
 "barcodes <software>` can be scanned to designate the source and destination, "
 "or scanned direction to initiate a transfer in **Barcode**."
 msgstr ""
+"**内部转移** `WHINT` 创建新的转移订单。可扫描 :doc:`位置条形码 <software>` 指"
+"定来源和目的地，或在 **条形码** 中扫描扫描方向以启动转移。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:170
 msgid ""
 "**Pick** `WHPICK` creates a new picking operation. This will *require* "
 "a :doc:`location barcode <software>` for the source location."
 msgstr ""
+"**拣货** `WHPICK` 创建新的拣货操作。这将*要求*为源位置提供 :doc:`位置条形码 "
+"<software>`。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:174
 msgid "Commands"
@@ -4678,19 +4699,19 @@ msgstr "命令"
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:176
 msgid ""
 "`MAIN MENU`: Scan to return to the main menu from an inventory adjustment."
-msgstr ""
+msgstr "`主菜单`：扫描此按钮可从库存调整界面返回主菜单。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:177
 msgid ""
 "`VALIDATE`: Scan to confirm that an operation is correct and ready to be "
 "completed."
-msgstr ""
+msgstr "`验证`：扫描以确认操作正确且已准备就绪，可完成执行。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:178
 msgid ""
 "`CANCEL`: Scan from an operation to prevent that operation from being "
 "validated and set its status to *Cancelled*."
-msgstr ""
+msgstr "`取消`：从操作中取消扫描，以阻止该操作被验证，并将状态设置为*已取消*。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:180
 msgid ""
@@ -4698,6 +4719,8 @@ msgid ""
 "or receipt to generate a PDF with the name and barcode for that operation's "
 "reference number. This can be scanned later to go directly to the operation."
 msgstr ""
+"`打印拣货操作单`：从现有送货单、转运单或收货单扫描生成 PDF 文件，文件名包含该"
+"操作的参考编号及条形码。该文件可后续扫描直接跳转至对应操作。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:183
 msgid ""
@@ -4705,6 +4728,8 @@ msgid ""
 "generate a PDF of the purchase order or delivery order. This will not "
 "include a barcode."
 msgstr ""
+"`打印送货单`：扫描现有收据或送货单，生成采购订单或送货单的 PDF 文件。此文件不"
+"包含条形码。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:185
 msgid ""
@@ -4713,6 +4738,9 @@ msgid ""
 "package>`. Products scanned *after* this command are placed in a new package "
 "if the `PUT IN PACK` command is scanned again."
 msgstr ""
+"`放入包装`：扫描商品后，此命令将指定所有商品均归入同一个 :doc:`包装 <../../"
+"inventory/product_management/configure/package>`。若再次扫描`放入包装`命令，"
+"此命令之后扫描的商品将被放入新包装。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:188
 msgid ""
@@ -4720,10 +4748,13 @@ msgid ""
 "virtual location for :doc:`scrap inventory <../../inventory/"
 "warehouses_storage/inventory_management/scrap_inventory>`"
 msgstr ""
+"`报废`：扫描此条目可将扫描的产品标记为缺陷品，并将其移至虚拟位置：:doc:`报废"
+"库存 <../../inventory/warehouses_storage/inventory_management/"
+"scrap_inventory>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:192
 msgid "Print barcodes for manufacturing commands"
-msgstr ""
+msgstr "打印生产作业相关条形码"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:194
 msgid ""
@@ -4735,10 +4766,15 @@ msgid ""
 "click :icon:`fa-print` :guilabel:`Print barcode commands and operation "
 "types`."
 msgstr ""
+"默认情况下，:guilabel:`生产` 作业类型可扫描产品及零部件，点击*生产*按钮即可开"
+"展生产作业。如需打印基础生产作业的条形码，请进入 :menuselection:`生产应"
+"用 --> 配置 --> 设置`，在 :guilabel:`作业`** 板块中，勾选 :guilabel:`条形码扫"
+"描器` 选项，再点击 :icon:`fa-print` :guilabel:`打印库存指令及作业类型条形"
+"码`。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:201
 msgid "Work order commands"
-msgstr ""
+msgstr "工单发料指令"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:203
 msgid ""
@@ -4750,28 +4786,37 @@ msgid ""
 "Orders` box is ticked and click :icon:`fa-print` :guilabel:`Print barcode "
 "commands`."
 msgstr ""
+"要通过**条形码**实现对制造流程的精细化控制，请启用 :doc:`工作订单 <../../"
+"manufacturing/basic_setup/bill_configuration>` 功能。要打印工单条形码，请前"
+"往 :menuselection:`制造应用 --> 配置 --> 设置`，在 :guilabel:`操作`部分确保勾"
+"选 :guilabel:`工单`选项框，然后点击 :icon:`fa-print` :guilabel:`打印条形码指"
+"令`。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:None
 msgid ""
 "'Print barcode commands' like in the Work Orders section of Manufacturing "
 "settings."
-msgstr ""
+msgstr "类似于制造设置中工作订单部分的“打印条形码指令”。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:213
 msgid ""
 "`Odoo Tutorials: Process and Cancel MOs Using Barcodes <https://"
 "www.youtube.com/watch?v=6zBz93AIXBo>`_"
 msgstr ""
+"`Odoo 教程：使用条形码处理和取消采购订单 <https://www.youtube.com/"
+"watch?v=6zBz93AIXBo>`_"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:215
 msgid ""
 "`Odoo Tutorials: Consuming Components Using Barcodes <https://"
 "www.youtube.com/watch?v=2ojxIbTq41Q>`_"
 msgstr ""
+"`Odoo 教程：使用条形码消耗组件 <https://www.youtube.com/watch?v=2ojxIbTq41Q>"
+"`_"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:3
 msgid "RFID"
-msgstr ""
+msgstr "RFID"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:7
 msgid ""
@@ -4781,6 +4826,9 @@ msgid ""
 "RFID helps automate processes by keeping inventory accurate and tracking "
 "internal and external moves."
 msgstr ""
+"RFID 是射频识别技术的缩写，该技术通过无线电波实现物品追踪：将 RFID 标签附着于"
+"库存产品上，RFID 阅读器可读取标签信息并将其传输至计算机系统。RFID 技术能精准"
+"把控库存数据、追踪物料的内外部流转，从而助力业务流程的自动化升级。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:12
 msgid ""
@@ -4790,40 +4838,45 @@ msgid ""
 "establishes common rules for encoding information within a barcode to "
 "facilitate the global exchange of goods."
 msgstr ""
+"RFID 标签会传输电子产品代码（|EPC|），该代码是区分单个物品的唯一标识。Odoo 中"
+"的电子产品代码遵循 GS1 全球标准，可实现产品的全球统一识别。GS1 编码体系为条形"
+"码的信息编码制定了通用规则，以此推动商品的全球流通。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:18
 msgid ":doc:`../operations/gs1_nomenclature`"
-msgstr ""
+msgstr ":doc:`../operations/gs1_nomenclature`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:21
 msgid "Hardware"
-msgstr ""
+msgstr "硬件"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:23
 msgid "The following are required to begin working with RFID in Odoo:"
-msgstr ""
+msgstr "在 Odoo 中启用 RFID 功能，需准备以下硬件设备："
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:25
 msgid "Zebra TCX Series mobile computer, or"
-msgstr ""
+msgstr "斑马 TCX 系列移动数据终端；或"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:26
 msgid "Android Smartphone"
-msgstr ""
+msgstr "安卓智能手机"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:28
 msgid "Paired with:"
-msgstr ""
+msgstr "配对使用："
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:30
 msgid "Zebra RFD40 (can read and write RFID tags)"
-msgstr ""
+msgstr "斑马 RFD40（可读写 RFID 标签）"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:35
 msgid ""
 "Before using RFID tags to manage inventory, the Android Package Kit (APK) "
 "with RFID support must be installed on the mobile computer or smartphone."
 msgstr ""
+"在使用 RFID 标签管理库存前，必须在移动计算机或智能手机上安装支持 RFID 的安卓"
+"安装包（APK）。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:39
 msgid ""
@@ -4832,6 +4885,9 @@ msgid ""
 "device's :guilabel:`App` or :guilabel:`App & Notification` settings, under "
 "the :guilabel:`Special access` or :guilabel:`Special app access` section."
 msgstr ""
+"在单个设备上安装 APK 之前，先在设备设置中启用安装未知来源应用的权限。可在设备"
+"的 :guilabel:`应用` 或 :guilabel:`应用和通知` 设置中找到该选项，位置通常在 "
+":guilabel:`特殊访问权限` 或 :guilabel:`特殊应用访问` 板块下。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:44
 msgid ""
@@ -4842,10 +4898,14 @@ msgid ""
 "computer and transfer the APK via USB or Bluetooth, or use the device's web "
 "browser to download the APK."
 msgstr ""
+"然后下载 APK。在 :guilabel:`下载`页面，于 :guilabel:`移动应用程序`部分，点击 "
+":guilabel:`安卓`选项旁的 :guilabel:`下载`，然后从下拉菜单中选择 :guilabel:`下"
+"载APK（含Zebra RFID支持）`。可通过计算机下载该文件，再经 USB 或蓝牙传输 APK，"
+"或直接使用设备浏览器下载 APK。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:None
 msgid "Download the APK from the Download page."
-msgstr ""
+msgstr "从下载页面下载 APK。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:53
 msgid ""
@@ -4855,26 +4915,31 @@ msgid ""
 "device's file manager, open it and navigate to the location where the file "
 "is stored, then tap it to install the APK."
 msgstr ""
+"安装 APK。如果已为设备的网页浏览器开启 :guilabel:`安装未知应用` 权限，可直接"
+"通过浏览器下载通知安装 APK。如果已为设备的文件管理器开启 :guilabel:`安装未知"
+"应用`权限，打开文件管理器并进入文件存储位置，点击文件即可安装。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:58
 msgid ""
 "Then, when reading or writing RFID tags, ensure that the Zebra device and "
 "the smart device are paired and connected."
-msgstr ""
+msgstr "之后，在读写 RFID 标签时，确保 Zebra 设备与智能设备已配对并连接。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:62
 msgid "Set a compatible barcode"
-msgstr ""
+msgstr "设置兼容的条形码"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:64
 msgid ""
 "Before you can manage inventory using RFID tags, a compatible barcode must "
 "be assigned to the products. Set the product barcode in the product form."
 msgstr ""
+"在使用 RFID 标签管理库存前，必须为产品分配兼容的条形码。在产品表单中设置产品"
+"条形码。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:68
 msgid ":ref:`Set product barcodes <inventory/barcode/set-barcodes>`"
-msgstr ""
+msgstr ":ref:`设置产品条形码 <inventory/barcode/set-barcodes>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:70
 msgid ""
@@ -4882,16 +4947,18 @@ msgid ""
 "inventory tracking must be enabled for the product. Product barcodes that "
 "are not GTIN-14-compatible must be upgraded to work with RFID."
 msgstr ""
+"要使用 RFID，产品条形码必须兼容 GTIN-14 格式，且必须为产品启用库存跟踪。不兼"
+"容 GTIN-14 的产品条形码必须升级后才能使用 RFID。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:75
 msgid ""
 "Tracking by serial number or lots does not need to be enabled for this "
 "feature to work properly."
-msgstr ""
+msgstr "该功能正常使用无需启用序列号或批次跟踪。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:78
 msgid "Limitations"
-msgstr ""
+msgstr "限制"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:80
 msgid ""
@@ -4899,6 +4966,8 @@ msgid ""
 "SGTIN-96 is the only supported encoding scheme for RFID tags in Odoo. "
 "Alphanumeric serial numbers are **not** supported."
 msgstr ""
+"属于 |EPC| 一部分的序列号必须为纯数字，因为 Odoo 中 RFID 标签仅支持 SGTIN-96 "
+"编码格式。**不支持**字母数字混合的序列号。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:83
 msgid ""
@@ -4906,10 +4975,12 @@ msgid ""
 "considered as one lot with a quantity of `1`. It does not count individual "
 "products in a receipt."
 msgstr ""
+"对于按批次追踪的产品，可以扫描批次，但系统会将其视为数量为 1 的单个批次，不会"
+"在收货时统计批次内的单个产品数量。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:85
 msgid "Only ultra-high frequency (UHF) RFID tags are supported."
-msgstr ""
+msgstr "仅支持超高频（UHF）RFID 标签。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:86
 msgid "Products need to be GS1-registered because barcodes must be unique."
