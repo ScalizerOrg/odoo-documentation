@@ -309,10 +309,21 @@ Configuration --> Settings`. When enabled:
 - :guilabel:`Invoice Date` and :guilabel:`Bill Date` are pre-filled when encoding a transaction.
 - A :guilabel:`Quick encoding` option is available for customer invoices and vendor bills.
 
+.. _accounting/share-invoices:
+
+Share invoices with external accountants
+========================================
+
+Odoo offers multiple ways to share invoices and bills with an external accountant, including
+the abilities to :ref:`grant access rights <accounting/accountant-access-rights>` to your database,
+to :ref:`automatically send copies of a journal's invoices or bills <accounting/send-copy>` to a
+specified email address, and to :ref:`download ZIP files <accounting/zip>` containing all invoices
+and all bills.
+
 .. _accounting/accountant-access-rights:
 
 Accountant access rights
-========================
+------------------------
 
 To grant access to the company's accountant, :ref:`add the accountant as a new user
 <users/add-individual>` and configure the appropriate :doc:`access rights
@@ -331,6 +342,42 @@ company's financial data:
    `Odoo's pricing <https://www.odoo.com/pricing-plan>`_.
 
 For a multi-company environment, set the appropriate :ref:`access <users/multi-companies>`.
+
+.. _accounting/send-copy:
+
+Send copies of a journal's invoices or bills
+--------------------------------------------
+
+Sales and purchase type journals can be used to send all of their invoices and bills to external
+email addresses. These records are sent in XML format.
+
+To configure a journal to automatically send its records to a specified email address, follow these
+steps:
+
+#. Navigate to :menuselection:`Accounting --> Configuration --> Journals`.
+#. Open the desired journal.
+#. In the :guilabel:`Advanced Settings` tab, enter an email address in the :guilabel:`Send Copy To`
+   field.
+
+.. note::
+   Multiple email addresses can be entered. Separate them with `;` without a space (i.e.:
+   `sample1@example.com;sample2@example.com`).
+
+.. _accounting/zip:
+
+ZIP file export
+---------------
+
+Groups of invoices and bills can be exported in ZIP files. To export invoices or bills in ZIP files,
+follow these steps:
+
+#. Navigate to :menuselection:`Accounting --> Customers --> Invoices` or :menuselection:`Accounting
+   --> Vendors --> Bills`.
+#. Select the invoices or bills to be included in the ZIP file.
+#. Click :icon:`fa-print` :guilabel:`Print` menu, and click :guilabel:`Export ZIP`.
+
+Once the ZIP file is exported, it can be sent to an external accountant to provide them with all the
+information of your invoices and bills.
 
 .. toctree::
    :titlesonly:
