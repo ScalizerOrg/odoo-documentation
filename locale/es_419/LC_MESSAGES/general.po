@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-13 18:30+0000\n"
+"POT-Creation-Date: 2026-03-06 18:31+0000\n"
 "PO-Revision-Date: 2026-02-18 23:20+0000\n"
 "Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
@@ -36,8 +36,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
-" ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
+"0) ? 1 : 2);\n"
 "X-Generator: Weblate 5.14.3\n"
 
 #: ../../content/applications/general.rst:3
@@ -583,19 +583,11 @@ msgid ""
 "All configurations, except for :ref:`accounting <accounting/branches>` "
 "settings inherited from the parent company, must be set individually per "
 "branch. This allows for branch-specific setups such as :doc:`loyalty "
-"programs <../sales/point_of_sale/pricing/loyalty>`, :doc:`price lists <../"
-"sales/point_of_sale/pricing/pricelists>`, or :doc:`inventory locations <../"
-"inventory_and_mrp/inventory/warehouses_storage/inventory_management/"
-"use_locations>`."
+"programs <../sales/sales/products_prices/"
+"loyalty_discount>`, :doc:`pricelists <../sales/sales/products_prices/prices/"
+"pricing>`, or :doc:`inventory locations <../inventory_and_mrp/inventory/"
+"warehouses_storage/inventory_management/use_locations>`."
 msgstr ""
-"Todas las configuraciones, salvo los ajustes de :ref:`contabilidad "
-"<accounting/branches>` que se heredan de la empresa matriz, deben "
-"configurarse de forma individual para cada sucursal. De esta forma "
-"permitimos configuraciones específicas para cada sucursal, "
-"como :doc:`programas de lealtad <../sales/point_of_sale/pricing/"
-"loyalty>`, :doc:`listas de precios <../sales/point_of_sale/pricing/"
-"pricelists>`, o :doc:`ubicaciones de inventario <../inventory_and_mrp/"
-"inventory/warehouses_storage/inventory_management/use_locations>`."
 
 #: ../../content/applications/general/companies.rst:147
 #: ../../content/applications/general/companies/multi_company.rst:66
@@ -9903,7 +9895,7 @@ msgstr ":doc:`windows_iot`"
 #: ../../content/applications/general/iot/devices/camera.rst:12
 #: ../../content/applications/general/iot/devices/footswitch.rst:14
 #: ../../content/applications/general/iot/devices/printer.rst:16
-#: ../../content/applications/general/iot/devices/screen.rst:10
+#: ../../content/applications/general/iot/devices/screen.rst:11
 msgid "Connection"
 msgstr "Conexión"
 
@@ -10099,12 +10091,9 @@ msgstr "Una vez que el sistema IoT esté conectado a una base de datos:"
 msgid ""
 "If the :doc:`Point of Sale app </applications/sales/point_of_sale>` is "
 "installed, a popup appears to select the :doc:`POS the IoT system should be "
-"associated with </applications/sales/point_of_sale/configuration/pos_iot>`."
+"associated with </applications/sales/point_of_sale/hardware_network/"
+"pos_iot>`."
 msgstr ""
-"Si la :doc:`aplicación Punto de venta </applications/sales/point_of_sale>` "
-"está instalada aparecerá una ventana emergente para seleccionar el :doc:`PdV "
-"al que se debe asociar el sistema IoT </applications/sales/point_of_sale/"
-"configuration/pos_iot>`."
 
 #: ../../content/applications/general/iot/connect.rst:101
 msgid ""
@@ -11468,11 +11457,11 @@ msgid ""
 msgstr ""
 ":ref:`Accede a la configuración del PdV <pos/use/settings>` y selecciona tu "
 "punto de venta, o haz clic en el botón de los tres puntos verticales "
-"(:guilabel:`⋮`) en una tarjeta de punto de venta y haz clic en "
-":guilabel:`Editar`. Deslízate hacia abajo, hasta la sección :guilabel:`"
-"Dispositivos conectados`, activa :guilabel:`la caja IoT` y selecciona la "
-"impresora en el campo :guilabel:`Impresora de recibos`. Haz clic en "
-":guilabel:`Guardar`."
+"(:guilabel:`⋮`) en una tarjeta de punto de venta y haz clic "
+"en :guilabel:`Editar`. Deslízate hacia abajo, hasta la "
+"sección :guilabel:`Dispositivos conectados`, activa :guilabel:`la caja IoT` "
+"y selecciona la impresora en el campo :guilabel:`Impresora de recibos`. Haz "
+"clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:249
 msgid ""
@@ -12052,14 +12041,10 @@ msgstr "No ocurre nada al escanear un código de barras"
 #: ../../content/applications/general/iot/devices/printer.rst:475
 msgid ""
 "Make sure the correct device is selected in the :doc:`Point of Sale settings "
-"</applications/sales/point_of_sale/configuration/pos_iot>` (when applicable) "
-"and the barcode is configured to send an `ENTER` character (keycode 28) at "
-"the end of every barcode."
+"</applications/sales/point_of_sale/hardware_network/pos_iot>` (when "
+"applicable) and the barcode is configured to send an `ENTER` character "
+"(keycode 28) at the end of every barcode."
 msgstr ""
-"Asegúrese de haber seleccionado el dispositivo correcto en los :doc:`ajustes "
-"de Punto de venta </applications/sales/point_of_sale/configuration/pos_iot>` "
-"(cuando corresponda) y que el código de barras esté configurado para enviar "
-"un carácter `ENTER` (código de teclado 28) al final de cada código de barras."
 
 #: ../../content/applications/general/iot/devices/printer.rst:480
 msgid "The barcode scanner is detected as a keyboard"
@@ -12150,25 +12135,21 @@ msgstr ""
 
 #: ../../content/applications/general/iot/devices/scale.rst:22
 msgid ""
-"Once the scale is connected to the IoT system, :ref:`configure it in the POS "
-"settings <pos/hardware/scale>`."
+"Once the scale is connected to the IoT system, :doc:`configure it in the POS "
+"settings </applications/sales/point_of_sale/hardware_network/scale>`."
 msgstr ""
-"Una vez que hayas conectado la báscula al sistema IoT, :ref:`configúrala en "
-"los ajustes del PdV <pos/hardware/scale>`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:26
 msgid ""
 ":doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/"
-"configuration/pos_iot>`"
+"hardware_network/pos_iot>`"
 msgstr ""
-":doc:`Conectar un sistema IoT a un PdV </applications/sales/point_of_sale/"
-"configuration/pos_iot>`"
 
-#: ../../content/applications/general/iot/devices/scale.rst:29
+#: ../../content/applications/general/iot/devices/scale.rst:30
 msgid "Ariva S scales"
 msgstr "Básculas Ariva S"
 
-#: ../../content/applications/general/iot/devices/scale.rst:31
+#: ../../content/applications/general/iot/devices/scale.rst:32
 msgid ""
 "For Ariva S series scales (manufactured by Mettler-Toledo, LLC.) to function "
 "with IoT systems, a specific setting must be modified, and a dedicated "
@@ -12178,7 +12159,7 @@ msgstr ""
 "LLC.) funcionen con sistemas IoT, es necesario que haga algunos ajustes "
 "específicos y use un cable Mettler USB a RJ45."
 
-#: ../../content/applications/general/iot/devices/scale.rst:35
+#: ../../content/applications/general/iot/devices/scale.rst:36
 msgid ""
 "The official Mettler USB-to-RJ45 cable (Mettler part number 72256236) must "
 "be used. Contact Mettler or a partner to purchase an authentic cable. **No "
@@ -12189,7 +12170,7 @@ msgstr ""
 "adquirir un cable original, ya que **ningún otro** cable funciona para estos "
 "ajustes."
 
-#: ../../content/applications/general/iot/devices/scale.rst:39
+#: ../../content/applications/general/iot/devices/scale.rst:40
 msgid ""
 "To configure the Ariva S scale for IoT system recognition, refer to page 17 "
 "of `Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
@@ -12200,21 +12181,21 @@ msgstr ""
 "de la serie Ariva S <https://www.mt.com/dam/RET_DOCS/2014_usermanuals/"
 "UG_Ariva_ES.pdf>`_ y siga estos pasos:"
 
-#: ../../content/applications/general/iot/devices/scale.rst:42
+#: ../../content/applications/general/iot/devices/scale.rst:43
 msgid ""
 "Hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears."
 msgstr ""
 "Mantenga presionado el botón **>T<** durante ocho segundos o hasta que "
 "aparezca :guilabel:`CONF`."
 
-#: ../../content/applications/general/iot/devices/scale.rst:43
+#: ../../content/applications/general/iot/devices/scale.rst:44
 msgid ""
 "Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm."
 msgstr ""
 "Presione **>T<** hasta que aparezca :guilabel:`GRP 3`, luego presione "
 "**>0<** para confirmar."
 
-#: ../../content/applications/general/iot/devices/scale.rst:44
+#: ../../content/applications/general/iot/devices/scale.rst:45
 msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports) by pressing **>T<** to cycle through the options."
@@ -12223,7 +12204,7 @@ msgstr ""
 "(Puertos COM virtuales USB) y presione **>T<** para navegar entre las "
 "opciones."
 
-#: ../../content/applications/general/iot/devices/scale.rst:46
+#: ../../content/applications/general/iot/devices/scale.rst:47
 msgid ""
 "Press **>0<** until :guilabel:`3.6` (if available, otherwise skip the next "
 "step)."
@@ -12231,7 +12212,7 @@ msgstr ""
 "Presione **>0<** hasta que aparezca :guilabel:`3.6` (si está disponible; de "
 "lo contrario, vaya al siguiente paso)."
 
-#: ../../content/applications/general/iot/devices/scale.rst:47
+#: ../../content/applications/general/iot/devices/scale.rst:48
 msgid ""
 "At step :guilabel:`3.6`, make sure the value is set to :guilabel:`3` (8217 "
 "Mettler-Toledo (WO)) by pressing **>T<** to cycle through the options."
@@ -12240,32 +12221,32 @@ msgstr ""
 "(8217 Mettler-Toledo (WO)) y presione **>T<** para navegar entre las "
 "opciones."
 
-#: ../../content/applications/general/iot/devices/scale.rst:49
+#: ../../content/applications/general/iot/devices/scale.rst:50
 msgid ""
 "Press **>0<** (multiple times if necessary) until :guilabel:`GRP 4` appears."
 msgstr ""
 "Presione **>0<** (varias veces en caso de que sea necesario) hasta que "
 "aparezca :guilabel:`GRP 4`."
 
-#: ../../content/applications/general/iot/devices/scale.rst:50
+#: ../../content/applications/general/iot/devices/scale.rst:51
 msgid "Press **>T<** until :guilabel:`EXIT` appears."
 msgstr "Presione **>T<** hasta que aparezca :guilabel:`EXIT`."
 
-#: ../../content/applications/general/iot/devices/scale.rst:53
+#: ../../content/applications/general/iot/devices/scale.rst:54
 msgid "Do **not** make any other changes unless otherwise needed."
 msgstr "**No** haga ningún otro cambio a menos que sea necesario."
 
-#: ../../content/applications/general/iot/devices/scale.rst:55
+#: ../../content/applications/general/iot/devices/scale.rst:56
 msgid "Press **>0<**."
 msgstr "Presione **>0<**."
 
-#: ../../content/applications/general/iot/devices/scale.rst:56
+#: ../../content/applications/general/iot/devices/scale.rst:57
 msgid "Press **>0<** again to :guilabel:`SAVE`; the scale restarts."
 msgstr ""
 "Vuelva a presionar **>0<** para :guilabel:`GUARDAR`, luego se reiniciará la "
 "báscula."
 
-#: ../../content/applications/general/iot/devices/scale.rst:57
+#: ../../content/applications/general/iot/devices/scale.rst:58
 msgid ""
 "Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/"
 "windows_iot/restart>`. The scale should then appear as `Toledo 8217`."
@@ -12280,16 +12261,12 @@ msgstr "Conectar una pantalla"
 #: ../../content/applications/general/iot/devices/screen.rst:5
 msgid ""
 "The :doc:`IoT box <../iot_box>` can be connected to a screen, e.g. to ease "
-"the IoT box's setup and/or serve as a :ref:`customer display <pos/hardware/"
-"display>` to show customers their :doc:`Point of Sale </applications/sales/"
-"point_of_sale>` orders."
+"the IoT box's setup and/or serve as a :doc:`customer display </applications/"
+"sales/point_of_sale/hardware_network/customer_display>` to show customers "
+"their :doc:`Point of Sale </applications/sales/point_of_sale>` orders."
 msgstr ""
-"La :doc:`caja IoT <../iot_box>` se puede conectar a una pantalla, por "
-"ejemplo, para facilitar la configuración de la caja IoT o para funcionar "
-"como :ref:`pantalla para clientes <pos/hardware/display>` y mostrarles sus "
-"órdenes del :doc:`punto de venta </applications/sales/point_of_sale>`."
 
-#: ../../content/applications/general/iot/devices/screen.rst:12
+#: ../../content/applications/general/iot/devices/screen.rst:13
 msgid ""
 "Connect the screen to the IoT box using a micro-HDMI cable. If the "
 "connection was successful, the external monitor displays "
@@ -12303,39 +12280,36 @@ msgstr ""
 msgid "Default Status Display screen"
 msgstr "Pantalla de visualización de estado de forma predeterminada"
 
-#: ../../content/applications/general/iot/devices/screen.rst:18
+#: ../../content/applications/general/iot/devices/screen.rst:19
 msgid "The screen also appears in the IoT box's list of devices:"
 msgstr ""
 "La pantalla también aparece en la lista de dispositivos de la caja IoT:"
 
-#: ../../content/applications/general/iot/devices/screen.rst:20
+#: ../../content/applications/general/iot/devices/screen.rst:21
 msgid "on the :ref:`IoT box's form <iot/connect/IoT-form>`;"
 msgstr "En el :ref:`formulario de la caja IoT <iot/connect/IoT-form>`."
 
-#: ../../content/applications/general/iot/devices/screen.rst:21
+#: ../../content/applications/general/iot/devices/screen.rst:22
 msgid "on the :ref:`IoT box's homepage <iot/iot-box/homepage>`;"
 msgstr "En la :ref:`página de inicio de la caja IoT <iot/iot-box/homepage>`."
 
-#: ../../content/applications/general/iot/devices/screen.rst:22
+#: ../../content/applications/general/iot/devices/screen.rst:23
 msgid "in the IoT app, under the menu :menuselection:`IoT --> Devices`."
 msgstr ""
 "En la aplicación IoT, dentro del menú :menuselection:`IoT --> Dispositivos`."
 
-#: ../../content/applications/general/iot/devices/screen.rst:25
+#: ../../content/applications/general/iot/devices/screen.rst:26
 msgid "Customer display"
 msgstr "Pantalla del cliente"
 
-#: ../../content/applications/general/iot/devices/screen.rst:27
+#: ../../content/applications/general/iot/devices/screen.rst:28
 msgid ""
-"To use the screen as a :ref:`customer display <pos/hardware/"
-"display>`, :ref:`configure the POS accordingly <pos/hardware/display-"
-"configuration>`."
+"To use the screen as a :doc:`customer display </applications/sales/"
+"point_of_sale/hardware_network/customer_display>`, :ref:`configure the POS "
+"accordingly <pos/hardware_network/display-configuration>`."
 msgstr ""
-"Para usar la pantalla como :ref:`pantalla para clientes <pos/hardware/"
-"display>`, :ref:`configura el PdV según corresponda <pos/hardware/display-"
-"configuration>`."
 
-#: ../../content/applications/general/iot/devices/screen.rst:30
+#: ../../content/applications/general/iot/devices/screen.rst:32
 msgid ""
 "To display a specific website on the screen instead of the POS customer "
 "display, go to :menuselection:`IoT --> Devices`, click the screen's card, "
@@ -16402,8 +16376,8 @@ msgid ""
 "the :guilabel:`Client ID`."
 msgstr ""
 "Luego de completar los pasos anteriores, el sistema generará dos llaves en "
-"el tablero de la API de Google, que son :guilabel:`ID del cliente` y "
-":guilabel:`Secreto del cliente`. Copia el :guilabel:`ID del cliente`."
+"el tablero de la API de Google, que son :guilabel:`ID del cliente` "
+"y :guilabel:`Secreto del cliente`. Copia el :guilabel:`ID del cliente`."
 
 #: ../../content/applications/general/users/google.rst:None
 msgid "Google OAuth Client ID generated."
@@ -17314,6 +17288,81 @@ msgstr ":doc:`Permisos de acceso </applications/general/users/access_rights>`"
 #: ../../content/applications/general/users/user_portals/updating_portal_info.rst:154
 msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ":doc:`Documentación de acceso al portal <portal_access>`"
+
+#~ msgid ""
+#~ "All configurations, except for :ref:`accounting <accounting/branches>` "
+#~ "settings inherited from the parent company, must be set individually per "
+#~ "branch. This allows for branch-specific setups such as :doc:`loyalty "
+#~ "programs <../sales/point_of_sale/pricing/loyalty>`, :doc:`price lists <../"
+#~ "sales/point_of_sale/pricing/pricelists>`, or :doc:`inventory locations "
+#~ "<../inventory_and_mrp/inventory/warehouses_storage/inventory_management/"
+#~ "use_locations>`."
+#~ msgstr ""
+#~ "Todas las configuraciones, salvo los ajustes de :ref:`contabilidad "
+#~ "<accounting/branches>` que se heredan de la empresa matriz, deben "
+#~ "configurarse de forma individual para cada sucursal. De esta forma "
+#~ "permitimos configuraciones específicas para cada sucursal, "
+#~ "como :doc:`programas de lealtad <../sales/point_of_sale/pricing/"
+#~ "loyalty>`, :doc:`listas de precios <../sales/point_of_sale/pricing/"
+#~ "pricelists>`, o :doc:`ubicaciones de inventario <../inventory_and_mrp/"
+#~ "inventory/warehouses_storage/inventory_management/use_locations>`."
+
+#~ msgid ""
+#~ "If the :doc:`Point of Sale app </applications/sales/point_of_sale>` is "
+#~ "installed, a popup appears to select the :doc:`POS the IoT system should "
+#~ "be associated with </applications/sales/point_of_sale/configuration/"
+#~ "pos_iot>`."
+#~ msgstr ""
+#~ "Si la :doc:`aplicación Punto de venta </applications/sales/"
+#~ "point_of_sale>` está instalada aparecerá una ventana emergente para "
+#~ "seleccionar el :doc:`PdV al que se debe asociar el sistema IoT </"
+#~ "applications/sales/point_of_sale/configuration/pos_iot>`."
+
+#~ msgid ""
+#~ "Make sure the correct device is selected in the :doc:`Point of Sale "
+#~ "settings </applications/sales/point_of_sale/configuration/pos_iot>` (when "
+#~ "applicable) and the barcode is configured to send an `ENTER` character "
+#~ "(keycode 28) at the end of every barcode."
+#~ msgstr ""
+#~ "Asegúrese de haber seleccionado el dispositivo correcto en "
+#~ "los :doc:`ajustes de Punto de venta </applications/sales/point_of_sale/"
+#~ "configuration/pos_iot>` (cuando corresponda) y que el código de barras "
+#~ "esté configurado para enviar un carácter `ENTER` (código de teclado 28) "
+#~ "al final de cada código de barras."
+
+#~ msgid ""
+#~ "Once the scale is connected to the IoT system, :ref:`configure it in the "
+#~ "POS settings <pos/hardware/scale>`."
+#~ msgstr ""
+#~ "Una vez que hayas conectado la báscula al sistema IoT, :ref:`configúrala "
+#~ "en los ajustes del PdV <pos/hardware/scale>`."
+
+#~ msgid ""
+#~ ":doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/"
+#~ "configuration/pos_iot>`"
+#~ msgstr ""
+#~ ":doc:`Conectar un sistema IoT a un PdV </applications/sales/point_of_sale/"
+#~ "configuration/pos_iot>`"
+
+#~ msgid ""
+#~ "The :doc:`IoT box <../iot_box>` can be connected to a screen, e.g. to "
+#~ "ease the IoT box's setup and/or serve as a :ref:`customer display <pos/"
+#~ "hardware/display>` to show customers their :doc:`Point of Sale </"
+#~ "applications/sales/point_of_sale>` orders."
+#~ msgstr ""
+#~ "La :doc:`caja IoT <../iot_box>` se puede conectar a una pantalla, por "
+#~ "ejemplo, para facilitar la configuración de la caja IoT o para funcionar "
+#~ "como :ref:`pantalla para clientes <pos/hardware/display>` y mostrarles "
+#~ "sus órdenes del :doc:`punto de venta </applications/sales/point_of_sale>`."
+
+#~ msgid ""
+#~ "To use the screen as a :ref:`customer display <pos/hardware/"
+#~ "display>`, :ref:`configure the POS accordingly <pos/hardware/display-"
+#~ "configuration>`."
+#~ msgstr ""
+#~ "Para usar la pantalla como :ref:`pantalla para clientes <pos/hardware/"
+#~ "display>`, :ref:`configura el PdV según corresponda <pos/hardware/display-"
+#~ "configuration>`."
 
 #~ msgid ""
 #~ ":ref:`Access the POS settings <configuration/settings>` and select your "
