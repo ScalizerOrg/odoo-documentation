@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-27 18:30+0000\n"
+"POT-Creation-Date: 2026-03-06 18:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11495,11 +11495,11 @@ msgid "Multi-package shipments"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:5
-msgid "In some cases, a delivery order with multiple items may need to be shipped in more than one package. This may be necessary if the items are too large to ship in a single package, or if certain items cannot be packaged together. Shipping a single delivery order in multiple packages provides flexibility for how each item is packaged, without the need to create multiple delivery orders."
+msgid "In some cases, a delivery order with multiple items may need to be shipped in multiple packages. This may be necessary if the items are too large to ship in a single package, or if certain items cannot be packaged together. Shipping a single delivery order in multiple packages allows each item to be packaged differently, without creating multiple delivery orders."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:13
-msgid "In order to split a delivery order across multiple packages, the *Packages* setting must be enabled. To do so, navigate to :menuselection:`Inventory --> Configuration --> Settings`, then enable the checkbox next to :guilabel:`Packages`. Click :guilabel:`Save` to confirm the change."
+msgid "To split a delivery order across multiple packages, the *Packages* setting must be enabled. To do so, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, then in the *Operations* section, select the :guilabel:`Packages` checkbox. Click :guilabel:`Save` to confirm the change."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:None
@@ -11511,11 +11511,11 @@ msgid "Ship items in multiple packages"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:26
-msgid "To split items in the same delivery order across multiple packages, begin by navigating to :menuselection:`Inventory --> Delivery Orders`, then select a delivery order that has multiple items, a multiple quantity of the same item, or both."
+msgid "To split items in the same delivery order across multiple packages, navigate to the :menuselection:`Inventory` app. On the *Inventory Overview* page, click the :guilabel:`# to Process` button on the :guilabel:`Delivery Orders` card. On the *Delivery Orders* page, select a delivery order that has multiple items, multiple quantities of the same item, or both."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:30
-msgid "On the :guilabel:`Operations` tab, select the :guilabel:`⁞≣ (menu)` icon in the line of the product that will be shipped in the first package."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:31
+msgid "On the *Operations* tab, select the :icon:`fa-list` :guilabel:`(Open Move)` icon for the product that will be shipped in the first package."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:None
@@ -11523,83 +11523,87 @@ msgid "The menu icon for a product in a delivery order."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:37
-msgid "This makes a :guilabel:`Detailed Operations` pop-up window appear. In the table at the bottom of the pop-up window, the :guilabel:`Reserved` column shows the total quantity of the product included in the delivery order."
+msgid "This opens the *Open: Stock move* pop-up window. In the table in the pop-up window, the :guilabel:`Quantity` column shows the total quantity of the product included in the delivery order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:41
-msgid "If the full quantity will be shipped in the first package, enter the number from the :guilabel:`Done` column in the :guilabel:`Reserved` column. If less than the full quantity will be shipped in the first package, enter a smaller number than the one that appears in the :guilabel:`Reserved` column. Click :guilabel:`Confirm` to confirm the :guilabel:`Done` quantities and close the pop-up."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:40
+msgid "If the full quantity will be shipped in the first package, enter the :guilabel:`Demand` value in the :guilabel:`Quantity` column. If less than the full quantity will be shipped in the first package, enter a smaller number than the :guilabel:`Demand` quantity. Then, specify a :guilabel:`Destination Package` for the product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:None
 msgid "The Detailed Operations pop-up for a product in a delivery order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:51
-msgid "Repeat the same steps for every item quantity that is included in the first package. Then, click :guilabel:`Put In Pack` to create a package with all of the selected items."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:48
+msgid "If the product is to be split into multiple packages, click the :guilabel:`Add a line` link and split the :guilabel:`Quantity` between the different :guilabel:`Destination Package` options that are created."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:None
-msgid "The Put In Pack button on a delivery order."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:52
+msgid "Click :guilabel:`Save` to confirm the packages and close the pop-up."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:58
-msgid "For the next package, follow the same steps as detailed above, marking the quantity of each item to be included in the package as :guilabel:`Done` before clicking :guilabel:`Put In Pack` on the delivery order. Continue doing so until the full quantity of all items are added to a package."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:54
+msgid "If packaging multiple products into the same package, repeat the steps for each product. Be sure to specify the same :guilabel:`Destination Package` in the *Open: Stock move* window."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:62
-msgid "Finally, after all of the packages have been shipped, click :guilabel:`Validate` to confirm that the delivery order has been completed."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:57
+msgid "For the next package, follow the same steps outlined above, marking the :guilabel:`Quantity` and :guilabel:`Destination Package` for each item to be included. Continue doing so until the full quantity of all products has been added to packages."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:66
-msgid "After one or more packages are created, a :guilabel:`Packages` smart button appears in the top-right corner of the delivery order. Click the :guilabel:`Packages` smart button to go to the :guilabel:`Packages` page for the delivery order, where each package can be selected to view all of the items included in it."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:61
+msgid "Finally, after all packages have been shipped, click :guilabel:`Validate` to confirm that the delivery order is complete."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:65
+msgid "After one or more packages are created, a :icon:`fa-cubes` :guilabel:`Packages` smart button appears above the delivery order. Click the :icon:`fa-cubes` :guilabel:`Packages` smart button to open the *Packages* page for the delivery order, where each package can be selected to view all of its items."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:0
 msgid "The Packages smart button on a delivery order."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:76
+msgid "Create a back order for items to be shipped later"
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:78
-msgid "Create a backorder for items to be shipped later"
+msgid "If some items will be shipped later than others, there is no need to package them until they are ready to ship. Instead, create a back order for the items being shipped later."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:80
-msgid "If some items will be shipped at a later date than others, there is no need to put them in a package until they are ready to be shipped. Instead, create a backorder for the items being shipped later."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:81
+msgid "Begin by shipping the items that will be shipped immediately. If they will be shipped in multiple packages, follow the steps in :ref:`inventory/shipping/multiple-packages` to package them as required. If they will be shipped in a single package, mark the :guilabel:`Quantity` and :guilabel:`Destination Package` for all of the products in that shipment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:83
-msgid "Begin by shipping the items that will be shipped immediately. If they will be shipped in multiple packages, follow the :ref:`steps above <inventory/shipping/multiple-packages>` to package them as required. If they will be shipped in a single package, simply mark in the :guilabel:`Done` column the quantity of each item being shipped, but **do not** click the :guilabel:`Put In Pack` button."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:88
-msgid "After all quantities being shipped immediately are marked as :guilabel:`Done`, click the :guilabel:`Validate` button, and a :guilabel:`Create Backorder?` pop-up window appears. Then, click the :guilabel:`Create Backorder` button. Doing so confirms the items being shipped immediately and creates a new delivery order for the items that will be shipped later."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:86
+msgid "After all quantities being shipped immediately are packaged, return to the delivery order form. Change the :guilabel:`Quantity` for the back ordered items to `0` or to the partial quantity being shipped. Then, click the :guilabel:`Validate` button, and a :guilabel:`Create Backorder?` pop-up window appears. Click the :guilabel:`Create Backorder` button. Doing so immediately confirms the items being shipped and creates a new delivery order for the items that will be shipped later."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:None
-msgid "The Create Backorder? pop-up window."
+msgid "Create a back order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:97
-msgid "The backorder delivery order will be listed in the chatter of the original delivery order in a message that reads :guilabel:`The backorder WH/OUT/XXXXX has been created.`. Click on :guilabel:`WH/OUT/XXXXX` in the message to view the backorder delivery order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:None
-msgid "The backorder delivery order listed in the chatter of the original delivery order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:105
-msgid "The backorder delivery order can also be accessed by navigating to :menuselection:`Inventory`, clicking the :guilabel:`# Back Orders` button on the :guilabel:`Delivery Orders` card, and selecting the delivery order."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:95
+msgid "The back order delivery order will be listed in the chatter of the original delivery order, with a message that reads :guilabel:`The backorder WH/OUT/XXXXX has been created`. Click on :guilabel:`WH/OUT/XXXXX` in the message to view the back order delivery order."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:None
-msgid "The Back Orders button on the Delivery Orders card."
+msgid "The back order delivery order listed in the chatter of the original delivery order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:102
+msgid "The back order delivery order can also be accessed by navigating to :menuselection:`Inventory`, clicking the :guilabel:`# Back Orders` link on the *Delivery Orders* card, and selecting the delivery order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:None
+msgid "The Back Orders link on the Delivery Orders card."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:109
+msgid "When the remaining items are ready to be shipped, navigate to the back order delivery order. The items can be shipped in a single package by clicking :guilabel:`Validate`, or shipped in multiple packages by following the steps outlined in :ref:`inventory/shipping/multiple-packages`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:113
-msgid "Once the remaining items are ready to be shipped, navigate to the backorder delivery order. The items can be shipped in a single package by clicking :guilabel:`Validate` and selecting :guilabel:`Apply` on the :guilabel:`Immediate Transfer?` pop-up window that appears, or shipped in multiple packages by following the steps detailed in the section above."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:118
-msgid "It is also possible to ship out some of the items while creating another backorder for the rest. To do so, simply follow the same steps used to create the first backorder."
+msgid "It is also possible to ship some of the items while creating a new back order for the rest. To do so, follow the same steps used to create the first back order."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:3
