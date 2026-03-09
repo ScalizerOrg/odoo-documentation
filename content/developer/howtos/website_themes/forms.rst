@@ -30,11 +30,11 @@ It should look something like the following.
       data-success-mode="redirect"
       data-success-page="/contactus-thank-you"
       data-model_name="mail.mail">
-        <div class="s_website_form_rows row s_col_no_bgcolor">
-             <div class="form-group s_website_form_field col-12 s_website_form_dnone" data-name="Field">
-                  <!-- Form fields -->
-              </div>
-        </div>
+      <div class="s_website_form_rows row s_col_no_bgcolor">
+            <div class="form-group s_website_form_field col-12 s_website_form_dnone" data-name="Field">
+               <!-- Form fields -->
+            </div>
+      </div>
    </form>
 
 .. _website_themes/forms/actions :
@@ -83,9 +83,9 @@ Create a task.
 
 .. note::
 
-   The default action is :guilabel:`Send an E-mail` but following the Apps installed on the database, some
-   other options can be found, such as: Apply for a job, create a customer, create a ticket, create an
-   opportunity, etc.
+   The default action is :guilabel:`Send an E-mail` but following the Apps installed on the
+   database, some other options can be found, such as: Apply for a job, create a customer, create a
+   ticket, create an opportunity, etc.
 
    Please, note that some of these actions may need specific required fields in order to be
    functional. To not forget some requirements, we highly recommend to preset the form snippet with
@@ -116,11 +116,11 @@ sure that the success message is hidden if the form hasn't been submitted.
 .. code-block:: xml
 
    <div class="s_website_form_end_message d-none">
-        <div class="oe_structure">
-             <section class="s_text_block pt64 pb64" data-snippet="s_text_block">
-                  <div class="container">
-                        <h2 class="text-center">This is a success!</h2>
-                  </div>
-             </section>
-        </div>
+      <div class="oe_structure">
+         <section class="s_text_block pt64 pb64" data-snippet="s_text_block">
+            <div class="container">
+               <h2 class="text-center">This is a success!</h2>
+            </div>
+         </section>
+      </div>
    </div>
