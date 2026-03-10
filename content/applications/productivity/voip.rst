@@ -16,7 +16,7 @@ rules. Features like call recording and analytics provide insights into call vol
 times, helping businesses streamline external communication and track team performance.
 
 .. cards::
-   .. card:: *Phone* widget
+   .. card:: Phone widget
       :target: voip/voip_widget
       :large:
 
@@ -54,26 +54,31 @@ To make |VOIP| calls in Odoo, first :ref:`install <general/install>` the **Phone
 Once the app is installed, a :icon:`oi-voip` (:guilabel:`Phone`) icon will appear at the top of the
 screen. When this icon is clicked, a **Phone** pop-up widget appears on the screen. This is where
 users can make and receive calls, send emails, edit user and employee info, and manage activities.
-The pop-up widget stays open when navigating other Odoo apps.
+screen. Clicking it opens a widget, where users can make and receive calls, send emails, edit user
+and employee info, and manage activities. The widget stays open when navigating other Odoo apps.
 
 Assign user permissions
 -----------------------
 
+.. note::
+   As of Odoo 19.0, the **Phone** app has three access roles that can be assigned.
+
 By default, users can receive their own calls, and managers can receive calls for their team
-members. To grant additional |VOIP| permissions to a user, go to :menuselection:`Settings app -->
-Users \& Companies --> Users` and search for the user. Open the user's contact card and navigate to
-the *Access Rights* tab. Go to the *Productivity* section, and in the |VOIP| field select the
-desired access level.
+members. To grant additional **Phone** app permissions to a user, go to :menuselection:`Settings app
+--> Users \& Companies --> Users` and search for the user. Open the user's contact card and navigate
+to the *Access Rights* tab. Go to the *Productivity* section, and in the |VOIP| field, select the
+desired access role.
 
-There are three access roles for |VOIP|:
+The **Phone** app has three access roles:
 
-- :guilabel:`No`: cannot access |VOIP| features.
+- :guilabel:`No`: cannot access **Phone** app features.
 - :guilabel:`Officer`: can view and report on all calls.
 - :guilabel:`Administrator`: can view, report, and manage call settings.
 
 .. important::
-   | Database administrators are not automatically granted administrator rights for |VOIP|.
-   | Make sure to set the correct access level for each |VOIP| user.
+   | Database administrators are not automatically granted administrator rights for the **Phone**
+     app.
+   | Make sure to set the correct access role for each **Phone** app user.
 
 To modify these roles or add custom roles, see :ref:`Create and modify groups
 <access-rights/groups>`.
@@ -94,13 +99,6 @@ providers in the Odoo database:
       Learn how to set up Axivox in Odoo. This includes adding users to Axivox, setting up call
       queues, and more.
 
-   .. card:: OnSIP configuration
-      :target: voip/onsip
-      :large:
-
-      Learn how to set up OnSIP in Odoo. This includes entering OnSIP credentials into Odoo and
-      handling troubleshooting.
-
    .. card:: DIDWW configuration
       :target: voip/didww
       :large:
@@ -108,23 +106,31 @@ providers in the Odoo database:
       Learn how to set up DIDWW in Odoo. This includes entering DIDWW credentials into Odoo and
       purchasing new numbers.
 
+   .. card:: OnSIP configuration
+      :target: voip/onsip
+      :large:
+
+      Learn how to set up OnSIP in Odoo. This includes entering OnSIP credentials into Odoo and
+      handling troubleshooting.
+
 Other providers must meet two requirements to connect with Odoo:
 
-#. The |VOIP| host must provide access to a SIP server via a websocket connection.
+#. The |VOIP| host must provide access to a SIP server via a WebSocket connection.
 #. The |VOIP| host must support WebRTC protocol.
 
 .. important::
+
    If these requirements are met, it should be possible to add the alternate provider to Odoo.
-   However, Odoo recommends using a verified provider, and cannot guarantee that every alternate
-   provider is compatible with the **Phone** app.
+   However, Odoo recommends using a verified provider and cannot guarantee compatibility with every
+   alternate provider.
 
 To add credentials for an alternate provider, go to the :menuselection:`Phone app --> Configuration
---> Settings`. Click :guilabel:`New` and enter the provider information (like the websocket's URL).
-Enter the domain created by the alternate provider in the :guilabel:`OnSIP Domain` field.
+--> Settings`. Click :guilabel:`New`, then enter the provider information (such as the websocket's
+URL). Enter the domain created by the alternate provider in the :guilabel:`OnSIP Domain` field.
 
 For issues setting up the |VOIP| service provider in Odoo, follow the :ref:`relevant troubleshooting
 steps <voip/voip_widget/troubleshooting_voip>`. For any other issues with the |VOIP| service
-provider, reach out directly to their support team.
+provider, contact their support team directly.
 
 VoIP workflows
 ==============
@@ -150,9 +156,9 @@ well. Click the cards below to learn about |VOIP| workflows in Odoo:
 .. toctree::
    :titlesonly:
 
-   voip/onsip
    voip/axivox
    voip/didww
+   voip/onsip
    voip/voip_widget
    voip/devices_integrations
    voip/sales_calls
