@@ -78,6 +78,7 @@ for employees, shows:
 - **Order cards**: Summarizes individual orders, including:
 
   - Associated tables and order numbers.
+  - :doc:`Preset <presets>` service types, if configured.
   - Status, such as `Ready`, highlighted with the defined colors.
   - Waiting time, with visual indicators.
 
