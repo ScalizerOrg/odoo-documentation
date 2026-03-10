@@ -8,6 +8,8 @@ Contacts are created in the **Contacts** application for customers the company d
 through Odoo. A contact record is a repository of vital business information, facilitating
 communication and business transactions.
 
+.. _contacts/contact-form:
+
 Contact form
 ============
 
