@@ -243,7 +243,7 @@ Order management
 ================
 
 The POS register allows for :ref:`processing <pos/restaurant/orders/process>` and :ref:`transferring
-<pos/restaurant/floors/transfer>` orders, defining :ref:`presets <pos/restaurant/orders/preset>`,
+<pos/restaurant/floors/transfer>` orders, defining :doc:`presets <extra/presets>`,
 and managing :ref:`courses <pos/restaurant/orders/courses>`.
 
 .. _pos/restaurant/orders/process:
@@ -260,9 +260,9 @@ To process an order from the POS register, follow these steps:
      :guilabel:`Assign`, or click :guilabel:`Plan` to return to the :guilabel:`Floor plan` view and
      manually select a table.
    - Click :guilabel:`Set Tab` to enter the open order's name and click :guilabel:`Apply`.
-#. Click :guilabel:`Send` to validate the order.
 
-When ready, :ref:`process the order payment <pos/restaurant/bills/payment>`.
+#. Click :guilabel:`Send` to validate the order.
+#. When ready, :ref:`process the order payment <pos/restaurant/bills/payment>`.
 
 .. note::
    Clicking :guilabel:`Send` redirects to the :ref:`Floor plan <pos/restaurant/floors>` view if
@@ -278,6 +278,15 @@ When ready, :ref:`process the order payment <pos/restaurant/bills/payment>`.
      available when the cart is empty.
    - :ref:`Configure a printer <pos/restaurant/orders-printing>` to send an order to the kitchen
      printer when clicking :guilabel:`Send`.
+   - Use :doc:`presets <extra/presets>` when offering different service types, e.g., :guilabel:`Dine
+     In`, :guilabel:`Takeout`, or :guilabel:`Delivery`.
+   - If the order is a direct sale not linked to any table, its name can be modified by clicking the
+     :icon:`fa-ellipsis-v` (:guilabel:`Actions`) menu and selecting :icon:`fa-pencil-square-o`
+     :guilabel:`Edit Order Name`.
+
+.. seealso::
+   - :doc:`extra/preparation`
+   - :doc:`restaurant/online_food_delivery`
 
 .. _pos/restaurant/floors/transfer:
 
@@ -290,36 +299,6 @@ the target table in the :ref:`Floor plan <pos/restaurant/floors>` view:
 
    - Select an available table to transfer customers and their orders.
    - Select an occupied table to merge customers and their orders.
-
-.. _pos/restaurant/orders/preset:
-
-Presets
--------
-
-Presets are used to apply preconfigured settings to orders and determine whether an order is for
-:guilabel:`Dine In`, :guilabel:`Takeout`, or :guilabel:`Delivery`. They also control whether
-customer contact information is required and apply capacity limits based on opening hours and order
-quantity.
-
-To use preconfigured presets, go to the :ref:`POS settings <pos/use/settings>` and
-enable the :guilabel:`Take out / Delivery / Members` setting under the :guilabel:`Point of Sale`
-section. Set the :guilabel:`Default` field to the preferred preset, then save. From the
-:ref:`register <pos/restaurant/orders>`, select the relevant preset, and :ref:`process the order
-<pos/restaurant/orders/process>`:
-
-- :guilabel:`Dine In`: Assign a :ref:`table or open a tab <pos/restaurant/orders/process>`.
-- :guilabel:`Takeout`: Enter the order's name and click :guilabel:`Apply`, then select a date
-  and a time slot, or click :guilabel:`Continue` to apply the first available date and time slot.
-- :guilabel:`Delivery`: Select an existing customer, or click :guilabel:`Create` to add one. Then,
-  select a time slot.
-
-.. tip::
-   Click the preset button to switch to another one.
-
-.. seealso::
-   - `Manage presets (video tutorial) <https://youtu.be/mTXTgpBuLBY?si=4AVWH4CQedq6Jel8>`_
-   - :doc:`extra/preparation`
-   - :doc:`restaurant/online_food_delivery`
 
 .. _pos/restaurant/orders/courses:
 
