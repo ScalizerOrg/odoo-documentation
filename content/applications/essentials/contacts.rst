@@ -9,6 +9,8 @@ business, whether as a customer, a vendor, or in some other capacity. A contact 
 repository of vital information for both individuals and companies, facilitating communication and
 business transactions.
 
+.. _contacts/contact-form:
+
 Contact form and basic fields
 =============================
 
