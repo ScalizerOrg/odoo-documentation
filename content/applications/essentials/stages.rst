@@ -44,12 +44,12 @@ Rotting lead detection
 ----------------------
 
 .. note::
-   The *Days to rot* feature is only available to apps that use stages, for instance,
-   **CRM** and **Heldesk** apps. This feature is automatically disabled by setting it to zero.
+   The *Days to rot* feature is only available to apps that use stages, for instance, **CRM** and
+   **Helpdesk** apps. This feature is automatically disabled by setting it to zero.
 
-The *Days to rot* feature provides proactive notification when a specific card within
-that stage requires attention. When a card passes the defined rotting threshold, it becomes
-highlighted in red and the stage displays the total number of cards currently rotting.
+The *Days to rot* feature provides proactive notification when a specific card within that stage
+requires attention. When a card passes the defined rotting threshold, it becomes highlighted in red
+and the stage displays the total number of cards currently rotting.
 
 .. image:: stages/rotting-card.png
    :alt: Sample of a rotting card and stage in CRM app.
