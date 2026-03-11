@@ -264,3 +264,4 @@ Gain invaluable insight into event-related revenues with customizable reports an
    events/event_sponsors
    events/registration_desk
    events/revenues_report
+   events/attendees_report
