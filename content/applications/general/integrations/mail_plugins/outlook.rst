@@ -5,10 +5,59 @@ Outlook plugin
 The Outlook plugin connects an Odoo database to an Outlook inbox, which enables users to create Odoo
 records (such as opportunities, tasks, and tickets) directly in Outlook.
 
+<<<<<<< afc24ce8ef1f6245a2041545c3a4b31a4efb6209
 .. note::
    The Outlook plugin is available for both the desktop and web versions of Outlook. See
    `Microsoft's add-in article
    <https://support.microsoft.com/en-us/office/use-add-ins-in-outlook-1ee261f9-49bf-4ba6-b3e2-2ba7bcab64c8>`_.
+||||||| 66c23246b12e619d39ed682fd3899cb742e701d4
+.. important::
+   Make sure to check the database version in the :guilabel:`Settings app --> General Settings`, at
+   the bottom of the page.
+
+   For database versions 19.2 and later, see the `latest documentation
+   <https://www.odoo.com/documentation/master/applications/general/integrations/mail_plugins/outlook.html>`_
+   for installation instructions.
+
+Configuration
+=============
+
+The Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on Odoo and Outlook.
+
+.. _mail-plugin/outlook/enable-mail-plugin:
+
+Enable Mail Plugin
+------------------
+
+First, enable the *Mail Plugin* module in the database. Go to :menuselection:`Settings --> General
+Settings --> Integrations`, enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration.
+=======
+.. note::
+   The Outlook plugin is available for both the desktop and web versions of Outlook. See
+   `Microsoft's add-in article
+   <https://support.microsoft.com/en-us/office/use-add-ins-in-outlook-1ee261f9-49bf-4ba6-b3e2-2ba7bcab64c8>`_.
+
+Configuration
+=============
+
+The Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on Odoo and Outlook.
+
+.. important::
+   Make sure to check the database version in the :guilabel:`Settings app --> General Settings`, at
+   the bottom of the page.
+
+   For database versions 19.2 and later, see the `latest documentation
+   <https://www.odoo.com/documentation/master/applications/general/integrations/mail_plugins/outlook.html>`_
+   for installation instructions.
+
+.. _mail-plugin/outlook/enable-mail-plugin:
+
+Enable Mail Plugin
+------------------
+
+First, enable the *Mail Plugin* module in the database. Go to :menuselection:`Settings --> General
+Settings --> Integrations`, enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration.
+>>>>>>> 909d363e86f4a0df797ef16ebc149201a44f2e00
 
 .. _mail-plugin/outlook/install-plugin:
 
