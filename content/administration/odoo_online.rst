@@ -175,6 +175,6 @@ To retrieve a list of all databases displayed under the `database manager
           headers={
               "Authorization": f"bearer {APIKEY}",
               "X-Odoo-Database": "openerp",
-          }
+          },
           json={},
       )
