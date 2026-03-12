@@ -14,11 +14,19 @@ records (such as opportunities, tasks, and tickets) directly in Gmail.
 Install the Gmail Plugin
 ========================
 
+.. important::
+   Make sure to check the database version in the :menuselection:`Settings app --> General
+   Settings`, at the bottom of the page.
+
+   For database versions earlier than 19.2, see the `19.0 documentation
+   <https://www.odoo.com/documentation/19.0/applications/general/integrations/mail_plugins/gmail.html>`_
+   for installation instructions.
+
 From the Google Workspace Marketplace
 -------------------------------------
 
 To install the Odoo Gmail plugin, sign in to the Gmail account to be connected to Odoo, then go to
-the `Odoo Inbox Addin <https://workspace.google.com/marketplace/app/odoo_inbox_addin/873497133275>`_
+the `Odoo Inbox Addin <https://workspace.google.com/marketplace/app/odoo_inbox_addin/546131068990>`_
 page in the Google Workspace Marketplace. Click :guilabel:`Install` and a pop-up window appears.
 Click :guilabel:`Continue` and select the checkbox next to :guilabel:`Select all` to grant the
 necessary permissions, then click :guilabel:`Continue` one more time to confirm the installation of
