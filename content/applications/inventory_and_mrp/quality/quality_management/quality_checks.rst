@@ -21,25 +21,41 @@ manually create a single quality check. Creating a check manually is useful when
 to schedule a quality check that will only occur once, or register a quality check that they conduct
 unprompted.
 
+.. _quality/quality_checks/manual:
+
 Manual quality check
 ====================
 
 To manually create a single quality check, navigate to :menuselection:`Quality --> Quality Control
---> Quality Checks`, and click :guilabel:`New`. On the quality check form, begin by selecting an
-option from the :guilabel:`Control per` drop-down menu:
+--> Quality Checks`, and click :guilabel:`New`.
 
-- :guilabel:`Operation` requests a check for an entire operation (ex. delivery order) and all
+On the quality check form, begin by specifying a :guilabel:`Title` for the quality check. This
+should be a brief description of what the quality check entails.
+
+Select an option from the :guilabel:`Control per` drop-down menu:
+
+- :guilabel:`Operation` requests a check for an entire operation (such as a delivery order) and all
   products within it.
-- :guilabel:`Product` requests a check for every unit of a product that is part of an operation (ex.
-  every unit of a product within a delivery order).
+- :guilabel:`Product` requests a check for every unit of a product that is part of an operation
+  (e.g., every unit of a product within a delivery order).
 - :guilabel:`Quantity` requests a check for every quantity of a product that is part of an operation
-  (ex. one check for five units of a product within a delivery order). Selecting
-  :guilabel:`Quantity` also causes a :guilabel:`Lot/Serial` drop-down field to appear, from which
-  can be selected a specific lot or serial number that the quality check should be conducted for.
+  (e.g., one check for five units of a product within a delivery order).
+
+When :guilabel:`Product` or :guilabel:`Quantity` are selected, it is possible to select a
+:guilabel:`Product` in inventory. If that product is tracked by lot or serial number, the
+:guilabel:`Lot/Serial` field appears, where the lot or serial number to be quality checked must be
+specified.
 
 Next, select an inventory operation from the :guilabel:`Picking` drop-down menu or a manufacturing
 order from the :guilabel:`Production Order` drop-down menu. This is necessary because Odoo needs to
 know for which operation the quality check is being conducted.
+
+.. note::
+   It is also possible to create a quality check directly from an *Inventory* operation. To do so,
+   navigate to :menuselection:`Inventory app --> Operations` and select an operation type from the
+   :guilabel:`Transfers` menu. Open an operation from the list, then click the :icon:`fa-cog`
+   :guilabel:`(cog)` icon and select :guilabel:`Quality Check`. The :guilabel:`Control per`,
+   :guilabel:`Product`, and :guilabel:`Picking` fields are automatically filled.
 
 If the quality check should be assigned to a specific |QCP|, select it from the :guilabel:`Control
 Point` drop-down menu. This is useful if the quality check is being created manually, but should
@@ -63,7 +79,7 @@ In the :guilabel:`Team` field, select the quality team that is responsible for t
 the :guilabel:`Company` field, select the company that owns the product being inspected.
 
 On the :guilabel:`Notes` tab at the bottom of the form, enter any relevant instructions in the
-:guilabel:`Instructions` text entry box (ex. 'Attach a picture of the product'). In the
+:guilabel:`Instructions` text entry box (e.g., `Attach a picture of the product`). In the
 :guilabel:`Notes` text entry box, enter any relevant information about the quality check (who
 created it, why it was created, etc.).
 
@@ -71,7 +87,6 @@ Finally, if the check is being processed immediately, click the :guilabel:`Pass`
 left of the screen if the check passes, or the :guilabel:`Fail` button if the check fails.
 
 .. image:: quality_checks/quality-check-form.png
-   :align: center
    :alt: A quality check form filled out for a Pass - Fail check.
 
 Process quality check
@@ -105,21 +120,21 @@ Quality check on order
 To process a quality check on an order, select a manufacturing or inventory order (receipt,
 delivery, return, etc.), for which a check is required. Manufacturing orders can be selected by
 navigating to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and clicking
-on an order. Inventory orders can be selected by navigating to :menuselection:`Inventory`, clicking
-the :guilabel:`# To Process` button on an operation card, and selecting an order.
+on an order. Inventory orders can be selected by navigating to the :menuselection:`Inventory` app,
+clicking the :guilabel:`# To` button on an operation card (e.g., :guilabel:`5 to Deliver`), and
+selecting an order.
 
 On the selected inventory or manufacturing order, a purple :guilabel:`Quality Checks` button appears
-at the top of the order. Click the button to open the :guilabel:`Quality Check` pop-up window, which
-shows all of the quality checks required for that order.
+at the top of the order. Click the button to open the quality check pop-up window, which shows all
+of the quality checks required for that order.
 
-Follow the instructions that appear on the :guilabel:`Quality Check` pop-up window. If a Pass - Fail
-check is being processed, complete the check by clicking :guilabel:`Pass` or :guilabel:`Fail` at the
-bottom of the pop-up window. For all other quality check types, a :guilabel:`Validate` button
-appears instead. Click it to complete the check.
+Follow the instructions that appear on the quality check pop-up window. If a Pass - Fail check is
+being processed, complete the check by clicking :guilabel:`Pass` or :guilabel:`Fail` at the bottom
+of the pop-up window. For all other quality check types, a :guilabel:`Validate` button appears
+instead. Click it to complete the check.
 
 .. image:: quality_checks/quality-check-pop-up.png
-   :align: center
-   :alt: The "Quality Check" pop-up window on a manufacturing order.
+   :alt: The quality check pop-up window on a manufacturing order.
 
 Quality check on work order
 ---------------------------
