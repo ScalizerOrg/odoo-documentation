@@ -5,6 +5,14 @@ Gmail Plugin
 The *Gmail Plugin* integrates an Odoo database with a Gmail inbox, so users can keep track of all
 their work between Gmail and Odoo, without losing any information.
 
+.. important::
+   Make sure to check the database version in the :menuselection:`Settings app --> General Settings`, at
+   the bottom of the page.
+
+   For database versions 19.2 and later, see the `latest documentation
+   <https://www.odoo.com/documentation/master/applications/general/integrations/mail_plugins/outlook.html>`_
+   for installation instructions.
+
 .. seealso::
    Learn how Odoo handles your data by reading Odoo's `Privacy Policy
    <https://www.odoo.com/privacy>`_ and :doc:`Terms and Conditions <../../../../legal>`.
