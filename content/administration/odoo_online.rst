@@ -161,20 +161,51 @@ Web services
 
 To retrieve a list of all databases displayed under the `database manager
 <https://www.odoo.com/my/databases>`_ programmatically, call the `list` method of the
-`odoo.database` model via an :doc:`external JSON-2 API <../developer/reference/external_api>` call.
+`odoo.database` model via an :doc:`web service <../developer/howtos/web_services>` call.
 
-.. example::
-   .. code:: python
+To retrieve this list with the `xmlrpc.client` library:
 
-      import requests
+.. code:: python
 
-      APIKEY = "your_apikey"
+   import xmlrpc.client
 
-      requests.post(
-          "https://www.odoo.com/json/2/odoo.database/list",
-          headers={
-              "Authorization": f"bearer {APIKEY}",
-              "X-Odoo-Database": "openerp",
-          }
-          json={},
-      )
+   USER = 'user@domain.tld'
+   APIKEY = 'your_apikey'
+
+   root = 'https://www.odoo.com/xmlrpc/'
+   uid = xmlrpc.client.ServerProxy(root + 'common').login('openerp', USER, APIKEY)
+   sock = xmlrpc.client.ServerProxy(root + 'object')
+   databases_list = sock.execute('openerp', uid, APIKEY, 'odoo.database', 'list')
+
+The equivalent example with JSON-RPC:
+
+.. code:: python
+
+   import json
+   import random
+   import urllib.request
+
+   USER = 'user@domain.tld'
+   APIKEY = 'your_apikey'
+
+   def json_rpc(url, method, params):
+       data = {
+           'jsonrpc': '2.0',
+           'method': method,
+           'params': params,
+           'id': random.randint(0, 1000000000),
+       }
+       req = urllib.request.Request(url=url, data=json.dumps(data).encode(), headers={
+           "Content-Type": "application/json",
+       })
+       reply = json.loads(urllib.request.urlopen(req).read().decode('UTF-8'))
+       if reply.get('error'):
+           raise Exception(reply['error'])
+       return reply['result']
+
+   def call(url, service, method, *args):
+       return json_rpc(url, 'call', {'service': service, 'method': method, 'args': args})
+
+   url = 'https://www.odoo.com/jsonrpc'
+   uid = call(url, 'common', 'login', 'openerp', USER, APIKEY)
+   databases_list = call(url, 'object', 'execute', 'openerp', uid, APIKEY, 'odoo.database', 'list')
