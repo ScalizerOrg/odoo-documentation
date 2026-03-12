@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-06 18:31+0000\n"
-"PO-Revision-Date: 2026-03-10 09:49+0000\n"
+"PO-Revision-Date: 2026-03-12 23:21+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/hr/zh_Hans/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16.1\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: ../../content/applications/hr.rst:5
 msgid "Human resources"
@@ -2134,6 +2134,9 @@ msgid ""
 "and :guilabel:`Department` fields are populated according to the information "
 "on the employee record."
 msgstr ""
+"首先，通过下拉菜单在 :guilabel:`待考评员工`字段中选择被考评员工。选定员工后，"
+"其主管信息将自动填充至 :guilabel:`考评人`字段。 :guilabel:`职位`和 "
+":guilabel:`部门`字段将根据员工档案信息自动填充。"
 
 #: ../../content/applications/hr/appraisals/schedule_appraisals.rst:74
 msgid ""
@@ -2141,6 +2144,8 @@ msgid ""
 "completed. The default deadline is one month from the current date, but can "
 "be adjusted using the calendar selector."
 msgstr ""
+":guilabel:`考评日期`指考评计划完成的时间。默认截止日期为当前日期起一个月后，"
+"但可通过日历选择器进行调整。"
 
 #: ../../content/applications/hr/appraisals/schedule_appraisals.rst:77
 msgid ""
@@ -2151,6 +2156,9 @@ msgid ""
 "indicates that the following appraisal will be scheduled according to the "
 "appraisal schedule."
 msgstr ""
+"当考评标记为完成后，将显示一个 :guilabel:`下次考评日期` 字段，并自动填入下次"
+"考评的日期。若已配置 :ref:`考评计划 <appraisals/appraisal-plan>`，则该字段将"
+"显示 :guilabel:`持续进行中`。这表示后续考评将根据考评计划自动安排。"
 
 #: ../../content/applications/hr/appraisals/schedule_appraisals.rst:83
 msgid ""
@@ -2159,6 +2167,8 @@ msgid ""
 "**Appraisals** app is installed. Using the drop-down menu, select a "
 "different template, if desired."
 msgstr ""
+"最后，选择所需的 :guilabel:`模板`。该字段默认填充 :guilabel:`默认`模板，该模"
+"板在安装 **考评** 应用时创建。如需使用其他模板，请通过下拉菜单进行选择。"
 
 #: ../../content/applications/hr/appraisals/schedule_appraisals.rst:87
 msgid ""
@@ -2167,6 +2177,9 @@ msgid ""
 "appraisal is scheduled, the employee and any other appraisers are notified, "
 "and both the employee and appraisers can start to fill out the appraisal."
 msgstr ""
+"当 :guilabel:`考评`表单上半部分的信息填写完毕后，请点击左上角的 :guilabel:`确"
+"认`按钮。此时考评流程将被安排，员工及所有其他考评人将收到通知，员工与考评人均"
+"可开始填写考评表。"
 
 #: ../../content/applications/hr/appraisals/schedule_appraisals.rst:92
 msgid ""
@@ -2180,6 +2193,11 @@ msgid ""
 "The :guilabel:`Final Rating` field is only populated after the appraisal is "
 "complete."
 msgstr ""
+"考评确认后，会出现两个额外的字段：:guilabel:`目标职位` 和 :guilabel:`最终评"
+"分`。:guilabel:`目标职位` 允许经理为员工选择其可能努力争取的职位。当在此字段"
+"中选择职位后，该职位所需的任何技能都会显示在技能标签页中。这有助于在 :doc:`考"
+"评过程中 <new_appraisals>` 了解员工相对于该职位要求的现状。:guilabel:`最终考"
+"评` 字段仅在考评完成后才会被填写。"
 
 #: ../../content/applications/hr/appraisals/schedule_appraisals.rst:None
 msgid "A new appraisal form with the top half filled out."
@@ -2295,7 +2313,7 @@ msgstr ":guilabel:`当前级别`：员工在技能方面达到的当前级别。
 msgid ""
 ":guilabel:`Previous Progress`: the previous percentage of competency "
 "achieved for the skill."
-msgstr ":guilabel:`以前的进度`：技能以前达到的能力百分比。"
+msgstr ":guilabel:`先前进度`：该技能先前已达到的能力百分比。"
 
 #: ../../content/applications/hr/appraisals/skills_evolution.rst:48
 msgid ""
@@ -3402,6 +3420,8 @@ msgid ""
 "various methods available. Odoo's **Attendances** application has an "
 "onboarding feature to aid with employee training."
 msgstr ""
+"**考勤**应用提供了多种上下班签到 / 签退方式。管理者或人力资源人员可能需要对员"
+"工进行相关操作培训。Odoo 的**考勤**应用内置了入职培训功能，以协助员工培训。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:9
 msgid ""
@@ -3411,15 +3431,19 @@ msgid ""
 "manual>`, with a :ref:`barcode <attendances/onboard-barcode>`, or with "
 "an :ref:`RFID token <attendances/onboard-rfid>`."
 msgstr ""
+"要打开入职培训界面，请前往 :menuselection:`考勤应用程序 --> 配置 --> 入职培"
+"训`。界面将加载一个入职培训仪表板，提供三种签到方式： :ref:`手动签到 "
+"<attendances/onboard-manual>`、使用 :ref:`条形码 <attendances/onboard-"
+"barcode>`或使用 :ref:`RFID 令牌 <attendances/onboard-rfid>`。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:15
 msgid "This can be done on either a PC or tablet."
-msgstr ""
+msgstr "此操作可在电脑或平板上完成。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:None
 msgid ""
 "The onboarding screen in the Attendances app, with three options to check-in."
-msgstr ""
+msgstr "考勤应用的入职培训界面，提供三种签到选项。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:21
 msgid ""
@@ -3428,6 +3452,8 @@ msgid ""
 "check-in during onboarding training are logged into work in the "
 "**Attendances** app."
 msgstr ""
+"使用*入职培训*界面对员工进行培训时，所创建的任何考勤记录都会实时反映在数据库"
+"中。这意味着员工在入职培训期间的签到操作，会在**考勤**应用中记录为实际上班。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:25
 msgid ""
@@ -3435,10 +3461,12 @@ msgid ""
 "they must check attendance records and make any necessary modifications, so "
 "all attendance records are accurate and reflect the correct working hours."
 msgstr ""
+"如果管理者希望*仅*将*入职培训*仪表板用于培训目的，则必须检查考勤记录并进行必"
+"要的修改，以确保所有考勤记录准确无误，反映正确的工作时长。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:32
 msgid "Manual selection"
-msgstr ""
+msgstr "手动选择"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:34
 msgid ""
@@ -3448,10 +3476,13 @@ msgid ""
 "current status with either a red :guilabel:`Absent` or a green :guilabel:`On "
 "Site` text in the upper-right corner of the card."
 msgstr ""
+"在*入职培训*界面，点击或轻触文字 :guilabel:`在平板上选择` 上方的图片。系统将"
+"加载一个仪表板，以默认的看板视图列出所有员工。所有看板卡片的右上角会以红色的 "
+":guilabel:`缺勤` 或绿色的 :guilabel:`在岗` 文本显示员工当前状态。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:None
 msgid "The manual selection check in screen in the Attendances app onboarding."
-msgstr ""
+msgstr "考勤应用入职培训中的手动选择签到界面。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:42
 msgid ""
@@ -3461,6 +3492,9 @@ msgid ""
 "or *Goodbye* screen with the current date and time, along with any "
 "previously logged attendance hours."
 msgstr ""
+"找到目标员工，然后点击或轻触其看板卡片。系统将根据员工在**考勤**应用中的当前"
+"状态，自动为其完成签到或签退。界面会短暂显示一个带有当前日期和时间的*欢"
+"迎*或*再见*屏幕，并列出之前记录的考勤时长。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:47
 msgid ""
@@ -3469,16 +3503,19 @@ msgid ""
 "*Onboarding* dashboard. To exit the screen sooner, click the :guilabel:`OK` "
 "button."
 msgstr ""
+"在 :ref:`自助终端设置 <attendances/kiosk-settings>` 中指定的时间段结束后，屏"
+"幕将返回主*入职培训*仪表板。若需提前退出当前界面，请点击 :guilabel:`确定`按钮"
+"。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:52
 msgid ""
 "The list of departments on the left-side or the search bar at the top can be "
 "used to navigate to the desired employee."
-msgstr ""
+msgstr "可使用左侧的部门列表或顶部的搜索栏来快速找到目标员工。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:58
 msgid "Badge with barcode"
-msgstr ""
+msgstr "条形码工牌"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:60
 msgid ""
@@ -3488,6 +3525,9 @@ msgid ""
 "displaying two options: :guilabel:`Scan your badge` and :guilabel:`New Set-"
 "up (Employee/Badge)`."
 msgstr ""
+"第二种签到 / 签退方式是使用带有条形码的员工工牌。点击或轻触文字 :guilabel:`在"
+"平板上使用条形码工牌` 上方的中间图片，系统将加载一个仪表板，显示两个选项"
+"：:guilabel:`扫描您的工牌` 和 :guilabel:`新设置（员工/工牌）`。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:65
 msgid ""
@@ -3497,16 +3537,19 @@ msgid ""
 "displays the area being scanned. Scan the barcode to check in or check out "
 "of the database."
 msgstr ""
+"如果员工持有带条形码的工牌，请点击 :guilabel:`扫描您的工牌` 按钮，使用设备摄"
+"像头或专用条形码扫描器扫描条形码。系统会弹出一个*条形码*扫描器窗口，并显示正"
+"在扫描的区域。扫描条形码即可在系统中完成签到或签退。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:None
 msgid "The barcode scanning dashboard from the Onboarding screen."
-msgstr ""
+msgstr "入职培训界面中的条形码扫描仪表板。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:74
 msgid ""
 "The **Barcode** app does **not** need to be installed to use the barcode "
 "option."
-msgstr ""
+msgstr "使用条码功能时，**无需**安装**条形码**应用程序。"
 
 #: ../../content/applications/hr/attendances/attendance_onboarding.rst:77
 msgid "Create a new barcode"
@@ -4412,6 +4455,8 @@ msgid ""
 "following banner at the top: :guilabel:`Connect an RFID reader, and scan a "
 "token. 'Read the Documentation'/ 'Buy an RFID Device`."
 msgstr ""
+"自动终端启动后，显示当前日期和时间，顶部悬挂着以下横幅：:guilabel:`连接 RFID "
+"读卡器，扫描令牌。` ‘阅读文档’/ '购买RFID设备`。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:109
 msgid ""
@@ -4421,6 +4466,9 @@ msgid ""
 "with available products to purchase on Amazon. Close either tab to return to "
 "the kiosk."
 msgstr ""
+"点击文本链接 :guilabel:`阅读说明文档`，将在新标签页中打开 :doc:`对应说明文档 "
+"<../attendances/hardware>`。点击文本链接 :guilabel:`购买 RFID 设备`，将在新标"
+"签页中打开亚马逊可购产品页面。关闭任一标签页即可返回自助终端界面。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:113
 msgid ""
@@ -4428,6 +4476,8 @@ msgid ""
 "close the banner. Closing the banner hides it from that point on, and "
 "*cannot be enabled again*."
 msgstr ""
+"文本末尾会出现一个 :guilabel:`X`。点击 :guilabel:`X` 可关闭横幅。关闭后横幅将"
+"永久隐藏，且*无法再次启用*。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:116
 msgid ""
@@ -4501,6 +4551,8 @@ msgid ""
 "Users who do not have a scannable badge or an RFID fob can manually check in "
 "and out at a kiosk."
 msgstr ""
+"没有可扫描的胸牌或 RFID 门禁卡的用户，可在自助服务终端机上进行手动签到和签退"
+"。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:152
 msgid ""
@@ -4509,6 +4561,9 @@ msgid ""
 "Tap on a person to check them in or out, and a :ref:`confirmation message "
 "<attendances/confirmation>` appears."
 msgstr ""
+"在自助终端上点击图标 :guilabel:`手动识别`，屏幕将显示所有可签到或签退的员工。"
+"点击某人进行签到或签退操作后，将弹出 :ref:`确认消息 <attendances/"
+"confirmation>`。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:156
 msgid "To find a specific person, either:"
@@ -4519,6 +4574,8 @@ msgid ""
 "Search: Tap into the search bar and enter the desired person's name. As the "
 "name is typed, matching results are displayed on the screen."
 msgstr ""
+"搜索：点击搜索栏并输入目标人物姓名。随着姓名输入，匹配结果将实时显示在屏幕上"
+"。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:160
 msgid ""
@@ -4527,6 +4584,8 @@ msgid ""
 "specific department. The number at the end of each listed department "
 "represents how many employees that department has."
 msgstr ""
+"按部门筛选：点击屏幕左侧部门区域中的任意选项，即可**仅**查看该部门员工。每个"
+"部门名称后方的数字代表该部门员工数量。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:165
 msgid "PIN"
@@ -4575,7 +4634,7 @@ msgstr "确认信息"
 msgid ""
 "When an employee checks in or out, a confirmation message appears, with all "
 "the check-in or check-out information."
-msgstr ""
+msgstr "当员工签到或签退时，系统会显示一条确认消息，其中包含所有签到或签退信息。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:189
 msgid ""
@@ -4594,6 +4653,8 @@ msgid ""
 "date and time of checkout. Beneath the message is an :guilabel:`Hours Today: "
 "HH:MM` field, with the total hours and minutes logged for the day."
 msgstr ""
+"结账时会显示 :guilabel:`再见（员工）` 以及结账日期和时间。该信息下方设有 "
+":guilabel:`今日工时：HH:MM` 字段，显示当日累计记录的小时数和分钟数。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:197
 msgid ""
@@ -4653,20 +4714,20 @@ msgstr "每条出勤记录都会显示以下信息："
 
 #: ../../content/applications/hr/attendances/management.rst:25
 msgid ":guilabel:`Check Out`: The date and time the employee checked out."
-msgstr ""
+msgstr ":guilabel:`签退`：员工签退的日期和时间。"
 
 #: ../../content/applications/hr/attendances/management.rst:26
 msgid ""
 ":guilabel:`Worked Time`: The number of worked hours the employee logged."
-msgstr ""
+msgstr ":guilabel:`工作时间`：员工记录的工作小时数。"
 
 #: ../../content/applications/hr/attendances/management.rst:27
 msgid ":guilabel:`Worked Extra Hours`: The amount of overtime worked."
-msgstr ""
+msgstr ":guilabel:`加班时长`：加班的总时长。"
 
 #: ../../content/applications/hr/attendances/management.rst:28
 msgid ":guilabel:`Extra Hours`: The total approved extra hours."
-msgstr ""
+msgstr ":guilabel:`加班时长`：总批准加班时长。"
 
 #: ../../content/applications/hr/attendances/management.rst:None
 msgid ""
@@ -4720,6 +4781,9 @@ msgid ""
 "modified, if needed. Click into the desired field, and make any needed "
 "changes."
 msgstr ""
+"记录的上半部分显示具体的签到和签退详情，包括所使用的签到方式。表单上半部分的 "
+":guilabel:`签到` 和 :guilabel:`签退` 信息可根据需要进行修改。点击目标字段，即"
+"可进行所需更改。"
 
 #: ../../content/applications/hr/attendances/management.rst:57
 msgid ""
@@ -4728,6 +4792,9 @@ msgid ""
 "pay rate and status. The extra hours listed in this tab can be modified, "
 "allowing for partial overtime approval."
 msgstr ""
+"表格下半部分包含*加班详情*选项卡。该选项卡列出了用于计算加班小时数的加班规则"
+"，以及相应的薪酬率和状态。此选项卡中列出的加班小时数可进行修改，支持部分加班"
+"批准。"
 
 #: ../../content/applications/hr/attendances/management.rst:61
 msgid ""
@@ -4735,6 +4802,8 @@ msgid ""
 "modified. Enter the amount of hours being approved in an `HH:MM` format, "
 "then click :icon:`fa-check` :guilabel:`Approve` at the end of the line."
 msgstr ""
+"点击正在修改的行中的 :guilabel:`额外工时（编码）` 字段。以 `HH:MM` 格式输入批"
+"准的工时数，然后点击行末的 :icon:`fa-check` :guilabel:`批准` 按钮。"
 
 #: ../../content/applications/hr/attendances/management.rst:None
 msgid "A detailed attendance record."
@@ -4746,6 +4815,8 @@ msgid ""
 "status changes to :guilabel:`Approved`, and the :guilabel:`Extra Hours` "
 "field in the top half of the form updates to display the approved overtime."
 msgstr ""
+"编辑并批准 :guilabel:`加班时长（编码）` 字段后，状态将变更为 :guilabel:`已批"
+"准`，且表单上半部分的 :guilabel:`加班时长` 字段将更新为显示已批准的加班时长。"
 
 #: ../../content/applications/hr/attendances/management.rst:73
 msgid ""
@@ -4754,6 +4825,9 @@ msgid ""
 "in the top half of the form, or clicking :icon:`fa-times` :guilabel:`Refuse` "
 "at the end of the overtime entry in the *Overtime Details* tab."
 msgstr ""
+"一旦部分加班获得批准，仍可通过以下方式拒绝加班：点击表单上半部分 "
+":guilabel:`额外工时` 字段旁的 :icon:`fa-times` 图标，或在*加班详情*选项卡中点"
+"击加班条目末尾的 :icon:`fa-times` :guilabel:`拒绝`按钮。"
 
 #: ../../content/applications/hr/attendances/management.rst:79
 msgid ""
@@ -4768,7 +4842,7 @@ msgstr ""
 msgid ""
 "The :guilabel:`Mode` field is not modifiable, as it only logs the method the "
 "attendance record was created."
-msgstr ""
+msgstr ":guilabel:`模式`字段不可修改，因为它仅记录考勤记录创建时所采用的方法。"
 
 #: ../../content/applications/hr/attendances/management.rst:85
 msgid "The possible options are:"
@@ -4780,6 +4854,8 @@ msgid ""
 "a :doc:`kiosk <kiosks>` device. The employee was present at the kiosk to "
 "check-in."
 msgstr ""
+":guilabel:`自助终端`：员工通过 :doc:`自助终端 <kiosks>` 设备进行实体签到或签"
+"退。员工需亲临自助终端进行签到操作。"
 
 #: ../../content/applications/hr/attendances/management.rst:89
 msgid ""
@@ -4788,16 +4864,21 @@ msgid ""
 "displayed on the detailed attendance record, the employee's location at the "
 "time of check-in can be determined."
 msgstr ""
+":guilabel:`Systray`：员工通过 :doc:`直接从数据库 <check_in_check_out>`进行签"
+"到或签退。根据详细考勤记录中显示的 :guilabel:`IP地址`，可确定员工签到时的具体"
+"位置。"
 
 #: ../../content/applications/hr/attendances/management.rst:92
 msgid ""
 ":guilabel:`Manual`: The record was created manually in the **Attendances** "
 "app. This is typically done by management, to add a missing record."
 msgstr ""
+":guilabel:`手动`：该记录是在**考勤**应用中手动创建的。通常由管理人员执行此操"
+"作，用于补充缺失的记录。"
 
 #: ../../content/applications/hr/attendances/management.rst:96
 msgid "Convert overtime to time off"
-msgstr ""
+msgstr "将加班时间转换为休假"
 
 #: ../../content/applications/hr/attendances/management.rst:98
 msgid ""
@@ -4806,6 +4887,9 @@ msgid ""
 "to :menuselection:`Attendances app --> Management`. Click on the desired "
 "attendance record to view the specific attendance details."
 msgstr ""
+"部分公司允许将加班时间转换为补休。若需将全部或部分加班时间转换为补休，请依次"
+"进入 :menuselection:`考勤应用 --> 管理`。点击目标考勤记录即可查看具体考勤详情"
+"。"
 
 #: ../../content/applications/hr/attendances/management.rst:102
 msgid ""
@@ -4817,10 +4901,16 @@ msgid ""
 "to :guilabel:`Approved`, and the :guilabel:`Extra Hours` field in the top "
 "half of the form updates to reflect the approved overtime."
 msgstr ""
+"在*加班详情*选项卡中，如有必要，请在 :guilabel:`额外工时（编码）`字段调整转换"
+"为补休的加班时长。随后勾选 :guilabel:`可转换为补休`列的复选框，标记该加班需转"
+"换为补休。点击行末的 :icon:`fa-check` :guilabel:`批准`按钮，状态将变为 "
+":guilabel:`已批准`，表单上半部分的 :guilabel:`额外工时`字段将更新为已批准的加"
+"班时长。"
 
 #: ../../content/applications/hr/attendances/management.rst:None
+#, fuzzy
 msgid "An attendance record with 2 ours of overtime converted to time off."
-msgstr ""
+msgstr "一份考勤记录，其中2小时加班时间已转换为补休。"
 
 #: ../../content/applications/hr/attendances/management.rst:115
 msgid "Create attendance records"
@@ -4845,12 +4935,17 @@ msgid ""
 "upper-left corner to open a *Create* pop-up window. Enter the following "
 "information on the form, then click :guilabel:`Save & Close`:"
 msgstr ""
+"要添加缺失的出勤记录，请访问 :menuselection:`考勤应用程序 --> 概览 --> 仪表"
+"板` 。点击左上角的 :guilabel:`新建` 按钮，打开 *创建* 弹出窗口。在表单中填写"
+"以下信息，然后点击 :guilabel:`保存并关闭` ："
 
 #: ../../content/applications/hr/attendances/management.rst:126
 msgid ""
 ":guilabel:`Employee`: Select the employee the record is being created for. "
 "The signed-in user populates this field, by default."
 msgstr ""
+":guilabel:`员工`：选择要创建记录的员工。默认情况下，该字段由登录用户自动填充"
+"。"
 
 #: ../../content/applications/hr/attendances/management.rst:128
 msgid ""
@@ -4858,6 +4953,8 @@ msgid ""
 "then click :guilabel:`Apply`. By default, the current date is selected, and "
 "the time is set to `12:00:AM`."
 msgstr ""
+":guilabel:`签到`：使用日历选择签到日期和时间，然后点击 :guilabel:`应用`。默认"
+"情况下，当前日期已被选中，时间设置为 `凌晨 12:00`。"
 
 #: ../../content/applications/hr/attendances/management.rst:130
 msgid ""
@@ -4865,13 +4962,18 @@ msgid ""
 "time, then click :guilabel:`Apply`. By default, the following date is "
 "selected, and the time is set to `12:00:AM`."
 msgstr ""
+":guilabel:`签退`：使用日历选择签退日期和时间，然后点击 :guilabel:`应用`。默认"
+"情况下，系统将选择次日日期，时间默认设置为 `凌晨 12:00`。"
 
 #: ../../content/applications/hr/attendances/management.rst:132
+#, fuzzy
 msgid ""
 ":guilabel:`Worked Time`: This field is automatically populated with the "
 "difference from the selected :guilabel:`Check In` and :guilabel:`Check Out` "
 "times. This field **cannot** be modified."
 msgstr ""
+":guilabel:`工作时间`：该字段将自动填入所选的 :guilabel:`签到` 和 "
+":guilabel:`签退` 时间的差值。此字段**不能**修改。"
 
 #: ../../content/applications/hr/attendances/management.rst:134
 msgid ""
@@ -4879,32 +4981,36 @@ msgid ""
 "be :ref:`approved <attendances/approve-refuse>`. This field displays zero "
 "(`00:00`) by default."
 msgstr ""
+":guilabel:`加班时长`：此字段不可修改，因加班需经 :ref:`批准 <attendances/"
+"approve-refuse>`。该字段默认显示零值（`00:00`）。"
 
 #: ../../content/applications/hr/attendances/management.rst:None
 msgid ""
 "An Attendances app record form, filled out for Mike Smith for January 27, "
 "2026."
-msgstr ""
+msgstr "一份考勤记录表，填写对象为 Mike Smith，日期为2026年1月27日。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:3
 msgid "Overtime rulesets"
-msgstr ""
+msgstr "超时规则集"
 
 #: ../../content/applications/hr/attendances/overtime.rst:5
 msgid ""
 "Odoo's **Attendances** app allows for the configuration of overtime rules to "
 "determine if and when employees earn overtime, and at what rate."
 msgstr ""
+"Odoo **考勤** 应用支持配置加班规则，用于确定员工何时获得加班资格、是否获得加"
+"班资格以及加班费率。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:9
 msgid ""
 "No overtime rulesets come preconfigured in the **Attendances** app; all "
 "overtime rulesets must be created."
-msgstr ""
+msgstr "在 **考勤** 应用中，所有加班规则集均需手动创建，系统不预配置任何规则集。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:13
 msgid "Create an overtime ruleset"
-msgstr ""
+msgstr "创建加班规则集"
 
 #: ../../content/applications/hr/attendances/overtime.rst:15
 msgid ""
@@ -4914,22 +5020,28 @@ msgid ""
 "the :guilabel:`Rate Mode`, and the :guilabel:`Rules Count` (the number of "
 "rules configured for the ruleset)."
 msgstr ""
+"要创建加班规则集，请前往 :menuselection:`考勤应用程序 --> 配置 --> 加班规则"
+"集`。所有现有加班规则集将显示在默认列表视图中，并呈现规则集的 :guilabel:`名"
+"称`、:guilabel:`费率模式`以及 :guilabel:`规则数量`（该规则集配置的规则条目数"
+"）。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:20
 msgid ""
 "Click the :guilabel:`New` button, and a blank :guilabel:`Rulesets` form "
 "loads. Enter the following information on the top half of the form:"
 msgstr ""
+"点击 :guilabel:`新建` 按钮，将加载一个空白的 :guilabel:`规则集` 表单。在表单"
+"上半部分输入以下信息："
 
 #: ../../content/applications/hr/attendances/overtime.rst:23
 msgid ":guilabel:`Ruleset Name`: Enter a name for the ruleset."
-msgstr ""
+msgstr ":guilabel:`规则集名称`：为规则集输入名称。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:24
 msgid ""
 ":guilabel:`Rate Combination Mode`: Using the drop-down menu, select how the "
 "overtime rate is calculated. The options are:"
-msgstr ""
+msgstr ":guilabel:`计费组合模式`：使用下拉菜单选择加班费率的计算方式。可选项包括："
 
 #: ../../content/applications/hr/attendances/overtime.rst:27
 msgid ""
@@ -4937,6 +5049,8 @@ msgid ""
 "pay. For example, if there are two available rates of 150% and 125%, the "
 "highest available rate, 150%, is applied."
 msgstr ""
+":guilabel:`最高费率`：用于确定加班费的最高费率。例如，若存在 150% 和 125% 两"
+"种可用费率，则采用最高可用费率 150%。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:29
 msgid ""
@@ -4944,6 +5058,8 @@ msgid ""
 "is used to calculate the overtime pay. Odoo calculates the rate by adding "
 "the *extra* pay rates (above 100%)."
 msgstr ""
+":guilabel:`所有费率之和`：计算加班费时采用所有适用加班费率的组合。Odoo 通过累"
+"加 *额外* 薪酬费率（超过 100% 的部分）来计算该费率。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:34
 msgid ""
@@ -4951,26 +5067,29 @@ msgid ""
 "The :guilabel:`Sum of all rates` option is selected. The overtime rate "
 "applied is 170%."
 msgstr ""
+"创建了两种加班费率，一种为150%，另一种为120%。选择了`所有费率之和`选项。实际"
+"应用的加班费率为170%。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:37
+#, fuzzy
 msgid ""
 "The calculation used to determine this rate is: 100% (baseline) + (150-100)% "
 "+ (120-100)% = 170%."
-msgstr ""
+msgstr "计算该比率的公式为：100%（基准值）+ (150-100)% + (120-100)% = 170%。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:40
 msgid ":guilabel:`Description`: Enter a brief description for the ruleset."
-msgstr ""
+msgstr ":guilabel:`说明`：为规则集输入简要说明。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:41
 msgid ""
 ":guilabel:`Country`: Using the drop-down menu, select the country the "
 "ruleset applies to."
-msgstr ""
+msgstr ":guilabel:`国家/地区`：通过下拉菜单选择规则集适用的国家/地区。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:44
 msgid "Overtime rules"
-msgstr ""
+msgstr "加班规则"
 
 #: ../../content/applications/hr/attendances/overtime.rst:46
 msgid ""
@@ -4979,16 +5098,18 @@ msgid ""
 "*Overtime Rules* tab of the :guilabel:`Ruleset` form, and a *Create Rule* "
 "pop-up window loads."
 msgstr ""
+"规则集主信息创建完成后，下一步是添加具体规则。在:guilabel:`规则集` 表单的 *加"
+"班规则* 选项卡底部点击:guilabel:`添加一行` ，系统将加载*创建规则* 弹出窗口。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:50
 msgid ""
 "Enter the :guilabel:`Rule Name` in the corresponding field. Next, enter the "
 "following information in the *Definition* tab:"
-msgstr ""
+msgstr "在对应字段中输入 :guilabel:`规则名称`。接着，在 *定义* 选项卡中输入以下信息："
 
 #: ../../content/applications/hr/attendances/overtime.rst:54
 msgid "Condition section"
-msgstr ""
+msgstr "条件部分"
 
 #: ../../content/applications/hr/attendances/overtime.rst:56
 msgid ""
@@ -4996,10 +5117,12 @@ msgid ""
 "based on :ref:`quantity <attendnaces/quantity>` or :ref:`timing <attendnaces/"
 "timing>`."
 msgstr ""
+"此部分用于定义哪些记录的工时将被计为加班。规则可以基于 :ref:`时长 "
+"<attendnaces/timing>` 或 :ref:`时间 <attendnaces/timing>`。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:62
 msgid "Based on quantity"
-msgstr ""
+msgstr "基于时长"
 
 #: ../../content/applications/hr/attendances/overtime.rst:64
 msgid ""
@@ -5008,6 +5131,9 @@ msgid ""
 "the :guilabel:`The rule is based on` field. Configure the rest of the fields "
 "in the *Condition* section as follows:"
 msgstr ""
+"如果当员工每日或每周的总记录工时超过预期时长时产生加班，请为 :guilabel:`规则"
+"基于` 字段选择 :guilabel:`时长` 单选按钮。按以下方式配置*条件*部分的其余字段"
+"："
 
 #: ../../content/applications/hr/attendances/overtime.rst:68
 msgid ""
@@ -5016,6 +5142,9 @@ msgid ""
 "or :guilabel:`Week`, using the drop-down menu. Next, select if the "
 "difference is compared:"
 msgstr ""
+":guilabel:`如果每日/每周的实际工时与预期工时存在差异`：首先，通过下拉菜单选择"
+"预期总工时是按 :guilabel:`日` 还是 :guilabel:`周` 计算。接下来，选择差异比较"
+"的基准："
 
 #: ../../content/applications/hr/attendances/overtime.rst:72
 msgid ""
@@ -5023,6 +5152,8 @@ msgid ""
 "the overtime is based on the working hours :ref:`defined on the employees "
 "contract <payroll/gen-info>`."
 msgstr ""
+":guilabel:`与合同中定义的工时相比`：如果加班基于员工合同中 :ref:`定义的工时 "
+"<payroll/gen-info>`，请选择此选项。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:74
 msgid ""
@@ -5033,6 +5164,10 @@ msgid ""
 "each :guilabel:`Day` or :guilabel:`Week`, depending on what is selected in "
 "the :guilabel:`If the worked hours on a (Day/Week) differs` field."
 msgstr ""
+":guilabel:`与特定时长相比`：如果加班基于一个指定的时长，请选择此选项。选择后"
+"，会出现一个 :guilabel:`需超出的时长` 字段。根据在 :guilabel:`如果每日/每周的"
+"实际工时与预期工时存在差异` 字段中的选择，输入员工每日或每周必须超出的时长（"
+"格式为 HH:MM）。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:80
 msgid ""
@@ -5042,6 +5177,9 @@ msgid ""
 "employee logs an 8 hour and 13 minute workday, the extra 13 minutes is "
 "**not** counted as overtime."
 msgstr ""
+":guilabel:`对雇主有利的容差时间`：此字段定义一段不计入加班的缓冲时间。以 "
+"`HH:MM` 格式输入时长。例如，如果此字段设置为 `00:15`，而员工工作了 8 小时 13 "
+"分钟，则额外的 13 分钟不计入加班。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:84
 msgid ""
@@ -5051,10 +5189,13 @@ msgid ""
 "48 minute workday, the missing 12 minutes **are** counted as overtime, for a "
 "total of one full hour of overtime (instead of only 48 minutes of overtime)."
 msgstr ""
+":guilabel:`对员工有利的容差时间`：以 `HH:MM` 格式输入给予员工的额外加班时间。"
+"例如，如果此字段设置为 `00:15`，而员工工作了 8 小时 48 分钟，则缺少的 12 分钟"
+"会被计入加班，总加班时长为整整一小时（而非仅 48 分钟）。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:92
 msgid "Based on timing"
-msgstr ""
+msgstr "基于时间"
 
 #: ../../content/applications/hr/attendances/overtime.rst:94
 msgid ""
@@ -5063,6 +5204,8 @@ msgid ""
 "field. Configure the rest of the fields in the *Condition* section as "
 "follows:"
 msgstr ""
+"如果仅在特定日期或特定时间工作才产生加班，请为 :guilabel:`规则基于` 字段选择 "
+":guilabel:`时间` 单选按钮。按以下方式配置*条件*部分的其余字段："
 
 #: ../../content/applications/hr/attendances/overtime.rst:98
 msgid ""
@@ -5072,6 +5215,9 @@ msgid ""
 "employee logs a 40 hour and 13 minute workweek, the extra 13 minutes is "
 "**not** counted as overtime."
 msgstr ""
+":guilabel:`对雇主有利的容差时间`：此字段定义一段不计入加班的缓冲时间。以 "
+"`HH:MM` 格式输入时长。例如，如果此字段设置为 `00:15`，而员工一周工作了 40 小"
+"时 13 分钟，则额外的 13 分钟不计入加班。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:102
 msgid ""
@@ -5081,12 +5227,17 @@ msgid ""
 "48 minute workweek, the missing 12 minutes **is** counted as overtime, for a "
 "total of one full hour of overtime (instead of only 48 minutes of overtime)."
 msgstr ""
+":guilabel:`对员工有利的容差时间`：以 `HH:MM` 格式输入给予员工的额外加班时间。"
+"例如，如果此字段设置为 `00:15`，而员工一周工作了 40 小时 48 分钟，则缺少的 "
+"12 分钟会被计入加班，总加班时长为整整一小时（而非仅 48 分钟）。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:106
 msgid ""
 ":guilabel:`If the employee works`: Click the radio button to select the "
 "period of time defined for accruing overtime. The options are:"
 msgstr ""
+":guilabel:`如果员工在以下时间工作`：点击单选按钮以选择产生加班的时间段。选项"
+"包括："
 
 #: ../../content/applications/hr/attendances/overtime.rst:109
 msgid ""
@@ -5096,6 +5247,10 @@ msgid ""
 "`24:00` hours, by default. Adjust the working times in an `HH:MM` for both "
 "fields, defining the specific working hours an employee earns overtime for."
 msgstr ""
+":guilabel:`在任何工作日`：如果员工在任何工作日的指定工作时间之外工作即产生加"
+"班，请选择此选项。选择后，会出现一个 :guilabel:`在...之间` 字段，默认列出 "
+"`00:00` 至 `24:00`。调整两个字段的时间（格式为 `HH:MM`），以定义员工在此时间"
+"段内工作可获得加班工资。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:115
 msgid ""
@@ -5103,6 +5258,8 @@ msgid ""
 "works from 7:00 AM until 4:00 PM. The employee earns 2 hours of overtime, "
 "for the hours between 7:00 AM and 9:00 AM."
 msgstr ""
+"例如，:guilabel:`在...之间` 的时间设置为 `09:00` 至 `17:00`。员工从早上 7:00 "
+"工作到下午 4:00。则员工在早上 7:00 至 9:00 之间工作的 2 小时将被计为加班。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:119
 msgid ""
@@ -5113,12 +5270,18 @@ msgid ""
 "`HH:MM` for both fields, defining the specific working hours an employee "
 "earns overtime for."
 msgstr ""
+":guilabel:`在任何非工作日`：如果员工在任何非工作日的指定工作时间之外工作即产"
+"生加班，请选择此选项。选择后，会出现一个 :guilabel:`在...之间` 字段，默认列"
+"出 `00:00` 至 `24:00`。调整两个字段的时间（格式为 `HH:MM`），以定义员工在此时"
+"间段内工作可获得加班工资。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:124
 msgid ""
 ":guilabel:`When employee is off`: Select this option if overtime is accrued "
 "on any day the employee is *not* scheduled to work."
 msgstr ""
+":guilabel:`当员工休假时`：如果员工在任何*未*被排班的工作日工作即产生加班，请"
+"选择此选项。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:126
 msgid ""
@@ -5128,16 +5291,19 @@ msgid ""
 "appears. Using the drop-down menu, select the working schedule used to "
 "determine overtime."
 msgstr ""
+":guilabel:`超出特定排班时间`：如果员工在选定的 :doc:`工作排班 <../payroll/"
+"working_schedules>` 之外工作即产生加班，请选择此选项。选择后，会出现一个  "
+":guilabel:`排班` 字段。通过下拉菜单选择用于确定加班的工作排班。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:132
 msgid "Action section"
-msgstr ""
+msgstr "操作部分"
 
 #: ../../content/applications/hr/attendances/overtime.rst:134
 msgid ""
 "Once the criteria set in the *Condition* section are met, the *Action* "
 "section determines how any approved extra time is handled."
-msgstr ""
+msgstr "一旦满足*条件*部分设置的标准，*操作*部分将决定如何处理所有批准的额外工时。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:137
 msgid ""
@@ -5146,6 +5312,9 @@ msgid ""
 "populated with the rate defined on the overtime :ref:`work entry type "
 "<payroll/work-entry-types>`."
 msgstr ""
+":guilabel:`支付额外工时工资`：如果需要支付加班工资，请启用此复选框。启用后，"
+"复选框右侧会出现一个百分比字段，默认填充为加班 :ref:`工作条目类型 <payroll/"
+"work-entry-types>` 中定义的费率。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:140
 msgid ""
@@ -5154,16 +5323,21 @@ msgid ""
 "select what :ref:`work entry type <payroll/work-entry-types>` is created for "
 "the overtime. By default, :guilabel:`Overtime Hours` is selected."
 msgstr ""
+":guilabel:`使用的工作条目类型`：此字段仅在启用 :guilabel:`支付额外工时工资` "
+"字段后显示。通过下拉菜单选择为加班创建的 :ref:`工作条目类型 <payroll/work-"
+"entry-types>`。默认选择为 :guilabel:`加班工时`。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:144
 msgid ""
 ":guilabel:`Give back as time off`: Enable this checkbox if the overtime "
 "should be converted to time off, instead of being paid out."
 msgstr ""
+":guilabel:`转换为休假时间`：如果加班应转换为休假时间而非支付工资，请启用此复"
+"选框。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:148
 msgid "Example overtime ruleset"
-msgstr ""
+msgstr "加班规则集示例"
 
 #: ../../content/applications/hr/attendances/overtime.rst:150
 msgid ""
@@ -5174,10 +5348,14 @@ msgid ""
 "The country is set to :guilabel:`United States`, and "
 "a :guilabel:`Description` is entered explaining the overtime rules."
 msgstr ""
+"一家美国公司希望为所有每周工作超过 40 小时或在任何非工作日工作的员工支付 1.5 "
+"倍的加班工资。为配置此规则，他们创建了一个名为 `加班`的规则集，将 "
+":guilabel:`费率组合模式` 设置为 :guilabel:`最高费率`。国家设置为 "
+":guilabel:`美国`，并输入了解释加班规则的 :guilabel:`描述`。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:None
 msgid "The top half of the overtime ruleset for the example."
-msgstr ""
+msgstr "示例中加班规则集的上半部分。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:159
 msgid ""
@@ -5185,10 +5363,12 @@ msgid ""
 "Schedule Rule <attendnaces/schedule-rule>` and :ref:`Non Working Days Rule "
 "<attendnaces/hours-rule>`."
 msgstr ""
+"在加班规则标签页中配置了两条规则：:ref:`员工排班规则 <attendnaces/schedule-"
+"rule>` 和 :ref:`非工作日规则 <attendnaces/hours-rule>`。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:165
 msgid "Employee schedule rule"
-msgstr ""
+msgstr "员工排班规则"
 
 #: ../../content/applications/hr/attendances/overtime.rst:167
 msgid ""
@@ -5199,15 +5379,19 @@ msgid ""
 "rate of :guilabel:`150%`, and the time is logged as :guilabel:`Overtime "
 "Hours` on their attendance log."
 msgstr ""
+"*员工排班规则* 基于 :guilabel:`时长`，如果员工在任何给定的 :guilabel:`日` 工"
+"作时间超过 :guilabel:`合同中定义的工时`，则产生加班。未为员工或雇主设置容差。"
+"如果员工加班，他们将按 :guilabel:`150%` 的费率获得报酬，并且该时间会在其考勤"
+"记录中记录为 :guilabel:`加班工时`。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:None
 msgid ""
 "The rule set for an employee who works more than their scheduled work day."
-msgstr ""
+msgstr "为工作时间超过排班时长的员工设置的规则。"
 
 #: ../../content/applications/hr/attendances/overtime.rst:179
 msgid "Non-working days rule"
-msgstr ""
+msgstr "非工作日规则"
 
 #: ../../content/applications/hr/attendances/overtime.rst:181
 msgid ""
@@ -5217,6 +5401,10 @@ msgid ""
 "the employee works overtime, they are paid at a rate of :guilabel:`150%`, "
 "and the time is logged as :guilabel:`Overtime Hours` on their attendance log."
 msgstr ""
+"*非工作日规则* 基于 :guilabel:`时间`，如果员工在 :guilabel:`任何非工作日` 工"
+"作，无论时间长短，均产生加班。未为员工或雇主设置容差。如果员工加班，他们将按 "
+":guilabel:`150%` 的费率获得报酬，并且该时间会在其考勤记录中记录为 "
+":guilabel:`加班工时`。"
 
 #: ../../content/applications/hr/employees.rst:5
 #: ../../content/applications/hr/employees.rst:81
@@ -5243,6 +5431,14 @@ msgid ""
 "all employees are trained and ready for work, and all required steps are "
 "taken when they leave."
 msgstr ""
+"Odoo **员工**应用将 :doc:`人事档案 <employees/new_employee>`、雇佣 :doc:`合"
+"同 <payroll/contracts>` 和 :doc:`部门层级 <employees/departments>` 集中在一个"
+"系统中进行管理。此外，每个员工档案还会跟踪 :doc:`认证 <employees/"
+"certifications>` 和 :doc:`培训 <employees/learning>`、获得的 :doc:`徽章 "
+"<employees/badges>` 以及所有分配的 :doc:`设备 <employees/equipment>`。可定制"
+"的 :doc:`入职 <employees/onboarding>`和 :doc:`离职 <employees/offboarding>` "
+"流程确保所有员工都接受了充分的培训并准备好开展工作，同时在员工离职时完成所有"
+"必要的步骤。"
 
 #: ../../content/applications/hr/employees.rst:16
 msgid ""
@@ -5250,6 +5446,8 @@ msgid ""
 "dashboard shows each employee's real-time attendance and work location—data "
 "that drives payroll accuracy, capacity planning, and compliance reporting."
 msgstr ""
+"正确配置**员工**应用中的设置，可确保仪表盘显示每位员工的实时考勤和工作地点 —"
+"— 这些数据是提高薪资核算准确性、进行产能规划和合规报告的关键。"
 
 #: ../../content/applications/hr/employees.rst:22
 #: ../../content/applications/hr/employees/new_employee.rst:3
