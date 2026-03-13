@@ -1,54 +1,39 @@
+.. |BOM| replace:: :abbr:`BoM (Bill of Materials)`
+
 ===================================
 Manufacturing product configuration
 ===================================
 
-.. _manufacturing/management/configure-manufacturing-product:
-.. |BOM| replace:: :abbr:`BoM (Bill of Materials)`
+Manufacturing products can be configured with lots or serial numbers for :doc:`tracking
+<../../inventory/product_management/product_tracking>`, and a bill of materials (BoM) for
+:doc:`replenishment <../../inventory/warehouses_storage/replenishment/mto>`.
 
-In order to manufacture a product in Odoo *Manufacturing*, the product must be properly configured.
-Doing so consists of enabling the *Manufacturing* route and configuring a bill of materials (BoM)
-for the product. Once these steps are completed, the product is selectable when creating a new
-manufacturing order.
-
-Activate the Manufacture route
-==============================
-
-The Manufacture route is activated for each product on its own product page. To do so, begin by
-navigating to :menuselection:`Manufacturing --> Products --> Products`. Then, select an existing
-product, or create a new one by clicking :guilabel:`New`.
-
-On the product page, select the :guilabel:`Inventory` tab, then enable the :guilabel:`Manufacture`
-checkbox in the :guilabel:`Routes` section. This tells Odoo the product can be manufactured.
-
-.. image:: configure_manufacturing_product/manufacturing-route.png
-   :align: center
-   :alt: The Manufacturing route on the Inventory tab of a product page.
-
-.. _manufacturing/basic_setup/lot-serial-tracking:
+.. _manufacturing/basic-setup/lot-serial-tracking:
 
 Lot/serial number tracking
---------------------------
+==========================
 
-The assignment of lots or serial numbers to newly manufactured products is optional. To optionally
-:doc:`assign lots or serial numbers <../../inventory/product_management/product_tracking>`
-to newly manufactured products, go to the :guilabel:`Traceability` section in the
-:guilabel:`Inventory` tab. In the :guilabel:`Tracking` field, select :guilabel:`By Unique Serial
-Number` or :guilabel:`By Lots`.
+To optionally :doc:`assign lots or serial numbers
+<../../inventory/product_management/product_tracking>` to newly manufactured products, go to
+:menuselection:`Manufacturing --> Products --> Products`. Then, select an existing product, or
+create a new one by clicking :guilabel:`New`. Go to the :guilabel:`Inventory` tab, and open the
+:guilabel:`General Information` tab. In the :guilabel:`Track Inventory` field, select :guilabel:`By
+Unique Serial Number` or :guilabel:`By Lots`.
 
-Doing so enables the *Lot/Serial Number* field on a manufacturing order, or the *Register
-Production* instruction on a work order card in the *Shop Floor* app.
+Doing so enables the :guilabel:`Lot/Serial Number` field on a manufacturing order, or the
+:guilabel:`Register Production` instruction on a work order card in the **Shop Floor** app.
 
 .. figure:: configure_manufacturing_product/lot-number-field.png
-   :align: center
    :alt: "Lot/Serial Number" field on the MO.
 
    **Lot/Serial Number** field on the MO.
 
 .. figure:: configure_manufacturing_product/register-production.png
-   :align: center
    :alt: **Register Production** option to generate lot/serial number on a work order card.
 
    **Register Production** option to generate lot/serial number on a work order card.
+
+.. _manufacturing/basic-setup/configure-bom:
 
 Configure a bill of materials (BoM)
 ===================================
@@ -61,7 +46,6 @@ Products`, then select the product. On the product page, click the :guilabel:`Bi
 smart button at the top of the page, then select :guilabel:`New` to configure a new |BOM|.
 
 .. image:: configure_manufacturing_product/bom-smart-button.png
-   :align: center
    :alt: The Bill of Materials smart button on a product page.
 
 On the |BOM|, the :guilabel:`Product` field auto-populates with the product. In the
@@ -73,7 +57,6 @@ in the :guilabel:`Quantity` field. Continue adding components on new lines until
 been added.
 
 .. image:: configure_manufacturing_product/components-tab.png
-   :align: center
    :alt: The Components tab on a bill of materials.
 
 Next, select the :guilabel:`Operations` tab. Click :guilabel:`Add a line` and a :guilabel:`Create
@@ -88,12 +71,7 @@ to finish adding operations, or :guilabel:`Save & New` to add more.
    :guilabel:`Work Orders` checkbox.
 
 .. image:: configure_manufacturing_product/operations-tab.png
-   :align: center
    :alt: The Operations tab on a bill of materials.
 
-.. admonition:: Learn more
-
-   The section above provides instructions for creating a basic |BOM| that allows a product to be
-   manufactured in Odoo. However, it is by no means an exhaustive summary of all the options
-   available when configuring a |BOM|. For more information about bills of materials, see the
-   documentation on how to :doc:`create a bill of materials <bill_configuration>`.
+.. seealso::
+   :doc:`bill_configuration`.

@@ -26,11 +26,6 @@ removed, and finished products created.
       :align: center
       :alt: The Manufacture radio input field on a warehouse configuration page.
 
-.. important::
-   Products must be properly configured before they can be manufactured in Odoo. For details on how
-   to do so, see the documentation on how to :ref:`configure a product for manufacturing
-   <manufacturing/management/configure-manufacturing-product>`.
-
 Create manufacturing order
 ==========================
 
