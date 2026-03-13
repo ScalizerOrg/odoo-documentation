@@ -119,24 +119,46 @@ Odoo offers multiple ways to log timesheets:
 Using the timer
 ---------------
 
-To record the time spent on a project in real time, follow these steps:
+The timer allows users to easily log timesheets. It starts automatically when the user checks in.
+When the user is done working on a project or task, they can create a timesheet from anywhere in
+Odoo by stopping the timer and selecting the appropriate project.
 
-#. Go to the Timesheets app.
-#. Click :guilabel:`Start` to launch the timer.
-#. By default, the project most frequently used in the last five timesheet entries is automatically
-   selected. To log time for another project, type or select it in the :guilabel:`Project` field.
-#. Optionally, select a :guilabel:`Task` in the project and :guilabel:`Describe your activity`.
-#. Click :guilabel:`Stop` to stop the timer. The time spent is automatically added to the chosen
-   timesheet.
+To log timesheets using the timer, follow these steps:
 
-.. tip::
+In the top menu, click the :icon:`fa-play-circle` (:guilabel:`play circle`) button.
 
-   - You can also press **Enter** to start and stop the timer.
-   - To edit an entry, click the relevant cell in the grid and modify the time.
+If you are using the Attendances app, first :ref:`check in <attendances/check-in>` by clicking the
+:icon:`fa-circle` :guilabel:`(red circle)` and then the :guilabel:`Check in` :icon:`fa-sign-in`
+button in the pop-up. After checking in, click the :icon:`fa-circle` :guilabel:`(green circle)`.
 
-Alternatively, locate the project you want to log time for in the grid and click or press the letter
-displayed next to it on the keyboard to start the timer. Click or press the letter again to stop it.
-To add time in 15-minute increments, press Shift + [letter].
+.. image:: timesheets/timesheets-timer-popup.png
+   :alt: Timesheets timer popup.
+
+In the pop-up:
+
+- Use the :guilabel:`Describe your activity...` field next to the :icon:`fa-comment`
+  (:guilabel:`comment`) icon to enter an optional description.
+- Use the :guilabel:`Project` field next to the :icon:`fa-tasks` (:guilabel:`tasks`) icon to select
+  a project and, optionally, a :guilabel:`Task` in the field below.
+- If the selected project is billable, you can enable the :guilabel:`Billable` setting so the
+  timesheet can be used to invoice the client.
+- If necessary, edit the time next to the :icon:`fa-clock-o` (:guilabel:`clock`) icon.
+- Finally, click :guilabel:`Create`.
+
+.. note::
+   The running timer shows the time elapsed since the user checked in or since the timer was last
+   reset (for example, when a previous timesheet was created).
+
+When a timesheet is created, the timer automatically resets and is ready to create a new timesheet.
+
+To reset the timer, click :guilabel:`Reset` in the pop-up.
+
+To edit a timesheet entry created earlier on the same day, select it in the lower half of the popup.
+Make the desired changes and click :guilabel:`Save`, or :guilabel:`Delete` to permanently remove it.
+
+When you're done for the day, click :guilabel:`Check out` :icon:`fa-sign-out` in the pop-up to stop
+the timer. The timer will resume when you check in again. If you do not check out, the timer will
+automatically reset at midnight.
 
  .. _timesheets/timesheets/log-manually:
 
