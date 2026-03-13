@@ -6,6 +6,8 @@ When moving opportunities through the *CRM* pipeline, *Leads* act as a qualifyin
 formal opportunity is created. Enabling *Leads* provides additional time to review an opportunity's
 potential and gauge its viability before it's assigned to a salesperson.
 
+.. _crm/configure-leads:
+
 Configuration
 =============
 
