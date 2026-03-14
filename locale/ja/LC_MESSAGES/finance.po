@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-06 18:31+0000\n"
+"POT-Creation-Date: 2026-03-13 18:30+0000\n"
 "PO-Revision-Date: 2026-03-01 23:10+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -82,6 +82,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:300
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:122
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:39
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:57
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:122
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:65
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:234
@@ -144,7 +145,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting.rst:48
 #: ../../content/applications/finance/accounting.rst:144
 #: ../../content/applications/finance/accounting.rst:187
-#: ../../content/applications/finance/accounting/customer_invoices.rst:177
+#: ../../content/applications/finance/accounting/customer_invoices.rst:176
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:88
 #: ../../content/applications/finance/accounting/reporting.rst:5
 #: ../../content/applications/finance/accounting/reporting/budget.rst:126
@@ -392,7 +393,7 @@ msgid "Statement"
 msgstr "取引明細書"
 
 #: ../../content/applications/finance/accounting.rst:195
-#: ../../content/applications/finance/accounting/customer_invoices.rst:221
+#: ../../content/applications/finance/accounting/customer_invoices.rst:220
 msgid "Balance sheet"
 msgstr "貸借対照表"
 
@@ -630,10 +631,22 @@ msgstr ""
 "用できます。"
 
 #: ../../content/applications/finance/accounting.rst:315
-msgid "Accountant access rights"
+msgid "Share invoices with external accountants"
 msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:317
+msgid ""
+"Odoo offers multiple ways to share invoices and bills with an external "
+"accountant, including the abilities to :ref:`grant access rights <accounting/"
+"accountant-access-rights>` to your database and to :ref:`download ZIP files "
+"<accounting/zip>` containing all invoices and all bills."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:324
+msgid "Accountant access rights"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:326
 msgid ""
 "To grant access to the company's accountant, :ref:`add the accountant as a "
 "new user <users/add-individual>` and configure the appropriate :doc:`access "
@@ -641,15 +654,15 @@ msgid ""
 "section to enable access to the company's financial data:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting.rst:322
+#: ../../content/applications/finance/accounting.rst:331
 msgid ":guilabel:`Accounting`: Select :guilabel:`Accountant`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting.rst:323
+#: ../../content/applications/finance/accounting.rst:332
 msgid ":guilabel:`Bank`: Allow bank account validation."
 msgstr ""
 
-#: ../../content/applications/finance/accounting.rst:326
+#: ../../content/applications/finance/accounting.rst:335
 msgid ""
 "Adding an accountant as a new user in :doc:`Odoo Online <../../"
 "administration/odoo_online>` is free if the accountant has an Odoo account "
@@ -660,10 +673,42 @@ msgid ""
 "<https://www.odoo.com/pricing-plan>`_."
 msgstr ""
 
-#: ../../content/applications/finance/accounting.rst:333
+#: ../../content/applications/finance/accounting.rst:342
 msgid ""
 "For a multi-company environment, set the appropriate :ref:`access <users/"
 "multi-companies>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:347
+msgid "ZIP file export"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:349
+msgid ""
+"Groups of invoices and bills can be exported in ZIP files. To export "
+"invoices or bills in ZIP files, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:352
+msgid ""
+"Navigate to :menuselection:`Accounting --> Customers --> Invoices` "
+"or :menuselection:`Accounting --> Vendors --> Bills`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:354
+msgid "Select the invoices or bills to be included in the ZIP file."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:355
+msgid ""
+"Click :icon:`fa-cog` :guilabel:`Actions` menu, and click :guilabel:`Export "
+"ZIP`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:357
+msgid ""
+"Once the ZIP file is exported, it can be sent to an external accountant to "
+"provide them with all the information of your invoices and bills."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank.rst:7
@@ -852,7 +897,7 @@ msgstr ":doc:`取引`"
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:6
 #: ../../content/applications/finance/fiscal_localizations/india.rst:688
 #: ../../content/applications/finance/fiscal_localizations/indonesia.rst:32
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:822
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:818
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:104
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:8
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:10
@@ -3323,24 +3368,21 @@ msgstr "複数の顧客請求書を送信する"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:138
 msgid ""
-"To send and print multiple invoices, go to :menuselection:`Accounting --> "
-"Customers --> Invoices`, select them in the :guilabel:`Invoices` list view "
-"and click :guilabel:`Send`. The :guilabel:`Send` window displays the "
-"selected invoice sending methods based on the preferred method set."
+"To send multiple invoices, go to :menuselection:`Accounting --> Customers --"
+"> Invoices`, select them in the :guilabel:`Invoices` list view and "
+"click :guilabel:`Send`. The :guilabel:`Send` window displays the number of "
+"selected invoice to send by email."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:143
+#: ../../content/applications/finance/accounting/customer_invoices.rst:142
 msgid ""
-"A banner is added to the selected invoices to indicate they are part of an "
-"ongoing send and print batch. This helps prevent the process from being "
-"triggered manually again, as it may take some time to complete for "
-"exceptionally large batches."
+"After clicking :guilabel:`Send`, a banner is added to the selected invoices "
+"to indicate they are part of an ongoing send batch. This helps prevent the "
+"process from being triggered manually again, as it may take some time to "
+"complete for exceptionally large batches."
 msgstr ""
-"選択した顧客請求書に、送信および印刷バッチの一部であることを示すバナーが追加"
-"されます。これにより、非常に大きなバッチの場合、処理に時間がかかるため、プロ"
-"セスが再び手動でトリガされるのを防ぐことができます。"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:147
+#: ../../content/applications/finance/accounting/customer_invoices.rst:146
 msgid ""
 "To check all invoices that have not yet been sent, go "
 "to :menuselection:`Accounting --> Customers --> Invoices`. In "
@@ -3351,12 +3393,12 @@ msgstr ""
 "> 顧客 --> 顧客請求書` に移動します。 :guilabel:`顧客請求書` リストビューで、"
 "検索バーをクリックし、 :guilabel:`未送信` でフィルタリングします。"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:154
+#: ../../content/applications/finance/accounting/customer_invoices.rst:153
 #: ../../content/applications/finance/accounting/vendor_bills.rst:131
 msgid "Payment and reconciliation"
 msgstr "支払と消込"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:156
+#: ../../content/applications/finance/accounting/customer_invoices.rst:155
 msgid ""
 "In Odoo, an invoice is considered :guilabel:`Paid` when the associated "
 "accounting entry has been reconciled with a corresponding bank transaction."
@@ -3364,22 +3406,22 @@ msgstr ""
 "Odooでは、顧客請求書は、関連する会計仕訳が対応する銀行取引と消込された時点"
 "で :guilabel:`支払済` とみなされます。"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:160
+#: ../../content/applications/finance/accounting/customer_invoices.rst:159
 #: ../../content/applications/finance/accounting/vendor_bills.rst:150
 msgid ":doc:`payments`"
 msgstr ":doc:`支払`"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:161
+#: ../../content/applications/finance/accounting/customer_invoices.rst:160
 #: ../../content/applications/finance/accounting/payments.rst:19
 #: ../../content/applications/finance/accounting/vendor_bills.rst:151
 msgid ":doc:`bank/reconciliation`"
 msgstr ":doc:`bank/reconciliation`"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:166
+#: ../../content/applications/finance/accounting/customer_invoices.rst:165
 msgid "Payment follow-up"
 msgstr "支払フォローアップ"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:168
+#: ../../content/applications/finance/accounting/customer_invoices.rst:167
 msgid ""
 "Odoo's :doc:`follow-up actions <payments/follow_up>` help companies follow "
 "up on customer invoices. Different actions can be set up to remind customers "
@@ -3396,15 +3438,15 @@ msgstr ""
 "リガされるフォローアップレベルにまとめられます。同じ顧客に対して複数の滞納請"
 "求書がある場合、最も滞納期間が長い請求書に対してアクションが実行されます。"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:182
+#: ../../content/applications/finance/accounting/customer_invoices.rst:181
 msgid "Partner reports"
 msgstr "取引先レポート"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:187
+#: ../../content/applications/finance/accounting/customer_invoices.rst:186
 msgid "Partner Ledger"
 msgstr "取引先元帳"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:189
+#: ../../content/applications/finance/accounting/customer_invoices.rst:188
 msgid ""
 "The :guilabel:`Partner Ledger` report shows the balance of customers and "
 "suppliers. To access it, go to :menuselection:`Accounting --> Reporting --> "
@@ -3413,12 +3455,12 @@ msgstr ""
 ":guilabel:`取引先元帳` レポートは顧客と仕入先の残高を表示します。これ"
 "は :menuselection:`会計 --> レポーティング --> 取引先元帳` から利用できます。"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:195
+#: ../../content/applications/finance/accounting/customer_invoices.rst:194
 #: ../../content/applications/finance/accounting/reporting.rst:102
 msgid "Aged Receivable"
 msgstr "売掛金年齢表"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:197
+#: ../../content/applications/finance/accounting/customer_invoices.rst:196
 msgid ""
 "To review outstanding customer invoices and their related due dates, use "
 "the :ref:`Aged Receivable <accounting/reporting/aged-receivable>` report. To "
@@ -3429,12 +3471,12 @@ msgstr ""
 "<accounting/reporting/aged-receivable>` レポートを使用します。 アクセスするに"
 "は、:menuselection:`会計 --> レポート --> 売掛金年齢表`を選択します。"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:204
+#: ../../content/applications/finance/accounting/customer_invoices.rst:203
 #: ../../content/applications/finance/accounting/reporting.rst:110
 msgid "Aged Payable"
 msgstr "買掛金年齢表"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:206
+#: ../../content/applications/finance/accounting/customer_invoices.rst:205
 msgid ""
 "To review outstanding vendor bills and their related due dates, use "
 "the :ref:`Aged Payable <accounting/reporting/aged-payable>` report. To "
@@ -3444,12 +3486,12 @@ msgstr ""
 "<accounting/reporting/aged-payable>` レポートを使用します。アクセスするに"
 "は、:menuselection:`会計 --> レポーティング --> 買掛金年齢表` に移動します。"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:213
+#: ../../content/applications/finance/accounting/customer_invoices.rst:212
 #: ../../content/applications/finance/accounting/reporting.rst:48
 msgid "Profit and Loss"
 msgstr "損益計算書"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:215
+#: ../../content/applications/finance/accounting/customer_invoices.rst:214
 msgid ""
 "The :ref:`Profit and Loss <accounting/reporting/profit-and-loss>` statement "
 "shows details of income and expenses."
@@ -3457,7 +3499,7 @@ msgstr ""
 ":ref:`損益 <accounting/reporting/profit-and-loss>` 計算書は、収益と経費の詳細"
 "を示しています。"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:223
+#: ../../content/applications/finance/accounting/customer_invoices.rst:222
 msgid ""
 "The :ref:`Balance Sheet <accounting/reporting/balance-sheet>` summarizes the "
 "company's assets, liabilities, and equity at a specific time."
@@ -3960,15 +4002,12 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:33
 msgid ""
-"In the :guilabel:`Credit Note` window, fill in the :guilabel:`Reason "
-"displayed on Credit Note` and update the :guilabel:`Journal` "
-"and :guilabel:`Reversal date` if needed. There are two options:"
+"In the :guilabel:`Credit Note` window, fill in the :guilabel:`Reason` and "
+"update the :guilabel:`Journal` and :guilabel:`Reversal date` if needed. "
+"There are two options:"
 msgstr ""
-":guilabel:`クレジットノート` ウィンドウで、:guilabel:`クレジットノートに表示"
-"される理由` を入力し、必要に応じて :guilabel:`仕訳帳` および :guilabel:`逆仕"
-"訳日` を更新します。2 つのオプションがあります。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:37
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:36
 msgid ""
 "Click :guilabel:`Reverse` to open a draft credit note prefilled with the "
 "exact details from the original invoice. Update the :guilabel:`Product` "
@@ -3980,17 +4019,15 @@ msgstr ""
 "び :guilabel:`数量` を更新し、:guilabel:`確定` をクリックします。このオプショ"
 "ンを使用すると、クレジットノートの一部払い戻しや変更を行うことができます。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:40
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:39
 msgid ""
-"Click :guilabel:`Reverse and Create invoice` to create a credit note, "
-"validate it automatically, reconcile it with the related invoice, and open a "
-"new draft invoice prefilled with the exact details from the original invoice."
+"Click :guilabel:`Reverse and Create invoice` to create a credit note that is "
+"automatically validated and reconciled with the related invoice, and to open "
+"a new draft invoice prefilled with the exact details from the original "
+"invoice."
 msgstr ""
-" :guilabel:`逆仕訳し請求書を作成` をクリックして、クレジットノートを作成し、"
-"自動的に検証し、関連する請求書と照合し、元の請求書の正確な詳細が事前入力され"
-"た新しいドラフト請求書を開きます。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:44
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:43
 msgid ""
 "To create a credit note from scratch, go to :menuselection:`Accounting --> "
 "Customers --> Credit Notes`, and click :guilabel:`New`. Filling out a credit "
@@ -4002,7 +4039,7 @@ msgstr ""
 "の記入は、:ref:`顧客請求書 <accounting/invoice/creation>` の記入と同じ手順で"
 "行います。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:49
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:48
 msgid ""
 "A credit note sequence starts with `R` and is followed by the related "
 "document number (e.g., RINV/2025/0004 is associated with the invoice INV/"
@@ -4012,11 +4049,11 @@ msgstr ""
 "ます。(例：RINV/2025/0004 は顧客請求書 INV/2025/0004 に関連付けられていま"
 "す)。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:55
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:54
 msgid "Issue a customer debit note"
 msgstr "顧客向けのデビットノートを発行する"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:57
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:56
 msgid ""
 "To create a debit note, go to :menuselection:`Accounting --> Customers --> "
 "Invoices` and follow these steps:"
@@ -4024,7 +4061,7 @@ msgstr ""
 "デビットノートを作成するには、:menuselection:`会計 --> 顧客 --> 顧客請求書` "
 "に進み、以下の手順に従ってください:"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:60
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:59
 msgid ""
 "Select the desired invoice(s), click :icon:`fa-cog` :guilabel:`Actions` and "
 "select :guilabel:`Create Debit Note`."
@@ -4032,17 +4069,14 @@ msgstr ""
 "目的の請求書を選択し、アイコン :icon:`fa-cog` :guilabel:`アクション` をクリッ"
 "クし、:guilabel:`デビットノートを作成` を選択します。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:62
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:61
 msgid ""
 "In the :guilabel:`Create Debit Note` window, fill in the :guilabel:`Reason` "
 "and update the :guilabel:`Use Specific Journal` and :guilabel:`Debit Note "
-"Date` fields if needed."
+"Date` fields."
 msgstr ""
-":guilabel:`デビットノートを作成`  ウィンドウで、:guilabel:`理由` を入力し、必"
-"要に応じて :guilabel:`特定の仕訳帳を使用` および :guilabel:`デビットノート日"
-"付` の項目を更新します。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:64
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:63
 msgid ""
 "Enable the :guilabel:`Copy Lines` option to copy the invoice lines and "
 "click :guilabel:`Create Debit Note`."
@@ -4050,7 +4084,7 @@ msgstr ""
 ":guilabel:`明細をコピー` オプションを有効にして請求明細をコピー"
 "し、:guilabel:`デビットノートを作成` をクリックします。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:66
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:65
 msgid ""
 "In the debit note, update the :guilabel:`Product` and :guilabel:`Quantity` "
 "and click :guilabel:`Confirm`."
@@ -4058,7 +4092,7 @@ msgstr ""
 "デビットノートで、:guilabel:`プロダクト` および :guilabel:`数量` を更新"
 "し、:guilabel:`確定` をクリックします。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:70
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:69
 msgid ""
 "To create a debit note from the invoice form view, click the :icon:`fa-"
 "cog` :guilabel:`(gear)` icon and select :guilabel:`Debit Note`."
@@ -4067,11 +4101,11 @@ msgstr ""
 "cog` :guilabel:`(歯車)` アイコンをクリックし、:guilabel:`デビットノート` を選"
 "択します。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:76
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:75
 msgid "Record a vendor refund"
 msgstr "仕入先返金を記録"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:78
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:77
 msgid ""
 "Vendor refunds or vendor credit notes are recorded the same way "
 "as :ref:`credit notes <accounting/credit_notes/issue-credit-note>`:"
@@ -4079,7 +4113,7 @@ msgstr ""
 "仕入先からの払い戻しやクレジットノートは、:ref:`クレジットノート <accounting/"
 "credit_notes/issue-credit-note>` と同じ方法で記録します。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:81
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:80
 msgid ""
 "To record a vendor refund or a vendor credit note directly from the "
 "corresponding vendor bill, go to :menuselection:`Accounting --> Vendors --> "
@@ -4089,19 +4123,17 @@ msgstr ""
 "は、:menuselection:`会計 --> 仕入先 --> 仕入先請求書` を選択し、該当する仕入"
 "先請求書を開いて、:guilabel:`クレジットノート` をクリックします。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:85
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:84
 msgid ""
 "To record it from scratch, go to :menuselection:`Accounting --> Vendors --> "
-"Refund`, and click on :guilabel:`New`."
+"Refunds`, and click on :guilabel:`New`."
 msgstr ""
-"最初から記録するには、:menuselection:`会計 --> 仕入先 --> 払戻` に移動"
-"し、:guilabel:`新規` をクリックしてください。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:91
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:90
 msgid "Record a vendor debit note"
 msgstr "仕入先デビットノートを記録する"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:93
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:92
 msgid ""
 "Debit notes from vendors are recorded the same way :ref:`debit notes are "
 "issued to customers <accounting/credit_notes/issue-debit-note>`."
@@ -4109,7 +4141,7 @@ msgstr ""
 "仕入先からのデビットノートも同様に記録します。:ref:`顧客へのデビットノートの"
 "発行 <accounting/credit_notes/issue-debit-note>`。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:96
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:95
 msgid ""
 "To record a debit note, go to :menuselection:`Accounting --> Vendors --> "
 "Bills` and select the desired bill(s). Click :icon:`fa-"
@@ -4119,7 +4151,7 @@ msgstr ""
 "移動し、目的の請求書を選択します。:icon:`fa-cog` :guilabel:`アクション` をク"
 "リックし、:guilabel:`デビットノートを作成` を選択します。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:100
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:99
 msgid ""
 "To create a debit note from the vendor bill form view, click the :icon:`fa-"
 "cog` :guilabel:`(gear)` icon and select :guilabel:`Debit Note`."
@@ -4128,13 +4160,13 @@ msgstr ""
 "cog` :guilabel:`(歯車)` アイコンをクリックし、:guilabel:`デビットノート` を選"
 "択します。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:106
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:105
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:156
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:135
 msgid "Journal entries"
 msgstr "仕訳"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:108
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:107
 msgid ""
 "Creating a credit/debit note from an invoice/bill generates a **reverse "
 "entry** that cancels out the journal items from the original invoice."
@@ -4142,7 +4174,7 @@ msgstr ""
 "顧客請求書/仕入先請求書からクレジットノート/デビットノートを作成すると、元の"
 "顧客請求書/仕入先請求書の仕訳帳項目を相殺する **逆仕訳** が作成されます。"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:112
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:111
 msgid "The journal entry of an invoice:"
 msgstr "顧客請求書の仕訳帳への仕訳:"
 
@@ -4150,7 +4182,7 @@ msgstr "顧客請求書の仕訳帳への仕訳:"
 msgid "Invoice journal entry"
 msgstr "顧客請求書仕訳"
 
-#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:117
+#: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:116
 msgid ""
 "The credit note's journal entry generated to reverse the original invoice "
 "above:"
@@ -4249,11 +4281,9 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:43
 msgid ""
-"If :doc:`Send by Post <snailmail>` is checked when you click :guilabel:`Send "
-"& Print`, the invoice will be mailed to the invoice address."
+"If :doc:`Send by Post <snailmail>` is checked when you "
+"click :guilabel:`Send`, the invoice will be mailed to the invoice address."
 msgstr ""
-" :doc:`郵送 <snailmail>` がチェックされている場合、:guilabel:`送信 & 印刷` を"
-"クリックすると、請求書が請求先住所に送られます。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:3
 msgid "Deferred revenues"
@@ -11390,6 +11420,7 @@ msgstr "勘定科目タイプ"
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:23
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:16
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:17
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:17
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:16
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:18
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:18
@@ -14781,19 +14812,13 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:102
 msgid ""
-"**Closing** a mandate updates the mandate's end day to the current day. "
+"**Closing** a mandate updates the mandate's end date to the current day. "
 "Invoices issued after the present day will not be processed with an |sdd| "
 "payment. **Revoking** a mandate disables the mandate immediately. No |sdd| "
 "payment can be registered anymore, regardless of the invoice's date. "
 "However, payments that have already been registered are still included in "
 "the next :ref:`SDD XML file <accounting/batch_sdd/XML>`."
 msgstr ""
-"委任状(口座振替同意書) を **終了** すると、その終了日は当日に更新されます。 "
-"これ以降に発行された請求書については、|sdd| 支払として処理されなくなります。 "
-"一方で、委任状を **取消** すると、その時点で即座に無効化されます。 この場合、"
-"請求書の日付に関係なく、|sdd| 支払の登録は一切できなくなります。 ただし、すで"
-"に登録済みの支払については、次回の :ref:`SDD XML ファイル <accounting/"
-"batch_sdd/XML>` に含まれます。"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:109
 msgid ""
@@ -14871,10 +14896,10 @@ msgstr ""
 "び :guilabel:`支払済請求書` スマートボタンをクリックします。"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:138
-msgid "Click :guilabel:`Re-generate Export file` to regenerate the XML file."
+msgid ""
+"Click :guilabel:`Re-generate Export file` in the batch payment form to "
+"regenerate the XML file."
 msgstr ""
-":guilabel:`エクスポートファイルを再生成する` をクリックして、XMLファイルを再"
-"生成します。"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:141
 msgid ":doc:`batch`"
@@ -15575,13 +15600,10 @@ msgstr "顧客ポータル"
 
 #: ../../content/applications/finance/accounting/payments/online.rst:31
 msgid ""
-"After issuing the invoice, click on *Send & Print* and send the invoice by "
+"After issuing the invoice, click on :guilabel:`Send` and send the invoice by "
 "email to the customer. They will receive an email with a link that redirects "
 "them to the invoice on their **Customer Portal**."
 msgstr ""
-"請求書を発行したら、*送信 & 印刷* をクリックし、請求書を顧客にメールで送信し"
-"ます。顧客は、**顧客ポータル** 上の請求書にリダイレクトされるリンクが記載され"
-"たメールを受け取ります。"
 
 #: ../../content/applications/finance/accounting/payments/online.rst:None
 msgid "Email with a link to view the invoice online on the Customer Portal."
@@ -20629,6 +20651,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:21
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:14
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:15
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:15
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:14
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:16
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:16
@@ -20664,6 +20687,7 @@ msgstr "名称"
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:22
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:15
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:16
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:16
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:15
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:17
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:17
@@ -27936,8 +27960,8 @@ msgid ":doc:`Switzerland <fiscal_localizations/switzerland>`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations.rst:137
-msgid "Taiwan"
-msgstr "台湾"
+msgid ":doc:`Taiwan <fiscal_localizations/taiwan>`"
+msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations.rst:138
 msgid "Tanzania"
@@ -30566,6 +30590,7 @@ msgstr "オーストラリア"
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:8
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:8
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:13
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:8
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:10
 msgid "Modules"
 msgstr "モジュール"
@@ -30662,6 +30687,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/indonesia.rst:94
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:330
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:181
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:96
 msgid "Accounting"
 msgstr "会計"
 
@@ -33441,6 +33467,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:108
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:38
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:34
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:38
 msgid "Localization overview"
 msgstr ""
 
@@ -33476,6 +33503,7 @@ msgid ":doc:`Payroll </applications/hr/payroll>`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:93
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:50
 msgid ":doc:`Reporting <../accounting/reporting>`"
 msgstr ""
 
@@ -33781,7 +33809,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:247
 msgid ""
 "An email will then be received with a token and a link to create a password. "
-"Click on this link and copy-paste the token to allocate the desired password."
+"Click this link and copy-paste the token to allocate the desired password."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:251
@@ -34255,10 +34283,10 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:515
 msgid ""
-"Then, click :guilabel:`Send`. In the :guilabel:`Print & Send` window, "
-"click :guilabel:`Process e-invoice` and any other options, such "
-"as :guilabel:`Download` or :guilabel:`Email`. Finally, "
-"click :guilabel:`Send` to process the invoice with the government."
+"Then, click :guilabel:`Send`. In the pop-up window, click :guilabel:`Process "
+"e-invoice` and any other options, such as :guilabel:`Download` "
+"or :guilabel:`Email`. Finally, click :guilabel:`Send` to process the invoice "
+"with the government."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:520
@@ -34562,6 +34590,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/india.rst:136
 #: ../../content/applications/finance/fiscal_localizations/india.rst:314
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:230
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:141
 msgid "Workflow"
 msgstr "ワークフロー"
 
@@ -38536,6 +38565,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:173
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1052
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:42
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:76
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:225
 msgid "Contacts"
 msgstr "連絡先"
@@ -38850,10 +38880,10 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:361
 msgid ""
 "After the :ref:`invoice confirmation <localization/colombia/invoice-"
-"creation>`, click :guilabel:`Print & Send`. In the wizard that appears, make "
-"sure to enable the :guilabel:`DIAN` and :guilabel:`Email` checkboxes to send "
-"an XML to the |DIAN| web service and the validated invoice to the client "
-"fiscal email and click :guilabel:`Print & Send`. Then:"
+"creation>`, click :guilabel:`Send`. In the wizard that appears, make sure to "
+"enable the :guilabel:`DIAN` and :guilabel:`Email` checkboxes to send an XML "
+"to the |DIAN| web service and the validated invoice to the client fiscal "
+"email and click :guilabel:`Send`. Then:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:366
@@ -40877,6 +40907,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:782
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1235
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:275
 msgid "eCommerce"
 msgstr "Eコマース"
 
@@ -43292,9 +43323,9 @@ msgstr ""
 msgid ""
 "The DATEV ATCH ZIP file includes the files (reports) linked to an Odoo "
 "invoice or bill. For customer invoices, the file must have been generated by "
-"using the :guilabel:`Print & Send` button. For vendor bills, the file must "
-"have been received via an email alias or uploaded by using "
-"the :guilabel:`Upload` button."
+"using the :guilabel:`Send` button. For vendor bills, the file must have been "
+"received via an email alias or uploaded by using the :guilabel:`Upload` "
+"button."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:67
@@ -44852,6 +44883,7 @@ msgstr "API固有のユーザ名とパスワードを送信"
 #: ../../content/applications/finance/fiscal_localizations/india.rst:111
 #: ../../content/applications/finance/fiscal_localizations/india.rst:299
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:142
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:126
 #: ../../content/applications/finance/payment_providers/paypal.rst:42
 msgid "Configuration in Odoo"
 msgstr "Odooでの設定"
@@ -46614,13 +46646,8 @@ msgid ""
 "to :menuselection:`Accounting --> Configuration --> Taxes`, select a similar "
 "tax, then click on the cog icon and select :guilabel:`Duplicate`. In "
 "the :guilabel:`Advanced Options` tab, add the :guilabel:`Exoneration` "
-"and :guilabel:`Law Reference`. To confirm click on :guilabel:`Save`."
+"and :guilabel:`Law Reference`. To confirm click :guilabel:`Save`."
 msgstr ""
-"別の種類の免除を使用する必要がある場合は、 :menuselection:`会計 --> 設定 --> "
-"税`に進み、類似の税金を選択し、歯車のアイコンをクリックして :guilabel:`複製` "
-"を選択します。:guilabel:`高度なオプション`タブで、:guilabel:`免除`"
-"と:guilabel:`法参照`を追加します。確認するには :guilabel:`保存` をクリックし"
-"ます。"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:126
 msgid ""
@@ -46672,7 +46699,7 @@ msgstr ""
 "ます。"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:148
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:590
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:586
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:146
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:204
 msgid "Invoices"
@@ -46902,7 +46929,7 @@ msgid "Electronic document invoicing settings"
 msgstr "電子ドキュメント請求設定"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:259
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:681
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:677
 msgid "Process"
 msgstr "処理"
 
@@ -46938,19 +46965,10 @@ msgstr "XMLドキュメント作成"
 msgid ""
 "Odoo generates the required XML files as attachments to invoices in the "
 "`FatturaPA` format required by the :abbr:`AdE (Agenzia delle Entrate)`. Once "
-"the invoices needed are selected, go to :guilabel:`Action` and click "
-"on :guilabel:`Send and Print`."
+"the invoices needed are selected, click the :guilabel:`Send` button."
 msgstr ""
-"Odooは顧客請求書の添付ファイルとして、:abbr:`AdE (Agenzia delle Entrate)`が要"
-"求する`FatturaPA`形式のXMLファイルを生成します。必要な顧客請求書を選択した"
-"ら、:guilabel:`アクション`に移動し、:guilabel:`送信して印刷`をクリックしま"
-"す。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:None
-msgid "Send and Print menu"
-msgstr "送信と印刷メニュー"
-
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:284
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:281
 msgid ""
 "When the pop-up window opens there is a selection of actions that can be "
 "taken. :guilabel:`Generate XML File` generates the attachments."
@@ -46958,11 +46976,7 @@ msgstr ""
 "ポップアップウィンドウが開くと、実行可能なアクションが選択できま"
 "す。:guilabel:`XMLファイルを生成` は添付ファイルを生成します。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:None
-msgid "Send and Print dialog"
-msgstr "送信と印刷ダイアログ"
-
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:290
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:284
 msgid ""
 "The XML file as well as the PDF once can be found attached to the invoice."
 msgstr "XMLファイルおよびPDFファイルは、顧客請求書に添付されています。"
@@ -46971,30 +46985,28 @@ msgstr "XMLファイルおよびPDFファイルは、顧客請求書に添付さ
 msgid "EDI Attachments"
 msgstr "EDI添付"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:298
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:289
+msgid "After choosing the desired actions, click :guilabel:`send`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:294
 msgid "Submission to SDI"
 msgstr "SDIへの送信"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:300
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:296
 msgid ""
-"The :guilabel:`Send to Tax Agency` option in the :guilabel:`Send and Print` "
-"dialog sends the attachment to the :guilabel:`Proxy Server`, which gathers "
-"all requests and then forwards them via a WebServices channel to "
-"the :abbr:`SdI (Sistema di Interscambio)`. Check the sending status of the "
-"invoice through the :guilabel:`Check Sending` button at the top of the "
-"invoice's view."
+"The :guilabel:`Send to Tax Agency` sends the attachment to "
+"the :guilabel:`Proxy Server`, which gathers all requests and then forwards "
+"them via a WebServices channel to the :abbr:`SdI (Sistema di Interscambio)`. "
+"Check the sending status of the invoice through the :guilabel:`Check "
+"Sending` button at the top of the invoice's view."
 msgstr ""
-":guilabel:`送信と印刷`ダイアログの :guilabel:`税務署へ送付` オプションは、添"
-"付ファイルを :guilabel:`プロキシサーバ` に送信します。 :guilabel:`プロキシ"
-"サーバ` は全てのリクエストを収集し、ウェブサービスチャネルを経由し"
-"て :abbr:`SdI (Sistema di Intercambio)` に転送します。顧客請求書の送信ステー"
-"タスは、請求書ビューの上部にある :guilabel:`送信確認` ボタンで確認できます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:308
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:304
 msgid "Processing by SDI"
 msgstr "SDIにより処理中"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:310
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:306
 msgid ""
 "The :abbr:`SdI (Sistema di Interscambio)` receives the document and verifies "
 "for any errors. At this stage, the invoice is in the :guilabel:`SdI "
@@ -47014,11 +47026,11 @@ msgstr ""
 msgid "Check Sending button and Sdi Processing state"
 msgstr "送信ボタンとSdi処理ステータスを確認する"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:322
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:318
 msgid "Acceptance"
 msgstr "検収"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:324
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:320
 msgid ""
 "If the document is valid, it is recorded and considered fiscally valid by "
 "the :abbr:`AdE (Agenzia delle Entrate)`, which will proceed with archiving "
@@ -47030,7 +47042,7 @@ msgstr ""
 "ポータルで明示的に要求された場合、:guilabel:`代理ストレージ (Conservazione "
 "Sostitutiva)`にアーカイブされます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:329
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:325
 msgid ""
 "Odoo does not offer the `Conservazione Sostitutiva <https://www.agid.gov.it/"
 "index.php/it/piattaforme/conservazione>`_ requirements. Other providers "
@@ -47042,7 +47054,7 @@ msgstr ""
 "や:abbr:`AdE (Agenzia delle Entrate)`は、法律で要求された仕様を満たす認証済の"
 "ストレージを無料で提供しています。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:334
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:330
 msgid ""
 "The :abbr:`SdI (Sistema di Interscambio)` :guilabel:`Destination Code` "
 "attempts to forward the invoice to the customer at the provided address, "
@@ -47059,11 +47071,11 @@ msgstr ""
 "場合でもこの処理には3日かかることがあります。顧客請求書のステータス"
 "は :guilabel:`SDIが受理、取引先に転送中` です。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:343
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:339
 msgid "Possible Rejection"
 msgstr "却下の可能性"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:345
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:341
 msgid ""
 "The :abbr:`SdI (Sistema di Interscambio)` may find inaccuracies in the "
 "compilation, possibly even formal ones. In this case, the invoice is in "
@@ -47080,7 +47092,7 @@ msgstr ""
 "を :guilabel:`ドラフト` に戻し、エラーを修正すれば十分です。顧客請求書の準備"
 "ができたら、再送信することができます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:352
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:348
 msgid ""
 "To regenerate the XML, both the XML attachment and the PDF report must be "
 "deleted, so that they are then regenerated together. This ensures that both "
@@ -47094,11 +47106,11 @@ msgstr ""
 msgid "EDI Rejected State"
 msgstr "EDI却下済ステータス"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:361
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:357
 msgid "Forwarding Completed"
 msgstr "転送完了"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:363
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:359
 msgid ""
 "The invoice has been delivered to the customer; however, you can still send "
 "a copy to the customer in PDF via email or post. Its status "
@@ -47107,7 +47119,7 @@ msgstr ""
 "顧客請求書は顧客に配信済ですが、電子メールまたは郵送でPDFのコピーを顧客に送信"
 "できます。ステータスは :guilabel:`SDI受理済、取引先送付済` です。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:366
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:362
 msgid ""
 "If the :abbr:`SdI (Sistema di Interscambio)` cannot contact your customer, "
 "they may not be registered on the :abbr:`AdE (Agenzia delle Entrate)` "
@@ -47120,11 +47132,11 @@ msgstr ""
 "ります。この場合、PDFの顧客請求書をEメールまたは郵送でお送り下さい。この場"
 "合、顧客請求書は :guilabel:`SDI受理済, 取引先送付失敗` の状態になります。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:374
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:370
 msgid "Tax Integration"
 msgstr "税統合"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:376
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:372
 msgid ""
 "When you receive a vendor bill, either from :abbr:`SdI (Sistema di "
 "Interscambio)`, from paper or from an imported XML file, the Tax Agency "
@@ -47138,7 +47150,7 @@ msgstr ""
 "す。これは、非課税であった取引が何らかの理由で課税対象となった場合に起こりま"
 "す。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:382
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:378
 msgid "Here is a non-exhaustive list:"
 msgstr "以下リストから、その一部を確認して下さい:"
 
@@ -47182,14 +47194,14 @@ msgstr ""
 "ビジネスオーナーとして、ビジネスのために購入した資産を個人的な理由で使用する"
 "場合、本来ビジネスコストとして控除した税金を支払なければなりません。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:395
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:391
 msgid ""
 "Odoo may detect that your vendor bill can be interpreted as a document of a "
 "type that needs tax integration, as detailed in the :ref:`localizations/"
 "italy/document-types` section."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:399
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:395
 msgid ""
 "Be sure that you replace the :guilabel:`0% Sale Taxes` on the vendor bill "
 "you received with the ones you're supposed to pay to the :abbr:`AdE (Agenzia "
@@ -47200,7 +47212,7 @@ msgstr ""
 "Entrate)`に支払うべきものと必ず置換えて下さい。すると、仕入先請求書フォームの"
 "上部に送信ボタンが表示されます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:403
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:399
 msgid ""
 "When clicking on the :guilabel:`Send Tax Integration` button, an XML file of "
 "the appropriate :guilabel:`Document Type` is generated, attached to the "
@@ -47214,12 +47226,12 @@ msgstr ""
 msgid "EDI Send Tax Integration button"
 msgstr "EDI税統合送信ボタン"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:412
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:408
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:328
 msgid "Document Types"
 msgstr "ドキュメントタイプ"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:414
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:410
 msgid ""
 "The :abbr:`SdI (Sistema di Interscambio)` requires businesses to send "
 "customer invoices and other documents through the :abbr:`EDI (Electronic "
@@ -47229,7 +47241,7 @@ msgstr ""
 "トを :abbr:`EDI (Electronic Data Interchange)`を通じて送信することを義務付け"
 "ています。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:417
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:413
 msgid ""
 "The following :guilabel:`Document Type` codes all technically identify "
 "different business use cases."
@@ -47237,11 +47249,11 @@ msgstr ""
 "以下の :guilabel:`ドキュメントタイプ` コードは全て技術的に異なるビジネスユー"
 "スケースを識別するものです。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:422
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:418
 msgid "TD01 - Invoices"
 msgstr "TD01 - 顧客請求書"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:424
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:420
 msgid ""
 "This represents the standard **domestic** scenario for all invoices "
 "exchanged through the :abbr:`SdI (Sistema di Interscambio)`. Any invoice "
@@ -47253,11 +47265,11 @@ msgstr ""
 "客請求書は通常の請求書に分類され、 :guilabel:`ドキュメントタイプ` `TD01`で識"
 "別されます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:431
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:427
 msgid "TD02 - Down payments"
 msgstr "TD02 - 前受金"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:433
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:429
 msgid ""
 "**Down payment** invoices are imported/exported with a "
 "different :guilabel:`Document Type` code `TDO2` than regular invoices. Upon "
@@ -47267,25 +47279,25 @@ msgstr ""
 "ド `TDO2` でインポート/エクスポートされます。顧客請求書をインポートすると、通"
 "常の仕入先請求書が作成されます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:436
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:432
 msgid ""
 "Odoo exports transactions as `TD02` if the following conditions are met:"
 msgstr "以下の条件を満たす場合、Odooは取引を`TD02`としてエクスポートします:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:438
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:578
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:434
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:574
 msgid "It is an invoice;"
 msgstr "顧客請求書である;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:439
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:435
 msgid "All invoice lines are related to down payment sales order lines."
 msgstr "全ての顧客請求書は、前受金販売オーダ明細と関連しています。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:444
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:440
 msgid "TD04 - Credit notes"
 msgstr "TD04 - クレジットノート"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:446
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:442
 msgid ""
 "It is the standard scenario for all **credit notes** issued to **domestic** "
 "clients, when we need to formally acknowledge that the seller is reducing or "
@@ -47295,11 +47307,11 @@ msgid ""
 "`TD04`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:454
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:450
 msgid "TD07, TD08, TD09 - Simplified Invoicing"
 msgstr "TD07, TD08, TD09 - 簡易顧客請求"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:456
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:452
 msgid ""
 "Simplified invoices (`TD07`), credit notes (`TD08`), and debit notes "
 "(`TD09`) can be used to certify domestic transactions under 400 EUR (VAT "
@@ -47310,36 +47322,36 @@ msgstr ""
 "400EUR(VAT込)未満の国内取引の証明に使用できます。そのステータスは通常の顧客請"
 "求書と同じですが、必要な情報が少なくなっています。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:460
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:456
 msgid "For a simplified invoice to be established, it must include:"
 msgstr "簡易請求書が成立するためには、以下を含む必要があります:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:462
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:458
 msgid ""
 ":guilabel:`Customer Invoice` reference: **unique** numbering sequence with "
 "**no gaps**;"
 msgstr ""
 ":guilabel:`顧客請求書`参照: **ギャップなし**、**一意の**番号付けシーケンス;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:463
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:459
 msgid ":guilabel:`Invoice Date`: issue **date** of the invoice;"
 msgstr ":guilabel:`顧客請求書日付`: 顧客請求書の発行 **日付** ;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:464
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:460
 msgid ""
 ":ref:`Company Info <general/companies/company>`: the **seller**'s full "
 "credentials (VAT/TIN number, name, full address);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:466
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:462
 msgid ":guilabel:`VAT`: the **buyer**'s VAT/TIN number (on the partner form);"
 msgstr ":guilabel:`VAT`: **購入者**のVAT/TIN番号 (取引先フォーム);"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:467
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:463
 msgid ":guilabel:`Total`: the total **amount** (VAT included) of the invoice."
 msgstr ":guilabel:`合計`: 顧客請求書の合計**金額** (VAT込)"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:469
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:465
 msgid ""
 "In the :abbr:`EDI (Electronic Data Interchange)`, Odoo exports invoices as "
 "simplified if:"
@@ -47347,11 +47359,11 @@ msgstr ""
 " :abbr:`EDI (電子データ交換)`でOdooは以下の場合、顧客請求書を簡易化してエクス"
 "ポートします:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:471
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:467
 msgid "It is a domestic transaction (i.e., the partner is from Italy);"
 msgstr "これは国内取引ですつまり(取引先はイタリアから);"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:472
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:468
 msgid ""
 "Your company's **required fields** (:guilabel:`VAT Number` "
 "or :guilabel:`Codice Fiscale`, :guilabel:`Fiscal Regime`, and full "
@@ -47360,17 +47372,17 @@ msgstr ""
 "会社の**必須フィールド**(:guilabel:`VAT番号`または :guilabel:`Codice "
 "Fiscale`、 :guilabel:`会計制度`、および完全な**住所**)が提供されます;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:474
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:470
 msgid ""
 "The partner's address is not fully specified (i.e., it misses the City or "
 "the ZipCode);"
 msgstr "取引先の住所が不完全です(都市や郵便番号の抜けなど);"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:475
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:471
 msgid "The total amount of VAT included is **less** than **400 EUR**."
 msgstr "VAT込の合計金額が**400ユーロ****以下**であること。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:478
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:474
 msgid ""
 "The 400 EUR threshold was defined in `the decree of the 10th of May 2019 in "
 "the Gazzetta Ufficiale <https://www.gazzettaufficiale.it/eli/id/"
@@ -47380,37 +47392,37 @@ msgstr ""
 "<https://www.gazzettaufficiale.it/eli/id/2019/05/24/19A03271/sg>`_で定められ"
 "ています。現在の公式値を確認することをお勧めします。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:485
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:481
 msgid "TD16 - Internal Reverse Charge"
 msgstr "TD16 - 内部リバースチャージ"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:487
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:483
 msgid ""
 "Internal reverse charge transactions (see :ref:`localizations/italy/tax-"
 "exemption` and :ref:`localizations/italy/reverse-charge`) are exported as "
 "`TD16` if the following conditions are met:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:491
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:510
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:526
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:547
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:613
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:487
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:506
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:522
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:543
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:609
 msgid "It is a vendor bill;"
 msgstr "これは仕入先請求書です;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:492
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:488
 msgid ""
 "It has at least **one tax** on the invoice lines that targets one of "
 "these :ref:`tax grids <localizations/italy/grids>`: `VJ6`, `VJ7`, `VJ8`, "
 "`VJ12`, `VJ13`, `VJ14`, `VJ15`, `VJ16`, `VJ17`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:498
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:494
 msgid "TD17 - Buying services from abroad"
 msgstr "TD17 - 海外からサービスを購入"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:500
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:496
 msgid ""
 "When buying **services** from **EU** and **non-EU** countries, the foreign "
 "*seller* invoices a service with a **VAT-excluded** price, as it is not "
@@ -47420,7 +47432,7 @@ msgstr ""
 "リアでは課税されないため、**VAT除外**価格で顧客請求書を発行します。VAT はイタ"
 "リア国内の *購入者* が支払います。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:504
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:500
 msgid ""
 "Within the EU: the *buyer* integrates the invoice received with the **VAT "
 "information** due in Italy (i.e., **vendor bill tax integration**);"
@@ -47428,24 +47440,24 @@ msgstr ""
 "EU内: *購入者*は、受取った顧客請求書とイタリアでの**VAT情報**を統合します(つ"
 "まり、**仕入先請求書税統合**);"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:506
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:502
 msgid ""
 "Non-EU: the *buyer* sends themselves an invoice (i.e., **self-billing**)."
 msgstr ""
 "EU外: *購入者* が自分自身に顧客請求書を送ります(つまり、**Self-billing**）。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:508
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:504
 msgid ""
 "Odoo exports a transaction as `TD17` if the following conditions are met:"
 msgstr "Odooは以下の条件を満たす場合、取引を`TD17`としてエクスポートします: "
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:511
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:507
 msgid ""
 "It has at least **one tax** on the invoice lines that targets the tax "
 "grid :ref:`VJ3 <localizations/italy/grids>`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:513
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:509
 msgid ""
 "All invoice lines either have :guilabel:`Services` as **products**, or a tax "
 "with the :guilabel:`Services` as **tax scope**."
@@ -47453,11 +47465,11 @@ msgstr ""
 "全ての顧客請求書は :guilabel:`サービス` を **プロダクト** として持っている"
 "か、または :guilabel:`サービス` を **課税範囲** として持っています。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:519
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:515
 msgid "TD18 - Buying goods from EU"
 msgstr "TD18 - EUから商品を購入"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:521
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:517
 msgid ""
 "Invoices issued within the EU follow a **standard format**, therefore only "
 "an integration of the existing invoice is required."
@@ -47465,22 +47477,22 @@ msgstr ""
 "EU内で発行される顧客請求書は**標準フォーマット**に従っているため、既存の請求"
 "書を統合するだけです。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:524
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:520
 msgid ""
 "Odoo exports a transaction as `TD18` if the following conditions are met:"
 msgstr "以下の条件を満たす場合、Odooは取引を`TD18`としてエクスポートします:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:527
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:523
 msgid "The **partner** is from an **EU** country;"
 msgstr "**取引先**は**EU**諸国からです;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:528
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:524
 msgid ""
 "It has at least one tax on the invoice lines that targets the tax "
 "grid :ref:`VJ9 <localizations/italy/grids>`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:530
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:526
 msgid ""
 "All invoice lines either have :guilabel:`Consumable` as **products**, or a "
 "tax with :guilabel:`Goods` as **tax scope**."
@@ -47488,11 +47500,11 @@ msgstr ""
 "全ての顧客請求書は :guilabel:`消耗品` を **プロダクト** として持っているか、"
 "または :guilabel:`商品` を **課税範囲** として持っています。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:536
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:532
 msgid "TD19 - Buying goods from VAT deposit"
 msgstr "TD19 - VATデポジットからの商品購入"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:538
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:534
 msgid ""
 "Buying **goods** from a **foreign** vendor, but the **goods** are already in "
 "**Italy** in a **VAT deposit**."
@@ -47500,7 +47512,7 @@ msgstr ""
 "**外国**の仕入先から**商品**を買いますが、**商品**は**VATデポジット**で既に**"
 "イタリア**にあります。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:541
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:537
 msgid ""
 "From the EU: the *buyer* integrates the invoice received with the **VAT "
 "information** due in Italy (i.e., **vendor bill tax integration**);"
@@ -47508,7 +47520,7 @@ msgstr ""
 "EUから:*購入者*は、受取った顧客請求書とイタリアでの**VAT情報**を統合します(つ"
 "まり、**仕入先請求書税統合**); "
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:543
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:539
 msgid ""
 "Non-EU: the *buyer* sends an invoice to *themselves* (i.e., **self-"
 "billing**)."
@@ -47516,18 +47528,18 @@ msgstr ""
 "EU外: *購入者* は *自分* あてに顧客請求書を送信します (つまり **Self-"
 "billing**)。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:545
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:541
 msgid ""
 "Odoo exports a transaction as a `TD19` if the following conditions are met:"
 msgstr "Odooは以下の条件を満たす場合、取引を`TD19`としてエクスポートします:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:548
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:544
 msgid ""
 "It has at least one tax on the invoice lines that targets the tax "
 "grid :ref:`VJ3 <localizations/italy/grids>`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:550
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:546
 msgid ""
 "All invoice lines either have :guilabel:`Consumables` as products, or a tax "
 "with :guilabel:`Goods` as **tax scope**."
@@ -47535,11 +47547,11 @@ msgstr ""
 "全ての顧客請求書は :guilabel:`消耗品` をプロダクトとして持つか、また"
 "は :guilabel:`商品` を **課税範囲** として持つ税を持ちます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:556
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:552
 msgid "TD24 - Deferred invoices"
 msgstr "TD24 - 繰延顧客請求書"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:558
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:554
 msgid ""
 "The **deferred invoice** is an invoice that is **issued at a later time** "
 "than the sale of goods or the provision of services. A **deferred invoice** "
@@ -47550,7 +47562,7 @@ msgstr ""
 "求書のことです。**繰延顧客請求書**は、遅くともそのドキュメントに記載された納"
 "品の翌月**15日**以内に発行されなければなりません。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:562
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:558
 msgid ""
 "It usually is a **summary invoice** containing a list of multiple sales of "
 "goods or services carried out in the month. The business is allowed to "
@@ -47563,7 +47575,7 @@ msgstr ""
 "求書**に販売を**グループ化**することができます。繰延顧客請求書は、**卸売業者"
 "**が定期的に顧客を持つ場合のデフォルトです。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:567
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:563
 msgid ""
 "If the goods are transported by a **carrier**, every delivery has an "
 "associated **Documento di Transporto (DDT)**, or **Transport Document**. The "
@@ -47574,29 +47586,29 @@ msgstr ""
 "Transporto (DDT)**、または**運送ドキュメント**があります。繰延顧客請求書に"
 "は、追跡を容易にするため、全ての**DDT**情報の詳細を記載する必要があります。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:572
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:568
 msgid ""
 "E-invoicing of deferred invoices requires the "
 "`l10n_it_stock_ddt` :ref:`module <localizations/italy/modules>`. In this "
 "case, a dedicated :guilabel:`Document Type` `TD24` is used in the e-invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:576
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:572
 msgid ""
 "Odoo exports transactions as `TD24` if the following conditions are met:"
 msgstr "以下の条件を満たす場合、Odooは取引を`TD24`としてエクスポートします:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:579
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:575
 msgid ""
 "It is associated with deliveries whose **DDTs** have a **different** date "
 "than the issue date of the invoice."
 msgstr "**DDT**の日付が顧客請求書の発行日と**異なる**納品に関連付けられます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:585
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:581
 msgid "TD28 - San Marino"
 msgstr "TD28 - サンマリノ"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:592
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:588
 msgid ""
 "San Marino and Italy have special agreements on e-invoicing operations. As "
 "such, **invoices** follow the regular **reverse charge** rules. You can use "
@@ -47610,27 +47622,27 @@ msgstr ""
 "`TD01`, `TD04`, `TD05`, `TD24`, `TD25` です。追加要件はOdooによって強制される"
 "ものではありません。ただし、ユーザは*政府**から要求されます:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:597
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:593
 msgid "Select a tax with the :guilabel:`Tax Exemption Kind` set to `N3.3`;"
 msgstr ":guilabel:`免税種類`が`N3.3`に設定されている税を選択します。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:598
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:594
 msgid ""
 "Use the generic :abbr:`SdI (Sistema di Interscambio)` :guilabel:`Destination "
 "Code` `2R4GTO8`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:600
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:596
 msgid ""
 "The invoice is then routed by a dedicated office in San Marino to the "
 "correct business."
 msgstr "顧客請求書は、サンマリノの専用オフィスから適切な企業に送られます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:605
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:601
 msgid "Vendor Bills"
 msgstr "仕入先請求書"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:607
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:603
 msgid ""
 "When a **paper bill** is received from San Marino, any Italian company "
 "**must** submit that invoice to the :abbr:`AdE (Agenzia delle Entrate)` by "
@@ -47642,26 +47654,26 @@ msgstr ""
 "て、その顧客請求書を :abbr:`AdE (Agenzia delle Entrate)`に提出しなければなり"
 "ません。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:611
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:607
 msgid ""
 "Odoo exports a transaction as `TD28` if the following conditions are met:"
 msgstr "以下の条件を満たす場合、Odooは取引を`TD28`としてエクスポートします:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:614
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:610
 msgid ""
 "It has at least one tax on the invoice lines that targets the tax "
 "grids :ref:`VJ <localizations/italy/grids>`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:616
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:612
 msgid "The **country** of the partner is **San Marino**."
 msgstr "取引先の**国**は**サンマリノ**です。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:621
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:617
 msgid "Public Administration Businesses (B2G)"
 msgstr "行政機関事業 (B2G)"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:623
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:619
 msgid ""
 ":abbr:`PA (Public Administration)` businesses are subjected to more control "
 "than private businesses as they handle public money coming from taxpayers. "
@@ -47671,7 +47683,7 @@ msgid ""
 "**refuse** invoices."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:629
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:625
 msgid ""
 ":abbr:`PA (Public Administration)` businesses have a 6-digit "
 "long :guilabel:`Destination Code`, also called :abbr:`CUU (Codice Univoco "
@@ -47682,7 +47694,7 @@ msgstr ""
 "は :abbr:`CUU (Codice Univoco Ufficio)`とも呼ばれ、**必須**です。この場合"
 "**PEC** アドレスは使用できません。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:634
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:630
 msgid ""
 "`Complete list of businesses that belong to the Public Administration along "
 "with their Destination Code <https://www.agenziaentrate.gov.it/portale/web/"
@@ -47692,11 +47704,11 @@ msgstr ""
 "www.agenziaentrate.gov.it/portale/web/guest/aree-tematiche/fatturazione-"
 "elettronica>`_"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:640
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:636
 msgid "CIG, CUP, DatiOrdineAcquisto"
 msgstr "CIG, CUP, DatiOrdineAcquisto"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:642
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:638
 msgid ""
 "To ensure the effective traceability of payments by public administrations, "
 "electronic invoices issued to public administrations must contain:"
@@ -47704,7 +47716,7 @@ msgstr ""
 "行政機関による支払いの効果的なトレーサビリティを確保するため、行政機関に発行"
 "される電子顧客請求書には、以下の内容が含まれていなければなりません:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:645
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:641
 msgid ""
 "The :abbr:`CIG (Codice Identificativo Gara)`, except in cases of exclusion "
 "from traceability obligations provided by law n. 136 of August 13, 2010;"
@@ -47712,14 +47724,14 @@ msgstr ""
 ":abbr:`CIG (Codice Identificativo Gara)`、2010年8月13日付法律第136号によりト"
 "レーサビリティの義務から除外される場合を除きます;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:647
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:643
 msgid ""
 "The :abbr:`CUP (Codice Unico di Progetto)`, in case of invoices related to "
 "public works."
 msgstr ""
 "公共事業に関する顧客請求書の場合、:abbr:`CUP (Codice Unico di Progetto)`。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:649
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:645
 msgid ""
 "If the XML file requires it, the :abbr:`AdE (Agenzia Delle Entrate)` can "
 "*only* proceed payments of electronic invoices when the XML file contains "
@@ -47731,7 +47743,7 @@ msgstr ""
 "Progetto)`が含まれている場合に*のみ*、電子顧客請求書の支払を進めることができ"
 "ます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:654
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:650
 msgid ""
 "The :abbr:`CUP (Codice Unico di Progetto)` and the :abbr:`CIG (Codice "
 "Identificativo Gara)` must be included in one of the `DatiOrdineAcquisto`, "
@@ -47742,7 +47754,7 @@ msgstr ""
 "Gara)`は  `DatiOrdineAcquisto`, `DatiContratto`, `DatiConvenzione`のいずれか"
 "の XML タグに含める必要があります。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:658
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:654
 msgid ""
 "These correspond to the elements named :guilabel:`CodiceCUP` "
 "and :guilabel:`CodiceCIG` of the electronic invoice XML file, whose table "
@@ -47752,17 +47764,17 @@ msgstr ""
 "と :guilabel:`CodiceCIG` という要素に対応しています。その表は、政府`ウェブサ"
 "イト <http://www.fatturapa.gov.it/>`_で見ることができます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:665
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:661
 msgid "Split Payment"
 msgstr "分割払い"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:667
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:663
 msgid ""
 "The :guilabel:`Split Payment` mechanism behaves much "
 "like :ref:`localizations/italy/reverse-charge`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:670
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:666
 msgid ""
 "When an Italian company bills a :abbr:`PA (Public Administration)` business "
 "- for example, cleaning services for a public building - the :abbr:`PA "
@@ -47775,7 +47787,7 @@ msgstr ""
 "告するため、仕入先は顧客請求書で適切な :guilabel:`免税` の税額を選択するだけ"
 "です。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:675
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:671
 msgid ""
 "The specific :guilabel:`Scissione dei Pagamenti` fiscal position is "
 "available to deal with partners belonging to the :abbr:`PA (Public "
@@ -47784,11 +47796,11 @@ msgstr ""
 "特定の :guilabel:`Scissione dei Pagamenti` 会計ポジションは、 :abbr:`PA (行政"
 "機関)`に属する取引先との取引に利用できます。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:686
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:682
 msgid "Qualified electronic signature"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:688
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:684
 msgid ""
 "Invoices and bills intended for the :abbr:`PA (Public Administration)` must "
 "include a **qualified electronic signature** when submitted through "
@@ -47798,18 +47810,18 @@ msgid ""
 "indicates a :abbr:`PA (Public Administration)` business)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:695
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:691
 msgid ""
 "When such an invoice is transmitted to the Tax Agency, the generated `.xml` "
 "file is signed on the Odoo servers, returned to the database, and attached "
 "to the invoice automatically."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:701
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:697
 msgid "Acceptance or Refusal"
 msgstr "受諾と拒否"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:703
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:699
 msgid ""
 "After receiving the invoice through the :abbr:`SdI (Sistema di "
 "Interscambio)`, the :abbr:`PA (Public Administration)` business has 15 days "
@@ -47826,11 +47838,11 @@ msgstr ""
 "請求書は検証済とみなされます。その場合、クレジットノートを発行し、それ"
 "を :abbr:`SdI (Sistema di Interscambio)`に送付する必要があります。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:712
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:708
 msgid "Expired Terms"
 msgstr "有効期限"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:714
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:710
 msgid ""
 "If the :abbr:`PA (Public Administration)` business doesn't reply within 15 "
 "days, you need to contact the :abbr:`PA (Public Administration)` business "
@@ -47843,18 +47855,18 @@ msgstr ""
 "で送る必要があります。その際、顧客請求書に正しい :guilabel:`SdIステータス` を"
 "手動で設定して下さい。"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:722
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:718
 msgid "Point of Sale fiscal printers"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:725
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:721
 msgid ""
 "Fiscal printers are distinct from :doc:`ePOS printers </applications/sales/"
 "point_of_sale/configuration/epos_printers>`. The IP address for a fiscal "
 "printer should not be entered in the ePOS IP address settings."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:729
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:725
 msgid ""
 "Fiscal regulations mandate using certified RT devices, such as RT printers "
 "or RT servers, to ensure compliant sales receipts and secure communication "
@@ -47864,12 +47876,12 @@ msgid ""
 "integrity and compliance."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:737
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:733
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:57
 msgid "Simulation mode"
 msgstr "シミュレーションモード"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:740
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:736
 msgid ""
 "Since the simulation mode sends data to the authorities, it should only be "
 "enabled at the very start of the printer's configuration process. Once the "
@@ -47877,73 +47889,73 @@ msgid ""
 "simulation mode."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:744
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:740
 msgid ""
 "To test the fiscal printer setup with Odoo, configure the fiscal printer in "
 "the simulation mode as follows:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:747
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:778
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:743
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:774
 msgid ""
 "Make sure the fiscal printer is set to its default state: printer on, start-"
 "up cycle complete, and no transaction in progress."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:749
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:780
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:745
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:776
 msgid "Type `3333`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:750
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:781
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:746
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:777
 msgid ""
 "Press :guilabel:`Chiave`. The screen displays :guilabel:`Scelta Funzione`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:751
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:747
 msgid "Type `14`. The screen displays :guilabel:`Apprendimento`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:752
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:748
 msgid "Type `62`. The screen displays :guilabel:`Simulazione`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:753
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:749
 msgid "To turn the :guilabel:`no` into a :guilabel:`si`, press :guilabel:`X`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:754
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:750
 msgid "To confirm, press :guilabel:`Contante`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:755
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:786
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:751
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:782
 msgid "Press :guilabel:`Chiave`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:757
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:753
 msgid "To configure the printer for production, repeat the steps above."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:760
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:756
 msgid ""
 "To test the printer configuration, the physical device must first be "
 "obtained and registered with the relevant authorities."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:766
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:762
 msgid "Setting up the printer to work with Odoo"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:768
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:764
 msgid ""
 "Fiscal printers are meant to work only in the local network. This means the "
 "printer and the device running :doc:`Odoo Point of Sale </applications/sales/"
 "point_of_sale>` must be connected to the same network."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:772
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:768
 msgid ""
 "Fiscal printers are typically configured to use HTTP by default. To ensure "
 "compatibility with Odoo, the settings must be updated to enable HTTPS "
@@ -47951,55 +47963,55 @@ msgid ""
 "configuration software or the keyboard connected to the printer."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:776
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:772
 msgid "To set up the fiscal printer using the keyboard, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:782
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:778
 msgid "Type `34`. The screen displays :guilabel:`Web Server`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:783
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:779
 msgid ""
 "Press :guilabel:`Contante` 3 times until the screen displays :guilabel:`Web "
 "Server: SSL`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:784
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:780
 msgid "To turn the value `0` into a `1`, press :guilabel:`X`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:785
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:781
 msgid "To confirm, press :guilabel:`Contante` 3 times."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:788
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:784
 msgid ""
 "Then, log in to the printer with the device that runs :doc:`Odoo Point of "
 "Sale </applications/sales/point_of_sale>` so it recognizes the printer's "
 "certificate."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:791
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:787
 msgid "To approve and install the printer's certificate, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:793
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:789
 msgid ""
 "Access the printer by opening a web browser and entering `https://<ip-of-"
 "your-printer>` in the address bar. A :guilabel:`Warning: Potential Security "
 "Risk Ahead` security message appears."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:795
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:791
 msgid "Click :guilabel:`Advanced` to show the certificate approval options."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:796
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:792
 msgid "Click :guilabel:`Proceed` to validate the certificate."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:798
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:794
 msgid ""
 "Then, to ensure :doc:`Odoo Point of Sale </applications/sales/"
 "point_of_sale>` is configured with the fiscal printer, go "
@@ -48009,11 +48021,11 @@ msgid ""
 "HTTPS`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:806
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:802
 msgid "Ri.Ba. (Ricevuta Bancaria)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:808
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:804
 msgid ""
 ":abbr:`Ri.Ba. (Ricevuta Bancaria)` is a payment method widely used in Italy "
 "where vendors request payments through their bank, which forwards the "
@@ -48021,31 +48033,31 @@ msgid ""
 "collection. This enables payment automation and reduces risks for the vendor."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:812
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:808
 msgid ""
 "The vendor generally uploads a fixed-format text file with the list of "
 "payments to the bank's web portal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:816
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:812
 msgid ""
 ":abbr:`Ri.Ba. (Ricevute Bancarie)` are exclusively for **domestic payments** "
 "in Italy. For recurring international payments, please use `SEPA Direct Debt "
 "(SDD) <../accounting/payments/batch_sdd>`_"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:824
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:820
 msgid ""
 "Check that the `l10n_it_riba` module is :ref:`installed <general/install>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:825
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:821
 msgid ""
 "Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
 "select the company that will use :abbr:`Ri.Ba. (Ricevute Bancarie)`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:827
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:823
 msgid "Fill out the required :guilabel:`SIA Code`."
 msgstr ""
 
@@ -48053,7 +48065,7 @@ msgstr ""
 msgid "The company's SIA code"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:833
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:829
 msgid ""
 "The :guilabel:`SIA Code` identifies businesses within the Italian banking "
 "network and is used to receive money through specific payment methods. It "
@@ -48061,44 +48073,44 @@ msgid ""
 "found on the bank's portal or obtained by contacting the bank."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:838
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:834
 msgid "Ensure the Company's bank account has an Italian IBAN."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:841
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:837
 msgid "How to configure :doc:`Bank Accounts <../accounting/bank>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:846
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:842
 msgid "Accept Ri.Ba. for your invoices"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:848
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:844
 msgid ""
 "Payments of type :abbr:`Ri.Ba. (Ricevuta Bancaria)` can be registered from "
 "the :guilabel:`Invoices` (:menuselection:`Accounting --> Customers --> "
 "Invoices`)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:852
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:848
 msgid ""
 "Make sure that your invoice involves a Partner that has a bank account with "
 "an Italian IBAN."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:854
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:850
 msgid "Then, all Payments must be grouped in a **Batch Payment**."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:857
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:853
 msgid ":doc:`Batch Payments <../accounting/payments>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:858
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:854
 msgid ":doc:`Create a Batch Payment <../accounting/payments/batch>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:860
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:856
 msgid ""
 "Once you press the :guilabel:`Validate` button for the Batch Payment, "
 "the :abbr:`Ri.Ba. (Ricevuta Bancaria)` file is generated and attached to the "
@@ -49260,15 +49272,12 @@ msgid ":guilabel:`Confirm` the invoice."
 msgstr "顧客請求書を :guilabel:`確定` します。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:308
-msgid ""
-"Click :guilabel:`Send and print`, and then enable :guilabel:`Send to eTIMS`."
+msgid "Click :guilabel:`Send`, and then enable :guilabel:`Send to eTIMS`."
 msgstr ""
-" :guilabel:`送信して印刷`をクリックして、 :guilabel:`eTIMSに送信`を有効化しま"
-"す。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:309
-msgid "Click :guilabel:`Send & print` to send the invoice."
-msgstr " :guilabel:`送信 & 印刷` をクリックして顧客請求書を送信します。"
+msgid "Click :guilabel:`Send` to send the invoice."
+msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:311
 msgid ""
@@ -50196,6 +50205,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:85
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:112
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:280
 msgid "Set-up"
 msgstr ""
 
@@ -51127,7 +51138,7 @@ msgstr ""
 msgid ""
 "Odoo supports four groups of :guilabel:`SAT Tax "
 "Types`: :guilabel:`IVA`, :guilabel:`ISR`, :guilabel:`IEPS`, "
-"and :guilabel:`Local Taxes`."
+"and :guilabel:`Local`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:214
@@ -51340,7 +51351,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:352
 msgid ""
-"After clicking on :guilabel:`Confirm` in the customer invoice, click on "
+"After clicking on :guilabel:`Confirm` in the customer invoice, click "
 "the :guilabel:`Send` button to process the invoice with the government. Make "
 "sure that the :guilabel:`CFDI` checkbox is marked."
 msgstr ""
@@ -51647,7 +51658,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:519
-msgid ":guilabel:`Confirm` the draft and :guilabel:`Send & Print` the invoice."
+msgid ":guilabel:`Confirm` the draft and :guilabel:`Send` the invoice."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:520
@@ -53056,7 +53067,7 @@ msgstr ""
 msgid ""
 "Create a purchase order from :menuselection:`Purchase --> Orders --> "
 "Purchase Order`. Then, confirm the order to display a :guilabel:`Receipt` "
-"smart button. Click on the :guilabel:`Receipt` smart button "
+"smart button. Click the :guilabel:`Receipt` smart button "
 "and :guilabel:`Validate` the receipt."
 msgstr ""
 
@@ -53087,7 +53098,7 @@ msgstr "陸揚コスト在庫レコード上の税関番号"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1355
 msgid ""
-"Next, create a sales order and confirm it. Click on the :guilabel:`Delivery` "
+"Next, create a sales order and confirm it. Click the :guilabel:`Delivery` "
 "smart button that appears, and :guilabel:`Validate` the delivery order."
 msgstr ""
 
@@ -57946,16 +57957,11 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:270
 msgid ""
 "Once you have :doc:`created <../../finance/accounting/customer_invoices>` an "
-"invoice and confirmed it, click :guilabel:`Send & Print`. Make "
+"invoice and confirmed it, click :guilabel:`Send`. Make "
 "sure :guilabel:`Generate Facturae edi file` is enabled, and "
-"click :guilabel:`Send & Print` again. Once the invoice is sent, the "
-"generated XML file is available in the **chatter**."
+"click :guilabel:`Send` again. Once the invoice is sent, the generated XML "
+"file is available in the **chatter**."
 msgstr ""
-"請求書を :doc:`作成して <../../finance/accounting/customer_invoices>` 確認"
-"し、 :guilabel:`送信 & 印刷`をクリックします。必ず :guilabel:`Facturae edi"
-"ファイル` が有効化されていることを確認し、 :guilabel:`送信 & 印刷` を再度ク"
-"リックして下さい。請求書が送付されると、 生成済のXMLファイルを**チャター**で"
-"利用できます。"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:276
 msgid ""
@@ -58423,6 +58429,521 @@ msgstr ""
 "会計ポジションの更新をお忘れなく。バージョン11.1(またはそれ以上)であれば、何"
 "もする必要はありません。そうでない場合は、会計ポジションも適宜更新する必要が"
 "あります。"
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:3
+msgid "Taiwan"
+msgstr "台湾"
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:10
+msgid "The following modules related to Taiwan localization are available:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:18
+msgid ":guilabel:`Taiwan - Accounting`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:19
+msgid "`l10n_tw`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:20
+msgid "This is the base module to manage the accounting chart for Taiwan."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:21
+msgid ":guilabel:`Taiwan - E-invoicing`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:22
+msgid "`l10n_tw_edi_ecpay`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:23
+msgid "This module allows the user to send their invoices to the Ecpay system."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:24
+msgid ":guilabel:`Taiwan - E-invoicing Ecommerce`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:25
+msgid "`l10n_tw_edi_ecpay_website_sale`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:26
+msgid ""
+"This module allows the user to input Ecpay information in ecommerce for "
+"sending their invoices to the Ecpay system."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:27
+msgid ":guilabel:`Taiwan - Accounting Reports`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:28
+msgid "`l10n_tw_reports`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:29
+msgid "This module includes the accounting reports for Taiwan."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:32
+msgid ""
+"In some cases, such as when upgrading to a version with additional modules, "
+"modules may not be installed automatically. Any missing modules can be "
+"manually :ref:`installed <general/install>`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:40
+msgid ""
+"The Taiwanese localization package ensures compliance with Taiwanese fiscal "
+"and accounting regulations. It includes tools for managing taxes, fiscal "
+"positions, reporting, and a predefined chart of accounts tailored to "
+"Taiwan's standards."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:44
+msgid ""
+"The Taiwanese localization package provides the following key features to "
+"ensure compliance with local fiscal and accounting regulations:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:47
+msgid ""
+":doc:`../accounting/get_started/chart_of_accounts`: a predefined structure "
+"tailored to Taiwanese accounting standards."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:49
+msgid ":ref:`Taxes <localizations/taiwan/taxes>`: pre-configured tax rates."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:51
+msgid ""
+":ref:`E-invoicing (ECPay) <localizations/taiwan/ecpay-integration>`: "
+"integration for electronic invoicing in line with Taiwanese government "
+"requirements."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:59
+msgid ""
+"The standard tax rate in Taiwan is 5%, though special tax rates apply to "
+"specific industries. To configure special taxes for the :abbr:`GBRT (Gross "
+"Business Receipts Tax)`, go to :menuselection:`Accounting --> Configuration "
+"--> Taxes`, click :guilabel:`New`, and configure the following:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:64
+msgid ""
+"Fill in the :ref:`standard fields <taxes/configuration/back-end>` "
+"and :doc:`tax computation <../accounting/taxes/tax_computation>`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:66
+msgid ""
+"In the :guilabel:`Ecpay Tax Type` field, select :guilabel:`Taxable (special "
+"tax rate)`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:67
+msgid ""
+"In the new :guilabel:`Ecpay Special Tax Type` field that appears, select the "
+"applicable industry."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:71
+msgid ""
+"If :guilabel:`Saloons and tea rooms, coffee shops and bars offering "
+"companionship services:` :guilabel:`Tax rate is 25%` is selected, enter `25` "
+"in the :guilabel:`Amount` field."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:78
+msgid ""
+"To manage the distinction between :abbr:`B2C (Business-to-Consumer)` "
+"and :abbr:`B2B (Business-to-Business)` invoices, configure the following "
+"fields in their :doc:`contact <../../essentials/contacts>` form:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:82
+msgid ""
+":guilabel:`Individual` (B2C): Select the :doc:`contact <../../essentials/"
+"contacts>` type and provide the :guilabel:`Email` or :guilabel:`Phone` "
+"number."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:84
+msgid ""
+":guilabel:`Company` (B2B): Select the :doc:`contact <../../essentials/"
+"contacts>` type, enter the :guilabel:`Tax ID`, and provide "
+"the :guilabel:`Email` or :guilabel:`Phone` number."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:88
+msgid ""
+"Invoices sent to individuals not linked to a :guilabel:`Company` contact are "
+"treated as a **B2C invoice**."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:90
+msgid ""
+"Invoices sent to individuals belonging to a :guilabel:`Company` contact are "
+"treated as a **B2B invoice** (to the parent Company)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:101
+msgid "ECPay integration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:104
+msgid ""
+"Make sure to :ref:`install <general/install>` the :guilabel:`Taiwan - E-"
+"invoicing` (`l10n_tw_edi_ecpay`) module."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:107
+msgid ""
+"Odoo supports integration with ECPay to submit generated invoices directly "
+"to their system."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:114
+msgid ""
+"To configure the integration, valid credentials must be retrieved from the "
+"`ECPay vendor backend <https://vendor.ecpay.com.tw/User/LogOn_Step1>`_. Go "
+"to :menuselection:`System Settings --> System Integration Settings --> "
+"Integration Information` to get the required information:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:119
+msgid ":guilabel:`MerchantID`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:120
+msgid ":guilabel:`Hashkey`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:121
+msgid ":guilabel:`HashIV`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:128
+msgid ""
+"Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll "
+"down to the :guilabel:`Taiwan Electronic Invoicing` section, and fill in "
+"the :guilabel:`MerchantID`, :guilabel:`HashKey`, and :guilabel:`HashIV` "
+"fields, retrieved from the :ref:`ECPay vendor backend <localizations/taiwan/"
+"ecpay-setup>`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:134
+msgid ""
+"For testing purposes, do not use real credentials. Instead, enable "
+"the :guilabel:`Staging mode` option and use the `Staging information "
+"<https://developers.ecpay.com.tw/?p=24174>`_ provided by ECPay."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:146
+msgid "Send invoices to ECPay"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:151
+msgid "B2C invoice (individual)"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:153
+msgid "To send a B2C invoice, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:155
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:187
+msgid ""
+"Navigate to :menuselection:`Accounting --> Customers --> Invoices` "
+"and :ref:`create a new invoice <accounting/invoice/creation>`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:157
+msgid ""
+"Select a :ref:`customer <localizations/taiwan/contacts>` of the "
+"type :guilabel:`Individual`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:158
+msgid "In the :guilabel:`Ecpay` tab, configure delivery options:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:160
+msgid ""
+":guilabel:`Get Printed Version`: Check this to allow the customer to receive "
+"a printable ECPay invoice."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:162
+msgid ""
+":guilabel:`Love Code`: Enter the Love Code if the customer wishes to donate "
+"the invoice to a charity."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:164
+msgid ""
+":guilabel:`Carrier Type`: Select the carrier type if the customer uses a "
+"cloud-based carrier, and enter the :guilabel:`Carrier Number` "
+"(and :guilabel:`Carrier Number 2`) if required."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:167
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:191
+msgid ""
+":guilabel:`Confirm` the invoice, and click :guilabel:`Send`. Then, ensure "
+"the :guilabel:`Send to Ecpay` checkbox is selected, and "
+"click :guilabel:`Send`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:169
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:193
+msgid ""
+"The :guilabel:`Invoice Status`, :guilabel:`Ecpay Invoice Number`, "
+"and :guilabel:`Creation Date` in the :guilabel:`Ecpay` tab will update "
+"automatically upon successful submission."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:173
+msgid "To print or download the ECpay invoice, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:175
+msgid ""
+"Make sure the :guilabel:`Get Printed Version` option is checked in "
+"the :guilabel:`Ecpay` tab."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:176
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:203
+msgid ""
+"Click the :icon:`fa-cog` (gear) icon and select :guilabel:`Print Ecpay "
+"invoice`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:177
+msgid ""
+"In the :guilabel:`Print Ecpay Invoice` window, select a :guilabel:`Print "
+"Format (B2C)` and click :guilabel:`Print Invoice`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:183
+msgid "B2B invoice (company)"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:185
+msgid "To send a B2B invoice, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:189
+msgid ""
+"Select a :ref:`customer <localizations/taiwan/contacts>` who is either "
+"a :guilabel:`Company` or an :guilabel:`Individual` belonging to "
+"a :guilabel:`Company`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:197
+msgid ""
+"Ensure the :guilabel:`Tax ID` field  of the :ref:`customer <localizations/"
+"taiwan/contacts>` is filled in with the Tax Identification Number."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:201
+msgid ""
+"By default, B2B ECpay invoices are available to print or download. Please "
+"follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:204
+msgid ""
+"In the :guilabel:`Print Ecpay Invoice` window, select a :guilabel:`Print "
+"Format (B2B)` and click :guilabel:`Print Invoice`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:208
+msgid ""
+"Check the invoice's :guilabel:`Log Note` for ECPay submission details. "
+"Failed attempts display error messages, while successful submissions record "
+"the :guilabel:`Ecpay invoice number` and :guilabel:`Invoice status`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:215
+msgid "Invoice Cancellation"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:217
+msgid "To cancel a submitted invoice:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:219
+msgid "Open the relevant invoice and click :guilabel:`Request Cancel`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:220
+msgid ""
+"In the pop-up window, provide a cancellation :guilabel:`Reason`, then "
+"click :guilabel:`Cancel Invoice`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:222
+msgid ""
+"The :guilabel:`Invoice Status` changes to :guilabel:`Invalid`, and "
+"the :guilabel:`Invalidate Reason` is filled in with the "
+"cancellation :guilabel:`Reason`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:0
+msgid "ECPay invoice cancellation"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:231
+msgid "Send credit notes to ECPay"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:233
+msgid ""
+"Before sending a credit note, the original invoice must be successfully "
+"submitted to ECPay."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:236
+msgid "The credit note amount cannot exceed the original invoice amount."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:241
+msgid "B2C Credit Notes"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:243
+msgid "To send a B2C credit note to ECPay, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:245
+msgid ""
+"Click :guilabel:`Credit Note` on the relevant invoice and enter "
+"the :guilabel:`Reason displayed on Credit Note`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:247
+msgid ""
+"Select the :guilabel:`Agreement Type` and the :guilabel:`Allowance Notify "
+"Way`, and click :guilabel:`Reverse`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:249
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:267
+msgid ""
+"Click :guilabel:`Confirm`, then :guilabel:`Send`, ensuring :guilabel:`Send "
+"to Ecpay (Issue Allowance)` is selected."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:252
+msgid ""
+"Then, The :guilabel:`Refund State` updates to :guilabel:`Agreed` "
+"(for :guilabel:`Offline agreements`) or :guilabel:`To be agreed` "
+"(for :guilabel:`Online agreements`). Additionally, the :guilabel:`Refund "
+"Invoice Number`, :guilabel:`Refund invoice Agreement Type` "
+"and :guilabel:`Allowance Notify Way` updates accordingly in "
+"the :guilabel:`Ecpay` tab."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:261
+msgid "B2B credit notes"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:263
+msgid "To send a B2B credit note to ECPay, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:265
+msgid ""
+"Click :guilabel:`Credit Note` on the relevant invoice, enter "
+"the :guilabel:`Reason displayed on Credit Note`, then "
+"click :guilabel:`Reverse`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:270
+msgid ""
+"Then the :guilabel:`Refund Invoice Number` is updated automatically in "
+"the :guilabel:`Ecpay` tab."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:282
+msgid "To enable direct invoice submission via eCommerce:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:284
+msgid "Go to :menuselection:`Website --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:285
+msgid ""
+"In the :guilabel:`Invoicing` section, enable :guilabel:`Automatic Invoice`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:287
+msgid ""
+"This ensures invoices are generated and sent to ECPay automatically once the "
+"online payment is confirmed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:293
+msgid "Checkout Process"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:295
+msgid ""
+"**B2C Customers**: During checkout, customers must indicate whether they "
+"want to receive a physical invoice using the :guilabel:`Request a paper "
+"copy` field"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:298
+msgid ":guilabel:`No`: No copy is provided."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:299
+msgid ":guilabel:`Yes`: The invoice can be downloaded from the invoice view."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:301
+msgid ""
+"**B2B Customers**: An :guilabel:`Invoicing Info` page appears after delivery "
+"confirmation. Customers can either select the :guilabel:`Donate` checkbox to "
+"donate the invoice, or choose an :guilabel:`Ecpay e-invoice carrier` from "
+"the following options, and provide the :guilabel:`Carrier Number` "
+"and :guilabel:`Carrier Number 2` where applicable."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:306
+msgid ":guilabel:`Member Account`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:307
+msgid ":guilabel:`Citizen Digital Certificate`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:308
+msgid ":guilabel:`Mobile Barcode`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:309
+msgid ":guilabel:`EasyCard`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:310
+msgid ":guilabel:`iPass`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:313
+msgid ""
+"If no option has been selected, a :guilabel:`Print Ecpay invoice` can still "
+"be downloaded from the invoice view."
+msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:3
 msgid "Thailand"
@@ -61590,7 +62111,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:119
-msgid "Click on :guilabel:`Create Uruware Account`."
+msgid "Click :guilabel:`Create Uruware Account`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:121
@@ -61977,10 +62498,10 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:343
 msgid ""
 "Confirm the invoice to create it with an internal reference. To send the "
-"document to |DGI| via Uruware, click on :guilabel:`Send and Print` and "
-"select the checkbox :guilabel:`Create CFE`. The legal document sequence "
-"(number) is brought from Uruware once the document has been processed. Make "
-"sure you have |CAEs| available in Uruware."
+"document to |DGI| via Uruware, click :guilabel:`Send` and select the "
+"checkbox :guilabel:`Create CFE`. The legal document sequence (number) is "
+"brought from Uruware once the document has been processed. Make sure you "
+"have |CAEs| available in Uruware."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:349
@@ -62387,9 +62908,8 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:188
 msgid ""
 "Invoices can be sent to SInvoice once they have been confirmed. To do so, "
-"follow the :ref:`invoice sending <accounting/invoice/sending>` steps. In "
-"the :guilabel:`Send` popup, enable :guilabel:`Send to SInvoice` and "
-"click :guilabel:`Send & Print`."
+"follow the :ref:`invoice sending <accounting/invoice/sending>` steps. In the "
+"popup window, enable :guilabel:`Send to SInvoice` and click :guilabel:`Send`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:192
@@ -65908,6 +66428,157 @@ msgstr ""
 ":guilabel:`シークレットキー` と :guilabel:`Webhookトークン` フィールド"
 "に :ref:`payment_providers/xendit/configure_dashboard` ステップで保存した情報"
 "を入力します。"
+
+#~ msgid ""
+#~ "A banner is added to the selected invoices to indicate they are part of "
+#~ "an ongoing send and print batch. This helps prevent the process from "
+#~ "being triggered manually again, as it may take some time to complete for "
+#~ "exceptionally large batches."
+#~ msgstr ""
+#~ "選択した顧客請求書に、送信および印刷バッチの一部であることを示すバナーが追"
+#~ "加されます。これにより、非常に大きなバッチの場合、処理に時間がかかるため、"
+#~ "プロセスが再び手動でトリガされるのを防ぐことができます。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Credit Note` window, fill in the :guilabel:`Reason "
+#~ "displayed on Credit Note` and update the :guilabel:`Journal` "
+#~ "and :guilabel:`Reversal date` if needed. There are two options:"
+#~ msgstr ""
+#~ ":guilabel:`クレジットノート` ウィンドウで、:guilabel:`クレジットノートに表"
+#~ "示される理由` を入力し、必要に応じて :guilabel:`仕訳帳` および :guilabel:`"
+#~ "逆仕訳日` を更新します。2 つのオプションがあります。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Reverse and Create invoice` to create a credit note, "
+#~ "validate it automatically, reconcile it with the related invoice, and "
+#~ "open a new draft invoice prefilled with the exact details from the "
+#~ "original invoice."
+#~ msgstr ""
+#~ " :guilabel:`逆仕訳し請求書を作成` をクリックして、クレジットノートを作成"
+#~ "し、自動的に検証し、関連する請求書と照合し、元の請求書の正確な詳細が事前入"
+#~ "力された新しいドラフト請求書を開きます。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Create Debit Note` window, fill in "
+#~ "the :guilabel:`Reason` and update the :guilabel:`Use Specific Journal` "
+#~ "and :guilabel:`Debit Note Date` fields if needed."
+#~ msgstr ""
+#~ ":guilabel:`デビットノートを作成`  ウィンドウで、:guilabel:`理由` を入力"
+#~ "し、必要に応じて :guilabel:`特定の仕訳帳を使用` および :guilabel:`デビット"
+#~ "ノート日付` の項目を更新します。"
+
+#~ msgid ""
+#~ "To record it from scratch, go to :menuselection:`Accounting --> Vendors --"
+#~ "> Refund`, and click on :guilabel:`New`."
+#~ msgstr ""
+#~ "最初から記録するには、:menuselection:`会計 --> 仕入先 --> 払戻` に移動"
+#~ "し、:guilabel:`新規` をクリックしてください。"
+
+#~ msgid ""
+#~ "If :doc:`Send by Post <snailmail>` is checked when you "
+#~ "click :guilabel:`Send & Print`, the invoice will be mailed to the invoice "
+#~ "address."
+#~ msgstr ""
+#~ " :doc:`郵送 <snailmail>` がチェックされている場合、:guilabel:`送信 & 印刷"
+#~ "` をクリックすると、請求書が請求先住所に送られます。"
+
+#~ msgid ""
+#~ "**Closing** a mandate updates the mandate's end day to the current day. "
+#~ "Invoices issued after the present day will not be processed with an |sdd| "
+#~ "payment. **Revoking** a mandate disables the mandate immediately. No |"
+#~ "sdd| payment can be registered anymore, regardless of the invoice's date. "
+#~ "However, payments that have already been registered are still included in "
+#~ "the next :ref:`SDD XML file <accounting/batch_sdd/XML>`."
+#~ msgstr ""
+#~ "委任状(口座振替同意書) を **終了** すると、その終了日は当日に更新されま"
+#~ "す。 これ以降に発行された請求書については、|sdd| 支払として処理されなくな"
+#~ "ります。 一方で、委任状を **取消** すると、その時点で即座に無効化されま"
+#~ "す。 この場合、請求書の日付に関係なく、|sdd| 支払の登録は一切できなくなり"
+#~ "ます。 ただし、すでに登録済みの支払については、次回の :ref:`SDD XML ファイ"
+#~ "ル <accounting/batch_sdd/XML>` に含まれます。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Re-generate Export file` to regenerate the XML file."
+#~ msgstr ""
+#~ ":guilabel:`エクスポートファイルを再生成する` をクリックして、XMLファイルを"
+#~ "再生成します。"
+
+#~ msgid ""
+#~ "After issuing the invoice, click on *Send & Print* and send the invoice "
+#~ "by email to the customer. They will receive an email with a link that "
+#~ "redirects them to the invoice on their **Customer Portal**."
+#~ msgstr ""
+#~ "請求書を発行したら、*送信 & 印刷* をクリックし、請求書を顧客にメールで送信"
+#~ "します。顧客は、**顧客ポータル** 上の請求書にリダイレクトされるリンクが記"
+#~ "載されたメールを受け取ります。"
+
+#~ msgid ""
+#~ "If you need to use a different kind of exoneration, go "
+#~ "to :menuselection:`Accounting --> Configuration --> Taxes`, select a "
+#~ "similar tax, then click on the cog icon and select :guilabel:`Duplicate`. "
+#~ "In the :guilabel:`Advanced Options` tab, add the :guilabel:`Exoneration` "
+#~ "and :guilabel:`Law Reference`. To confirm click on :guilabel:`Save`."
+#~ msgstr ""
+#~ "別の種類の免除を使用する必要がある場合は、 :menuselection:`会計 --> 設定 "
+#~ "--> 税`に進み、類似の税金を選択し、歯車のアイコンをクリックし"
+#~ "て :guilabel:`複製` を選択します。:guilabel:`高度なオプション`タブ"
+#~ "で、:guilabel:`免除`と:guilabel:`法参照`を追加します。確認するに"
+#~ "は :guilabel:`保存` をクリックします。"
+
+#~ msgid ""
+#~ "Odoo generates the required XML files as attachments to invoices in the "
+#~ "`FatturaPA` format required by the :abbr:`AdE (Agenzia delle Entrate)`. "
+#~ "Once the invoices needed are selected, go to :guilabel:`Action` and click "
+#~ "on :guilabel:`Send and Print`."
+#~ msgstr ""
+#~ "Odooは顧客請求書の添付ファイルとして、:abbr:`AdE (Agenzia delle Entrate)`"
+#~ "が要求する`FatturaPA`形式のXMLファイルを生成します。必要な顧客請求書を選択"
+#~ "したら、:guilabel:`アクション`に移動し、:guilabel:`送信して印刷`をクリック"
+#~ "します。"
+
+#~ msgid "Send and Print menu"
+#~ msgstr "送信と印刷メニュー"
+
+#~ msgid "Send and Print dialog"
+#~ msgstr "送信と印刷ダイアログ"
+
+#~ msgid ""
+#~ "The :guilabel:`Send to Tax Agency` option in the :guilabel:`Send and "
+#~ "Print` dialog sends the attachment to the :guilabel:`Proxy Server`, which "
+#~ "gathers all requests and then forwards them via a WebServices channel to "
+#~ "the :abbr:`SdI (Sistema di Interscambio)`. Check the sending status of "
+#~ "the invoice through the :guilabel:`Check Sending` button at the top of "
+#~ "the invoice's view."
+#~ msgstr ""
+#~ ":guilabel:`送信と印刷`ダイアログの :guilabel:`税務署へ送付` オプションは、"
+#~ "添付ファイルを :guilabel:`プロキシサーバ` に送信します。 :guilabel:`プロキ"
+#~ "シサーバ` は全てのリクエストを収集し、ウェブサービスチャネルを経由し"
+#~ "て :abbr:`SdI (Sistema di Intercambio)` に転送します。顧客請求書の送信ス"
+#~ "テータスは、請求書ビューの上部にある :guilabel:`送信確認` ボタンで確認でき"
+#~ "ます。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Send and print`, and then enable :guilabel:`Send to "
+#~ "eTIMS`."
+#~ msgstr ""
+#~ " :guilabel:`送信して印刷`をクリックして、 :guilabel:`eTIMSに送信`を有効化"
+#~ "します。"
+
+#~ msgid "Click :guilabel:`Send & print` to send the invoice."
+#~ msgstr " :guilabel:`送信 & 印刷` をクリックして顧客請求書を送信します。"
+
+#~ msgid ""
+#~ "Once you have :doc:`created <../../finance/accounting/customer_invoices>` "
+#~ "an invoice and confirmed it, click :guilabel:`Send & Print`. Make "
+#~ "sure :guilabel:`Generate Facturae edi file` is enabled, and "
+#~ "click :guilabel:`Send & Print` again. Once the invoice is sent, the "
+#~ "generated XML file is available in the **chatter**."
+#~ msgstr ""
+#~ "請求書を :doc:`作成して <../../finance/accounting/customer_invoices>` 確認"
+#~ "し、 :guilabel:`送信 & 印刷`をクリックします。必ず :guilabel:`Facturae edi"
+#~ "ファイル` が有効化されていることを確認し、 :guilabel:`送信 & 印刷` を再度"
+#~ "クリックして下さい。請求書が送付されると、 生成済のXMLファイルを**チャター"
+#~ "**で利用できます。"
 
 #~ msgid ""
 #~ "`Odoo Cloud Hosting - Service Level Agreement <https://www.odooo.com/"
