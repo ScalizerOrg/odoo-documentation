@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-06 18:31+0000\n"
+"POT-Creation-Date: 2026-03-13 18:30+0000\n"
 "PO-Revision-Date: 2026-03-11 23:20+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -199,6 +199,7 @@ msgstr "带有指定计数的条形码仪表盘。"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:41
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:229
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -6360,8 +6361,8 @@ msgid ""
 "field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
 "field, select :guilabel:`Service` as the :guilabel:`Product Type`."
 msgstr ""
-"在 :guilabel:`产品名称` 字段中为到岸成本产品命名（例如 `国际运输`）。在 "
-":guilabel:`产品类型` 字段中，选择 :guilabel:`服务` 作为 :guilabel:`产品类"
+"在 :guilabel:`产品名称` 字段中为到岸成本产品命名（例如 `国际运输`）。"
+"在 :guilabel:`产品类型` 字段中，选择 :guilabel:`服务` 作为 :guilabel:`产品类"
 "型`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:50
@@ -6436,8 +6437,8 @@ msgid ""
 "**must** belong to a *Product Category* with a *Costing Method* of either |"
 "AVCO| or |FIFO|."
 msgstr ""
-"要在供应商账单上应用到岸成本，原始采购订单中的产品**必须**属于采"
-"用|AVCO|或|FIFO|*成本计算方法*的*产品类别*。"
+"要在供应商账单上应用到岸成本，原始采购订单中的产品**必须**属于采用|AVCO|或|"
+"FIFO|*成本计算方法*的*产品类别*。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:75
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
@@ -16794,7 +16795,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:84
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:29
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:79
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:37
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
@@ -18061,8 +18062,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:9
 msgid ""
 "The *at confirmation* reservation method reserves products **only** when a "
-"sales order (SO) is confirmed, **and** if enough stock of the products "
-"included in the |SO| is already available."
+"sales order (SO) is confirmed, **and** enough product stock is available."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:13
@@ -18073,69 +18073,44 @@ msgstr ":doc:`关于预订方法 <../reservation_methods>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:18
 msgid ""
-"To set the reservation method to *at confirmation*, navigate "
-"to :menuselection:`Inventory app --> Configuration --> Operations Types`. "
+"To set the reservation method to *at confirmation*, navigate to "
+"the :menuselection:`Inventory app --> Configuration --> Operations Types`. "
 "Then, select the desired :guilabel:`Operation Type` to configure, or create "
 "a new one by clicking :guilabel:`New`."
 msgstr ""
-"要将预订方法设置为*确认*，请前往 :menuselection:`库存应用程序 --> 配置 --> 操"
-"作类型`。然后，选择所需的 :guilabel:`操作类型` 进行配置，或点击 :guilabel:`新"
-"建` 创建新类型。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:22
 msgid ""
-"In the :guilabel:`General` tab on the operation type form, locate "
-"the :guilabel:`Reservation Method` field, and select :guilabel:`At "
+"In the *General* tab on the operation type form, locate "
+"the :guilabel:`Reservation Method` field and select :guilabel:`At "
 "Confirmation`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:31
 msgid ""
 "To see the *at confirmation* reservation method in action, create a new |SO| "
-"by navigating to :menuselection:`Sales app --> New`."
+"by navigating to the :menuselection:`Sales app`. On the *Quotations* page, "
+"click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:35
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:34
 msgid ""
-"Add a customer in the :guilabel:`Customer` field. Then, in "
-"the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select "
-"a product to add to the quotation from the drop-down menu. Finally, in "
+"On the quotation, add a customer in the :guilabel:`Customer` field. Then, in "
+"the *Order Lines* tab, click :guilabel:`Add a product` and select a product "
+"to add to the quotation from the drop-down menu. Finally, in "
 "the :guilabel:`Quantity` column, adjust the desired quantity of the product "
 "to sell."
 msgstr ""
-"在 :guilabel:`客户` 字段中添加客户。然后，在 :guilabel:`订单行` 选项卡中点"
-"击 :guilabel:`添加产品`，并从下拉菜单中选择要添加到报价单的产品。最后，"
-"在 :guilabel:`数量` 栏中，调整所需的产品销售数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:39
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:46
-msgid "Once ready, click :guilabel:`Confirm` to confirm the sales order."
-msgstr "准备就绪后，点击 :guilabel:`确认` 销售订单。"
+msgid "Once ready, click :guilabel:`Confirm` to create the sales order."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:41
 msgid ""
-"Click the :guilabel:`📈 (area graph)` icon on the product line to reveal the "
-"product's :guilabel:`Availability` tooltip, which reveals "
-"the :guilabel:`Reserved` number of units for this order."
-msgstr ""
-"点击产品线上的 :guilabel:`📈（区域图）` 图标，显示产品的 :guilabel:`可用性` "
-"工具提示，其中显示此订单的 :guilabel:`预留` 单位数。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:46
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:106
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:57
-msgid ""
-"If there is **not** sufficient quantity of stock for the product included in "
-"the |SO|, the :guilabel:`📈 (area graph)` icon is red, instead of green."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:49
-msgid ""
-"Instead of revealing the reserved number of units for the order, "
-"the :guilabel:`Availability` tooltip reads :guilabel:`Available`, and "
-"reveals the available number of units (e.g., `0 Units`)."
+"Click the :icon:`fa-area-chart` :guilabel:`(area chart)` icon on the product "
+"line to reveal the product's :guilabel:`Availability` tooltip, which shows "
+"the :guilabel:`Reserved` quantity for this order."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
@@ -18144,60 +18119,67 @@ msgstr ""
 msgid "Confirmed sales order with product availability tooltip selected."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:49
+msgid ""
+"If there is **not** sufficient quantity of stock for the product included in "
+"the |SO|, the :icon:`fa-area-chart` :guilabel:`(area chart)` icon is red "
+"instead of green."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:52
+msgid ""
+"Instead of showing the reserved number of units for the order, "
+"the :guilabel:`Availability` tooltip reads :guilabel:`Reserved` and shows "
+"the reserved number of units (e.g., `0 Units`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:55
 msgid "Forecasted Report"
 msgstr "预测报告"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:57
 msgid ""
-"To see all the factors that affect product reservation, click "
-"the :guilabel:`View Forecast` internal link arrow to view "
+"To see all the factors that affect product reservation, click the :icon:`oi-"
+"arrow-right` :guilabel:`View Forecast` internal link arrow to view "
 "the :guilabel:`Forecasted Report` dashboard."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:61
 msgid ""
-"The :guilabel:`Forecasted Report` displays forecast information about the "
-"product(s) included in the sales order; namely, any live receipts of the "
-"product, and any active sales orders, which are listed in "
-"the :guilabel:`Used By` column. See how each order is fulfilled in "
-"the :guilabel:`Replenishment` column."
+"The :guilabel:`Forecasted Report` displays forecast information for the "
+"products included in the sales order, namely any live receipts of the "
+"product and any active sales orders, which are listed in the :guilabel:`Used "
+"By` column. See how each order is fulfilled in the :guilabel:`Replenishment` "
+"column."
 msgstr ""
-":guilabel:`预测报告`显示销售订单中包含的产品的预测信息，即产品的任何实时收货"
-"和任何活动销售订单，这些信息列在 :guilabel:`使用者` 列中。在 :guilabel:`补货"
-"` 列中查看每个订单的完成情况。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:66
 msgid ""
 "Additionally, the :guilabel:`Forecasted` quantity is calculated at the top "
-"of the page, by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
-"quantity, and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
+"of the page by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
+"quantity and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
 msgid "Forecasted quantity equation from the Forecasted Report page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:73
 msgid ""
 "If one order should be prioritized over another order, click "
 "the :guilabel:`Unreserve` button on the corresponding order line in "
 "the :guilabel:`Replenishment` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:76
 msgid ""
-"To deliver the products, click the :guilabel:`Delivery` smart button at the "
-"top of the sales order form. To confirm that the reservation worked "
-"properly, ensure that the :guilabel:`Product Availability` field reads "
-"`Available` (in green text), and the numbers in the :guilabel:`Demand` "
-"and :guilabel:`Quantity` columns match (in this case, both should read "
-"`100.00`)."
+"To deliver the products, click the :icon:`fa-truck` :guilabel:`Delivery` "
+"smart button at the top of the sales order form. To confirm that the "
+"reservation worked properly, ensure that the :guilabel:`Product "
+"Availability` field reads `Available` (in green text), and that the numbers "
+"in the :guilabel:`Demand` and :guilabel:`Quantity` columns match (in this "
+"case, both should read `10.00`)."
 msgstr ""
-"要交付产品，请点击销售订单表格顶部的 :guilabel:`送货` 智能按钮。要确认预订操"
-"作正常，请确保 :guilabel:`产品可用性` 字段显示为 `可用`（绿色文本），"
-"且 :guilabel:`需求` 和 :guilabel:`数量` 列中的数字相匹配（在本例中，两列都应"
-"显示为 `100.00`）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
 msgid ""
@@ -18205,18 +18187,27 @@ msgid ""
 "reservation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:149
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:108
 msgid "Once ready, click :guilabel:`Validate`."
 msgstr "准备就绪后，点击 :guilabel:`验证`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:88
+msgid ""
+"Delivery orders can be starred, or favorited. Unlike :guilabel:`Before "
+"scheduled date` reservations, adding a delivery order to favorites via "
+"the :guilabel:`At Confirmation` reservation does not prioritize it. The "
+"delivery order is only prioritized in the **Inventory** app's display of "
+"delivery orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:94
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:152
 msgid ":doc:`Manual reservation <manually>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:139
 msgid ":doc:`Before scheduled date reservation <before_scheduled_date>`"
 msgstr ""
@@ -18347,6 +18338,11 @@ msgstr ""
 msgid "For this sample workflow, set the :guilabel:`Quantity` to `10`."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:46
+msgid "Once ready, click :guilabel:`Confirm` to confirm the sales order."
+msgstr "准备就绪后，点击 :guilabel:`确认` 销售订单。"
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:94
 msgid ""
 "Click the green :guilabel:`📈 (area graph)` icon on the product line to "
@@ -18372,6 +18368,13 @@ msgstr ""
 msgid ""
 "Since reservation is not until two days before the scheduled delivery, it "
 "will not reserve the products until then."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:57
+msgid ""
+"If there is **not** sufficient quantity of stock for the product included in "
+"the |SO|, the :guilabel:`📈 (area graph)` icon is red, instead of green."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:109
@@ -18495,6 +18498,18 @@ msgid ""
 msgstr ""
 "要查看*手动*预订方法的操作，请导航至 :menuselection:`销售应用程序 --> 新建`，"
 "创建一个新的 |SO|。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:42
+msgid ""
+"Add a customer in the :guilabel:`Customer` field. Then, in "
+"the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select "
+"a product to add to the quotation from the drop-down menu. Finally, in "
+"the :guilabel:`Quantity` column, adjust the desired quantity of the product "
+"to sell."
+msgstr ""
+"在 :guilabel:`客户` 字段中添加客户。然后，在 :guilabel:`订单行` 选项卡中点"
+"击 :guilabel:`添加产品`，并从下拉菜单中选择要添加到报价单的产品。最后，"
+"在 :guilabel:`数量` 栏中，调整所需的产品销售数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:48
 msgid ""
@@ -28822,13 +28837,13 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:17
 msgid ""
 "For :doc:`purchased products <../../../purchase/manage_deals/rfq>`, Odoo "
-"creates an |RFQ|"
+"creates an |RFQ|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:18
 msgid ""
 "For :doc:`manufactured products <../../../manufacturing/basic_setup/"
-"configure_manufacturing_product>`, it creates an |MO|"
+"configure_manufacturing_product>`, it creates an |MO|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:21
@@ -28848,13 +28863,12 @@ msgstr ""
 msgid ""
 "The |RFQ| or |MO| generated by |MTO| is designed to fulfill the originating |"
 "SO|. These documents should normally be confirmed or adjusted rather than "
-"cancelled. If the demand changes, update the document instead of cancelling "
-"it."
+"canceled. If the demand changes, update the document instead of canceling it."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:32
 msgid ""
-"If an |RFQ| or |MO| is cancelled, Odoo does not automatically generate a "
+"If an |RFQ| or |MO| is canceled, Odoo does not automatically generate a "
 "replacement. A new replenishment document must be created manually, but it "
 "**cannot** be linked back to the original |SO| through the smart button."
 msgstr ""
@@ -28863,114 +28877,55 @@ msgstr ""
 msgid "Finally, click :guilabel:`Save` to save the change."
 msgstr "最后，点击 :guilabel:`保存` 以保存更改。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:41
-msgid "Unarchive MTO route"
-msgstr "取消存档 MTO 路线"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:43
-msgid ""
-"In order to use the |MTO| route, the :guilabel:`Multi-Step Routes` feature "
-"must be enabled. To do so, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and tick the checkbox next to :guilabel:`Multi-"
-"Step Routes`, under the :guilabel:`Warehouse` heading."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:46
+msgid "Enable the MTO route"
 msgstr ""
-"要使用 |MTO| 路径，必须启用 :guilabel:`多步骤路线` 功能。要执行此操作，请导航"
-"至:menuselection:`库存应用程序 --> 配置 --> 设置`，并勾选 :guilabel:`仓库` 标"
-"题下:guilabel:`多步路线` 旁边的复选框。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:48
 msgid ""
-"By default, Odoo sets the |MTO| route as *archived*. This is because |MTO| "
-"is a somewhat niche workflow that is only used by certain companies. "
-"However, it is easy to unarchive the route in just a few simple steps."
+"In order to use the |MTO| route, the :guilabel:`Replenish on order (MTO)` "
+"setting must be enabled. To do so, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Settings`. Go to the :guilabel:`Warehouse` section at "
+"the end of the page, and select the checkbox next to :guilabel:`Replenish on "
+"order (MTO)`. Click :guilabel:`Save` to confirm the setting."
 msgstr ""
-"默认情况下，Odoo 将 |MTO| 路由设置为 *存档*。这是因为 |MTO| 是一个有点小众的"
-"工作流程，只有某些公司才会使用。不过，只需几个简单的步骤，就可以轻松取消路线"
-"存档。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:51
-msgid ""
-"To do so, begin by navigating to :menuselection:`Inventory app --> "
-"Configuration --> Routes`. On the :guilabel:`Routes` page, click "
-"the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right side of "
-"the search bar, and click the :guilabel:`Archived` filter to enable it."
-msgstr ""
-"要执行此操作，首先导航至 :menuselection:`库存管理应用程序 --> 配置 --> 路线"
-"`。在 :guilabel:`路线` 页面上，点击搜索栏右侧的 :icon:`fa-caret-"
-"down`:guilabel:`（向下箭头）` 图标，然后点击 :guilabel:`已存档` 筛选器以启用"
-"它。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
-msgid "The archived filter on the Routes page."
-msgstr "路线页面上的存档筛选器。"
+msgid "Select the Replenish on order (MTO) checkbox."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:59
-msgid ""
-"After enabling the :guilabel:`Archived` filter, the :guilabel:`Routes` page "
-"shows all routes which are currently archived. Tick the checkbox next "
-"to :guilabel:`Replenish on Order (MTO)`, then click the :icon:`fa-"
-"cog` :guilabel:`Actions` button to reveal a drop-down menu. From the drop-"
-"down menu, select :guilabel:`Unarchive`."
+msgid "Configure a product for MTO"
 msgstr ""
-"启用 :guilabel:`已存档` 筛选器后，:guilabel:`路线` 页面将显示当前存档的所有路"
-"线。勾选 :guilabel:`按订单补货（MTO）`旁边的复选框，然后点击 :icon:`fa-"
-"cog`:guilabel:`操作`按钮，显示一个下拉菜单。从下拉菜单中选择 :guilabel:`取消"
-"存档`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
-msgid "The unarchive action on the Routes page."
-msgstr "路线页面上的取消存档操作。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:61
 msgid ""
-"Finally, remove the :guilabel:`Archived` filter from the search bar. "
-"The :guilabel:`Routes` page now shows all unarchived routes, "
-"including :guilabel:`Replenish on Order (MTO)`, which is selectable on the "
-"*Inventory* tab of each product page."
+"With the |MTO| route enabled, products can now be configured to use "
+"replenish on order. To do so, begin by going to :menuselection:`Inventory "
+"app --> Products --> Products`, then select an existing product, or "
+"click :guilabel:`New` to configure a new product."
 msgstr ""
-"最后，删除搜索栏中的 :guilabel:`已存档` 筛选器。现在，:guilabel:`路线` 页面显"
-"示所有未存档的路线，包括 :guilabel:`按订单补货（MTO）`，可在每个产品页面的 *"
-"库存* 选项卡上选择。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:73
-msgid "Configure product for MTO"
-msgstr "为 MTO 配置产品"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:65
 msgid ""
-"With the |MTO| route unarchived, products can now be properly configured to "
-"use replenish on order. To do so, begin by going "
-"to :menuselection:`Inventory app --> Products --> Products`, then select an "
-"existing product, or click :guilabel:`New` to configure a new one."
+"In the product form, go to the :guilabel:`Inventory` tab. Under the "
+"*Operations* section, select the checkbox next to the :guilabel:`Replenish "
+"on Order (MTO)` option in the :guilabel:`Routes` field."
 msgstr ""
-"在 |MTO| 路由未存档的情况下，现在可以正确配置产品以使用订单补货。要执行此操"
-"作，首先进入 :menuselection:`库存管理应用程序 --> 产品 --> 产品`，然后选择一"
-"个现有产品，或点击 :guilabel:`新建` 配置一个新产品。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:69
 msgid ""
-"On the product page, select the :guilabel:`Inventory` tab and enable "
-"the :guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
-"section, along with the :guilabel:`Buy` or :guilabel:`Manufacture` route."
+"The :guilabel:`Replenish on Order (MTO)` route does not work if "
+"the :guilabel:`Purchase` route is enabled. To ensure the product is "
+"configured for manufacturing, make sure the checkbox next to "
+"the :guilabel:`Purchase` route is not selected."
 msgstr ""
-"在产品页面上，选择 :guilabel:`库存管理` 选项卡，并在 :guilabel:`路线` 部分启"
-"用 :guilabel:`按订单再生产（MTO）` 路线，以及 :guilabel:`购买` 或 :guilabel:`"
-"制造` 路线。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:84
-msgid ""
-"The :guilabel:`Replenish on Order (MTO)` route **does not** work unless "
-"another route is selected as well. This is because Odoo needs to know how to "
-"replenish the product when an order is placed for it (buy or manufacture it)."
-msgstr ""
-"除非同时选择了其他路径，否则 :guilabel:`按订单补货 (MTO)` 路径 **不起** 作"
-"用。这是因为 Odoo 需要知道在下订单（购买或生产）时如何补充产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
 msgid "Select the MTO route and a second route on the Inventory tab."
 msgstr "在库存选项卡上选择 MTO 路线和第二条路线。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:77
 msgid ""
 "If the product is purchased from a vendor to fulfill |SOs|, enable "
 "the :guilabel:`Can be Purchased` checkbox under the product name. Doing so "
@@ -28979,7 +28934,7 @@ msgstr ""
 "如果产品是从供应商处购买以执行 |SO| ，请启用产品名称下的 :guilabel:`可以采购"
 "` 复选框。这样，:guilabel:`采购` 选项卡就会与下面的其他选项卡一起显示。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:81
 msgid ""
 "Click the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and "
 "the :guilabel:`Price` they sell the product for."
@@ -28987,7 +28942,7 @@ msgstr ""
 "点击 :guilabel:`采购` 选项卡，指定 :guilabel:`供应商` 和销售产品"
 "的 :guilabel:`价格`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:85
 msgid ""
 "Specifying a vendor is essential for this workflow, because Odoo cannot "
 "generate an |RFQ| without knowing who the product is purchased from."
@@ -28995,7 +28950,7 @@ msgstr ""
 "指定供应商对这一工作流程至关重要，因为如果不知道产品是从谁那里购买的，Odoo 就"
 "无法生成 |RFQ|。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:88
 msgid ""
 "If the product is manufactured, make sure it has a bill of materials (BOM) "
 "configured for it. To do so, click the :guilabel:`Bill of Materials` smart "
@@ -29007,7 +28962,7 @@ msgstr ""
 "的 :guilabel:`物料清单` 智能按钮，然后点击 :guilabel:`物料清单` 页面上"
 "的 :guilabel:`新建` 为产品配置新的 BOM。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:93
 msgid ""
 "For a full overview of |BOM| creation, see the documentation on :doc:`bills "
 "of materials <../../../manufacturing/basic_setup/bill_configuration>`."
@@ -29015,11 +28970,11 @@ msgstr ""
 "有关 |BOM| 创建的完整概述，请参阅 :doc:`物料清单 <.../../../manufacturing/"
 "basic_setup/bill_configuration>` 文档。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:99
 msgid "Replenish using MTO"
 msgstr "使用 MTO 补充"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:101
 msgid ""
 "After configuring a product to use the |MTO| route, a replenishment order is "
 "created for it every time an |SO| or |MO| including the product is "
@@ -29029,13 +28984,13 @@ msgstr ""
 "将产品配置为使用 |MTO| 路线后，每次确认包含该产品的 |SO| 或 |MO| 时，都会为其"
 "创建补货订单。创建的订单类型取决于除 |MTO| 之外选择的第二个路线。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:105
 msgid ""
 "For example, if *Buy* was the second route selected, then a |PO| is created "
 "upon confirmation of an |SO|."
 msgstr "例如，如果 *购买* 是选择的第二条路线，则在确认 |SO| 后创建一个 |PO|。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:109
 msgid ""
 "When the |MTO| route is enabled for a product, a replenishment order is "
 "always created upon confirmation of an |SO| or |MO|. This is the case, even "
@@ -29045,7 +29000,7 @@ msgstr ""
 "为产品启用 |MTO| 路线后，在确认 |SO| 或 |MO| 时，总是会创建补货订单。即使现有"
 "库存足够满足 |SO|，也不需要购买或生产额外的单位。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:113
 msgid ""
 "While the |MTO| route can be used in unison with the *Buy* or *Manufacture* "
 "routes, the *Buy* route is used as the example for this workflow. Begin by "
@@ -29056,7 +29011,7 @@ msgstr ""
 "为例。首先导航到 :menuselection:`销售` 应用程序，然后点击 :guilabel:`新建`，"
 "打开一个空白报价表。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:117
 msgid ""
 "On the blank quotation form, add a :guilabel:`Customer`. Then, "
 "click :guilabel:`Add a product` under the :guilabel:`Order Lines` tab, and "
@@ -29067,7 +29022,7 @@ msgstr ""
 "的 :guilabel:`添加产品`，输入配置为使用 *MTO* 和 *购买* 路线的产品。点"
 "击 :guilabel:`确认`，报价就会变成 |SO|。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:121
 msgid ""
 "A :guilabel:`Purchase` smart button now appears at the top of the page. "
 "Clicking it opens the |RFQ| associated with the |SO|."
@@ -29075,7 +29030,7 @@ msgstr ""
 "现在，页面顶部会出现一个 :guilabel:`采购` 智能按钮。点击它可打开与 |SO| 相关"
 "联的|RFQ|。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:124
 msgid ""
 "After receiving approval from the vendor that they can meet the demand by "
 "the :guilabel:`Expected Arrival` date, click :guilabel:`Confirm Order` to "
@@ -29085,14 +29040,14 @@ msgid ""
 "click :guilabel:`Validate` to enter the products into inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:130
 msgid ""
 "Return to the |SO| by clicking the :guilabel:`SO` breadcrumb, or by "
 "navigating to :menuselection:`Sales app --> Orders --> Orders`, and "
 "selecting the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:133
 msgid ""
 "Finally, click the :guilabel:`Delivery` smart button at the top of the order "
 "to open the delivery order. Once the products have been shipped to the "
@@ -29101,35 +29056,34 @@ msgstr ""
 "最后，点击订单顶部的 :guilabel:`送货` 智能按钮，打开送货订单。产品运送给客户"
 "后，点击 :guilabel:`验证` 确认送货。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:151
-msgid "Cancelling an SO with an MTO product"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:140
+msgid "Cancel an MTO sales order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:142
 msgid ""
-"When a |SO| is cancelled, and it had created an |RFQ| or |MO|, the related "
-"delivery order is cancelled automatically. However, the |RFQ| or |MO| "
-"themselves are **not** cancelled. Instead, a warning appears in their "
-"chatter noting the |SO| cancellation. These documents remain active, so the "
-"user can either cancel them manually or repurpose the replenishment for "
-"another order."
+"When a |SO| that had created an |RFQ| or |MO| is canceled, the related "
+"delivery order is canceled automatically. However, the |RFQ| or |MO| "
+"themselves are **not** canceled. Instead, a warning appears in their chatter "
+"noting the |SO| cancellation. These documents remain active, so the user can "
+"either cancel them manually or repurpose the replenishment for another order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:148
 msgid ""
 "For information on workflows that include the |MTO| route, see the following "
 "documentation:"
 msgstr "有关包含 |MTO| 路由的工作流程的信息，请参阅以下文档："
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:150
 msgid ":doc:`resupply_warehouses`"
 msgstr ":doc:`resupply_warehouses`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:151
 msgid ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 msgstr ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:152
 msgid ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 msgstr ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 
@@ -30385,13 +30339,10 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:83
 msgid ""
 "To replenish products using the make-to-order method, go to the product form "
-"and ensure the :ref:`MTO route is unarchived <inventory/warehouses_storage/"
-"unarchive-mto>`, so it appears in the :guilabel:`Routes` section of "
-"the :guilabel:`Inventory` tab."
+"and ensure the :ref:`MTO route is unarchived <inventory/mto/enable-mto>`, so "
+"it appears in the :guilabel:`Routes` section of the :guilabel:`Inventory` "
+"tab."
 msgstr ""
-"要使用按订单生产方法补充产品，请转到产品表单并确保 :ref:`MTO 路线未存档 "
-"<inventory/warehouses_storage/unarchive-mto>` ，这样它就会出现在 :guilabel:`"
-"路径` 标签的 :guilabel:`库存` 部分。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:87
 msgid ""
@@ -53007,6 +52958,150 @@ msgstr "处理完交货并将产品退还给客户后，点击 :guilabel:`验证
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "To set the reservation method to *at confirmation*, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Operations Types`. "
+#~ "Then, select the desired :guilabel:`Operation Type` to configure, or "
+#~ "create a new one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "要将预订方法设置为*确认*，请前往 :menuselection:`库存应用程序 --> 配置 --"
+#~ "> 操作类型`。然后，选择所需的 :guilabel:`操作类型` 进行配置，或点"
+#~ "击 :guilabel:`新建` 创建新类型。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`📈 (area graph)` icon on the product line to reveal "
+#~ "the product's :guilabel:`Availability` tooltip, which reveals "
+#~ "the :guilabel:`Reserved` number of units for this order."
+#~ msgstr ""
+#~ "点击产品线上的 :guilabel:`📈（区域图）` 图标，显示产品的 :guilabel:`可用性"
+#~ "` 工具提示，其中显示此订单的 :guilabel:`预留` 单位数。"
+
+#~ msgid ""
+#~ "The :guilabel:`Forecasted Report` displays forecast information about the "
+#~ "product(s) included in the sales order; namely, any live receipts of the "
+#~ "product, and any active sales orders, which are listed in "
+#~ "the :guilabel:`Used By` column. See how each order is fulfilled in "
+#~ "the :guilabel:`Replenishment` column."
+#~ msgstr ""
+#~ ":guilabel:`预测报告`显示销售订单中包含的产品的预测信息，即产品的任何实时收"
+#~ "货和任何活动销售订单，这些信息列在 :guilabel:`使用者` 列中。在 :guilabel:`"
+#~ "补货` 列中查看每个订单的完成情况。"
+
+#~ msgid ""
+#~ "To deliver the products, click the :guilabel:`Delivery` smart button at "
+#~ "the top of the sales order form. To confirm that the reservation worked "
+#~ "properly, ensure that the :guilabel:`Product Availability` field reads "
+#~ "`Available` (in green text), and the numbers in the :guilabel:`Demand` "
+#~ "and :guilabel:`Quantity` columns match (in this case, both should read "
+#~ "`100.00`)."
+#~ msgstr ""
+#~ "要交付产品，请点击销售订单表格顶部的 :guilabel:`送货` 智能按钮。要确认预订"
+#~ "操作正常，请确保 :guilabel:`产品可用性` 字段显示为 `可用`（绿色文本），"
+#~ "且 :guilabel:`需求` 和 :guilabel:`数量` 列中的数字相匹配（在本例中，两列都"
+#~ "应显示为 `100.00`）。"
+
+#~ msgid "Unarchive MTO route"
+#~ msgstr "取消存档 MTO 路线"
+
+#~ msgid ""
+#~ "In order to use the |MTO| route, the :guilabel:`Multi-Step Routes` "
+#~ "feature must be enabled. To do so, navigate to :menuselection:`Inventory "
+#~ "app --> Configuration --> Settings`, and tick the checkbox next "
+#~ "to :guilabel:`Multi-Step Routes`, under the :guilabel:`Warehouse` heading."
+#~ msgstr ""
+#~ "要使用 |MTO| 路径，必须启用 :guilabel:`多步骤路线` 功能。要执行此操作，请"
+#~ "导航至:menuselection:`库存应用程序 --> 配置 --> 设置`，并勾选 :guilabel:`"
+#~ "仓库` 标题下:guilabel:`多步路线` 旁边的复选框。"
+
+#~ msgid ""
+#~ "By default, Odoo sets the |MTO| route as *archived*. This is because |"
+#~ "MTO| is a somewhat niche workflow that is only used by certain companies. "
+#~ "However, it is easy to unarchive the route in just a few simple steps."
+#~ msgstr ""
+#~ "默认情况下，Odoo 将 |MTO| 路由设置为 *存档*。这是因为 |MTO| 是一个有点小众"
+#~ "的工作流程，只有某些公司才会使用。不过，只需几个简单的步骤，就可以轻松取消"
+#~ "路线存档。"
+
+#~ msgid ""
+#~ "To do so, begin by navigating to :menuselection:`Inventory app --> "
+#~ "Configuration --> Routes`. On the :guilabel:`Routes` page, click "
+#~ "the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right side "
+#~ "of the search bar, and click the :guilabel:`Archived` filter to enable it."
+#~ msgstr ""
+#~ "要执行此操作，首先导航至 :menuselection:`库存管理应用程序 --> 配置 --> 路"
+#~ "线`。在 :guilabel:`路线` 页面上，点击搜索栏右侧的 :icon:`fa-caret-"
+#~ "down`:guilabel:`（向下箭头）` 图标，然后点击 :guilabel:`已存档` 筛选器以启"
+#~ "用它。"
+
+#~ msgid "The archived filter on the Routes page."
+#~ msgstr "路线页面上的存档筛选器。"
+
+#~ msgid ""
+#~ "After enabling the :guilabel:`Archived` filter, the :guilabel:`Routes` "
+#~ "page shows all routes which are currently archived. Tick the checkbox "
+#~ "next to :guilabel:`Replenish on Order (MTO)`, then click the :icon:`fa-"
+#~ "cog` :guilabel:`Actions` button to reveal a drop-down menu. From the drop-"
+#~ "down menu, select :guilabel:`Unarchive`."
+#~ msgstr ""
+#~ "启用 :guilabel:`已存档` 筛选器后，:guilabel:`路线` 页面将显示当前存档的所"
+#~ "有路线。勾选 :guilabel:`按订单补货（MTO）`旁边的复选框，然后点"
+#~ "击 :icon:`fa-cog`:guilabel:`操作`按钮，显示一个下拉菜单。从下拉菜单中选"
+#~ "择 :guilabel:`取消存档`。"
+
+#~ msgid "The unarchive action on the Routes page."
+#~ msgstr "路线页面上的取消存档操作。"
+
+#~ msgid ""
+#~ "Finally, remove the :guilabel:`Archived` filter from the search bar. "
+#~ "The :guilabel:`Routes` page now shows all unarchived routes, "
+#~ "including :guilabel:`Replenish on Order (MTO)`, which is selectable on "
+#~ "the *Inventory* tab of each product page."
+#~ msgstr ""
+#~ "最后，删除搜索栏中的 :guilabel:`已存档` 筛选器。现在，:guilabel:`路线` 页"
+#~ "面显示所有未存档的路线，包括 :guilabel:`按订单补货（MTO）`，可在每个产品页"
+#~ "面的 *库存* 选项卡上选择。"
+
+#~ msgid "Configure product for MTO"
+#~ msgstr "为 MTO 配置产品"
+
+#~ msgid ""
+#~ "With the |MTO| route unarchived, products can now be properly configured "
+#~ "to use replenish on order. To do so, begin by going "
+#~ "to :menuselection:`Inventory app --> Products --> Products`, then select "
+#~ "an existing product, or click :guilabel:`New` to configure a new one."
+#~ msgstr ""
+#~ "在 |MTO| 路由未存档的情况下，现在可以正确配置产品以使用订单补货。要执行此"
+#~ "操作，首先进入 :menuselection:`库存管理应用程序 --> 产品 --> 产品`，然后选"
+#~ "择一个现有产品，或点击 :guilabel:`新建` 配置一个新产品。"
+
+#~ msgid ""
+#~ "On the product page, select the :guilabel:`Inventory` tab and enable "
+#~ "the :guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
+#~ "section, along with the :guilabel:`Buy` or :guilabel:`Manufacture` route."
+#~ msgstr ""
+#~ "在产品页面上，选择 :guilabel:`库存管理` 选项卡，并在 :guilabel:`路线` 部分"
+#~ "启用 :guilabel:`按订单再生产（MTO）` 路线，以及 :guilabel:`购买` "
+#~ "或 :guilabel:`制造` 路线。"
+
+#~ msgid ""
+#~ "The :guilabel:`Replenish on Order (MTO)` route **does not** work unless "
+#~ "another route is selected as well. This is because Odoo needs to know how "
+#~ "to replenish the product when an order is placed for it (buy or "
+#~ "manufacture it)."
+#~ msgstr ""
+#~ "除非同时选择了其他路径，否则 :guilabel:`按订单补货 (MTO)` 路径 **不起** 作"
+#~ "用。这是因为 Odoo 需要知道在下订单（购买或生产）时如何补充产品。"
+
+#~ msgid ""
+#~ "To replenish products using the make-to-order method, go to the product "
+#~ "form and ensure the :ref:`MTO route is unarchived <inventory/"
+#~ "warehouses_storage/unarchive-mto>`, so it appears in "
+#~ "the :guilabel:`Routes` section of the :guilabel:`Inventory` tab."
+#~ msgstr ""
+#~ "要使用按订单生产方法补充产品，请转到产品表单并确保 :ref:`MTO 路线未存档 "
+#~ "<inventory/warehouses_storage/unarchive-mto>` ，这样它就会出现"
+#~ "在 :guilabel:`路径` 标签的 :guilabel:`库存` 部分。"
 
 #~ msgid ""
 #~ "In Odoo, goods and services are both set up as *products*. When setting "

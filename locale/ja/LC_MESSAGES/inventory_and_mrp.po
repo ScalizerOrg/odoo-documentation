@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-06 18:31+0000\n"
+"POT-Creation-Date: 2026-03-13 18:30+0000\n"
 "PO-Revision-Date: 2026-02-02 23:21+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -187,6 +187,7 @@ msgstr "カウント作業が割当てられたバーコードダッシュボー
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:41
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:229
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -18016,7 +18017,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:84
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:29
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:79
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:37
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
@@ -19352,11 +19353,8 @@ msgstr "引当確認"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:9
 msgid ""
 "The *at confirmation* reservation method reserves products **only** when a "
-"sales order (SO) is confirmed, **and** if enough stock of the products "
-"included in the |SO| is already available."
+"sales order (SO) is confirmed, **and** enough product stock is available."
 msgstr ""
-"*確認時* 引当方式は、販売オーダ(SO)が確認され、**かつ** その |SO| に含まれる"
-"プロダクトの十分な在庫がすでにある場合に *のみ*、プロダクトを引当します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:14
@@ -19366,82 +19364,45 @@ msgstr ":doc:`引当方法について <../reservation_methods>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:18
 msgid ""
-"To set the reservation method to *at confirmation*, navigate "
-"to :menuselection:`Inventory app --> Configuration --> Operations Types`. "
+"To set the reservation method to *at confirmation*, navigate to "
+"the :menuselection:`Inventory app --> Configuration --> Operations Types`. "
 "Then, select the desired :guilabel:`Operation Type` to configure, or create "
 "a new one by clicking :guilabel:`New`."
 msgstr ""
-"引当方法を *確認時* に設定するには、 :menuselection:`在庫アプリ --> 設定 --> "
-"オペレーションタイプ` に移動します。次に、設定したい :guilabel:`オペレーショ"
-"ンタイプ` を選択するか、 :guilabel:`新規` をクリックして新規作成します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:22
 msgid ""
-"In the :guilabel:`General` tab on the operation type form, locate "
-"the :guilabel:`Reservation Method` field, and select :guilabel:`At "
+"In the *General* tab on the operation type form, locate "
+"the :guilabel:`Reservation Method` field and select :guilabel:`At "
 "Confirmation`."
 msgstr ""
-"オペレーションタイプフォームの :guilabel:`概要` タブで、 :guilabel:`引当方法"
-"` フィールドを探し、 :guilabel:`確認時` を選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:31
 msgid ""
 "To see the *at confirmation* reservation method in action, create a new |SO| "
-"by navigating to :menuselection:`Sales app --> New`."
+"by navigating to the :menuselection:`Sales app`. On the *Quotations* page, "
+"click :guilabel:`New`."
 msgstr ""
-"引当方法が *確認時* にどのように機能するかを確認するには、、:menuselection:`"
-"販売アプリ --> 新規` に移動して新規 |SO| (販売オーダ)を作成して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:35
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:34
 msgid ""
-"Add a customer in the :guilabel:`Customer` field. Then, in "
-"the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select "
-"a product to add to the quotation from the drop-down menu. Finally, in "
+"On the quotation, add a customer in the :guilabel:`Customer` field. Then, in "
+"the *Order Lines* tab, click :guilabel:`Add a product` and select a product "
+"to add to the quotation from the drop-down menu. Finally, in "
 "the :guilabel:`Quantity` column, adjust the desired quantity of the product "
 "to sell."
 msgstr ""
-":guilabel:`顧客` フィールドに顧客を追加します。次に :guilabel:`オーダ明細` タ"
-"ブで :guilabel:`プロダクト追加` をクリックし、ドロップダウンメニューから見積"
-"に追加するプロダクトを選択します。最後に、:guilabel:`数量` 列で、販売するプロ"
-"ダクトの希望数量を調整します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:39
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:46
-msgid "Once ready, click :guilabel:`Confirm` to confirm the sales order."
+msgid "Once ready, click :guilabel:`Confirm` to create the sales order."
 msgstr ""
-"準備ができたら、:guilabel:`確定` をクリックして販売オーダを確定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:41
 msgid ""
-"Click the :guilabel:`📈 (area graph)` icon on the product line to reveal the "
-"product's :guilabel:`Availability` tooltip, which reveals "
-"the :guilabel:`Reserved` number of units for this order."
+"Click the :icon:`fa-area-chart` :guilabel:`(area chart)` icon on the product "
+"line to reveal the product's :guilabel:`Availability` tooltip, which shows "
+"the :guilabel:`Reserved` quantity for this order."
 msgstr ""
-"プロダクト明細の :guilabel:`📈(エリアグラフ)` アイコンをクリックすると、プロ"
-"ダクトの :guilabel:`利用可能` ツールチップが表示され、このオーダ"
-"の :guilabel:`引当済` 個数が表示されます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:46
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:106
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:57
-msgid ""
-"If there is **not** sufficient quantity of stock for the product included in "
-"the |SO|, the :guilabel:`📈 (area graph)` icon is red, instead of green."
-msgstr ""
-"|SO| に含まれる商品の在庫が十分で **ない** 場合、:guilabel:`📈(エリアグラ"
-"フ)` のアイコンは緑ではなく赤になります。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:49
-msgid ""
-"Instead of revealing the reserved number of units for the order, "
-"the :guilabel:`Availability` tooltip reads :guilabel:`Available`, and "
-"reveals the available number of units (e.g., `0 Units`)."
-msgstr ""
-":guilabel:`利用可能` ツールチップは、引当済オーダの単位数を表示する代わり"
-"に、:guilabel:`利用可能` と表示し、利用可能な単位数を表示します。 (例 `0個"
-"`)。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:None
@@ -19449,46 +19410,52 @@ msgstr ""
 msgid "Confirmed sales order with product availability tooltip selected."
 msgstr "プロダクト利用可能ツールチップが選択された販売オーダ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:49
+msgid ""
+"If there is **not** sufficient quantity of stock for the product included in "
+"the |SO|, the :icon:`fa-area-chart` :guilabel:`(area chart)` icon is red "
+"instead of green."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:52
+msgid ""
+"Instead of showing the reserved number of units for the order, "
+"the :guilabel:`Availability` tooltip reads :guilabel:`Reserved` and shows "
+"the reserved number of units (e.g., `0 Units`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:55
 msgid "Forecasted Report"
 msgstr "予測レポート"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:57
 msgid ""
-"To see all the factors that affect product reservation, click "
-"the :guilabel:`View Forecast` internal link arrow to view "
+"To see all the factors that affect product reservation, click the :icon:`oi-"
+"arrow-right` :guilabel:`View Forecast` internal link arrow to view "
 "the :guilabel:`Forecasted Report` dashboard."
 msgstr ""
-"プロダクト引当に影響する全ての要素を見るには、 :guilabel:`予測照会` の内部リ"
-"ンク矢印をクリックして :guilabel:`予測レポート` ダッシュボードを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:61
 msgid ""
-"The :guilabel:`Forecasted Report` displays forecast information about the "
-"product(s) included in the sales order; namely, any live receipts of the "
-"product, and any active sales orders, which are listed in "
-"the :guilabel:`Used By` column. See how each order is fulfilled in "
-"the :guilabel:`Replenishment` column."
+"The :guilabel:`Forecasted Report` displays forecast information for the "
+"products included in the sales order, namely any live receipts of the "
+"product and any active sales orders, which are listed in the :guilabel:`Used "
+"By` column. See how each order is fulfilled in the :guilabel:`Replenishment` "
+"column."
 msgstr ""
-":guilabel:`予測レポート` は、販売オーダに含まれるプロダクトの予測情報を表示し"
-"ます。つまり、そのプロダクトの入荷状況や、 :guilabel:`使用先` 列に表示される"
-"有効な販売オーダを表示します。各オーダは :guilabel:`補充` 列に表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:66
 msgid ""
 "Additionally, the :guilabel:`Forecasted` quantity is calculated at the top "
-"of the page, by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
-"quantity, and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
+"of the page by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
+"quantity and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
 msgstr ""
-"さらに、 :guilabel:`手持`と :guilabel:`入荷`の数量を足し、 :guilabel:`出荷`の"
-"数量を引くことで、 :guilabel:`予測`数量が、以下に表示されるようにページの一番"
-"上で計算されます:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
 msgid "Forecasted quantity equation from the Forecasted Report page."
 msgstr "予測レポートページの予測数量方程式。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:73
 msgid ""
 "If one order should be prioritized over another order, click "
 "the :guilabel:`Unreserve` button on the corresponding order line in "
@@ -19497,20 +19464,15 @@ msgstr ""
 "あるオーダを他のオーダよりも優先させたい場合は、 :guilabel:`補充` 列の対応す"
 "るオーダ明細の :guilabel:`引当解除` ボタンをクリックして下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:76
 msgid ""
-"To deliver the products, click the :guilabel:`Delivery` smart button at the "
-"top of the sales order form. To confirm that the reservation worked "
-"properly, ensure that the :guilabel:`Product Availability` field reads "
-"`Available` (in green text), and the numbers in the :guilabel:`Demand` "
-"and :guilabel:`Quantity` columns match (in this case, both should read "
-"`100.00`)."
+"To deliver the products, click the :icon:`fa-truck` :guilabel:`Delivery` "
+"smart button at the top of the sales order form. To confirm that the "
+"reservation worked properly, ensure that the :guilabel:`Product "
+"Availability` field reads `Available` (in green text), and that the numbers "
+"in the :guilabel:`Demand` and :guilabel:`Quantity` columns match (in this "
+"case, both should read `10.00`)."
 msgstr ""
-"プロダクトを配送するには、販売オーダフォームの上部にある :guilabel:`配送` ス"
-"マートボタンをクリックします。引当が正しく行われたことを確認するため"
-"に、 :guilabel:`プロダクト利用可能` フィールドが `利用可能` (緑色のテキスト) "
-"と表示され、 :guilabel:`需要` と :guilabel:`数量` 列の数字が一致していること"
-"を確認します (この場合、両方とも `100.00` と表示されるはずです)。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
 msgid ""
@@ -19518,18 +19480,27 @@ msgid ""
 "reservation."
 msgstr "確認時に引当の販売オーダに含まれるプロダクトの出荷オーダ。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:149
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:108
 msgid "Once ready, click :guilabel:`Validate`."
 msgstr "用意ができたら、:guilabel:`検証` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:88
+msgid ""
+"Delivery orders can be starred, or favorited. Unlike :guilabel:`Before "
+"scheduled date` reservations, adding a delivery order to favorites via "
+"the :guilabel:`At Confirmation` reservation does not prioritize it. The "
+"delivery order is only prioritized in the **Inventory** app's display of "
+"delivery orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:94
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:152
 msgid ":doc:`Manual reservation <manually>`"
 msgstr ":doc:`手動引当 <manually>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:139
 msgid ":doc:`Before scheduled date reservation <before_scheduled_date>`"
 msgstr ":doc:`予定日前に引当<before_scheduled_date>`"
@@ -19689,6 +19660,12 @@ msgstr ""
 msgid "For this sample workflow, set the :guilabel:`Quantity` to `10`."
 msgstr "このサンプルワークフローでは、 :guilabel:`数量` を `10` に設定します。"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:46
+msgid "Once ready, click :guilabel:`Confirm` to confirm the sales order."
+msgstr ""
+"準備ができたら、:guilabel:`確定` をクリックして販売オーダを確定します。"
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:94
 msgid ""
 "Click the green :guilabel:`📈 (area graph)` icon on the product line to "
@@ -19718,6 +19695,15 @@ msgid ""
 msgstr ""
 "引当は配送予定日の2日前からとなるため、それまではプロダクトの引当はできませ"
 "ん。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:57
+msgid ""
+"If there is **not** sufficient quantity of stock for the product included in "
+"the |SO|, the :guilabel:`📈 (area graph)` icon is red, instead of green."
+msgstr ""
+"|SO| に含まれる商品の在庫が十分で **ない** 場合、:guilabel:`📈(エリアグラ"
+"フ)` のアイコンは緑ではなく赤になります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:109
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:60
@@ -19869,6 +19855,19 @@ msgid ""
 msgstr ""
 "手動 *引当方法* がどのように機能するかを見るには、 :menuselection:`販売アプ"
 "リ --> 新規` に移動して新しい |SO| を作成して下さい。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:42
+msgid ""
+"Add a customer in the :guilabel:`Customer` field. Then, in "
+"the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select "
+"a product to add to the quotation from the drop-down menu. Finally, in "
+"the :guilabel:`Quantity` column, adjust the desired quantity of the product "
+"to sell."
+msgstr ""
+":guilabel:`顧客` フィールドに顧客を追加します。次に :guilabel:`オーダ明細` タ"
+"ブで :guilabel:`プロダクト追加` をクリックし、ドロップダウンメニューから見積"
+"に追加するプロダクトを選択します。最後に、:guilabel:`数量` 列で、販売するプロ"
+"ダクトの希望数量を調整します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:48
 msgid ""
@@ -31357,13 +31356,13 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:17
 msgid ""
 "For :doc:`purchased products <../../../purchase/manage_deals/rfq>`, Odoo "
-"creates an |RFQ|"
+"creates an |RFQ|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:18
 msgid ""
 "For :doc:`manufactured products <../../../manufacturing/basic_setup/"
-"configure_manufacturing_product>`, it creates an |MO|"
+"configure_manufacturing_product>`, it creates an |MO|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:21
@@ -31383,13 +31382,12 @@ msgstr ""
 msgid ""
 "The |RFQ| or |MO| generated by |MTO| is designed to fulfill the originating |"
 "SO|. These documents should normally be confirmed or adjusted rather than "
-"cancelled. If the demand changes, update the document instead of cancelling "
-"it."
+"canceled. If the demand changes, update the document instead of canceling it."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:32
 msgid ""
-"If an |RFQ| or |MO| is cancelled, Odoo does not automatically generate a "
+"If an |RFQ| or |MO| is canceled, Odoo does not automatically generate a "
 "replacement. A new replenishment document must be created manually, but it "
 "**cannot** be linked back to the original |SO| through the smart button."
 msgstr ""
@@ -31398,120 +31396,55 @@ msgstr ""
 msgid "Finally, click :guilabel:`Save` to save the change."
 msgstr "最後に、:guilabel:`保存` をクリックして変更を保存します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:41
-msgid "Unarchive MTO route"
-msgstr "MTOルートのアーカイブ解除"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:43
-msgid ""
-"In order to use the |MTO| route, the :guilabel:`Multi-Step Routes` feature "
-"must be enabled. To do so, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and tick the checkbox next to :guilabel:`Multi-"
-"Step Routes`, under the :guilabel:`Warehouse` heading."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:46
+msgid "Enable the MTO route"
 msgstr ""
-"|MTO| ルートを使用するには、:guilabel:`複数ステップルート` 機能を有効にする必"
-"要があります。これを行うには、:menuselection:`在庫アプリ --> 設定 --> 管理設"
-"定`に移動し、:guilabel:`倉庫` の見出しの下にある :guilabel:`複数ステップルー"
-"ト`の横のチェックボックスにチェックを入れます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:48
 msgid ""
-"By default, Odoo sets the |MTO| route as *archived*. This is because |MTO| "
-"is a somewhat niche workflow that is only used by certain companies. "
-"However, it is easy to unarchive the route in just a few simple steps."
+"In order to use the |MTO| route, the :guilabel:`Replenish on order (MTO)` "
+"setting must be enabled. To do so, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Settings`. Go to the :guilabel:`Warehouse` section at "
+"the end of the page, and select the checkbox next to :guilabel:`Replenish on "
+"order (MTO)`. Click :guilabel:`Save` to confirm the setting."
 msgstr ""
-"デフォルトでは、Odooは |MTO| ルートを *アーカイブ済* に設定しています。これ"
-"は |MTO| が特定の企業でのみ使用される、ややニッチなワークフローであるためで"
-"す。必要な場合は、簡単なステップでルートのアーカイブを解除することができま"
-"す。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:51
-msgid ""
-"To do so, begin by navigating to :menuselection:`Inventory app --> "
-"Configuration --> Routes`. On the :guilabel:`Routes` page, click "
-"the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right side of "
-"the search bar, and click the :guilabel:`Archived` filter to enable it."
-msgstr ""
-"これを行うには、まず最初に :menuselection:`在庫アプリ --> 設定 --> ルート` に"
-"移動します。 :guilabel:`ルート` ページで、検索バーの右側にある :icon:`fa-"
-"caret-down` :guilabel:`(下向き矢印)` アイコンをクリックし、:guilabel:`アーカ"
-"イブ済` フィルタをクリックして有効にします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
-msgid "The archived filter on the Routes page."
-msgstr "ルートページのアーカイブフィルタ。"
+msgid "Select the Replenish on order (MTO) checkbox."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:59
-msgid ""
-"After enabling the :guilabel:`Archived` filter, the :guilabel:`Routes` page "
-"shows all routes which are currently archived. Tick the checkbox next "
-"to :guilabel:`Replenish on Order (MTO)`, then click the :icon:`fa-"
-"cog` :guilabel:`Actions` button to reveal a drop-down menu. From the drop-"
-"down menu, select :guilabel:`Unarchive`."
+msgid "Configure a product for MTO"
 msgstr ""
-":guilabel:`アーカイブ済` フィルタを有効にすると、:guilabel:`ルート` ページに"
-"は現在アーカイブされている全てのルートが表示されます。 :guilabel:`受注補充 "
-"(MTO)` の隣にあるチェックボックスにチェックを入れ、:icon:`fa-cog` :guilabel:`"
-"アクション` ボタンをクリックしてドロップダウンメニューを表示します。ドロップ"
-"ダウンメニューから :guilabel:`アーカイブ解除` を選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
-msgid "The unarchive action on the Routes page."
-msgstr "ルートページのアーカイブ解除アクション。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:61
 msgid ""
-"Finally, remove the :guilabel:`Archived` filter from the search bar. "
-"The :guilabel:`Routes` page now shows all unarchived routes, "
-"including :guilabel:`Replenish on Order (MTO)`, which is selectable on the "
-"*Inventory* tab of each product page."
+"With the |MTO| route enabled, products can now be configured to use "
+"replenish on order. To do so, begin by going to :menuselection:`Inventory "
+"app --> Products --> Products`, then select an existing product, or "
+"click :guilabel:`New` to configure a new product."
 msgstr ""
-"最後に、検索バーから :guilabel:`アーカイブ済` フィルタを削除しま"
-"す。 :guilabel:`ルート` ページには、アーカイブされていない全てのルートが表示"
-"され、その中には、各プロダクトページの *在庫* タブで選択可能な :guilabel:`受"
-"注補充 (MTO)` も含まれます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:73
-msgid "Configure product for MTO"
-msgstr "受注生産(MTO)用にプロダクトを設定する"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:65
 msgid ""
-"With the |MTO| route unarchived, products can now be properly configured to "
-"use replenish on order. To do so, begin by going "
-"to :menuselection:`Inventory app --> Products --> Products`, then select an "
-"existing product, or click :guilabel:`New` to configure a new one."
+"In the product form, go to the :guilabel:`Inventory` tab. Under the "
+"*Operations* section, select the checkbox next to the :guilabel:`Replenish "
+"on Order (MTO)` option in the :guilabel:`Routes` field."
 msgstr ""
-"|MTO| ルートがアーカイブされていない場合、プロダクトはオーダ補充を使用するよ"
-"うに適切に設定することができます。 これを行うには、まず :menuselection:`在庫"
-"アプリ --> プロダクト --> プロダクト` に移動し、既存のプロダクトを選択する"
-"か、:guilabel:`新規作成` をクリックして新規プロダクトを設定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:69
 msgid ""
-"On the product page, select the :guilabel:`Inventory` tab and enable "
-"the :guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
-"section, along with the :guilabel:`Buy` or :guilabel:`Manufacture` route."
+"The :guilabel:`Replenish on Order (MTO)` route does not work if "
+"the :guilabel:`Purchase` route is enabled. To ensure the product is "
+"configured for manufacturing, make sure the checkbox next to "
+"the :guilabel:`Purchase` route is not selected."
 msgstr ""
-"プロダクトページで、:guilabel:`在庫` タブを選択し、:guilabel:`ルート` セク"
-"ションで :guilabel:`購買` または:guilabel:`製造` ルートとともに :guilabel:`受"
-"注補充(MTO)` ルートを有効にします。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:84
-msgid ""
-"The :guilabel:`Replenish on Order (MTO)` route **does not** work unless "
-"another route is selected as well. This is because Odoo needs to know how to "
-"replenish the product when an order is placed for it (buy or manufacture it)."
-msgstr ""
-"別のルートも選択しない限り、:guilabel:`受注補充 (MTO)` ルートは動作 **しませ"
-"ん**。これは、Odooがプロダクトのオーダ(購買または製造)が発行された際に、プロ"
-"ダクトをどのように補充するのかを知る必要があるためです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
 msgid "Select the MTO route and a second route on the Inventory tab."
 msgstr "インベントリタブでMTOルートと2つ目のルートを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:77
 msgid ""
 "If the product is purchased from a vendor to fulfill |SOs|, enable "
 "the :guilabel:`Can be Purchased` checkbox under the product name. Doing so "
@@ -31521,7 +31454,7 @@ msgstr ""
 "ト名の下にある :guilabel:`購買可能` のチェックボックスを有効にして下さい。こ"
 "れにより、他のタブと並んで :guilabel:`購買` タブが表示されるようになります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:81
 msgid ""
 "Click the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and "
 "the :guilabel:`Price` they sell the product for."
@@ -31529,7 +31462,7 @@ msgstr ""
 ":guilabel:`購買` タブをクリックし、:guilabel:`仕入先` と、そのプロダクト"
 "の :guilabel:`価格` を指定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:85
 msgid ""
 "Specifying a vendor is essential for this workflow, because Odoo cannot "
 "generate an |RFQ| without knowing who the product is purchased from."
@@ -31538,7 +31471,7 @@ msgstr ""
 "らプロダクトが購買されたのかがわからないと、 見積依頼書 |RFQ| を生成できない"
 "からです。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:88
 msgid ""
 "If the product is manufactured, make sure it has a bill of materials (BOM) "
 "configured for it. To do so, click the :guilabel:`Bill of Materials` smart "
@@ -31551,7 +31484,7 @@ msgstr ""
 "トボタンをクリックし、:guilabel:`部品表` ページで :guilabel:`新規` をクリック"
 "して、プロダクト用の新しい BOM を設定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:93
 msgid ""
 "For a full overview of |BOM| creation, see the documentation on :doc:`bills "
 "of materials <../../../manufacturing/basic_setup/bill_configuration>`."
@@ -31559,11 +31492,11 @@ msgstr ""
 "BOM作成の概要については、次のドキュメントを参照して下さい:  :doc:`bills of "
 "materials <../../../manufacturing/basic_setup/bill_configuration>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:99
 msgid "Replenish using MTO"
 msgstr "受注生産(MTO)による補充"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:101
 msgid ""
 "After configuring a product to use the |MTO| route, a replenishment order is "
 "created for it every time an |SO| or |MO| including the product is "
@@ -31575,7 +31508,7 @@ msgstr ""
 "トに対する補充オーダが作成されます。作成されるオーダの種類は、受注生産 |MTO| "
 "に加えて選択された2番目のルートによって異なります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:105
 msgid ""
 "For example, if *Buy* was the second route selected, then a |PO| is created "
 "upon confirmation of an |SO|."
@@ -31583,7 +31516,7 @@ msgstr ""
 "例えば、*購買* が2番目に選択された場合、販売オーダ |SO| の確認時に 購買オー"
 "ダ |PO| が作成されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:109
 msgid ""
 "When the |MTO| route is enabled for a product, a replenishment order is "
 "always created upon confirmation of an |SO| or |MO|. This is the case, even "
@@ -31595,7 +31528,7 @@ msgstr ""
 "のプロダクトの追加数量を購買または製造することなく、販売オーダ |SO| を満たす"
 "のに十分な在庫がプロダクトの手持在庫にある場合でも同様です。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:113
 msgid ""
 "While the |MTO| route can be used in unison with the *Buy* or *Manufacture* "
 "routes, the *Buy* route is used as the example for this workflow. Begin by "
@@ -31607,7 +31540,7 @@ msgstr ""
 "アプリに移動し、:guilabel:`新規` をクリックして、空白の見積フォームを開きま"
 "す。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:117
 msgid ""
 "On the blank quotation form, add a :guilabel:`Customer`. Then, "
 "click :guilabel:`Add a product` under the :guilabel:`Order Lines` tab, and "
@@ -31619,7 +31552,7 @@ msgstr ""
 "*購買* ルートを使用するように設定したプロダクトを入力します。 :guilabel:`確認"
 "` をクリックすると、見積が販売オーダ |SO| に変換されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:121
 msgid ""
 "A :guilabel:`Purchase` smart button now appears at the top of the page. "
 "Clicking it opens the |RFQ| associated with the |SO|."
@@ -31627,7 +31560,7 @@ msgstr ""
 ":guilabel:`購買` スマートボタンがページの上部に表示されました。クリックする"
 "と、販売オーダ |SO| に関連付けられた 見積依頼書 |RFQ| が開きます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:124
 msgid ""
 "After receiving approval from the vendor that they can meet the demand by "
 "the :guilabel:`Expected Arrival` date, click :guilabel:`Confirm Order` to "
@@ -31637,14 +31570,14 @@ msgid ""
 "click :guilabel:`Validate` to enter the products into inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:130
 msgid ""
 "Return to the |SO| by clicking the :guilabel:`SO` breadcrumb, or by "
 "navigating to :menuselection:`Sales app --> Orders --> Orders`, and "
 "selecting the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:133
 msgid ""
 "Finally, click the :guilabel:`Delivery` smart button at the top of the order "
 "to open the delivery order. Once the products have been shipped to the "
@@ -31654,21 +31587,20 @@ msgstr ""
 "オーダを開きます。 プロダクトが顧客に発送されたら、:guilabel:`検証` をクリッ"
 "クして配送を確定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:151
-msgid "Cancelling an SO with an MTO product"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:140
+msgid "Cancel an MTO sales order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:142
 msgid ""
-"When a |SO| is cancelled, and it had created an |RFQ| or |MO|, the related "
-"delivery order is cancelled automatically. However, the |RFQ| or |MO| "
-"themselves are **not** cancelled. Instead, a warning appears in their "
-"chatter noting the |SO| cancellation. These documents remain active, so the "
-"user can either cancel them manually or repurpose the replenishment for "
-"another order."
+"When a |SO| that had created an |RFQ| or |MO| is canceled, the related "
+"delivery order is canceled automatically. However, the |RFQ| or |MO| "
+"themselves are **not** canceled. Instead, a warning appears in their chatter "
+"noting the |SO| cancellation. These documents remain active, so the user can "
+"either cancel them manually or repurpose the replenishment for another order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:148
 msgid ""
 "For information on workflows that include the |MTO| route, see the following "
 "documentation:"
@@ -31676,15 +31608,15 @@ msgstr ""
 "受注生産 |MTO| ルートを含むワークフローについては、次のドキュメントを参照して"
 "下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:150
 msgid ":doc:`resupply_warehouses`"
 msgstr ":doc:`resupply_warehouses`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:151
 msgid ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 msgstr ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:152
 msgid ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 msgstr ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 
@@ -33156,14 +33088,10 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:83
 msgid ""
 "To replenish products using the make-to-order method, go to the product form "
-"and ensure the :ref:`MTO route is unarchived <inventory/warehouses_storage/"
-"unarchive-mto>`, so it appears in the :guilabel:`Routes` section of "
-"the :guilabel:`Inventory` tab."
+"and ensure the :ref:`MTO route is unarchived <inventory/mto/enable-mto>`, so "
+"it appears in the :guilabel:`Routes` section of the :guilabel:`Inventory` "
+"tab."
 msgstr ""
-"受注生産方式でプロダクトを補充するには、プロダクトフォームに移動し、:ref:`受"
-"注生産(MTO)ルートがアーカイブ解除 <inventory/warehouses_storage/unarchive-"
-"mto>` されていることを確認します。そうすると、:guilabel:`Inventory` タブ"
-"の :guilabel:`ルート` セクションに表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:87
 msgid ""
@@ -58913,6 +58841,216 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "The *at confirmation* reservation method reserves products **only** when "
+#~ "a sales order (SO) is confirmed, **and** if enough stock of the products "
+#~ "included in the |SO| is already available."
+#~ msgstr ""
+#~ "*確認時* 引当方式は、販売オーダ(SO)が確認され、**かつ** その |SO| に含まれ"
+#~ "るプロダクトの十分な在庫がすでにある場合に *のみ*、プロダクトを引当しま"
+#~ "す。"
+
+#~ msgid ""
+#~ "To set the reservation method to *at confirmation*, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Operations Types`. "
+#~ "Then, select the desired :guilabel:`Operation Type` to configure, or "
+#~ "create a new one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "引当方法を *確認時* に設定するには、 :menuselection:`在庫アプリ --> 設定 "
+#~ "--> オペレーションタイプ` に移動します。次に、設定したい :guilabel:`オペ"
+#~ "レーションタイプ` を選択するか、 :guilabel:`新規` をクリックして新規作成し"
+#~ "ます。"
+
+#~ msgid ""
+#~ "In the :guilabel:`General` tab on the operation type form, locate "
+#~ "the :guilabel:`Reservation Method` field, and select :guilabel:`At "
+#~ "Confirmation`."
+#~ msgstr ""
+#~ "オペレーションタイプフォームの :guilabel:`概要` タブで、 :guilabel:`引当方"
+#~ "法` フィールドを探し、 :guilabel:`確認時` を選択します。"
+
+#~ msgid ""
+#~ "To see the *at confirmation* reservation method in action, create a new |"
+#~ "SO| by navigating to :menuselection:`Sales app --> New`."
+#~ msgstr ""
+#~ "引当方法が *確認時* にどのように機能するかを確認するに"
+#~ "は、、:menuselection:`販売アプリ --> 新規` に移動して新規 |SO| (販売オー"
+#~ "ダ)を作成して下さい。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`📈 (area graph)` icon on the product line to reveal "
+#~ "the product's :guilabel:`Availability` tooltip, which reveals "
+#~ "the :guilabel:`Reserved` number of units for this order."
+#~ msgstr ""
+#~ "プロダクト明細の :guilabel:`📈(エリアグラフ)` アイコンをクリックすると、プ"
+#~ "ロダクトの :guilabel:`利用可能` ツールチップが表示され、このオーダ"
+#~ "の :guilabel:`引当済` 個数が表示されます。"
+
+#~ msgid ""
+#~ "Instead of revealing the reserved number of units for the order, "
+#~ "the :guilabel:`Availability` tooltip reads :guilabel:`Available`, and "
+#~ "reveals the available number of units (e.g., `0 Units`)."
+#~ msgstr ""
+#~ ":guilabel:`利用可能` ツールチップは、引当済オーダの単位数を表示する代わり"
+#~ "に、:guilabel:`利用可能` と表示し、利用可能な単位数を表示します。 (例 `0個"
+#~ "`)。"
+
+#~ msgid ""
+#~ "To see all the factors that affect product reservation, click "
+#~ "the :guilabel:`View Forecast` internal link arrow to view "
+#~ "the :guilabel:`Forecasted Report` dashboard."
+#~ msgstr ""
+#~ "プロダクト引当に影響する全ての要素を見るには、 :guilabel:`予測照会` の内部"
+#~ "リンク矢印をクリックして :guilabel:`予測レポート` ダッシュボードを表示しま"
+#~ "す。"
+
+#~ msgid ""
+#~ "The :guilabel:`Forecasted Report` displays forecast information about the "
+#~ "product(s) included in the sales order; namely, any live receipts of the "
+#~ "product, and any active sales orders, which are listed in "
+#~ "the :guilabel:`Used By` column. See how each order is fulfilled in "
+#~ "the :guilabel:`Replenishment` column."
+#~ msgstr ""
+#~ ":guilabel:`予測レポート` は、販売オーダに含まれるプロダクトの予測情報を表"
+#~ "示します。つまり、そのプロダクトの入荷状況や、 :guilabel:`使用先` 列に表示"
+#~ "される有効な販売オーダを表示します。各オーダは :guilabel:`補充` 列に表示さ"
+#~ "れます。"
+
+#~ msgid ""
+#~ "Additionally, the :guilabel:`Forecasted` quantity is calculated at the "
+#~ "top of the page, by adding the :guilabel:`On Hand` "
+#~ "and :guilabel:`Incoming` quantity, and subtracting "
+#~ "the :guilabel:`Outgoing` quantity, as shown below:"
+#~ msgstr ""
+#~ "さらに、 :guilabel:`手持`と :guilabel:`入荷`の数量を足し、 :guilabel:`出荷"
+#~ "`の数量を引くことで、 :guilabel:`予測`数量が、以下に表示されるようにページ"
+#~ "の一番上で計算されます:"
+
+#~ msgid ""
+#~ "To deliver the products, click the :guilabel:`Delivery` smart button at "
+#~ "the top of the sales order form. To confirm that the reservation worked "
+#~ "properly, ensure that the :guilabel:`Product Availability` field reads "
+#~ "`Available` (in green text), and the numbers in the :guilabel:`Demand` "
+#~ "and :guilabel:`Quantity` columns match (in this case, both should read "
+#~ "`100.00`)."
+#~ msgstr ""
+#~ "プロダクトを配送するには、販売オーダフォームの上部にある :guilabel:`配送` "
+#~ "スマートボタンをクリックします。引当が正しく行われたことを確認するため"
+#~ "に、 :guilabel:`プロダクト利用可能` フィールドが `利用可能` (緑色のテキス"
+#~ "ト) と表示され、 :guilabel:`需要` と :guilabel:`数量` 列の数字が一致してい"
+#~ "ることを確認します (この場合、両方とも `100.00` と表示されるはずです)。"
+
+#~ msgid "Unarchive MTO route"
+#~ msgstr "MTOルートのアーカイブ解除"
+
+#~ msgid ""
+#~ "In order to use the |MTO| route, the :guilabel:`Multi-Step Routes` "
+#~ "feature must be enabled. To do so, navigate to :menuselection:`Inventory "
+#~ "app --> Configuration --> Settings`, and tick the checkbox next "
+#~ "to :guilabel:`Multi-Step Routes`, under the :guilabel:`Warehouse` heading."
+#~ msgstr ""
+#~ "|MTO| ルートを使用するには、:guilabel:`複数ステップルート` 機能を有効にす"
+#~ "る必要があります。これを行うには、:menuselection:`在庫アプリ --> 設定 --> "
+#~ "管理設定`に移動し、:guilabel:`倉庫` の見出しの下にある :guilabel:`複数ス"
+#~ "テップルート`の横のチェックボックスにチェックを入れます。"
+
+#~ msgid ""
+#~ "By default, Odoo sets the |MTO| route as *archived*. This is because |"
+#~ "MTO| is a somewhat niche workflow that is only used by certain companies. "
+#~ "However, it is easy to unarchive the route in just a few simple steps."
+#~ msgstr ""
+#~ "デフォルトでは、Odooは |MTO| ルートを *アーカイブ済* に設定しています。こ"
+#~ "れは |MTO| が特定の企業でのみ使用される、ややニッチなワークフローであるた"
+#~ "めです。必要な場合は、簡単なステップでルートのアーカイブを解除することがで"
+#~ "きます。"
+
+#~ msgid ""
+#~ "To do so, begin by navigating to :menuselection:`Inventory app --> "
+#~ "Configuration --> Routes`. On the :guilabel:`Routes` page, click "
+#~ "the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right side "
+#~ "of the search bar, and click the :guilabel:`Archived` filter to enable it."
+#~ msgstr ""
+#~ "これを行うには、まず最初に :menuselection:`在庫アプリ --> 設定 --> ルート"
+#~ "` に移動します。 :guilabel:`ルート` ページで、検索バーの右側にあ"
+#~ "る :icon:`fa-caret-down` :guilabel:`(下向き矢印)` アイコンをクリック"
+#~ "し、:guilabel:`アーカイブ済` フィルタをクリックして有効にします。"
+
+#~ msgid "The archived filter on the Routes page."
+#~ msgstr "ルートページのアーカイブフィルタ。"
+
+#~ msgid ""
+#~ "After enabling the :guilabel:`Archived` filter, the :guilabel:`Routes` "
+#~ "page shows all routes which are currently archived. Tick the checkbox "
+#~ "next to :guilabel:`Replenish on Order (MTO)`, then click the :icon:`fa-"
+#~ "cog` :guilabel:`Actions` button to reveal a drop-down menu. From the drop-"
+#~ "down menu, select :guilabel:`Unarchive`."
+#~ msgstr ""
+#~ ":guilabel:`アーカイブ済` フィルタを有効にすると、:guilabel:`ルート` ページ"
+#~ "には現在アーカイブされている全てのルートが表示されます。 :guilabel:`受注補"
+#~ "充 (MTO)` の隣にあるチェックボックスにチェックを入れ、:icon:`fa-"
+#~ "cog` :guilabel:`アクション` ボタンをクリックしてドロップダウンメニューを表"
+#~ "示します。ドロップダウンメニューから :guilabel:`アーカイブ解除` を選択しま"
+#~ "す。"
+
+#~ msgid "The unarchive action on the Routes page."
+#~ msgstr "ルートページのアーカイブ解除アクション。"
+
+#~ msgid ""
+#~ "Finally, remove the :guilabel:`Archived` filter from the search bar. "
+#~ "The :guilabel:`Routes` page now shows all unarchived routes, "
+#~ "including :guilabel:`Replenish on Order (MTO)`, which is selectable on "
+#~ "the *Inventory* tab of each product page."
+#~ msgstr ""
+#~ "最後に、検索バーから :guilabel:`アーカイブ済` フィルタを削除しま"
+#~ "す。 :guilabel:`ルート` ページには、アーカイブされていない全てのルートが表"
+#~ "示され、その中には、各プロダクトページの *在庫* タブで選択可能"
+#~ "な :guilabel:`受注補充 (MTO)` も含まれます。"
+
+#~ msgid "Configure product for MTO"
+#~ msgstr "受注生産(MTO)用にプロダクトを設定する"
+
+#~ msgid ""
+#~ "With the |MTO| route unarchived, products can now be properly configured "
+#~ "to use replenish on order. To do so, begin by going "
+#~ "to :menuselection:`Inventory app --> Products --> Products`, then select "
+#~ "an existing product, or click :guilabel:`New` to configure a new one."
+#~ msgstr ""
+#~ "|MTO| ルートがアーカイブされていない場合、プロダクトはオーダ補充を使用する"
+#~ "ように適切に設定することができます。 これを行うには、まず :menuselection:`"
+#~ "在庫アプリ --> プロダクト --> プロダクト` に移動し、既存のプロダクトを選択"
+#~ "するか、:guilabel:`新規作成` をクリックして新規プロダクトを設定します。"
+
+#~ msgid ""
+#~ "On the product page, select the :guilabel:`Inventory` tab and enable "
+#~ "the :guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
+#~ "section, along with the :guilabel:`Buy` or :guilabel:`Manufacture` route."
+#~ msgstr ""
+#~ "プロダクトページで、:guilabel:`在庫` タブを選択し、:guilabel:`ルート` セク"
+#~ "ションで :guilabel:`購買` または:guilabel:`製造` ルートととも"
+#~ "に :guilabel:`受注補充(MTO)` ルートを有効にします。"
+
+#~ msgid ""
+#~ "The :guilabel:`Replenish on Order (MTO)` route **does not** work unless "
+#~ "another route is selected as well. This is because Odoo needs to know how "
+#~ "to replenish the product when an order is placed for it (buy or "
+#~ "manufacture it)."
+#~ msgstr ""
+#~ "別のルートも選択しない限り、:guilabel:`受注補充 (MTO)` ルートは動作 **しま"
+#~ "せん**。これは、Odooがプロダクトのオーダ(購買または製造)が発行された際に、"
+#~ "プロダクトをどのように補充するのかを知る必要があるためです。"
+
+#~ msgid ""
+#~ "To replenish products using the make-to-order method, go to the product "
+#~ "form and ensure the :ref:`MTO route is unarchived <inventory/"
+#~ "warehouses_storage/unarchive-mto>`, so it appears in "
+#~ "the :guilabel:`Routes` section of the :guilabel:`Inventory` tab."
+#~ msgstr ""
+#~ "受注生産方式でプロダクトを補充するには、プロダクトフォームに移動し、:ref:`"
+#~ "受注生産(MTO)ルートがアーカイブ解除 <inventory/warehouses_storage/"
+#~ "unarchive-mto>` されていることを確認します。そうする"
+#~ "と、:guilabel:`Inventory` タブの :guilabel:`ルート` セクションに表示されま"
+#~ "す。"
 
 #~ msgid ""
 #~ "In Odoo, goods and services are both set up as *products*. When setting "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-06 18:31+0000\n"
+"POT-Creation-Date: 2026-03-13 18:30+0000\n"
 "PO-Revision-Date: 2026-02-25 07:20+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -176,6 +176,7 @@ msgstr "지정 수량이 표시되어 있는 바코드 현황판."
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:41
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:229
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -17276,7 +17277,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:84
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:29
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:79
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:37
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
@@ -18593,12 +18594,8 @@ msgstr "확정 시 예약"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:9
 msgid ""
 "The *at confirmation* reservation method reserves products **only** when a "
-"sales order (SO) is confirmed, **and** if enough stock of the products "
-"included in the |SO| is already available."
+"sales order (SO) is confirmed, **and** enough product stock is available."
 msgstr ""
-"예약 방법 중 *확정 시* 방식은 판매주문서(SO)가 **확정된 경우에만** 품목을 예"
-"약할 수 있으며, **동시에** |SO| 에 있는 품목의 재고가 충분한 경우에 한해서만 "
-"예약을 할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:14
@@ -18608,76 +18605,45 @@ msgstr ":doc:`예약 방법 정보 <../reservation_methods>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:18
 msgid ""
-"To set the reservation method to *at confirmation*, navigate "
-"to :menuselection:`Inventory app --> Configuration --> Operations Types`. "
+"To set the reservation method to *at confirmation*, navigate to "
+"the :menuselection:`Inventory app --> Configuration --> Operations Types`. "
 "Then, select the desired :guilabel:`Operation Type` to configure, or create "
 "a new one by clicking :guilabel:`New`."
 msgstr ""
-"*확인 시* 예약이 완료되도록 예약 방법을 설정하려면 :menuselection:`재고 관리 "
-"앱 --> 환경설정 --> 작업 유형` 으로 이동합니다. 그런 다음 원하는 :guilabel:`"
-"작업 유형` 을 선택하여 설정하거나 :guilabel:`신규` 를 클릭하여 새로 생성합니"
-"다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:22
 msgid ""
-"In the :guilabel:`General` tab on the operation type form, locate "
-"the :guilabel:`Reservation Method` field, and select :guilabel:`At "
+"In the *General* tab on the operation type form, locate "
+"the :guilabel:`Reservation Method` field and select :guilabel:`At "
 "Confirmation`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:31
 msgid ""
 "To see the *at confirmation* reservation method in action, create a new |SO| "
-"by navigating to :menuselection:`Sales app --> New`."
+"by navigating to the :menuselection:`Sales app`. On the *Quotations* page, "
+"click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:35
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:34
 msgid ""
-"Add a customer in the :guilabel:`Customer` field. Then, in "
-"the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select "
-"a product to add to the quotation from the drop-down menu. Finally, in "
+"On the quotation, add a customer in the :guilabel:`Customer` field. Then, in "
+"the *Order Lines* tab, click :guilabel:`Add a product` and select a product "
+"to add to the quotation from the drop-down menu. Finally, in "
 "the :guilabel:`Quantity` column, adjust the desired quantity of the product "
 "to sell."
 msgstr ""
-":guilabel:`고객` 필드에 고객을 추가합니다. 그런 다음 :guilabel:`주문 내역` 탭"
-"에서 :guilabel:`품목 추가` 를 클릭하고 견적서에 추가할 품목을 드롭다운 메뉴에"
-"서 선택합니다. 마지막으로 판매 품목의 수량을 :guilabel:`수량` 열에서 조정합니"
-"다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:39
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:46
-msgid "Once ready, click :guilabel:`Confirm` to confirm the sales order."
-msgstr "준비가 완료되어 :guilabel:`확인`을 클릭하면 판매주문서가 확정됩니다."
+msgid "Once ready, click :guilabel:`Confirm` to create the sales order."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:41
 msgid ""
-"Click the :guilabel:`📈 (area graph)` icon on the product line to reveal the "
-"product's :guilabel:`Availability` tooltip, which reveals "
-"the :guilabel:`Reserved` number of units for this order."
+"Click the :icon:`fa-area-chart` :guilabel:`(area chart)` icon on the product "
+"line to reveal the product's :guilabel:`Availability` tooltip, which shows "
+"the :guilabel:`Reserved` quantity for this order."
 msgstr ""
-"품목 내역에서 :guilabel:`📈(영역 그래프)` 아이콘을 클릭하면 품목"
-"의 :guilabel:`사용 가능 여부` 도구 설명이 나타나며, 이 주문에서 :guilabel:`예"
-"약된` 단위 수가 표시됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:46
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:106
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:57
-msgid ""
-"If there is **not** sufficient quantity of stock for the product included in "
-"the |SO|, the :guilabel:`📈 (area graph)` icon is red, instead of green."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:49
-msgid ""
-"Instead of revealing the reserved number of units for the order, "
-"the :guilabel:`Availability` tooltip reads :guilabel:`Available`, and "
-"reveals the available number of units (e.g., `0 Units`)."
-msgstr ""
-"주문에 대해 예약한 수량이 표시되는 대신, :guilabel:`사용 가능 여부` 도구 설명"
-"에 :guilabel:`사용 가능` 이라는 표시가 나타나고 사용할 수 있는 수량(예: `0 개"
-"`)이 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:None
@@ -18687,65 +18653,67 @@ msgstr ""
 "확정이 완료된 판매주문서에 제품에 대한 사용 가능 여부 도구 설명이 선택되어 있"
 "는 모습입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:49
+msgid ""
+"If there is **not** sufficient quantity of stock for the product included in "
+"the |SO|, the :icon:`fa-area-chart` :guilabel:`(area chart)` icon is red "
+"instead of green."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:52
+msgid ""
+"Instead of showing the reserved number of units for the order, "
+"the :guilabel:`Availability` tooltip reads :guilabel:`Reserved` and shows "
+"the reserved number of units (e.g., `0 Units`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:55
 msgid "Forecasted Report"
 msgstr "예측 보고서"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:57
 msgid ""
-"To see all the factors that affect product reservation, click "
-"the :guilabel:`View Forecast` internal link arrow to view "
+"To see all the factors that affect product reservation, click the :icon:`oi-"
+"arrow-right` :guilabel:`View Forecast` internal link arrow to view "
 "the :guilabel:`Forecasted Report` dashboard."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:61
 msgid ""
-"The :guilabel:`Forecasted Report` displays forecast information about the "
-"product(s) included in the sales order; namely, any live receipts of the "
-"product, and any active sales orders, which are listed in "
-"the :guilabel:`Used By` column. See how each order is fulfilled in "
-"the :guilabel:`Replenishment` column."
+"The :guilabel:`Forecasted Report` displays forecast information for the "
+"products included in the sales order, namely any live receipts of the "
+"product and any active sales orders, which are listed in the :guilabel:`Used "
+"By` column. See how each order is fulfilled in the :guilabel:`Replenishment` "
+"column."
 msgstr ""
-":guilabel:`예측 보고서` 는 판매주문서에 포함된 품목에 대한 예측 정보를 표시합"
-"니다. 즉, 실시간 품목 입고 상황 및 활성화 상태인 판매주문서가 :guilabel:`사용"
-"자` 열에 표시됩니다. 각 주문서가 어떻게 처리되는지 :guilabel:`보충` 열에서 확"
-"인할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:66
 msgid ""
 "Additionally, the :guilabel:`Forecasted` quantity is calculated at the top "
-"of the page, by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
-"quantity, and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
+"of the page by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
+"quantity and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
 msgstr ""
-"또한 :guilabel:`예상` 수량은 페이지 상단에서 계산되며, 아래와 같"
-"이 :guilabel:`보유` 및 :guilabel:`입고` 수량을 더하고 :guilabel:`출고` 수량"
-"을 뺍니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
 msgid "Forecasted quantity equation from the Forecasted Report page."
 msgstr "예측 보고서 페이지에 있는 예측 수량 수식입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:73
 msgid ""
 "If one order should be prioritized over another order, click "
 "the :guilabel:`Unreserve` button on the corresponding order line in "
 "the :guilabel:`Replenishment` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:76
 msgid ""
-"To deliver the products, click the :guilabel:`Delivery` smart button at the "
-"top of the sales order form. To confirm that the reservation worked "
-"properly, ensure that the :guilabel:`Product Availability` field reads "
-"`Available` (in green text), and the numbers in the :guilabel:`Demand` "
-"and :guilabel:`Quantity` columns match (in this case, both should read "
-"`100.00`)."
+"To deliver the products, click the :icon:`fa-truck` :guilabel:`Delivery` "
+"smart button at the top of the sales order form. To confirm that the "
+"reservation worked properly, ensure that the :guilabel:`Product "
+"Availability` field reads `Available` (in green text), and that the numbers "
+"in the :guilabel:`Demand` and :guilabel:`Quantity` columns match (in this "
+"case, both should read `10.00`)."
 msgstr ""
-"품목을 배송하려면 판매주문서 상단의 :guilabel:`배송` 스마트 버튼을 클릭합니"
-"다. 예약이 제대로 되었는지 확인하려면 :guilabel:`품목 사용 가능 여부` 에 `사"
-"용 가능` (초록색 텍스트)이 표시되고 :guilabel:`요청` 및 :guilabel:`수량` 열"
-"의 숫자가 일치하는지 확인합니다 (이 경우 둘 다 '100.00' 으로 표시되어야 합니"
-"다.)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
 msgid ""
@@ -18754,18 +18722,27 @@ msgid ""
 msgstr ""
 "품목에 대한 배송주문서에 확인 예약이 된 판매주문서가 나타나 있는 모습입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:149
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:108
 msgid "Once ready, click :guilabel:`Validate`."
 msgstr "준비가 완료되면 :guilabel:`승인` 을 클릭합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:88
+msgid ""
+"Delivery orders can be starred, or favorited. Unlike :guilabel:`Before "
+"scheduled date` reservations, adding a delivery order to favorites via "
+"the :guilabel:`At Confirmation` reservation does not prioritize it. The "
+"delivery order is only prioritized in the **Inventory** app's display of "
+"delivery orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:94
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:152
 msgid ":doc:`Manual reservation <manually>`"
 msgstr ":doc:`수동 예약 <manually>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:139
 msgid ":doc:`Before scheduled date reservation <before_scheduled_date>`"
 msgstr ":doc:`예약된 날짜 전 예약 <before_scheduled_date>`"
@@ -18917,6 +18894,11 @@ msgstr ""
 msgid "For this sample workflow, set the :guilabel:`Quantity` to `10`."
 msgstr "이 예제 워크플로우의 경우, `10`일로 변경합니다."
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:46
+msgid "Once ready, click :guilabel:`Confirm` to confirm the sales order."
+msgstr "준비가 완료되어 :guilabel:`확인`을 클릭하면 판매주문서가 확정됩니다."
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:94
 msgid ""
 "Click the green :guilabel:`📈 (area graph)` icon on the product line to "
@@ -18944,6 +18926,13 @@ msgstr ""
 msgid ""
 "Since reservation is not until two days before the scheduled delivery, it "
 "will not reserve the products until then."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:57
+msgid ""
+"If there is **not** sufficient quantity of stock for the product included in "
+"the |SO|, the :guilabel:`📈 (area graph)` icon is red, instead of green."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:109
@@ -19086,6 +19075,19 @@ msgid ""
 "To see the *Manually* reservation method in action, create a new |SO| by "
 "navigating to :menuselection:`Sales app --> New`."
 msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:42
+msgid ""
+"Add a customer in the :guilabel:`Customer` field. Then, in "
+"the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select "
+"a product to add to the quotation from the drop-down menu. Finally, in "
+"the :guilabel:`Quantity` column, adjust the desired quantity of the product "
+"to sell."
+msgstr ""
+":guilabel:`고객` 필드에 고객을 추가합니다. 그런 다음 :guilabel:`주문 내역` 탭"
+"에서 :guilabel:`품목 추가` 를 클릭하고 견적서에 추가할 품목을 드롭다운 메뉴에"
+"서 선택합니다. 마지막으로 판매 품목의 수량을 :guilabel:`수량` 열에서 조정합니"
+"다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:48
 msgid ""
@@ -29926,13 +29928,13 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:17
 msgid ""
 "For :doc:`purchased products <../../../purchase/manage_deals/rfq>`, Odoo "
-"creates an |RFQ|"
+"creates an |RFQ|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:18
 msgid ""
 "For :doc:`manufactured products <../../../manufacturing/basic_setup/"
-"configure_manufacturing_product>`, it creates an |MO|"
+"configure_manufacturing_product>`, it creates an |MO|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:21
@@ -29952,13 +29954,12 @@ msgstr ""
 msgid ""
 "The |RFQ| or |MO| generated by |MTO| is designed to fulfill the originating |"
 "SO|. These documents should normally be confirmed or adjusted rather than "
-"cancelled. If the demand changes, update the document instead of cancelling "
-"it."
+"canceled. If the demand changes, update the document instead of canceling it."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:32
 msgid ""
-"If an |RFQ| or |MO| is cancelled, Odoo does not automatically generate a "
+"If an |RFQ| or |MO| is canceled, Odoo does not automatically generate a "
 "replacement. A new replenishment document must be created manually, but it "
 "**cannot** be linked back to the original |SO| through the smart button."
 msgstr ""
@@ -29967,118 +29968,55 @@ msgstr ""
 msgid "Finally, click :guilabel:`Save` to save the change."
 msgstr "마지막으로 :guilabel:`저장` 을 클릭하면 변경 사항이 저장됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:41
-msgid "Unarchive MTO route"
-msgstr "MTO 경로 보관 취소"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:43
-msgid ""
-"In order to use the |MTO| route, the :guilabel:`Multi-Step Routes` feature "
-"must be enabled. To do so, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and tick the checkbox next to :guilabel:`Multi-"
-"Step Routes`, under the :guilabel:`Warehouse` heading."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:46
+msgid "Enable the MTO route"
 msgstr ""
-"|MTO| 경로를 활용하려면 반드시 :guilabel:`다단계 경로` 기능을 활성화해야 합니"
-"다. 그러려면 :menuselection:`재고 관리 앱 --> 환경설정 --> 설정` 으로 이동하"
-"여 :guilabel:`창고` 제목 아래에 있는 :guilabel:`다단계 경로` 옆 확인란에 표시"
-"합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:48
 msgid ""
-"By default, Odoo sets the |MTO| route as *archived*. This is because |MTO| "
-"is a somewhat niche workflow that is only used by certain companies. "
-"However, it is easy to unarchive the route in just a few simple steps."
+"In order to use the |MTO| route, the :guilabel:`Replenish on order (MTO)` "
+"setting must be enabled. To do so, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Settings`. Go to the :guilabel:`Warehouse` section at "
+"the end of the page, and select the checkbox next to :guilabel:`Replenish on "
+"order (MTO)`. Click :guilabel:`Save` to confirm the setting."
 msgstr ""
-"기본적으로 Odoo는 |MTO| 경로를 *보관됨*으로 설정합니다. 이는 |MTO|가 특정 회"
-"사에서만 사용하는 다소 전문화 된 워크플로우로 간주되기 때문입니다. 그러나 몇 "
-"가지 간단한 단계만 거치면 경로의 보관을 해제할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:51
-msgid ""
-"To do so, begin by navigating to :menuselection:`Inventory app --> "
-"Configuration --> Routes`. On the :guilabel:`Routes` page, click "
-"the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right side of "
-"the search bar, and click the :guilabel:`Archived` filter to enable it."
-msgstr ""
-"활성화하려면 먼저 :menuselection:`재고 관리 앱 --> 환경 설정 --> 경로` 로 이"
-"동합니다. :guilabel:`경로` 페이지에서 검색 창 오른쪽에 있는 :icon:`fa-caret-"
-"down` :guilabel:`(아래쪽 화살표)` 아이콘을 클릭하고 :guilabel:`보관됨` 필터"
-"를 클릭하여 활성화합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
-msgid "The archived filter on the Routes page."
-msgstr "경로 페이지의 보관된 필터입니다."
+msgid "Select the Replenish on order (MTO) checkbox."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:59
-msgid ""
-"After enabling the :guilabel:`Archived` filter, the :guilabel:`Routes` page "
-"shows all routes which are currently archived. Tick the checkbox next "
-"to :guilabel:`Replenish on Order (MTO)`, then click the :icon:`fa-"
-"cog` :guilabel:`Actions` button to reveal a drop-down menu. From the drop-"
-"down menu, select :guilabel:`Unarchive`."
+msgid "Configure a product for MTO"
 msgstr ""
-":guilabel:`보관됨` 필터를 활성화하면 :guilabel:`경로` 페이지에 현재 보관된 모"
-"든 경로가 표시됩니다. :guilabel:`주문 시 보충 (MTO)` 항목 옆 확인란에 표시한 "
-"다음 :icon:`fa-cog` :guilabel:`활동` 버튼을 클릭하여 드롭다운 메뉴를 표시합니"
-"다. 드롭다운 메뉴에서 :guilabel:`보관 취소` 를 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
-msgid "The unarchive action on the Routes page."
-msgstr "경로 페이지의 보관 취소 작업입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:61
 msgid ""
-"Finally, remove the :guilabel:`Archived` filter from the search bar. "
-"The :guilabel:`Routes` page now shows all unarchived routes, "
-"including :guilabel:`Replenish on Order (MTO)`, which is selectable on the "
-"*Inventory* tab of each product page."
+"With the |MTO| route enabled, products can now be configured to use "
+"replenish on order. To do so, begin by going to :menuselection:`Inventory "
+"app --> Products --> Products`, then select an existing product, or "
+"click :guilabel:`New` to configure a new product."
 msgstr ""
-"마지막으로 검색창에서 :guilabel:`보관됨` 필터를 제거합니다. 이제 :guilabel:`"
-"경로` 페이지에는 보관되지 않은 경로가 모두 표시됩니다. :guilabel:`주문 시 보"
-"충 (MTO)` 과 같은 항목도 여기에 포함되며, 이는 각 품목 페이지의 *재고* 탭에"
-"서 선택할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:73
-msgid "Configure product for MTO"
-msgstr "MTO에 대한 품목 환경설정"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:65
 msgid ""
-"With the |MTO| route unarchived, products can now be properly configured to "
-"use replenish on order. To do so, begin by going "
-"to :menuselection:`Inventory app --> Products --> Products`, then select an "
-"existing product, or click :guilabel:`New` to configure a new one."
+"In the product form, go to the :guilabel:`Inventory` tab. Under the "
+"*Operations* section, select the checkbox next to the :guilabel:`Replenish "
+"on Order (MTO)` option in the :guilabel:`Routes` field."
 msgstr ""
-"|MTO| 경로가 보관 취소되었으므로, 이제 품목을 적절히 설정하여 주문 시 보충 전"
-"략을 활용할 수 있습니다. 진행하려면 먼저 :menuselection:`재고 관리 앱 --> 품"
-"목 --> 품목` 으로 이동한 후 기존 품목을 선택하거나 :guilabel:`새로 만들기` "
-"를 클릭하여 새로 품목을 설정합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:69
 msgid ""
-"On the product page, select the :guilabel:`Inventory` tab and enable "
-"the :guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
-"section, along with the :guilabel:`Buy` or :guilabel:`Manufacture` route."
+"The :guilabel:`Replenish on Order (MTO)` route does not work if "
+"the :guilabel:`Purchase` route is enabled. To ensure the product is "
+"configured for manufacturing, make sure the checkbox next to "
+"the :guilabel:`Purchase` route is not selected."
 msgstr ""
-"품목 페이지에서 :guilabel:`재고` 탭을 선택하고 :guilabel:`경로` 섹션에"
-"서 :guilabel:`주문 시 보충(MTO)` 경로와 :guilabel:`매입` 또는 :guilabel:`제조"
-"` 경로를 활성화합니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:84
-msgid ""
-"The :guilabel:`Replenish on Order (MTO)` route **does not** work unless "
-"another route is selected as well. This is because Odoo needs to know how to "
-"replenish the product when an order is placed for it (buy or manufacture it)."
-msgstr ""
-":guilabel:`주문 시 보충 (MTO)` 경로는 추가 경로를 선택하지 않을 경우 작동하"
-"지 **않습니다**. 이는 Odoo에서 품목 보충 방법에 대해 정보가 주문을 받는 시점"
-"에 있어야 하기 때문입니다 (매입 또는 제조)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
 msgid "Select the MTO route and a second route on the Inventory tab."
 msgstr "재고 탭에서 MTO 경로와 두 번째 경로를 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:77
 msgid ""
 "If the product is purchased from a vendor to fulfill |SOs|, enable "
 "the :guilabel:`Can be Purchased` checkbox under the product name. Doing so "
@@ -30088,7 +30026,7 @@ msgstr ""
 "는 :guilabel:`구매 가능` 확인란을 활성화합니다. 이렇게 하면 아래쪽"
 "에 :guilabel:`구매` 탭이 다른 탭과 함께 나타납니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:81
 msgid ""
 "Click the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and "
 "the :guilabel:`Price` they sell the product for."
@@ -30096,13 +30034,13 @@ msgstr ""
 ":guilabel:`매입` 탭을 클릭한 후 :guilabel:`공급업체` 및 품목에 대한 판"
 "매 :guilabel:`가격` 을 지정합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:85
 msgid ""
 "Specifying a vendor is essential for this workflow, because Odoo cannot "
 "generate an |RFQ| without knowing who the product is purchased from."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:88
 msgid ""
 "If the product is manufactured, make sure it has a bill of materials (BOM) "
 "configured for it. To do so, click the :guilabel:`Bill of Materials` smart "
@@ -30115,7 +30053,7 @@ msgstr ""
 "한 다음, :guilabel:`자재명세서` 페이지에서 :guilabel:`새로 만들기` 를 클릭하"
 "여 품목에 대한 새 |BOM| 을 설정합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:93
 msgid ""
 "For a full overview of |BOM| creation, see the documentation on :doc:`bills "
 "of materials <../../../manufacturing/basic_setup/bill_configuration>`."
@@ -30123,11 +30061,11 @@ msgstr ""
 "|BOM| 에 대한 전체보기를 풀 버전으로 확인하려면, :doc:`자재명세서 <../../../"
 "manufacturing/basic_setup/bill_configuration>` 에 대한 문서를 참조하세요."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:99
 msgid "Replenish using MTO"
 msgstr "MTO를 사용하여 보충하기"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:101
 msgid ""
 "After configuring a product to use the |MTO| route, a replenishment order is "
 "created for it every time an |SO| or |MO| including the product is "
@@ -30138,13 +30076,13 @@ msgstr ""
 "할 때마다 해당 품목에 대한 보충 주문이 생성됩니다. 주문 생성 유형은 |MTO| 외"
 "에도 두 번째 경로 선택에 따라 달라집니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:105
 msgid ""
 "For example, if *Buy* was the second route selected, then a |PO| is created "
 "upon confirmation of an |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:109
 msgid ""
 "When the |MTO| route is enabled for a product, a replenishment order is "
 "always created upon confirmation of an |SO| or |MO|. This is the case, even "
@@ -30155,7 +30093,7 @@ msgstr ""
 "이 생성됩니다. 이 경우에는 제품을 추가로 구매하거나 제조하지 않더라도, |SO| "
 "처리하기에 충분히 재고가 있는지 여부에 관계없이 주문을 생성하게 됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:113
 msgid ""
 "While the |MTO| route can be used in unison with the *Buy* or *Manufacture* "
 "routes, the *Buy* route is used as the example for this workflow. Begin by "
@@ -30166,7 +30104,7 @@ msgstr ""
 "서는 *구매* 경로를 예시로 사용합니다. 먼저 :menuselection:`판매` 앱으로 이동"
 "한 다음 :guilabel:`새로 만들기` 를 클릭하면 견적서 양식이 새로 열립니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:117
 msgid ""
 "On the blank quotation form, add a :guilabel:`Customer`. Then, "
 "click :guilabel:`Add a product` under the :guilabel:`Order Lines` tab, and "
@@ -30178,13 +30116,13 @@ msgstr ""
 "록 설정한 품목을 입력합니다. :guilabel:`확인` 을 클릭하면 견적서가 |SO| 로 전"
 "환됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:121
 msgid ""
 "A :guilabel:`Purchase` smart button now appears at the top of the page. "
 "Clicking it opens the |RFQ| associated with the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:124
 msgid ""
 "After receiving approval from the vendor that they can meet the demand by "
 "the :guilabel:`Expected Arrival` date, click :guilabel:`Confirm Order` to "
@@ -30194,14 +30132,14 @@ msgid ""
 "click :guilabel:`Validate` to enter the products into inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:130
 msgid ""
 "Return to the |SO| by clicking the :guilabel:`SO` breadcrumb, or by "
 "navigating to :menuselection:`Sales app --> Orders --> Orders`, and "
 "selecting the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:133
 msgid ""
 "Finally, click the :guilabel:`Delivery` smart button at the top of the order "
 "to open the delivery order. Once the products have been shipped to the "
@@ -30211,35 +30149,34 @@ msgstr ""
 "문서가 열립니다. 품목이 고객에게 출고되면 :guilabel:`승인` 을 클릭하여 배송"
 "을 확정합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:151
-msgid "Cancelling an SO with an MTO product"
-msgstr "MTO 제품이 포함된 판매주문서 취소하기"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:153
-msgid ""
-"When a |SO| is cancelled, and it had created an |RFQ| or |MO|, the related "
-"delivery order is cancelled automatically. However, the |RFQ| or |MO| "
-"themselves are **not** cancelled. Instead, a warning appears in their "
-"chatter noting the |SO| cancellation. These documents remain active, so the "
-"user can either cancel them manually or repurpose the replenishment for "
-"another order."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:140
+msgid "Cancel an MTO sales order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:142
+msgid ""
+"When a |SO| that had created an |RFQ| or |MO| is canceled, the related "
+"delivery order is canceled automatically. However, the |RFQ| or |MO| "
+"themselves are **not** canceled. Instead, a warning appears in their chatter "
+"noting the |SO| cancellation. These documents remain active, so the user can "
+"either cancel them manually or repurpose the replenishment for another order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:148
 msgid ""
 "For information on workflows that include the |MTO| route, see the following "
 "documentation:"
 msgstr "|MTO| 경로 외 워크플로우에 대한 자세한 내용은 다음 문서를 참조하세요."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:150
 msgid ":doc:`resupply_warehouses`"
 msgstr ":doc:`resupply_warehouses`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:151
 msgid ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 msgstr ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:152
 msgid ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 msgstr ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 
@@ -31585,14 +31522,10 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:83
 msgid ""
 "To replenish products using the make-to-order method, go to the product form "
-"and ensure the :ref:`MTO route is unarchived <inventory/warehouses_storage/"
-"unarchive-mto>`, so it appears in the :guilabel:`Routes` section of "
-"the :guilabel:`Inventory` tab."
+"and ensure the :ref:`MTO route is unarchived <inventory/mto/enable-mto>`, so "
+"it appears in the :guilabel:`Routes` section of the :guilabel:`Inventory` "
+"tab."
 msgstr ""
-"품목 보충을 주문 제작 방식으로 하려면, 품목 양식으로 이동하여 :ref:`MTO 경로"
-"가 보관되지 않음 <inventory/warehouses_storage/unarchive-mto>` 으로 되어 있는"
-"지 확인합니다. 그러면 :guilabel:`재고 관리` 탭의 :guilabel:`경로` 섹션에 나타"
-"나는 것을 볼 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:87
 msgid ""
@@ -55869,6 +55802,190 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "The *at confirmation* reservation method reserves products **only** when "
+#~ "a sales order (SO) is confirmed, **and** if enough stock of the products "
+#~ "included in the |SO| is already available."
+#~ msgstr ""
+#~ "예약 방법 중 *확정 시* 방식은 판매주문서(SO)가 **확정된 경우에만** 품목을 "
+#~ "예약할 수 있으며, **동시에** |SO| 에 있는 품목의 재고가 충분한 경우에 한해"
+#~ "서만 예약을 할 수 있습니다."
+
+#~ msgid ""
+#~ "To set the reservation method to *at confirmation*, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Operations Types`. "
+#~ "Then, select the desired :guilabel:`Operation Type` to configure, or "
+#~ "create a new one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "*확인 시* 예약이 완료되도록 예약 방법을 설정하려면 :menuselection:`재고 관"
+#~ "리 앱 --> 환경설정 --> 작업 유형` 으로 이동합니다. 그런 다음 원하"
+#~ "는 :guilabel:`작업 유형` 을 선택하여 설정하거나 :guilabel:`신규` 를 클릭하"
+#~ "여 새로 생성합니다."
+
+#~ msgid ""
+#~ "Click the :guilabel:`📈 (area graph)` icon on the product line to reveal "
+#~ "the product's :guilabel:`Availability` tooltip, which reveals "
+#~ "the :guilabel:`Reserved` number of units for this order."
+#~ msgstr ""
+#~ "품목 내역에서 :guilabel:`📈(영역 그래프)` 아이콘을 클릭하면 품목"
+#~ "의 :guilabel:`사용 가능 여부` 도구 설명이 나타나며, 이 주문에"
+#~ "서 :guilabel:`예약된` 단위 수가 표시됩니다."
+
+#~ msgid ""
+#~ "Instead of revealing the reserved number of units for the order, "
+#~ "the :guilabel:`Availability` tooltip reads :guilabel:`Available`, and "
+#~ "reveals the available number of units (e.g., `0 Units`)."
+#~ msgstr ""
+#~ "주문에 대해 예약한 수량이 표시되는 대신, :guilabel:`사용 가능 여부` 도구 "
+#~ "설명에 :guilabel:`사용 가능` 이라는 표시가 나타나고 사용할 수 있는 수량"
+#~ "(예: `0 개`)이 표시됩니다."
+
+#~ msgid ""
+#~ "The :guilabel:`Forecasted Report` displays forecast information about the "
+#~ "product(s) included in the sales order; namely, any live receipts of the "
+#~ "product, and any active sales orders, which are listed in "
+#~ "the :guilabel:`Used By` column. See how each order is fulfilled in "
+#~ "the :guilabel:`Replenishment` column."
+#~ msgstr ""
+#~ ":guilabel:`예측 보고서` 는 판매주문서에 포함된 품목에 대한 예측 정보를 표"
+#~ "시합니다. 즉, 실시간 품목 입고 상황 및 활성화 상태인 판매주문서"
+#~ "가 :guilabel:`사용자` 열에 표시됩니다. 각 주문서가 어떻게 처리되는"
+#~ "지 :guilabel:`보충` 열에서 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "Additionally, the :guilabel:`Forecasted` quantity is calculated at the "
+#~ "top of the page, by adding the :guilabel:`On Hand` "
+#~ "and :guilabel:`Incoming` quantity, and subtracting "
+#~ "the :guilabel:`Outgoing` quantity, as shown below:"
+#~ msgstr ""
+#~ "또한 :guilabel:`예상` 수량은 페이지 상단에서 계산되며, 아래와 같"
+#~ "이 :guilabel:`보유` 및 :guilabel:`입고` 수량을 더하고 :guilabel:`출고` 수"
+#~ "량을 뺍니다."
+
+#~ msgid ""
+#~ "To deliver the products, click the :guilabel:`Delivery` smart button at "
+#~ "the top of the sales order form. To confirm that the reservation worked "
+#~ "properly, ensure that the :guilabel:`Product Availability` field reads "
+#~ "`Available` (in green text), and the numbers in the :guilabel:`Demand` "
+#~ "and :guilabel:`Quantity` columns match (in this case, both should read "
+#~ "`100.00`)."
+#~ msgstr ""
+#~ "품목을 배송하려면 판매주문서 상단의 :guilabel:`배송` 스마트 버튼을 클릭합"
+#~ "니다. 예약이 제대로 되었는지 확인하려면 :guilabel:`품목 사용 가능 여부` "
+#~ "에 `사용 가능` (초록색 텍스트)이 표시되고 :guilabel:`요청` 및 :guilabel:`"
+#~ "수량` 열의 숫자가 일치하는지 확인합니다 (이 경우 둘 다 '100.00' 으로 표시"
+#~ "되어야 합니다.)"
+
+#~ msgid "Unarchive MTO route"
+#~ msgstr "MTO 경로 보관 취소"
+
+#~ msgid ""
+#~ "In order to use the |MTO| route, the :guilabel:`Multi-Step Routes` "
+#~ "feature must be enabled. To do so, navigate to :menuselection:`Inventory "
+#~ "app --> Configuration --> Settings`, and tick the checkbox next "
+#~ "to :guilabel:`Multi-Step Routes`, under the :guilabel:`Warehouse` heading."
+#~ msgstr ""
+#~ "|MTO| 경로를 활용하려면 반드시 :guilabel:`다단계 경로` 기능을 활성화해야 "
+#~ "합니다. 그러려면 :menuselection:`재고 관리 앱 --> 환경설정 --> 설정` 으로 "
+#~ "이동하여 :guilabel:`창고` 제목 아래에 있는 :guilabel:`다단계 경로` 옆 확인"
+#~ "란에 표시합니다."
+
+#~ msgid ""
+#~ "By default, Odoo sets the |MTO| route as *archived*. This is because |"
+#~ "MTO| is a somewhat niche workflow that is only used by certain companies. "
+#~ "However, it is easy to unarchive the route in just a few simple steps."
+#~ msgstr ""
+#~ "기본적으로 Odoo는 |MTO| 경로를 *보관됨*으로 설정합니다. 이는 |MTO|가 특정 "
+#~ "회사에서만 사용하는 다소 전문화 된 워크플로우로 간주되기 때문입니다. 그러"
+#~ "나 몇 가지 간단한 단계만 거치면 경로의 보관을 해제할 수 있습니다."
+
+#~ msgid ""
+#~ "To do so, begin by navigating to :menuselection:`Inventory app --> "
+#~ "Configuration --> Routes`. On the :guilabel:`Routes` page, click "
+#~ "the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right side "
+#~ "of the search bar, and click the :guilabel:`Archived` filter to enable it."
+#~ msgstr ""
+#~ "활성화하려면 먼저 :menuselection:`재고 관리 앱 --> 환경 설정 --> 경로` 로 "
+#~ "이동합니다. :guilabel:`경로` 페이지에서 검색 창 오른쪽에 있는 :icon:`fa-"
+#~ "caret-down` :guilabel:`(아래쪽 화살표)` 아이콘을 클릭하고 :guilabel:`보관"
+#~ "됨` 필터를 클릭하여 활성화합니다."
+
+#~ msgid "The archived filter on the Routes page."
+#~ msgstr "경로 페이지의 보관된 필터입니다."
+
+#~ msgid ""
+#~ "After enabling the :guilabel:`Archived` filter, the :guilabel:`Routes` "
+#~ "page shows all routes which are currently archived. Tick the checkbox "
+#~ "next to :guilabel:`Replenish on Order (MTO)`, then click the :icon:`fa-"
+#~ "cog` :guilabel:`Actions` button to reveal a drop-down menu. From the drop-"
+#~ "down menu, select :guilabel:`Unarchive`."
+#~ msgstr ""
+#~ ":guilabel:`보관됨` 필터를 활성화하면 :guilabel:`경로` 페이지에 현재 보관"
+#~ "된 모든 경로가 표시됩니다. :guilabel:`주문 시 보충 (MTO)` 항목 옆 확인란"
+#~ "에 표시한 다음 :icon:`fa-cog` :guilabel:`활동` 버튼을 클릭하여 드롭다운 메"
+#~ "뉴를 표시합니다. 드롭다운 메뉴에서 :guilabel:`보관 취소` 를 선택합니다."
+
+#~ msgid "The unarchive action on the Routes page."
+#~ msgstr "경로 페이지의 보관 취소 작업입니다."
+
+#~ msgid ""
+#~ "Finally, remove the :guilabel:`Archived` filter from the search bar. "
+#~ "The :guilabel:`Routes` page now shows all unarchived routes, "
+#~ "including :guilabel:`Replenish on Order (MTO)`, which is selectable on "
+#~ "the *Inventory* tab of each product page."
+#~ msgstr ""
+#~ "마지막으로 검색창에서 :guilabel:`보관됨` 필터를 제거합니다. 이"
+#~ "제 :guilabel:`경로` 페이지에는 보관되지 않은 경로가 모두 표시됩니"
+#~ "다. :guilabel:`주문 시 보충 (MTO)` 과 같은 항목도 여기에 포함되며, 이는 "
+#~ "각 품목 페이지의 *재고* 탭에서 선택할 수 있습니다."
+
+#~ msgid "Configure product for MTO"
+#~ msgstr "MTO에 대한 품목 환경설정"
+
+#~ msgid ""
+#~ "With the |MTO| route unarchived, products can now be properly configured "
+#~ "to use replenish on order. To do so, begin by going "
+#~ "to :menuselection:`Inventory app --> Products --> Products`, then select "
+#~ "an existing product, or click :guilabel:`New` to configure a new one."
+#~ msgstr ""
+#~ "|MTO| 경로가 보관 취소되었으므로, 이제 품목을 적절히 설정하여 주문 시 보"
+#~ "충 전략을 활용할 수 있습니다. 진행하려면 먼저 :menuselection:`재고 관리 "
+#~ "앱 --> 품목 --> 품목` 으로 이동한 후 기존 품목을 선택하거나 :guilabel:`새"
+#~ "로 만들기` 를 클릭하여 새로 품목을 설정합니다."
+
+#~ msgid ""
+#~ "On the product page, select the :guilabel:`Inventory` tab and enable "
+#~ "the :guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
+#~ "section, along with the :guilabel:`Buy` or :guilabel:`Manufacture` route."
+#~ msgstr ""
+#~ "품목 페이지에서 :guilabel:`재고` 탭을 선택하고 :guilabel:`경로` 섹션에"
+#~ "서 :guilabel:`주문 시 보충(MTO)` 경로와 :guilabel:`매입` 또는 :guilabel:`"
+#~ "제조` 경로를 활성화합니다."
+
+#~ msgid ""
+#~ "The :guilabel:`Replenish on Order (MTO)` route **does not** work unless "
+#~ "another route is selected as well. This is because Odoo needs to know how "
+#~ "to replenish the product when an order is placed for it (buy or "
+#~ "manufacture it)."
+#~ msgstr ""
+#~ ":guilabel:`주문 시 보충 (MTO)` 경로는 추가 경로를 선택하지 않을 경우 작동"
+#~ "하지 **않습니다**. 이는 Odoo에서 품목 보충 방법에 대해 정보가 주문을 받는 "
+#~ "시점에 있어야 하기 때문입니다 (매입 또는 제조)."
+
+#~ msgid "Cancelling an SO with an MTO product"
+#~ msgstr "MTO 제품이 포함된 판매주문서 취소하기"
+
+#~ msgid ""
+#~ "To replenish products using the make-to-order method, go to the product "
+#~ "form and ensure the :ref:`MTO route is unarchived <inventory/"
+#~ "warehouses_storage/unarchive-mto>`, so it appears in "
+#~ "the :guilabel:`Routes` section of the :guilabel:`Inventory` tab."
+#~ msgstr ""
+#~ "품목 보충을 주문 제작 방식으로 하려면, 품목 양식으로 이동하여 :ref:`MTO 경"
+#~ "로가 보관되지 않음 <inventory/warehouses_storage/unarchive-mto>` 으로 되"
+#~ "어 있는지 확인합니다. 그러면 :guilabel:`재고 관리` 탭의 :guilabel:`경로` "
+#~ "섹션에 나타나는 것을 볼 수 있습니다."
 
 #~ msgid ""
 #~ "In Odoo, goods and services are both set up as *products*. When setting "

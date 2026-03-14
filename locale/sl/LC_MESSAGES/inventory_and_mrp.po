@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-06 18:31+0000\n"
+"POT-Creation-Date: 2026-03-13 18:30+0000\n"
 "PO-Revision-Date: 2025-11-20 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -161,6 +161,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:41
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:229
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
@@ -14974,7 +14975,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:84
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:29
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:79
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:37
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
@@ -16197,8 +16198,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:9
 msgid ""
 "The *at confirmation* reservation method reserves products **only** when a "
-"sales order (SO) is confirmed, **and** if enough stock of the products "
-"included in the |SO| is already available."
+"sales order (SO) is confirmed, **and** enough product stock is available."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:13
@@ -16209,61 +16209,44 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:18
 msgid ""
-"To set the reservation method to *at confirmation*, navigate "
-"to :menuselection:`Inventory app --> Configuration --> Operations Types`. "
+"To set the reservation method to *at confirmation*, navigate to "
+"the :menuselection:`Inventory app --> Configuration --> Operations Types`. "
 "Then, select the desired :guilabel:`Operation Type` to configure, or create "
 "a new one by clicking :guilabel:`New`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:22
 msgid ""
-"In the :guilabel:`General` tab on the operation type form, locate "
-"the :guilabel:`Reservation Method` field, and select :guilabel:`At "
+"In the *General* tab on the operation type form, locate "
+"the :guilabel:`Reservation Method` field and select :guilabel:`At "
 "Confirmation`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:31
 msgid ""
 "To see the *at confirmation* reservation method in action, create a new |SO| "
-"by navigating to :menuselection:`Sales app --> New`."
+"by navigating to the :menuselection:`Sales app`. On the *Quotations* page, "
+"click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:35
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:34
 msgid ""
-"Add a customer in the :guilabel:`Customer` field. Then, in "
-"the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select "
-"a product to add to the quotation from the drop-down menu. Finally, in "
+"On the quotation, add a customer in the :guilabel:`Customer` field. Then, in "
+"the *Order Lines* tab, click :guilabel:`Add a product` and select a product "
+"to add to the quotation from the drop-down menu. Finally, in "
 "the :guilabel:`Quantity` column, adjust the desired quantity of the product "
 "to sell."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:39
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:46
-msgid "Once ready, click :guilabel:`Confirm` to confirm the sales order."
+msgid "Once ready, click :guilabel:`Confirm` to create the sales order."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:41
 msgid ""
-"Click the :guilabel:`📈 (area graph)` icon on the product line to reveal the "
-"product's :guilabel:`Availability` tooltip, which reveals "
-"the :guilabel:`Reserved` number of units for this order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:46
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:106
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:57
-msgid ""
-"If there is **not** sufficient quantity of stock for the product included in "
-"the |SO|, the :guilabel:`📈 (area graph)` icon is red, instead of green."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:49
-msgid ""
-"Instead of revealing the reserved number of units for the order, "
-"the :guilabel:`Availability` tooltip reads :guilabel:`Available`, and "
-"reveals the available number of units (e.g., `0 Units`)."
+"Click the :icon:`fa-area-chart` :guilabel:`(area chart)` icon on the product "
+"line to reveal the product's :guilabel:`Availability` tooltip, which shows "
+"the :guilabel:`Reserved` quantity for this order."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
@@ -16272,52 +16255,66 @@ msgstr ""
 msgid "Confirmed sales order with product availability tooltip selected."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:49
+msgid ""
+"If there is **not** sufficient quantity of stock for the product included in "
+"the |SO|, the :icon:`fa-area-chart` :guilabel:`(area chart)` icon is red "
+"instead of green."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:52
+msgid ""
+"Instead of showing the reserved number of units for the order, "
+"the :guilabel:`Availability` tooltip reads :guilabel:`Reserved` and shows "
+"the reserved number of units (e.g., `0 Units`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:55
 msgid "Forecasted Report"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:57
 msgid ""
-"To see all the factors that affect product reservation, click "
-"the :guilabel:`View Forecast` internal link arrow to view "
+"To see all the factors that affect product reservation, click the :icon:`oi-"
+"arrow-right` :guilabel:`View Forecast` internal link arrow to view "
 "the :guilabel:`Forecasted Report` dashboard."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:61
 msgid ""
-"The :guilabel:`Forecasted Report` displays forecast information about the "
-"product(s) included in the sales order; namely, any live receipts of the "
-"product, and any active sales orders, which are listed in "
-"the :guilabel:`Used By` column. See how each order is fulfilled in "
-"the :guilabel:`Replenishment` column."
+"The :guilabel:`Forecasted Report` displays forecast information for the "
+"products included in the sales order, namely any live receipts of the "
+"product and any active sales orders, which are listed in the :guilabel:`Used "
+"By` column. See how each order is fulfilled in the :guilabel:`Replenishment` "
+"column."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:66
 msgid ""
 "Additionally, the :guilabel:`Forecasted` quantity is calculated at the top "
-"of the page, by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
-"quantity, and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
+"of the page by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
+"quantity and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
 msgid "Forecasted quantity equation from the Forecasted Report page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:73
 msgid ""
 "If one order should be prioritized over another order, click "
 "the :guilabel:`Unreserve` button on the corresponding order line in "
 "the :guilabel:`Replenishment` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:76
 msgid ""
-"To deliver the products, click the :guilabel:`Delivery` smart button at the "
-"top of the sales order form. To confirm that the reservation worked "
-"properly, ensure that the :guilabel:`Product Availability` field reads "
-"`Available` (in green text), and the numbers in the :guilabel:`Demand` "
-"and :guilabel:`Quantity` columns match (in this case, both should read "
-"`100.00`)."
+"To deliver the products, click the :icon:`fa-truck` :guilabel:`Delivery` "
+"smart button at the top of the sales order form. To confirm that the "
+"reservation worked properly, ensure that the :guilabel:`Product "
+"Availability` field reads `Available` (in green text), and that the numbers "
+"in the :guilabel:`Demand` and :guilabel:`Quantity` columns match (in this "
+"case, both should read `10.00`)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:None
@@ -16326,18 +16323,27 @@ msgid ""
 "reservation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:149
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:108
 msgid "Once ready, click :guilabel:`Validate`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:88
+msgid ""
+"Delivery orders can be starred, or favorited. Unlike :guilabel:`Before "
+"scheduled date` reservations, adding a delivery order to favorites via "
+"the :guilabel:`At Confirmation` reservation does not prioritize it. The "
+"delivery order is only prioritized in the **Inventory** app's display of "
+"delivery orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:94
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:152
 msgid ":doc:`Manual reservation <manually>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:139
 msgid ":doc:`Before scheduled date reservation <before_scheduled_date>`"
 msgstr ""
@@ -16466,6 +16472,11 @@ msgstr ""
 msgid "For this sample workflow, set the :guilabel:`Quantity` to `10`."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:46
+msgid "Once ready, click :guilabel:`Confirm` to confirm the sales order."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:94
 msgid ""
 "Click the green :guilabel:`📈 (area graph)` icon on the product line to "
@@ -16486,6 +16497,13 @@ msgstr ""
 msgid ""
 "Since reservation is not until two days before the scheduled delivery, it "
 "will not reserve the products until then."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:57
+msgid ""
+"If there is **not** sufficient quantity of stock for the product included in "
+"the |SO|, the :guilabel:`📈 (area graph)` icon is red, instead of green."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:109
@@ -16599,6 +16617,15 @@ msgstr ""
 msgid ""
 "To see the *Manually* reservation method in action, create a new |SO| by "
 "navigating to :menuselection:`Sales app --> New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:42
+msgid ""
+"Add a customer in the :guilabel:`Customer` field. Then, in "
+"the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select "
+"a product to add to the quotation from the drop-down menu. Finally, in "
+"the :guilabel:`Quantity` column, adjust the desired quantity of the product "
+"to sell."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:48
@@ -26096,13 +26123,13 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:17
 msgid ""
 "For :doc:`purchased products <../../../purchase/manage_deals/rfq>`, Odoo "
-"creates an |RFQ|"
+"creates an |RFQ|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:18
 msgid ""
 "For :doc:`manufactured products <../../../manufacturing/basic_setup/"
-"configure_manufacturing_product>`, it creates an |MO|"
+"configure_manufacturing_product>`, it creates an |MO|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:21
@@ -26122,13 +26149,12 @@ msgstr ""
 msgid ""
 "The |RFQ| or |MO| generated by |MTO| is designed to fulfill the originating |"
 "SO|. These documents should normally be confirmed or adjusted rather than "
-"cancelled. If the demand changes, update the document instead of cancelling "
-"it."
+"canceled. If the demand changes, update the document instead of canceling it."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:32
 msgid ""
-"If an |RFQ| or |MO| is cancelled, Odoo does not automatically generate a "
+"If an |RFQ| or |MO| is canceled, Odoo does not automatically generate a "
 "replacement. A new replenishment document must be created manually, but it "
 "**cannot** be linked back to the original |SO| through the smart button."
 msgstr ""
@@ -26137,108 +26163,74 @@ msgstr ""
 msgid "Finally, click :guilabel:`Save` to save the change."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:41
-msgid "Unarchive MTO route"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:46
+msgid "Enable the MTO route"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:48
 msgid ""
-"In order to use the |MTO| route, the :guilabel:`Multi-Step Routes` feature "
-"must be enabled. To do so, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and tick the checkbox next to :guilabel:`Multi-"
-"Step Routes`, under the :guilabel:`Warehouse` heading."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:47
-msgid ""
-"By default, Odoo sets the |MTO| route as *archived*. This is because |MTO| "
-"is a somewhat niche workflow that is only used by certain companies. "
-"However, it is easy to unarchive the route in just a few simple steps."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:51
-msgid ""
-"To do so, begin by navigating to :menuselection:`Inventory app --> "
-"Configuration --> Routes`. On the :guilabel:`Routes` page, click "
-"the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right side of "
-"the search bar, and click the :guilabel:`Archived` filter to enable it."
+"In order to use the |MTO| route, the :guilabel:`Replenish on order (MTO)` "
+"setting must be enabled. To do so, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Settings`. Go to the :guilabel:`Warehouse` section at "
+"the end of the page, and select the checkbox next to :guilabel:`Replenish on "
+"order (MTO)`. Click :guilabel:`Save` to confirm the setting."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
-msgid "The archived filter on the Routes page."
+msgid "Select the Replenish on order (MTO) checkbox."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:59
+msgid "Configure a product for MTO"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:61
 msgid ""
-"After enabling the :guilabel:`Archived` filter, the :guilabel:`Routes` page "
-"shows all routes which are currently archived. Tick the checkbox next "
-"to :guilabel:`Replenish on Order (MTO)`, then click the :icon:`fa-"
-"cog` :guilabel:`Actions` button to reveal a drop-down menu. From the drop-"
-"down menu, select :guilabel:`Unarchive`."
+"With the |MTO| route enabled, products can now be configured to use "
+"replenish on order. To do so, begin by going to :menuselection:`Inventory "
+"app --> Products --> Products`, then select an existing product, or "
+"click :guilabel:`New` to configure a new product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
-msgid "The unarchive action on the Routes page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:65
 msgid ""
-"Finally, remove the :guilabel:`Archived` filter from the search bar. "
-"The :guilabel:`Routes` page now shows all unarchived routes, "
-"including :guilabel:`Replenish on Order (MTO)`, which is selectable on the "
-"*Inventory* tab of each product page."
+"In the product form, go to the :guilabel:`Inventory` tab. Under the "
+"*Operations* section, select the checkbox next to the :guilabel:`Replenish "
+"on Order (MTO)` option in the :guilabel:`Routes` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:73
-msgid "Configure product for MTO"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:69
 msgid ""
-"With the |MTO| route unarchived, products can now be properly configured to "
-"use replenish on order. To do so, begin by going "
-"to :menuselection:`Inventory app --> Products --> Products`, then select an "
-"existing product, or click :guilabel:`New` to configure a new one."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:79
-msgid ""
-"On the product page, select the :guilabel:`Inventory` tab and enable "
-"the :guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
-"section, along with the :guilabel:`Buy` or :guilabel:`Manufacture` route."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:84
-msgid ""
-"The :guilabel:`Replenish on Order (MTO)` route **does not** work unless "
-"another route is selected as well. This is because Odoo needs to know how to "
-"replenish the product when an order is placed for it (buy or manufacture it)."
+"The :guilabel:`Replenish on Order (MTO)` route does not work if "
+"the :guilabel:`Purchase` route is enabled. To ensure the product is "
+"configured for manufacturing, make sure the checkbox next to "
+"the :guilabel:`Purchase` route is not selected."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
 msgid "Select the MTO route and a second route on the Inventory tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:77
 msgid ""
 "If the product is purchased from a vendor to fulfill |SOs|, enable "
 "the :guilabel:`Can be Purchased` checkbox under the product name. Doing so "
 "makes the :guilabel:`Purchase` tab appear alongside the other tabs below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:81
 msgid ""
 "Click the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and "
 "the :guilabel:`Price` they sell the product for."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:85
 msgid ""
 "Specifying a vendor is essential for this workflow, because Odoo cannot "
 "generate an |RFQ| without knowing who the product is purchased from."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:88
 msgid ""
 "If the product is manufactured, make sure it has a bill of materials (BOM) "
 "configured for it. To do so, click the :guilabel:`Bill of Materials` smart "
@@ -26247,17 +26239,17 @@ msgid ""
 "product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:93
 msgid ""
 "For a full overview of |BOM| creation, see the documentation on :doc:`bills "
 "of materials <../../../manufacturing/basic_setup/bill_configuration>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:99
 msgid "Replenish using MTO"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:101
 msgid ""
 "After configuring a product to use the |MTO| route, a replenishment order is "
 "created for it every time an |SO| or |MO| including the product is "
@@ -26265,13 +26257,13 @@ msgid ""
 "addition to |MTO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:105
 msgid ""
 "For example, if *Buy* was the second route selected, then a |PO| is created "
 "upon confirmation of an |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:109
 msgid ""
 "When the |MTO| route is enabled for a product, a replenishment order is "
 "always created upon confirmation of an |SO| or |MO|. This is the case, even "
@@ -26279,7 +26271,7 @@ msgid ""
 "buying or manufacturing additional units of it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:113
 msgid ""
 "While the |MTO| route can be used in unison with the *Buy* or *Manufacture* "
 "routes, the *Buy* route is used as the example for this workflow. Begin by "
@@ -26287,7 +26279,7 @@ msgid ""
 "which opens a blank quotation form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:117
 msgid ""
 "On the blank quotation form, add a :guilabel:`Customer`. Then, "
 "click :guilabel:`Add a product` under the :guilabel:`Order Lines` tab, and "
@@ -26295,13 +26287,13 @@ msgid ""
 "Click :guilabel:`Confirm`, and the quotation is turned into an |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:121
 msgid ""
 "A :guilabel:`Purchase` smart button now appears at the top of the page. "
 "Clicking it opens the |RFQ| associated with the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:124
 msgid ""
 "After receiving approval from the vendor that they can meet the demand by "
 "the :guilabel:`Expected Arrival` date, click :guilabel:`Confirm Order` to "
@@ -26311,49 +26303,48 @@ msgid ""
 "click :guilabel:`Validate` to enter the products into inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:130
 msgid ""
 "Return to the |SO| by clicking the :guilabel:`SO` breadcrumb, or by "
 "navigating to :menuselection:`Sales app --> Orders --> Orders`, and "
 "selecting the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:133
 msgid ""
 "Finally, click the :guilabel:`Delivery` smart button at the top of the order "
 "to open the delivery order. Once the products have been shipped to the "
 "customer, click :guilabel:`Validate` to confirm the delivery."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:151
-msgid "Cancelling an SO with an MTO product"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:140
+msgid "Cancel an MTO sales order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:142
 msgid ""
-"When a |SO| is cancelled, and it had created an |RFQ| or |MO|, the related "
-"delivery order is cancelled automatically. However, the |RFQ| or |MO| "
-"themselves are **not** cancelled. Instead, a warning appears in their "
-"chatter noting the |SO| cancellation. These documents remain active, so the "
-"user can either cancel them manually or repurpose the replenishment for "
-"another order."
+"When a |SO| that had created an |RFQ| or |MO| is canceled, the related "
+"delivery order is canceled automatically. However, the |RFQ| or |MO| "
+"themselves are **not** canceled. Instead, a warning appears in their chatter "
+"noting the |SO| cancellation. These documents remain active, so the user can "
+"either cancel them manually or repurpose the replenishment for another order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:148
 msgid ""
 "For information on workflows that include the |MTO| route, see the following "
 "documentation:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:150
 msgid ":doc:`resupply_warehouses`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:151
 msgid ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:152
 msgid ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 msgstr ""
 
@@ -27529,9 +27520,9 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:83
 msgid ""
 "To replenish products using the make-to-order method, go to the product form "
-"and ensure the :ref:`MTO route is unarchived <inventory/warehouses_storage/"
-"unarchive-mto>`, so it appears in the :guilabel:`Routes` section of "
-"the :guilabel:`Inventory` tab."
+"and ensure the :ref:`MTO route is unarchived <inventory/mto/enable-mto>`, so "
+"it appears in the :guilabel:`Routes` section of the :guilabel:`Inventory` "
+"tab."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:87
