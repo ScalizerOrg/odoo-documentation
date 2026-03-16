@@ -731,16 +731,17 @@ the employee can be assigned in the **Planning** app.
 Attendance/Point of Sale/Manufacturing
 --------------------------------------
 
-This section determines how employees sign in to either the **Attendances**. **Point Of Sale**, or
-**Manufacturing** apps, and only appear if any of those apps are installed.
+This section determines how employees sign in to the **Attendances**, **Point Of Sale**, and
+**Manufacturing** apps and only appears if any of those apps are installed.
 
-- :guilabel:`PIN Code`: Enter the employee's pin number in this field. This code is used to sign in
-  and out of **Attendances** app kiosks, and a :abbr:`POS (Point Of Sale)` system.
+- :guilabel:`PIN Code`: Enter the employee's PIN code in this field. This code is used to sign in
+  and out of **Attendances** app kiosks, the **Point Of Sale** app, and the **Manufacturing** app's
+  *Shop Floor* companion module.
 - :guilabel:`RFID/Badge Number`: Click :guilabel:`Generate` at the end of the :guilabel:`RFID/Badge
   Number` line to create a unique number. Once generated, the number populates the
   :guilabel:`RFID/Badge Number` field, and :guilabel:`Generate` changes to :guilabel:`Print Badge`.
   Click :guilabel:`Print Badge` to create a PDF file of the employee's badge. The badge can be
-  printed and used to log into a :abbr:`POS (point of sale)` system or :ref:`check-in
+  printed and used to log into a :abbr:`POS (point of sale)` system or :ref:`check in
   <attendances/kiosk-mode-entry>` on an **Attendances** app kiosk.
 
   If the employee uses an RFID token or already has an ID badge issued with a barcode, click
