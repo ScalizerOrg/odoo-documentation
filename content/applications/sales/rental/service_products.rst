@@ -250,6 +250,9 @@ email the quotation to the customer. When the customer approves the quotation, c
 
 .. _rental/service_products/customer-signature:
 
+Request a customer signature
+============================
+
 Odoo has the ability to request the customer sign a rental agreement, outlining the arrangement
 between the company and customer, *before* they pick up the rental products. Such documents can
 ensure everything is returned on-time and in its original condition.
