@@ -21,8 +21,8 @@ enhancing the overall management process.
    plan.
 
    - **For yearly or multi-year contracts**: An upsell order is created with a 30-day limit.
-   - **For monthly contracts**: The subscription automatically switches to the *Custom* plan and
-     the new rate is applied when the next bill is generated.
+   - **For monthly contracts**: The subscription automatically switches to the *Custom* plan and the
+     new rate is applied when the next bill is generated.
 
    For more information, refer to `Odoo's pricing page <https://www.odoo.com/pricing-plan>`_ or
    contact your account manager.
@@ -129,14 +129,14 @@ Then, select the option(s) to create a counterpart for the selected company:
 
 - :guilabel:`Generate Bills and Refunds`: Generate a bill/refund when a company confirms an
   invoice/credit note for the selected company. To generate a validated bill/refund, select
-  :guilabel:`Create and validate`.
+  :guilabel:`Validate`.
 - :guilabel:`Generate Sales Orders`: Generate a quotation (drafted sales order) when a sales order
   is confirmed for the selected company. To generate a validated sales order instead of a quotation,
-  select :guilabel:`Create and validate`.
+  select :guilabel:`Validate`.
 - :guilabel:`Generate Purchase Orders`: Generate a request for quotation (drafted purchase order)
   using the selected company warehouse in the :guilabel:`Use Warehouse` field when a purchase order
   is confirmed for the selected company. To generate a validated purchase order instead of a request
-  for quotation, select :guilabel:`Create and validate`.
+  for quotation, select :guilabel:`Validate`.
 
 .. note::
    For inter-company transactions, the :ref:`products must be shared
@@ -146,9 +146,9 @@ Then, select the option(s) to create a counterpart for the selected company:
    :guilabel:`Generate Bills and Refunds`: when an invoice for :guilabel:`Customer` `JS Store US` is
    posted on `JS Store Belgium`, a vendor bill is automatically created in `JS Store US`.
 
-   :guilabel:`Generate Sales Orders`: when a sales order for :guilabel:`Customer` `JS
-   Store US` is confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically
-   created (and confirmed if the :guilabel:`Create and validate` option is selected).
+   :guilabel:`Generate Sales Orders`: when a sales order for :guilabel:`Customer` `JS Store US` is
+    confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically created (and
+    confirmed if the :guilabel:`Create and validate` option is selected).
 
 .. seealso::
    - :doc:`Multi-company Guidelines <../../../developer/howtos/company>`
