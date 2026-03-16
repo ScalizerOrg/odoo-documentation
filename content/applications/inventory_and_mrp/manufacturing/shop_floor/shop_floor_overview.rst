@@ -100,9 +100,8 @@ the |MO| once production is completed. However, if there are any quality checks 
 instead. Clicking :guilabel:`Quality Checks` opens a pop-up window, from which any required quality
 checks can be completed.
 
-After clicking :guilabel:`Close Production`, the |MO| card begins to fade away, and an
-:guilabel:`Undo` button appears on the footer. Clicking :guilabel:`Undo` causes the |MO| to remain
-open. Once the |MO| card disappears completely, the work order is closed.
+After clicking :guilabel:`Close Production`, the |MO| card disappears completely and the work order
+is closed.
 
 On the right side of the footer is an :guilabel:`⋮ (options)` button, which opens a pop-up window
 with additional options for the |MO|:
