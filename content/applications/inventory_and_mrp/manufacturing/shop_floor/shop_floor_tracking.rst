@@ -4,116 +4,142 @@ Shop Floor time tracking
 
 .. |MO| replace:: :abbr:`MO (Manufacturing Order)`
 .. |MOs| replace:: :abbr:`MOs (Manufacturing Orders)`
+.. |PIN| replace:: :abbr:`PIN (Personal Identification Number)`
 
 By signing in to the Odoo *Shop Floor* module as *operators*, employees are able to track the amount
-of time they spend working on each work order.
+of time they spend working on each work order. Odoo tracks the time it takes to complete each work
+order as well as the time each operator spends on each work order.
 
-Odoo tracks the time it takes to complete each work order, as well as the time each operator spends
-on each work order.
+.. _manufacturing/shop_floor/manage-operators:
 
-Operator sign in
+Manage operators
 ================
 
-To sign in to the *Shop Floor* module as an operator, sign in to the Odoo database, and open the
-:menuselection:`Shop Floor` module. The employee profile that is signed in to the database is
-automatically signed in as an operator.
+When the *Shop Floor* module is first opened, the employee profile that is signed in to the database
+is automatically signed in as an operator.
 
-All active operators are listed in the operator panel on the left side of the module. The panel can
-be opened or collapsed by clicking the :guilabel:`show/hide panel (white square with black column on
-left side)` button, located in the top-left corner of the module.
+All operators for the current session are listed in the operator panel on the left side of the
+screen. While the panel can list multiple employee profiles, only one employee can be active at
+once. The active profile highlighted in the operator panel is used for :ref:`time tracking
+<manufacturing/shop_floor/track-work-order-duration>`.
 
 .. image:: shop_floor_tracking/operator-panel.png
-   :align: center
-   :alt: The operator panel in the Shop Floor module, with the show/hide panel button above it.
+   :alt: The operator panel in the Shop Floor module.
 
-To sign in to *Shop Floor* as a different employee, click the :guilabel:`+ Add Operator` button at
-the bottom of the panel. Doing so opens the :guilabel:`Select Employee` pop-up window, which lists
-every employee that is able to sign in to the module.
+Add an operator
+---------------
 
-Click on a specific employee to sign in using their profile. If no PIN code is required to sign in
-as that employee, the profile will be signed in automatically.
+To add employees to the operator panel, click the :guilabel:`Edit Operators` button at the bottom of
+the panel. In the *Edit Operators* pop-up window, select the employees that should be added as
+operators for the current session, then click :guilabel:`Done`.
 
-If a PIN code is required, a :guilabel:`Password?` pop-up window appears, showing a number pad, from
-which the code can be entered. Enter the code using the number pad, and click :guilabel:`Confirm` to
-sign in to the *Shop Floor* module.
+.. image:: shop_floor_tracking/edit-operators.png
+   :alt: The Edit Operators pop-up window with four operators selected.
 
-.. image:: shop_floor_tracking/pin-code.png
-   :align: center
-   :alt: The "Password?" pop-up window, which is used to enter an operator PIN code.
+Switch profiles
+---------------
 
-.. note::
-   A PIN code can be set for each employee, which must be entered each time they sign in to the
-   *Shop Floor* module, check in or out in the *Kiosk Mode* of the *Attendances* application, or
-   sign in as a cashier in the *Point of Sale* application.
+To sign in to *Shop Floor* as a different employee, click their name in the operator panel to sign
+in using their profile. If a |PIN| has not been set for the employee, the profile is signed in
+automatically. If a |PIN| has been set for the employee, an :guilabel:`Enter your pin` pop-up window
+appears. Enter the code using the number pad or keyboard, then click :guilabel:`Confirm` to sign in
+to the *Shop Floor* module.
 
-   To set an employee PIN, navigate to the :menuselection:`Employees` app, and select a specific
-   employee. At the bottom of the employee's form, click on the :guilabel:`HR Settings` tab, and
-   enter a numerical code in the :guilabel:`PIN Code` field.
+.. seealso::
+   Each employee can be assigned a PIN, which must be entered when signing in to the *Shop Floor*
+   module. Badges can also be generated and printed for checking in and out with *Kiosk Mode* in the
+   **Attendances** app. See the :ref:`employee settings section <employees/hr-attn-pos>` to learn
+   more.
 
-Once an employee is signed in to the module, their name appears in the operator panel, along with
-every other employee that has signed in. While the panel can list multiple employees, only one
-employee can be active at any given time, on a single instance of the *Shop Floor* module.
+Remove an operator
+------------------
 
-Click on an employee's name to make their profile active. The active employee appears highlighted
-in blue, while employees that are signed in, but not active, have their names faded out.
+To remove employees from the operator panel, click the :guilabel:`Edit Operators` button, and click
+the profiles that should be removed from the panel. Confirm that the profiles have been unchecked,
+then click :guilabel:`Done`.
 
-To sign out a specific employee from the module, click the :guilabel:`X (remove)` button next to
-their name, in the operator panel.
+.. _manufacturing/shop_floor/track-work-order-duration:
 
 Track work order duration
 =========================
 
-To track time spent working on a work order, begin by selecting the employee working on it from the
-operator panel.
+To track the time spent on a work order, select the work center where the work order is scheduled to
+be carried out. This can be done by selecting the work center from the top of the page in the *Shop
+Floor* module or by clicking the name of the work center in the form for the manufacturing order
+(MO) that the work order is a part of.
 
-Next, navigate to the page for the work center where the work order is scheduled to be carried out.
-This can be done by selecting the work center from the top navigation in the *Shop Floor* module, or
-by clicking the name of the work center on the card for the manufacturing order (MO) that the work
-order is a part of.
-
-On the page for the work center, find the card for the work order. Once work begins, click the
-header of the work order card to start timing the duration it takes to complete. This duration is
-displayed by a timer on the header of the work order card, which tracks the collective time spent
-working on the work order, by all employees.
+When work begins, click the :guilabel:`Start` button on the work order card to start tracking the
+duration. The :guilabel:`Start` button is replaced by a timer which displays the total duration that
+all operators have spent on the work order.
 
 .. image:: shop_floor_tracking/work-order-timer.png
-   :align: center
    :alt: A work order card with an active timer.
 
-In addition, the reference number of the work order appears in the operator panel, under the name of
-the employee working on it, along with a second timer, which tracks the amount of time the employee
-has spent on the work order individually. This timer only reflects work done during the current
-session, even if the employee has previously worked on the work order.
+View active profile work orders
+-------------------------------
 
-Employees are able to work on multiple work orders simultaneously, and track their time for each.
-The reference number for each work order being worked on appears below the employee's name, along
-with a timer.
+The operator panel displays the work center location and individual time spent for each work order
+an operator is working on. This timer only reflects work done during the current session, even if
+the operator has previously worked on the work order.
+
+Operators can work on multiple work orders simultaneously and track their time for each. Click
+:guilabel:`My WO` at the top of the page to see all of the work orders the active profile is working
+on.
 
 .. image:: shop_floor_tracking/employee-timer.png
-   :align: center
    :alt: An employee card in the operator panel, showing two work order timers.
 
-To pause the timer on the work order card, and remove the work order from below the employee's name
-on the operator panel, click the header a second time.
+Pause and stop timer
+--------------------
 
-Once the work order is completed, click the :guilabel:`Mark as Done` button at the bottom of the
-work order card, which causes the card to fade away. If the timer is still active, it stops once the
-card disappears completely.
+To pause the timer on a work order, click the work order card a second time.
+
+Once a work order is complete, click the :guilabel:`Mark as Done` button at the bottom of the work
+order card, and it disappears from the work center page.
+
+.. note::
+   If there are no additional work orders for the |MO|, the button says :guilabel:`Close Production`
+   instead. Clicking :guilabel:`Close Production` marks the entire |MO| as *Done* and removes it
+   from the *Shop Floor* module.
+
+   The :guilabel:`Close Production` button is always visible on the manufacturing order card in the
+   :guilabel:`Overview` tab.
+
+
+.. _manufacturing/shop_floor/view-work-order-duration:
 
 View work order duration
 ========================
 
+By individual work order
+------------------------
+
 To view the duration of a work order, navigate to :menuselection:`Manufacturing app --> Operations
---> Manufacturing Orders`, and select an |MO|.
+--> Work Orders`.
 
-To view and select |MOs| that have been completed and marked as *Done*, remove the :guilabel:`To Do`
-filter from the :guilabel:`Search...` bar, by clicking on the :guilabel:`X (close)` button on the
-right side of the filter.
+By default, the search bar has a filter applied to display incomplete work orders only. To view work
+orders that have been completed and marked as *Done*, remove the filter from the search bar by
+clicking on the :icon:`oi-close` :guilabel:`(Remove)` button on the right side of the filter.
 
-On the page for the |MO|, click on the :guilabel:`Work Orders` tab to see a list of all work orders
-included in the |MO|. The time it took to complete each work order is displayed in the
-:guilabel:`Real Duration` column of the tab.
+The actual time it took to complete each work order is displayed in the :guilabel:`Real Duration`
+column. This value represents the total time spent on the work order by all operators who worked on
+it. It includes time tracked in the *Shop Floor* module as well as time tracked in the work order
+form or the :guilabel:`Work Orders` tab of the |MO|.
 
-The *Real Duration* represents the total time spent working on the work order by all workers who
-worked on it. It includes time tracked in the *Shop Floor* module, as well as time tracked on the
-:guilabel:`Work Orders` tab of the |MO| itself.
+To view detailed time tracking information, select a work order. In the work order form, go to the
+:guilabel:`Time Tracking` tab to see a detailed list of all operators who have worked on the work
+order and the amount of time they spent on it.
+
+By manufacturing order
+----------------------
+
+To view the duration of all work orders in a specific |MO|, navigate to
+:menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`.
+
+By default, the search bar has a filter applied to display incomplete |MOs| only. To view |MOs| that
+have been completed and marked as *Done*, remove the filter from the search bar by clicking on the
+:icon:`oi-close` :guilabel:`(Remove)` button on the right side of the filter.
+
+Select an |MO|. In the |MO| form, go to the :guilabel:`Work Orders` tab to see a list of all work
+orders included in the |MO|. To view details for a specific work order, click anywhere on the entry
+line and the work order form opens.
