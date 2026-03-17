@@ -80,20 +80,26 @@ The table below shows the support status of every version. Major releases are hi
      - September 2026 (planned)
    * - **Odoo 16.0**
      - |red|
-     - |red|
-     - |red|
+     - |orange|
+     - |orange|
      - October 2022
      - September 2025
    * - **Odoo 15.0**
      - |red|
-     - |red|
-     - |red|
+     - |orange|
+     - |orange|
      - October 2021
      - October 2024
+   * - **Odoo 14.0**
+     - |red|
+     - |orange|
+     - |orange|
+     - Before 2021
+     - Before 2024
    * - Older versions
      - |red|
      - |red|
-     - |red|
+     - |orange|
      - Before 2021
      - Before 2024
 
@@ -101,13 +107,19 @@ The table below shows the support status of every version. Major releases are hi
 
    |green| : Standard support
 
-   |red| : Extended support available (with an extra fee)
+   |orange| : Extended support available (with an extra fee)
+
+   |red| : Not supported
 
    N/A : Never released for this platform
 
 .. |green| raw:: html
 
    <span class="text-success" style="font-size: 32px; line-height: 32px; display: inline-block; vertical-align: middle;">●</span>
+
+.. |orange| raw:: html
+
+   <span class="text-warning" style="font-size: 32px; line-height: 32px; display: inline-block; vertical-align: middle;">●</span>
 
 .. |red| raw:: html
 
