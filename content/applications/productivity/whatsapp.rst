@@ -407,6 +407,26 @@ the business phone number.
    `Meta for Developers: Add a Phone Number
    <https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/add-a-phone-number>`__
 
+Phone number status stuck in pending
+************************************
+
+When adding a phone number in the Meta Developer App, the number may remain stuck in *Pending*
+status instead of switching to *Connected*.
+
+This can prevent the WhatsApp integration from functioning correctly.
+
+To resolve this issue, generate a temporary access token and enable full account access:
+
+#. Go to https://developers.facebook.com and open your app.
+#. Navigate to :menuselection:`WhatsApp --> API Setup`.
+#. Click :guilabel:`Generate access token`.
+#. Select :guilabel:`Edit previous settings`.
+#. Select the option: *Opt in to all current and future WhatsApp accounts*.
+#. Click :guilabel:`Continue`, then :guilabel:`Save`, and finally :guilabel:`Got it`.
+#. Generate the temporary access token.
+
+After completing these steps, the phone number status should update from *Pending* to *Connected*.
+
 .. _productivity/whatsapp/token:
 
 Create a permanent token
@@ -447,6 +467,36 @@ the screen that follows.
 With that token value, update the :guilabel:`Access Token` field in the WhatsApp business account in
 Odoo by navigating to :menuselection:`WhatsApp app --> Configuration --> WhatsApp Business
 Accounts`.
+
+Access token permission
+***********************
+
+When creating a permanent access token, the `business_management` permission may not be available.
+
+To resolve this issue:
+
+- Ensure that the app is created with the appropriate use case (e.g., *Business* app type).
+- Verify that the account used to create the app has sufficient permissions:
+
+  - Avoid using a standard developer-only account.
+  - Use an account with *Product Manager* role or higher in the Meta Business account.
+
+If the permission is still missing, recreate the app with the correct configuration and permissions.
+
+Callback URL requirements
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When configuring the webhook, the Callback URL must be a fully qualified public URL.
+
+The URL must include:
+
+- ``https://``
+- A valid domain name
+- The full path to the webhook endpoint
+
+.. important::
+   The callback URL must be publicly accessible so that Meta servers can successfully send webhook
+   events.
 
 Go live with the Meta app
 =========================
@@ -508,8 +558,8 @@ To create a WhatsApp template, go to the :menuselection:`WhatsApp app --> Templa
 click :guilabel:`New`. Enter a :guilabel:`Name` for the template, and select a :guilabel:`Language`.
 
 .. important::
-   In order to complete this next task, :doc:`administrator access rights
-   <../general/users/access_rights>` are needed to edit the :guilabel:`Applies to` field.
+   To complete this next task, :doc:`administrator access rights <../general/users/access_rights>`
+   are needed to edit the :guilabel:`Applies to` field.
 
 In the :guilabel:`Account` drop-down menu, select the *WhatsApp business account* in Odoo that this
 template should link to. Next, under the :guilabel:`Applies to` field, select the *model* the server
