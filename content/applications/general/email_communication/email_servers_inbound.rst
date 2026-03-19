@@ -141,8 +141,8 @@ domains must then be added to the alias domains to be used by a company.
 Use a custom domain for inbound messages
 ========================================
 
-The :ref:`alias domain <email-outbound-alias-domain>` must be selected in the general
-settings. If you have multiple companies, each one must be configured.
+The :ref:`alias domain <email-outbound-alias-domain>` must be selected in the general settings. If
+you have multiple companies, each one must be configured.
 
 .. image:: email_servers_inbound/alias-domain-settings.png
    :alt: The alias domain in the general settings.
@@ -159,10 +159,10 @@ are done to `[alias]@my-custom-domain.com`. Replies to other models are sent to 
    :ref:`"Using a custom domain with Odoo’s email server" instructions
    <email-outbound-custom-domain-odoo-server>`.
 
-Since this custom domain is used, all emails using an alias (replies, bounces and direct
-sends) are sent to an address of the domain. They are thus delivered to the email server linked to the domain (MX record). To
-display them in the chatter or to create new records, it is necessary to retrieve these incoming
-emails in the Odoo database.
+Since this custom domain is used, all emails using an alias (replies, bounces and direct sends) are
+sent to an address of the domain. They are thus delivered to the email server linked to the domain
+(MX record). To display them in the chatter or to create new records, it is necessary to retrieve
+these incoming emails in the Odoo database.
 
 .. list-table::
    :header-rows: 1
@@ -234,10 +234,21 @@ Every other alias used must be redirected as well.
    #. Do not forget to change back the alias of the sales team and the catchall value on the mail
       alias domain, just as they were before this procedure.
 
-.. note::
-   An alternative to redirections is **forwarding**. With forwarding, **the address forwarding the
-   email will be identified as the sender**, while with redirections, the original sender will
-   always remain.
+An alternative to redirections is **forwarding**. With forwarding, **the address forwarding the
+email will be identified as the sender**, while with redirections, the original sender will always
+remain.
+
+.. important::
+   When using email redirection to manage incoming messages, additional configuration may be
+   required to ensure correct behavior.
+
+   Some email providers, such as Gmail, require the redirection address to be explicitly confirmed
+   before emails are forwarded, otherwise the redirection may not function.
+
+   In addition, when redirection is used instead of an incoming mail server, the alias may appear
+   with the `@yourdb.odoo.com` domain unless *Local-part based incoming detection* is enabled on the
+   corresponding alias. This setting can be found under :menuselection:`Settings --> Technical -->
+   Aliases`.
 
 .. _email-inbound-custom-domain-incoming-server:
 
@@ -276,8 +287,8 @@ Additionally, using an incoming mail server in Odoo gives the opportunity to cre
 specified model. Each incoming mail server can create records in a different model.
 
 .. example::
-   Emails received on `task@company-name.com` are fetched by the Odoo database. All fetched emails will
-   create a new project task in the database.
+   Emails received on `task@company-name.com` are fetched by the Odoo database. All fetched emails
+   will create a new project task in the database.
 
    .. image:: email_servers_inbound/incoming-mail-server.png
       :alt: Technical schema of mailing route when using a custom domain in Odoo.
