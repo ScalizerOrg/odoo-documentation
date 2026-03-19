@@ -260,6 +260,10 @@ Notes
 Notes allow you to attach extra information to specific products in an order. There are two types of
 notes: internal notes and customer notes.
 
+.. note::
+   Any notes added to a product from the :ref:`POS register <pos/use/open-register>` are displayed
+   on the :doc:`customer display <../point_of_sale/hardware_network/customer_display>`.
+
 Internal notes
 --------------
 
