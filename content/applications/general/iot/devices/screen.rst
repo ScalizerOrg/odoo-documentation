@@ -22,13 +22,10 @@ The screen also appears in the IoT box's list of devices:
 - on the :ref:`IoT box's homepage <iot/iot-box/homepage>`;
 - in the IoT app, under the menu :menuselection:`IoT --> Devices`.
 
-Customer display
-================
-
-To use the screen as a :doc:`customer display
-</applications/sales/point_of_sale/hardware_network/customer_display>`, :ref:`configure the POS
-accordingly <pos/hardware_network/display-configuration>`.
-
-To display a specific website on the screen instead of the POS customer display, go to
-:menuselection:`IoT --> Devices`, click the screen's card, then enter the desired website's URL in
-the :guilabel:`Display URL` field.
+.. tip::
+   - To use the screen as a :doc:`customer display
+     </applications/sales/point_of_sale/hardware_network/customer_display>` in the POS,
+     :ref:`configure the POS accordingly <pos/hardware_network/display-configuration>`.
+   - To display a specific website on the screen instead of the POS customer display, go to
+     :menuselection:`IoT --> Devices`, click the screen's card, then enter the desired website's URL
+     in the :guilabel:`Display URL` field.
