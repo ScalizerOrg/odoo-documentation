@@ -151,10 +151,10 @@ Below is a list of commonly-used fields when importing vendor pricelists:
      - The purchase price for the product from the vendor.
      - :guilabel:`Price` field in the vendor pricelist.
      - `price`
-   * - Delivery Lead Time
-     - :ref:`Number of days <inventory/warehouses_storage/purchase-lt>` before receiving the product
-       after confirming a purchase order.
-     - :guilabel:`Delivery Lead Time` field on the vendor pricelist.
+   * - Lead Time
+     - :ref:`Number of days <inventory/warehouses_storage/purchase-vendor-lt>` before receiving the
+       product after confirming a purchase order.
+     - :guilabel:`Lead Time` field on the vendor pricelist.
      - `delay`
    * - Sequence
      - Defines the order of vendors in the pricelist when multiple vendors are available. For
