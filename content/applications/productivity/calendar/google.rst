@@ -101,6 +101,15 @@ Under :menuselection:`Create OAuth Client ID`, select :guilabel:`Website applica
 
 - Under the :guilabel:`Authorized JavaScript Origins` section, click :guilabel:`+ Add URI` and type
   the company's Odoo full :abbr:`URL (Uniform Resource Locator)` address.
+
+.. important::
+   When entering the *Authorized JavaScript Origins*, the exact URL of the Odoo database must be
+   used.
+
+   If the database is accessible through both an `.odoo.com` subdomain and a custom domain, the
+   custom domain configured as the primary domain should be used. The `.odoo.com` subdomain may not
+   work correctly in all cases and can result in authentication errors.
+
 - Under the :guilabel:`Authorized redirect URIs` section, click :guilabel:`+ Add URI` and type the
   company's Odoo :abbr:`URL (Uniform Resource Locator)` address followed by
   `/google_account/authentication`. Finally, click :guilabel:`Create`.
@@ -132,8 +141,8 @@ click :guilabel:`Save`.
 Sync calendar in Odoo
 =====================
 
-Finally, open the :menuselection:`Calendar` app in Odoo and click on the :guilabel:`Google` sync
-button to sync Google Calendar with Odoo.
+Finally, open the :menuselection:`Calendar` app in Odoo and click the :guilabel:`Google` sync button
+to sync Google Calendar with Odoo.
 
 .. image:: google/sync-google.png
    :alt: Click the Google sync button in Odoo Calendar to sync Google Calendar with Odoo.
