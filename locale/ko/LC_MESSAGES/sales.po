@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-27 18:30+0000\n"
+"POT-Creation-Date: 2026-03-20 18:30+0000\n"
 "PO-Revision-Date: 2026-02-24 23:11+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/sales/"
@@ -115,7 +115,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:14
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:34
 #: ../../content/applications/sales/sales/sales_quotations/margin.rst:12
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:24
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:46
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:11
 #: ../../content/applications/sales/subscriptions/closing.rst:9
 msgid "Configuration"
@@ -26523,6 +26523,7 @@ msgid "Create, configure, and send quotations to customers."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations.rst:47
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:57
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:3
 msgid "Quotation templates"
 msgstr "견적서 템플릿"
@@ -26595,7 +26596,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations.rst:83
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:3
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:6
 msgid "PDF quote builder"
 msgstr "PDF 견적서 제작기"
 
@@ -27559,8 +27560,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:56
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:89
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:85
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:99
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:269
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:117
 msgid ":doc:`quote_template`"
 msgstr ":doc:`견적서 템플릿`"
 
@@ -28365,212 +28365,301 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:5
+#, fuzzy
+#| msgid ""
+#| "The use of optional products is a marketing strategy that involves the "
+#| "cross-selling of products along with a core product. The aim is to offer "
+#| "useful and related products to customers, which may result in an "
+#| "increased sale."
 msgid ""
 "The use of optional products is a marketing strategy that involves the cross-"
-"selling of products along with a core product. The aim is to offer useful "
-"and related products to customers, which may result in an increased sale."
+"selling of useful and related products alongside a desired core product. For "
+"instance, when a business configures optional products in their Odoo "
+"database, an eCommerce or Website customer could be suggested a mouse and "
+"keyboard or an extended warranty when they add a laptop to their shopping "
+"cart."
 msgstr ""
 "선택 품목을 사용하는 것은 주력 품목과 함께 다른 제품들을 교차 판매하는 마케"
 "팅 전략입니다. 고객과 관련이 있는 유용한 품목을 제안하여 매출을 증대시키는 것"
 "을 목표로 합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:9
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:10
 msgid ""
-"For instance, if a customer wants to buy a car, they have the choice to "
-"order massaging seats, as well, or ignore the offer and simply buy the car. "
-"Presenting the choice to purchase optional products enhances the customer "
-"experience."
+"Optional products are automatically suggested during the quotation process "
+"whenever an associated core product is added to a quote. They are also "
+"suggested in e-commerce interactions when a customer adds an associated core "
+"product to their shopping cart."
 msgstr ""
-"예를 들어, 자동차를 구매하려는 고객에게 마사지 시트를 같이 주문할지 아니면 제"
-"안을 수락하지 않고 그냥 자동차만 구입할지를 선택하도록 합니다. 선택 품목을 구"
-"매할 수 있도록 제안하여 고객 경험을 제고합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:14
-msgid "Optional products on quotations"
-msgstr "견적서 상의 선택 품목"
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:16
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:15
 msgid ""
-"With the Odoo *Sales* application, it is possible to add or modify optional "
-"products directly on quotations by navigating to the :guilabel:`Optional "
-"Products` tab on a quotation form."
+"Optional products differ from :doc:`accessory and alternative products </"
+"applications/websites/ecommerce/products/cross_upselling>` in terms of where "
+"they are displayed during customers' online shopping journeys."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:20
+#, fuzzy
+#| msgid "Optional products"
+msgid "Configuring optional products"
+msgstr "품목 선택 사항"
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:22
+#, fuzzy
+#| msgid ""
+#| "With the Odoo *Sales* application, it is possible to add or modify "
+#| "optional products directly on quotations by navigating to "
+#| "the :guilabel:`Optional Products` tab on a quotation form."
+msgid ""
+"With the Odoo *Sales* app, it is possible to add optional products directly "
+"to product forms. To add an optional product, navigate "
+"to :menuselection:`Sales --> Products --> Products` and click on a product "
+"Kanban card."
 msgstr ""
 "Odoo *판매* 애플리케이션에서 직접 견적서에 선택 품목을 추가하거나 수정할 수 "
 "있습니다. 견적서 양식에 있는 :guilabel:`선택 품목` 탭으로 이동하세요."
 
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:26
+msgid ""
+"Ensure the :guilabel:`Can be Sold` option is checked, then click "
+"the :guilabel:`Sales` tab. Under the :guilabel:`Upsell & Cross-sell` "
+"heading, the :guilabel:`Optional Products` drop-down menu allows for "
+"optional products to be set, and are displayed in alphabetical order."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:30
+#, fuzzy
+#| msgid ""
+#| "To delete any line item from the :guilabel:`Optional Products` tab, click "
+#| "the :icon:`fa-trash` :guilabel:`(remove record)` icon."
+msgid ""
+"To delete an optional product from the product form,  click the :icon:`fa-"
+"times` :guilabel:`(Delete)` icon."
+msgstr ""
+":guilabel:`선택 품목` 탭에서 모든 줄에 있는 항목을 삭제하려면 :icon:`fa-"
+"trash` :guilabel:`(레코드 제거)` 아이콘을 클릭합니다."
+
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
-msgid "How to add optional products to your quotations on Odoo Sales."
-msgstr "Odoo 판매 앱에서 견적서에 선택 가능 품목을 추가하는 방법"
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:23
+#, fuzzy
+#| msgid ""
+#| "The attributes and values tab on a typical product form in Odoo Sales."
 msgid ""
-"To add an optional product(s) to a quotation, click :guilabel:`Add a "
-"product` in the :guilabel:`Optional Products` tab of a quotation. Doing so "
-"reveals a blank field in the :guilabel:`Product` column."
-msgstr ""
-"견적서에 선택 가능 품목을 추가하려면 견적서의 :guilabel:`선택 가능 품목` 탭에"
-"서 :guilabel:`품목 추가`를 클릭합니다. 그러면 :guilabel:`품목` 열에 빈 필드"
-"가 나타납니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:27
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:169
-msgid ""
-"When clicked, a drop-down menu with products from the database appear. "
-"Select the desired product from the drop-down menu to add it as an optional "
-"product to the quotation template."
-msgstr ""
-"클릭하면 데이터베이스의 품목 드롭다운 메뉴로 표시됩니다. 드롭다운 메뉴에서 원"
-"하는 품목을 선택하여 견적서 서식에 선택 가능 품목으로 추가합니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:31
-msgid ""
-"If the desired product isn't readily visible, type the name of the desired "
-"product in the field, and the option appears in the drop-down menu. Then, "
-"select that desired product to add it to the quotation."
-msgstr ""
-"원하는 품목을 쉽게 찾을 수 없는 경우 필드에 원하는 품목명을 입력하면 드롭다"
-"운 메뉴에 선택 항목이 나타납니다. 여기에서 원하는 품목을 선택하여 견적서에 추"
-"가합니다."
+"The optional products section as it appears in product forms in Odoo Sales."
+msgstr "Odoo 판매 앱에서 일반적인 품목 양식에 있는 속성 및 값 탭"
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:36
 msgid ""
-"When a product is added, the default :guilabel:`Quantity` is `1`, but that "
-"can be edited at any time."
+"Select the optional products using the drop-down menu. There is no limit to "
+"the number of optional products that can be added."
 msgstr ""
-"품목이 추가되면 기본 :guilabel:`수량`은 `1`이지만 언제든지 수정할 수 있습니"
-"다."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:39
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:41
 msgid ""
-"To delete any line item from the :guilabel:`Optional Products` tab, click "
-"the :guilabel:`🗑️ (trash can)` icon."
+"Multiple products can be selected by clicking :guilabel:`Search more...` "
+"and  *Search: Optional Products* pop-up window loads. Click the checkbox "
+"next to each desired product being added. When all optional products are "
+"selected, click :guilabel:`Select`, and all optional products appear in the "
+"field. If needed, new products can be created and added."
 msgstr ""
-":guilabel:`선택 가능 품목` 탭에 있는 항목을 삭제하려면 :guilabel:`🗑️ (휴지"
-"통)` 아이콘을 클릭합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:42
-msgid ""
-"Click the :guilabel:`Preview` button, located in the upper-left corner of "
-"the quotation, to reveal a preview of the quotation customers would receive, "
-"via email, along with the optional products they can potentially add to "
-"their order, located in the :guilabel:`Options` section."
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:0
+msgid "The Search: Optional Products form accessed by clicking Search more..."
 msgstr ""
-"견적서의 왼쪽 상단에 있는 :guilabel:`미리보기` 버튼을 클릭하면 고객이 이메일"
-"로 받게 될 견적서의 미리보기와 함께 주문에 추가할 수 있는 선택 가능 품목"
-"이 :guilabel:`선택 항목`에 표시됩니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
-msgid "Preview your quotations on Odoo Sales."
-msgstr "Odoo 판매 앱에서의 견적서 미리보기"
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:50
-msgid ""
-"Customers are able to add different optional products to an order by "
-"clicking the :guilabel:`🛒 (shopping cart)` icon, located to the right of "
-"the optional product line."
-msgstr ""
-"고객은 선택 가능 품목 내역의 오른쪽에 있는 :guilabel:`🛒 (장바구니)` 아이콘"
-"을 클릭하여 다양한 선택 가능 품목을 주문서에 추가할 수 있습니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:53
-msgid ""
-"If a customer selects optional products, these are automatically added to "
-"the quotation managed by the salesperson."
-msgstr ""
-"고객이 선택 항목 품목을 선택하면 영업 담당자가 관리하는 견적서에 자동으로 추"
-"가됩니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:56
-msgid ""
-"When the customer adds an optional product(s) to an order, the salesperson "
-"is instantly notified about the change, along with any other change the "
-"customer makes to an order. This allows salespeople to stay up-to-date with "
-"everything related to an order in the backend of the *Sales* application."
-msgstr ""
-"고객이 주문서에 선택 품목을 추가하면, 영업 담당자가 즉시 변경 사항을 고객이 "
-"주문서에서 변경한 다른 내용 전체와 함께 통보 받습니다. 이를 통해 영업 담당자"
-"는 *판매* 앱의 백엔드에서 주문서 관련된 모든 내용을 최근 상태로 유지할 수 있"
-"습니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:62
-msgid "Optional products on quotation templates"
+#, fuzzy
+#| msgid "Optional products on quotation templates"
+msgid "Optional products on quotation templates and quotations"
 msgstr "견적서 서식 상의 선택 품목"
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:65
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:52
 msgid ""
-"Be sure to review the :doc:`quote_template` documentation to better "
-"understand how quotation templates work before reading the following "
-"information."
+"Optional products can be added to quotation templates, allowing sales staff "
+"to offer related products without needing to manually add them to each "
+"quote. Additional optional products can also be added to individual "
+"quotations when needed."
 msgstr ""
-"다음의 정보를 확인하기 전에 :doc:`견적서_서식` 문서를 읽어보면 견적서 서식의 "
-"작동 방법을 쉽게 이해할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:68
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:59
+#, fuzzy
+#| msgid ""
+#| "To add optional products to a quotation template, navigate "
+#| "to :menuselection:`Sales app --> Configuration --> Quotation Templates`. "
+#| "Then, either select an existing quotation template to edit, or create a "
+#| "new one by clicking :guilabel:`New`."
 msgid ""
-"For quotation templates, just like a typical quotation form, there is also "
-"an :guilabel:`Optional Products` tab, wherein related products or services "
-"can be added to a quotation template."
-msgstr ""
-"견적서 서식의 경우, 일반적인 견적서 양식과 마찬가지로, :guilabel:`선택 품목` "
-"탭에서 관련된 품목이나 서비스를 견적서 서식에 추가할 수 있습니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:71
-msgid ""
-"To add optional products to a quotation template, navigate "
-"to :menuselection:`Sales app --> Configuration --> Quotation Templates`. "
-"Then, either select an existing quotation template to edit, or create a new "
-"one by clicking :guilabel:`New`."
+"Quotation templates also have an *Optional Products* tab, where related "
+"products or services can be added. To add optional products to a quotation "
+"template, navigate to :menuselection:`Sales app --> Configuration --> "
+"Quotation Templates`. Then, either select an existing quotation template to "
+"edit or :doc:`create a new one <quote_template>`."
 msgstr ""
 "견적서 서식에 선택 품목을 추가하려면, :menuselection:`판매 앱 --> 환경 설정 "
 "--> 견적서 서식` 메뉴로 이동합니다. 그런 다음, 편집할 기존 견적서 서식을 선택"
 "하거나 :guilabel:`새로 만들기`를 클릭하여 새로운 항목을 생성합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:75
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:64
+#, fuzzy
+#| msgid ""
+#| "On the quotation template form, click the :guilabel:`Optional Products` "
+#| "tab. Under the :guilabel:`Optional Products` tab, click :guilabel:`Add a "
+#| "line`, and select the desired product to add as an optional product to "
+#| "the quotation template."
 msgid ""
 "On the quotation template form, click the :guilabel:`Optional Products` tab. "
-"Under the :guilabel:`Optional Products` tab, click :guilabel:`Add a line`, "
-"and select the desired product to add as an optional product to the "
-"quotation template."
+"Then, click :guilabel:`Add a line` and select the desired product to add as "
+"an optional product to the quotation template."
 msgstr ""
 "견적서 서식 양식에서 :guilabel:`선택 품목` 탭을 클릭합니다. :guilabel:`선택 "
 "품목` 탭 아래에 있는 :guilabel:`줄 추가`를 선택한 후 견적서 서식에 선택 품목"
 "으로 추가하려는 품목을 선택합니다. "
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:83
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:68
+#, fuzzy
+#| msgid ""
+#| "The products added in the :guilabel:`Optional Products` tab are present "
+#| "in the quotation, by default, whenever that particular quotation template "
+#| "is used. These products can be removed, and additional products can be "
+#| "added, before the quotation is sent to a customer."
 msgid ""
-"The products added in the :guilabel:`Optional Products` tab are present in "
-"the quotation, by default, whenever that particular quotation template is "
-"used. These products can be removed, and additional products can be added, "
-"before the quotation is sent to a customer."
+"When the configured quotation template is used, the products added in "
+"the :guilabel:`Optional Products` tab will appear in the corresponding tab "
+"in the quotation. These products can be removed and additional products can "
+"be added before the quotation is sent to a customer."
 msgstr ""
 "특정한 견적서 서식을 사용할 때마다 기본적으로 :guilabel:`선택 품목` 탭에 추가"
 "된 품목이 견적서에 표시됩니다. 고객에게 견적서를 보내기 전에 이와 같은 품목"
 "을 삭제하거나 별도로 추가할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:88
-msgid ""
-"It's best to offer optional products that would encourage a customer to add "
-"additional items to their order, or entice them to purchase a more expensive "
-"version of their initially selected product."
-msgstr ""
-"고객이 주문할 때 다른 품목을 추가할 수 있도록 하거나 처음에 선택한 품목 중에"
-"서 더 비싼 버전으로 구매하도록 유도하도록 선택 품목을 제안하는 것이 가장 좋습"
-"니다."
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
+#, fuzzy
+#| msgid ""
+#| "The online payment setting on quotation template forms in Odoo Sales."
+msgid "The Optional Products section in a quotation template in Odoo Sales."
+msgstr "Odoo 판매 앱에서 견적서 서식 양식에 대한 온라인 결제 설정 메뉴"
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:92
-msgid ""
-"For example, if a customer purchases a wooden chair, some optional products "
-"could be: a warranty on that chair and/or a wooden chair with leather seats."
-msgstr ""
-"예를 들어, 고객이 나무로 된 의자를 구매하는 경우에 선택 품목은 해당 의자에 대"
-"한 워런티 및/또는 나무 의자에 가죽 시트가 있는 품목과 같은 것이 될 수 있습니"
-"다."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:96
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:76
 msgid ""
 "There is no limit to how many optional products can be added to a quotation "
 "template."
 msgstr "견적서 서식에 추가할 수 있는 선택 품목의 수에는 제한이 없습니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:79
+#, fuzzy
+#| msgid "Quotation settings"
+msgid "Quotations"
+msgstr "견적서 설정 메뉴"
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:81
+msgid ""
+"To add additional products on an individual quote, navigate "
+"to :menuselection:`Sales --> Orders --> Quotations` and select an existing "
+"quote or :doc:`create a new quote <create_quotations>`. Then open "
+"the :guilabel:`Optional Products`. Doing so reveals a blank field in "
+"the :guilabel:`Product` column. Click :guilabel:`Add a product`. When "
+"clicked, a drop-down menu with products from the database appear. Select the "
+"desired product from the drop-down menu to add it as an optional product. "
+"Type the name of the desired product or click :guilabel:`Search More...` to "
+"find additional products."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:88
+#, fuzzy
+#| msgid ""
+#| "To delete any line item from the :guilabel:`Optional Products` tab, click "
+#| "the :icon:`fa-trash` :guilabel:`(remove record)` icon."
+msgid ""
+"To delete any line item from the :guilabel:`Optional Products` tab, click "
+"the :icon:`fa-trash-o` :guilabel:`(delete)` icon."
+msgstr ""
+":guilabel:`선택 품목` 탭에서 모든 줄에 있는 항목을 삭제하려면 :icon:`fa-"
+"trash` :guilabel:`(레코드 제거)` 아이콘을 클릭합니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:92
+#, fuzzy
+#| msgid ""
+#| "When a product is added, the default :guilabel:`Quantity` is `1`, but "
+#| "that can be edited at any time."
+msgid ""
+"When a product is added, the default :guilabel:`Quantity` is `1`, but can be "
+"updated."
+msgstr ""
+"품목이 추가되면 기본 :guilabel:`수량`은 `1`이지만 언제든지 수정할 수 있습니"
+"다."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:95
+#, fuzzy
+#| msgid "Optional products"
+msgid "Previewing optional products"
+msgstr "품목 선택 사항"
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:97
+#, fuzzy
+#| msgid ""
+#| "Click the :guilabel:`Preview` button, located in the upper-left corner of "
+#| "the quotation, to reveal a preview of the quotation customers would "
+#| "receive, via email, along with the optional products they can potentially "
+#| "add to their order, located in the :guilabel:`Options` section."
+msgid ""
+"Click the :guilabel:`Preview` button, located in the upper-left corner of "
+"the quotation, to reveal a preview of the quotation email customers would "
+"receive. Optional products are located in the :guilabel:`Options` section of "
+"the preview."
+msgstr ""
+"견적서의 왼쪽 상단에 있는 :guilabel:`미리보기` 버튼을 클릭하면 고객이 이메일"
+"로 받게 될 견적서의 미리보기와 함께 주문에 추가할 수 있는 선택 가능 품목"
+"이 :guilabel:`선택 항목`에 표시됩니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:101
+#, fuzzy
+#| msgid ""
+#| "Customers are able to add different optional products to an order by "
+#| "clicking the :guilabel:`🛒 (shopping cart)` icon, located to the right of "
+#| "the optional product line."
+msgid ""
+"Customers are able to add different optional products to an order by "
+"clicking the :icon:`fa-shopping-cart` :guilabel:`(Add to cart)` icon, "
+"located to the right of the optional product line."
+msgstr ""
+"고객은 선택 가능 품목 내역의 오른쪽에 있는 :guilabel:`🛒 (장바구니)` 아이콘"
+"을 클릭하여 다양한 선택 가능 품목을 주문서에 추가할 수 있습니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
+msgid "The Options section within a quotation preview."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:108
+#, fuzzy
+#| msgid ""
+#| "If a customer selects optional products, these are automatically added to "
+#| "the quotation managed by the salesperson."
+msgid ""
+"If a customer selects optional products, they are automatically added to the "
+"quotation managed by the salesperson."
+msgstr ""
+"고객이 선택 항목 품목을 선택하면 영업 담당자가 관리하는 견적서에 자동으로 추"
+"가됩니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:111
+#, fuzzy
+#| msgid ""
+#| "When the customer adds an optional product(s) to an order, the "
+#| "salesperson is instantly notified about the change, along with any other "
+#| "change the customer makes to an order. This allows salespeople to stay up-"
+#| "to-date with everything related to an order in the backend of the *Sales* "
+#| "application."
+msgid ""
+"When a customer adds optional products to an order, the salesperson is "
+"instantly notified about the change, along with any other change the "
+"customer makes to an order. This allows salespeople to stay up-to-date with "
+"everything related to an order in the backend of the *Sales* application. "
+"Added products appear in green in the :guilabel:`Optional Products` tab when "
+"the quote is viewed."
+msgstr ""
+"고객이 주문서에 선택 품목을 추가하면, 영업 담당자가 즉시 변경 사항을 고객이 "
+"주문서에서 변경한 다른 내용 전체와 함께 통보 받습니다. 이를 통해 영업 담당자"
+"는 *판매* 앱의 백엔드에서 주문서 관련된 모든 내용을 최근 상태로 유지할 수 있"
+"습니다."
 
 #: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:5
 msgid ""
@@ -28822,7 +28911,7 @@ msgstr ""
 msgid ":doc:`../products_prices/products/variants`"
 msgstr ":doc:`../products_prices/products/variants`"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:5
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:8
 msgid ""
 "The *PDF Quote Builder* in Odoo *Sales* provides the opportunity to send "
 "customers a fully customized PDF file for quotes, showcasing the company and "
@@ -28833,7 +28922,7 @@ msgstr ""
 "는 것이 아니라 다양한 정보 및 디자인 요소와 함께 회사와 품목을 소개하는 완전"
 "히 맞춤화된 견적용 PDF 파일을 고객에게 보낼 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:9
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:12
 msgid ""
 "The PDF Quote Builder groups header pages, product descriptions, the "
 "price(s), and footer pages to create a detailed quote. It can also inject "
@@ -28844,7 +28933,7 @@ msgstr ""
 "여 견적서를 자세히 제작합니다. 또한 PDF에 동적 텍스트나 사용자 지정 메모를 삽"
 "입하여 고객 맞춤형으로 제안을 할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:13
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:16
 msgid ""
 "Having a customized PDF in quotes provides a heightened conclusion to the "
 "shopping experience for customers, and adds an elegant level of "
@@ -28853,7 +28942,7 @@ msgstr ""
 "맞춤형 PDF 견적서를 사용하면 고객에게 한층 더 완성도 있는 쇼핑 경험을 선사할 "
 "수 있을 뿐만 아니라 기업에 걸맞는 품격으로 전문성을 더할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:17
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:20
 msgid ""
 "`Odoo Quick Tips - Create a PDF quote [video] <https://www.youtube.com/watch?"
 "v=tQNydBZt-VI>`_"
@@ -28861,7 +28950,7 @@ msgstr ""
 "`Odoo 빠른 팁 - PDF 견적서 만들기 [동영상] <https://www.youtube.com/watch?"
 "v=tQNydBZt-VI>`_"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:20
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:23
 msgid ""
 "It is recommended to edit PDF forms with Adobe software. The form fields on "
 "the header and footer PDF templates are necessary to get dynamic values with "
@@ -28870,7 +28959,42 @@ msgstr ""
 "PDF 양식을 편집할 경우 Adobe 소프트웨어를 사용하는 것이 좋습니다. Odoo 머리"
 "글 및 바닥글에 동적 값을 사용하려면 PDF 서식의 양식 필드가 있어야 합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:26
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:28
+#, fuzzy
+#| msgid "Dynamic text in PDFs"
+msgid "Add dynamic text to PDFs"
+msgstr "PDF의 동적 텍스트"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:28
+#, fuzzy
+#| msgid "Dynamic text in PDFs"
+msgid "Add dynamic text fields to PDFs."
+msgstr "PDF의 동적 텍스트"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:33
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:3
+#, fuzzy
+#| msgid "Add PDF to product"
+msgid "Add PDFs to quotes"
+msgstr "품목에 PDF 추가하기"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:33
+msgid "Add a PDF header or footer to a quote."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:38
+#, fuzzy
+#| msgid "Add PDF to product"
+msgid "Add PDFs to products"
+msgstr "품목에 PDF 추가하기"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:38
+msgid ""
+"Set up the headers and footers for products. These will appear on sales "
+"quotes and online store pages."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:48
 msgid ""
 "In order to add custom PDF files for quotes, the :guilabel:`PDF Quote "
 "builder` feature *must* be configured."
@@ -28878,7 +29002,7 @@ msgstr ""
 "견적서에 맞춤형 PDF 파일을 추가하려면 :guilabel:`PDF 견적서 제작기` 기능을 *"
 "반드시* 설정해야 합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:29
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:51
 msgid ""
 "To do that, navigate to :menuselection:`Sales app --> Configuration --> "
 "Settings`. Then, on the :guilabel:`Settings` page, scroll to "
@@ -28889,11 +29013,11 @@ msgstr ""
 "다. 그런 다음 :guilabel:`설정` 페이지에서 :guilabel:`견적서 및 주문서`로 스크"
 "롤을 이동한 후 :guilabel:`PDF 견적서 제작기` 기능을 찾습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:34
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:56
 msgid "Add PDF as Header/Footer"
 msgstr "PDF를 머리글/바닥글에 추가하기"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:36
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:58
 msgid ""
 "In Odoo *Sales*, it's possible to add a custom PDF that can be used either "
 "as a header or a footer. When the PDF quote builder is activated in a "
@@ -28904,7 +29028,7 @@ msgstr ""
 "습니다. 견적용으로 PDF 견적서 빌더가 활성화되면 머리글과 바닥글을 얼마든지 선"
 "택하여 사용할 수 있으며, 이와 같은 PDF도 이후 최종 PDF에 삽입이 가능합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:40
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:62
 msgid ""
 "To add a custom PDF as header or footer, start by navigating "
 "to :menuselection:`Sales app --> Configuration --> Headers/Footers`. From "
@@ -28914,7 +29038,7 @@ msgstr ""
 "> 환경설정 --> 머리글/바닥글` 로 이동합니다. 이 페이지에서 :guilabel:`새로 만"
 "들기` 또는 :guilabel:`업로드` 를 클릭합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:44
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:66
 msgid ""
 "Clicking :guilabel:`Upload` instantly provides the opportunity to upload the "
 "desired document. Then, the document can be further configured on the "
@@ -28927,8 +29051,8 @@ msgstr ""
 "는 :icon:`fa-ellipsis-v` :guilabel:`(세로 줄임표)` 아이콘을 클릭한 다"
 "음 :guilabel:`편집` 을 클릭하면 설정할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:49
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:177
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:71
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:31
 msgid ""
 "Clicking :guilabel:`New` reveals a blank documents form, in which the "
 "desired PDF can be uploaded via the :guilabel:`Upload your file` button on "
@@ -28938,15 +29062,15 @@ msgstr ""
 "을 :guilabel:`파일 콘텐츠`에 있는 양식의 :guilabel:`파일 업로드` 버튼으로 업"
 "로드할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:53
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:75
 msgid ""
 "Various information and configurations related to the uploaded document can "
 "be modified here."
 msgstr ""
 "업로드 문서와 관련된 다양한 정보 및 설정 내용을 여기에서 수정할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:55
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:187
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:77
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:41
 msgid ""
 "The first field on the documents form is for the :guilabel:`Name` of the "
 "document, and it is grayed-out (not clickable) until a document is uploaded. "
@@ -28957,7 +29081,7 @@ msgstr ""
 "때까지 회색으로 표시됩니다 (클릭할 수 없음). PDF를 업로드하면 :guilabel:`이름"
 "` 필드에 PDF 이름이 자동으로 입력되고 편집할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:59
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:81
 msgid ""
 "Then, in the :guilabel:`Document Type` field, click the drop-down menu, and "
 "select either: :guilabel:`Header`, or :guilabel:`Footer` to define whether "
@@ -28968,13 +29092,13 @@ msgstr ""
 "후 :guilabel:`머리글` 또는 :guilabel:`바닥글` 을 선택하면 이러한 파일을 견적"
 "서의 처음 또는 끝부분 중 어디에서 선택하게 할지 지정할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:63
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:85
 msgid ""
 "Under this, in the :guilabel:`Quotation Templates` section, this PDF can be "
 "restricted quotation templates only."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:67
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:89
 msgid ""
 "Alternatively, you can also navigate to :menuselection:`Sales app --> "
 "Configuration --> Quotation Templates`, select a template and "
@@ -28985,7 +29109,7 @@ msgstr ""
 "플릿을 선택한 후 PDF를 직접 :guilabel:`견적서 빌더` 탭에서 :guilabel:`추가` "
 "또는 :guilabel:`업로드` 할 수도 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:71
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:93
 msgid ""
 "Lastly, beside the :guilabel:`File Content` field, you have the possibility "
 "to :guilabel:`Configure dynamic fields`."
@@ -28993,11 +29117,266 @@ msgstr ""
 "마지막으로 :guilabel:`파일 콘텐츠` 필드 옆에 있는 :guilabel:`동적 필드 설정` "
 "옵션을 활용할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:75
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:3
+#, fuzzy
+#| msgid "Add PDF to product"
+msgid "Add PDFs to a product"
+msgstr "품목에 PDF 추가하기"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:5
+msgid ""
+"In Odoo *Sales*, it's also possible to add a custom PDF to a product form. "
+"When a PDF is added to a product, and that product is used in a quotation, "
+"that PDF is also inserted in the final PDF."
+msgstr ""
+"Odoo *판매* 에서 품목 양식에 맞춤형 PDF를 추가하는 것도 가능합니다. PDF를 품"
+"목에 추가한 경우, 해당 품목이 견적서에 사용되면 이 PDF 역시 최종 PDF에 삽입됩"
+"니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:8
+msgid ""
+"To add a custom PDF to a product, start by navigating "
+"to :menuselection:`Sales app --> Products --> Products`, and select the "
+"desired product to add a custom PDF to."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:12
+msgid ""
+"A document could also be added to a product variant, instead of a product. "
+"If there are documents on a product *and* on its variant, **only** the "
+"documents in the variant are shown."
+msgstr ""
+"품목 대신 품목 세부 옵션에 문서를 추가할 수도 있습니다. 품목 *및* 세부 옵션"
+"에 대한 문서가 있는 경우에는 **오직**세부 옵션 관련된 문서에만 표시됩니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:15
+msgid ""
+"To add a custom document to a product variant, navigate "
+"to :menuselection:`Sales app --> Products --> Product Variants`. Select the "
+"desired variant, click the :guilabel:`Documents` smart button, and proceed "
+"to upload the custom document to the specific product variant."
+msgstr ""
+"품목 세부 옵션에 맞춤형 문서를 추가하려면 :menuselection:`판매 앱 --> 품목 --"
+"> 품목 세부 옵션` 으로 이동합니다. 원하는 세부 옵션을 선택하고 :guilabel:`문"
+"서` 스마트 버튼을 클릭한 다음, 품목 세부 옵션에 맞춤형 문서를 업로드합니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:19
+msgid ""
+"On the product page, click the :guilabel:`Documents` smart button at the top "
+"of the page to navigate to a :guilabel:`Documents` page for that product, "
+"where files related to that product can be uploaded. From this page, either "
+"click :guilabel:`New` or :guilabel:`Upload`."
+msgstr ""
+"품목 페이지에서 페이지 상단에 있는 :guilabel:`문서` 스마트 버튼을 클릭하면 해"
+"당 품목에 대한 :guilabel:`문서` 페이지로 이동하며, 여기에 해당 품목과 관련된 "
+"파일을 업로드할 수 있습니다. 이 페이지에서 :guilabel:`새로 만들기` 또"
+"는 :guilabel:`업로드` 를 클릭합니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
+msgid "The Documents smart button on a product form in Odoo Sales."
+msgstr "Odoo 판매의 품목 양식에 있는 문서 스마트 버튼"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:26
+msgid ""
+"Clicking :guilabel:`Upload` opens the computer's local file directory. An "
+"uploaded document can be further configured on the document card, or by "
+"clicking the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in "
+"the top-right corner of the document card, and then "
+"clicking :guilabel:`Edit`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:36
+msgid "PDF form configuration"
+msgstr "PDF 양식 환경설정"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
+msgid ""
+"A standard document form with various fields for a specific product in Odoo "
+"Sales."
+msgstr "Odoo 판매 앱에서 특정 품목에 대해 다양한 필드가 있는 표준 문서 양식"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:45
+msgid ""
+"Prior to uploading a document, there's the option to designate whether the "
+"document is a :guilabel:`File` or :guilabel:`URL` from the :guilabel:`Type` "
+"drop-down field menu."
+msgstr ""
+"문서를 업로드하기 전에 :guilabel:`유형` 드롭다운 필드 메뉴에서 문서"
+"를 :guilabel:`파일` 또는 :guilabel:`URL`로 지정하는 선택 항목이 있습니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
+msgid "A standard document form with an uploaded pdf in Odoo Sales."
+msgstr "Odoo 판매 앱에서 PDF가 업로드된 표준 문서 양식"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:52
+msgid ""
+"If a PDF is uploaded, the :guilabel:`Type` field is auto-populated "
+"to :guilabel:`File`, and it cannot be modified."
+msgstr ""
+"PDF를 업로드하면 :guilabel:`유형`이 :guilabel:`파일`로 자동 입력되며 수정할 "
+"수 없습니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:55
+msgid ""
+"Then, in the :guilabel:`Sales` section, in the :guilabel:`Visible at` field, "
+"click the drop-down menu, and select either: :guilabel:`On "
+"quotation`, :guilabel:`On confirmed order`, or :guilabel:`Inside quote pdf`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:59
+msgid ""
+":guilabel:`Quotation`: the document is sent to (and accessible by) customers "
+"at any time."
+msgstr ""
+":guilabel:`견적`: 문서를 언제든지 고객에게 전송할 수 있습니다(고객이 액세스"
+"할 수 있습니다)."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:61
+msgid ""
+":guilabel:`Confirmed order`: the document is sent to customers upon the "
+"confirmation of an order. This is best for user manuals and other "
+"supplemental documents."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:64
+msgid ""
+":guilabel:`Inside quote`: the document is included in the PDF of the "
+"quotation, between the header pages and the :guilabel:`Pricing` section of "
+"the quote."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:68
+msgid ""
+"When the :guilabel:`Inside quote` option for the :guilabel:`Visible at` "
+"field is chosen, and the custom PDF file, `Corner Desk.pdf` is uploaded, the "
+"PDF is visible on the quotation in the *customer portal* under "
+"the :guilabel:`Documents` field."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:0
+msgid ""
+"Sample of an uploaded pdf with the on quote option chosen in Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:75
+msgid ""
+"Beside the :guilabel:`File Content` field, you have the possibility "
+"to :guilabel:`Configure dynamic fields`. When doing so, remember that the "
+"starting model is the :guilabel:`sale_order_line`, unlike for headers and "
+"footers that start from the :guilabel:`sale_order`."
+msgstr ""
+":guilabel:`파일 콘텐츠` 필드 옆에서 :guilabel:`동적 필드 환경설정` 을 할 수 "
+"있습니다. 이 경우, 시작 모델은 :guilabel:`sale_order_line` 라는 점에 유의하도"
+"록 하며, 이와 달리 머리글 및 바닥글은 :guilabel:`판매주문서` 에서 시작합니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:79
+msgid ""
+"Lastly, in the :guilabel:`E-Commerce` section, decide whether or not "
+"to :guilabel:`Publish on Website` so that the PDF appears on the product "
+"page in the online store."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:83
+msgid ""
+"When the :guilabel:`Publish on Website` option is enabled, a link to the "
+"uploaded document, `Corner Desk.pdf`, appears on the product's page in the "
+"online store."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:86
+msgid ""
+"It appears beneath a :guilabel:`Documents` heading, with a link showcasing "
+"the name of the uploaded document."
+msgstr ""
+"해당 내용은 :guilabel:`문서` 제목 아래에 표시되며, 업로드된 문서의 이름으로 "
+"링크가 함께 표시됩니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:0
+msgid ""
+"Showing a link to an uploaded document on a product page using Odoo Sales."
+msgstr ""
+"Odoo 판매를 사용하여 품목 페이지에 업로드된 문서에 대한 링크가 표시된 모습입"
+"니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:5
+msgid ""
+"On a sales order, in the :guilabel:`Quote Builder` tab, select additional "
+"documents to be merged into the final PDF. If a selected document has custom "
+"fields, they appear as editable text boxes to be filled in."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:None
+msgid ""
+"Selectable quotation headers and footers under the Quote Builder section in "
+"a quotation."
+msgstr ""
+"견적서 머리글 및 바닥글이 견적서에 있는 견적서 작성기 섹션에 나타나 있는 모습"
+"입니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:12
+msgid ""
+"Once a quote with a pre-configured PDF has been confirmed, Odoo provides the "
+"option to print the confirmed quote to check for errors, or to keep for "
+"records."
+msgstr ""
+"견적서를 사전 설정되어 있는 PDF와 함께 확정하면, Odoo에서 확정된 견적서를 선"
+"택 사항으로 인쇄할 수 있으며 이를 통해 오류를 확인하거나 기록용으로 보관할 "
+"수 있습니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:15
+msgid ""
+"To print the PDF quote, navigate to the confirmed quote, and click "
+"the :guilabel:`⚙️ (gear)` icon to reveal a drop-down menu. From this drop-"
+"down menu, select :guilabel:`Print`, then select :guilabel:`PDF Quote`."
+msgstr ""
+"PDF 견적서를 인쇄하려면 확정된 견적서로 이동한 후 :guilabel:`⚙️ (톱니바퀴)` 아"
+"이콘을 클릭하면 드롭다운 메뉴가 표시됩니다. 이 드롭다운 메뉴에서 :guilabel:`"
+"인쇄` 를 선택한 다음 :guilabel:`PDF 견적서` 를 선택합니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:None
+msgid ""
+"Print pdf quote option on drop-down menu located on confirmed sales order in "
+"Odoo Sales."
+msgstr ""
+"Odoo 판매의 확정 판매주문서에 있는 드롭다운 메뉴에 PDF 견적서 인쇄 옵션이 나"
+"타나 있는 모습입니다.."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:22
+msgid ""
+"Doing so instantly downloads the PDF quote. When opened, the PDF quote, "
+"along with the configured product PDF that was set to be visible inside the "
+"quote, can be viewed and printed."
+msgstr ""
+"이렇게 하면 PDF 견적서가 즉시 다운로드됩니다. PDF 견적서를 열면 견적서 내부"
+"에 나타나도록 설정되어 있는 품목 PDF와 함께 견적서를 확인하여 인쇄할 수 있습"
+"니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:26
+#, fuzzy
+#| msgid ""
+#| "Download these :download:`PDF quote builder examples <pdf_quote_builder/"
+#| "pdfquotebuilderexamples.zip>` or download :download:`sample quotation "
+#| "<pdf_quote_builder/sample_quotation.pdf>` for added reference."
+msgid ""
+"Download these :download:`PDF quote builder examples <add_pdf_quotes/"
+"pdfquotebuilderexamples.zip>` or download :download:`sample quotation "
+"<add_pdf_quotes/sample_quotation.pdf>` for added reference."
+msgstr ""
+"추가로 참조할 수 있도록 `PDF 견적서 작성기 예시 <pdf_quote_builder/"
+"pdfquotebuilderexamples.zip>` 또는 :download:`예시용 견적서 "
+"<pdf_quote_builder/sample_quotation.pdf>` 를 다운로드하세요."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:31
+#, fuzzy
+#| msgid ":doc:`quote_template`"
+msgid ":doc:`../quote_template`"
+msgstr ":doc:`견적서 템플릿`"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:3
 msgid "Dynamic text in PDFs"
 msgstr "PDF의 동적 텍스트"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:77
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:5
 msgid ""
 "While creating custom PDFs for quotes, use *dynamic text* for Odoo to auto-"
 "fill the PDF content with information related to the quote from the Odoo "
@@ -29007,7 +29386,7 @@ msgstr ""
 "나 가격과 같은 Odoo 데이터베이스의 견적서 관련 정보로 PDF 콘텐츠가 자동 입력"
 "되도록 합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:80
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:8
 msgid ""
 "Dynamic text values are form components (text inputs) that can be added in a "
 "PDF file, and Odoo automatically fills those values in with information "
@@ -29016,93 +29395,93 @@ msgstr ""
 "동적 텍스트 값은 PDF 파일에 추가할 수 있는 양식 요소 (입력용 텍스트)이며 Odoo"
 "에서는 견적서와 관련된 내용이 해당 값에 입력됩니다.."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:84
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:12
 msgid "Dynamic text values"
 msgstr "동적 텍스트 값"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:86
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:14
 msgid ""
 "Below are common dynamic text values used in custom PDFs that are already "
 "mapped to the correct fields, and what they represent."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:89
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:17
 msgid "For headers and footers PDF:"
 msgstr "머리글 및 바닥글 PDF:"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:91
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:19
 msgid ":guilabel:`name`: Sales Order Reference"
 msgstr ":guilabel:`name`: 판매주문서 참조"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:92
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:20
 msgid ":guilabel:`partner_id__name`: Customer Name"
 msgstr ":guilabel:`partner_id__name`: 고객명"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:93
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:21
 msgid ":guilabel:`user_id__name`: Salesperson Name"
 msgstr ":guilabel:`user_id__name`: 영업 담당자 이름"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:94
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:22
 msgid ":guilabel:`amount_untaxed`: Untaxed Amount"
 msgstr ":guilabel:`amount_untaxed`: 비과세 금액"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:95
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:23
 msgid ":guilabel:`amount_total`: Total Amount"
 msgstr ":guilabel:`amount_total`: 총 금액"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:96
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:24
 msgid ":guilabel:`delivery_date`: Delivery Date"
 msgstr ":guilabel:`delivery_date`: 배송일"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:97
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:25
 msgid ":guilabel:`validity_date`: Expiration Date"
 msgstr ":guilabel:`validity_date`: 만료일"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:98
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:26
 msgid ":guilabel:`client_order_ref`: Customer Reference"
 msgstr ":guilabel:`client_order_ref`: 고객 참조"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:101
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:29
 msgid "For product PDF:"
 msgstr "품목 PDF용:"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:103
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:31
 msgid ":guilabel:`description`: Product Description"
 msgstr ":guilabel:`설명`: 품목 설명"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:104
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:32
 msgid ":guilabel:`quantity`: Quantity"
 msgstr ":guilabel:`수량`: 수량"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:105
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:33
 msgid ":guilabel:`uom`: Unit of Measure (UoM)"
 msgstr ":guilabel:`uom`: 단위(UoM)"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:106
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:34
 msgid ":guilabel:`price_unit`: Price Unit"
 msgstr ":guilabel:`price_unit`: 가격 단위"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:107
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:35
 msgid ":guilabel:`discount`: Discount"
 msgstr ":guilabel:`할인`: 할인"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:108
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:36
 msgid ":guilabel:`product_sale_price`: Product List Price"
 msgstr ":guilabel:`product_sale_price`: 품목 목록에 있는 가격"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:109
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:37
 msgid ":guilabel:`taxes`: Taxes name joined by a comma (`,`)"
 msgstr ":guilabel:`세금`: 세금명은 쉼표(`,`)로 추가합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:110
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:38
 msgid ":guilabel:`tax_excl_price`: Tax Excluded Price"
 msgstr ":guilabel:`tax_excl_price`: 세금 미포함 가격"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:111
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:39
 msgid ":guilabel:`tax_incl_price`: Tax Included Price"
 msgstr ":guilabel:`tax_incl_price`: 세금 포함 가격"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:113
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:41
 msgid ""
 "After uploading a PDF, you can then :guilabel:`Configure dynamic fields`. "
 "This will allow you to map any field name found in your PDF to the field you "
@@ -29119,7 +29498,7 @@ msgstr ""
 "를 따릅니다. 경로를 비워두면 견적서에서 사용자 지정 메모를 작성하여 직접 입력"
 "할 수 있습니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:121
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:48
 msgid ""
 "When a PDF is built, it's best practice to use common dynamic text values "
 "(:guilabel:`name` and :guilabel:`partner_id_name`). When uploaded into the "
@@ -29131,18 +29510,18 @@ msgstr ""
 "스에 업로드되면 Odoo에서는 해당 항목에 있는 내용을 자동으로 항목에 입력합니"
 "다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:125
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:52
 msgid ""
 "In this case, Odoo would auto-populate the Sales Order Reference in "
 "the :guilabel:`name` dynamic text field, and the Customer Name in "
 "the :guilabel:`partner_id_name` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:0
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:0
 msgid "PDF quote being built using common dynamic placeholders."
 msgstr "일반적인 동적 자리 표시자를 사용하여 PDF 견적서를 작성합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:132
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:59
 msgid ""
 "Once the PDF file(s) are complete, save them to the computer's hard drive, "
 "and proceed to upload them to Odoo via :menuselection:`Sales app --> "
@@ -29151,7 +29530,7 @@ msgstr ""
 "PDF 파일이 만들어지면 컴퓨터의 하드 드라이브에 저장한 후 :menuselection:`판"
 "매 앱 --> 환경설정 --> 머리글/바닥글` 을 통해 Odoo에 업로드합니다."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:136
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:63
 msgid ""
 "When uploading PDF containing the form "
 "field :guilabel:`invoice_partner_country`, which is an information available "
@@ -29169,7 +29548,7 @@ msgstr ""
 "서 PDF를 작성할 때 청구서 파트너 국가명으로 양식을 입력하는 경"
 "우, :guilabel:`order_id.partner_invoice_id.country_id.name` "
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:144
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:71
 msgid ""
 "When uploading any PDF containing the form field :guilabel:`custom_note`, "
 "leaving the :guilabel:`path` empty allows the seller to write down any note "
@@ -29178,252 +29557,6 @@ msgstr ""
 "양식 필드 :guilabel:`custom_note` 가 포함된 PDF를 업로드할 "
 "때 :guilabel:`path` 를 비워두면 판매자가 문서에서 해당 양식 필드가 있는 위치"
 "에 대한 메모를 기재하여 PDF가 작성될 때 표시할 수 있습니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:149
-msgid "Add PDF to product"
-msgstr "품목에 PDF 추가하기"
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:151
-msgid ""
-"In Odoo *Sales*, it's also possible to add a custom PDF to a product form. "
-"When a PDF is added to a product, and that product is used in a quotation, "
-"that PDF is also inserted in the final PDF."
-msgstr ""
-"Odoo *판매* 에서 품목 양식에 맞춤형 PDF를 추가하는 것도 가능합니다. PDF를 품"
-"목에 추가한 경우, 해당 품목이 견적서에 사용되면 이 PDF 역시 최종 PDF에 삽입됩"
-"니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:154
-msgid ""
-"To add a custom PDF to a product, start by navigating "
-"to :menuselection:`Sales app --> Products --> Products`, and select the "
-"desired product to add a custom PDF to."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:158
-msgid ""
-"A document could also be added to a product variant, instead of a product. "
-"If there are documents on a product *and* on its variant, **only** the "
-"documents in the variant are shown."
-msgstr ""
-"품목 대신 품목 세부 옵션에 문서를 추가할 수도 있습니다. 품목 *및* 세부 옵션"
-"에 대한 문서가 있는 경우에는 **오직**세부 옵션 관련된 문서에만 표시됩니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:161
-msgid ""
-"To add a custom document to a product variant, navigate "
-"to :menuselection:`Sales app --> Products --> Product Variants`. Select the "
-"desired variant, click the :guilabel:`Documents` smart button, and proceed "
-"to upload the custom document to the specific product variant."
-msgstr ""
-"품목 세부 옵션에 맞춤형 문서를 추가하려면 :menuselection:`판매 앱 --> 품목 --"
-"> 품목 세부 옵션` 으로 이동합니다. 원하는 세부 옵션을 선택하고 :guilabel:`문"
-"서` 스마트 버튼을 클릭한 다음, 품목 세부 옵션에 맞춤형 문서를 업로드합니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:165
-msgid ""
-"On the product page, click the :guilabel:`Documents` smart button at the top "
-"of the page to navigate to a :guilabel:`Documents` page for that product, "
-"where files related to that product can be uploaded. From this page, either "
-"click :guilabel:`New` or :guilabel:`Upload`."
-msgstr ""
-"품목 페이지에서 페이지 상단에 있는 :guilabel:`문서` 스마트 버튼을 클릭하면 해"
-"당 품목에 대한 :guilabel:`문서` 페이지로 이동하며, 여기에 해당 품목과 관련된 "
-"파일을 업로드할 수 있습니다. 이 페이지에서 :guilabel:`새로 만들기` 또"
-"는 :guilabel:`업로드` 를 클릭합니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid "The Documents smart button on a product form in Odoo Sales."
-msgstr "Odoo 판매의 품목 양식에 있는 문서 스마트 버튼"
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:172
-msgid ""
-"Clicking :guilabel:`Upload` opens the computer's local file directory. An "
-"uploaded document can be further configured on the document card, or by "
-"clicking the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in "
-"the top-right corner of the document card, and then "
-"clicking :guilabel:`Edit`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:182
-msgid "PDF form configuration"
-msgstr "PDF 양식 환경설정"
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid ""
-"A standard document form with various fields for a specific product in Odoo "
-"Sales."
-msgstr "Odoo 판매 앱에서 특정 품목에 대해 다양한 필드가 있는 표준 문서 양식"
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:191
-msgid ""
-"Prior to uploading a document, there's the option to designate whether the "
-"document is a :guilabel:`File` or :guilabel:`URL` from the :guilabel:`Type` "
-"drop-down field menu."
-msgstr ""
-"문서를 업로드하기 전에 :guilabel:`유형` 드롭다운 필드 메뉴에서 문서"
-"를 :guilabel:`파일` 또는 :guilabel:`URL`로 지정하는 선택 항목이 있습니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid "A standard document form with an uploaded pdf in Odoo Sales."
-msgstr "Odoo 판매 앱에서 PDF가 업로드된 표준 문서 양식"
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:198
-msgid ""
-"If a PDF is uploaded, the :guilabel:`Type` field is auto-populated "
-"to :guilabel:`File`, and it cannot be modified."
-msgstr ""
-"PDF를 업로드하면 :guilabel:`유형`이 :guilabel:`파일`로 자동 입력되며 수정할 "
-"수 없습니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:201
-msgid ""
-"Then, in the :guilabel:`Sales` section, in the :guilabel:`Visible at` field, "
-"click the drop-down menu, and select either: :guilabel:`On "
-"quotation`, :guilabel:`On confirmed order`, or :guilabel:`Inside quote pdf`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:205
-msgid ""
-":guilabel:`Quotation`: the document is sent to (and accessible by) customers "
-"at any time."
-msgstr ""
-":guilabel:`견적`: 문서를 언제든지 고객에게 전송할 수 있습니다(고객이 액세스"
-"할 수 있습니다)."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:207
-msgid ""
-":guilabel:`Confirmed order`: the document is sent to customers upon the "
-"confirmation of an order. This is best for user manuals and other "
-"supplemental documents."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:210
-msgid ""
-":guilabel:`Inside quote`: the document is included in the PDF of the "
-"quotation, between the header pages and the :guilabel:`Pricing` section of "
-"the quote."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:214
-msgid ""
-"When the :guilabel:`Inside quote` option for the :guilabel:`Visible at` "
-"field is chosen, and the custom PDF file, `Corner Desk.pdf` is uploaded, the "
-"PDF is visible on the quotation in the *customer portal* under "
-"the :guilabel:`Documents` field."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:0
-msgid ""
-"Sample of an uploaded pdf with the on quote option chosen in Odoo Sales."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:221
-msgid ""
-"Beside the :guilabel:`File Content` field, you have the possibility "
-"to :guilabel:`Configure dynamic fields`. When doing so, remember that the "
-"starting model is the :guilabel:`sale_order_line`, unlike for headers and "
-"footers that start from the :guilabel:`sale_order`."
-msgstr ""
-":guilabel:`파일 콘텐츠` 필드 옆에서 :guilabel:`동적 필드 환경설정` 을 할 수 "
-"있습니다. 이 경우, 시작 모델은 :guilabel:`sale_order_line` 라는 점에 유의하도"
-"록 하며, 이와 달리 머리글 및 바닥글은 :guilabel:`판매주문서` 에서 시작합니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:226
-msgid ""
-"Lastly, in the :guilabel:`E-Commerce` section, decide whether or not "
-"to :guilabel:`Publish on Website` so that the PDF appears on the product "
-"page in the online store."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:230
-msgid ""
-"When the :guilabel:`Publish on Website` option is enabled, a link to the "
-"uploaded document, `Corner Desk.pdf`, appears on the product's page in the "
-"online store."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:233
-msgid ""
-"It appears beneath a :guilabel:`Documents` heading, with a link showcasing "
-"the name of the uploaded document."
-msgstr ""
-"해당 내용은 :guilabel:`문서` 제목 아래에 표시되며, 업로드된 문서의 이름으로 "
-"링크가 함께 표시됩니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:0
-msgid ""
-"Showing a link to an uploaded document on a product page using Odoo Sales."
-msgstr ""
-"Odoo 판매를 사용하여 품목 페이지에 업로드된 문서에 대한 링크가 표시된 모습입"
-"니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:240
-msgid "PDF quote"
-msgstr "PDF 견적서"
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:242
-msgid ""
-"On a sales order, in the :guilabel:`Quote Builder` tab, select additional "
-"documents to be merged into the final PDF. If a selected document has custom "
-"fields, they appear as editable text boxes to be filled in."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid ""
-"Selectable quotation headers and footers under the Quote Builder section in "
-"a quotation."
-msgstr ""
-"견적서 머리글 및 바닥글이 견적서에 있는 견적서 작성기 섹션에 나타나 있는 모습"
-"입니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:249
-msgid ""
-"Once a quote with a pre-configured PDF has been confirmed, Odoo provides the "
-"option to print the confirmed quote to check for errors, or to keep for "
-"records."
-msgstr ""
-"견적서를 사전 설정되어 있는 PDF와 함께 확정하면, Odoo에서 확정된 견적서를 선"
-"택 사항으로 인쇄할 수 있으며 이를 통해 오류를 확인하거나 기록용으로 보관할 "
-"수 있습니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:252
-msgid ""
-"To print the PDF quote, navigate to the confirmed quote, and click "
-"the :guilabel:`⚙️ (gear)` icon to reveal a drop-down menu. From this drop-"
-"down menu, select :guilabel:`Print`, then select :guilabel:`PDF Quote`."
-msgstr ""
-"PDF 견적서를 인쇄하려면 확정된 견적서로 이동한 후 :guilabel:`⚙️ (톱니바퀴)` 아"
-"이콘을 클릭하면 드롭다운 메뉴가 표시됩니다. 이 드롭다운 메뉴에서 :guilabel:`"
-"인쇄` 를 선택한 다음 :guilabel:`PDF 견적서` 를 선택합니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid ""
-"Print pdf quote option on drop-down menu located on confirmed sales order in "
-"Odoo Sales."
-msgstr ""
-"Odoo 판매의 확정 판매주문서에 있는 드롭다운 메뉴에 PDF 견적서 인쇄 옵션이 나"
-"타나 있는 모습입니다.."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:259
-msgid ""
-"Doing so instantly downloads the PDF quote. When opened, the PDF quote, "
-"along with the configured product PDF that was set to be visible inside the "
-"quote, can be viewed and printed."
-msgstr ""
-"이렇게 하면 PDF 견적서가 즉시 다운로드됩니다. PDF 견적서를 열면 견적서 내부"
-"에 나타나도록 설정되어 있는 품목 PDF와 함께 견적서를 확인하여 인쇄할 수 있습"
-"니다."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:263
-msgid ""
-"Download these :download:`PDF quote builder examples <pdf_quote_builder/"
-"pdfquotebuilderexamples.zip>` or download :download:`sample quotation "
-"<pdf_quote_builder/sample_quotation.pdf>` for added reference."
-msgstr ""
-"추가로 참조할 수 있도록 `PDF 견적서 작성기 예시 <pdf_quote_builder/"
-"pdfquotebuilderexamples.zip>` 또는 :download:`예시용 견적서 "
-"<pdf_quote_builder/sample_quotation.pdf>` 를 다운로드하세요."
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:5
 msgid ""
@@ -29839,6 +29972,15 @@ msgid ""
 "the :guilabel:`Product` column."
 msgstr ""
 ":guilabel:`줄 추가` 를 클릭하면 :guilabel:`품목` 열에 빈 필드가 표시됩니다."
+
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:169
+msgid ""
+"When clicked, a drop-down menu with products from the database appear. "
+"Select the desired product from the drop-down menu to add it as an optional "
+"product to the quotation template."
+msgstr ""
+"클릭하면 데이터베이스의 품목 드롭다운 메뉴로 표시됩니다. 드롭다운 메뉴에서 원"
+"하는 품목을 선택하여 견적서 서식에 선택 가능 품목으로 추가합니다."
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:172
 msgid ""
@@ -34004,6 +34146,87 @@ msgid ""
 "Subscriptions."
 msgstr ""
 "Odoo 구독의 판매 이력 스마트 버튼에서 볼 수 있는 관련된 판매주문서입니다."
+
+#~ msgid ""
+#~ "For instance, if a customer wants to buy a car, they have the choice to "
+#~ "order massaging seats, as well, or ignore the offer and simply buy the "
+#~ "car. Presenting the choice to purchase optional products enhances the "
+#~ "customer experience."
+#~ msgstr ""
+#~ "예를 들어, 자동차를 구매하려는 고객에게 마사지 시트를 같이 주문할지 아니"
+#~ "면 제안을 수락하지 않고 그냥 자동차만 구입할지를 선택하도록 합니다. 선택 "
+#~ "품목을 구매할 수 있도록 제안하여 고객 경험을 제고합니다."
+
+#~ msgid "Optional products on quotations"
+#~ msgstr "견적서 상의 선택 품목"
+
+#~ msgid "How to add optional products to your quotations on Odoo Sales."
+#~ msgstr "Odoo 판매 앱에서 견적서에 선택 가능 품목을 추가하는 방법"
+
+#~ msgid ""
+#~ "To add an optional product(s) to a quotation, click :guilabel:`Add a "
+#~ "product` in the :guilabel:`Optional Products` tab of a quotation. Doing "
+#~ "so reveals a blank field in the :guilabel:`Product` column."
+#~ msgstr ""
+#~ "견적서에 선택 가능 품목을 추가하려면 견적서의 :guilabel:`선택 가능 품목` "
+#~ "탭에서 :guilabel:`품목 추가`를 클릭합니다. 그러면 :guilabel:`품목` 열에 "
+#~ "빈 필드가 나타납니다."
+
+#~ msgid ""
+#~ "If the desired product isn't readily visible, type the name of the "
+#~ "desired product in the field, and the option appears in the drop-down "
+#~ "menu. Then, select that desired product to add it to the quotation."
+#~ msgstr ""
+#~ "원하는 품목을 쉽게 찾을 수 없는 경우 필드에 원하는 품목명을 입력하면 드롭"
+#~ "다운 메뉴에 선택 항목이 나타납니다. 여기에서 원하는 품목을 선택하여 견적서"
+#~ "에 추가합니다."
+
+#~ msgid ""
+#~ "To delete any line item from the :guilabel:`Optional Products` tab, click "
+#~ "the :guilabel:`🗑️ (trash can)` icon."
+#~ msgstr ""
+#~ ":guilabel:`선택 가능 품목` 탭에 있는 항목을 삭제하려면 :guilabel:`🗑️ (휴지"
+#~ "통)` 아이콘을 클릭합니다."
+
+#~ msgid "Preview your quotations on Odoo Sales."
+#~ msgstr "Odoo 판매 앱에서의 견적서 미리보기"
+
+#~ msgid ""
+#~ "Be sure to review the :doc:`quote_template` documentation to better "
+#~ "understand how quotation templates work before reading the following "
+#~ "information."
+#~ msgstr ""
+#~ "다음의 정보를 확인하기 전에 :doc:`견적서_서식` 문서를 읽어보면 견적서 서식"
+#~ "의 작동 방법을 쉽게 이해할 수 있습니다."
+
+#~ msgid ""
+#~ "For quotation templates, just like a typical quotation form, there is "
+#~ "also an :guilabel:`Optional Products` tab, wherein related products or "
+#~ "services can be added to a quotation template."
+#~ msgstr ""
+#~ "견적서 서식의 경우, 일반적인 견적서 양식과 마찬가지로, :guilabel:`선택 품"
+#~ "목` 탭에서 관련된 품목이나 서비스를 견적서 서식에 추가할 수 있습니다."
+
+#~ msgid ""
+#~ "It's best to offer optional products that would encourage a customer to "
+#~ "add additional items to their order, or entice them to purchase a more "
+#~ "expensive version of their initially selected product."
+#~ msgstr ""
+#~ "고객이 주문할 때 다른 품목을 추가할 수 있도록 하거나 처음에 선택한 품목 중"
+#~ "에서 더 비싼 버전으로 구매하도록 유도하도록 선택 품목을 제안하는 것이 가"
+#~ "장 좋습니다."
+
+#~ msgid ""
+#~ "For example, if a customer purchases a wooden chair, some optional "
+#~ "products could be: a warranty on that chair and/or a wooden chair with "
+#~ "leather seats."
+#~ msgstr ""
+#~ "예를 들어, 고객이 나무로 된 의자를 구매하는 경우에 선택 품목은 해당 의자"
+#~ "에 대한 워런티 및/또는 나무 의자에 가죽 시트가 있는 품목과 같은 것이 될 "
+#~ "수 있습니다."
+
+#~ msgid "PDF quote"
+#~ msgstr "PDF 견적서"
 
 #~ msgid ""
 #~ "Products variants can be managed via their individual product template, "

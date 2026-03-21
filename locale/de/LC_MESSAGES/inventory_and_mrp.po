@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-06 18:31+0000\n"
+"POT-Creation-Date: 2026-03-20 18:30+0000\n"
 "PO-Revision-Date: 2026-02-04 23:11+0000\n"
 "Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -203,9 +203,8 @@ msgstr "Das Barcode-Dashboard mit einer zugewiesenen Zählung."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:13
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
@@ -24541,7 +24540,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:217
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:236
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:215
 msgid ":guilabel:`Shipping label(s)` depending on the number of packages."
 msgstr ":guilabel:`Versandetikett(en)` je nach Anzahl der Pakete."
 
@@ -27575,7 +27574,6 @@ msgstr ""
 "Seite :guilabel:`Versandmethoden` auf :guilabel:`Neu`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:123
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
 msgid ""
 ":guilabel:`Shipping Methods` can also be accessed by going "
 "to :menuselection:`Inventory --> Configuration --> Delivery --> Shipping "
@@ -28286,8 +28284,10 @@ msgid "Finding the Starshipit API keys."
 msgstr "API-Schlüssel von Starshipit finden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:93
-msgid "Install"
-msgstr "Installieren"
+#, fuzzy
+#| msgid "Install Sendcloud shipping module"
+msgid "Install the Starshipit module"
+msgstr "Sendcloud-Versandmodul installieren"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:95
 msgid ""
@@ -28305,6 +28305,12 @@ msgstr ""
 msgid "Starshipit Shipping module in the Odoo Apps module."
 msgstr "Starshipit-Versandmodul in the Odoo Apps."
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
+#, fuzzy
+#| msgid "Configure shipping method"
+msgid "Configure a Starshipit delivery method"
+msgstr "Versandmethode konfigurieren"
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:106
 msgid ""
 "Once installed, activate the feature by going to :menuselection:`Inventory --"
@@ -28317,26 +28323,52 @@ msgstr ""
 "Option :guilabel:`Starshipit-Konnektor`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:110
+#, fuzzy
+#| msgid ""
+#| "After activating :guilabel:`Starshipit Connector`, click "
+#| "the :guilabel:`Starshipit Shipping Methods` link below the listed "
+#| "connector. Once on the :guilabel:`Shipping Methods` page, "
+#| "click :guilabel:`Create`."
 msgid ""
 "After activating :guilabel:`Starshipit Connector`, click "
 "the :guilabel:`Starshipit Shipping Methods` link below the listed connector. "
-"Once on the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
+"Once on the :guilabel:`Delivery Methods` page, click :guilabel:`Create`."
 msgstr ""
 "Nachdem Sie den :guilabel:`Starshipit-Konnektor` aktiviert haben, klicken "
 "Sie auf den Link :guilabel:`Starshipit-Versandmethoden` unterhalb des "
 "aufgeführten Konnektors. Klicken Sie auf der "
 "Seite :guilabel:`Versandmethoden` auf :guilabel:`Neu`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Shipping Methods` can also be accessed by going "
+#| "to :menuselection:`Inventory --> Configuration --> Delivery --> Shipping "
+#| "Methods`."
 msgid ""
-"Configure Starshipit in Odoo by filling out the fields on "
-"the :guilabel:`Shipping Methods` form as follows:"
+":guilabel:`Delivery Methods` can also be accessed by going "
+"to :menuselection:`Inventory --> Configuration --> Delivery --> Delivery "
+"Methods`."
+msgstr ""
+":guilabel:`Versandmethoden` kann auch unter :menuselection:`Lager --> "
+"Konfiguration --> Lieferung --> Versandmethoden` aufgerufen werden."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:118
+#, fuzzy
+#| msgid ""
+#| "Configure Starshipit in Odoo by filling out the fields on "
+#| "the :guilabel:`Shipping Methods` form as follows:"
+msgid ""
+"Configure a Starshipit delivery method in Odoo by filling out the fields on "
+"the :guilabel:`Delivery Methods` form as follows:"
 msgstr ""
 "Konfigurieren Sie Starshipit in Odoo, indem Sie die Felder im "
 "Formular :guilabel:`Versandmethoden` wie folgt ausfüllen:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:121
-msgid ":guilabel:`Shipping Method`: type `Starshipit`."
+#, fuzzy
+#| msgid ":guilabel:`Shipping Method`: type `Starshipit`."
+msgid ":guilabel:`Delivery Method`: type `Starshipit`."
 msgstr ":guilabel:`Versandmethode`: Tippen Sie `Starshipit`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:122
@@ -28421,44 +28453,54 @@ msgstr ""
 "werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:146
+#, fuzzy
+#| msgid "Then, click :guilabel:`Save` at the top of the page to save changes."
 msgid ""
-"Manually :guilabel:`Save` the form by clicking the cloud icon next to "
-"the :guilabel:`Shipping Methods / New` breadcrumbs."
+"Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon at the "
+"top of the page to save the changes."
 msgstr ""
-"Speichern Sie das Formular manuell, indem Sie auf das Wolkensymbol neben dem "
-"Brotkrümelsymbol :guilabel:`Versandmethoden/Neu` klicken."
+"Klicken Sie dann auf :guilabel:`Speichern` am unteren Rand der Seite, um die "
+"Änderungen zu speichern."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:148
+#, fuzzy
+#| msgid ""
+#| "Doing so opens the :guilabel:`Choose Starshipit Shipping Service` pop-up "
+#| "window. In the :guilabel:`Delivery Service` field, choose the desired "
+#| "shipping service for deliveries and returns from the drop-down menu. "
+#| "Finally, click :guilabel:`Confirm`."
 msgid ""
-"To load the newly configured shipping products, click the :guilabel:`Select "
-"a service linked to the Starshipit account` link at the bottom of "
-"the :guilabel:`Starshipit Configuration` tab."
-msgstr ""
-"Um die neu konfigurierten Versandprodukte zu laden, klicken Sie auf den "
-"Link :guilabel:`Einen mit Ihrem starshipit-Konto verbundenen "
-"Serviceauswählen` unten im Reiter :guilabel:`Starshipit-Konfiguration`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:152
-msgid ""
-"Doing so opens the :guilabel:`Choose Starshipit Shipping Service` pop-up "
-"window. In the :guilabel:`Delivery Service` field, choose the desired "
-"shipping service for deliveries and returns from the drop-down menu. "
-"Finally, click :guilabel:`Confirm`."
+"To load the newly configured shipping products, click :guilabel:`Select a "
+"service linked to your starshipit account` at the bottom of "
+"the :guilabel:`Starshipit Configuration` tab, and a :guilabel:`Choose "
+"Starshipit Shipping Service` pop-up window appears. In "
+"the :guilabel:`Delivery Service` field, select the desired shipping service "
+"for deliveries and returns from the drop-down menu."
 msgstr ""
 "Daraufhin öffnet sich das Pop-up-Fenster :guilabel:`Starshipit-"
 "Versandservice auswählen`. Wählen Sie im Feld :guilabel:`Lieferdienst` den "
 "gewünschten Versandservice für Lieferungen und Retouren aus dem Dropdown-"
 "Menü. Klicken Sie abschließend auf :guilabel:`Bestätigen`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:154
 msgid ""
-"The chosen delivery service will populate in the :guilabel:`Service Name` "
-"field."
+"The list of services shown during initial configuration may be incomplete. "
+"Starshipit determines service availability based on shipment details such as "
+"the destination address and package weight, which are not yet available at "
+"this stage. To select from the full list of services available for a "
+"specific order, use the :guilabel:`Get more delivery methods` option "
+"directly from the sales order. See :ref:`inventory/shipping_receiving/star-"
+"label` for details."
 msgstr ""
-"Der gewählte Lieferservice wird in das Feld :guilabel:`Service-Name` "
-"eingetragen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:160
+msgid ""
+"Click :guilabel:`Confirm` and the selected delivery service populates in "
+"the :guilabel:`Shipping Method` and :guilabel:`Starshipit Service Code` "
+"fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:163
 msgid "Sample of a Starshipit shipping product configured in Odoo:"
 msgstr ""
 "Beispiel für Starshipit-Versandprodukte, die in Odoo konfiguriert sind:"
@@ -28475,7 +28517,7 @@ msgstr ":guilabel:`Shipping-Produkt`: `Sendle-Lieferung`"
 msgid ":guilabel:`Starshipit Service Code`: `STANDARD-DROPOFF`"
 msgstr ":guilabel:`Starshipit-Service-Code`: `STANDARD-AUSLIEFERUNG`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:174
 msgid ""
 "Starshipit does not provide test keys when a company tests the sending of a "
 "package in Odoo. This means that if a package is created, the account may be "
@@ -28485,7 +28527,7 @@ msgstr ""
 "den Versand eines Pakets in Odoo testet. Das bedeutet, dass das Konto "
 "belastet werden kann, wenn ein Paket erstellt wird."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:177
 msgid ""
 "Odoo has a built-in layer of protection against unwanted charges when using "
 "test environments. Within a test environment, if a shipping method is used "
@@ -28502,7 +28544,7 @@ msgstr ""
 "Druck der Etiketten belastet werden kann, es sei denn, der Auftrag wird "
 "manuell im Portal des Versanddienstleisters storniert."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:184
 msgid ""
 "Switch between the test and production environment by clicking "
 "the :guilabel:`Environment` smart button at the top of the shipping method "
@@ -28512,11 +28554,11 @@ msgstr ""
 "im Formular für die Versandmethode auf die intelligente "
 "Schaltfläche :guilabel:`Umgebung` klicken."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:190
 msgid "Generate a label with Starshipit"
 msgstr "Ein Etikett mit Starshipit generieren"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:192
 msgid ""
 "When creating a quotation in Odoo, add the Starshipit shipping method by "
 "clicking the :guilabel:`Add shipping` button."
@@ -28525,15 +28567,29 @@ msgstr ""
 "Versandmethode hinzu, indem Sie auf die Schaltfläche :guilabel:`Versand "
 "hinzufügen` klicken."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:191
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:196
+#, fuzzy
+#| msgid ""
+#| "In the :guilabel:`Add a shipping method` pop-up window, select Starshipit "
+#| "in the :guilabel:`Shipping Method` field."
 msgid ""
-"In the :guilabel:`Add a shipping method` pop-up window, select Starshipit in "
-"the :guilabel:`Shipping Method` field."
+"In the :guilabel:`Add a shipping method` pop-up window, select a Starshipit "
+"shipping method in the :guilabel:`Shipping Method` field."
 msgstr ""
 "Im Pop-up-Fenster :guilabel:`Eine Versandmethode hinzufügen` wählen Sie "
 "Starshipit im Feld :guilabel:`Versandmethode`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:199
+msgid ""
+"If the desired service is not available, click :guilabel:`Get more delivery "
+"methods`. This sends the actual order details (including the destination "
+"address, weight, and volume) to Starshipit, which returns the complete list "
+"of services available for that specific shipment. A new Starshipit delivery "
+"method is then created automatically and selected in the :guilabel:`Shipping "
+"Method` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:204
 msgid ""
 "Calculate the shipping rate by clicking :guilabel:`Get rate`. Finally, "
 "click :guilabel:`Add` to include the cost of shipping to the sales order "
@@ -28544,7 +28600,7 @@ msgstr ""
 "Versandkosten in die Verkaufsauftragszeile aufzunehmen, die als "
 "*Lieferprodukt* gekennzeichnet ist."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:209
 msgid ""
 "Automatically calculate shipping costs for Starshipit in **both** Odoo "
 "*Sales* and *eCommerce* applications."
@@ -28552,7 +28608,7 @@ msgstr ""
 "Berechnen Sie automatisch die Versandkosten für Starshipit in **beiden** "
 "Apps Odoo *Verkauf* und *E-Commerce*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:202
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:212
 msgid ""
 "Then, :guilabel:`Validate` the delivery. Shipping label documents are "
 "automatically generated in the chatter, which includes the following:"
@@ -28561,13 +28617,13 @@ msgstr ""
 "für die Versandetiketten werden automatisch im Chatter generiert und "
 "enthalten Folgendes:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:216
 msgid ":guilabel:`Tracking number(s)` if the selected courier supports it."
 msgstr ""
 ":guilabel:`Sendungsnummer(n)`, falls das ausgewählte Transportunternehmen "
 "dies unterstützt."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:217
 msgid ""
 ":guilabel:`Return label(s)` if the Starshipit connector is configured for "
 "returns."
@@ -28579,7 +28635,7 @@ msgstr ""
 msgid "Example of a shipped order in Odoo."
 msgstr "Beispiel eines versandten Auftrags in Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:224
 msgid ""
 "Package weight in Odoo is calculated by adding the weights of the products "
 "plus the empty package saved in the database. Ensure the correct shipping "
@@ -28590,7 +28646,7 @@ msgstr ""
 "sicher, dass die richtige Versandoption ausgewählt ist, da das Paketgewicht "
 "nicht automatisch überprüft wird."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:218
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:228
 msgid ""
 "Verify the destination address, as Starshipit checks it when the order is "
 "created."
@@ -28598,7 +28654,7 @@ msgstr ""
 "Überprüfen Sie die Zieladresse, da Starshipit diese bei der Erstellung des "
 "Auftrags überprüft."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:230
 msgid ""
 "Finally, some couriers may require other information, such as an email "
 "address or phone number. Please ensure that all necessary information are "
@@ -28609,43 +28665,43 @@ msgstr ""
 "sich, dass alle erforderlichen Informationen beim Absenden eines "
 "Versandauftrags angegeben sind."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:234
 msgid "Returns"
 msgstr "Retouren"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:243
 msgid "Starshipit allows returns with the following couriers:"
 msgstr "Starshipit ermöglicht Retouren mit den folgenden Transportunternehmen:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:227
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:237
 msgid "Australia Post eParcel"
 msgstr "Australia Post eParcel"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:228
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:238
 msgid "TNT"
 msgstr "TNT"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:229
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:239
 msgid "Couriers Please"
 msgstr "Couriers Please"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:240
 msgid "Aramex"
 msgstr "Aramex"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:231
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:241
 msgid "StarTrack"
 msgstr "StarTrack"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:242
 msgid "DHL Express"
 msgstr "DHL Express"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:243
 msgid "NZ Post Domestic"
 msgstr "NZ Post Domestic"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:245
 msgid ""
 "This can be done by clicking the :guilabel:`Return` smart button on the "
 "intended delivery order. If the selected courier supports returns, "
@@ -28656,11 +28712,11 @@ msgstr ""
 "Retouren unterstützt, steht Ihnen die "
 "Schaltfläche :guilabel:`Rücksendeetikett drucken` zur Verfügung."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:250
 msgid "Cancellations"
 msgstr "Stornierungen"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:252
 msgid ""
 "If a delivery order is cancelled in Odoo, it will be automatically archived "
 "in Starshipit. However, the cancellation will not be sent to the courier "
@@ -31371,7 +31427,6 @@ msgstr ""
 "`1-31` ein, je nach dem gewünschten Monat des Jahres."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:267
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:117
 msgid ""
 "Then, to change the month, click :guilabel:`December` to reveal the drop-"
 "down menu, and select the desired month."
@@ -31568,24 +31623,36 @@ msgid "Cycle counts"
 msgstr "Zyklische Zählungen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:5
+#, fuzzy
+#| msgid ""
+#| "For most companies, warehouse stock only needs to be counted once a year. "
+#| "This is why, by default, after making an *inventory adjustment* in Odoo, "
+#| "the scheduled date for the next inventory count is set for the 31st of "
+#| "December of the current year."
 msgid ""
 "For most companies, warehouse stock only needs to be counted once a year. "
-"This is why, by default, after making an *inventory adjustment* in Odoo, the "
-"scheduled date for the next inventory count is set for the 31st of December "
-"of the current year."
+"This is why, by default, the scheduled date for the next inventory count is "
+"set for the 31st of December of the current year."
 msgstr ""
 "Bei den meisten Unternehmen muss der Lagerbestand nur einmal im Jahr gezählt "
 "werden. Deshalb wird nach einer *Bestandsaufnahme* in Odoo standardmäßig der "
 "31. Dezember des laufenden Jahres als Termin für die nächste Bestandszählung "
 "festgelegt."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:9
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:8
+#, fuzzy
+#| msgid ""
+#| "However, for some businesses, it's crucial to have an accurate inventory "
+#| "count at all times. These companies use *cycle counts* to keep critical "
+#| "stock levels accurate. Cycle counting is a method by which companies "
+#| "count their inventory more often in certain *locations*, to ensure that "
+#| "their physical inventory counts match their inventory records."
 msgid ""
-"However, for some businesses, it's crucial to have an accurate inventory "
-"count at all times. These companies use *cycle counts* to keep critical "
-"stock levels accurate. Cycle counting is a method by which companies count "
-"their inventory more often in certain *locations*, to ensure that their "
-"physical inventory counts match their inventory records."
+"However, for some businesses, maintaining an accurate inventory count is "
+"crucial. These companies use *cycle counts* to keep critical stock levels "
+"accurate. Cycle counting is a method by which companies count their "
+"inventory more often in certain *locations* to ensure that their physical "
+"inventory counts match their inventory records."
 msgstr ""
 "Für einige Unternehmen ist es jedoch von entscheidender Bedeutung, jederzeit "
 "über eine genaue Bestandszählung zu verfügen. Diese Unternehmen verwenden "
@@ -31594,7 +31661,7 @@ msgstr ""
 "*Standorten* häufiger zählen, um sicherzustellen, dass ihre physischen "
 "Bestandszählungen mit ihren Bestandsaufzeichnungen übereinstimmen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:16
 msgid ""
 "In Odoo, cycle counts are performed by location. Therefore, the *Storage "
 "Locations* feature needs to be enabled before performing a cycle count."
@@ -31603,11 +31670,17 @@ msgstr ""
 "Funktion *Lagerorte* aktiviert werden, bevor Sie eine zyklische Zählung "
 "durchführen können."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:20
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:19
+#, fuzzy
+#| msgid ""
+#| "To enable this feature, navigate to :menuselection:`Inventory app --> "
+#| "Configuration --> Settings`, and scroll down to the :guilabel:`Warehouse` "
+#| "section. Then, tick the checkbox next to :guilabel:`Storage Locations`, "
+#| "and click :guilabel:`Save`."
 msgid ""
 "To enable this feature, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and scroll down to the :guilabel:`Warehouse` "
-"section. Then, tick the checkbox next to :guilabel:`Storage Locations`, and "
+"Configuration --> Settings`, and scroll down to the *Warehouse* section. "
+"Then, select the checkbox next to :guilabel:`Storage Locations`, and "
 "click :guilabel:`Save`."
 msgstr ""
 "Um diese Funktion zu aktivieren, navigieren Sie zu :menuselection:`Lager --> "
@@ -31619,45 +31692,72 @@ msgstr ""
 msgid "Enabled Storage Locations setting in inventory settings."
 msgstr "Aktivierte Einstellung der Lagerorte in den Lagereinstellungen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:29
-msgid "Change inventory count frequency by location"
-msgstr "Häufigkeit der Inventarzählung je Standort ändern"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:27
+#, fuzzy
+#| msgid "Change inventory count frequency"
+msgid "Counting inventory at a set frequency"
+msgstr "Häufigkeit der Inventarzählung ändern"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:29
+#, fuzzy
+#| msgid ""
+#| "Once the *Storage Locations* feature is enabled, and there are multiple "
+#| "locations created in the warehouse, the inventory count frequency can be "
+#| "changed for specific locations."
 msgid ""
-"Once the *Storage Locations* feature is enabled, and there are multiple "
-"locations created in the warehouse, the inventory count frequency can be "
-"changed for specific locations."
+"After the *Storage Locations* feature is enabled and locations are created "
+"in the warehouse, the inventory count frequency can be changed for specific "
+"locations, and counts can be conducted on those locations."
 msgstr ""
 "Sobald die Funktion *Lagerorte* aktiviert ist und mehrere Standorte im Lager "
 "angelegt sind, kann die Häufigkeit der Inventur für bestimmte Standorte "
 "geändert werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:34
+#, fuzzy
+#| msgid "Change inventory count frequency"
+msgid "Setting a cycle count frequency"
+msgstr "Häufigkeit der Inventarzählung ändern"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:36
+#, fuzzy
+#| msgid ""
+#| "To view and edit locations, navigate to :menuselection:`Inventory app --> "
+#| "Configuration --> Locations`. This reveals a :guilabel:`Locations` page "
+#| "containing every location currently created and listed in the warehouse."
 msgid ""
 "To view and edit locations, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Locations`. This reveals a :guilabel:`Locations` page "
-"containing every location currently created and listed in the warehouse."
+"Configuration --> Locations`. This opens a *Locations* page listing every "
+"location currently created in the warehouse."
 msgstr ""
 "Um Lagerorte anzuzeigen und zu bearbeiten, navigieren Sie "
 "zur :menuselection:`Lagerapp --> Konfiguration --> Lagerorte`. Sie gelangen "
 "auf die Seite :guilabel:`Lagerorte`, auf der alle derzeit erstellten und im "
 "Lagerhaus aufgeführten Standorte aufgeführt sind."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:38
-msgid ""
-"From this page, click into a location to reveal the settings and "
-"configuration page for that location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:39
+#, fuzzy
+#| msgid ""
+#| "From this page, click into a location to reveal the settings and "
+#| "configuration page for that location."
+msgid "From this page, click a location to open its form."
 msgstr ""
 "Klicken Sie auf dieser Seite auf einen Ort, um die Seite mit den "
 "Einstellungen und der Konfiguration für diesen Lagerort aufzurufen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:41
+#, fuzzy
+#| msgid ""
+#| "Under the :guilabel:`Cyclic Counting` section, locate "
+#| "the :guilabel:`Inventory Frequency (Days)` field, which should be set to "
+#| "`0` by default (if this location has not been edited previously). In this "
+#| "field, change the value to any number of days desired for the frequency "
+#| "of counts."
 msgid ""
-"Under the :guilabel:`Cyclic Counting` section, locate "
-"the :guilabel:`Inventory Frequency (Days)` field, which should be set to `0` "
-"by default (if this location has not been edited previously). In this field, "
-"change the value to any number of days desired for the frequency of counts."
+"Under the *Cyclic Counting* section, locate the :guilabel:`Inventory "
+"Frequency` field, which is set to `0` by default (if this location has not "
+"been edited previously). In this field, change the value to any number of "
+"days desired for the frequency of counts."
 msgstr ""
 "Suchen Sie unter dem Abschnitt :guilabel:`Zyklische Zählung` das "
 "Feld :guilabel:`Inventurhäufigkeit (Tage)`, das standardmäßig auf `0` "
@@ -31669,34 +31769,54 @@ msgstr ""
 msgid "Location frequency setting on location."
 msgstr "Einstellung der Häufigkeit des Lagerorst."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:49
+#, fuzzy
+#| msgid ""
+#| "A location that needs an inventory count every 30 days should have "
+#| "the :guilabel:`Inventory Frequency (Days)` value set to `30`."
 msgid ""
 "A location that needs an inventory count every 30 days should have "
-"the :guilabel:`Inventory Frequency (Days)` value set to `30`."
+"the :guilabel:`Inventory Frequency` value set to `30`."
 msgstr ""
 "Bei einem Lagerort, der alle 30 Tage eine Inventur benötigt, sollte der "
 "Wert :guilabel:`Inventurhäufigkeit (Tage)` auf `30` gesetzt sein."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:52
+#, fuzzy
+#| msgid ""
+#| "Now, once an inventory adjustment is applied to this location, the next "
+#| "scheduled count date is automatically set, based on the value entered "
+#| "into the :guilabel:`Inventory Frequency (Days)` field."
 msgid ""
-"Now, once an inventory adjustment is applied to this location, the next "
-"scheduled count date is automatically set, based on the value entered into "
-"the :guilabel:`Inventory Frequency (Days)` field."
+"Now, to ensure the scheduled cycle count appears as expected, :ref:`perform "
+"the first cycle count <inventory/warehouses_storage/cycle_count_perform>`. "
+"After inventory adjustments have been applied to the products in this "
+"location, the next scheduled count date is automatically set based on the "
+"value entered in the :guilabel:`Inventory Frequency` field."
 msgstr ""
 "Sobald eine Bestandsaufnahme an diesem Lagerort vorgenommen wird, wird das "
 "nächste geplante Zähldatum automatisch auf der Grundlage des in das "
 "Feld :guilabel:`Inventurhäufigkeit (Tage)` eingegebenen Wertes festgelegt."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:57
-msgid "Count inventory by location"
-msgstr "Inventur zählen je Lagerort"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:60
+#, fuzzy
+#| msgid "Performing an inventory count"
+msgid "Performing a cycle count"
+msgstr "Eine Inventarzählung durchführen"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:62
+#, fuzzy
+#| msgid ""
+#| "To perform a cycle count for a specific location in the warehouse, "
+#| "navigate to :menuselection:`Inventory app --> Operations --> Physical "
+#| "Inventory`. This reveals an :guilabel:`Inventory Adjustments` page "
+#| "containing all products currently in-stock, with each product listed on "
+#| "its own line."
 msgid ""
 "To perform a cycle count for a specific location in the warehouse, navigate "
 "to :menuselection:`Inventory app --> Operations --> Physical Inventory`. "
-"This reveals an :guilabel:`Inventory Adjustments` page containing all "
-"products currently in-stock, with each product listed on its own line."
+"This opens an *Inventory Adjustments* page that lists all products currently "
+"in stock, with each product on its own line."
 msgstr ""
 "Um eine Zählung für einen bestimmten Standort im Lagerhaus durchzuführen, "
 "navigieren Sie zur :menuselection:`Lagerapp --> Vorgänge --> "
@@ -31704,12 +31824,17 @@ msgstr ""
 "mit allen Produkten, die derzeit auf Lager sind, wobei jedes Produkt in "
 "einer eigenen Zeile aufgeführt ist."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:66
+#, fuzzy
+#| msgid ""
+#| "From this page, the :guilabel:`Filters` and :guilabel:`Group By` options "
+#| "(accessible by clicking the :guilabel:`⬇️ (down arrow)` icon, to the right "
+#| "of the :guilabel:`Search...` bar), can be used to select specific "
+#| "locations and perform inventory counts."
 msgid ""
 "From this page, the :guilabel:`Filters` and :guilabel:`Group By` options "
-"(accessible by clicking the :guilabel:`⬇️ (down arrow)` icon, to the right of "
-"the :guilabel:`Search...` bar), can be used to select specific locations and "
-"perform inventory counts."
+"(accessible by clicking in the :guilabel:`Search` bar) can be used to select "
+"specific locations and perform inventory counts."
 msgstr ""
 "Von dieser Seite aus können Sie über die Optionen :guilabel:`Filter` "
 "und :guilabel:`Gruppieren nach` (erreichbar durch Anklicken des "
@@ -31717,12 +31842,17 @@ msgstr ""
 "Leiste :guilabel:`Suchen ...`), bestimmte Orte auswählen und "
 "Bestandszählungen durchführen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:69
+#, fuzzy
+#| msgid ""
+#| "To select a specific location, and view all products within that "
+#| "location, click the :guilabel:`⬇️ (down arrow)` icon, to the right of "
+#| "the :guilabel:`Search...` bar. Then, in the :guilabel:`Group By` column, "
+#| "click :guilabel:`Add Custom Group` to reveal a new drop-down menu."
 msgid ""
-"To select a specific location, and view all products within that location, "
-"click the :guilabel:`⬇️ (down arrow)` icon, to the right of "
-"the :guilabel:`Search...` bar. Then, in the :guilabel:`Group By` column, "
-"click :guilabel:`Add Custom Group` to reveal a new drop-down menu."
+"To select a specific location and view all products within that location, "
+"click in the :guilabel:`Search` bar. Then, in the :guilabel:`Group By` "
+"column, select :guilabel:`Location`."
 msgstr ""
 "Um einen bestimmten Ort auszuwählen und alle Produkte innerhalb dieses Ortes "
 "anzuzeigen, klicken Sie auf das Symbol :guilabel:`⬇️ (Pfeil nach unten)` "
@@ -31735,23 +31865,35 @@ msgid "Filters and Group By menu on Inventory Adjustments page."
 msgstr ""
 "Menü für Filter und Gruppieren nach auf der Seite der Bestandsaufnahmen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:75
+#, fuzzy
+#| msgid ""
+#| "Click :guilabel:`Location` from the drop-down menu. Doing so sorts "
+#| "products into their storage locations on the :guilabel:`Inventory "
+#| "Adjustments` page, and a cycle count can be performed for all products in "
+#| "that location."
 msgid ""
-"Click :guilabel:`Location` from the drop-down menu. Doing so sorts products "
-"into their storage locations on the :guilabel:`Inventory Adjustments` page, "
-"and a cycle count can be performed for all products in that location."
+"All products are sorted into their storage locations on the *Inventory "
+"Adjustments* page, and a cycle count can be performed for all products in "
+"that location."
 msgstr ""
 "Klicken Sie im Dropdown-Menü auf :guilabel:`Lagerort`. Dadurch werden die "
 "Produkte auf der Seite :guilabel:`Bestandsaufnahmen` nach ihren Lagerorten "
 "sortiert, und für alle Produkte in diesem Lagerort kann eine zyklische "
 "Zählung durchgeführt werden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:79
+#, fuzzy
+#| msgid ""
+#| "In large warehouses with multiple locations and a high volume of "
+#| "products, it might be easier to search for the specific location desired. "
+#| "To do this, from the :guilabel:`Inventory Adjustments` page, click "
+#| "the :guilabel:`⬇️ (down arrow)` icon to the right of "
+#| "the :guilabel:`Search...` bar."
 msgid ""
 "In large warehouses with multiple locations and a high volume of products, "
-"it might be easier to search for the specific location desired. To do this, "
-"from the :guilabel:`Inventory Adjustments` page, click the :guilabel:`⬇️ "
-"(down arrow)` icon to the right of the :guilabel:`Search...` bar."
+"it might be easier to search for the desired location. To do this, from the "
+"*Inventory Adjustments* page, click in the :guilabel:`Search` bar."
 msgstr ""
 "In großen Lagerhäusern mit mehreren Lagerorten und einer großen Anzahl von "
 "Produkten ist es vielleicht einfacher, nach dem gewünschten Lagerort zu "
@@ -31759,16 +31901,20 @@ msgstr ""
 "Symbol :guilabel:`⬇️ (Pfeil nach unten)` rechts neben der "
 "Leiste :guilabel:`Suchen ...`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:83
+#, fuzzy
+#| msgid ""
+#| "Then, in the :guilabel:`Filters` column, click :guilabel:`Add Custom "
+#| "Filter` to open an :guilabel:`Add Custom Filter` pop-up window."
 msgid ""
 "Then, in the :guilabel:`Filters` column, click :guilabel:`Add Custom Filter` "
-"to open an :guilabel:`Add Custom Filter` pop-up window."
+"to open an *Add Custom Filter* pop-up window."
 msgstr ""
 "Klicken Sie dann in der Spalte :guilabel:`Filter` "
 "auf :guilabel:`Benutzerdefinierten Filter hinzufügen`, um ein Pop-up-"
 "Fenster :guilabel:`Benutzerdefinierten Filter hinzufügen` zu öffnen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:86
 msgid ""
 "In the first field, click the value and select :guilabel:`Location` from the "
 "list of options. Select :guilabel:`contains` in the second field. In the "
@@ -31779,7 +31925,7 @@ msgstr ""
 "Feld :guilabel:`enthält`. Geben Sie in das dritte Feld den Namen des "
 "gesuchten Ortes ein."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:90
 msgid "Click :guilabel:`Add` for that location to appear on the page."
 msgstr ""
 "Klicken Sie auf :guilabel:`Hinzufügen`, damit dieser Ort auf der Seite "
@@ -31791,28 +31937,51 @@ msgstr ""
 "Pop-up-Fenster „Benutzerdefinierten Filter hinzufügen“ mit eingegebenen "
 "Standortwerten."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:99
-msgid "Change full inventory count frequency"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:96
+msgid ""
+"When performing counts in the *Barcode* app, inventory adjustments are "
+"grouped by location by default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:100
+#, fuzzy
+#| msgid "Change full inventory count frequency"
+msgid "Change full inventory count date"
 msgstr "Häufigkeit der vollständigen Inventarzählung ändern"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:102
+#, fuzzy
+#| msgid ""
+#| "While cycle counts are typically performed per location, the scheduled "
+#| "date for full inventory counts of all in-stock products in the warehouse "
+#| "can also be manually changed, to push the date up sooner than the date "
+#| "listed."
 msgid ""
-"While cycle counts are typically performed per location, the scheduled date "
-"for full inventory counts of all in-stock products in the warehouse can also "
-"be manually changed, to push the date up sooner than the date listed."
+"While cycle counts are typically performed at the location level, companies "
+"should conduct a full inventory count once per year. In addition to keeping "
+"stock counts accurate, full inventory counts ensure that accounting earnings "
+"and costs are recorded accurately. The scheduled date for full inventory "
+"counts of all in-stock products in the warehouse can be manually changed to "
+"push it up earlier than the listed date."
 msgstr ""
 "Während regelmäßigen Zählungen in der Regel pro Lagerort durchgeführt "
 "werden, kann das geplante Datum für vollständige Inventurzählungen aller im "
 "Lager vorrätigen Produkte auch manuell geändert werden, um den Termin vor "
 "das angegebene Datum zu verlegen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:108
+#, fuzzy
+#| msgid ""
+#| "To modify the default scheduled date, go to :menuselection:`Inventory app "
+#| "--> Configuration --> Settings`. Then, in the :guilabel:`Operations` "
+#| "section, locate the :guilabel:`Annual Inventory Day and Month` setting "
+#| "field, which includes a drop-down field that is set to "
+#| "`31` :guilabel:`December`, by default."
 msgid ""
 "To modify the default scheduled date, go to :menuselection:`Inventory app --"
-"> Configuration --> Settings`. Then, in the :guilabel:`Operations` section, "
-"locate the :guilabel:`Annual Inventory Day and Month` setting field, which "
-"includes a drop-down field that is set to `31` :guilabel:`December`, by "
-"default."
+"> Configuration --> Settings`. Then, in the *Operations* section, locate "
+"the :guilabel:`Annual Inventory Day and Month` setting, which includes a "
+"drop-down set to `31` :guilabel:`December` by default."
 msgstr ""
 "Um das standardmäßige geplante Datum zu ändern, gehen Sie "
 "zur :menuselection:`Lagerapp --> Konfiguration --> Einstellungen`. Suchen "
@@ -31824,25 +31993,43 @@ msgstr ""
 msgid "Frequency field in inventory app settings."
 msgstr "Häufigkeitsfeld in den Einstellungen der Lagerapp."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:115
+#, fuzzy
+#| msgid ""
+#| "To change the day, click the `31`, and change it to a day within the "
+#| "range `1-31`, depending on the desired month of the year."
 msgid ""
-"To change the day, click the `31`, and change it to a day within the range "
-"`1-31`, depending on the desired month of the year."
+"To change the day, click the `31` and select a day within the range `1-31`, "
+"depending on the desired month of the year."
 msgstr ""
 "Um den Tag zu ändern, klicken Sie auf `31`, und ändern Sie es auf einen Tag "
 "innerhalb des Bereichs `1-31`, je nach dem gewünschten Monat des Jahres."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:120
-msgid "Once all necessary changes have been made, click :guilabel:`Save`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:118
+#, fuzzy
+#| msgid ""
+#| "Then, to change the month, click :guilabel:`December` to reveal the drop-"
+#| "down menu, and select the desired month."
+msgid ""
+"Then, to change the month, click :guilabel:`December` to open the drop-down "
+"menu and select the desired month."
+msgstr ""
+"Um den Monat zu ändern, klicken Sie auf :guilabel:`Dezember`, um das Drop-"
+"down-Menü zu öffnen, und wählen Sie den gewünschten Monat aus."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:121
+#, fuzzy
+#| msgid "Once all necessary changes have been made, click :guilabel:`Save`."
+msgid "After all necessary changes have been made, click :guilabel:`Save`."
 msgstr ""
 "Sobald Sie alle notwendigen Änderungen vorgenommen haben, klicken Sie "
 "auf :guilabel:`Speichern`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:124
 msgid ":doc:`count_products`"
 msgstr ":doc:`count_products`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:125
 msgid ":doc:`use_locations`"
 msgstr ":doc:`use_locations`"
 
@@ -63328,6 +63515,38 @@ msgstr ""
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
 
+#~ msgid "Install"
+#~ msgstr "Installieren"
+
+#~ msgid ""
+#~ "Manually :guilabel:`Save` the form by clicking the cloud icon next to "
+#~ "the :guilabel:`Shipping Methods / New` breadcrumbs."
+#~ msgstr ""
+#~ "Speichern Sie das Formular manuell, indem Sie auf das Wolkensymbol neben "
+#~ "dem Brotkrümelsymbol :guilabel:`Versandmethoden/Neu` klicken."
+
+#~ msgid ""
+#~ "To load the newly configured shipping products, click "
+#~ "the :guilabel:`Select a service linked to the Starshipit account` link at "
+#~ "the bottom of the :guilabel:`Starshipit Configuration` tab."
+#~ msgstr ""
+#~ "Um die neu konfigurierten Versandprodukte zu laden, klicken Sie auf den "
+#~ "Link :guilabel:`Einen mit Ihrem starshipit-Konto verbundenen "
+#~ "Serviceauswählen` unten im Reiter :guilabel:`Starshipit-Konfiguration`."
+
+#~ msgid ""
+#~ "The chosen delivery service will populate in the :guilabel:`Service Name` "
+#~ "field."
+#~ msgstr ""
+#~ "Der gewählte Lieferservice wird in das Feld :guilabel:`Service-Name` "
+#~ "eingetragen."
+
+#~ msgid "Change inventory count frequency by location"
+#~ msgstr "Häufigkeit der Inventarzählung je Standort ändern"
+
+#~ msgid "Count inventory by location"
+#~ msgstr "Inventur zählen je Lagerort"
+
 #~ msgid ""
 #~ "In order to split a delivery order across multiple packages, the "
 #~ "*Packages* setting must be enabled. To do so, navigate "
@@ -64974,9 +65193,6 @@ msgstr ":doc:`../../sales/sales/products_prices/returns`"
 #~ "und :doc:`Versandetiketten generieren <labels>`. Dies wird durch die "
 #~ "Aktivierung des FedEx-Versandkonnektors und die anschließende "
 #~ "Konfiguration mindestens einer Versandmethode erreicht."
-
-#~ msgid "Configure shipping method"
-#~ msgstr "Versandmethode konfigurieren"
 
 #~ msgid ""
 #~ "Once the FedEx shipping connector is enabled, it is necessary to "

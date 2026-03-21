@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-27 18:30+0000\n"
+"POT-Creation-Date: 2026-03-20 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -123,7 +123,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:14
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:34
 #: ../../content/applications/sales/sales/sales_quotations/margin.rst:12
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:24
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:46
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:11
 #: ../../content/applications/sales/subscriptions/closing.rst:9
 msgid "Configuration"
@@ -29168,6 +29168,7 @@ msgid "Create, configure, and send quotations to customers."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations.rst:47
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:57
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:3
 msgid "Quotation templates"
 msgstr "Formulare de ofertă"
@@ -29240,7 +29241,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations.rst:83
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:3
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:6
 msgid "PDF quote builder"
 msgstr "Generator de cotații PDF"
 
@@ -30232,8 +30233,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:56
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:89
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:85
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:99
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:269
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:117
 msgid ":doc:`quote_template`"
 msgstr ":doc:`quote_template`"
 
@@ -31070,227 +31070,312 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:5
+#, fuzzy
+#| msgid ""
+#| "The use of optional products is a marketing strategy that involves the "
+#| "cross-selling of products along with a core product. The aim is to offer "
+#| "useful and related products to customers, which may result in an "
+#| "increased sale."
 msgid ""
 "The use of optional products is a marketing strategy that involves the cross-"
-"selling of products along with a core product. The aim is to offer useful "
-"and related products to customers, which may result in an increased sale."
+"selling of useful and related products alongside a desired core product. For "
+"instance, when a business configures optional products in their Odoo "
+"database, an eCommerce or Website customer could be suggested a mouse and "
+"keyboard or an extended warranty when they add a laptop to their shopping "
+"cart."
 msgstr ""
 "Utilizarea produselor opționale este o strategie de marketing care implică "
 "vânzarea încrucișată a produselor împreună cu un produs de bază. Scopul este "
 "de a oferi clienților produse utile și conexe, ceea ce poate avea ca "
 "rezultat o creștere a vânzării."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:9
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:10
 msgid ""
-"For instance, if a customer wants to buy a car, they have the choice to "
-"order massaging seats, as well, or ignore the offer and simply buy the car. "
-"Presenting the choice to purchase optional products enhances the customer "
-"experience."
+"Optional products are automatically suggested during the quotation process "
+"whenever an associated core product is added to a quote. They are also "
+"suggested in e-commerce interactions when a customer adds an associated core "
+"product to their shopping cart."
 msgstr ""
-"De exemplu, dacă un client dorește să cumpere o mașină, poate alege să "
-"comande și scaune de masaj sau să ignore oferta și să cumpere pur și simplu "
-"mașina. Prezentarea opțiunii de a cumpăra produse opționale îmbunătățește "
-"experiența clientului."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:14
-msgid "Optional products on quotations"
-msgstr "Produse optionale la cotatie"
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:16
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:15
 msgid ""
-"With the Odoo *Sales* application, it is possible to add or modify optional "
-"products directly on quotations by navigating to the :guilabel:`Optional "
-"Products` tab on a quotation form."
+"Optional products differ from :doc:`accessory and alternative products </"
+"applications/websites/ecommerce/products/cross_upselling>` in terms of where "
+"they are displayed during customers' online shopping journeys."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:20
+#, fuzzy
+#| msgid "Optional products"
+msgid "Configuring optional products"
+msgstr "Produse opționale"
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:22
+#, fuzzy
+#| msgid ""
+#| "With the Odoo *Sales* application, it is possible to add or modify "
+#| "optional products directly on quotations by navigating to "
+#| "the :guilabel:`Optional Products` tab on a quotation form."
+msgid ""
+"With the Odoo *Sales* app, it is possible to add optional products directly "
+"to product forms. To add an optional product, navigate "
+"to :menuselection:`Sales --> Products --> Products` and click on a product "
+"Kanban card."
 msgstr ""
 "Cu aplicația Odoo *Vânzări*, este posibil să adăugați sau să modificați "
 "produse opționale direct pe cotații, navigând la fila :guilabel:`Produse "
 "Opționale` dintr-un formular de ofertă."
 
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:26
+msgid ""
+"Ensure the :guilabel:`Can be Sold` option is checked, then click "
+"the :guilabel:`Sales` tab. Under the :guilabel:`Upsell & Cross-sell` "
+"heading, the :guilabel:`Optional Products` drop-down menu allows for "
+"optional products to be set, and are displayed in alphabetical order."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:30
+#, fuzzy
+#| msgid ""
+#| "To delete any line item from the :guilabel:`Optional Products` tab, click "
+#| "the :icon:`fa-trash` :guilabel:`(remove record)` icon."
+msgid ""
+"To delete an optional product from the product form,  click the :icon:`fa-"
+"times` :guilabel:`(Delete)` icon."
+msgstr ""
+"Pentru a șterge orice linie din tabul :guilabel:`Produse opționale`, apasă "
+"pe pictograma :icon:`fa-trash` :guilabel:`(șterge înregistrarea)`."
+
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
-msgid "How to add optional products to your quotations on Odoo Sales."
-msgstr "Cum să adăugați produse opționale la cotațiile dvs. pe Odoo Sales."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:23
+#, fuzzy
+#| msgid ""
+#| "The attributes and values tab on a typical product form in Odoo Sales."
 msgid ""
-"To add an optional product(s) to a quotation, click :guilabel:`Add a "
-"product` in the :guilabel:`Optional Products` tab of a quotation. Doing so "
-"reveals a blank field in the :guilabel:`Product` column."
+"The optional products section as it appears in product forms in Odoo Sales."
 msgstr ""
-"Pentru a adăuga un produs opțional(e) la o ofertă, faceți clic "
-"pe :guilabel:`Adăugați un produs` în fila :guilabel:`Produse opționale` a "
-"unei cotații. Procedând astfel, apare un câmp gol în "
-"coloana :guilabel:`Produs`."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:27
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:169
-msgid ""
-"When clicked, a drop-down menu with products from the database appear. "
-"Select the desired product from the drop-down menu to add it as an optional "
-"product to the quotation template."
-msgstr ""
-"Când faceți clic, apare un meniu derulant cu produse din baza de date. "
-"Selectați produsul dorit din meniul derulant pentru a-l adăuga ca produs "
-"opțional la șablonul de cotație."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:31
-msgid ""
-"If the desired product isn't readily visible, type the name of the desired "
-"product in the field, and the option appears in the drop-down menu. Then, "
-"select that desired product to add it to the quotation."
-msgstr ""
-"Dacă produsul dorit nu este ușor vizibil, introduceți numele produsului "
-"dorit în câmp, iar opțiunea apare în meniul derulant. Apoi, selectați "
-"produsul dorit pentru a-l adăuga la cotație."
+"Fila Atribute și valori dintr-un formular tipic de produs în Odoo Sales."
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:36
 msgid ""
-"When a product is added, the default :guilabel:`Quantity` is `1`, but that "
-"can be edited at any time."
+"Select the optional products using the drop-down menu. There is no limit to "
+"the number of optional products that can be added."
 msgstr ""
-"Când se adaugă un produs, valoarea implicită :guilabel:`Cantitate` este `1`, "
-"dar aceasta poate fi editată oricând."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:39
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:41
 msgid ""
-"To delete any line item from the :guilabel:`Optional Products` tab, click "
-"the :guilabel:`🗑️ (trash can)` icon."
+"Multiple products can be selected by clicking :guilabel:`Search more...` "
+"and  *Search: Optional Products* pop-up window loads. Click the checkbox "
+"next to each desired product being added. When all optional products are "
+"selected, click :guilabel:`Select`, and all optional products appear in the "
+"field. If needed, new products can be created and added."
 msgstr ""
-"Pentru a șterge orice element rând din fila :guilabel:`Produse opționale`, "
-"faceți clic pe pictograma :guilabel:`🗑️ (coș de gunoi)`."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:42
-msgid ""
-"Click the :guilabel:`Preview` button, located in the upper-left corner of "
-"the quotation, to reveal a preview of the quotation customers would receive, "
-"via email, along with the optional products they can potentially add to "
-"their order, located in the :guilabel:`Options` section."
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:0
+msgid "The Search: Optional Products form accessed by clicking Search more..."
 msgstr ""
-"Faceți clic pe butonul :guilabel:`Previzualizare`, situat în colțul din "
-"stânga sus al cotației, pentru a dezvălui o previzualizare a ofertei pe care "
-"clienții le-ar primi, prin e-mail, împreună cu produsele opționale pe care "
-"le pot adăuga la comanda lor, situate în secțiunea :guilabel:`Opțiuni`."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
-msgid "Preview your quotations on Odoo Sales."
-msgstr "Previzualizează-ți cotațiile pe Odoo Sales."
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:50
-msgid ""
-"Customers are able to add different optional products to an order by "
-"clicking the :guilabel:`🛒 (shopping cart)` icon, located to the right of "
-"the optional product line."
-msgstr ""
-"Clienții pot adăuga diferite produse opționale la o comandă făcând clic pe "
-"pictograma :guilabel:`🛒 (coș de cumpărături)`, situată în partea dreaptă a "
-"liniei de produse opționale."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:53
-msgid ""
-"If a customer selects optional products, these are automatically added to "
-"the quotation managed by the salesperson."
-msgstr ""
-"Dacă un client selectează produse opționale, acestea sunt adăugate automat "
-"la cotația gestionată de vânzător."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:56
-msgid ""
-"When the customer adds an optional product(s) to an order, the salesperson "
-"is instantly notified about the change, along with any other change the "
-"customer makes to an order. This allows salespeople to stay up-to-date with "
-"everything related to an order in the backend of the *Sales* application."
-msgstr ""
-"Când clientul adaugă un produs (produs) opțional(e) la o comandă, agentul de "
-"vânzări este notificat instantaneu despre modificare, împreună cu orice altă "
-"modificare pe care clientul o face la o comandă. Acest lucru le permite "
-"vânzătorilor să rămână la curent cu tot ce are legătură cu o comandă în "
-"backend-ul aplicației *Vânzări*."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:62
-msgid "Optional products on quotation templates"
+#, fuzzy
+#| msgid "Optional products on quotation templates"
+msgid "Optional products on quotation templates and quotations"
 msgstr "Produse opționale pe șabloane de cotație"
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:65
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:52
 msgid ""
-"Be sure to review the :doc:`quote_template` documentation to better "
-"understand how quotation templates work before reading the following "
-"information."
+"Optional products can be added to quotation templates, allowing sales staff "
+"to offer related products without needing to manually add them to each "
+"quote. Additional optional products can also be added to individual "
+"quotations when needed."
 msgstr ""
-"Asigurați-vă că examinați documentația :doc:`quote_template` pentru a "
-"înțelege mai bine cum funcționează șabloanele de cotație înainte de a citi "
-"următoarele informații."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:68
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:59
+#, fuzzy
+#| msgid ""
+#| "To add optional products to a quotation template, navigate "
+#| "to :menuselection:`Sales app --> Configuration --> Quotation Templates`. "
+#| "Then, either select an existing quotation template to edit, or create a "
+#| "new one by clicking :guilabel:`New`."
 msgid ""
-"For quotation templates, just like a typical quotation form, there is also "
-"an :guilabel:`Optional Products` tab, wherein related products or services "
-"can be added to a quotation template."
-msgstr ""
-"Pentru șabloanele de cotație, la fel ca un formular obișnuit de cotație, "
-"există și o filă :guilabel:`Produse opționale`, în care produsele sau "
-"serviciile conexe pot fi adăugate la un șablon de cotație."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:71
-msgid ""
-"To add optional products to a quotation template, navigate "
-"to :menuselection:`Sales app --> Configuration --> Quotation Templates`. "
-"Then, either select an existing quotation template to edit, or create a new "
-"one by clicking :guilabel:`New`."
+"Quotation templates also have an *Optional Products* tab, where related "
+"products or services can be added. To add optional products to a quotation "
+"template, navigate to :menuselection:`Sales app --> Configuration --> "
+"Quotation Templates`. Then, either select an existing quotation template to "
+"edit or :doc:`create a new one <quote_template>`."
 msgstr ""
 "Pentru a adăuga produse opționale la un șablon de cotație, navigați "
 "la :menuselection:`Aplicația de vânzări --> Configurare --> Șabloane de "
 "cotație`. Apoi, fie selectați un șablon de cotație existent de editat, fie "
 "creați unul nou făcând clic pe :guilabel:`Nou`."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:75
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:64
+#, fuzzy
+#| msgid ""
+#| "On the quotation template form, click the :guilabel:`Optional Products` "
+#| "tab. Under the :guilabel:`Optional Products` tab, click :guilabel:`Add a "
+#| "line`, and select the desired product to add as an optional product to "
+#| "the quotation template."
 msgid ""
 "On the quotation template form, click the :guilabel:`Optional Products` tab. "
-"Under the :guilabel:`Optional Products` tab, click :guilabel:`Add a line`, "
-"and select the desired product to add as an optional product to the "
-"quotation template."
+"Then, click :guilabel:`Add a line` and select the desired product to add as "
+"an optional product to the quotation template."
 msgstr ""
 "Pe formularul șablon de ofertă, faceți clic pe fila :guilabel:`Produse "
 "opționale`. Sub fila :guilabel:`Produse opționale`, faceți clic "
 "pe :guilabel:`Adăugați o linie` și selectați produsul dorit pentru a adăuga "
 "ca produs opțional la șablonul de cotație."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:83
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:68
+#, fuzzy
+#| msgid ""
+#| "The products added in the :guilabel:`Optional Products` tab are present "
+#| "in the quotation, by default, whenever that particular quotation template "
+#| "is used. These products can be removed, and additional products can be "
+#| "added, before the quotation is sent to a customer."
 msgid ""
-"The products added in the :guilabel:`Optional Products` tab are present in "
-"the quotation, by default, whenever that particular quotation template is "
-"used. These products can be removed, and additional products can be added, "
-"before the quotation is sent to a customer."
+"When the configured quotation template is used, the products added in "
+"the :guilabel:`Optional Products` tab will appear in the corresponding tab "
+"in the quotation. These products can be removed and additional products can "
+"be added before the quotation is sent to a customer."
 msgstr ""
 "Produsele adăugate în fila :guilabel:`Produse opționale` sunt prezente în "
 "cotație, în mod implicit, ori de câte ori este utilizat acel șablon de "
 "cotație. Aceste produse pot fi eliminate și pot fi adăugate produse "
 "suplimentare, înainte ca oferta să fie trimisă unui client."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:88
-msgid ""
-"It's best to offer optional products that would encourage a customer to add "
-"additional items to their order, or entice them to purchase a more expensive "
-"version of their initially selected product."
-msgstr ""
-"Cel mai bine este să oferiți produse opționale care să încurajeze un client "
-"să adauge articole suplimentare la comanda sa sau să-l atragă să cumpere o "
-"versiune mai scumpă a produsului selectat inițial."
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
+#, fuzzy
+#| msgid ""
+#| "The online payment setting on quotation template forms in Odoo Sales."
+msgid "The Optional Products section in a quotation template in Odoo Sales."
+msgstr "Setarea de plată online pe formularele șablon de ofertă în Odoo Sales."
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:92
-msgid ""
-"For example, if a customer purchases a wooden chair, some optional products "
-"could be: a warranty on that chair and/or a wooden chair with leather seats."
-msgstr ""
-"De exemplu, dacă un client achiziționează un scaun din lemn, unele produse "
-"opționale ar putea fi: o garanție pentru acel scaun și/sau un scaun din lemn "
-"cu scaune din piele."
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:96
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:76
 msgid ""
 "There is no limit to how many optional products can be added to a quotation "
 "template."
 msgstr ""
 "Nu există limită pentru câte produse opționale pot fi adăugate la un șablon "
 "de cotație."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:79
+#, fuzzy
+#| msgid "Quotation settings"
+msgid "Quotations"
+msgstr "Setări ofertă"
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:81
+msgid ""
+"To add additional products on an individual quote, navigate "
+"to :menuselection:`Sales --> Orders --> Quotations` and select an existing "
+"quote or :doc:`create a new quote <create_quotations>`. Then open "
+"the :guilabel:`Optional Products`. Doing so reveals a blank field in "
+"the :guilabel:`Product` column. Click :guilabel:`Add a product`. When "
+"clicked, a drop-down menu with products from the database appear. Select the "
+"desired product from the drop-down menu to add it as an optional product. "
+"Type the name of the desired product or click :guilabel:`Search More...` to "
+"find additional products."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:88
+#, fuzzy
+#| msgid ""
+#| "To delete any line item from the :guilabel:`Optional Products` tab, click "
+#| "the :icon:`fa-trash` :guilabel:`(remove record)` icon."
+msgid ""
+"To delete any line item from the :guilabel:`Optional Products` tab, click "
+"the :icon:`fa-trash-o` :guilabel:`(delete)` icon."
+msgstr ""
+"Pentru a șterge orice linie din tabul :guilabel:`Produse opționale`, apasă "
+"pe pictograma :icon:`fa-trash` :guilabel:`(șterge înregistrarea)`."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:92
+#, fuzzy
+#| msgid ""
+#| "When a product is added, the default :guilabel:`Quantity` is `1`, but "
+#| "that can be edited at any time."
+msgid ""
+"When a product is added, the default :guilabel:`Quantity` is `1`, but can be "
+"updated."
+msgstr ""
+"Când se adaugă un produs, valoarea implicită :guilabel:`Cantitate` este `1`, "
+"dar aceasta poate fi editată oricând."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:95
+#, fuzzy
+#| msgid "Optional products"
+msgid "Previewing optional products"
+msgstr "Produse opționale"
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:97
+#, fuzzy
+#| msgid ""
+#| "Click the :guilabel:`Preview` button, located in the upper-left corner of "
+#| "the quotation, to reveal a preview of the quotation customers would "
+#| "receive, via email, along with the optional products they can potentially "
+#| "add to their order, located in the :guilabel:`Options` section."
+msgid ""
+"Click the :guilabel:`Preview` button, located in the upper-left corner of "
+"the quotation, to reveal a preview of the quotation email customers would "
+"receive. Optional products are located in the :guilabel:`Options` section of "
+"the preview."
+msgstr ""
+"Faceți clic pe butonul :guilabel:`Previzualizare`, situat în colțul din "
+"stânga sus al cotației, pentru a dezvălui o previzualizare a ofertei pe care "
+"clienții le-ar primi, prin e-mail, împreună cu produsele opționale pe care "
+"le pot adăuga la comanda lor, situate în secțiunea :guilabel:`Opțiuni`."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:101
+#, fuzzy
+#| msgid ""
+#| "Customers are able to add different optional products to an order by "
+#| "clicking the :guilabel:`🛒 (shopping cart)` icon, located to the right of "
+#| "the optional product line."
+msgid ""
+"Customers are able to add different optional products to an order by "
+"clicking the :icon:`fa-shopping-cart` :guilabel:`(Add to cart)` icon, "
+"located to the right of the optional product line."
+msgstr ""
+"Clienții pot adăuga diferite produse opționale la o comandă făcând clic pe "
+"pictograma :guilabel:`🛒 (coș de cumpărături)`, situată în partea dreaptă a "
+"liniei de produse opționale."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
+msgid "The Options section within a quotation preview."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:108
+#, fuzzy
+#| msgid ""
+#| "If a customer selects optional products, these are automatically added to "
+#| "the quotation managed by the salesperson."
+msgid ""
+"If a customer selects optional products, they are automatically added to the "
+"quotation managed by the salesperson."
+msgstr ""
+"Dacă un client selectează produse opționale, acestea sunt adăugate automat "
+"la cotația gestionată de vânzător."
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:111
+#, fuzzy
+#| msgid ""
+#| "When the customer adds an optional product(s) to an order, the "
+#| "salesperson is instantly notified about the change, along with any other "
+#| "change the customer makes to an order. This allows salespeople to stay up-"
+#| "to-date with everything related to an order in the backend of the *Sales* "
+#| "application."
+msgid ""
+"When a customer adds optional products to an order, the salesperson is "
+"instantly notified about the change, along with any other change the "
+"customer makes to an order. This allows salespeople to stay up-to-date with "
+"everything related to an order in the backend of the *Sales* application. "
+"Added products appear in green in the :guilabel:`Optional Products` tab when "
+"the quote is viewed."
+msgstr ""
+"Când clientul adaugă un produs (produs) opțional(e) la o comandă, agentul de "
+"vânzări este notificat instantaneu despre modificare, împreună cu orice altă "
+"modificare pe care clientul o face la o comandă. Acest lucru le permite "
+"vânzătorilor să rămână la curent cu tot ce are legătură cu o comandă în "
+"backend-ul aplicației *Vânzări*."
 
 #: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:5
 msgid ""
@@ -31562,7 +31647,7 @@ msgstr ""
 msgid ":doc:`../products_prices/products/variants`"
 msgstr ":doc:`../products_prices/products/variants`"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:5
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:8
 msgid ""
 "The *PDF Quote Builder* in Odoo *Sales* provides the opportunity to send "
 "customers a fully customized PDF file for quotes, showcasing the company and "
@@ -31574,7 +31659,7 @@ msgstr ""
 "compania și produsele, cu diverse informații și elemente de design, în loc "
 "să arate doar prețul și totalul."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:9
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:12
 msgid ""
 "The PDF Quote Builder groups header pages, product descriptions, the "
 "price(s), and footer pages to create a detailed quote. It can also inject "
@@ -31586,7 +31671,7 @@ msgstr ""
 "insera și texte dinamice sau note personalizate în PDF pentru a personaliza "
 "oferta pentru client."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:13
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:16
 msgid ""
 "Having a customized PDF in quotes provides a heightened conclusion to the "
 "shopping experience for customers, and adds an elegant level of "
@@ -31596,7 +31681,7 @@ msgstr ""
 "cumpărături pentru clienți și adaugă un nivel elegant de profesionalism unei "
 "companii."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:17
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:20
 msgid ""
 "`Odoo Quick Tips - Create a PDF quote [video] <https://www.youtube.com/watch?"
 "v=tQNydBZt-VI>`_"
@@ -31604,7 +31689,7 @@ msgstr ""
 "`Odoo Quick Tips - Creează o ofertă PDF [video] <https://www.youtube.com/"
 "watch?v=tQNydBZt-VI>`_"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:20
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:23
 msgid ""
 "It is recommended to edit PDF forms with Adobe software. The form fields on "
 "the header and footer PDF templates are necessary to get dynamic values with "
@@ -31614,7 +31699,42 @@ msgstr ""
 "formular de pe șabloanele PDF pentru antet și subsol sunt necesare pentru a "
 "obține valori dinamice cu Odoo."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:26
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:28
+#, fuzzy
+#| msgid "Dynamic text in PDFs"
+msgid "Add dynamic text to PDFs"
+msgstr "Text dinamic în PDF-uri"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:28
+#, fuzzy
+#| msgid "Dynamic text in PDFs"
+msgid "Add dynamic text fields to PDFs."
+msgstr "Text dinamic în PDF-uri"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:33
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:3
+#, fuzzy
+#| msgid "Add PDF to product"
+msgid "Add PDFs to quotes"
+msgstr "Adăugați PDF la produs"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:33
+msgid "Add a PDF header or footer to a quote."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:38
+#, fuzzy
+#| msgid "Add PDF to product"
+msgid "Add PDFs to products"
+msgstr "Adăugați PDF la produs"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:38
+msgid ""
+"Set up the headers and footers for products. These will appear on sales "
+"quotes and online store pages."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:48
 msgid ""
 "In order to add custom PDF files for quotes, the :guilabel:`PDF Quote "
 "builder` feature *must* be configured."
@@ -31622,7 +31742,7 @@ msgstr ""
 "Pentru a adăuga fișiere PDF personalizate pentru citate, "
 "funcția :guilabel:`PDF Quote Builder` *trebuie* configurată."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:29
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:51
 msgid ""
 "To do that, navigate to :menuselection:`Sales app --> Configuration --> "
 "Settings`. Then, on the :guilabel:`Settings` page, scroll to "
@@ -31634,11 +31754,11 @@ msgstr ""
 "secțiunea :guilabel:`Cotații și comenzi` și găsiți "
 "caracteristica :guilabel:`PDF Quote Builder`."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:34
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:56
 msgid "Add PDF as Header/Footer"
 msgstr "Adaugă PDF ca Antet/Subsol"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:36
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:58
 msgid ""
 "In Odoo *Sales*, it's possible to add a custom PDF that can be used either "
 "as a header or a footer. When the PDF quote builder is activated in a "
@@ -31650,7 +31770,7 @@ msgstr ""
 "selecta oricâte antete și subsoluri dorești, acestea fiind inserate și în "
 "PDF-ul final."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:40
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:62
 msgid ""
 "To add a custom PDF as header or footer, start by navigating "
 "to :menuselection:`Sales app --> Configuration --> Headers/Footers`. From "
@@ -31660,7 +31780,7 @@ msgstr ""
 "accesează :menuselection:`Aplicația Vânzări --> Configurare --> Antete/"
 "Subsoluri`. De aici, apasă pe :guilabel:`Nou` sau :guilabel:`Încarcă`."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:44
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:66
 msgid ""
 "Clicking :guilabel:`Upload` instantly provides the opportunity to upload the "
 "desired document. Then, the document can be further configured on the "
@@ -31673,8 +31793,8 @@ msgstr ""
 "pictograma :icon:`fa-ellipsis-v` :guilabel:`(trei puncte verticale)` din "
 "colțul dreapta sus al cardului și apoi pe :guilabel:`Editează`."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:49
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:177
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:71
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:31
 msgid ""
 "Clicking :guilabel:`New` reveals a blank documents form, in which the "
 "desired PDF can be uploaded via the :guilabel:`Upload your file` button on "
@@ -31685,7 +31805,7 @@ msgstr ""
 "butonului :guilabel:`Încărcați fișierul` din formular, aflat în "
 "câmpul :guilabel:`Conținut fișier`."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:53
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:75
 msgid ""
 "Various information and configurations related to the uploaded document can "
 "be modified here."
@@ -31693,8 +31813,8 @@ msgstr ""
 "Diverse informații și configurații legate de documentul încărcat pot fi "
 "modificate aici."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:55
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:187
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:77
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:41
 msgid ""
 "The first field on the documents form is for the :guilabel:`Name` of the "
 "document, and it is grayed-out (not clickable) until a document is uploaded. "
@@ -31706,7 +31826,7 @@ msgstr ""
 "este încărcat. Odată ce un PDF a fost încărcat, câmpul :guilabel:`Name` este "
 "completat automat cu numele PDF-ului și poate fi apoi editat."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:59
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:81
 msgid ""
 "Then, in the :guilabel:`Document Type` field, click the drop-down menu, and "
 "select either: :guilabel:`Header`, or :guilabel:`Footer` to define whether "
@@ -31717,7 +31837,7 @@ msgstr ""
 "selectează :guilabel:`Antet` sau :guilabel:`Subsol` pentru a defini dacă "
 "fișierul va putea fi selectat la începutul sau la sfârșitul ofertei."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:63
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:85
 msgid ""
 "Under this, in the :guilabel:`Quotation Templates` section, this PDF can be "
 "restricted quotation templates only."
@@ -31725,7 +31845,7 @@ msgstr ""
 "Sub acest câmp, în secțiunea :guilabel:`Șabloane de ofertă`, acest PDF poate "
 "fi restricționat doar la anumite șabloane de ofertă."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:67
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:89
 msgid ""
 "Alternatively, you can also navigate to :menuselection:`Sales app --> "
 "Configuration --> Quotation Templates`, select a template and "
@@ -31736,7 +31856,7 @@ msgstr ""
 "> Șabloane de ofertă`, selectezi un șablon și adaugi sau încarci direct un "
 "PDF în tabul :guilabel:`Quote Builder`."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:71
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:93
 msgid ""
 "Lastly, beside the :guilabel:`File Content` field, you have the possibility "
 "to :guilabel:`Configure dynamic fields`."
@@ -31744,11 +31864,307 @@ msgstr ""
 "În final, lângă câmpul :guilabel:`Conținut fișier`, ai posibilitatea "
 "să :guilabel:`Configurezi câmpuri dinamice`."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:75
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:3
+#, fuzzy
+#| msgid "Add PDF to product"
+msgid "Add PDFs to a product"
+msgstr "Adăugați PDF la produs"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:5
+msgid ""
+"In Odoo *Sales*, it's also possible to add a custom PDF to a product form. "
+"When a PDF is added to a product, and that product is used in a quotation, "
+"that PDF is also inserted in the final PDF."
+msgstr ""
+"În Odoo *Vânzări*, este, de asemenea, posibil să adăugați un PDF "
+"personalizat la un formular de produs. Când un PDF este adăugat la un produs "
+"și acel produs este utilizat într-o ofertă, acel PDF este de asemenea "
+"inserat în PDF-ul final."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:8
+msgid ""
+"To add a custom PDF to a product, start by navigating "
+"to :menuselection:`Sales app --> Products --> Products`, and select the "
+"desired product to add a custom PDF to."
+msgstr ""
+"Pentru a adăuga un PDF personalizat unui produs, "
+"accesați :menuselection:`Aplicația Vânzări --> Produse --> Produse` și "
+"selectați produsul dorit."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:12
+msgid ""
+"A document could also be added to a product variant, instead of a product. "
+"If there are documents on a product *and* on its variant, **only** the "
+"documents in the variant are shown."
+msgstr ""
+"Un document ar putea fi adăugat și la o variantă de produs, în locul unui "
+"produs. Dacă există documente pe un produs *și* pe varianta acestuia, sunt "
+"afișate **doar** documentele din variantă."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:15
+msgid ""
+"To add a custom document to a product variant, navigate "
+"to :menuselection:`Sales app --> Products --> Product Variants`. Select the "
+"desired variant, click the :guilabel:`Documents` smart button, and proceed "
+"to upload the custom document to the specific product variant."
+msgstr ""
+"Pentru a adăuga un document personalizat unei variante de produs, "
+"accesați :menuselection:`Aplicația Vânzări --> Produse --> Variante "
+"produse`. Selectați varianta dorită, faceți clic pe butonul "
+"inteligent :guilabel:`Documente` și încărcați documentul pentru acea "
+"variantă."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:19
+msgid ""
+"On the product page, click the :guilabel:`Documents` smart button at the top "
+"of the page to navigate to a :guilabel:`Documents` page for that product, "
+"where files related to that product can be uploaded. From this page, either "
+"click :guilabel:`New` or :guilabel:`Upload`."
+msgstr ""
+"Pe pagina produsului, faceți clic pe butonul "
+"inteligent :guilabel:`Documente` din partea de sus pentru a accesa pagina de "
+"documente a produsului, unde puteți încărca fișiere. De aici, faceți clic "
+"pe :guilabel:`Nou` sau :guilabel:`Încarcă`."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
+msgid "The Documents smart button on a product form in Odoo Sales."
+msgstr ""
+"Butonul inteligent Documente de pe un formular de produs în Odoo Sales."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:26
+msgid ""
+"Clicking :guilabel:`Upload` opens the computer's local file directory. An "
+"uploaded document can be further configured on the document card, or by "
+"clicking the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in "
+"the top-right corner of the document card, and then "
+"clicking :guilabel:`Edit`."
+msgstr ""
+"La clic pe :guilabel:`Încarcă` se deschide directorul local al "
+"calculatorului. Un document încărcat poate fi configurat suplimentar pe "
+"cardul documentului sau făcând clic pe pictograma :icon:`fa-ellipsis-"
+"v` :guilabel:`(trei puncte verticale)` din colțul dreapta sus și apoi "
+"pe :guilabel:`Editează`."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:36
+msgid "PDF form configuration"
+msgstr "Configurare formular PDF"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
+msgid ""
+"A standard document form with various fields for a specific product in Odoo "
+"Sales."
+msgstr ""
+"Un formular de document standard cu diverse câmpuri pentru un anumit produs "
+"în Odoo Sales."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:45
+msgid ""
+"Prior to uploading a document, there's the option to designate whether the "
+"document is a :guilabel:`File` or :guilabel:`URL` from the :guilabel:`Type` "
+"drop-down field menu."
+msgstr ""
+"Înainte de a încărca un document, există opțiunea de a desemna dacă "
+"documentul este un :guilabel:`Fișier` sau :guilabel:`URL` din meniul "
+"derulant de câmpuri :guilabel:`Type`."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
+msgid "A standard document form with an uploaded pdf in Odoo Sales."
+msgstr "Un formular de document standard cu un pdf încărcat în Odoo Sales."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:52
+msgid ""
+"If a PDF is uploaded, the :guilabel:`Type` field is auto-populated "
+"to :guilabel:`File`, and it cannot be modified."
+msgstr ""
+"Dacă este încărcat un PDF, câmpul :guilabel:`Type` este completat automat "
+"în :guilabel:`File` și nu poate fi modificat."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:55
+msgid ""
+"Then, in the :guilabel:`Sales` section, in the :guilabel:`Visible at` field, "
+"click the drop-down menu, and select either: :guilabel:`On "
+"quotation`, :guilabel:`On confirmed order`, or :guilabel:`Inside quote pdf`."
+msgstr ""
+"Apoi, în secțiunea :guilabel:`Vânzări`, la câmpul :guilabel:`Vizibil la`, "
+"deschideți lista și selectați: :guilabel:`Pe ofertă`, :guilabel:`Pe comandă "
+"confirmată` sau :guilabel:`În PDF ofertă`."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:59
+msgid ""
+":guilabel:`Quotation`: the document is sent to (and accessible by) customers "
+"at any time."
+msgstr ""
+":guilabel:`Citație`: documentul este trimis (și accesibil de) clienți în "
+"orice moment."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:61
+msgid ""
+":guilabel:`Confirmed order`: the document is sent to customers upon the "
+"confirmation of an order. This is best for user manuals and other "
+"supplemental documents."
+msgstr ""
+":guilabel:`Comandă confirmată`: documentul este trimis clienților la "
+"confirmarea unei comenzi. Acest lucru este cel mai bun pentru manualele de "
+"utilizare și alte documente suplimentare."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:64
+msgid ""
+":guilabel:`Inside quote`: the document is included in the PDF of the "
+"quotation, between the header pages and the :guilabel:`Pricing` section of "
+"the quote."
+msgstr ""
+":guilabel:`În interiorul citatului`: documentul este inclus în PDF-ul "
+"cotației, între paginile antet și secțiunea :guilabel:`Prețuri` a cotației."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:68
+msgid ""
+"When the :guilabel:`Inside quote` option for the :guilabel:`Visible at` "
+"field is chosen, and the custom PDF file, `Corner Desk.pdf` is uploaded, the "
+"PDF is visible on the quotation in the *customer portal* under "
+"the :guilabel:`Documents` field."
+msgstr ""
+"Când opțiunea :guilabel:`În ofertă` este selectată la "
+"câmpul :guilabel:`Vizibil la` și fișierul PDF personalizat, `Corner "
+"Desk.pdf`, este încărcat, PDF-ul va fi vizibil pe ofertă în *portalul "
+"clientului* la câmpul :guilabel:`Documente`."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:0
+msgid ""
+"Sample of an uploaded pdf with the on quote option chosen in Odoo Sales."
+msgstr ""
+"Exemplu de PDF încărcat cu opțiunea pe ofertă selectată în Odoo Vânzări."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:75
+msgid ""
+"Beside the :guilabel:`File Content` field, you have the possibility "
+"to :guilabel:`Configure dynamic fields`. When doing so, remember that the "
+"starting model is the :guilabel:`sale_order_line`, unlike for headers and "
+"footers that start from the :guilabel:`sale_order`."
+msgstr ""
+"Lângă câmpul :guilabel:`Conținut fișier` aveți posibilitatea "
+"să :guilabel:`Configurați câmpuri dinamice`. Țineți cont că modelul de "
+"pornire este :guilabel:`sale_order_line`, spre deosebire de antet/subsol "
+"care pornesc de la :guilabel:`sale_order`."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:79
+msgid ""
+"Lastly, in the :guilabel:`E-Commerce` section, decide whether or not "
+"to :guilabel:`Publish on Website` so that the PDF appears on the product "
+"page in the online store."
+msgstr ""
+"În final, în secțiunea :guilabel:`E-Commerce`, decideți dacă doriți "
+"să :guilabel:`Publicați pe site` pentru ca PDF-ul să apară pe pagina "
+"produsului din magazinul online."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:83
+msgid ""
+"When the :guilabel:`Publish on Website` option is enabled, a link to the "
+"uploaded document, `Corner Desk.pdf`, appears on the product's page in the "
+"online store."
+msgstr ""
+"Când opțiunea :guilabel:`Publică pe site` este activată, un link către "
+"documentul încărcat, `Corner Desk.pdf`, apare pe pagina produsului din "
+"magazinul online."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:86
+msgid ""
+"It appears beneath a :guilabel:`Documents` heading, with a link showcasing "
+"the name of the uploaded document."
+msgstr ""
+"Apare sub un titlu :guilabel:`Documente`, cu un link care arată numele "
+"documentului încărcat."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:0
+msgid ""
+"Showing a link to an uploaded document on a product page using Odoo Sales."
+msgstr ""
+"Afișarea unui link către un document încărcat pe pagina unui produs folosind "
+"Odoo Sales."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:5
+msgid ""
+"On a sales order, in the :guilabel:`Quote Builder` tab, select additional "
+"documents to be merged into the final PDF. If a selected document has custom "
+"fields, they appear as editable text boxes to be filled in."
+msgstr ""
+"Pe o comandă de vânzare, în fila :guilabel:`Constructor ofertă`, selectați "
+"documente suplimentare care să fie îmbinate în PDF-ul final. Dacă un "
+"document selectat are câmpuri personalizate, acestea vor apărea ca casete "
+"editabile de completat."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:None
+msgid ""
+"Selectable quotation headers and footers under the Quote Builder section in "
+"a quotation."
+msgstr ""
+"Antete și subsoluri de ofertă selectabile în secțiunea Constructor ofertă "
+"dintr-o ofertă."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:12
+msgid ""
+"Once a quote with a pre-configured PDF has been confirmed, Odoo provides the "
+"option to print the confirmed quote to check for errors, or to keep for "
+"records."
+msgstr ""
+"Odată ce o ofertă cu un PDF preconfigurat a fost confirmată, Odoo oferă "
+"opțiunea de a tipări oferta confirmată pentru a verifica erorile sau pentru "
+"a păstra înregistrări."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:15
+msgid ""
+"To print the PDF quote, navigate to the confirmed quote, and click "
+"the :guilabel:`⚙️ (gear)` icon to reveal a drop-down menu. From this drop-"
+"down menu, select :guilabel:`Print`, then select :guilabel:`PDF Quote`."
+msgstr ""
+"Pentru a imprima oferta PDF, navigați la oferta confirmată și faceți clic pe "
+"pictograma :guilabel:`⚙️ (roată)` pentru a afișa un meniu derulant. Din acest "
+"meniu derulant, selectați :guilabel:`Print`, apoi selectați :guilabel:`PDF "
+"Quote`."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:None
+msgid ""
+"Print pdf quote option on drop-down menu located on confirmed sales order in "
+"Odoo Sales."
+msgstr ""
+"Imprimați opțiunea de cotație pdf din meniul derulant situat pe comanda de "
+"vânzare confirmată în Odoo Sales."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:22
+msgid ""
+"Doing so instantly downloads the PDF quote. When opened, the PDF quote, "
+"along with the configured product PDF that was set to be visible inside the "
+"quote, can be viewed and printed."
+msgstr ""
+"Procedând astfel, descarcă instantaneu citatul PDF. Când este deschis, "
+"cotația PDF, împreună cu PDF-ul de produs configurat care a fost setat să "
+"fie vizibil în interiorul cotației, pot fi vizualizate și tipărite."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:26
+#, fuzzy
+#| msgid ""
+#| "Download these :download:`PDF quote builder examples <pdf_quote_builder/"
+#| "pdfquotebuilderexamples.zip>` or download :download:`sample quotation "
+#| "<pdf_quote_builder/sample_quotation.pdf>` for added reference."
+msgid ""
+"Download these :download:`PDF quote builder examples <add_pdf_quotes/"
+"pdfquotebuilderexamples.zip>` or download :download:`sample quotation "
+"<add_pdf_quotes/sample_quotation.pdf>` for added reference."
+msgstr ""
+"Descarcă aceste :download:`exemple PDF quote builder <pdf_quote_builder/"
+"pdfquotebuilderexamples.zip>` sau descarcă :download:`ofertă exemplu "
+"<pdf_quote_builder/sample_quotation.pdf>` pentru referință suplimentară."
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:31
+#, fuzzy
+#| msgid ":doc:`quote_template`"
+msgid ":doc:`../quote_template`"
+msgstr ":doc:`quote_template`"
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:3
 msgid "Dynamic text in PDFs"
 msgstr "Text dinamic în PDF-uri"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:77
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:5
 msgid ""
 "While creating custom PDFs for quotes, use *dynamic text* for Odoo to auto-"
 "fill the PDF content with information related to the quote from the Odoo "
@@ -31758,7 +32174,7 @@ msgstr ""
 "dinamic* pentru Odoo pentru a completa automat conținutul PDF cu informații "
 "legate de citat din baza de date Odoo, cum ar fi nume, prețuri etc."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:80
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:8
 msgid ""
 "Dynamic text values are form components (text inputs) that can be added in a "
 "PDF file, and Odoo automatically fills those values in with information "
@@ -31768,11 +32184,11 @@ msgstr ""
 "care pot fi adăugate într-un fișier PDF, iar Odoo completează automat acele "
 "valori cu informații legate de citat."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:84
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:12
 msgid "Dynamic text values"
 msgstr "Valori dinamice ale textului"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:86
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:14
 msgid ""
 "Below are common dynamic text values used in custom PDFs that are already "
 "mapped to the correct fields, and what they represent."
@@ -31780,83 +32196,83 @@ msgstr ""
 "Mai jos sunt valori dinamice uzuale folosite în PDF-uri personalizate, deja "
 "mapate la câmpurile corecte, și ce reprezintă acestea."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:89
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:17
 msgid "For headers and footers PDF:"
 msgstr "Pentru PDF-urile de antet și subsol:"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:91
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:19
 msgid ":guilabel:`name`: Sales Order Reference"
 msgstr ":guilabel:`name`: Referința comenzii de vânzare"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:92
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:20
 msgid ":guilabel:`partner_id__name`: Customer Name"
 msgstr ":guilabel:`partner_id__name`: Numele clientului"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:93
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:21
 msgid ":guilabel:`user_id__name`: Salesperson Name"
 msgstr ":guilabel:`user_id__name`: Numele vânzătorului"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:94
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:22
 msgid ":guilabel:`amount_untaxed`: Untaxed Amount"
 msgstr ":guilabel:`amount_untaxed`: Sumă netaxată"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:95
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:23
 msgid ":guilabel:`amount_total`: Total Amount"
 msgstr ":guilabel:`amount_total`: Suma totală"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:96
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:24
 msgid ":guilabel:`delivery_date`: Delivery Date"
 msgstr ":guilabel:`delivery_date`: Data livrării"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:97
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:25
 msgid ":guilabel:`validity_date`: Expiration Date"
 msgstr ":guilabel:`validity_date`: Data de expirare"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:98
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:26
 msgid ":guilabel:`client_order_ref`: Customer Reference"
 msgstr ":guilabel:`client_order_ref`: Referință client"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:101
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:29
 msgid "For product PDF:"
 msgstr "Pentru PDF-ul de produs:"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:103
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:31
 msgid ":guilabel:`description`: Product Description"
 msgstr ":guilabel:`description`: Descrierea produsului"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:104
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:32
 msgid ":guilabel:`quantity`: Quantity"
 msgstr ":guilabel:`quantity`: Cantitate"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:105
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:33
 msgid ":guilabel:`uom`: Unit of Measure (UoM)"
 msgstr ":guilabel:`uom`: Unitate de măsură (UoM)"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:106
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:34
 msgid ":guilabel:`price_unit`: Price Unit"
 msgstr ":guilabel:`price_unit`: Unitate de preț"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:107
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:35
 msgid ":guilabel:`discount`: Discount"
 msgstr ":guilabel:`discount`: Reducere"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:108
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:36
 msgid ":guilabel:`product_sale_price`: Product List Price"
 msgstr ":guilabel:`product_sale_price`: Preț de listă de produse"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:109
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:37
 msgid ":guilabel:`taxes`: Taxes name joined by a comma (`,`)"
 msgstr ":guilabel:`taxes`: numele taxelor alăturat printr-o virgulă (`,`)"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:110
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:38
 msgid ":guilabel:`tax_excl_price`: Tax Excluded Price"
 msgstr ":guilabel:`tax_excl_price`: Preț cu taxe excluse"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:111
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:39
 msgid ":guilabel:`tax_incl_price`: Tax Included Price"
 msgstr ":guilabel:`tax_incl_price`: Preț cu taxe incluse"
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:113
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:41
 msgid ""
 "After uploading a PDF, you can then :guilabel:`Configure dynamic fields`. "
 "This will allow you to map any field name found in your PDF to the field you "
@@ -31873,7 +32289,7 @@ msgstr ""
 "la :guilabel:`sale_order_line`. Dacă lăsați calea goală, puteți completa "
 "note personalizate direct din oferta respectivă."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:121
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:48
 msgid ""
 "When a PDF is built, it's best practice to use common dynamic text values "
 "(:guilabel:`name` and :guilabel:`partner_id_name`). When uploaded into the "
@@ -31885,7 +32301,7 @@ msgstr ""
 "și :guilabel:`partner_id_name`). Când este încărcat în baza de date, Odoo "
 "completează automat acele câmpuri cu informațiile din câmpurile respective."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:125
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:52
 msgid ""
 "In this case, Odoo would auto-populate the Sales Order Reference in "
 "the :guilabel:`name` dynamic text field, and the Customer Name in "
@@ -31895,11 +32311,11 @@ msgstr ""
 "câmpul de text dinamic :guilabel:`name` și Numele clientului în "
 "câmpul :guilabel:`partner_id_name`."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:0
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:0
 msgid "PDF quote being built using common dynamic placeholders."
 msgstr "Citat PDF fiind construit folosind substituenți dinamici obișnuiți."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:132
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:59
 msgid ""
 "Once the PDF file(s) are complete, save them to the computer's hard drive, "
 "and proceed to upload them to Odoo via :menuselection:`Sales app --> "
@@ -31909,7 +32325,7 @@ msgstr ""
 "Odoo prin :menuselection:`Aplicația Vânzări --> Configurare --> Antete/"
 "Subsoluri`."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:136
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:63
 msgid ""
 "When uploading PDF containing the form "
 "field :guilabel:`invoice_partner_country`, which is an information available "
@@ -31928,7 +32344,7 @@ msgstr ""
 "produs. Astfel, la generarea PDF-ului, se va completa cu țara partenerului "
 "de facturare."
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:144
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:71
 msgid ""
 "When uploading any PDF containing the form field :guilabel:`custom_note`, "
 "leaving the :guilabel:`path` empty allows the seller to write down any note "
@@ -31937,293 +32353,6 @@ msgstr ""
 "Când încărcați un PDF care conține câmpul :guilabel:`custom_note`, dacă "
 "lăsați :guilabel:`calea` goală, vânzătorul poate completa orice notă în acel "
 "câmp, care va apărea la generarea PDF-ului."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:149
-msgid "Add PDF to product"
-msgstr "Adăugați PDF la produs"
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:151
-msgid ""
-"In Odoo *Sales*, it's also possible to add a custom PDF to a product form. "
-"When a PDF is added to a product, and that product is used in a quotation, "
-"that PDF is also inserted in the final PDF."
-msgstr ""
-"În Odoo *Vânzări*, este, de asemenea, posibil să adăugați un PDF "
-"personalizat la un formular de produs. Când un PDF este adăugat la un produs "
-"și acel produs este utilizat într-o ofertă, acel PDF este de asemenea "
-"inserat în PDF-ul final."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:154
-msgid ""
-"To add a custom PDF to a product, start by navigating "
-"to :menuselection:`Sales app --> Products --> Products`, and select the "
-"desired product to add a custom PDF to."
-msgstr ""
-"Pentru a adăuga un PDF personalizat unui produs, "
-"accesați :menuselection:`Aplicația Vânzări --> Produse --> Produse` și "
-"selectați produsul dorit."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:158
-msgid ""
-"A document could also be added to a product variant, instead of a product. "
-"If there are documents on a product *and* on its variant, **only** the "
-"documents in the variant are shown."
-msgstr ""
-"Un document ar putea fi adăugat și la o variantă de produs, în locul unui "
-"produs. Dacă există documente pe un produs *și* pe varianta acestuia, sunt "
-"afișate **doar** documentele din variantă."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:161
-msgid ""
-"To add a custom document to a product variant, navigate "
-"to :menuselection:`Sales app --> Products --> Product Variants`. Select the "
-"desired variant, click the :guilabel:`Documents` smart button, and proceed "
-"to upload the custom document to the specific product variant."
-msgstr ""
-"Pentru a adăuga un document personalizat unei variante de produs, "
-"accesați :menuselection:`Aplicația Vânzări --> Produse --> Variante "
-"produse`. Selectați varianta dorită, faceți clic pe butonul "
-"inteligent :guilabel:`Documente` și încărcați documentul pentru acea "
-"variantă."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:165
-msgid ""
-"On the product page, click the :guilabel:`Documents` smart button at the top "
-"of the page to navigate to a :guilabel:`Documents` page for that product, "
-"where files related to that product can be uploaded. From this page, either "
-"click :guilabel:`New` or :guilabel:`Upload`."
-msgstr ""
-"Pe pagina produsului, faceți clic pe butonul "
-"inteligent :guilabel:`Documente` din partea de sus pentru a accesa pagina de "
-"documente a produsului, unde puteți încărca fișiere. De aici, faceți clic "
-"pe :guilabel:`Nou` sau :guilabel:`Încarcă`."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid "The Documents smart button on a product form in Odoo Sales."
-msgstr ""
-"Butonul inteligent Documente de pe un formular de produs în Odoo Sales."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:172
-msgid ""
-"Clicking :guilabel:`Upload` opens the computer's local file directory. An "
-"uploaded document can be further configured on the document card, or by "
-"clicking the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in "
-"the top-right corner of the document card, and then "
-"clicking :guilabel:`Edit`."
-msgstr ""
-"La clic pe :guilabel:`Încarcă` se deschide directorul local al "
-"calculatorului. Un document încărcat poate fi configurat suplimentar pe "
-"cardul documentului sau făcând clic pe pictograma :icon:`fa-ellipsis-"
-"v` :guilabel:`(trei puncte verticale)` din colțul dreapta sus și apoi "
-"pe :guilabel:`Editează`."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:182
-msgid "PDF form configuration"
-msgstr "Configurare formular PDF"
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid ""
-"A standard document form with various fields for a specific product in Odoo "
-"Sales."
-msgstr ""
-"Un formular de document standard cu diverse câmpuri pentru un anumit produs "
-"în Odoo Sales."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:191
-msgid ""
-"Prior to uploading a document, there's the option to designate whether the "
-"document is a :guilabel:`File` or :guilabel:`URL` from the :guilabel:`Type` "
-"drop-down field menu."
-msgstr ""
-"Înainte de a încărca un document, există opțiunea de a desemna dacă "
-"documentul este un :guilabel:`Fișier` sau :guilabel:`URL` din meniul "
-"derulant de câmpuri :guilabel:`Type`."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid "A standard document form with an uploaded pdf in Odoo Sales."
-msgstr "Un formular de document standard cu un pdf încărcat în Odoo Sales."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:198
-msgid ""
-"If a PDF is uploaded, the :guilabel:`Type` field is auto-populated "
-"to :guilabel:`File`, and it cannot be modified."
-msgstr ""
-"Dacă este încărcat un PDF, câmpul :guilabel:`Type` este completat automat "
-"în :guilabel:`File` și nu poate fi modificat."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:201
-msgid ""
-"Then, in the :guilabel:`Sales` section, in the :guilabel:`Visible at` field, "
-"click the drop-down menu, and select either: :guilabel:`On "
-"quotation`, :guilabel:`On confirmed order`, or :guilabel:`Inside quote pdf`."
-msgstr ""
-"Apoi, în secțiunea :guilabel:`Vânzări`, la câmpul :guilabel:`Vizibil la`, "
-"deschideți lista și selectați: :guilabel:`Pe ofertă`, :guilabel:`Pe comandă "
-"confirmată` sau :guilabel:`În PDF ofertă`."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:205
-msgid ""
-":guilabel:`Quotation`: the document is sent to (and accessible by) customers "
-"at any time."
-msgstr ""
-":guilabel:`Citație`: documentul este trimis (și accesibil de) clienți în "
-"orice moment."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:207
-msgid ""
-":guilabel:`Confirmed order`: the document is sent to customers upon the "
-"confirmation of an order. This is best for user manuals and other "
-"supplemental documents."
-msgstr ""
-":guilabel:`Comandă confirmată`: documentul este trimis clienților la "
-"confirmarea unei comenzi. Acest lucru este cel mai bun pentru manualele de "
-"utilizare și alte documente suplimentare."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:210
-msgid ""
-":guilabel:`Inside quote`: the document is included in the PDF of the "
-"quotation, between the header pages and the :guilabel:`Pricing` section of "
-"the quote."
-msgstr ""
-":guilabel:`În interiorul citatului`: documentul este inclus în PDF-ul "
-"cotației, între paginile antet și secțiunea :guilabel:`Prețuri` a cotației."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:214
-msgid ""
-"When the :guilabel:`Inside quote` option for the :guilabel:`Visible at` "
-"field is chosen, and the custom PDF file, `Corner Desk.pdf` is uploaded, the "
-"PDF is visible on the quotation in the *customer portal* under "
-"the :guilabel:`Documents` field."
-msgstr ""
-"Când opțiunea :guilabel:`În ofertă` este selectată la "
-"câmpul :guilabel:`Vizibil la` și fișierul PDF personalizat, `Corner "
-"Desk.pdf`, este încărcat, PDF-ul va fi vizibil pe ofertă în *portalul "
-"clientului* la câmpul :guilabel:`Documente`."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:0
-msgid ""
-"Sample of an uploaded pdf with the on quote option chosen in Odoo Sales."
-msgstr ""
-"Exemplu de PDF încărcat cu opțiunea pe ofertă selectată în Odoo Vânzări."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:221
-msgid ""
-"Beside the :guilabel:`File Content` field, you have the possibility "
-"to :guilabel:`Configure dynamic fields`. When doing so, remember that the "
-"starting model is the :guilabel:`sale_order_line`, unlike for headers and "
-"footers that start from the :guilabel:`sale_order`."
-msgstr ""
-"Lângă câmpul :guilabel:`Conținut fișier` aveți posibilitatea "
-"să :guilabel:`Configurați câmpuri dinamice`. Țineți cont că modelul de "
-"pornire este :guilabel:`sale_order_line`, spre deosebire de antet/subsol "
-"care pornesc de la :guilabel:`sale_order`."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:226
-msgid ""
-"Lastly, in the :guilabel:`E-Commerce` section, decide whether or not "
-"to :guilabel:`Publish on Website` so that the PDF appears on the product "
-"page in the online store."
-msgstr ""
-"În final, în secțiunea :guilabel:`E-Commerce`, decideți dacă doriți "
-"să :guilabel:`Publicați pe site` pentru ca PDF-ul să apară pe pagina "
-"produsului din magazinul online."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:230
-msgid ""
-"When the :guilabel:`Publish on Website` option is enabled, a link to the "
-"uploaded document, `Corner Desk.pdf`, appears on the product's page in the "
-"online store."
-msgstr ""
-"Când opțiunea :guilabel:`Publică pe site` este activată, un link către "
-"documentul încărcat, `Corner Desk.pdf`, apare pe pagina produsului din "
-"magazinul online."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:233
-msgid ""
-"It appears beneath a :guilabel:`Documents` heading, with a link showcasing "
-"the name of the uploaded document."
-msgstr ""
-"Apare sub un titlu :guilabel:`Documente`, cu un link care arată numele "
-"documentului încărcat."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:0
-msgid ""
-"Showing a link to an uploaded document on a product page using Odoo Sales."
-msgstr ""
-"Afișarea unui link către un document încărcat pe pagina unui produs folosind "
-"Odoo Sales."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:240
-msgid "PDF quote"
-msgstr "Citat PDF"
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:242
-msgid ""
-"On a sales order, in the :guilabel:`Quote Builder` tab, select additional "
-"documents to be merged into the final PDF. If a selected document has custom "
-"fields, they appear as editable text boxes to be filled in."
-msgstr ""
-"Pe o comandă de vânzare, în fila :guilabel:`Constructor ofertă`, selectați "
-"documente suplimentare care să fie îmbinate în PDF-ul final. Dacă un "
-"document selectat are câmpuri personalizate, acestea vor apărea ca casete "
-"editabile de completat."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid ""
-"Selectable quotation headers and footers under the Quote Builder section in "
-"a quotation."
-msgstr ""
-"Antete și subsoluri de ofertă selectabile în secțiunea Constructor ofertă "
-"dintr-o ofertă."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:249
-msgid ""
-"Once a quote with a pre-configured PDF has been confirmed, Odoo provides the "
-"option to print the confirmed quote to check for errors, or to keep for "
-"records."
-msgstr ""
-"Odată ce o ofertă cu un PDF preconfigurat a fost confirmată, Odoo oferă "
-"opțiunea de a tipări oferta confirmată pentru a verifica erorile sau pentru "
-"a păstra înregistrări."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:252
-msgid ""
-"To print the PDF quote, navigate to the confirmed quote, and click "
-"the :guilabel:`⚙️ (gear)` icon to reveal a drop-down menu. From this drop-"
-"down menu, select :guilabel:`Print`, then select :guilabel:`PDF Quote`."
-msgstr ""
-"Pentru a imprima oferta PDF, navigați la oferta confirmată și faceți clic pe "
-"pictograma :guilabel:`⚙️ (roată)` pentru a afișa un meniu derulant. Din acest "
-"meniu derulant, selectați :guilabel:`Print`, apoi selectați :guilabel:`PDF "
-"Quote`."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid ""
-"Print pdf quote option on drop-down menu located on confirmed sales order in "
-"Odoo Sales."
-msgstr ""
-"Imprimați opțiunea de cotație pdf din meniul derulant situat pe comanda de "
-"vânzare confirmată în Odoo Sales."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:259
-msgid ""
-"Doing so instantly downloads the PDF quote. When opened, the PDF quote, "
-"along with the configured product PDF that was set to be visible inside the "
-"quote, can be viewed and printed."
-msgstr ""
-"Procedând astfel, descarcă instantaneu citatul PDF. Când este deschis, "
-"cotația PDF, împreună cu PDF-ul de produs configurat care a fost setat să "
-"fie vizibil în interiorul cotației, pot fi vizualizate și tipărite."
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:263
-msgid ""
-"Download these :download:`PDF quote builder examples <pdf_quote_builder/"
-"pdfquotebuilderexamples.zip>` or download :download:`sample quotation "
-"<pdf_quote_builder/sample_quotation.pdf>` for added reference."
-msgstr ""
-"Descarcă aceste :download:`exemple PDF quote builder <pdf_quote_builder/"
-"pdfquotebuilderexamples.zip>` sau descarcă :download:`ofertă exemplu "
-"<pdf_quote_builder/sample_quotation.pdf>` pentru referință suplimentară."
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:5
 msgid ""
@@ -32655,6 +32784,16 @@ msgid ""
 msgstr ""
 "Făcând clic pe :guilabel:`Adăugați o linie`, apare un câmp gol în "
 "coloana :guilabel:`Produs`."
+
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:169
+msgid ""
+"When clicked, a drop-down menu with products from the database appear. "
+"Select the desired product from the drop-down menu to add it as an optional "
+"product to the quotation template."
+msgstr ""
+"Când faceți clic, apare un meniu derulant cu produse din baza de date. "
+"Selectați produsul dorit din meniul derulant pentru a-l adăuga ca produs "
+"opțional la șablonul de cotație."
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:172
 msgid ""
@@ -37411,6 +37550,91 @@ msgid ""
 msgstr ""
 "Comanda de vânzări aferentă poate fi vizualizată din butonul inteligent "
 "Istoricul vânzărilor din Abonamente Odoo."
+
+#~ msgid ""
+#~ "For instance, if a customer wants to buy a car, they have the choice to "
+#~ "order massaging seats, as well, or ignore the offer and simply buy the "
+#~ "car. Presenting the choice to purchase optional products enhances the "
+#~ "customer experience."
+#~ msgstr ""
+#~ "De exemplu, dacă un client dorește să cumpere o mașină, poate alege să "
+#~ "comande și scaune de masaj sau să ignore oferta și să cumpere pur și "
+#~ "simplu mașina. Prezentarea opțiunii de a cumpăra produse opționale "
+#~ "îmbunătățește experiența clientului."
+
+#~ msgid "Optional products on quotations"
+#~ msgstr "Produse optionale la cotatie"
+
+#~ msgid "How to add optional products to your quotations on Odoo Sales."
+#~ msgstr "Cum să adăugați produse opționale la cotațiile dvs. pe Odoo Sales."
+
+#~ msgid ""
+#~ "To add an optional product(s) to a quotation, click :guilabel:`Add a "
+#~ "product` in the :guilabel:`Optional Products` tab of a quotation. Doing "
+#~ "so reveals a blank field in the :guilabel:`Product` column."
+#~ msgstr ""
+#~ "Pentru a adăuga un produs opțional(e) la o ofertă, faceți clic "
+#~ "pe :guilabel:`Adăugați un produs` în fila :guilabel:`Produse opționale` a "
+#~ "unei cotații. Procedând astfel, apare un câmp gol în "
+#~ "coloana :guilabel:`Produs`."
+
+#~ msgid ""
+#~ "If the desired product isn't readily visible, type the name of the "
+#~ "desired product in the field, and the option appears in the drop-down "
+#~ "menu. Then, select that desired product to add it to the quotation."
+#~ msgstr ""
+#~ "Dacă produsul dorit nu este ușor vizibil, introduceți numele produsului "
+#~ "dorit în câmp, iar opțiunea apare în meniul derulant. Apoi, selectați "
+#~ "produsul dorit pentru a-l adăuga la cotație."
+
+#~ msgid ""
+#~ "To delete any line item from the :guilabel:`Optional Products` tab, click "
+#~ "the :guilabel:`🗑️ (trash can)` icon."
+#~ msgstr ""
+#~ "Pentru a șterge orice element rând din fila :guilabel:`Produse "
+#~ "opționale`, faceți clic pe pictograma :guilabel:`🗑️ (coș de gunoi)`."
+
+#~ msgid "Preview your quotations on Odoo Sales."
+#~ msgstr "Previzualizează-ți cotațiile pe Odoo Sales."
+
+#~ msgid ""
+#~ "Be sure to review the :doc:`quote_template` documentation to better "
+#~ "understand how quotation templates work before reading the following "
+#~ "information."
+#~ msgstr ""
+#~ "Asigurați-vă că examinați documentația :doc:`quote_template` pentru a "
+#~ "înțelege mai bine cum funcționează șabloanele de cotație înainte de a "
+#~ "citi următoarele informații."
+
+#~ msgid ""
+#~ "For quotation templates, just like a typical quotation form, there is "
+#~ "also an :guilabel:`Optional Products` tab, wherein related products or "
+#~ "services can be added to a quotation template."
+#~ msgstr ""
+#~ "Pentru șabloanele de cotație, la fel ca un formular obișnuit de cotație, "
+#~ "există și o filă :guilabel:`Produse opționale`, în care produsele sau "
+#~ "serviciile conexe pot fi adăugate la un șablon de cotație."
+
+#~ msgid ""
+#~ "It's best to offer optional products that would encourage a customer to "
+#~ "add additional items to their order, or entice them to purchase a more "
+#~ "expensive version of their initially selected product."
+#~ msgstr ""
+#~ "Cel mai bine este să oferiți produse opționale care să încurajeze un "
+#~ "client să adauge articole suplimentare la comanda sa sau să-l atragă să "
+#~ "cumpere o versiune mai scumpă a produsului selectat inițial."
+
+#~ msgid ""
+#~ "For example, if a customer purchases a wooden chair, some optional "
+#~ "products could be: a warranty on that chair and/or a wooden chair with "
+#~ "leather seats."
+#~ msgstr ""
+#~ "De exemplu, dacă un client achiziționează un scaun din lemn, unele "
+#~ "produse opționale ar putea fi: o garanție pentru acel scaun și/sau un "
+#~ "scaun din lemn cu scaune din piele."
+
+#~ msgid "PDF quote"
+#~ msgstr "Citat PDF"
 
 #~ msgid ""
 #~ "Products variants can be managed via their individual product template, "

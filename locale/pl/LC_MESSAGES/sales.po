@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-27 18:30+0000\n"
+"POT-Creation-Date: 2026-03-20 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-18-doc/sales/"
@@ -110,7 +110,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:14
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:34
 #: ../../content/applications/sales/sales/sales_quotations/margin.rst:12
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:24
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:46
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:11
 #: ../../content/applications/sales/subscriptions/closing.rst:9
 msgid "Configuration"
@@ -22471,6 +22471,7 @@ msgid "Create, configure, and send quotations to customers."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations.rst:47
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:57
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:3
 msgid "Quotation templates"
 msgstr "Szablony ofert"
@@ -22543,7 +22544,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations.rst:83
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:3
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:6
 msgid "PDF quote builder"
 msgstr "Kreator ofert PDF"
 
@@ -23281,8 +23282,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:56
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:89
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:85
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:99
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:269
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:117
 msgid ":doc:`quote_template`"
 msgstr ""
 
@@ -24008,159 +24008,194 @@ msgstr ""
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:5
 msgid ""
 "The use of optional products is a marketing strategy that involves the cross-"
-"selling of products along with a core product. The aim is to offer useful "
-"and related products to customers, which may result in an increased sale."
+"selling of useful and related products alongside a desired core product. For "
+"instance, when a business configures optional products in their Odoo "
+"database, an eCommerce or Website customer could be suggested a mouse and "
+"keyboard or an extended warranty when they add a laptop to their shopping "
+"cart."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:9
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:10
 msgid ""
-"For instance, if a customer wants to buy a car, they have the choice to "
-"order massaging seats, as well, or ignore the offer and simply buy the car. "
-"Presenting the choice to purchase optional products enhances the customer "
-"experience."
+"Optional products are automatically suggested during the quotation process "
+"whenever an associated core product is added to a quote. They are also "
+"suggested in e-commerce interactions when a customer adds an associated core "
+"product to their shopping cart."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:14
-msgid "Optional products on quotations"
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:16
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:15
 msgid ""
-"With the Odoo *Sales* application, it is possible to add or modify optional "
-"products directly on quotations by navigating to the :guilabel:`Optional "
-"Products` tab on a quotation form."
+"Optional products differ from :doc:`accessory and alternative products </"
+"applications/websites/ecommerce/products/cross_upselling>` in terms of where "
+"they are displayed during customers' online shopping journeys."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:20
+#, fuzzy
+#| msgid "Conditional rules"
+msgid "Configuring optional products"
+msgstr "Reguły warunkowe"
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:22
+msgid ""
+"With the Odoo *Sales* app, it is possible to add optional products directly "
+"to product forms. To add an optional product, navigate "
+"to :menuselection:`Sales --> Products --> Products` and click on a product "
+"Kanban card."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:26
+msgid ""
+"Ensure the :guilabel:`Can be Sold` option is checked, then click "
+"the :guilabel:`Sales` tab. Under the :guilabel:`Upsell & Cross-sell` "
+"heading, the :guilabel:`Optional Products` drop-down menu allows for "
+"optional products to be set, and are displayed in alphabetical order."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:30
+msgid ""
+"To delete an optional product from the product form,  click the :icon:`fa-"
+"times` :guilabel:`(Delete)` icon."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
-msgid "How to add optional products to your quotations on Odoo Sales."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:23
 msgid ""
-"To add an optional product(s) to a quotation, click :guilabel:`Add a "
-"product` in the :guilabel:`Optional Products` tab of a quotation. Doing so "
-"reveals a blank field in the :guilabel:`Product` column."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:27
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:169
-msgid ""
-"When clicked, a drop-down menu with products from the database appear. "
-"Select the desired product from the drop-down menu to add it as an optional "
-"product to the quotation template."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:31
-msgid ""
-"If the desired product isn't readily visible, type the name of the desired "
-"product in the field, and the option appears in the drop-down menu. Then, "
-"select that desired product to add it to the quotation."
+"The optional products section as it appears in product forms in Odoo Sales."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:36
 msgid ""
-"When a product is added, the default :guilabel:`Quantity` is `1`, but that "
-"can be edited at any time."
+"Select the optional products using the drop-down menu. There is no limit to "
+"the number of optional products that can be added."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:39
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:41
 msgid ""
-"To delete any line item from the :guilabel:`Optional Products` tab, click "
-"the :guilabel:`🗑️ (trash can)` icon."
+"Multiple products can be selected by clicking :guilabel:`Search more...` "
+"and  *Search: Optional Products* pop-up window loads. Click the checkbox "
+"next to each desired product being added. When all optional products are "
+"selected, click :guilabel:`Select`, and all optional products appear in the "
+"field. If needed, new products can be created and added."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:42
-msgid ""
-"Click the :guilabel:`Preview` button, located in the upper-left corner of "
-"the quotation, to reveal a preview of the quotation customers would receive, "
-"via email, along with the optional products they can potentially add to "
-"their order, located in the :guilabel:`Options` section."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
-msgid "Preview your quotations on Odoo Sales."
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:0
+msgid "The Search: Optional Products form accessed by clicking Search more..."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:50
-msgid ""
-"Customers are able to add different optional products to an order by "
-"clicking the :guilabel:`🛒 (shopping cart)` icon, located to the right of "
-"the optional product line."
+msgid "Optional products on quotation templates and quotations"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:53
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:52
 msgid ""
-"If a customer selects optional products, these are automatically added to "
-"the quotation managed by the salesperson."
+"Optional products can be added to quotation templates, allowing sales staff "
+"to offer related products without needing to manually add them to each "
+"quote. Additional optional products can also be added to individual "
+"quotations when needed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:56
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:59
 msgid ""
-"When the customer adds an optional product(s) to an order, the salesperson "
-"is instantly notified about the change, along with any other change the "
-"customer makes to an order. This allows salespeople to stay up-to-date with "
-"everything related to an order in the backend of the *Sales* application."
+"Quotation templates also have an *Optional Products* tab, where related "
+"products or services can be added. To add optional products to a quotation "
+"template, navigate to :menuselection:`Sales app --> Configuration --> "
+"Quotation Templates`. Then, either select an existing quotation template to "
+"edit or :doc:`create a new one <quote_template>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:62
-msgid "Optional products on quotation templates"
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:65
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:64
 msgid ""
-"Be sure to review the :doc:`quote_template` documentation to better "
-"understand how quotation templates work before reading the following "
-"information."
+"On the quotation template form, click the :guilabel:`Optional Products` tab. "
+"Then, click :guilabel:`Add a line` and select the desired product to add as "
+"an optional product to the quotation template."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:68
 msgid ""
-"For quotation templates, just like a typical quotation form, there is also "
-"an :guilabel:`Optional Products` tab, wherein related products or services "
-"can be added to a quotation template."
+"When the configured quotation template is used, the products added in "
+"the :guilabel:`Optional Products` tab will appear in the corresponding tab "
+"in the quotation. These products can be removed and additional products can "
+"be added before the quotation is sent to a customer."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:71
-msgid ""
-"To add optional products to a quotation template, navigate "
-"to :menuselection:`Sales app --> Configuration --> Quotation Templates`. "
-"Then, either select an existing quotation template to edit, or create a new "
-"one by clicking :guilabel:`New`."
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
+msgid "The Optional Products section in a quotation template in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:75
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:76
 msgid ""
-"On the quotation template form, click the :guilabel:`Optional Products` tab. "
-"Under the :guilabel:`Optional Products` tab, click :guilabel:`Add a line`, "
-"and select the desired product to add as an optional product to the "
-"quotation template."
+"There is no limit to how many optional products can be added to a quotation "
+"template."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:83
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:79
+#, fuzzy
+#| msgid "Quotation templates"
+msgid "Quotations"
+msgstr "Szablony ofert"
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:81
 msgid ""
-"The products added in the :guilabel:`Optional Products` tab are present in "
-"the quotation, by default, whenever that particular quotation template is "
-"used. These products can be removed, and additional products can be added, "
-"before the quotation is sent to a customer."
+"To add additional products on an individual quote, navigate "
+"to :menuselection:`Sales --> Orders --> Quotations` and select an existing "
+"quote or :doc:`create a new quote <create_quotations>`. Then open "
+"the :guilabel:`Optional Products`. Doing so reveals a blank field in "
+"the :guilabel:`Product` column. Click :guilabel:`Add a product`. When "
+"clicked, a drop-down menu with products from the database appear. Select the "
+"desired product from the drop-down menu to add it as an optional product. "
+"Type the name of the desired product or click :guilabel:`Search More...` to "
+"find additional products."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:88
 msgid ""
-"It's best to offer optional products that would encourage a customer to add "
-"additional items to their order, or entice them to purchase a more expensive "
-"version of their initially selected product."
+"To delete any line item from the :guilabel:`Optional Products` tab, click "
+"the :icon:`fa-trash-o` :guilabel:`(delete)` icon."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:92
 msgid ""
-"For example, if a customer purchases a wooden chair, some optional products "
-"could be: a warranty on that chair and/or a wooden chair with leather seats."
+"When a product is added, the default :guilabel:`Quantity` is `1`, but can be "
+"updated."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:96
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:95
+msgid "Previewing optional products"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:97
 msgid ""
-"There is no limit to how many optional products can be added to a quotation "
-"template."
+"Click the :guilabel:`Preview` button, located in the upper-left corner of "
+"the quotation, to reveal a preview of the quotation email customers would "
+"receive. Optional products are located in the :guilabel:`Options` section of "
+"the preview."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:101
+msgid ""
+"Customers are able to add different optional products to an order by "
+"clicking the :icon:`fa-shopping-cart` :guilabel:`(Add to cart)` icon, "
+"located to the right of the optional product line."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
+msgid "The Options section within a quotation preview."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:108
+msgid ""
+"If a customer selects optional products, they are automatically added to the "
+"quotation managed by the salesperson."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:111
+msgid ""
+"When a customer adds optional products to an order, the salesperson is "
+"instantly notified about the change, along with any other change the "
+"customer makes to an order. This allows salespeople to stay up-to-date with "
+"everything related to an order in the backend of the *Sales* application. "
+"Added products appear in green in the :guilabel:`Optional Products` tab when "
+"the quote is viewed."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:5
@@ -24351,7 +24386,7 @@ msgstr ""
 msgid ":doc:`../products_prices/products/variants`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:5
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:8
 msgid ""
 "The *PDF Quote Builder* in Odoo *Sales* provides the opportunity to send "
 "customers a fully customized PDF file for quotes, showcasing the company and "
@@ -24359,7 +24394,7 @@ msgid ""
 "showing the price and total."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:9
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:12
 msgid ""
 "The PDF Quote Builder groups header pages, product descriptions, the "
 "price(s), and footer pages to create a detailed quote. It can also inject "
@@ -24367,33 +24402,60 @@ msgid ""
 "customer."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:13
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:16
 msgid ""
 "Having a customized PDF in quotes provides a heightened conclusion to the "
 "shopping experience for customers, and adds an elegant level of "
 "professionalism to a company."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:17
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:20
 msgid ""
 "`Odoo Quick Tips - Create a PDF quote [video] <https://www.youtube.com/watch?"
 "v=tQNydBZt-VI>`_"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:20
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:23
 msgid ""
 "It is recommended to edit PDF forms with Adobe software. The form fields on "
 "the header and footer PDF templates are necessary to get dynamic values with "
 "Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:26
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:28
+msgid "Add dynamic text to PDFs"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:28
+msgid "Add dynamic text fields to PDFs."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:33
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:3
+msgid "Add PDFs to quotes"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:33
+msgid "Add a PDF header or footer to a quote."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:38
+msgid "Add PDFs to products"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:38
+msgid ""
+"Set up the headers and footers for products. These will appear on sales "
+"quotes and online store pages."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:48
 msgid ""
 "In order to add custom PDF files for quotes, the :guilabel:`PDF Quote "
 "builder` feature *must* be configured."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:29
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:51
 msgid ""
 "To do that, navigate to :menuselection:`Sales app --> Configuration --> "
 "Settings`. Then, on the :guilabel:`Settings` page, scroll to "
@@ -24401,11 +24463,11 @@ msgid ""
 "Quote builder` feature."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:34
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:56
 msgid "Add PDF as Header/Footer"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:36
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:58
 msgid ""
 "In Odoo *Sales*, it's possible to add a custom PDF that can be used either "
 "as a header or a footer. When the PDF quote builder is activated in a "
@@ -24413,14 +24475,14 @@ msgid ""
 "use, these PDF will then also be inserted in the final PDF."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:40
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:62
 msgid ""
 "To add a custom PDF as header or footer, start by navigating "
 "to :menuselection:`Sales app --> Configuration --> Headers/Footers`. From "
 "this page, either click :guilabel:`New` or :guilabel:`Upload`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:44
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:66
 msgid ""
 "Clicking :guilabel:`Upload` instantly provides the opportunity to upload the "
 "desired document. Then, the document can be further configured on the "
@@ -24429,22 +24491,22 @@ msgid ""
 "clicking :guilabel:`Edit`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:49
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:177
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:71
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:31
 msgid ""
 "Clicking :guilabel:`New` reveals a blank documents form, in which the "
 "desired PDF can be uploaded via the :guilabel:`Upload your file` button on "
 "the form, located in the :guilabel:`File Content` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:53
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:75
 msgid ""
 "Various information and configurations related to the uploaded document can "
 "be modified here."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:55
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:187
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:77
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:41
 msgid ""
 "The first field on the documents form is for the :guilabel:`Name` of the "
 "document, and it is grayed-out (not clickable) until a document is uploaded. "
@@ -24452,7 +24514,7 @@ msgid ""
 "with the name of the PDF, and it can then be edited."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:59
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:81
 msgid ""
 "Then, in the :guilabel:`Document Type` field, click the drop-down menu, and "
 "select either: :guilabel:`Header`, or :guilabel:`Footer` to define whether "
@@ -24460,13 +24522,13 @@ msgid ""
 "quote."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:63
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:85
 msgid ""
 "Under this, in the :guilabel:`Quotation Templates` section, this PDF can be "
 "restricted quotation templates only."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:67
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:89
 msgid ""
 "Alternatively, you can also navigate to :menuselection:`Sales app --> "
 "Configuration --> Quotation Templates`, select a template and "
@@ -24474,117 +24536,322 @@ msgid ""
 "the :guilabel:`Quote Builder` tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:71
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:93
 msgid ""
 "Lastly, beside the :guilabel:`File Content` field, you have the possibility "
 "to :guilabel:`Configure dynamic fields`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:75
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:3
+msgid "Add PDFs to a product"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:5
+msgid ""
+"In Odoo *Sales*, it's also possible to add a custom PDF to a product form. "
+"When a PDF is added to a product, and that product is used in a quotation, "
+"that PDF is also inserted in the final PDF."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:8
+msgid ""
+"To add a custom PDF to a product, start by navigating "
+"to :menuselection:`Sales app --> Products --> Products`, and select the "
+"desired product to add a custom PDF to."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:12
+msgid ""
+"A document could also be added to a product variant, instead of a product. "
+"If there are documents on a product *and* on its variant, **only** the "
+"documents in the variant are shown."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:15
+msgid ""
+"To add a custom document to a product variant, navigate "
+"to :menuselection:`Sales app --> Products --> Product Variants`. Select the "
+"desired variant, click the :guilabel:`Documents` smart button, and proceed "
+"to upload the custom document to the specific product variant."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:19
+msgid ""
+"On the product page, click the :guilabel:`Documents` smart button at the top "
+"of the page to navigate to a :guilabel:`Documents` page for that product, "
+"where files related to that product can be uploaded. From this page, either "
+"click :guilabel:`New` or :guilabel:`Upload`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
+msgid "The Documents smart button on a product form in Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:26
+msgid ""
+"Clicking :guilabel:`Upload` opens the computer's local file directory. An "
+"uploaded document can be further configured on the document card, or by "
+"clicking the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in "
+"the top-right corner of the document card, and then "
+"clicking :guilabel:`Edit`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:36
+msgid "PDF form configuration"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
+msgid ""
+"A standard document form with various fields for a specific product in Odoo "
+"Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:45
+msgid ""
+"Prior to uploading a document, there's the option to designate whether the "
+"document is a :guilabel:`File` or :guilabel:`URL` from the :guilabel:`Type` "
+"drop-down field menu."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
+msgid "A standard document form with an uploaded pdf in Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:52
+msgid ""
+"If a PDF is uploaded, the :guilabel:`Type` field is auto-populated "
+"to :guilabel:`File`, and it cannot be modified."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:55
+msgid ""
+"Then, in the :guilabel:`Sales` section, in the :guilabel:`Visible at` field, "
+"click the drop-down menu, and select either: :guilabel:`On "
+"quotation`, :guilabel:`On confirmed order`, or :guilabel:`Inside quote pdf`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:59
+msgid ""
+":guilabel:`Quotation`: the document is sent to (and accessible by) customers "
+"at any time."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:61
+msgid ""
+":guilabel:`Confirmed order`: the document is sent to customers upon the "
+"confirmation of an order. This is best for user manuals and other "
+"supplemental documents."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:64
+msgid ""
+":guilabel:`Inside quote`: the document is included in the PDF of the "
+"quotation, between the header pages and the :guilabel:`Pricing` section of "
+"the quote."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:68
+msgid ""
+"When the :guilabel:`Inside quote` option for the :guilabel:`Visible at` "
+"field is chosen, and the custom PDF file, `Corner Desk.pdf` is uploaded, the "
+"PDF is visible on the quotation in the *customer portal* under "
+"the :guilabel:`Documents` field."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:0
+msgid ""
+"Sample of an uploaded pdf with the on quote option chosen in Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:75
+msgid ""
+"Beside the :guilabel:`File Content` field, you have the possibility "
+"to :guilabel:`Configure dynamic fields`. When doing so, remember that the "
+"starting model is the :guilabel:`sale_order_line`, unlike for headers and "
+"footers that start from the :guilabel:`sale_order`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:79
+msgid ""
+"Lastly, in the :guilabel:`E-Commerce` section, decide whether or not "
+"to :guilabel:`Publish on Website` so that the PDF appears on the product "
+"page in the online store."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:83
+msgid ""
+"When the :guilabel:`Publish on Website` option is enabled, a link to the "
+"uploaded document, `Corner Desk.pdf`, appears on the product's page in the "
+"online store."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:86
+msgid ""
+"It appears beneath a :guilabel:`Documents` heading, with a link showcasing "
+"the name of the uploaded document."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:0
+msgid ""
+"Showing a link to an uploaded document on a product page using Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:5
+msgid ""
+"On a sales order, in the :guilabel:`Quote Builder` tab, select additional "
+"documents to be merged into the final PDF. If a selected document has custom "
+"fields, they appear as editable text boxes to be filled in."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:None
+msgid ""
+"Selectable quotation headers and footers under the Quote Builder section in "
+"a quotation."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:12
+msgid ""
+"Once a quote with a pre-configured PDF has been confirmed, Odoo provides the "
+"option to print the confirmed quote to check for errors, or to keep for "
+"records."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:15
+msgid ""
+"To print the PDF quote, navigate to the confirmed quote, and click "
+"the :guilabel:`⚙️ (gear)` icon to reveal a drop-down menu. From this drop-"
+"down menu, select :guilabel:`Print`, then select :guilabel:`PDF Quote`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:None
+msgid ""
+"Print pdf quote option on drop-down menu located on confirmed sales order in "
+"Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:22
+msgid ""
+"Doing so instantly downloads the PDF quote. When opened, the PDF quote, "
+"along with the configured product PDF that was set to be visible inside the "
+"quote, can be viewed and printed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:26
+msgid ""
+"Download these :download:`PDF quote builder examples <add_pdf_quotes/"
+"pdfquotebuilderexamples.zip>` or download :download:`sample quotation "
+"<add_pdf_quotes/sample_quotation.pdf>` for added reference."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_quotes.rst:31
+msgid ":doc:`../quote_template`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:3
 msgid "Dynamic text in PDFs"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:77
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:5
 msgid ""
 "While creating custom PDFs for quotes, use *dynamic text* for Odoo to auto-"
 "fill the PDF content with information related to the quote from the Odoo "
 "database, like names, prices, etc."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:80
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:8
 msgid ""
 "Dynamic text values are form components (text inputs) that can be added in a "
 "PDF file, and Odoo automatically fills those values in with information "
 "related to the quote."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:84
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:12
 msgid "Dynamic text values"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:86
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:14
 msgid ""
 "Below are common dynamic text values used in custom PDFs that are already "
 "mapped to the correct fields, and what they represent."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:89
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:17
 msgid "For headers and footers PDF:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:91
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:19
 msgid ":guilabel:`name`: Sales Order Reference"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:92
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:20
 msgid ":guilabel:`partner_id__name`: Customer Name"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:93
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:21
 msgid ":guilabel:`user_id__name`: Salesperson Name"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:94
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:22
 msgid ":guilabel:`amount_untaxed`: Untaxed Amount"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:95
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:23
 msgid ":guilabel:`amount_total`: Total Amount"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:96
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:24
 msgid ":guilabel:`delivery_date`: Delivery Date"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:97
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:25
 msgid ":guilabel:`validity_date`: Expiration Date"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:98
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:26
 msgid ":guilabel:`client_order_ref`: Customer Reference"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:101
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:29
 msgid "For product PDF:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:103
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:31
 msgid ":guilabel:`description`: Product Description"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:104
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:32
 msgid ":guilabel:`quantity`: Quantity"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:105
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:33
 msgid ":guilabel:`uom`: Unit of Measure (UoM)"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:106
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:34
 msgid ":guilabel:`price_unit`: Price Unit"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:107
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:35
 msgid ":guilabel:`discount`: Discount"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:108
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:36
 msgid ":guilabel:`product_sale_price`: Product List Price"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:109
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:37
 msgid ":guilabel:`taxes`: Taxes name joined by a comma (`,`)"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:110
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:38
 msgid ":guilabel:`tax_excl_price`: Tax Excluded Price"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:111
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:39
 msgid ":guilabel:`tax_incl_price`: Tax Included Price"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:113
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:41
 msgid ""
 "After uploading a PDF, you can then :guilabel:`Configure dynamic fields`. "
 "This will allow you to map any field name found in your PDF to the field you "
@@ -24595,7 +24862,7 @@ msgid ""
 "that requires it."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:121
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:48
 msgid ""
 "When a PDF is built, it's best practice to use common dynamic text values "
 "(:guilabel:`name` and :guilabel:`partner_id_name`). When uploaded into the "
@@ -24603,25 +24870,25 @@ msgid ""
 "respective fields."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:125
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:52
 msgid ""
 "In this case, Odoo would auto-populate the Sales Order Reference in "
 "the :guilabel:`name` dynamic text field, and the Customer Name in "
 "the :guilabel:`partner_id_name` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:0
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:0
 msgid "PDF quote being built using common dynamic placeholders."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:132
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:59
 msgid ""
 "Once the PDF file(s) are complete, save them to the computer's hard drive, "
 "and proceed to upload them to Odoo via :menuselection:`Sales app --> "
 "Configuration --> Headers/Footers`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:136
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:63
 msgid ""
 "When uploading PDF containing the form "
 "field :guilabel:`invoice_partner_country`, which is an information available "
@@ -24633,216 +24900,11 @@ msgid ""
 "is built."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:144
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:71
 msgid ""
 "When uploading any PDF containing the form field :guilabel:`custom_note`, "
 "leaving the :guilabel:`path` empty allows the seller to write down any note "
 "where that form field is in that document and shown when the PDF is built."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:149
-msgid "Add PDF to product"
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:151
-msgid ""
-"In Odoo *Sales*, it's also possible to add a custom PDF to a product form. "
-"When a PDF is added to a product, and that product is used in a quotation, "
-"that PDF is also inserted in the final PDF."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:154
-msgid ""
-"To add a custom PDF to a product, start by navigating "
-"to :menuselection:`Sales app --> Products --> Products`, and select the "
-"desired product to add a custom PDF to."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:158
-msgid ""
-"A document could also be added to a product variant, instead of a product. "
-"If there are documents on a product *and* on its variant, **only** the "
-"documents in the variant are shown."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:161
-msgid ""
-"To add a custom document to a product variant, navigate "
-"to :menuselection:`Sales app --> Products --> Product Variants`. Select the "
-"desired variant, click the :guilabel:`Documents` smart button, and proceed "
-"to upload the custom document to the specific product variant."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:165
-msgid ""
-"On the product page, click the :guilabel:`Documents` smart button at the top "
-"of the page to navigate to a :guilabel:`Documents` page for that product, "
-"where files related to that product can be uploaded. From this page, either "
-"click :guilabel:`New` or :guilabel:`Upload`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid "The Documents smart button on a product form in Odoo Sales."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:172
-msgid ""
-"Clicking :guilabel:`Upload` opens the computer's local file directory. An "
-"uploaded document can be further configured on the document card, or by "
-"clicking the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in "
-"the top-right corner of the document card, and then "
-"clicking :guilabel:`Edit`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:182
-msgid "PDF form configuration"
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid ""
-"A standard document form with various fields for a specific product in Odoo "
-"Sales."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:191
-msgid ""
-"Prior to uploading a document, there's the option to designate whether the "
-"document is a :guilabel:`File` or :guilabel:`URL` from the :guilabel:`Type` "
-"drop-down field menu."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid "A standard document form with an uploaded pdf in Odoo Sales."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:198
-msgid ""
-"If a PDF is uploaded, the :guilabel:`Type` field is auto-populated "
-"to :guilabel:`File`, and it cannot be modified."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:201
-msgid ""
-"Then, in the :guilabel:`Sales` section, in the :guilabel:`Visible at` field, "
-"click the drop-down menu, and select either: :guilabel:`On "
-"quotation`, :guilabel:`On confirmed order`, or :guilabel:`Inside quote pdf`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:205
-msgid ""
-":guilabel:`Quotation`: the document is sent to (and accessible by) customers "
-"at any time."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:207
-msgid ""
-":guilabel:`Confirmed order`: the document is sent to customers upon the "
-"confirmation of an order. This is best for user manuals and other "
-"supplemental documents."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:210
-msgid ""
-":guilabel:`Inside quote`: the document is included in the PDF of the "
-"quotation, between the header pages and the :guilabel:`Pricing` section of "
-"the quote."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:214
-msgid ""
-"When the :guilabel:`Inside quote` option for the :guilabel:`Visible at` "
-"field is chosen, and the custom PDF file, `Corner Desk.pdf` is uploaded, the "
-"PDF is visible on the quotation in the *customer portal* under "
-"the :guilabel:`Documents` field."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:0
-msgid ""
-"Sample of an uploaded pdf with the on quote option chosen in Odoo Sales."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:221
-msgid ""
-"Beside the :guilabel:`File Content` field, you have the possibility "
-"to :guilabel:`Configure dynamic fields`. When doing so, remember that the "
-"starting model is the :guilabel:`sale_order_line`, unlike for headers and "
-"footers that start from the :guilabel:`sale_order`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:226
-msgid ""
-"Lastly, in the :guilabel:`E-Commerce` section, decide whether or not "
-"to :guilabel:`Publish on Website` so that the PDF appears on the product "
-"page in the online store."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:230
-msgid ""
-"When the :guilabel:`Publish on Website` option is enabled, a link to the "
-"uploaded document, `Corner Desk.pdf`, appears on the product's page in the "
-"online store."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:233
-msgid ""
-"It appears beneath a :guilabel:`Documents` heading, with a link showcasing "
-"the name of the uploaded document."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:0
-msgid ""
-"Showing a link to an uploaded document on a product page using Odoo Sales."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:240
-msgid "PDF quote"
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:242
-msgid ""
-"On a sales order, in the :guilabel:`Quote Builder` tab, select additional "
-"documents to be merged into the final PDF. If a selected document has custom "
-"fields, they appear as editable text boxes to be filled in."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid ""
-"Selectable quotation headers and footers under the Quote Builder section in "
-"a quotation."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:249
-msgid ""
-"Once a quote with a pre-configured PDF has been confirmed, Odoo provides the "
-"option to print the confirmed quote to check for errors, or to keep for "
-"records."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:252
-msgid ""
-"To print the PDF quote, navigate to the confirmed quote, and click "
-"the :guilabel:`⚙️ (gear)` icon to reveal a drop-down menu. From this drop-"
-"down menu, select :guilabel:`Print`, then select :guilabel:`PDF Quote`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:None
-msgid ""
-"Print pdf quote option on drop-down menu located on confirmed sales order in "
-"Odoo Sales."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:259
-msgid ""
-"Doing so instantly downloads the PDF quote. When opened, the PDF quote, "
-"along with the configured product PDF that was set to be visible inside the "
-"quote, can be viewed and printed."
-msgstr ""
-
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:263
-msgid ""
-"Download these :download:`PDF quote builder examples <pdf_quote_builder/"
-"pdfquotebuilderexamples.zip>` or download :download:`sample quotation "
-"<pdf_quote_builder/sample_quotation.pdf>` for added reference."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:5
@@ -25148,6 +25210,13 @@ msgstr ""
 msgid ""
 "Clicking :guilabel:`Add a line` reveals a blank field in "
 "the :guilabel:`Product` column."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:169
+msgid ""
+"When clicked, a drop-down menu with products from the database appear. "
+"Select the desired product from the drop-down menu to add it as an optional "
+"product to the quotation template."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:172
