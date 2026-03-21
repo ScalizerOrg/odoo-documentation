@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 18:30+0000\n"
+"POT-Creation-Date: 2026-03-20 18:30+0000\n"
 "PO-Revision-Date: 2026-02-25 07:20+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -223,7 +223,7 @@ msgstr ":doc:`다중 회사 <companies/multi_company>`"
 #: ../../content/applications/general/companies.rst:17
 #: ../../content/applications/general/companies.rst:97
 #: ../../content/applications/general/companies/multi_company.rst:33
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:18
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:15
 #: ../../content/applications/general/users/azure.rst:22
 #: ../../content/applications/general/users/google.rst:24
 msgid "Configuration"
@@ -2035,24 +2035,41 @@ msgstr ""
 msgid ""
 ":guilabel:`Generate Bills and Refunds`: Generate a bill/refund when a "
 "company confirms an invoice/credit note for the selected company. To "
-"generate a validated bill/refund, select :guilabel:`Create and validate`."
+"generate a validated bill/refund, select :guilabel:`Validate`."
 msgstr ""
 
 #: ../../content/applications/general/companies/multi_company.rst:133
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Generate Purchase Orders`: Generate a request for quotation "
+#| "(drafted purchase order) using the selected company warehouse in "
+#| "the :guilabel:`Use Warehouse` field when a purchase order is confirmed "
+#| "for the selected company. To generate a validated purchase order instead "
+#| "of a request for quotation, select :guilabel:`Create and validate`."
 msgid ""
 ":guilabel:`Generate Sales Orders`: Generate a quotation (drafted sales "
 "order) when a sales order is confirmed for the selected company. To generate "
-"a validated sales order instead of a quotation, select :guilabel:`Create and "
-"validate`."
+"a validated sales order instead of a quotation, select :guilabel:`Validate`."
 msgstr ""
+":guilabel:`구매발주서 생성`: 선택한 회사에서 구매발주서가 확정되"
+"면 :guilabel:`창고 사용` 필드에서 해당 회사의 창고를 선택하여 이 창고로 견적"
+"요청서(구매발주서 초안)를 생성합니다. 견적요청서 대신 구매발주서를 승인하여 "
+"생성하려면 :guilabel:`생성 및 승인` 을 선택합니다."
 
 #: ../../content/applications/general/companies/multi_company.rst:136
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Generate Purchase Orders`: Generate a request for quotation "
+#| "(drafted purchase order) using the selected company warehouse in "
+#| "the :guilabel:`Use Warehouse` field when a purchase order is confirmed "
+#| "for the selected company. To generate a validated purchase order instead "
+#| "of a request for quotation, select :guilabel:`Create and validate`."
 msgid ""
 ":guilabel:`Generate Purchase Orders`: Generate a request for quotation "
 "(drafted purchase order) using the selected company warehouse in "
 "the :guilabel:`Use Warehouse` field when a purchase order is confirmed for "
 "the selected company. To generate a validated purchase order instead of a "
-"request for quotation, select :guilabel:`Create and validate`."
+"request for quotation, select :guilabel:`Validate`."
 msgstr ""
 ":guilabel:`구매발주서 생성`: 선택한 회사에서 구매발주서가 확정되"
 "면 :guilabel:`창고 사용` 필드에서 해당 회사의 창고를 선택하여 이 창고로 견적"
@@ -2072,12 +2089,17 @@ msgid ""
 "vendor bill is automatically created in `JS Store US`."
 msgstr ""
 
-#: ../../content/applications/general/companies/multi_company.rst:149
+#: ../../content/applications/general/companies/multi_company.rst:150
 msgid ""
 ":guilabel:`Generate Sales Orders`: when a sales order "
-"for :guilabel:`Customer` `JS Store US` is confirmed on `JS Store Belgium`, a "
-"purchase order on `JS Store US` is automatically created (and confirmed if "
-"the :guilabel:`Create and validate` option is selected)."
+"for :guilabel:`Customer` `JS Store US` is"
+msgstr ""
+
+#: ../../content/applications/general/companies/multi_company.rst:150
+msgid ""
+"confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is "
+"automatically created (and confirmed if the :guilabel:`Create and validate` "
+"option is selected)."
 msgstr ""
 
 #: ../../content/applications/general/companies/multi_company.rst:154
@@ -8008,15 +8030,29 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:9
 msgid ""
+"Make sure to check the database version in the :menuselection:`Settings app "
+"--> General Settings`, at the bottom of the page."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:12
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:23
+msgid ""
+"For database versions 19.2 and later, see the `latest documentation <https://"
+"www.odoo.com/documentation/master/applications/general/integrations/"
+"mail_plugins/outlook.html>`_ for installation instructions."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:17
+msgid ""
 "Learn how Odoo handles your data by reading Odoo's `Privacy Policy <https://"
 "www.odoo.com/privacy>`_ and :doc:`Terms and Conditions <../../../../legal>`."
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:13
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:21
 msgid "Odoo Online users"
 msgstr "Odoo 온라인 사용자"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:15
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:23
 msgid ""
 "For databases hosted on Odoo Online (or Odoo.sh), follow the steps below to "
 "configure the Gmail Plugin."
@@ -8024,17 +8060,17 @@ msgstr ""
 "Odoo 온라인 (또는 Odoo.sh)에서 데이터베이스를 호스팅하는 경우에는, 다음의 단"
 "계에 따라 Gmail 플러그인을 설정하세요."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:19
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:98
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:27
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:106
 msgid "Install the Gmail Plugin"
 msgstr "Gmail 플러그인 설치하기"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:21
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:29
 msgid ""
 "First, log in to the Gmail account that the user wishes to connect to Odoo."
 msgstr "먼저, Odoo에 연결하려는 사용자의 Gmail 계정에 로그인합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:23
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:31
 msgid ""
 "From the Gmail inbox, click the plus sign icon on the right side panel to "
 "get add-ons. If the side panel is not visible, click on the arrow icon at "
@@ -8048,7 +8084,7 @@ msgstr ""
 msgid "Plus sign icon on the Gmail inbox side panel."
 msgstr "Gmail 받은 편지함에서 사이드 패널에 있는 더하기 기호 아이콘"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:30
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:38
 msgid ""
 "Then, use the search bar to search for `Odoo` and locate the :guilabel:`Odoo "
 "Inbox Addin`."
@@ -8060,7 +8096,7 @@ msgstr ""
 msgid "Odoo Inbox Addin on Google Workspace Marketplace."
 msgstr "Google Workspace 마켓플레이스의 Odoo 받은 편지함 추가 기능"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:36
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:44
 msgid ""
 "Or, go directly to the :guilabel:`Odoo Inbox Addin` page on the `Google "
 "Workspace Marketplace <https://workspace.google.com/marketplace/app/"
@@ -8070,7 +8106,7 @@ msgstr ""
 "marketplace/app/odoo_inbox_addin/873497133275>`_에서 Or, :guilabel:`Odoo "
 "Inbox Addin`로 바로 이동할 수도 있습니다. ."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:39
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:47
 msgid ""
 "Once the plugin is located, click :guilabel:`Install`. Then, "
 "click :guilabel:`Continue` to start the installation."
@@ -8078,7 +8114,7 @@ msgstr ""
 "플러그인을 찾았으면, :guilabel:`설치`를 클릭합니다. 그런 다음 :guilabel:`계속"
 "하기`를 클릭하면 설치를 시작합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:42
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:50
 msgid ""
 "Next, select which Gmail account the user wishes to connect to Odoo. Then "
 "click :guilabel:`Allow` to let Odoo access the Google account. Google will "
@@ -8088,13 +8124,13 @@ msgstr ""
 "Odoo에서 Google 계정에 접근할 수 있도록 :guilabel:`허용`을 클릭하세요. 그러"
 "면 Google에서 설치에 성공했다는 확인이 팝업 창으로 표시됩니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:47
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:138
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:55
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:146
 msgid "Configure the Odoo database"
 msgstr "Odoo 데이터베이스 설정"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:49
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:140
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:57
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:148
 msgid ""
 "The :guilabel:`Mail Plugin` feature must be enabled in the Odoo database in "
 "order to use the Gmail Plugin. To enable the feature, go "
@@ -8111,13 +8147,13 @@ msgstr ""
 msgid "The Mail Plugin feature in the Settings."
 msgstr "설정 메뉴에 있는 메일 플러그인 기능"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:59
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:149
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:67
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:157
 msgid "Configure the Gmail inbox"
 msgstr "Gmail 받은편지함 설정"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:61
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:151
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:69
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:159
 msgid ""
 "In the Gmail inbox, a purple Odoo icon is now visible on the right side "
 "panel. Click on the Odoo icon to open up the Odoo plugin window. Then, click "
@@ -8134,8 +8170,8 @@ msgid ""
 "The Authorize Access button in the right sidebar of the Odoo plugin panel."
 msgstr "Odoo 플러그인 패널의 오른쪽 사이드바에 있는 액세스 권한 부여 버튼"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:69
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:159
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:77
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:167
 msgid ""
 "Next, click :guilabel:`Login`. Then, enter the URL of the Odoo database that "
 "the user wishes to connect to the Gmail inbox, and log in to the database."
@@ -8143,8 +8179,8 @@ msgstr ""
 "다음으로, :guilabel:`로그인`을 클릭하세요. 그 다음, Gmail 받은편지함에 연결하"
 "려는 사용자의 Odoo 데이터베이스 URL을 입력하여 데이터베이스에 로그인하세요."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:73
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:163
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:81
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:171
 msgid ""
 "Use the general URL for the database, not the URL of a specific page in the "
 "database. For example, use `https://mycompany.odoo.com`, not `https://"
@@ -8154,8 +8190,8 @@ msgstr ""
 "니다. 예를 들어, `https://mycompany.odoo.com/web#cids=1&action=menu` 가 아니"
 "라 `https://mycompany.odoo.com` 를 사용해야 합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:77
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:167
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:85
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:175
 msgid ""
 "Finally, click :guilabel:`Allow` to let Gmail access the Odoo database. The "
 "browser will then show a :guilabel:`Success!` message. After that, close the "
@@ -8166,11 +8202,11 @@ msgstr ""
 "니다. 그 후에는 창을 닫으면 됩니다, 이제 Gmail 받은편지함과 Odoo 데이터베이"
 "스 연결이 완료되었습니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:82
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:90
 msgid "Odoo On-Premise users"
 msgstr "Odoo 온프레미스 사용자"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:84
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:92
 msgid ""
 "For databases hosted on servers other than Odoo Online (or Odoo.sh), follow "
 "the steps below to configure the Gmail Plugin."
@@ -8178,7 +8214,7 @@ msgstr ""
 "Odoo 온라인 (또는 Odoo.sh) 이외의 서버에서 데이터베이스가 호스팅되는 경우 아"
 "래 단계에 따라 Gmail 플러그인을 설정하세요."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:88
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:96
 msgid ""
 "As part of their security guidelines, Google requires add-on creators to "
 "provide a list of URLs that can be used in actions and redirections launched "
@@ -8192,7 +8228,7 @@ msgstr ""
 "여 사용자를 보호합니다. ('Google 앱 스크립트 <https://developers.google.com/"
 "apps-script/manifest/allowlist-url>`_ 에서 자세히 확인해 보세요.)"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:93
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:101
 msgid ""
 "Since Odoo can only list the `odoo.com` domain and not every on-premise "
 "customer's unique server domain, on-premise customers cannot install the "
@@ -8202,7 +8238,7 @@ msgstr ""
 "모두 표시되는 것은 아닙니다. 이에 따라 온프레미스 고객은 Google Workspace 마"
 "켓 플레이스에서 Gmail 플러그인을 설치할 수 없습니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:100
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:108
 msgid ""
 "First, access the `GitHub repository <https://github.com/odoo/mail-client-"
 "extensions>`_ for the Odoo Mail Plugins. Next, click on the "
@@ -8218,7 +8254,7 @@ msgstr ""
 msgid "Download the ZIP file from the Odoo GitHub repository for Mail Plugins."
 msgstr "메일 플러그인용 Odoo GitHub 저장소에서 ZIP 파일을 다운로드하세요."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:108
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:116
 msgid ""
 "Open the ZIP file on the computer. Then, go to :menuselection:`mail-client-"
 "extensions-master --> gmail --> src --> views`, and open "
@@ -8230,19 +8266,19 @@ msgstr ""
 "경우), TextEdit (Mac인 경우) 또는 Visual Studio Code와 같은 텍스트 편집기 프"
 "로그램으로 파일을 엽니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:112
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:120
 msgid ""
 "Delete the following three lines of text from the :file:`login.ts` file:"
 msgstr ":file:`login.ts` 파일에 있는 텍스트 중 다음의 세 줄을 삭제합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:120
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:128
 msgid ""
 "This removes the `odoo.com` domain constraint from the Gmail Plugin program."
 msgstr ""
 "이렇게 하면 Gmail 플러그인 프로그램에서 `odoo.com` 도메인에 대한 제약 조건이 "
 "삭제됩니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:122
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:130
 msgid ""
 "Next, in the ZIP file, go to :menuselection:`mail-client-extensions-master --"
 "> gmail`, and open the file called :guilabel:`appsscript.json`. In "
@@ -8254,7 +8290,7 @@ msgstr ""
 "요. :guilabel:`urlFetchWhitelist` 섹션에 있는 모든 레퍼런스를 `odoo.com` 로 "
 "바꾸어 Odoo 고객의 고유한 서버 도메인으로 변경합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:126
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:134
 msgid ""
 "Then, in the same :guilabel:`gmail` folder, open the file "
 "called :guilabel:`README.md`. Follow the instructions in "
@@ -8265,7 +8301,7 @@ msgstr ""
 "세요. :guilabel:`README.md` 파일에 있는 안내에 따라서 Gmail 플러그인 파일을 "
 "Google 프로젝트로 푸시합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:130
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:138
 msgid ""
 "The computer must be able to run Linux commands in order to follow the "
 "instructions on the :guilabel:`README.md` file."
@@ -8273,7 +8309,7 @@ msgstr ""
 ":guilabel:`README.md` 파일에 있는 안내대로 하기 위해서는 컴퓨터에서 반드시 "
 "Linux 명령어 실행을 할 수 있어야 합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:133
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:141
 msgid ""
 "After that, share the Google Project with the Gmail account that the user "
 "wishes to connect to Odoo. Then, click :guilabel:`Publish` "
@@ -8301,18 +8337,12 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:10
 msgid ""
-"Make sure to check the database version in the :guilabel:`Settings app --> "
-"General Settings`, at the bottom of the page."
+"The Outlook plugin is available for both the desktop and web versions of "
+"Outlook. See `Microsoft's add-in article <https://support.microsoft.com/en-"
+"us/office/use-add-ins-in-outlook-1ee261f9-49bf-4ba6-b3e2-2ba7bcab64c8>`_."
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:13
-msgid ""
-"For database versions 19.2 and later, see the `latest documentation <https://"
-"www.odoo.com/documentation/master/applications/general/integrations/"
-"mail_plugins/outlook.html>`_ for installation instructions."
-msgstr ""
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:20
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:17
 msgid ""
 "The Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both "
 "on Odoo and Outlook."
@@ -8320,22 +8350,28 @@ msgstr ""
 "Odoo와 Outlook 모두에서 Outlook :doc:`메일 플러그인 <../mail_plugins>` 을 설"
 "정해야 합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:25
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:20
+msgid ""
+"Make sure to check the database version in the :guilabel:`Settings app --> "
+"General Settings`, at the bottom of the page."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:30
 msgid "Enable Mail Plugin"
 msgstr "메일 플러그인 활성화"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:27
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:32
 msgid ""
 "First, enable the *Mail Plugin* module in the database. Go "
 "to :menuselection:`Settings --> General Settings --> Integrations`, "
 "enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration."
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:33
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:38
 msgid "Install the Outlook Plugin"
 msgstr "Outlook 플러그인 설치"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:35
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:40
 msgid ""
 "Download (:menuselection:`Save Page As --> Web Page XML only`) the following "
 "XML file to upload later: `https://download.odoocdn.com/plugins/outlook/"
@@ -8346,7 +8382,7 @@ msgstr ""
 "download.odoocdn.com/plugins/outlook/manifest.xml <https://"
 "download.odoocdn.com/plugins/outlook/manifest.xml>`_"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:39
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:44
 msgid ""
 "Next, open the Outlook mailbox, and select any email. After completing this, "
 "click on the :guilabel:`Apps` button in the upper right-side, then "
@@ -8357,7 +8393,7 @@ msgstr ""
 msgid "Apps button in Outlook"
 msgstr "Outlook의 앱 버튼"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:45
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:50
 msgid ""
 "Following this step, select the :guilabel:`My add-ins` tab on the left-side."
 msgstr ""
@@ -8367,7 +8403,7 @@ msgstr ""
 msgid "My add-ins in Outlook"
 msgstr "Outlook에 있는 내 추가 기능"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:50
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:55
 msgid ""
 "Under :guilabel:`Custom Addins` towards the bottom, click on :guilabel:`+ "
 "Add a custom add-in`, then select :guilabel:`Add from file...`"
@@ -8377,7 +8413,7 @@ msgstr ""
 msgid "Custom add-ins in Outlook"
 msgstr "Outlook의 사용자 지정 추가 기능"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:56
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:61
 msgid ""
 "For the next step, attach the `manifest.xml` file downloaded above, and "
 "press :guilabel:`OK`. Next, read the warning and click "
@@ -8390,11 +8426,11 @@ msgstr ""
 msgid "Custom add-in installation warning in Outlook"
 msgstr "Outlook의 사용자 지정 추가 기능을 설치할 때 나타나는 경고"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:65
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:70
 msgid "Connect the database"
 msgstr "데이터베이스 연결"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:67
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:72
 msgid ""
 "Now, Outlook will be connected to the Odoo database. First, open any email "
 "in the Outlook mailbox, click on the :guilabel:`Apps` button in the upper "
@@ -8405,7 +8441,7 @@ msgstr ""
 msgid "Odoo for Outlook add-in button"
 msgstr "Outlook용 Odoo 추가 기능 버튼"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:74
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:79
 msgid ""
 "The right-side panel can now display **Company Insights**. At the bottom, "
 "click on :guilabel:`Login`."
@@ -8417,7 +8453,7 @@ msgstr ""
 msgid "Logging in the Odoo database"
 msgstr "Odoo 데이터베이스에 로그인하기"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:81
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:86
 msgid ""
 "Only a limited amount of **Company Insights** (*Lead Enrichment*) requests "
 "are available as a trial database. This feature requires :ref:`prepaid "
@@ -8427,14 +8463,14 @@ msgstr ""
 "한되어 있습니다. 이 기능을 사용하려면 :ref:`선불 크레딧 <mail_plugins/"
 "pricing>` 을 구매해야 합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:85
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:90
 msgid ""
 "If, after a short while, the panel is still empty, it is possible that the "
 "browser cookie settings prevented it from loading. Note that these settings "
 "also change if the browser is in *Incognito* mode."
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:89
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:94
 msgid ""
 "To fix this issue, configure the browser to always allow cookies on Odoo's "
 "plugin page."
@@ -8442,7 +8478,7 @@ msgstr ""
 "이 문제를 해결하려면 Odoo 플러그인 페이지에서 항상 쿠키를 허용하도록 브라우저"
 "를 설정하세요."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:91
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:96
 msgid ""
 "For Google Chrome, change the browser cookie settings by following the guide "
 "at: `https://support.google.com/chrome/answer/95647 <https://"
@@ -8454,11 +8490,11 @@ msgstr ""
 "따라 브라우저 쿠키 설정을 변경하고 :guilabel:`항상 쿠키를 사용할 수 있는 사이"
 "트` 목록에 `download.odoo.com` 을 추가합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:96
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:101
 msgid "Once this is complete, the Outlook panel needs to be opened again."
 msgstr "이 작업이 완료되면 Outlook 패널을 다시 열어야 합니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:98
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:103
 msgid "Now, enter the Odoo database URL and click on :guilabel:`Login`."
 msgstr ""
 "이제 Odoo 데이터베이스 URL을 입력한 후 :guilabel:`로그인` 을 클릭합니다."
@@ -8467,7 +8503,7 @@ msgstr ""
 msgid "Entering the Odoo database URL"
 msgstr "Odoo 데이터베이스 URL 입력"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:103
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:108
 msgid "Next, click on :guilabel:`Allow` to open the pop-up window."
 msgstr "다음으로 :guilabel:`허용` 을 클릭하면 팝업 창이 열립니다."
 
@@ -8475,7 +8511,7 @@ msgstr "다음으로 :guilabel:`허용` 을 클릭하면 팝업 창이 열립니
 msgid "New window pop-up warning"
 msgstr "새로운 창으로 팝업 경고하기"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:108
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:113
 msgid ""
 "If the user isn't logged into the database, enter the credentials. Click "
 "on :guilabel:`Allow` to let the Outlook Plugin connect to the database."
@@ -8487,44 +8523,44 @@ msgstr ""
 msgid "Allowing the Outlook Plugin to connect to a database"
 msgstr "데이터베이스에 Outlook 플러그인이 연결되는 것을 허용하기"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:117
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:122
 msgid "Using the inbox plugin"
 msgstr "받은편지함 플러그인 사용하기"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:119
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:124
 msgid ""
 "To use the plugin, open any email in the Outlook mailbox, click on "
 "the :guilabel:`Apps` button in the upper right-side, and "
 "select :guilabel:`Odoo Inbox Addin` to open the panel."
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:123
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:128
 msgid ""
 "The options available in the panel will vary based on the applications "
 "installed in the database."
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:126
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:131
 msgid "Create a contact"
 msgstr "연락처 생성"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:128
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:133
 msgid ""
 "To create a contact record in Odoo from an email, click the :icon:`fa-plus-"
 "circle` :guilabel:`(circle plus)` icon."
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:132
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:137
 msgid ""
 "A contact record **must** be created before a lead/opportunity can be "
 "created."
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:135
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:140
 msgid "Create an opportunity"
 msgstr "영업기회 생성"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:137
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:142
 msgid ""
 "To create an opportunity from an email, click the :icon:`fa-"
 "plus` :guilabel:`(plus)` icon next to :guilabel:`Opportunities`. Doing so "
@@ -8533,11 +8569,11 @@ msgid ""
 "added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:143
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:148
 msgid "Create a task"
 msgstr "작업 생성"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:145
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:150
 msgid ""
 "To create a task from an email, click the :icon:`fa-plus` :guilabel:`(plus)` "
 "icon next to :guilabel:`Tasks`. Then, enter the title of the project where "
@@ -8552,11 +8588,11 @@ msgstr ""
 "새 탭으로 새로운 Odoo작업 레코드가 열립니다. 이메일의 제목은 작업 제목으로 사"
 "용되며, 이메일 본문은 :guilabel:`설명` 탭에 자동으로 추가됩니다."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:152
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:157
 msgid "Create a ticket"
 msgstr "티켓 생성"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:154
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:159
 msgid ""
 "To create a task from an email, click the :icon:`fa-plus` :guilabel:`(plus)` "
 "icon next to :guilabel:`Tickets`. Doing so opens a new ticket record in Odoo "

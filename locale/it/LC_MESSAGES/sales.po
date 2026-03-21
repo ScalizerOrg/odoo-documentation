@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 18:30+0000\n"
+"POT-Creation-Date: 2026-03-20 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -75,7 +75,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/extra/self_order.rst:9
 #: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:21
 #: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:13
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:10
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:30
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:20
@@ -576,10 +576,16 @@ msgid "Lead mining"
 msgstr "Estrarre lead"
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:8
+#, fuzzy
+#| msgid ""
+#| "*Lead mining* is a feature that allows *CRM* users to generate new leads "
+#| "directly into their Odoo database. To ensure lead qualification, lead "
+#| "mining output is determined by a variety of filtering criteria, such as "
+#| "the country, the company size, and the industry."
 msgid ""
 "*Lead mining* is a feature that allows *CRM* users to generate new leads "
-"directly into their Odoo database. To ensure lead qualification, lead mining "
-"output is determined by a variety of filtering criteria, such as the "
+"directly within their Odoo database. To ensure lead qualification, lead "
+"mining output is determined by a variety of filtering criteria, such as the "
 "country, the company size, and the industry."
 msgstr ""
 "La funzione *Estrazione lead* consente agli utenti del *CRM* di generare "
@@ -589,9 +595,14 @@ msgstr ""
 "dell'azienda e il settore."
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:15
+#, fuzzy
+#| msgid ""
+#| "To get started, go to :menuselection:`CRM app --> Configuration --> "
+#| "Settings`, and tick the :guilabel:`Lead Mining` checkbox to activate the "
+#| "feature. Then, click :guilabel:`Save`."
 msgid ""
 "To get started, go to :menuselection:`CRM app --> Configuration --> "
-"Settings`, and tick the :guilabel:`Lead Mining` checkbox to activate the "
+"Settings`, and select the :guilabel:`Lead Mining` checkbox to activate the "
 "feature. Then, click :guilabel:`Save`."
 msgstr ""
 "Per iniziare, accedi all'app :menuselection:`CRM --> Configurazione --> "
@@ -602,40 +613,44 @@ msgstr ""
 msgid "Activate lead mining in Odoo CRM settings."
 msgstr "Attivare il lead mining nelle impostazioni di Odoo CRM."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:23
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:22
 msgid "Generate leads"
 msgstr "Generare lead"
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:25
 msgid ""
-"After the *Lead Mining* setting is activated, a new button called *Generate "
-"Leads* is available to use in the upper-left corner of the *CRM* *Pipeline* "
-"(:menuselection:`CRM app --> Sales --> My Pipeline`)."
+"If the :doc:`Leads </applications/sales/crm/acquire_leads/convert>` feature "
+"is not enabled, then lead generation creates opportunities instead."
 msgstr ""
-"Dopo aver attivato l'impostazione *Estrazione lead*, nell'angolo in alto a "
-"sinistra della *Pipeline* del *CRM* è disponibile un nuovo pulsante chiamato "
-"*Genera lead* (:menuselection:`CRM --> Vendite --> La mia pipeline`)."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:29
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:28
+#, fuzzy
+#| msgid ""
+#| "Lead mining requests are also available through :menuselection:`CRM app --"
+#| "> Configuration --> Lead Mining Requests`, or through :menuselection:`CRM "
+#| "app --> Leads --> Leads`, where the :guilabel:`Generate Leads` button is "
+#| "also available."
 msgid ""
-"Lead mining requests are also available through :menuselection:`CRM app --> "
-"Configuration --> Lead Mining Requests`, or through :menuselection:`CRM app "
-"--> Leads --> Leads`, where the :guilabel:`Generate Leads` button is also "
-"available."
+"With the *Lead Mining* setting activated, the *Generate Leads* button is "
+"added to the upper-left corner of the *CRM* *Pipeline* (:menuselection:`CRM "
+"app --> Sales --> My Pipeline`). Lead mining requests are also available "
+"through :menuselection:`CRM app --> Configuration --> Lead Mining Requests` "
+"and through :menuselection:`CRM app --> Leads`, where "
+"the :guilabel:`Generate Leads` button is also available."
 msgstr ""
 "Le richieste di estrazione di lead sono disponibili anche seguendo il "
 "percorso :menuselection:`app CRM --> Configurazione --> Richieste estrazione "
 "lead`, oppure tramite :menuselection:`app CRM --> Lead --> Lead`, dove è "
 "disponibile anche il pulsante :guilabel:`Genera lead`."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:None
-msgid "The Generate Leads button to use the lead mining feature."
-msgstr "Il pulsante Genera lead per utilizzare la funzione di estrazione lead."
-
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:37
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:34
+#, fuzzy
+#| msgid ""
+#| "Click the :guilabel:`Generate Leads` button, and a pop-up window appears, "
+#| "offering a variety of criteria by which to generate leads."
 msgid ""
-"Click the :guilabel:`Generate Leads` button, and a pop-up window appears, "
-"offering a variety of criteria by which to generate leads."
+"From any of these locations, click the :guilabel:`Generate Leads` button, "
+"and a pop-up window appears."
 msgstr ""
 "Facendo clic sul pulsante :guilabel:`Genera lead`, si apre una finestra pop-"
 "up che offre una serie di criteri per la generazione dei lead."
@@ -647,90 +662,141 @@ msgid ""
 msgstr ""
 "La finestra pop-up con i criteri di selezione per generare lead in Odoo."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:44
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:40
+#, fuzzy
+#| msgid ""
+#| "Choose to generate leads for :guilabel:`Companies` to get company "
+#| "information only, or choose |CC| to get company information and "
+#| "individual employee contact information."
 msgid ""
-"Choose to generate leads for :guilabel:`Companies` to get company "
-"information only, or choose |CC| to get company information and individual "
-"employee contact information."
+"Leads can be generated for :guilabel:`Companies` to get company information "
+"only, or for |CC| to get both company information and contact information "
+"for individual employees."
 msgstr ""
 "Scegli di generare lead per :guilabel:`Aziende` per ottenere solo "
 "informazioni sull'azienda, oppure scegli |CC| per ottenere informazioni "
 "sull'azienda e sui contatti dei singoli dipendenti."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:48
-msgid ""
-"When targeting |CC|, additional options are available to filter contacts "
-"based on :guilabel:`Role` or :guilabel:`Seniority`."
-msgstr ""
-"Quando scegli |CC|, sono disponibili opzioni aggiuntive per filtrare i "
-"contatti in base al :guilabel:`Ruolo` o all':guilabel:`Anzianità`."
-
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:51
-msgid "Additional filtering options include the following:"
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:43
+#, fuzzy
+#| msgid "Additional filtering options include the following:"
+msgid "Filtering options for generating leads include the following:"
 msgstr "Le opzioni di filtraggio aggiuntive includono le seguenti:"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:53
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:45
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Countries`: filter leads based on the country (or countries) "
+#| "they are located in."
 msgid ""
-":guilabel:`Countries`: filter leads based on the country (or countries) they "
+":guilabel:`Countries`: Filter leads based on the country (or countries) they "
 "are located in."
 msgstr ""
 ":guilabel:`Paesi`: filtra i contatti in base al Paese (o ai Paesi) in cui si "
 "trovano"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:54
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:46
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`States`: further filter leads based on the state in which they "
+#| "are located, if applicable."
 msgid ""
-":guilabel:`States`: further filter leads based on the state in which they "
-"are located, if applicable."
+":guilabel:`States`: Filter leads even further based on the state in which "
+"they are located, if applicable."
 msgstr ""
 ":guilabel:`Stati`: filtra ulteriormente i contatti in base allo Stato in cui "
 "si trovano, se applicabile"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:56
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:48
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Industries`: filter leads based on the specific industry they "
+#| "work in."
 msgid ""
-":guilabel:`Industries`: filter leads based on the specific industry they "
+":guilabel:`Industries`: Filter leads based on the specific industry they "
 "work in."
 msgstr ""
 ":guilabel:`Settori`: filtra i contatti in base al settore specifico in cui "
 "lavorano"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:57
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:49
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Filter on Size`: tick this checkbox to specify the number of "
+#| "employees at the company. This generates a field "
+#| "labeled :guilabel:`Size`. Fill in the blanks to create a range for the "
+#| "desired company size."
 msgid ""
-":guilabel:`Filter on Size`: tick this checkbox to specify the number of "
-"employees at the company. This generates a field labeled :guilabel:`Size`. "
-"Fill in the blanks to create a range for the desired company size."
+":guilabel:`Filter on Size`: Generates a field labeled :guilabel:`Size`. Fill "
+"in the blanks to create a range for the desired company size based on its "
+"number of employees."
 msgstr ""
 ":guilabel:`Filtro dimensione`: seleziona questa casella di controllo per "
 "specificare il numero di dipendenti dell'azienda. Questo genera un campo "
 "denominato :guilabel:`Dimensione`. Compila gli spazi vuoti per creare un "
 "intervallo per le dimensioni dell'azienda desiderata"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:60
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:53
+#, fuzzy
+#| msgid ""
+#| "When targeting |CC|, additional options are available to filter contacts "
+#| "based on :guilabel:`Role` or :guilabel:`Seniority`."
 msgid ""
-":guilabel:`Sales Team`: choose which Sales Team the leads will be assigned "
-"to."
+"When using |CC|, generated contacts can also be filtered based on "
+"their :guilabel:`Role` or :guilabel:`Seniority`."
+msgstr ""
+"Quando scegli |CC|, sono disponibili opzioni aggiuntive per filtrare i "
+"contatti in base al :guilabel:`Ruolo` o all':guilabel:`Anzianità`."
+
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:56
+msgid ""
+"Additionally, there are options for sales team assignment and internal "
+"tracking:"
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:58
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Sales Team`: choose which Sales Team the leads will be "
+#| "assigned to."
+msgid ""
+":guilabel:`Sales Team`: Set which Sales Team the leads will be assigned to."
 msgstr ""
 ":guilabel:`Team vendite`: scegli a quale team di vendita assegnare i lead"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:61
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:59
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Salesperson`: choose which member of the Sales Team the leads "
+#| "will be assigned to."
 msgid ""
-":guilabel:`Salesperson`: choose which member of the Sales Team the leads "
-"will be assigned to."
+":guilabel:`Salesperson`: Set which member of the Sales Team the leads will "
+"be assigned to."
 msgstr ""
 ":guilabel:`Addetto vendite`: scegli a quale membro del team vendite "
 "assegnare i lead"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:62
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:60
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Default Tags`: choose which tags are applied directly to the "
+#| "leads once found."
 msgid ""
-":guilabel:`Default Tags`: choose which tags are applied directly to the "
-"leads once found."
+":guilabel:`Default Tags`: Set which tags are applied directly to the leads "
+"once found."
 msgstr ""
 ":guilabel:`Tag predefiniti`: scegli quali tag applicare direttamente ai lead "
 "una volta trovati"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:65
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:63
+#, fuzzy
+#| msgid ""
+#| "Make sure to be aware of the latest EU regulations when receiving contact "
+#| "information. Get more information about the General Data Protection "
+#| "Regulation on `Odoo GDPR <http://odoo.com/gdpr>`_."
 msgid ""
-"Make sure to be aware of the latest EU regulations when receiving contact "
-"information. Get more information about the General Data Protection "
+"If applicable, make sure to be aware of the latest EU regulations when "
+"receiving contact information. Learn more about the General Data Protection "
 "Regulation on `Odoo GDPR <http://odoo.com/gdpr>`_."
 msgstr ""
 "Assicurati di essere al corrente delle ultime normative UE quando ricevi "
@@ -738,25 +804,35 @@ msgstr ""
 "sulla protezione dei dati sono disponibili su `Odoo GDPR <https://"
 "www.odoo.com/it_IT/gdpr>`_."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:69
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:68
 msgid "View leads"
 msgstr "Visualizzare lead"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:71
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:70
+#, fuzzy
+#| msgid ""
+#| "After leads are generated, they are assigned to the designated "
+#| "salesperson and team. To view additional information regarding the lead, "
+#| "select one from the list, and click to open it."
 msgid ""
 "After leads are generated, they are assigned to the designated salesperson "
 "and team. To view additional information regarding the lead, select one from "
-"the list, and click to open it."
+"the list and click to open it."
 msgstr ""
 "Una volta generati, i lead vengono assegnati all'addetto vendite e al team "
 "designato. Per visualizzare ulteriori informazioni sul lead, selezionane uno "
 "dall'elenco e fai clic per aprirlo."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:74
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:73
+#, fuzzy
+#| msgid ""
+#| "In the chatter thread for the lead, additional information is provided. "
+#| "This can include the number of employees, the technology used by the "
+#| "company, the timezone, and direct contact information."
 msgid ""
-"In the chatter thread for the lead, additional information is provided. This "
-"can include the number of employees, the technology used by the company, the "
-"timezone, and direct contact information."
+"Additional information for the lead is provided in its chatter. This can "
+"include the number of employees that work for the lead, the technology it "
+"uses, its timezone, and any direct contact information."
 msgstr ""
 "Nel thread del chatter per il lead, vengono fornite ulteriori informazioni. "
 "Queste possono includere il numero di dipendenti, la tecnologia utilizzata "
@@ -766,91 +842,64 @@ msgstr ""
 msgid "The chatter thread of a newly generated lead."
 msgstr "Il thread del chatter di un nuovo lead generato."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:82
-msgid ""
-"If :guilabel:`Leads` are **not** enabled for the database, then leads are "
-"generated as *opportunities*, and added to the pipeline for the designated "
-"salesperson."
-msgstr ""
-"Se la funzione :guilabel:`Lead` **non** viene attivata per il database, i "
-"lead vengono generati come *opportunità* e aggiunti alla pipeline per il "
-"venditore designato."
-
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:85
-msgid ""
-"To enable the :guilabel:`Leads` feature, navigate to :menuselection:`CRM app "
-"--> Configuration --> Settings`, and tick the :guilabel:`Leads` checkbox. "
-"Then, click :guilabel:`Save`."
-msgstr ""
-"Per attivare la funzionalità *lead*, apri l'app :menuselection:`CRM --> "
-"Configurazione --> Impostazioni` e spunta la casella :guilabel:`Lead`. "
-"Infine, fai clic su :guilabel:`Salva`."
-
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:89
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:81
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:94
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:52
 #: ../../content/applications/sales/rental.rst:87
 msgid "Pricing"
 msgstr "Tariffazione"
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:91
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:83
 msgid ""
-"Lead mining is an *In-App Purchase* feature, and each generated lead costs "
-"one :ref:`credit <in_app_purchase/credits>`."
+"Lead mining is an *In-App Purchase* service, and each generated lead costs "
+"one :ref:`credit <in_app_purchase/credits>`. When using the |CC| option to "
+"generate leads, one additional credit is used for each contact generated. "
+"See here for complete pricing information: `Lead Generation by Odoo IAP "
+"<https://iap.odoo.com/iap/in-app-services/167?>`_. Enterprise Odoo users "
+"with a valid subscription get free credits to test |IAP| features before "
+"purchasing more credits for the database. This includes demo/training "
+"databases, educational databases, and one-app-free databases."
 msgstr ""
-"L'estrazione di lead è una funzione *acquisti in app* e ogni lead generato "
-"costa un :ref:`credito <in_app_purchase/credits>`."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:95
-msgid ""
-"Generating |CC| costs one additional credit for each contact generated. See "
-"here for complete pricing information: `Lead Generation by Odoo IAP <https://"
-"iap.odoo.com/iap/in-app-services/167?>`_."
-msgstr ""
-"La generazione di |CC| costa un credito aggiuntivo per ogni contatto "
-"generato. Per maggiori informazioni sulle tariffe, onsulta la sezione: "
-"`Generazione lead tramite IAP Odoo <https://iap.odoo.com/iap/in-app-services/"
-"167?>`_."
-
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:99
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:90
+#, fuzzy
+#| msgid ""
+#| "To buy credits, navigate to :menuselection:`CRM app --> Configuration --> "
+#| "Settings`. In the :guilabel:`Lead Generation` section, under "
+#| "the :guilabel:`Lead Mining` feature, click :guilabel:`Buy Credits`."
 msgid ""
 "To buy credits, navigate to :menuselection:`CRM app --> Configuration --> "
 "Settings`. In the :guilabel:`Lead Generation` section, under "
-"the :guilabel:`Lead Mining` feature, click :guilabel:`Buy Credits`."
+"the :guilabel:`Lead Mining` feature, click :guilabel:`Manage Service & Buy "
+"Credits` to go to the Lead Generation Settings page. Click :guilabel:`Buy "
+"Credit` to go to the *Odoo IAP* page where you'll be able to buy packs of "
+"Lead Generation credits."
 msgstr ""
 "Per comprare crediti, apri l'app :menuselection:`CRM --> Configurazione --> "
 "Impostazioni`. Nella sezione :guilabel:`Generazione lead`, sotto la "
 "funzionalità :guilabel:`Estrazione lead`, fai clic su :guilabel:`Compra "
 "crediti`."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:103
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:96
 msgid ""
-"Credits may also be purchased by navigating to the :menuselection:`Settings "
-"app`. In the :guilabel:`Contacts` section, under the :guilabel:`Odoo IAP` "
-"feature, click :guilabel:`View My Services`."
+"Credits may also be purchased by navigating directly to the `Odoo IAP "
+"<https://iap.odoo.com/>`_ page and clicking the :guilabel:`Lead Generation` "
+"button."
 msgstr ""
-"I crediti possono essere acquistati anche accedendo "
-"all'applicazione :menuselection:`Impostazioni`. Nella "
-"sezione :guilabel:`Contatti`, sotto la funzione :guilabel:`IAP Odoo`, fai "
-"clic su :guilabel:`Vedi i miei servizi`."
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:None
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:None
 msgid "Buy credits in the Odoo IAP settings."
 msgstr "Acquistare crediti nelle impostazioni IAP di Odoo."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:112
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:103
 msgid ""
-"Enterprise Odoo users with a valid subscription get free credits to test |"
-"IAP| features before purchasing more credits for the database. This includes "
-"demo/training databases, educational databases, and one-app-free databases."
+"Credits are **not** interchangeable between IAP services. *Lead Generation* "
+"credits may not be spent on other IAP services, and no other IAP credits can "
+"be spent on *Lead Generation*."
 msgstr ""
-"Gli utenti di Odoo Enterprise con un abbonamento valido ricevono crediti "
-"gratuiti per testare le funzionalità |IAP| prima acquistare più crediti per "
-"il database inclusi database demo/di formazione, database educativi e "
-"database con un'app gratuita."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:117
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:107
 msgid ":doc:`/applications/essentials/in_app_purchase`"
 msgstr ":doc:`/applications/essentials/in_app_purchase`"
 
@@ -5865,6 +5914,7 @@ msgstr ""
 "una :guilabel:`Dashboard` dove salvare il resoconto."
 
 #: ../../content/applications/sales/crm/performance/win_loss.rst:627
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:88
 #: ../../content/applications/sales/point_of_sale/use.rst:122
 msgid "Click :guilabel:`Create`."
 msgstr "Fai clic su :guilabel:`Crea`."
@@ -10509,6 +10559,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:155
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:38
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`."
 msgstr ""
 
@@ -11773,559 +11824,89 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:12
+#, fuzzy
+#| msgid ""
+#| "To work with Odoo, some printer models that can be used without "
+#| "an :doc:`IoT system </applications/general/iot>` may require :doc:`the "
+#| "HTTPS protocol <https>` to establish a secure connection between the "
+#| "browser and the printer. However, trying to reach the printer's IP "
+#| "address using HTTPS leads to a warning page on most web browsers. In that "
+#| "case, you can temporarily :ref:`force the connection <epos_ssc/"
+#| "instructions>`, which allows you to reach the page in HTTPS and use the "
+#| "ePOS printer in Odoo as long as the browser window stays open."
 msgid ""
 "To work with Odoo, some printer models that can be used without an :doc:`IoT "
 "system </applications/general/iot>` may require the HTTPS protocol to "
 "establish a secure connection between the browser and the printer. However, "
-"trying to reach the printer's IP address using HTTPS leads to a warning page "
-"on most web browsers."
+"trying to reach the printer's IP address using HTTPS results in a warning "
+"page in most web browsers. Force the connection to establish an HTTPS link "
+"and enable the printer in Odoo."
 msgstr ""
+"Per funzionare con Odoo, alcuni modelli di stampanti che possono essere "
+"utilizzati senza un :doc:`sistema IoT </applications/general/iot>` "
+"potrebbero richiedere :doc:`il protocollo HTTPS <https>` per stabilire una "
+"connessione sicura tra il browser e la stampante. Tuttavia, provare a "
+"raggiungere l'indirizzo IP della stampante usando l'HTTPS porta a una pagina "
+"di avviso sulla maggior parte dei browser web. In quel caso, "
+"puoi :ref:`forzare la connessione <epos_ssc/instructions>` temporaneamente, "
+"il che permette di raggiungere la pagina in HTTPS e usare la stampante ePOS "
+"in Odoo finché la finestra del browser rimane aperta."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:19
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:65
-msgid ":doc:`pos_lna`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:22
-msgid "Generate, export, and import self-signed certificates"
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:21
+#, fuzzy
+#| msgid "Generate, export, and import self-signed certificates"
+msgid "Generation, export, and import of self-signed certificates"
 msgstr "Generare, esportare e importare certificati autofirmati"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:24
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:23
 msgid ""
-"For a long-term solution, you must generate a **self-signed certificate**. "
-"Then, export and import it into your browser."
+"Printers that operate without an :doc:`IoT system </applications/general/"
+"iot>` still require secure communication, which can be achieved "
+"by :ref:`generating <pos/epos-ssc/certificate-generation>`, :ref:`exporting "
+"<pos/epos-ssc/certificate-export>`, and/or :ref:`importing <pos/epos-ssc/"
+"certificate-import>` a self-signed certificate."
 msgstr ""
-"Per una soluzione a lungo termine, è necessario generare un **certificato "
-"autofirmato**. In seguito, esportalo e importale nel tuo browser."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:28
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:29
+#, fuzzy
+#| msgid ""
+#| "**Generating** an SSL certificate should only be done **once**. If you "
+#| "create another certificate, devices using the previous one will lose "
+#| "HTTPS access."
 msgid ""
-"**Generating** an SSL certificate should only be done **once**. If you "
-"create another certificate, devices using the previous one will lose HTTPS "
+"Generating a self-signed certificate should only be done **once**. Creating "
+"another certificate causes devices using the previous one to lose HTTPS "
 "access."
 msgstr ""
 "La **generazione** di un certificato SSL deve essere effettuata **una sola "
 "volta**. Se crei un altro certificato, i dispositivi che utilizzano quello "
 "precedente perderanno l'accesso HTTPS."
 
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:31
+msgid ""
+"Printers that use an :doc:`IoT system </applications/general/iot>` do not "
+"need a self-signed certificate, as the IoT box generates it automatically."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:33
-msgid "Windows 10 & Linux OS"
-msgstr "Windows 10 e Linux OS"
+msgid ""
+"For stable results, it is strongly recommended to use the Google Chrome "
+"browser to generate the self-signed certificate."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:37
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:170
-msgid "Generate a self-signed certificate"
-msgstr "Generare un certificato autofirmato"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:39
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:172
+#, fuzzy
+#| msgid ""
+#| "If you need to export SSL certificates from an operating system or web "
+#| "browser that has not been mentioned, search for `export SSL certificate` "
+#| "+ `the name of your browser or operating system` in your preferred search "
+#| "engine."
 msgid ""
-"Navigate to the ePOS' IP address (e.g., `https://192.168.1.25`) and force "
-"the connection by clicking :guilabel:`Advanced` and :guilabel:`Proceed to "
-"[IP address] (unsafe)`."
-msgstr ""
-"Accedi all'indirizzo IP dell'ePOS (ad es., `https://192.168.1.25`) e forza "
-"la connessione facendo clic su :guilabel:`Avanzato` e :guilabel:`Procedi "
-"verso [IP address] (unsafe)`."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:0
-msgid "warning page about the connection privacy on Google Chrome"
-msgstr "Pagina di avviso sulla privacy della connessione su Google Chrome"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:47
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:180
-msgid "Warning page on Google Chrome, Windows 10"
-msgstr "Pagina di avviso su Google Chrome, Windows 10"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:49
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:182
-msgid ""
-"Then, sign in using your printer credentials to access the ePOS printer "
-"settings. To sign in, enter `epson` in the :guilabel:`ID` field and your "
-"printer serial number in the :guilabel:`Password` field."
-msgstr ""
-"In seguito, accedi utilizzando le credenziali della stampante per accedere "
-"alle impostazioni della stampante ePOS. Per accedere, digita `epson` nel "
-"campo :guilabel:`ID` e il numero di serie della stampante nel "
-"campo :guilabel:`Password`."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:53
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:186
-msgid ""
-"Click :guilabel:`Certificate List` in the :guilabel:`Authentication` "
-"section, and click :guilabel:`create` to generate a new **Self-Signed "
-"Certificate**. The :guilabel:`Common Name` should be automatically filled "
-"out. If not, fill it in with the printer IP address number. Select the years "
-"the certificate will be valid in the :guilabel:`Validity Period` field, "
-"click :guilabel:`Create`, and :guilabel:`Reset` or manually restart the "
-"printer."
-msgstr ""
-"Fai clic su :guilabel:`Elenco certificati` nella "
-"sezione :guilabel:`Autenticazione` e fai clic su :guilabel:`crea` per "
-"generare un nuovo **Certificato autofirmato**. Il :guilabel:`Nome comune` "
-"dovrebbe essere compilato automaticamente. Se ciò non avviene, inserisci "
-"l'indirizzo IP della stampante. Seleziona gli anni di validità del "
-"certificato nel campo :guilabel:`Periodo validità`, fai clic "
-"su :guilabel:`Crea` e :guilabel:`Ripristina` oppure riavvia la stampante "
-"manualmente."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:60
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:193
-msgid ""
-"The self-signed certificate is generated. Reload the page and "
-"click :guilabel:`SSL/TLS` in the :guilabel:`Security` section to ensure "
-"**Selfsigned Certificate** is correctly selected in the :guilabel:`Server "
-"Certificate` section."
-msgstr ""
-"Il certificato autofirmato è stato generato. Ricarica la pagina e fai clic "
-"su :guilabel:`SSL/TLS` nella sezione :guilabel:`Sicurezza` per assicurarti "
-"che il **Certificato autofirmato** sia selezionato correttamente nella "
-"sezione :guilabel:`Certificato server`."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:64
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:197
-msgid "Export a self-signed certificate"
-msgstr "Esportare un certificato autofirmato"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:66
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:199
-msgid ""
-"The export process is heavily dependent on the :abbr:`OS (Operating System)` "
-"and the browser. Start by accessing your ePOS printer settings on your web "
-"browser by navigating to its IP address (e.g., `https://192.168.1.25`). "
-"Then, force the connection as explained in the **Generate a self-signed "
-"certificate tab**."
-msgstr ""
-"Il processo di esportazione dipende molto da :abbr:`OS (Sistema operativo)` "
-"e browser. Inizia accedendo alle impostazioni della stampante ePOS sul tuo "
-"browser web per poi trovare l'indirizzo IP (ad es., `https://192.168.1.25`). "
-"Successivamente, forza la connessione come spiegato nella sezione **Generare "
-"un certificato autofirmato**."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:71
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:131
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:204
-msgid "If you are using **Google Chrome**,"
-msgstr "Se stai utilizzando **Google Chrome**:"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:73
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:206
-msgid ""
-"click :guilabel:`Not secure` next to the search bar, "
-"and :guilabel:`Certificate is not valid`;"
-msgstr ""
-"fai clic su :guilabel:`Non sicuro` accanto alla barra di ricerca e poi "
-"su :guilabel:`Certificato non valido`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:0
-msgid "Connection to the printer not secure button in Google Chrome browser."
-msgstr ""
-"Pulsante connessione alla stampante non sicura nel browser Google Chrome."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:79
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:212
-msgid "go to the :guilabel:`Details` tab and click :guilabel:`Export`;"
-msgstr "apri la scheda :guilabel:`Dettagli` e fai clic su :guilabel:`Esporta`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:80
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:213
-msgid ""
-"add `.crt` at the end of the file name to ensure it has the correct "
-"extension;"
-msgstr ""
-"aggiungi `.crt` alla fine del nome del file per assicurarti che abbia "
-"l'estensione corretta"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:81
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:214
-msgid ""
-"select :guilabel:`Base64-encoded ASCII, single certificate`, at the bottom "
-"of the pop-up window;"
-msgstr ""
-"seleziona :guilabel:`Base64-encoded ASCII, certificato singolo` nella parte "
-"inferiore della finestra pop-up"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:83
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:100
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:216
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:233
-msgid "save, and the certificate is exported."
-msgstr "salva e il certificato viene esportato."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:86
-msgid ""
-"Make sure that the certificate ends with the extension `.crt`. Otherwise, "
-"some browsers might not see the file during the import process."
-msgstr ""
-"Assicurati che il certificato termini con l'estensione `.crt`. Altrimenti, "
-"alcuni browser potrebbero non vedere il file durante il processo di "
-"importazione."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:89
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:144
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:222
-msgid "If you are using **Mozilla Firefox**,"
-msgstr "Se stai utilizzando **Mozilla Firefox**:"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:91
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:224
-msgid "click the **lock-shaped** icon on the left of the address bar;"
-msgstr ""
-"fai clic sull'icona a forma di **lucchetto** a sinistra della barra "
-"dell'indirizzo"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:92
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:225
-msgid ""
-"go to :menuselection:`Connection not secure --> More information --> "
-"Security tab --> View certificate`;"
-msgstr ""
-"vai su :menuselection:`Connessione non sicura --> Maggiori informazioni --> "
-"scheda Sicurezza --> Visualizza certificato`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:0
-msgid "Connection is not secure button in Mozilla Firefox browser"
-msgstr "Pulsante connessione non sicura nel browser Mozilla Firefox."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:98
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:231
-msgid "scroll down to the :guilabel:`Miscellaneous` section;"
-msgstr "scorri giù fino alla sezione :guilabel:`Varie`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:99
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:232
-msgid "click :guilabel:`PEM (cert)` in the :guilabel:`Download` section;"
-msgstr "fai clic su :guilabel:`PEM (cert)` nella sezione :guilabel:`Download`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:102
-msgid "Import a self-signed certificate"
-msgstr "Importare un certificato autofirmato"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:104
-msgid ""
-"The import process is heavily dependent on the :abbr:`OS (Operating System)` "
-"and the browser."
-msgstr ""
-"Il processo di importazione dipende molto da :abbr:`OS (Sistema operativo)` "
-"e browser."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:109
-msgid "Windows 10"
-msgstr "Windows 10"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:111
-msgid ""
-"Windows 10 manages certificates, which means that self-signed certificates "
-"must be imported from the certification file rather than the browser. To do "
-"so,"
-msgstr ""
-"Windows 10 gestisce i certificati, il che significa che i certificati "
-"autofirmati devono essere importati dal file di certificazione anziché dal "
-"browser. Per farlo:"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:114
-msgid ""
-"open the Windows File Explorer and locate the downloaded certification file;"
-msgstr ""
-"apri la sezione Esplora risorse di Windows e trova il file relativo alla "
-"certificazione scaricato"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:115
-msgid ""
-"right-click on the certification file and click :guilabel:`Install "
-"Certificate`;"
-msgstr "fai clic destro sul file e poi su :guilabel:`Installa certificato`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:117
-msgid ""
-"select where to install the certificate and for whom - either for "
-"the :guilabel:`Current User` or all users (:guilabel:`Local Machine`). Then, "
-"click :guilabel:`Next`;"
-msgstr ""
-"scegli dove installare il certificato e per chi, che si tratti di "
-"un :guilabel:`Utente attuale` o di tutti gli utenti (:guilabel:`Computer "
-"locale`). In seguito, fai clic su :guilabel:`Successivo`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:120
-msgid ""
-"on the `Certificate Store` screen, tick :guilabel:`Place all certificates in "
-"the following store`, click :guilabel:`Browse...`, and "
-"select :guilabel:`Trusted Root Certification Authorities`;"
-msgstr ""
-"nella schermata `Archivio certificati`, seleziona l'opzione :guilabel:`Salva "
-"i certificati nella seguente cartella`, fai clic su :guilabel:`Carica...` e "
-"seleziona :guilabel:`Autorità di certificazione radice disponibile "
-"nell'elenco locale`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:126
-msgid "click :guilabel:`Finish`, accept the pop-up security window;"
-msgstr ""
-"fai clic su :guilabel:`Termina` e accetta la finestra pop-up di sicurezza"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:127
-msgid "restart the computer to make sure that the changes are applied."
-msgstr ""
-"riavvia il computer per assicurarti che i cambiamenti siano stati applicati."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:129
-msgid "Linux"
-msgstr "Linux"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:133
-msgid "open Chrome;"
-msgstr "apri Chrome"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:134
-msgid ""
-"go to :menuselection:`Settings --> Privacy and security --> Security --> "
-"Manage certificates`;"
-msgstr ""
-"vai su :menuselection:`Impostazioni --> Privacy e sicurezza --> Sicurezza --"
-"> Gestisci certificati`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:136
-msgid ""
-"on the :guilabel:`Local certificates` tab, click :guilabel:`Installed by "
-"you` under the :guilabel:`Custom` section;"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:137
-msgid ""
-"click :guilabel:`Import` next to :guilabel:`Trusted Certificates`, and "
-"select the exported certification file from your local drive;"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:139
-msgid "accept all warnings;"
-msgstr "accetta tutti gli avvisi"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:140
-msgid "click :guilabel:`ok`;"
-msgstr "fai clic su :guilabel:`ok`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:141
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:154
-msgid "restart your browser."
-msgstr "riavvia il browser."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:146
-msgid "open Firefox;"
-msgstr "apri Firefox"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:147
-msgid ""
-"go to :menuselection:`Settings --> Privacy & Security --> Security --> View "
-"Certificates... --> Import`;"
-msgstr ""
-"vai su :menuselection:`Impostazioni --> Privacy e sicurezza --> Sicurezza --"
-"> Visualizza certificati... --> Importa`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:149
-msgid "in the pop-up window, open the :guilabel:`Servers` tab;"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:150
-msgid "click :guilabel:`Add Exception...`;"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:151
-msgid ""
-"enter the printer's IP address in the :guilabel:`Location` field, then "
-"click :guilabel:`Get Certificate`;"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:153
-msgid ""
-"tick the :guilabel:`Permanently store this exception` checkbox and confirm;"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:156
-msgid "Mac OS"
-msgstr "Mac OS"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:158
-msgid ""
-"On Mac OS, you can secure the connection for all browsers by following these "
-"steps:"
-msgstr ""
-"Su Mac OS, è possibile proteggere la connessione per tutti i browser "
-"seguendo questi passaggi:"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:160
-msgid ""
-"open Safari and navigate to your printer's IP address. Doing so leads to a "
-"warning page;"
-msgstr ""
-"apri Safari e accedi all'indirizzo IP della stampante. In questo modo "
-"ottieni una pagina di avviso"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:161
-msgid ""
-"on the warning page,  go to :menuselection:`Show Details --> visit this "
-"website --> Visit Website`, validate;"
-msgstr ""
-"nella pagina di avviso,  vai su :menuselection:`Mostra dettagli --> visita "
-"questo sito web --> Visita sito web`, convalida"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:163
-msgid "reboot the printer so you can use it with any other browser."
-msgstr ""
-"riavvia la stampante in modo da poterla utilizzare con qualsiasi altro "
-"browser."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:165
-msgid ""
-"To generate and export an SSL certificate and send it to IOS devices, open "
-"**Google Chrome** or **Mozilla Firefox**. Then,"
-msgstr ""
-"Per generare ed esportare un certificato SSL e inviarlo ai dispositivi IOS, "
-"apri **Google Chrome** o **Mozilla Firefox**. Successivamente:"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:0
-msgid "Warning page about the connection privacy on Google Chrome"
-msgstr "Pagina di avviso sulla privacy della connessione su Google Chrome."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:0
-msgid "Connection to the printer not secure button in Google Chrome"
-msgstr "Pulsante connessione alla stampante non sicura in Google Chrome."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:219
-msgid ""
-"Make sure that the certificate ends with the extension `.crt`. Otherwise, "
-"some browsers might not find the file during the import process."
-msgstr ""
-"Assicurati che il certificato termini con l'estensione `.crt`. Altrimenti, "
-"alcuni browser potrebbero non trovare il file durante il processo di "
-"importazione."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:0
-msgid "Connection is not secure button in Mozilla Firefox"
-msgstr "Pulsante connessione non sicura in Mozilla Firefox."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:235
-msgid "Android OS"
-msgstr "Android OS"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:237
-msgid ""
-"To import an SSL certificate into an Android device, first create and export "
-"it from a computer. Next, transfer the `.crt` file to the device using "
-"email, Bluetooth, or USB. Once the file is on the device,"
-msgstr ""
-"Per importare un certificato SSL in un dispositivo Android, occorre "
-"innanzitutto crearlo ed esportarlo da un computer. Successivamente, "
-"trasferisci il file `.crt` al dispositivo tramite e-mail, Bluetooth o USB. "
-"Una volta che il file è sul dispositivo:"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:241
-msgid "open the settings and search for `certificate`;"
-msgstr "apri le impostazioni e cerca `certificato`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:242
-msgid "click :guilabel:`Certificate AC` (Install from device storage);"
-msgstr ""
-"fai clic su :guilabel:`Certificato AC` (Installa dalla memoria del "
-"dispositivo)"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:243
-msgid "select the certificate file to install it on the device."
-msgstr "seleziona il file del certificato per installarlo sul dispositivo."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:246
-msgid ""
-"The specific steps for installing a certificate may vary depending on the "
-"version of Android and the device manufacturer."
-msgstr ""
-"I passaggi specifici per l'installazione di un certificato possono variare a "
-"seconda della versione di Android e del produttore del dispositivo."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:249
-msgid "iOS"
-msgstr "iOS"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:251
-msgid ""
-"To import an SSL certificate into an iOS device, first create and export it "
-"from a computer. Then, transfer the `.crt` file to the device using email, "
-"Bluetooth, or any file-sharing service."
-msgstr ""
-"Per importare un certificato SSL in un dispositivo iOS, occorre innanzitutto "
-"crearlo ed esportarlo da un computer. In seguito, trasferisci il file `.crt` "
-"al dispositivo tramite e-mail, Bluetooth o qualsiasi altro servizio di "
-"condivisione di file."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:255
-msgid ""
-"Downloading this file triggers a warning pop-up window. "
-"Click :guilabel:`Allow` to download the configuration profile, and close the "
-"second pop-up window. Then,"
-msgstr ""
-"Il download del file attiva una finestra pop-up di avviso. Fai clic "
-"su :guilabel:`Consenti` per scaricare il profilo di configurazione e "
-"chiudere la seconda finestra pop-up. Successivamente:"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:258
-msgid "go to the **Settings App** on the iOS device;"
-msgstr "apri l'applicazione **Impostazioni** sul dispositivo iOS"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:259
-msgid "click :guilabel:`Profile Downloaded` under the user's details box;"
-msgstr ""
-"fai clic su :guilabel:`Profilo scaricato` sotto il riquadro con i dettagli "
-"dell'utente"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:260
-msgid "locate the downloaded `.crt` file and select it;"
-msgstr "individua il file `.crt' scaricato e selezionalo"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:261
-msgid "click :guilabel:`Install` on the top right of the screen;"
-msgstr "fai clic su :guilabel:`Installa` in alto a destra dello schermo"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:262
-msgid "if a passcode is set on the device, enter the passcode;"
-msgstr "se sul dispositivo è impostato un codice di accesso, immettilo"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:263
-msgid ""
-"click :guilabel:`Install` on the top right of the certificate warning screen "
-"and the pop-up window;"
-msgstr ""
-"fai clic su :guilabel:`Installa` in alto a destra della schermata di avviso "
-"del certificato e della finestra a comparsa"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:265
-msgid "click :guilabel:`Done`."
-msgstr "fai clic su :guilabel:`Fatto`."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:269
-msgid ""
-"The certificate is installed, but it still needs to be authenticated. To do "
-"so,"
-msgstr ""
-"Il certificato è installato, ma deve essere ancora autenticato. Per farlo:"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:271
-msgid ""
-"go to :menuselection:`Settings --> General --> About > Certificate Trust "
-"Settings`;"
-msgstr ""
-"vai su :menuselection:`Impostazioni --> Generali --> Informazioni > "
-"Impostazioni attendibilità certificato`"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:272
-msgid "enable the installed certificate using the **slide button**;"
-msgstr "attiva il certificato installato usando il **pulsante di scorrimento**"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:273
-msgid "click :guilabel:`Continue` on the pop-up window."
-msgstr "fai clic su :guilabel:`Continua` nella finestra a comparsa."
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:276
-msgid ""
-"If you need to export SSL certificates from an operating system or web "
-"browser that has not been mentioned, search for `export SSL certificate` + "
-"`the name of your browser or operating system` in your preferred search "
+"To export self-signed certificates from an operating system or a web browser "
+"that is not mentioned in this documentation, search for `export SSL "
+"certificate` and the name of your browser or operating system in the "
+"preferred search engine. Similarly, to import self-signed certificates, "
+"search for `import SSL certificate root authority` in the preferred search "
 "engine."
 msgstr ""
 "Se hai bisogno di esportare i certificati SSL da un sistema operativo o da "
@@ -12333,28 +11914,753 @@ msgstr ""
 "SSL` + `il nome del browser o sistema operativo` nel tuo motore di ricerca "
 "preferito."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:279
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:45
+#, fuzzy
+#| msgid "Self-signed certificate for ePOS printers"
+msgid "Self-signed certificate generation"
+msgstr "Certificato autofirmato per stampanti ePOS"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:47
+#, fuzzy
+#| msgid ""
+#| "The import process is heavily dependent on the :abbr:`OS (Operating "
+#| "System)` and the browser."
 msgid ""
-"Similarly, to import SSL certificates from an unmentioned OS or browser, "
-"search for `import SSL certificate root authority` + `the name of your "
-"browser or operating system` in your preferred search engine."
+"The generation process depends on the :abbr:`OS (Operating System)` and the "
+"browser."
 msgstr ""
-"Allo stesso modo, per importare certificati SSL da un sistema operativo o da "
-"un browser non menzionato, cerca `importare autorità radice certificato SSL` "
-"+ `il nome del tuo browser o sistema operativo` nel motore di ricerca che "
-"preferisci."
+"Il processo di importazione dipende molto da :abbr:`OS (Sistema operativo)` "
+"e browser."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:284
-msgid "Check if the certificate was imported correctly"
-msgstr "Verificare la corretta importazione del certificato"
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:51
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:100
+#, fuzzy
+#| msgid "Windows 10 & Linux OS"
+msgid "Windows 10 & Linux"
+msgstr "Windows 10 e Linux OS"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:286
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:53
 msgid ""
-"To confirm your printer's connection is secure, connect to its IP address "
-"using HTTPS. For example, navigate to `https://192.168.1.25` in your "
-"browser. If the SSL certificate has been applied correctly, you should no "
-"longer see a warning page, and the address bar should display a padlock "
-"icon, indicating that the connection is secure."
+"To generate a self-signed certificate on **Google Chrome**, follow the next "
+"steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:55
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:136
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:152
+msgid ""
+"Open the browser, type the printer's IP address in the search bar (e.g., "
+"`https://192.168.1.25`), and press `Enter`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:57
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:138
+msgid ""
+"On the security warning page, click :guilabel:`Advanced`, "
+"then :guilabel:`Proceed to [IP address] (unsafe)` to force the connection."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:59
+#, fuzzy
+#| msgid ""
+#| "To save the filter, click :guilabel:`Save` in the :guilabel:`Favorites` "
+#| "section of the drop-down filter menu."
+msgid ""
+"On the EPSON platform, click :guilabel:`Advanced Settings`, "
+"then :guilabel:`Administrator Login` to log in to the printer's homepage."
+msgstr ""
+"Per salvare il filtro, fai clic su :guilabel:`Salva` nella "
+"sezione :guilabel:`Preferiti` del menu filtri a discesa."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:61
+msgid ""
+"Type the initial password located at the back of the printer in "
+"the :guilabel:`Current Password` field, then press `Enter`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:63
+#, fuzzy
+#| msgid ""
+#| "go to :menuselection:`Settings --> Privacy and security --> Security --> "
+#| "Manage certificates`;"
+msgid "Go to :menuselection:`Network Security --> SSL/TLS --> Certificate`."
+msgstr ""
+"vai su :menuselection:`Impostazioni --> Privacy e sicurezza --> Sicurezza --"
+"> Gestisci certificati`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:64
+#, fuzzy
+#| msgid ""
+#| "On the :guilabel:`Pipeline Analysis` page, click the :guilabel:`down "
+#| "arrow` icon next to the :guilabel:`Search...` bar."
+msgid ""
+"On the :guilabel:`Certificate` page, click :guilabel:`Update` under "
+"the :guilabel:`Self-signed Certificate` section."
+msgstr ""
+"nella pagina :guilabel:`Analisi pipeline`, fai clic "
+"sull'icona :guilabel:`freccia giù` accanto alla barra :guilabel:`Ricerca...`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:66
+msgid ""
+"Adapt the :guilabel:`Common Name` field to retain only the IP address, then "
+"click :guilabel:`Next`, then :guilabel:`OK`. Wait for the printer's lights "
+"to stop blinking."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:0
+msgid "Warning page about the connection privacy on Google Chrome"
+msgstr "Pagina di avviso sulla privacy della connessione su Google Chrome."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:74
+msgid ""
+"The Epson homepage may vary depending on the printer model used. For the "
+"Epson TM-m30 ii, log in to the Epson homepage by typing `epson` as the "
+"username and the printer's serial number as the password."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:78
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:128
+msgid "Mac OS"
+msgstr "Mac OS"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:80
+msgid ""
+"To generate a self-signed certificate using the `Keychain Access <https://"
+"support.apple.com/en-gb/guide/keychain-access/kyca8916/mac>`_ app on Mac, "
+"follow the next steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:84
+msgid "Access the :guilabel:`Keychain Access` app on Mac."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:85
+#, fuzzy
+#| msgid ""
+#| "go to :menuselection:`Settings --> Privacy and security --> Security --> "
+#| "Manage certificates`;"
+msgid ""
+"Go to :menuselection:`Access --> Certificate Assistant --> Create a "
+"Certificate`."
+msgstr ""
+"vai su :menuselection:`Impostazioni --> Privacy e sicurezza --> Sicurezza --"
+"> Gestisci certificati`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:86
+#, fuzzy
+#| msgid "Generate a self-signed certificate"
+msgid "Enter a name for the certificate."
+msgstr "Generare un certificato autofirmato"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:87
+msgid "Select an identity type, then the type of certificate."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:89
+#, fuzzy
+#| msgid "When the desired changes are complete, click :guilabel:`Save`."
+msgid "Review the certificate, then click :guilabel:`Done`."
+msgstr "Una volta completate le modifiche, fai clic su :guilabel:`Salva`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:94
+#, fuzzy
+#| msgid "Self-signed certificate for ePOS printers"
+msgid "Self-signed certificate export"
+msgstr "Certificato autofirmato per stampanti ePOS"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:96
+#, fuzzy
+#| msgid ""
+#| "The import process is heavily dependent on the :abbr:`OS (Operating "
+#| "System)` and the browser."
+msgid ""
+"The export process depends on the :abbr:`OS (Operating System)` and the "
+"browser."
+msgstr ""
+"Il processo di importazione dipende molto da :abbr:`OS (Sistema operativo)` "
+"e browser."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:104
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:132
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:197
+#, fuzzy
+#| msgid "open Chrome;"
+msgid "Google Chrome"
+msgstr "apri Chrome"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:106
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:118
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:134
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:150
+#, fuzzy
+#| msgid "To add a new marketplace, follow these steps:"
+msgid "To export the certificate, follow the next steps:"
+msgstr "Per aggiungere un nuovo marketplace, devi:"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:108
+msgid ""
+"Once the printer's lights are solid, hover the mouse over the browser's "
+"search bar and click :guilabel:`Not secure`, then :guilabel:`Certificate "
+"details`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:110
+#, fuzzy
+#| msgid "go to the :guilabel:`Details` tab and click :guilabel:`Export`;"
+msgid ""
+"Click the :guilabel:`Details` tab in the :guilabel:`Certificate Viewer` "
+"popover, then click :guilabel:`Export`."
+msgstr "apri la scheda :guilabel:`Dettagli` e fai clic su :guilabel:`Esporta`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:112
+#, fuzzy
+#| msgid "Add those languages to the :guilabel:`Available` field."
+msgid "Add `.crt` next to the IP address in the :guilabel:`File name` field."
+msgstr "Aggiungi tali lingue nel campo :guilabel:`Disponibile`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:113
+#, fuzzy
+#| msgid ""
+#| "select :guilabel:`Base64-encoded ASCII, single certificate`, at the "
+#| "bottom of the pop-up window;"
+msgid ""
+"Set the :guilabel:`Save as type` field to `Base64-encoded ASCII, single "
+"certificate`."
+msgstr ""
+"seleziona :guilabel:`Base64-encoded ASCII, certificato singolo` nella parte "
+"inferiore della finestra pop-up"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:114
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:146
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:36
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:41
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:28
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:20
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:54
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:80
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:73
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:149
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:339
+#: ../../content/applications/sales/sales/products_prices/products/product_images.rst:115
+msgid "Click :guilabel:`Save`."
+msgstr "fai clic su :guilabel:`Salva`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:116
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:148
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:211
+#, fuzzy
+#| msgid "open Firefox;"
+msgid "Mozilla Firefox"
+msgstr "apri Firefox"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:120
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:154
+#, fuzzy
+#| msgid "Click the :guilabel:`⬇️ (down arrow)` next to the search bar."
+msgid "Click :guilabel:`Not secure` next to the search bar."
+msgstr ""
+"fai clic sulla :guilabel:`⬇️ (freccia giù)` accanto alla barra di ricerca."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:121
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:155
+#, fuzzy
+#| msgid ""
+#| "go to :menuselection:`Connection not secure --> More information --> "
+#| "Security tab --> View certificate`;"
+msgid "Go to :menuselection:`Connection not secure --> More information`."
+msgstr ""
+"vai su :menuselection:`Connessione non sicura --> Maggiori informazioni --> "
+"scheda Sicurezza --> Visualizza certificato`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:122
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:156
+#, fuzzy
+#| msgid ""
+#| "Then, click :guilabel:`Add a product` in the :guilabel:`Order Lines` tab, "
+#| "and select the :guilabel:`Cabinet with Doors` product."
+msgid ""
+"Click :guilabel:`View certificate` in the :guilabel:`Security` tab, "
+"then :guilabel:`Details`."
+msgstr ""
+"Successivamente, fai clic su :guilabel:`Aggiungi un prodotto` nella "
+"scheda :guilabel:`Righe ordine` e seleziona il prodotto :guilabel:`Armadio "
+"con ante`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:124
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:158
+#, fuzzy
+#| msgid "Select the items and click :guilabel:`Order` to place an order."
+msgid ""
+"Select the certificate, click :guilabel:`Export`, then select a folder in "
+"your local drive."
+msgstr ""
+"seleziona gli articoli e fai clic su :guilabel:`Ordina` per effettuare un "
+"ordine"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:126
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:160
+#, fuzzy
+#| msgid "Click :guilabel:`New`."
+msgid "Click :guilabel:`Close`."
+msgstr "fai clic su :guilabel:`Nuovo`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:140
+#, fuzzy
+#| msgid ""
+#| "click :guilabel:`Not secure` next to the search bar, "
+#| "and :guilabel:`Certificate is not valid`;"
+msgid ""
+"Click :guilabel:`Not secure` next to the search bar, "
+"then :guilabel:`Certificate is not valid`."
+msgstr ""
+"fai clic su :guilabel:`Non sicuro` accanto alla barra di ricerca e poi "
+"su :guilabel:`Certificato non valido`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:142
+#, fuzzy
+#| msgid "go to the :guilabel:`Details` tab and click :guilabel:`Export`;"
+msgid "Go to the :guilabel:`Details` tab and click :guilabel:`Export`."
+msgstr "apri la scheda :guilabel:`Dettagli` e fai clic su :guilabel:`Esporta`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:143
+#, fuzzy
+#| msgid ""
+#| "add `.crt` at the end of the file name to ensure it has the correct "
+#| "extension;"
+msgid ""
+"Add `.crt` at the end of the file name to ensure it has the correct "
+"extension."
+msgstr ""
+"aggiungi `.crt` alla fine del nome del file per assicurarti che abbia "
+"l'estensione corretta"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:144
+#, fuzzy
+#| msgid ""
+#| "select :guilabel:`Base64-encoded ASCII, single certificate`, at the "
+#| "bottom of the pop-up window;"
+msgid ""
+"Select `Base64-encoded ASCII, single certificate`, at the bottom of the "
+"popover."
+msgstr ""
+"seleziona :guilabel:`Base64-encoded ASCII, certificato singolo` nella parte "
+"inferiore della finestra pop-up"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:165
+#, fuzzy
+#| msgid "Self-signed certificate for ePOS printers"
+msgid "Self-signed certificate import"
+msgstr "Certificato autofirmato per stampanti ePOS"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:167
+#, fuzzy
+#| msgid ""
+#| "The import process is heavily dependent on the :abbr:`OS (Operating "
+#| "System)` and the browser."
+msgid ""
+"The import process depends on the :abbr:`OS (Operating System)` and the "
+"browser."
+msgstr ""
+"Il processo di importazione dipende molto da :abbr:`OS (Sistema operativo)` "
+"e browser."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:171
+msgid "Windows 10"
+msgstr "Windows 10"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:173
+#, fuzzy
+#| msgid "Import a self-signed certificate"
+msgid "To import a self-signed certificate from **Google Chrome**:"
+msgstr "Importare un certificato autofirmato"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:175
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:201
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:215
+msgid "Open the browser."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:176
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:202
+#, fuzzy
+#| msgid ""
+#| "go to :menuselection:`Settings --> Privacy and security --> Security --> "
+#| "Manage certificates`;"
+msgid ""
+"Go to :menuselection:`Settings --> Privacy and security --> Security`, and "
+"click :guilabel:`Manage certificates`."
+msgstr ""
+"vai su :menuselection:`Impostazioni --> Privacy e sicurezza --> Sicurezza --"
+"> Gestisci certificati`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:178
+#, fuzzy
+#| msgid ""
+#| "Then, click :guilabel:`Save` at the top of the :guilabel:`Settings` page."
+msgid ""
+"Click :guilabel:`Manage imported certificates from Windows` on "
+"the :guilabel:`Certificate Manager` page."
+msgstr ""
+"Successivamente, fai clic su :guilabel:`Salva` nella parte alta della "
+"pagina :guilabel:`Impostazioni`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:180
+#, fuzzy
+#| msgid "Click :guilabel:`Sessions` under the :guilabel:`View` section."
+msgid "Click :guilabel:`Import` in the :guilabel:`Certificates` popover."
+msgstr "fai clic su :guilabel:`Sessioni` nella sezione :guilabel:`Vista`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:181
+msgid ""
+"In the :guilabel:`Certificate Import Wizard`, click :guilabel:`Next`, "
+"then :guilabel:`Browse` to select the certificate, and "
+"click :guilabel:`Next` again."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:183
+#, fuzzy
+#| msgid ""
+#| "In the :guilabel:`Assignment` field, select one of the following options:"
+msgid ""
+"Select the :guilabel:`Place all certificates in the following store` option."
+msgstr ""
+"Scegli una delle seguenti opzioni per il campo :guilabel:`Assegnazione`:"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:184
+msgid ""
+"Click :guilabel:`Browse`, select the :guilabel:`Trusted Root Certification "
+"Authorities` folder, and click :guilabel:`OK`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:186
+#, fuzzy
+#| msgid "Click :guilabel:`Sessions` under the :guilabel:`View` section."
+msgid "Click :guilabel:`Next`, then :guilabel:`Finish`."
+msgstr "fai clic su :guilabel:`Sessioni` nella sezione :guilabel:`Vista`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:187
+#, fuzzy
+#| msgid "Click :guilabel:`Sessions` under the :guilabel:`View` section."
+msgid "Click :guilabel:`Yes` in the :guilabel:`Security Warning` popover."
+msgstr "fai clic su :guilabel:`Sessioni` nella sezione :guilabel:`Vista`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:190
+msgid ""
+"To import a self-signed certificate using **Mozilla Firefox** on Windows, "
+"see the steps in the :guilabel:`Linux` tab."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:193
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:199
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:213
+#, fuzzy
+#| msgid "Import a self-signed certificate"
+msgid "To import a self-signed certificate, follow the next steps:"
+msgstr "Importare un certificato autofirmato"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:204
+#, fuzzy
+#| msgid ""
+#| "Then, click :guilabel:`Add a product` in the :guilabel:`Order Lines` tab, "
+#| "and select the :guilabel:`Cabinet with Doors` product."
+msgid ""
+"Click :guilabel:`Installed by you` under the :guilabel:`Custom` section on "
+"the :guilabel:`Local certificates` tab."
+msgstr ""
+"Successivamente, fai clic su :guilabel:`Aggiungi un prodotto` nella "
+"scheda :guilabel:`Righe ordine` e seleziona il prodotto :guilabel:`Armadio "
+"con ante`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:206
+#, fuzzy
+#| msgid ""
+#| "go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and "
+#| "select the exported certification file;"
+msgid ""
+"Click :guilabel:`Import` next to :guilabel:`Trusted Certificates`, and "
+"select the exported certification file from your local drive."
+msgstr ""
+"apri la scheda :guilabel:`Autorità`, fai clic su :guilabel:`Importa` e "
+"seleziona il file di certificazione esportato"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:208
+#, fuzzy
+#| msgid "accept all warnings;"
+msgid "Accept all warnings."
+msgstr "accetta tutti gli avvisi"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:209
+#, fuzzy
+#| msgid "click :guilabel:`ok`;"
+msgid "Click :guilabel:`ok`."
+msgstr "fai clic su :guilabel:`ok`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:216
+#, fuzzy
+#| msgid ""
+#| "go to :menuselection:`Settings --> Privacy & Security --> Security --> "
+#| "View Certificates... --> Import`;"
+msgid ""
+"Go to :menuselection:`Settings --> Privacy & Security --> Security --> View "
+"Certificates`."
+msgstr ""
+"vai su :menuselection:`Impostazioni --> Privacy e sicurezza --> Sicurezza --"
+"> Visualizza certificati... --> Importa`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:218
+#, fuzzy
+#| msgid ""
+#| "go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and "
+#| "select the exported certification file;"
+msgid ""
+"In the :guilabel:`Certificate Manager` popover, click the :guilabel:`Your "
+"Certificates` tab, then :guilabel:`Import`, and select the certificate in "
+"your local drive."
+msgstr ""
+"apri la scheda :guilabel:`Autorità`, fai clic su :guilabel:`Importa` e "
+"seleziona il file di certificazione esportato"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:221
+#, fuzzy
+#| msgid ""
+#| "Then, click :guilabel:`Save` at the top of the :guilabel:`Settings` page."
+msgid ""
+"Click the :guilabel:`Servers` tab in the :guilabel:`Certificate Manager` "
+"popover."
+msgstr ""
+"Successivamente, fai clic su :guilabel:`Salva` nella parte alta della "
+"pagina :guilabel:`Impostazioni`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:222
+#, fuzzy
+#| msgid "Click :guilabel:`Add`."
+msgid "Click :guilabel:`Add Exception`."
+msgstr "Fai clic su :guilabel:`Aggiungi`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:223
+#, fuzzy
+#| msgid ""
+#| "In the drop-down menu that appears, under the :guilabel:`Favorites` "
+#| "heading, click :guilabel:`Save current search`."
+msgid ""
+"Enter the printer's IP address in the :guilabel:`Location` field, then "
+"click :guilabel:`Get Certificate`."
+msgstr ""
+"Nel menu a discesa che appare, sotto il titolo :guilabel:`Preferiti`, fai "
+"clic su :guilabel:`Salva ricerca corrente`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:225
+msgid ""
+"Enable the :guilabel:`Permanently store this exception` option and confirm."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:227
+msgid "Android OS"
+msgstr "Android OS"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:230
+#, fuzzy
+#| msgid ""
+#| "The specific steps for installing a certificate may vary depending on the "
+#| "version of Android and the device manufacturer."
+msgid ""
+"The specific steps for installing a certificate may vary depending on the "
+"Android version and the device manufacturer."
+msgstr ""
+"I passaggi specifici per l'installazione di un certificato possono variare a "
+"seconda della versione di Android e del produttore del dispositivo."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:233
+#, fuzzy
+#| msgid ""
+#| "To import an SSL certificate into an Android device, first create and "
+#| "export it from a computer. Next, transfer the `.crt` file to the device "
+#| "using email, Bluetooth, or USB. Once the file is on the device,"
+msgid ""
+"To import a self-signed certificate into an Android device, first create and "
+"export it from a computer. Then, transfer the `.crt` file to the device via "
+"email, Bluetooth, or USB. Once the file is on the device, install the EPSON "
+"ePOS SDK for JavaScript if required, then follow the next steps:"
+msgstr ""
+"Per importare un certificato SSL in un dispositivo Android, occorre "
+"innanzitutto crearlo ed esportarlo da un computer. Successivamente, "
+"trasferisci il file `.crt` al dispositivo tramite e-mail, Bluetooth o USB. "
+"Una volta che il file è sul dispositivo:"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:238
+#, fuzzy
+#| msgid "Go to the :guilabel:`Settings` tab."
+msgid "Go to the device settings."
+msgstr "accedi alla scheda :guilabel:`Impostazioni`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:239
+msgid "Type `certificate` in the search bar."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:240
+#, fuzzy
+#| msgid "click :guilabel:`Certificate AC` (Install from device storage);"
+msgid ""
+"Click :guilabel:`Certificate AC`, then :guilabel:`Install from device "
+"storage`."
+msgstr ""
+"fai clic su :guilabel:`Certificato AC` (Installa dalla memoria del "
+"dispositivo)"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:241
+#, fuzzy
+#| msgid "select the certificate file to install it on the device."
+msgid "Select the certificate file to install it on the device."
+msgstr "seleziona il file del certificato per installarlo sul dispositivo."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:244
+msgid ""
+"Download the certificate on a computer if the tablet restricts direct "
+"downloads. Forward the file via email, then open it directly from the tablet "
+"to complete the installation."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:247
+msgid "iOS"
+msgstr "iOS"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:249
+#, fuzzy
+#| msgid ""
+#| "To import an SSL certificate into an iOS device, first create and export "
+#| "it from a computer. Then, transfer the `.crt` file to the device using "
+#| "email, Bluetooth, or any file-sharing service."
+msgid ""
+"To import a self-signed certificate into an iOS device, first create and "
+"export it from a computer. Then, transfer the `.crt` file to the device via "
+"email, Bluetooth, or any file-sharing service."
+msgstr ""
+"Per importare un certificato SSL in un dispositivo iOS, occorre innanzitutto "
+"crearlo ed esportarlo da un computer. In seguito, trasferisci il file `.crt` "
+"al dispositivo tramite e-mail, Bluetooth o qualsiasi altro servizio di "
+"condivisione di file."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:253
+#, fuzzy
+#| msgid ""
+#| "Downloading this file triggers a warning pop-up window. "
+#| "Click :guilabel:`Allow` to download the configuration profile, and close "
+#| "the second pop-up window. Then,"
+msgid ""
+"Downloading this file triggers a warning popover. Click :guilabel:`Allow` to "
+"download the configuration profile, and close the second popover. Then "
+"follow the next steps:"
+msgstr ""
+"Il download del file attiva una finestra pop-up di avviso. Fai clic "
+"su :guilabel:`Consenti` per scaricare il profilo di configurazione e "
+"chiudere la seconda finestra pop-up. Successivamente:"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:256
+#, fuzzy
+#| msgid "go to the **Settings App** on the iOS device;"
+msgid "Go to the **Settings** app on the iOS device."
+msgstr "apri l'applicazione **Impostazioni** sul dispositivo iOS"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:257
+#, fuzzy
+#| msgid "click :guilabel:`Profile Downloaded` under the user's details box;"
+msgid "Click :guilabel:`Profile Downloaded` under the user's details box."
+msgstr ""
+"fai clic su :guilabel:`Profilo scaricato` sotto il riquadro con i dettagli "
+"dell'utente"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:258
+#, fuzzy
+#| msgid "locate the downloaded `.crt` file and select it;"
+msgid "Locate the downloaded `.crt` file and select it."
+msgstr "individua il file `.crt' scaricato e selezionalo"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:259
+#, fuzzy
+#| msgid "click :guilabel:`Install` on the top right of the screen;"
+msgid "Click :guilabel:`Install` in the top-right corner."
+msgstr "fai clic su :guilabel:`Installa` in alto a destra dello schermo"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:260
+msgid "Enter a passcode if needed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:261
+#, fuzzy
+#| msgid ""
+#| "click :guilabel:`Install` on the top right of the certificate warning "
+#| "screen and the pop-up window;"
+msgid ""
+"Click :guilabel:`Install` in the top-right corner of the certificate warning "
+"screen and the popover."
+msgstr ""
+"fai clic su :guilabel:`Installa` in alto a destra della schermata di avviso "
+"del certificato e della finestra a comparsa"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:263
+#, fuzzy
+#| msgid "click :guilabel:`Done`."
+msgid "Click :guilabel:`Done`."
+msgstr "fai clic su :guilabel:`Fatto`."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:265
+#, fuzzy
+#| msgid ""
+#| "The certificate is installed, but it still needs to be authenticated. To "
+#| "do so,"
+msgid "Once the certificate is installed, authenticate it as follows:"
+msgstr ""
+"Il certificato è installato, ma deve essere ancora autenticato. Per farlo:"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:267
+#, fuzzy
+#| msgid ""
+#| "go to :menuselection:`Settings --> General --> About > Certificate Trust "
+#| "Settings`;"
+msgid ""
+"Go to :menuselection:`Settings --> General --> About > Certificate Trust "
+"Settings`."
+msgstr ""
+"vai su :menuselection:`Impostazioni --> Generali --> Informazioni > "
+"Impostazioni attendibilità certificato`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:268
+#, fuzzy
+#| msgid "enable the installed certificate using the **slide button**;"
+msgid ""
+"Enable the installed certificate using the :icon:`fa-toggle-on` (switch) "
+"toggle."
+msgstr "attiva il certificato installato usando il **pulsante di scorrimento**"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:269
+#, fuzzy
+#| msgid "click :guilabel:`Continue` on the pop-up window."
+msgid "Click :guilabel:`Continue` in the popover."
+msgstr "fai clic su :guilabel:`Continua` nella finestra a comparsa."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:272
+#, fuzzy
+#| msgid "select the exported certification file;"
+msgid "Certificate import verification"
+msgstr "seleziona il file di certificazione esportato"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:274
+#, fuzzy
+#| msgid ""
+#| "To confirm your printer's connection is secure, connect to its IP address "
+#| "using HTTPS. For example, navigate to `https://192.168.1.25` in your "
+#| "browser. If the SSL certificate has been applied correctly, you should no "
+#| "longer see a warning page, and the address bar should display a padlock "
+#| "icon, indicating that the connection is secure."
+msgid ""
+"To confirm the printer's connection is secure, connect to its IP address "
+"using HTTPS. For example, navigate to `https://192.168.1.25` in a browser. "
+"If the self-signed certificate has been applied correctly, no warning page "
+"appears, and the address bar should display a padlock icon, indicating a "
+"secure connection."
 msgstr ""
 "Per verificare che la connessione della stampante sia sicura, collegati al "
 "suo indirizzo IP utilizzando il protocollo HTTPS. Ad esempio, collegati "
@@ -12520,7 +12826,7 @@ msgid ""
 "requires explicit user permission, which makes it possible to grant network "
 "access to a specific web page. Using |LNA|, Odoo Point of Sale can "
 "communicate with devices with local access, such as :ref:`supported ePOS "
-"printers <pos/epos_printers/supported-printers>`, directly from the browser "
+"printers <pos/epos-printers/supported-printers>`, directly from the browser "
 "and without requiring an :doc:`SSL certificate <epos_ssc>`."
 msgstr ""
 
@@ -12567,18 +12873,6 @@ msgstr ""
 msgid ":guilabel:`Value`: `True`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:36
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:28
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:20
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:54
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:80
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:73
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:149
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:339
-#: ../../content/applications/sales/sales/products_prices/products/product_images.rst:115
-msgid "Click :guilabel:`Save`."
-msgstr "fai clic su :guilabel:`Salva`."
-
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:39
 msgid "Browser permission"
 msgstr ""
@@ -12586,7 +12880,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:41
 msgid ""
 "Once |LNA| is activated in Odoo and a device with local access, such as "
-"an :ref:`ePOS printer <pos/epos_printers/supported-printers>`, is "
+"an :ref:`ePOS printer <pos/epos-printers/supported-printers>`, is "
 "configured, the browser displays a popup requesting permission to "
 "communicate with the devices on the local network."
 msgstr ""
@@ -12633,76 +12927,150 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:5
 msgid ""
-"ePOS printers are designed to work seamlessly with Point of Sale systems. "
-"Once connected, these devices automatically share information, allowing for "
-"direct printing of tickets from the POS system to the ePOS printer."
+"Receipt printers integrate with Point of Sale systems to receive print jobs "
+"directly from the POS. Once properly configured and connected, this "
+"integration enables automatic receipt printing for every completed "
+"transaction."
 msgstr ""
-"Le stampanti ePOS sono progettate per funzionare perfettamente con sistemi "
-"Punto vendita. Una volta connessi, i dispositivi condividono automaticamente "
-"le informazioni, permettendo la stampa diretta delle ricevute dal sistema "
-"Punto vendita alla stampante ePOS."
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:10
+msgid ""
+"Epson printers are strongly recommended. The following printers are "
+"compatible with Odoo:"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:12
-msgid "To use an ePos printer in Point of Sale:"
-msgstr "Per utilizzare una stampante ePos nel Punto vendita:"
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:14
-#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:25
-msgid ":ref:`Access the POS settings <pos/use/settings>`."
+msgid ""
+"Network-based printers that support the ePOS communication protocol (without "
+"IoT), such as the TM-m30 iii (model 112 or 152)."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:15
-msgid "Activate the :guilabel:`ePos Printer` feature."
-msgstr "attiva la funzionalità :guilabel:`Stampante ePos`"
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:14
+#, fuzzy
+#| msgid ""
+#| "Epson printers using only USB connections are compatible **with** "
+#| "an :doc:`IoT system </applications/general/iot/devices/printer>`."
+msgid ""
+"ePOS printers with USB connectivity that need to be connected to "
+"an :doc:`IoT system </applications/general/iot/connect>`."
+msgstr ""
+"Le stampanti Epson che sfruttano solo connessioni USB sono compatibili "
+"**con** un :doc:`sistema IoT </applications/general/iot/devices/printer>`."
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:16
-msgid "Fill in the field with your ePos IP address."
-msgstr "riempi il campo con l'indirizzo IP della tua stampante ePos."
+#, fuzzy
+#| msgid ""
+#| "The following printers require an :doc:`IoT system </applications/general/"
+#| "iot/devices/printer>` to be compatible with Odoo:"
+msgid ""
+"ESC/POS printers that require a connection via an :doc:`IoT system </"
+"applications/general/iot/connect>` using either a USB or network-based "
+"interface."
+msgstr ""
+"Le seguenti stampanti richiedono un :doc:`sistema IoT </applications/general/"
+"iot/devices/printer>` per essere compatibili con Odoo:"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:None
-msgid "setting to enable the ePos printer feature"
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:19
+msgid "Bluetooth printers are not compatible with Odoo."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:22
 msgid ""
-"When the printer connects to a network, it automatically prints a ticket "
-"with its IP address."
+"`Receipt printers without IoT (video tutorial) <https://youtu.be/OUUi6N_xT-U?"
+"si=NZ9PPrsXDUcJ4kSy>`_"
 msgstr ""
-"Quando la stampante si collega alla rete, viene stampata una ricevuta con "
-"l'indirizzo IP."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:27
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:24
+msgid ""
+"`Receipt printers with IoT (video tutorial) <https://youtu.be/ORojunUs5Bs?"
+"si=FrDJ0N-9f8SJlQrA>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:32
+msgid ""
+"To configure the printer, connect it to a power source, then to the network "
+"using either Wi-Fi or an Ethernet cable. Then, power the printer on; an "
+"automatic ticket with the printer’s IP address gets printed upon connection. "
+"Keep it for the configuration process."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:36
+#, fuzzy
+#| msgid "To use an ePos printer in Point of Sale:"
+msgid "To link the printer with Point of Sale, follow the next steps:"
+msgstr "Per utilizzare una stampante ePos nel Punto vendita:"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:39
+#, fuzzy
+#| msgid ""
+#| "Scroll down to the :guilabel:`Connected Devices` section and "
+#| "enable :guilabel:`IoT Box`."
+msgid ""
+"Scroll down to the :guilabel:`Connected Devices` section and "
+"enable :guilabel:`ePos Printers`."
+msgstr ""
+"scorri in basso verso la sezione :guilabel:`Dispositivi connessi` e abilita "
+"la :guilabel:`box IoT`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:40
+msgid "Type the printer's IP address in the dedicated field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:43
+msgid ""
+"Enable the :doc:`pos_lna` to allow Point of Sale to communicate directly "
+"with the printer on the same network. Alternatively, once the printer is "
+"connected to Odoo, ensure the connection is secure and reliable by "
+"generating a :ref:`self-signed certificate <pos/epos-ssc/certificate>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:48
+msgid ":doc:`pos_lna`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:49
+msgid ":doc:`epos_ssc`"
+msgstr ":doc:`epos_ssc`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:50
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:361
+msgid ":doc:`/applications/general/iot/devices/printer`"
+msgstr ":doc:`/applications/general/iot/devices/printer`"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:55
 msgid "Directly supported ePOS printers"
 msgstr "Stampanti ePOS supportate direttamente"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:29
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:57
 msgid ""
 "The **Epson TM-m30 i/ii/iii (Wi-Fi or Ethernet only) models** are strongly "
 "recommended, as they have been fully tested with Odoo Point of Sale."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:32
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:60
 msgid ""
 "Other Wi-Fi or Ethernet Epson printer models that support the **ePoS "
 "protocol** should also be compatible."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:36
-msgid "The ePoS printer must be capable of operating in HTTP mode."
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:64
+msgid "The printer must be capable of operating in HTTP mode."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:37
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:65
 msgid ""
-"When using :doc:`Local Network Access (LNA) <pos_lna>`, the ePOS printer "
-"must have a **static IP address**; otherwise, it may become unreachable. The "
+"When using :doc:`Local Network Access (LNA) <pos_lna>`, the printer must "
+"have a **static IP address**; otherwise, it may become unreachable. The "
 "static IP should be configured through the router."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:44
-msgid "ePOS printers with IoT system integration"
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:72
+#, fuzzy
+#| msgid "ePOS printers with IoT system integration"
+msgid "Printers with IoT system integration"
 msgstr "Stampanti ePOS con integrazione sistema IoT"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:46
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:74
 msgid ""
 "The following printers require an :doc:`IoT system </applications/general/"
 "iot/devices/printer>` to be compatible with Odoo:"
@@ -12710,54 +13078,53 @@ msgstr ""
 "Le seguenti stampanti richiedono un :doc:`sistema IoT </applications/general/"
 "iot/devices/printer>` per essere compatibili con Odoo:"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:49
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:77
 msgid "Epson TM-T20 family (incompatible ePOS software)"
 msgstr "Epson TM-T20 family (software ePOS non compatibile)"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:50
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:78
 msgid "Epson TM-T88 family (incompatible ePOS software)"
 msgstr "Epson TM-T88 family (software ePOS non compatibile)"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:51
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:79
 msgid "Epson TM-U220 family (incompatible ePOS software)"
 msgstr "Epson TM-U220 family (software ePOS non compatibile)"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:54
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:84
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:93
+msgid "Troubleshooting"
+msgstr "Risoluzione problemi"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:86
 msgid ""
-"Epson printers using Wi-Fi/Ethernet connections and following the `EPOS SDK "
-"Javascript protocol <https://download4.epson.biz/sec_pubs/pos/reference_en/"
-"technology/epson_epos_sdk.html>`_ are compatible with Odoo **without** "
-"needing an :doc:`IoT system </applications/general/iot/devices/printer>`."
+"To resolve common hardware issues, including connectivity failures, "
+"configuration errors, and physical maintenance, follow the instructions "
+"below:"
 msgstr ""
-"Le stampanti Epson che usano il `protocollo Javascript EPOS SDK <https://"
-"download4.epson.biz/sec_pubs/pos/reference_en/technology/"
-"epson_epos_sdk.html>`_ sono compatibili con Odoo **senza** dover installare "
-"un :doc:`sistema IoT </applications/general/iot/devices/printer>`."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:58
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:89
 msgid ""
-"Thermal printers using ESC/POS are compatible **with** an :doc:`IoT system </"
-"applications/general/iot/devices/printer>`."
+"Check the printer's blinking lights to help identify the source of a problem."
 msgstr ""
-"Le stampanti termiche che utilizzano ESC/POS sono compatibili **con** "
-"un :doc:`sistema IoT </applications/general/iot/devices/printer>`."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:60
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:90
 msgid ""
-"Epson printers using only USB connections are compatible **with** "
-"an :doc:`IoT system </applications/general/iot/devices/printer>`."
+"If the printer does not print the first automatic ticket with the IP "
+"address, check the network cable or Wi-Fi connection."
 msgstr ""
-"Le stampanti Epson che sfruttano solo connessioni USB sono compatibili "
-"**con** un :doc:`sistema IoT </applications/general/iot/devices/printer>`."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:62
-msgid "Epson printers that connect via Bluetooth are **not compatible**."
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:92
+msgid ""
+"If the receipt comes out blank, the paper roll may be upside down; try "
+"flipping it."
 msgstr ""
-"Le stampanti Epson che si collegano via Bluetooth **non sono compatibili**."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:66
-msgid ":doc:`epos_ssc`"
-msgstr ":doc:`epos_ssc`"
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:93
+msgid ""
+"If the POS cannot connect to the printer, make sure the printer's IP address "
+"entered in Odoo matches the one on the first automatically printed ticket. "
+"Also, ensure the router assigns the printer a static IP address."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:6
 msgid ""
@@ -12789,6 +13156,10 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:23
 msgid "Scale connection"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:25
+msgid ":ref:`Access the POS settings <pos/use/settings>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:26
@@ -15410,10 +15781,6 @@ msgid ""
 "method for **Stripe** in the :guilabel:`Payment Methods` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:93
-msgid "Troubleshooting"
-msgstr "Risoluzione problemi"
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:96
 msgid "Payment terminal unavailable in your Stripe account"
 msgstr ""
@@ -17039,10 +17406,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:360
 msgid ":doc:`Connect an IoT system to a POS <hardware_network/pos_iot>`"
 msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:361
-msgid ":doc:`/applications/general/iot/devices/printer`"
-msgstr ":doc:`/applications/general/iot/devices/printer`"
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:368
 msgid "Bills and payment"
@@ -37486,6 +37849,357 @@ msgstr ""
 "L'ordine di vendita correlato visualizzabile dal pulsante Cronologia vendite "
 "in Odoo Abbonamenti."
 
+#~ msgid ""
+#~ "After the *Lead Mining* setting is activated, a new button called "
+#~ "*Generate Leads* is available to use in the upper-left corner of the "
+#~ "*CRM* *Pipeline* (:menuselection:`CRM app --> Sales --> My Pipeline`)."
+#~ msgstr ""
+#~ "Dopo aver attivato l'impostazione *Estrazione lead*, nell'angolo in alto "
+#~ "a sinistra della *Pipeline* del *CRM* è disponibile un nuovo pulsante "
+#~ "chiamato *Genera lead* (:menuselection:`CRM --> Vendite --> La mia "
+#~ "pipeline`)."
+
+#~ msgid "The Generate Leads button to use the lead mining feature."
+#~ msgstr ""
+#~ "Il pulsante Genera lead per utilizzare la funzione di estrazione lead."
+
+#~ msgid ""
+#~ "If :guilabel:`Leads` are **not** enabled for the database, then leads are "
+#~ "generated as *opportunities*, and added to the pipeline for the "
+#~ "designated salesperson."
+#~ msgstr ""
+#~ "Se la funzione :guilabel:`Lead` **non** viene attivata per il database, i "
+#~ "lead vengono generati come *opportunità* e aggiunti alla pipeline per il "
+#~ "venditore designato."
+
+#~ msgid ""
+#~ "To enable the :guilabel:`Leads` feature, navigate to :menuselection:`CRM "
+#~ "app --> Configuration --> Settings`, and tick the :guilabel:`Leads` "
+#~ "checkbox. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Per attivare la funzionalità *lead*, apri l'app :menuselection:`CRM --> "
+#~ "Configurazione --> Impostazioni` e spunta la casella :guilabel:`Lead`. "
+#~ "Infine, fai clic su :guilabel:`Salva`."
+
+#~ msgid ""
+#~ "Lead mining is an *In-App Purchase* feature, and each generated lead "
+#~ "costs one :ref:`credit <in_app_purchase/credits>`."
+#~ msgstr ""
+#~ "L'estrazione di lead è una funzione *acquisti in app* e ogni lead "
+#~ "generato costa un :ref:`credito <in_app_purchase/credits>`."
+
+#~ msgid ""
+#~ "Generating |CC| costs one additional credit for each contact generated. "
+#~ "See here for complete pricing information: `Lead Generation by Odoo IAP "
+#~ "<https://iap.odoo.com/iap/in-app-services/167?>`_."
+#~ msgstr ""
+#~ "La generazione di |CC| costa un credito aggiuntivo per ogni contatto "
+#~ "generato. Per maggiori informazioni sulle tariffe, onsulta la sezione: "
+#~ "`Generazione lead tramite IAP Odoo <https://iap.odoo.com/iap/in-app-"
+#~ "services/167?>`_."
+
+#~ msgid ""
+#~ "Credits may also be purchased by navigating to "
+#~ "the :menuselection:`Settings app`. In the :guilabel:`Contacts` section, "
+#~ "under the :guilabel:`Odoo IAP` feature, click :guilabel:`View My "
+#~ "Services`."
+#~ msgstr ""
+#~ "I crediti possono essere acquistati anche accedendo "
+#~ "all'applicazione :menuselection:`Impostazioni`. Nella "
+#~ "sezione :guilabel:`Contatti`, sotto la funzione :guilabel:`IAP Odoo`, fai "
+#~ "clic su :guilabel:`Vedi i miei servizi`."
+
+#~ msgid ""
+#~ "Enterprise Odoo users with a valid subscription get free credits to test |"
+#~ "IAP| features before purchasing more credits for the database. This "
+#~ "includes demo/training databases, educational databases, and one-app-free "
+#~ "databases."
+#~ msgstr ""
+#~ "Gli utenti di Odoo Enterprise con un abbonamento valido ricevono crediti "
+#~ "gratuiti per testare le funzionalità |IAP| prima acquistare più crediti "
+#~ "per il database inclusi database demo/di formazione, database educativi e "
+#~ "database con un'app gratuita."
+
+#~ msgid ""
+#~ "For a long-term solution, you must generate a **self-signed "
+#~ "certificate**. Then, export and import it into your browser."
+#~ msgstr ""
+#~ "Per una soluzione a lungo termine, è necessario generare un **certificato "
+#~ "autofirmato**. In seguito, esportalo e importale nel tuo browser."
+
+#~ msgid ""
+#~ "Navigate to the ePOS' IP address (e.g., `https://192.168.1.25`) and force "
+#~ "the connection by clicking :guilabel:`Advanced` and :guilabel:`Proceed to "
+#~ "[IP address] (unsafe)`."
+#~ msgstr ""
+#~ "Accedi all'indirizzo IP dell'ePOS (ad es., `https://192.168.1.25`) e "
+#~ "forza la connessione facendo clic su :guilabel:`Avanzato` "
+#~ "e :guilabel:`Procedi verso [IP address] (unsafe)`."
+
+#~ msgid "warning page about the connection privacy on Google Chrome"
+#~ msgstr "Pagina di avviso sulla privacy della connessione su Google Chrome"
+
+#~ msgid "Warning page on Google Chrome, Windows 10"
+#~ msgstr "Pagina di avviso su Google Chrome, Windows 10"
+
+#~ msgid ""
+#~ "Then, sign in using your printer credentials to access the ePOS printer "
+#~ "settings. To sign in, enter `epson` in the :guilabel:`ID` field and your "
+#~ "printer serial number in the :guilabel:`Password` field."
+#~ msgstr ""
+#~ "In seguito, accedi utilizzando le credenziali della stampante per "
+#~ "accedere alle impostazioni della stampante ePOS. Per accedere, digita "
+#~ "`epson` nel campo :guilabel:`ID` e il numero di serie della stampante nel "
+#~ "campo :guilabel:`Password`."
+
+#~ msgid ""
+#~ "Click :guilabel:`Certificate List` in the :guilabel:`Authentication` "
+#~ "section, and click :guilabel:`create` to generate a new **Self-Signed "
+#~ "Certificate**. The :guilabel:`Common Name` should be automatically filled "
+#~ "out. If not, fill it in with the printer IP address number. Select the "
+#~ "years the certificate will be valid in the :guilabel:`Validity Period` "
+#~ "field, click :guilabel:`Create`, and :guilabel:`Reset` or manually "
+#~ "restart the printer."
+#~ msgstr ""
+#~ "Fai clic su :guilabel:`Elenco certificati` nella "
+#~ "sezione :guilabel:`Autenticazione` e fai clic su :guilabel:`crea` per "
+#~ "generare un nuovo **Certificato autofirmato**. Il :guilabel:`Nome comune` "
+#~ "dovrebbe essere compilato automaticamente. Se ciò non avviene, inserisci "
+#~ "l'indirizzo IP della stampante. Seleziona gli anni di validità del "
+#~ "certificato nel campo :guilabel:`Periodo validità`, fai clic "
+#~ "su :guilabel:`Crea` e :guilabel:`Ripristina` oppure riavvia la stampante "
+#~ "manualmente."
+
+#~ msgid ""
+#~ "The self-signed certificate is generated. Reload the page and "
+#~ "click :guilabel:`SSL/TLS` in the :guilabel:`Security` section to ensure "
+#~ "**Selfsigned Certificate** is correctly selected in the :guilabel:`Server "
+#~ "Certificate` section."
+#~ msgstr ""
+#~ "Il certificato autofirmato è stato generato. Ricarica la pagina e fai "
+#~ "clic su :guilabel:`SSL/TLS` nella sezione :guilabel:`Sicurezza` per "
+#~ "assicurarti che il **Certificato autofirmato** sia selezionato "
+#~ "correttamente nella sezione :guilabel:`Certificato server`."
+
+#~ msgid "Export a self-signed certificate"
+#~ msgstr "Esportare un certificato autofirmato"
+
+#~ msgid ""
+#~ "The export process is heavily dependent on the :abbr:`OS (Operating "
+#~ "System)` and the browser. Start by accessing your ePOS printer settings "
+#~ "on your web browser by navigating to its IP address (e.g., `https://"
+#~ "192.168.1.25`). Then, force the connection as explained in the **Generate "
+#~ "a self-signed certificate tab**."
+#~ msgstr ""
+#~ "Il processo di esportazione dipende molto da :abbr:`OS (Sistema "
+#~ "operativo)` e browser. Inizia accedendo alle impostazioni della stampante "
+#~ "ePOS sul tuo browser web per poi trovare l'indirizzo IP (ad es., `https://"
+#~ "192.168.1.25`). Successivamente, forza la connessione come spiegato nella "
+#~ "sezione **Generare un certificato autofirmato**."
+
+#~ msgid "If you are using **Google Chrome**,"
+#~ msgstr "Se stai utilizzando **Google Chrome**:"
+
+#~ msgid ""
+#~ "Connection to the printer not secure button in Google Chrome browser."
+#~ msgstr ""
+#~ "Pulsante connessione alla stampante non sicura nel browser Google Chrome."
+
+#~ msgid "save, and the certificate is exported."
+#~ msgstr "salva e il certificato viene esportato."
+
+#~ msgid ""
+#~ "Make sure that the certificate ends with the extension `.crt`. Otherwise, "
+#~ "some browsers might not see the file during the import process."
+#~ msgstr ""
+#~ "Assicurati che il certificato termini con l'estensione `.crt`. "
+#~ "Altrimenti, alcuni browser potrebbero non vedere il file durante il "
+#~ "processo di importazione."
+
+#~ msgid "If you are using **Mozilla Firefox**,"
+#~ msgstr "Se stai utilizzando **Mozilla Firefox**:"
+
+#~ msgid "click the **lock-shaped** icon on the left of the address bar;"
+#~ msgstr ""
+#~ "fai clic sull'icona a forma di **lucchetto** a sinistra della barra "
+#~ "dell'indirizzo"
+
+#~ msgid "Connection is not secure button in Mozilla Firefox browser"
+#~ msgstr "Pulsante connessione non sicura nel browser Mozilla Firefox."
+
+#~ msgid "scroll down to the :guilabel:`Miscellaneous` section;"
+#~ msgstr "scorri giù fino alla sezione :guilabel:`Varie`"
+
+#~ msgid "click :guilabel:`PEM (cert)` in the :guilabel:`Download` section;"
+#~ msgstr ""
+#~ "fai clic su :guilabel:`PEM (cert)` nella sezione :guilabel:`Download`"
+
+#~ msgid ""
+#~ "Windows 10 manages certificates, which means that self-signed "
+#~ "certificates must be imported from the certification file rather than the "
+#~ "browser. To do so,"
+#~ msgstr ""
+#~ "Windows 10 gestisce i certificati, il che significa che i certificati "
+#~ "autofirmati devono essere importati dal file di certificazione anziché "
+#~ "dal browser. Per farlo:"
+
+#~ msgid ""
+#~ "open the Windows File Explorer and locate the downloaded certification "
+#~ "file;"
+#~ msgstr ""
+#~ "apri la sezione Esplora risorse di Windows e trova il file relativo alla "
+#~ "certificazione scaricato"
+
+#~ msgid ""
+#~ "right-click on the certification file and click :guilabel:`Install "
+#~ "Certificate`;"
+#~ msgstr "fai clic destro sul file e poi su :guilabel:`Installa certificato`"
+
+#~ msgid ""
+#~ "select where to install the certificate and for whom - either for "
+#~ "the :guilabel:`Current User` or all users (:guilabel:`Local Machine`). "
+#~ "Then, click :guilabel:`Next`;"
+#~ msgstr ""
+#~ "scegli dove installare il certificato e per chi, che si tratti di "
+#~ "un :guilabel:`Utente attuale` o di tutti gli utenti (:guilabel:`Computer "
+#~ "locale`). In seguito, fai clic su :guilabel:`Successivo`"
+
+#~ msgid ""
+#~ "on the `Certificate Store` screen, tick :guilabel:`Place all certificates "
+#~ "in the following store`, click :guilabel:`Browse...`, and "
+#~ "select :guilabel:`Trusted Root Certification Authorities`;"
+#~ msgstr ""
+#~ "nella schermata `Archivio certificati`, seleziona "
+#~ "l'opzione :guilabel:`Salva i certificati nella seguente cartella`, fai "
+#~ "clic su :guilabel:`Carica...` e seleziona :guilabel:`Autorità di "
+#~ "certificazione radice disponibile nell'elenco locale`"
+
+#~ msgid "click :guilabel:`Finish`, accept the pop-up security window;"
+#~ msgstr ""
+#~ "fai clic su :guilabel:`Termina` e accetta la finestra pop-up di sicurezza"
+
+#~ msgid "restart the computer to make sure that the changes are applied."
+#~ msgstr ""
+#~ "riavvia il computer per assicurarti che i cambiamenti siano stati "
+#~ "applicati."
+
+#~ msgid "restart your browser."
+#~ msgstr "riavvia il browser."
+
+#~ msgid ""
+#~ "On Mac OS, you can secure the connection for all browsers by following "
+#~ "these steps:"
+#~ msgstr ""
+#~ "Su Mac OS, è possibile proteggere la connessione per tutti i browser "
+#~ "seguendo questi passaggi:"
+
+#~ msgid ""
+#~ "open Safari and navigate to your printer's IP address. Doing so leads to "
+#~ "a warning page;"
+#~ msgstr ""
+#~ "apri Safari e accedi all'indirizzo IP della stampante. In questo modo "
+#~ "ottieni una pagina di avviso"
+
+#~ msgid ""
+#~ "on the warning page,  go to :menuselection:`Show Details --> visit this "
+#~ "website --> Visit Website`, validate;"
+#~ msgstr ""
+#~ "nella pagina di avviso,  vai su :menuselection:`Mostra dettagli --> "
+#~ "visita questo sito web --> Visita sito web`, convalida"
+
+#~ msgid "reboot the printer so you can use it with any other browser."
+#~ msgstr ""
+#~ "riavvia la stampante in modo da poterla utilizzare con qualsiasi altro "
+#~ "browser."
+
+#~ msgid ""
+#~ "To generate and export an SSL certificate and send it to IOS devices, "
+#~ "open **Google Chrome** or **Mozilla Firefox**. Then,"
+#~ msgstr ""
+#~ "Per generare ed esportare un certificato SSL e inviarlo ai dispositivi "
+#~ "IOS, apri **Google Chrome** o **Mozilla Firefox**. Successivamente:"
+
+#~ msgid "Connection to the printer not secure button in Google Chrome"
+#~ msgstr "Pulsante connessione alla stampante non sicura in Google Chrome."
+
+#~ msgid ""
+#~ "Make sure that the certificate ends with the extension `.crt`. Otherwise, "
+#~ "some browsers might not find the file during the import process."
+#~ msgstr ""
+#~ "Assicurati che il certificato termini con l'estensione `.crt`. "
+#~ "Altrimenti, alcuni browser potrebbero non trovare il file durante il "
+#~ "processo di importazione."
+
+#~ msgid "Connection is not secure button in Mozilla Firefox"
+#~ msgstr "Pulsante connessione non sicura in Mozilla Firefox."
+
+#~ msgid "open the settings and search for `certificate`;"
+#~ msgstr "apri le impostazioni e cerca `certificato`"
+
+#~ msgid "if a passcode is set on the device, enter the passcode;"
+#~ msgstr "se sul dispositivo è impostato un codice di accesso, immettilo"
+
+#~ msgid ""
+#~ "Similarly, to import SSL certificates from an unmentioned OS or browser, "
+#~ "search for `import SSL certificate root authority` + `the name of your "
+#~ "browser or operating system` in your preferred search engine."
+#~ msgstr ""
+#~ "Allo stesso modo, per importare certificati SSL da un sistema operativo o "
+#~ "da un browser non menzionato, cerca `importare autorità radice "
+#~ "certificato SSL` + `il nome del tuo browser o sistema operativo` nel "
+#~ "motore di ricerca che preferisci."
+
+#~ msgid "Check if the certificate was imported correctly"
+#~ msgstr "Verificare la corretta importazione del certificato"
+
+#~ msgid ""
+#~ "ePOS printers are designed to work seamlessly with Point of Sale systems. "
+#~ "Once connected, these devices automatically share information, allowing "
+#~ "for direct printing of tickets from the POS system to the ePOS printer."
+#~ msgstr ""
+#~ "Le stampanti ePOS sono progettate per funzionare perfettamente con "
+#~ "sistemi Punto vendita. Una volta connessi, i dispositivi condividono "
+#~ "automaticamente le informazioni, permettendo la stampa diretta delle "
+#~ "ricevute dal sistema Punto vendita alla stampante ePOS."
+
+#~ msgid "Activate the :guilabel:`ePos Printer` feature."
+#~ msgstr "attiva la funzionalità :guilabel:`Stampante ePos`"
+
+#~ msgid "Fill in the field with your ePos IP address."
+#~ msgstr "riempi il campo con l'indirizzo IP della tua stampante ePos."
+
+#~ msgid ""
+#~ "When the printer connects to a network, it automatically prints a ticket "
+#~ "with its IP address."
+#~ msgstr ""
+#~ "Quando la stampante si collega alla rete, viene stampata una ricevuta con "
+#~ "l'indirizzo IP."
+
+#~ msgid ""
+#~ "Epson printers using Wi-Fi/Ethernet connections and following the `EPOS "
+#~ "SDK Javascript protocol <https://download4.epson.biz/sec_pubs/pos/"
+#~ "reference_en/technology/epson_epos_sdk.html>`_ are compatible with Odoo "
+#~ "**without** needing an :doc:`IoT system </applications/general/iot/"
+#~ "devices/printer>`."
+#~ msgstr ""
+#~ "Le stampanti Epson che usano il `protocollo Javascript EPOS SDK <https://"
+#~ "download4.epson.biz/sec_pubs/pos/reference_en/technology/"
+#~ "epson_epos_sdk.html>`_ sono compatibili con Odoo **senza** dover "
+#~ "installare un :doc:`sistema IoT </applications/general/iot/devices/"
+#~ "printer>`."
+
+#~ msgid ""
+#~ "Thermal printers using ESC/POS are compatible **with** an :doc:`IoT "
+#~ "system </applications/general/iot/devices/printer>`."
+#~ msgstr ""
+#~ "Le stampanti termiche che utilizzano ESC/POS sono compatibili **con** "
+#~ "un :doc:`sistema IoT </applications/general/iot/devices/printer>`."
+
+#~ msgid "Epson printers that connect via Bluetooth are **not compatible**."
+#~ msgstr ""
+#~ "Le stampanti Epson che si collegano via Bluetooth **non sono "
+#~ "compatibili**."
+
 #~ msgid "Utilize activities for sales teams"
 #~ msgstr "Utilizzare attività per i team di vendita"
 
@@ -39715,27 +40429,6 @@ msgstr ""
 #~ msgid ":doc:`https`"
 #~ msgstr ":doc:`https`"
 
-#~ msgid ""
-#~ "To work with Odoo, some printer models that can be used without "
-#~ "an :doc:`IoT system </applications/general/iot>` may require :doc:`the "
-#~ "HTTPS protocol <https>` to establish a secure connection between the "
-#~ "browser and the printer. However, trying to reach the printer's IP "
-#~ "address using HTTPS leads to a warning page on most web browsers. In that "
-#~ "case, you can temporarily :ref:`force the connection <epos_ssc/"
-#~ "instructions>`, which allows you to reach the page in HTTPS and use the "
-#~ "ePOS printer in Odoo as long as the browser window stays open."
-#~ msgstr ""
-#~ "Per funzionare con Odoo, alcuni modelli di stampanti che possono essere "
-#~ "utilizzati senza un :doc:`sistema IoT </applications/general/iot>` "
-#~ "potrebbero richiedere :doc:`il protocollo HTTPS <https>` per stabilire "
-#~ "una connessione sicura tra il browser e la stampante. Tuttavia, provare a "
-#~ "raggiungere l'indirizzo IP della stampante usando l'HTTPS porta a una "
-#~ "pagina di avviso sulla maggior parte dei browser web. In quel caso, "
-#~ "puoi :ref:`forzare la connessione <epos_ssc/instructions>` "
-#~ "temporaneamente, il che permette di raggiungere la pagina in HTTPS e "
-#~ "usare la stampante ePOS in Odoo finché la finestra del browser rimane "
-#~ "aperta."
-
 #~ msgid "Secure connection (HTTPS)"
 #~ msgstr "Connessione sicura (HTTPS)"
 
@@ -41407,16 +42100,6 @@ msgstr ""
 #~ "*Contatti*, ricordati di fare clic su :guilabel:`Salva` per salvare le "
 #~ "modifiche nel database."
 
-#~ msgid ""
-#~ "go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and "
-#~ "select the exported certification file;"
-#~ msgstr ""
-#~ "apri la scheda :guilabel:`Autorità`, fai clic su :guilabel:`Importa` e "
-#~ "seleziona il file di certificazione esportato"
-
-#~ msgid "select the exported certification file;"
-#~ msgstr "seleziona il file di certificazione esportato"
-
 #~ msgid "tick the checkboxes and validate;"
 #~ msgstr "seleziona le caselle e convalida"
 
@@ -41619,12 +42302,6 @@ msgstr ""
 #~ msgstr ""
 #~ "In questa sezione, spunta la casella per attivare la "
 #~ "funzionalità :guilabel:`Varianti`."
-
-#~ msgid ""
-#~ "Then, click :guilabel:`Save` at the top of the :guilabel:`Settings` page."
-#~ msgstr ""
-#~ "Successivamente, fai clic su :guilabel:`Salva` nella parte alta della "
-#~ "pagina :guilabel:`Impostazioni`."
 
 #~ msgid "The :guilabel:`Display Type` options are:"
 #~ msgstr ""
@@ -42046,14 +42723,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Per prima cosa, accedi all'app :menuselection:`Vendite --> Nuovo` e "
 #~ "aggiungi un :guilabel:`Cliente` al preventivo."
-
-#~ msgid ""
-#~ "Then, click :guilabel:`Add a product` in the :guilabel:`Order Lines` tab, "
-#~ "and select the :guilabel:`Cabinet with Doors` product."
-#~ msgstr ""
-#~ "Successivamente, fai clic su :guilabel:`Aggiungi un prodotto` nella "
-#~ "scheda :guilabel:`Righe ordine` e seleziona il "
-#~ "prodotto :guilabel:`Armadio con ante`."
 
 #~ msgid ""
 #~ "When the order is confirmed (via the :guilabel:`Confirm` button), the "

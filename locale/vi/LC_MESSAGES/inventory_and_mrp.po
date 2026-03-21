@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 18:30+0000\n"
+"POT-Creation-Date: 2026-03-20 18:30+0000\n"
 "PO-Revision-Date: 2026-03-20 23:20+0000\n"
 "Last-Translator: \"Thi Huong Nguyen (thng)\" <thng@odoo.com>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -163,7 +163,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:13
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
@@ -6671,7 +6670,7 @@ msgstr ""
 "Khối lượng của container được định nghĩa trong cài đặt *Loại kiện hàng*"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:91
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:14
 msgid "Lot/serial number tracking"
 msgstr "Theo dõi số lô/sê-ri"
 
@@ -20835,7 +20834,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:217
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:236
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:215
 msgid ":guilabel:`Shipping label(s)` depending on the number of packages."
 msgstr ""
 
@@ -23247,7 +23246,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:123
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
 msgid ""
 ":guilabel:`Shipping Methods` can also be accessed by going "
 "to :menuselection:`Inventory --> Configuration --> Delivery --> Shipping "
@@ -23790,8 +23788,8 @@ msgid "Finding the Starshipit API keys."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:93
-msgid "Install"
-msgstr "Cài đặt"
+msgid "Install the Starshipit module"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:95
 msgid ""
@@ -23805,6 +23803,10 @@ msgstr ""
 msgid "Starshipit Shipping module in the Odoo Apps module."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
+msgid "Configure a Starshipit delivery method"
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:106
 msgid ""
 "Once installed, activate the feature by going to :menuselection:`Inventory --"
@@ -23816,17 +23818,30 @@ msgstr ""
 msgid ""
 "After activating :guilabel:`Starshipit Connector`, click "
 "the :guilabel:`Starshipit Shipping Methods` link below the listed connector. "
-"Once on the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
+"Once on the :guilabel:`Delivery Methods` page, click :guilabel:`Create`."
 msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
+#, fuzzy
+#| msgid ""
+#| "Delivery orders can *also* be accessed by going "
+#| "to :menuselection:`Inventory app --> Operations --> Deliveries`."
+msgid ""
+":guilabel:`Delivery Methods` can also be accessed by going "
+"to :menuselection:`Inventory --> Configuration --> Delivery --> Delivery "
+"Methods`."
+msgstr ""
+"Lệnh giao hàng *cũng* có thể được truy cập bằng cách vào :menuselection:`ứng "
+"dụng Tồn kho --> Hoạt động --> Lệnh giao hàng`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:118
 msgid ""
-"Configure Starshipit in Odoo by filling out the fields on "
-"the :guilabel:`Shipping Methods` form as follows:"
+"Configure a Starshipit delivery method in Odoo by filling out the fields on "
+"the :guilabel:`Delivery Methods` form as follows:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:121
-msgid ":guilabel:`Shipping Method`: type `Starshipit`."
+msgid ":guilabel:`Delivery Method`: type `Starshipit`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:122
@@ -23886,33 +23901,48 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:146
+#, fuzzy
+#| msgid ""
+#| "Click the :icon:`fa-cog` :guilabel:`(cog)` icon at the top-left of the "
+#| "page, then select :icon:`fa-cogs` :guilabel:`Add Properties` from the "
+#| "drop-down menu."
 msgid ""
-"Manually :guilabel:`Save` the form by clicking the cloud icon next to "
-"the :guilabel:`Shipping Methods / New` breadcrumbs."
+"Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon at the "
+"top of the page to save the changes."
+msgstr ""
+"Nhấn vào biểu tượng :icon:`fa-cog` :guilabel:`(bánh răng)` ở góc trên bên "
+"trái của trang, sau đó chọn :icon:`fa-cogs` :guilabel:`Thêm thuộc tính` từ "
+"menu thả xuống."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:148
+msgid ""
+"To load the newly configured shipping products, click :guilabel:`Select a "
+"service linked to your starshipit account` at the bottom of "
+"the :guilabel:`Starshipit Configuration` tab, and a :guilabel:`Choose "
+"Starshipit Shipping Service` pop-up window appears. In "
+"the :guilabel:`Delivery Service` field, select the desired shipping service "
+"for deliveries and returns from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:154
 msgid ""
-"To load the newly configured shipping products, click the :guilabel:`Select "
-"a service linked to the Starshipit account` link at the bottom of "
-"the :guilabel:`Starshipit Configuration` tab."
+"The list of services shown during initial configuration may be incomplete. "
+"Starshipit determines service availability based on shipment details such as "
+"the destination address and package weight, which are not yet available at "
+"this stage. To select from the full list of services available for a "
+"specific order, use the :guilabel:`Get more delivery methods` option "
+"directly from the sales order. See :ref:`inventory/shipping_receiving/star-"
+"label` for details."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:160
 msgid ""
-"Doing so opens the :guilabel:`Choose Starshipit Shipping Service` pop-up "
-"window. In the :guilabel:`Delivery Service` field, choose the desired "
-"shipping service for deliveries and returns from the drop-down menu. "
-"Finally, click :guilabel:`Confirm`."
+"Click :guilabel:`Confirm` and the selected delivery service populates in "
+"the :guilabel:`Shipping Method` and :guilabel:`Starshipit Service Code` "
+"fields."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:156
-msgid ""
-"The chosen delivery service will populate in the :guilabel:`Service Name` "
-"field."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:163
 msgid "Sample of a Starshipit shipping product configured in Odoo:"
 msgstr ""
 
@@ -23928,14 +23958,14 @@ msgstr ""
 msgid ":guilabel:`Starshipit Service Code`: `STANDARD-DROPOFF`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:174
 msgid ""
 "Starshipit does not provide test keys when a company tests the sending of a "
 "package in Odoo. This means that if a package is created, the account may be "
 "charged."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:177
 msgid ""
 "Odoo has a built-in layer of protection against unwanted charges when using "
 "test environments. Within a test environment, if a shipping method is used "
@@ -23951,53 +23981,63 @@ msgstr ""
 "đang sử dụng, tài khoản có thể vẫn bị tính phí in nhãn, trừ khi đơn hàng "
 "được hủy thủ công trên cổng thông tin của hãng vận chuyển."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:184
 msgid ""
 "Switch between the test and production environment by clicking "
 "the :guilabel:`Environment` smart button at the top of the shipping method "
 "form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:190
 msgid "Generate a label with Starshipit"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:192
 msgid ""
 "When creating a quotation in Odoo, add the Starshipit shipping method by "
 "clicking the :guilabel:`Add shipping` button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:191
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:196
 msgid ""
-"In the :guilabel:`Add a shipping method` pop-up window, select Starshipit in "
-"the :guilabel:`Shipping Method` field."
+"In the :guilabel:`Add a shipping method` pop-up window, select a Starshipit "
+"shipping method in the :guilabel:`Shipping Method` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:199
+msgid ""
+"If the desired service is not available, click :guilabel:`Get more delivery "
+"methods`. This sends the actual order details (including the destination "
+"address, weight, and volume) to Starshipit, which returns the complete list "
+"of services available for that specific shipment. A new Starshipit delivery "
+"method is then created automatically and selected in the :guilabel:`Shipping "
+"Method` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:204
 msgid ""
 "Calculate the shipping rate by clicking :guilabel:`Get rate`. Finally, "
 "click :guilabel:`Add` to include the cost of shipping to the sales order "
 "line, labeled as the *delivery product*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:209
 msgid ""
 "Automatically calculate shipping costs for Starshipit in **both** Odoo "
 "*Sales* and *eCommerce* applications."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:202
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:212
 msgid ""
 "Then, :guilabel:`Validate` the delivery. Shipping label documents are "
 "automatically generated in the chatter, which includes the following:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:216
 msgid ":guilabel:`Tracking number(s)` if the selected courier supports it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:217
 msgid ""
 ":guilabel:`Return label(s)` if the Starshipit connector is configured for "
 "returns."
@@ -24007,74 +24047,74 @@ msgstr ""
 msgid "Example of a shipped order in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:224
 msgid ""
 "Package weight in Odoo is calculated by adding the weights of the products "
 "plus the empty package saved in the database. Ensure the correct shipping "
 "option is selected, as the package weight is not automatically verified."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:218
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:228
 msgid ""
 "Verify the destination address, as Starshipit checks it when the order is "
 "created."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:230
 msgid ""
 "Finally, some couriers may require other information, such as an email "
 "address or phone number. Please ensure that all necessary information are "
 "set upon sending a shipping order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:234
 msgid "Returns"
 msgstr "Trả hàng"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:243
 msgid "Starshipit allows returns with the following couriers:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:227
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:237
 msgid "Australia Post eParcel"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:228
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:238
 msgid "TNT"
 msgstr "TNT"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:229
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:239
 msgid "Couriers Please"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:240
 msgid "Aramex"
 msgstr "Aramex"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:231
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:241
 msgid "StarTrack"
 msgstr "StarTrack"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:242
 msgid "DHL Express"
 msgstr "DHL Express"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:243
 msgid "NZ Post Domestic"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:245
 msgid ""
 "This can be done by clicking the :guilabel:`Return` smart button on the "
 "intended delivery order. If the selected courier supports returns, "
 "the :guilabel:`Print Return Label` button will be available."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:250
 msgid "Cancellations"
 msgstr "Huỷ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:252
 msgid ""
 "If a delivery order is cancelled in Odoo, it will be automatically archived "
 "in Starshipit. However, the cancellation will not be sent to the courier "
@@ -26285,7 +26325,6 @@ msgstr ""
 "ngày mong muốn trong tháng."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:309
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:117
 msgid ""
 "Then, to change the month, click :guilabel:`December` to reveal the drop-"
 "down menu, and select the desired month."
@@ -26432,11 +26471,16 @@ msgid "Cycle counts"
 msgstr "Đếm theo chu kỳ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:5
+#, fuzzy
+#| msgid ""
+#| "For most companies, warehouse stock only needs to be counted once a year. "
+#| "This is why, by default, after making an *inventory adjustment* in Odoo, "
+#| "the scheduled date for the next inventory count is set for the 31st of "
+#| "December of the current year."
 msgid ""
-"For most companies, warehouse stock only needs to be counted once a year. "
-"This is why, by default, after making an *inventory adjustment* in Odoo, the "
-"scheduled date for the next inventory count is set for the 31st of December "
-"of the current year."
+"For most companies, warehouse stock only needs to be counted once a year. To "
+"comply with that standard, the *Inventory* app defaults to the scheduled "
+"date of the 31st of December of the current year."
 msgstr ""
 "Đối với hầu hết các công ty, hàng tồn kho trong kho hàng chỉ cần được kiểm "
 "đếm một lần mỗi năm. Đây là lý do, theo mặc định, sau khi thực hiện *điều "
@@ -26444,12 +26488,19 @@ msgstr ""
 "vào ngày 31 tháng 12 của năm hiện tại."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:9
+#, fuzzy
+#| msgid ""
+#| "However, for some businesses, it's crucial to have an accurate inventory "
+#| "count at all times. These companies use *cycle counts* to keep critical "
+#| "stock levels accurate. Cycle counting is a method by which companies "
+#| "count their inventory more often in certain *locations*, to ensure that "
+#| "their physical inventory counts match their inventory records."
 msgid ""
-"However, for some businesses, it's crucial to have an accurate inventory "
-"count at all times. These companies use *cycle counts* to keep critical "
-"stock levels accurate. Cycle counting is a method by which companies count "
-"their inventory more often in certain *locations*, to ensure that their "
-"physical inventory counts match their inventory records."
+"However, for some businesses, maintaining an accurate inventory count is "
+"crucial. These companies use *cycle counts* to maintain accurate stock "
+"levels. Cycle counting is a method by which companies count their inventory "
+"more often in certain *locations* to ensure that their physical inventory "
+"counts match their inventory records."
 msgstr ""
 "Tuy nhiên, với một số doanh nghiệp, việc có số liệu kiểm đếm tồn kho chính "
 "xác mọi lúc là rất quan trọng. Những công ty này sử dụng *kiểm đếm theo chu "
@@ -26468,10 +26519,16 @@ msgstr ""
 "chu kỳ."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:20
+#, fuzzy
+#| msgid ""
+#| "To enable this feature, navigate to :menuselection:`Inventory app --> "
+#| "Configuration --> Settings`, and scroll down to the :guilabel:`Warehouse` "
+#| "section. Then, tick the checkbox next to :guilabel:`Storage Locations`, "
+#| "and click :guilabel:`Save`."
 msgid ""
 "To enable this feature, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and scroll down to the :guilabel:`Warehouse` "
-"section. Then, tick the checkbox next to :guilabel:`Storage Locations`, and "
+"Configuration --> Settings` and scroll down to the *Warehouse* section. "
+"Then, select the checkbox next to :guilabel:`Storage Locations` and "
 "click :guilabel:`Save`."
 msgstr ""
 "Để bật tính năng này, đi tới :menuselection:`Ứng dụng Tồn kho --> Cấu hình --"
@@ -26482,44 +26539,71 @@ msgstr ""
 msgid "Enabled Storage Locations setting in inventory settings."
 msgstr "Thiết lập Vị trí lưu kho đã được bật trong cài đặt kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:29
-msgid "Change inventory count frequency by location"
-msgstr "Thay đổi tần suất kiểm đếm tồn kho theo vị trí"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:28
+#, fuzzy
+#| msgid "Change inventory count frequency"
+msgid "Counting inventory at a set frequency"
+msgstr "Thay đổi tần suất kiểm đếm tồn kho"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:30
+#, fuzzy
+#| msgid ""
+#| "Once the *Storage Locations* feature is enabled, and there are multiple "
+#| "locations created in the warehouse, the inventory count frequency can be "
+#| "changed for specific locations."
 msgid ""
-"Once the *Storage Locations* feature is enabled, and there are multiple "
-"locations created in the warehouse, the inventory count frequency can be "
-"changed for specific locations."
+"Once the *Storage Locations* feature is enabled and locations are created in "
+"the warehouse, the inventory count frequency can be changed for specific "
+"locations, and counts can be conducted on those locations."
 msgstr ""
 "Khi tính năng *Vị trí lưu kho* đã được bật và có nhiều vị trí được tạo trong "
 "kho hàng, tần suất kiểm đếm tồn kho có thể được thay đổi cho từng vị trí cụ "
 "thể."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:35
+#, fuzzy
+#| msgid "Change inventory count frequency"
+msgid "Setting a cycle count frequency"
+msgstr "Thay đổi tần suất kiểm đếm tồn kho"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:37
+#, fuzzy
+#| msgid ""
+#| "To view and edit locations, navigate to :menuselection:`Inventory app --> "
+#| "Configuration --> Locations`. This reveals a :guilabel:`Locations` page "
+#| "containing every location currently created and listed in the warehouse."
 msgid ""
 "To view and edit locations, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Locations`. This reveals a :guilabel:`Locations` page "
-"containing every location currently created and listed in the warehouse."
+"Configuration --> Locations`. This opens a *Locations* page containing every "
+"location currently created in the warehouse."
 msgstr ""
 "Để xem và chỉnh sửa vị trí, đi tới :menuselection:`Ứng dụng Tồn kho --> Cấu "
 "hình --> Vị trí`. Trang :guilabel:`Vị trí` này sẽ hiển thị tất cả vị trí "
 "hiện có trong kho hàng."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:38
-msgid ""
-"From this page, click into a location to reveal the settings and "
-"configuration page for that location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:41
+#, fuzzy
+#| msgid ""
+#| "From this page, click into a location to reveal the settings and "
+#| "configuration page for that location."
+msgid "From this page, click a location to open its form."
 msgstr ""
 "Từ trang này, nhấn vào một vị trí để mở trang cài đặt và cấu hình cho vị trí "
 "đó."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:43
+#, fuzzy
+#| msgid ""
+#| "Under the :guilabel:`Cyclic Counting` section, locate "
+#| "the :guilabel:`Inventory Frequency (Days)` field, which should be set to "
+#| "`0` by default (if this location has not been edited previously). In this "
+#| "field, change the value to any number of days desired for the frequency "
+#| "of counts."
 msgid ""
-"Under the :guilabel:`Cyclic Counting` section, locate "
-"the :guilabel:`Inventory Frequency (Days)` field, which should be set to `0` "
-"by default (if this location has not been edited previously). In this field, "
-"change the value to any number of days desired for the frequency of counts."
+"Under the *Cyclic Counting* section, locate the :guilabel:`Inventory "
+"Frequency` field, which is set to `0` by default (if this location has not "
+"been edited previously). In this field, change the value to any number of "
+"days desired for the frequency of counts."
 msgstr ""
 "Trong phần :guilabel:`Kiểm đếm theo chu kỳ`, tìm trường :guilabel:`Tần suất "
 "kiểm kho (ngày)`, mặc định được đặt là `0` (nếu vị trí này chưa từng được "
@@ -26530,58 +26614,87 @@ msgstr ""
 msgid "Location frequency setting on location."
 msgstr "Thiết lập tần suất kiểm kho tại vị trí."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:51
+#, fuzzy
+#| msgid ""
+#| "A location that needs an inventory count every 30 days should have "
+#| "the :guilabel:`Inventory Frequency (Days)` value set to `30`."
 msgid ""
 "A location that needs an inventory count every 30 days should have "
-"the :guilabel:`Inventory Frequency (Days)` value set to `30`."
+"the :guilabel:`Inventory Frequency` value set to `30`."
 msgstr ""
 "Một vị trí cần được kiểm đếm tồn kho mỗi 30 ngày nên đặt giá "
 "trị :guilabel:`Tần suất kiểm kho (ngày)` là `30`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:54
+#, fuzzy
+#| msgid ""
+#| "Now, once an inventory adjustment is applied to this location, the next "
+#| "scheduled count date is automatically set, based on the value entered "
+#| "into the :guilabel:`Inventory Frequency (Days)` field."
 msgid ""
-"Now, once an inventory adjustment is applied to this location, the next "
-"scheduled count date is automatically set, based on the value entered into "
-"the :guilabel:`Inventory Frequency (Days)` field."
+"Now, to ensure the scheduled cycle count appears as expected, :ref:`perform "
+"the first cycle count <inventory/warehouses_storage/cycle_count_perform>`. "
+"After inventory adjustments have been applied to products in this location, "
+"the next scheduled count date is automatically set based on the value "
+"entered in the :guilabel:`Inventory Frequency` field."
 msgstr ""
 "Bây giờ, khi một điều chỉnh tồn kho được áp dụng cho vị trí này, ngày kiểm "
 "đếm tiếp theo sẽ được tự động thiết lập dựa trên giá trị đã nhập trong "
 "trường :guilabel:`Tần suất kiểm kho (ngày)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:57
-msgid "Count inventory by location"
-msgstr "Kiểm đếm tồn kho theo vị trí"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:62
+msgid "Performing a cycle count"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:64
+#, fuzzy
+#| msgid ""
+#| "To perform a cycle count for a specific location in the warehouse, "
+#| "navigate to :menuselection:`Inventory app --> Operations --> Physical "
+#| "Inventory`. This reveals an :guilabel:`Inventory Adjustments` page "
+#| "containing all products currently in-stock, with each product listed on "
+#| "its own line."
 msgid ""
 "To perform a cycle count for a specific location in the warehouse, navigate "
-"to :menuselection:`Inventory app --> Operations --> Physical Inventory`. "
-"This reveals an :guilabel:`Inventory Adjustments` page containing all "
-"products currently in-stock, with each product listed on its own line."
+"to the :menuselection:`Inventory app --> Operations --> Physical Inventory`. "
+"This opens a *Physical Inventory* page that lists all products currently in "
+"stock, with each product on its own line. Use this page to perform inventory "
+"adjustments."
 msgstr ""
 "Để thực hiện kiểm đếm theo chu kỳ cho một vị trí cụ thể trong kho, đi "
 "tới :menuselection:`Ứng dụng Tồn kho --> Hoạt động --> Kiểm kê thực tế`. "
 "Trang :guilabel:`Điều chỉnh tồn kho` sẽ hiển thị tất cả sản phẩm hiện có "
 "trong kho, với mỗi sản phẩm được liệt kê trên một dòng riêng."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:69
+#, fuzzy
+#| msgid ""
+#| "From this page, the :guilabel:`Filters` and :guilabel:`Group By` options "
+#| "(accessible by clicking the :guilabel:`⬇️ (down arrow)` icon, to the right "
+#| "of the :guilabel:`Search...` bar), can be used to select specific "
+#| "locations and perform inventory counts."
 msgid ""
 "From this page, the :guilabel:`Filters` and :guilabel:`Group By` options "
-"(accessible by clicking the :guilabel:`⬇️ (down arrow)` icon, to the right of "
-"the :guilabel:`Search...` bar), can be used to select specific locations and "
-"perform inventory counts."
+"(accessible by clicking into the :guilabel:`Search` bar) can be used to "
+"select specific locations and perform inventory counts."
 msgstr ""
 "Từ trang này, các tùy chọn :guilabel:`Bộ lọc` và :guilabel:`Nhóm theo` (truy "
 "cập bằng cách nhấn vào biểu tượng :guilabel:`⬇️ (mũi tên xuống)` bên phải "
 "thanh :guilabel:`Tìm kiếm...`) có thể được sử dụng để chọn các vị trí cụ thể "
 "và thực hiện kiểm đếm tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:73
+#, fuzzy
+#| msgid ""
+#| "To select a specific location, and view all products within that "
+#| "location, click the :guilabel:`⬇️ (down arrow)` icon, to the right of "
+#| "the :guilabel:`Search...` bar. Then, in the :guilabel:`Group By` column, "
+#| "click :guilabel:`Add Custom Group` to reveal a new drop-down menu."
 msgid ""
-"To select a specific location, and view all products within that location, "
-"click the :guilabel:`⬇️ (down arrow)` icon, to the right of "
-"the :guilabel:`Search...` bar. Then, in the :guilabel:`Group By` column, "
-"click :guilabel:`Add Custom Group` to reveal a new drop-down menu."
+"To select a specific location and view all products within it, click into "
+"the :guilabel:`Search` bar. Then, in the :guilabel:`Group By` column, "
+"select :guilabel:`Location`."
 msgstr ""
 "Để chọn một vị trí cụ thể và xem tất cả sản phẩm trong vị trí đó, nhấn vào "
 "biểu tượng :guilabel:`⬇️ (mũi tên xuống)` bên phải thanh :guilabel:`Tìm "
@@ -26592,38 +26705,53 @@ msgstr ""
 msgid "Filters and Group By menu on Inventory Adjustments page."
 msgstr "Menu Bộ lọc và Nhóm theo trên trang Điều chỉnh tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:79
+#, fuzzy
+#| msgid ""
+#| "Click :guilabel:`Location` from the drop-down menu. Doing so sorts "
+#| "products into their storage locations on the :guilabel:`Inventory "
+#| "Adjustments` page, and a cycle count can be performed for all products in "
+#| "that location."
 msgid ""
-"Click :guilabel:`Location` from the drop-down menu. Doing so sorts products "
-"into their storage locations on the :guilabel:`Inventory Adjustments` page, "
-"and a cycle count can be performed for all products in that location."
+"All products are sorted by storage location on the *Physical Inventory* "
+"page, and a cycle count can be performed for all products in that location."
 msgstr ""
 "Nhấn :guilabel:`Vị trí` trong menu thả xuống. Thao tác này sẽ sắp xếp các "
 "sản phẩm theo vị trí lưu trữ trên trang :guilabel:`Điều chỉnh tồn kho`, và "
 "kiểm đếm theo chu kỳ có thể được thực hiện cho tất cả sản phẩm trong vị trí "
 "đó."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:83
+#, fuzzy
+#| msgid ""
+#| "In large warehouses with multiple locations and a high volume of "
+#| "products, it might be easier to search for the specific location desired. "
+#| "To do this, from the :guilabel:`Inventory Adjustments` page, click "
+#| "the :guilabel:`⬇️ (down arrow)` icon to the right of "
+#| "the :guilabel:`Search...` bar."
 msgid ""
 "In large warehouses with multiple locations and a high volume of products, "
-"it might be easier to search for the specific location desired. To do this, "
-"from the :guilabel:`Inventory Adjustments` page, click the :guilabel:`⬇️ "
-"(down arrow)` icon to the right of the :guilabel:`Search...` bar."
+"it might be easier to search for the desired location. To do this, from the "
+"*Physical Inventory* page, click into the :guilabel:`Search` bar."
 msgstr ""
 "Trong các kho hàng lớn có nhiều vị trí và số lượng sản phẩm lớn, việc tìm "
 "kiếm vị trí cụ thể mong muốn có thể dễ dàng hơn. Để làm điều này, từ "
 "trang :guilabel:`Điều chỉnh tồn kho`, nhấn vào biểu tượng :guilabel:`⬇️ (mũi "
 "tên xuống)` bên phải thanh :guilabel:`Tìm kiếm...`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:87
+#, fuzzy
+#| msgid ""
+#| "Then, in the :guilabel:`Filters` column, click :guilabel:`Add Custom "
+#| "Filter` to open an :guilabel:`Add Custom Filter` pop-up window."
 msgid ""
-"Then, in the :guilabel:`Filters` column, click :guilabel:`Add Custom Filter` "
-"to open an :guilabel:`Add Custom Filter` pop-up window."
+"Then, in the :guilabel:`Filters` column, click :guilabel:`Custom Filter` to "
+"open a :guilabel:`Custom Filter` pop-up window."
 msgstr ""
 "Sau đó, trong cột :guilabel:`Bộ lọc`, nhấn :guilabel:`Thêm bộ lọc tùy chỉnh` "
 "để mở cửa sổ pop-up :guilabel:`Thêm bộ lọc tùy chỉnh`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:90
 msgid ""
 "In the first field, click the value and select :guilabel:`Location` from the "
 "list of options. Select :guilabel:`contains` in the second field. In the "
@@ -26633,8 +26761,10 @@ msgstr ""
 "sách tùy chọn. Chọn :guilabel:`chứa` trong trường thứ hai. Ở trường thứ ba, "
 "nhập tên vị trí cần tìm kiếm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:92
-msgid "Click :guilabel:`Add` for that location to appear on the page."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:94
+#, fuzzy
+#| msgid "Click :guilabel:`Add` for that location to appear on the page."
+msgid "Click :guilabel:`Search` for that location to appear on the page."
 msgstr "Nhấn :guilabel:`Thêm` để vị trí đó xuất hiện trên trang."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:0
@@ -26642,27 +26772,50 @@ msgid "Add Custom Filter pop-up window with location values entered."
 msgstr ""
 "Cửa sổ pop-up Thêm bộ lọc tùy chỉnh với các giá trị vị trí đã được nhập."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:99
-msgid "Change full inventory count frequency"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:100
+msgid ""
+"When performing counts in the *Barcode* app, inventory adjustments are "
+"grouped by location by default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:104
+#, fuzzy
+#| msgid "Change full inventory count frequency"
+msgid "Change full inventory count date"
 msgstr "Thay đổi tần suất kiểm đếm toàn bộ tồn kho"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:106
+#, fuzzy
+#| msgid ""
+#| "While cycle counts are typically performed per location, the scheduled "
+#| "date for full inventory counts of all in-stock products in the warehouse "
+#| "can also be manually changed, to push the date up sooner than the date "
+#| "listed."
 msgid ""
-"While cycle counts are typically performed per location, the scheduled date "
-"for full inventory counts of all in-stock products in the warehouse can also "
-"be manually changed, to push the date up sooner than the date listed."
+"While cycle counts are typically performed at the location level, companies "
+"should conduct a full inventory count once per year. In addition to keeping "
+"stock counts accurate, full inventory counts ensure that accounting earnings "
+"and costs are recorded accurately. The scheduled date for full inventory "
+"counts of all in-stock products in the warehouse can be manually changed to "
+"an earlier date than the listed date."
 msgstr ""
 "Trong khi kiểm đếm theo chu kỳ thường được thực hiện theo từng vị trí, ngày "
 "dự kiến cho việc kiểm đếm toàn bộ sản phẩm có trong kho cũng có thể được "
 "thay đổi thủ công, để đẩy ngày kiểm đếm sớm hơn so với ngày được liệt kê."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:112
+#, fuzzy
+#| msgid ""
+#| "To modify the default scheduled date, go to :menuselection:`Inventory app "
+#| "--> Configuration --> Settings`. Then, in the :guilabel:`Operations` "
+#| "section, locate the :guilabel:`Annual Inventory Day and Month` setting "
+#| "field, which includes a drop-down field that is set to "
+#| "`31` :guilabel:`December`, by default."
 msgid ""
-"To modify the default scheduled date, go to :menuselection:`Inventory app --"
-"> Configuration --> Settings`. Then, in the :guilabel:`Operations` section, "
-"locate the :guilabel:`Annual Inventory Day and Month` setting field, which "
-"includes a drop-down field that is set to `31` :guilabel:`December`, by "
-"default."
+"To modify the default scheduled date, go to the :menuselection:`Inventory "
+"app --> Configuration --> Settings`. Then, in the *Operations* section, "
+"locate the :guilabel:`Annual Inventory Day and Month` setting, which "
+"defaults to `31` :guilabel:`December`."
 msgstr ""
 "Để chỉnh sửa ngày dự kiến mặc định, đi tới :menuselection:`Ứng dụng Tồn kho "
 "--> Cấu hình --> Cài đặt`. Sau đó, trong phần :guilabel:`Hoạt động`, tìm "
@@ -26673,24 +26826,46 @@ msgstr ""
 msgid "Frequency field in inventory app settings."
 msgstr "Trường Tần suất trong cài đặt ứng dụng Tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:119
+#, fuzzy
+#| msgid ""
+#| "To change the day, click the `31`, and change it to a day within the "
+#| "range `1-31`, depending on the desired month of the year."
 msgid ""
-"To change the day, click the `31`, and change it to a day within the range "
-"`1-31`, depending on the desired month of the year."
+"To change the day, click the `31` and select a day within the range `1-31`, "
+"depending on the desired month of the year."
 msgstr ""
 "Để thay đổi ngày, nhấn vào số `31` và đổi thành một ngày trong khoảng từ "
 "`1-31`, tùy thuộc vào tháng mong muốn trong năm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:120
-msgid "Once all necessary changes have been made, click :guilabel:`Save`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:122
+#, fuzzy
+#| msgid ""
+#| "Then, to change the month, click :guilabel:`December` to reveal the drop-"
+#| "down menu, and select the desired month."
+msgid ""
+"Then, to change the month, click :guilabel:`December` to open the drop-down "
+"menu and select the desired month."
+msgstr ""
+"Sau đó, để thay đổi tháng, nhấn vào :guilabel:`Tháng 12` để mở menu thả "
+"xuống, rồi chọn tháng mong muốn."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:126
+msgid "Confirm the date entry reflects a valid calendar date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:128
+#, fuzzy
+#| msgid "Once all necessary changes have been made, click :guilabel:`Save`."
+msgid "After all necessary changes have been made, click :guilabel:`Save`."
 msgstr ""
 "Khi tất cả các thay đổi cần thiết đã được thực hiện, nhấn :guilabel:`Lưu`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:131
 msgid ":doc:`count_products`"
 msgstr ":doc:`count_products`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:132
 msgid ":doc:`use_locations`"
 msgstr ":doc:`use_locations`"
 
@@ -36633,7 +36808,6 @@ msgstr ""
 "vào :guilabel:`Mới`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:30
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:94
 msgid "Learn more"
 msgstr "Tìm hiểu thêm"
 
@@ -37411,62 +37585,35 @@ msgstr ""
 msgid "Show sample by-product in the BoM."
 msgstr "Hiển thị phụ phẩm mẫu trong BoM."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:3
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:5
 msgid "Manufacturing product configuration"
 msgstr "Cấu hình sản phẩm sản xuất"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:8
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:7
 msgid ""
-"In order to manufacture a product in Odoo *Manufacturing*, the product must "
-"be properly configured. Doing so consists of enabling the *Manufacturing* "
-"route and configuring a bill of materials (BoM) for the product. Once these "
-"steps are completed, the product is selectable when creating a new "
-"manufacturing order."
+"Manufacturing products can be configured with lots or serial numbers "
+"for :doc:`tracking <../../inventory/product_management/product_tracking>`, "
+"and a bill of materials (BoM) for :doc:`replenishment <../../inventory/"
+"warehouses_storage/replenishment/mto>`."
 msgstr ""
-"Để sản xuất một sản phẩm trong Odoo *Sản xuất*, sản phẩm phải được cấu hình "
-"đúng cách. Việc này bao gồm kích hoạt tuyến *Sản xuất* và cấu hình danh mục "
-"vật tư (BoM) cho sản phẩm. Sau khi hoàn tất các bước này, sản phẩm có thể "
-"được chọn khi tạo lệnh sản xuất mới."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:14
-msgid "Activate the Manufacture route"
-msgstr "Kích hoạt tuyến sản xuất"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:16
+#, fuzzy
+#| msgid ""
+#| "The assignment of lots or serial numbers to newly manufactured products "
+#| "is optional. To optionally :doc:`assign lots or serial numbers <../../"
+#| "inventory/product_management/product_tracking>` to newly manufactured "
+#| "products, go to the :guilabel:`Traceability` section in "
+#| "the :guilabel:`Inventory` tab. In the :guilabel:`Tracking` field, "
+#| "select :guilabel:`By Unique Serial Number` or :guilabel:`By Lots`."
 msgid ""
-"The Manufacture route is activated for each product on its own product page. "
-"To do so, begin by navigating to :menuselection:`Manufacturing --> Products "
-"--> Products`. Then, select an existing product, or create a new one by "
-"clicking :guilabel:`New`."
-msgstr ""
-"Tuyến Sản xuất được kích hoạt cho từng sản phẩm trên trang sản phẩm riêng "
-"của sản phẩm đó. Để thực hiện, hãy bắt đầu bằng cách đi "
-"đến :menuselection:`Sản xuất --> Sản phẩm --> Sản phẩm`. Sau đó, chọn một "
-"sản phẩm hiện có hoặc tạo một sản phẩm mới bằng cách nhấp "
-"vào :guilabel:`Mới`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:20
-msgid ""
-"On the product page, select the :guilabel:`Inventory` tab, then enable "
-"the :guilabel:`Manufacture` checkbox in the :guilabel:`Routes` section. This "
-"tells Odoo the product can be manufactured."
-msgstr ""
-"Trên trang sản phẩm, chọn tab :guilabel:`Tồn kho`, sau đó bật hộp "
-"kiểm :guilabel:`Sản xuất` trong phần :guilabel:`Tuyến`. Điều này cho Odoo "
-"biết sản phẩm có thể được sản xuất."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:None
-msgid "The Manufacturing route on the Inventory tab of a product page."
-msgstr "Tuyến sản xuất trên tab Tồn kho của trang sản phẩm."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:32
-msgid ""
-"The assignment of lots or serial numbers to newly manufactured products is "
-"optional. To optionally :doc:`assign lots or serial numbers <../../inventory/"
-"product_management/product_tracking>` to newly manufactured products, go to "
-"the :guilabel:`Traceability` section in the :guilabel:`Inventory` tab. In "
-"the :guilabel:`Tracking` field, select :guilabel:`By Unique Serial Number` "
-"or :guilabel:`By Lots`."
+"To optionally :doc:`assign lots or serial numbers <../../inventory/"
+"product_management/product_tracking>` to newly manufactured products, go "
+"to :menuselection:`Manufacturing --> Products --> Products`. Then, select an "
+"existing product, or create a new one by clicking :guilabel:`New`. Go to "
+"the :guilabel:`Inventory` tab, and open the :guilabel:`General Information` "
+"tab. In the :guilabel:`Track Inventory` field, select :guilabel:`By Unique "
+"Serial Number` or :guilabel:`By Lots`."
 msgstr ""
 "Việc chỉ định lô hoặc số sê-ri cho các sản phẩm mới sản xuất là tùy chọn. Để "
 "tùy chọn :doc:`chỉ định lô hoặc số sê-ri <../../inventory/product_management/"
@@ -37475,34 +37622,39 @@ msgstr ""
 "trường :guilabel:`Theo dõi`, hãy chọn :guilabel:`Theo số sê-ri duy nhất` "
 "hoặc :guilabel:`Theo lô`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:23
+#, fuzzy
+#| msgid ""
+#| "Doing so enables the *Lot/Serial Number* field on a manufacturing order, "
+#| "or the *Register Production* instruction on a work order card in the "
+#| "*Shop Floor* app."
 msgid ""
-"Doing so enables the *Lot/Serial Number* field on a manufacturing order, or "
-"the *Register Production* instruction on a work order card in the *Shop "
-"Floor* app."
+"Doing so enables the :guilabel:`Lot/Serial Number` field on a manufacturing "
+"order, or the :guilabel:`Register Production` instruction on a work order "
+"card in the **Shop Floor** app."
 msgstr ""
 "Thao tác này sẽ kích hoạt trường *Số lô/sê-ri* trên lệnh sản xuất hoặc hướng "
 "dẫn *Ghi nhận sản xuất* trên thẻ công đoạn trong ứng dụng *Xưởng*."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:29
 msgid "\"Lot/Serial Number\" field on the MO."
 msgstr "Trường \"Số lô/sê-ri\" trên MO."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:29
 msgid "**Lot/Serial Number** field on the MO."
 msgstr "Trường **Số lô/sê-ri** trên MO."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:34
 msgid ""
 "**Register Production** option to generate lot/serial number on a work order "
 "card."
 msgstr "Tùy chọn **Ghi nhận sản xuất** để tạo số lô/sê-ri trên thẻ công đoạn."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:39
 msgid "Configure a bill of materials (BoM)"
 msgstr "Cấu hình danh mục vật tư (BoM)"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:41
 msgid ""
 "Next, a |BOM| must be configured for the product so Odoo knows how it is "
 "manufactured. A |BOM| is a list of the components and operations required to "
@@ -37512,7 +37664,7 @@ msgstr ""
 "phẩm đó. |BoM| là danh mục các thành phần và hoạt động cần thiết để sản xuất "
 "một sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:44
 msgid ""
 "To create a |BOM| for a specific product, navigate "
 "to :menuselection:`Manufacturing --> Products --> Products`, then select the "
@@ -37529,7 +37681,7 @@ msgstr ""
 msgid "The Bill of Materials smart button on a product page."
 msgstr "Nút danh mục vật tư trên trang sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:67
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:51
 msgid ""
 "On the |BOM|, the :guilabel:`Product` field auto-populates with the product. "
 "In the :guilabel:`Quantity` field, specify the number of units that the BoM "
@@ -37539,7 +37691,7 @@ msgstr ""
 "Trong trường :guilabel:`Số lượng`, hãy xác định số lượng đơn vị mà BoM sản "
 "xuất."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:54
 msgid ""
 "Add a component to the |BOM| by selecting the :guilabel:`Components` tab and "
 "clicking :guilabel:`Add a line`. Select a component from "
@@ -37557,7 +37709,7 @@ msgstr ""
 msgid "The Components tab on a bill of materials."
 msgstr "Tab Thành phần trên danh mục vật tư."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:62
 msgid ""
 "Next, select the :guilabel:`Operations` tab. Click :guilabel:`Add a line` "
 "and a :guilabel:`Create Operations` pop-up window appears. In "
@@ -37575,7 +37727,7 @@ msgstr ""
 "vào :guilabel:`Lưu & đóng` để hoàn tất việc thêm hoạt động "
 "hoặc :guilabel:`Lưu & mới` để thêm hoạt động khác."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:69
 msgid ""
 "The :guilabel:`Operations` tab only appears if the :guilabel:`Work Orders` "
 "setting is enabled. To do so, navigate to :menuselection:`Manufacturing --> "
@@ -37590,19 +37742,11 @@ msgstr ""
 msgid "The Operations tab on a bill of materials."
 msgstr "Tab Hoạt động trên danh mục vật tư."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:96
-msgid ""
-"The section above provides instructions for creating a basic |BOM| that "
-"allows a product to be manufactured in Odoo. However, it is by no means an "
-"exhaustive summary of all the options available when configuring a |BOM|. "
-"For more information about bills of materials, see the documentation on how "
-"to :doc:`create a bill of materials <bill_configuration>`."
-msgstr ""
-"Phần trên cung cấp hướng dẫn để tạo |BoM| cơ bản cho phép sản xuất sản phẩm "
-"trong Odoo. Tuy nhiên, đây không phải là bản tóm tắt đầy đủ về tất cả tùy "
-"chọn có sẵn khi cấu hình |BoM|. Để biết thêm thông tin về danh mục vật tư, "
-"hãy tham khảo tài liệu về cách :doc:`tạo danh mục vật tư "
-"<bill_configuration>`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:77
+#, fuzzy
+#| msgid ":doc:`../setup_configuration`"
+msgid ":doc:`bill_configuration`."
+msgstr ":doc:`../setup_configuration`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:3
 msgid "Manufacturing order costs"
@@ -38235,29 +38379,15 @@ msgstr ""
 msgid "The Manufacture radio input field on a warehouse configuration page."
 msgstr "Trường lựa chọn radio về Sản xuất trên trang cấu hình kho hàng."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:31
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:33
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:30
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:31
-msgid ""
-"Products must be properly configured before they can be manufactured in "
-"Odoo. For details on how to do so, see the documentation on how "
-"to :ref:`configure a product for manufacturing <manufacturing/management/"
-"configure-manufacturing-product>`."
-msgstr ""
-"Sản phẩm phải được cấu hình chính xác trước khi có thể được sản xuất trong "
-"Odoo. Để biết chi tiết về cách thực hiện, hãy tham khảo tài liệu về "
-"cách :ref:`cấu hình sản phẩm để sản xuất <manufacturing/management/configure-"
-"manufacturing-product>`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:38
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:35
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:36
 msgid "Create manufacturing order"
 msgstr "Tạo lệnh sản xuất"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:40
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:37
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:33
 msgid ""
 "To manufacture a product in Odoo *Manufacturing*, begin by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, "
@@ -38267,7 +38397,7 @@ msgstr ""
 "đến :menuselection:`Sản xuất --> Hoạt động --> Lệnh sản xuất`, sau đó nhấp "
 "vào :guilabel:`Mới` để tạo |MO| mới."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:39
 msgid ""
 "On the new |MO|, select the product to be produced from "
 "the :guilabel:`Product` drop-down menu. The :guilabel:`Bill of Material` "
@@ -38277,9 +38407,9 @@ msgstr ""
 "xuống :guilabel:`Sản phẩm`. Danh mục vật tư (BoM) liên quan sẽ tự động được "
 "điền vào trường :guilabel:`Danh mục vật tư`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:47
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:44
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:42
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:40
 msgid ""
 "If a product has more than one |BOM| configured for it, the specific |BOM| "
 "can be selected in the :guilabel:`Bill of Material` field, and "
@@ -38290,9 +38420,9 @@ msgstr ""
 "trường :guilabel:`Sản phẩm` sẽ được tự động điền bằng thông tin về sản phẩm "
 "liên quan."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:51
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:48
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:49
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:44
 msgid ""
 "After a |BOM| has been selected, the :guilabel:`Components` "
 "and :guilabel:`Work Orders` tabs auto-populate with the components and "
@@ -38307,21 +38437,21 @@ msgstr ""
 "thêm chúng vào các tab :guilabel:`Thành phần` và :guilabel:`Công đoạn` bằng "
 "cách nhấp vào :guilabel:`Thêm một dòng`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:56
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:53
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:48
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:49
 msgid "Finally, click :guilabel:`Confirm` to confirm the |MO|."
 msgstr "Cuối cùng, nhấp vào :guilabel:`Xác nhận` để xác nhận |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:59
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:80
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:72
 msgid "Process manufacturing order"
 msgstr "Xử lý lệnh sản xuất"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:61
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:82
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:74
 msgid ""
 "An |MO| is processed by completing all of the work orders listed under "
 "its :guilabel:`Work Orders` tab. This can be done on the |MO| itself, or "
@@ -38331,14 +38461,14 @@ msgstr ""
 "tab :guilabel:`Công đoạn` của lệnh sản xuất đó. Bạn có thể thực hiện trên "
 "chính |MO| hoặc từ chế độ xem máy tính bảng của công đoạn."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:65
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:86
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:81
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:78
 msgid "Basic workflow"
 msgstr "Quy trình cơ bản"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:67
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:62
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:80
 msgid ""
 "To complete work orders from the |MO| itself, begin by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, "
@@ -38348,8 +38478,8 @@ msgstr ""
 "đến :menuselection:`Sản xuất --> Hoạt động --> Lệnh sản xuất`, sau đó chọn "
 "một |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:70
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:86
 msgid ""
 "On the |MO| page, select the :guilabel:`Work Orders` tab. Once work begins "
 "on the first work order that needs to be completed, click "
@@ -38365,9 +38495,9 @@ msgstr ""
 msgid "The Start button for an operation on a manufacturing order."
 msgstr "Nút Bắt đầu cho một hoạt động trên lệnh sản xuất."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:78
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:99
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:96
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:73
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:94
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:91
 msgid ""
 "When the work order is completed, click the :guilabel:`Done` button for that "
 "work order. Repeat the same process for each work order listed on "
@@ -38381,9 +38511,9 @@ msgstr ""
 msgid "The Done button for an operation on a manufacturing order."
 msgstr "Nút Hoàn tất cho một hoạt động trên lệnh sản xuất."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:85
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:106
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:103
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:80
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:98
 msgid ""
 "After completing all of the work orders, click :guilabel:`Produce All` at "
 "the top of the screen to mark the |MO| as :guilabel:`Done`, and register the "
@@ -38393,15 +38523,15 @@ msgstr ""
 "cả` ở đầu màn hình để đánh dấu |MO| là :guilabel:`Hoàn tất` và ghi nhận "
 "(các) sản phẩm đã sản xuất vào hàng tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:89
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:110
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:84
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:105
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:102
 msgid "Shop Floor workflow"
 msgstr "Quy trình Xưởng"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:91
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:112
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:104
 msgid ""
 "To complete the work orders for an |MO| using the *Shop Floor* module, begin "
 "by navigating to :menuselection:`Manufacturing --> Operations --> "
@@ -38411,9 +38541,9 @@ msgstr ""
 "hãy bắt đầu từ việc đi đến :menuselection:`Sản xuất --> Hoạt động --> Lệnh "
 "sản xuất`, sau đó chọn một |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:94
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:115
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:89
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:110
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:107
 msgid ""
 "On the |MO|, click on the :guilabel:`Work Orders` tab, and then select "
 "the :guilabel:`↗️ (square with arrow coming out of it)` button on the line of "
@@ -38426,9 +38556,9 @@ msgstr ""
 "đó, cửa sổ bật lên :guilabel:`Công đoạn` sẽ mở ra và chứa thông tin chi tiết "
 "cũng như tùy chọn xử lý công đoạn."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:99
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:120
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:117
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:94
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:112
 msgid ""
 "On the pop-up window, select the :guilabel:`Open Shop Floor` button at the "
 "top-left of the window to open the *Shop Floor* module."
@@ -38442,9 +38572,9 @@ msgstr ""
 msgid "The Open Shop Floor button for a work order on a manufacturing order."
 msgstr "Nút Mở Xưởng để thực hiện công đoạn trong lệnh sản xuất."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:106
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:127
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:124
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:122
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:119
 msgid ""
 "When accessed directly from a specific work order within an |MO|, *Shop "
 "Floor* defaults to the page for the work center where the work order is "
@@ -38464,8 +38594,8 @@ msgstr ""
 msgid "A work order card on a work center page in the Shop Floor module."
 msgstr "Thẻ công đoạn trên trang khu vực sản xuất trong phân hệ Xưởng."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:115
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:133
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:110
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:128
 msgid ""
 "A work order is processed by completing each step listed on its card. This "
 "can be done by clicking on a step and following the instructions listed on "
@@ -38477,9 +38607,9 @@ msgstr ""
 "làm theo hướng dẫn hiển thị trên cửa sổ bật lên. Khi hoàn thành bước này, "
 "hãy nhấp vào :guilabel:`Tiếp theo` để chuyển sang bước kế tiếp, nếu cần."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:119
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:140
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:135
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:132
 msgid ""
 "Alternatively, work order steps can be completed by clicking the checkbox "
 "that appears on the right side of the step's line on the work order card. "
@@ -38491,9 +38621,9 @@ msgstr ""
 "phương pháp này, bước sẽ tự động được đánh dấu là đã hoàn thành mà không có "
 "cửa sổ bật lên nào xuất hiện."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:123
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:144
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:141
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:118
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:139
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:136
 msgid ""
 "The final step on a work order card is titled *Register Production*. This "
 "step is used to register the number of product units that were produced. If "
@@ -38507,9 +38637,9 @@ msgstr ""
 "vào nút :guilabel:`# đơn vị` ở bên phải dòng để tự động ghi nhận con số đó "
 "làm số lượng đã sản xuất."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:128
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:149
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:146
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:144
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:141
 msgid ""
 "If a different number must be entered, click the :guilabel:`Register "
 "Production` step to open a pop-up window. Enter the number of units produced "
@@ -38521,9 +38651,9 @@ msgstr ""
 "trường :guilabel:`Đơn vị`, sau đó nhấp vào :guilabel:`Xác thực` để ghi nhận "
 "con số đó."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:133
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:154
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:151
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:128
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:149
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:146
 msgid ""
 "The *Register Production* step appears on every work order card. It must be "
 "completed for the first work order that is processed. After doing so, the "
@@ -38533,9 +38663,9 @@ msgstr ""
 "bước này cho công đoạn đầu tiên mà bạn xử lý. Sau đó, bước này sẽ xuất hiện "
 "là đã hoàn thành trên mỗi công đoạn còn lại trong |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:137
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:158
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:155
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:153
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:150
 msgid ""
 "After completing all of the steps for a work order, a button appears on the "
 "footer of the work order card. If any other work orders must be completed "
@@ -38549,9 +38679,9 @@ msgstr ""
 "không cần hoàn thành thêm công đoạn nào, nút đó sẽ có tiêu đề "
 "là :guilabel:`Đóng sản xuất`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:142
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:163
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:160
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:158
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:155
 msgid ""
 "Clicking :guilabel:`Mark as Done` causes the work order card to fade away. "
 "Once it disappears completely, the work order's status is marked as "
@@ -38567,9 +38697,9 @@ msgstr ""
 "công đoạn đó. Mọi công đoạn bổ sung đều có thể được xử lý bằng cách sử dụng "
 "các hướng dẫn đã nêu trong phần này."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:148
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:169
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:166
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:143
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:164
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:161
 msgid ""
 "Clicking :guilabel:`Close Production` causes the work order card to fade "
 "away. Once it disappears, the |MO| is marked as *Done*, and the units of the "
@@ -38579,9 +38709,9 @@ msgstr ""
 "thẻ biến mất, |MO| được đánh dấu là *Hoàn tất* và các đơn vị sản phẩm đã sản "
 "xuất được nhập vào tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:152
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:173
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:170
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:168
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:165
 msgid ""
 "After clicking :guilabel:`Mark as Done` or :guilabel:`Close Production`, "
 "each button is replaced by an :guilabel:`Undo` button. Click "
@@ -38593,9 +38723,9 @@ msgstr ""
 "nút :guilabel:`Hoàn tác` trước khi thẻ công đoạn mờ dần để duy trì trạng "
 "thái mở của công đoạn."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:157
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:178
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:175
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:173
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:170
 msgid ""
 "This section details the basic workflow for processing an |MO| in the *Shop "
 "Floor* module. For a more in-depth explanation of the module and all of its "
@@ -38625,8 +38755,8 @@ msgstr ""
 "lượng hàng tồn kho dựa trên số lượng thành phần đã chuyển đi và thành phẩm "
 "đã tạo ra."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:41
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:42
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:37
 msgid ""
 "On the new |MO|, select the product to be produced from "
 "the :guilabel:`Product` drop-down menu. The :guilabel:`Bill of Material` "
@@ -38636,12 +38766,12 @@ msgstr ""
 "xuống :guilabel:`Sản phẩm`. Danh mục vật tư (BoM) liên quan sẽ tự động được "
 "điền vào trường :guilabel:`Danh mục vật tư`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:56
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:52
 msgid "Process pick components transfer"
 msgstr "Xử lý lệnh chuyển thành phần"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:58
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:53
 msgid ""
 "After confirming a three-step |MO|, a :guilabel:`Transfers` smart button "
 "appears at the top of the page. Click it to be taken to "
@@ -38654,7 +38784,7 @@ msgstr ""
 "hàng` dành cho |MO|. Trang này liệt kê hai lệnh chuyển hàng: *WH/PC/XXXXX* "
 "(lệnh chuyển thành phần) và *WH/SFP/XXXXX* (lệnh chuyển thành phẩm vào kho)."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:58
 msgid ""
 "Select :guilabel:`WH/PC/XXXXX` to open the pick components transfer for the |"
 "MO|. This transfer is used to track the movement of components from the "
@@ -38665,8 +38795,8 @@ msgstr ""
 "chuyển này được sử dụng nhằm mục đích theo dõi việc điều chuyển thành phần "
 "từ vị trí lưu trữ đến vị trí sử dụng để sản xuất sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:67
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:62
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:59
 msgid ""
 "After transferring the components out of their storage location, "
 "click :guilabel:`Validate` at the top of the transfer, followed "
@@ -38680,8 +38810,8 @@ msgstr ""
 "Thao tác này sẽ đánh dấu lệnh chuyển hàng là :guilabel:`Hoàn tất` và cập "
 "nhật số lượng tồn kho để phản ánh số lượng thành phần đã chuyển đi."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:72
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:67
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:64
 msgid ""
 "Finally, return to the |MO| by clicking the :guilabel:`WH/MO/XXXXX` "
 "breadcrumb at the top of the page."
@@ -38694,7 +38824,7 @@ msgstr ""
 msgid "The manufacturing order bread crumb on a pick components transfer."
 msgstr "Breadcrumb của lệnh sản xuất trên một lệnh chuyển thành phần."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:83
 msgid ""
 "To complete work orders from the |MO| itself, begin by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, "
@@ -38712,7 +38842,7 @@ msgstr "Nút Bắt đầu cho công đoạn trong lệnh sản xuất."
 msgid "The Done button for an work order on a manufacturing order."
 msgstr "Nút Hoàn tất cho công đoạn trong lệnh sản xuất."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:136
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:131
 msgid ""
 "A work order is processed by completing each step listed on its card. This "
 "can be done by clicking on a step, and following the instructions listed on "
@@ -38724,11 +38854,11 @@ msgstr ""
 "làm theo hướng dẫn hiển thị trên cửa sổ bật lên. Khi hoàn thành bước này, "
 "hãy nhấp vào :guilabel:`Tiếp theo` để chuyển sang bước kế tiếp, nếu cần."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:183
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:178
 msgid "Process finished product transfer"
 msgstr "Xử lý lệnh chuyển thành phẩm"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:185
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:180
 msgid ""
 "After completing the |MO|, return to the order's :guilabel:`Transfers` page "
 "by clicking the :guilabel:`Transfers` button at the top of the order. This "
@@ -38743,7 +38873,7 @@ msgstr ""
 "thành phẩm vào kho. Lệnh chuyển hàng này được sử dụng để theo dõi quá trình "
 "điều chuyển thành phẩm từ nơi sản xuất đến nơi lưu trữ."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:190
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:185
 msgid ""
 "After transferring the finished products to their storage location, "
 "click :guilabel:`Validate` at the top of the transfer, followed "
@@ -38776,7 +38906,7 @@ msgstr ""
 "kho. Số lượng hàng tồn kho vẫn được cập nhật dựa trên số lượng sản phẩm đã "
 "sản xuất, song việc chuyển chúng vào và ra khỏi kho không được theo dõi."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:54
 msgid ""
 "After confirming a two-step |MO|, a :guilabel:`Transfers` smart button "
 "appears at the top of the page. Click it to open the pick components "
@@ -38789,7 +38919,7 @@ msgstr ""
 "Lệnh chuyển này được sử dụng nhằm mục đích theo dõi việc điều chuyển thành "
 "phần từ vị trí lưu trữ đến vị trí sử dụng để sản xuất sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:83
 msgid ""
 "On the |MO| page, select the :guilabel:`Work Orders` tab. Once work begins "
 "on the first work order that needs to be completed, click "
@@ -39995,38 +40125,36 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:103
 msgid ""
-"After clicking :guilabel:`Close Production`, the |MO| card begins to fade "
-"away, and an :guilabel:`Undo` button appears on the footer. "
-"Clicking :guilabel:`Undo` causes the |MO| to remain open. Once the |MO| card "
-"disappears completely, the work order is closed."
+"After clicking :guilabel:`Close Production`, the |MO| card disappears "
+"completely and the work order is closed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:106
 msgid ""
 "On the right side of the footer is an :guilabel:`⋮ (options)` button, which "
 "opens a pop-up window with additional options for the |MO|:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:110
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:171
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:170
 msgid ""
 ":guilabel:`Scrap` is used to send components to a scrap location when they "
 "are found to be defective."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:111
 msgid ""
 ":guilabel:`Add Work Order` is used to add an additional work order to the |"
 "MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:113
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:173
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:172
 msgid ""
 ":guilabel:`Add Component` is used to add an additional component to the |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:113
 msgid ":guilabel:`Open Backend MO` opens the |MO| in the Manufacturing app."
 msgstr ""
 
@@ -40035,11 +40163,11 @@ msgid ""
 "An information card for an MO on the \"All\" page of the Shop Floor module."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:120
 msgid "Work center pages"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:122
 msgid ""
 "By default, the page for each work center shows an information card for "
 "every work order assigned to it that is *ready to start*. A work order is "
@@ -40047,25 +40175,25 @@ msgid ""
 "and any preceding work orders have been completed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:127
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:126
 msgid ""
 "To view every confirmed work order assigned to a work center regardless of "
 "readiness, click the :guilabel:`x` button on the :guilabel:`Ready to Start` "
 "filter to remove it from the :guilabel:`Search...` bar."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:131
 msgid "Work order information card"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:133
 msgid ""
 "A work order information card on a work center's page shows all of the "
 "relevant details of the associated work order, and also provides employees "
 "with options for processing the work order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:136
 msgid ""
 "The header for a work order card shows the reference number of the |MO| that "
 "the work order is a part of, the product and number of units being produced, "
@@ -40080,7 +40208,7 @@ msgstr ""
 "Khi đã bắt đầu, trạng thái sẽ cập nhật để hiển thị đồng hồ tính giờ cho biết "
 "tổng thời gian công đoạn đã được thực hiện."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:142
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:141
 msgid ""
 "The main body of a work order card shows a line for each step required to "
 "complete the work order. Work order steps can be completed by clicking on "
@@ -40094,7 +40222,7 @@ msgstr ""
 "Ngoài ra, việc nhấp vào hộp kiểm ở phía bên phải của mỗi dòng sẽ tự động "
 "đánh dấu bước đó là đã hoàn thành."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:146
 msgid ""
 "Below the final step of the work order is a line titled :guilabel:`Register "
 "Production`, which functions the same as the :guilabel:`Register Production` "
@@ -40103,7 +40231,7 @@ msgid ""
 "the step for the associated |MO| card."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:151
 msgid ""
 "If the work order being processed is the final work order for the |MO|, "
 "a :guilabel:`Close Production` button appears on the footer of the work "
@@ -40118,7 +40246,7 @@ msgstr ""
 "MO| yêu cầu kiểm tra chất lượng. Trong trường hợp này, cần hoàn thành kiểm "
 "tra chất lượng từ thẻ |MO| trước khi có thể đóng |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:158
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:157
 msgid ""
 "Alternatively, if the |MO| requires the completion of additional work "
 "orders, a :guilabel:`Mark as Done` button appears instead. "
@@ -40127,7 +40255,7 @@ msgid ""
 "is assigned to."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:163
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:162
 msgid ""
 "After clicking :guilabel:`Close Production` or :guilabel:`Mark as Done`, the "
 "work order card begins to fade away, and an :guilabel:`Undo` button appears "
@@ -40136,25 +40264,25 @@ msgid ""
 "marked as :guilabel:`Finished` on the |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:168
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:167
 msgid ""
 "On the right side of the footer is an :guilabel:`⋮ (options)` button, which "
 "opens a pop-up window with additional options for the work order:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:174
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:173
 msgid ""
 ":guilabel:`Move to work center` is used to transfer the work order to a "
 "different work center."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:175
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:174
 msgid ""
 ":guilabel:`Suggest a Worksheet improvement` allows the user to propose a "
 "change to the work order's instructions or steps."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:177
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:176
 msgid ""
 ":guilabel:`Create a Quality Alert` opens a quality alert form that can be "
 "filled out to alert a quality team about a potential issue."
@@ -40164,25 +40292,25 @@ msgstr ""
 msgid "An information card for a work order in the Shop Floor module."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:185
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:184
 msgid "Operator panel"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:186
 msgid ""
 "The operator panel is used to manage the employees that are signed in to the "
 "*Shop Floor* module. The panel shows the name and profile picture of every "
 "employee that is currently signed in across all instances of the database."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:191
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:190
 msgid ""
 "To interact with *Shop Floor* as a specific employee, click the employee's "
 "name to activate their profile. Profiles that are not active appear with "
 "their names and profile pictures greyed-out."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:194
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:193
 msgid ""
 "When an employee is selected in the operator panel, they can begin working "
 "on a work order by clicking the work order's heading. If an employee is "
@@ -40196,14 +40324,14 @@ msgstr ""
 "từng công đoạn sẽ xuất hiện dưới tên của chúng, kèm theo đồng hồ tính giờ "
 "hiển thị khoảng thời gian họ đã làm việc trên từng công đoạn."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:199
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:198
 msgid ""
 "To add a new employee to the operator panel, click the :guilabel:`+ Add "
 "Operator` button at the bottom of the panel. Then, select an employee from "
 "the :guilabel:`Select Employee` pop-up window."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:202
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:201
 msgid ""
 "To remove an employee from the operator panel, simply click "
 "the :guilabel:`x` button next to their name in the panel."
@@ -40215,11 +40343,11 @@ msgid ""
 "in."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:210
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:209
 msgid "MO/WO prioritization"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:211
 msgid ""
 "The **Shop Floor** module uses the *scheduled date* entered on |MOs| to "
 "prioritize the |MOs| and work orders that appear on the module's dashboard "
@@ -40227,72 +40355,72 @@ msgid ""
 "highly prioritized, and appear before orders which are scheduled further out."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:217
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:216
 msgid ""
 "To specify the scheduled date on an |MO|, begin by navigating "
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
 "Orders`, and click :guilabel:`New` to create a new |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:220
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:219
 msgid ""
 "Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
 "window. By default, the :guilabel:`Scheduled Date` field, and its "
 "corresponding pop-up window, show the current date and time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:223
 msgid ""
 "Use the calendar to select the date on which processing should begin for the "
 "|MO|. In the two fields at the bottom of the popover window, enter the hour "
 "and minute at which processing should begin, using the 24-hour clock format."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:228
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:227
 msgid ""
 "Finally, click :guilabel:`Apply` at the bottom of the popover window to set "
 "the date and time for the :guilabel:`Scheduled Date` field. Then, click "
 "the :guilabel:`Confirm` button at the top of the |MO| to confirm it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:232
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:231
 msgid ""
 "Once the |MO| is confirmed, it appears in the **Shop Floor** module, as long "
 "is it has the :guilabel:`Ready` status, which means all components are "
 "available."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:235
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:234
 msgid ""
 "On the Odoo dashboard, click on the :menuselection:`Shop Floor` module to "
 "open it. The :guilabel:`All MO #` page of the dashboard displays *Ready* |"
 "MOs|, organized in order of their scheduled dates."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:239
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:238
 msgid ""
 "At the top of the module, select a work center to see the work orders "
 "assigned to it. The page for each work center organizes work orders, based "
 "on the scheduled dates of their corresponding |MOs|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:243
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:242
 msgid "Three |MOs| are confirmed for a *Bookcase* product:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:245
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:244
 msgid "WH/MO/00411 has a :guilabel:`Scheduled Date` of August 16th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:246
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:245
 msgid "WH/MO/00412 has a :guilabel:`Scheduled Date` of August 20th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:247
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:246
 msgid "WH/MO/00413 has a :guilabel:`Scheduled Date` of August 18th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:249
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:248
 msgid ""
 "On the :guilabel:`All MO #` page of the **Shop Floor** module, the cards for "
 "each |MO| appear in this order: WH/MO/00411, WH/MO/00413, WH/MO/00412."
@@ -40302,7 +40430,7 @@ msgstr ""
 msgid "MOs in the Shop Floor module, ordered by their scheduled date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:256
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:255
 msgid ""
 "Each |MO| requires one work order, carried out at :guilabel:`Assembly "
 "Station 1`. Clicking on the :guilabel:`Assembly Station 1` button at the top "
@@ -43535,7 +43663,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:82
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/pass_fail_check.rst:121
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/picture_check.rst:133
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:131
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:146
 msgid ""
 "On the |MO|, select the :guilabel:`Work Orders` tab, and then click "
 "the :guilabel:`Open Work Order (external link icon)` button on the line of "
@@ -43547,7 +43675,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:87
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/instructions_check.rst:80
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/pass_fail_check.rst:126
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:140
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:155
 msgid ""
 "When accessed from a specific work order, the *Shop Floor* module opens to "
 "the page for the work center where the order is configured to be processed, "
@@ -51933,37 +52061,59 @@ msgid ""
 "unprompted."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:25
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:27
 msgid "Manual quality check"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:27
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:29
+#, fuzzy
+#| msgid ""
+#| "To create a storage category, go to :menuselection:`Inventory app --> "
+#| "Configuration --> Storage Categories`, and click :guilabel:`New`."
 msgid ""
 "To manually create a single quality check, navigate "
 "to :menuselection:`Quality --> Quality Control --> Quality Checks`, and "
-"click :guilabel:`New`. On the quality check form, begin by selecting an "
-"option from the :guilabel:`Control per` drop-down menu:"
+"click :guilabel:`New`."
 msgstr ""
+"Để tạo một danh mục lưu kho, hãy vào :menuselection:`Ứng dụng Tồn kho --> "
+"Cấu hình --> Danh mục lưu kho`, rồi nhấp :guilabel:`Mới`."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:31
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:32
 msgid ""
-":guilabel:`Operation` requests a check for an entire operation (ex. delivery "
-"order) and all products within it."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:33
-msgid ""
-":guilabel:`Product` requests a check for every unit of a product that is "
-"part of an operation (ex. every unit of a product within a delivery order)."
+"On the quality check form, begin by specifying a :guilabel:`Title` for the "
+"quality check. This should be a brief description of what the quality check "
+"entails."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:35
+msgid "Select an option from the :guilabel:`Control per` drop-down menu:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:37
+msgid ""
+":guilabel:`Operation` requests a check for an entire operation (such as a "
+"delivery order) and all products within it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:39
+msgid ""
+":guilabel:`Product` requests a check for every unit of a product that is "
+"part of an operation (e.g., every unit of a product within a delivery order)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:41
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Quantity` requests a check for every quantity of a product "
+#| "that is part of an operation (ex. one check for five units of a product "
+#| "within a delivery order). Selecting :guilabel:`Quantity` also causes "
+#| "a :guilabel:`Lot/Serial` drop-down field to appear, from which can be "
+#| "selected a specific lot or serial number that the quality check should be "
+#| "conducted for."
 msgid ""
 ":guilabel:`Quantity` requests a check for every quantity of a product that "
-"is part of an operation (ex. one check for five units of a product within a "
-"delivery order). Selecting :guilabel:`Quantity` also causes a :guilabel:`Lot/"
-"Serial` drop-down field to appear, from which can be selected a specific lot "
-"or serial number that the quality check should be conducted for."
+"is part of an operation (e.g., one check for five units of a product within "
+"a delivery order)."
 msgstr ""
 ":guilabel:`Số lượng` yêu cầu kiểm tra cho mỗi lượng sản phẩm thuộc một hoạt "
 "động (VD: một lần kiểm tra cho năm đơn vị sản phẩm trong lệnh giao hàng). "
@@ -51971,7 +52121,15 @@ msgstr ""
 "xuống :guilabel:`Số lô/sê-ri`, từ đó có thể chọn lô hoặc số sê-ri cụ thể cần "
 "kiểm tra chất lượng."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:40
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:44
+msgid ""
+"When :guilabel:`Product` or :guilabel:`Quantity` are selected, it is "
+"possible to select a :guilabel:`Product` in inventory. If that product is "
+"tracked by lot or serial number, the :guilabel:`Lot/Serial` field appears, "
+"where the lot or serial number to be quality checked must be specified."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:49
 msgid ""
 "Next, select an inventory operation from the :guilabel:`Picking` drop-down "
 "menu or a manufacturing order from the :guilabel:`Production Order` drop-"
@@ -51979,7 +52137,18 @@ msgid ""
 "the quality check is being conducted."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:44
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:54
+msgid ""
+"It is also possible to create a quality check directly from an *Inventory* "
+"operation. To do so, navigate to :menuselection:`Inventory app --> "
+"Operations` and select an operation type from the :guilabel:`Transfers` "
+"menu. Open an operation from the list, then click the :icon:`fa-"
+"cog` :guilabel:`(cog)` icon and select :guilabel:`Quality Check`. "
+"The :guilabel:`Control per`, :guilabel:`Product`, and :guilabel:`Picking` "
+"fields are automatically filled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:60
 msgid ""
 "If the quality check should be assigned to a specific |QCP|, select it from "
 "the :guilabel:`Control Point` drop-down menu. This is useful if the quality "
@@ -51987,66 +52156,66 @@ msgid ""
 "to a specific |QCP|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:48
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:64
 msgid "Select a quality check type from the :guilabel:`Type` drop-down field:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:50
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:66
 msgid ""
 ":guilabel:`Instructions` provides specific instructions for how to conduct "
 "the quality check."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:51
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:67
 msgid ""
 ":guilabel:`Take a Picture` requires a picture to be attached to the check "
 "before the check can be completed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:53
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:69
 msgid ""
 ":guilabel:`Print label` opens a pop-up from which labels can be printed. "
 "This step can be customized to provide instructions about where to add the "
 "labels on a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:55
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:71
 msgid ""
 ":guilabel:`Pass - Fail` is used when the product being checked must meet a "
 "certain criteria to pass the check."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:57
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:73
 msgid ""
 "Selecting :guilabel:`Measure` causes a :guilabel:`Measure` input field to "
 "appear, in which a measurement must be entered before the check can be "
 "completed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:59
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:75
 msgid ""
 "Selecting :guilabel:`Worksheet` causes a :guilabel:`Quality Template` drop-"
 "down field to appear. Use it to select a quality worksheet that must be "
 "filled out to complete the check."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:62
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:78
 msgid ""
 "In the :guilabel:`Team` field, select the quality team that is responsible "
 "for the quality check. In the :guilabel:`Company` field, select the company "
 "that owns the product being inspected."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:65
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:81
 msgid ""
 "On the :guilabel:`Notes` tab at the bottom of the form, enter any relevant "
-"instructions in the :guilabel:`Instructions` text entry box (ex. 'Attach a "
-"picture of the product'). In the :guilabel:`Notes` text entry box, enter any "
+"instructions in the :guilabel:`Instructions` text entry box (e.g., `Attach a "
+"picture of the product`). In the :guilabel:`Notes` text entry box, enter any "
 "relevant information about the quality check (who created it, why it was "
 "created, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:70
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:86
 msgid ""
 "Finally, if the check is being processed immediately, click "
 "the :guilabel:`Pass` button at the top left of the screen if the check "
@@ -52057,11 +52226,11 @@ msgstr ""
 msgid "A quality check form filled out for a Pass - Fail check."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:78
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:93
 msgid "Process quality check"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:80
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:95
 msgid ""
 "Quality checks can be processed directly on the quality check's page, or "
 "from a manufacturing or inventory order for which a check is required. "
@@ -52069,7 +52238,7 @@ msgid ""
 "operation, the check is processed in the *Shop Floor* module."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:85
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:100
 msgid ""
 "It is not possible to manually create a single quality check that is "
 "assigned to a specific work order operation. Quality checks for work order "
@@ -52084,11 +52253,11 @@ msgstr ""
 "lượng <quality/quality_management/quality-control-points>` để biết cách cấu "
 "hình |QCP| nhằm tạo kiểm tra chất lượng cho từng công đoạn cụ thể."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:92
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:107
 msgid "Quality check page"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:94
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:109
 msgid ""
 "To process a quality check from the check's page, begin by navigating "
 "to :menuselection:`Quality --> Quality Control --> Quality Checks`, then "
@@ -52097,25 +52266,34 @@ msgid ""
 "tab at the bottom of the page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:99
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:114
 msgid ""
 "If the quality check passes, click the :guilabel:`Pass` button at the top of "
 "the page. If the check fails, click the :guilabel:`Fail` button, instead."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:103
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:118
 msgid "Quality check on order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:105
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:120
+#, fuzzy
+#| msgid ""
+#| "To process a quality check on an order, select a manufacturing or "
+#| "inventory order (receipt, delivery, return, etc.), for which a check is "
+#| "required. Manufacturing orders can be selected by navigating "
+#| "to :menuselection:`Manufacturing --> Operations --> Manufacturing "
+#| "Orders`, and clicking on an order. Inventory orders can be selected by "
+#| "navigating to :menuselection:`Inventory`, clicking the :guilabel:`# To "
+#| "Process` button on an operation card, and selecting an order."
 msgid ""
 "To process a quality check on an order, select a manufacturing or inventory "
 "order (receipt, delivery, return, etc.), for which a check is required. "
 "Manufacturing orders can be selected by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, "
-"and clicking on an order. Inventory orders can be selected by navigating "
-"to :menuselection:`Inventory`, clicking the :guilabel:`# To Process` button "
-"on an operation card, and selecting an order."
+"and clicking on an order. Inventory orders can be selected by navigating to "
+"the :menuselection:`Inventory` app, clicking the :guilabel:`# To` button on "
+"an operation card (e.g., :guilabel:`5 to Deliver`), and selecting an order."
 msgstr ""
 "Để thực hiện kiểm tra chất lượng trên một đơn hàng, hãy chọn một lệnh sản "
 "xuất hoặc phiếu kho (nhập kho, giao hàng, trả hàng,...) cần được kiểm tra. "
@@ -52124,32 +52302,34 @@ msgstr ""
 "được chọn bằng cách đi đến :menuselection:`Tồn kho`, nhấp vào "
 "nút :guilabel:`# Cần xử lý` trên thẻ hoạt động và chọn một phiếu."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:111
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:127
 msgid ""
 "On the selected inventory or manufacturing order, a "
 "purple :guilabel:`Quality Checks` button appears at the top of the order. "
-"Click the button to open the :guilabel:`Quality Check` pop-up window, which "
-"shows all of the quality checks required for that order."
+"Click the button to open the quality check pop-up window, which shows all of "
+"the quality checks required for that order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:115
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:131
 msgid ""
-"Follow the instructions that appear on the :guilabel:`Quality Check` pop-up "
-"window. If a Pass - Fail check is being processed, complete the check by "
+"Follow the instructions that appear on the quality check pop-up window. If a "
+"Pass - Fail check is being processed, complete the check by "
 "clicking :guilabel:`Pass` or :guilabel:`Fail` at the bottom of the pop-up "
 "window. For all other quality check types, a :guilabel:`Validate` button "
 "appears instead. Click it to complete the check."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:None
-msgid "The \"Quality Check\" pop-up window on a manufacturing order."
-msgstr ""
+#, fuzzy
+#| msgid "The status tags for work orders on a manufacturing order."
+msgid "The quality check pop-up window on a manufacturing order."
+msgstr "Thẻ trạng thái cho công đoạn trong lệnh sản xuất."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:125
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:140
 msgid "Quality check on work order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:127
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:142
 msgid ""
 "To process a quality check for a work order, begin by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`. "
@@ -52157,13 +52337,13 @@ msgid ""
 "required."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:137
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:152
 msgid ""
 "For a full guide to the Shop Floor module, see the :doc:`Shop Floor overview "
 "<../../manufacturing/shop_floor/shop_floor_overview>` documentation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:144
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:159
 msgid ""
 "Process the work order's steps until the quality check step is reached. "
 "Click on the step to open a pop-up window that details how the check should "
@@ -52178,33 +52358,33 @@ msgstr ""
 "Không đạt`, bạn có thể nhấp vào nút :guilabel:`Đạt` hoặc :guilabel:`Không "
 "đạt`."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:149
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:164
 msgid ""
 "It is also possible to complete a quality check by clicking the checkbox on "
 "the right side of the step. Doing so automatically marks the check as "
 "*Passed*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:153
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:168
 msgid ""
 "The specific steps for processing a quality check depend upon the type of "
 "check being conducted. For information about processing each type of quality "
 "check, see the associated documentation:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:156
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:171
 msgid ":doc:`../quality_check_types/instructions_check`"
 msgstr ":doc:`../quality_check_types/instructions_check`"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:157
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:172
 msgid ":doc:`../quality_check_types/pass_fail_check`"
 msgstr ":doc:`../quality_check_types/pass_fail_check`"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:158
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:173
 msgid ":doc:`../quality_check_types/measure_check`"
 msgstr ":doc:`../quality_check_types/measure_check`"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:159
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:174
 msgid ":doc:`../quality_check_types/picture_check`"
 msgstr ":doc:`../quality_check_types/picture_check`"
 
@@ -52968,6 +53148,79 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid "Install"
+#~ msgstr "Cài đặt"
+
+#~ msgid "Change inventory count frequency by location"
+#~ msgstr "Thay đổi tần suất kiểm đếm tồn kho theo vị trí"
+
+#~ msgid "Count inventory by location"
+#~ msgstr "Kiểm đếm tồn kho theo vị trí"
+
+#~ msgid ""
+#~ "In order to manufacture a product in Odoo *Manufacturing*, the product "
+#~ "must be properly configured. Doing so consists of enabling the "
+#~ "*Manufacturing* route and configuring a bill of materials (BoM) for the "
+#~ "product. Once these steps are completed, the product is selectable when "
+#~ "creating a new manufacturing order."
+#~ msgstr ""
+#~ "Để sản xuất một sản phẩm trong Odoo *Sản xuất*, sản phẩm phải được cấu "
+#~ "hình đúng cách. Việc này bao gồm kích hoạt tuyến *Sản xuất* và cấu hình "
+#~ "danh mục vật tư (BoM) cho sản phẩm. Sau khi hoàn tất các bước này, sản "
+#~ "phẩm có thể được chọn khi tạo lệnh sản xuất mới."
+
+#~ msgid "Activate the Manufacture route"
+#~ msgstr "Kích hoạt tuyến sản xuất"
+
+#~ msgid ""
+#~ "The Manufacture route is activated for each product on its own product "
+#~ "page. To do so, begin by navigating to :menuselection:`Manufacturing --> "
+#~ "Products --> Products`. Then, select an existing product, or create a new "
+#~ "one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "Tuyến Sản xuất được kích hoạt cho từng sản phẩm trên trang sản phẩm riêng "
+#~ "của sản phẩm đó. Để thực hiện, hãy bắt đầu bằng cách đi "
+#~ "đến :menuselection:`Sản xuất --> Sản phẩm --> Sản phẩm`. Sau đó, chọn một "
+#~ "sản phẩm hiện có hoặc tạo một sản phẩm mới bằng cách nhấp "
+#~ "vào :guilabel:`Mới`."
+
+#~ msgid ""
+#~ "On the product page, select the :guilabel:`Inventory` tab, then enable "
+#~ "the :guilabel:`Manufacture` checkbox in the :guilabel:`Routes` section. "
+#~ "This tells Odoo the product can be manufactured."
+#~ msgstr ""
+#~ "Trên trang sản phẩm, chọn tab :guilabel:`Tồn kho`, sau đó bật hộp "
+#~ "kiểm :guilabel:`Sản xuất` trong phần :guilabel:`Tuyến`. Điều này cho Odoo "
+#~ "biết sản phẩm có thể được sản xuất."
+
+#~ msgid "The Manufacturing route on the Inventory tab of a product page."
+#~ msgstr "Tuyến sản xuất trên tab Tồn kho của trang sản phẩm."
+
+#~ msgid ""
+#~ "The section above provides instructions for creating a basic |BOM| that "
+#~ "allows a product to be manufactured in Odoo. However, it is by no means "
+#~ "an exhaustive summary of all the options available when configuring a |"
+#~ "BOM|. For more information about bills of materials, see the "
+#~ "documentation on how to :doc:`create a bill of materials "
+#~ "<bill_configuration>`."
+#~ msgstr ""
+#~ "Phần trên cung cấp hướng dẫn để tạo |BoM| cơ bản cho phép sản xuất sản "
+#~ "phẩm trong Odoo. Tuy nhiên, đây không phải là bản tóm tắt đầy đủ về tất "
+#~ "cả tùy chọn có sẵn khi cấu hình |BoM|. Để biết thêm thông tin về danh mục "
+#~ "vật tư, hãy tham khảo tài liệu về cách :doc:`tạo danh mục vật tư "
+#~ "<bill_configuration>`."
+
+#~ msgid ""
+#~ "Products must be properly configured before they can be manufactured in "
+#~ "Odoo. For details on how to do so, see the documentation on how "
+#~ "to :ref:`configure a product for manufacturing <manufacturing/management/"
+#~ "configure-manufacturing-product>`."
+#~ msgstr ""
+#~ "Sản phẩm phải được cấu hình chính xác trước khi có thể được sản xuất "
+#~ "trong Odoo. Để biết chi tiết về cách thực hiện, hãy tham khảo tài liệu về "
+#~ "cách :ref:`cấu hình sản phẩm để sản xuất <manufacturing/management/"
+#~ "configure-manufacturing-product>`."
 
 #~ msgid ""
 #~ "The |RFQ| or |MO| generated by |MTO| is designed to fulfill the "

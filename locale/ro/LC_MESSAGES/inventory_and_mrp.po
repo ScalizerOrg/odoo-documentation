@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 18:30+0000\n"
+"POT-Creation-Date: 2026-03-20 18:30+0000\n"
 "PO-Revision-Date: 2025-11-20 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -183,7 +183,6 @@ msgstr "Tabloul de bord Barcode cu o numărătoare atribuită."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:13
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
@@ -7971,7 +7970,7 @@ msgid "Weight of the container is defined in the *Package Type* settings"
 msgstr "Greutatea containerului este definită în setările *Tip pachet*"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:91
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:14
 msgid "Lot/serial number tracking"
 msgstr "Urmărire lot/număr de serie"
 
@@ -23179,7 +23178,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:217
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:236
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:215
 msgid ":guilabel:`Shipping label(s)` depending on the number of packages."
 msgstr ":guilabel:`Etichetă(e) de expediere` în funcție de numărul de pachete."
 
@@ -26183,7 +26182,6 @@ msgstr ""
 "pe :guilabel:`New`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:123
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
 msgid ""
 ":guilabel:`Shipping Methods` can also be accessed by going "
 "to :menuselection:`Inventory --> Configuration --> Delivery --> Shipping "
@@ -26885,8 +26883,10 @@ msgid "Finding the Starshipit API keys."
 msgstr "Găsirea cheilor API Starshipit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:93
-msgid "Install"
-msgstr "Instalare"
+#, fuzzy
+#| msgid "Install Sendcloud shipping module"
+msgid "Install the Starshipit module"
+msgstr "Instalați modulul de expediere Sendcloud"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:95
 msgid ""
@@ -26904,6 +26904,12 @@ msgstr ""
 msgid "Starshipit Shipping module in the Odoo Apps module."
 msgstr "Modulul Starshipit Shipping în modulul Odoo Apps."
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
+#, fuzzy
+#| msgid "Configure DHL shipping method"
+msgid "Configure a Starshipit delivery method"
+msgstr "Configurează metoda de transport DHL"
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:106
 msgid ""
 "Once installed, activate the feature by going to :menuselection:`Inventory --"
@@ -26915,26 +26921,53 @@ msgstr ""
 "activați opțiunea :guilabel:`Conector Starshipit`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:110
+#, fuzzy
+#| msgid ""
+#| "After activating :guilabel:`Starshipit Connector`, click "
+#| "the :guilabel:`Starshipit Shipping Methods` link below the listed "
+#| "connector. Once on the :guilabel:`Shipping Methods` page, "
+#| "click :guilabel:`Create`."
 msgid ""
 "After activating :guilabel:`Starshipit Connector`, click "
 "the :guilabel:`Starshipit Shipping Methods` link below the listed connector. "
-"Once on the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
+"Once on the :guilabel:`Delivery Methods` page, click :guilabel:`Create`."
 msgstr ""
 "După activarea :guilabel:`Conector Starshipit`, faceți clic pe "
 "linkul :guilabel:`Metode de expediere Starshipit` de sub conectorul listat. "
 "Odată ajuns pe pagina :guilabel:`Metode de expediere`, faceți clic "
 "pe :guilabel:`Creați`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Shipping Methods` can also be accessed by going "
+#| "to :menuselection:`Inventory --> Configuration --> Delivery --> Shipping "
+#| "Methods`."
 msgid ""
-"Configure Starshipit in Odoo by filling out the fields on "
-"the :guilabel:`Shipping Methods` form as follows:"
+":guilabel:`Delivery Methods` can also be accessed by going "
+"to :menuselection:`Inventory --> Configuration --> Delivery --> Delivery "
+"Methods`."
+msgstr ""
+":guilabel:`Metode de expediere` poate fi accesat și "
+"accesând :menuselection:`Inventar --> Configurare --> Livrare --> Metode de "
+"expediere`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:118
+#, fuzzy
+#| msgid ""
+#| "Configure Starshipit in Odoo by filling out the fields on "
+#| "the :guilabel:`Shipping Methods` form as follows:"
+msgid ""
+"Configure a Starshipit delivery method in Odoo by filling out the fields on "
+"the :guilabel:`Delivery Methods` form as follows:"
 msgstr ""
 "Configurați Starshipit în Odoo completând câmpurile din "
 "formularul :guilabel:`Metode de expediere`, după cum urmează:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:121
-msgid ":guilabel:`Shipping Method`: type `Starshipit`."
+#, fuzzy
+#| msgid ":guilabel:`Shipping Method`: type `Starshipit`."
+msgid ":guilabel:`Delivery Method`: type `Starshipit`."
 msgstr ":guilabel:`Metoda de expediere`: tastați `Starshipit`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:122
@@ -27018,43 +27051,54 @@ msgstr ""
 "Setări`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:146
+#, fuzzy
+#| msgid "Then, click :guilabel:`Save` at the top of the page to save changes."
 msgid ""
-"Manually :guilabel:`Save` the form by clicking the cloud icon next to "
-"the :guilabel:`Shipping Methods / New` breadcrumbs."
+"Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon at the "
+"top of the page to save the changes."
 msgstr ""
-"Manual :guilabel:`Salvați` formularul făcând clic pe pictograma nor de "
-"lângă :guilabel:`Metode de expediere/Nou`."
+"Apoi, faceți clic pe :guilabel:`Salvați` în partea de sus a paginii pentru a "
+"salva modificările."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:148
+#, fuzzy
+#| msgid ""
+#| "Doing so opens the :guilabel:`Choose Starshipit Shipping Service` pop-up "
+#| "window. In the :guilabel:`Delivery Service` field, choose the desired "
+#| "shipping service for deliveries and returns from the drop-down menu. "
+#| "Finally, click :guilabel:`Confirm`."
 msgid ""
-"To load the newly configured shipping products, click the :guilabel:`Select "
-"a service linked to the Starshipit account` link at the bottom of "
-"the :guilabel:`Starshipit Configuration` tab."
-msgstr ""
-"Pentru a încărca produsele de expediere nou configurate, faceți clic pe "
-"linkul :guilabel:`Selectați un serviciu legat de contul Starshipit` din "
-"partea de jos a filei :guilabel:`Configurare Starshipit`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:152
-msgid ""
-"Doing so opens the :guilabel:`Choose Starshipit Shipping Service` pop-up "
-"window. In the :guilabel:`Delivery Service` field, choose the desired "
-"shipping service for deliveries and returns from the drop-down menu. "
-"Finally, click :guilabel:`Confirm`."
+"To load the newly configured shipping products, click :guilabel:`Select a "
+"service linked to your starshipit account` at the bottom of "
+"the :guilabel:`Starshipit Configuration` tab, and a :guilabel:`Choose "
+"Starshipit Shipping Service` pop-up window appears. In "
+"the :guilabel:`Delivery Service` field, select the desired shipping service "
+"for deliveries and returns from the drop-down menu."
 msgstr ""
 "Procedând astfel, se deschide fereastra pop-up :guilabel:`Alege serviciul de "
 "expediere Starshipit`. În câmpul :guilabel:`Serviciul de livrare`, alegeți "
 "serviciul de expediere dorit pentru livrări și retururi din meniul derulant. "
 "În cele din urmă, faceți clic pe :guilabel:`Confirmați`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:154
 msgid ""
-"The chosen delivery service will populate in the :guilabel:`Service Name` "
-"field."
+"The list of services shown during initial configuration may be incomplete. "
+"Starshipit determines service availability based on shipment details such as "
+"the destination address and package weight, which are not yet available at "
+"this stage. To select from the full list of services available for a "
+"specific order, use the :guilabel:`Get more delivery methods` option "
+"directly from the sales order. See :ref:`inventory/shipping_receiving/star-"
+"label` for details."
 msgstr ""
-"Serviciul de livrare ales se va completa în câmpul :guilabel:`Nume serviciu`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:160
+msgid ""
+"Click :guilabel:`Confirm` and the selected delivery service populates in "
+"the :guilabel:`Shipping Method` and :guilabel:`Starshipit Service Code` "
+"fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:163
 msgid "Sample of a Starshipit shipping product configured in Odoo:"
 msgstr "Exemplu de produs de expediere Starshipit configurat în Odoo:"
 
@@ -27070,7 +27114,7 @@ msgstr ":guilabel:`Produs de expediere`: `Trimite livrare`"
 msgid ":guilabel:`Starshipit Service Code`: `STANDARD-DROPOFF`"
 msgstr ":guilabel:`Cod de serviciu Starshipit`: `STANDARD-DROPOFF`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:174
 msgid ""
 "Starshipit does not provide test keys when a company tests the sending of a "
 "package in Odoo. This means that if a package is created, the account may be "
@@ -27080,7 +27124,7 @@ msgstr ""
 "trimiterea unui pachet în Odoo. Aceasta înseamnă că, dacă se creează un "
 "pachet, contul poate fi taxat."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:177
 msgid ""
 "Odoo has a built-in layer of protection against unwanted charges when using "
 "test environments. Within a test environment, if a shipping method is used "
@@ -27097,7 +27141,7 @@ msgstr ""
 "pentru tipărirea etichetei, cu excepția cazului în care comanda este anulată "
 "manual pe portalul curierului."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:184
 msgid ""
 "Switch between the test and production environment by clicking "
 "the :guilabel:`Environment` smart button at the top of the shipping method "
@@ -27107,11 +27151,11 @@ msgstr ""
 "inteligent :guilabel:`Mediu` din partea de sus a formularului pentru metoda "
 "de expediere."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:190
 msgid "Generate a label with Starshipit"
 msgstr "Generați o etichetă cu Starshipit"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:192
 msgid ""
 "When creating a quotation in Odoo, add the Starshipit shipping method by "
 "clicking the :guilabel:`Add shipping` button."
@@ -27119,15 +27163,29 @@ msgstr ""
 "Când creați o ofertă în Odoo, adăugați metoda de expediere Starshipit făcând "
 "clic pe butonul :guilabel:`Adăugați livrare`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:191
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:196
+#, fuzzy
+#| msgid ""
+#| "In the :guilabel:`Add a shipping method` pop-up window, select Starshipit "
+#| "in the :guilabel:`Shipping Method` field."
 msgid ""
-"In the :guilabel:`Add a shipping method` pop-up window, select Starshipit in "
-"the :guilabel:`Shipping Method` field."
+"In the :guilabel:`Add a shipping method` pop-up window, select a Starshipit "
+"shipping method in the :guilabel:`Shipping Method` field."
 msgstr ""
 "În fereastra pop-up :guilabel:`Adăugați o metodă de expediere`, selectați "
 "Starshipit în câmpul :guilabel:`Metodă de expediere`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:199
+msgid ""
+"If the desired service is not available, click :guilabel:`Get more delivery "
+"methods`. This sends the actual order details (including the destination "
+"address, weight, and volume) to Starshipit, which returns the complete list "
+"of services available for that specific shipment. A new Starshipit delivery "
+"method is then created automatically and selected in the :guilabel:`Shipping "
+"Method` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:204
 msgid ""
 "Calculate the shipping rate by clicking :guilabel:`Get rate`. Finally, "
 "click :guilabel:`Add` to include the cost of shipping to the sales order "
@@ -27138,7 +27196,7 @@ msgstr ""
 "de expediere la linia de comandă de vânzări, etichetat ca *produs de "
 "livrare*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:209
 msgid ""
 "Automatically calculate shipping costs for Starshipit in **both** Odoo "
 "*Sales* and *eCommerce* applications."
@@ -27146,7 +27204,7 @@ msgstr ""
 "Calculați automat costurile de expediere pentru Starshipit în **ambele** "
 "aplicații Odoo *Vânzări* și *eCommerce*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:202
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:212
 msgid ""
 "Then, :guilabel:`Validate` the delivery. Shipping label documents are "
 "automatically generated in the chatter, which includes the following:"
@@ -27154,12 +27212,12 @@ msgstr ""
 "Apoi, :guilabel:`Validați` livrarea. Documentele etichetelor de expediere "
 "sunt generate automat în chatter, care include următoarele:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:216
 msgid ":guilabel:`Tracking number(s)` if the selected courier supports it."
 msgstr ""
 ":guilabel:`Număr(e) de urmărire` dacă curierul selectat acceptă acest lucru."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:217
 msgid ""
 ":guilabel:`Return label(s)` if the Starshipit connector is configured for "
 "returns."
@@ -27171,7 +27229,7 @@ msgstr ""
 msgid "Example of a shipped order in Odoo."
 msgstr "Exemplu de comandă expediată în Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:224
 msgid ""
 "Package weight in Odoo is calculated by adding the weights of the products "
 "plus the empty package saved in the database. Ensure the correct shipping "
@@ -27182,7 +27240,7 @@ msgstr ""
 "selectată opțiunea de livrare corectă, deoarece greutatea pachetului nu este "
 "verificată automat."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:218
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:228
 msgid ""
 "Verify the destination address, as Starshipit checks it when the order is "
 "created."
@@ -27190,7 +27248,7 @@ msgstr ""
 "Verificați adresa de destinație, deoarece Starshipit o verifică atunci când "
 "este creată comanda."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:230
 msgid ""
 "Finally, some couriers may require other information, such as an email "
 "address or phone number. Please ensure that all necessary information are "
@@ -27200,43 +27258,43 @@ msgstr ""
 "adresă de e-mail sau un număr de telefon. Vă rugăm să vă asigurați că toate "
 "informațiile necesare sunt setate la trimiterea unei comenzi de expediere."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:234
 msgid "Returns"
 msgstr "Retururi"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:243
 msgid "Starshipit allows returns with the following couriers:"
 msgstr "Starshipit permite returnări cu următorii curieri:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:227
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:237
 msgid "Australia Post eParcel"
 msgstr "Australia Post eParcel"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:228
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:238
 msgid "TNT"
 msgstr "TNT"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:229
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:239
 msgid "Couriers Please"
 msgstr "Curieri Va rog"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:240
 msgid "Aramex"
 msgstr "Aramex"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:231
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:241
 msgid "StarTrack"
 msgstr "StarTrack"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:242
 msgid "DHL Express"
 msgstr "DHL Express"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:243
 msgid "NZ Post Domestic"
 msgstr "NZ Post Domestic"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:245
 msgid ""
 "This can be done by clicking the :guilabel:`Return` smart button on the "
 "intended delivery order. If the selected courier supports returns, "
@@ -27247,11 +27305,11 @@ msgstr ""
 "curierul selectat acceptă retururi, butonul :guilabel:`Tipărește eticheta de "
 "returnare` va fi disponibil."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:250
 msgid "Cancellations"
 msgstr "Anulări"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:252
 msgid ""
 "If a delivery order is cancelled in Odoo, it will be automatically archived "
 "in Starshipit. However, the cancellation will not be sent to the courier "
@@ -29813,7 +29871,6 @@ msgstr ""
 "`1-31`, în funcție de luna dorită din an."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:309
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:117
 msgid ""
 "Then, to change the month, click :guilabel:`December` to reveal the drop-"
 "down menu, and select the desired month."
@@ -29960,11 +30017,16 @@ msgid "Cycle counts"
 msgstr "Numărări ciclice"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:5
+#, fuzzy
+#| msgid ""
+#| "For most companies, warehouse stock only needs to be counted once a year. "
+#| "This is why, by default, after making an *inventory adjustment* in Odoo, "
+#| "the scheduled date for the next inventory count is set for the 31st of "
+#| "December of the current year."
 msgid ""
-"For most companies, warehouse stock only needs to be counted once a year. "
-"This is why, by default, after making an *inventory adjustment* in Odoo, the "
-"scheduled date for the next inventory count is set for the 31st of December "
-"of the current year."
+"For most companies, warehouse stock only needs to be counted once a year. To "
+"comply with that standard, the *Inventory* app defaults to the scheduled "
+"date of the 31st of December of the current year."
 msgstr ""
 "Pentru majoritatea companiilor, stocul din depozit trebuie numărat doar o "
 "dată pe an. Acesta este motivul pentru care, în mod implicit, după "
@@ -29973,12 +30035,19 @@ msgstr ""
 "anului curent."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:9
+#, fuzzy
+#| msgid ""
+#| "However, for some businesses, it's crucial to have an accurate inventory "
+#| "count at all times. These companies use *cycle counts* to keep critical "
+#| "stock levels accurate. Cycle counting is a method by which companies "
+#| "count their inventory more often in certain *locations*, to ensure that "
+#| "their physical inventory counts match their inventory records."
 msgid ""
-"However, for some businesses, it's crucial to have an accurate inventory "
-"count at all times. These companies use *cycle counts* to keep critical "
-"stock levels accurate. Cycle counting is a method by which companies count "
-"their inventory more often in certain *locations*, to ensure that their "
-"physical inventory counts match their inventory records."
+"However, for some businesses, maintaining an accurate inventory count is "
+"crucial. These companies use *cycle counts* to maintain accurate stock "
+"levels. Cycle counting is a method by which companies count their inventory "
+"more often in certain *locations* to ensure that their physical inventory "
+"counts match their inventory records."
 msgstr ""
 "Cu toate acestea, pentru unele companii, este esențial să existe un număr "
 "exact de inventar în orice moment. Aceste companii folosesc *numărările "
@@ -29997,10 +30066,16 @@ msgstr ""
 "efectua un număr de cicluri."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:20
+#, fuzzy
+#| msgid ""
+#| "To enable this feature, navigate to :menuselection:`Inventory app --> "
+#| "Configuration --> Settings`, and scroll down to the :guilabel:`Warehouse` "
+#| "section. Then, tick the checkbox next to :guilabel:`Storage Locations`, "
+#| "and click :guilabel:`Save`."
 msgid ""
 "To enable this feature, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and scroll down to the :guilabel:`Warehouse` "
-"section. Then, tick the checkbox next to :guilabel:`Storage Locations`, and "
+"Configuration --> Settings` and scroll down to the *Warehouse* section. "
+"Then, select the checkbox next to :guilabel:`Storage Locations` and "
 "click :guilabel:`Save`."
 msgstr ""
 "Pentru a activa această funcție, navigați la :menuselection:`Inventory app --"
@@ -30012,45 +30087,72 @@ msgstr ""
 msgid "Enabled Storage Locations setting in inventory settings."
 msgstr "Setarea Locații de stocare activată în setările de inventar."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:29
-msgid "Change inventory count frequency by location"
-msgstr "Modificați frecvența de numărare a inventarului în funcție de locație"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:28
+#, fuzzy
+#| msgid "Change inventory count frequency"
+msgid "Counting inventory at a set frequency"
+msgstr "Modificați frecvența de numărare a inventarului"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:30
+#, fuzzy
+#| msgid ""
+#| "Once the *Storage Locations* feature is enabled, and there are multiple "
+#| "locations created in the warehouse, the inventory count frequency can be "
+#| "changed for specific locations."
 msgid ""
-"Once the *Storage Locations* feature is enabled, and there are multiple "
-"locations created in the warehouse, the inventory count frequency can be "
-"changed for specific locations."
+"Once the *Storage Locations* feature is enabled and locations are created in "
+"the warehouse, the inventory count frequency can be changed for specific "
+"locations, and counts can be conducted on those locations."
 msgstr ""
 "Odată ce funcția *Locații de stocare* este activată și există mai multe "
 "locații create în depozit, frecvența de contorizare a inventarului poate fi "
 "modificată pentru anumite locații."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:35
+#, fuzzy
+#| msgid "Change inventory count frequency"
+msgid "Setting a cycle count frequency"
+msgstr "Modificați frecvența de numărare a inventarului"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:37
+#, fuzzy
+#| msgid ""
+#| "To view and edit locations, navigate to :menuselection:`Inventory app --> "
+#| "Configuration --> Locations`. This reveals a :guilabel:`Locations` page "
+#| "containing every location currently created and listed in the warehouse."
 msgid ""
 "To view and edit locations, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Locations`. This reveals a :guilabel:`Locations` page "
-"containing every location currently created and listed in the warehouse."
+"Configuration --> Locations`. This opens a *Locations* page containing every "
+"location currently created in the warehouse."
 msgstr ""
 "Pentru a vedea și edita locațiile, navigați la :menuselection:`Aplicația "
 "inventar --> Configurare --> Locații`. Aceasta dezvăluie o "
 "pagină :guilabel:`Locații` care conține fiecare locație creată în prezent și "
 "listată în depozit."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:38
-msgid ""
-"From this page, click into a location to reveal the settings and "
-"configuration page for that location."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:41
+#, fuzzy
+#| msgid ""
+#| "From this page, click into a location to reveal the settings and "
+#| "configuration page for that location."
+msgid "From this page, click a location to open its form."
 msgstr ""
 "Din această pagină, faceți clic într-o locație pentru a dezvălui setările și "
 "pagina de configurare pentru locația respectivă."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:43
+#, fuzzy
+#| msgid ""
+#| "Under the :guilabel:`Cyclic Counting` section, locate "
+#| "the :guilabel:`Inventory Frequency (Days)` field, which should be set to "
+#| "`0` by default (if this location has not been edited previously). In this "
+#| "field, change the value to any number of days desired for the frequency "
+#| "of counts."
 msgid ""
-"Under the :guilabel:`Cyclic Counting` section, locate "
-"the :guilabel:`Inventory Frequency (Days)` field, which should be set to `0` "
-"by default (if this location has not been edited previously). In this field, "
-"change the value to any number of days desired for the frequency of counts."
+"Under the *Cyclic Counting* section, locate the :guilabel:`Inventory "
+"Frequency` field, which is set to `0` by default (if this location has not "
+"been edited previously). In this field, change the value to any number of "
+"days desired for the frequency of counts."
 msgstr ""
 "În secțiunea :guilabel:`Contorare ciclică`, localizați "
 "câmpul :guilabel:`Frecvența inventarului (zile)`, care ar trebui să fie "
@@ -30062,34 +30164,55 @@ msgstr ""
 msgid "Location frequency setting on location."
 msgstr "Setarea frecvenței locației pe locație."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:51
+#, fuzzy
+#| msgid ""
+#| "A location that needs an inventory count every 30 days should have "
+#| "the :guilabel:`Inventory Frequency (Days)` value set to `30`."
 msgid ""
 "A location that needs an inventory count every 30 days should have "
-"the :guilabel:`Inventory Frequency (Days)` value set to `30`."
+"the :guilabel:`Inventory Frequency` value set to `30`."
 msgstr ""
 "O locație care necesită un număr de inventar la fiecare 30 de zile ar trebui "
 "să aibă valoarea :guilabel:`Frecvența inventarului (zile)` setată la `30`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:54
+#, fuzzy
+#| msgid ""
+#| "Now, once an inventory adjustment is applied to this location, the next "
+#| "scheduled count date is automatically set, based on the value entered "
+#| "into the :guilabel:`Inventory Frequency (Days)` field."
 msgid ""
-"Now, once an inventory adjustment is applied to this location, the next "
-"scheduled count date is automatically set, based on the value entered into "
-"the :guilabel:`Inventory Frequency (Days)` field."
+"Now, to ensure the scheduled cycle count appears as expected, :ref:`perform "
+"the first cycle count <inventory/warehouses_storage/cycle_count_perform>`. "
+"After inventory adjustments have been applied to products in this location, "
+"the next scheduled count date is automatically set based on the value "
+"entered in the :guilabel:`Inventory Frequency` field."
 msgstr ""
 "Acum, odată ce o ajustare a inventarului este aplicată acestei locații, "
 "următoarea dată de numărare programată este setată automat, pe baza valorii "
 "introduse în câmpul :guilabel:`Frecvența inventarului (zile)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:57
-msgid "Count inventory by location"
-msgstr "Numărați inventarul după locație"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:62
+#, fuzzy
+#| msgid "Performing an inventory count"
+msgid "Performing a cycle count"
+msgstr "Efectuarea unei numărători de inventar"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:64
+#, fuzzy
+#| msgid ""
+#| "To perform a cycle count for a specific location in the warehouse, "
+#| "navigate to :menuselection:`Inventory app --> Operations --> Physical "
+#| "Inventory`. This reveals an :guilabel:`Inventory Adjustments` page "
+#| "containing all products currently in-stock, with each product listed on "
+#| "its own line."
 msgid ""
 "To perform a cycle count for a specific location in the warehouse, navigate "
-"to :menuselection:`Inventory app --> Operations --> Physical Inventory`. "
-"This reveals an :guilabel:`Inventory Adjustments` page containing all "
-"products currently in-stock, with each product listed on its own line."
+"to the :menuselection:`Inventory app --> Operations --> Physical Inventory`. "
+"This opens a *Physical Inventory* page that lists all products currently in "
+"stock, with each product on its own line. Use this page to perform inventory "
+"adjustments."
 msgstr ""
 "Pentru a efectua un număr de cicluri pentru o anumită locație din depozit, "
 "navigați la :menuselection:`Aplicația inventar --> Operațiuni --> Inventar "
@@ -30097,24 +30220,34 @@ msgstr ""
 "conține toate produsele aflate în stoc în prezent, fiecare produs fiind "
 "listat pe propria linie."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:69
+#, fuzzy
+#| msgid ""
+#| "From this page, the :guilabel:`Filters` and :guilabel:`Group By` options "
+#| "(accessible by clicking the :guilabel:`⬇️ (down arrow)` icon, to the right "
+#| "of the :guilabel:`Search...` bar), can be used to select specific "
+#| "locations and perform inventory counts."
 msgid ""
 "From this page, the :guilabel:`Filters` and :guilabel:`Group By` options "
-"(accessible by clicking the :guilabel:`⬇️ (down arrow)` icon, to the right of "
-"the :guilabel:`Search...` bar), can be used to select specific locations and "
-"perform inventory counts."
+"(accessible by clicking into the :guilabel:`Search` bar) can be used to "
+"select specific locations and perform inventory counts."
 msgstr ""
 "Din această pagină, opțiunile :guilabel:`Filters` și :guilabel:`Group By` "
 "(accesibile făcând clic pe pictograma :guilabel:`⬇️ (săgeată în jos)`, în "
 "dreapta :guilabel:`Căutare... ` bar), poate fi folosit pentru a selecta "
 "anumite locații și pentru a efectua contorizări de inventar."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:73
+#, fuzzy
+#| msgid ""
+#| "To select a specific location, and view all products within that "
+#| "location, click the :guilabel:`⬇️ (down arrow)` icon, to the right of "
+#| "the :guilabel:`Search...` bar. Then, in the :guilabel:`Group By` column, "
+#| "click :guilabel:`Add Custom Group` to reveal a new drop-down menu."
 msgid ""
-"To select a specific location, and view all products within that location, "
-"click the :guilabel:`⬇️ (down arrow)` icon, to the right of "
-"the :guilabel:`Search...` bar. Then, in the :guilabel:`Group By` column, "
-"click :guilabel:`Add Custom Group` to reveal a new drop-down menu."
+"To select a specific location and view all products within it, click into "
+"the :guilabel:`Search` bar. Then, in the :guilabel:`Group By` column, "
+"select :guilabel:`Location`."
 msgstr ""
 "Pentru a selecta o anumită locație și a vedea toate produsele din acea "
 "locație, faceți clic pe pictograma :guilabel:`⬇️ (săgeata în jos)`, din "
@@ -30126,23 +30259,34 @@ msgstr ""
 msgid "Filters and Group By menu on Inventory Adjustments page."
 msgstr "Meniul Filtre și Grupare după de pe pagina Ajustări inventar."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:79
+#, fuzzy
+#| msgid ""
+#| "Click :guilabel:`Location` from the drop-down menu. Doing so sorts "
+#| "products into their storage locations on the :guilabel:`Inventory "
+#| "Adjustments` page, and a cycle count can be performed for all products in "
+#| "that location."
 msgid ""
-"Click :guilabel:`Location` from the drop-down menu. Doing so sorts products "
-"into their storage locations on the :guilabel:`Inventory Adjustments` page, "
-"and a cycle count can be performed for all products in that location."
+"All products are sorted by storage location on the *Physical Inventory* "
+"page, and a cycle count can be performed for all products in that location."
 msgstr ""
 "Faceți clic pe :guilabel:`Locație` din meniul drop-down. Procedând astfel, "
 "produsele sortează în locațiile lor de depozitare pe "
 "pagina :guilabel:`Ajustări inventar`, iar un număr de cicluri poate fi "
 "efectuat pentru toate produsele din acea locație."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:83
+#, fuzzy
+#| msgid ""
+#| "In large warehouses with multiple locations and a high volume of "
+#| "products, it might be easier to search for the specific location desired. "
+#| "To do this, from the :guilabel:`Inventory Adjustments` page, click "
+#| "the :guilabel:`⬇️ (down arrow)` icon to the right of "
+#| "the :guilabel:`Search...` bar."
 msgid ""
 "In large warehouses with multiple locations and a high volume of products, "
-"it might be easier to search for the specific location desired. To do this, "
-"from the :guilabel:`Inventory Adjustments` page, click the :guilabel:`⬇️ "
-"(down arrow)` icon to the right of the :guilabel:`Search...` bar."
+"it might be easier to search for the desired location. To do this, from the "
+"*Physical Inventory* page, click into the :guilabel:`Search` bar."
 msgstr ""
 "În depozitele mari cu mai multe locații și un volum mare de produse, ar "
 "putea fi mai ușor să căutați locația specifică dorită. Pentru a face acest "
@@ -30150,16 +30294,20 @@ msgstr ""
 "pictograma :guilabel:`⬇️ (săgeată în jos)` din dreapta "
 "barei :guilabel:`Căutare...`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:87
+#, fuzzy
+#| msgid ""
+#| "Then, in the :guilabel:`Filters` column, click :guilabel:`Add Custom "
+#| "Filter` to open an :guilabel:`Add Custom Filter` pop-up window."
 msgid ""
-"Then, in the :guilabel:`Filters` column, click :guilabel:`Add Custom Filter` "
-"to open an :guilabel:`Add Custom Filter` pop-up window."
+"Then, in the :guilabel:`Filters` column, click :guilabel:`Custom Filter` to "
+"open a :guilabel:`Custom Filter` pop-up window."
 msgstr ""
 "Apoi, în coloana :guilabel:`Filtre`, faceți clic pe :guilabel:`Adăugați "
 "filtru personalizat` pentru a deschide o fereastră pop-"
 "up :guilabel:`Adăugați filtru personalizat`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:90
 msgid ""
 "In the first field, click the value and select :guilabel:`Location` from the "
 "list of options. Select :guilabel:`contains` in the second field. In the "
@@ -30169,8 +30317,10 @@ msgstr ""
 "lista de opțiuni. Selectați :guilabel:`contains` în al doilea câmp. În al "
 "treilea câmp, introduceți numele locației căutate."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:92
-msgid "Click :guilabel:`Add` for that location to appear on the page."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:94
+#, fuzzy
+#| msgid "Click :guilabel:`Add` for that location to appear on the page."
+msgid "Click :guilabel:`Search` for that location to appear on the page."
 msgstr ""
 "Faceți clic pe :guilabel:`Adăugați` pentru ca acea locație să apară pe "
 "pagină."
@@ -30180,28 +30330,51 @@ msgid "Add Custom Filter pop-up window with location values entered."
 msgstr ""
 "Fereastra pop-up Adăugați filtru personalizat cu valorile locației introduse."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:99
-msgid "Change full inventory count frequency"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:100
+msgid ""
+"When performing counts in the *Barcode* app, inventory adjustments are "
+"grouped by location by default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:104
+#, fuzzy
+#| msgid "Change full inventory count frequency"
+msgid "Change full inventory count date"
 msgstr "Modificați frecvența completă a numărului de inventar"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:106
+#, fuzzy
+#| msgid ""
+#| "While cycle counts are typically performed per location, the scheduled "
+#| "date for full inventory counts of all in-stock products in the warehouse "
+#| "can also be manually changed, to push the date up sooner than the date "
+#| "listed."
 msgid ""
-"While cycle counts are typically performed per location, the scheduled date "
-"for full inventory counts of all in-stock products in the warehouse can also "
-"be manually changed, to push the date up sooner than the date listed."
+"While cycle counts are typically performed at the location level, companies "
+"should conduct a full inventory count once per year. In addition to keeping "
+"stock counts accurate, full inventory counts ensure that accounting earnings "
+"and costs are recorded accurately. The scheduled date for full inventory "
+"counts of all in-stock products in the warehouse can be manually changed to "
+"an earlier date than the listed date."
 msgstr ""
 "În timp ce contorizarea ciclului se efectuează în mod obișnuit pe locație, "
 "data programată pentru contorizarea inventarului complet al tuturor "
 "produselor aflate în stoc din depozit poate fi, de asemenea, modificată "
 "manual, pentru a împinge data mai devreme decât data indicată."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:112
+#, fuzzy
+#| msgid ""
+#| "To modify the default scheduled date, go to :menuselection:`Inventory app "
+#| "--> Configuration --> Settings`. Then, in the :guilabel:`Operations` "
+#| "section, locate the :guilabel:`Annual Inventory Day and Month` setting "
+#| "field, which includes a drop-down field that is set to "
+#| "`31` :guilabel:`December`, by default."
 msgid ""
-"To modify the default scheduled date, go to :menuselection:`Inventory app --"
-"> Configuration --> Settings`. Then, in the :guilabel:`Operations` section, "
-"locate the :guilabel:`Annual Inventory Day and Month` setting field, which "
-"includes a drop-down field that is set to `31` :guilabel:`December`, by "
-"default."
+"To modify the default scheduled date, go to the :menuselection:`Inventory "
+"app --> Configuration --> Settings`. Then, in the *Operations* section, "
+"locate the :guilabel:`Annual Inventory Day and Month` setting, which "
+"defaults to `31` :guilabel:`December`."
 msgstr ""
 "Pentru a modifica data programată implicită, "
 "accesați :menuselection:`Inventory app --> Configuration --> Settings`. "
@@ -30213,25 +30386,47 @@ msgstr ""
 msgid "Frequency field in inventory app settings."
 msgstr "Câmp de frecvență în setările aplicației de inventar."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:119
+#, fuzzy
+#| msgid ""
+#| "To change the day, click the `31`, and change it to a day within the "
+#| "range `1-31`, depending on the desired month of the year."
 msgid ""
-"To change the day, click the `31`, and change it to a day within the range "
-"`1-31`, depending on the desired month of the year."
+"To change the day, click the `31` and select a day within the range `1-31`, "
+"depending on the desired month of the year."
 msgstr ""
 "Pentru a schimba ziua, faceți clic pe `31` și schimbați-o într-o zi din "
 "intervalul `1-31`, în funcție de luna dorită a anului."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:120
-msgid "Once all necessary changes have been made, click :guilabel:`Save`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:122
+#, fuzzy
+#| msgid ""
+#| "Then, to change the month, click :guilabel:`December` to reveal the drop-"
+#| "down menu, and select the desired month."
+msgid ""
+"Then, to change the month, click :guilabel:`December` to open the drop-down "
+"menu and select the desired month."
+msgstr ""
+"Apoi, pentru a schimba luna, faceți clic pe :guilabel:`Decembrie` pentru a "
+"afișa meniul derulant și selectați luna dorită."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:126
+msgid "Confirm the date entry reflects a valid calendar date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:128
+#, fuzzy
+#| msgid "Once all necessary changes have been made, click :guilabel:`Save`."
+msgid "After all necessary changes have been made, click :guilabel:`Save`."
 msgstr ""
 "După ce au fost făcute toate modificările necesare, faceți clic "
 "pe :guilabel:`Salvați`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:131
 msgid ":doc:`count_products`"
 msgstr ":doc:`count_products`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:132
 msgid ":doc:`use_locations`"
 msgstr ":doc:`use_locations`"
 
@@ -40794,7 +40989,6 @@ msgstr ""
 "clic pe :guilabel:`Nou`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:30
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:94
 msgid "Learn more"
 msgstr "Aflați mai multe"
 
@@ -41608,62 +41802,35 @@ msgstr ""
 msgid "Show sample by-product in the BoM."
 msgstr "Afișați eșantionul de produs secundar în BM."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:3
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:5
 msgid "Manufacturing product configuration"
 msgstr "Configurația produsului de fabricație"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:8
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:7
 msgid ""
-"In order to manufacture a product in Odoo *Manufacturing*, the product must "
-"be properly configured. Doing so consists of enabling the *Manufacturing* "
-"route and configuring a bill of materials (BoM) for the product. Once these "
-"steps are completed, the product is selectable when creating a new "
-"manufacturing order."
+"Manufacturing products can be configured with lots or serial numbers "
+"for :doc:`tracking <../../inventory/product_management/product_tracking>`, "
+"and a bill of materials (BoM) for :doc:`replenishment <../../inventory/"
+"warehouses_storage/replenishment/mto>`."
 msgstr ""
-"Pentru a fabrica un produs în Odoo *Manufacturing*, produsul trebuie "
-"configurat corespunzător. Acest lucru constă în activarea rutei *Producție* "
-"și configurarea unei liste de materiale (BM) pentru produs. Odată finalizați "
-"acești pași, produsul poate fi selectat la crearea unei noi comenzi de "
-"producție."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:14
-msgid "Activate the Manufacture route"
-msgstr "Activați ruta Fabricare"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:16
+#, fuzzy
+#| msgid ""
+#| "The assignment of lots or serial numbers to newly manufactured products "
+#| "is optional. To optionally :doc:`assign lots or serial numbers <../../"
+#| "inventory/product_management/product_tracking>` to newly manufactured "
+#| "products, go to the :guilabel:`Traceability` section in "
+#| "the :guilabel:`Inventory` tab. In the :guilabel:`Tracking` field, "
+#| "select :guilabel:`By Unique Serial Number` or :guilabel:`By Lots`."
 msgid ""
-"The Manufacture route is activated for each product on its own product page. "
-"To do so, begin by navigating to :menuselection:`Manufacturing --> Products "
-"--> Products`. Then, select an existing product, or create a new one by "
-"clicking :guilabel:`New`."
-msgstr ""
-"Traseul Fabricare este activat pentru fiecare produs pe pagina proprie de "
-"produs. Pentru a face acest lucru, începeți prin a naviga "
-"la :menuselection:`Producție --> Produse --> Produse`. Apoi, selectați un "
-"produs existent sau creați unul nou făcând clic pe :guilabel:`Nou`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:20
-msgid ""
-"On the product page, select the :guilabel:`Inventory` tab, then enable "
-"the :guilabel:`Manufacture` checkbox in the :guilabel:`Routes` section. This "
-"tells Odoo the product can be manufactured."
-msgstr ""
-"Pe pagina produsului, selectați fila :guilabel:`Inventar`, apoi activați "
-"caseta de selectare :guilabel:`Fabricație` din secțiunea :guilabel:`Rute`. "
-"Acest lucru îi spune lui Odoo că produsul poate fi fabricat."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:None
-msgid "The Manufacturing route on the Inventory tab of a product page."
-msgstr "Ruta de fabricație din fila Inventar a paginii unui produs."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:32
-msgid ""
-"The assignment of lots or serial numbers to newly manufactured products is "
-"optional. To optionally :doc:`assign lots or serial numbers <../../inventory/"
-"product_management/product_tracking>` to newly manufactured products, go to "
-"the :guilabel:`Traceability` section in the :guilabel:`Inventory` tab. In "
-"the :guilabel:`Tracking` field, select :guilabel:`By Unique Serial Number` "
-"or :guilabel:`By Lots`."
+"To optionally :doc:`assign lots or serial numbers <../../inventory/"
+"product_management/product_tracking>` to newly manufactured products, go "
+"to :menuselection:`Manufacturing --> Products --> Products`. Then, select an "
+"existing product, or create a new one by clicking :guilabel:`New`. Go to "
+"the :guilabel:`Inventory` tab, and open the :guilabel:`General Information` "
+"tab. In the :guilabel:`Track Inventory` field, select :guilabel:`By Unique "
+"Serial Number` or :guilabel:`By Lots`."
 msgstr ""
 "Atribuirea loturilor sau a numerelor de serie produselor fabricate este "
 "opțională. Pentru a :doc:`atribui opțional loturi sau numere de serie <../../"
@@ -41672,25 +41839,30 @@ msgstr ""
 "În câmpul :guilabel:`Tracking`, selectați :guilabel:`By Unique Serial "
 "Number` sau :guilabel:`By Lots`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:23
+#, fuzzy
+#| msgid ""
+#| "Doing so enables the *Lot/Serial Number* field on a manufacturing order, "
+#| "or the *Register Production* instruction on a work order card in the "
+#| "*Shop Floor* app."
 msgid ""
-"Doing so enables the *Lot/Serial Number* field on a manufacturing order, or "
-"the *Register Production* instruction on a work order card in the *Shop "
-"Floor* app."
+"Doing so enables the :guilabel:`Lot/Serial Number` field on a manufacturing "
+"order, or the :guilabel:`Register Production` instruction on a work order "
+"card in the **Shop Floor** app."
 msgstr ""
 "Procedând astfel, se activează câmpul *Lot/Număr de serie* dintr-o comandă "
 "de fabricație sau instrucțiunea *Înregistrare producție* de pe un card de "
 "comandă de lucru în aplicația *Shop Floor*."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:29
 msgid "\"Lot/Serial Number\" field on the MO."
 msgstr "Câmpul „Lot/Număr de serie” din MO."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:29
 msgid "**Lot/Serial Number** field on the MO."
 msgstr "Câmpul **Lot/Număr de serie** din MO."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:34
 msgid ""
 "**Register Production** option to generate lot/serial number on a work order "
 "card."
@@ -41698,11 +41870,11 @@ msgstr ""
 "Opțiunea **Înregistrare producție** pentru a genera numărul de lot/serie pe "
 "un card de comandă de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:39
 msgid "Configure a bill of materials (BoM)"
 msgstr "Configurați o listă de materiale (BoM)"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:41
 msgid ""
 "Next, a |BOM| must be configured for the product so Odoo knows how it is "
 "manufactured. A |BOM| is a list of the components and operations required to "
@@ -41712,7 +41884,7 @@ msgstr ""
 "cum este fabricat. A |BOM| este o listă a componentelor și operațiunilor "
 "necesare pentru fabricarea unui produs."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:44
 msgid ""
 "To create a |BOM| for a specific product, navigate "
 "to :menuselection:`Manufacturing --> Products --> Products`, then select the "
@@ -41730,7 +41902,7 @@ msgstr ""
 msgid "The Bill of Materials smart button on a product page."
 msgstr "Butonul inteligent Lista materialelor de pe pagina unui produs."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:67
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:51
 msgid ""
 "On the |BOM|, the :guilabel:`Product` field auto-populates with the product. "
 "In the :guilabel:`Quantity` field, specify the number of units that the BoM "
@@ -41740,7 +41912,7 @@ msgstr ""
 "câmpul :guilabel:`Cantitate`, specificați numărul de unități pe care le "
 "produce BoM."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:54
 msgid ""
 "Add a component to the |BOM| by selecting the :guilabel:`Components` tab and "
 "clicking :guilabel:`Add a line`. Select a component from "
@@ -41758,7 +41930,7 @@ msgstr ""
 msgid "The Components tab on a bill of materials."
 msgstr "Fila Componente dintr-o listă de materiale."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:62
 msgid ""
 "Next, select the :guilabel:`Operations` tab. Click :guilabel:`Add a line` "
 "and a :guilabel:`Create Operations` pop-up window appears. In "
@@ -41777,7 +41949,7 @@ msgstr ""
 "pe :guilabel:`Salvați și Închideți` pentru a finaliza operațiunile de "
 "adăugare, sau pe :guilabel:`Salvați și Închideți` pentru a adăuga mai multe."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:69
 msgid ""
 "The :guilabel:`Operations` tab only appears if the :guilabel:`Work Orders` "
 "setting is enabled. To do so, navigate to :menuselection:`Manufacturing --> "
@@ -41793,20 +41965,11 @@ msgstr ""
 msgid "The Operations tab on a bill of materials."
 msgstr "Fila Operațiuni dintr-o listă de materiale."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:96
-msgid ""
-"The section above provides instructions for creating a basic |BOM| that "
-"allows a product to be manufactured in Odoo. However, it is by no means an "
-"exhaustive summary of all the options available when configuring a |BOM|. "
-"For more information about bills of materials, see the documentation on how "
-"to :doc:`create a bill of materials <bill_configuration>`."
-msgstr ""
-"Secțiunea de mai sus oferă instrucțiuni pentru crearea unei |BOM| de bază "
-"care permite fabricarea unui produs în Odoo. Cu toate acestea, nu este în "
-"niciun caz un rezumat exhaustiv al tuturor opțiunilor disponibile la "
-"configurarea unei |BOM|. Pentru mai multe informații despre listele de "
-"materiale, consultați documentația despre cum să :doc:`creați o listă de "
-"materiale <bill_configuration>`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:77
+#, fuzzy
+#| msgid ":doc:`../setup_configuration`"
+msgid ":doc:`bill_configuration`."
+msgstr ":doc:`../configurare_initiala`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:3
 msgid "Manufacturing order costs"
@@ -42462,29 +42625,15 @@ msgid "The Manufacture radio input field on a warehouse configuration page."
 msgstr ""
 "Câmpul de intrare radio Fabricare pe pagina de configurare a depozitului."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:31
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:33
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:30
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:31
-msgid ""
-"Products must be properly configured before they can be manufactured in "
-"Odoo. For details on how to do so, see the documentation on how "
-"to :ref:`configure a product for manufacturing <manufacturing/management/"
-"configure-manufacturing-product>`."
-msgstr ""
-"Produsele trebuie să fie configurate corect înainte de a putea fi fabricate "
-"în Odoo. Pentru detalii despre cum să faceți acest lucru, consultați "
-"documentația despre cum să :ref:`configurați un produs pentru fabricarea "
-"<manufacturing/management/configure-manufacturing-product>`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:38
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:35
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:36
 msgid "Create manufacturing order"
 msgstr "Creați comanda de fabricație"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:40
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:37
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:33
 msgid ""
 "To manufacture a product in Odoo *Manufacturing*, begin by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, "
@@ -42494,7 +42643,7 @@ msgstr ""
 "la :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, "
 "apoi faceți clic pe :guilabel:`New` pentru a crea un nou |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:39
 msgid ""
 "On the new |MO|, select the product to be produced from "
 "the :guilabel:`Product` drop-down menu. The :guilabel:`Bill of Material` "
@@ -42504,9 +42653,9 @@ msgstr ""
 "down :guilabel:`Produs`. Câmpul :guilabel:`Bill of Material` se completează "
 "automat cu lista de materiale asociată."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:47
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:44
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:42
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:40
 msgid ""
 "If a product has more than one |BOM| configured for it, the specific |BOM| "
 "can be selected in the :guilabel:`Bill of Material` field, and "
@@ -42516,9 +42665,9 @@ msgstr ""
 "poate fi selectat în câmpul :guilabel:`Bill of Material`, iar "
 "câmpul :guilabel:`Product` se completează automat cu produsul asociat."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:51
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:48
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:49
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:44
 msgid ""
 "After a |BOM| has been selected, the :guilabel:`Components` "
 "and :guilabel:`Work Orders` tabs auto-populate with the components and "
@@ -42534,22 +42683,22 @@ msgstr ""
 "filele :guilabel:`Componente` și :guilabel:`Comenzi de lucru` făcând clic "
 "pe :guilabel:`Adăugați o linie`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:56
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:53
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:48
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:49
 msgid "Finally, click :guilabel:`Confirm` to confirm the |MO|."
 msgstr ""
 "În cele din urmă, faceți clic pe :guilabel:`Confirm` pentru a confirma |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:59
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:80
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:72
 msgid "Process manufacturing order"
 msgstr "Procesează comanda de fabricație"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:61
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:82
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:74
 msgid ""
 "An |MO| is processed by completing all of the work orders listed under "
 "its :guilabel:`Work Orders` tab. This can be done on the |MO| itself, or "
@@ -42559,14 +42708,14 @@ msgstr ""
 "în fila sa :guilabel:`Comenzi de lucru`. Acest lucru se poate face pe |MO| "
 "propriu-zis, sau din vizualizarea tabletei comenzii de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:65
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:86
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:81
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:78
 msgid "Basic workflow"
 msgstr "Flux de lucru de bază"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:67
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:62
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:80
 msgid ""
 "To complete work orders from the |MO| itself, begin by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, "
@@ -42576,8 +42725,8 @@ msgstr ""
 "naviga la :menuselection:`Manufacturing --> Operations --> Manufacturing "
 "Orders`, apoi selectați un |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:70
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:86
 msgid ""
 "On the |MO| page, select the :guilabel:`Work Orders` tab. Once work begins "
 "on the first work order that needs to be completed, click "
@@ -42594,9 +42743,9 @@ msgstr ""
 msgid "The Start button for an operation on a manufacturing order."
 msgstr "Butonul Start pentru o operație pe o comandă de fabricație."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:78
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:99
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:96
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:73
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:94
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:91
 msgid ""
 "When the work order is completed, click the :guilabel:`Done` button for that "
 "work order. Repeat the same process for each work order listed on "
@@ -42611,9 +42760,9 @@ msgstr ""
 msgid "The Done button for an operation on a manufacturing order."
 msgstr "Butonul Terminat pentru o operație pe o comandă de fabricație."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:85
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:106
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:103
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:80
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:98
 msgid ""
 "After completing all of the work orders, click :guilabel:`Produce All` at "
 "the top of the screen to mark the |MO| as :guilabel:`Done`, and register the "
@@ -42623,15 +42772,15 @@ msgstr ""
 "pe :guilabel:`Produce All` în partea de sus a ecranului pentru a marca |MO| "
 "ca :guilabel:`Done` și înregistrați produsul(ele) fabricat(e) în inventar."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:89
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:110
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:84
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:105
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:102
 msgid "Shop Floor workflow"
 msgstr "Fluxul de lucru din magazin"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:91
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:112
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:104
 msgid ""
 "To complete the work orders for an |MO| using the *Shop Floor* module, begin "
 "by navigating to :menuselection:`Manufacturing --> Operations --> "
@@ -42641,9 +42790,9 @@ msgstr ""
 "Floor*, începeți prin a naviga la :menuselection:`Manufacturing --> "
 "Operations --> Manufacturing Orders`, apoi selectați un |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:94
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:115
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:89
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:110
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:107
 msgid ""
 "On the |MO|, click on the :guilabel:`Work Orders` tab, and then select "
 "the :guilabel:`↗️ (square with arrow coming out of it)` button on the line of "
@@ -42657,9 +42806,9 @@ msgstr ""
 "deschide o fereastră pop-up :guilabel:`Comenzi de lucru`, cu detalii și "
 "opțiuni de procesare pentru comanda de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:99
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:120
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:117
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:94
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:112
 msgid ""
 "On the pop-up window, select the :guilabel:`Open Shop Floor` button at the "
 "top-left of the window to open the *Shop Floor* module."
@@ -42674,9 +42823,9 @@ msgid "The Open Shop Floor button for a work order on a manufacturing order."
 msgstr ""
 "Butonul Open Shop Floor pentru o comandă de lucru pe o comandă de fabricație."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:106
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:127
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:124
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:122
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:119
 msgid ""
 "When accessed directly from a specific work order within an |MO|, *Shop "
 "Floor* defaults to the page for the work center where the work order is "
@@ -42699,8 +42848,8 @@ msgstr ""
 "Un card de comandă de lucru pe pagina unui centru de lucru din modulul Shop "
 "Floor."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:115
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:133
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:110
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:128
 msgid ""
 "A work order is processed by completing each step listed on its card. This "
 "can be done by clicking on a step and following the instructions listed on "
@@ -42713,9 +42862,9 @@ msgstr ""
 "finalizat, faceți clic pe :guilabel:`Next` pentru a trece la următorul pas, "
 "dacă este necesar."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:119
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:140
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:135
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:132
 msgid ""
 "Alternatively, work order steps can be completed by clicking the checkbox "
 "that appears on the right side of the step's line on the work order card. "
@@ -42727,9 +42876,9 @@ msgstr ""
 "comenzii de lucru. Când utilizați această metodă, pasul este marcat automat "
 "ca finalizat, fără a apărea o fereastră pop-up."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:123
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:144
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:141
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:118
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:139
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:136
 msgid ""
 "The final step on a work order card is titled *Register Production*. This "
 "step is used to register the number of product units that were produced. If "
@@ -42744,9 +42893,9 @@ msgstr ""
 "din partea dreaptă a liniei pentru a înregistra automat acel număr ca "
 "cantitate produsă."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:128
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:149
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:146
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:144
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:141
 msgid ""
 "If a different number must be entered, click the :guilabel:`Register "
 "Production` step to open a pop-up window. Enter the number of units produced "
@@ -42758,9 +42907,9 @@ msgstr ""
 "up. Introduceți numărul de unități produse în câmpul :guilabel:`Units`, apoi "
 "faceți clic pe :guilabel:`Validat` pentru a înregistra acel număr."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:133
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:154
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:151
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:128
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:149
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:146
 msgid ""
 "The *Register Production* step appears on every work order card. It must be "
 "completed for the first work order that is processed. After doing so, the "
@@ -42771,9 +42920,9 @@ msgstr ""
 "După ce faceți acest lucru, pasul apare ca fiind deja finalizat pentru "
 "fiecare comandă de lucru rămasă în |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:137
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:158
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:155
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:153
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:150
 msgid ""
 "After completing all of the steps for a work order, a button appears on the "
 "footer of the work order card. If any other work orders must be completed "
@@ -42788,9 +42937,9 @@ msgstr ""
 "suplimentare de finalizat, butonul se intitulează :guilabel:`Închide "
 "producția`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:142
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:163
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:160
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:158
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:155
 msgid ""
 "Clicking :guilabel:`Mark as Done` causes the work order card to fade away. "
 "Once it disappears completely, the work order's status is marked as "
@@ -42806,9 +42955,9 @@ msgstr ""
 "efectuat. . Orice comenzi de lucru suplimentare pot fi procesate folosind "
 "instrucțiunile detaliate în această secțiune."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:148
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:169
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:166
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:143
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:164
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:161
 msgid ""
 "Clicking :guilabel:`Close Production` causes the work order card to fade "
 "away. Once it disappears, the |MO| is marked as *Done*, and the units of the "
@@ -42818,9 +42967,9 @@ msgstr ""
 "va dispărea. Odată ce dispare, |MO| este marcat ca *Terminat*, iar unitățile "
 "de produs care au fost produse sunt introduse în inventar."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:152
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:173
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:170
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:168
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:165
 msgid ""
 "After clicking :guilabel:`Mark as Done` or :guilabel:`Close Production`, "
 "each button is replaced by an :guilabel:`Undo` button. Click "
@@ -42832,9 +42981,9 @@ msgstr ""
 "Faceți clic pe butonul :guilabel:`Anulați` înainte ca cardul de comandă de "
 "lucru să dispară pentru a menține deschisă comanda de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:157
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:178
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:175
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:173
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:170
 msgid ""
 "This section details the basic workflow for processing an |MO| in the *Shop "
 "Floor* module. For a more in-depth explanation of the module and all of its "
@@ -42866,8 +43015,8 @@ msgstr ""
 "inventar în funcție de numărul de componente eliminate și de produsele "
 "finite create."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:41
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:42
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:37
 msgid ""
 "On the new |MO|, select the product to be produced from "
 "the :guilabel:`Product` drop-down menu. The :guilabel:`Bill of Material` "
@@ -42877,12 +43026,12 @@ msgstr ""
 "down :guilabel:`Produs`. Câmpul :guilabel:`Bill of Material` se completează "
 "automat cu lista de materiale asociată."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:56
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:52
 msgid "Process pick components transfer"
 msgstr "Procesul de preluare a componentelor de transfer"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:58
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:53
 msgid ""
 "After confirming a three-step |MO|, a :guilabel:`Transfers` smart button "
 "appears at the top of the page. Click it to be taken to "
@@ -42896,7 +43045,7 @@ msgstr ""
 "transferuri: *WH/PC/XXXX* (transferul componentelor de alegere) și *WH/SFP/"
 "XXXX* (transferul produselor finite din magazin)."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:58
 msgid ""
 "Select :guilabel:`WH/PC/XXXXX` to open the pick components transfer for the |"
 "MO|. This transfer is used to track the movement of components from the "
@@ -42908,8 +43057,8 @@ msgstr ""
 "mișcarea componentelor de la locațiile în care sunt depozitate până la locul "
 "în care sunt utilizate pentru fabricarea produsului."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:67
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:62
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:59
 msgid ""
 "After transferring the components out of their storage location, "
 "click :guilabel:`Validate` at the top of the transfer, followed "
@@ -42924,8 +43073,8 @@ msgstr ""
 "și actualizează numărul de inventar pentru a reflecta cantitatea de "
 "componente transferată."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:72
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:67
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:64
 msgid ""
 "Finally, return to the |MO| by clicking the :guilabel:`WH/MO/XXXXX` "
 "breadcrumb at the top of the page."
@@ -42938,7 +43087,7 @@ msgstr ""
 msgid "The manufacturing order bread crumb on a pick components transfer."
 msgstr "Comanda de fabricație pesmet pe un transfer de componente pick."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:83
 msgid ""
 "To complete work orders from the |MO| itself, begin by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, "
@@ -42956,7 +43105,7 @@ msgstr "Butonul Start pentru o comandă de lucru pe o comandă de fabricație."
 msgid "The Done button for an work order on a manufacturing order."
 msgstr "Butonul Terminat pentru o comandă de lucru pe o comandă de fabricație."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:136
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:131
 msgid ""
 "A work order is processed by completing each step listed on its card. This "
 "can be done by clicking on a step, and following the instructions listed on "
@@ -42969,11 +43118,11 @@ msgstr ""
 "finalizat, faceți clic pe :guilabel:`Next` pentru a trece la următorul pas, "
 "dacă este necesar."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:183
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:178
 msgid "Process finished product transfer"
 msgstr "Procesul de transfer al produsului finit"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:185
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:180
 msgid ""
 "After completing the |MO|, return to the order's :guilabel:`Transfers` page "
 "by clicking the :guilabel:`Transfers` button at the top of the order. This "
@@ -42989,7 +43138,7 @@ msgstr ""
 "pentru a urmări mișcarea produselor finite de la locul în care au fost "
 "fabricate până la locul în care sunt depozitate."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:190
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:185
 msgid ""
 "After transferring the finished products to their storage location, "
 "click :guilabel:`Validate` at the top of the transfer, followed "
@@ -43025,7 +43174,7 @@ msgstr ""
 "numărul de produse fabricate, dar acțiunea de a le transfera către și de la "
 "inventar nu este urmărită."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:54
 msgid ""
 "After confirming a two-step |MO|, a :guilabel:`Transfers` smart button "
 "appears at the top of the page. Click it to open the pick components "
@@ -43040,7 +43189,7 @@ msgstr ""
 "sunt depozitate până la locul în care sunt utilizate pentru fabricarea "
 "produsului."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:83
 msgid ""
 "On the |MO| page, select the :guilabel:`Work Orders` tab. Once work begins "
 "on the first work order that needs to be completed, click "
@@ -44622,17 +44771,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:103
 msgid ""
-"After clicking :guilabel:`Close Production`, the |MO| card begins to fade "
-"away, and an :guilabel:`Undo` button appears on the footer. "
-"Clicking :guilabel:`Undo` causes the |MO| to remain open. Once the |MO| card "
-"disappears completely, the work order is closed."
+"After clicking :guilabel:`Close Production`, the |MO| card disappears "
+"completely and the work order is closed."
 msgstr ""
-"După ce faceți clic pe :guilabel:`Închide producția`, |MO| cardul începe să "
-"dispară și un buton :guilabel:`Anulați` apare pe subsol. Dacă faceți clic "
-"pe :guilabel:`Anulați`, apare |MO| să rămână deschisă. Odată ce |MO| cardul "
-"dispare complet, comanda de lucru este închisă."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:106
 msgid ""
 "On the right side of the footer is an :guilabel:`⋮ (options)` button, which "
 "opens a pop-up window with additional options for the |MO|:"
@@ -44640,8 +44783,8 @@ msgstr ""
 "În partea dreaptă a subsolului este un buton :guilabel:`⋮ (opțiuni)`, care "
 "deschide o fereastră pop-up cu opțiuni suplimentare pentru |MO|:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:110
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:171
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:170
 msgid ""
 ":guilabel:`Scrap` is used to send components to a scrap location when they "
 "are found to be defective."
@@ -44649,7 +44792,7 @@ msgstr ""
 ":guilabel:`Scrap` este folosit pentru a trimite componente într-o locație de "
 "deșeuri atunci când se constată că sunt defecte."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:111
 msgid ""
 ":guilabel:`Add Work Order` is used to add an additional work order to the |"
 "MO|."
@@ -44657,15 +44800,15 @@ msgstr ""
 ":guilabel:`Add Work Order` este folosit pentru a adăuga o comandă de lucru "
 "suplimentară la |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:113
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:173
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:172
 msgid ""
 ":guilabel:`Add Component` is used to add an additional component to the |MO|."
 msgstr ""
 ":guilabel:`Add Component` este folosit pentru a adăuga o componentă "
 "suplimentară la |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:113
 msgid ":guilabel:`Open Backend MO` opens the |MO| in the Manufacturing app."
 msgstr ":guilabel:`Open Backend MO` deschide |MO| în aplicația de producție."
 
@@ -44675,11 +44818,11 @@ msgid ""
 msgstr ""
 "Un card de informații pentru un MO pe pagina „Toate” a modulului Shop Floor."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:120
 msgid "Work center pages"
 msgstr "Paginile centrului de lucru"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:122
 msgid ""
 "By default, the page for each work center shows an information card for "
 "every work order assigned to it that is *ready to start*. A work order is "
@@ -44692,7 +44835,7 @@ msgstr ""
 "cu |MO| este o parte din este gata de pornire și toate comenzile de lucru "
 "anterioare au fost finalizate."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:127
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:126
 msgid ""
 "To view every confirmed work order assigned to a work center regardless of "
 "readiness, click the :guilabel:`x` button on the :guilabel:`Ready to Start` "
@@ -44703,11 +44846,11 @@ msgstr ""
 "butonul :guilabel:`x` din filtrul :guilabel:`Gata de pornire` pentru a o "
 "elimina din bara :guilabel:`Căutare...` ."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:131
 msgid "Work order information card"
 msgstr "Fișă cu informații despre comanda de lucru"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:133
 msgid ""
 "A work order information card on a work center's page shows all of the "
 "relevant details of the associated work order, and also provides employees "
@@ -44717,7 +44860,7 @@ msgstr ""
 "arată toate detaliile relevante ale comenzii de lucru asociate și oferă, de "
 "asemenea, angajaților opțiuni pentru procesarea comenzii de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:136
 msgid ""
 "The header for a work order card shows the reference number of the |MO| that "
 "the work order is a part of, the product and number of units being produced, "
@@ -44733,7 +44876,7 @@ msgstr ""
 "actualizează pentru a afișa un cronometru care arată durata totală la care a "
 "fost lucrată comanda de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:142
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:141
 msgid ""
 "The main body of a work order card shows a line for each step required to "
 "complete the work order. Work order steps can be completed by clicking on "
@@ -44748,7 +44891,7 @@ msgstr ""
 "selectare din partea dreaptă a fiecărei linii marchează automat pasul ca "
 "finalizat."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:146
 msgid ""
 "Below the final step of the work order is a line titled :guilabel:`Register "
 "Production`, which functions the same as the :guilabel:`Register Production` "
@@ -44763,7 +44906,7 @@ msgstr ""
 "producție` pe un card de comandă de lucru completează, de asemenea, pasul "
 "pentru |MO| asociat. card."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:151
 msgid ""
 "If the work order being processed is the final work order for the |MO|, "
 "a :guilabel:`Close Production` button appears on the footer of the work "
@@ -44779,7 +44922,7 @@ msgstr ""
 "verificare a calității pentru |MO|. În acest caz, verificarea calității "
 "trebuie finalizată din |MO| card înainte de |MO| poate fi închis."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:158
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:157
 msgid ""
 "Alternatively, if the |MO| requires the completion of additional work "
 "orders, a :guilabel:`Mark as Done` button appears instead. "
@@ -44793,7 +44936,7 @@ msgstr ""
 "finalizată și face ca următoarea comandă de lucru să apară pe pagina "
 "centrului de lucru căruia îi este alocată."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:163
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:162
 msgid ""
 "After clicking :guilabel:`Close Production` or :guilabel:`Mark as Done`, the "
 "work order card begins to fade away, and an :guilabel:`Undo` button appears "
@@ -44808,7 +44951,7 @@ msgstr ""
 "comandă de lucru dispare complet, comanda de lucru este marcată "
 "ca :guilabel:`Terminat` pe |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:168
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:167
 msgid ""
 "On the right side of the footer is an :guilabel:`⋮ (options)` button, which "
 "opens a pop-up window with additional options for the work order:"
@@ -44816,7 +44959,7 @@ msgstr ""
 "În partea dreaptă a subsolului este un buton :guilabel:`⋮ (opțiuni)`, care "
 "deschide o fereastră pop-up cu opțiuni suplimentare pentru comanda de lucru:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:174
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:173
 msgid ""
 ":guilabel:`Move to work center` is used to transfer the work order to a "
 "different work center."
@@ -44824,7 +44967,7 @@ msgstr ""
 ":guilabel:`Mutare la centrul de lucru` este folosit pentru a transfera "
 "comanda de lucru la un alt centru de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:175
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:174
 msgid ""
 ":guilabel:`Suggest a Worksheet improvement` allows the user to propose a "
 "change to the work order's instructions or steps."
@@ -44832,7 +44975,7 @@ msgstr ""
 ":guilabel:`Sugerează o îmbunătățire a foii de lucru` permite utilizatorului "
 "să propună o modificare a instrucțiunilor sau pașilor comenzii de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:177
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:176
 msgid ""
 ":guilabel:`Create a Quality Alert` opens a quality alert form that can be "
 "filled out to alert a quality team about a potential issue."
@@ -44845,11 +44988,11 @@ msgstr ""
 msgid "An information card for a work order in the Shop Floor module."
 msgstr "Un card de informații pentru o comandă de lucru în modulul Shop Floor."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:185
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:184
 msgid "Operator panel"
 msgstr "Panoul operator"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:186
 msgid ""
 "The operator panel is used to manage the employees that are signed in to the "
 "*Shop Floor* module. The panel shows the name and profile picture of every "
@@ -44860,7 +45003,7 @@ msgstr ""
 "fiecărui angajat care este conectat în prezent în toate instanțele bazei de "
 "date."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:191
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:190
 msgid ""
 "To interact with *Shop Floor* as a specific employee, click the employee's "
 "name to activate their profile. Profiles that are not active appear with "
@@ -44870,7 +45013,7 @@ msgstr ""
 "numele angajatului pentru a-i activa profilul. Profilurile care nu sunt "
 "active apar cu numele lor și fotografiile de profil cu gri."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:194
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:193
 msgid ""
 "When an employee is selected in the operator panel, they can begin working "
 "on a work order by clicking the work order's heading. If an employee is "
@@ -44884,7 +45027,7 @@ msgstr ""
 "comenzii de lucru apar sub numele său, împreună cu un cronometru care arată "
 "cât timp lucrează la fiecare comandă."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:199
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:198
 msgid ""
 "To add a new employee to the operator panel, click the :guilabel:`+ Add "
 "Operator` button at the bottom of the panel. Then, select an employee from "
@@ -44894,7 +45037,7 @@ msgstr ""
 "butonul :guilabel:`+ Adăugare operator` din partea de jos a panoului. Apoi, "
 "selectați un angajat din fereastra pop-up :guilabel:`Select Employee`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:202
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:201
 msgid ""
 "To remove an employee from the operator panel, simply click "
 "the :guilabel:`x` button next to their name in the panel."
@@ -44909,11 +45052,11 @@ msgid ""
 msgstr ""
 "Panoul operator al modulului Shop Floor, care arată trei angajați conectați."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:210
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:209
 msgid "MO/WO prioritization"
 msgstr "Prioritizarea MO/WO"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:211
 msgid ""
 "The **Shop Floor** module uses the *scheduled date* entered on |MOs| to "
 "prioritize the |MOs| and work orders that appear on the module's dashboard "
@@ -44926,7 +45069,7 @@ msgstr ""
 "lucru programate mai devreme au prioritate mai mare și apar înaintea celor "
 "programate mai târziu."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:217
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:216
 msgid ""
 "To specify the scheduled date on an |MO|, begin by navigating "
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
@@ -44936,7 +45079,7 @@ msgstr ""
 "la :menuselection:`Aplicația Producție --> Operațiuni --> Ordine de "
 "producție` și apasă :guilabel:`Nou` pentru a crea un nou |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:220
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:219
 msgid ""
 "Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
 "window. By default, the :guilabel:`Scheduled Date` field, and its "
@@ -44946,7 +45089,7 @@ msgstr ""
 "pop-up cu calendar. În mod implicit, câmpul :guilabel:`Dată programată` și "
 "fereastra sa pop-up afișează data și ora curente."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:223
 msgid ""
 "Use the calendar to select the date on which processing should begin for the "
 "|MO|. In the two fields at the bottom of the popover window, enter the hour "
@@ -44957,7 +45100,7 @@ msgstr ""
 "pop-up, introdu ora și minutul la care ar trebui să înceapă procesarea, "
 "folosind formatul de 24 de ore."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:228
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:227
 msgid ""
 "Finally, click :guilabel:`Apply` at the bottom of the popover window to set "
 "the date and time for the :guilabel:`Scheduled Date` field. Then, click "
@@ -44968,7 +45111,7 @@ msgstr ""
 "apasă butonul :guilabel:`Confirmă` din partea de sus a |MO| pentru a-l "
 "confirma."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:232
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:231
 msgid ""
 "Once the |MO| is confirmed, it appears in the **Shop Floor** module, as long "
 "is it has the :guilabel:`Ready` status, which means all components are "
@@ -44978,7 +45121,7 @@ msgstr ""
 "timp cât are statutul :guilabel:`Gata`, ceea ce înseamnă că toate "
 "componentele sunt disponibile."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:235
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:234
 msgid ""
 "On the Odoo dashboard, click on the :menuselection:`Shop Floor` module to "
 "open it. The :guilabel:`All MO #` page of the dashboard displays *Ready* |"
@@ -44988,7 +45131,7 @@ msgstr ""
 "a-l deschide. Pagina :guilabel:`Toate MO #` a tabloului de bord afișează |"
 "MO|-uri *Gata*, organizate în funcție de datele lor programate."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:239
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:238
 msgid ""
 "At the top of the module, select a work center to see the work orders "
 "assigned to it. The page for each work center organizes work orders, based "
@@ -44999,23 +45142,23 @@ msgstr ""
 "organizează ordinele de lucru, pe baza datelor programate ale |MO|-urilor "
 "corespunzătoare."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:243
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:242
 msgid "Three |MOs| are confirmed for a *Bookcase* product:"
 msgstr "Trebuie confirmate trei |MO|-uri pentru un produs *Bibliotecă*:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:245
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:244
 msgid "WH/MO/00411 has a :guilabel:`Scheduled Date` of August 16th."
 msgstr "WH/MO/00411 are o :guilabel:`Dată programată` de 16 august."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:246
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:245
 msgid "WH/MO/00412 has a :guilabel:`Scheduled Date` of August 20th."
 msgstr "WH/MO/00412 are o :guilabel:`Dată programată` de 20 august."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:247
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:246
 msgid "WH/MO/00413 has a :guilabel:`Scheduled Date` of August 18th."
 msgstr "WH/MO/00413 are o :guilabel:`Dată programată` de 18 august."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:249
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:248
 msgid ""
 "On the :guilabel:`All MO #` page of the **Shop Floor** module, the cards for "
 "each |MO| appear in this order: WH/MO/00411, WH/MO/00413, WH/MO/00412."
@@ -45028,7 +45171,7 @@ msgstr ""
 msgid "MOs in the Shop Floor module, ordered by their scheduled date."
 msgstr "MO-urile din modulul Shop Floor, ordonate după data programată."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:256
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:255
 msgid ""
 "Each |MO| requires one work order, carried out at :guilabel:`Assembly "
 "Station 1`. Clicking on the :guilabel:`Assembly Station 1` button at the top "
@@ -49515,7 +49658,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:82
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/pass_fail_check.rst:121
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/picture_check.rst:133
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:131
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:146
 msgid ""
 "On the |MO|, select the :guilabel:`Work Orders` tab, and then click "
 "the :guilabel:`Open Work Order (external link icon)` button on the line of "
@@ -49533,7 +49676,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:87
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/instructions_check.rst:80
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/pass_fail_check.rst:126
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:140
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:155
 msgid ""
 "When accessed from a specific work order, the *Shop Floor* module opens to "
 "the page for the work center where the order is configured to be processed, "
@@ -60220,56 +60363,92 @@ msgstr ""
 "singură dată sau să înregistreze un control al calității pe care îl "
 "efectuează fără a fi solicitat."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:25
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:27
 msgid "Manual quality check"
 msgstr "Verificare manuală a calității"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:27
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:29
+#, fuzzy
+#| msgid ""
+#| "To create a single *Measure* quality check, navigate "
+#| "to :menuselection:`Quality --> Quality Control --> Quality Checks`, and "
+#| "click :guilabel:`New`. Fill out the new quality check form as follows:"
 msgid ""
 "To manually create a single quality check, navigate "
 "to :menuselection:`Quality --> Quality Control --> Quality Checks`, and "
-"click :guilabel:`New`. On the quality check form, begin by selecting an "
-"option from the :guilabel:`Control per` drop-down menu:"
+"click :guilabel:`New`."
 msgstr ""
-"Pentru a crea manual o singură verificare a calității, navigați "
-"la :menuselection:`Calitate --> Control calitate --> Verificări de calitate` "
-"și faceți clic pe :guilabel:`Nou`. Pe formularul de verificare a calității, "
-"începeți prin a selecta o opțiune din meniul drop-down :guilabel:`Control "
-"per`:"
+"Pentru a crea o singură verificare a calității *Measure*, navigați "
+"la :menuselection:`Calitate --> Controlul calității --> Verificări de "
+"calitate` și faceți clic pe :guilabel:`Nou`. Completați noul formular de "
+"verificare a calității după cum urmează:"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:31
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:32
 msgid ""
-":guilabel:`Operation` requests a check for an entire operation (ex. delivery "
-"order) and all products within it."
+"On the quality check form, begin by specifying a :guilabel:`Title` for the "
+"quality check. This should be a brief description of what the quality check "
+"entails."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:35
+#, fuzzy
+#| msgid ""
+#| "Select a quality check type from the :guilabel:`Type` drop-down field:"
+msgid "Select an option from the :guilabel:`Control per` drop-down menu:"
+msgstr ""
+"Selectați un tip de verificare a calității din câmpul drop-"
+"down :guilabel:`Tip`:"
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:37
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Operation` requests a check for an entire operation (ex. "
+#| "delivery order) and all products within it."
+msgid ""
+":guilabel:`Operation` requests a check for an entire operation (such as a "
+"delivery order) and all products within it."
 msgstr ""
 ":guilabel:`Operațiunea` solicită o verificare pentru o întreagă operațiune "
 "(ex. comandă de livrare) și pentru toate produsele din cadrul acesteia."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:33
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:39
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Product` requests a check for every unit of a product that is "
+#| "part of an operation (ex. every unit of a product within a delivery "
+#| "order)."
 msgid ""
 ":guilabel:`Product` requests a check for every unit of a product that is "
-"part of an operation (ex. every unit of a product within a delivery order)."
+"part of an operation (e.g., every unit of a product within a delivery order)."
 msgstr ""
 ":guilabel:`Produs` solicită o verificare pentru fiecare unitate a unui "
 "produs care face parte dintr-o operațiune (de ex. fiecare unitate a unui "
 "produs dintr-o comandă de livrare)."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:35
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:41
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Product` requests a check for every unit of a product that is "
+#| "part of an operation (ex. every unit of a product within a delivery "
+#| "order)."
 msgid ""
 ":guilabel:`Quantity` requests a check for every quantity of a product that "
-"is part of an operation (ex. one check for five units of a product within a "
-"delivery order). Selecting :guilabel:`Quantity` also causes a :guilabel:`Lot/"
-"Serial` drop-down field to appear, from which can be selected a specific lot "
-"or serial number that the quality check should be conducted for."
+"is part of an operation (e.g., one check for five units of a product within "
+"a delivery order)."
 msgstr ""
-":guilabel:`Cantitate` solicită o verificare pentru fiecare cantitate dintr-"
-"un produs care face parte dintr-o operațiune (de ex. o verificare pentru "
-"cinci unități dintr-un produs dintr-o comandă de livrare). "
-"Selectarea :guilabel:`Cantitate` provoacă, de asemenea, să apară un câmp "
-"derulant :guilabel:`Lot/Serial`, din care poate fi selectat un anumit lot "
-"sau număr de serie pentru care ar trebui efectuată verificarea calității."
+":guilabel:`Produs` solicită o verificare pentru fiecare unitate a unui "
+"produs care face parte dintr-o operațiune (de ex. fiecare unitate a unui "
+"produs dintr-o comandă de livrare)."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:40
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:44
+msgid ""
+"When :guilabel:`Product` or :guilabel:`Quantity` are selected, it is "
+"possible to select a :guilabel:`Product` in inventory. If that product is "
+"tracked by lot or serial number, the :guilabel:`Lot/Serial` field appears, "
+"where the lot or serial number to be quality checked must be specified."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:49
 msgid ""
 "Next, select an inventory operation from the :guilabel:`Picking` drop-down "
 "menu or a manufacturing order from the :guilabel:`Production Order` drop-"
@@ -60281,7 +60460,18 @@ msgstr ""
 "down :guilabel:`Production Order`. Acest lucru este necesar deoarece Odoo "
 "trebuie să știe pentru ce operațiune se efectuează verificarea calității."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:44
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:54
+msgid ""
+"It is also possible to create a quality check directly from an *Inventory* "
+"operation. To do so, navigate to :menuselection:`Inventory app --> "
+"Operations` and select an operation type from the :guilabel:`Transfers` "
+"menu. Open an operation from the list, then click the :icon:`fa-"
+"cog` :guilabel:`(cog)` icon and select :guilabel:`Quality Check`. "
+"The :guilabel:`Control per`, :guilabel:`Product`, and :guilabel:`Picking` "
+"fields are automatically filled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:60
 msgid ""
 "If the quality check should be assigned to a specific |QCP|, select it from "
 "the :guilabel:`Control Point` drop-down menu. This is useful if the quality "
@@ -60293,13 +60483,13 @@ msgstr ""
 "util dacă verificarea calității este creată manual, dar ar trebui totuși "
 "recunoscută ca aparținând unui |QCP| specific."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:48
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:64
 msgid "Select a quality check type from the :guilabel:`Type` drop-down field:"
 msgstr ""
 "Selectați un tip de verificare a calității din câmpul drop-"
 "down :guilabel:`Tip`:"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:50
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:66
 msgid ""
 ":guilabel:`Instructions` provides specific instructions for how to conduct "
 "the quality check."
@@ -60307,7 +60497,7 @@ msgstr ""
 ":guilabel:`Instrucțiuni` oferă instrucțiuni specifice despre cum se "
 "efectuează verificarea calității."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:51
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:67
 msgid ""
 ":guilabel:`Take a Picture` requires a picture to be attached to the check "
 "before the check can be completed."
@@ -60315,14 +60505,14 @@ msgstr ""
 ":guilabel:`Fă o poză` necesită atașarea unei imagini la cec înainte ca "
 "verificarea să poată fi finalizată."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:53
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:69
 msgid ""
 ":guilabel:`Print label` opens a pop-up from which labels can be printed. "
 "This step can be customized to provide instructions about where to add the "
 "labels on a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:55
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:71
 msgid ""
 ":guilabel:`Pass - Fail` is used when the product being checked must meet a "
 "certain criteria to pass the check."
@@ -60330,7 +60520,7 @@ msgstr ""
 ":guilabel:`Pass - Fail` este folosit atunci când produsul verificat trebuie "
 "să îndeplinească anumite criterii pentru a trece verificarea."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:57
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:73
 msgid ""
 "Selecting :guilabel:`Measure` causes a :guilabel:`Measure` input field to "
 "appear, in which a measurement must be entered before the check can be "
@@ -60340,7 +60530,7 @@ msgstr ""
 "introducere :guilabel:`Măsură`, în care trebuie introdusă o măsurătoare "
 "înainte ca verificarea să poată fi finalizată."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:59
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:75
 msgid ""
 "Selecting :guilabel:`Worksheet` causes a :guilabel:`Quality Template` drop-"
 "down field to appear. Use it to select a quality worksheet that must be "
@@ -60350,7 +60540,7 @@ msgstr ""
 "derulant :guilabel:`Șablon de calitate`. Folosiți-l pentru a selecta o fișă "
 "de lucru de calitate care trebuie completată pentru a finaliza verificarea."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:62
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:78
 msgid ""
 "In the :guilabel:`Team` field, select the quality team that is responsible "
 "for the quality check. In the :guilabel:`Company` field, select the company "
@@ -60360,11 +60550,18 @@ msgstr ""
 "responsabilă de verificarea calității. În câmpul :guilabel:`Companie`, "
 "selectați compania care deține produsul inspectat."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:65
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:81
+#, fuzzy
+#| msgid ""
+#| "On the :guilabel:`Notes` tab at the bottom of the form, enter any "
+#| "relevant instructions in the :guilabel:`Instructions` text entry box (ex. "
+#| "'Attach a picture of the product'). In the :guilabel:`Notes` text entry "
+#| "box, enter any relevant information about the quality check (who created "
+#| "it, why it was created, etc.)."
 msgid ""
 "On the :guilabel:`Notes` tab at the bottom of the form, enter any relevant "
-"instructions in the :guilabel:`Instructions` text entry box (ex. 'Attach a "
-"picture of the product'). In the :guilabel:`Notes` text entry box, enter any "
+"instructions in the :guilabel:`Instructions` text entry box (e.g., `Attach a "
+"picture of the product`). In the :guilabel:`Notes` text entry box, enter any "
 "relevant information about the quality check (who created it, why it was "
 "created, etc.)."
 msgstr ""
@@ -60375,7 +60572,7 @@ msgstr ""
 "informație relevantă despre verificarea calității (cine l-a creat, de ce a "
 "fost creat etc.)."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:70
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:86
 msgid ""
 "Finally, if the check is being processed immediately, click "
 "the :guilabel:`Pass` button at the top left of the screen if the check "
@@ -60391,11 +60588,11 @@ msgstr ""
 "Un formular de verificare a calității completat pentru o verificare de "
 "trecere - eșec."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:78
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:93
 msgid "Process quality check"
 msgstr "Verificarea calității procesului"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:80
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:95
 msgid ""
 "Quality checks can be processed directly on the quality check's page, or "
 "from a manufacturing or inventory order for which a check is required. "
@@ -60408,7 +60605,7 @@ msgstr ""
 "pentru o anumită operațiune de comandă de lucru, verificarea este procesată "
 "în modulul *Shop Floor*."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:85
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:100
 msgid ""
 "It is not possible to manually create a single quality check that is "
 "assigned to a specific work order operation. Quality checks for work order "
@@ -60425,11 +60622,11 @@ msgstr ""
 "despre cum să configurați un |QCP| care va crea controale de calitate pentru "
 "o anumită operațiune de comandă de lucru."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:92
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:107
 msgid "Quality check page"
 msgstr "Pagina de verificare a calității"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:94
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:109
 msgid ""
 "To process a quality check from the check's page, begin by navigating "
 "to :menuselection:`Quality --> Quality Control --> Quality Checks`, then "
@@ -60444,7 +60641,7 @@ msgstr ""
 "câmpul :guilabel:`Instrucțiuni` din fila :guilabel:`Note` din partea de jos "
 "a paginii."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:99
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:114
 msgid ""
 "If the quality check passes, click the :guilabel:`Pass` button at the top of "
 "the page. If the check fails, click the :guilabel:`Fail` button, instead."
@@ -60453,19 +60650,28 @@ msgstr ""
 "din partea de sus a paginii. Dacă verificarea eșuează, faceți clic pe "
 "butonul :guilabel:`Fail`."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:103
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:118
 msgid "Quality check on order"
 msgstr "Verificare calitate la comanda"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:105
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:120
+#, fuzzy
+#| msgid ""
+#| "To process a quality check on an order, select a manufacturing or "
+#| "inventory order (receipt, delivery, return, etc.), for which a check is "
+#| "required. Manufacturing orders can be selected by navigating "
+#| "to :menuselection:`Manufacturing --> Operations --> Manufacturing "
+#| "Orders`, and clicking on an order. Inventory orders can be selected by "
+#| "navigating to :menuselection:`Inventory`, clicking the :guilabel:`# To "
+#| "Process` button on an operation card, and selecting an order."
 msgid ""
 "To process a quality check on an order, select a manufacturing or inventory "
 "order (receipt, delivery, return, etc.), for which a check is required. "
 "Manufacturing orders can be selected by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, "
-"and clicking on an order. Inventory orders can be selected by navigating "
-"to :menuselection:`Inventory`, clicking the :guilabel:`# To Process` button "
-"on an operation card, and selecting an order."
+"and clicking on an order. Inventory orders can be selected by navigating to "
+"the :menuselection:`Inventory` app, clicking the :guilabel:`# To` button on "
+"an operation card (e.g., :guilabel:`5 to Deliver`), and selecting an order."
 msgstr ""
 "Pentru a procesa o verificare a calității asupra unei comenzi, selectați o "
 "comandă de fabricație sau de inventar (primire, livrare, retur etc.), pentru "
@@ -60475,12 +60681,18 @@ msgstr ""
 "navigând la :menuselection:`Inventar`, făcând clic pe butonul :guilabel:`# "
 "To Process` de pe un card de operațiuni și selectând o comandă."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:111
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:127
+#, fuzzy
+#| msgid ""
+#| "On the selected inventory or manufacturing order, a "
+#| "purple :guilabel:`Quality Checks` button appears at the top of the order. "
+#| "Click the button to open the :guilabel:`Quality Check` pop-up window, "
+#| "which shows all of the quality checks required for that order."
 msgid ""
 "On the selected inventory or manufacturing order, a "
 "purple :guilabel:`Quality Checks` button appears at the top of the order. "
-"Click the button to open the :guilabel:`Quality Check` pop-up window, which "
-"shows all of the quality checks required for that order."
+"Click the button to open the quality check pop-up window, which shows all of "
+"the quality checks required for that order."
 msgstr ""
 "Pe inventarul sau comanda de fabricație selectată, în partea de sus a "
 "comenzii apare un buton violet :guilabel:`Verificări de calitate`. Faceți "
@@ -60488,10 +60700,17 @@ msgstr ""
 "calității`, care arată toate verificările de calitate necesare pentru acea "
 "comandă."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:115
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:131
+#, fuzzy
+#| msgid ""
+#| "Follow the instructions that appear on the :guilabel:`Quality Check` pop-"
+#| "up window. If a Pass - Fail check is being processed, complete the check "
+#| "by clicking :guilabel:`Pass` or :guilabel:`Fail` at the bottom of the pop-"
+#| "up window. For all other quality check types, a :guilabel:`Validate` "
+#| "button appears instead. Click it to complete the check."
 msgid ""
-"Follow the instructions that appear on the :guilabel:`Quality Check` pop-up "
-"window. If a Pass - Fail check is being processed, complete the check by "
+"Follow the instructions that appear on the quality check pop-up window. If a "
+"Pass - Fail check is being processed, complete the check by "
 "clicking :guilabel:`Pass` or :guilabel:`Fail` at the bottom of the pop-up "
 "window. For all other quality check types, a :guilabel:`Validate` button "
 "appears instead. Click it to complete the check."
@@ -60504,14 +60723,16 @@ msgstr ""
 "acesta pentru a finaliza verificarea."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:None
-msgid "The \"Quality Check\" pop-up window on a manufacturing order."
+#, fuzzy
+#| msgid "The \"Quality Check\" pop-up window on a manufacturing order."
+msgid "The quality check pop-up window on a manufacturing order."
 msgstr "Fereastra pop-up „Verificarea calității” la o comandă de fabricație."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:125
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:140
 msgid "Quality check on work order"
 msgstr "Verificare de calitate la comanda de lucru"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:127
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:142
 msgid ""
 "To process a quality check for a work order, begin by navigating "
 "to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`. "
@@ -60523,7 +60744,7 @@ msgstr ""
 "Comenzi de fabricație`. Selectați un |MO| care include o comandă de lucru "
 "pentru care este necesară o verificare a calității."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:137
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:152
 msgid ""
 "For a full guide to the Shop Floor module, see the :doc:`Shop Floor overview "
 "<../../manufacturing/shop_floor/shop_floor_overview>` documentation."
@@ -60532,7 +60753,7 @@ msgstr ""
 "documentația :doc:`Shop Floor overview <../../manufacturing/shop_floor/"
 "shop_floor_overview>`."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:144
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:159
 msgid ""
 "Process the work order's steps until the quality check step is reached. "
 "Click on the step to open a pop-up window that details how the check should "
@@ -60547,7 +60768,7 @@ msgstr ""
 "verificarea. Ca alternativă, dacă este procesată o verificare *Pass - Fail*, "
 "faceți clic fie pe butonul :guilabel:`Pass`, fie pe :guilabel:`Fail`."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:149
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:164
 msgid ""
 "It is also possible to complete a quality check by clicking the checkbox on "
 "the right side of the step. Doing so automatically marks the check as "
@@ -60557,7 +60778,7 @@ msgstr ""
 "pe caseta de selectare din partea dreaptă a pasului. Dacă faceți acest "
 "lucru, verificarea este marcată automat ca *Reușită*."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:153
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:168
 msgid ""
 "The specific steps for processing a quality check depend upon the type of "
 "check being conducted. For information about processing each type of quality "
@@ -60567,19 +60788,19 @@ msgstr ""
 "de control efectuat. Pentru informații despre procesarea fiecărui tip de "
 "control al calității, consultați documentația asociată:"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:156
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:171
 msgid ":doc:`../quality_check_types/instructions_check`"
 msgstr ":doc:`../quality_check_types/instructions_check`"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:157
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:172
 msgid ":doc:`../quality_check_types/pass_fail_check`"
 msgstr ":doc:`../quality_check_types/pass_fail_check`"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:158
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:173
 msgid ":doc:`../quality_check_types/measure_check`"
 msgstr ":doc:`../quality_check_types/measure_check`"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:159
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:174
 msgid ":doc:`../quality_check_types/picture_check`"
 msgstr ":doc:`../quality_check_types/picture_check`"
 
@@ -61621,6 +61842,143 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid "Install"
+#~ msgstr "Instalare"
+
+#~ msgid ""
+#~ "Manually :guilabel:`Save` the form by clicking the cloud icon next to "
+#~ "the :guilabel:`Shipping Methods / New` breadcrumbs."
+#~ msgstr ""
+#~ "Manual :guilabel:`Salvați` formularul făcând clic pe pictograma nor de "
+#~ "lângă :guilabel:`Metode de expediere/Nou`."
+
+#~ msgid ""
+#~ "To load the newly configured shipping products, click "
+#~ "the :guilabel:`Select a service linked to the Starshipit account` link at "
+#~ "the bottom of the :guilabel:`Starshipit Configuration` tab."
+#~ msgstr ""
+#~ "Pentru a încărca produsele de expediere nou configurate, faceți clic pe "
+#~ "linkul :guilabel:`Selectați un serviciu legat de contul Starshipit` din "
+#~ "partea de jos a filei :guilabel:`Configurare Starshipit`."
+
+#~ msgid ""
+#~ "The chosen delivery service will populate in the :guilabel:`Service Name` "
+#~ "field."
+#~ msgstr ""
+#~ "Serviciul de livrare ales se va completa în câmpul :guilabel:`Nume "
+#~ "serviciu`."
+
+#~ msgid "Change inventory count frequency by location"
+#~ msgstr ""
+#~ "Modificați frecvența de numărare a inventarului în funcție de locație"
+
+#~ msgid "Count inventory by location"
+#~ msgstr "Numărați inventarul după locație"
+
+#~ msgid ""
+#~ "In order to manufacture a product in Odoo *Manufacturing*, the product "
+#~ "must be properly configured. Doing so consists of enabling the "
+#~ "*Manufacturing* route and configuring a bill of materials (BoM) for the "
+#~ "product. Once these steps are completed, the product is selectable when "
+#~ "creating a new manufacturing order."
+#~ msgstr ""
+#~ "Pentru a fabrica un produs în Odoo *Manufacturing*, produsul trebuie "
+#~ "configurat corespunzător. Acest lucru constă în activarea rutei "
+#~ "*Producție* și configurarea unei liste de materiale (BM) pentru produs. "
+#~ "Odată finalizați acești pași, produsul poate fi selectat la crearea unei "
+#~ "noi comenzi de producție."
+
+#~ msgid "Activate the Manufacture route"
+#~ msgstr "Activați ruta Fabricare"
+
+#~ msgid ""
+#~ "The Manufacture route is activated for each product on its own product "
+#~ "page. To do so, begin by navigating to :menuselection:`Manufacturing --> "
+#~ "Products --> Products`. Then, select an existing product, or create a new "
+#~ "one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "Traseul Fabricare este activat pentru fiecare produs pe pagina proprie de "
+#~ "produs. Pentru a face acest lucru, începeți prin a naviga "
+#~ "la :menuselection:`Producție --> Produse --> Produse`. Apoi, selectați un "
+#~ "produs existent sau creați unul nou făcând clic pe :guilabel:`Nou`."
+
+#~ msgid ""
+#~ "On the product page, select the :guilabel:`Inventory` tab, then enable "
+#~ "the :guilabel:`Manufacture` checkbox in the :guilabel:`Routes` section. "
+#~ "This tells Odoo the product can be manufactured."
+#~ msgstr ""
+#~ "Pe pagina produsului, selectați fila :guilabel:`Inventar`, apoi activați "
+#~ "caseta de selectare :guilabel:`Fabricație` din "
+#~ "secțiunea :guilabel:`Rute`. Acest lucru îi spune lui Odoo că produsul "
+#~ "poate fi fabricat."
+
+#~ msgid "The Manufacturing route on the Inventory tab of a product page."
+#~ msgstr "Ruta de fabricație din fila Inventar a paginii unui produs."
+
+#~ msgid ""
+#~ "The section above provides instructions for creating a basic |BOM| that "
+#~ "allows a product to be manufactured in Odoo. However, it is by no means "
+#~ "an exhaustive summary of all the options available when configuring a |"
+#~ "BOM|. For more information about bills of materials, see the "
+#~ "documentation on how to :doc:`create a bill of materials "
+#~ "<bill_configuration>`."
+#~ msgstr ""
+#~ "Secțiunea de mai sus oferă instrucțiuni pentru crearea unei |BOM| de bază "
+#~ "care permite fabricarea unui produs în Odoo. Cu toate acestea, nu este în "
+#~ "niciun caz un rezumat exhaustiv al tuturor opțiunilor disponibile la "
+#~ "configurarea unei |BOM|. Pentru mai multe informații despre listele de "
+#~ "materiale, consultați documentația despre cum să :doc:`creați o listă de "
+#~ "materiale <bill_configuration>`."
+
+#~ msgid ""
+#~ "Products must be properly configured before they can be manufactured in "
+#~ "Odoo. For details on how to do so, see the documentation on how "
+#~ "to :ref:`configure a product for manufacturing <manufacturing/management/"
+#~ "configure-manufacturing-product>`."
+#~ msgstr ""
+#~ "Produsele trebuie să fie configurate corect înainte de a putea fi "
+#~ "fabricate în Odoo. Pentru detalii despre cum să faceți acest lucru, "
+#~ "consultați documentația despre cum să :ref:`configurați un produs pentru "
+#~ "fabricarea <manufacturing/management/configure-manufacturing-product>`."
+
+#~ msgid ""
+#~ "After clicking :guilabel:`Close Production`, the |MO| card begins to fade "
+#~ "away, and an :guilabel:`Undo` button appears on the footer. "
+#~ "Clicking :guilabel:`Undo` causes the |MO| to remain open. Once the |MO| "
+#~ "card disappears completely, the work order is closed."
+#~ msgstr ""
+#~ "După ce faceți clic pe :guilabel:`Închide producția`, |MO| cardul începe "
+#~ "să dispară și un buton :guilabel:`Anulați` apare pe subsol. Dacă faceți "
+#~ "clic pe :guilabel:`Anulați`, apare |MO| să rămână deschisă. Odată ce |MO| "
+#~ "cardul dispare complet, comanda de lucru este închisă."
+
+#~ msgid ""
+#~ "To manually create a single quality check, navigate "
+#~ "to :menuselection:`Quality --> Quality Control --> Quality Checks`, and "
+#~ "click :guilabel:`New`. On the quality check form, begin by selecting an "
+#~ "option from the :guilabel:`Control per` drop-down menu:"
+#~ msgstr ""
+#~ "Pentru a crea manual o singură verificare a calității, navigați "
+#~ "la :menuselection:`Calitate --> Control calitate --> Verificări de "
+#~ "calitate` și faceți clic pe :guilabel:`Nou`. Pe formularul de verificare "
+#~ "a calității, începeți prin a selecta o opțiune din meniul drop-"
+#~ "down :guilabel:`Control per`:"
+
+#~ msgid ""
+#~ ":guilabel:`Quantity` requests a check for every quantity of a product "
+#~ "that is part of an operation (ex. one check for five units of a product "
+#~ "within a delivery order). Selecting :guilabel:`Quantity` also causes "
+#~ "a :guilabel:`Lot/Serial` drop-down field to appear, from which can be "
+#~ "selected a specific lot or serial number that the quality check should be "
+#~ "conducted for."
+#~ msgstr ""
+#~ ":guilabel:`Cantitate` solicită o verificare pentru fiecare cantitate "
+#~ "dintr-un produs care face parte dintr-o operațiune (de ex. o verificare "
+#~ "pentru cinci unități dintr-un produs dintr-o comandă de livrare). "
+#~ "Selectarea :guilabel:`Cantitate` provoacă, de asemenea, să apară un câmp "
+#~ "derulant :guilabel:`Lot/Serial`, din care poate fi selectat un anumit lot "
+#~ "sau număr de serie pentru care ar trebui efectuată verificarea calității."
 
 #~ msgid ""
 #~ "The *at confirmation* reservation method reserves products **only** when "
