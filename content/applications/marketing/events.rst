@@ -49,7 +49,7 @@ be used to improve decision-making and event-planning.
       Instantly grant access to event attendees with Odoo's Registration Desk feature.
 
    .. card:: Revenues report
-      :target: events/revenues_report
+      :target: events/event_reporting/revenues_report
 
       Analyze the financial success of events with Odoo.
 
@@ -251,7 +251,7 @@ Revenues report
 Gain invaluable insight into event-related revenues with customizable reports and metrics.
 
 .. seealso::
-   :doc:`events/revenues_report`
+   :doc:`events/event_reporting/revenues_report`
 
 .. toctree::
 
@@ -263,5 +263,4 @@ Gain invaluable insight into event-related revenues with customizable reports an
    events/event_tracks
    events/event_sponsors
    events/registration_desk
-   events/revenues_report
-   events/attendees_report
+   events/event_reporting
