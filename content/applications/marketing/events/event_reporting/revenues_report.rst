@@ -69,7 +69,7 @@ Doing so opens a drop-down mega menu of options organized into columns: :ref:`Fi
    Only **one** selection can be made from the :guilabel:`Comparison` column at a time.
 
 .. seealso::
-   :doc:`../../essentials/search`
+   :doc:`../../../essentials/search`
 
 Filter options
 ~~~~~~~~~~~~~~
