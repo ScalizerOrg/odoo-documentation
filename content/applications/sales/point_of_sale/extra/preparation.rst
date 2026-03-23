@@ -2,55 +2,58 @@
 Preparation display
 ===================
 
-The preparation display feature allows you to handle POS orders requiring preparation. Concretely,
+The preparation display feature enables efficient management of POS orders that require preparation
+prior to completion. It is intended for use in environments where ordered items must be assembled,
+cooked, or otherwise processed before they are handed over to the customer.
 
-- **For retail**:  The preparation team is notified after a payment is completed at the POS to
-  gather the purchased items for customer pickup.
-- **For restaurants**: POS orders inform the kitchen of the meals to be prepared.
+.. admonition:: Use cases
+
+   - **For retail**: Once an order is completed and paid in the :ref:`POS register
+     <pos/use/open-register>`, it is sent to the preparation display. This notifies the preparation
+     team to collect and prepare the purchased items for customer pickup.
+   - **For restaurants**: Once orders are placed in the :ref:`POS register <pos/use/open-register>`,
+     they are sent to the preparation display to inform the kitchen about the meals that need to be
+     prepared.
+
+.. _pos/preparation/configuration:
 
 Configuration
 =============
 
-To enable the preparation display feature,
+To create and set up a preparation display, go to :menuselection:`Point of Sale --> Orders -->
+Preparation Display`, and click :guilabel:`New`. Then, configure it:
 
-#. Go to the :ref:`POS settings <pos/use/settings>`.
-#. Scroll down to the :guilabel:`Preparation` section.
-#. Check the :guilabel:`Preparation Display` option.
+- Enter a descriptive :guilabel:`Name` (e.g., `Main Kitchen`, `Bar`, `Pickup zone`).
+- Select the :guilabel:`Point of Sale` that sends orders to this display. Leave it empty to link it
+  to *all* points of sale.
+- Specify the POS :ref:`product categories <pos/products/categories>` to be sent to this display.
+  Leave it empty to allow *all* categories.
+- Enable the :guilabel:`Auto clear` option to automatically remove orders from the :ref:`Order
+  Status Screen <preparation/order-status-screen>` after a given time.
+- Define the steps required for orders to be processed in the :guilabel:`Stages` tab:
 
-.. image:: preparation/preparation-setting.png
-   :alt: Setting to enable the preparation display feature
-   :scale: 90 %
+  - Click :guilabel:`Add a line` to add a stage.
+  - Optionally, assign colors to stages for better visibility.
+  - Set an :guilabel:`Alert timer (min)` for each stage to define the expected processing
+    time. Orders are highlighted when this time is exceeded.
 
-To create and set up a preparation display,
-
-#. Go to :menuselection:`Point of Sale --> Orders --> Preparation Display`
-#. Click :guilabel:`New`.
-#. Give the display a descriptive :guilabel:`Name` (e.g., `Main Kitchen`, `Bar`)
-#. Set it up:
-
-   #. :guilabel:`Point of Sale`: Select the POS that sends orders to this display.
-   #. :guilabel:`Product categories`: Specify the POS :guilabel:`Product categories` sent to this
-      display.
-   #. :guilabel:`Stages`: Define the steps required for the orders to be ready.
-
-      - Click :guilabel:`Add a line` to add a stage.
-      - Assign specific colors to each stage for clarity (optional).
-      - Define an :guilabel:`Alert timer (min)` for each stage to indicate the expected processing
-        time.
-
-.. image:: preparation/display-form.png
-   :alt: preparation display set-up form
-   :scale: 85 %
+- If the :guilabel:`POS Enterprise SMS Whatsapp` module is installed, activate :guilabel:`SMS
+  Enabled` and/or :guilabel:`WhatsApp Enabled` in the :guilabel:`Communication` tab to notify
+  customers. Then, select templates for :guilabel:`Order received` and :guilabel:`Order is
+  ready`.
 
 .. note::
-   To edit a pre-existing preparation display, click the vertical ellipsis button
-   (:icon:`fa-ellipsis-v`) on the display's card and select :guilabel:`Configure`.
+   To edit an existing preparation display, click :icon:`fa-ellipsis-v` :guilabel:`Dropdown
+   menu` on the display's card and select :guilabel:`Configure`.
 
-Practical application
-=====================
+.. _pos/preparation/application:
 
-Go to :menuselection:`Point of Sale --> Orders --> Preparation Display` to get an overview of all
-your displays.
+Preparation display overview
+============================
+
+To view all preparation displays, and related :ref:`order status screens
+<preparation/order-status-screen>`, go to :menuselection:`Point of Sale --> Orders --> Preparation
+Display`.
 
 .. image:: preparation/display-card.png
    :alt: Kanban view of the preparation display
@@ -58,53 +61,122 @@ your displays.
 
 The display card shows:
 
-- The configured stages.
+- The configured stages, e.g., `To prepare`, `Ready`, `Completed`.
 - The number of orders currently :guilabel:`In progress`.
 - The :guilabel:`Average time` employees usually take to complete an order.
+- The :ref:`Order Status Screen <preparation/order-status-screen>` button, if installed.
 
 .. tip::
-   Click the :guilabel:`Kitchen Display` app icon on your Odoo Dashboard for quicker access.
+   - A default preparation display named :guilabel:`Kitchen Display` is automatically configured
+     when creating a new :doc:`restaurant point of sale <../restaurant>` :ref:`through the
+     onboarding screen <pos/use/create-pos>` and selecting the :guilabel:`Restaurant` card.
+   - The **Kitchen Display** app is automatically installed whenever a :doc:`restaurant point of
+     sale <../restaurant>` is :ref:`created <pos/use/create-pos>` and provides quick access to the
+     :guilabel:`Preparation Display` page from the main dashboard.
+
+.. note::
+   To use the preparation display, log in via a web browser on a mobile device or a touchscreen
+   connected via USB or HDMI. IoT boxes are not supported.
+
+.. _pos/preparation/application/use:
 
 Using the preparation display
 -----------------------------
 
-To access the preparation display, click :guilabel:`Preparation Screen`. This interface, designed
-for employees, shows:
+To open the preparation display, click :guilabel:`Preparation Screen` on the display card. The
+employee interface consists of a :ref:`top bar <pos/preparation/top-bar>`, a :ref:`side panel
+<pos/preparation/sidepanel>`, and the :ref:`order cards <pos/preparation/order-cards>` processing
+section.
 
-- **Stages and order count**: Displays the progress of orders across stages such as `To prepare`,
-  `Ready`, and `Completed`, along with the number of orders in each stage.
-- **Ordered products by category**: Lists all items in progress, grouped by POS categories (e.g.,
-  `Drinks`, `Food`).
-- **Order cards**: Summarizes individual orders, including:
+.. _pos/preparation/top-bar:
 
-  - Associated tables and order numbers.
-  - :doc:`Preset <presets>` service types, if configured.
-  - Status, such as `Ready`, highlighted with the defined colors.
-  - Waiting time, with visual indicators.
+Top bar
+~~~~~~~
 
-.. note::
-   The duration indicator turns red if the elapsed time exceeds the predefined alert time.
+The top bar shows the progress of :guilabel:`All` orders across configured stages, such as
+`To prepare`/`To cook`, `Ready`, and `Completed`, along with the number of orders per stage. Click a
+stage to see its orders.
 
-.. image:: preparation/preparation-display.png
-   :alt: the preparation display interface with orders to process.
-   :scale: 80 %
+.. image:: preparation/order-count.png
+   :alt: Order count in the top bar.
 
-To update order progress:
+Click the :icon:`fa-undo` :guilabel:`Recall` button to reset the last order stage move, and use the
+:icon:`fa-sign-out` :guilabel:`Close` button to exit the display.
 
-- Click items on the order card to cross them off individually.
-- Click the order card itself to mark all items at once.
-- The card automatically moves to the next stage once every item is crossed off.
-- Click :icon:`fa-undo` :guilabel:`Recall` to move an order back to the previous stage if you
-  mistakenly sent it to the next stage.
+.. _pos/preparation/sidepanel:
 
-Customer display
-----------------
+Side panel
+~~~~~~~~~~
 
-In parallel, click :guilabel:`Order Status Screen` to open the customer interface. This interface,
-designed for customers, provides an overview of orders that are:
+The side panel is folded by default. Open it by clicking the icon in the upper-left corner. Then,
+filter orders by:
+
+- :guilabel:`Time`, such as :guilabel:`Today` or :guilabel:`Tomorrow`
+- :doc:`Preset <presets>`, such as :guilabel:`Dine in` or :guilabel:`Delivery`
+- :ref:`POS categories <pos/products/categories>` defined on the :ref:`display form
+  <pos/preparation/configuration>`, such as :guilabel:`Food` or :guilabel:`Drinks`
+
+The total number of orders/category items is displayed next to the corresponding filter. Each
+filter section consists of a breakdown of the individual elements.
+
+Use the :icon:`fa-search-minus` and :icon:`fa-search-plus` zoom control at the bottom of the side
+panel to adjust the card view size.
+
+.. _pos/preparation/order-cards:
+
+Order cards
+~~~~~~~~~~~
+
+Order cards represent individual orders and contain relevant information, including:
+
+- Associated :ref:`tables <pos/restaurant/floors>`, order numbers, :ref:`customer
+  <pos/use/customers>` or order names.
+- Number of guests.
+- :doc:`Preset <presets>` service types, if configured.
+- The selected time and date, if :ref:`configured <pos/presets/preset-form>`.
+- Stages, i.e., the status such as `Ready`, highlighted in the defined colors.
+- Waiting time, with visual indicators, if the elapsed time exceeds the predefined alert time.
+
+To update order progress from the order card, click individual items to cross them off individually
+or click the order card itself to mark all items at once. Once all items are completed, the order
+automatically moves to the next stage. Click :icon:`fa-undo` :guilabel:`Reset` on
+:guilabel:`Completed` orders to move them back to the first stage if needed.
+
+.. example::
+   The preparation display shows several orders to process:
+
+   - Order 1: The `Lunch Maki 18pc` for takeout with order name `John Meyer`, scheduled for `14/04`
+     at `13:00`, is ready (crossed out). The `Bacon Burger` is still in preparation.
+   - Order 2: The delivery order for the customer `Acme Corporation` is marked red because it
+     exceeds the expected time in the `Ready` stage.
+   - Order 3: Table 2 `T2` has a `Dine in` order with 3 dishes and 3 guests (:icon:`fa-users` icon)
+     at this table. You can click `Done` to archive the order or :guilabel:`Reset` to move it back
+     to the `To cook` stage.
+
+   .. image:: preparation/preparation-display-cards.png
+      :alt: The preparation display interface with orders to process.
+      :scale: 80 %
+
+.. _preparation/order-status-screen:
+
+Using the order status screen
+-----------------------------
+
+The :guilabel:`Order Status Screen` is automatically enabled once a :ref:`preparation display
+<pos/preparation/application>` is created. It is an additional display to show customers an overview
+of orders that are:
 
 - :guilabel:`Ready` for pickup.
 - :guilabel:`Almost there`, indicating they are taken care of.
 
+To open this customer interface, click :guilabel:`Order Status Screen` on the :ref:`preparation
+display card <pos/preparation/application>`.
+
+.. image:: preparation/order-status-screen.png
+   :alt: The overview of orders in the customer interface.
+   :scale: 50 %
+
 .. note::
-   The order number can be found at the top of the customer's receipt.
+   - The order number can be found at the top of the customer's :doc:`receipt <../use/receipts>`.
+   - To use the order status screen, log in via a web browser on a mobile device or a screen
+     connected via USB or HDMI. IoT boxes are not supported.
