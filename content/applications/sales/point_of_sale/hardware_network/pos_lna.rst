@@ -35,19 +35,38 @@ as follows:
 
 #. Click :guilabel:`Save`.
 
+.. _pos/lna/browser-permission:
+
 Browser permission
 ==================
 
-Once |LNA| is activated in Odoo and a device with local access, such as an :ref:`ePOS printer
-<pos/epos-printers/supported-printers>`, is configured, the browser displays a popup requesting
-permission to communicate with the devices on the local network.
+Once |LNA| is activated in Odoo and a device with local access (such as an :ref:`ePOS printer
+<pos/epos-printers/supported-printers>`) is configured in Google Chrome, the browser displays a
+popup requesting permission to access devices on the local network.
 
 .. image:: pos_lna/pos-lna.png
    :alt: Permission popup to access local network devices
 
+If the popup does not appear in Google Chrome, follow the next steps to manually grant local
+network access:
+
+#. Access Google Chrome's settings.
+#. Click :guilabel:`Privacy and security`, then :guilabel:`Site settings`.
+#. Click :guilabel:`Additional permissions`, then :guilabel:`Local network`.
+#. Grant local network access:
+
+   - If the database URL appears under :guilabel:`Not allowed to access other devices on your
+     local network`, click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon, then
+     :guilabel:`Allow`.
+   - If the database URL is not listed on the page, click :guilabel:`Add` next to :guilabel:`Allowed
+     to access other devices on your local network`, enter the database URL, then click
+     :guilabel:`Add`.
+
+#. Refresh the database page.
+
 .. note::
-   - If the popup does not appear, permission can be granted manually through the browser's site
-     settings.
+   - To manually grant local network access in browsers other than Google Chrome, refer to their
+     respective documentation.
    - Some browsers may require enabling a flag to activate the feature:
 
      - Brave: `brave://flags/#local-network-access-check`
