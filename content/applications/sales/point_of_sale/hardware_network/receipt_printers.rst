@@ -86,6 +86,9 @@ Troubleshooting
 To resolve common hardware issues, including connectivity failures, configuration errors, and
 physical maintenance, follow the instructions below:
 
+- If Google Chrome denies access to local devices, printers and IoT boxes will fail to connect.
+  :ref:`Grant the necessary browser permissions <pos/lna/browser-permission>` to restore the
+  connection.
 - Check the printer's blinking lights to help identify the source of a problem.
 - If the printer does not print the first automatic ticket with the IP address, check the network
   cable or Wi-Fi connection.
