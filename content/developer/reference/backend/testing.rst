@@ -50,9 +50,6 @@ related to testing Odoo content (modules, mainly):
 .. autoclass:: odoo.tests.TransactionCase
     :members: browse_ref, ref
 
-.. autoclass:: odoo.tests.SingleTransactionCase
-    :members: browse_ref, ref
-
 .. autoclass:: odoo.tests.HttpCase
     :members: browse_ref, ref, url_open, browser_js
 
