@@ -37,7 +37,7 @@ Once opened, the :guilabel:`Attendees` page offers five different view options.
           :alt: Graph view in the Attendees reporting graph view in Odoo Events.
 
        For more information about customizing the graph view, see the :doc:`Reporting
-       <../../essentials/reporting>` documentation.
+       <../../../essentials/reporting>` documentation.
 
     .. tab:: Pivot
 
@@ -53,7 +53,7 @@ Once opened, the :guilabel:`Attendees` page offers five different view options.
            :alt: Pivot view in the Attendees reporting graph view in Odoo Events.
 
        For more information about using the pivot view, see the :doc:`Reporting
-       <../../essentials/reporting>` documentation.
+       <../../../essentials/reporting>` documentation.
 
     .. tab:: Kanban
 
