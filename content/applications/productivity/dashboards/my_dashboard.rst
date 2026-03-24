@@ -2,6 +2,11 @@
 My Dashboard
 ============
 
+.. note::
+   To have access to **My Dashboard**, make sure the :guilabel:`Dashboards` (`board`) module is
+   :ref:`installed <general/install>` in addition to the :guilabel:`Spreadsheet dashboard`
+   (`spreadsheet_dashboard)` module.
+
 **My Dashboard** allows you to centralize the :doc:`Odoo views <../../studio/views>` you consult
 most regularly, making it possible to see critical tasks at a glance without having to first
 navigate through multiple apps. Unlike other Odoo dashboards, My Dashboard is not based on **Odoo
