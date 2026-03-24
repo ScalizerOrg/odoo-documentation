@@ -19,32 +19,30 @@ adds an associated core product to their shopping cart.
 Configuring optional products
 =============================
 
-With the Odoo *Sales* app, it is possible to add optional products directly to product forms. To add
-an optional product, navigate to :menuselection:`Sales --> Products --> Products` and click on a
-product Kanban card.
+With the Odoo **Sales** app, it is possible to add optional products directly to product forms. To
+add an optional product to a product form, navigate to :menuselection:`Sales --> Products -->
+Products` and choose a product.
 
-Ensure the :guilabel:`Can be Sold` option is checked, then click the :guilabel:`Sales` tab. Under
-the :guilabel:`Upsell & Cross-sell` heading, the :guilabel:`Optional Products` drop-down menu allows
-for optional products to be set, and are displayed in alphabetical order.
+Ensure that the product's :guilabel:`Sales` checkbox is checked and click the :guilabel:`Sales` tab.
+Under :guilabel:`Upsell & Cross-sell` heading, the :guilabel:`Optional Products` drop-down menu
+allows for optional products to be set. Products will be displayed in alphabetical order. If the
+desired product isn't readily visible, type its name in the field to bring it up, then select it to
+add it as an optional product.
 
-To delete an optional product from the product form,  click the :icon:`fa-times`
+To delete an optional product from the product form, simply click the :icon:`fa-times`
 :guilabel:`(Delete)` icon.
 
 .. image:: optional_products/optional-products-product-form.png
-   :alt: The optional products section as it appears in product forms in Odoo Sales.
+   :alt: Where the optional products section appears in product forms in Odoo Sales.
 
-Select the optional products using the drop-down menu. There is no limit to the number of optional
-products that can be added.
+Additional products can also be added to a core product by clicking :guilabel:`Search more...`. This
+opens the :guilabel:`Search: Optional Products` form, which displays all products in the catalog and
+includes the :guilabel:`New` button to create a new product. Multiple products may be selected as
+optional products at once when using this form by clicking their checkboxes and then clicking
+:guilabel:`Select`.
 
-
-.. tip::
-   Multiple products can be selected by clicking :guilabel:`Search more...` and  *Search: Optional
-   Products* pop-up window loads. Click the checkbox next to each desired product being added. When
-   all optional products are selected, click :guilabel:`Select`, and all optional products appear in
-   the field. If needed, new products can be created and added.
-
-   .. image:: optional_products/search-optional-products-form.png
-      :alt: The Search: Optional Products form accessed by clicking Search more...
+.. image:: optional_products/search-optional-products-form.png
+   :alt: The Search: Optional Products form accessed by clicking Search more...
 
 Optional products on quotation templates and quotations
 =======================================================
@@ -52,6 +50,23 @@ Optional products on quotation templates and quotations
 Optional products can be added to quotation templates, allowing sales staff to offer related
 products without needing to manually add them to each quote. Additional optional products can also
 be added to individual quotations when needed.
+
+Quotations
+----------
+
+To add additional products on an individual quote, navigate to :menuselection:`Sales --> Orders -->
+Quotations` and select an existing quote or :doc:`create a new quote <create_quotations>`. Then open
+the :guilabel:`Optional Products` tab. Doing so reveals a blank field in the :guilabel:`Product`
+column. Click :guilabel:`Add a product`. When clicked, a drop-down menu with products from the
+database appear. Select the desired product from the drop-down menu to add it as an optional
+product. Type the name of the desired product or click :guilabel:`Search More...` to find additional
+products.
+
+To delete any line item from the :guilabel:`Optional Products` tab, click the :icon:`fa-trash-o`
+:guilabel:`(delete)` icon.
+
+.. note::
+   When a product is added, the default :guilabel:`Quantity` is `1`, but can be updated.
 
 Quotation templates
 -------------------
@@ -74,22 +89,6 @@ and additional products can be added before the quotation is sent to a customer.
 
 .. note::
    There is no limit to how many optional products can be added to a quotation template.
-
-Quotations
-----------
-
-To add additional products on an individual quote, navigate to :menuselection:`Sales --> Orders -->
-Quotations` and select an existing quote or :doc:`create a new quote <create_quotations>`. Then open
-the :guilabel:`Optional Products`. Doing so reveals a blank field in the :guilabel:`Product` column.
-Click :guilabel:`Add a product`. When clicked, a drop-down menu with products from the database
-appear. Select the desired product from the drop-down menu to add it as an optional product. Type
-the name of the desired product or click :guilabel:`Search More...` to find additional products.
-
-To delete any line item from the :guilabel:`Optional Products` tab, click the :icon:`fa-trash-o`
-:guilabel:`(delete)` icon.
-
-.. note::
-   When a product is added, the default :guilabel:`Quantity` is `1`, but can be updated.
 
 Previewing optional products
 ============================
