@@ -63,10 +63,15 @@ enforcing stricter processes and improving oversight.
    While this setup enhances process control, separating picking and packing requires validation at
    each step. If the same person handles both, it may cause redundancy and slow operations.
 
-   Quality checks and packing do not require a three-step flow. Enable :doc:`quality control points
-   <../../quality/quality_management/quality_control_points>` separately or activate the
-   :ref:`Packages feature <inventory/warehouses_storage/enable-package>` in Odoo to incorporate
-   these processes without adding extra transfer steps.
+   Quality checks and packing **do not** require a three-step flow. To quality check outside of this
+   flow:
+
+   - Enable :doc:`quality control points <../../quality/quality_management/quality_control_points>`
+     separately
+   - Perform :ref:`manual quality checks <quality/quality_checks/manual>`
+
+   Activate the :ref:`Packages feature <inventory/warehouses_storage/enable-package>` to package
+   outside of the three-step flow.
 
 - **Receiving**: Products follow a structured process: *input area* → *quality control* → *stock*.
 - **Shipping**: Products are *picked*, *packed*, and then *shipped*, ensuring proper handling and
