@@ -25,7 +25,7 @@ enhancing the overall management process.
      new rate is applied when the next bill is generated.
 
    For more information, refer to `Odoo's pricing page <https://www.odoo.com/pricing-plan>`_ or
-   contact your account manager.
+   contact the account manager.
 
 .. _general/multi-company/configuration:
 
@@ -125,17 +125,17 @@ and synchronized.
 To activate inter-company transactions, select the relevant company in the :ref:`company selector
 <general/multi-company/company-selector>`, open the Settings app, navigate to the
 :guilabel:`Companies` section, enable :guilabel:`Inter-Company Transactions`, and :guilabel:`Save`.
-Then, select the option(s) to create a counterpart for the selected company:
+Then, select the options to create a counterpart for the selected company:
 
 - :guilabel:`Generate Bills and Refunds`: Generate a bill/refund when a company confirms an
   invoice/credit note for the selected company. To generate a validated bill/refund, select
   :guilabel:`Validate`.
-- :guilabel:`Generate Sales Orders`: Generate a quotation (drafted sales order) when a sales order
-  is confirmed for the selected company. To generate a validated sales order instead of a quotation,
-  select :guilabel:`Validate`.
+- :guilabel:`Generate Sales Orders`: Generate a quotation (drafted sales order) when a purchase
+   order is confirmed for the selected company. To generate a validated sales order instead of a
+   quotation, select :guilabel:`Validate`.
 - :guilabel:`Generate Purchase Orders`: Generate a request for quotation (drafted purchase order)
-  using the selected company warehouse in the :guilabel:`Use Warehouse` field when a purchase order
-  is confirmed for the selected company. To generate a validated purchase order instead of a request
+  using the selected company warehouse in the :guilabel:`Use Warehouse` field when a sales order is
+  confirmed for the selected company. To generate a validated purchase order instead of a request
   for quotation, select :guilabel:`Validate`.
 
 .. note::
@@ -146,9 +146,9 @@ Then, select the option(s) to create a counterpart for the selected company:
    :guilabel:`Generate Bills and Refunds`: when an invoice for :guilabel:`Customer` `JS Store US` is
    posted on `JS Store Belgium`, a vendor bill is automatically created in `JS Store US`.
 
-   :guilabel:`Generate Sales Orders`: when a sales order for :guilabel:`Customer` `JS Store US` is
-    confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically created (and
-    confirmed if the :guilabel:`Create and validate` option is selected).
+   :guilabel:`Generate Purchase Orders`: when a sales order for :guilabel:`Customer` `JS Store US`
+   is confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically created
+   (and confirmed if the :guilabel:`Create and validate` option is selected).
 
 .. seealso::
    - :doc:`Multi-company Guidelines <../../../developer/howtos/company>`
@@ -167,7 +167,7 @@ Multinational companies
 A multinational retail chain operating in the United States and Canada must manage transactions in
 USD and CAD.
 
-Since each country has its own tax laws and regulations, using Odoo’s multi-company feature is
+Since each country has its own tax laws and regulations, using Odoo's multi-company feature is
 highly beneficial.
 
 This setup allows for inter-company transactions, which is essential for managing cross-border
