@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 18:30+0000\n"
+"POT-Creation-Date: 2026-03-27 18:30+0000\n"
 "PO-Revision-Date: 2025-10-03 15:50+0000\n"
 "Last-Translator: \"Tiffany Chang (tic)\" <tic@odoo.com>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -4558,7 +4558,7 @@ msgstr ""
 
 #: ../../content/applications/marketing/events.rst:51
 #: ../../content/applications/marketing/events.rst:249
-#: ../../content/applications/marketing/events/revenues_report.rst:3
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:3
 msgid "Revenues report"
 msgstr "Raport de venituri"
 
@@ -5007,7 +5007,9 @@ msgstr ""
 "ajutorul rapoartelor și indicatorilor personalizabili."
 
 #: ../../content/applications/marketing/events.rst:254
-msgid ":doc:`events/revenues_report`"
+#, fuzzy
+#| msgid ":doc:`events/revenues_report`"
+msgid ":doc:`events/event_reporting/revenues_report`"
 msgstr ":doc:`events/revenues_report`"
 
 #: ../../content/applications/marketing/events/create_events.rst:5
@@ -5844,9 +5846,13 @@ msgid ":doc:`track_manage_talks`"
 msgstr ":doc:`track_manage_talks`"
 
 #: ../../content/applications/marketing/events/event_booths.rst:5
+#, fuzzy
+#| msgid ""
+#| "The Odoo *Events* application provides users with the ability to create "
+#| "event booths, sell their availability, and manage their reservations."
 msgid ""
-"The Odoo *Events* application provides users with the ability to create "
-"event booths, sell their availability, and manage their reservations."
+"The Odoo **Events** application provides users with the ability to create, "
+"sell, and manage event booth reservations."
 msgstr ""
 "Aplicația Odoo *Events* oferă utilizatorilor posibilitatea de a crea "
 "standuri de eveniment, de a vinde disponibilitatea acestora și de a gestiona "
@@ -5869,10 +5875,15 @@ msgstr ""
 "Management* trebuie activată."
 
 #: ../../content/applications/marketing/events/event_booths.rst:14
+#, fuzzy
+#| msgid ""
+#| "To do that, navigate to :menuselection:`Events app --> Configuration --> "
+#| "Settings`, and tick the :guilabel:`Booth Management` checkbox. Then, "
+#| "click :guilabel:`Save`."
 msgid ""
 "To do that, navigate to :menuselection:`Events app --> Configuration --> "
-"Settings`, and tick the :guilabel:`Booth Management` checkbox. Then, "
-"click :guilabel:`Save`."
+"Settings`. Click the :guilabel:`Booth Management` checkbox, then "
+"click :guilabel:`Save` to enable the setting."
 msgstr ""
 "Pentru a face acest lucru, navighează la :menuselection:`Events app --> "
 "Configuration --> Settings` și bifează căsuța :guilabel:`Booth Management`. "
@@ -5882,25 +5893,21 @@ msgstr ""
 msgid "The Booth Management setting in the Odoo Events application."
 msgstr "Setarea Booth Management în aplicația Odoo Events."
 
-#: ../../content/applications/marketing/events/event_booths.rst:22
+#: ../../content/applications/marketing/events/event_booths.rst:20
 msgid ""
-"When the :guilabel:`Booth Management` setting is activated, a "
-"new :doc:`Product Type <../../inventory_and_mrp/inventory/product_management/"
-"configure/type>` becomes available on all product forms: *Event Booth*."
+"When the :guilabel:`Booth Management` setting is activated, Odoo "
+"automatically creates a default *Event Booth* product in the database with "
+"its :guilabel:`Product Type` set to :guilabel:`Service` and "
+"its :guilabel:`Create on Order` field set to :guilabel:`Event Booth`."
 msgstr ""
-"Când setarea :guilabel:`Booth Management` este activată, un nou :doc:`Tip de "
-"produs <../../inventory_and_mrp/inventory/product_management/configure/"
-"type>` devine disponibil pe toate formularele de produs: *Event Booth*."
 
-#: ../../content/applications/marketing/events/event_booths.rst:26
+#: ../../content/applications/marketing/events/event_booths.rst:24
 msgid ""
-"This is important because every created booth **must** be assigned a *Booth "
-"Category* on their respective booth form, and every booth category **must** "
-"have an *Event Booth* product assigned to it."
+"Users can modify/duplicate this default product or create a new, custom "
+"product. In either case, users **must** verify that an *Event Booth* product "
+"exists with this configuration in order to create booths and booth "
+"categories, as shown later in this documentation."
 msgstr ""
-"Acest lucru este important deoarece fiecare stand creat **trebuie** să aibă "
-"o *Categorie de stand* atribuită pe formularul său, iar fiecare categorie de "
-"stand **trebuie** să aibă un produs *Event Booth* asociat."
 
 #: ../../content/applications/marketing/events/event_booths.rst:31
 msgid "Booth categories"
@@ -5908,88 +5915,80 @@ msgstr "Categorii de standuri"
 
 #: ../../content/applications/marketing/events/event_booths.rst:33
 msgid ""
-"With the *Booth Management* setting activated in the *Events* app, the "
-"*Booth Categories* option appears in the :guilabel:`Configuration` menu."
+"Custom *booth categories* can be created by users to assign different price "
+"tiers and :doc:`sponsors <event_sponsors>` for multiple booths at once."
 msgstr ""
-"Cu setarea *Booth Management* activată în aplicația *Events*, opțiunea "
-"*Booth Categories* apare în meniul :guilabel:`Configuration`."
 
 #: ../../content/applications/marketing/events/event_booths.rst:36
 msgid ""
-"To access the :guilabel:`Booth Category` dashboard, go "
-"to :menuselection:`Events app --> Configuration --> Booth Categories`, which "
-"reveals a list of all created booth categories."
+"When the *Booth Management* setting is activated, Odoo automatically creates "
+"three default booth categories: *Standard Booth*, *Premium Booth*, and *VIP "
+"Booth*. Users can modify/duplicate these default categories or create new, "
+"custom categories. In either case, booth categories **must** exist in the "
+"database before users can create event booths."
 msgstr ""
-"Pentru a accesa tabloul de bord :guilabel:`Booth Category`, mergi "
-"la :menuselection:`Events app --> Configuration --> Booth Categories`, unde "
-"vei vedea o listă cu toate categoriile de standuri create."
+
+#: ../../content/applications/marketing/events/event_booths.rst:42
+#, fuzzy
+#| msgid "Booth categories"
+msgid "Booth categories dashboard"
+msgstr "Categorii de standuri"
+
+#: ../../content/applications/marketing/events/event_booths.rst:44
+#, fuzzy
+#| msgid ""
+#| "To view and modify the *Email Marketing* settings, navigate "
+#| "to :menuselection:`Email Marketing app --> Configuration --> Settings`."
+msgid ""
+"To view and manage booth categories, navigate to :menuselection:`Events app "
+"--> Configuration --> Booth Categories`."
+msgstr ""
+"Pentru a vedea și modifica setările *Email Marketing*, navigați "
+"la :menuselection:`Aplicația Email Marketing --> Configurare --> Setări`."
+
+#: ../../content/applications/marketing/events/event_booths.rst:47
+msgid ""
+"The :guilabel:`Booth Category` dashboard displays a list of all created "
+"booth categories along with the booth category name, associated *Event "
+"Booth* product, and price."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:51
+msgid ""
+"If sponsors are enabled in the **Events** app, an additional *Create "
+"Sponsor* checkbox appears on each record in the list as well as on the booth "
+"category form."
+msgstr ""
 
 #: ../../content/applications/marketing/events/event_booths.rst:None
 msgid "The Booth Category page in the Odoo Events application."
 msgstr "Pagina Booth Category din aplicația Odoo Events."
 
-#: ../../content/applications/marketing/events/event_booths.rst:43
+#: ../../content/applications/marketing/events/event_booths.rst:57
+#, fuzzy
+#| msgid ""
+#| "To edit an existing booth category, select it from the list, and proceed "
+#| "to make any desired modifications from the event category form."
 msgid ""
-"On the :guilabel:`Booth Category` page, the following information for each "
-"booth category is listed:"
-msgstr ""
-"Pe pagina :guilabel:`Booth Category` sunt afișate următoarele informații "
-"pentru fiecare categorie de stand:"
-
-#: ../../content/applications/marketing/events/event_booths.rst:45
-msgid ":guilabel:`Name`: the name of the booth category."
-msgstr ":guilabel:`Nume`: numele categoriei de stand."
-
-#: ../../content/applications/marketing/events/event_booths.rst:46
-msgid ""
-":guilabel:`Create Sponsor`: if checked, booking this booth category creates "
-"a sponsor for the user."
-msgstr ""
-":guilabel:`Creează sponsor`: dacă este bifat, rezervarea acestei categorii "
-"de stand creează un sponsor pentru utilizator."
-
-#: ../../content/applications/marketing/events/event_booths.rst:48
-msgid ""
-":guilabel:`Product`: the *Event Booth* product associated with that specific "
-"booth category."
-msgstr ""
-":guilabel:`Produs`: produsul *Event Booth* asociat acelei categorii de stand."
-
-#: ../../content/applications/marketing/events/event_booths.rst:49
-msgid ":guilabel:`Price`: the price of a booth in that booth category."
-msgstr ":guilabel:`Preț`: prețul unui stand din acea categorie de stand."
-
-#: ../../content/applications/marketing/events/event_booths.rst:51
-msgid ""
-"When the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon, located to "
-"the far-right of the column titles, is clicked, a drop-down menu of "
-"additional column options appears. From the resulting drop-down menu, tick "
-"the checkbox beside :guilabel:`Sponsor Level` and/or :guilabel:`Sponsor "
-"Type` to reveal those columns on the :guilabel:`Booth Category` page."
-msgstr ""
-"Când este apăsată pictograma :icon:`oi-settings-"
-"adjust` :guilabel:`(settings)` din dreapta titlurilor de coloană, apare un "
-"meniu derulant cu opțiuni suplimentare de coloană. Din acest meniu, bifează "
-"căsuța de lângă :guilabel:`Sponsor Level` și/sau :guilabel:`Sponsor Type` "
-"pentru a afișa aceste coloane pe pagina :guilabel:`Booth Category`."
-
-#: ../../content/applications/marketing/events/event_booths.rst:56
-msgid ""
-"To edit an existing booth category, select it from the list, and proceed to "
-"make any desired modifications from the event category form."
+"To edit an existing booth category, select it from the list and proceed to "
+"make any desired modifications in the resulting booth category form."
 msgstr ""
 "Pentru a edita o categorie de stand existentă, selecteaz-o din listă și "
 "efectuează modificările dorite din formularul categoriei de eveniment."
 
-#: ../../content/applications/marketing/events/event_booths.rst:60
+#: ../../content/applications/marketing/events/event_booths.rst:63
 msgid "Create booth category"
 msgstr "Creează categorie de stand"
 
-#: ../../content/applications/marketing/events/event_booths.rst:62
+#: ../../content/applications/marketing/events/event_booths.rst:65
+#, fuzzy
+#| msgid ""
+#| "To create a booth category from the :guilabel:`Booth Category` page, "
+#| "click the :guilabel:`New` button in the upper-left corner to reveal a "
+#| "blank booth category form."
 msgid ""
-"To create a booth category from the :guilabel:`Booth Category` page, click "
-"the :guilabel:`New` button in the upper-left corner to reveal a blank booth "
-"category form."
+"To create a booth category, click the :guilabel:`New` button in the upper-"
+"left corner of the page to reveal a blank booth category form."
 msgstr ""
 "Pentru a crea o categorie de stand din pagina :guilabel:`Booth Category`, "
 "apasă butonul :guilabel:`New` din colțul stânga sus pentru a deschide un "
@@ -5999,219 +5998,143 @@ msgstr ""
 msgid "A typical booth category form in the Odoo Events application."
 msgstr "Un formular tipic de categorie de stand în aplicația Odoo Events."
 
-#: ../../content/applications/marketing/events/event_booths.rst:69
+#: ../../content/applications/marketing/events/event_booths.rst:71
+#, fuzzy
+#| msgid ""
+#| "Start by entering a name for the booth category in the "
+#| "top :guilabel:`Booth Category` field. This is a **requried** field."
 msgid ""
 "Start by entering a name for the booth category in the top :guilabel:`Booth "
-"Category` field. This is a **requried** field."
+"Category` field. This is a **required** field."
 msgstr ""
 "Începe prin a introduce un nume pentru categoria de stand în câmpul de "
 "sus :guilabel:`Booth Category`. Acesta este un câmp **obligatoriu**."
 
-#: ../../content/applications/marketing/events/event_booths.rst:72
+#: ../../content/applications/marketing/events/event_booths.rst:74
 msgid ""
-"To add a corresponding image to the booth category (e.g. a sample photo of "
-"how the booth looks), click the :icon:`fa-pencil` :guilabel:`(pencil)` icon "
-"that appears when the cursor hovers over the camera placeholder in the upper-"
-"right corner of the booth category form. When clicked, proceed to upload the "
-"desired image to the booth category form, if needed."
+"Optionally, upload a corresponding image (e.g., a sample photo of how the "
+"booth looks)."
 msgstr ""
-"Pentru a adăuga o imagine corespunzătoare categoriei de stand (de exemplu, o "
-"fotografie de exemplu cu aspectul standului), apasă pe pictograma :icon:`fa-"
-"pencil` :guilabel:`(creion)` care apare când cursorul este deasupra camerei "
-"din colțul dreapta sus al formularului categoriei de stand. După ce ai "
-"apăsat, încarcă imaginea dorită în formularul categoriei de stand, dacă este "
-"necesar."
 
-#: ../../content/applications/marketing/events/event_booths.rst:77
+#: ../../content/applications/marketing/events/event_booths.rst:76
+#, fuzzy
+#| msgid ""
+#| "Start by entering a name for the booth category in the "
+#| "top :guilabel:`Booth Category` field. This is a **requried** field."
 msgid ""
-"In the :guilabel:`Booth Details` section, users **must** assign "
-"a :guilabel:`Product` to the category, and it **must** have *Event Booth* "
-"set as the *Product Type* on the product form."
+"In the :guilabel:`Booth Details` section, assign an *Event Booth* product in "
+"the :guilabel:`Product` field. This a **required** field."
 msgstr ""
-"În secțiunea :guilabel:`Booth Details`, utilizatorii **trebuie** să atribuie "
-"un :guilabel:`Produs` categoriei, iar acesta **trebuie** să aibă *Event "
-"Booth* setat ca *Tip de produs* pe formularul de produs."
+"Începe prin a introduce un nume pentru categoria de stand în câmpul de "
+"sus :guilabel:`Booth Category`. Acesta este un câmp **obligatoriu**."
 
-#: ../../content/applications/marketing/events/event_booths.rst:80
+#: ../../content/applications/marketing/events/event_booths.rst:79
+#, fuzzy
+#| msgid ""
+#| "Next, set the registration cost of the ticket in the :guilabel:`Price` "
+#| "field."
 msgid ""
-"And, regardless of the listed price on the *Event Booth* product chosen, the "
-"user can input a custom :guilabel:`Price` to be applied for this booth "
-"category in the field below."
+"Next, set a price for the booth category in the :guilabel:`Price` field."
 msgstr ""
-"Indiferent de prețul afișat la produsul *Event Booth* ales, utilizatorul "
-"poate introduce un :guilabel:`Preț` personalizat care să fie aplicat pentru "
-"această categorie de stand în câmpul de mai jos."
+"Apoi, setați costul de înregistrare al biletului în câmpul :guilabel:`Preț`."
 
-#: ../../content/applications/marketing/events/event_booths.rst:83
+#: ../../content/applications/marketing/events/event_booths.rst:81
+#, fuzzy
+#| msgid ""
+#| "In the :guilabel:`Sponsorship` section, there is a :guilabel:`Create "
+#| "Sponsor` checkbox option. With that checkbox ticked, whenever a booth "
+#| "belonging to this category is booked, the user is created as an official "
+#| "*Sponsor* of the event."
 msgid ""
-"In the :guilabel:`Sponsorship` section, there is a :guilabel:`Create "
-"Sponsor` checkbox option. With that checkbox ticked, whenever a booth "
-"belonging to this category is booked, the user is created as an official "
-"*Sponsor* of the event."
+"If event sponsors are configured, a :guilabel:`Sponsorship` section appears "
+"with a :guilabel:`Create Sponsor` checkbox option. When enabled, the user is "
+"created as an official *Sponsor* of the event whenever a booth of this "
+"category is booked."
 msgstr ""
 "În secțiunea :guilabel:`Sponsorship` există opțiunea de "
 "bifare :guilabel:`Create Sponsor`. Dacă această opțiune este bifată, ori de "
 "câte ori un stand din această categorie este rezervat, utilizatorul devine "
 "*Sponsor* oficial al evenimentului."
 
-#: ../../content/applications/marketing/events/event_booths.rst:87
+#: ../../content/applications/marketing/events/event_booths.rst:85
 msgid ""
-"When the :guilabel:`Create Sponsor` checkbox is ticked, two additional "
-"fields appear beneath it: :guilabel:`Sponsor Level` and :guilabel:`Sponsor "
-"Type`."
+"Additionally, the :guilabel:`Sponsor Level` and :guilabel:`Sponsor Type` "
+"fields can be configured to specify the level/tier and the type of "
+"sponsorship. See the :doc:`event sponsors <event_sponsors>` documentation "
+"for more information about configuring sponsor levels and types."
 msgstr ""
-"Când opțiunea :guilabel:`Create Sponsor` este bifată, apar două câmpuri "
-"suplimentare dedesubt: :guilabel:`Sponsor Level` și :guilabel:`Sponsor Type`."
 
-#: ../../content/applications/marketing/events/event_booths.rst:91
+#: ../../content/applications/marketing/events/event_booths.rst:89
 msgid ""
-":guilabel:`Sponsor Level` and :guilabel:`Sponsor Type` are purely to "
-"distinguish different distinctions of sponsors. For example, if a sponsor "
-"has been attached to a company for multiple years, they would be granted a "
-"higher level (e.g. *Gold* level), which provides them with immediate "
-"credability and status. Whereas, conversely, a relatively new sponsor would "
-"be granted a lower level (e.g. *Bronze* level), which coincides with its own "
-"credability and status."
+"Finally, in the :guilabel:`Description` tab, enter any information about the "
+"booth category (e.g., the square footage, any amenities, size of display "
+"screen, etc.)."
 msgstr ""
-":guilabel:`Sponsor Level` și :guilabel:`Sponsor Type` sunt folosite doar "
-"pentru a distinge diferite tipuri de sponsori. De exemplu, dacă un sponsor "
-"este asociat unei companii de mai mulți ani, va primi un nivel mai ridicat "
-"(ex: nivel *Gold*), ceea ce îi oferă credibilitate și statut imediat. În "
-"schimb, un sponsor nou va primi un nivel mai scăzut (ex: nivel *Bronze*), "
-"corespunzător propriei credibilități și statut."
 
-#: ../../content/applications/marketing/events/event_booths.rst:97
-msgid ""
-"Select a desired level of sponsorship from the :guilabel:`Sponsor Level` "
-"drop-down field."
-msgstr ""
-"Selectează nivelul de sponsorizare dorit din câmpul "
-"derulant :guilabel:`Sponsor Level`."
-
-#: ../../content/applications/marketing/events/event_booths.rst:100
-msgid ""
-"To modify any existing :guilabel:`Sponsor Level`, select it from the drop-"
-"down field, then click the :icon:`fa-arrow-right` :guilabel:`(right arrow)` "
-"that appears at the end of the line. Doing so opens a separate page, wherein "
-"the :guilabel:`Sponsor Level` name and :guilabel:`Ribbon Style` can be "
-"changed, if necessary."
-msgstr ""
-"Pentru a modifica un :guilabel:`Sponsor Level` existent, selectează-l din "
-"câmpul derulant, apoi apasă pe pictograma :icon:`fa-arrow-"
-"right` :guilabel:`(săgeată dreapta)` care apare la finalul liniei. Astfel se "
-"deschide o pagină separată unde pot fi schimbate numele :guilabel:`Sponsor "
-"Level` și :guilabel:`Ribbon Style`, dacă este necesar."
-
-#: ../../content/applications/marketing/events/event_booths.rst:105
-msgid ""
-"Users can also create a new :guilabel:`Sponsor Level`, by typing in the name "
-"of the new level, and clicking :guilabel:`Create and edit...` from the "
-"resulting drop-down menu."
-msgstr ""
-"Utilizatorii pot crea și un nou :guilabel:`Sponsor Level` tastând numele "
-"noului nivel și apăsând :guilabel:`Create and edit...` din meniul derulant "
-"rezultat."
-
-#: ../../content/applications/marketing/events/event_booths.rst:109
-msgid ""
-"Clicking :guilabel:`Create` from the resulting drop-down menu in this "
-"instance creates the sponsor level, but doesn't immediately prompt the user "
-"to further configure it, via a :guilabel:`Create Sponsor Level` pop-up "
-"window."
-msgstr ""
-"Apăsând :guilabel:`Create` din meniul derulant rezultat creează nivelul de "
-"sponsor, dar nu solicită imediat utilizatorului să îl configureze "
-"suplimentar printr-o fereastră pop-up :guilabel:`Create Sponsor Level`."
-
-#: ../../content/applications/marketing/events/event_booths.rst:113
-msgid "Doing so reveals a :guilabel:`Create Sponsor Level` pop-up window."
-msgstr ""
-"Astfel se deschide o fereastră pop-up :guilabel:`Create Sponsor Level`."
-
-#: ../../content/applications/marketing/events/event_booths.rst:None
-msgid ""
-"The Create Sponsor Level pop-up window that appears in the Odoo Events "
-"application."
-msgstr ""
-"Fereastra pop-up Create Sponsor Level care apare în aplicația Odoo Events."
-
-#: ../../content/applications/marketing/events/event_booths.rst:119
-msgid ""
-"From this pop-up window, confirm the newly-created :guilabel:`Sponsor "
-"Level`, and decide what kind of :guilabel:`Ribbon Style` should be applied, "
-"if any. The :guilabel:`Ribbon Style` options available in that drop-down "
-"field are: :guilabel:`No Ribbon`, :guilabel:`Gold`, :guilabel:`Silver`, "
-"and :guilabel:`Bronze`."
-msgstr ""
-"Din această fereastră pop-up, confirmă :guilabel:`Sponsor Level` creat și "
-"decide ce tip de :guilabel:`Ribbon Style` să fie aplicat, dacă este cazul. "
-"Opțiunile disponibile pentru :guilabel:`Ribbon Style` în acel câmp derulant "
-"sunt: :guilabel:`No Ribbon`, :guilabel:`Gold`, :guilabel:`Silver` "
-"și :guilabel:`Bronze`."
-
-#: ../../content/applications/marketing/events/event_booths.rst:124
-msgid ""
-"If one is selected, that :guilabel:`Ribbon Style` appears with the sponsor's "
-"name on the event website."
-msgstr ""
-"Dacă este selectat unul, acel :guilabel:`Ribbon Style` va apărea lângă "
-"numele sponsorului pe site-ul evenimentului."
-
-#: ../../content/applications/marketing/events/event_booths.rst:127
-msgid ""
-"On the booth category form, beneath those sections (:guilabel:`Booth "
-"Details` and :guilabel:`Sponsorship`), there is the :guilabel:`Description` "
-"tab. In this tab, proceed to enter any vital information related to the "
-"booth category that would be important for any potential booth-buyer to know "
-"about (e.g., the square footage, any amenities, size of display screen, "
-"etc.)."
-msgstr ""
-"Pe formularul categoriei de stand, sub aceste secțiuni (:guilabel:`Booth "
-"Details` și :guilabel:`Sponsorship`), există fila :guilabel:`Description`. "
-"În această filă, introdu orice informație esențială legată de categoria de "
-"stand care ar fi importantă pentru orice potențial cumpărător de stand (ex: "
-"suprafața, facilități, dimensiunea ecranului de afișare etc.)."
-
-#: ../../content/applications/marketing/events/event_booths.rst:133
-msgid "Add booth to an event"
+#: ../../content/applications/marketing/events/event_booths.rst:93
+#, fuzzy
+#| msgid "Add booth to an event"
+msgid "Add booths to events"
 msgstr "Adaugă stand la un eveniment"
 
-#: ../../content/applications/marketing/events/event_booths.rst:135
+#: ../../content/applications/marketing/events/event_booths.rst:95
 msgid ""
-"In order to add a booth to an event, navigate to an existing event form, "
-"via :menuselection:`Events app --> Events`, and select the desired event "
-"from the :guilabel:`Events` dashboard. Or, click :guilabel:`New` to open a "
-"blank event form."
+"After configuring booth categories, booths can be created and added to "
+"specific events."
 msgstr ""
-"Pentru a adăuga un stand la un eveniment, navighează la un formular de "
-"eveniment existent prin :menuselection:`Events app --> Events` și selectează "
-"evenimentul dorit din tabloul de bord :guilabel:`Events`. Sau "
-"apasă :guilabel:`New` pentru a deschide un formular de eveniment gol."
 
-#: ../../content/applications/marketing/events/event_booths.rst:139
+#: ../../content/applications/marketing/events/event_booths.rst:98
+#, fuzzy
+#| msgid "Events dashboard"
+msgid "Booths dashboard"
+msgstr "Tabloul de bord pentru evenimente"
+
+#: ../../content/applications/marketing/events/event_booths.rst:100
+#, fuzzy
+#| msgid ""
+#| "From the event form, to access the *Booths* for that specific event, "
+#| "click the :guilabel:`Booths` smart button at the top of the page."
 msgid ""
-"From the event form, to access the *Booths* for that specific event, click "
-"the :guilabel:`Booths` smart button at the top of the page."
+"To create and add booths to a specific event, first navigate to its event "
+"form and click the :guilabel:`Booths` smart button at the top to access "
+"the :guilabel:`Booths` dashboard."
 msgstr ""
 "Din formularul evenimentului, pentru a accesa *Booths* pentru acel "
 "eveniment, apasă butonul inteligent :guilabel:`Booths` din partea de sus a "
 "paginii."
 
-#: ../../content/applications/marketing/events/event_booths.rst:142
+#: ../../content/applications/marketing/events/event_booths.rst:103
+#, fuzzy
+#| msgid ""
+#| "The booths present in the :guilabel:`Available` stage are still available "
+#| "for people to purchase for the event. The booths present in "
+#| "the :guilabel:`Unavailable` stage have already been purchased, and are no "
+#| "longer available."
 msgid ""
-"The :guilabel:`Booths` page is displayed in a Kanban view, by default, with "
-"two different stages: :guilabel:`Available` and :guilabel:`Unavailable`."
+"The dashboard is displayed in a Kanban view, by default, and grouped by two "
+"different: :guilabel:`Available` and :guilabel:`Unavailable`. The booths in "
+"the :guilabel:`Available` stage are still available for exhibitors to "
+"reserve. The booths in the :guilabel:`Unavailable` stage have already been "
+"reserved and are no longer available."
 msgstr ""
-"Pagina :guilabel:`Booths` este afișată implicit în vizualizare Kanban, cu "
-"două etape diferite: :guilabel:`Available` și :guilabel:`Unavailable`."
+"Standurile aflate în etapa :guilabel:`Available` sunt încă disponibile "
+"pentru a fi achiziționate pentru eveniment. Standurile din "
+"etapa :guilabel:`Unavailable` au fost deja achiziționate și nu mai sunt "
+"disponibile."
 
-#: ../../content/applications/marketing/events/event_booths.rst:146
+#: ../../content/applications/marketing/events/event_booths.rst:109
+#, fuzzy
+#| msgid ""
+#| "The :guilabel:`Booths` page of an event is also viewable in a :icon:`oi-"
+#| "view-list` :guilabel:`List` view, :icon:`fa-area-chart` :guilabel:`Graph` "
+#| "view, and :icon:`oi-view-pivot` :guilabel:`Pivot` view. All of which are "
+#| "accessible, via their icons, in the upper-right corner of "
+#| "the :guilabel:`Booths` page."
 msgid ""
-"The :guilabel:`Booths` page of an event is also viewable in a :icon:`oi-view-"
-"list` :guilabel:`List` view, :icon:`fa-area-chart` :guilabel:`Graph` view, "
-"and :icon:`oi-view-pivot` :guilabel:`Pivot` view. All of which are "
-"accessible, via their icons, in the upper-right corner of "
-"the :guilabel:`Booths` page."
+"The :guilabel:`Booths` dashboard is also viewable in a :icon:`oi-view-"
+"list` :guilabel:`(List)`, :icon:`fa-area-chart` :guilabel:`(Graph)`, "
+"or :icon:`oi-view-pivot` :guilabel:`(Pivot)` views for users to track "
+"insights about booths for a particular event."
 msgstr ""
 "Pagina :guilabel:`Booths` a unui eveniment poate fi vizualizată și "
 "în :icon:`oi-view-list` :guilabel:`List`, :icon:`fa-area-"
@@ -6219,47 +6142,70 @@ msgstr ""
 "aceste opțiuni sunt accesibile prin pictogramele din colțul dreapta sus al "
 "paginii :guilabel:`Booths`."
 
-#: ../../content/applications/marketing/events/event_booths.rst:151
+#: ../../content/applications/marketing/events/event_booths.rst:113
 msgid ""
-"The booths present in the :guilabel:`Available` stage are still available "
-"for people to purchase for the event. The booths present in "
-"the :guilabel:`Unavailable` stage have already been purchased, and are no "
-"longer available."
+"In addition to the default :guilabel:`Available` and :guilabel:`Unavailable` "
+"filters, the **Booths** dashboard can be grouped by the following:"
 msgstr ""
-"Standurile aflate în etapa :guilabel:`Available` sunt încă disponibile "
-"pentru a fi achiziționate pentru eveniment. Standurile din "
-"etapa :guilabel:`Unavailable` au fost deja achiziționate și nu mai sunt "
-"disponibile."
 
-#: ../../content/applications/marketing/events/event_booths.rst:155
+#: ../../content/applications/marketing/events/event_booths.rst:116
 msgid ""
-"To modify any existing booth, simply click the desired booth from "
-"the :guilabel:`Booths` page, and proceed to make any necessary changes from "
-"the booth form. Or, create a new one, by clicking the :guilabel:`New` button "
-"in the upper-left corner to reveal a blank booth form."
+":guilabel:`Status`: Group by the availability of the booths. This is the "
+"default grouping option."
 msgstr ""
-"Pentru a modifica un stand existent, apasă pe standul dorit din "
-"pagina :guilabel:`Booths` și efectuează modificările necesare din formularul "
-"standului. Sau creează unul nou apăsând butonul :guilabel:`New` din colțul "
-"stânga sus pentru a deschide un formular gol de stand."
 
-#: ../../content/applications/marketing/events/event_booths.rst:160
-msgid "Booth form"
-msgstr "Formular stand"
+#: ../../content/applications/marketing/events/event_booths.rst:117
+#, fuzzy
+#| msgid ":guilabel:`Name`: the name of the booth category."
+msgid ":guilabel:`Renter`: Group by the individual renters of the booths."
+msgstr ":guilabel:`Nume`: numele categoriei de stand."
 
-#: ../../content/applications/marketing/events/event_booths.rst:162
+#: ../../content/applications/marketing/events/event_booths.rst:118
+#, fuzzy
+#| msgid ":guilabel:`Name`: the name of the booth category."
 msgid ""
-"The booth form in Odoo *Events* lets users customize and configure event "
-"booths in a number of different ways."
+":guilabel:`Booth Category`: Group by the booth categories of the booths."
+msgstr ":guilabel:`Nume`: numele categoriei de stand."
+
+#: ../../content/applications/marketing/events/event_booths.rst:119
+msgid ":guilabel:`Is Paid`: Group by booths that have been paid and reserved."
 msgstr ""
-"Formularul de stand din Odoo *Events* permite utilizatorilor să "
-"personalizeze și să configureze standurile de eveniment în mai multe moduri."
+
+#: ../../content/applications/marketing/events/event_booths.rst:120
+#, fuzzy
+#| msgid ":guilabel:`Event Type`: Group data based on the type of event."
+msgid ":guilabel:`Event`: Group by the associated event of the booths."
+msgstr ":guilabel:`Event Type`: Grupează datele pe baza tipului de eveniment."
+
+#: ../../content/applications/marketing/events/event_booths.rst:122
+#, fuzzy
+#| msgid ""
+#| "View :doc:`../../essentials/search` for more information about making "
+#| "custom groups and filters."
+msgid ""
+"See the :doc:`reporting <../../essentials/reporting>` documentation for more "
+"information about views and how to apply filters and grouping options."
+msgstr ""
+"Vezi :doc:`../../essentials/search` pentru mai multe informații despre "
+"crearea de grupuri și filtre personalizate."
+
+#: ../../content/applications/marketing/events/event_booths.rst:127
+#, fuzzy
+#| msgid "Create event track"
+msgid "Create an event booth"
+msgstr "Creează track de eveniment"
+
+#: ../../content/applications/marketing/events/event_booths.rst:129
+msgid ""
+"To create a new booth, click :guilabel:`New` in either the Kanban or List "
+"view. This opens an event booth form for the user to configure a new booth."
+msgstr ""
 
 #: ../../content/applications/marketing/events/event_booths.rst:None
 msgid "Typical booth form in the Odoo Events application."
 msgstr "Formular tipic de stand în aplicația Odoo Events."
 
-#: ../../content/applications/marketing/events/event_booths.rst:169
+#: ../../content/applications/marketing/events/event_booths.rst:135
 msgid ""
 "Start by typing in a :guilabel:`Name` for the booth. This is a **required** "
 "field."
@@ -6267,58 +6213,56 @@ msgstr ""
 "Începe prin a introduce un :guilabel:`Nume` pentru stand. Acesta este un "
 "câmp **obligatoriu**."
 
-#: ../../content/applications/marketing/events/event_booths.rst:171
+#: ../../content/applications/marketing/events/event_booths.rst:137
+#, fuzzy
+#| msgid ""
+#| "Then, apply a :guilabel:`Booth Category` to the booth. This is a "
+#| "**required** field."
 msgid ""
-"Then, apply a :guilabel:`Booth Category` to the booth. This is a "
-"**required** field."
+"Then, apply (or :ref:`create <events/booth-categories/create>`) "
+"a :guilabel:`Booth Category`. This is a **required** field."
 msgstr ""
 "Apoi, atribuie o :guilabel:`Categorie de stand` standului. Acesta este un "
 "câmp **obligatoriu**."
 
-#: ../../content/applications/marketing/events/event_booths.rst:174
+#: ../../content/applications/marketing/events/event_booths.rst:140
 msgid ""
-"A new :guilabel:`Booth Category` can be created from this field, by typing "
-"in the name of the new category, and clicking :guilabel:`Create and edit...` "
-"from the resulting drop-down menu. Doing so reveals a :guilabel:`Create "
-"Booth Category` pop-up window, with all the standard fields found on a "
-"common booth category form."
+"After selecting an existing :guilabel:`Booth Category`, the corresponding "
+"product and price of the selected booth category appear in the non-"
+"modifiable :guilabel:`Product` and :guilabel:`Price` fields."
 msgstr ""
-"O nouă :guilabel:`Categorie de stand` poate fi creată din acest câmp, "
-"tastând numele noii categorii și apăsând :guilabel:`Create and edit...` din "
-"meniul derulant rezultat. Astfel se deschide o fereastră pop-"
-"up :guilabel:`Create Booth Category` cu toate câmpurile standard ale unui "
-"formular obișnuit de categorie de stand."
 
-#: ../../content/applications/marketing/events/event_booths.rst:179
+#: ../../content/applications/marketing/events/event_booths.rst:144
+#, fuzzy
+#| msgid ""
+#| "However, if the rental of a booth is conducted in any other way (e.g., in "
+#| "person, via sales order, etc.), the :guilabel:`Renter`, :guilabel:`Renter "
+#| "Name`, :guilabel:`Renter Email`, and :guilabel:`Renter Phone` fields can "
+#| "be entered in manually."
 msgid ""
-"Simply clicking :guilabel:`Create` from the resulting drop-down menu creates "
-"the category, but does not reveal the :guilabel:`Create Booth Category` pop-"
-"up window. The category would have to be modified later, via the *Booth "
-"Categories* page (:menuselection:`Events app --> Configuration --> Booth "
-"Categories`)."
+"Continue by selecting a renter's contact in the :guilabel:`Renter` drop-down "
+"to automatically populate the :guilabel:`Renter Name`, :guilabel:`Renter "
+"Email`, and :guilabel:`Renter Phone` fields. Alternatively, these fields can "
+"also be entered manually."
 msgstr ""
-"Apăsând doar :guilabel:`Create` din meniul derulant creează categoria, dar "
-"nu deschide fereastra pop-up :guilabel:`Create Booth Category`. Categoria va "
-"trebui modificată ulterior din pagina *Booth Categories* "
-"(:menuselection:`Events app --> Configuration --> Booth Categories`)."
+"Totuși, dacă închirierea unui stand se face în alt mod (de exemplu, fizic, "
+"prin comandă de vânzare etc.), "
+"câmpurile :guilabel:`Renter`, :guilabel:`Renter Name`, :guilabel:`Renter "
+"Email` și :guilabel:`Renter Phone` pot fi completate manual."
 
-#: ../../content/applications/marketing/events/event_booths.rst:184
+#: ../../content/applications/marketing/events/event_booths.rst:149
+#, fuzzy
+#| msgid ""
+#| "When a person purchases a booth rental through the event website, the "
+#| "subsequent renter-related fields on the form auto-populate, based on the "
+#| "information provided by the purchaser during the online transaction. The "
+#| "booth also automatically changes its status from *Available* to "
+#| "*Unavailable*."
 msgid ""
-"Upon selecting a pre-existing :guilabel:`Booth Category`, two additional, "
-"non-modifiable fields appear: :guilabel:`Product` and :guilabel:`Price`. "
-"Both fields represent their respective selections for that specific booth "
-"category."
-msgstr ""
-"La selectarea unei :guilabel:`Booth Category` existente, apar două câmpuri "
-"suplimentare, nemodificabile: :guilabel:`Product` și :guilabel:`Price`. "
-"Ambele câmpuri reflectă selecțiile respective pentru acea categorie de stand."
-
-#: ../../content/applications/marketing/events/event_booths.rst:188
-msgid ""
-"When a person purchases a booth rental through the event website, the "
-"subsequent renter-related fields on the form auto-populate, based on the "
-"information provided by the purchaser during the online transaction. The "
-"booth also automatically changes its status from *Available* to "
+"When a renter :ref:`reserves a booth <events/booth-reservation/reserving>` "
+"through the event website, the renter-related fields on the form "
+"automatically populate based on the information provided during the online "
+"transaction. The booth then automatically changes status from *Available* to "
 "*Unavailable*."
 msgstr ""
 "Când o persoană achiziționează un stand prin intermediul site-ului "
@@ -6327,51 +6271,69 @@ msgstr ""
 "online. Standul își schimbă automat și statusul din *Available* în "
 "*Unavailable*."
 
-#: ../../content/applications/marketing/events/event_booths.rst:193
-msgid ""
-"However, if the rental of a booth is conducted in any other way (e.g., in "
-"person, via sales order, etc.), the :guilabel:`Renter`, :guilabel:`Renter "
-"Name`, :guilabel:`Renter Email`, and :guilabel:`Renter Phone` fields can be "
-"entered in manually."
-msgstr ""
-"Totuși, dacă închirierea unui stand se face în alt mod (de exemplu, fizic, "
-"prin comandă de vânzare etc.), "
-"câmpurile :guilabel:`Renter`, :guilabel:`Renter Name`, :guilabel:`Renter "
-"Email` și :guilabel:`Renter Phone` pot fi completate manual."
-
-#: ../../content/applications/marketing/events/event_booths.rst:197
+#: ../../content/applications/marketing/events/event_booths.rst:154
+#, fuzzy
+#| msgid ""
+#| "The status of the booth (:guilabel:`Available` "
+#| "or :guilabel:`Unavailable`) can also be changed manually, either by "
+#| "clicking the appropriate status from the status bar present on the booth "
+#| "form, or by dragging-and-dropping the desired booth into the appropriate "
+#| "stage, via the *Booths* page Kanban view."
 msgid ""
 "The status of the booth (:guilabel:`Available` or :guilabel:`Unavailable`) "
 "can also be changed manually, either by clicking the appropriate status from "
-"the status bar present on the booth form, or by dragging-and-dropping the "
-"desired booth into the appropriate stage, via the *Booths* page Kanban view."
+"the status bar in the upper-right of the booth form or by dragging-and-"
+"dropping the desired booth into the appropriate stage via the *Booths* "
+"dashboard Kanban view."
 msgstr ""
 "Statusul standului (:guilabel:`Available` sau :guilabel:`Unavailable`) poate "
 "fi schimbat și manual, fie apăsând pe statusul dorit din bara de status a "
 "formularului standului, fie prin drag-and-drop în etapa dorită din "
 "vizualizarea Kanban a paginii *Booths*."
 
-#: ../../content/applications/marketing/events/event_booths.rst:203
-msgid "Sell event booths"
-msgstr "Vinde standuri de eveniment"
+#: ../../content/applications/marketing/events/event_booths.rst:160
+#, fuzzy
+#| msgid "Event booths"
+msgid "Event booth reservation"
+msgstr "Standuri de eveniment"
 
-#: ../../content/applications/marketing/events/event_booths.rst:205
+#: ../../content/applications/marketing/events/event_booths.rst:162
+#, fuzzy
+#| msgid ""
+#| "With event booths configured on the event form, via the event-specific "
+#| "*Booths* pages, Odoo presents them on the event website, via the *Get A "
+#| "Booth* event subheader link."
 msgid ""
-"With event booths configured on the event form, via the event-specific "
-"*Booths* pages, Odoo presents them on the event website, via the *Get A "
-"Booth* event subheader link."
+"With event booths configured, renters can view and reserve them on the event "
+"webpage via the *Get A Booth* event sub-menu link."
 msgstr ""
 "Cu standurile de eveniment configurate pe formularul evenimentului, prin "
 "paginile *Booths* specifice evenimentului, Odoo le afișează pe site-ul "
 "evenimentului prin linkul *Get A Booth* din submeniul evenimentului."
 
-#: ../../content/applications/marketing/events/event_booths.rst:208
+#: ../../content/applications/marketing/events/event_booths.rst:165
 msgid ""
-"To access the *Get A Booth* page on the event website, open "
-"the :menuselection:`Events app`, and select the desired event from "
-"the :guilabel:`Events` dashboard. From the event form, click "
-"the :guilabel:`Go to Website` smart button to be taken to the Odoo-built "
-"event website."
+"This section outlines how to configure the event website to allow renters to "
+"reserve booths. It then provides a view of how renters can reserve the "
+"booths through the website."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:169
+msgid "Enable booth reservations"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:171
+#, fuzzy
+#| msgid ""
+#| "To access the *Get A Booth* page on the event website, open "
+#| "the :menuselection:`Events app`, and select the desired event from "
+#| "the :guilabel:`Events` dashboard. From the event form, click "
+#| "the :guilabel:`Go to Website` smart button to be taken to the Odoo-built "
+#| "event website."
+msgid ""
+"To access the event booths page for a specific event, navigate to the event "
+"form in the **Events** app and click the :guilabel:`Go to Website` smart "
+"button to open the event page."
 msgstr ""
 "Pentru a accesa pagina *Get A Booth* de pe site-ul evenimentului, "
 "deschide :menuselection:`Events app` și selectează evenimentul dorit din "
@@ -6379,17 +6341,33 @@ msgstr ""
 "butonul inteligent :guilabel:`Go to Website` pentru a fi direcționat către "
 "site-ul evenimentului construit cu Odoo."
 
-#: ../../content/applications/marketing/events/event_booths.rst:212
+#: ../../content/applications/marketing/events/event_booths.rst:174
+#, fuzzy
+#| msgid ""
+#| "If the event subheader menu (with the :guilabel:`Get A Booth` option) is "
+#| "*not* showing up on the event website, there are two ways to make it "
+#| "appear."
 msgid ""
-"If the event subheader menu (with the :guilabel:`Get A Booth` option) is "
-"*not* showing up on the event website, there are two ways to make it appear."
+"If the event sub-menu (with the :guilabel:`Get A Booth` option) is *not* "
+"showing up, there are two ways to make it appear: via the website edit mode "
+"or through the developer mode."
 msgstr ""
 "Dacă submeniul evenimentului (cu opțiunea :guilabel:`Get A Booth`) *nu* "
 "apare pe site-ul evenimentului, există două modalități de a-l face vizibil."
 
-#: ../../content/applications/marketing/events/event_booths.rst:215
+#: ../../content/applications/marketing/events/event_booths.rst:178
+msgid "Website edit mode"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:180
+#, fuzzy
+#| msgid ""
+#| "While on the event website, enter the edit mode by clicking "
+#| "the :guilabel:`Edit` button in the upper-right corner. Then, click into "
+#| "the :guilabel:`Customize` tab of the resulting sidebar of web design "
+#| "tools."
 msgid ""
-"While on the event website, enter the edit mode by clicking "
+"While on the event page, enter the edit mode by clicking "
 "the :guilabel:`Edit` button in the upper-right corner. Then, click into "
 "the :guilabel:`Customize` tab of the resulting sidebar of web design tools."
 msgstr ""
@@ -6397,79 +6375,138 @@ msgstr ""
 "butonul :guilabel:`Edit` din colțul dreapta sus. Apoi, accesează "
 "fila :guilabel:`Customize` din bara laterală cu instrumente de design web."
 
-#: ../../content/applications/marketing/events/event_booths.rst:219
+#: ../../content/applications/marketing/events/event_booths.rst:184
+#, fuzzy
+#| msgid ""
+#| "In the :guilabel:`Customize` tab, click the toggle switch "
+#| "for :guilabel:`Sub-Menu (Specific)`, and click :guilabel:`Save`. Doing so "
+#| "reveals the event subheader menu with various options."
 msgid ""
 "In the :guilabel:`Customize` tab, click the toggle switch for :guilabel:`Sub-"
-"Menu (Specific)`, and click :guilabel:`Save`. Doing so reveals the event "
-"subheader menu with various options."
+"menu (Specific)`, then click :guilabel:`Save`. Doing so reveals the event "
+"sub-menu with various options (e.g., Talks, Agenda, Info, etc.)."
 msgstr ""
 "În fila :guilabel:`Customize`, activează comutatorul pentru :guilabel:`Sub-"
 "Menu (Specific)` și apasă :guilabel:`Save`. Astfel va apărea submeniul "
 "evenimentului cu diverse opțiuni."
 
-#: ../../content/applications/marketing/events/event_booths.rst:222
+#: ../../content/applications/marketing/events/event_booths.rst:189
+msgid "Developer mode"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:191
+#, fuzzy
+#| msgid ""
+#| "Alternatively, enter :doc:`Debug mode <../../general/developer_mode>`, "
+#| "and open the specific event form in the the *Events* application."
 msgid ""
-"Alternatively, enter :doc:`Debug mode <../../general/developer_mode>`, and "
-"open the specific event form in the the *Events* application."
+"Alternatively, enter :doc:`Debug mode <../../general/developer_mode>` and "
+"open the specific event form in the **Events** application."
 msgstr ""
 "Alternativ, intră în :doc:`Debug mode <../../general/developer_mode>` și "
 "deschide formularul evenimentului dorit în aplicația *Events*."
 
-#: ../../content/applications/marketing/events/event_booths.rst:225
+#: ../../content/applications/marketing/events/event_booths.rst:194
+#, fuzzy
+#| msgid ""
+#| "On the event form, with *Debug mode* on, an array of subheader menu "
+#| "options appears. Tick the checkbox for :guilabel:`Website Submenu`, in "
+#| "order for the submenu to appear on the event website. Doing so also ticks "
+#| "every other submenu-related checkbox automatically."
 msgid ""
-"On the event form, with *Debug mode* on, an array of subheader menu options "
-"appears. Tick the checkbox for :guilabel:`Website Submenu`, in order for the "
-"submenu to appear on the event website. Doing so also ticks every other "
-"submenu-related checkbox automatically."
+"With *Debug mode* on, an array of sub-menu options appears at the top of the "
+"event form. Click the checkbox for :guilabel:`Website Submenu` to display "
+"the event sub-menu on the event page."
 msgstr ""
 "Pe formularul evenimentului, cu *Debug mode* activ, apare o listă de opțiuni "
 "pentru submeniul evenimentului. Bifează căsuța :guilabel:`Website Submenu` "
 "pentru ca submeniul să apară pe site-ul evenimentului. Astfel se bifează "
 "automat și celelalte opțiuni legate de submeniu."
 
-#: ../../content/applications/marketing/events/event_booths.rst:229
+#: ../../content/applications/marketing/events/event_booths.rst:197
+#, fuzzy
+#| msgid ""
+#| "At this point, proceed to choose which options to keep on the event "
+#| "subheader menu. In this case, make sure the :guilabel:`Booth Register` "
+#| "checkbox is ticked."
 msgid ""
-"At this point, proceed to choose which options to keep on the event "
-"subheader menu. In this case, make sure the :guilabel:`Booth Register` "
-"checkbox is ticked."
+"Next, choose which sub-menu options to include on the event page. In this "
+"case, make sure the :guilabel:`Booth Register` checkbox is selected."
 msgstr ""
 "În acest moment, alege ce opțiuni să păstrezi în submeniul evenimentului. În "
 "acest caz, asigură-te că este bifată opțiunea :guilabel:`Booth Register`."
 
-#: ../../content/applications/marketing/events/event_booths.rst:232
+#: ../../content/applications/marketing/events/event_booths.rst:203
+#, fuzzy
+#| msgid "Sell event booths"
+msgid "Reserve a booth"
+msgstr "Vinde standuri de eveniment"
+
+#: ../../content/applications/marketing/events/event_booths.rst:205
 msgid ""
-"From there, click the :guilabel:`Get A Booth` event subheader menu option. "
-"Doing so reveals the :guilabel:`Get A Booth` page, showcasing all the "
-"configured event booths that were created on the event form."
+"Once the sub-menu is enabled on the event page either through the website "
+"editor or through the debug mode, renters can then view and reserve "
+"available booths."
 msgstr ""
-"De acolo, apasă pe opțiunea de submeniu :guilabel:`Get A Booth` a "
-"evenimentului. Astfel se va deschide pagina :guilabel:`Get A Booth`, unde "
-"sunt afișate toate standurile de eveniment configurate pe formularul "
-"evenimentului."
+
+#: ../../content/applications/marketing/events/event_booths.rst:208
+#, fuzzy
+#| msgid ""
+#| "To access the *Get A Booth* page on the event website, open "
+#| "the :menuselection:`Events app`, and select the desired event from "
+#| "the :guilabel:`Events` dashboard. From the event form, click "
+#| "the :guilabel:`Go to Website` smart button to be taken to the Odoo-built "
+#| "event website."
+msgid ""
+"Renters can access the *Get A Booth* page on the event website by selecting "
+"the desired event from the :guilabel:`Events` homepage then clicking "
+"the :guilabel:`Get A Booth` sub-menu option."
+msgstr ""
+"Pentru a accesa pagina *Get A Booth* de pe site-ul evenimentului, "
+"deschide :menuselection:`Events app` și selectează evenimentul dorit din "
+"tabloul de bord :guilabel:`Events`. Din formularul evenimentului, apasă "
+"butonul inteligent :guilabel:`Go to Website` pentru a fi direcționat către "
+"site-ul evenimentului construit cu Odoo."
 
 #: ../../content/applications/marketing/events/event_booths.rst:None
-msgid "Typical Get A Booth page on the event website via the Odoo Events app."
+#, fuzzy
+#| msgid ""
+#| "Typical Get A Booth page on the event website via the Odoo Events app."
+msgid "Get A Booth page on the website in Odoo Events."
 msgstr ""
 "Pagină tipică Get A Booth pe site-ul evenimentului prin aplicația Odoo "
 "Events."
 
-#: ../../content/applications/marketing/events/event_booths.rst:240
+#: ../../content/applications/marketing/events/event_booths.rst:214
+#, fuzzy
+#| msgid ""
+#| "From here, the visitor can select their desired booth option, "
+#| "then :guilabel:`Location`. Next, they would click the :guilabel:`Book my "
+#| "Booth(s)` button, located at the bottom of the :guilabel:`Get A Booth` "
+#| "page."
 msgid ""
-"From here, the visitor can select their desired booth option, "
-"then :guilabel:`Location`. Next, they would click the :guilabel:`Book my "
-"Booth(s)` button, located at the bottom of the :guilabel:`Get A Booth` page."
+"From the :guilabel:`Get A Booth` page, the renter can select their desired "
+"booth option, then :guilabel:`Location`. Next, they click "
+"the :guilabel:`Book my Booth(s)` button located at the bottom-right of the "
+"page."
 msgstr ""
 "De aici, vizitatorul poate selecta opțiunea de stand dorită, "
 "apoi :guilabel:`Location`. Următorul pas este să apese "
 "butonul :guilabel:`Book my Booth(s)` aflat în partea de jos a "
 "paginii :guilabel:`Get A Booth`."
 
-#: ../../content/applications/marketing/events/event_booths.rst:244
+#: ../../content/applications/marketing/events/event_booths.rst:218
+#, fuzzy
+#| msgid ""
+#| "Doing so reveals a :guilabel:`Contact Details` page, wherein they fill "
+#| "out either *Contact Details* or *Sponsor Details*, depending on how the "
+#| "booth was configured on the event form. The fields present on this form "
+#| "vary, depending on whether its meant for a basic contact or an event "
+#| "sponsor."
 msgid ""
-"Doing so reveals a :guilabel:`Contact Details` page, wherein they fill out "
-"either *Contact Details* or *Sponsor Details*, depending on how the booth "
-"was configured on the event form. The fields present on this form vary, "
-"depending on whether its meant for a basic contact or an event sponsor."
+"Doing so reveals a :guilabel:`Contact Details` page where they fill out "
+"either *Contact Details* or *Sponsor Details* depending on how the booth was "
+"configured."
 msgstr ""
 "Astfel se deschide pagina :guilabel:`Contact Details`, unde vizitatorul "
 "completează fie *Contact Details*, fie *Sponsor Details*, în funcție de "
@@ -6477,72 +6514,1181 @@ msgstr ""
 "Câmpurile de pe acest formular diferă în funcție de tipul de contact: simplu "
 "sau sponsor."
 
-#: ../../content/applications/marketing/events/event_booths.rst:249
+#: ../../content/applications/marketing/events/event_booths.rst:221
+#, fuzzy
+#| msgid ""
+#| "Once the necessary information has been entered, the visitor then clicks "
+#| "the :guilabel:`Go to Payment` at the bottom of the page, and proceeds to "
+#| "complete the typical checkout process."
 msgid ""
-"If the selected booth has the *Create Sponsor* checkbox ticked, this page "
-"reads as *Sponsor Details*."
-msgstr ""
-"Dacă standul selectat are bifată opțiunea *Create Sponsor*, această pagină "
-"va afișa *Sponsor Details*."
-
-#: ../../content/applications/marketing/events/event_booths.rst:252
-msgid ""
-"The information provided on this details page is used to auto-populate the "
-"renter-related information on the booth form on the event form in the "
-"*Events* application."
-msgstr ""
-"Informațiile completate pe această pagină sunt folosite pentru a completa "
-"automat datele despre chiriaș pe formularul standului din aplicația *Events*."
-
-#: ../../content/applications/marketing/events/event_booths.rst:255
-msgid ""
-"Once the necessary information has been entered, the visitor then clicks "
-"the :guilabel:`Go to Payment` at the bottom of the page, and proceeds to "
-"complete the typical checkout process."
+"Once the necessary information has been entered, the renter then clicks "
+"the :guilabel:`Go to Payment` at the bottom of the page and proceeds to "
+"complete the typical :doc:`checkout process <../../websites/ecommerce/"
+"checkout>`."
 msgstr ""
 "După ce toate informațiile necesare au fost completate, vizitatorul apasă "
 "pe :guilabel:`Go to Payment` în partea de jos a paginii și continuă cu "
 "procesul obișnuit de plată."
 
-#: ../../content/applications/marketing/events/event_booths.rst:258
+#: ../../content/applications/marketing/events/event_booths.rst:225
 msgid ""
-"Upon a successful payment confirmation, that selected booth automatically "
-"moves to the *Unavailable* stage on the event-specific *Booths* page in the "
-"*Events* application (accessible via the *Booths* smart button on the event "
-"form)."
+"Upon a successful payment confirmation, the renter has successfully reserved "
+"a booth."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:227
+#, fuzzy
+#| msgid ""
+#| "Upon a successful payment confirmation, that selected booth automatically "
+#| "moves to the *Unavailable* stage on the event-specific *Booths* page in "
+#| "the *Events* application (accessible via the *Booths* smart button on the "
+#| "event form)."
+msgid ""
+"In the database, that selected booth automatically moves to the "
+"*Unavailable* stage on the event-specific *Booths* page in the **Events** "
+"app."
 msgstr ""
 "După confirmarea plății, standul selectat trece automat în starea "
 "*Unavailable* pe pagina *Booths* a evenimentului din aplicația *Events* "
 "(accesibilă prin butonul inteligent *Booths* de pe formularul evenimentului)."
 
-#: ../../content/applications/marketing/events/event_booths.rst:262
+#: ../../content/applications/marketing/events/event_booths.rst:230
+#, fuzzy
+#| msgid ""
+#| "Also, the provided *Sponsor* information (if applicable) and *Sales "
+#| "Order* information are accessible from the specific event form, via their "
+#| "respective smart buttons that appear at the top of the form."
 msgid ""
-"Also, the provided *Sponsor* information (if applicable) and *Sales Order* "
-"information are accessible from the specific event form, via their "
+"The provided *Sponsor* information (if applicable) and *Sales Order* "
+"information are also accessible from the specific event form via their "
 "respective smart buttons that appear at the top of the form."
 msgstr ""
 "De asemenea, informațiile despre *Sponsor* (dacă este cazul) și despre "
 "*Sales Order* pot fi accesate din formularul evenimentului, prin butoanele "
 "inteligente corespunzătoare din partea de sus a formularului."
 
-#: ../../content/applications/marketing/events/event_booths.rst:267
-msgid ""
-"Click the *Sponsors* smart button to modify any information about the "
-"sponsor, if necessary."
-msgstr ""
-"Apasă pe butonul inteligent *Sponsors* pentru a modifica orice informație "
-"despre sponsor, dacă este necesar."
-
-#: ../../content/applications/marketing/events/event_booths.rst:270
+#: ../../content/applications/marketing/events/event_booths.rst:234
 #: ../../content/applications/marketing/events/event_templates.rst:217
 #: ../../content/applications/marketing/events/event_tracks.rst:309
 #: ../../content/applications/marketing/events/sell_tickets.rst:144
 msgid ":doc:`create_events`"
 msgstr ":doc:`create_events`"
 
-#: ../../content/applications/marketing/events/event_booths.rst:271
+#: ../../content/applications/marketing/events/event_booths.rst:235
 msgid ":doc:`sell_tickets`"
 msgstr ":doc:`sell_tickets`"
+
+#: ../../content/applications/marketing/events/event_reporting.rst:6
+#: ../../content/applications/marketing/marketing_automation.rst:188
+msgid "Reporting"
+msgstr "Raportare"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:3
+#, fuzzy
+#| msgid "Revenues report"
+msgid "Attendees report"
+msgstr "Raport de venituri"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:5
+#, fuzzy
+#| msgid ""
+#| "The Odoo **Events** application creates custom reports, based on event-"
+#| "related data and analytics. These reports can either be focused on "
+#| "*Attendees* or *Revenues*."
+msgid ""
+"The Odoo **Events** application creates custom reports based on event-"
+"related data and analytics."
+msgstr ""
+"Aplicația Odoo **Events** creează rapoarte personalizate, bazate pe date și "
+"analize legate de evenimente. Aceste rapoarte pot fi axate fie pe "
+"*Attendees* (participanți), fie pe *Revenues* (venituri)."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:7
+#, fuzzy
+#| msgid ""
+#| "The following documentation focuses on the reporting options related to "
+#| "event *Revenues*."
+msgid ""
+"The following documentation focuses on reporting options related to event "
+"*Attendees*."
+msgstr ""
+"Documentația de mai jos se concentrează pe opțiunile de raportare legate de "
+"*Revenues* (venituri) pentru evenimente."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:12
+#, fuzzy
+#| msgid "Revenues reporting page"
+msgid "Attendees reporting page"
+msgstr "Pagina de raportare a veniturilor"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:14
+#, fuzzy
+#| msgid ""
+#| "To access the *Attendees* reporting page, navigate "
+#| "to :menuselection:`Events app --> Reporting --> Revenues`."
+msgid ""
+"To access the *Attendees* reporting page, navigate to :menuselection:`Events "
+"app --> Reporting --> Attendees`."
+msgstr ""
+"Pentru a accesa pagina de raportare *Attendees*, "
+"accesați :menuselection:`Events app --> Reporting --> Revenues`."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:18
+#, fuzzy
+#| msgid "Reporting"
+msgid "Reporting views"
+msgstr "Raportare"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:20
+msgid ""
+"Once opened, the :guilabel:`Attendees` page offers five different view "
+"options."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:24
+#, fuzzy
+#| msgid "Graph view"
+msgid "Graph"
+msgstr "Vedere grafică"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:26
+#, fuzzy
+#| msgid ""
+#| "By default, the :guilabel:`Events` dashboard is displayed in "
+#| "the :icon:`oi-view-kanban` :guilabel:`Kanban` view, which is populated "
+#| "with a variety of pipeline stages."
+msgid ""
+"By default, the :guilabel:`Attendees` page opens in the :icon:`fa-area-"
+"chart` :guilabel:`(Graph)` view, allowing users to visually compare "
+"attendance data across events."
+msgstr ""
+"În mod implicit, tabloul de bord :guilabel:`Evenimente` este afișat în "
+"vizualizarea :icon:`oi-view-kanban` :guilabel:`Kanban`, care este populată "
+"cu o varietate de etape pipeline."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:29
+msgid ""
+"The graph view provides three available charts to display different insights "
+"about event attendance:"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:32
+msgid ""
+":icon:`fa-bar-chart` :guilabel:`(Bar)`/:icon:`fa-line-"
+"chart` :guilabel:`(Line)`: Compare attendance trends across events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:34
+msgid ""
+":icon:`fa-pie-chart` :guilabel:`(Pie)`: View attendance distribution across "
+"events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid "Overview of events setting with the kanban view in Odoo Events."
+msgid "Graph view in the Attendees reporting graph view in Odoo Events."
+msgstr ""
+"Prezentare generală a setării evenimentelor cu vizualizarea kanban în "
+"Evenimente Odoo."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:39
+msgid ""
+"For more information about customizing the graph view, see "
+"the :doc:`Reporting <../../../essentials/reporting>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:42
+#, fuzzy
+#| msgid "Pivot view"
+msgid "Pivot"
+msgstr "Vedere pivot"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:44
+msgid ""
+"The :icon:`oi-view-pivot` :guilabel:`(pivot)` view displays a pivot table, "
+"allowing users to break down subsets of attendee-related data into specific "
+"categories or groups for more precise analysis."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:48
+msgid ""
+"For example, using the :ref:`Group By <events/attendees_report/groups>` "
+"options, users can organize an event's total registration count (subset) by "
+"its count for each ticket type (group) to draw more granular insights about "
+"each ticket type's popularity across events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid "Overview of events setting with the kanban view in Odoo Events."
+msgid "Pivot view in the Attendees reporting graph view in Odoo Events."
+msgstr ""
+"Prezentare generală a setării evenimentelor cu vizualizarea kanban în "
+"Evenimente Odoo."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:55
+msgid ""
+"For more information about using the pivot view, see the :doc:`Reporting "
+"<../../../essentials/reporting>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:58
+#, fuzzy
+#| msgid "Kanban view"
+msgid "Kanban"
+msgstr "Vizualizare Kanban"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:60
+msgid ""
+"The :icon:`oi-view-kanban` :guilabel:`(Kanban)` view displays a Kanban, "
+"providing users with an at-a-glance overview of all registered attendees "
+"across events along with their ticket type and registration status."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:64
+msgid ""
+"By applying specific :ref:`Group By <events/attendees_report/groups>` "
+"options, users can group all attendees by specific criteria (e.g., "
+"registration status or ticket type) into separate, vertical stages to get a "
+"quick overview of their attendees' records."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:69
+msgid ""
+"In *Attendees reporting*, only attendees **without** a specified ticket type "
+"can be dragged between stages."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid ""
+#| "The default view of the Revenues reporting page in the Odoo Events "
+#| "application."
+msgid "Kanban view in the Attendees reporting graph view in Odoo Events."
+msgstr ""
+"Vizualizarea implicită a paginii de raportare a veniturilor în aplicația "
+"Odoo Events."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:75
+msgid ""
+"For more information about using the Kanban view, see the :ref:`Kanban "
+"<studio/views/multiple-records/kanban>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:78
+#, fuzzy
+#| msgid "List view"
+msgid "List"
+msgstr "Vizualizare Listă"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:80
+msgid ""
+"The :icon:`oi-view-list` :guilabel:`(list)` view displays a list of all "
+"registered attendees along with additional information such as contact "
+"information and registration status."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:83
+msgid ""
+"The list view provides users the option to view detailed records of their "
+"attendees in a centralized view. By applying the :ref:`Group By <events/"
+"attendees_report/groups>` options, users can then collapse long lists of "
+"records into smaller groups by specific criteria such as event or ticket "
+"type."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid ""
+#| "The default view of the Revenues reporting page in the Odoo Events "
+#| "application."
+msgid "List view in the Attendees reporting graph view in Odoo Events."
+msgstr ""
+"Vizualizarea implicită a paginii de raportare a veniturilor în aplicația "
+"Odoo Events."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:91
+msgid ""
+"For more information about using the List view, see the :ref:`List <studio/"
+"views/multiple-records/list>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:94
+msgid "Cohort"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:96
+msgid ""
+"The :icon:`oi-view-cohort` :guilabel:`(cohort)` view displays the percentage "
+"of event registrations per time interval over a certain time period."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:99
+msgid ""
+"The cohort view allows users to view broader registration patterns over a "
+"customizable time frame. For example, users can track the change in "
+"percentage of registrations over days, weeks, months, or years to identify "
+"trends at specific moments in time."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid ""
+#| "The default view of the Revenues reporting page in the Odoo Events "
+#| "application."
+msgid "Cohort view in the Attendees reporting graph view in Odoo Events."
+msgstr ""
+"Vizualizarea implicită a paginii de raportare a veniturilor în aplicația "
+"Odoo Events."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:106
+msgid ""
+"For more information about using the Cohort view, see the :ref:`Cohort "
+"<studio/views/timeline/cohort>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:109
+msgid ""
+"The option to select a :ref:`measure <reporting/choosing-measures>` from "
+"the :guilabel:`Measures` drop-down menu is available only on the Kanban, "
+"pivot, and cohort views. Additionally, only the :guilabel:`Count` option is "
+"available as a measure for the :guilabel:`Attendees` reporting page."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:116
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:75
+msgid "Filter options"
+msgstr "Opțiuni de filtrare"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:118
+msgid ""
+"The :guilabel:`Filters` column in the search bar's drop-down menu sorts "
+"attendee data by specific criteria in any given view. Multiple filters can "
+"be selected at once."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:121
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:82
+msgid "The :guilabel:`Filters` column has the following options:"
+msgstr "Coloana :guilabel:`Filters` are următoarele opțiuni:"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:123
+msgid ":guilabel:`Ongoing Events`: Filter by ongoing events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:124
+msgid ":guilabel:`Taken`: Filter by events with sold tickets."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:125
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Button Title`: enter a title to appear on the button for "
+#| "attendees."
+msgid ":guilabel:`Unconfirmed`: Filter by unconfirmed attendees."
+msgstr ""
+":guilabel:`Button Title`: introdu un titlu care va apărea pe buton pentru "
+"participanți."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:126
+#, fuzzy
+#| msgid ":guilabel:`Trigger`: :guilabel:`After each registration`"
+msgid ":guilabel:`Registered`: Filter by registered attendees."
+msgstr ":guilabel:`Trigger`: :guilabel:`După fiecare înregistrare`"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:127
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Registration Date`: Click the :icon:`fa-caret-"
+#| "down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, "
+#| "and year options. Select any number of these options to view a specific "
+#| "periods of time and see how many registrations happened during that time."
+msgid ""
+":guilabel:`Registration Date`: Filter by a specific registration date. Click "
+"the :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a list of "
+"month, quarter, and year options."
+msgstr ""
+":guilabel:`Registration Date`: Faceți clic pe pictograma :icon:`fa-caret-"
+"down` :guilabel:`(săgeată în jos)` pentru a afișa o listă de opțiuni pentru "
+"lună, trimestru și an. Selectați oricâte opțiuni doriți pentru a vedea "
+"perioade specifice și câte înregistrări au avut loc în acele perioade."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:130
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Event Start Date`: Click the :icon:`fa-caret-"
+#| "down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, "
+#| "and year options. Select any number of these options to designate event "
+#| "start dates to use as filters for revenue-related event data."
+msgid ""
+":guilabel:`Event Start Date`: Filter by a specific event start date. Click "
+"the :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a list of "
+"month, quarter, and year options."
+msgstr ""
+":guilabel:`Event Start Date`: Faceți clic pe pictograma :icon:`fa-caret-"
+"down` :guilabel:`(săgeată în jos)` pentru a afișa o listă de opțiuni pentru "
+"lună, trimestru și an. Selectați oricâte opțiuni doriți pentru a desemna "
+"datele de început ale evenimentelor ca filtre pentru datele legate de "
+"venituri."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:133
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Event End Date`: Click the :icon:`fa-caret-"
+#| "down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, "
+#| "and year options. Select any number of these options to designate event "
+#| "end dates to use as filters for revenue-related event data."
+msgid ""
+":guilabel:`Attended Date`: Filter by a specific attendance date. Click "
+"the :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a list of "
+"month, quarter, and year options."
+msgstr ""
+":guilabel:`Event End Date`: Faceți clic pe pictograma :icon:`fa-caret-"
+"down` :guilabel:`(săgeată în jos)` pentru a afișa o listă de opțiuni pentru "
+"lună, trimestru și an. Selectați oricâte opțiuni doriți pentru a desemna "
+"datele de sfârșit ale evenimentelor ca filtre pentru datele legate de "
+"venituri."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:135
+msgid ":guilabel:`Last 30 days`: Filter by the last 30 days of attendee data."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:136
+msgid ":guilabel:`Archived`: Filter by archived attendee records."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:137
+msgid ""
+":guilabel:`Add Custom Filter`: Create a :ref:`custom filter <search/custom-"
+"filters>` to analyze event-related attendee data."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:143
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:108
+msgid "Group By options"
+msgstr "Opțiuni de grupare"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:145
+msgid ""
+"The :guilabel:`Group By` column in the search bar's drop-down menu sorts "
+"attendee data by specific criteria in any given view. Multiple grouping "
+"criteria can be selected at once."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:149
+msgid "Grouping options are **not** available in the Cohort view."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:151
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:115
+msgid "The :guilabel:`Group By` column has the following options:"
+msgstr "Coloana :guilabel:`Group By` are următoarele opțiuni:"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:153
+#, fuzzy
+#| msgid ":guilabel:`Event Type`: Group data based on the type of event."
+msgid ""
+":guilabel:`Partner`: Group data based on the partner of attendees' "
+"registered events."
+msgstr ":guilabel:`Event Type`: Grupează datele pe baza tipului de eveniment."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:154
+#, fuzzy
+#| msgid ":guilabel:`Event Type`: Group data based on the type of event."
+msgid ":guilabel:`Event`: Group data based on attendees' registered events."
+msgstr ":guilabel:`Event Type`: Grupează datele pe baza tipului de eveniment."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:155
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Ticket`: Group data based on the type of event ticket "
+#| "purchased by attendees."
+msgid ""
+":guilabel:`Ticket Type`: Group data based on the type of event ticket "
+"purchased by attendees."
+msgstr ""
+":guilabel:`Ticket`: Grupează datele pe baza tipului de bilet de eveniment "
+"achiziționat de participanți."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:156
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Product`: Group data based on the event registration product."
+msgid ":guilabel:`Status`: Group data based on attendees' registration status."
+msgstr ""
+":guilabel:`Product`: Grupează datele pe baza produsului de înregistrare la "
+"eveniment."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:157
+msgid ""
+":guilabel:`Registration Date`: Group data based on a specific registration "
+"date. Click the :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a "
+"list of day, week, month, quarter, and year options."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:160
+#, fuzzy
+#| msgid ""
+#| "A new campaign can be created from scratch or from a :ref:`template "
+#| "<marketing_automation/campaign-templates>`."
+msgid ""
+":guilabel:`Campaign`: Group data based on marketing :ref:`campaigns "
+"<marketing_automation/campaigns>`."
+msgstr ""
+"O campanie nouă poate fi creată de la zero sau dintr-un :ref:`șablon "
+"<marketing_automation/campaign-templates>`."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:162
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Add Custom Group`: Click the :icon:`fa-caret-"
+#| "down` :guilabel:`(down arrow)` icon to reveal a drop-down of grouping "
+#| "options. To select one, click on the desired option, and Odoo adds it to "
+#| "the :guilabel:`Group By` column. Multiple selections can be made."
+msgid ""
+":guilabel:`Add Custom Group`: Create a :ref:`custom group <search/group>` to "
+"organize data by additional fields. Click the :icon:`fa-caret-"
+"down` :guilabel:`(down)` arrow to reveal a drop-down of grouping options. "
+"Multiple selections can be made."
+msgstr ""
+":guilabel:`Add Custom Group`: Faceți clic pe pictograma :icon:`fa-caret-"
+"down` :guilabel:`(săgeată în jos)` pentru a afișa un meniu derulant cu "
+"opțiuni de grupare. Pentru a selecta una, faceți clic pe opțiunea dorită, "
+"iar Odoo o va adăuga în coloana :guilabel:`Group By`. Se pot face selecții "
+"multiple."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:167
+msgid ""
+"A local production company recently organized a music festival and wants to "
+"measure the distribution of ticket registrations across concerts. Using the "
+"event attendance report, the production company created a graph showing the "
+"count of ticket registrations in the last 30 days, grouped by individual "
+"events and attendees' ticket types."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+msgid "A sample report in Attendees reporting in Odoo Events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:175
+msgid ""
+"To create this report, use the default graph view, with the :icon:`fa-bar-"
+"chart` :guilabel:`(Bar)` and :icon:`fa-database` :guilabel:`(Stacked)` "
+"options selected. Remove the default filters in the search bar."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:179
+#, fuzzy
+#| msgid ""
+#| "Then, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the "
+#| "right of the search bar, to reveal the drop-down mega menu of filter and "
+#| "grouping options."
+msgid ""
+"Then, click the :icon:`fa-caret-down` :guilabel:`(down)` arrow to the right "
+"of the search bar to open the drop-down menu of filter and grouping options."
+msgstr ""
+"Apoi, faceți clic pe :icon:`fa-caret-down` :guilabel:`(săgeată în jos)` din "
+"dreapta barei de căutare pentru a afișa meniul derulant cu opțiuni de "
+"filtrare și grupare."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:182
+#, fuzzy
+#| msgid ""
+#| "From here, select :guilabel:`Free` and :guilabel:`Sold` from "
+#| "the :guilabel:`Filters` column."
+msgid ""
+"Select the :guilabel:`Last 30 days` filter from the :guilabel:`Filters` "
+"column to filter the data."
+msgstr ""
+"De aici, selectați :guilabel:`Free` și :guilabel:`Sold` din "
+"coloana :guilabel:`Filters`."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:185
+#, fuzzy
+#| msgid ""
+#| "Next, in the :guilabel:`Group By` column, select the :guilabel:`Event` "
+#| "and :guilabel:`Ticket` options, **in that sequential order**. Doing so "
+#| "first groups the data by event, *then* by ticket type, which provides a "
+#| "more useful array of data to analyze."
+msgid ""
+"Next, select the :guilabel:`Event` and :guilabel:`Ticket Type` options from "
+"the :guilabel:`Group By` column **in that sequential order**. This groups "
+"the data by event, then by ticket type."
+msgstr ""
+"În continuare, în coloana :guilabel:`Group By`, selectați "
+"opțiunile :guilabel:`Event` și :guilabel:`Ticket`, **în această ordine**. "
+"Astfel, datele vor fi grupate mai întâi după eveniment, *apoi* după tipul de "
+"bilet, oferind o imagine mai utilă pentru analiză."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:189
+#, fuzzy
+#| msgid ""
+#| "The order in which the options are selected in the :guilabel:`Group By` "
+#| "column directly affects how the data is presented on the report."
+msgid ""
+"The order in which the options are selected in the :guilabel:`Group By` "
+"columns directly affects how the data is grouped and displayed in the report."
+msgstr ""
+"Ordinea în care sunt selectate opțiunile din coloana :guilabel:`Group By` "
+"afectează direct modul în care datele sunt prezentate în raport."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:193
+#, fuzzy
+#| msgid ":doc:`events/revenues_report`"
+msgid ":doc:`revenues_report`"
+msgstr ":doc:`events/revenues_report`"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:5
+msgid ""
+"The Odoo **Events** application creates custom reports, based on event-"
+"related data and analytics. These reports can either be focused on "
+"*Attendees* or *Revenues*."
+msgstr ""
+"Aplicația Odoo **Events** creează rapoarte personalizate, bazate pe date și "
+"analize legate de evenimente. Aceste rapoarte pot fi axate fie pe "
+"*Attendees* (participanți), fie pe *Revenues* (venituri)."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:8
+msgid ""
+"The following documentation focuses on the reporting options related to "
+"event *Revenues*."
+msgstr ""
+"Documentația de mai jos se concentrează pe opțiunile de raportare legate de "
+"*Revenues* (venituri) pentru evenimente."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:11
+msgid "Revenues reporting page"
+msgstr "Pagina de raportare a veniturilor"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:13
+msgid ""
+"To access the *Attendees* reporting page, navigate to :menuselection:`Events "
+"app --> Reporting --> Revenues`."
+msgstr ""
+"Pentru a accesa pagina de raportare *Attendees*, "
+"accesați :menuselection:`Events app --> Reporting --> Revenues`."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:None
+msgid ""
+"The default view of the Revenues reporting page in the Odoo Events "
+"application."
+msgstr ""
+"Vizualizarea implicită a paginii de raportare a veniturilor în aplicația "
+"Odoo Events."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:20
+msgid ""
+"By default, the :guilabel:`Revenues` reporting page appears as a graph "
+"(a :icon:`fa-line-chart` :guilabel:`(Line Chart)` with :icon:`fa-"
+"database` :guilabel:`(Stacked)` data). The default filters, :guilabel:`Non-"
+"free tickets` and :guilabel:`Event Start Date: (current year)`, are present "
+"in the search bar."
+msgstr ""
+"Implicit, vizualizarea este setată pe un grafic cu bare, dar poate fi "
+"schimbată într-un grafic liniar, grafic circular sau vizualizare tabel "
+"folosind pictogramele din colțul din dreapta sus al paginii."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:26
+msgid ""
+"To learn more about the various graph views (and graph view options), refer "
+"to the :ref:`Graph views <reporting/using-graph>` documentation."
+msgstr ""
+"Filtrele și măsurile pot fi aplicate pentru a personaliza datele afișate."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:29
+msgid ""
+"The :guilabel:`Revenues` reporting page can also be viewed as a :ref:`pivot "
+"table <reporting/views/pivot>`, by clicking the :icon:`oi-view-"
+"pivot` :guilabel:`(Pivot)` icon in the upper-right corner."
+msgstr ""
+"Pagina de raportare :guilabel:`Revenues` poate fi vizualizată și ca "
+"un :ref:`pivot table <reporting/views/pivot>`, făcând clic pe "
+"pictograma :icon:`oi-view-pivot` :guilabel:`(Pivot)` din colțul din dreapta "
+"sus."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:34
+msgid "Measures"
+msgstr "Indicatori"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:36
+msgid ""
+"Choosing specific :ref:`Measures <reporting/choosing-measures>` is a quick "
+"way to customize reporting pages."
+msgstr ""
+"Alegerea unor :ref:`Measures <reporting/choosing-measures>` specifice este o "
+"modalitate rapidă de a personaliza paginile de raportare."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:39
+msgid ""
+"Regardless of the chosen view, the measures on the :guilabel:`Revenues` "
+"reporting page are as follows: :guilabel:`Revenues`, :guilabel:`Untaxed "
+"Revenues`, and :guilabel:`Count`."
+msgstr ""
+"Indiferent de vizualizarea aleasă, măsurile de pe pagina de "
+"raportare :guilabel:`Revenues` "
+"sunt: :guilabel:`Revenues`, :guilabel:`Untaxed Revenues` "
+"și :guilabel:`Count`."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:43
+msgid ""
+"In the default graph view of the :guilabel:`Revenues` reporting page, only "
+"the :guilabel:`Revenues` option is set in the :guilabel:`Measures` drop-down "
+"menu."
+msgstr ""
+"În vizualizarea grafică implicită a paginii de "
+"raportare :guilabel:`Revenues`, doar opțiunea :guilabel:`Revenues` este "
+"setată în meniul derulant :guilabel:`Measures`."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:46
+msgid ""
+"In graph view, only one of the :guilabel:`Measures` can be selected at a "
+"time."
+msgstr ""
+"În vizualizarea grafică, doar una dintre opțiunile :guilabel:`Measures` "
+"poate fi selectată la un moment dat."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:48
+msgid ""
+"When the pivot option is selected, all :guilabel:`Measures` options are "
+"selected, by default."
+msgstr ""
+"Când este selectată opțiunea pivot, toate opțiunile :guilabel:`Measures` "
+"sunt selectate implicit."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:50
+msgid ":guilabel:`Revenues`: shows the revenues generated from events."
+msgstr ":guilabel:`Revenues`: afișează veniturile generate din evenimente."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:51
+msgid ""
+":guilabel:`Untaxed Revenues`: shows the untaxed revenues generated from "
+"events."
+msgstr ""
+":guilabel:`Untaxed Revenues`: afișează veniturile neimpozitate generate din "
+"evenimente."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:52
+msgid ""
+":guilabel:`Count`: shows the total amount of registrants who attended events."
+msgstr ""
+":guilabel:`Count`: afișează numărul total de participanți care au participat "
+"la evenimente."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:55
+msgid "Filters and grouping options"
+msgstr "Opțiuni de filtrare și grupare"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:57
+msgid ""
+"To reveal a drop-down menu of filter and grouping options to create custom "
+"reports, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the "
+"right of the search bar."
+msgstr ""
+"Pentru a afișa un meniu derulant cu opțiuni de filtrare și grupare pentru a "
+"crea rapoarte personalizate, faceți clic pe :icon:`fa-caret-"
+"down` :guilabel:`(săgeată în jos)` din dreapta barei de căutare."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:60
+msgid ""
+"Doing so opens a drop-down mega menu of options organized into "
+"columns: :ref:`Filters <search/preconfigured-filters>`, :ref:`Group By "
+"<search/group>`, and :ref:`Favorites <search/favorites>`."
+msgstr ""
+"Astfel se deschide un mega-meniu derulant cu opțiuni organizate pe "
+"coloane: :ref:`Filters <search/preconfigured-filters>`, :ref:`Group By "
+"<search/group>` și :ref:`Favorites <search/favorites>`."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:65
+msgid ""
+"If a time-related option has been selected from the :guilabel:`Filters` "
+"column (e.g. the default :guilabel:`Event Start Date: (year)` filter), "
+"a :guilabel:`Comparison` column appears, with comparison options for the "
+"corresponding time-related filter option selected."
+msgstr ""
+"Dacă a fost selectată o opțiune legată de timp din "
+"coloana :guilabel:`Filters` (de exemplu, filtrul implicit :guilabel:`Event "
+"Start Date: (year)`), apare o coloană :guilabel:`Comparison` cu opțiuni de "
+"comparație pentru filtrul de timp selectat."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:69
+msgid ""
+"Only **one** selection can be made from the :guilabel:`Comparison` column at "
+"a time."
+msgstr ""
+"Doar **o** selecție poate fi făcută din coloana :guilabel:`Comparison` la un "
+"moment dat."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:72
+#, fuzzy
+#| msgid ":doc:`../../essentials/search`"
+msgid ":doc:`../../../essentials/search`"
+msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:77
+msgid ""
+"In the :guilabel:`Filters` column of the drop-down mega menu, there are "
+"various event-related options that can be utilized to create custom reports, "
+"based on a number of specific criteria."
+msgstr ""
+"În coloana :guilabel:`Filters` a mega-meniului derulant există diverse "
+"opțiuni legate de evenimente care pot fi utilizate pentru a crea rapoarte "
+"personalizate, pe baza unor criterii specifice."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:80
+msgid ""
+"Multiple options in the :guilabel:`Filters` column can be selected at once."
+msgstr ""
+"Se pot selecta simultan mai multe opțiuni din coloana :guilabel:`Filters`."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:84
+msgid ""
+":guilabel:`Non-free tickets`: event tickets/registrations that were **not** "
+"free."
+msgstr ""
+":guilabel:`Non-free tickets`: bilete/înregistrări la eveniment care **nu** "
+"au fost gratuite."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:85
+msgid ":guilabel:`Free`: event tickets/registrations that *were* free."
+msgstr ""
+":guilabel:`Free`: bilete/înregistrări la eveniment care au fost gratuite."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:86
+msgid ""
+":guilabel:`Pending payment`: event tickets/registrations that were "
+"purchased, but still have payment pending."
+msgstr ""
+":guilabel:`Pending payment`: bilete/înregistrări la eveniment care au fost "
+"achiziționate, dar pentru care plata este încă în așteptare."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:88
+msgid ""
+":guilabel:`Sold`: event tickets/registrations that have been successfully "
+"sold (and paid for)."
+msgstr ""
+":guilabel:`Sold`: bilete/înregistrări la eveniment care au fost vândute cu "
+"succes (și plătite)."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:89
+msgid ""
+":guilabel:`Registration Date`: Click the :icon:`fa-caret-"
+"down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, and "
+"year options. Select any number of these options to view a specific periods "
+"of time and see how many registrations happened during that time."
+msgstr ""
+":guilabel:`Registration Date`: Faceți clic pe pictograma :icon:`fa-caret-"
+"down` :guilabel:`(săgeată în jos)` pentru a afișa o listă de opțiuni pentru "
+"lună, trimestru și an. Selectați oricâte opțiuni doriți pentru a vedea "
+"perioade specifice și câte înregistrări au avut loc în acele perioade."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:92
+msgid ""
+":guilabel:`Upcoming/Running`: include revenue-related information for events "
+"that are either currently running or are going to happen in the future."
+msgstr ""
+":guilabel:`Upcoming/Running`: include informații legate de venituri pentru "
+"evenimente care sunt în desfășurare sau care urmează să aibă loc."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:94
+msgid ""
+":guilabel:`Past Events`: include revenue-related information for events that "
+"have already taken place."
+msgstr ""
+":guilabel:`Past Events`: include informații legate de venituri pentru "
+"evenimente care au avut deja loc."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:96
+msgid ""
+":guilabel:`Event Start Date`: Click the :icon:`fa-caret-"
+"down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, and "
+"year options. Select any number of these options to designate event start "
+"dates to use as filters for revenue-related event data."
+msgstr ""
+":guilabel:`Event Start Date`: Faceți clic pe pictograma :icon:`fa-caret-"
+"down` :guilabel:`(săgeată în jos)` pentru a afișa o listă de opțiuni pentru "
+"lună, trimestru și an. Selectați oricâte opțiuni doriți pentru a desemna "
+"datele de început ale evenimentelor ca filtre pentru datele legate de "
+"venituri."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:99
+msgid ""
+":guilabel:`Event End Date`: Click the :icon:`fa-caret-down` :guilabel:`(down "
+"arrow)` icon to reveal a list of month, quarter, and year options. Select "
+"any number of these options to designate event end dates to use as filters "
+"for revenue-related event data."
+msgstr ""
+":guilabel:`Event End Date`: Faceți clic pe pictograma :icon:`fa-caret-"
+"down` :guilabel:`(săgeată în jos)` pentru a afișa o listă de opțiuni pentru "
+"lună, trimestru și an. Selectați oricâte opțiuni doriți pentru a desemna "
+"datele de sfârșit ale evenimentelor ca filtre pentru datele legate de "
+"venituri."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:102
+msgid ""
+":guilabel:`Published Events`: Select this option to show revenue-related "
+"data for published events."
+msgstr ""
+":guilabel:`Published Events`: Selectați această opțiune pentru a afișa date "
+"legate de venituri pentru evenimentele publicate."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:104
+msgid ""
+":guilabel:`Add Custom Filter`: Create a custom filter to analyze event-"
+"related revenue data. To learn more, refer to the documentation "
+"on :ref:`custom filters <search/custom-filters>`."
+msgstr ""
+":guilabel:`Add Custom Filter`: Creați un filtru personalizat pentru a "
+"analiza datele legate de venituri ale evenimentelor. Pentru a afla mai "
+"multe, consultați documentația despre :ref:`filtre personalizate <search/"
+"custom-filters>`."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:110
+msgid ""
+"In the :guilabel:`Group By` column of the drop-down mega menu, there are "
+"various event-related options to create custom groupings of data."
+msgstr ""
+"În coloana :guilabel:`Group By` a mega-meniului derulant, există diverse "
+"opțiuni legate de evenimente pentru a crea grupări personalizate de date."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:113
+msgid "Multiple :guilabel:`Group By` options can be selected at once."
+msgstr "Se pot selecta mai multe opțiuni :guilabel:`Group By` simultan."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:117
+msgid ":guilabel:`Event Type`: Group data based on the type of event."
+msgstr ":guilabel:`Event Type`: Grupează datele pe baza tipului de eveniment."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:118
+msgid ""
+":guilabel:`Event`: Organize data into individual groups, separated by events."
+msgstr ""
+":guilabel:`Event`: Organizează datele în grupuri individuale, separate pe "
+"evenimente."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:119
+msgid ""
+":guilabel:`Product`: Group data based on the event registration product."
+msgstr ""
+":guilabel:`Product`: Grupează datele pe baza produsului de înregistrare la "
+"eveniment."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:120
+msgid ""
+":guilabel:`Ticket`: Group data based on the type of event ticket purchased "
+"by attendees."
+msgstr ""
+":guilabel:`Ticket`: Grupează datele pe baza tipului de bilet de eveniment "
+"achiziționat de participanți."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:121
+msgid ""
+":guilabel:`Registration Status`: Group data based on the status of "
+"registrations."
+msgstr ""
+":guilabel:`Registration Status`: Grupează datele pe baza statusului "
+"înregistrărilor."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:122
+msgid ""
+":guilabel:`Sale Order Status`: Group data based on the status of event-"
+"related sales orders."
+msgstr ""
+":guilabel:`Sale Order Status`: Grupează datele pe baza statusului comenzilor "
+"de vânzare legate de eveniment."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:123
+msgid ":guilabel:`Customer`: Group data based on customer records."
+msgstr ":guilabel:`Customer`: Grupează datele pe baza fișelor de client."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:124
+msgid ""
+":guilabel:`Add Custom Group`: Click the :icon:`fa-caret-"
+"down` :guilabel:`(down arrow)` icon to reveal a drop-down of grouping "
+"options. To select one, click on the desired option, and Odoo adds it to "
+"the :guilabel:`Group By` column. Multiple selections can be made."
+msgstr ""
+":guilabel:`Add Custom Group`: Faceți clic pe pictograma :icon:`fa-caret-"
+"down` :guilabel:`(săgeată în jos)` pentru a afișa un meniu derulant cu "
+"opțiuni de grupare. Pentru a selecta una, faceți clic pe opțiunea dorită, "
+"iar Odoo o va adăuga în coloana :guilabel:`Group By`. Se pot face selecții "
+"multiple."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:129
+msgid "Sample report: event ticket analysis (graph)"
+msgstr "Exemplu de raport: analiza biletelor la eveniment (grafic)"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:131
+msgid ""
+"The following is an example of how various filters and grouping options can "
+"create a useful analytic graph report related to event revenues. In this "
+"case, the configurations present data about sold or free tickets to "
+"published events, with the metrics separated by ticket type and event."
+msgstr ""
+"Următorul este un exemplu de cum diverse filtre și opțiuni de grupare pot "
+"crea un raport analitic util, sub formă de grafic, legat de veniturile din "
+"evenimente. În acest caz, configurațiile prezintă date despre biletele "
+"vândute sau gratuite la evenimente publicate, cu metrici separate pe tip de "
+"bilet și eveniment."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:None
+msgid ""
+"The event ticket analysis sample report with unique filters and groupings in "
+"place."
+msgstr ""
+"Exemplul de raport de analiză a biletelor la eveniment cu filtre și grupări "
+"unice aplicate."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:139
+msgid ""
+"To create such a report, navigate to :menuselection:`Events app --> "
+"Reporting --> Revenues`. Stay in the default graph view, but remove the "
+"default filters from the search bar."
+msgstr ""
+"Pentru a crea un astfel de raport, accesați :menuselection:`Events app --> "
+"Reporting --> Revenues`. Rămâneți în vizualizarea grafică implicită, dar "
+"eliminați filtrele implicite din bara de căutare."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:142
+msgid ""
+"Then, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the right "
+"of the search bar, to reveal the drop-down mega menu of filter and grouping "
+"options."
+msgstr ""
+"Apoi, faceți clic pe :icon:`fa-caret-down` :guilabel:`(săgeată în jos)` din "
+"dreapta barei de căutare pentru a afișa meniul derulant cu opțiuni de "
+"filtrare și grupare."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:145
+msgid ""
+"From here, select :guilabel:`Free` and :guilabel:`Sold` from "
+"the :guilabel:`Filters` column."
+msgstr ""
+"De aici, selectați :guilabel:`Free` și :guilabel:`Sold` din "
+"coloana :guilabel:`Filters`."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:147
+msgid ""
+"Then, since it is desired to **only** view data related to already published "
+"events, select the :guilabel:`Published Events` option in "
+"the :guilabel:`Filters` column, as well."
+msgstr ""
+"Apoi, deoarece se dorește afișarea **doar** a datelor legate de evenimentele "
+"deja publicate, selectați și opțiunea :guilabel:`Published Events` din "
+"coloana :guilabel:`Filters`."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:150
+msgid ""
+"Next, in the :guilabel:`Group By` column, select the :guilabel:`Event` "
+"and :guilabel:`Ticket` options, **in that sequential order**. Doing so first "
+"groups the data by event, *then* by ticket type, which provides a more "
+"useful array of data to analyze."
+msgstr ""
+"În continuare, în coloana :guilabel:`Group By`, selectați "
+"opțiunile :guilabel:`Event` și :guilabel:`Ticket`, **în această ordine**. "
+"Astfel, datele vor fi grupate mai întâi după eveniment, *apoi* după tipul de "
+"bilet, oferind o imagine mai utilă pentru analiză."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:155
+msgid ""
+"The order in which the options are selected in the :guilabel:`Group By` "
+"column directly affects how the data is presented on the report."
+msgstr ""
+"Ordinea în care sunt selectate opțiunile din coloana :guilabel:`Group By` "
+"afectează direct modul în care datele sunt prezentate în raport."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:158
+msgid ""
+"From there, additional configurations can be added for more detailed data, "
+"if desired."
+msgstr ""
+"De acolo, se pot adăuga configurații suplimentare pentru date mai detaliate, "
+"dacă se dorește."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:160
+msgid ""
+"If no additional filters or groupings are added, Odoo presents a graphical "
+"representation of data related to all *free* or *sold* tickets for "
+"*published events*, grouped by *event*, and organized by *ticket* type."
+msgstr ""
+"Dacă nu se adaugă filtre sau grupări suplimentare, Odoo prezintă o "
+"reprezentare grafică a datelor referitoare la toate biletele *gratuite* sau "
+"*vândute* pentru *evenimentele publicate*, grupate după *eveniment* și "
+"organizate după tipul de *bilet*."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:165
+msgid "Sample report: event type analysis (pivot table)"
+msgstr "Exemplu de raport: analiză pe tipuri de evenimente (tabel pivot)"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:167
+msgid ""
+"The following is an example of how various filters and grouping options can "
+"create a useful analytic pivot table report related to event revenues. In "
+"this case, the configurations present data about how much revenue different "
+"event types have generated, in order to gauge which events are the most "
+"profitable."
+msgstr ""
+"Următorul este un exemplu de cum diferite filtre și opțiuni de grupare pot "
+"crea un raport analitic util de tip tabel pivot, legat de veniturile "
+"evenimentelor. În acest caz, configurațiile prezintă date despre cât venit a "
+"generat fiecare tip de eveniment, pentru a evalua care sunt cele mai "
+"profitabile."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:None
+msgid ""
+"The event type analysis sample report with unique filters and groupings in "
+"place."
+msgstr ""
+"Exemplu de raport de analiză pe tipuri de evenimente, cu filtre și grupări "
+"specifice aplicate."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:176
+msgid ""
+"First, navigate to :menuselection:`Events app --> Reporting --> Revenues`, "
+"and switch to the pivot table view, by clicking the :icon:`oi-view-"
+"pivot` :guilabel:`(Pivot)` icon in the upper-right corner."
+msgstr ""
+"Mai întâi, accesați :menuselection:`Events app --> Reporting --> Revenues` "
+"și comutați la vizualizarea tabelului pivot, făcând clic pe "
+"pictograma :icon:`oi-view-pivot` :guilabel:`(Pivot)` din colțul din dreapta "
+"sus."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:180
+msgid ""
+"Keep the default filters (:guilabel:`Non-free tickets` and :guilabel:`Event "
+"Start Date: (year)`) in the search bar."
+msgstr ""
+"Păstrați filtrele implicite (:guilabel:`Non-free tickets` "
+"și :guilabel:`Event Start Date: (year)`) în bara de căutare."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:183
+msgid ""
+"Next, open the :guilabel:`Measures` drop-down menu, and deselect the option "
+"for :guilabel:`Count`, because this report is only going to focus on "
+"revenues."
+msgstr ""
+"Apoi, deschideți meniul derulant :guilabel:`Measures` și debifați "
+"opțiunea :guilabel:`Count`, deoarece acest raport se va concentra doar pe "
+"venituri."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:186
+msgid ""
+"Then, click :icon:`fa-plus-square` :guilabel:`Total` above the column "
+"titles, and select :guilabel:`Event Type` from the resulting drop-down menu."
+msgstr ""
+"Apoi, faceți clic pe :icon:`fa-plus-square` :guilabel:`Total` deasupra "
+"titlurilor coloanelor și selectați :guilabel:`Event Type` din meniul "
+"derulant rezultat."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:189
+msgid ""
+"With these configurations in place, all the revenues generated from the "
+"events (and their corresponding registrations) are displayed, organized by "
+"the event type (presented as expandable columns)."
+msgstr ""
+"Cu aceste configurații, toate veniturile generate de evenimente (și de "
+"înscrierile aferente) sunt afișate, organizate după tipul de eveniment "
+"(prezentate ca și coloane expandabile)."
 
 #: ../../content/applications/marketing/events/event_sponsors.rst:3
 msgid "Event sponsors"
@@ -8179,10 +9325,15 @@ msgstr ""
 "Odoo Events."
 
 #: ../../content/applications/marketing/events/registration_desk.rst:5
+#, fuzzy
+#| msgid ""
+#| "Use the *Registration Desk* feature in Odoo **Events** to grant access to "
+#| "registered event attendees as they arrive, and store attendee-related "
+#| "data in the reporting metrics."
 msgid ""
-"Use the *Registration Desk* feature in Odoo **Events** to grant access to "
-"registered event attendees as they arrive, and store attendee-related data "
-"in the reporting metrics."
+"The *Registration Desk* feature in Odoo **Events** allows users to grant "
+"access to registered event attendees as they arrive and store attendee-"
+"related data in the reporting metrics."
 msgstr ""
 "Folosește funcția *Registration Desk* din Odoo **Events** pentru a acorda "
 "acces participanților înregistrați la sosire și pentru a stoca datele "
@@ -8193,10 +9344,15 @@ msgid "Registration Desk page"
 msgstr "Pagina Registration Desk"
 
 #: ../../content/applications/marketing/events/registration_desk.rst:11
+#, fuzzy
+#| msgid ""
+#| "On a mobile device (on the Odoo app or in a browser), open "
+#| "the :menuselection:`Events app`, and click the :guilabel:`Registration "
+#| "Desk` to view the :guilabel:`Registration Desk` page."
 msgid ""
-"On a mobile device (on the Odoo app or in a browser), open "
-"the :menuselection:`Events app`, and click the :guilabel:`Registration Desk` "
-"to view the :guilabel:`Registration Desk` page."
+"On a mobile device (on the Odoo app or in a browser), navigate "
+"to :menuselection:`Events app --> Registration Desk` to open "
+"the :guilabel:`Registration Desk` page."
 msgstr ""
 "Pe un dispozitiv mobil (în aplicația Odoo sau într-un browser), "
 "deschide :menuselection:`Events app` și apasă pe :guilabel:`Registration "
@@ -8206,29 +9362,38 @@ msgstr ""
 msgid "The Registration Desk page in the Odoo Events application."
 msgstr "Pagina Registration Desk în aplicația Odoo Events."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:18
+#: ../../content/applications/marketing/events/registration_desk.rst:17
+#, fuzzy
+#| msgid ""
+#| "At the bottom of the :guilabel:`Registration Desk` box, there are options "
+#| "to either :guilabel:`Scan a badge` or :guilabel:`Select Attendee`."
 msgid ""
-"At the bottom of the :guilabel:`Registration Desk` box, there are options to "
+"In the :guilabel:`Registration Desk` box, the user has the option to "
 "either :guilabel:`Scan a badge` or :guilabel:`Select Attendee`."
 msgstr ""
 "La baza casetei :guilabel:`Registration Desk` există "
 "opțiunile :guilabel:`Scan a badge` sau :guilabel:`Select Attendee`."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:22
+#: ../../content/applications/marketing/events/registration_desk.rst:21
 msgid "Scan a badge"
 msgstr "Scanați un ecuson"
 
-#: ../../content/applications/marketing/events/registration_desk.rst:24
+#: ../../content/applications/marketing/events/registration_desk.rst:23
+#, fuzzy
+#| msgid ""
+#| "Scan the codes present on event attendee badges, by navigating "
+#| "to :menuselection:`Events app --> Registration Desk`, and selecting "
+#| "the :guilabel:`Scan a badge` option."
 msgid ""
-"Scan the codes present on event attendee badges, by navigating "
-"to :menuselection:`Events app --> Registration Desk`, and selecting "
-"the :guilabel:`Scan a badge` option."
+"To scan the code on event attendees' badges, navigate "
+"to :menuselection:`Events app --> Registration Desk` and tap "
+"the :guilabel:`Scan or Tap` option."
 msgstr ""
 "Scanează codurile de pe badge-urile participanților la eveniment navigând "
 "la :menuselection:`Events app --> Registration Desk` și selectând "
 "opțiunea :guilabel:`Scan a badge`."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:28
+#: ../../content/applications/marketing/events/registration_desk.rst:27
 msgid ""
 "Odoo **must** be granted access to the camera being used for "
 "the :guilabel:`Scan a badge` option to work."
@@ -8236,12 +9401,18 @@ msgstr ""
 "Odoo **trebuie** să aibă acces la camera folosită pentru ca "
 "opțiunea :guilabel:`Scan a badge` să funcționeze."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:31
+#: ../../content/applications/marketing/events/registration_desk.rst:30
+#, fuzzy
+#| msgid ""
+#| "Once Odoo has access to the camera, a :guilabel:`Barcode Scanner` pop-up "
+#| "window appears, showing the camera's point-of-view. There is also a "
+#| "specified view finder box present, whose size can be manually modified, "
+#| "accordingly, using the :icon:`fa-crop` :guilabel:`(crop)` icon."
 msgid ""
 "Once Odoo has access to the camera, a :guilabel:`Barcode Scanner` pop-up "
-"window appears, showing the camera's point-of-view. There is also a "
-"specified view finder box present, whose size can be manually modified, "
-"accordingly, using the :icon:`fa-crop` :guilabel:`(crop)` icon."
+"window appears, showing a viewfinder box in the camera frame. The size of "
+"the box can be manually adjusted by dragging the :icon:`fa-"
+"crop` :guilabel:`(crop)` icon."
 msgstr ""
 "După ce Odoo are acces la cameră, apare o fereastră pop-"
 "up :guilabel:`Barcode Scanner` care afișează imaginea camerei. Există și o "
@@ -8255,49 +9426,74 @@ msgid ""
 msgstr ""
 "Fereastra Barcode Scanner din Registration Desk în aplicația Odoo Events."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:39
+#: ../../content/applications/marketing/events/registration_desk.rst:37
+#, fuzzy
+#| msgid ""
+#| "When the badge code is in the middle of the view finder box, the code is "
+#| "scanned, the :guilabel:`Barcode Scanner` pop-up window disappears, and "
+#| "the attendee is granted access to the event. Once the code is scanned, "
+#| "their attendance is logged in the Odoo **Events** app."
 msgid ""
-"When the badge code is in the middle of the view finder box, the code is "
-"scanned, the :guilabel:`Barcode Scanner` pop-up window disappears, and the "
-"attendee is granted access to the event. Once the code is scanned, their "
-"attendance is logged in the Odoo **Events** app."
+"When the badge code is in the middle of the view-finder box, the code is "
+"scanned and the :guilabel:`Barcode Scanner` pop-up window disappears. The "
+"attendee is then granted access to the event and their attendance is logged "
+"in the Odoo **Events** app."
 msgstr ""
 "Când codul de pe badge se află în mijlocul casetei de vizualizare, acesta "
 "este scanat, fereastra pop-up :guilabel:`Barcode Scanner` dispare, iar "
 "participantului i se acordă acces la eveniment. După scanare, prezența este "
 "înregistrată în aplicația Odoo **Events**."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:43
+#: ../../content/applications/marketing/events/registration_desk.rst:41
+#, fuzzy
+#| msgid ""
+#| "If the barcode being scanned is invalid, an error pop-up message appears "
+#| "in the upper-right corner."
 msgid ""
-"If the barcode being scanned is invalid, an error pop-up message appears in "
-"the upper-right corner."
+"If the scanned barcode is invalid, an error pop-up message appears in the "
+"upper-right corner."
 msgstr ""
 "Dacă codul de bare scanat este invalid, apare un mesaj de eroare într-o "
 "fereastră pop-up în colțul din dreapta sus."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:46
-msgid "Select attendee"
+#: ../../content/applications/marketing/events/registration_desk.rst:44
+#, fuzzy
+#| msgid "Select attendee"
+msgid "Select Attendee"
 msgstr "Selectează participant"
 
-#: ../../content/applications/marketing/events/registration_desk.rst:48
+#: ../../content/applications/marketing/events/registration_desk.rst:46
+#, fuzzy
+#| msgid ""
+#| "Manually grant access to event attendees, by navigating "
+#| "to :menuselection:`Events app --> Registration Desk`, and selecting "
+#| "the :guilabel:`Select Attendee` option."
 msgid ""
-"Manually grant access to event attendees, by navigating "
-"to :menuselection:`Events app --> Registration Desk`, and selecting "
+"To manually grant access to event attendees, navigate "
+"to :menuselection:`Events app --> Registration Desk` and tap "
 "the :guilabel:`Select Attendee` option."
 msgstr ""
 "Acordă manual acces participanților la eveniment navigând "
 "la :menuselection:`Events app --> Registration Desk` și selectând "
 "opțiunea :guilabel:`Select Attendee`."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:51
+#: ../../content/applications/marketing/events/registration_desk.rst:49
 msgid ""
-"Odoo reveals an :guilabel:`Attendees` page, with all the attendees for every "
-"event in the database, in a default :icon:`oi-view-"
-"kanban` :guilabel:`Kanban` view."
+"This opens an :guilabel:`Attendees` page with all registered attendees "
+"across events in the database. By default, this page opens in the :icon:`oi-"
+"view-kanban` :guilabel:`(Kanban)` view, allowing the user to see an overview "
+"of all attendees at a glance. Each attendee is displayed as a card with "
+"their name, registered event, associated company (if applicable), ticket "
+"type (if applicable), and registration status."
 msgstr ""
-"Odoo afișează o pagină :guilabel:`Attendees` cu toți participanții pentru "
-"fiecare eveniment din baza de date, în vizualizarea implicită :icon:`oi-view-"
-"kanban` :guilabel:`Kanban`."
+
+#: ../../content/applications/marketing/events/registration_desk.rst:55
+msgid ""
+"Alternatively, users can view a detailed list of all attendees using "
+"the :icon:`oi-view-list` :guilabel:`(List)` view. Each attendee is displayed "
+"on a line with their name, contact information, registered event, ticket "
+"type, registration status, and an option to :guilabel:`Mark as Attending`."
+msgstr ""
 
 #: ../../content/applications/marketing/events/registration_desk.rst:None
 msgid ""
@@ -8307,49 +9503,40 @@ msgstr ""
 "Pagina Attendees, prin intermediul Registration Desk, aflată în aplicația "
 "Odoo Events."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:58
+#: ../../content/applications/marketing/events/registration_desk.rst:62
 msgid ""
-"On the :guilabel:`Attendees` page, each attendee card displays that person's "
-"name, which event they are registered to attend, their associated company "
-"(if applicable), what ticket tier they purchased (if applicable), along with "
-"two buttons: a :icon:`fa-check` :guilabel:`(checkmark)` and :icon:`fa-"
-"undo` :guilabel:`(counter-clockwise arrow)`."
+"To grant access to an attendee and mark them as :guilabel:`Attended` in the "
+"Kanban view, click on their card. The resulting pop-up window notifies the "
+"user that the attendee has been marked as registered. "
+"Click :guilabel:`Continue` at the bottom-left to mark the attendee "
+"as :guilabel:`Attended`."
 msgstr ""
-"Pe pagina :guilabel:`Attendees`, fiecare card de participant afișează numele "
-"persoanei, evenimentul la care este înregistrată, compania asociată (dacă "
-"este cazul), tipul de bilet achiziționat (dacă este cazul), precum și două "
-"butoane: :icon:`fa-check` :guilabel:`(bifă)` și :icon:`fa-"
-"undo` :guilabel:`(săgeată în sens invers acelor de ceasornic)`."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:63
+#: ../../content/applications/marketing/events/registration_desk.rst:67
 msgid ""
-"To grant access to a person, marking them as attended, click the :icon:`fa-"
-"check` :guilabel:`(checkmark)` button on that attendee's card."
+"Alternatively, in the List view, click on the :guilabel:`Mark as Attending` "
+"button on the attendee's line. The button then disappears and the attendee's "
+"registration status changes to :guilabel:`Attended`."
 msgstr ""
-"Pentru a acorda acces unei persoane, marcând-o ca prezentă, faceți clic pe "
-"butonul :icon:`fa-check` :guilabel:`(bifă)` de pe cardul participantului."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:66
+#: ../../content/applications/marketing/events/registration_desk.rst:72
 msgid ""
-"Click the :icon:`fa-undo` :guilabel:`(counter-clockwise arrow)` button on an "
-"attendee's card to undo the previous action."
+"Users can apply :doc:`filters and grouping options <../../essentials/"
+"search>` on the :guilabel:`Attendees` page in both the Kanban and List views "
+"to narrow down a large list of attendees or reorganize the page by specific "
+"categories."
 msgstr ""
-"Faceți clic pe butonul :icon:`fa-undo` :guilabel:`(săgeată în sens invers "
-"acelor de ceasornic)` de pe cardul unui participant pentru a anula acțiunea "
-"anterioară."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:70
-msgid ""
-"It is recommended to use an event-specific filter on "
-"the :guilabel:`Attendees` page, via the search bar drop-down menu."
-msgstr ""
-"Este recomandat să folosiți un filtru specific evenimentului pe "
-"pagina :guilabel:`Attendees`, prin meniul derulant al barei de căutare."
-
-#: ../../content/applications/marketing/events/registration_desk.rst:73
+#: ../../content/applications/marketing/events/registration_desk.rst:76
+#, fuzzy
+#| msgid ""
+#| "To do that, click the :icon:`fa-sort-desc` :guilabel:`(down arrow)` "
+#| "beside the seach bar to reveal a drop-down menu "
+#| "with :guilabel:`Filters`, :guilabel:`Group By`, and :guilabel:`Favorites` "
+#| "options."
 msgid ""
 "To do that, click the :icon:`fa-sort-desc` :guilabel:`(down arrow)` beside "
-"the seach bar to reveal a drop-down menu "
+"the search bar to reveal a drop-down menu "
 "with :guilabel:`Filters`, :guilabel:`Group By`, and :guilabel:`Favorites` "
 "options."
 msgstr ""
@@ -8358,584 +9545,9 @@ msgstr ""
 "un meniu derulant cu opțiunile :guilabel:`Filters`, :guilabel:`Group By` "
 "și :guilabel:`Favorites`."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:77
-msgid ""
-"For example, click the :guilabel:`Event` option, in the :guilabel:`Group By` "
-"column. Then, click away to remove the drop-down menu. Odoo reveals "
-"the :guilabel:`Attendees` page with event-specific columns, allowing users "
-"to locate specific event attendees."
-msgstr ""
-"De exemplu, faceți clic pe opțiunea :guilabel:`Event` din "
-"coloana :guilabel:`Group By`. Apoi, faceți clic în afara meniului pentru a-l "
-"închide. Odoo va afișa pagina :guilabel:`Attendees` cu coloane specifice "
-"evenimentului, permițând utilizatorilor să găsească rapid participanții la "
-"un anumit eveniment."
-
-#: ../../content/applications/marketing/events/registration_desk.rst:82
-#: ../../content/applications/marketing/events/revenues_report.rst:72
+#: ../../content/applications/marketing/events/registration_desk.rst:81
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:5
-msgid ""
-"The Odoo **Events** application creates custom reports, based on event-"
-"related data and analytics. These reports can either be focused on "
-"*Attendees* or *Revenues*."
-msgstr ""
-"Aplicația Odoo **Events** creează rapoarte personalizate, bazate pe date și "
-"analize legate de evenimente. Aceste rapoarte pot fi axate fie pe "
-"*Attendees* (participanți), fie pe *Revenues* (venituri)."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:8
-msgid ""
-"The following documentation focuses on the reporting options related to "
-"event *Revenues*."
-msgstr ""
-"Documentația de mai jos se concentrează pe opțiunile de raportare legate de "
-"*Revenues* (venituri) pentru evenimente."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:11
-msgid "Revenues reporting page"
-msgstr "Pagina de raportare a veniturilor"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:13
-msgid ""
-"To access the *Attendees* reporting page, navigate to :menuselection:`Events "
-"app --> Reporting --> Revenues`."
-msgstr ""
-"Pentru a accesa pagina de raportare *Attendees*, "
-"accesați :menuselection:`Events app --> Reporting --> Revenues`."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:None
-msgid ""
-"The default view of the Revenues reporting page in the Odoo Events "
-"application."
-msgstr ""
-"Vizualizarea implicită a paginii de raportare a veniturilor în aplicația "
-"Odoo Events."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:20
-msgid ""
-"By default, the :guilabel:`Revenues` reporting page appears as a graph "
-"(a :icon:`fa-line-chart` :guilabel:`(Line Chart)` with :icon:`fa-"
-"database` :guilabel:`(Stacked)` data). The default filters, :guilabel:`Non-"
-"free tickets` and :guilabel:`Event Start Date: (current year)`, are present "
-"in the search bar."
-msgstr ""
-"Implicit, vizualizarea este setată pe un grafic cu bare, dar poate fi "
-"schimbată într-un grafic liniar, grafic circular sau vizualizare tabel "
-"folosind pictogramele din colțul din dreapta sus al paginii."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:26
-msgid ""
-"To learn more about the various graph views (and graph view options), refer "
-"to the :ref:`Graph views <reporting/using-graph>` documentation."
-msgstr ""
-"Filtrele și măsurile pot fi aplicate pentru a personaliza datele afișate."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:29
-msgid ""
-"The :guilabel:`Revenues` reporting page can also be viewed as a :ref:`pivot "
-"table <reporting/views/pivot>`, by clicking the :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` icon in the upper-right corner."
-msgstr ""
-"Pagina de raportare :guilabel:`Revenues` poate fi vizualizată și ca "
-"un :ref:`pivot table <reporting/views/pivot>`, făcând clic pe "
-"pictograma :icon:`oi-view-pivot` :guilabel:`(Pivot)` din colțul din dreapta "
-"sus."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:34
-msgid "Measures"
-msgstr "Indicatori"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:36
-msgid ""
-"Choosing specific :ref:`Measures <reporting/choosing-measures>` is a quick "
-"way to customize reporting pages."
-msgstr ""
-"Alegerea unor :ref:`Measures <reporting/choosing-measures>` specifice este o "
-"modalitate rapidă de a personaliza paginile de raportare."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:39
-msgid ""
-"Regardless of the chosen view, the measures on the :guilabel:`Revenues` "
-"reporting page are as follows: :guilabel:`Revenues`, :guilabel:`Untaxed "
-"Revenues`, and :guilabel:`Count`."
-msgstr ""
-"Indiferent de vizualizarea aleasă, măsurile de pe pagina de "
-"raportare :guilabel:`Revenues` "
-"sunt: :guilabel:`Revenues`, :guilabel:`Untaxed Revenues` "
-"și :guilabel:`Count`."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:43
-msgid ""
-"In the default graph view of the :guilabel:`Revenues` reporting page, only "
-"the :guilabel:`Revenues` option is set in the :guilabel:`Measures` drop-down "
-"menu."
-msgstr ""
-"În vizualizarea grafică implicită a paginii de "
-"raportare :guilabel:`Revenues`, doar opțiunea :guilabel:`Revenues` este "
-"setată în meniul derulant :guilabel:`Measures`."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:46
-msgid ""
-"In graph view, only one of the :guilabel:`Measures` can be selected at a "
-"time."
-msgstr ""
-"În vizualizarea grafică, doar una dintre opțiunile :guilabel:`Measures` "
-"poate fi selectată la un moment dat."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:48
-msgid ""
-"When the pivot option is selected, all :guilabel:`Measures` options are "
-"selected, by default."
-msgstr ""
-"Când este selectată opțiunea pivot, toate opțiunile :guilabel:`Measures` "
-"sunt selectate implicit."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:50
-msgid ":guilabel:`Revenues`: shows the revenues generated from events."
-msgstr ":guilabel:`Revenues`: afișează veniturile generate din evenimente."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:51
-msgid ""
-":guilabel:`Untaxed Revenues`: shows the untaxed revenues generated from "
-"events."
-msgstr ""
-":guilabel:`Untaxed Revenues`: afișează veniturile neimpozitate generate din "
-"evenimente."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:52
-msgid ""
-":guilabel:`Count`: shows the total amount of registrants who attended events."
-msgstr ""
-":guilabel:`Count`: afișează numărul total de participanți care au participat "
-"la evenimente."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:55
-msgid "Filters and grouping options"
-msgstr "Opțiuni de filtrare și grupare"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:57
-msgid ""
-"To reveal a drop-down menu of filter and grouping options to create custom "
-"reports, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the "
-"right of the search bar."
-msgstr ""
-"Pentru a afișa un meniu derulant cu opțiuni de filtrare și grupare pentru a "
-"crea rapoarte personalizate, faceți clic pe :icon:`fa-caret-"
-"down` :guilabel:`(săgeată în jos)` din dreapta barei de căutare."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:60
-msgid ""
-"Doing so opens a drop-down mega menu of options organized into "
-"columns: :ref:`Filters <search/preconfigured-filters>`, :ref:`Group By "
-"<search/group>`, and :ref:`Favorites <search/favorites>`."
-msgstr ""
-"Astfel se deschide un mega-meniu derulant cu opțiuni organizate pe "
-"coloane: :ref:`Filters <search/preconfigured-filters>`, :ref:`Group By "
-"<search/group>` și :ref:`Favorites <search/favorites>`."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:65
-msgid ""
-"If a time-related option has been selected from the :guilabel:`Filters` "
-"column (e.g. the default :guilabel:`Event Start Date: (year)` filter), "
-"a :guilabel:`Comparison` column appears, with comparison options for the "
-"corresponding time-related filter option selected."
-msgstr ""
-"Dacă a fost selectată o opțiune legată de timp din "
-"coloana :guilabel:`Filters` (de exemplu, filtrul implicit :guilabel:`Event "
-"Start Date: (year)`), apare o coloană :guilabel:`Comparison` cu opțiuni de "
-"comparație pentru filtrul de timp selectat."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:69
-msgid ""
-"Only **one** selection can be made from the :guilabel:`Comparison` column at "
-"a time."
-msgstr ""
-"Doar **o** selecție poate fi făcută din coloana :guilabel:`Comparison` la un "
-"moment dat."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:75
-msgid "Filter options"
-msgstr "Opțiuni de filtrare"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:77
-msgid ""
-"In the :guilabel:`Filters` column of the drop-down mega menu, there are "
-"various event-related options that can be utilized to create custom reports, "
-"based on a number of specific criteria."
-msgstr ""
-"În coloana :guilabel:`Filters` a mega-meniului derulant există diverse "
-"opțiuni legate de evenimente care pot fi utilizate pentru a crea rapoarte "
-"personalizate, pe baza unor criterii specifice."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:80
-msgid ""
-"Multiple options in the :guilabel:`Filters` column can be selected at once."
-msgstr ""
-"Se pot selecta simultan mai multe opțiuni din coloana :guilabel:`Filters`."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:82
-msgid "The :guilabel:`Filters` column has the following options:"
-msgstr "Coloana :guilabel:`Filters` are următoarele opțiuni:"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:84
-msgid ""
-":guilabel:`Non-free tickets`: event tickets/registrations that were **not** "
-"free."
-msgstr ""
-":guilabel:`Non-free tickets`: bilete/înregistrări la eveniment care **nu** "
-"au fost gratuite."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:85
-msgid ":guilabel:`Free`: event tickets/registrations that *were* free."
-msgstr ""
-":guilabel:`Free`: bilete/înregistrări la eveniment care au fost gratuite."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:86
-msgid ""
-":guilabel:`Pending payment`: event tickets/registrations that were "
-"purchased, but still have payment pending."
-msgstr ""
-":guilabel:`Pending payment`: bilete/înregistrări la eveniment care au fost "
-"achiziționate, dar pentru care plata este încă în așteptare."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:88
-msgid ""
-":guilabel:`Sold`: event tickets/registrations that have been successfully "
-"sold (and paid for)."
-msgstr ""
-":guilabel:`Sold`: bilete/înregistrări la eveniment care au fost vândute cu "
-"succes (și plătite)."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:89
-msgid ""
-":guilabel:`Registration Date`: Click the :icon:`fa-caret-"
-"down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, and "
-"year options. Select any number of these options to view a specific periods "
-"of time and see how many registrations happened during that time."
-msgstr ""
-":guilabel:`Registration Date`: Faceți clic pe pictograma :icon:`fa-caret-"
-"down` :guilabel:`(săgeată în jos)` pentru a afișa o listă de opțiuni pentru "
-"lună, trimestru și an. Selectați oricâte opțiuni doriți pentru a vedea "
-"perioade specifice și câte înregistrări au avut loc în acele perioade."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:92
-msgid ""
-":guilabel:`Upcoming/Running`: include revenue-related information for events "
-"that are either currently running or are going to happen in the future."
-msgstr ""
-":guilabel:`Upcoming/Running`: include informații legate de venituri pentru "
-"evenimente care sunt în desfășurare sau care urmează să aibă loc."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:94
-msgid ""
-":guilabel:`Past Events`: include revenue-related information for events that "
-"have already taken place."
-msgstr ""
-":guilabel:`Past Events`: include informații legate de venituri pentru "
-"evenimente care au avut deja loc."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:96
-msgid ""
-":guilabel:`Event Start Date`: Click the :icon:`fa-caret-"
-"down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, and "
-"year options. Select any number of these options to designate event start "
-"dates to use as filters for revenue-related event data."
-msgstr ""
-":guilabel:`Event Start Date`: Faceți clic pe pictograma :icon:`fa-caret-"
-"down` :guilabel:`(săgeată în jos)` pentru a afișa o listă de opțiuni pentru "
-"lună, trimestru și an. Selectați oricâte opțiuni doriți pentru a desemna "
-"datele de început ale evenimentelor ca filtre pentru datele legate de "
-"venituri."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:99
-msgid ""
-":guilabel:`Event End Date`: Click the :icon:`fa-caret-down` :guilabel:`(down "
-"arrow)` icon to reveal a list of month, quarter, and year options. Select "
-"any number of these options to designate event end dates to use as filters "
-"for revenue-related event data."
-msgstr ""
-":guilabel:`Event End Date`: Faceți clic pe pictograma :icon:`fa-caret-"
-"down` :guilabel:`(săgeată în jos)` pentru a afișa o listă de opțiuni pentru "
-"lună, trimestru și an. Selectați oricâte opțiuni doriți pentru a desemna "
-"datele de sfârșit ale evenimentelor ca filtre pentru datele legate de "
-"venituri."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:102
-msgid ""
-":guilabel:`Published Events`: Select this option to show revenue-related "
-"data for published events."
-msgstr ""
-":guilabel:`Published Events`: Selectați această opțiune pentru a afișa date "
-"legate de venituri pentru evenimentele publicate."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:104
-msgid ""
-":guilabel:`Add Custom Filter`: Create a custom filter to analyze event-"
-"related revenue data. To learn more, refer to the documentation "
-"on :ref:`custom filters <search/custom-filters>`."
-msgstr ""
-":guilabel:`Add Custom Filter`: Creați un filtru personalizat pentru a "
-"analiza datele legate de venituri ale evenimentelor. Pentru a afla mai "
-"multe, consultați documentația despre :ref:`filtre personalizate <search/"
-"custom-filters>`."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:108
-msgid "Group By options"
-msgstr "Opțiuni de grupare"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:110
-msgid ""
-"In the :guilabel:`Group By` column of the drop-down mega menu, there are "
-"various event-related options to create custom groupings of data."
-msgstr ""
-"În coloana :guilabel:`Group By` a mega-meniului derulant, există diverse "
-"opțiuni legate de evenimente pentru a crea grupări personalizate de date."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:113
-msgid "Multiple :guilabel:`Group By` options can be selected at once."
-msgstr "Se pot selecta mai multe opțiuni :guilabel:`Group By` simultan."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:115
-msgid "The :guilabel:`Group By` column has the following options:"
-msgstr "Coloana :guilabel:`Group By` are următoarele opțiuni:"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:117
-msgid ":guilabel:`Event Type`: Group data based on the type of event."
-msgstr ":guilabel:`Event Type`: Grupează datele pe baza tipului de eveniment."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:118
-msgid ""
-":guilabel:`Event`: Organize data into individual groups, separated by events."
-msgstr ""
-":guilabel:`Event`: Organizează datele în grupuri individuale, separate pe "
-"evenimente."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:119
-msgid ""
-":guilabel:`Product`: Group data based on the event registration product."
-msgstr ""
-":guilabel:`Product`: Grupează datele pe baza produsului de înregistrare la "
-"eveniment."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:120
-msgid ""
-":guilabel:`Ticket`: Group data based on the type of event ticket purchased "
-"by attendees."
-msgstr ""
-":guilabel:`Ticket`: Grupează datele pe baza tipului de bilet de eveniment "
-"achiziționat de participanți."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:121
-msgid ""
-":guilabel:`Registration Status`: Group data based on the status of "
-"registrations."
-msgstr ""
-":guilabel:`Registration Status`: Grupează datele pe baza statusului "
-"înregistrărilor."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:122
-msgid ""
-":guilabel:`Sale Order Status`: Group data based on the status of event-"
-"related sales orders."
-msgstr ""
-":guilabel:`Sale Order Status`: Grupează datele pe baza statusului comenzilor "
-"de vânzare legate de eveniment."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:123
-msgid ":guilabel:`Customer`: Group data based on customer records."
-msgstr ":guilabel:`Customer`: Grupează datele pe baza fișelor de client."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:124
-msgid ""
-":guilabel:`Add Custom Group`: Click the :icon:`fa-caret-"
-"down` :guilabel:`(down arrow)` icon to reveal a drop-down of grouping "
-"options. To select one, click on the desired option, and Odoo adds it to "
-"the :guilabel:`Group By` column. Multiple selections can be made."
-msgstr ""
-":guilabel:`Add Custom Group`: Faceți clic pe pictograma :icon:`fa-caret-"
-"down` :guilabel:`(săgeată în jos)` pentru a afișa un meniu derulant cu "
-"opțiuni de grupare. Pentru a selecta una, faceți clic pe opțiunea dorită, "
-"iar Odoo o va adăuga în coloana :guilabel:`Group By`. Se pot face selecții "
-"multiple."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:129
-msgid "Sample report: event ticket analysis (graph)"
-msgstr "Exemplu de raport: analiza biletelor la eveniment (grafic)"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:131
-msgid ""
-"The following is an example of how various filters and grouping options can "
-"create a useful analytic graph report related to event revenues. In this "
-"case, the configurations present data about sold or free tickets to "
-"published events, with the metrics separated by ticket type and event."
-msgstr ""
-"Următorul este un exemplu de cum diverse filtre și opțiuni de grupare pot "
-"crea un raport analitic util, sub formă de grafic, legat de veniturile din "
-"evenimente. În acest caz, configurațiile prezintă date despre biletele "
-"vândute sau gratuite la evenimente publicate, cu metrici separate pe tip de "
-"bilet și eveniment."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:None
-msgid ""
-"The event ticket analysis sample report with unique filters and groupings in "
-"place."
-msgstr ""
-"Exemplul de raport de analiză a biletelor la eveniment cu filtre și grupări "
-"unice aplicate."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:139
-msgid ""
-"To create such a report, navigate to :menuselection:`Events app --> "
-"Reporting --> Revenues`. Stay in the default graph view, but remove the "
-"default filters from the search bar."
-msgstr ""
-"Pentru a crea un astfel de raport, accesați :menuselection:`Events app --> "
-"Reporting --> Revenues`. Rămâneți în vizualizarea grafică implicită, dar "
-"eliminați filtrele implicite din bara de căutare."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:142
-msgid ""
-"Then, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the right "
-"of the search bar, to reveal the drop-down mega menu of filter and grouping "
-"options."
-msgstr ""
-"Apoi, faceți clic pe :icon:`fa-caret-down` :guilabel:`(săgeată în jos)` din "
-"dreapta barei de căutare pentru a afișa meniul derulant cu opțiuni de "
-"filtrare și grupare."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:145
-msgid ""
-"From here, select :guilabel:`Free` and :guilabel:`Sold` from "
-"the :guilabel:`Filters` column."
-msgstr ""
-"De aici, selectați :guilabel:`Free` și :guilabel:`Sold` din "
-"coloana :guilabel:`Filters`."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:147
-msgid ""
-"Then, since it is desired to **only** view data related to already published "
-"events, select the :guilabel:`Published Events` option in "
-"the :guilabel:`Filters` column, as well."
-msgstr ""
-"Apoi, deoarece se dorește afișarea **doar** a datelor legate de evenimentele "
-"deja publicate, selectați și opțiunea :guilabel:`Published Events` din "
-"coloana :guilabel:`Filters`."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:150
-msgid ""
-"Next, in the :guilabel:`Group By` column, select the :guilabel:`Event` "
-"and :guilabel:`Ticket` options, **in that sequential order**. Doing so first "
-"groups the data by event, *then* by ticket type, which provides a more "
-"useful array of data to analyze."
-msgstr ""
-"În continuare, în coloana :guilabel:`Group By`, selectați "
-"opțiunile :guilabel:`Event` și :guilabel:`Ticket`, **în această ordine**. "
-"Astfel, datele vor fi grupate mai întâi după eveniment, *apoi* după tipul de "
-"bilet, oferind o imagine mai utilă pentru analiză."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:155
-msgid ""
-"The order in which the options are selected in the :guilabel:`Group By` "
-"column directly affects how the data is presented on the report."
-msgstr ""
-"Ordinea în care sunt selectate opțiunile din coloana :guilabel:`Group By` "
-"afectează direct modul în care datele sunt prezentate în raport."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:158
-msgid ""
-"From there, additional configurations can be added for more detailed data, "
-"if desired."
-msgstr ""
-"De acolo, se pot adăuga configurații suplimentare pentru date mai detaliate, "
-"dacă se dorește."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:160
-msgid ""
-"If no additional filters or groupings are added, Odoo presents a graphical "
-"representation of data related to all *free* or *sold* tickets for "
-"*published events*, grouped by *event*, and organized by *ticket* type."
-msgstr ""
-"Dacă nu se adaugă filtre sau grupări suplimentare, Odoo prezintă o "
-"reprezentare grafică a datelor referitoare la toate biletele *gratuite* sau "
-"*vândute* pentru *evenimentele publicate*, grupate după *eveniment* și "
-"organizate după tipul de *bilet*."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:165
-msgid "Sample report: event type analysis (pivot table)"
-msgstr "Exemplu de raport: analiză pe tipuri de evenimente (tabel pivot)"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:167
-msgid ""
-"The following is an example of how various filters and grouping options can "
-"create a useful analytic pivot table report related to event revenues. In "
-"this case, the configurations present data about how much revenue different "
-"event types have generated, in order to gauge which events are the most "
-"profitable."
-msgstr ""
-"Următorul este un exemplu de cum diferite filtre și opțiuni de grupare pot "
-"crea un raport analitic util de tip tabel pivot, legat de veniturile "
-"evenimentelor. În acest caz, configurațiile prezintă date despre cât venit a "
-"generat fiecare tip de eveniment, pentru a evalua care sunt cele mai "
-"profitabile."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:None
-msgid ""
-"The event type analysis sample report with unique filters and groupings in "
-"place."
-msgstr ""
-"Exemplu de raport de analiză pe tipuri de evenimente, cu filtre și grupări "
-"specifice aplicate."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:176
-msgid ""
-"First, navigate to :menuselection:`Events app --> Reporting --> Revenues`, "
-"and switch to the pivot table view, by clicking the :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` icon in the upper-right corner."
-msgstr ""
-"Mai întâi, accesați :menuselection:`Events app --> Reporting --> Revenues` "
-"și comutați la vizualizarea tabelului pivot, făcând clic pe "
-"pictograma :icon:`oi-view-pivot` :guilabel:`(Pivot)` din colțul din dreapta "
-"sus."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:180
-msgid ""
-"Keep the default filters (:guilabel:`Non-free tickets` and :guilabel:`Event "
-"Start Date: (year)`) in the search bar."
-msgstr ""
-"Păstrați filtrele implicite (:guilabel:`Non-free tickets` "
-"și :guilabel:`Event Start Date: (year)`) în bara de căutare."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:183
-msgid ""
-"Next, open the :guilabel:`Measures` drop-down menu, and deselect the option "
-"for :guilabel:`Count`, because this report is only going to focus on "
-"revenues."
-msgstr ""
-"Apoi, deschideți meniul derulant :guilabel:`Measures` și debifați "
-"opțiunea :guilabel:`Count`, deoarece acest raport se va concentra doar pe "
-"venituri."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:186
-msgid ""
-"Then, click :icon:`fa-plus-square` :guilabel:`Total` above the column "
-"titles, and select :guilabel:`Event Type` from the resulting drop-down menu."
-msgstr ""
-"Apoi, faceți clic pe :icon:`fa-plus-square` :guilabel:`Total` deasupra "
-"titlurilor coloanelor și selectați :guilabel:`Event Type` din meniul "
-"derulant rezultat."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:189
-msgid ""
-"With these configurations in place, all the revenues generated from the "
-"events (and their corresponding registrations) are displayed, organized by "
-"the event type (presented as expandable columns)."
-msgstr ""
-"Cu aceste configurații, toate veniturile generate de evenimente (și de "
-"înscrierile aferente) sunt afișate, organizate după tipul de eveniment "
-"(prezentate ca și coloane expandabile)."
 
 #: ../../content/applications/marketing/events/sell_tickets.rst:5
 msgid ""
@@ -10043,10 +10655,6 @@ msgstr ""
 #: ../../content/applications/marketing/marketing_automation.rst:185
 msgid ":doc:`marketing_automation/testing_running`"
 msgstr ":doc:`marketing_automation/testare_rulare`"
-
-#: ../../content/applications/marketing/marketing_automation.rst:188
-msgid "Reporting"
-msgstr "Raportare"
 
 #: ../../content/applications/marketing/marketing_automation.rst:190
 msgid ""
@@ -19396,6 +20004,394 @@ msgstr ""
 #: ../../content/applications/marketing/surveys/scoring.rst:None
 msgid "Example of how a badge looks on the eLearning portion of the website."
 msgstr "Exemplu de cum arată o insignă în partea eLearning a site-ului."
+
+#~ msgid ""
+#~ "When the :guilabel:`Booth Management` setting is activated, a "
+#~ "new :doc:`Product Type <../../inventory_and_mrp/inventory/"
+#~ "product_management/configure/type>` becomes available on all product "
+#~ "forms: *Event Booth*."
+#~ msgstr ""
+#~ "Când setarea :guilabel:`Booth Management` este activată, un nou :doc:`Tip "
+#~ "de produs <../../inventory_and_mrp/inventory/product_management/configure/"
+#~ "type>` devine disponibil pe toate formularele de produs: *Event Booth*."
+
+#~ msgid ""
+#~ "This is important because every created booth **must** be assigned a "
+#~ "*Booth Category* on their respective booth form, and every booth category "
+#~ "**must** have an *Event Booth* product assigned to it."
+#~ msgstr ""
+#~ "Acest lucru este important deoarece fiecare stand creat **trebuie** să "
+#~ "aibă o *Categorie de stand* atribuită pe formularul său, iar fiecare "
+#~ "categorie de stand **trebuie** să aibă un produs *Event Booth* asociat."
+
+#~ msgid ""
+#~ "With the *Booth Management* setting activated in the *Events* app, the "
+#~ "*Booth Categories* option appears in the :guilabel:`Configuration` menu."
+#~ msgstr ""
+#~ "Cu setarea *Booth Management* activată în aplicația *Events*, opțiunea "
+#~ "*Booth Categories* apare în meniul :guilabel:`Configuration`."
+
+#~ msgid ""
+#~ "To access the :guilabel:`Booth Category` dashboard, go "
+#~ "to :menuselection:`Events app --> Configuration --> Booth Categories`, "
+#~ "which reveals a list of all created booth categories."
+#~ msgstr ""
+#~ "Pentru a accesa tabloul de bord :guilabel:`Booth Category`, mergi "
+#~ "la :menuselection:`Events app --> Configuration --> Booth Categories`, "
+#~ "unde vei vedea o listă cu toate categoriile de standuri create."
+
+#~ msgid ""
+#~ "On the :guilabel:`Booth Category` page, the following information for "
+#~ "each booth category is listed:"
+#~ msgstr ""
+#~ "Pe pagina :guilabel:`Booth Category` sunt afișate următoarele informații "
+#~ "pentru fiecare categorie de stand:"
+
+#~ msgid ""
+#~ ":guilabel:`Create Sponsor`: if checked, booking this booth category "
+#~ "creates a sponsor for the user."
+#~ msgstr ""
+#~ ":guilabel:`Creează sponsor`: dacă este bifat, rezervarea acestei "
+#~ "categorii de stand creează un sponsor pentru utilizator."
+
+#~ msgid ""
+#~ ":guilabel:`Product`: the *Event Booth* product associated with that "
+#~ "specific booth category."
+#~ msgstr ""
+#~ ":guilabel:`Produs`: produsul *Event Booth* asociat acelei categorii de "
+#~ "stand."
+
+#~ msgid ":guilabel:`Price`: the price of a booth in that booth category."
+#~ msgstr ":guilabel:`Preț`: prețul unui stand din acea categorie de stand."
+
+#~ msgid ""
+#~ "When the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon, located "
+#~ "to the far-right of the column titles, is clicked, a drop-down menu of "
+#~ "additional column options appears. From the resulting drop-down menu, "
+#~ "tick the checkbox beside :guilabel:`Sponsor Level` and/"
+#~ "or :guilabel:`Sponsor Type` to reveal those columns on "
+#~ "the :guilabel:`Booth Category` page."
+#~ msgstr ""
+#~ "Când este apăsată pictograma :icon:`oi-settings-"
+#~ "adjust` :guilabel:`(settings)` din dreapta titlurilor de coloană, apare "
+#~ "un meniu derulant cu opțiuni suplimentare de coloană. Din acest meniu, "
+#~ "bifează căsuța de lângă :guilabel:`Sponsor Level` și/"
+#~ "sau :guilabel:`Sponsor Type` pentru a afișa aceste coloane pe "
+#~ "pagina :guilabel:`Booth Category`."
+
+#~ msgid ""
+#~ "To add a corresponding image to the booth category (e.g. a sample photo "
+#~ "of how the booth looks), click the :icon:`fa-pencil` :guilabel:`(pencil)` "
+#~ "icon that appears when the cursor hovers over the camera placeholder in "
+#~ "the upper-right corner of the booth category form. When clicked, proceed "
+#~ "to upload the desired image to the booth category form, if needed."
+#~ msgstr ""
+#~ "Pentru a adăuga o imagine corespunzătoare categoriei de stand (de "
+#~ "exemplu, o fotografie de exemplu cu aspectul standului), apasă pe "
+#~ "pictograma :icon:`fa-pencil` :guilabel:`(creion)` care apare când "
+#~ "cursorul este deasupra camerei din colțul dreapta sus al formularului "
+#~ "categoriei de stand. După ce ai apăsat, încarcă imaginea dorită în "
+#~ "formularul categoriei de stand, dacă este necesar."
+
+#~ msgid ""
+#~ "In the :guilabel:`Booth Details` section, users **must** assign "
+#~ "a :guilabel:`Product` to the category, and it **must** have *Event Booth* "
+#~ "set as the *Product Type* on the product form."
+#~ msgstr ""
+#~ "În secțiunea :guilabel:`Booth Details`, utilizatorii **trebuie** să "
+#~ "atribuie un :guilabel:`Produs` categoriei, iar acesta **trebuie** să aibă "
+#~ "*Event Booth* setat ca *Tip de produs* pe formularul de produs."
+
+#~ msgid ""
+#~ "And, regardless of the listed price on the *Event Booth* product chosen, "
+#~ "the user can input a custom :guilabel:`Price` to be applied for this "
+#~ "booth category in the field below."
+#~ msgstr ""
+#~ "Indiferent de prețul afișat la produsul *Event Booth* ales, utilizatorul "
+#~ "poate introduce un :guilabel:`Preț` personalizat care să fie aplicat "
+#~ "pentru această categorie de stand în câmpul de mai jos."
+
+#~ msgid ""
+#~ "When the :guilabel:`Create Sponsor` checkbox is ticked, two additional "
+#~ "fields appear beneath it: :guilabel:`Sponsor Level` "
+#~ "and :guilabel:`Sponsor Type`."
+#~ msgstr ""
+#~ "Când opțiunea :guilabel:`Create Sponsor` este bifată, apar două câmpuri "
+#~ "suplimentare dedesubt: :guilabel:`Sponsor Level` și :guilabel:`Sponsor "
+#~ "Type`."
+
+#~ msgid ""
+#~ ":guilabel:`Sponsor Level` and :guilabel:`Sponsor Type` are purely to "
+#~ "distinguish different distinctions of sponsors. For example, if a sponsor "
+#~ "has been attached to a company for multiple years, they would be granted "
+#~ "a higher level (e.g. *Gold* level), which provides them with immediate "
+#~ "credability and status. Whereas, conversely, a relatively new sponsor "
+#~ "would be granted a lower level (e.g. *Bronze* level), which coincides "
+#~ "with its own credability and status."
+#~ msgstr ""
+#~ ":guilabel:`Sponsor Level` și :guilabel:`Sponsor Type` sunt folosite doar "
+#~ "pentru a distinge diferite tipuri de sponsori. De exemplu, dacă un "
+#~ "sponsor este asociat unei companii de mai mulți ani, va primi un nivel "
+#~ "mai ridicat (ex: nivel *Gold*), ceea ce îi oferă credibilitate și statut "
+#~ "imediat. În schimb, un sponsor nou va primi un nivel mai scăzut (ex: "
+#~ "nivel *Bronze*), corespunzător propriei credibilități și statut."
+
+#~ msgid ""
+#~ "Select a desired level of sponsorship from the :guilabel:`Sponsor Level` "
+#~ "drop-down field."
+#~ msgstr ""
+#~ "Selectează nivelul de sponsorizare dorit din câmpul "
+#~ "derulant :guilabel:`Sponsor Level`."
+
+#~ msgid ""
+#~ "To modify any existing :guilabel:`Sponsor Level`, select it from the drop-"
+#~ "down field, then click the :icon:`fa-arrow-right` :guilabel:`(right "
+#~ "arrow)` that appears at the end of the line. Doing so opens a separate "
+#~ "page, wherein the :guilabel:`Sponsor Level` name and :guilabel:`Ribbon "
+#~ "Style` can be changed, if necessary."
+#~ msgstr ""
+#~ "Pentru a modifica un :guilabel:`Sponsor Level` existent, selectează-l din "
+#~ "câmpul derulant, apoi apasă pe pictograma :icon:`fa-arrow-"
+#~ "right` :guilabel:`(săgeată dreapta)` care apare la finalul liniei. Astfel "
+#~ "se deschide o pagină separată unde pot fi schimbate "
+#~ "numele :guilabel:`Sponsor Level` și :guilabel:`Ribbon Style`, dacă este "
+#~ "necesar."
+
+#~ msgid ""
+#~ "Users can also create a new :guilabel:`Sponsor Level`, by typing in the "
+#~ "name of the new level, and clicking :guilabel:`Create and edit...` from "
+#~ "the resulting drop-down menu."
+#~ msgstr ""
+#~ "Utilizatorii pot crea și un nou :guilabel:`Sponsor Level` tastând numele "
+#~ "noului nivel și apăsând :guilabel:`Create and edit...` din meniul "
+#~ "derulant rezultat."
+
+#~ msgid ""
+#~ "Clicking :guilabel:`Create` from the resulting drop-down menu in this "
+#~ "instance creates the sponsor level, but doesn't immediately prompt the "
+#~ "user to further configure it, via a :guilabel:`Create Sponsor Level` pop-"
+#~ "up window."
+#~ msgstr ""
+#~ "Apăsând :guilabel:`Create` din meniul derulant rezultat creează nivelul "
+#~ "de sponsor, dar nu solicită imediat utilizatorului să îl configureze "
+#~ "suplimentar printr-o fereastră pop-up :guilabel:`Create Sponsor Level`."
+
+#~ msgid "Doing so reveals a :guilabel:`Create Sponsor Level` pop-up window."
+#~ msgstr ""
+#~ "Astfel se deschide o fereastră pop-up :guilabel:`Create Sponsor Level`."
+
+#~ msgid ""
+#~ "The Create Sponsor Level pop-up window that appears in the Odoo Events "
+#~ "application."
+#~ msgstr ""
+#~ "Fereastra pop-up Create Sponsor Level care apare în aplicația Odoo Events."
+
+#~ msgid ""
+#~ "From this pop-up window, confirm the newly-created :guilabel:`Sponsor "
+#~ "Level`, and decide what kind of :guilabel:`Ribbon Style` should be "
+#~ "applied, if any. The :guilabel:`Ribbon Style` options available in that "
+#~ "drop-down field are: :guilabel:`No "
+#~ "Ribbon`, :guilabel:`Gold`, :guilabel:`Silver`, and :guilabel:`Bronze`."
+#~ msgstr ""
+#~ "Din această fereastră pop-up, confirmă :guilabel:`Sponsor Level` creat și "
+#~ "decide ce tip de :guilabel:`Ribbon Style` să fie aplicat, dacă este "
+#~ "cazul. Opțiunile disponibile pentru :guilabel:`Ribbon Style` în acel câmp "
+#~ "derulant sunt: :guilabel:`No "
+#~ "Ribbon`, :guilabel:`Gold`, :guilabel:`Silver` și :guilabel:`Bronze`."
+
+#~ msgid ""
+#~ "If one is selected, that :guilabel:`Ribbon Style` appears with the "
+#~ "sponsor's name on the event website."
+#~ msgstr ""
+#~ "Dacă este selectat unul, acel :guilabel:`Ribbon Style` va apărea lângă "
+#~ "numele sponsorului pe site-ul evenimentului."
+
+#~ msgid ""
+#~ "On the booth category form, beneath those sections (:guilabel:`Booth "
+#~ "Details` and :guilabel:`Sponsorship`), there is "
+#~ "the :guilabel:`Description` tab. In this tab, proceed to enter any vital "
+#~ "information related to the booth category that would be important for any "
+#~ "potential booth-buyer to know about (e.g., the square footage, any "
+#~ "amenities, size of display screen, etc.)."
+#~ msgstr ""
+#~ "Pe formularul categoriei de stand, sub aceste secțiuni (:guilabel:`Booth "
+#~ "Details` și :guilabel:`Sponsorship`), există "
+#~ "fila :guilabel:`Description`. În această filă, introdu orice informație "
+#~ "esențială legată de categoria de stand care ar fi importantă pentru orice "
+#~ "potențial cumpărător de stand (ex: suprafața, facilități, dimensiunea "
+#~ "ecranului de afișare etc.)."
+
+#~ msgid ""
+#~ "In order to add a booth to an event, navigate to an existing event form, "
+#~ "via :menuselection:`Events app --> Events`, and select the desired event "
+#~ "from the :guilabel:`Events` dashboard. Or, click :guilabel:`New` to open "
+#~ "a blank event form."
+#~ msgstr ""
+#~ "Pentru a adăuga un stand la un eveniment, navighează la un formular de "
+#~ "eveniment existent prin :menuselection:`Events app --> Events` și "
+#~ "selectează evenimentul dorit din tabloul de bord :guilabel:`Events`. Sau "
+#~ "apasă :guilabel:`New` pentru a deschide un formular de eveniment gol."
+
+#~ msgid ""
+#~ "The :guilabel:`Booths` page is displayed in a Kanban view, by default, "
+#~ "with two different stages: :guilabel:`Available` "
+#~ "and :guilabel:`Unavailable`."
+#~ msgstr ""
+#~ "Pagina :guilabel:`Booths` este afișată implicit în vizualizare Kanban, cu "
+#~ "două etape diferite: :guilabel:`Available` și :guilabel:`Unavailable`."
+
+#~ msgid ""
+#~ "To modify any existing booth, simply click the desired booth from "
+#~ "the :guilabel:`Booths` page, and proceed to make any necessary changes "
+#~ "from the booth form. Or, create a new one, by clicking "
+#~ "the :guilabel:`New` button in the upper-left corner to reveal a blank "
+#~ "booth form."
+#~ msgstr ""
+#~ "Pentru a modifica un stand existent, apasă pe standul dorit din "
+#~ "pagina :guilabel:`Booths` și efectuează modificările necesare din "
+#~ "formularul standului. Sau creează unul nou apăsând "
+#~ "butonul :guilabel:`New` din colțul stânga sus pentru a deschide un "
+#~ "formular gol de stand."
+
+#~ msgid "Booth form"
+#~ msgstr "Formular stand"
+
+#~ msgid ""
+#~ "The booth form in Odoo *Events* lets users customize and configure event "
+#~ "booths in a number of different ways."
+#~ msgstr ""
+#~ "Formularul de stand din Odoo *Events* permite utilizatorilor să "
+#~ "personalizeze și să configureze standurile de eveniment în mai multe "
+#~ "moduri."
+
+#~ msgid ""
+#~ "A new :guilabel:`Booth Category` can be created from this field, by "
+#~ "typing in the name of the new category, and clicking :guilabel:`Create "
+#~ "and edit...` from the resulting drop-down menu. Doing so reveals "
+#~ "a :guilabel:`Create Booth Category` pop-up window, with all the standard "
+#~ "fields found on a common booth category form."
+#~ msgstr ""
+#~ "O nouă :guilabel:`Categorie de stand` poate fi creată din acest câmp, "
+#~ "tastând numele noii categorii și apăsând :guilabel:`Create and edit...` "
+#~ "din meniul derulant rezultat. Astfel se deschide o fereastră pop-"
+#~ "up :guilabel:`Create Booth Category` cu toate câmpurile standard ale unui "
+#~ "formular obișnuit de categorie de stand."
+
+#~ msgid ""
+#~ "Simply clicking :guilabel:`Create` from the resulting drop-down menu "
+#~ "creates the category, but does not reveal the :guilabel:`Create Booth "
+#~ "Category` pop-up window. The category would have to be modified later, "
+#~ "via the *Booth Categories* page (:menuselection:`Events app --> "
+#~ "Configuration --> Booth Categories`)."
+#~ msgstr ""
+#~ "Apăsând doar :guilabel:`Create` din meniul derulant creează categoria, "
+#~ "dar nu deschide fereastra pop-up :guilabel:`Create Booth Category`. "
+#~ "Categoria va trebui modificată ulterior din pagina *Booth Categories* "
+#~ "(:menuselection:`Events app --> Configuration --> Booth Categories`)."
+
+#~ msgid ""
+#~ "Upon selecting a pre-existing :guilabel:`Booth Category`, two additional, "
+#~ "non-modifiable fields appear: :guilabel:`Product` and :guilabel:`Price`. "
+#~ "Both fields represent their respective selections for that specific booth "
+#~ "category."
+#~ msgstr ""
+#~ "La selectarea unei :guilabel:`Booth Category` existente, apar două "
+#~ "câmpuri suplimentare, nemodificabile: :guilabel:`Product` "
+#~ "și :guilabel:`Price`. Ambele câmpuri reflectă selecțiile respective "
+#~ "pentru acea categorie de stand."
+
+#~ msgid ""
+#~ "From there, click the :guilabel:`Get A Booth` event subheader menu "
+#~ "option. Doing so reveals the :guilabel:`Get A Booth` page, showcasing all "
+#~ "the configured event booths that were created on the event form."
+#~ msgstr ""
+#~ "De acolo, apasă pe opțiunea de submeniu :guilabel:`Get A Booth` a "
+#~ "evenimentului. Astfel se va deschide pagina :guilabel:`Get A Booth`, unde "
+#~ "sunt afișate toate standurile de eveniment configurate pe formularul "
+#~ "evenimentului."
+
+#~ msgid ""
+#~ "If the selected booth has the *Create Sponsor* checkbox ticked, this page "
+#~ "reads as *Sponsor Details*."
+#~ msgstr ""
+#~ "Dacă standul selectat are bifată opțiunea *Create Sponsor*, această "
+#~ "pagină va afișa *Sponsor Details*."
+
+#~ msgid ""
+#~ "The information provided on this details page is used to auto-populate "
+#~ "the renter-related information on the booth form on the event form in the "
+#~ "*Events* application."
+#~ msgstr ""
+#~ "Informațiile completate pe această pagină sunt folosite pentru a completa "
+#~ "automat datele despre chiriaș pe formularul standului din aplicația "
+#~ "*Events*."
+
+#~ msgid ""
+#~ "Click the *Sponsors* smart button to modify any information about the "
+#~ "sponsor, if necessary."
+#~ msgstr ""
+#~ "Apasă pe butonul inteligent *Sponsors* pentru a modifica orice informație "
+#~ "despre sponsor, dacă este necesar."
+
+#~ msgid ""
+#~ "Odoo reveals an :guilabel:`Attendees` page, with all the attendees for "
+#~ "every event in the database, in a default :icon:`oi-view-"
+#~ "kanban` :guilabel:`Kanban` view."
+#~ msgstr ""
+#~ "Odoo afișează o pagină :guilabel:`Attendees` cu toți participanții pentru "
+#~ "fiecare eveniment din baza de date, în vizualizarea implicită :icon:`oi-"
+#~ "view-kanban` :guilabel:`Kanban`."
+
+#~ msgid ""
+#~ "On the :guilabel:`Attendees` page, each attendee card displays that "
+#~ "person's name, which event they are registered to attend, their "
+#~ "associated company (if applicable), what ticket tier they purchased (if "
+#~ "applicable), along with two buttons: a :icon:`fa-"
+#~ "check` :guilabel:`(checkmark)` and :icon:`fa-undo` :guilabel:`(counter-"
+#~ "clockwise arrow)`."
+#~ msgstr ""
+#~ "Pe pagina :guilabel:`Attendees`, fiecare card de participant afișează "
+#~ "numele persoanei, evenimentul la care este înregistrată, compania "
+#~ "asociată (dacă este cazul), tipul de bilet achiziționat (dacă este "
+#~ "cazul), precum și două butoane: :icon:`fa-check` :guilabel:`(bifă)` "
+#~ "și :icon:`fa-undo` :guilabel:`(săgeată în sens invers acelor de "
+#~ "ceasornic)`."
+
+#~ msgid ""
+#~ "To grant access to a person, marking them as attended, click "
+#~ "the :icon:`fa-check` :guilabel:`(checkmark)` button on that attendee's "
+#~ "card."
+#~ msgstr ""
+#~ "Pentru a acorda acces unei persoane, marcând-o ca prezentă, faceți clic "
+#~ "pe butonul :icon:`fa-check` :guilabel:`(bifă)` de pe cardul "
+#~ "participantului."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-undo` :guilabel:`(counter-clockwise arrow)` button on "
+#~ "an attendee's card to undo the previous action."
+#~ msgstr ""
+#~ "Faceți clic pe butonul :icon:`fa-undo` :guilabel:`(săgeată în sens invers "
+#~ "acelor de ceasornic)` de pe cardul unui participant pentru a anula "
+#~ "acțiunea anterioară."
+
+#~ msgid ""
+#~ "It is recommended to use an event-specific filter on "
+#~ "the :guilabel:`Attendees` page, via the search bar drop-down menu."
+#~ msgstr ""
+#~ "Este recomandat să folosiți un filtru specific evenimentului pe "
+#~ "pagina :guilabel:`Attendees`, prin meniul derulant al barei de căutare."
+
+#~ msgid ""
+#~ "For example, click the :guilabel:`Event` option, in the :guilabel:`Group "
+#~ "By` column. Then, click away to remove the drop-down menu. Odoo reveals "
+#~ "the :guilabel:`Attendees` page with event-specific columns, allowing "
+#~ "users to locate specific event attendees."
+#~ msgstr ""
+#~ "De exemplu, faceți clic pe opțiunea :guilabel:`Event` din "
+#~ "coloana :guilabel:`Group By`. Apoi, faceți clic în afara meniului pentru "
+#~ "a-l închide. Odoo va afișa pagina :guilabel:`Attendees` cu coloane "
+#~ "specifice evenimentului, permițând utilizatorilor să găsească rapid "
+#~ "participanții la un anumit eveniment."
 
 #~ msgid ""
 #~ "With the *Events* application, event organizers can create and configure "

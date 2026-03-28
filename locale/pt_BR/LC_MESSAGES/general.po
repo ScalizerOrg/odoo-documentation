@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-20 18:30+0000\n"
+"POT-Creation-Date: 2026-03-27 18:30+0000\n"
 "PO-Revision-Date: 2025-10-03 15:44+0000\n"
 "Last-Translator: \"Tiffany Chang (tic)\" <tic@odoo.com>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/"
@@ -4375,7 +4375,7 @@ msgstr ""
 "catchall no domínio do alias de e-mail, exatamente como estavam antes desse "
 "procedimento."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:237
 msgid ""
 "An alternative to redirections is **forwarding**. With forwarding, **the "
 "address forwarding the email will be identified as the sender**, while with "
@@ -4386,11 +4386,33 @@ msgstr ""
 "remetente**, enquanto que com os redirecionamentos, o remetente original "
 "sempre permanecerá."
 
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:242
+msgid ""
+"When using email redirection to manage incoming messages, additional "
+"configuration may be required to ensure correct behavior."
+msgstr ""
+
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
+msgid ""
+"Some email providers, such as Gmail, require the redirection address to be "
+"explicitly confirmed before emails are forwarded, otherwise the redirection "
+"may not function."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:248
+msgid ""
+"In addition, when redirection is used instead of an incoming mail server, "
+"the alias may appear with the `@yourdb.odoo.com` domain unless *Local-part "
+"based incoming detection* is enabled on the corresponding alias. This "
+"setting can be found under :menuselection:`Settings --> Technical --> "
+"Aliases`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:256
 msgid "Incoming mail servers"
 msgstr "Servidores de recebimento de e-mails"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:247
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:258
 msgid ""
 "As mentioned earlier, using redirections is the recommended method to "
 "receive emails in Odoo. However, it is also possible to set up incoming mail "
@@ -4399,14 +4421,14 @@ msgid ""
 "in order to fetch all incoming emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:253
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:264
 msgid ""
 "Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g., "
 "`sales@yourcompany.com` or `support@yourcompany.com`) to route messages to "
 "team pipelines, tickets, or documents."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:257
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:268
 msgid ""
 "Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as "
 "incoming mail servers is **not** recommended. Doing so can lead to increased "
@@ -4414,13 +4436,13 @@ msgid ""
 "syncing replies correctly."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:261
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:272
 msgid ""
 "Incoming mail servers are created by going to :menuselection:`Settings --> "
 "Technical --> Emails: Incoming Mail Servers`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:265
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:276
 msgid ""
 "We recommend using the IMAP protocol over the POP protocol, as IMAP fetches "
 "all unread emails, while POP fetches all the emails' history and then tags "
@@ -4430,7 +4452,7 @@ msgstr ""
 "obtém todos os e-mails não lidos, enquanto o POP obtém todo o histórico de e-"
 "mails e, em seguida, marca-os como excluídos em sua caixa de entrada."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:269
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:280
 msgid ""
 "It is also possible to connect a mailbox through :doc:`Gmail with Google "
 "OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth "
@@ -4440,7 +4462,7 @@ msgstr ""
 "OAuth <google_oauth>` ou :doc:`Outlook com Microsoft Azure OAuth "
 "<azure_oauth>`."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:272
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:283
 msgid ""
 "Regardless of the protocol chosen, emails are fetched using the *Mail: "
 "Fetchmail Service* scheduled action."
@@ -4448,7 +4470,7 @@ msgstr ""
 "Independentemente do protocolo escolhido, os e-mails são obtidos usando a "
 "ação programada *E-mail: Serviço de Fetchmail*."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:275
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:286
 msgid ""
 "Additionally, using an incoming mail server in Odoo gives the opportunity to "
 "create new records in a specified model. Each incoming mail server can "
@@ -4459,7 +4481,7 @@ msgstr ""
 "servidor de recebimento de e-mails pode criar registros em um modelo "
 "diferente."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:290
 msgid ""
 "Emails received on `task@company-name.com` are fetched by the Odoo database. "
 "All fetched emails will create a new project task in the database."
@@ -4468,11 +4490,11 @@ msgstr ""
 "dados do Odoo. Todos os e-mails recuperados criarão uma nova tarefa de "
 "projeto na base de dados."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:299
 msgid "MX record"
 msgstr "Registro MX"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:290
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:301
 msgid ""
 "A third option is to create a MX record in your DNS zone which specifies the "
 "mail server managing emails sent to your domain. **Advanced technical "
@@ -4482,7 +4504,7 @@ msgstr ""
 "servidor de e-mail que gerencia os e-mails enviados para o seu domínio. **É "
 "necessário conhecimento técnico avançado.**"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
 msgid ""
 "This configuration only works with a subdomain on the Odoo Online or Odoo.sh "
 "infrastructure (e.g., `@mail.mydomain.com`)"
@@ -4490,18 +4512,18 @@ msgstr ""
 "Essa configuração só funciona com um subdomínio na infraestrutura do Odoo "
 "Online ou do Odoo.sh (ex.: `@mail.mydomain.com`)"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr ""
 "Abaixo são apresentadas algumas especificações, dependendo do tipo de "
 "hospedagem:"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:301
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:312
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr "Odoo Online"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
 "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/"
 "website/configuration/domain_names>`."
@@ -4509,12 +4531,12 @@ msgstr ""
 "O subdomínio personalizado deve ser adicionado ao seu :doc:`Odoo Portal "
 "<../../websites/website/configuration/domain_names>`."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:306
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
 msgid ""
 "The custom subdomain must be added to the :doc:`settings of the project "
 "<../../../administration/odoo_sh/getting_started/settings>`:"
@@ -4528,11 +4550,11 @@ msgstr ""
 "Adição de um subdomínio personalizado para e-mail às definições do projeto "
 "Odoo.sh."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
 msgid "Infinite email loops"
 msgstr "Loops de e-mail infinitos"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:330
 msgid ""
 "In some cases, infinite mailing loops can be created. Odoo provides some "
 "protection against such loops, ensuring the same sender cannot send too many "
@@ -4543,7 +4565,7 @@ msgstr ""
 "possa enviar muitos e-mails **que criariam registros** para um alias em um "
 "período de tempo específico."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid ""
 "By default, an email address can send up to 20 emails in 120 minutes. If "
 "more emails are sent, they are blocked and the sender receives the following "
@@ -4559,7 +4581,7 @@ msgstr ""
 "E-mail de devolução recebido após tentar entrar em contato com um alias "
 "muitas vezes."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
 msgid ""
 "To change the default behavior, enable :ref:`developer-mode`, then go "
 "to :menuselection:`Settings --> Technical --> Parameters: System Parameters` "
@@ -4569,7 +4591,7 @@ msgstr ""
 "seguida, vá para :menuselection:`Definições --> Técnico --> Parâmetros: "
 "Parâmetros do sistema` para adicionar dois parâmetros."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
 "For the first parameter, enter `mail.gateway.loop.minutes` as "
 "the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` "
@@ -4579,7 +4601,7 @@ msgstr ""
 "como :guilabel:`Chave` e escolha um número de minutos como :guilabel:`Valor` "
 "(`120` é o comportamento padrão)."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
 msgid ""
 "For the second parameter, enter `mail.gateway.loop.threshold` as "
 "the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` "
@@ -4589,11 +4611,11 @@ msgstr ""
 "como :guilabel:`Chave` e escolha um número de e-mails como :guilabel:`Valor` "
 "(`20` é o comportamento padrão)."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
 msgid "Allow alias domain system parameter"
 msgstr "Parâmetro de sistema de domínio de alias permitidos"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
 "Incoming aliases are set in the Odoo database to create records by receiving "
 "incoming emails. To view aliases set in the Odoo database, first activate "
@@ -4606,7 +4628,7 @@ msgstr ""
 "desenvolvedor <developer-mode>`. Então, acesse :menuselection:`app "
 "Definições --> Técnico --> Aliases`."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:355
 msgid ""
 "The following system parameter, `mail.catchall.domain.allowed`, set with "
 "allowed alias domain values, separated by commas, filters out correctly "
@@ -4621,7 +4643,7 @@ msgstr ""
 "falsos positivos em que há endereços de e-mail com apenas o prefixo do "
 "alias, e não o domínio."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:360
 msgid ""
 "In some instances, matches have been made in the Odoo database when an email "
 "is received with the same alias prefix and a different domain on the "
@@ -4633,7 +4655,7 @@ msgstr ""
 "endereço de e-mail recebido. Isso ocorre nos endereços de e-mail de "
 "remetente, destinatário e :abbr:`CC (Carbon Copy)` de um e-mail recebido."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:365
 msgid ""
 "When Odoo receives emails with the `commercial` prefix alias in the sender, "
 "recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
@@ -4647,7 +4669,7 @@ msgstr ""
 "mail erroneamente como o alias `comercial` completo, com um domínio "
 "diferente e, portanto, cria um chamado/lead/oportunidade/etc."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
 msgid ""
 "To add the `mail.catchall.domain.allowed` system parameter, first, activate "
 "the :ref:`developer mode <developer-mode>`. Then, go "
@@ -4661,7 +4683,7 @@ msgstr ""
 "sistema`. Clique em :guilabel:`Novo`. Em seguida, digite "
 "`mail.catchall.domain.allowed` no campo :guilabel:`Chave`."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:374
 msgid ""
 "Next, for the :guilabel:`Value` field, add the domains separated by commas. "
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
@@ -4675,11 +4697,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr "parâmetro do sistema mail.catchall.domain.allowed definido."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:381
 msgid "Local-part based incoming detection"
 msgstr "Detecção de entrada baseada na parte local"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:372
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:383
 msgid ""
 "When creating a new alias, there is an option to enable :guilabel:`Local-"
 "part based incoming detection`. If enabled, Odoo only requires the local-"
@@ -15796,12 +15818,12 @@ msgstr ""
 #: ../../content/applications/general/users/user_portals/portal_access.rst:34
 msgid ""
 "When portal access is granted to a Company, all contacts affiliated with "
-"that company will be granted portal access. Indiviual contacts can be "
-"removed as needed."
+"that company are granted portal access. Individual contacts can be removed "
+"as needed."
 msgstr ""
 
 #: ../../content/applications/general/users/user_portals/portal_access.rst:38
-msgid "Granting accesss to multiple users at once"
+msgid "Granting access to multiple users at once"
 msgstr ""
 
 #: ../../content/applications/general/users/user_portals/portal_access.rst:40

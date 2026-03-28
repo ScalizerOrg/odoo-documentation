@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-20 18:30+0000\n"
+"POT-Creation-Date: 2026-03-27 18:30+0000\n"
 "PO-Revision-Date: 2026-03-16 23:21+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -661,7 +661,6 @@ msgstr "自定义订购和结账流程，以满足您的业务需求。"
 
 #: ../../content/applications/websites/ecommerce.rst:35
 #: ../../content/applications/websites/ecommerce/order_handling.rst:93
-#: ../../content/applications/websites/ecommerce/shipping.rst:3
 msgid "Delivery"
 msgstr "发货"
 
@@ -783,12 +782,19 @@ msgid "Default add to cart behavior"
 msgstr "默认购物车添加行为"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:30
+#, fuzzy
+#| msgid ""
+#| "When clicking the :guilabel:`Add to cart` button, different actions can "
+#| "be triggered. To configure them, go to :menuselection:`Website --> "
+#| "Configuration --> Settings`, scroll down to the :guilabel:`eCommerce` "
+#| "section, and select one of the following options for the :guilabel:`Add "
+#| "to cart` feature:"
 msgid ""
 "When clicking the :guilabel:`Add to cart` button, different actions can be "
 "triggered. To configure them, go to :menuselection:`Website --> "
 "Configuration --> Settings`, scroll down to the :guilabel:`eCommerce` "
 "section, and select one of the following options for the :guilabel:`Add to "
-"cart` feature:"
+"Cart` feature:"
 msgstr ""
 "点击 :guilabel:`添加到购物车` 按钮时，可触发不同的操作。要配置这些操作，请访"
 "问 :menuselection:`网站--> 配置--> 设置`，向下滚动到 :guilabel:`电子商务` 部"
@@ -796,23 +802,28 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:35
 msgid ""
-":guilabel:`Stay on Product Page`: The customer can choose if they want "
-"to :guilabel:`Add to cart` and continue shopping or :guilabel:`Go to the "
-"Checkout`."
+":guilabel:`Stay on Product Page`: The customer remains on the product page "
+"after adding a product to the cart. If the added product has "
+"linked :ref:`optional products <ecommerce/products/cross_upselling>`, the "
+"customer can choose between :guilabel:`Add to cart` (to stay on the product "
+"page) and :guilabel:`Go to Checkout` :icon:`fa-chevron-right` (to be "
+"redirected to the cart)."
 msgstr ""
-":guilabel:`停留在产品页面`：顾客可以选择是 :guilabel:`加入购物车` 并继续购"
-"物，还是 :guilabel:`前往结账`。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:37
+#: ../../content/applications/websites/ecommerce/checkout.rst:40
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Go to cart`: The customer is immediately redirected to the "
+#| "cart."
 msgid ""
-":guilabel:`Go to cart`: The customer is immediately redirected to the cart."
+":guilabel:`Go to cart`: The customer is redirected to the cart immediately."
 msgstr ":guilabel:`前往购物车`：客户会立即重定向到购物车。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:42
+#: ../../content/applications/websites/ecommerce/checkout.rst:45
 msgid "Button customization"
 msgstr "按钮自定义"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:44
+#: ../../content/applications/websites/ecommerce/checkout.rst:47
 msgid ""
 "You can replace the :guilabel:`Add to Cart` button with a :guilabel:`Contact "
 "Us` button, which redirects users to the default contact form."
@@ -820,7 +831,7 @@ msgstr ""
 "您可以用 :guilabel:`联系我们` 按钮替换 :guilabel:`添加到购物车` 按钮，将用户"
 "重定向到默认的联系表单。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:48
+#: ../../content/applications/websites/ecommerce/checkout.rst:51
 msgid ""
 "Removing the ability to add products to the cart is often used by businesses "
 "that want to display an online catalog but cannot share prices publicly "
@@ -829,104 +840,132 @@ msgstr ""
 "想要显示在线目录但又不能公开共享价格（例如，提供自定义或可变定价）的企业通常"
 "会取消将产品添加到购物车的功能。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:51
+#: ../../content/applications/websites/ecommerce/checkout.rst:54
+#, fuzzy
+#| msgid ""
+#| "To display the :guilabel:`Contact Us` button and a note saying `Not "
+#| "Available For Sale` , you need to :ref:`hide prices <ecommerce/prices/"
+#| "hide-prices>` on the product page. When the customer clicks "
+#| "the :guilabel:`Contact Us` button, they are redirected to the contact "
+#| "form where the :guilabel:`Subject` field is already auto-filled with the "
+#| "requested product's name."
 msgid ""
-"To display the :guilabel:`Contact Us` button and a note saying `Not "
-"Available For Sale` , you need to :ref:`hide prices <ecommerce/prices/hide-"
-"prices>` on the product page. When the customer clicks "
-"the :guilabel:`Contact Us` button, they are redirected to the contact form "
-"where the :guilabel:`Subject` field is already auto-filled with the "
-"requested product's name."
+"To display the :guilabel:`Contact Us` button, you need to :ref:`hide prices "
+"<ecommerce/prices/hide-prices>` on the product page. When the customer "
+"clicks the :guilabel:`Contact Us` button, by default, they are redirected to "
+"the contact form where the :guilabel:`Subject` field is already auto-filled "
+"with the requested product's name."
 msgstr ""
 "要显示 :guilabel:`联系我们` 按钮和 “不可出售” 备注，您需要在产品页面上 :ref:`"
 "隐藏价格 <ecommerce/prices/hide-prices>`。当客户点击 :guilabel:`；联系我们` "
 "按钮时，他们会被重定向到联系表单，其中 :guilabel:`主题` 字段已自动填写了所需"
 "产品的名称。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:None
-msgid "Contact us button on product page"
-msgstr "产品页面上的联系我们按钮"
-
 #: ../../content/applications/websites/ecommerce/checkout.rst:60
-msgid ""
-"The :guilabel:`Contact Us` button label, URL, and the *Not Available For "
-"Sale* text beneath the product title and description can be modified on the "
-"product's page while in :guilabel:`Edit` mode."
-msgstr ""
-"在 :guilabel:`编辑` 模式下，可在产品页面上修改 :guilabel:`联系我们` 按钮标"
-"签、URL 以及产品标题和说明下方的 *不可出售* 文本。"
-
-#: ../../content/applications/websites/ecommerce/checkout.rst:65
 msgid "Additional add to cart buttons"
 msgstr "附加购物车按钮"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:67
+#: ../../content/applications/websites/ecommerce/checkout.rst:62
+#, fuzzy
+#| msgid ""
+#| "To add them, open the website editor and place the :guilabel:`Add to Cart "
+#| "Button` inner content building block. Once placed, click the button, "
+#| "scroll to the :guilabel:`Add to Cart Button` section, and configure the "
+#| "following:"
 msgid ""
 "You can add additional :guilabel:`Add to Cart` buttons and link them to "
-"specific products on any website page."
-msgstr ""
-"您可以添加额外的 :guilabel:`添加到购物车` 按钮，并将它们链接到任何网站页面上"
-"的特定产品。"
-
-#: ../../content/applications/websites/ecommerce/checkout.rst:70
-msgid ""
-"To add them, open the website editor and place the :guilabel:`Add to Cart "
-"Button` inner content building block. Once placed, click the button, scroll "
-"to the :guilabel:`Add to Cart Button` section, and configure the following:"
+"specific products on any website page. To add them, open the website editor "
+"and place the :guilabel:`Add to Cart Button` inner content building block. "
+"Once placed, click the button, scroll to the :guilabel:`Add to Cart Button` "
+"section, and configure the following:"
 msgstr ""
 "要添加它们，请打开网站编辑器并放置 :guilabel:`添加到购物车按钮`内部内容构件。"
 "放置后，点击按钮，滚动到 :guilabel:`添加到购物车按钮` 部分，然后配置以下内"
 "容："
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:74
+#: ../../content/applications/websites/ecommerce/checkout.rst:67
 msgid ":guilabel:`Product`: Select the product to link the button with."
 msgstr ":guilabel：`产品`：选择将按钮链接的产品。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:75
+#: ../../content/applications/websites/ecommerce/checkout.rst:68
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Action`: Choose if it should be an :guilabel:`Add to Cart` "
+#| "or :ref:`Buy Now <ecommerce/checkout/buy-now>` button."
 msgid ""
-":guilabel:`Action`: Choose if it should be an :guilabel:`Add to Cart` "
+":guilabel:`Action`: Choose whether to use an :guilabel:`Add to Cart` "
 "or :ref:`Buy Now <ecommerce/checkout/buy-now>` button."
 msgstr ""
 ":guilabel:`操作`：选择是否应该是 :guilabel:`加入购物车`或 :ref:`立即购买 "
 "<ecommerce/checkout/buy-now>` 按钮。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:79
+#: ../../content/applications/websites/ecommerce/checkout.rst:72
+#, fuzzy
+#| msgid ""
+#| "If the product has variants, either choose one or leave the option "
+#| "on :guilabel:`Visitor's Choice`, which prompts the customer to select a "
+#| "variant and then :guilabel:`Add to Cart` and continue shopping "
+#| "or :guilabel:`Go to Checkout`."
 msgid ""
-"If the product has variants, either choose one or leave the option "
-"on :guilabel:`Visitor's Choice`, which prompts the customer to select a "
-"variant and then :guilabel:`Add to Cart` and continue shopping "
-"or :guilabel:`Go to Checkout`."
+"If the product has variants, either choose one or leave the option set "
+"to :guilabel:`Visitor's Choice`, which prompts the customer to select a "
+"variant before choosing to :guilabel:`Add to cart` and continue shopping or "
+"to :guilabel:`Go to Checkout`."
 msgstr ""
 "如果产品有变体，请选择其中一个，或保留 :guilabel:`访客选择` 选项，提示客户选"
 "择变体，然后 :guilabel:`添加到购物车` 并继续购物或 :guilabel:`前往结账`。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:82
+#: ../../content/applications/websites/ecommerce/checkout.rst:75
+#, fuzzy
+#| msgid ""
+#| "The default :guilabel:`Add to Cart` button does not offer those options, "
+#| "but its label can be changed."
 msgid ""
-"The default :guilabel:`Add to Cart` button does not offer those options, but "
+"The default :guilabel:`Add to cart` button does not offer those options, but "
 "its label can be changed."
 msgstr "默认的 :guilabel:`添加到购物车` 按钮不提供这些选项，但可以更改其标签。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:86
+#: ../../content/applications/websites/ecommerce/checkout.rst:79
+#, fuzzy
+#| msgid ""
+#| "To display the :icon:`fa-heart` (:guilabel:`Wishlist`) icon in the "
+#| "header, open the website editor, click the header, navigate to "
+#| "the :guilabel:`Show/Hide Elements` section, and toggle the :icon:`fa-"
+#| "heart` (:guilabel:`Wishlist`) icon next to :guilabel:`Show Empty`. If it "
+#| "is not enabled, the wishlist icon only appears when an item has been "
+#| "added to the wishlist. The number of items in the wishlist is also "
+#| "displayed next to the icon."
 msgid ""
 "In the website editor, it is also possible to show or hide the :icon:`fa-"
-"shopping-cart` (:guilabel:`cart`) icon in the page's header. Click the "
-"header and then the :icon:`fa-shopping-cart` (:guilabel:`cart`) button next "
-"to the :guilabel:`Show Empty` option under the :guilabel:`Style` tab."
+"shopping-cart` (:guilabel:`cart`) icon in the page's header. To do so, click "
+"the header, go to the :guilabel:`Style`, navigate to the :guilabel:`Show/"
+"Hide Elements` section, and toggle the :icon:`fa-shopping-cart` "
+"(:guilabel:`cart`) button next to the :guilabel:`Show Empty` option. If it "
+"is not enabled, the cart icon appears only when an item is added to the "
+"cart. The number of items in the cart is also displayed next to the icon."
 msgstr ""
-"在网站编辑器中，还可以显示或隐藏页面标题中的 :icon:`fa-shopping-cart`"
-"（:guilabel:`购物车`）图标。点击页眉，然后点击 :guilabel:`样式` 选项卡"
-"下 :guilabel:`显示空` 选项旁边的 :icon:`fa-shopping-cart`（:guilabel:`购物车"
-"`）按钮。"
+"要在页眉显示 :icon:`fa-heart`（:guilabel:`愿望清单`）图标，请打开网站编辑器，"
+"点击页眉，导航到 :guilabel:`显示/隐藏元素`部分，然后切换 :guilabel:`显示空`旁"
+"边的:icon:`fa-heart`（ :guilabel:`愿望清单`）图标。如果未启用，则只有当有物品"
+"添加到愿望清单时才会显示愿望清单图标。图标旁边还会显示愿望清单中的物品数量。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:94
+#: ../../content/applications/websites/ecommerce/checkout.rst:89
 msgid "Buy now"
 msgstr "立即购买"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:96
+#: ../../content/applications/websites/ecommerce/checkout.rst:91
+#, fuzzy
+#| msgid ""
+#| "To let customers choose to go to the :ref:`Order summary <ecommerce/"
+#| "checkout/review_order>` step directly, you can add an "
+#| "additional :guilabel:`Buy now` button. To do so, go to any product's "
+#| "page, open the website editor, go to the :guilabel:`Style` tab, and click "
+#| "the :icon:`fa-bolt` :guilabel:`Buy Now` button next to "
+#| "the :guilabel:`Purchase Options`."
 msgid ""
-"To let customers choose to go to the :ref:`Order summary <ecommerce/checkout/"
-"review_order>` step directly, you can add an additional :guilabel:`Buy now` "
-"button. To do so, go to any product's page, open the website editor, go to "
+"To let customers choose to go directly to the :ref:`Order summary <ecommerce/"
+"checkout/review_order>` step, add an additional :guilabel:`Buy now` button. "
+"To do so, go to any product's page, open the website editor, go to "
 "the :guilabel:`Style` tab, and click the :icon:`fa-bolt` :guilabel:`Buy Now` "
 "button next to the :guilabel:`Purchase Options`."
 msgstr ""
@@ -939,15 +978,15 @@ msgstr ""
 msgid "Buy now button"
 msgstr "立即购买按钮"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:107
+#: ../../content/applications/websites/ecommerce/checkout.rst:102
 msgid "Reorder products"
 msgstr "重新订购产品"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:109
+#: ../../content/applications/websites/ecommerce/checkout.rst:104
 msgid "Customers can reorder items from a previous sales order:"
 msgstr "客户可以从以前的销售订单中重新订购商品："
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:111
+#: ../../content/applications/websites/ecommerce/checkout.rst:106
 msgid ""
 "from their customer portal, using the :guilabel:`Order Again` button. All "
 "products from the selected order are automatically added to the cart, and "
@@ -960,7 +999,7 @@ msgstr ""
 msgid "Reorder button"
 msgstr "重新订购按钮"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:118
+#: ../../content/applications/websites/ecommerce/checkout.rst:113
 msgid ""
 "from the cart, by clicking :guilabel:`Quick reorder` at the :ref:`Order "
 "summary step <ecommerce/checkout/review_order>`. Customers can then adjust "
@@ -975,36 +1014,43 @@ msgstr ""
 msgid "Quick reorder button"
 msgstr "快速重新订购按钮"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:128
+#: ../../content/applications/websites/ecommerce/checkout.rst:123
 msgid "Checkout steps"
 msgstr "结帐步骤"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:130
-msgid ""
-"During the checkout process, customers are taken through the following steps:"
+#: ../../content/applications/websites/ecommerce/checkout.rst:125
+#, fuzzy
+#| msgid ""
+#| "During the checkout process, customers are taken through the following "
+#| "steps:"
+msgid "During checkout, customers are taken through the following steps:"
 msgstr "在结账过程中，客户将经历以下步骤："
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:132
+#: ../../content/applications/websites/ecommerce/checkout.rst:127
 msgid ":ref:`Order summary <ecommerce/checkout/review_order>`"
 msgstr ":ref:`订单摘要 <ecommerce/checkout/review_order>`"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:133
-msgid ":ref:`Address and delivery <ecommerce/checkout/delivery>`"
+#: ../../content/applications/websites/ecommerce/checkout.rst:128
+#, fuzzy
+#| msgid ":ref:`Address and delivery <ecommerce/checkout/delivery>`"
+msgid ":ref:`Address <ecommerce/checkout/delivery>`"
 msgstr ":ref:`地址和送货 <ecommerce/checkout/delivery>`"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:134
-msgid ":ref:`Extra info (if enabled) <ecommerce/checkout/extra_step>`"
+#: ../../content/applications/websites/ecommerce/checkout.rst:129
+#, fuzzy
+#| msgid ":ref:`Extra info (if enabled) <ecommerce/checkout/extra_step>`"
+msgid ":ref:`Extra Info (if enabled) <ecommerce/checkout/extra_step>`"
 msgstr ":ref:`额外信息（如果启用）<ecommerce/checkout/extra_step>`"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:135
+#: ../../content/applications/websites/ecommerce/checkout.rst:130
 msgid ":ref:`Payment <ecommerce/checkout/payment>`"
 msgstr ":ref:`付款 <ecommerce/checkout/payment>`"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:136
+#: ../../content/applications/websites/ecommerce/checkout.rst:131
 msgid ":ref:`Order confirmation <ecommerce/checkout/order_confirmation>`"
 msgstr ":ref:`订单确认 <ecommerce/checkout/order_confirmation>`"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:140
+#: ../../content/applications/websites/ecommerce/checkout.rst:135
 msgid ""
 "Each step can be customized using the website editor by "
 "adding :doc:`building blocks <../website/web_design/building_blocks>` or "
@@ -1013,11 +1059,11 @@ msgstr ""
 "可使用网站编辑器添加 :doc:`建构块 <../website/web_design/building_blocks>` 或"
 "打开 :guilabel:`风格` 标签来启用各种结账选项，从而自定义每个步骤。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:145
+#: ../../content/applications/websites/ecommerce/checkout.rst:140
 msgid "Content added through building blocks is **specific** to each step."
 msgstr "通过构建模块添加的内容是每个步骤的**特定**。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:148
+#: ../../content/applications/websites/ecommerce/checkout.rst:143
 msgid ""
 "Restrict access to the :ref:`shop <ecommerce/customer_accounts/shop-access>` "
 "and :ref:`checkout <ecommerce/customer_accounts/checkout-access>` for "
@@ -1028,19 +1074,28 @@ msgstr ""
 "和 :ref:`结账 <ecommerce/customer_accounts/checkout-access>` 的权限，例如"
 "在 :doc:`B2B <../ecommerce/configuration/b2b_b2c>` 业务设置中。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:155
+#: ../../content/applications/websites/ecommerce/checkout.rst:150
 msgid "Order summary"
 msgstr "订单摘要"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:157
+#: ../../content/applications/websites/ecommerce/checkout.rst:152
+#, fuzzy
+#| msgid ""
+#| "The :guilabel:`Order summary` step allows customers to see the items they "
+#| "added to their cart, adjust quantities, :guilabel:`Remove` products, "
+#| "and :ref:`reorder products from a previous order <ecommerce/checkout/"
+#| "reorder>`. Information related to the product prices and taxes applied "
+#| "are also displayed. Customers can then click the :guilabel:`Checkout` "
+#| "button to continue to the :ref:`Address and delivery <ecommerce/checkout/"
+#| "delivery>` step."
 msgid ""
 "The :guilabel:`Order summary` step allows customers to see the items they "
 "added to their cart, adjust quantities, :guilabel:`Remove` products, "
 "and :ref:`reorder products from a previous order <ecommerce/checkout/"
-"reorder>`. Information related to the product prices and taxes applied are "
-"also displayed. Customers can then click the :guilabel:`Checkout` button to "
-"continue to the :ref:`Address and delivery <ecommerce/checkout/delivery>` "
-"step."
+"reorder>`. Information on product prices and the taxes applied is also "
+"displayed. Customers can then click the :guilabel:`Checkout` :icon:`fa-"
+"chevron-right` button to continue to the :ref:`Address <ecommerce/checkout/"
+"delivery>` step."
 msgstr ""
 "在 :guilabel:`订单摘要` 步骤中，客户可以查看他们添加到购物车的商品、调整数"
 "量、:guilabel:`删除'商品，以及 :ref:`从以前的订单 <ecommerce/checkout/"
@@ -1048,7 +1103,7 @@ msgstr ""
 "可点击 :guilabel:`结账` 按钮，继续进行 :ref:`地址和送货 <ecommerce/checkout/"
 "delivery>` 步骤。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:163
+#: ../../content/applications/websites/ecommerce/checkout.rst:158
 msgid ""
 "Open the website editor to :ref:`enable <ecommerce/checkout/"
 "customize_steps>` checkout options such as:"
@@ -1056,7 +1111,7 @@ msgstr ""
 "打开网站编辑器以 :ref:`启用 <ecommerce/checkout/customize_steps>` 结账选项，"
 "例如："
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:166
+#: ../../content/applications/websites/ecommerce/checkout.rst:161
 msgid ""
 ":guilabel:`Suggested Accessories`: to showcase :ref:`accessory products "
 "<ecommerce/products/cross_upselling>`;"
@@ -1064,27 +1119,39 @@ msgstr ""
 ":guilabel:`推荐配件`：展示 :ref:`配件产品 <ecommerce/products/"
 "cross_upselling>`；"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:168
+#: ../../content/applications/websites/ecommerce/checkout.rst:163
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Promo Code`: to allow customers to redeem :ref:`gift cards "
+#| "<ewallet_gift/gift-cards>` or apply :doc:`discount codes <../../sales/"
+#| "sales/products_prices/loyalty_discount>`;"
 msgid ""
 ":guilabel:`Promo Code`: to allow customers to redeem :ref:`gift cards "
-"<ewallet_gift/gift-cards>` or apply :doc:`discount codes <../../sales/sales/"
-"products_prices/loyalty_discount>`;"
+"<ewallet_gift/gift-cards>` and apply :doc:`discount codes <../../sales/sales/"
+"products_prices/loyalty_discount>` or :ref:`promotional codes <ecommerce/"
+"prices/promotional-code>`;"
 msgstr ""
 ":guilabel:`促销代码`：允许客户兑换 :ref:`礼品卡 <ewallet_gift/gift-cards>` 或"
 "使用 :doc:`折扣码 <.../../sales/sales/products_prices/loyalty_discount>`；"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:170
+#: ../../content/applications/websites/ecommerce/checkout.rst:166
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Add to Wishlist`: :ref:`Enable wishlists <ecommerce/products/"
+#| "additional_features/wishlists>` to allow signed-in users to remove a "
+#| "product from their cart and add it to their wishlist using "
+#| "the :guilabel:`Save for later` option."
 msgid ""
 ":guilabel:`Add to Wishlist`: :ref:`Enable wishlists <ecommerce/products/"
 "additional_features/wishlists>` to allow signed-in users to remove a product "
 "from their cart and add it to their wishlist using the :guilabel:`Save for "
-"later` option."
+"Later` option."
 msgstr ""
 ":guilabel:`加入愿望清单`: :ref:`启用愿望清单 <ecommerce/products/"
 "additional_features/wishlists>`允许已登录的用户使用 :guilabel:`保存备用` 选项"
 "从购物车中移除产品并将其添加到愿望清单。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:175
+#: ../../content/applications/websites/ecommerce/checkout.rst:171
 msgid ""
 "If a :doc:`fiscal position <../../finance/accounting/taxes/"
 "fiscal_positions>` is detected automatically, the product tax is determined "
@@ -1093,7 +1160,7 @@ msgstr ""
 "如果自动检测到 :doc:`财务规则 <.../../finance/accounting/taxes/"
 "fiscal_positions>` ，则根据客户的 IP 地址确定产品税。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:177
+#: ../../content/applications/websites/ecommerce/checkout.rst:173
 msgid ""
 "If the installed :doc:`payment provider <../../finance/payment_providers>` "
 "supports :ref:`express checkout <payment_providers/express_checkout>`, a "
@@ -1104,29 +1171,34 @@ msgstr ""
 "快结账<payment_providers/express_checkout>`，则会显示一个专用按钮，允许客户直"
 "接从购物车进入确认页面，而无需填写联系表单。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:185
-msgid "Address and delivery"
-msgstr "地址和送货"
+#: ../../content/applications/websites/ecommerce/checkout.rst:181
+msgid "Address"
+msgstr ""
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:187
+#: ../../content/applications/websites/ecommerce/checkout.rst:183
 msgid "Once they have reviewed their order:"
 msgstr "一旦他们查看了自己的订单："
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:189
+#: ../../content/applications/websites/ecommerce/checkout.rst:185
+#, fuzzy
+#| msgid ""
+#| "Unsigned-in customers are prompted to :guilabel:`Sign in` or enter "
+#| "their :guilabel:`Email address`, along with their delivery address and "
+#| "phone details;"
 msgid ""
 "Unsigned-in customers are prompted to :guilabel:`Sign in` or enter "
-"their :guilabel:`Email address`, along with their delivery address and phone "
-"details;"
+"their :guilabel:`Name` and :guilabel:`Email` address, along with their "
+"delivery address and phone details;"
 msgstr ""
 "未登录的客户会被提示 :guilabel:`登入` 或输入他们的 :guilabel:`电子邮件地址`，"
 "以及他们的送货地址和电话详情；"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:191
+#: ../../content/applications/websites/ecommerce/checkout.rst:187
 msgid ""
 "Signed-in customers can select the appropriate :guilabel:`Delivery address`."
 msgstr "已登录的客户可选择相应的 :guilabel:`送货地址`。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:193
+#: ../../content/applications/websites/ecommerce/checkout.rst:189
 msgid ""
 "They can then :doc:`choose a delivery method <shipping>`, select or enter "
 "their :guilabel:`Billing Address` (or toggle the :guilabel:`Same as delivery "
@@ -1137,7 +1209,7 @@ msgstr ""
 "单地址`（或切换 :guilabel:`与送货地址相同` 开关，如果账单地址和送货地址相"
 "同），并点击 :guilabel:`确认` 进入下一步。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:198
+#: ../../content/applications/websites/ecommerce/checkout.rst:194
 msgid ""
 "For B2B customers, you can also :ref:`enable <ecommerce/checkout/"
 "customize_steps>` optional :ref:`B2B fields <ecommerce/b2b_b2c/b2b-fields>` "
@@ -1146,7 +1218,7 @@ msgstr ""
 "对于 B2B 客户，您还可以在网站编辑器中 :ref:`启用 <ecommerce/checkout/"
 "customize_steps>` 可选的 :ref:`B2B 字段 <ecommerce/b2b_b2c/b2b-fields>`。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:200
+#: ../../content/applications/websites/ecommerce/checkout.rst:196
 msgid ""
 "You can add a checkbox for users without an account to sign up for a "
 "newsletter. To do so, go to :menuselection:`Website --> Configuration --> "
@@ -1157,11 +1229,18 @@ msgstr ""
 "入 :menuselection:`网站-->配置-->设置`，向下滚动到 :guilabel:`电子商务`部分，"
 "启用 :guilabel:`时事通讯`功能，并选择 :guilabel:`时事通讯列表`。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:208
+#: ../../content/applications/websites/ecommerce/checkout.rst:200
+msgid ""
+"When the :ref:`Pick up in store <ecommerce/shipping/instore-pickup>` "
+"delivery method is selected, the customer can :guilabel:`Choose a pick-up "
+"point`, provided several pick-up points are available."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout.rst:207
 msgid "Extra info"
 msgstr "附加信息"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:210
+#: ../../content/applications/websites/ecommerce/checkout.rst:209
 msgid ""
 "You can add an :guilabel:`Extra Info` step in the checkout process to "
 "collect additional customer information through an online form, which is "
@@ -1176,19 +1255,31 @@ msgstr ""
 "customize_steps>` :guilabel:`额外步骤` 选项。可根据需要 :ref:`自定义 "
 "<website/building_blocks/form>` 表单。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:219
+#: ../../content/applications/websites/ecommerce/checkout.rst:218
 msgid "Payment"
 msgstr "收款"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:221
+#: ../../content/applications/websites/ecommerce/checkout.rst:220
+#, fuzzy
+#| msgid ""
+#| "At the :guilabel:`Payment` step, customers can :guilabel:`Choose a "
+#| "payment method`, enter their payment details, and click :guilabel:`Pay "
+#| "now`."
 msgid ""
-"At the :guilabel:`Payment` step, customers can :guilabel:`Choose a payment "
+"At the :guilabel:`Payment` step, customers can choose a :guilabel:`Payment "
 "method`, enter their payment details, and click :guilabel:`Pay now`."
 msgstr ""
 "在 :guilabel:`付款` 步骤中，客戶可 :guilabel:`选择付款方式`、输入付款详情，然"
 "后点击 :guilabel:`立即付款`。"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:224
+msgid ""
+"When the :ref:`Cash on Delivery <payment_providers/inperson_payments/"
+"cash_on_delivery>` payment option is enabled, the customer must click "
+"the :guilabel:`Confirm` button and pay upon delivery."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout.rst:228
 msgid ""
 "To make payment methods available to customers, configure and enable one or "
 "more :doc:`payment provider(s) </applications/finance/payment_providers>`. "
@@ -1201,7 +1292,7 @@ msgstr ""
 "配置 --> 支付提供商`，:guilabel:`激活`相关支付提供程序，并 :ref:`配置 "
 "<payment_providers/add_new>` 它。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:230
+#: ../../content/applications/websites/ecommerce/checkout.rst:234
 msgid ""
 "The options displayed at checkout depend on the active payment providers, "
 "the enabled :ref:`payment methods <payment_providers/payment_methods>`, "
@@ -1214,22 +1305,28 @@ msgstr ""
 "<payment_providers/currencies_countries>`，以及可选的为提供商设置的 :ref:`最"
 "大金额 <payment_providers/maximum_amount>`。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:235
+#: ../../content/applications/websites/ecommerce/checkout.rst:239
+#, fuzzy
+#| msgid ""
+#| "To display an :ref:`availability <payment_providers/availability>` report "
+#| "for payment providers and payment methods and help diagnose potential "
+#| "availability issues on the payment form, enable the :ref:`developer mode "
+#| "<developer-mode>` and click the :icon:`fa-bug` (:guilabel:`bug)` icon."
 msgid ""
 "To display an :ref:`availability <payment_providers/availability>` report "
 "for payment providers and payment methods and help diagnose potential "
 "availability issues on the payment form, enable the :ref:`developer mode "
-"<developer-mode>` and click the :icon:`fa-bug` (:guilabel:`bug)` icon."
+"<developer-mode>`, and click the :icon:`fa-bug` (:guilabel:`bug)` icon."
 msgstr ""
 "要显示支付提供商和支付方法的 :ref:`可用性 <payment_providers/availability>` "
 "报告并帮助诊断支付表单上潜在的可用性问题，请启用 :ref:`开发者模式 <developer-"
 "mode>` 并点击 :icon:`fa-bug`（:guilabel:`bug）` 图标。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:240
+#: ../../content/applications/websites/ecommerce/checkout.rst:244
 msgid "Terms and conditions"
 msgstr "条款和条件"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:242
+#: ../../content/applications/websites/ecommerce/checkout.rst:246
 msgid ""
 "To require customers to agree to the :doc:`terms and conditions <../../"
 "finance/accounting/customer_invoices/terms_conditions>` before payment, open "
@@ -1240,11 +1337,11 @@ msgstr ""
 "customer_invoices/terms_conditions>` ，请打开网站编辑器并在 :guilabel:`样式` "
 "选项卡中切换 :guilabel:`接受条款` 开关。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:247
+#: ../../content/applications/websites/ecommerce/checkout.rst:251
 msgid "eWallets and gift cards"
 msgstr "电子钱包和礼品卡"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:249
+#: ../../content/applications/websites/ecommerce/checkout.rst:253
 msgid ""
 "Customers can pay with an eWallet or gift card during checkout. To offer "
 "these options, go to :menuselection:`Website --> Configuration --> Settings` "
@@ -1264,23 +1361,30 @@ msgstr ""
 msgid "Gift card and eWallet options at checkout"
 msgstr "结账时可选择礼品卡和电子钱包"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:261
+#: ../../content/applications/websites/ecommerce/checkout.rst:265
 msgid "Order confirmation"
 msgstr "订单确认"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:263
+#: ../../content/applications/websites/ecommerce/checkout.rst:267
+#, fuzzy
+#| msgid ""
+#| "The final step of the checkout process is the :guilabel:`Order "
+#| "confirmation`, which provides a summary of the customer's purchase "
+#| "details. A sales order is automatically created in the backend. Enable "
+#| "the :ref:`Automatic Invoice <ecommerce/handling/invoices>` setting to "
+#| "automatically send an invoice to the customer."
 msgid ""
-"The final step of the checkout process is the :guilabel:`Order "
-"confirmation`, which provides a summary of the customer's purchase details. "
-"A sales order is automatically created in the backend. Enable "
-"the :ref:`Automatic Invoice <ecommerce/handling/invoices>` setting to "
-"automatically send an invoice to the customer."
+"The final step of the checkout process is the order confirmation page, which "
+"provides a summary of the customer's purchase details. A sales order is "
+"automatically created in the backend. Enable the :ref:`Automatic Invoice "
+"<ecommerce/handling/invoices>` setting to automatically send an invoice to "
+"the customer."
 msgstr ""
 "结账流程的最后一步是 :guilabel:`订单确认`，它提供了客户购买详情的摘要。后台会"
 "自动创建销售订单。启用 :ref:`自动发票 <ecommerce/handling/invoices>` 设置可自"
 "动向客户发送发票。"
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:269
+#: ../../content/applications/websites/ecommerce/checkout.rst:273
 msgid ":doc:`Order handling <order_handling>`"
 msgstr ":doc:`订单处理 <order_handling>`"
 
@@ -1642,7 +1746,8 @@ msgstr "为产品配置产品变体："
 #: ../../content/applications/websites/ecommerce/configuration/categories_variants.rst:20
 #: ../../content/applications/websites/ecommerce/order_handling.rst:72
 #: ../../content/applications/websites/ecommerce/order_handling.rst:185
-#: ../../content/applications/websites/ecommerce/shipping.rst:104
+#: ../../content/applications/websites/ecommerce/shipping.rst:33
+#: ../../content/applications/websites/ecommerce/shipping.rst:92
 #: ../../content/applications/websites/website/configuration/multi_website.rst:26
 #: ../../content/applications/websites/website/configuration/multi_website.rst:136
 #: ../../content/applications/websites/website/configuration/translate.rst:16
@@ -2746,15 +2851,26 @@ msgid "E-commerce promotional code"
 msgstr "电子商务促销代码"
 
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:293
+#, fuzzy
+#| msgid ""
+#| "To offer a discounted pricelist for customers with a specific discount "
+#| "code, access the relevant :ref:`pricelist form <ecommerce/prices/"
+#| "pricelists>`, go to the :guilabel:`Ecommerce` tab, and add "
+#| "an :guilabel:`E-commerce Promotional Code`, e.g., `SUMMERSALE10%`. Then, "
+#| "go to the :guilabel:`Sales Price` tab, click :guilabel:`Add a line`, "
+#| "and :ref:`configure the discount <sales/products/price-rules>`. When a "
+#| "customer inserts the code during the :ref:`checkout process <ecommerce/"
+#| "checkout/review_order>`, this discount is granted according to "
+#| "the :guilabel:`Sales Price` configuration."
 msgid ""
 "To offer a discounted pricelist for customers with a specific discount code, "
 "access the relevant :ref:`pricelist form <ecommerce/prices/pricelists>`, go "
 "to the :guilabel:`Ecommerce` tab, and add an :guilabel:`E-commerce "
 "Promotional Code`, e.g., `SUMMERSALE10%`. Then, go to the :guilabel:`Sales "
-"Price` tab, click :guilabel:`Add a line`, and :ref:`configure the discount "
+"Prices` tab, click :guilabel:`Add a line`, and :ref:`configure the discount "
 "<sales/products/price-rules>`. When a customer inserts the code during "
 "the :ref:`checkout process <ecommerce/checkout/review_order>`, this discount "
-"is granted according to the :guilabel:`Sales Price` configuration."
+"is granted according to the :guilabel:`Sales Prices` configuration."
 msgstr ""
 "要为使用特定折扣代码的客户提供折扣价格表，请访问相关的 :ref:`价目表表格 "
 "<ecommerce/prices/pricelists>`，转到 :guilabel:`电子商务` 选项卡，并添"
@@ -4698,14 +4814,19 @@ msgid ""
 msgstr "您可启用更多附加功能，并展示此前在后台完成配置的相关信息，具体如下："
 
 #: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:149
+#, fuzzy
+#| msgid ""
+#| ":ref:`Click & Collect <ecommerce/shipping/instore-pickup>`: Show the "
+#| "order pick-up location and delivery availability on the product page."
 msgid ""
 ":ref:`Click & Collect <ecommerce/shipping/instore-pickup>`: Show the order "
-"pick-up location and delivery availability on the product page."
+"pick-up location and delivery availability on the product page, and allow "
+"customers to select the desired pick-up point."
 msgstr ""
 ":ref:`到店自提 <ecommerce/shipping/instore-pickup>`：在产品页面展示订单自提点"
 "及配送可预约情况。"
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:151
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:152
 msgid ""
 ":ref:`Description <ecommerce/products/description>`: Display an e-commerce-"
 "specific product description right under the product name."
@@ -4713,7 +4834,7 @@ msgstr ""
 ":ref:`产品描述 <ecommerce/products/description>`：在产品名称下方，展示电商专"
 "属的产品描述内容。"
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:153
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:154
 msgid ""
 ":ref:`Packagings <ecommerce/products/stock-management/packagings>`: Offer "
 "different types of packagings."
@@ -4721,7 +4842,7 @@ msgstr ""
 ":ref:`包装规格 <ecommerce/products/stock-management/packagings>`：为产品提供"
 "多种包装规格选择。"
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:155
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:156
 msgid ""
 ":ref:`Documents <ecommerce/products/digital-files>`: Add relevant documents, "
 "such as user manuals or other supporting materials."
@@ -4729,33 +4850,33 @@ msgstr ""
 ":ref:`相关文档 <ecommerce/products/digital-files>`：添加产品相关文档，如使用"
 "手册、配套资料等。"
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:157
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:158
 msgid ""
 ":ref:`Alternative products <ecommerce/products/cross_upselling>`: Suggest "
 "similar products and customize the section."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:159
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:160
 msgid ""
 ":ref:`Show Available Quantity <ecommerce/products/stock-management>`: "
 "Display the available product quantity when the quantity falls below a "
 "specified threshold."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:161
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:162
 msgid ""
 ":ref:`Out-of-Stock Message <ecommerce/products/stock-management>`: Display a "
 "customized message for products that are out of stock."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:163
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:164
 msgid ""
 ":ref:`Get notified when back in stock <ecommerce/products/stock-"
 "management>`: Customers can insert their email address to receive a "
 "notification when the item is back in stock."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:166
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:167
 msgid ""
 ":guilabel:`Product Page Extra Fields`: To enable specific extra fields for "
 "the product page, enable the :doc:`developer mode </applications/general/"
@@ -4771,13 +4892,13 @@ msgstr ""
 "卡，在 :guilabel:`字段` 下，点击 :guilabel:`添加一行` 添加所需的附加字段，例"
 "如，产品的条形码编号。"
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:176
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:177
 #: ../../content/applications/websites/website/web_design.rst:16
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:5
 msgid "Building blocks"
 msgstr "构建模块"
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:178
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:179
 msgid ""
 "Use building blocks to add content and design elements to all product pages "
 "or to a specific one. To do so, navigate to any or the relevant product page "
@@ -4789,13 +4910,13 @@ msgstr ""
 "往任何或相关产品页面，然后点击右上角的 :guilabel:`编辑`。然后，在 :icon:`fa-"
 "plus`（:guilabel:`plus`） :guilabel:`块` 选项卡中，选择一个构件，并拖放它："
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:183
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:184
 msgid ""
 "into the blue area at the top or bottom of the product page to make it "
 "available on *all* product pages, or"
 msgstr "拖放至产品页面顶部或底部的蓝色区域，即可在*所有*产品页面显示该模块，或"
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:185
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:186
 msgid ""
 "into the blue building block area below the product title or below the "
 "ordering options to display it only for the current product."
@@ -4807,14 +4928,14 @@ msgstr ""
 msgid "Drag and drop building blocks on the product page."
 msgstr "可在产品页面对各类模块进行拖放操作。"
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:192
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:193
 msgid ""
 "These building blocks do not appear on the :ref:`shop page <ecommerce/"
 "catalog/customize-layout>`."
 msgstr ""
 "此类模块不会在 :ref:`商店页面 <ecommerce/catalog/customize-layout>` 中显示。"
 
-#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:195
+#: ../../content/applications/websites/ecommerce/ecommerce_design/product_page.rst:196
 msgid ":doc:`../../../websites/website/web_design`"
 msgstr ":doc:`../../../websites/website/web_design`"
 
@@ -5601,17 +5722,31 @@ msgid ""
 "websites with moderate traffic."
 msgstr ""
 
+#: ../../content/applications/websites/ecommerce/shipping.rst:3
+#, fuzzy
+#| msgid "Delivery orders"
+msgid "Delivery methods"
+msgstr "送货订单"
+
 #: ../../content/applications/websites/ecommerce/shipping.rst:5
+#, fuzzy
+#| msgid ""
+#| "Odoo eCommerce allows you to configure various delivery methods, enabling "
+#| "customers to choose their preferred option at :doc:`checkout <checkout>`. "
+#| "These methods include :ref:`external providers <ecommerce/shipping/"
+#| "external-provider>`, :ref:`custom options <ecommerce/shipping/custom-"
+#| "method>` such as flat-rate or free shipping, local carriers "
+#| "via :doc:`Sendcloud </applications/inventory_and_mrp/inventory/"
+#| "shipping_receiving/setup_configuration/sendcloud_shipping>` "
+#| "or :ref:`Based on Rules <inventory/shipping/rules>`, and :ref:`in-store "
+#| "pickup <ecommerce/shipping/instore-pickup>`."
 msgid ""
 "Odoo eCommerce allows you to configure various delivery methods, enabling "
-"customers to choose their preferred option at :doc:`checkout <checkout>`. "
-"These methods include :ref:`external providers <ecommerce/shipping/external-"
-"provider>`, :ref:`custom options <ecommerce/shipping/custom-method>` such as "
-"flat-rate or free shipping, local carriers via :doc:`Sendcloud </"
-"applications/inventory_and_mrp/inventory/shipping_receiving/"
-"setup_configuration/sendcloud_shipping>` or :ref:`Based on Rules <inventory/"
-"shipping/rules>`, and :ref:`in-store pickup <ecommerce/shipping/instore-"
-"pickup>`."
+"customers to choose their preferred option at :ref:`checkout <ecommerce/"
+"checkout/steps>`. These methods include integrations with :ref:`external "
+"providers <ecommerce/shipping/external-provider>` as well as :ref:`custom "
+"options <ecommerce/shipping/custom-method>` such as flat-rate shipping, free "
+"shipping, or :ref:`in-store pickup <ecommerce/shipping/instore-pickup>`."
 msgstr ""
 "Odoo 电商系统允许您配置多种配送方式，使客户能够在 :doc:`结账<checkout>` 页面"
 "选择其偏好的选项。这些方式包括：:ref:`外部供应商 <ecommerce/shipping/"
@@ -5621,23 +5756,49 @@ msgstr ""
 "地承运商，或 :ref:`基于规则的配送 <inventory/shipping/rules>`，以及 :ref:`门"
 "店自提 <ecommerce/shipping/instore-pickup>` 服务。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:16
+#: ../../content/applications/websites/ecommerce/shipping.rst:12
+#, fuzzy
+#| msgid ""
+#| ":doc:`Third-party shipping carriers </applications/inventory_and_mrp/"
+#| "inventory/shipping_receiving/setup_configuration/third_party_shipper>`"
+msgid ""
+":doc:`Configuring delivery methods </applications/inventory_and_mrp/"
+"inventory/shipping_receiving/setup_configuration>`"
+msgstr ""
+":doc:`第三方送货提供商</applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/third_party_shipper>`"
+
+#: ../../content/applications/websites/ecommerce/shipping.rst:18
 msgid "External provider integration"
 msgstr "外部提供商整合"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:18
+#: ../../content/applications/websites/ecommerce/shipping.rst:20
+#, fuzzy
+#| msgid ""
+#| "To handle product delivery, you can connect your database to :doc:`third-"
+#| "party shipping carriers </applications/inventory_and_mrp/inventory/"
+#| "shipping_receiving/setup_configuration/third_party_shipper>` "
+#| "like :doc:`FedEx </applications/inventory_and_mrp/inventory/"
+#| "shipping_receiving/setup_configuration/fedex>`, :doc:`UPS </applications/"
+#| "inventory_and_mrp/inventory/shipping_receiving/setup_configuration/"
+#| "ups_credentials>`, or :doc:`DHL </applications/inventory_and_mrp/"
+#| "inventory/shipping_receiving/setup_configuration/dhl_credentials>`. A "
+#| "shipping connector links to these providers, automating :doc:`tracking "
+#| "labels </applications/inventory_and_mrp/inventory/shipping_receiving/"
+#| "setup_configuration/labels>` and shipping processes."
 msgid ""
-"To handle product delivery, you can connect your database to :doc:`third-"
-"party shipping carriers </applications/inventory_and_mrp/inventory/"
-"shipping_receiving/setup_configuration/third_party_shipper>` "
-"like :doc:`FedEx </applications/inventory_and_mrp/inventory/"
-"shipping_receiving/setup_configuration/fedex>`, :doc:`UPS </applications/"
+"You can integrate with :doc:`third-party shipping carriers </applications/"
 "inventory_and_mrp/inventory/shipping_receiving/setup_configuration/"
-"ups_credentials>`, or :doc:`DHL </applications/inventory_and_mrp/inventory/"
-"shipping_receiving/setup_configuration/dhl_credentials>`. A shipping "
-"connector links to these providers, automating :doc:`tracking labels </"
+"third_party_shipper>`, such as :doc:`FedEx </applications/inventory_and_mrp/"
+"inventory/shipping_receiving/setup_configuration/fedex>`, :doc:`UPS </"
 "applications/inventory_and_mrp/inventory/shipping_receiving/"
-"setup_configuration/labels>` and shipping processes."
+"setup_configuration/ups_credentials>`, or :doc:`DHL </applications/"
+"inventory_and_mrp/inventory/shipping_receiving/setup_configuration/"
+"dhl_credentials>` to streamline shipping operations. Connecting with an "
+"external provider allows to generate :doc:`tracking labels </applications/"
+"inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>` "
+"automatically and to offer customers several delivery options "
+"at :ref:`checkout <ecommerce/checkout/steps>`."
 msgstr ""
 "要处理产品交付，您可以将数据库连接到 :doc:`第三方承运商</applications/"
 "inventory_and_mrp/inventory/shipping_receiving/setup_configuration/"
@@ -5650,143 +5811,126 @@ msgstr ""
 "applications/inventory_and_mrp/inventory/shipping_receiving/"
 "setup_configuration/labels>` 和运输过程自动化。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:27
-msgid ""
-"To enable a third-party delivery provider, go to :menuselection:`Website --> "
-"Configuration --> Settings`, scroll to the :guilabel:`Delivery` section, "
-"select the desired delivery provider(s), and :guilabel:`Save`."
-msgstr ""
-"要启用第三方送货提供商，请访问 :menuselection:`网站 --> 配置 --> 设置`，滚动"
-"到 :guilabel:`送货` 部分，选择所需的送货提供商，然后 :guilabel:`保存`。"
-
 #: ../../content/applications/websites/ecommerce/shipping.rst:31
-msgid ""
-"Go to :menuselection:`Website --> Configuration --> Delivery Methods` and "
-"select the delivery method in the list to :ref:`configure it <inventory/"
-"shipping_receiving/configure-delivery-method>`."
+msgid "To enable a third-party delivery provider:"
 msgstr ""
-"进入 :menuselection:`网站 --> 配置 --> 送货方式`，在列表中选择送货方式，然"
-"后 :ref:`完成配置 <inventory/shipping_receiving/configure-delivery-method>`。"
+
+#: ../../content/applications/websites/ecommerce/shipping.rst:34
+#, fuzzy
+#| msgid "Click the :guilabel:`Create` button."
+msgid "Scroll to the :guilabel:`eCommerce` section."
+msgstr "单击 :guilabel:`创建` 按钮。"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:35
 msgid ""
-":doc:`Third-party shipping carriers </applications/inventory_and_mrp/"
-"inventory/shipping_receiving/setup_configuration/third_party_shipper>`"
+"Under :guilabel:`Configure Delivery Methods`, click :icon:`fa-arrow-"
+"right` :guilabel:`Find a Delivery Provider`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/shipping.rst:37
+msgid ""
+"On the :guilabel:`New Providers` page, click the :guilabel:`Delivery "
+"methods` button of an already-installed provider to access the delivery "
+"method's form, or :guilabel:`Install` a new provider."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/shipping.rst:40
+#, fuzzy
+#| msgid ""
+#| ":doc:`Third-party shipping carriers </applications/inventory_and_mrp/"
+#| "inventory/shipping_receiving/setup_configuration/third_party_shipper>`"
+msgid ""
+":doc:`Configure the delivery method </applications/inventory_and_mrp/"
+"inventory/shipping_receiving/setup_configuration/third_party_shipper>`."
 msgstr ""
 ":doc:`第三方送货提供商</applications/inventory_and_mrp/inventory/"
 "shipping_receiving/setup_configuration/third_party_shipper>`"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:37
-msgid ":doc:`Gelato </applications/sales/sales/gelato>`"
+#: ../../content/applications/websites/ecommerce/shipping.rst:44
+msgid ""
+"The :ref:`shipping price <inventory/shipping/calculate-delivery-cost>`, "
+"including the :guilabel:`Margin on rate` or :guilabel:`Additional margin` "
+"configured on the :ref:`delivery method <inventory/shipping_receiving/"
+"configure-delivery-method>` (if applicable), is displayed when selecting the "
+"provider during :ref:`checkout <ecommerce/checkout/steps>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:40
+#: ../../content/applications/websites/ecommerce/shipping.rst:50
 msgid ""
-"The field used to define additional fees **must** be filled **in your third-"
-"party delivery provider account**, even if you do not plan to charge "
-"customers any additional fee. If you do not want to apply a fee, enter `0`. "
-"If the field is left empty, the delivery price cannot be calculated, and an "
-"error message prompts the customer to select an alternative delivery method."
+"It is also possible to connect your e-commerce to shipping aggregators, such "
+"as :doc:`Sendcloud </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/sendcloud_shipping>` "
+"or :doc:`Envia.com </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/envia_shipping>`, or to fulfillment "
+"platforms like :doc:`Gelato </applications/sales/sales/gelato>`."
 msgstr ""
-"即使您不打算向客户收取任何额外费用，也**必须**在**第三方送货服务提供商帐户**"
-"中填写用于定义额外费用的字段。如果不想收费，请输入 `0`。如果该字段为空，则无"
-"法计算送货价格，错误信息会提示客户选择其他送货方式。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:46
-msgid "Margin on delivery rate"
-msgstr "运费费率加成"
-
-#: ../../content/applications/websites/ecommerce/shipping.rst:48
-msgid ""
-"To add an additional fee to the base shipping rate (e.g., to cover extra "
-"costs), log into your carrier account and set the desired fee in the related "
-"field. The shipping connector retrieves this fee and includes it in the "
-"final price at checkout. Contact your carrier for further assistance with "
-"this configuration."
-msgstr ""
-"要在基本运费率上添加额外费用（如支付额外费用），请登录承运商账户并在相关字段"
-"中设置所需的费用。运输连接器会检索该费用，并将其包含在结账时的最终价格中。有"
-"关此配置的进一步帮助，请联系您的承运商。"
-
-#: ../../content/applications/websites/ecommerce/shipping.rst:53
-msgid ""
-"Alternatively, enter `0` in your third-party shipping provider account, then "
-"set the fee in Odoo. To do so, access the desired :ref:`shipping method's "
-"form <inventory/shipping_receiving/configure-delivery-method>` and enter the "
-"fee in the :guilabel:`Margin on Rate` field to add a percentage to the "
-"shipping costs and/or the :guilabel:`Additional margin` field to add a fixed "
-"amount."
-msgstr ""
-"或者，在第三方运输提供商账户中输入 `0`，然后在 Odoo 中设置费用。要执行此操"
-"作，请访问所需的 :ref:`运输方式表单 <inventory/shipping_receiving/configure-"
-"delivery-method>`，并在 :guilabel:`费率加成` 字段中输入费用，以在运费中添加百"
-"分比和/或在 :guilabel:`额外附加费` 字段中添加固定金额。"
-
-#: ../../content/applications/websites/ecommerce/shipping.rst:60
-msgid ""
-"The field used to define additional fees cannot be left empty in your third-"
-"party shipping provider account."
-msgstr "在第三方运输提供商账户中，用于定义附加费用的字段不能为空。"
-
-#: ../../content/applications/websites/ecommerce/shipping.rst:66
+#: ../../content/applications/websites/ecommerce/shipping.rst:59
 msgid "Custom delivery method"
 msgstr "自定义配送方式"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:68
+#: ../../content/applications/websites/ecommerce/shipping.rst:61
 msgid "Custom delivery methods must be created, for example:"
 msgstr "例如，必须创建自定义配送方式："
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:70
+#: ../../content/applications/websites/ecommerce/shipping.rst:63
+#, fuzzy
+#| msgid ""
+#| "to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping, or "
+#| "shipping :ref:`Based on Rules <inventory/shipping/rules>`."
 msgid ""
-"to integrate delivery carriers through :doc:`Sendcloud </applications/"
-"inventory_and_mrp/inventory/shipping_receiving/setup_configuration/"
-"sendcloud_shipping>`;"
-msgstr ""
-"通过 :doc:`Sendcloud</applications/inventory_and_mrp/inventory/"
-"shipping_receiving/setup_configuration/sendcloud_shipping>` 整合配送提供商；"
-
-#: ../../content/applications/websites/ecommerce/shipping.rst:72
-msgid ""
-"to configure specific rules (e.g., to offer free shipping for orders above a "
-"specific amount) for a specific provider;"
-msgstr ""
-"为特定提供商配置特定规则（例如，为超过特定金额的订单提供免费送货服务）；"
-
-#: ../../content/applications/websites/ecommerce/shipping.rst:74
-msgid ""
-"to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping, or "
-"shipping :ref:`Based on Rules <inventory/shipping/rules>`."
+"to configure :ref:`fixed-price <inventory/shipping/fixed>` shipping that "
+"applies to all orders;"
 msgstr ""
 "配置 :ref:`固定价格 <inventory/shipping/fixed>` 运费，或 :ref:`根据规则 "
 "<inventory/shipping/rules>` 运费。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:77
+#: ../../content/applications/websites/ecommerce/shipping.rst:64
+#, fuzzy
+#| msgid ""
+#| "to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping, or "
+#| "shipping :ref:`Based on Rules <inventory/shipping/rules>`."
+msgid "to configure shipping :ref:`based on rules <inventory/shipping/rules>`;"
+msgstr ""
+"配置 :ref:`固定价格 <inventory/shipping/fixed>` 运费，或 :ref:`根据规则 "
+"<inventory/shipping/rules>` 运费。"
+
+#: ../../content/applications/websites/ecommerce/shipping.rst:65
 msgid ""
-"To create a custom delivery method, go to :menuselection:`Website --> "
-"Configuration --> Delivery Methods`, click :guilabel:`New`, and fill in "
-"the :ref:`fields <inventory/shipping_receiving/shipping-methods-details>`."
+"to configure the :ref:`Click & Collect <ecommerce/shipping/instore-pickup>` "
+"option."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/shipping.rst:67
+#, fuzzy
+#| msgid ""
+#| "To create a custom delivery method, go to :menuselection:`Website --> "
+#| "Configuration --> Delivery Methods`, click :guilabel:`New`, and fill in "
+#| "the :ref:`fields <inventory/shipping_receiving/shipping-methods-details>`."
+msgid ""
+"To create a custom :doc:`delivery method </applications/inventory_and_mrp/"
+"inventory/shipping_receiving/setup_configuration/new_delivery_method>`, go "
+"to :menuselection:`Website --> Configuration --> Delivery Methods`, "
+"click :guilabel:`New`, and :ref:`configure it <inventory/shipping_receiving/"
+"delivery-product>`."
 msgstr ""
 "要创建自定义配送方式，请访问 :menuselection:`网站 --> 配置 --> 配送方式`，点"
 "击 :guilabel:`新建`，然后填写 :ref:`字段<inventory/shipping_receiving/"
 "shipping-methods-details>`。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:81
+#: ../../content/applications/websites/ecommerce/shipping.rst:73
+#, fuzzy
+#| msgid ""
+#| "Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-"
+#| "method>` a delivery method, you can:"
 msgid ""
-"In the :guilabel:`Provider` field, select :ref:`Based on Rules <inventory/"
-"shipping/rules>` or :ref:`Fixed Price <inventory/shipping/fixed>`."
-msgstr ""
-"在 :guilabel:`提供商` 字段中，选择 :ref:`基于规则 <inventory/shipping/"
-"rules>` 或 :ref:`固定价格 <inventory/shipping/fixed>`。"
-
-#: ../../content/applications/websites/ecommerce/shipping.rst:85
-msgid ""
-"Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-"
-"method>` a delivery method, you can:"
+"Upon :ref:`configuring <inventory/shipping_receiving/delivery-product>` a "
+"delivery method, you can:"
 msgstr ""
 "在 :ref:`配置 <inventory/shipping_receiving/configure-delivery-method>` 配送"
 "方式后，您可以："
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:88
+#: ../../content/applications/websites/ecommerce/shipping.rst:76
 msgid ""
 "Restrict it :doc:`to a specific website <../website/configuration/"
 "multi_website>` by selecting it in the :guilabel:`Website` field."
@@ -5795,17 +5939,7 @@ msgstr ""
 "multi_website>`，限制其 :doc:`在特定网站<.../website/configuration/"
 "multi_website>`。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:90
-msgid ""
-"Click the :guilabel:`Test Environment` smart button to switch to "
-"the :guilabel:`Production Environment`. Then, click :guilabel:`Unpublished` "
-"to :guilabel:`Publish` the delivery method and make it available to website "
-"visitors."
-msgstr ""
-"点击 :guilabel:`测试环境` 智能按钮切换到 :guilabel:`正式运行环境`。然后，点"
-"击 :guilabel:`未发布` 以 :guilabel:`发布` 送货方法，并将其提供给网站访问者。"
-
-#: ../../content/applications/websites/ecommerce/shipping.rst:93
+#: ../../content/applications/websites/ecommerce/shipping.rst:78
 msgid ""
 "Use the :guilabel:`Availability` tab to define :ref:`conditions <inventory/"
 "shipping_receiving/availability>` for the delivery method based on the "
@@ -5814,31 +5948,53 @@ msgstr ""
 "使用 :guilabel:`可用性` 标签页，根据订单内容或目的地为交货方式定义 :ref:`条"
 "件 <inventory/shipping_receiving/availability>`。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:100
+#: ../../content/applications/websites/ecommerce/shipping.rst:81
+msgid ""
+"Enable the :ref:`Cash on Delivery <payment_providers/inperson_payments/"
+"cash_on_delivery>` option so customers can pay when their order is delivered."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/shipping.rst:83
+msgid ""
+"Add a :guilabel:`Tracking Link` to allow customer to track their order via "
+"the customer portal."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/shipping.rst:88
 msgid "Click & Collect"
 msgstr "线上下单 & 线下取货"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:102
+#: ../../content/applications/websites/ecommerce/shipping.rst:90
 msgid ""
 "To allow customers to reserve products online and collect them in-store, "
 "follow these steps:"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:105
+#: ../../content/applications/websites/ecommerce/shipping.rst:93
 msgid ""
 "Scroll to the :guilabel:`eCommerce` section, enable :guilabel:`Click & "
 "Collect`, and :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:107
+#: ../../content/applications/websites/ecommerce/shipping.rst:95
+#, fuzzy
+#| msgid ""
+#| "Click :icon:`fa-arrow-right` :guilabel:`Configure Pickup Locations` "
+#| "to :ref:`configure <inventory/shipping_receiving/configure-delivery-"
+#| "method>` the delivery method and ensure the :guilabel:`Provider` field is "
+#| "set to :guilabel:`Pick up in store`."
 msgid ""
 "Click :icon:`fa-arrow-right` :guilabel:`Configure Pickup Locations` "
-"to :ref:`configure <inventory/shipping_receiving/configure-delivery-method>` "
-"the delivery method if needed and ensure the :guilabel:`Provider` field is "
-"set to :guilabel:`Pick up in store`."
+"to :doc:`configure the delivery method </applications/inventory_and_mrp/"
+"inventory/shipping_receiving/setup_configuration/new_delivery_method>`, if "
+"needed, and ensure the :guilabel:`Provider` field is set to :guilabel:`Pick "
+"up in store`."
 msgstr ""
+"点击 :icon:`fa-arrow-right`:guilabel:`配置取货地点`，以 :ref:`配置 "
+"<inventory/shipping_receiving/configure-delivery-method>` 配送方式，并确"
+"保 :guilabel:`提供商` 字段设置为 :guilabel:`在店内取货 `。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:110
+#: ../../content/applications/websites/ecommerce/shipping.rst:99
 msgid ""
 "In the :guilabel:`Stores` tab, click :guilabel:`Add a line` and select the "
 "warehouse(s) where customers can collect their orders."
@@ -5846,25 +6002,42 @@ msgstr ""
 "在 :guilabel:`商店` 标签页中，点击 :guilabel:`添加一行` 并选择客户可以领取订"
 "单的仓库。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:112
+#: ../../content/applications/websites/ecommerce/shipping.rst:101
+#, fuzzy
+#| msgid ""
+#| "Once your setup is complete, click the :guilabel:`Unpublish` button to "
+#| "change the status to :guilabel:`Publish` and make the delivery method "
+#| "available to customers."
 msgid ""
-"Once your setup is complete, click the :guilabel:`Unpublish` button to "
-"change the status to :guilabel:`Publish` and make the delivery method "
+"Once the setup is complete, click the :guilabel:`Unpublished` button to "
+"change the status to :guilabel:`Published` and make the delivery method "
 "available to customers."
 msgstr ""
 "设置完成后，点击 :guilabel:`取消发布` 按钮，将状态更改为 :guilabel:`发布` 并"
 "向客户提供配送方式。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:116
+#: ../../content/applications/websites/ecommerce/shipping.rst:105
+#, fuzzy
+#| msgid ""
+#| "When the product is in stock, a location selector is displayed on "
+#| "the :doc:`product <products>` and :doc:`checkout <checkout>` pages. "
+#| "Customers cannot select a pickup location if the product is out of stock "
+#| "at that location, unless the :ref:`Continue selling <ecommerce/products/"
+#| "stock-management>` option for out-of-stock products is enabled."
 msgid ""
 "When the product is in stock, a location selector is displayed on "
-"the :doc:`product <configuration/products>` and :doc:`checkout <checkout>` "
-"pages. Customers cannot select a pickup location if the product is out of "
-"stock at that location, unless the :ref:`Continue selling <ecommerce/"
-"products/stock-management>` option for out-of-stock products is enabled."
+"the :doc:`product page <configuration/products>` and "
+"the :guilabel:`Address` :ref:`checkout <ecommerce/checkout/delivery>` page. "
+"Customers cannot select a pick-up location if the product is out of stock at "
+"that location, unless the :ref:`Continue selling <ecommerce/products/stock-"
+"management>` option for out-of-stock products is enabled."
 msgstr ""
+"当产品有库存时，系统将在 :doc:`产品 <products>` 页面与 :doc:`结账 <checkout>`"
+"页面显示取货地点选择器。若产品在某个地点处于缺货状态，客户将无法选择该取货"
+"点，除非已为该产品启用缺货时 :ref:`继续销售 <ecommerce/products/stock-"
+"management>`选项。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:121
+#: ../../content/applications/websites/ecommerce/shipping.rst:110
 msgid ""
 "If the :ref:`Show Available Qty <ecommerce/products/stock-management>` "
 "option is enabled for a product, customers can view the stock quantity "
@@ -5873,7 +6046,7 @@ msgstr ""
 "若为产品启用了 :ref:`显示可用数量 <ecommerce/products/stock-management>`选"
 "项，客户可在产品页面的地点选择器中查看各仓库的实时库存数量。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:124
+#: ../../content/applications/websites/ecommerce/shipping.rst:113
 msgid ""
 "Each warehouse must have a **complete address** to ensure its location is "
 "accurately displayed to customers. Incomplete addresses prevent the "
@@ -5882,24 +6055,30 @@ msgstr ""
 "每个仓库必须维护**完整地址**信息，方能确保其位置可准确向客户展示。地址不完整"
 "的仓库将不会在界面中显示。"
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:126
+#: ../../content/applications/websites/ecommerce/shipping.rst:115
 msgid ""
 "In a multi-company environment, the company assigned to the warehouse must "
 "match the company assigned to the website on which the delivery method is "
 "used. If the companies differ, the pickup location cannot be selected."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:129
+#: ../../content/applications/websites/ecommerce/shipping.rst:118
 msgid "The :guilabel:`Click & Collect` option is not available for services."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/shipping.rst:130
+#: ../../content/applications/websites/ecommerce/shipping.rst:119
 msgid ""
 "By default, the :ref:`Pay on Site <payment_providers/inperson_payments/"
 "pay_on_site>` payment method is :ref:`enabled and published "
 "<payment_providers/add_new>` when the :guilabel:`Click & Collect` feature is "
 "activated."
 msgstr ""
+
+#: ../../content/applications/websites/ecommerce/shipping.rst:124
+#, fuzzy
+#| msgid ":doc:`../../ecommerce/products/categories_variants`"
+msgid ":ref:`ecommerce/products/stock-management`"
+msgstr ":doc:`../../ecommerce/products/categories_variants`"
 
 #: ../../content/applications/websites/elearning.rst:3
 msgid "eLearning"
@@ -17264,6 +17443,139 @@ msgid ""
 msgstr ""
 
 #~ msgid ""
+#~ ":guilabel:`Stay on Product Page`: The customer can choose if they want "
+#~ "to :guilabel:`Add to cart` and continue shopping or :guilabel:`Go to the "
+#~ "Checkout`."
+#~ msgstr ""
+#~ ":guilabel:`停留在产品页面`：顾客可以选择是 :guilabel:`加入购物车` 并继续购"
+#~ "物，还是 :guilabel:`前往结账`。"
+
+#~ msgid "Contact us button on product page"
+#~ msgstr "产品页面上的联系我们按钮"
+
+#~ msgid ""
+#~ "The :guilabel:`Contact Us` button label, URL, and the *Not Available For "
+#~ "Sale* text beneath the product title and description can be modified on "
+#~ "the product's page while in :guilabel:`Edit` mode."
+#~ msgstr ""
+#~ "在 :guilabel:`编辑` 模式下，可在产品页面上修改 :guilabel:`联系我们` 按钮标"
+#~ "签、URL 以及产品标题和说明下方的 *不可出售* 文本。"
+
+#~ msgid ""
+#~ "You can add additional :guilabel:`Add to Cart` buttons and link them to "
+#~ "specific products on any website page."
+#~ msgstr ""
+#~ "您可以添加额外的 :guilabel:`添加到购物车` 按钮，并将它们链接到任何网站页面"
+#~ "上的特定产品。"
+
+#~ msgid ""
+#~ "In the website editor, it is also possible to show or hide the :icon:`fa-"
+#~ "shopping-cart` (:guilabel:`cart`) icon in the page's header. Click the "
+#~ "header and then the :icon:`fa-shopping-cart` (:guilabel:`cart`) button "
+#~ "next to the :guilabel:`Show Empty` option under the :guilabel:`Style` tab."
+#~ msgstr ""
+#~ "在网站编辑器中，还可以显示或隐藏页面标题中的 :icon:`fa-shopping-cart`"
+#~ "（:guilabel:`购物车`）图标。点击页眉，然后点击 :guilabel:`样式` 选项卡"
+#~ "下 :guilabel:`显示空` 选项旁边的 :icon:`fa-shopping-cart`（:guilabel:`购物"
+#~ "车`）按钮。"
+
+#~ msgid "Address and delivery"
+#~ msgstr "地址和送货"
+
+#~ msgid ""
+#~ "To enable a third-party delivery provider, go to :menuselection:`Website "
+#~ "--> Configuration --> Settings`, scroll to the :guilabel:`Delivery` "
+#~ "section, select the desired delivery provider(s), and :guilabel:`Save`."
+#~ msgstr ""
+#~ "要启用第三方送货提供商，请访问 :menuselection:`网站 --> 配置 --> 设置`，滚"
+#~ "动到 :guilabel:`送货` 部分，选择所需的送货提供商，然后 :guilabel:`保存`。"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Website --> Configuration --> Delivery Methods` and "
+#~ "select the delivery method in the list to :ref:`configure it <inventory/"
+#~ "shipping_receiving/configure-delivery-method>`."
+#~ msgstr ""
+#~ "进入 :menuselection:`网站 --> 配置 --> 送货方式`，在列表中选择送货方式，然"
+#~ "后 :ref:`完成配置 <inventory/shipping_receiving/configure-delivery-"
+#~ "method>`。"
+
+#~ msgid ""
+#~ "The field used to define additional fees **must** be filled **in your "
+#~ "third-party delivery provider account**, even if you do not plan to "
+#~ "charge customers any additional fee. If you do not want to apply a fee, "
+#~ "enter `0`. If the field is left empty, the delivery price cannot be "
+#~ "calculated, and an error message prompts the customer to select an "
+#~ "alternative delivery method."
+#~ msgstr ""
+#~ "即使您不打算向客户收取任何额外费用，也**必须**在**第三方送货服务提供商帐户"
+#~ "**中填写用于定义额外费用的字段。如果不想收费，请输入 `0`。如果该字段为空，"
+#~ "则无法计算送货价格，错误信息会提示客户选择其他送货方式。"
+
+#~ msgid "Margin on delivery rate"
+#~ msgstr "运费费率加成"
+
+#~ msgid ""
+#~ "To add an additional fee to the base shipping rate (e.g., to cover extra "
+#~ "costs), log into your carrier account and set the desired fee in the "
+#~ "related field. The shipping connector retrieves this fee and includes it "
+#~ "in the final price at checkout. Contact your carrier for further "
+#~ "assistance with this configuration."
+#~ msgstr ""
+#~ "要在基本运费率上添加额外费用（如支付额外费用），请登录承运商账户并在相关字"
+#~ "段中设置所需的费用。运输连接器会检索该费用，并将其包含在结账时的最终价格"
+#~ "中。有关此配置的进一步帮助，请联系您的承运商。"
+
+#~ msgid ""
+#~ "Alternatively, enter `0` in your third-party shipping provider account, "
+#~ "then set the fee in Odoo. To do so, access the desired :ref:`shipping "
+#~ "method's form <inventory/shipping_receiving/configure-delivery-method>` "
+#~ "and enter the fee in the :guilabel:`Margin on Rate` field to add a "
+#~ "percentage to the shipping costs and/or the :guilabel:`Additional margin` "
+#~ "field to add a fixed amount."
+#~ msgstr ""
+#~ "或者，在第三方运输提供商账户中输入 `0`，然后在 Odoo 中设置费用。要执行此操"
+#~ "作，请访问所需的 :ref:`运输方式表单 <inventory/shipping_receiving/"
+#~ "configure-delivery-method>`，并在 :guilabel:`费率加成` 字段中输入费用，以"
+#~ "在运费中添加百分比和/或在 :guilabel:`额外附加费` 字段中添加固定金额。"
+
+#~ msgid ""
+#~ "The field used to define additional fees cannot be left empty in your "
+#~ "third-party shipping provider account."
+#~ msgstr "在第三方运输提供商账户中，用于定义附加费用的字段不能为空。"
+
+#~ msgid ""
+#~ "to integrate delivery carriers through :doc:`Sendcloud </applications/"
+#~ "inventory_and_mrp/inventory/shipping_receiving/setup_configuration/"
+#~ "sendcloud_shipping>`;"
+#~ msgstr ""
+#~ "通过 :doc:`Sendcloud</applications/inventory_and_mrp/inventory/"
+#~ "shipping_receiving/setup_configuration/sendcloud_shipping>` 整合配送提供"
+#~ "商；"
+
+#~ msgid ""
+#~ "to configure specific rules (e.g., to offer free shipping for orders "
+#~ "above a specific amount) for a specific provider;"
+#~ msgstr ""
+#~ "为特定提供商配置特定规则（例如，为超过特定金额的订单提供免费送货服务）；"
+
+#~ msgid ""
+#~ "In the :guilabel:`Provider` field, select :ref:`Based on Rules <inventory/"
+#~ "shipping/rules>` or :ref:`Fixed Price <inventory/shipping/fixed>`."
+#~ msgstr ""
+#~ "在 :guilabel:`提供商` 字段中，选择 :ref:`基于规则 <inventory/shipping/"
+#~ "rules>` 或 :ref:`固定价格 <inventory/shipping/fixed>`。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Test Environment` smart button to switch to "
+#~ "the :guilabel:`Production Environment`. Then, "
+#~ "click :guilabel:`Unpublished` to :guilabel:`Publish` the delivery method "
+#~ "and make it available to website visitors."
+#~ msgstr ""
+#~ "点击 :guilabel:`测试环境` 智能按钮切换到 :guilabel:`正式运行环境`。然后，"
+#~ "点击 :guilabel:`未发布` 以 :guilabel:`发布` 送货方法，并将其提供给网站访问"
+#~ "者。"
+
+#~ msgid ""
 #~ "**Odoo Blog** allows you to create and manage blog posts on your website "
 #~ "to engage your audience and build a community."
 #~ msgstr ""
@@ -17948,9 +18260,6 @@ msgstr ""
 #~ "择 :guilabel:`我的账户`并打开 :doc:`网站构建器 <../website/web_design>`。"
 #~ "在 :guilabel:`样式`标签页中，根据需要启用或禁用特定文档的访问权限。"
 
-#~ msgid ":doc:`../../ecommerce/products/categories_variants`"
-#~ msgstr ":doc:`../../ecommerce/products/categories_variants`"
-
 #~ msgid ""
 #~ "After :ref:`adding media items on the product form <ecommerce/products/"
 #~ "images>` or upon :ref:`product creation in the frontend <ecommerce/"
@@ -18443,18 +18752,6 @@ msgstr ""
 #~ msgstr ":ref:`导航到产品表单 <ecommerce/products/create-products>`。"
 
 #~ msgid ""
-#~ "When the product is in stock, a location selector is displayed on "
-#~ "the :doc:`product <products>` and :doc:`checkout <checkout>` pages. "
-#~ "Customers cannot select a pickup location if the product is out of stock "
-#~ "at that location, unless the :ref:`Continue selling <ecommerce/products/"
-#~ "stock-management>` option for out-of-stock products is enabled."
-#~ msgstr ""
-#~ "当产品有库存时，系统将在 :doc:`产品 <products>` 页面与 :doc:`结账 "
-#~ "<checkout>`页面显示取货地点选择器。若产品在某个地点处于缺货状态，客户将无"
-#~ "法选择该取货点，除非已为该产品启用缺货时 :ref:`继续销售 <ecommerce/"
-#~ "products/stock-management>`选项。"
-
-#~ msgid ""
 #~ "You can set a default social share image. Go to :menuselection:`Website --"
 #~ "> Configuration --> Settings` in the :guilabel:`SEO`section and tick "
 #~ "the :guilabel:`Default Social Share Image` checkbox."
@@ -18662,9 +18959,6 @@ msgstr ""
 #~ msgstr ""
 #~ "对于遗弃购物车邮件，客户必须在结账过程中输入联系信息，或者在将产品添加到购"
 #~ "物车时已登录。"
-
-#~ msgid "Delivery orders"
-#~ msgstr "送货订单"
 
 #~ msgid "Delivery flow"
 #~ msgstr "送货流程"
@@ -20247,16 +20541,6 @@ msgstr ""
 #~ msgstr ""
 #~ "滚动至 :guilabel:`配送`版块，启用 :guilabel:`线上订购，线下取货 `选项，然"
 #~ "后点击:guilabel:`保存`。"
-
-#~ msgid ""
-#~ "Click :icon:`fa-arrow-right` :guilabel:`Configure Pickup Locations` "
-#~ "to :ref:`configure <inventory/shipping_receiving/configure-delivery-"
-#~ "method>` the delivery method and ensure the :guilabel:`Provider` field is "
-#~ "set to :guilabel:`Pick up in store`."
-#~ msgstr ""
-#~ "点击 :icon:`fa-arrow-right`:guilabel:`配置取货地点`，以 :ref:`配置 "
-#~ "<inventory/shipping_receiving/configure-delivery-method>` 配送方式，并确"
-#~ "保 :guilabel:`提供商` 字段设置为 :guilabel:`在店内取货 `。"
 
 #~ msgid "The Click & Collect option is not available for services."
 #~ msgstr "“线上订购，线下取货” 选项不适用于服务。"

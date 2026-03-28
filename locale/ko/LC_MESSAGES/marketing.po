@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 18:30+0000\n"
+"POT-Creation-Date: 2026-03-27 18:30+0000\n"
 "PO-Revision-Date: 2026-02-12 23:20+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -4015,7 +4015,7 @@ msgstr ""
 
 #: ../../content/applications/marketing/events.rst:51
 #: ../../content/applications/marketing/events.rst:249
-#: ../../content/applications/marketing/events/revenues_report.rst:3
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:3
 msgid "Revenues report"
 msgstr "수익 보고서"
 
@@ -4406,7 +4406,9 @@ msgstr ""
 "수 있습니다."
 
 #: ../../content/applications/marketing/events.rst:254
-msgid ":doc:`events/revenues_report`"
+#, fuzzy
+#| msgid ":doc:`events/revenues_report`"
+msgid ":doc:`events/event_reporting/revenues_report`"
 msgstr ":doc:`events/revenues_report`"
 
 #: ../../content/applications/marketing/events/create_events.rst:5
@@ -5197,10 +5199,16 @@ msgid ":doc:`track_manage_talks`"
 msgstr ":doc:`track_manage_talks`"
 
 #: ../../content/applications/marketing/events/event_booths.rst:5
+#, fuzzy
+#| msgid ""
+#| "The *Email Marketing* application provides users with the ability to "
+#| "build mailing campaigns."
 msgid ""
-"The Odoo *Events* application provides users with the ability to create "
-"event booths, sell their availability, and manage their reservations."
+"The Odoo **Events** application provides users with the ability to create, "
+"sell, and manage event booth reservations."
 msgstr ""
+"*이메일 마케팅* 애플리케이션에서는 메일링 캠페인을 구축하는 기능을 제공하고 "
+"있습니다."
 
 #: ../../content/applications/marketing/events/event_booths.rst:9
 #: ../../content/applications/marketing/events/event_sponsors.rst:9
@@ -5217,32 +5225,39 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/marketing/events/event_booths.rst:14
+#, fuzzy
+#| msgid ""
+#| "To do that, navigate to :menuselection:`Website app --> Configuration --> "
+#| "Settings`, activate :guilabel:`Enable Web Push Notifications`, fill out "
+#| "the corresponding fields, and click :guilabel:`Save`."
 msgid ""
 "To do that, navigate to :menuselection:`Events app --> Configuration --> "
-"Settings`, and tick the :guilabel:`Booth Management` checkbox. Then, "
-"click :guilabel:`Save`."
+"Settings`. Click the :guilabel:`Booth Management` checkbox, then "
+"click :guilabel:`Save` to enable the setting."
 msgstr ""
+"그렇게 하려면 :menuselection:`웹사이트 앱 --> 환경설정 --> 설정`으로 이동하"
+"여 :guilabel:`웹 푸시 알림 활성화`를 활성화하고 해당 필드에 입력한 다"
+"음 :guilabel:`저장`을 클릭합니다."
 
 #: ../../content/applications/marketing/events/event_booths.rst:None
 msgid "The Booth Management setting in the Odoo Events application."
 msgstr "Odoo 행사 애플리케이션에 있는 부스 관리 설정입니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:22
+#: ../../content/applications/marketing/events/event_booths.rst:20
 msgid ""
-"When the :guilabel:`Booth Management` setting is activated, a "
-"new :doc:`Product Type <../../inventory_and_mrp/inventory/product_management/"
-"configure/type>` becomes available on all product forms: *Event Booth*."
+"When the :guilabel:`Booth Management` setting is activated, Odoo "
+"automatically creates a default *Event Booth* product in the database with "
+"its :guilabel:`Product Type` set to :guilabel:`Service` and "
+"its :guilabel:`Create on Order` field set to :guilabel:`Event Booth`."
 msgstr ""
 
-#: ../../content/applications/marketing/events/event_booths.rst:26
+#: ../../content/applications/marketing/events/event_booths.rst:24
 msgid ""
-"This is important because every created booth **must** be assigned a *Booth "
-"Category* on their respective booth form, and every booth category **must** "
-"have an *Event Booth* product assigned to it."
+"Users can modify/duplicate this default product or create a new, custom "
+"product. In either case, users **must** verify that an *Event Booth* product "
+"exists with this configuration in order to create booths and booth "
+"categories, as shown later in this documentation."
 msgstr ""
-"부스를 생성할 경우 **반드시** 부스 양식에서 **부스 카테고리** 를 지정해야 하"
-"며 부스 카테고리에는 **행사 부스* 제품이 **반드시** 지정되어야 하므로 이는 매"
-"우 중요합니다."
 
 #: ../../content/applications/marketing/events/event_booths.rst:31
 msgid "Booth categories"
@@ -5250,324 +5265,272 @@ msgstr "부스 카테고리"
 
 #: ../../content/applications/marketing/events/event_booths.rst:33
 msgid ""
-"With the *Booth Management* setting activated in the *Events* app, the "
-"*Booth Categories* option appears in the :guilabel:`Configuration` menu."
+"Custom *booth categories* can be created by users to assign different price "
+"tiers and :doc:`sponsors <event_sponsors>` for multiple booths at once."
 msgstr ""
 
 #: ../../content/applications/marketing/events/event_booths.rst:36
 msgid ""
-"To access the :guilabel:`Booth Category` dashboard, go "
-"to :menuselection:`Events app --> Configuration --> Booth Categories`, which "
-"reveals a list of all created booth categories."
+"When the *Booth Management* setting is activated, Odoo automatically creates "
+"three default booth categories: *Standard Booth*, *Premium Booth*, and *VIP "
+"Booth*. Users can modify/duplicate these default categories or create new, "
+"custom categories. In either case, booth categories **must** exist in the "
+"database before users can create event booths."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:42
+#, fuzzy
+#| msgid "Booth categories"
+msgid "Booth categories dashboard"
+msgstr "부스 카테고리"
+
+#: ../../content/applications/marketing/events/event_booths.rst:44
+#, fuzzy
+#| msgid ""
+#| "To access the *Attendees* reporting page, navigate "
+#| "to :menuselection:`Events app --> Reporting --> Revenues`."
+msgid ""
+"To view and manage booth categories, navigate to :menuselection:`Events app "
+"--> Configuration --> Booth Categories`."
+msgstr ""
+"*참석자* 보고 페이지에 액세스하려면 :menuselection:`행사 앱 --> 보고 --> 수익"
+"` 으로 이동합니다."
+
+#: ../../content/applications/marketing/events/event_booths.rst:47
+msgid ""
+"The :guilabel:`Booth Category` dashboard displays a list of all created "
+"booth categories along with the booth category name, associated *Event "
+"Booth* product, and price."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:51
+msgid ""
+"If sponsors are enabled in the **Events** app, an additional *Create "
+"Sponsor* checkbox appears on each record in the list as well as on the booth "
+"category form."
 msgstr ""
 
 #: ../../content/applications/marketing/events/event_booths.rst:None
 msgid "The Booth Category page in the Odoo Events application."
 msgstr "Odoo 행사 애플리케이션에 있는 부스 카테고리 페이지입니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:43
+#: ../../content/applications/marketing/events/event_booths.rst:57
 msgid ""
-"On the :guilabel:`Booth Category` page, the following information for each "
-"booth category is listed:"
-msgstr ""
-":guilabel:`부스 카테고리` 페이지에는 각 부스 카테고리와 관련하여 다음 내용이 "
-"표시되어 있습니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:45
-msgid ":guilabel:`Name`: the name of the booth category."
-msgstr ":guilabel:`이름`: 부스 카테고리의 제목입니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:46
-msgid ""
-":guilabel:`Create Sponsor`: if checked, booking this booth category creates "
-"a sponsor for the user."
-msgstr ""
-":guilabel:`스폰서 생성`: 표시할 경우, 이 부스 카테고리를 예약하면 스폰서가 생"
-"성됩니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:48
-msgid ""
-":guilabel:`Product`: the *Event Booth* product associated with that specific "
-"booth category."
-msgstr ":guilabel:`제품`: 해당 부스 카테고리와 관련된 *행사 부스* 제품입니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:49
-msgid ":guilabel:`Price`: the price of a booth in that booth category."
-msgstr ":guilabel:`가격`: 해당 부스 카테고리의 부스 가격입니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:51
-msgid ""
-"When the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon, located to "
-"the far-right of the column titles, is clicked, a drop-down menu of "
-"additional column options appears. From the resulting drop-down menu, tick "
-"the checkbox beside :guilabel:`Sponsor Level` and/or :guilabel:`Sponsor "
-"Type` to reveal those columns on the :guilabel:`Booth Category` page."
-msgstr ""
-"열 제목의 가장 오른쪽에 있는 :icon:`oi-settings-adjust` :guilabel:`(설정)` 아"
-"이콘을 클릭하면 추가 열 선택 드롭다운 메뉴가 나타납니다. 드롭다운 메뉴에"
-"서 :guilabel:`후원사 레벨` 및/또는 :guilabel:`후원사 유형` 옆의 확인란에 표시"
-"하면 :guilabel:`부스 카테고리` 페이지에 해당 열이 표시됩니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:56
-msgid ""
-"To edit an existing booth category, select it from the list, and proceed to "
-"make any desired modifications from the event category form."
+"To edit an existing booth category, select it from the list and proceed to "
+"make any desired modifications in the resulting booth category form."
 msgstr ""
 
-#: ../../content/applications/marketing/events/event_booths.rst:60
+#: ../../content/applications/marketing/events/event_booths.rst:63
 msgid "Create booth category"
 msgstr "부스 카테고리 만들기"
 
-#: ../../content/applications/marketing/events/event_booths.rst:62
+#: ../../content/applications/marketing/events/event_booths.rst:65
+#, fuzzy
+#| msgid ""
+#| "To make changes to the mailing list itself, click the :guilabel:`Edit` "
+#| "button in the upper-left corner of the mailing list detail form."
 msgid ""
-"To create a booth category from the :guilabel:`Booth Category` page, click "
-"the :guilabel:`New` button in the upper-left corner to reveal a blank booth "
-"category form."
+"To create a booth category, click the :guilabel:`New` button in the upper-"
+"left corner of the page to reveal a blank booth category form."
 msgstr ""
+"메일링 리스트 자체를 변경하려면, 메일링 리스트 세부 양식의 왼쪽 상단에 있"
+"는 :guilabel:`편집` 버튼을 클릭합니다."
 
 #: ../../content/applications/marketing/events/event_booths.rst:None
 msgid "A typical booth category form in the Odoo Events application."
 msgstr "Odoo 행사 애플리케이션의 일반적인 부스 카테고리 양식입니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:69
+#: ../../content/applications/marketing/events/event_booths.rst:71
+#, fuzzy
+#| msgid ""
+#| "Start by typing in a :guilabel:`Name` for the booth. This is a "
+#| "**required** field."
 msgid ""
 "Start by entering a name for the booth category in the top :guilabel:`Booth "
-"Category` field. This is a **requried** field."
+"Category` field. This is a **required** field."
+msgstr ""
+"부스의 :guilabel:`이름` 을 입력하는 것부터 시작합니다. 이 필드는 **필수** 항"
+"목입니다."
+
+#: ../../content/applications/marketing/events/event_booths.rst:74
+msgid ""
+"Optionally, upload a corresponding image (e.g., a sample photo of how the "
+"booth looks)."
 msgstr ""
 
-#: ../../content/applications/marketing/events/event_booths.rst:72
+#: ../../content/applications/marketing/events/event_booths.rst:76
 msgid ""
-"To add a corresponding image to the booth category (e.g. a sample photo of "
-"how the booth looks), click the :icon:`fa-pencil` :guilabel:`(pencil)` icon "
-"that appears when the cursor hovers over the camera placeholder in the upper-"
-"right corner of the booth category form. When clicked, proceed to upload the "
-"desired image to the booth category form, if needed."
+"In the :guilabel:`Booth Details` section, assign an *Event Booth* product in "
+"the :guilabel:`Product` field. This a **required** field."
 msgstr ""
-"부스 카테고리에 해당 이미지를 추가하려면 (예: 부스 모습을 찍은 샘플 사진) 부"
-"스 카테고리 양식의 오른쪽 상단에 있는 카메라 자리 표시자 위에 커서를 가져갑니"
-"다. :icon:`fa-pencil` :guilabel:`(연필)` 아이콘이 나타나면 클릭합니다. 클릭"
-"한 후, 필요한 이미지를 부스 카테고리 양식에 업로드합니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:77
+#: ../../content/applications/marketing/events/event_booths.rst:79
+#, fuzzy
+#| msgid ""
+#| "Next, set the registration cost of the ticket in the :guilabel:`Price` "
+#| "field."
 msgid ""
-"In the :guilabel:`Booth Details` section, users **must** assign "
-"a :guilabel:`Product` to the category, and it **must** have *Event Booth* "
-"set as the *Product Type* on the product form."
-msgstr ""
-":guilabel:`부스 세부 정보` 섹션에서는 **반드시** 카테고리에 :guilabel:`품목` "
-"을 지정해야 하며, **반드시** *행사 부스* 로 품목 양식의 *품목 유형* 을 설정해"
-"야 합니다."
+"Next, set a price for the booth category in the :guilabel:`Price` field."
+msgstr "다음으로, :guilabel:`가격` 필드에 티켓 등록비를 설정합니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:80
+#: ../../content/applications/marketing/events/event_booths.rst:81
+#, fuzzy
+#| msgid ""
+#| "In the :guilabel:`Sponsorship` section, there is a :guilabel:`Create "
+#| "Sponsor` checkbox option. With that checkbox ticked, whenever a booth "
+#| "belonging to this category is booked, the user is created as an official "
+#| "*Sponsor* of the event."
 msgid ""
-"And, regardless of the listed price on the *Event Booth* product chosen, the "
-"user can input a custom :guilabel:`Price` to be applied for this booth "
-"category in the field below."
-msgstr ""
-"|PLM| 앱은 제품의 출시부터 각 후속 버전에 이르기까지 제품 수명 주기를 관리하"
-"는 데 사용됩니다. 따라서 제품을 개선시킬 수 있는 여러 가지 방법을 테스트할 "
-"때 유용합니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:83
-msgid ""
-"In the :guilabel:`Sponsorship` section, there is a :guilabel:`Create "
-"Sponsor` checkbox option. With that checkbox ticked, whenever a booth "
-"belonging to this category is booked, the user is created as an official "
-"*Sponsor* of the event."
+"If event sponsors are configured, a :guilabel:`Sponsorship` section appears "
+"with a :guilabel:`Create Sponsor` checkbox option. When enabled, the user is "
+"created as an official *Sponsor* of the event whenever a booth of this "
+"category is booked."
 msgstr ""
 ":guilabel:`후원` 섹션에는 :guilabel:`후원사 만들기` 확인란을 선택할 수 있습니"
 "다. 확인란에 표시하면 이 카테고리에 있는 부스가 예약될 때마다 해당 사용자가 "
 "행사의 공식 *후원사* 로 생성됩니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:87
+#: ../../content/applications/marketing/events/event_booths.rst:85
 msgid ""
-"When the :guilabel:`Create Sponsor` checkbox is ticked, two additional "
-"fields appear beneath it: :guilabel:`Sponsor Level` and :guilabel:`Sponsor "
-"Type`."
+"Additionally, the :guilabel:`Sponsor Level` and :guilabel:`Sponsor Type` "
+"fields can be configured to specify the level/tier and the type of "
+"sponsorship. See the :doc:`event sponsors <event_sponsors>` documentation "
+"for more information about configuring sponsor levels and types."
 msgstr ""
 
-#: ../../content/applications/marketing/events/event_booths.rst:91
+#: ../../content/applications/marketing/events/event_booths.rst:89
 msgid ""
-":guilabel:`Sponsor Level` and :guilabel:`Sponsor Type` are purely to "
-"distinguish different distinctions of sponsors. For example, if a sponsor "
-"has been attached to a company for multiple years, they would be granted a "
-"higher level (e.g. *Gold* level), which provides them with immediate "
-"credability and status. Whereas, conversely, a relatively new sponsor would "
-"be granted a lower level (e.g. *Bronze* level), which coincides with its own "
-"credability and status."
+"Finally, in the :guilabel:`Description` tab, enter any information about the "
+"booth category (e.g., the square footage, any amenities, size of display "
+"screen, etc.)."
 msgstr ""
-":guilabel:`스폰서 레벨` 과 :guilabel:`스폰서 유형`은 순전히 다양하게 구분되"
-"는 스폰서를 분류하기 위한 것입니다. 예를 들어, 스폰서가 수년동안 회사에 소속"
-"되어 있는 경우 더 높은 레벨 (예: *골드* 레벨)이 부여되어 즉각적인 신뢰도과 지"
-"위를 부여받습니다. 반면에, 비교적 새로 유입된 스폰서의 경우에는 낮은 레벨 "
-"(예: *브론즈* 레벨)을 부여받으며, 이는 스폰서 자체의 신뢰도 및 지위와 수준이 "
-"같습니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:97
+#: ../../content/applications/marketing/events/event_booths.rst:93
+#, fuzzy
+#| msgid "Add booth to an event"
+msgid "Add booths to events"
+msgstr "행사에 부스 추가하기"
+
+#: ../../content/applications/marketing/events/event_booths.rst:95
 msgid ""
-"Select a desired level of sponsorship from the :guilabel:`Sponsor Level` "
-"drop-down field."
+"After configuring booth categories, booths can be created and added to "
+"specific events."
 msgstr ""
-"원하는 수준으로 스폰서 레벨을 :guilabel:`스폰서 레벨` 드롭다운 필드에서 선택"
-"합니다."
+
+#: ../../content/applications/marketing/events/event_booths.rst:98
+#, fuzzy
+#| msgid "Events dashboard"
+msgid "Booths dashboard"
+msgstr "행사 현황판"
 
 #: ../../content/applications/marketing/events/event_booths.rst:100
 msgid ""
-"To modify any existing :guilabel:`Sponsor Level`, select it from the drop-"
-"down field, then click the :icon:`fa-arrow-right` :guilabel:`(right arrow)` "
-"that appears at the end of the line. Doing so opens a separate page, wherein "
-"the :guilabel:`Sponsor Level` name and :guilabel:`Ribbon Style` can be "
-"changed, if necessary."
+"To create and add booths to a specific event, first navigate to its event "
+"form and click the :guilabel:`Booths` smart button at the top to access "
+"the :guilabel:`Booths` dashboard."
 msgstr ""
-"기존의 :guilabel:`후원사 레벨` 을 수정하려면 드롭다운 필드에서 항목을 선택한 "
-"다음 줄 끝에 나타나는 :icon:`fa-arrow-right` :guilabel:`(오른쪽 화살표)` 를 "
-"클릭합니다. 그러면 별도의 페이지가 열리며 필요한 경우 :guilabel:`후원사 레벨"
-"` 이름과 :guilabel:`리본 스타일` 을 변경할 수 있습니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:105
+#: ../../content/applications/marketing/events/event_booths.rst:103
+#, fuzzy
+#| msgid ""
+#| "The booths present in the :guilabel:`Available` stage are still available "
+#| "for people to purchase for the event. The booths present in "
+#| "the :guilabel:`Unavailable` stage have already been purchased, and are no "
+#| "longer available."
 msgid ""
-"Users can also create a new :guilabel:`Sponsor Level`, by typing in the name "
-"of the new level, and clicking :guilabel:`Create and edit...` from the "
-"resulting drop-down menu."
+"The dashboard is displayed in a Kanban view, by default, and grouped by two "
+"different: :guilabel:`Available` and :guilabel:`Unavailable`. The booths in "
+"the :guilabel:`Available` stage are still available for exhibitors to "
+"reserve. The booths in the :guilabel:`Unavailable` stage have already been "
+"reserved and are no longer available."
 msgstr ""
-"새 :guilabel:`스폰서 레벨` 을 만들 수도 있으며, 새로운 레벨에 이름을 입력하"
-"고 드롭다운 메뉴가 나타나면 :guilabel:`만들기 및 편집...` 을 클릭하면 됩니다."
+"부스가 :guilabel:`사용 가능` 단계에 있을 경우 행사용으로 계속 구매할 수 있습"
+"니다. :guilabel:`사용 불가` 단계에 있는 경우에는 이미 부스 대여가 되었으며 "
+"더 이상 구매할 수 없습니다."
 
 #: ../../content/applications/marketing/events/event_booths.rst:109
+#, fuzzy
+#| msgid ""
+#| "The :guilabel:`Booths` page of an event is also viewable in a :icon:`oi-"
+#| "view-list` :guilabel:`List` view, :icon:`fa-area-chart` :guilabel:`Graph` "
+#| "view, and :icon:`oi-view-pivot` :guilabel:`Pivot` view. All of which are "
+#| "accessible, via their icons, in the upper-right corner of "
+#| "the :guilabel:`Booths` page."
 msgid ""
-"Clicking :guilabel:`Create` from the resulting drop-down menu in this "
-"instance creates the sponsor level, but doesn't immediately prompt the user "
-"to further configure it, via a :guilabel:`Create Sponsor Level` pop-up "
-"window."
-msgstr ""
-"이 경우 드롭다운 메뉴가 나타나면 :guilabel:` 만들기` 를 클릭하면 스폰서 레벨"
-"이 생성되지만 추가 설정을 하라는 메시지가 즉각적으로 :guilabel:`스폰서 레벨 "
-"만들기` 팝업 창을 통해 표시되지는 않습니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:113
-msgid "Doing so reveals a :guilabel:`Create Sponsor Level` pop-up window."
-msgstr "그러면 :guilabel:`스폰서 레벨 만들기` 팝업창이 나타납니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:None
-msgid ""
-"The Create Sponsor Level pop-up window that appears in the Odoo Events "
-"application."
-msgstr ""
-"스폰서 레벨 생성 팝업 창이 Odoo 행사 애플리케이션에 나타나 있는 모습입니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:119
-msgid ""
-"From this pop-up window, confirm the newly-created :guilabel:`Sponsor "
-"Level`, and decide what kind of :guilabel:`Ribbon Style` should be applied, "
-"if any. The :guilabel:`Ribbon Style` options available in that drop-down "
-"field are: :guilabel:`No Ribbon`, :guilabel:`Gold`, :guilabel:`Silver`, "
-"and :guilabel:`Bronze`."
-msgstr ""
-"이 팝업 창에서 새로 생성한 :guilabel:`후원사 레벨` 을 확인한 후 적용"
-"할 :guilabel:`리본 스타일` 이 있는 경우 이를 적용합니다. 드롭다운 필드에서 선"
-"택할 수 있는 :guilabel:`리본 스타일` 에는 :guilabel:`리본 없음`, :guilabel:`"
-"골드`, :guilabel:`실버`, :guilabel:`브론즈` 가 있습니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:124
-msgid ""
-"If one is selected, that :guilabel:`Ribbon Style` appears with the sponsor's "
-"name on the event website."
-msgstr ""
-"리본 스타일을 선택하면, 해당 :guilabel:`리본 스타일` 이 행사 웹사이트에 스폰"
-"서 이름과 함께 표시됩니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:127
-msgid ""
-"On the booth category form, beneath those sections (:guilabel:`Booth "
-"Details` and :guilabel:`Sponsorship`), there is the :guilabel:`Description` "
-"tab. In this tab, proceed to enter any vital information related to the "
-"booth category that would be important for any potential booth-buyer to know "
-"about (e.g., the square footage, any amenities, size of display screen, "
-"etc.)."
-msgstr ""
-"부스 카테고리 양식에서 해당 섹션 (:guilabel:`부스 세부 정보` 및 :guilabel:`후"
-"원`) 아래에는 :guilabel:`설명` 탭이 있습니다. 이 탭에서 향후 부스를 대여할 경"
-"우 알아야 할 부스 카테고리와 관련된 중요 정보 (예: 면적, 편의시설, 디스플레"
-"이 화면 크기 등)를 입력합니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:133
-msgid "Add booth to an event"
-msgstr "행사에 부스 추가하기"
-
-#: ../../content/applications/marketing/events/event_booths.rst:135
-msgid ""
-"In order to add a booth to an event, navigate to an existing event form, "
-"via :menuselection:`Events app --> Events`, and select the desired event "
-"from the :guilabel:`Events` dashboard. Or, click :guilabel:`New` to open a "
-"blank event form."
-msgstr ""
-"행사에 부스를 추가하려면 :menuselection:`행사 앱 --> 행사` 에서 기존 행사 양"
-"식으로 이동한 후 :guilabel:`행사` 현황판에서 행사를 선택합니다. 또"
-"는 :guilabel:`새로 만들기` 를 클릭하여 새로운 행사 양식을 엽니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:139
-msgid ""
-"From the event form, to access the *Booths* for that specific event, click "
-"the :guilabel:`Booths` smart button at the top of the page."
-msgstr ""
-
-#: ../../content/applications/marketing/events/event_booths.rst:142
-msgid ""
-"The :guilabel:`Booths` page is displayed in a Kanban view, by default, with "
-"two different stages: :guilabel:`Available` and :guilabel:`Unavailable`."
-msgstr ""
-
-#: ../../content/applications/marketing/events/event_booths.rst:146
-msgid ""
-"The :guilabel:`Booths` page of an event is also viewable in a :icon:`oi-view-"
-"list` :guilabel:`List` view, :icon:`fa-area-chart` :guilabel:`Graph` view, "
-"and :icon:`oi-view-pivot` :guilabel:`Pivot` view. All of which are "
-"accessible, via their icons, in the upper-right corner of "
-"the :guilabel:`Booths` page."
+"The :guilabel:`Booths` dashboard is also viewable in a :icon:`oi-view-"
+"list` :guilabel:`(List)`, :icon:`fa-area-chart` :guilabel:`(Graph)`, "
+"or :icon:`oi-view-pivot` :guilabel:`(Pivot)` views for users to track "
+"insights about booths for a particular event."
 msgstr ""
 "행사에 대한 :guilabel:`부스` 페이지는 :icon:`oi-view-list` :guilabel:`목록` "
 "보기, :icon:`fa-area-chart` :guilabel:`그래프` 보기, :icon:`oi-view-"
 "pivot` :guilabel:`피벗` 보기에서도 볼 수 있습니다. 모두 :guilabel:`부스` 페이"
 "지에서 오른쪽 상단에 있는 아이콘을 통해 액세스할 수 있습니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:151
+#: ../../content/applications/marketing/events/event_booths.rst:113
 msgid ""
-"The booths present in the :guilabel:`Available` stage are still available "
-"for people to purchase for the event. The booths present in "
-"the :guilabel:`Unavailable` stage have already been purchased, and are no "
-"longer available."
+"In addition to the default :guilabel:`Available` and :guilabel:`Unavailable` "
+"filters, the **Booths** dashboard can be grouped by the following:"
 msgstr ""
-"부스가 :guilabel:`사용 가능` 단계에 있을 경우 행사용으로 계속 구매할 수 있습"
-"니다. :guilabel:`사용 불가` 단계에 있는 경우에는 이미 부스 대여가 되었으며 "
-"더 이상 구매할 수 없습니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:155
+#: ../../content/applications/marketing/events/event_booths.rst:116
 msgid ""
-"To modify any existing booth, simply click the desired booth from "
-"the :guilabel:`Booths` page, and proceed to make any necessary changes from "
-"the booth form. Or, create a new one, by clicking the :guilabel:`New` button "
-"in the upper-left corner to reveal a blank booth form."
+":guilabel:`Status`: Group by the availability of the booths. This is the "
+"default grouping option."
 msgstr ""
-"기존 부스를 수정하려면 :guilabel:`부스` 페이지에서 부스를 클릭한 후 부스 양식"
-"에서 필요한 변경 사항대로 진행하면 됩니다. 또는 왼쪽 상단에 있는 :guilabel:`"
-"새로 만들기` 버튼을 클릭하면 빈 부스 양식을이 표시되어 양식을 새로 만들 수 있"
-"습니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:160
-msgid "Booth form"
-msgstr "부스 양식"
+#: ../../content/applications/marketing/events/event_booths.rst:117
+#, fuzzy
+#| msgid ":guilabel:`Name`: the name of the booth category."
+msgid ":guilabel:`Renter`: Group by the individual renters of the booths."
+msgstr ":guilabel:`이름`: 부스 카테고리의 제목입니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:162
+#: ../../content/applications/marketing/events/event_booths.rst:118
+#, fuzzy
+#| msgid ":guilabel:`Name`: the name of the booth category."
 msgid ""
-"The booth form in Odoo *Events* lets users customize and configure event "
-"booths in a number of different ways."
+":guilabel:`Booth Category`: Group by the booth categories of the booths."
+msgstr ":guilabel:`이름`: 부스 카테고리의 제목입니다."
+
+#: ../../content/applications/marketing/events/event_booths.rst:119
+msgid ":guilabel:`Is Paid`: Group by booths that have been paid and reserved."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:120
+#, fuzzy
+#| msgid ":guilabel:`Event Type`: Group data based on the type of event."
+msgid ":guilabel:`Event`: Group by the associated event of the booths."
+msgstr ":guilabel:`행사 유형`: 행사 유형에 따라 그룹 데이터를 표시합니다."
+
+#: ../../content/applications/marketing/events/event_booths.rst:122
+#, fuzzy
+#| msgid ""
+#| "View :doc:`../../essentials/search` for more information about making "
+#| "custom groups and filters."
+msgid ""
+"See the :doc:`reporting <../../essentials/reporting>` documentation for more "
+"information about views and how to apply filters and grouping options."
+msgstr ""
+"사용자 지정 그룹 및 필터 만들기에 대한 자세한 내용은 :doc:`../../essentials/"
+"search` 를 참조하세요."
+
+#: ../../content/applications/marketing/events/event_booths.rst:127
+#, fuzzy
+#| msgid "Create event track"
+msgid "Create an event booth"
+msgstr "행사 트랙 만들기"
+
+#: ../../content/applications/marketing/events/event_booths.rst:129
+msgid ""
+"To create a new booth, click :guilabel:`New` in either the Kanban or List "
+"view. This opens an event booth form for the user to configure a new booth."
 msgstr ""
 
 #: ../../content/applications/marketing/events/event_booths.rst:None
 msgid "Typical booth form in the Odoo Events application."
 msgstr "Odoo 행사 애플리케이션의 일반적인 부스 양식입니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:169
+#: ../../content/applications/marketing/events/event_booths.rst:135
 msgid ""
 "Start by typing in a :guilabel:`Name` for the booth. This is a **required** "
 "field."
@@ -5575,123 +5538,158 @@ msgstr ""
 "부스의 :guilabel:`이름` 을 입력하는 것부터 시작합니다. 이 필드는 **필수** 항"
 "목입니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:171
+#: ../../content/applications/marketing/events/event_booths.rst:137
+#, fuzzy
+#| msgid ""
+#| "Then, apply a :guilabel:`Booth Category` to the booth. This is a "
+#| "**required** field."
 msgid ""
-"Then, apply a :guilabel:`Booth Category` to the booth. This is a "
-"**required** field."
+"Then, apply (or :ref:`create <events/booth-categories/create>`) "
+"a :guilabel:`Booth Category`. This is a **required** field."
 msgstr ""
 "그런 다음 부스에 :guilabel:`부스 카테고리` 를 적용합니다. **필수** 필드입니"
 "다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:174
+#: ../../content/applications/marketing/events/event_booths.rst:140
 msgid ""
-"A new :guilabel:`Booth Category` can be created from this field, by typing "
-"in the name of the new category, and clicking :guilabel:`Create and edit...` "
-"from the resulting drop-down menu. Doing so reveals a :guilabel:`Create "
-"Booth Category` pop-up window, with all the standard fields found on a "
-"common booth category form."
-msgstr ""
-"이 항목에서 새 :guilabel:`부스 카테고리` 를 생성할 수 있습니다. 새 카테고리"
-"의 이름을 입력하여 드롭다운 메뉴가 나타나면 :guilabel:`만들기 및 편집...` 을 "
-"클릭합니다. 그러면 :guilabel:`부스 카테고리 만들기` 팝업 창이 나타나고, 여기"
-"에서 일반적인 부스 카테고리 양식에서 사용하는 표준 항목을 모두 확인할 수 있습"
-"니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:179
-msgid ""
-"Simply clicking :guilabel:`Create` from the resulting drop-down menu creates "
-"the category, but does not reveal the :guilabel:`Create Booth Category` pop-"
-"up window. The category would have to be modified later, via the *Booth "
-"Categories* page (:menuselection:`Events app --> Configuration --> Booth "
-"Categories`)."
-msgstr ""
-"여기에서 나타나는 드롭다운 메뉴에서 :guilabel:`만들기` 를 클릭하면 카테고리"
-"가 생성되지만 :guilabel:`부스 카테고리 만들기` 팝업 창은 표시되지 않습니다. "
-"이 카테고리는 나중에 *부스 카테고리* 페이지 (:menuselection:`행사 앱 --> 환"
-"경 설정 --> 부스 카테고리`)에서 수정해야 합니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:184
-msgid ""
-"Upon selecting a pre-existing :guilabel:`Booth Category`, two additional, "
-"non-modifiable fields appear: :guilabel:`Product` and :guilabel:`Price`. "
-"Both fields represent their respective selections for that specific booth "
-"category."
+"After selecting an existing :guilabel:`Booth Category`, the corresponding "
+"product and price of the selected booth category appear in the non-"
+"modifiable :guilabel:`Product` and :guilabel:`Price` fields."
 msgstr ""
 
-#: ../../content/applications/marketing/events/event_booths.rst:188
+#: ../../content/applications/marketing/events/event_booths.rst:144
+#, fuzzy
+#| msgid ""
+#| "However, if the rental of a booth is conducted in any other way (e.g., in "
+#| "person, via sales order, etc.), the :guilabel:`Renter`, :guilabel:`Renter "
+#| "Name`, :guilabel:`Renter Email`, and :guilabel:`Renter Phone` fields can "
+#| "be entered in manually."
 msgid ""
-"When a person purchases a booth rental through the event website, the "
-"subsequent renter-related fields on the form auto-populate, based on the "
-"information provided by the purchaser during the online transaction. The "
-"booth also automatically changes its status from *Available* to "
+"Continue by selecting a renter's contact in the :guilabel:`Renter` drop-down "
+"to automatically populate the :guilabel:`Renter Name`, :guilabel:`Renter "
+"Email`, and :guilabel:`Renter Phone` fields. Alternatively, these fields can "
+"also be entered manually."
+msgstr ""
+"그러나 다른 방식으로 부스를 대여하는 경우 (예: 직접 방문, 판매 주문 "
+"등) :guilabel:`신청자`, :guilabel:`신청자명`, :guilabel:`신청자 이메일"
+"`, :guilabel:`신청자 전화번호` 를 직접 입력할 수 있습니다."
+
+#: ../../content/applications/marketing/events/event_booths.rst:149
+#, fuzzy
+#| msgid ""
+#| "When a person purchases a booth rental through the event website, the "
+#| "subsequent renter-related fields on the form auto-populate, based on the "
+#| "information provided by the purchaser during the online transaction. The "
+#| "booth also automatically changes its status from *Available* to "
+#| "*Unavailable*."
+msgid ""
+"When a renter :ref:`reserves a booth <events/booth-reservation/reserving>` "
+"through the event website, the renter-related fields on the form "
+"automatically populate based on the information provided during the online "
+"transaction. The booth then automatically changes status from *Available* to "
 "*Unavailable*."
 msgstr ""
 "행사 웹사이트를 통해 부스 대여를 하게 되면 온라인 거래 중에 구매자가 제공한 "
 "정보를 기반으로, 양식에 이후에 대여할 사람과 관련된 항목이 자동으로 입력됩니"
 "다. 또한 부스는 자동으로 *사용 가능*에서 *사용 불가* 로 상태가 변경됩니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:193
-msgid ""
-"However, if the rental of a booth is conducted in any other way (e.g., in "
-"person, via sales order, etc.), the :guilabel:`Renter`, :guilabel:`Renter "
-"Name`, :guilabel:`Renter Email`, and :guilabel:`Renter Phone` fields can be "
-"entered in manually."
-msgstr ""
-"그러나 다른 방식으로 부스를 대여하는 경우 (예: 직접 방문, 판매 주문 "
-"등) :guilabel:`신청자`, :guilabel:`신청자명`, :guilabel:`신청자 이메일"
-"`, :guilabel:`신청자 전화번호` 를 직접 입력할 수 있습니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:197
+#: ../../content/applications/marketing/events/event_booths.rst:154
+#, fuzzy
+#| msgid ""
+#| "The status of the booth (:guilabel:`Available` "
+#| "or :guilabel:`Unavailable`) can also be changed manually, either by "
+#| "clicking the appropriate status from the status bar present on the booth "
+#| "form, or by dragging-and-dropping the desired booth into the appropriate "
+#| "stage, via the *Booths* page Kanban view."
 msgid ""
 "The status of the booth (:guilabel:`Available` or :guilabel:`Unavailable`) "
 "can also be changed manually, either by clicking the appropriate status from "
-"the status bar present on the booth form, or by dragging-and-dropping the "
-"desired booth into the appropriate stage, via the *Booths* page Kanban view."
+"the status bar in the upper-right of the booth form or by dragging-and-"
+"dropping the desired booth into the appropriate stage via the *Booths* "
+"dashboard Kanban view."
 msgstr ""
 "부스 상태 (:guilabel:`사용 가능` 또는 :guilabel:`사용 불가`)도 수동으로 변경"
 "할 수 있습니다. 부스 양식에 있는 상태 표시줄에서 해당하는 상태를 클릭하거나 "
 "부스를 알맞은 단계로 끌어다 놓으면 되며, *부스* 페이지 칸반 보기에서 진행합니"
 "다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:203
-msgid "Sell event booths"
-msgstr "행사 부스 판매"
+#: ../../content/applications/marketing/events/event_booths.rst:160
+#, fuzzy
+#| msgid "Event booths"
+msgid "Event booth reservation"
+msgstr "행사 부스"
 
-#: ../../content/applications/marketing/events/event_booths.rst:205
+#: ../../content/applications/marketing/events/event_booths.rst:162
+#, fuzzy
+#| msgid ""
+#| "With event booths configured on the event form, via the event-specific "
+#| "*Booths* pages, Odoo presents them on the event website, via the *Get A "
+#| "Booth* event subheader link."
 msgid ""
-"With event booths configured on the event form, via the event-specific "
-"*Booths* pages, Odoo presents them on the event website, via the *Get A "
-"Booth* event subheader link."
+"With event booths configured, renters can view and reserve them on the event "
+"webpage via the *Get A Booth* event sub-menu link."
 msgstr ""
 "행사 부스를 행사 양식에서 환경설정할 때 행사별 *부스* 페이지를 통해 진행할 경"
 "우, Odoo 행사 웹사이트에 부스가 표시되며 *부스 신청하기* 행사 하위 헤더 링크"
 "를 통해 나타납니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:208
+#: ../../content/applications/marketing/events/event_booths.rst:165
 msgid ""
-"To access the *Get A Booth* page on the event website, open "
-"the :menuselection:`Events app`, and select the desired event from "
-"the :guilabel:`Events` dashboard. From the event form, click "
-"the :guilabel:`Go to Website` smart button to be taken to the Odoo-built "
-"event website."
+"This section outlines how to configure the event website to allow renters to "
+"reserve booths. It then provides a view of how renters can reserve the "
+"booths through the website."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:169
+msgid "Enable booth reservations"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:171
+#, fuzzy
+#| msgid ""
+#| "To access the *Get A Booth* page on the event website, open "
+#| "the :menuselection:`Events app`, and select the desired event from "
+#| "the :guilabel:`Events` dashboard. From the event form, click "
+#| "the :guilabel:`Go to Website` smart button to be taken to the Odoo-built "
+#| "event website."
+msgid ""
+"To access the event booths page for a specific event, navigate to the event "
+"form in the **Events** app and click the :guilabel:`Go to Website` smart "
+"button to open the event page."
 msgstr ""
 "행사 웹사이트에서 *부스 신청하기* 페이지에 액세스하려면 :menuselection:`행사 "
 "앱` 에 있는 :guilabel:`행사` 현황판에서 행사를 선택합니다. 행사 양식에"
 "서 :guilabel:`웹사이트로 이동` 스마트 버튼을 클릭하면 Odoo를 통해 제작한 행"
 "사 웹사이트로 이동합니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:212
+#: ../../content/applications/marketing/events/event_booths.rst:174
+#, fuzzy
+#| msgid ""
+#| "If the event subheader menu (with the :guilabel:`Get A Booth` option) is "
+#| "*not* showing up on the event website, there are two ways to make it "
+#| "appear."
 msgid ""
-"If the event subheader menu (with the :guilabel:`Get A Booth` option) is "
-"*not* showing up on the event website, there are two ways to make it appear."
+"If the event sub-menu (with the :guilabel:`Get A Booth` option) is *not* "
+"showing up, there are two ways to make it appear: via the website edit mode "
+"or through the developer mode."
 msgstr ""
 "행사 하위 헤더 메뉴(:guilabel:`부스 신청` 항목 포함)가 행사 웹사이트에 *표시"
 "되지 않는 경우에는* , 다음과 같은 두 가지 방법을 이용하여 표시되게 할 수 있습"
 "니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:215
+#: ../../content/applications/marketing/events/event_booths.rst:178
+msgid "Website edit mode"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:180
+#, fuzzy
+#| msgid ""
+#| "While on the event website, enter the edit mode by clicking "
+#| "the :guilabel:`Edit` button in the upper-right corner. Then, click into "
+#| "the :guilabel:`Customize` tab of the resulting sidebar of web design "
+#| "tools."
 msgid ""
-"While on the event website, enter the edit mode by clicking "
+"While on the event page, enter the edit mode by clicking "
 "the :guilabel:`Edit` button in the upper-right corner. Then, click into "
 "the :guilabel:`Customize` tab of the resulting sidebar of web design tools."
 msgstr ""
@@ -5699,139 +5697,1194 @@ msgstr ""
 "드로 들어갑니다. 그런 다음 웹 디자인 도구의 사이드바가 나타나면 :guilabel:`사"
 "용자 지정` 탭을 클릭합니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:219
+#: ../../content/applications/marketing/events/event_booths.rst:184
 msgid ""
 "In the :guilabel:`Customize` tab, click the toggle switch for :guilabel:`Sub-"
-"Menu (Specific)`, and click :guilabel:`Save`. Doing so reveals the event "
-"subheader menu with various options."
+"menu (Specific)`, then click :guilabel:`Save`. Doing so reveals the event "
+"sub-menu with various options (e.g., Talks, Agenda, Info, etc.)."
 msgstr ""
 
-#: ../../content/applications/marketing/events/event_booths.rst:222
+#: ../../content/applications/marketing/events/event_booths.rst:189
+msgid "Developer mode"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:191
+#, fuzzy
+#| msgid ""
+#| "Alternatively, enter :doc:`Debug mode <../../general/developer_mode>`, "
+#| "and open the specific event form in the the *Events* application."
 msgid ""
-"Alternatively, enter :doc:`Debug mode <../../general/developer_mode>`, and "
-"open the specific event form in the the *Events* application."
+"Alternatively, enter :doc:`Debug mode <../../general/developer_mode>` and "
+"open the specific event form in the **Events** application."
 msgstr ""
 "또는 :doc:`디버그 모드 <../../general/developer_mode>` 를 입력한 후 *행사* 애"
 "플리케이션에서 선택하려는 행사 양식을 엽니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:225
+#: ../../content/applications/marketing/events/event_booths.rst:194
+#, fuzzy
+#| msgid ""
+#| "On the event form, with *Debug mode* on, an array of subheader menu "
+#| "options appears. Tick the checkbox for :guilabel:`Website Submenu`, in "
+#| "order for the submenu to appear on the event website. Doing so also ticks "
+#| "every other submenu-related checkbox automatically."
 msgid ""
-"On the event form, with *Debug mode* on, an array of subheader menu options "
-"appears. Tick the checkbox for :guilabel:`Website Submenu`, in order for the "
-"submenu to appear on the event website. Doing so also ticks every other "
-"submenu-related checkbox automatically."
+"With *Debug mode* on, an array of sub-menu options appears at the top of the "
+"event form. Click the checkbox for :guilabel:`Website Submenu` to display "
+"the event sub-menu on the event page."
 msgstr ""
 "행사 양식에서 *디버그 모드* 가 켜져 있으면 하위 헤더 메뉴가 배열로 표시됩니"
 "다. 행사 웹사이트에 하위 메뉴가 나타나게 하려면 :guilabel:`웹사이트 하위 메뉴"
 "` 확인란에 표시합니다. 이렇게 하면 다른 모든 하위 메뉴 관련 확인란도 자동으"
 "로 선택됩니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:229
+#: ../../content/applications/marketing/events/event_booths.rst:197
+#, fuzzy
+#| msgid ""
+#| "At this point, proceed to choose which options to keep on the event "
+#| "subheader menu. In this case, make sure the :guilabel:`Booth Register` "
+#| "checkbox is ticked."
 msgid ""
-"At this point, proceed to choose which options to keep on the event "
-"subheader menu. In this case, make sure the :guilabel:`Booth Register` "
-"checkbox is ticked."
+"Next, choose which sub-menu options to include on the event page. In this "
+"case, make sure the :guilabel:`Booth Register` checkbox is selected."
 msgstr ""
 "여기에서 행사 하위 헤더에 위치할 메뉴를 선택합니다. 이 경우 :guilabel:`부스 "
 "등록` 확인란이 선택되어 있는지 확인하세요."
 
-#: ../../content/applications/marketing/events/event_booths.rst:232
+#: ../../content/applications/marketing/events/event_booths.rst:203
+#, fuzzy
+#| msgid "Sell event booths"
+msgid "Reserve a booth"
+msgstr "행사 부스 판매"
+
+#: ../../content/applications/marketing/events/event_booths.rst:205
 msgid ""
-"From there, click the :guilabel:`Get A Booth` event subheader menu option. "
-"Doing so reveals the :guilabel:`Get A Booth` page, showcasing all the "
-"configured event booths that were created on the event form."
+"Once the sub-menu is enabled on the event page either through the website "
+"editor or through the debug mode, renters can then view and reserve "
+"available booths."
 msgstr ""
-"거기에서 행사의 하위 헤더 메뉴인 :guilabel:`부스 신청하기` 를 클릭합니다. 클"
-"릭하면 :guilabel:`부스 신청하기` 페이지가 표시되어, 행사 양식에서 생성한 모"
-"든 행사 부스를 설정 완료된 상태로 보여줍니다."
+
+#: ../../content/applications/marketing/events/event_booths.rst:208
+#, fuzzy
+#| msgid ""
+#| "To access the *Get A Booth* page on the event website, open "
+#| "the :menuselection:`Events app`, and select the desired event from "
+#| "the :guilabel:`Events` dashboard. From the event form, click "
+#| "the :guilabel:`Go to Website` smart button to be taken to the Odoo-built "
+#| "event website."
+msgid ""
+"Renters can access the *Get A Booth* page on the event website by selecting "
+"the desired event from the :guilabel:`Events` homepage then clicking "
+"the :guilabel:`Get A Booth` sub-menu option."
+msgstr ""
+"행사 웹사이트에서 *부스 신청하기* 페이지에 액세스하려면 :menuselection:`행사 "
+"앱` 에 있는 :guilabel:`행사` 현황판에서 행사를 선택합니다. 행사 양식에"
+"서 :guilabel:`웹사이트로 이동` 스마트 버튼을 클릭하면 Odoo를 통해 제작한 행"
+"사 웹사이트로 이동합니다."
 
 #: ../../content/applications/marketing/events/event_booths.rst:None
-msgid "Typical Get A Booth page on the event website via the Odoo Events app."
+#, fuzzy
+#| msgid ""
+#| "Typical Get A Booth page on the event website via the Odoo Events app."
+msgid "Get A Booth page on the website in Odoo Events."
 msgstr "Odoo 행사 앱을 통한 행사 웹사이트의 일반적인 부스 예약 페이지입니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:240
+#: ../../content/applications/marketing/events/event_booths.rst:214
+#, fuzzy
+#| msgid ""
+#| "From here, the visitor can select their desired booth option, "
+#| "then :guilabel:`Location`. Next, they would click the :guilabel:`Book my "
+#| "Booth(s)` button, located at the bottom of the :guilabel:`Get A Booth` "
+#| "page."
 msgid ""
-"From here, the visitor can select their desired booth option, "
-"then :guilabel:`Location`. Next, they would click the :guilabel:`Book my "
-"Booth(s)` button, located at the bottom of the :guilabel:`Get A Booth` page."
+"From the :guilabel:`Get A Booth` page, the renter can select their desired "
+"booth option, then :guilabel:`Location`. Next, they click "
+"the :guilabel:`Book my Booth(s)` button located at the bottom-right of the "
+"page."
 msgstr ""
 "여기에서 방문자가 원하는 부스를 선택한 다음 :guilabel:`위치` 를 선택할 수 있"
 "습니다. 그런 다음 :guilabel:`부스 예약하기` 페이지 하단에 있는 :guilabel:`부"
 "스 예약` 버튼을 클릭합니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:244
+#: ../../content/applications/marketing/events/event_booths.rst:218
+#, fuzzy
+#| msgid ""
+#| "Doing so reveals a :guilabel:`Contact Details` page, wherein they fill "
+#| "out either *Contact Details* or *Sponsor Details*, depending on how the "
+#| "booth was configured on the event form. The fields present on this form "
+#| "vary, depending on whether its meant for a basic contact or an event "
+#| "sponsor."
 msgid ""
-"Doing so reveals a :guilabel:`Contact Details` page, wherein they fill out "
-"either *Contact Details* or *Sponsor Details*, depending on how the booth "
-"was configured on the event form. The fields present on this form vary, "
-"depending on whether its meant for a basic contact or an event sponsor."
+"Doing so reveals a :guilabel:`Contact Details` page where they fill out "
+"either *Contact Details* or *Sponsor Details* depending on how the booth was "
+"configured."
 msgstr ""
 "그러면 행사 양식에서 부스를 설정한 방식에 따라 :guilabel:`연락처 정보` 페이지"
 "가 표시되고, *연락처 정보* 또는 *후원사 정보* 를 입력할 수 있습니다. 이 양식"
 "에 있는 항목은 기본 연락처 혹은 행사 스폰서인지 여부에 따라 달라집니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:249
+#: ../../content/applications/marketing/events/event_booths.rst:221
+#, fuzzy
+#| msgid ""
+#| "Once the necessary information has been entered, the visitor then clicks "
+#| "the :guilabel:`Go to Payment` at the bottom of the page, and proceeds to "
+#| "complete the typical checkout process."
 msgid ""
-"If the selected booth has the *Create Sponsor* checkbox ticked, this page "
-"reads as *Sponsor Details*."
-msgstr ""
-"선택한 부스의 *스폰서 만들기* 확인란에 표시가 되어 있으면 이 페이지는 *스폰"
-"서 세부 정보* 로 표시됩니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:252
-msgid ""
-"The information provided on this details page is used to auto-populate the "
-"renter-related information on the booth form on the event form in the "
-"*Events* application."
-msgstr ""
-
-#: ../../content/applications/marketing/events/event_booths.rst:255
-msgid ""
-"Once the necessary information has been entered, the visitor then clicks "
-"the :guilabel:`Go to Payment` at the bottom of the page, and proceeds to "
-"complete the typical checkout process."
+"Once the necessary information has been entered, the renter then clicks "
+"the :guilabel:`Go to Payment` at the bottom of the page and proceeds to "
+"complete the typical :doc:`checkout process <../../websites/ecommerce/"
+"checkout>`."
 msgstr ""
 "필요한 정보를 입력한 후 방문자는 페이지 하단의 :guilabel:`결제로 이동` 을 클"
 "릭하여 통상적인 결제 프로세스를 완료합니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:258
+#: ../../content/applications/marketing/events/event_booths.rst:225
 msgid ""
-"Upon a successful payment confirmation, that selected booth automatically "
-"moves to the *Unavailable* stage on the event-specific *Booths* page in the "
-"*Events* application (accessible via the *Booths* smart button on the event "
-"form)."
+"Upon a successful payment confirmation, the renter has successfully reserved "
+"a booth."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_booths.rst:227
+#, fuzzy
+#| msgid ""
+#| "Upon a successful payment confirmation, that selected booth automatically "
+#| "moves to the *Unavailable* stage on the event-specific *Booths* page in "
+#| "the *Events* application (accessible via the *Booths* smart button on the "
+#| "event form)."
+msgid ""
+"In the database, that selected booth automatically moves to the "
+"*Unavailable* stage on the event-specific *Booths* page in the **Events** "
+"app."
 msgstr ""
 "결제 확인이 완료되면 선택한 부스가 자동으로 *행사* 애플리케이션의 행사별 *부"
 "스* 페이지에서 *사용 불가* 단계로 이동합니다 (행사 양식의 *부스* 스마트 버튼"
 "을 통해 액세스 가능)."
 
-#: ../../content/applications/marketing/events/event_booths.rst:262
+#: ../../content/applications/marketing/events/event_booths.rst:230
+#, fuzzy
+#| msgid ""
+#| "Also, the provided *Sponsor* information (if applicable) and *Sales "
+#| "Order* information are accessible from the specific event form, via their "
+#| "respective smart buttons that appear at the top of the form."
 msgid ""
-"Also, the provided *Sponsor* information (if applicable) and *Sales Order* "
-"information are accessible from the specific event form, via their "
+"The provided *Sponsor* information (if applicable) and *Sales Order* "
+"information are also accessible from the specific event form via their "
 "respective smart buttons that appear at the top of the form."
 msgstr ""
 "또한 입력한 *후원사* 정보 (해당되는 경우) 및 *판매주문서* 정보는 행사 양식 상"
 "단에 있는 각각의 스마트 버튼을 통해 액세스할 수 있습니다."
 
-#: ../../content/applications/marketing/events/event_booths.rst:267
-msgid ""
-"Click the *Sponsors* smart button to modify any information about the "
-"sponsor, if necessary."
-msgstr ""
-"필요한 경우 *스폰서* 스마트 버튼을 클릭하면 스폰서에 대한 정보를 수정할 수 있"
-"습니다."
-
-#: ../../content/applications/marketing/events/event_booths.rst:270
+#: ../../content/applications/marketing/events/event_booths.rst:234
 #: ../../content/applications/marketing/events/event_templates.rst:217
 #: ../../content/applications/marketing/events/event_tracks.rst:309
 #: ../../content/applications/marketing/events/sell_tickets.rst:144
 msgid ":doc:`create_events`"
 msgstr ":doc:`create_events`"
 
-#: ../../content/applications/marketing/events/event_booths.rst:271
+#: ../../content/applications/marketing/events/event_booths.rst:235
 msgid ":doc:`sell_tickets`"
 msgstr ":doc:`sell_tickets`"
+
+#: ../../content/applications/marketing/events/event_reporting.rst:6
+#: ../../content/applications/marketing/marketing_automation.rst:188
+msgid "Reporting"
+msgstr "보고"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:3
+#, fuzzy
+#| msgid "Revenues report"
+msgid "Attendees report"
+msgstr "수익 보고서"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:5
+#, fuzzy
+#| msgid ""
+#| "In the Odoo *Events* application, event templates can quickly be created "
+#| "and modified."
+msgid ""
+"The Odoo **Events** application creates custom reports based on event-"
+"related data and analytics."
+msgstr ""
+"Odoo *행사* 애플리케이션에서 행사 템플릿을 빠르게 생성하고 수정할 수 있습니"
+"다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:7
+#, fuzzy
+#| msgid ""
+#| "The following documentation focuses on the reporting options related to "
+#| "event *Revenues*."
+msgid ""
+"The following documentation focuses on reporting options related to event "
+"*Attendees*."
+msgstr ""
+"다음 문서에서는 행사 *수익* 과 관련된 보고 기능 항목을 중심으로 설명합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:12
+#, fuzzy
+#| msgid "Revenues reporting page"
+msgid "Attendees reporting page"
+msgstr "수익 보고 페이지"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:14
+#, fuzzy
+#| msgid ""
+#| "To access the *Attendees* reporting page, navigate "
+#| "to :menuselection:`Events app --> Reporting --> Revenues`."
+msgid ""
+"To access the *Attendees* reporting page, navigate to :menuselection:`Events "
+"app --> Reporting --> Attendees`."
+msgstr ""
+"*참석자* 보고 페이지에 액세스하려면 :menuselection:`행사 앱 --> 보고 --> 수익"
+"` 으로 이동합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:18
+#, fuzzy
+#| msgid "Reporting"
+msgid "Reporting views"
+msgstr "보고"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:20
+msgid ""
+"Once opened, the :guilabel:`Attendees` page offers five different view "
+"options."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:24
+#, fuzzy
+#| msgid "Graph view"
+msgid "Graph"
+msgstr "그래프 보기"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:26
+msgid ""
+"By default, the :guilabel:`Attendees` page opens in the :icon:`fa-area-"
+"chart` :guilabel:`(Graph)` view, allowing users to visually compare "
+"attendance data across events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:29
+msgid ""
+"The graph view provides three available charts to display different insights "
+"about event attendance:"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:32
+msgid ""
+":icon:`fa-bar-chart` :guilabel:`(Bar)`/:icon:`fa-line-"
+"chart` :guilabel:`(Line)`: Compare attendance trends across events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:34
+msgid ""
+":icon:`fa-pie-chart` :guilabel:`(Pie)`: View attendance distribution across "
+"events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid "Overview of events setting with the kanban view in Odoo Events."
+msgid "Graph view in the Attendees reporting graph view in Odoo Events."
+msgstr "Odoo 행사의 칸반 화면을 사용한 행사 설정에 대한 미리보기입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:39
+msgid ""
+"For more information about customizing the graph view, see "
+"the :doc:`Reporting <../../../essentials/reporting>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:42
+#, fuzzy
+#| msgid "Pivot view"
+msgid "Pivot"
+msgstr "피벗 보기"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:44
+msgid ""
+"The :icon:`oi-view-pivot` :guilabel:`(pivot)` view displays a pivot table, "
+"allowing users to break down subsets of attendee-related data into specific "
+"categories or groups for more precise analysis."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:48
+msgid ""
+"For example, using the :ref:`Group By <events/attendees_report/groups>` "
+"options, users can organize an event's total registration count (subset) by "
+"its count for each ticket type (group) to draw more granular insights about "
+"each ticket type's popularity across events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid "Overview of events setting with the kanban view in Odoo Events."
+msgid "Pivot view in the Attendees reporting graph view in Odoo Events."
+msgstr "Odoo 행사의 칸반 화면을 사용한 행사 설정에 대한 미리보기입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:55
+msgid ""
+"For more information about using the pivot view, see the :doc:`Reporting "
+"<../../../essentials/reporting>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:58
+#, fuzzy
+#| msgid "Kanban view"
+msgid "Kanban"
+msgstr "칸반 보기"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:60
+msgid ""
+"The :icon:`oi-view-kanban` :guilabel:`(Kanban)` view displays a Kanban, "
+"providing users with an at-a-glance overview of all registered attendees "
+"across events along with their ticket type and registration status."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:64
+msgid ""
+"By applying specific :ref:`Group By <events/attendees_report/groups>` "
+"options, users can group all attendees by specific criteria (e.g., "
+"registration status or ticket type) into separate, vertical stages to get a "
+"quick overview of their attendees' records."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:69
+msgid ""
+"In *Attendees reporting*, only attendees **without** a specified ticket type "
+"can be dragged between stages."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid ""
+#| "The default view of the Revenues reporting page in the Odoo Events "
+#| "application."
+msgid "Kanban view in the Attendees reporting graph view in Odoo Events."
+msgstr "Odoo 행사 애플리케이션의 수익 보고 페이지의 기본 보기입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:75
+msgid ""
+"For more information about using the Kanban view, see the :ref:`Kanban "
+"<studio/views/multiple-records/kanban>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:78
+#, fuzzy
+#| msgid "List view"
+msgid "List"
+msgstr "목록 보기"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:80
+msgid ""
+"The :icon:`oi-view-list` :guilabel:`(list)` view displays a list of all "
+"registered attendees along with additional information such as contact "
+"information and registration status."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:83
+msgid ""
+"The list view provides users the option to view detailed records of their "
+"attendees in a centralized view. By applying the :ref:`Group By <events/"
+"attendees_report/groups>` options, users can then collapse long lists of "
+"records into smaller groups by specific criteria such as event or ticket "
+"type."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid ""
+#| "The default view of the Revenues reporting page in the Odoo Events "
+#| "application."
+msgid "List view in the Attendees reporting graph view in Odoo Events."
+msgstr "Odoo 행사 애플리케이션의 수익 보고 페이지의 기본 보기입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:91
+msgid ""
+"For more information about using the List view, see the :ref:`List <studio/"
+"views/multiple-records/list>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:94
+msgid "Cohort"
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:96
+msgid ""
+"The :icon:`oi-view-cohort` :guilabel:`(cohort)` view displays the percentage "
+"of event registrations per time interval over a certain time period."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:99
+msgid ""
+"The cohort view allows users to view broader registration patterns over a "
+"customizable time frame. For example, users can track the change in "
+"percentage of registrations over days, weeks, months, or years to identify "
+"trends at specific moments in time."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+#, fuzzy
+#| msgid ""
+#| "The default view of the Revenues reporting page in the Odoo Events "
+#| "application."
+msgid "Cohort view in the Attendees reporting graph view in Odoo Events."
+msgstr "Odoo 행사 애플리케이션의 수익 보고 페이지의 기본 보기입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:106
+msgid ""
+"For more information about using the Cohort view, see the :ref:`Cohort "
+"<studio/views/timeline/cohort>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:109
+msgid ""
+"The option to select a :ref:`measure <reporting/choosing-measures>` from "
+"the :guilabel:`Measures` drop-down menu is available only on the Kanban, "
+"pivot, and cohort views. Additionally, only the :guilabel:`Count` option is "
+"available as a measure for the :guilabel:`Attendees` reporting page."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:116
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:75
+msgid "Filter options"
+msgstr "필터 옵션"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:118
+msgid ""
+"The :guilabel:`Filters` column in the search bar's drop-down menu sorts "
+"attendee data by specific criteria in any given view. Multiple filters can "
+"be selected at once."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:121
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:82
+msgid "The :guilabel:`Filters` column has the following options:"
+msgstr ":guilabel:`필터` 열에는 다음과 같은 옵션이 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:123
+msgid ":guilabel:`Ongoing Events`: Filter by ongoing events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:124
+msgid ":guilabel:`Taken`: Filter by events with sold tickets."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:125
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Button Title`: enter a title to appear on the button for "
+#| "attendees."
+msgid ":guilabel:`Unconfirmed`: Filter by unconfirmed attendees."
+msgstr ":guilabel:`버튼 제목`: 참석자에게 표시될 버튼 제목을 입력합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:126
+#, fuzzy
+#| msgid ":guilabel:`Trigger`: :guilabel:`After each registration`"
+msgid ":guilabel:`Registered`: Filter by registered attendees."
+msgstr ":guilabel:`트리거`: :guilabel:`각각 등록 후`"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:127
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Registration Date`: Click the :icon:`fa-caret-"
+#| "down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, "
+#| "and year options. Select any number of these options to view a specific "
+#| "periods of time and see how many registrations happened during that time."
+msgid ""
+":guilabel:`Registration Date`: Filter by a specific registration date. Click "
+"the :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a list of "
+"month, quarter, and year options."
+msgstr ""
+":guilabel:`등록 날짜`: :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아이"
+"콘을 클릭하면 월, 분기 및 연도 옵션 목록이 표시됩니다. 선택 항목 중에서 어떤 "
+"기간이든 선택하면 지정한 항목에 해당하는 기간 동안 등록한 숫자를 확인할 수 있"
+"습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:130
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Event Start Date`: Click the :icon:`fa-caret-"
+#| "down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, "
+#| "and year options. Select any number of these options to designate event "
+#| "start dates to use as filters for revenue-related event data."
+msgid ""
+":guilabel:`Event Start Date`: Filter by a specific event start date. Click "
+"the :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a list of "
+"month, quarter, and year options."
+msgstr ""
+":guilabel:`행사 시작일`: :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아"
+"이콘을 클릭하면 월, 분기 및 연도 목록이 표시됩니다. 여기에서 기간을 선택하여 "
+"행사 시작일을 지정할 수 있으며, 매출과 관련된 행사 데이터의 필터로 활용할 수 "
+"있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:133
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Event End Date`: Click the :icon:`fa-caret-"
+#| "down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, "
+#| "and year options. Select any number of these options to designate event "
+#| "end dates to use as filters for revenue-related event data."
+msgid ""
+":guilabel:`Attended Date`: Filter by a specific attendance date. Click "
+"the :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a list of "
+"month, quarter, and year options."
+msgstr ""
+":guilabel:`행사 종료일`: :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아"
+"이콘을 클릭하면 월, 분기 및 연도 목록이 표시됩니다. 여기에서 기간을 선택하여 "
+"행사 종료일을 지정할 수 있으며, 매출과 관련된 행사 데이터의 필터로 활용할 수 "
+"있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:135
+msgid ":guilabel:`Last 30 days`: Filter by the last 30 days of attendee data."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:136
+msgid ":guilabel:`Archived`: Filter by archived attendee records."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:137
+msgid ""
+":guilabel:`Add Custom Filter`: Create a :ref:`custom filter <search/custom-"
+"filters>` to analyze event-related attendee data."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:143
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:108
+msgid "Group By options"
+msgstr "옵션 기준 그룹"
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:145
+msgid ""
+"The :guilabel:`Group By` column in the search bar's drop-down menu sorts "
+"attendee data by specific criteria in any given view. Multiple grouping "
+"criteria can be selected at once."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:149
+msgid "Grouping options are **not** available in the Cohort view."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:151
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:115
+msgid "The :guilabel:`Group By` column has the following options:"
+msgstr ":guilabel:`그룹화 기준` 열에는 다음과 같은 옵션이 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:153
+#, fuzzy
+#| msgid ":guilabel:`Event Type`: Group data based on the type of event."
+msgid ""
+":guilabel:`Partner`: Group data based on the partner of attendees' "
+"registered events."
+msgstr ":guilabel:`행사 유형`: 행사 유형에 따라 그룹 데이터를 표시합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:154
+#, fuzzy
+#| msgid ":guilabel:`Event Type`: Group data based on the type of event."
+msgid ":guilabel:`Event`: Group data based on attendees' registered events."
+msgstr ":guilabel:`행사 유형`: 행사 유형에 따라 그룹 데이터를 표시합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:155
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Ticket`: Group data based on the type of event ticket "
+#| "purchased by attendees."
+msgid ""
+":guilabel:`Ticket Type`: Group data based on the type of event ticket "
+"purchased by attendees."
+msgstr ""
+":guilabel:`티켓`: 참가자가 구매한 행사 티켓 유형을 기준으로 데이터를 그룹화합"
+"니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:156
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Product`: Group data based on the event registration product."
+msgid ":guilabel:`Status`: Group data based on attendees' registration status."
+msgstr ":guilabel:`품목`: 행사 등록 품목을 기준으로 데이터를 그룹화합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:157
+msgid ""
+":guilabel:`Registration Date`: Group data based on a specific registration "
+"date. Click the :icon:`fa-caret-down` :guilabel:`(down)` arrow to reveal a "
+"list of day, week, month, quarter, and year options."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:160
+#, fuzzy
+#| msgid ""
+#| "A new campaign can be created from scratch or from a :ref:`template "
+#| "<marketing_automation/campaign-templates>`."
+msgid ""
+":guilabel:`Campaign`: Group data based on marketing :ref:`campaigns "
+"<marketing_automation/campaigns>`."
+msgstr ""
+"캠페인을 처음부터 새로 만들거나 :ref:`템플릿 <marketing_automation/campaign-"
+"templates>` 에서 만들 수 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:162
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Add Custom Group`: Click the :icon:`fa-caret-"
+#| "down` :guilabel:`(down arrow)` icon to reveal a drop-down of grouping "
+#| "options. To select one, click on the desired option, and Odoo adds it to "
+#| "the :guilabel:`Group By` column. Multiple selections can be made."
+msgid ""
+":guilabel:`Add Custom Group`: Create a :ref:`custom group <search/group>` to "
+"organize data by additional fields. Click the :icon:`fa-caret-"
+"down` :guilabel:`(down)` arrow to reveal a drop-down of grouping options. "
+"Multiple selections can be made."
+msgstr ""
+":guilabel:`사용자 지정 그룹 추가`: :icon:`fa-caret-down` :guilabel:`(아래쪽 "
+"화살표)` 아이콘을 클릭하면 그룹 드롭다운 메뉴가 표시됩니다. 해당 항목을 클릭"
+"하면 Odoo에서 그룹 항목이 :guilabel:`그룹 기준` 열에 추가합니다. 여러 개를 선"
+"택하는 것도 가능합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:167
+msgid ""
+"A local production company recently organized a music festival and wants to "
+"measure the distribution of ticket registrations across concerts. Using the "
+"event attendance report, the production company created a graph showing the "
+"count of ticket registrations in the last 30 days, grouped by individual "
+"events and attendees' ticket types."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:0
+msgid "A sample report in Attendees reporting in Odoo Events."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:175
+msgid ""
+"To create this report, use the default graph view, with the :icon:`fa-bar-"
+"chart` :guilabel:`(Bar)` and :icon:`fa-database` :guilabel:`(Stacked)` "
+"options selected. Remove the default filters in the search bar."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:179
+#, fuzzy
+#| msgid ""
+#| "To access those options, click the :guilabel:`(downward arrow)` icon, "
+#| "located to the right of the search bar. Doing so reveals a drop-down mega "
+#| "menu featuring those filtering and grouping options."
+msgid ""
+"Then, click the :icon:`fa-caret-down` :guilabel:`(down)` arrow to the right "
+"of the search bar to open the drop-down menu of filter and grouping options."
+msgstr ""
+"해당 항목에 액세스하려면 검색창 오른쪽에 있는 :guilabel:`(아래쪽 화살표)` 아"
+"이콘을 클릭합니다. 그러면 필터 및 그룹 옵션이 드롭다운 메가 메뉴로 표시됩니"
+"다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:182
+#, fuzzy
+#| msgid ""
+#| "From here, select :guilabel:`Free` and :guilabel:`Sold` from "
+#| "the :guilabel:`Filters` column."
+msgid ""
+"Select the :guilabel:`Last 30 days` filter from the :guilabel:`Filters` "
+"column to filter the data."
+msgstr ""
+"여기에서, :guilabel:`필터` 열에 있는 :guilabel:`무료` 및 :guilabel:`판매 완료"
+"` 를 선택합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:185
+#, fuzzy
+#| msgid ""
+#| "Next, in the :guilabel:`Group By` column, select the :guilabel:`Event` "
+#| "and :guilabel:`Ticket` options, **in that sequential order**. Doing so "
+#| "first groups the data by event, *then* by ticket type, which provides a "
+#| "more useful array of data to analyze."
+msgid ""
+"Next, select the :guilabel:`Event` and :guilabel:`Ticket Type` options from "
+"the :guilabel:`Group By` column **in that sequential order**. This groups "
+"the data by event, then by ticket type."
+msgstr ""
+"다음으로, :guilabel:`그룹 기준` 열에서 :guilabel:`행사` 및 :guilabel:`티켓` "
+"을 **순서대로** 선택합니다. 이렇게 하면 먼저 행사별로 데이터를 그룹화하고 *"
+"그 다음에* 티켓 유형별로 그룹화할 수 있기 때문에 분석에 더욱 유용하게 데이터 "
+"배열을 할 수 있게 됩니다."
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:189
+msgid ""
+"The order in which the options are selected in the :guilabel:`Group By` "
+"columns directly affects how the data is grouped and displayed in the report."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/attendees_report.rst:193
+#, fuzzy
+#| msgid ":doc:`events/revenues_report`"
+msgid ":doc:`revenues_report`"
+msgstr ":doc:`events/revenues_report`"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:5
+msgid ""
+"The Odoo **Events** application creates custom reports, based on event-"
+"related data and analytics. These reports can either be focused on "
+"*Attendees* or *Revenues*."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:8
+msgid ""
+"The following documentation focuses on the reporting options related to "
+"event *Revenues*."
+msgstr ""
+"다음 문서에서는 행사 *수익* 과 관련된 보고 기능 항목을 중심으로 설명합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:11
+msgid "Revenues reporting page"
+msgstr "수익 보고 페이지"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:13
+msgid ""
+"To access the *Attendees* reporting page, navigate to :menuselection:`Events "
+"app --> Reporting --> Revenues`."
+msgstr ""
+"*참석자* 보고 페이지에 액세스하려면 :menuselection:`행사 앱 --> 보고 --> 수익"
+"` 으로 이동합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:None
+msgid ""
+"The default view of the Revenues reporting page in the Odoo Events "
+"application."
+msgstr "Odoo 행사 애플리케이션의 수익 보고 페이지의 기본 보기입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:20
+msgid ""
+"By default, the :guilabel:`Revenues` reporting page appears as a graph "
+"(a :icon:`fa-line-chart` :guilabel:`(Line Chart)` with :icon:`fa-"
+"database` :guilabel:`(Stacked)` data). The default filters, :guilabel:`Non-"
+"free tickets` and :guilabel:`Event Start Date: (current year)`, are present "
+"in the search bar."
+msgstr ""
+"기본적으로 :guilabel:`수익` 보고 페이지는 그래프로 표시됩니다 (:icon:`fa-"
+"line-chart` :guilabel:`(꺾은선 그래프)` 및 :icon:`fa-database` :guilabel:`(누"
+"적형)` 데이터). 기본 필터인 :guilabel:`유료 티켓` 및 :guilabel:`행사 시작일: "
+"(현재 연도)` 가 검색 창에 적용됩니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:26
+msgid ""
+"To learn more about the various graph views (and graph view options), refer "
+"to the :ref:`Graph views <reporting/using-graph>` documentation."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:29
+msgid ""
+"The :guilabel:`Revenues` reporting page can also be viewed as a :ref:`pivot "
+"table <reporting/views/pivot>`, by clicking the :icon:`oi-view-"
+"pivot` :guilabel:`(Pivot)` icon in the upper-right corner."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:34
+msgid "Measures"
+msgstr "계산"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:36
+msgid ""
+"Choosing specific :ref:`Measures <reporting/choosing-measures>` is a quick "
+"way to customize reporting pages."
+msgstr ""
+"특정한 :ref:`측정값 <reporting/choosing-measures>` 을 선택할 경우 보고 페이지"
+"를 빠르게 사용자 지정할 수 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:39
+msgid ""
+"Regardless of the chosen view, the measures on the :guilabel:`Revenues` "
+"reporting page are as follows: :guilabel:`Revenues`, :guilabel:`Untaxed "
+"Revenues`, and :guilabel:`Count`."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:43
+msgid ""
+"In the default graph view of the :guilabel:`Revenues` reporting page, only "
+"the :guilabel:`Revenues` option is set in the :guilabel:`Measures` drop-down "
+"menu."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:46
+msgid ""
+"In graph view, only one of the :guilabel:`Measures` can be selected at a "
+"time."
+msgstr ""
+"그래프 보기에서 :guilabel:`측정값` 은 한 번에 하나만 선택할 수 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:48
+msgid ""
+"When the pivot option is selected, all :guilabel:`Measures` options are "
+"selected, by default."
+msgstr ""
+"피벗 옵션을 선택할 경우, :guilabel:`측정값` 옵션이 모두 기본값으로 선택됩니"
+"다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:50
+msgid ":guilabel:`Revenues`: shows the revenues generated from events."
+msgstr ":guilabel:`수익`: 행사에서 발생한 수익을 보여줍니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:51
+msgid ""
+":guilabel:`Untaxed Revenues`: shows the untaxed revenues generated from "
+"events."
+msgstr ":guilabel:`비과세 수익`: 행사에서 발생한 비과세 수익을 보여줍니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:52
+msgid ""
+":guilabel:`Count`: shows the total amount of registrants who attended events."
+msgstr ":guilabel:`숫자`: 행사에 참석한 등록자의 총 숫자를 표시합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:55
+msgid "Filters and grouping options"
+msgstr "필터 및 그룹 옵션"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:57
+msgid ""
+"To reveal a drop-down menu of filter and grouping options to create custom "
+"reports, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the "
+"right of the search bar."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:60
+msgid ""
+"Doing so opens a drop-down mega menu of options organized into "
+"columns: :ref:`Filters <search/preconfigured-filters>`, :ref:`Group By "
+"<search/group>`, and :ref:`Favorites <search/favorites>`."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:65
+msgid ""
+"If a time-related option has been selected from the :guilabel:`Filters` "
+"column (e.g. the default :guilabel:`Event Start Date: (year)` filter), "
+"a :guilabel:`Comparison` column appears, with comparison options for the "
+"corresponding time-related filter option selected."
+msgstr ""
+":guilabel:`필터` 열에서 기간과 관련된 항목이 선택된 경우 (예: 기"
+"본 :guilabel:` 행사 시작일: (년)` 필터), 해당하는 기간 관련 필터를 비교할 수 "
+"있는 항목이 있는 :guilabel:`비교` 열이 표시됩니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:69
+msgid ""
+"Only **one** selection can be made from the :guilabel:`Comparison` column at "
+"a time."
+msgstr "한 번에 **하나만** :guilabel:`비교` 열에서 선택할 수 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:72
+#, fuzzy
+#| msgid ":doc:`../../essentials/search`"
+msgid ":doc:`../../../essentials/search`"
+msgstr ":doc:`../../essentials/search`"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:77
+msgid ""
+"In the :guilabel:`Filters` column of the drop-down mega menu, there are "
+"various event-related options that can be utilized to create custom reports, "
+"based on a number of specific criteria."
+msgstr ""
+"드롭다운 메가 메뉴에 있는 :guilabel:`필터` 열에는 다양한 행사 관련 옵션이 있"
+"으며 여러 가지 지정된 기준에 따라 사용자 지정 보고서를 만들 수 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:80
+msgid ""
+"Multiple options in the :guilabel:`Filters` column can be selected at once."
+msgstr ""
+":guilabel:`필터` 열에 있는 여러 가지 옵션을 한 번에 선택할 수 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:84
+msgid ""
+":guilabel:`Non-free tickets`: event tickets/registrations that were **not** "
+"free."
+msgstr ""
+":guilabel:`무료가 아닌 티켓`: 이전에 **무료** 로 진행하지 않은 행사 티켓/등록"
+"입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:85
+msgid ":guilabel:`Free`: event tickets/registrations that *were* free."
+msgstr ":guilabel:`무료`: *이전에* 무료로 진행한 행사 티켓/등록입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:86
+msgid ""
+":guilabel:`Pending payment`: event tickets/registrations that were "
+"purchased, but still have payment pending."
+msgstr ""
+":guilabel:`결제 보류`: 행사 티켓/등록 항목에 대한 구매가 완료되었으나 아직 결"
+"제가 보류 중입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:88
+msgid ""
+":guilabel:`Sold`: event tickets/registrations that have been successfully "
+"sold (and paid for)."
+msgstr ""
+":guilabel:`판매됨`: 성공적으로 판매(및 결제) 완료된 행사 티켓/등록입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:89
+msgid ""
+":guilabel:`Registration Date`: Click the :icon:`fa-caret-"
+"down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, and "
+"year options. Select any number of these options to view a specific periods "
+"of time and see how many registrations happened during that time."
+msgstr ""
+":guilabel:`등록 날짜`: :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아이"
+"콘을 클릭하면 월, 분기 및 연도 옵션 목록이 표시됩니다. 선택 항목 중에서 어떤 "
+"기간이든 선택하면 지정한 항목에 해당하는 기간 동안 등록한 숫자를 확인할 수 있"
+"습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:92
+msgid ""
+":guilabel:`Upcoming/Running`: include revenue-related information for events "
+"that are either currently running or are going to happen in the future."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:94
+msgid ""
+":guilabel:`Past Events`: include revenue-related information for events that "
+"have already taken place."
+msgstr ""
+":guilabel:`지난 행사`: 이미 진행한 행사에 대한 수익 관련 정보 등이 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:96
+msgid ""
+":guilabel:`Event Start Date`: Click the :icon:`fa-caret-"
+"down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, and "
+"year options. Select any number of these options to designate event start "
+"dates to use as filters for revenue-related event data."
+msgstr ""
+":guilabel:`행사 시작일`: :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아"
+"이콘을 클릭하면 월, 분기 및 연도 목록이 표시됩니다. 여기에서 기간을 선택하여 "
+"행사 시작일을 지정할 수 있으며, 매출과 관련된 행사 데이터의 필터로 활용할 수 "
+"있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:99
+msgid ""
+":guilabel:`Event End Date`: Click the :icon:`fa-caret-down` :guilabel:`(down "
+"arrow)` icon to reveal a list of month, quarter, and year options. Select "
+"any number of these options to designate event end dates to use as filters "
+"for revenue-related event data."
+msgstr ""
+":guilabel:`행사 종료일`: :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아"
+"이콘을 클릭하면 월, 분기 및 연도 목록이 표시됩니다. 여기에서 기간을 선택하여 "
+"행사 종료일을 지정할 수 있으며, 매출과 관련된 행사 데이터의 필터로 활용할 수 "
+"있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:102
+msgid ""
+":guilabel:`Published Events`: Select this option to show revenue-related "
+"data for published events."
+msgstr ""
+":guilabel:`게시된 행사`: 이 항목을 선택하면 게시된 행사에 대한 수익 관련 데이"
+"터가 표시됩니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:104
+msgid ""
+":guilabel:`Add Custom Filter`: Create a custom filter to analyze event-"
+"related revenue data. To learn more, refer to the documentation "
+"on :ref:`custom filters <search/custom-filters>`."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:110
+msgid ""
+"In the :guilabel:`Group By` column of the drop-down mega menu, there are "
+"various event-related options to create custom groupings of data."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:113
+msgid "Multiple :guilabel:`Group By` options can be selected at once."
+msgstr "여러 가지 :guilabel:`그룹화 기준` 옵션을 한 번에 선택할 수 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:117
+msgid ":guilabel:`Event Type`: Group data based on the type of event."
+msgstr ":guilabel:`행사 유형`: 행사 유형에 따라 그룹 데이터를 표시합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:118
+msgid ""
+":guilabel:`Event`: Organize data into individual groups, separated by events."
+msgstr ""
+":guilabel:`행사`: 데이터를 행사를 기준으로 구분하여 개별 그룹으로 설정합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:119
+msgid ""
+":guilabel:`Product`: Group data based on the event registration product."
+msgstr ":guilabel:`품목`: 행사 등록 품목을 기준으로 데이터를 그룹화합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:120
+msgid ""
+":guilabel:`Ticket`: Group data based on the type of event ticket purchased "
+"by attendees."
+msgstr ""
+":guilabel:`티켓`: 참가자가 구매한 행사 티켓 유형을 기준으로 데이터를 그룹화합"
+"니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:121
+msgid ""
+":guilabel:`Registration Status`: Group data based on the status of "
+"registrations."
+msgstr ":guilabel:`등록 상태`: 그룹 데이터를 등록 상태에 따라 표시합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:122
+msgid ""
+":guilabel:`Sale Order Status`: Group data based on the status of event-"
+"related sales orders."
+msgstr ""
+":guilabel:`판매주문서 상태`: 행사와 관련된 판매주문서의 상태를 기준으로 데이"
+"터를 그룹화합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:123
+msgid ":guilabel:`Customer`: Group data based on customer records."
+msgstr ":guilabel:`고객`: 고객 레코드를 기준으로 데이터를 그룹화합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:124
+msgid ""
+":guilabel:`Add Custom Group`: Click the :icon:`fa-caret-"
+"down` :guilabel:`(down arrow)` icon to reveal a drop-down of grouping "
+"options. To select one, click on the desired option, and Odoo adds it to "
+"the :guilabel:`Group By` column. Multiple selections can be made."
+msgstr ""
+":guilabel:`사용자 지정 그룹 추가`: :icon:`fa-caret-down` :guilabel:`(아래쪽 "
+"화살표)` 아이콘을 클릭하면 그룹 드롭다운 메뉴가 표시됩니다. 해당 항목을 클릭"
+"하면 Odoo에서 그룹 항목이 :guilabel:`그룹 기준` 열에 추가합니다. 여러 개를 선"
+"택하는 것도 가능합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:129
+msgid "Sample report: event ticket analysis (graph)"
+msgstr "보고서 샘플: 행사 티켓 분석(그래프)"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:131
+msgid ""
+"The following is an example of how various filters and grouping options can "
+"create a useful analytic graph report related to event revenues. In this "
+"case, the configurations present data about sold or free tickets to "
+"published events, with the metrics separated by ticket type and event."
+msgstr ""
+"다음은 여러 가지 필터와 그룹 기능을 사용하여 행사 수익과 관련하여 유용하게 활"
+"용할 수 있는 분석용 그래프 보고서를 만드는 방법의 예입니다. 이 경우 환경 설정"
+"을 통해 행사 티켓 판매량 및 무료 제공량이 티켓 유형과 행사로 구분된 수치와 데"
+"이터로 표시됩니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:None
+msgid ""
+"The event ticket analysis sample report with unique filters and groupings in "
+"place."
+msgstr ""
+"행사 티켓 분석 보고서 샘플에서 고유 필터와 그룹화가 적용되어 있는 모습입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:139
+msgid ""
+"To create such a report, navigate to :menuselection:`Events app --> "
+"Reporting --> Revenues`. Stay in the default graph view, but remove the "
+"default filters from the search bar."
+msgstr ""
+"이와 같이 보고서를 생성하려면 :menuselection:`행사 앱 --> 보고 --> 수익` 으"
+"로 이동합니다. 기본 그래프 보기로 유지하되, 검색창에서 기본 필터를 제거합니"
+"다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:142
+msgid ""
+"Then, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the right "
+"of the search bar, to reveal the drop-down mega menu of filter and grouping "
+"options."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:145
+msgid ""
+"From here, select :guilabel:`Free` and :guilabel:`Sold` from "
+"the :guilabel:`Filters` column."
+msgstr ""
+"여기에서, :guilabel:`필터` 열에 있는 :guilabel:`무료` 및 :guilabel:`판매 완료"
+"` 를 선택합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:147
+msgid ""
+"Then, since it is desired to **only** view data related to already published "
+"events, select the :guilabel:`Published Events` option in "
+"the :guilabel:`Filters` column, as well."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:150
+msgid ""
+"Next, in the :guilabel:`Group By` column, select the :guilabel:`Event` "
+"and :guilabel:`Ticket` options, **in that sequential order**. Doing so first "
+"groups the data by event, *then* by ticket type, which provides a more "
+"useful array of data to analyze."
+msgstr ""
+"다음으로, :guilabel:`그룹 기준` 열에서 :guilabel:`행사` 및 :guilabel:`티켓` "
+"을 **순서대로** 선택합니다. 이렇게 하면 먼저 행사별로 데이터를 그룹화하고 *"
+"그 다음에* 티켓 유형별로 그룹화할 수 있기 때문에 분석에 더욱 유용하게 데이터 "
+"배열을 할 수 있게 됩니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:155
+msgid ""
+"The order in which the options are selected in the :guilabel:`Group By` "
+"column directly affects how the data is presented on the report."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:158
+msgid ""
+"From there, additional configurations can be added for more detailed data, "
+"if desired."
+msgstr ""
+"원하는 경우 더 자세하게 데이터를 나타낼 수 있도록 별도로 환경설정을 추가할 "
+"수 있습니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:160
+msgid ""
+"If no additional filters or groupings are added, Odoo presents a graphical "
+"representation of data related to all *free* or *sold* tickets for "
+"*published events*, grouped by *event*, and organized by *ticket* type."
+msgstr ""
+"추가 필터나 그룹 기준이 추가되지 않은 경우, Odoo는 *게시된 행사* 에 대해 그래"
+"픽으로 모든 *무료* 티켓이나 *판매 완료* 티켓과 관련된 데이터를 *행사* 별 그룹"
+"으로 분류하고 *티켓* 유형별로 정리하여 표시합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:165
+msgid "Sample report: event type analysis (pivot table)"
+msgstr "보고서 샘플: 행사 유형 분석(피벗 테이블)"
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:167
+msgid ""
+"The following is an example of how various filters and grouping options can "
+"create a useful analytic pivot table report related to event revenues. In "
+"this case, the configurations present data about how much revenue different "
+"event types have generated, in order to gauge which events are the most "
+"profitable."
+msgstr ""
+"다음은 여러 가지 필터와 그룹 기능을 사용하여 행사 수익과 관련된 유용하게 사용"
+"할 수 있는 분석용 피벗 테이블 보고서를 만드는 방법의 예입니다. 이 경우 환경 "
+"설정을 통해 가장 수익성이 높은 행사를 확인할 수 있도록 다양한 행사 유형에서 "
+"창출된 수익 금액에 대한 데이터를 표시합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:None
+msgid ""
+"The event type analysis sample report with unique filters and groupings in "
+"place."
+msgstr "행사 유형 분석 보고서 샘플에 고유 필터와 그룹화가 적용된 모습입니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:176
+msgid ""
+"First, navigate to :menuselection:`Events app --> Reporting --> Revenues`, "
+"and switch to the pivot table view, by clicking the :icon:`oi-view-"
+"pivot` :guilabel:`(Pivot)` icon in the upper-right corner."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:180
+msgid ""
+"Keep the default filters (:guilabel:`Non-free tickets` and :guilabel:`Event "
+"Start Date: (year)`) in the search bar."
+msgstr ""
+"검색창에 기본 필터(:guilabel:`무료가 아닌 티켓` 및 :guilabel:`행사 시작 날"
+"짜: (연도)`)를 계속 사용합니다."
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:183
+msgid ""
+"Next, open the :guilabel:`Measures` drop-down menu, and deselect the option "
+"for :guilabel:`Count`, because this report is only going to focus on "
+"revenues."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:186
+msgid ""
+"Then, click :icon:`fa-plus-square` :guilabel:`Total` above the column "
+"titles, and select :guilabel:`Event Type` from the resulting drop-down menu."
+msgstr ""
+
+#: ../../content/applications/marketing/events/event_reporting/revenues_report.rst:189
+msgid ""
+"With these configurations in place, all the revenues generated from the "
+"events (and their corresponding registrations) are displayed, organized by "
+"the event type (presented as expandable columns)."
+msgstr ""
+"이와 같이 환경설정하면, 행사에서 발생한 모든 수익(및 해당하는 등록 내용)이 행"
+"사 유형별로 정리되어 표시됩니다(확장 가능한 열로 표시됨)."
 
 #: ../../content/applications/marketing/events/event_sponsors.rst:3
 msgid "Event sponsors"
@@ -7295,9 +8348,9 @@ msgstr ""
 
 #: ../../content/applications/marketing/events/registration_desk.rst:5
 msgid ""
-"Use the *Registration Desk* feature in Odoo **Events** to grant access to "
-"registered event attendees as they arrive, and store attendee-related data "
-"in the reporting metrics."
+"The *Registration Desk* feature in Odoo **Events** allows users to grant "
+"access to registered event attendees as they arrive and store attendee-"
+"related data in the reporting metrics."
 msgstr ""
 
 #: ../../content/applications/marketing/events/registration_desk.rst:9
@@ -7305,10 +8358,15 @@ msgid "Registration Desk page"
 msgstr "등록 데스크 페이지"
 
 #: ../../content/applications/marketing/events/registration_desk.rst:11
+#, fuzzy
+#| msgid ""
+#| "On a mobile device (on the Odoo app or in a browser), open "
+#| "the :menuselection:`Events app`, and click the :guilabel:`Registration "
+#| "Desk` to view the :guilabel:`Registration Desk` page."
 msgid ""
-"On a mobile device (on the Odoo app or in a browser), open "
-"the :menuselection:`Events app`, and click the :guilabel:`Registration Desk` "
-"to view the :guilabel:`Registration Desk` page."
+"On a mobile device (on the Odoo app or in a browser), navigate "
+"to :menuselection:`Events app --> Registration Desk` to open "
+"the :guilabel:`Registration Desk` page."
 msgstr ""
 "모바일 기기(Odoo 앱 또는 브라우저)에서 :menuselection:`행사 앱` 을 열"
 "고 :guilabel:`등록 데스크` 를 클릭하면 :guilabel:`등록 데스크` 페이지를 확인"
@@ -7318,35 +8376,52 @@ msgstr ""
 msgid "The Registration Desk page in the Odoo Events application."
 msgstr "Odoo 행사 애플리케이션에 있는 등록 데스크 페이지입니다."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:18
+#: ../../content/applications/marketing/events/registration_desk.rst:17
+#, fuzzy
+#| msgid ""
+#| "In the :guilabel:`Constraints` section, there is one option "
+#| "available: :guilabel:`Mandatory Answer`."
 msgid ""
-"At the bottom of the :guilabel:`Registration Desk` box, there are options to "
+"In the :guilabel:`Registration Desk` box, the user has the option to "
 "either :guilabel:`Scan a badge` or :guilabel:`Select Attendee`."
 msgstr ""
+":guilabel:`제약 조건` 섹션에는 :guilabel:`필수 답변` 만 사용할 수 있습니다."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:22
+#: ../../content/applications/marketing/events/registration_desk.rst:21
 msgid "Scan a badge"
 msgstr "배지 스캔"
 
-#: ../../content/applications/marketing/events/registration_desk.rst:24
+#: ../../content/applications/marketing/events/registration_desk.rst:23
+#, fuzzy
+#| msgid ""
+#| "To access the *Attendees* reporting page, navigate "
+#| "to :menuselection:`Events app --> Reporting --> Revenues`."
 msgid ""
-"Scan the codes present on event attendee badges, by navigating "
-"to :menuselection:`Events app --> Registration Desk`, and selecting "
-"the :guilabel:`Scan a badge` option."
+"To scan the code on event attendees' badges, navigate "
+"to :menuselection:`Events app --> Registration Desk` and tap "
+"the :guilabel:`Scan or Tap` option."
 msgstr ""
+"*참석자* 보고 페이지에 액세스하려면 :menuselection:`행사 앱 --> 보고 --> 수익"
+"` 으로 이동합니다."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:28
+#: ../../content/applications/marketing/events/registration_desk.rst:27
 msgid ""
 "Odoo **must** be granted access to the camera being used for "
 "the :guilabel:`Scan a badge` option to work."
 msgstr ""
 
-#: ../../content/applications/marketing/events/registration_desk.rst:31
+#: ../../content/applications/marketing/events/registration_desk.rst:30
+#, fuzzy
+#| msgid ""
+#| "Once Odoo has access to the camera, a :guilabel:`Barcode Scanner` pop-up "
+#| "window appears, showing the camera's point-of-view. There is also a "
+#| "specified view finder box present, whose size can be manually modified, "
+#| "accordingly, using the :icon:`fa-crop` :guilabel:`(crop)` icon."
 msgid ""
 "Once Odoo has access to the camera, a :guilabel:`Barcode Scanner` pop-up "
-"window appears, showing the camera's point-of-view. There is also a "
-"specified view finder box present, whose size can be manually modified, "
-"accordingly, using the :icon:`fa-crop` :guilabel:`(crop)` icon."
+"window appears, showing a viewfinder box in the camera frame. The size of "
+"the box can be manually adjusted by dragging the :icon:`fa-"
+"crop` :guilabel:`(crop)` icon."
 msgstr ""
 "Odoo에서 카메라에 액세스하면 :guilabel:`바코드 스캐너` 팝업 창으로 카메라에 "
 "비치는 화면을 보여줍니다. 또한 지정된 뷰 파인더 상자가 있어서 :icon:`fa-"
@@ -7358,40 +8433,69 @@ msgid ""
 "application."
 msgstr "Odoo 행사 애플리케이션의 등록 데스크에 있는 바코드 스캐너 창입니다."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:39
+#: ../../content/applications/marketing/events/registration_desk.rst:37
+#, fuzzy
+#| msgid ""
+#| "When the badge code is in the middle of the view finder box, the code is "
+#| "scanned, the :guilabel:`Barcode Scanner` pop-up window disappears, and "
+#| "the attendee is granted access to the event. Once the code is scanned, "
+#| "their attendance is logged in the Odoo **Events** app."
 msgid ""
-"When the badge code is in the middle of the view finder box, the code is "
-"scanned, the :guilabel:`Barcode Scanner` pop-up window disappears, and the "
-"attendee is granted access to the event. Once the code is scanned, their "
-"attendance is logged in the Odoo **Events** app."
+"When the badge code is in the middle of the view-finder box, the code is "
+"scanned and the :guilabel:`Barcode Scanner` pop-up window disappears. The "
+"attendee is then granted access to the event and their attendance is logged "
+"in the Odoo **Events** app."
 msgstr ""
 "입장 코드를 뷰 파인더 박스 중앙에 놓으면 코드가 스캔되고 :guilabel:`바코드 스"
 "캐너` 팝업 창이 사라지고 참석자에게 행사 입장 권한이 부여됩니다. 코드를 스캔"
 "하면 Odoo **행사** 앱에 참석 여부가 기록됩니다."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:43
+#: ../../content/applications/marketing/events/registration_desk.rst:41
+#, fuzzy
+#| msgid ""
+#| "If the barcode being scanned is invalid, an error pop-up message appears "
+#| "in the upper-right corner."
 msgid ""
-"If the barcode being scanned is invalid, an error pop-up message appears in "
-"the upper-right corner."
+"If the scanned barcode is invalid, an error pop-up message appears in the "
+"upper-right corner."
 msgstr ""
 "유효하지 않은 바코드를 스캔하면 오른쪽 상단에 오류 팝업 메시지가 나타납니다."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:46
-msgid "Select attendee"
+#: ../../content/applications/marketing/events/registration_desk.rst:44
+#, fuzzy
+#| msgid "Select attendee"
+msgid "Select Attendee"
 msgstr "참석자 선택"
 
-#: ../../content/applications/marketing/events/registration_desk.rst:48
+#: ../../content/applications/marketing/events/registration_desk.rst:46
+#, fuzzy
+#| msgid ""
+#| "To access the *Attendees* reporting page, navigate "
+#| "to :menuselection:`Events app --> Reporting --> Revenues`."
 msgid ""
-"Manually grant access to event attendees, by navigating "
-"to :menuselection:`Events app --> Registration Desk`, and selecting "
+"To manually grant access to event attendees, navigate "
+"to :menuselection:`Events app --> Registration Desk` and tap "
 "the :guilabel:`Select Attendee` option."
 msgstr ""
+"*참석자* 보고 페이지에 액세스하려면 :menuselection:`행사 앱 --> 보고 --> 수익"
+"` 으로 이동합니다."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:51
+#: ../../content/applications/marketing/events/registration_desk.rst:49
 msgid ""
-"Odoo reveals an :guilabel:`Attendees` page, with all the attendees for every "
-"event in the database, in a default :icon:`oi-view-"
-"kanban` :guilabel:`Kanban` view."
+"This opens an :guilabel:`Attendees` page with all registered attendees "
+"across events in the database. By default, this page opens in the :icon:`oi-"
+"view-kanban` :guilabel:`(Kanban)` view, allowing the user to see an overview "
+"of all attendees at a glance. Each attendee is displayed as a card with "
+"their name, registered event, associated company (if applicable), ticket "
+"type (if applicable), and registration status."
+msgstr ""
+
+#: ../../content/applications/marketing/events/registration_desk.rst:55
+msgid ""
+"Alternatively, users can view a detailed list of all attendees using "
+"the :icon:`oi-view-list` :guilabel:`(List)` view. Each attendee is displayed "
+"on a line with their name, contact information, registered event, ticket "
+"type, registration status, and an option to :guilabel:`Mark as Attending`."
 msgstr ""
 
 #: ../../content/applications/marketing/events/registration_desk.rst:None
@@ -7400,547 +8504,41 @@ msgid ""
 "application."
 msgstr "Odoo 행사 애플리케이션에 있는 등록 데스크를 통한 참석자 페이지입니다."
 
-#: ../../content/applications/marketing/events/registration_desk.rst:58
+#: ../../content/applications/marketing/events/registration_desk.rst:62
 msgid ""
-"On the :guilabel:`Attendees` page, each attendee card displays that person's "
-"name, which event they are registered to attend, their associated company "
-"(if applicable), what ticket tier they purchased (if applicable), along with "
-"two buttons: a :icon:`fa-check` :guilabel:`(checkmark)` and :icon:`fa-"
-"undo` :guilabel:`(counter-clockwise arrow)`."
-msgstr ""
-":guilabel:`참석자` 페이지에 있는 참석자 카드에는 참석자 이름, 참석 등록한 행"
-"사, 소속 회사 (해당하는 경우), 구매한 티켓 등급 (해당하는 경우)이 표시되"
-"고 :icon:`fa-check` :guilabel:`(체크 표시)` 및 :icon:`fa-undo` :guilabel:`(반"
-"시계 방향 화살표)` 의 두 개의 버튼이 표시됩니다."
-
-#: ../../content/applications/marketing/events/registration_desk.rst:63
-msgid ""
-"To grant access to a person, marking them as attended, click the :icon:`fa-"
-"check` :guilabel:`(checkmark)` button on that attendee's card."
+"To grant access to an attendee and mark them as :guilabel:`Attended` in the "
+"Kanban view, click on their card. The resulting pop-up window notifies the "
+"user that the attendee has been marked as registered. "
+"Click :guilabel:`Continue` at the bottom-left to mark the attendee "
+"as :guilabel:`Attended`."
 msgstr ""
 
-#: ../../content/applications/marketing/events/registration_desk.rst:66
+#: ../../content/applications/marketing/events/registration_desk.rst:67
 msgid ""
-"Click the :icon:`fa-undo` :guilabel:`(counter-clockwise arrow)` button on an "
-"attendee's card to undo the previous action."
-msgstr ""
-"참석자 카드에서 :icon:`fa-undo` :guilabel:`(시계 반대 방향 화살표)` 버튼을 클"
-"릭하면 이전 작업이 실행 취소됩니다."
-
-#: ../../content/applications/marketing/events/registration_desk.rst:70
-msgid ""
-"It is recommended to use an event-specific filter on "
-"the :guilabel:`Attendees` page, via the search bar drop-down menu."
+"Alternatively, in the List view, click on the :guilabel:`Mark as Attending` "
+"button on the attendee's line. The button then disappears and the attendee's "
+"registration status changes to :guilabel:`Attended`."
 msgstr ""
 
-#: ../../content/applications/marketing/events/registration_desk.rst:73
+#: ../../content/applications/marketing/events/registration_desk.rst:72
+msgid ""
+"Users can apply :doc:`filters and grouping options <../../essentials/"
+"search>` on the :guilabel:`Attendees` page in both the Kanban and List views "
+"to narrow down a large list of attendees or reorganize the page by specific "
+"categories."
+msgstr ""
+
+#: ../../content/applications/marketing/events/registration_desk.rst:76
 msgid ""
 "To do that, click the :icon:`fa-sort-desc` :guilabel:`(down arrow)` beside "
-"the seach bar to reveal a drop-down menu "
+"the search bar to reveal a drop-down menu "
 "with :guilabel:`Filters`, :guilabel:`Group By`, and :guilabel:`Favorites` "
 "options."
 msgstr ""
 
-#: ../../content/applications/marketing/events/registration_desk.rst:77
-msgid ""
-"For example, click the :guilabel:`Event` option, in the :guilabel:`Group By` "
-"column. Then, click away to remove the drop-down menu. Odoo reveals "
-"the :guilabel:`Attendees` page with event-specific columns, allowing users "
-"to locate specific event attendees."
-msgstr ""
-"예를 들어, :guilabel:`그룹 기준` 열에서 :guilabel:`행사` 항목을 클릭합니다. "
-"그런 다음 드롭다운 메뉴를 제거하려면 클릭합니다. Odoo에서는 특정한 행사 참석"
-"자를 찾을 수 있도록 행사별 열이 있는 :guilabel:`참석자` 페이지가 표시됩니다."
-
-#: ../../content/applications/marketing/events/registration_desk.rst:82
-#: ../../content/applications/marketing/events/revenues_report.rst:72
+#: ../../content/applications/marketing/events/registration_desk.rst:81
 msgid ":doc:`../../essentials/search`"
 msgstr ":doc:`../../essentials/search`"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:5
-msgid ""
-"The Odoo **Events** application creates custom reports, based on event-"
-"related data and analytics. These reports can either be focused on "
-"*Attendees* or *Revenues*."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:8
-msgid ""
-"The following documentation focuses on the reporting options related to "
-"event *Revenues*."
-msgstr ""
-"다음 문서에서는 행사 *수익* 과 관련된 보고 기능 항목을 중심으로 설명합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:11
-msgid "Revenues reporting page"
-msgstr "수익 보고 페이지"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:13
-msgid ""
-"To access the *Attendees* reporting page, navigate to :menuselection:`Events "
-"app --> Reporting --> Revenues`."
-msgstr ""
-"*참석자* 보고 페이지에 액세스하려면 :menuselection:`행사 앱 --> 보고 --> 수익"
-"` 으로 이동합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:None
-msgid ""
-"The default view of the Revenues reporting page in the Odoo Events "
-"application."
-msgstr "Odoo 행사 애플리케이션의 수익 보고 페이지의 기본 보기입니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:20
-msgid ""
-"By default, the :guilabel:`Revenues` reporting page appears as a graph "
-"(a :icon:`fa-line-chart` :guilabel:`(Line Chart)` with :icon:`fa-"
-"database` :guilabel:`(Stacked)` data). The default filters, :guilabel:`Non-"
-"free tickets` and :guilabel:`Event Start Date: (current year)`, are present "
-"in the search bar."
-msgstr ""
-"기본적으로 :guilabel:`수익` 보고 페이지는 그래프로 표시됩니다 (:icon:`fa-"
-"line-chart` :guilabel:`(꺾은선 그래프)` 및 :icon:`fa-database` :guilabel:`(누"
-"적형)` 데이터). 기본 필터인 :guilabel:`유료 티켓` 및 :guilabel:`행사 시작일: "
-"(현재 연도)` 가 검색 창에 적용됩니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:26
-msgid ""
-"To learn more about the various graph views (and graph view options), refer "
-"to the :ref:`Graph views <reporting/using-graph>` documentation."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:29
-msgid ""
-"The :guilabel:`Revenues` reporting page can also be viewed as a :ref:`pivot "
-"table <reporting/views/pivot>`, by clicking the :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` icon in the upper-right corner."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:34
-msgid "Measures"
-msgstr "계산"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:36
-msgid ""
-"Choosing specific :ref:`Measures <reporting/choosing-measures>` is a quick "
-"way to customize reporting pages."
-msgstr ""
-"특정한 :ref:`측정값 <reporting/choosing-measures>` 을 선택할 경우 보고 페이지"
-"를 빠르게 사용자 지정할 수 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:39
-msgid ""
-"Regardless of the chosen view, the measures on the :guilabel:`Revenues` "
-"reporting page are as follows: :guilabel:`Revenues`, :guilabel:`Untaxed "
-"Revenues`, and :guilabel:`Count`."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:43
-msgid ""
-"In the default graph view of the :guilabel:`Revenues` reporting page, only "
-"the :guilabel:`Revenues` option is set in the :guilabel:`Measures` drop-down "
-"menu."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:46
-msgid ""
-"In graph view, only one of the :guilabel:`Measures` can be selected at a "
-"time."
-msgstr ""
-"그래프 보기에서 :guilabel:`측정값` 은 한 번에 하나만 선택할 수 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:48
-msgid ""
-"When the pivot option is selected, all :guilabel:`Measures` options are "
-"selected, by default."
-msgstr ""
-"피벗 옵션을 선택할 경우, :guilabel:`측정값` 옵션이 모두 기본값으로 선택됩니"
-"다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:50
-msgid ":guilabel:`Revenues`: shows the revenues generated from events."
-msgstr ":guilabel:`수익`: 행사에서 발생한 수익을 보여줍니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:51
-msgid ""
-":guilabel:`Untaxed Revenues`: shows the untaxed revenues generated from "
-"events."
-msgstr ":guilabel:`비과세 수익`: 행사에서 발생한 비과세 수익을 보여줍니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:52
-msgid ""
-":guilabel:`Count`: shows the total amount of registrants who attended events."
-msgstr ":guilabel:`숫자`: 행사에 참석한 등록자의 총 숫자를 표시합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:55
-msgid "Filters and grouping options"
-msgstr "필터 및 그룹 옵션"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:57
-msgid ""
-"To reveal a drop-down menu of filter and grouping options to create custom "
-"reports, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the "
-"right of the search bar."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:60
-msgid ""
-"Doing so opens a drop-down mega menu of options organized into "
-"columns: :ref:`Filters <search/preconfigured-filters>`, :ref:`Group By "
-"<search/group>`, and :ref:`Favorites <search/favorites>`."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:65
-msgid ""
-"If a time-related option has been selected from the :guilabel:`Filters` "
-"column (e.g. the default :guilabel:`Event Start Date: (year)` filter), "
-"a :guilabel:`Comparison` column appears, with comparison options for the "
-"corresponding time-related filter option selected."
-msgstr ""
-":guilabel:`필터` 열에서 기간과 관련된 항목이 선택된 경우 (예: 기"
-"본 :guilabel:` 행사 시작일: (년)` 필터), 해당하는 기간 관련 필터를 비교할 수 "
-"있는 항목이 있는 :guilabel:`비교` 열이 표시됩니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:69
-msgid ""
-"Only **one** selection can be made from the :guilabel:`Comparison` column at "
-"a time."
-msgstr "한 번에 **하나만** :guilabel:`비교` 열에서 선택할 수 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:75
-msgid "Filter options"
-msgstr "필터 옵션"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:77
-msgid ""
-"In the :guilabel:`Filters` column of the drop-down mega menu, there are "
-"various event-related options that can be utilized to create custom reports, "
-"based on a number of specific criteria."
-msgstr ""
-"드롭다운 메가 메뉴에 있는 :guilabel:`필터` 열에는 다양한 행사 관련 옵션이 있"
-"으며 여러 가지 지정된 기준에 따라 사용자 지정 보고서를 만들 수 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:80
-msgid ""
-"Multiple options in the :guilabel:`Filters` column can be selected at once."
-msgstr ""
-":guilabel:`필터` 열에 있는 여러 가지 옵션을 한 번에 선택할 수 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:82
-msgid "The :guilabel:`Filters` column has the following options:"
-msgstr ":guilabel:`필터` 열에는 다음과 같은 옵션이 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:84
-msgid ""
-":guilabel:`Non-free tickets`: event tickets/registrations that were **not** "
-"free."
-msgstr ""
-":guilabel:`무료가 아닌 티켓`: 이전에 **무료** 로 진행하지 않은 행사 티켓/등록"
-"입니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:85
-msgid ":guilabel:`Free`: event tickets/registrations that *were* free."
-msgstr ":guilabel:`무료`: *이전에* 무료로 진행한 행사 티켓/등록입니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:86
-msgid ""
-":guilabel:`Pending payment`: event tickets/registrations that were "
-"purchased, but still have payment pending."
-msgstr ""
-":guilabel:`결제 보류`: 행사 티켓/등록 항목에 대한 구매가 완료되었으나 아직 결"
-"제가 보류 중입니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:88
-msgid ""
-":guilabel:`Sold`: event tickets/registrations that have been successfully "
-"sold (and paid for)."
-msgstr ""
-":guilabel:`판매됨`: 성공적으로 판매(및 결제) 완료된 행사 티켓/등록입니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:89
-msgid ""
-":guilabel:`Registration Date`: Click the :icon:`fa-caret-"
-"down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, and "
-"year options. Select any number of these options to view a specific periods "
-"of time and see how many registrations happened during that time."
-msgstr ""
-":guilabel:`등록 날짜`: :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아이"
-"콘을 클릭하면 월, 분기 및 연도 옵션 목록이 표시됩니다. 선택 항목 중에서 어떤 "
-"기간이든 선택하면 지정한 항목에 해당하는 기간 동안 등록한 숫자를 확인할 수 있"
-"습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:92
-msgid ""
-":guilabel:`Upcoming/Running`: include revenue-related information for events "
-"that are either currently running or are going to happen in the future."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:94
-msgid ""
-":guilabel:`Past Events`: include revenue-related information for events that "
-"have already taken place."
-msgstr ""
-":guilabel:`지난 행사`: 이미 진행한 행사에 대한 수익 관련 정보 등이 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:96
-msgid ""
-":guilabel:`Event Start Date`: Click the :icon:`fa-caret-"
-"down` :guilabel:`(down arrow)` icon to reveal a list of month, quarter, and "
-"year options. Select any number of these options to designate event start "
-"dates to use as filters for revenue-related event data."
-msgstr ""
-":guilabel:`행사 시작일`: :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아"
-"이콘을 클릭하면 월, 분기 및 연도 목록이 표시됩니다. 여기에서 기간을 선택하여 "
-"행사 시작일을 지정할 수 있으며, 매출과 관련된 행사 데이터의 필터로 활용할 수 "
-"있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:99
-msgid ""
-":guilabel:`Event End Date`: Click the :icon:`fa-caret-down` :guilabel:`(down "
-"arrow)` icon to reveal a list of month, quarter, and year options. Select "
-"any number of these options to designate event end dates to use as filters "
-"for revenue-related event data."
-msgstr ""
-":guilabel:`행사 종료일`: :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아"
-"이콘을 클릭하면 월, 분기 및 연도 목록이 표시됩니다. 여기에서 기간을 선택하여 "
-"행사 종료일을 지정할 수 있으며, 매출과 관련된 행사 데이터의 필터로 활용할 수 "
-"있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:102
-msgid ""
-":guilabel:`Published Events`: Select this option to show revenue-related "
-"data for published events."
-msgstr ""
-":guilabel:`게시된 행사`: 이 항목을 선택하면 게시된 행사에 대한 수익 관련 데이"
-"터가 표시됩니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:104
-msgid ""
-":guilabel:`Add Custom Filter`: Create a custom filter to analyze event-"
-"related revenue data. To learn more, refer to the documentation "
-"on :ref:`custom filters <search/custom-filters>`."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:108
-msgid "Group By options"
-msgstr "옵션 기준 그룹"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:110
-msgid ""
-"In the :guilabel:`Group By` column of the drop-down mega menu, there are "
-"various event-related options to create custom groupings of data."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:113
-msgid "Multiple :guilabel:`Group By` options can be selected at once."
-msgstr "여러 가지 :guilabel:`그룹화 기준` 옵션을 한 번에 선택할 수 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:115
-msgid "The :guilabel:`Group By` column has the following options:"
-msgstr ":guilabel:`그룹화 기준` 열에는 다음과 같은 옵션이 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:117
-msgid ":guilabel:`Event Type`: Group data based on the type of event."
-msgstr ":guilabel:`행사 유형`: 행사 유형에 따라 그룹 데이터를 표시합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:118
-msgid ""
-":guilabel:`Event`: Organize data into individual groups, separated by events."
-msgstr ""
-":guilabel:`행사`: 데이터를 행사를 기준으로 구분하여 개별 그룹으로 설정합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:119
-msgid ""
-":guilabel:`Product`: Group data based on the event registration product."
-msgstr ":guilabel:`품목`: 행사 등록 품목을 기준으로 데이터를 그룹화합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:120
-msgid ""
-":guilabel:`Ticket`: Group data based on the type of event ticket purchased "
-"by attendees."
-msgstr ""
-":guilabel:`티켓`: 참가자가 구매한 행사 티켓 유형을 기준으로 데이터를 그룹화합"
-"니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:121
-msgid ""
-":guilabel:`Registration Status`: Group data based on the status of "
-"registrations."
-msgstr ":guilabel:`등록 상태`: 그룹 데이터를 등록 상태에 따라 표시합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:122
-msgid ""
-":guilabel:`Sale Order Status`: Group data based on the status of event-"
-"related sales orders."
-msgstr ""
-":guilabel:`판매주문서 상태`: 행사와 관련된 판매주문서의 상태를 기준으로 데이"
-"터를 그룹화합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:123
-msgid ":guilabel:`Customer`: Group data based on customer records."
-msgstr ":guilabel:`고객`: 고객 레코드를 기준으로 데이터를 그룹화합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:124
-msgid ""
-":guilabel:`Add Custom Group`: Click the :icon:`fa-caret-"
-"down` :guilabel:`(down arrow)` icon to reveal a drop-down of grouping "
-"options. To select one, click on the desired option, and Odoo adds it to "
-"the :guilabel:`Group By` column. Multiple selections can be made."
-msgstr ""
-":guilabel:`사용자 지정 그룹 추가`: :icon:`fa-caret-down` :guilabel:`(아래쪽 "
-"화살표)` 아이콘을 클릭하면 그룹 드롭다운 메뉴가 표시됩니다. 해당 항목을 클릭"
-"하면 Odoo에서 그룹 항목이 :guilabel:`그룹 기준` 열에 추가합니다. 여러 개를 선"
-"택하는 것도 가능합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:129
-msgid "Sample report: event ticket analysis (graph)"
-msgstr "보고서 샘플: 행사 티켓 분석(그래프)"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:131
-msgid ""
-"The following is an example of how various filters and grouping options can "
-"create a useful analytic graph report related to event revenues. In this "
-"case, the configurations present data about sold or free tickets to "
-"published events, with the metrics separated by ticket type and event."
-msgstr ""
-"다음은 여러 가지 필터와 그룹 기능을 사용하여 행사 수익과 관련하여 유용하게 활"
-"용할 수 있는 분석용 그래프 보고서를 만드는 방법의 예입니다. 이 경우 환경 설정"
-"을 통해 행사 티켓 판매량 및 무료 제공량이 티켓 유형과 행사로 구분된 수치와 데"
-"이터로 표시됩니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:None
-msgid ""
-"The event ticket analysis sample report with unique filters and groupings in "
-"place."
-msgstr ""
-"행사 티켓 분석 보고서 샘플에서 고유 필터와 그룹화가 적용되어 있는 모습입니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:139
-msgid ""
-"To create such a report, navigate to :menuselection:`Events app --> "
-"Reporting --> Revenues`. Stay in the default graph view, but remove the "
-"default filters from the search bar."
-msgstr ""
-"이와 같이 보고서를 생성하려면 :menuselection:`행사 앱 --> 보고 --> 수익` 으"
-"로 이동합니다. 기본 그래프 보기로 유지하되, 검색창에서 기본 필터를 제거합니"
-"다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:142
-msgid ""
-"Then, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the right "
-"of the search bar, to reveal the drop-down mega menu of filter and grouping "
-"options."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:145
-msgid ""
-"From here, select :guilabel:`Free` and :guilabel:`Sold` from "
-"the :guilabel:`Filters` column."
-msgstr ""
-"여기에서, :guilabel:`필터` 열에 있는 :guilabel:`무료` 및 :guilabel:`판매 완료"
-"` 를 선택합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:147
-msgid ""
-"Then, since it is desired to **only** view data related to already published "
-"events, select the :guilabel:`Published Events` option in "
-"the :guilabel:`Filters` column, as well."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:150
-msgid ""
-"Next, in the :guilabel:`Group By` column, select the :guilabel:`Event` "
-"and :guilabel:`Ticket` options, **in that sequential order**. Doing so first "
-"groups the data by event, *then* by ticket type, which provides a more "
-"useful array of data to analyze."
-msgstr ""
-"다음으로, :guilabel:`그룹 기준` 열에서 :guilabel:`행사` 및 :guilabel:`티켓` "
-"을 **순서대로** 선택합니다. 이렇게 하면 먼저 행사별로 데이터를 그룹화하고 *"
-"그 다음에* 티켓 유형별로 그룹화할 수 있기 때문에 분석에 더욱 유용하게 데이터 "
-"배열을 할 수 있게 됩니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:155
-msgid ""
-"The order in which the options are selected in the :guilabel:`Group By` "
-"column directly affects how the data is presented on the report."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:158
-msgid ""
-"From there, additional configurations can be added for more detailed data, "
-"if desired."
-msgstr ""
-"원하는 경우 더 자세하게 데이터를 나타낼 수 있도록 별도로 환경설정을 추가할 "
-"수 있습니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:160
-msgid ""
-"If no additional filters or groupings are added, Odoo presents a graphical "
-"representation of data related to all *free* or *sold* tickets for "
-"*published events*, grouped by *event*, and organized by *ticket* type."
-msgstr ""
-"추가 필터나 그룹 기준이 추가되지 않은 경우, Odoo는 *게시된 행사* 에 대해 그래"
-"픽으로 모든 *무료* 티켓이나 *판매 완료* 티켓과 관련된 데이터를 *행사* 별 그룹"
-"으로 분류하고 *티켓* 유형별로 정리하여 표시합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:165
-msgid "Sample report: event type analysis (pivot table)"
-msgstr "보고서 샘플: 행사 유형 분석(피벗 테이블)"
-
-#: ../../content/applications/marketing/events/revenues_report.rst:167
-msgid ""
-"The following is an example of how various filters and grouping options can "
-"create a useful analytic pivot table report related to event revenues. In "
-"this case, the configurations present data about how much revenue different "
-"event types have generated, in order to gauge which events are the most "
-"profitable."
-msgstr ""
-"다음은 여러 가지 필터와 그룹 기능을 사용하여 행사 수익과 관련된 유용하게 사용"
-"할 수 있는 분석용 피벗 테이블 보고서를 만드는 방법의 예입니다. 이 경우 환경 "
-"설정을 통해 가장 수익성이 높은 행사를 확인할 수 있도록 다양한 행사 유형에서 "
-"창출된 수익 금액에 대한 데이터를 표시합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:None
-msgid ""
-"The event type analysis sample report with unique filters and groupings in "
-"place."
-msgstr "행사 유형 분석 보고서 샘플에 고유 필터와 그룹화가 적용된 모습입니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:176
-msgid ""
-"First, navigate to :menuselection:`Events app --> Reporting --> Revenues`, "
-"and switch to the pivot table view, by clicking the :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` icon in the upper-right corner."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:180
-msgid ""
-"Keep the default filters (:guilabel:`Non-free tickets` and :guilabel:`Event "
-"Start Date: (year)`) in the search bar."
-msgstr ""
-"검색창에 기본 필터(:guilabel:`무료가 아닌 티켓` 및 :guilabel:`행사 시작 날"
-"짜: (연도)`)를 계속 사용합니다."
-
-#: ../../content/applications/marketing/events/revenues_report.rst:183
-msgid ""
-"Next, open the :guilabel:`Measures` drop-down menu, and deselect the option "
-"for :guilabel:`Count`, because this report is only going to focus on "
-"revenues."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:186
-msgid ""
-"Then, click :icon:`fa-plus-square` :guilabel:`Total` above the column "
-"titles, and select :guilabel:`Event Type` from the resulting drop-down menu."
-msgstr ""
-
-#: ../../content/applications/marketing/events/revenues_report.rst:189
-msgid ""
-"With these configurations in place, all the revenues generated from the "
-"events (and their corresponding registrations) are displayed, organized by "
-"the event type (presented as expandable columns)."
-msgstr ""
-"이와 같이 환경설정하면, 행사에서 발생한 모든 수익(및 해당하는 등록 내용)이 행"
-"사 유형별로 정리되어 표시됩니다(확장 가능한 열로 표시됨)."
 
 #: ../../content/applications/marketing/events/sell_tickets.rst:5
 msgid ""
@@ -8952,10 +9550,6 @@ msgstr ""
 #: ../../content/applications/marketing/marketing_automation.rst:185
 msgid ":doc:`marketing_automation/testing_running`"
 msgstr ":doc:`marketing_automation/testing_running`"
-
-#: ../../content/applications/marketing/marketing_automation.rst:188
-msgid "Reporting"
-msgstr "보고"
 
 #: ../../content/applications/marketing/marketing_automation.rst:190
 msgid ""
@@ -17405,6 +17999,281 @@ msgstr ""
 #: ../../content/applications/marketing/surveys/scoring.rst:None
 msgid "Example of how a badge looks on the eLearning portion of the website."
 msgstr "웹사이트의 이러닝 쪽에서 배지가 표시되는 방법을 보여주는 예시입니다."
+
+#~ msgid ""
+#~ "This is important because every created booth **must** be assigned a "
+#~ "*Booth Category* on their respective booth form, and every booth category "
+#~ "**must** have an *Event Booth* product assigned to it."
+#~ msgstr ""
+#~ "부스를 생성할 경우 **반드시** 부스 양식에서 **부스 카테고리** 를 지정해야 "
+#~ "하며 부스 카테고리에는 **행사 부스* 제품이 **반드시** 지정되어야 하므로 이"
+#~ "는 매우 중요합니다."
+
+#~ msgid ""
+#~ "On the :guilabel:`Booth Category` page, the following information for "
+#~ "each booth category is listed:"
+#~ msgstr ""
+#~ ":guilabel:`부스 카테고리` 페이지에는 각 부스 카테고리와 관련하여 다음 내용"
+#~ "이 표시되어 있습니다."
+
+#~ msgid ""
+#~ ":guilabel:`Create Sponsor`: if checked, booking this booth category "
+#~ "creates a sponsor for the user."
+#~ msgstr ""
+#~ ":guilabel:`스폰서 생성`: 표시할 경우, 이 부스 카테고리를 예약하면 스폰서"
+#~ "가 생성됩니다."
+
+#~ msgid ""
+#~ ":guilabel:`Product`: the *Event Booth* product associated with that "
+#~ "specific booth category."
+#~ msgstr ""
+#~ ":guilabel:`제품`: 해당 부스 카테고리와 관련된 *행사 부스* 제품입니다."
+
+#~ msgid ":guilabel:`Price`: the price of a booth in that booth category."
+#~ msgstr ":guilabel:`가격`: 해당 부스 카테고리의 부스 가격입니다."
+
+#~ msgid ""
+#~ "When the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon, located "
+#~ "to the far-right of the column titles, is clicked, a drop-down menu of "
+#~ "additional column options appears. From the resulting drop-down menu, "
+#~ "tick the checkbox beside :guilabel:`Sponsor Level` and/"
+#~ "or :guilabel:`Sponsor Type` to reveal those columns on "
+#~ "the :guilabel:`Booth Category` page."
+#~ msgstr ""
+#~ "열 제목의 가장 오른쪽에 있는 :icon:`oi-settings-adjust` :guilabel:`(설"
+#~ "정)` 아이콘을 클릭하면 추가 열 선택 드롭다운 메뉴가 나타납니다. 드롭다운 "
+#~ "메뉴에서 :guilabel:`후원사 레벨` 및/또는 :guilabel:`후원사 유형` 옆의 확인"
+#~ "란에 표시하면 :guilabel:`부스 카테고리` 페이지에 해당 열이 표시됩니다."
+
+#~ msgid ""
+#~ "To add a corresponding image to the booth category (e.g. a sample photo "
+#~ "of how the booth looks), click the :icon:`fa-pencil` :guilabel:`(pencil)` "
+#~ "icon that appears when the cursor hovers over the camera placeholder in "
+#~ "the upper-right corner of the booth category form. When clicked, proceed "
+#~ "to upload the desired image to the booth category form, if needed."
+#~ msgstr ""
+#~ "부스 카테고리에 해당 이미지를 추가하려면 (예: 부스 모습을 찍은 샘플 사진) "
+#~ "부스 카테고리 양식의 오른쪽 상단에 있는 카메라 자리 표시자 위에 커서를 가"
+#~ "져갑니다. :icon:`fa-pencil` :guilabel:`(연필)` 아이콘이 나타나면 클릭합니"
+#~ "다. 클릭한 후, 필요한 이미지를 부스 카테고리 양식에 업로드합니다."
+
+#~ msgid ""
+#~ "In the :guilabel:`Booth Details` section, users **must** assign "
+#~ "a :guilabel:`Product` to the category, and it **must** have *Event Booth* "
+#~ "set as the *Product Type* on the product form."
+#~ msgstr ""
+#~ ":guilabel:`부스 세부 정보` 섹션에서는 **반드시** 카테고리에 :guilabel:`품"
+#~ "목` 을 지정해야 하며, **반드시** *행사 부스* 로 품목 양식의 *품목 유형* "
+#~ "을 설정해야 합니다."
+
+#~ msgid ""
+#~ "And, regardless of the listed price on the *Event Booth* product chosen, "
+#~ "the user can input a custom :guilabel:`Price` to be applied for this "
+#~ "booth category in the field below."
+#~ msgstr ""
+#~ "|PLM| 앱은 제품의 출시부터 각 후속 버전에 이르기까지 제품 수명 주기를 관리"
+#~ "하는 데 사용됩니다. 따라서 제품을 개선시킬 수 있는 여러 가지 방법을 테스트"
+#~ "할 때 유용합니다."
+
+#~ msgid ""
+#~ ":guilabel:`Sponsor Level` and :guilabel:`Sponsor Type` are purely to "
+#~ "distinguish different distinctions of sponsors. For example, if a sponsor "
+#~ "has been attached to a company for multiple years, they would be granted "
+#~ "a higher level (e.g. *Gold* level), which provides them with immediate "
+#~ "credability and status. Whereas, conversely, a relatively new sponsor "
+#~ "would be granted a lower level (e.g. *Bronze* level), which coincides "
+#~ "with its own credability and status."
+#~ msgstr ""
+#~ ":guilabel:`스폰서 레벨` 과 :guilabel:`스폰서 유형`은 순전히 다양하게 구분"
+#~ "되는 스폰서를 분류하기 위한 것입니다. 예를 들어, 스폰서가 수년동안 회사에 "
+#~ "소속되어 있는 경우 더 높은 레벨 (예: *골드* 레벨)이 부여되어 즉각적인 신뢰"
+#~ "도과 지위를 부여받습니다. 반면에, 비교적 새로 유입된 스폰서의 경우에는 낮"
+#~ "은 레벨 (예: *브론즈* 레벨)을 부여받으며, 이는 스폰서 자체의 신뢰도 및 지"
+#~ "위와 수준이 같습니다."
+
+#~ msgid ""
+#~ "Select a desired level of sponsorship from the :guilabel:`Sponsor Level` "
+#~ "drop-down field."
+#~ msgstr ""
+#~ "원하는 수준으로 스폰서 레벨을 :guilabel:`스폰서 레벨` 드롭다운 필드에서 선"
+#~ "택합니다."
+
+#~ msgid ""
+#~ "To modify any existing :guilabel:`Sponsor Level`, select it from the drop-"
+#~ "down field, then click the :icon:`fa-arrow-right` :guilabel:`(right "
+#~ "arrow)` that appears at the end of the line. Doing so opens a separate "
+#~ "page, wherein the :guilabel:`Sponsor Level` name and :guilabel:`Ribbon "
+#~ "Style` can be changed, if necessary."
+#~ msgstr ""
+#~ "기존의 :guilabel:`후원사 레벨` 을 수정하려면 드롭다운 필드에서 항목을 선택"
+#~ "한 다음 줄 끝에 나타나는 :icon:`fa-arrow-right` :guilabel:`(오른쪽 화살"
+#~ "표)` 를 클릭합니다. 그러면 별도의 페이지가 열리며 필요한 경우 :guilabel:`"
+#~ "후원사 레벨` 이름과 :guilabel:`리본 스타일` 을 변경할 수 있습니다."
+
+#~ msgid ""
+#~ "Users can also create a new :guilabel:`Sponsor Level`, by typing in the "
+#~ "name of the new level, and clicking :guilabel:`Create and edit...` from "
+#~ "the resulting drop-down menu."
+#~ msgstr ""
+#~ "새 :guilabel:`스폰서 레벨` 을 만들 수도 있으며, 새로운 레벨에 이름을 입력"
+#~ "하고 드롭다운 메뉴가 나타나면 :guilabel:`만들기 및 편집...` 을 클릭하면 됩"
+#~ "니다."
+
+#~ msgid ""
+#~ "Clicking :guilabel:`Create` from the resulting drop-down menu in this "
+#~ "instance creates the sponsor level, but doesn't immediately prompt the "
+#~ "user to further configure it, via a :guilabel:`Create Sponsor Level` pop-"
+#~ "up window."
+#~ msgstr ""
+#~ "이 경우 드롭다운 메뉴가 나타나면 :guilabel:` 만들기` 를 클릭하면 스폰서 레"
+#~ "벨이 생성되지만 추가 설정을 하라는 메시지가 즉각적으로 :guilabel:`스폰서 "
+#~ "레벨 만들기` 팝업 창을 통해 표시되지는 않습니다."
+
+#~ msgid "Doing so reveals a :guilabel:`Create Sponsor Level` pop-up window."
+#~ msgstr "그러면 :guilabel:`스폰서 레벨 만들기` 팝업창이 나타납니다."
+
+#~ msgid ""
+#~ "The Create Sponsor Level pop-up window that appears in the Odoo Events "
+#~ "application."
+#~ msgstr ""
+#~ "스폰서 레벨 생성 팝업 창이 Odoo 행사 애플리케이션에 나타나 있는 모습입니"
+#~ "다."
+
+#~ msgid ""
+#~ "From this pop-up window, confirm the newly-created :guilabel:`Sponsor "
+#~ "Level`, and decide what kind of :guilabel:`Ribbon Style` should be "
+#~ "applied, if any. The :guilabel:`Ribbon Style` options available in that "
+#~ "drop-down field are: :guilabel:`No "
+#~ "Ribbon`, :guilabel:`Gold`, :guilabel:`Silver`, and :guilabel:`Bronze`."
+#~ msgstr ""
+#~ "이 팝업 창에서 새로 생성한 :guilabel:`후원사 레벨` 을 확인한 후 적용"
+#~ "할 :guilabel:`리본 스타일` 이 있는 경우 이를 적용합니다. 드롭다운 필드에"
+#~ "서 선택할 수 있는 :guilabel:`리본 스타일` 에는 :guilabel:`리본 없음"
+#~ "`, :guilabel:`골드`, :guilabel:`실버`, :guilabel:`브론즈` 가 있습니다."
+
+#~ msgid ""
+#~ "If one is selected, that :guilabel:`Ribbon Style` appears with the "
+#~ "sponsor's name on the event website."
+#~ msgstr ""
+#~ "리본 스타일을 선택하면, 해당 :guilabel:`리본 스타일` 이 행사 웹사이트에 스"
+#~ "폰서 이름과 함께 표시됩니다."
+
+#~ msgid ""
+#~ "On the booth category form, beneath those sections (:guilabel:`Booth "
+#~ "Details` and :guilabel:`Sponsorship`), there is "
+#~ "the :guilabel:`Description` tab. In this tab, proceed to enter any vital "
+#~ "information related to the booth category that would be important for any "
+#~ "potential booth-buyer to know about (e.g., the square footage, any "
+#~ "amenities, size of display screen, etc.)."
+#~ msgstr ""
+#~ "부스 카테고리 양식에서 해당 섹션 (:guilabel:`부스 세부 정보` "
+#~ "및 :guilabel:`후원`) 아래에는 :guilabel:`설명` 탭이 있습니다. 이 탭에서 향"
+#~ "후 부스를 대여할 경우 알아야 할 부스 카테고리와 관련된 중요 정보 (예: 면"
+#~ "적, 편의시설, 디스플레이 화면 크기 등)를 입력합니다."
+
+#~ msgid ""
+#~ "In order to add a booth to an event, navigate to an existing event form, "
+#~ "via :menuselection:`Events app --> Events`, and select the desired event "
+#~ "from the :guilabel:`Events` dashboard. Or, click :guilabel:`New` to open "
+#~ "a blank event form."
+#~ msgstr ""
+#~ "행사에 부스를 추가하려면 :menuselection:`행사 앱 --> 행사` 에서 기존 행사 "
+#~ "양식으로 이동한 후 :guilabel:`행사` 현황판에서 행사를 선택합니다. 또"
+#~ "는 :guilabel:`새로 만들기` 를 클릭하여 새로운 행사 양식을 엽니다."
+
+#~ msgid ""
+#~ "To modify any existing booth, simply click the desired booth from "
+#~ "the :guilabel:`Booths` page, and proceed to make any necessary changes "
+#~ "from the booth form. Or, create a new one, by clicking "
+#~ "the :guilabel:`New` button in the upper-left corner to reveal a blank "
+#~ "booth form."
+#~ msgstr ""
+#~ "기존 부스를 수정하려면 :guilabel:`부스` 페이지에서 부스를 클릭한 후 부스 "
+#~ "양식에서 필요한 변경 사항대로 진행하면 됩니다. 또는 왼쪽 상단에 있"
+#~ "는 :guilabel:`새로 만들기` 버튼을 클릭하면 빈 부스 양식을이 표시되어 양식"
+#~ "을 새로 만들 수 있습니다."
+
+#~ msgid "Booth form"
+#~ msgstr "부스 양식"
+
+#~ msgid ""
+#~ "A new :guilabel:`Booth Category` can be created from this field, by "
+#~ "typing in the name of the new category, and clicking :guilabel:`Create "
+#~ "and edit...` from the resulting drop-down menu. Doing so reveals "
+#~ "a :guilabel:`Create Booth Category` pop-up window, with all the standard "
+#~ "fields found on a common booth category form."
+#~ msgstr ""
+#~ "이 항목에서 새 :guilabel:`부스 카테고리` 를 생성할 수 있습니다. 새 카테고"
+#~ "리의 이름을 입력하여 드롭다운 메뉴가 나타나면 :guilabel:`만들기 및 편"
+#~ "집...` 을 클릭합니다. 그러면 :guilabel:`부스 카테고리 만들기` 팝업 창이 나"
+#~ "타나고, 여기에서 일반적인 부스 카테고리 양식에서 사용하는 표준 항목을 모"
+#~ "두 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "Simply clicking :guilabel:`Create` from the resulting drop-down menu "
+#~ "creates the category, but does not reveal the :guilabel:`Create Booth "
+#~ "Category` pop-up window. The category would have to be modified later, "
+#~ "via the *Booth Categories* page (:menuselection:`Events app --> "
+#~ "Configuration --> Booth Categories`)."
+#~ msgstr ""
+#~ "여기에서 나타나는 드롭다운 메뉴에서 :guilabel:`만들기` 를 클릭하면 카테고"
+#~ "리가 생성되지만 :guilabel:`부스 카테고리 만들기` 팝업 창은 표시되지 않습니"
+#~ "다. 이 카테고리는 나중에 *부스 카테고리* 페이지 (:menuselection:`행사 앱 "
+#~ "--> 환경 설정 --> 부스 카테고리`)에서 수정해야 합니다."
+
+#~ msgid ""
+#~ "From there, click the :guilabel:`Get A Booth` event subheader menu "
+#~ "option. Doing so reveals the :guilabel:`Get A Booth` page, showcasing all "
+#~ "the configured event booths that were created on the event form."
+#~ msgstr ""
+#~ "거기에서 행사의 하위 헤더 메뉴인 :guilabel:`부스 신청하기` 를 클릭합니다. "
+#~ "클릭하면 :guilabel:`부스 신청하기` 페이지가 표시되어, 행사 양식에서 생성"
+#~ "한 모든 행사 부스를 설정 완료된 상태로 보여줍니다."
+
+#~ msgid ""
+#~ "If the selected booth has the *Create Sponsor* checkbox ticked, this page "
+#~ "reads as *Sponsor Details*."
+#~ msgstr ""
+#~ "선택한 부스의 *스폰서 만들기* 확인란에 표시가 되어 있으면 이 페이지는 *스"
+#~ "폰서 세부 정보* 로 표시됩니다."
+
+#~ msgid ""
+#~ "Click the *Sponsors* smart button to modify any information about the "
+#~ "sponsor, if necessary."
+#~ msgstr ""
+#~ "필요한 경우 *스폰서* 스마트 버튼을 클릭하면 스폰서에 대한 정보를 수정할 "
+#~ "수 있습니다."
+
+#~ msgid ""
+#~ "On the :guilabel:`Attendees` page, each attendee card displays that "
+#~ "person's name, which event they are registered to attend, their "
+#~ "associated company (if applicable), what ticket tier they purchased (if "
+#~ "applicable), along with two buttons: a :icon:`fa-"
+#~ "check` :guilabel:`(checkmark)` and :icon:`fa-undo` :guilabel:`(counter-"
+#~ "clockwise arrow)`."
+#~ msgstr ""
+#~ ":guilabel:`참석자` 페이지에 있는 참석자 카드에는 참석자 이름, 참석 등록한 "
+#~ "행사, 소속 회사 (해당하는 경우), 구매한 티켓 등급 (해당하는 경우)이 표시되"
+#~ "고 :icon:`fa-check` :guilabel:`(체크 표시)` 및 :icon:`fa-"
+#~ "undo` :guilabel:`(반시계 방향 화살표)` 의 두 개의 버튼이 표시됩니다."
+
+#~ msgid ""
+#~ "Click the :icon:`fa-undo` :guilabel:`(counter-clockwise arrow)` button on "
+#~ "an attendee's card to undo the previous action."
+#~ msgstr ""
+#~ "참석자 카드에서 :icon:`fa-undo` :guilabel:`(시계 반대 방향 화살표)` 버튼"
+#~ "을 클릭하면 이전 작업이 실행 취소됩니다."
+
+#~ msgid ""
+#~ "For example, click the :guilabel:`Event` option, in the :guilabel:`Group "
+#~ "By` column. Then, click away to remove the drop-down menu. Odoo reveals "
+#~ "the :guilabel:`Attendees` page with event-specific columns, allowing "
+#~ "users to locate specific event attendees."
+#~ msgstr ""
+#~ "예를 들어, :guilabel:`그룹 기준` 열에서 :guilabel:`행사` 항목을 클릭합니"
+#~ "다. 그런 다음 드롭다운 메뉴를 제거하려면 클릭합니다. Odoo에서는 특정한 행"
+#~ "사 참석자를 찾을 수 있도록 행사별 열이 있는 :guilabel:`참석자` 페이지가 표"
+#~ "시됩니다."
 
 #~ msgid ""
 #~ "With the *Events* application, event organizers can create and configure "

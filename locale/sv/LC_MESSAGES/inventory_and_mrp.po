@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-20 18:30+0000\n"
+"POT-Creation-Date: 2026-03-27 18:30+0000\n"
 "PO-Revision-Date: 2025-11-20 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -3529,63 +3529,47 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:7
 msgid ""
-"`Barcode Lookup <https://www.barcodelookup.com/>`_ allows you to scan (or "
-"enter) products' barcodes (:abbr:`UPC (Universal Product Code)`, :abbr:`EAN "
+"`Barcode Lookup <https://www.barcodelookup.com/>`_ allows for the scanning "
+"of products' barcodes (:abbr:`UPC (Universal Product Code)`, :abbr:`EAN "
 "(European Article Number)`, or :abbr:`ISBN (International Standard Book "
-"Number)`) to automatically create them in your Odoo database, complete with "
-"product names, descriptions, images, categories, etc."
+"Number)`) to automatically create them as products in an Odoo database, "
+"complete with product names, descriptions, images, categories, etc."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:17
 msgid ""
-"If your database is hosted on **Odoo Online**, you can use Barcode Lookup "
-"without configuration."
+"To use Barcode Lookup, an API key is required. Visit the `API page <https://"
+"www.barcodelookup.com/api#sign-up>`_ on the Barcode Lookup website and "
+"choose an appropriate plan for business needs or try :guilabel:`free test "
+"API account`. Fill in the required details and complete the registration "
+"process, then copy the provided API key."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:19
-msgid ""
-"If your database is hosted on **Odoo.sh** or **on-premise**, proceed as "
-"follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:21
-msgid ""
-"Visit the `Barcode Lookup website <https://www.barcodelookup.com/api>`_ and "
-"click :guilabel:`Sign Up for the API`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:23
-msgid ""
-"Choose the appropriate plan based on the number of barcodes you need to scan."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:24
-msgid "Fill in the required details and complete the registration process."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:25
-msgid "Copy the API key."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:26
+#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:22
 msgid ""
 "In Odoo, open the Settings app, scroll down to the :guilabel:`Integrations` "
 "section, and, under :guilabel:`Barcode Database`, paste the Barcode "
 "Lookup :guilabel:`API Key`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:30
-msgid "Use"
+#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:26
+msgid "Usage"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:32
+#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:28
 msgid ""
 "To fill in product information using Barcode Lookup, create a new product "
 "and fill in the :guilabel:`Barcode` field. The product's details are then "
 "automatically imported from Barcode Lookup, updating the following "
 "fields: :guilabel:`Name`, :guilabel:`Price`, :guilabel:`Description`, :guilabel:`Tax`, :guilabel:`Image`, :guilabel:`Weight`, :guilabel:`Attributes`, :guilabel:`Product "
-"category`, and :guilabel:`Volume`. You can then modify any field(s) as "
-"needed."
+"category`, and :guilabel:`Volume`. The fields can then modified as needed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:35
+msgid ""
+"After the barcode for a product has been entered and the API has pulled its "
+"information, updating the barcode only changes its internal notes. Other "
+"details must be manually updated."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:39
@@ -19362,10 +19346,11 @@ msgstr "Leveransmetoder"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:7
 msgid ""
 "In Odoo, *delivery methods* make it possible to calculate shipping costs "
-"directly on sales orders and e-commerce carts, providing customers and sales "
-"teams with accurate shipping fee information. This transparency helps close "
-"sales by showing customers the exact cost for each shipping carrier or "
-"delivery timeframe."
+"directly on sales orders and :doc:`e-commerce </applications/websites/"
+"ecommerce/shipping>` carts, providing customers and sales teams with "
+"accurate shipping fee information. This transparency helps close sales by "
+"showing customers the exact cost for each shipping carrier or delivery "
+"timeframe."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:12
@@ -22104,7 +22089,7 @@ msgstr ""
 "order line <inventory/shipping/invoice-on-so>` som leveransavgift."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:51
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:58
 msgid ""
 ":guilabel:`Free if order amount is above`: checking this box enables free "
 "shipping if the customer spends above the specified amount."
@@ -22931,14 +22916,22 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:36
+#, fuzzy
+#| msgid ""
+#| ":guilabel:`Website`: configure shipping methods for an e-commerce page. "
+#| "Select the applicable website from the drop-down menu, or leave it blank "
+#| "to apply the method to all web pages."
 msgid ""
-":guilabel:`Website`: configure shipping methods for an **eCommerce** page. "
-"Select the applicable website from the drop-down menu, or leave it blank to "
-"apply the method to all web pages. This field only appears when the "
-"**eCommerce** app is enabled."
+":guilabel:`Website`: configure shipping methods for an :doc:`e-commerce </"
+"applications/websites/ecommerce/shipping>` page. Select the applicable "
+"website from the drop-down menu, or leave it blank to apply the method to "
+"all web pages. This field only appears when the **eCommerce** app is enabled."
 msgstr ""
+":guilabel:`Webbplats`: konfigurera fraktmetoder för en e-handelssida. Välj "
+"tillämplig webbplats i rullgardinsmenyn, eller lämna den tom för att "
+"tillämpa metoden på alla webbsidor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:40
 msgid ""
 ":guilabel:`Provider` (*Required field*): choose the delivery service, like "
 "FedEx, if using a :ref:`third-party carrier <inventory/shipping/"
@@ -22949,14 +22942,14 @@ msgid ""
 "options, refer to their respective sections below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:46
 msgid ""
 ":guilabel:`Cash on Delivery`: allow customers to choose the :ref:`Cash on "
 "Delivery <payment_providers/inperson_payments/cash_on_delivery>` payment "
 "method when selecting this delivery option on the ecommerce website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:49
 msgid ""
 ":guilabel:`Company`: If the shipping method should apply to a specific "
 "company, select it from the drop-down menu. Leave the field blank to apply "
@@ -22964,7 +22957,7 @@ msgid ""
 "databases."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:52
 msgid ""
 ":guilabel:`Routes`: select the applicable routes to define different "
 "delivery methods, such as standard or express shipping, based on varying "
@@ -22974,7 +22967,7 @@ msgid ""
 "shipping-route>` section."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:56
 msgid ""
 ":guilabel:`Delivery Product` (*Required field*): the product listed on "
 "the :ref:`sales order line <inventory/shipping/sales-order>` as the delivery "
@@ -22984,7 +22977,7 @@ msgstr ""
 "på :ref:`försäljningsorderrad <inventering/frakt/försäljningsorder>` som "
 "leveransavgift."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:60
 msgid ""
 ":guilabel:`Tracking Link`: This option adds a link to the portal so the "
 "customer can track their delivery. When a custom carrier is added in a "
@@ -22992,24 +22985,24 @@ msgid ""
 "tracking portal with that URL."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:65
 msgid "To set up `$200` flate-rate shipping, fill in the following fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:67
 msgid ":guilabel:`Delivery Method`: `Furniture Delivery (Manual)`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:67
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:110
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:111
 msgid ":guilabel:`Provider`: :guilabel:`Fixed Price`"
 msgstr ":guilabel:`Provider`: :guilabel:`Fixed Price`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:69
 msgid ":guilabel:`Fixed Price`: `200`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:70
 msgid ":guilabel:`Delivery Product`: :guilabel:`Furniture Delivery (manual)`"
 msgstr ""
 
@@ -23017,43 +23010,43 @@ msgstr ""
 msgid "Set up a delivery method with a fixed price of 200."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:77
 msgid ""
 "Use the :guilabel:`Availability` tab to define conditions for the delivery "
 "method based on the order's content or destination:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:80
 msgid ""
 ":guilabel:`Countries`: Specify one or more countries where the method is "
 "available."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:80
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:81
 msgid ""
 ":guilabel:`Max Weight`: Set a maximum weight; the method is only available "
 "for orders below this limit."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:83
 msgid ""
 ":guilabel:`Max Volume`: Set a maximum volume; the method is only available "
 "for orders below this limit."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:85
 msgid ""
 ":guilabel:`Must Have Tags`: The method is available only if at least one "
 "product in the order has one of these tags."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:87
 msgid ""
 ":guilabel:`Excluded Tags`: The method is unavailable if at least one product "
 "in the order has one of these tags."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:90
 msgid ""
 "For examples on how to configure specific shipping methods, refer to the "
 "sections below."
@@ -23061,11 +23054,11 @@ msgstr ""
 "Exempel på hur du konfigurerar specifika fraktmetoder finns i avsnitten "
 "nedan."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:95
 msgid "Fixed price"
 msgstr "Fast pris"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:97
 msgid ""
 "To configure a shipping price that is the same for all orders, go "
 "to :menuselection:`Inventory --> Configuration --> Delivery Methods`. Then, "
@@ -23075,7 +23068,7 @@ msgid ""
 "is where the fixed rate shipping amount is defined."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:103
 msgid ""
 "To enable free shipping if the amount of the order exceeds a specified "
 "amount, check the box :guilabel:`Free if order amount is above` and fill in "
@@ -23085,7 +23078,7 @@ msgstr ""
 "markerar du rutan :guilabel:`Fri om orderbeloppet är över` och fyller i "
 "beloppet."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:107
 msgid ""
 "To set up `$20` flat-rate shipping that becomes free if the customer spends "
 "over `$100`, fill in the following fields:"
@@ -23093,19 +23086,19 @@ msgstr ""
 "Fyll i följande fält för att ställa in en fast fraktavgift på `$20` som blir "
 "gratis om kunden spenderar över `$100`:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:110
 msgid ":guilabel:`Delivery Method`: `Flat-rate shipping`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:112
 msgid ":guilabel:`Fixed Price`: `$20.00`"
 msgstr ":guilabel:`Fast pris`: `$20.00`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:113
 msgid ":guilabel:`Free if order amount is above`: `$100.00`"
 msgstr ":guilabel:`Gratis om orderbeloppet är över`: `$100.00`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:114
 msgid ":guilabel:`Delivery Product`: `[SHIP] Flat`"
 msgstr ":guilabel:`Delivery Product`: `[SHIP] Flat`"
 
@@ -23113,11 +23106,11 @@ msgstr ":guilabel:`Delivery Product`: `[SHIP] Flat`"
 msgid "Example of filling out a shipping method."
 msgstr "Exempel på hur du fyller i en fraktmetod."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:122
 msgid "Based on rules"
 msgstr "Baserat på regler"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:124
 msgid ""
 "To calculate the price of shipping based on pricing rules, set "
 "the :guilabel:`Provider` field to the :guilabel:`Based on Rules` option. "
@@ -23130,11 +23123,11 @@ msgstr ""
 "och :guilabel:`Additional margin` för att inkludera ytterligare "
 "fraktkostnader."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:129
 msgid "Create pricing rules"
 msgstr "Skapa prissättningsregler"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:131
 msgid ""
 "Navigate to the :guilabel:`Pricing` tab and click :guilabel:`Add a line`. "
 "Doing so opens the :guilabel:`Create Pricing Rules` window, where "
@@ -23148,7 +23141,7 @@ msgstr ""
 "kvantitet jämförs med ett definierat belopp för att "
 "beräkna :guilabel:`Delivery Cost`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:136
 msgid ""
 "Once finished, click either :guilabel:`Save & New` to add another rule, "
 "or :guilabel:`Save & Close`."
@@ -23156,7 +23149,7 @@ msgstr ""
 "När du är klar klickar du antingen på :guilabel:`Save & New` för att lägga "
 "till en ny regel, eller på :guilabel:`Save & Close`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:139
 msgid ""
 "To charge customers $20 in shipping for orders with five or fewer products, "
 "set the :guilabel:`Condition` to `Quantity <= 5.00`, and "
@@ -23173,7 +23166,7 @@ msgstr ""
 "Visa fönster för att lägga till en prisregel. Ange ett villkor och en "
 "leveranskostnad."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:145
 msgid ""
 "To restrict shipping to specific destinations on the **eCommerce** website, "
 "in the shipping method form, navigate to the :guilabel:`Destination "
@@ -23182,11 +23175,11 @@ msgid ""
 "apply."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:152
 msgid "Calculate delivery cost"
 msgstr "Beräkna leveranskostnad"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:154
 msgid ""
 "Shipping cost is the :guilabel:`Delivery cost` specified in the rule that "
 "satisfies the :guilabel:`Condition`, plus any extra charges from "
@@ -23196,7 +23189,7 @@ msgstr ""
 "uppfyller :guilabel:`Condition`, plus eventuella extra avgifter "
 "från :guilabel:`Margin on rate` och :guilabel:`Additional margin`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:158
 msgid ""
 "Total = Rule's~Delivery~Cost + (Margin~on~rate \\times Rule's~Delivery~Cost) "
 "+ Additional~margin\n"
@@ -23206,21 +23199,21 @@ msgstr ""
 "Rule's~Delivery~Cost) + Additional~margin\n"
 "\n"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:162
 msgid "With the two following rules set up:"
 msgstr "Med de två följande reglerna fastställda:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:164
 msgid "If the order contains five or fewer products, shipping is $20"
 msgstr ""
 "Om beställningen innehåller fem eller färre produkter kostar frakten 20 USD"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:165
 msgid "If the order contains more than five products, shipping is $50."
 msgstr ""
 "Om beställningen innehåller fler än fem produkter kostar frakten 50 USD."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:167
 msgid ""
 ":guilabel:`Margin on Rate` is `10%` and :guilabel:`Additional margin` is "
 "`$9.00`."
@@ -23235,7 +23228,7 @@ msgstr ""
 "Visa exempel på fraktmetoden \"Baserat på regler\" med konfigurerade "
 "marginaler."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:172
 msgid ""
 "When the first rule is applied, the delivery cost is $31 (20 + (0.1 * 20) + "
 "9). When the second rule is applied, the delivery cost is $64 (50 + (0.1 * "
@@ -23245,18 +23238,18 @@ msgstr ""
 "+ 9). När den andra regeln tillämpas är leveranskostnaden 64 USD (50 + (0,1 "
 "* 50) + 9)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:178
 msgid "Route on shipping method"
 msgstr "Rutt på leveransmetod"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:177
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:180
 msgid ""
 "Optionally, set different warehouse delivery processes for a shipping method "
 "by configuring different :doc:`routes <../daily_operations/use_routes>` for "
 "it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:184
 msgid ""
 "Configuring multiple routes per shipping method is helpful for adjusting "
 "warehouse delivery processes based on:"
@@ -23264,20 +23257,20 @@ msgstr ""
 "Att konfigurera flera rutter per leveransmetod är användbart för att justera "
 "leveransprocesserna i lagret baserat på:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:187
 msgid ""
 "speed (e.g., use :doc:`one-step delivery <../daily_operations/"
 "receipts_delivery_one_step>` for express shipping, or :doc:`two-step <../"
 "daily_operations/receipts_delivery_two_steps>` for standard shipping)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:190
 msgid ""
 "international shipping (e.g. use :doc:`three-step delivery <../"
 "daily_operations/delivery_three_steps>` to prepare documents for customs)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:189
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:192
 msgid ""
 "in-store pickup or home delivery: ship from the central warehouse, or pick "
 "from the store's stock, depending on customer selection."
@@ -23285,13 +23278,13 @@ msgstr ""
 "avhämtning i butik eller hemleverans: leverans från centrallagret eller "
 "plock från butikens lager, beroende på kundens val."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:192
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:195
 msgid ""
 "To set up routes, go to :menuselection:`Inventory --> Configuration --> "
 "Routes`. Click :guilabel:`New`, or select the desired route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:195
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:198
 msgid ""
 "On the route form, in the :guilabel:`Applicable On` section, tick "
 "the :guilabel:`Shipping Methods` checkbox."
@@ -23299,21 +23292,21 @@ msgstr ""
 "På ruttformuläret, i avsnittet :guilabel:`Applicable On`, markerar du "
 "kryssrutan :guilabel:`Shipping Methods`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:204
 msgid "Routes form with the Shipping Methods checkbox selected."
 msgstr "Formuläret Routes med kryssrutan Leveransmetoder markerad."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:204
 msgid "Routes form with the :guilabel:`Shipping Method` checkbox ticked."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:206
 msgid ""
 "Then, go to :menuselection:`Inventory --> Configuration --> Delivery "
 "Methods`, and select the desired shipping method."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:209
 msgid ""
 "On the shipping method form, in the :guilabel:`Routes` field, select the "
 "available fulfillment routes from the drop-down menu."
@@ -23321,7 +23314,7 @@ msgstr ""
 "På formuläret för leveransmetod, i fältet :guilabel:`Routes`, väljer du de "
 "tillgängliga leveransvägarna från rullgardinsmenyn."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:210
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:213
 msgid ""
 "If the desired route is not selectable, check that the *Shipping Methods* "
 "option is enabled in the route's *Applicable On* section."
@@ -41869,32 +41862,37 @@ msgstr ""
 msgid "Shop Floor time tracking"
 msgstr "Tidrapportering för butiksgolv"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:8
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:9
+#, fuzzy
+#| msgid ""
+#| "By signing in to the Odoo *Shop Floor* module as *operators*, employees "
+#| "are able to track the amount of time they spend working on each work "
+#| "order."
 msgid ""
 "By signing in to the Odoo *Shop Floor* module as *operators*, employees are "
-"able to track the amount of time they spend working on each work order."
+"able to track the amount of time they spend working on each work order. Odoo "
+"tracks the time it takes to complete each work order as well as the time "
+"each operator spends on each work order."
 msgstr ""
 "Genom att logga in på Odoo *Shop Floor*-modulen som *operatörer* kan "
 "anställda spåra den tid de spenderar på att arbeta med varje arbetsorder."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:11
-msgid ""
-"Odoo tracks the time it takes to complete each work order, as well as the "
-"time each operator spends on each work order."
-msgstr ""
-"Odoo spårar den tid det tar att slutföra varje arbetsorder, samt den tid som "
-"varje operatör lägger på varje arbetsorder."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:16
+#, fuzzy
+#| msgid "Change operations"
+msgid "Manage operators"
+msgstr "Förändra verksamheten"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:15
-msgid "Operator sign in"
-msgstr "Operatörsinloggning"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:17
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:18
+#, fuzzy
+#| msgid ""
+#| "To sign in to the *Shop Floor* module as an operator, sign in to the Odoo "
+#| "database, and open the :menuselection:`Shop Floor` module. The employee "
+#| "profile that is signed in to the database is automatically signed in as "
+#| "an operator."
 msgid ""
-"To sign in to the *Shop Floor* module as an operator, sign in to the Odoo "
-"database, and open the :menuselection:`Shop Floor` module. The employee "
-"profile that is signed in to the database is automatically signed in as an "
-"operator."
+"When the *Shop Floor* module is first opened, the employee profile that is "
+"signed in to the database is automatically signed in as an operator."
 msgstr ""
 "För att logga in på *Shop Floor*-modulen som operatör, logga in på Odoo-"
 "databasen och öppna :menuselection:`Shop Floor`-modulen. Den "
@@ -41903,137 +41901,109 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:21
 msgid ""
-"All active operators are listed in the operator panel on the left side of "
-"the module. The panel can be opened or collapsed by clicking "
-"the :guilabel:`show/hide panel (white square with black column on left "
-"side)` button, located in the top-left corner of the module."
+"All operators for the current session are listed in the operator panel on "
+"the left side of the screen. While the panel can list multiple employee "
+"profiles, only one employee can be active at once. The active profile "
+"highlighted in the operator panel is used for :ref:`time tracking "
+"<manufacturing/shop_floor/track-work-order-duration>`."
 msgstr ""
-"Alla aktiva operatörer visas i operatörspanelen till vänster i modulen. "
-"Panelen kan öppnas eller stängas genom att klicka på "
-"knappen :guilabel:``show/hide panel (vit kvadrat med svart kolumn på vänster "
-"sida)``, som finns i modulens övre vänstra hörn."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
-msgid ""
-"The operator panel in the Shop Floor module, with the show/hide panel button "
-"above it."
-msgstr ""
-"Operatörspanelen i Shop Floor-modulen, med knappen för att visa/dölja "
-"panelen ovanför."
+#, fuzzy
+#| msgid "A Measure check in the Shop Floor module."
+msgid "The operator panel in the Shop Floor module."
+msgstr "En mätningskontroll i modulen Shop Floor."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:29
-msgid ""
-"To sign in to *Shop Floor* as a different employee, click the :guilabel:`+ "
-"Add Operator` button at the bottom of the panel. Doing so opens "
-"the :guilabel:`Select Employee` pop-up window, which lists every employee "
-"that is able to sign in to the module."
-msgstr ""
-"Om du vill logga in på *Shop Floor* som en annan anställd klickar du på "
-"knappen :guilabel:`+ Add Operator` längst ner på panelen. Då öppnas popup-"
-"fönstret :guilabel:``Select Employee``, som innehåller en lista över alla "
-"anställda som kan logga in i modulen."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:30
+#, fuzzy
+#| msgid "Add property"
+msgid "Add an operator"
+msgstr "Lägg till fastighet"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:33
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:32
+#, fuzzy
+#| msgid ""
+#| "To add a new employee to the operator panel, click the :guilabel:`+ Add "
+#| "Operator` button at the bottom of the panel. Then, select an employee "
+#| "from the :guilabel:`Select Employee` pop-up window."
 msgid ""
-"Click on a specific employee to sign in using their profile. If no PIN code "
-"is required to sign in as that employee, the profile will be signed in "
-"automatically."
+"To add employees to the operator panel, click the :guilabel:`Edit Operators` "
+"button at the bottom of the panel. In the *Edit Operators* pop-up window, "
+"select the employees that should be added as operators for the current "
+"session, then click :guilabel:`Done`."
 msgstr ""
-"Klicka på en viss anställd för att logga in med dennes profil. Om ingen PIN-"
-"kod krävs för att logga in som den anställde kommer profilen att loggas in "
-"automatiskt."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:36
-msgid ""
-"If a PIN code is required, a :guilabel:`Password?` pop-up window appears, "
-"showing a number pad, from which the code can be entered. Enter the code "
-"using the number pad, and click :guilabel:`Confirm` to sign in to the *Shop "
-"Floor* module."
-msgstr ""
-"Om en PIN-kod krävs visas ett popup-fönster :guilabel:`Password?` med en "
-"sifferknapp där koden kan anges. Ange koden med hjälp av nummerplattan och "
-"klicka på :guilabel:`Confirm` för att logga in på modulen *Shop Floor*."
+"För att lägga till en ny medarbetare i operatörspanelen klickar du på "
+"knappen :guilabel:`+ Lägg till operatör` längst ned i panelen. Välj sedan en "
+"medarbetare från popup-fönstret :guilabel:`Select Employee`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
-msgid ""
-"The \"Password?\" pop-up window, which is used to enter an operator PIN code."
-msgstr ""
-"Popup-fönstret \"Password?\", som används för att ange en PIN-kod för "
-"operatören."
+#, fuzzy
+#| msgid "The Register Production pop-up window in the Shop Floor module."
+msgid "The Edit Operators pop-up window with four operators selected."
+msgstr "Popup-fönstret Registrera produktion i modulen Verkstadsgolv."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:45
-msgid ""
-"A PIN code can be set for each employee, which must be entered each time "
-"they sign in to the *Shop Floor* module, check in or out in the *Kiosk Mode* "
-"of the *Attendances* application, or sign in as a cashier in the *Point of "
-"Sale* application."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:40
+msgid "Switch profiles"
 msgstr ""
-"En PIN-kod kan ställas in för varje anställd, som måste anges varje gång de "
-"loggar in i modulen *Shop Floor*, checkar in eller ut i *Kiosk Mode* i "
-"applikationen *Attendances* eller loggar in som kassör i applikationen "
-"*Point of Sale*."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:42
+msgid ""
+"To sign in to *Shop Floor* as a different employee, click their name in the "
+"operator panel to sign in using their profile. If a |PIN| has not been set "
+"for the employee, the profile is signed in automatically. If a |PIN| has "
+"been set for the employee, an :guilabel:`Enter your pin` pop-up window "
+"appears. Enter the code using the number pad or keyboard, then "
+"click :guilabel:`Confirm` to sign in to the *Shop Floor* module."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:49
 msgid ""
-"To set an employee PIN, navigate to the :menuselection:`Employees` app, and "
-"select a specific employee. At the bottom of the employee's form, click on "
-"the :guilabel:`HR Settings` tab, and enter a numerical code in "
-"the :guilabel:`PIN Code` field."
+"Each employee can be assigned a PIN, which must be entered when signing in "
+"to the *Shop Floor* module. Badges can also be generated and printed for "
+"checking in and out with *Kiosk Mode* in the **Attendances** app. See "
+"the :ref:`employee settings section <employees/hr-attn-pos>` to learn more."
 msgstr ""
-"För att ställa in en anställds PIN-kod, navigera till "
-"appen :menuselection:`Employees` och välj en specifik anställd. Klicka på "
-"fliken :guilabel:`HR Settings` längst ner i den anställdes formulär och ange "
-"en sifferkod i fältet :guilabel:`PIN Code`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:53
-msgid ""
-"Once an employee is signed in to the module, their name appears in the "
-"operator panel, along with every other employee that has signed in. While "
-"the panel can list multiple employees, only one employee can be active at "
-"any given time, on a single instance of the *Shop Floor* module."
-msgstr ""
-"När en anställd har loggat in i modulen visas dennes namn i "
-"operatörspanelen, tillsammans med alla andra anställda som har loggat in. "
-"Panelen kan visa flera anställda, men endast en anställd kan vara aktiv vid "
-"varje given tidpunkt i en enda instans av modulen *Shop Floor*."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:55
+#, fuzzy
+#| msgid "Remove a product"
+msgid "Remove an operator"
+msgstr "Ta bort en produkt"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:57
+#, fuzzy
+#| msgid ""
+#| "To add a new employee to the operator panel, click the :guilabel:`+ Add "
+#| "Operator` button at the bottom of the panel. Then, select an employee "
+#| "from the :guilabel:`Select Employee` pop-up window."
 msgid ""
-"Click on an employee's name to make their profile active. The active "
-"employee appears highlighted in blue, while employees that are signed in, "
-"but not active, have their names faded out."
+"To remove employees from the operator panel, click the :guilabel:`Edit "
+"Operators` button, and click the profiles that should be removed from the "
+"panel. Confirm that the profiles have been unchecked, then "
+"click :guilabel:`Done`."
 msgstr ""
-"Klicka på en medarbetares namn för att göra dennes profil aktiv. Den aktiva "
-"medarbetaren visas blåmarkerad, medan medarbetare som är inloggade men inte "
-"aktiva har sina namn uttonade."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:60
-msgid ""
-"To sign out a specific employee from the module, click the :guilabel:`X "
-"(remove)` button next to their name, in the operator panel."
-msgstr ""
-"För att logga ut en specifik anställd från modulen klickar du på "
-"knappen :guilabel:`X (remove)` bredvid dennes namn i operatörspanelen."
+"För att lägga till en ny medarbetare i operatörspanelen klickar du på "
+"knappen :guilabel:`+ Lägg till operatör` längst ned i panelen. Välj sedan en "
+"medarbetare från popup-fönstret :guilabel:`Select Employee`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:64
 msgid "Track work order duration"
 msgstr "Spåra arbetsorderns varaktighet"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:66
+#, fuzzy
+#| msgid ""
+#| "Next, navigate to the page for the work center where the work order is "
+#| "scheduled to be carried out. This can be done by selecting the work "
+#| "center from the top navigation in the *Shop Floor* module, or by clicking "
+#| "the name of the work center on the card for the manufacturing order (MO) "
+#| "that the work order is a part of."
 msgid ""
-"To track time spent working on a work order, begin by selecting the employee "
-"working on it from the operator panel."
-msgstr ""
-"Om du vill spåra tid som lagts på en arbetsorder börjar du med att välja den "
-"medarbetare som arbetar med den från operatörspanelen."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:69
-msgid ""
-"Next, navigate to the page for the work center where the work order is "
-"scheduled to be carried out. This can be done by selecting the work center "
-"from the top navigation in the *Shop Floor* module, or by clicking the name "
-"of the work center on the card for the manufacturing order (MO) that the "
-"work order is a part of."
+"To track the time spent on a work order, select the work center where the "
+"work order is scheduled to be carried out. This can be done by selecting the "
+"work center from the top of the page in the *Shop Floor* module or by "
+"clicking the name of the work center in the form for the manufacturing order "
+"(MO) that the work order is a part of."
 msgstr ""
 "Navigera sedan till sidan för det arbetscenter där arbetsordern är planerad "
 "att utföras. Detta kan göras genom att välja arbetscenter från "
@@ -42041,31 +42011,36 @@ msgstr ""
 "arbetscentrets namn på kortet för den tillverkningsorder (MO) som "
 "arbetsordern är en del av."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:74
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:71
 msgid ""
-"On the page for the work center, find the card for the work order. Once work "
-"begins, click the header of the work order card to start timing the duration "
-"it takes to complete. This duration is displayed by a timer on the header of "
-"the work order card, which tracks the collective time spent working on the "
-"work order, by all employees."
+"When work begins, click the :guilabel:`Start` button on the work order card "
+"to start tracking the duration. The :guilabel:`Start` button is replaced by "
+"a timer which displays the total duration that all operators have spent on "
+"the work order."
 msgstr ""
-"På sidan för arbetscentret hittar du kortet för arbetsordern. När arbetet "
-"påbörjas klickar du på arbetsorderkortets rubrik för att börja ta tid på hur "
-"lång tid det tar att slutföra arbetet. Denna tid visas med en timer på "
-"arbetsorderkortets rubrik, som spårar den sammanlagda tid som alla anställda "
-"har lagt på att arbeta med arbetsordern."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
 msgid "A work order card with an active timer."
 msgstr "Ett arbetsorderkort med en aktiv timer."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:79
+msgid "View active profile work orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:81
+#, fuzzy
+#| msgid ""
+#| "In addition, the reference number of the work order appears in the "
+#| "operator panel, under the name of the employee working on it, along with "
+#| "a second timer, which tracks the amount of time the employee has spent on "
+#| "the work order individually. This timer only reflects work done during "
+#| "the current session, even if the employee has previously worked on the "
+#| "work order."
 msgid ""
-"In addition, the reference number of the work order appears in the operator "
-"panel, under the name of the employee working on it, along with a second "
-"timer, which tracks the amount of time the employee has spent on the work "
-"order individually. This timer only reflects work done during the current "
-"session, even if the employee has previously worked on the work order."
+"The operator panel displays the work center location and individual time "
+"spent for each work order an operator is working on. This timer only "
+"reflects work done during the current session, even if the operator has "
+"previously worked on the work order."
 msgstr ""
 "Dessutom visas arbetsorderns referensnummer i operatörspanelen, under namnet "
 "på den medarbetare som arbetar med den, tillsammans med en andra timer som "
@@ -42073,11 +42048,16 @@ msgstr ""
 "Timern visar bara det arbete som utförts under den aktuella sessionen, även "
 "om medarbetaren har arbetat med arbetsordern tidigare."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:85
+#, fuzzy
+#| msgid ""
+#| "Employees are able to work on multiple work orders simultaneously, and "
+#| "track their time for each. The reference number for each work order being "
+#| "worked on appears below the employee's name, along with a timer."
 msgid ""
-"Employees are able to work on multiple work orders simultaneously, and track "
-"their time for each. The reference number for each work order being worked "
-"on appears below the employee's name, along with a timer."
+"Operators can work on multiple work orders simultaneously and track their "
+"time for each. Click :guilabel:`My WO` at the top of the page to see all of "
+"the work orders the active profile is working on."
 msgstr ""
 "Medarbetarna kan arbeta med flera arbetsorder samtidigt och följa upp sin "
 "tid för varje arbetsorder. Referensnumret för varje arbetsorder som "
@@ -42088,72 +42068,183 @@ msgid "An employee card in the operator panel, showing two work order timers."
 msgstr ""
 "Ett medarbetarkort i operatörspanelen, som visar två timers för arbetsorder."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:96
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:93
+#, fuzzy
+#| msgid "Warehouses and storage"
+msgid "Pause and stop timer"
+msgstr "Lager och förvaring"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:95
+#, fuzzy
+#| msgid ""
+#| "To pause the timer on the work order card, and remove the work order from "
+#| "below the employee's name on the operator panel, click the header a "
+#| "second time."
 msgid ""
-"To pause the timer on the work order card, and remove the work order from "
-"below the employee's name on the operator panel, click the header a second "
-"time."
+"To pause the timer on a work order, click the work order card a second time."
 msgstr ""
 "För att pausa timern på arbetsorderkortet och ta bort arbetsordern från "
 "under den anställdes namn på operatörspanelen klickar du på rubriken en gång "
 "till."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:99
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:97
+#, fuzzy
+#| msgid ""
+#| "Once the work order is completed, click the :guilabel:`Mark as Done` "
+#| "button at the bottom of the work order card, which causes the card to "
+#| "fade away. If the timer is still active, it stops once the card "
+#| "disappears completely."
 msgid ""
-"Once the work order is completed, click the :guilabel:`Mark as Done` button "
-"at the bottom of the work order card, which causes the card to fade away. If "
-"the timer is still active, it stops once the card disappears completely."
+"Once a work order is complete, click the :guilabel:`Mark as Done` button at "
+"the bottom of the work order card, and it disappears from the work center "
+"page."
 msgstr ""
 "När arbetsordern är klar klickar du på knappen :guilabel:`Markera som klar` "
 "längst ned på arbetsorderkortet, vilket gör att kortet försvinner. Om timern "
 "fortfarande är aktiv stannar den när kortet försvinner helt och hållet."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:104
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:101
+msgid ""
+"If there are no additional work orders for the |MO|, the button "
+"says :guilabel:`Close Production` instead. Clicking :guilabel:`Close "
+"Production` marks the entire |MO| as *Done* and removes it from the *Shop "
+"Floor* module."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:105
+#, fuzzy
+#| msgid ""
+#| "Click the :guilabel:`⚙️ (settings)` button to open the general settings "
+#| "for the manufacturing order, then select :guilabel:`Split`."
+msgid ""
+"The :guilabel:`Close Production` button is always visible on the "
+"manufacturing order card in the :guilabel:`Overview` tab."
+msgstr ""
+"Klicka på knappen :guilabel:`⚙️ (inställningar)` för att öppna de allmänna "
+"inställningarna för tillverkningsordern och välj sedan :guilabel:`Split`."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:112
 msgid "View work order duration"
 msgstr "Visa arbetsorderns varaktighet"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:115
+#, fuzzy
+#| msgid "On a work order"
+msgid "By individual work order"
+msgstr "På en arbetsorder"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:117
+#, fuzzy
+#| msgid ""
+#| "To view the duration of a work order, navigate "
+#| "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+#| "Orders`, and select an |MO|."
 msgid ""
 "To view the duration of a work order, navigate "
-"to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
-"Orders`, and select an |MO|."
+"to :menuselection:`Manufacturing app --> Operations --> Work Orders`."
 msgstr ""
 "För att visa varaktigheten för en arbetsorder, navigera "
 "till :menyval:`Tillverkningsapp --> Operationer --> Tillverkningsorder`, och "
 "välj en |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:120
+#, fuzzy
+#| msgid ""
+#| "To view and select |MOs| that have been completed and marked as *Done*, "
+#| "remove the :guilabel:`To Do` filter from the :guilabel:`Search...` bar, "
+#| "by clicking on the :guilabel:`X (close)` button on the right side of the "
+#| "filter."
 msgid ""
-"To view and select |MOs| that have been completed and marked as *Done*, "
-"remove the :guilabel:`To Do` filter from the :guilabel:`Search...` bar, by "
-"clicking on the :guilabel:`X (close)` button on the right side of the filter."
+"By default, the search bar has a filter applied to display incomplete work "
+"orders only. To view work orders that have been completed and marked as "
+"*Done*, remove the filter from the search bar by clicking on the :icon:`oi-"
+"close` :guilabel:`(Remove)` button on the right side of the filter."
 msgstr ""
 "För att visa och välja ärenden som har slutförts och markerats som *Förda*, "
 "ta bort filtret :guilabel:`Att göra` från fältet :guilabel:`Sök...` genom "
 "att klicka på knappen :guilabel:`X (stäng)` till höger om filtret."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:124
+#, fuzzy
+#| msgid ""
+#| "The *Real Duration* represents the total time spent working on the work "
+#| "order by all workers who worked on it. It includes time tracked in the "
+#| "*Shop Floor* module, as well as time tracked on the :guilabel:`Work "
+#| "Orders` tab of the |MO| itself."
 msgid ""
-"On the page for the |MO|, click on the :guilabel:`Work Orders` tab to see a "
-"list of all work orders included in the |MO|. The time it took to complete "
-"each work order is displayed in the :guilabel:`Real Duration` column of the "
-"tab."
-msgstr ""
-"På sidan för |MO| klickar du på fliken :guilabel:`Work Orders` för att se en "
-"lista över alla arbetsordrar som ingår i |MO|. Den tid det tog att slutföra "
-"varje arbetsorder visas i kolumnen :guilabel:`Real Duration` på fliken."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:117
-msgid ""
-"The *Real Duration* represents the total time spent working on the work "
-"order by all workers who worked on it. It includes time tracked in the *Shop "
-"Floor* module, as well as time tracked on the :guilabel:`Work Orders` tab of "
-"the |MO| itself."
+"The actual time it took to complete each work order is displayed in "
+"the :guilabel:`Real Duration` column. This value represents the total time "
+"spent on the work order by all operators who worked on it. It includes time "
+"tracked in the *Shop Floor* module as well as time tracked in the work order "
+"form or the :guilabel:`Work Orders` tab of the |MO|."
 msgstr ""
 "*Real Duration* representerar den totala tid som alla arbetare som arbetat "
 "med arbetsordern har lagt ner på den. Den inkluderar tid som registrerats i "
 "modulen *Shop Floor*, samt tid som registrerats på fliken :guilabel:`Work "
 "Orders` i själva |MO|."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:129
+msgid ""
+"To view detailed time tracking information, select a work order. In the work "
+"order form, go to the :guilabel:`Time Tracking` tab to see a detailed list "
+"of all operators who have worked on the work order and the amount of time "
+"they spent on it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:134
+#, fuzzy
+#| msgid "Create manufacturing order"
+msgid "By manufacturing order"
+msgstr "Skapa tillverkningsorder"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:136
+#, fuzzy
+#| msgid ""
+#| "To view the duration of a work order, navigate "
+#| "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+#| "Orders`, and select an |MO|."
+msgid ""
+"To view the duration of all work orders in a specific |MO|, navigate "
+"to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+"Orders`."
+msgstr ""
+"För att visa varaktigheten för en arbetsorder, navigera "
+"till :menyval:`Tillverkningsapp --> Operationer --> Tillverkningsorder`, och "
+"välj en |MO|."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:139
+#, fuzzy
+#| msgid ""
+#| "To view and select |MOs| that have been completed and marked as *Done*, "
+#| "remove the :guilabel:`To Do` filter from the :guilabel:`Search...` bar, "
+#| "by clicking on the :guilabel:`X (close)` button on the right side of the "
+#| "filter."
+msgid ""
+"By default, the search bar has a filter applied to display incomplete |MOs| "
+"only. To view |MOs| that have been completed and marked as *Done*, remove "
+"the filter from the search bar by clicking on the :icon:`oi-"
+"close` :guilabel:`(Remove)` button on the right side of the filter."
+msgstr ""
+"För att visa och välja ärenden som har slutförts och markerats som *Förda*, "
+"ta bort filtret :guilabel:`Att göra` från fältet :guilabel:`Sök...` genom "
+"att klicka på knappen :guilabel:`X (stäng)` till höger om filtret."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:143
+#, fuzzy
+#| msgid ""
+#| "On the page for the |MO|, click on the :guilabel:`Work Orders` tab to see "
+#| "a list of all work orders included in the |MO|. The time it took to "
+#| "complete each work order is displayed in the :guilabel:`Real Duration` "
+#| "column of the tab."
+msgid ""
+"Select an |MO|. In the |MO| form, go to the :guilabel:`Work Orders` tab to "
+"see a list of all work orders included in the |MO|. To view details for a "
+"specific work order, click anywhere on the entry line and the work order "
+"form opens."
+msgstr ""
+"På sidan för |MO| klickar du på fliken :guilabel:`Work Orders` för att se en "
+"lista över alla arbetsordrar som ingår i |MO|. Den tid det tog att slutföra "
+"varje arbetsorder visas i kolumnen :guilabel:`Real Duration` på fliken."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:5
 msgid "Subcontracting"
@@ -57716,6 +57807,141 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/produkter_priser/returer`"
+
+#~ msgid ""
+#~ "Odoo tracks the time it takes to complete each work order, as well as the "
+#~ "time each operator spends on each work order."
+#~ msgstr ""
+#~ "Odoo spårar den tid det tar att slutföra varje arbetsorder, samt den tid "
+#~ "som varje operatör lägger på varje arbetsorder."
+
+#~ msgid "Operator sign in"
+#~ msgstr "Operatörsinloggning"
+
+#~ msgid ""
+#~ "All active operators are listed in the operator panel on the left side of "
+#~ "the module. The panel can be opened or collapsed by clicking "
+#~ "the :guilabel:`show/hide panel (white square with black column on left "
+#~ "side)` button, located in the top-left corner of the module."
+#~ msgstr ""
+#~ "Alla aktiva operatörer visas i operatörspanelen till vänster i modulen. "
+#~ "Panelen kan öppnas eller stängas genom att klicka på "
+#~ "knappen :guilabel:``show/hide panel (vit kvadrat med svart kolumn på "
+#~ "vänster sida)``, som finns i modulens övre vänstra hörn."
+
+#~ msgid ""
+#~ "The operator panel in the Shop Floor module, with the show/hide panel "
+#~ "button above it."
+#~ msgstr ""
+#~ "Operatörspanelen i Shop Floor-modulen, med knappen för att visa/dölja "
+#~ "panelen ovanför."
+
+#~ msgid ""
+#~ "To sign in to *Shop Floor* as a different employee, click "
+#~ "the :guilabel:`+ Add Operator` button at the bottom of the panel. Doing "
+#~ "so opens the :guilabel:`Select Employee` pop-up window, which lists every "
+#~ "employee that is able to sign in to the module."
+#~ msgstr ""
+#~ "Om du vill logga in på *Shop Floor* som en annan anställd klickar du på "
+#~ "knappen :guilabel:`+ Add Operator` längst ner på panelen. Då öppnas popup-"
+#~ "fönstret :guilabel:``Select Employee``, som innehåller en lista över alla "
+#~ "anställda som kan logga in i modulen."
+
+#~ msgid ""
+#~ "Click on a specific employee to sign in using their profile. If no PIN "
+#~ "code is required to sign in as that employee, the profile will be signed "
+#~ "in automatically."
+#~ msgstr ""
+#~ "Klicka på en viss anställd för att logga in med dennes profil. Om ingen "
+#~ "PIN-kod krävs för att logga in som den anställde kommer profilen att "
+#~ "loggas in automatiskt."
+
+#~ msgid ""
+#~ "If a PIN code is required, a :guilabel:`Password?` pop-up window appears, "
+#~ "showing a number pad, from which the code can be entered. Enter the code "
+#~ "using the number pad, and click :guilabel:`Confirm` to sign in to the "
+#~ "*Shop Floor* module."
+#~ msgstr ""
+#~ "Om en PIN-kod krävs visas ett popup-fönster :guilabel:`Password?` med en "
+#~ "sifferknapp där koden kan anges. Ange koden med hjälp av nummerplattan "
+#~ "och klicka på :guilabel:`Confirm` för att logga in på modulen *Shop "
+#~ "Floor*."
+
+#~ msgid ""
+#~ "The \"Password?\" pop-up window, which is used to enter an operator PIN "
+#~ "code."
+#~ msgstr ""
+#~ "Popup-fönstret \"Password?\", som används för att ange en PIN-kod för "
+#~ "operatören."
+
+#~ msgid ""
+#~ "A PIN code can be set for each employee, which must be entered each time "
+#~ "they sign in to the *Shop Floor* module, check in or out in the *Kiosk "
+#~ "Mode* of the *Attendances* application, or sign in as a cashier in the "
+#~ "*Point of Sale* application."
+#~ msgstr ""
+#~ "En PIN-kod kan ställas in för varje anställd, som måste anges varje gång "
+#~ "de loggar in i modulen *Shop Floor*, checkar in eller ut i *Kiosk Mode* i "
+#~ "applikationen *Attendances* eller loggar in som kassör i applikationen "
+#~ "*Point of Sale*."
+
+#~ msgid ""
+#~ "To set an employee PIN, navigate to the :menuselection:`Employees` app, "
+#~ "and select a specific employee. At the bottom of the employee's form, "
+#~ "click on the :guilabel:`HR Settings` tab, and enter a numerical code in "
+#~ "the :guilabel:`PIN Code` field."
+#~ msgstr ""
+#~ "För att ställa in en anställds PIN-kod, navigera till "
+#~ "appen :menuselection:`Employees` och välj en specifik anställd. Klicka på "
+#~ "fliken :guilabel:`HR Settings` längst ner i den anställdes formulär och "
+#~ "ange en sifferkod i fältet :guilabel:`PIN Code`."
+
+#~ msgid ""
+#~ "Once an employee is signed in to the module, their name appears in the "
+#~ "operator panel, along with every other employee that has signed in. While "
+#~ "the panel can list multiple employees, only one employee can be active at "
+#~ "any given time, on a single instance of the *Shop Floor* module."
+#~ msgstr ""
+#~ "När en anställd har loggat in i modulen visas dennes namn i "
+#~ "operatörspanelen, tillsammans med alla andra anställda som har loggat in. "
+#~ "Panelen kan visa flera anställda, men endast en anställd kan vara aktiv "
+#~ "vid varje given tidpunkt i en enda instans av modulen *Shop Floor*."
+
+#~ msgid ""
+#~ "Click on an employee's name to make their profile active. The active "
+#~ "employee appears highlighted in blue, while employees that are signed in, "
+#~ "but not active, have their names faded out."
+#~ msgstr ""
+#~ "Klicka på en medarbetares namn för att göra dennes profil aktiv. Den "
+#~ "aktiva medarbetaren visas blåmarkerad, medan medarbetare som är inloggade "
+#~ "men inte aktiva har sina namn uttonade."
+
+#~ msgid ""
+#~ "To sign out a specific employee from the module, click the :guilabel:`X "
+#~ "(remove)` button next to their name, in the operator panel."
+#~ msgstr ""
+#~ "För att logga ut en specifik anställd från modulen klickar du på "
+#~ "knappen :guilabel:`X (remove)` bredvid dennes namn i operatörspanelen."
+
+#~ msgid ""
+#~ "To track time spent working on a work order, begin by selecting the "
+#~ "employee working on it from the operator panel."
+#~ msgstr ""
+#~ "Om du vill spåra tid som lagts på en arbetsorder börjar du med att välja "
+#~ "den medarbetare som arbetar med den från operatörspanelen."
+
+#~ msgid ""
+#~ "On the page for the work center, find the card for the work order. Once "
+#~ "work begins, click the header of the work order card to start timing the "
+#~ "duration it takes to complete. This duration is displayed by a timer on "
+#~ "the header of the work order card, which tracks the collective time spent "
+#~ "working on the work order, by all employees."
+#~ msgstr ""
+#~ "På sidan för arbetscentret hittar du kortet för arbetsordern. När arbetet "
+#~ "påbörjas klickar du på arbetsorderkortets rubrik för att börja ta tid på "
+#~ "hur lång tid det tar att slutföra arbetet. Denna tid visas med en timer "
+#~ "på arbetsorderkortets rubrik, som spårar den sammanlagda tid som alla "
+#~ "anställda har lagt på att arbeta med arbetsordern."
 
 #~ msgid "Install"
 #~ msgstr "Installera"
