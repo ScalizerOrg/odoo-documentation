@@ -102,6 +102,11 @@ discounts, set customers, etc., and the list of products. To make sales:
 .. image:: use/pos-register.png
    :alt: POS register
 
+.. note::
+   After clicking :guilabel:`Validate`, the order :ref:`receipt
+   <pos/configuration/receipt-configuration>` can be sent via email, SMS, or WhatsApp from the
+   :guilabel:`Receipt` screen.
+
 .. tip::
    - You can use both `,` and `.` on the keyboard as decimal separators.
    - **Cash** is selected by default if no :doc:`payment method <payment_methods>` is manually
