@@ -21,6 +21,8 @@ from physical inventory and placing it in a virtual scrap location (*Inventory a
    For more information about virtual locations, see the documentation about the different types of
    :ref:`location types <inventory/warehouses_storage/location-type>`.
 
+.. _inventory/scrap-from-stock:
+
 Scrap from stock
 ================
 
