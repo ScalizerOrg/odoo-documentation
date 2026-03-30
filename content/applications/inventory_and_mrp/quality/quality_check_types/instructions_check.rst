@@ -94,5 +94,5 @@ appears on the right side of the step's line on the work order card. When using 
 quality check automatically passes, without a pop-up window appearing.
 
 .. note::
-   For a full guide to the *Shop Floor* module, see the :ref:`Shop Floor overview
-   <manufacturing/shop_floor/shop_floor_overview>` documentation.
+   For a full guide to the *Shop Floor* module, see the
+   :doc:`../../manufacturing/shop_floor/shop_floor_overview` documentation.
