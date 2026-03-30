@@ -19,16 +19,21 @@ Receipts
 |   generate :doc:`invoices <pos_invoices>`                |                                 |
 +----------------------------------------------------------+---------------------------------+
 
-To set up POS receipts, navigate to the :ref:`POS settings <pos/use/settings>` and scroll down to
-the :guilabel:`Bills & Receipts` section.
+.. _pos/configuration/receipt-configuration:
 
-- To customize the header and footer, activate the :guilabel:`Header & Footer` setting
-  and fill in both fields with the information to be printed on the receipts.
-- To print receipts automatically once a payment is registered, enable the :guilabel:`Automatic
+Configuration
+=============
+
+To set up POS receipts, go to :menuselection:`Point of Sale --> Configuration --> Settings`, and
+scroll down to the :guilabel:`Bills & Receipts` section.
+
+- To customize the header and footer, enable the :guilabel:`Custom Header & Footer` setting and
+  enter the information to be printed on the receipts in both fields.
+- To print receipts automatically upon payment confirmation, enable the :guilabel:`Automatic
   Receipt Printing` setting.
 - To print receipts that don't display product prices, enable the :guilabel:`Basic Receipt` setting.
-- Receipts can be sent by email by default, but also by SMS or through WhatsApp. To do so, activate
-  the :guilabel:`SMS Enabled` or :guilabel:`WhatsApp Enabled` option(s).
+- To allow for sending receipts via email, SMS, or WhatsApp from the :ref:`Receipt <pos/use/sell>`
+  screen, enable the :guilabel:`SMS Enabled` and/or :guilabel:`WhatsApp Enabled` setting(s).
 
   .. note::
      The :guilabel:`WhatsApp Enabled` setting is only available if the :guilabel:`WhatsApp
@@ -39,13 +44,17 @@ the :guilabel:`Bills & Receipts` section.
    - :doc:`pos_invoices`
    - :doc:`../hardware_network/receipt_printers`
 
-Reprint a receipt
-=================
+.. _pos/configuration/receipt-reprint:
 
-To reprint a receipt, navigate to the :ref:`POS interface <pos/use/open-register>`, click
-:guilabel:`Orders`, open the dropdown selection menu next to the search bar, and change the default
-:guilabel:`All active orders` filter to :guilabel:`Paid`. Then, select the order and click
-:guilabel:`Print Receipt`.
+Receipt reprint
+===============
+
+To reprint a receipt, follow the next steps:
+
+#. Access the :ref:`POS register <pos/use/open-register>`.
+#. Click :guilabel:`Orders` on the POS interface.
+#. Open the dropdown selection menu next to the search bar, and set the filter to :guilabel:`Paid`.
+#. Select the desired order and click :icon:`fa-print` :guilabel:`Print Receipt`.
 
 .. tip::
    Filter the list of orders using the search bar: type in your reference and select
