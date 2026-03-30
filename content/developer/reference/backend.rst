@@ -18,3 +18,4 @@ Server framework
    backend/testing
    backend/http
    backend/mixins
+   backend/mail_store
