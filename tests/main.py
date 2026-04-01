@@ -17,12 +17,16 @@ CUSTOM_RST_DIRECTIVES = [
     'tab', 'tabs', 'group-tab', 'code-tab',  # sphinx_tabs
 ]
 
-ADDITIONAL_CHECKERS = [
+ADDITIONAL_CHECKERS = {
     checkers.resource_files.check_image_size,
     checkers.resource_files.check_image_color_depth,
     checkers.resource_files.check_resource_file_name,
     checkers.resource_files.check_resource_file_referenced,
-]
+}
+for checker in ADDITIONAL_CHECKERS:
+    checker.name = checker.__name__[len("check_"):].replace("_", "-")
+    checker.enabled = True
+    checker.suffixes = ['.png']
 
 
 def run_additional_checks(argv=None):
@@ -83,10 +87,13 @@ if __name__ == '__main__':
     ), patch(
         'sphinxlint.three_dot_directive_re',
         re.compile(rf'\.\.\. {sphinxlint.ALL_DIRECTIVES}::'),
+    ), patch(
+        'sphinxlint.checkers',
+        sphinxlint.checkers | {checker.name: checker for checker in ADDITIONAL_CHECKERS},
     ):
         parser = argparse.ArgumentParser()
         if os.getenv('REVIEW') == '1':  # Enable checkers for `make review`.
             setattr(sphinxlint.check_line_too_long, 'enabled', True)
             setattr(checkers.rst_style.check_early_line_breaks, 'enabled', True)
-        run_additional_checks()
+        # run_additional_checks()
         sys.exit(sphinxlint.main())
