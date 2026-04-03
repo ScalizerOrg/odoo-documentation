@@ -82,6 +82,7 @@ detailed analysis.
 .. toctree::
    :titlesonly:
 
+   sms_marketing/sms_configuration
    sms_marketing/create_sms
    sms_marketing/sms_analysis
    sms_marketing/marketing_campaigns
