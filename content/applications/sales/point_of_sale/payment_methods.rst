@@ -32,9 +32,9 @@ Methods`, click :guilabel:`New`, and follow the next steps:
      <accounting/journals/bank>` to the journal to enable :doc:`QR code payments
      <payment_methods/qr_code_payment>` with a bank app. Select a :guilabel:`QR Code Format` in the
      form.
-   - :guilabel:`Cash Machine (Glory)`: Connect a :doc:`Glory <payment_methods/cash_machines/glory>`
-     :doc:`cash machine <payment_methods/cash_machines>` to automate the point of sale's cash
-     transactions.
+   - :guilabel:`Cash Machine`: Connect a :doc:`Cashdro <payment_methods/cash_machines/cashdro>`
+     or a :doc:`Glory <payment_methods/cash_machines/glory>` :doc:`cash machine
+     <payment_methods/cash_machines>` to automate the point of sale's cash transactions.
 #. Save.
 
 .. note::
