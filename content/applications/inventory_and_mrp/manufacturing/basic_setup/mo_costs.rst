@@ -25,6 +25,8 @@ cost of a product, based on all completed |MOs|.
    complete than estimated, a greater component quantity might be needed than was specified on the
    |BoM|, or the price of components may change during manufacturing.
 
+.. _manufacturing/mo-costs/cost-configuration:
+
 Cost configuration
 ==================
 
@@ -32,6 +34,8 @@ Odoo computes |MO| costs based on the configuration of the |BoM| used to manufac
 calculation includes the cost and quantity of components and operations listed on the |BoM|, in
 addition to the operating costs of the work centers where those operations are carried out, and the
 amount paid to each employee who works on an operation.
+
+.. _manufacturing/mo-costs/component-cost:
 
 Component cost
 --------------
@@ -95,6 +99,8 @@ section.
    calculate the real cost of an |MO|. The estimated cost of an |MO|, referred to as the |MO| cost,
    uses the per employee cost set on each work center's form.
 
+.. _manufacturing/mo-costs/bom-configuration:
+
 |BoM| configuration
 -------------------
 
@@ -137,6 +143,8 @@ operation.
    For a full overview of |BoM| configuration, see the documentation on :doc:`bills of materials
    <bill_configuration>`.
 
+.. _manufacturing/mo-costs/mo-overview:
+
 |MO| overview
 =============
 
@@ -164,6 +172,8 @@ Once the |MO| has been completed by clicking :guilabel:`Produce All`, the values
 .. image:: mo_costs/overview.png
    :align: center
    :alt: The MO Overview page.
+
+.. _manufacturing/mo-costs/average-manufacturing-cost:
 
 Average manufacturing cost
 ==========================
@@ -216,7 +226,6 @@ the |BoM|.
    fields.
 
    .. image:: mo_costs/overview-before.png
-      :align: center
       :alt: The MO Overview page for one putting green, before production starts.
 
    Manufacturing begins, and the operations take ten minutes longer than expected, for a total
@@ -224,7 +233,6 @@ the |BoM|.
    overview, which now lists a :guilabel:`Real Cost` of `$70.00`.
 
    .. image:: mo_costs/overview-during.png
-      :align: center
       :alt: The MO Overview page for one putting green, during production.
 
    Once manufacturing is finished, and the |MO| is marked as *Done*, the |MO| overview updates
