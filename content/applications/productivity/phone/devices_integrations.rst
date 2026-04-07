@@ -27,7 +27,6 @@ schedule a call as an activity in the chatter.
    widget.
 
    .. image:: devices_integrations/crm-voip-widget.png
-      :align: center
       :alt: View of CRM leads and the option to schedule an activity for *Odoo Discuss*.
 
 Use Odoo Phone on a computer
@@ -39,7 +38,7 @@ Odoo database, and the widget appears.
 
 .. seealso::
    To see how to use the *Phone* widget on a desktop/laptop computer, check out this documentation:
-   :doc:`voip_widget`.
+   :doc:`phone_widget`.
 
 Use Odoo Phone on a mobile device
 =================================
