@@ -113,17 +113,17 @@ The export process depends on the :abbr:`OS (Operating System)` and the browser.
             #. Set the :guilabel:`Save as type` field to `Base64-encoded ASCII, single certificate`.
             #. Click :guilabel:`Save`.
 
-           .. tab:: Mozilla Firefox
+         .. tab:: Mozilla Firefox
 
-              To export the certificate, follow the next steps:
+            To export the certificate, follow the next steps:
 
-              #. Click :guilabel:`Not secure` next to the search bar.
-              #. Go to :menuselection:`Connection not secure --> More information`.
-              #. Click :guilabel:`View certificate` in the :guilabel:`Security` tab, then
-                 :guilabel:`Details`.
-              #. Select the certificate, click :guilabel:`Export`, then select a folder in your local
-                 drive.
-              #. Click :guilabel:`Close`.
+            #. Click :guilabel:`Not secure` next to the search bar.
+            #. Go to :menuselection:`Connection not secure --> More information`.
+            #. Click :guilabel:`View certificate` in the :guilabel:`Security` tab, then
+               :guilabel:`Details`.
+            #. Select the certificate, click :guilabel:`Export`, then select a folder in your local
+               drive.
+            #. Click :guilabel:`Close`.
 
    .. group-tab:: Mac OS
 
