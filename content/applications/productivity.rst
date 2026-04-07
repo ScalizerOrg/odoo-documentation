@@ -17,6 +17,6 @@ Productivity
     productivity/discuss
     productivity/data_cleaning
     productivity/whatsapp
-    productivity/voip
+    productivity/phone
     productivity/to_do
     productivity/ai
