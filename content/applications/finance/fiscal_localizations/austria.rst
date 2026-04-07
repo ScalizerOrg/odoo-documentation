@@ -184,36 +184,13 @@ Configuration
 .. tip::
    If this module is not listed, :ref:`update the app list <general/install>`.
 
-.. _localizations/austria/pos-rksv-company:
-
-Company information
-*******************
-
-Open the Settings app, navigate to the :guilabel:`Companies` section, and click
+Once installed, open the Settings app, navigate to the :guilabel:`Companies` section, and click
 :icon:`oi-arrow-right` :guilabel:`Update Info` to make sure the :ref:`information
 <localizations/austria/saf-t-company>` is up-to-date and correctly filled in.
 
-To link your company to Fiskaly and use it in Odoo, open the :guilabel:`Fiskaly` tab and enable
-:guilabel:`Managed by Odoo` :icon:`fa-toggle-on`, which activates automatic integration management.
-
-If a Fiskaly account already exists with its own credentials, disable the toggle and configure the
-existing :guilabel:`Fiskaly credentials` manually.
-
-.. note::
-   For testing, ensure that :guilabel:`Test Fiskaly` :icon:`fa-toggle-on` is enabled to run the
-   integration without impacting the production server. Since test mode is enabled by default,
-   disable :guilabel:`Test Fiskaly` :icon:`fa-toggle-off` to switch to production mode.
-
-  .. image:: austria/management-toggle.png
-    :alt: Management toggle
-
-.. important::
-   Once the credentials have been authenticated, the Fiskaly management option (by Odoo or custom)
-   and the mode (test or production) can no longer be modified.
-
-Click :guilabel:`Generate Credentials` to create a new organization in the Fiskaly system and
-generate the necessary credentials to run the service. Next, click :guilabel:`Authenticate Keys`
-to validate those credentials.
+Then, open the :guilabel:`Fiskaly` tab and click :guilabel:`Generate Credentials` to create a new
+organization in the Fiskaly system and generate the necessary credentials to run the service. Next,
+click :guilabel:`Authenticate Keys` to validate those credentials.
 
 .. _localizations/austria/pos-fiskaly-finanzonline:
 
@@ -285,7 +262,8 @@ To generate it, go to :menuselection:`Point of Sale --> Reporting --> DEP7 Repor
 - :guilabel:`End Datetime`: Exports data with dates on or before the end date.
 - :guilabel:`Point of Sale`: Specify from which point of sale(s) data must be exported.
 
-Then, click :guilabel:`Print` to download the PDF file with DEP7 data.
+Then, click :guilabel:`Print` to download the :abbr:`JSON (JavaScript Object Notation)` file with
+DEP7 data.
 
 .. image:: austria/dep7-reports.png
    :alt: DEP7 Reports
