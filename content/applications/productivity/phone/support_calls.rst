@@ -4,12 +4,12 @@
 Support calls with Odoo Phone
 =============================
 
-A useful tool for support teams, Odoo **Phone** is used as a way to get in contact with customers who
-need some help. Using the **Phone** app can help improve customer satisfaction, reduce support costs,
-and allows support agents to navigate an Odoo database while on a call.
+A useful tool for support teams, Odoo **Phone** is used as a way to get in contact with customers
+who need some help. Using the **Phone** app can help improve customer satisfaction, reduce support
+costs, and allows support agents to navigate an Odoo database while on a call.
 
 Instead of being tied to their desks, support agents can take calls from anywhere they have access
-to the Odoo :doc:`Phone <../voip>` app.
+to the Odoo :doc:`Phone <../phone>` app.
 
 .. important::
    This feature requires at least one :doc:`call queue <axivox/call_queues>` to be configured.
@@ -68,7 +68,7 @@ Work during a call
 Once the call with the customer begins, the support agent can still move about the Odoo database.
 Also, there are shortcut icons in the *Phone* widget that the support agent can use to access common
 actions, like sending an email to the customer, or pulling up their profile. Learn more about
-:doc:`the documents a support agent can access <voip_widget>` during a call.
+:doc:`the documents a support agent can access <phone_widget>` during a call.
 
 The support agent can also take some actions during the call:
 

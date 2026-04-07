@@ -154,7 +154,7 @@ upper-right corner of the screen anywhere in an Odoo database.
 
 .. seealso::
    - :doc:`axivox_config`
-   - :doc:`../voip_widget`
+   - :doc:`../phone_widget`
 
 For an agent to connect to the call queue, dial the :guilabel:`Agent connection` number, and then
 press the green call button :icon:`fa-phone` :guilabel:`(phone)` icon in the **VoIP** widget. Then,
