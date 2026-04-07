@@ -4,13 +4,13 @@
  Sales calls with Odoo Phone
 ============================
 
-Using Odoo **Phone** increases call efficiency, reduces costs, and allows a salesperson to access the
-Odoo database while on a call. Instead of relying on a separate phone for sales calls, a salesperson
-can make calls directly from the Odoo database.
+Using Odoo **Phone** increases call efficiency, reduces costs, and allows a salesperson to access
+the Odoo database while on a call. Instead of relying on a separate phone for sales calls, a
+salesperson can make calls directly from the Odoo database.
 
 This article goes over setting up Odoo **Phone** for a sales team that already has the **Phone** app
-configured. If it is **not** configured, refer to the :doc:`Phone <../voip>` documentation
-to get started.
+configured. If it is **not** configured, refer to the :doc:`Phone <../phone>` documentation to get
+started.
 
 .. seealso::
    `Odoo Tutorial: Sales calls with VoIP
@@ -39,7 +39,7 @@ Work during a call
 Once the call with the customer begins, the salesperson can still move about the Odoo database.
 Also, there are shortcut icons in the *Phone* widget that the salesperson can use to access common
 actions, like sending an email to the customer, or pulling up their profile. Learn more about
-:doc:`the documents a salesperson can access <voip_widget>` during a call.
+:doc:`the documents a salesperson can access <phone_widget>` during a call.
 
 The salesperson can also take some actions during the call:
 
