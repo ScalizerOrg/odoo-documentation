@@ -16,7 +16,7 @@ The **Phone** widget contains four tabs: :guilabel:`Keypad`, :guilabel:`Recent`,
 :guilabel:`Contacts`, and :guilabel:`Activities`, which are used for managing calls and day-to-day
 activities in Odoo. Use the search bar to find contacts faster.
 
-.. image:: voip_widget/phone-widget.png
+.. image:: phone_widget/phone-widget.png
    :alt: The **Phone** widget has four tabs: **Keypad**, **Recent**, **Contacts**, and **Activities**.
 
 Keypad tab
@@ -77,14 +77,14 @@ it is open to the Kanban view. Next, near the top of the screen, click the :icon
 the :icon:`fa-phone` :guilabel:`(phone)` with the small green :icon:`fa-plus` :guilabel:`(plus)`
 icon.
 
-.. image:: voip_widget/add-call.png
+.. image:: phone_widget/add-call.png
    :alt: A sales opportunity with the option to add a call to the Phone widget.
 
 To remove a call from the :guilabel:`Activities` tab, hover over the opportunity that has a call
 scheduled, and click the red :icon:`fa-phone` :guilabel:`(phone)` icon that appears with the
 :icon:`fa-minus` :guilabel:`(minus)` icon.
 
-.. image:: voip_widget/remove-call.png
+.. image:: phone_widget/remove-call.png
    :alt: A sales opportunity with the option to remove a call from the Phone widget.
 
 Make a VoIP call with the Phone widget
@@ -101,8 +101,7 @@ are the three ways to make a phone call in the Odoo database. First, click the :
   contact and click the :icon:`fa-phone` :guilabel:`(phone)` icon.
 
 When receiving calls in Odoo, the **Phone** widget rings, and displays a notification. To close the
-widget, click the :icon:`oi-close` :guilabel:`(close)` icon in the upper-right of the widget's
-screen.
+widget, click the :icon:`oi-close` :guilabel:`(close)` icon in the upper-right of the widget screen.
 
 .. note::
    The |VOIP| number is the one provided by Axivox. It can be accessed by navigating to
@@ -157,7 +156,7 @@ recipients, enter the email's subject line, and write the email. When it is read
 :guilabel:`(dropdown)` icon next to :guilabel:`Send`, click :guilabel:`Send Later`, pick the
 scheduled time, and click :guilabel:`Schedule`.
 
-.. _voip/voip_widget/troubleshooting_voip:
+.. _phone/phone_widget/troubleshooting:
 
 Troubleshooting
 ===============

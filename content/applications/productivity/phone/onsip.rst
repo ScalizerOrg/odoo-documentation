@@ -79,7 +79,7 @@ the :icon:`oi-voip` :guilabel:`(Phone)` icon in the top-right corner of Odoo.
 Handle incoming calls
 =====================
 
-Incoming calls appear in the :doc:`*Phone* widget <voip_widget>`. Click the green :guilabel:`📞
+Incoming calls appear in the :doc:`*Phone* widget <phone_widget>`. Click the green :guilabel:`📞
 (phone)` icon to answer the call, or click the red :guilabel:`📞 (phone)` icon to ignore the call.
 
 
