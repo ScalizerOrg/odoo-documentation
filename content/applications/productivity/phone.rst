@@ -17,14 +17,14 @@ times, helping businesses streamline external communication and track team perfo
 
 .. cards::
    .. card:: Phone widget
-      :target: voip/voip_widget
+      :target: phone/phone_widget
       :large:
 
       Get started with the **Phone** widget essentials, including actions that can be taken during a
       call.
 
    .. card:: Devices and integrations
-      :target: voip/devices_integrations
+      :target: phone/devices_integrations
       :large:
 
       Learn how to access the **Phone** widget from different devices (like phones) and apps (like
@@ -87,27 +87,27 @@ Connect to a VoIP provider
 --------------------------
 
 Making calls through the **Phone** app also requires a |VOIP| service provider. Odoo supports three
-verified providers by default: :doc:`Axivox <voip/axivox>`, :doc:`DIDWW <voip/didww>`, and
-:doc:`OnSIP <voip/onsip>`. Click on the cards below to learn how to configure these service
+verified providers by default: :doc:`Axivox <phone/axivox>`, :doc:`DIDWW <phone/didww>`, and
+:doc:`OnSIP <phone/onsip>`. Click on the cards below to learn how to configure these service
 providers in the Odoo database:
 
 .. cards::
    .. card:: Axivox configuration
-      :target: voip/axivox
+      :target: phone/axivox
       :large:
 
       Learn how to set up Axivox in Odoo. This includes adding users to Axivox, setting up call
       queues, and more.
 
    .. card:: DIDWW configuration
-      :target: voip/didww
+      :target: phone/didww
       :large:
 
       Learn how to set up DIDWW in Odoo. This includes entering DIDWW credentials into Odoo and
       purchasing new numbers.
 
    .. card:: OnSIP configuration
-      :target: voip/onsip
+      :target: phone/onsip
       :large:
 
       Learn how to set up OnSIP in Odoo. This includes entering OnSIP credentials into Odoo and
@@ -129,8 +129,8 @@ To add credentials for an alternate provider, go to the :menuselection:`Phone ap
 URL). Enter the domain created by the alternate provider in the :guilabel:`OnSIP Domain` field.
 
 For issues setting up the |VOIP| service provider in Odoo, follow the :ref:`relevant troubleshooting
-steps <voip/voip_widget/troubleshooting_voip>`. For any other issues with the |VOIP| service
-provider, contact their support team directly.
+steps <phone/phone_widget/troubleshooting>`. For any other issues with the |VOIP| service provider,
+contact their support team directly.
 
 VoIP workflows
 ==============
@@ -140,14 +140,14 @@ well. Click the cards below to learn about |VOIP| workflows in Odoo:
 
 .. cards::
    .. card:: Sales teams and VoIP
-      :target: voip/sales_calls
+      :target: phone/sales_calls
       :large:
 
       Learn how to use Odoo **Phone** for a sales team workflow. This includes making sales calls,
       handling follow-ups, and sending a sales quotation while on a call.
 
    .. card:: Support queues and VoIP
-      :target: voip/support_calls
+      :target: phone/support_calls
       :large:
 
       Learn how to use Odoo **Phone** for a support team workflow. This includes joining a call
@@ -156,10 +156,10 @@ well. Click the cards below to learn about |VOIP| workflows in Odoo:
 .. toctree::
    :titlesonly:
 
-   voip/axivox
-   voip/didww
-   voip/onsip
-   voip/voip_widget
-   voip/devices_integrations
-   voip/sales_calls
-   voip/support_calls
+   phone/axivox
+   phone/didww
+   phone/onsip
+   phone/phone_widget
+   phone/devices_integrations
+   phone/sales_calls
+   phone/support_calls
