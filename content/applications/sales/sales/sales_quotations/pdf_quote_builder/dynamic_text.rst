@@ -143,6 +143,8 @@ follow their path from :guilabel:`sale_order_line`.
 
         Example of Odoo's Form Field Path for the customer's country from a product document.
 
+.. _pdf_quote_builder/dynamic_text/custom-note:
+
 Create a custom note form field
 -------------------------------
 
