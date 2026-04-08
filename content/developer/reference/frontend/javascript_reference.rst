@@ -1395,6 +1395,23 @@ Many2many Tags - Kanban View (`kanban.many2many_tags`)
 
     - Supported field types: `many2many`
 
+Many2many Tags Color Dot (`many2many_tags_color_dot`)
+    Specialization of `many2many_tags` widget, which instead of coloring the
+    entire tag background, displays a colored bullet (dot) before the tag label.
+
+    - Supported field types: `many2many`
+
+Many2many Tags Avatar (`many2many_tags_avatar`)
+    Specialization of `many2many_tags` widget, for displaying list of avatars.
+
+    - Supported field types: `many2many`
+
+Many2many Tags Avatar - Kanban View (`kanban.many2many_tags_avatar`)
+    Specialization of `many2many_tags_avatar` widget for kanban view, providing a
+    popover to edit tags in kanban view (for fields which are not read-only).
+
+    - Supported field types: `many2many`
+
 Many2many Checkboxes (`many2many_checkboxes`)
     This field displays a list of checkboxes and allows the user to select a
     subset of the choices. Note that the number of displayed values is limited to
