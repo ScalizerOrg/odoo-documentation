@@ -44,13 +44,6 @@ modified at any time.
    The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
    website visitors to choose a pricelist when shopping in your **eCommerce** website.
 
-.. note::
-   In Odoo 17 (and above), you are *not required* to enter a pricelist in the :guilabel:`Pricelist`
-   field on a sales quotation form in order to confirm it (i.e. turn it into a sales order).
-
-   The chatter section is available on pricelist forms, which allows you to add notes and
-   communications on each pricelist page.
-
 Creating and editing pricelists
 -------------------------------
 
