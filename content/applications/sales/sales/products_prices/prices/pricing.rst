@@ -43,13 +43,6 @@ modified at any time.
    The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
    website visitors to choose a pricelist when shopping in your **eCommerce** website.
 
-.. note::
-   In Odoo 17 (and above), you are *not required* to enter a pricelist in the :guilabel:`Pricelist`
-   field on a sales quotation form in order to confirm it (i.e. turn it into a sales order).
-
-   The chatter section is available on pricelist forms, which allows you to add notes and
-   communications on each pricelist page.
-
 Creating and editing pricelists
 -------------------------------
 
@@ -178,7 +171,6 @@ and :guilabel:`Pricing` options. When the configurations are complete, click the
 Close` button.
 
 .. image:: pricing/time-period-popup.png
-   :align: center
    :alt: Custom time period pop-up form in Odoo Sales.
 
 Lastly, add the desired price for this recurring price rule in the :guilabel:`Recurring Price`
@@ -220,7 +212,6 @@ app --> Orders --> Customers` and selecting the customer from the main :guilabel
 or by clicking on the customer's name on a sales order.
 
 .. image:: pricing/customer-detail-form.png
-   :align: center
    :alt: Sample customer detail form in Odoo Sales.
 
 On the desired customer's contact form, under the :guilabel:`Sales & Purchase` tab, in the
@@ -228,7 +219,6 @@ On the desired customer's contact form, under the :guilabel:`Sales & Purchase` t
 the drop-down menu in the :guilabel:`Pricelist` field.
 
 .. image:: pricing/customer-form-pricelist-field.png
-   :align: center
    :alt: The pricelist field in a customer detail form in Odoo Sales.
 
 .. note::
