@@ -132,7 +132,8 @@ transaction data. It also reduces the time to pay the supplier as the customer d
 for the supplier to issue a vendor bill.
 
 Odoo supports the generation of both self-billing vendor bills and self-billing credit notes.
-Sending these self-billing vendor bills and credit notes is supported in Odoo via Peppol.
+Sending these self-billing vendor bills and credit notes is supported in Odoo both by email and via
+Peppol.
 
 .. _accounting/vendor_bills/self-billing/config:
 
@@ -145,13 +146,14 @@ self-billing:
 #. Navigate to :menuselection:`Accounting --> Configuration --> Journals`.
 #. Click the :guilabel:`New` button.
 #. Enter a :guilabel:`Journal Name` and set the :guilabel:`Type` to :guilabel:`Purchase`.
-#. In the :guilabel:`Journal Entries` tab, set a :guilabel:`Default Expense Account` and enter a
-   :guilabel:`Short Code`.
 #. In the :guilabel:`Advanced Settings` tab, enable :guilabel:`Self Billing`.
 
 .. note::
    The sequence of self-bills contains the :ref:`database ID <export_import_data/different-ids>`
    (also known as the internal ID) of the partner, making the sequence unique per partner.
+
+.. seealso::
+   :doc:`get_started/journals`
 
 .. _accounting/vendor_bills/self-billing/create:
 
@@ -170,7 +172,9 @@ Send a self-bill
 ----------------
 
 To send a self-bill after :ref:`creating <accounting/vendor_bills/self-billing/create>` and
-confirming it, click :guilabel:`Send & Print`.
+confirming it, click :guilabel:`Send`. In the :guilabel:`Send` popup window, select the sending
+methods (i.e., :guilabel:`by Email`, :guilabel:`by Post`, and/or :guilabel:`by Peppol`), and click
+:guilabel:`Send`.
 
 To send multiple self-bills at once, select them in the list view and click :guilabel:`Send`.
 
@@ -181,8 +185,6 @@ To send multiple self-bills at once, select them in the list view and click :gui
      <accounting/e-invoicing/contact-verification>` for vendors is the same as for customers except
      that vendors' contact records can be found via :menuselection:`Accounting --> Vendors -->
      Vendors`.
-   - The :guilabel:`Send` button only appears when then the bill's :guilabel:`Vendor` is registered
-     on Peppol.
    - Not every Peppol access point supports self-billing. Check with your vendors to ensure that
      their Peppol access point supports self-billing.
 
