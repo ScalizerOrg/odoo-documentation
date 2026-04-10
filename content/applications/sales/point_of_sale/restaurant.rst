@@ -30,6 +30,15 @@ orders:
    :ref:`Booking <pos/restaurant/floors/booking>` button appears in the POS interface to view
    and manage bookings.
 
+.. cards::
+
+   .. card:: Online food delivery
+      :target: restaurant/online_food_delivery
+      :large:
+
+      Integrate third-party delivery platforms via UrbanPiper to centralize and manage external
+      orders directly within the POS.
+
 .. _pos/restaurant/default:
 
 Default start screen

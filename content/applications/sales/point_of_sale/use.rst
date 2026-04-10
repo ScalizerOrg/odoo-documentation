@@ -4,6 +4,25 @@
 Use
 ===
 
+This section covers the essential daily operations of the Point of Sale, from initial setup and
+configuration to managing sales transactions, customer records, and receipt/invoice handling.
+
+.. cards::
+
+   .. card:: Receipts
+      :target: use/receipts
+      :large:
+
+      Set up automatic printing, customize headers and footers, and learn how to reprint
+      past receipts.
+
+   .. card:: Invoices
+      :target: use/pos_invoices
+      :large:
+
+      Configure default invoicing parameters, issue invoices during checkout, and manage
+      reprinting or emailing them later.
+
 .. _pos/use/create-pos:
 
 Create a POS
