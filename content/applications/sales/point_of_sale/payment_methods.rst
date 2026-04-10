@@ -53,10 +53,31 @@ Methods`, click :guilabel:`New`, and follow the next steps:
    - Always set the :guilabel:`Journal` to :guilabel:`Bank` when :ref:`configuring a payment
      terminal <pos/terminals/configuration>`.
 
+.. cards::
+
+   .. card:: Cash machines
+      :target: payment_methods/cash_machines
+
+      Integrate cash machines to automate cash handling and transaction validation.
+
+   .. card:: Customer account
+      :target: payment_methods/customer_credit
+
+      Allow customers to pay on credit, deposit funds, and manage their debt directly from the POS.
+
+   .. card:: QR code payments
+      :target: payment_methods/qr_code_payment
+
+      Generate QR codes for customers to scan and pay using mobile banking apps.
+
+   .. card:: Payment terminals
+      :target: payment_methods/terminals
+
+      Connect and configure supported card terminals (e.g., Adyen, Stripe, Ingenico) to process card
+      payments.
+
 .. seealso::
-   - `Payment methods (video tutorial) <https://www.youtube.com/watch?v=eHr4tS8Wmss>`_
-   - :doc:`payment_methods/terminals`
-   - :doc:`payment_methods/cash_machines`
+   `Payment methods (video tutorial) <https://www.youtube.com/watch?v=eHr4tS8Wmss>`_
 
 .. toctree::
    :titlesonly:
