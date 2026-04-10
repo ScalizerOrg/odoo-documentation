@@ -13,18 +13,48 @@ Beyond traditional :doc:`store <point_of_sale/shop>` and :doc:`restaurant
 :doc:`self-ordering <point_of_sale/extra/self_order>` feature, enabling customers to place orders
 and make payments using a dedicated kiosk or their own mobile device.
 
-Odoo :abbr:`POS (Point of Sale)` integrates with all essential point-of-sale hardware, including:
+.. cards::
 
-- :doc:`Payment terminals <point_of_sale/payment_methods/terminals>`;
-- Cash drawers;
-- :doc:`Cash machines <point_of_sale/payment_methods/cash_machines>`;
-- :doc:`Scales <point_of_sale/hardware_network/scale>`;
-- :doc:`Barcode scanners <../inventory_and_mrp/barcode/setup/hardware>`;
-- :doc:`Customer displays <point_of_sale/hardware_network/customer_display>`;
-- :doc:`Preparation displays <point_of_sale/extra/preparation>`;
-- :doc:`Electronic shelf labels <point_of_sale/hardware_network/electronic_labels>`.
+   .. card:: Use
+      :target: point_of_sale/use
 
-This hardware can be connected directly or through an :doc:`IoT system <../general/iot>`.
+      Set up a POS, manage basic settings, and handle daily operations.
+
+   .. card:: Products
+      :target: point_of_sale/products
+
+      Configure products, categories, combos, and serial number displays.
+
+   .. card:: Hardware and network
+      :target: point_of_sale/hardware_network
+
+      Connect and configure hardware peripherals and network settings.
+
+   .. card:: Shop features
+      :target: point_of_sale/shop
+
+      Features specific to retail: manage quotations, "ship later" orders, and barcodes.
+
+   .. card:: Restaurant features
+      :target: point_of_sale/restaurant
+
+      Features specific to restaurants: manage floors, tables, tips, and online delivery.
+
+   .. card:: Extra features
+      :target: point_of_sale/extra
+
+      Shared features: manage employees, preparation displays, self-ordering, and loyalty programs.
+
+   .. card:: Payment methods
+      :target: point_of_sale/payment_methods
+
+      Configure cash and card payments, cash machines, customer accounts, QR codes, and payment
+      terminals.
+
+   .. card:: Reporting
+      :target: point_of_sale/reporting
+
+      View and analyze orders and sessions' statistics.
 
 .. seealso::
    `Odoo Tutorials: Point of Sale tutorials <https://www.odoo.com/slides/point-of-sale-28>`_
