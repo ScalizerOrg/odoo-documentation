@@ -1,90 +1,154 @@
-=====================
-Add PDFs to a product
-=====================
+===============================
+Add a PDF or a URL to a product
+===============================
 
-In Odoo *Sales*, it's also possible to add a custom PDF to a product form. When a PDF is added to a
-product, and that product is used in a quotation, that PDF is also inserted in the final PDF.
+The Odoo **Sales** app lets users add a custom PDF or URL to a *product template* or variant using
+the PDF Quote builder. By attaching a PDF or a URL, users can include extra information or resources
+in their quotes, online product pages, or for manufacturing.
 
-To add a custom PDF to a product, start by navigating to :menuselection:`Sales app --> Products -->
-Products`, and select the desired product to add a custom PDF to.
+.. _sales/pdf_quote_builder/add_pdf_products/add-pdf-to-product:
 
-.. note::
-   A document could also be added to a product variant, instead of a product. If there are documents
-   on a product *and* on its variant, **only** the documents in the variant are shown.
+Add a PDF or URL to a product template
+======================================
 
-   To add a custom document to a product variant, navigate to :menuselection:`Sales app -->
-   Products --> Product Variants`. Select the desired variant, click the :guilabel:`Documents` smart
-   button, and proceed to upload the custom document to the specific product variant.
-
-On the product page, click the :guilabel:`Documents` smart button at the top of the page to navigate
-to a :guilabel:`Documents` page for that product, where files related to that product can be
-uploaded. From this page, either click :guilabel:`New` or :guilabel:`Upload`.
+To add a custom PDF to a product template, go to the :menuselection:`Sales app --> Products -->
+Products`, and select the desired product. Next, click the :guilabel:`Documents` smart button at the
+top of the product template page.
 
 .. image:: add_pdf_products/documents-smart-button.png
-   :alt: The Documents smart button on a product form in Odoo Sales.
+   :alt: The Documents smart button on a Sales product form.
 
-Clicking :guilabel:`Upload` opens the computer's local file directory. An uploaded document can be
-further configured on the document card, or by clicking the :icon:`fa-ellipsis-v`
-:guilabel:`(vertical ellipsis)` icon in the top-right corner of the document card, and then clicking
-:guilabel:`Edit`.
+Click :guilabel:`Upload` to open the user's local file directory then select and upload a PDF to
+Odoo. Odoo automatically creates a PDF document form from the uploaded PDF, with the
+:guilabel:`Sales Visibility` set to :guilabel:`Hidden` and the :guilabel:`Publish on website` toggle
+disabled by default. Click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in the
+corner of the document card and select :guilabel:`Edit` to further :ref:`configure the PDF form
+<sales/pdf_quote_builder/add_pdf_products/pdf-form-configuration>`.
 
-Clicking :guilabel:`New` reveals a blank documents form, in which the desired PDF can be uploaded
-via the :guilabel:`Upload your file` button on the form, located in the :guilabel:`File Content`
-field.
+Click :guilabel:`New` to open a blank PDF form and manually :ref:`configure the document form
+<sales/pdf_quote_builder/add_pdf_products/pdf-form-configuration>`.
 
-PDF form configuration
-======================
 
-.. image:: add_pdf_products/blank-document-form.png
-   :alt: A standard document form with various fields for a specific product in Odoo Sales.
+.. _sales/pdf_quote_builder/add_pdf_products/add-pdf-to-variant:
 
-The first field on the documents form is for the :guilabel:`Name` of the document, and it is
-grayed-out (not clickable) until a document is uploaded. Once a PDF has been uploaded, the
-:guilabel:`Name` field is auto-populated with the name of the PDF, and it can then be edited.
+Add a PDF or URL to a product variant
+-------------------------------------
 
-Prior to uploading a document, there's the option to designate whether the document is a
-:guilabel:`File` or :guilabel:`URL` from the :guilabel:`Type` drop-down field menu.
+A PDF document or URL can also be added to a product variant, rather than the product template. The
+document form for the product variant is the same as the product template's document form,
+**except** it doesn't include the *E-Commerce* section and thus cannot be published on the website.
+
+To add a PDF to a product variant, navigate to the :menuselection:`Sales app --> Products -->
+Product Variants`, select the product variant, click the :guilabel:`Documents` smart button, and
+:ref:`upload the PDF <sales/pdf_quote_builder/add_pdf_products/add-pdf-to-product>`.
+
+.. note::
+   If the variant is added to a quotation, and there are documents on a product *and* on its
+   variant, **only** the documents in the variant are shown in the *Quote Builder* tab of the
+   quotation.
+
+.. _sales/pdf_quote_builder/add_pdf_products/pdf-form-configuration:
+
+Document form configuration
+===========================
+
+.. important::
+   To save a document form entry, the user **must** add a URL or PDF to the document form. Odoo
+   won't save the entry without one, even if the rest of the form is configured.
+
+General Information
+-------------------
+
+Fill out the following information in the top section of the document form:
+
+- :guilabel:`Type`: Select either :guilabel:`File` or a :guilabel:`URL` from the drop-down menu. If
+  a PDF is uploaded, the :guilabel:`Type` field is automatically set to :guilabel:`File` and cannot
+  be changed.
+- :guilabel:`URL`: This field is only clickable if the :guilabel:`Type` field is set to
+  :guilabel:`URL`. Enter a URL link to an online PDF document.
+- :guilabel:`Name`: This field is grayed out (not clickable) until a URL is entered or a PDF is
+  uploaded. If the URL is entered, the :guilabel:`Name` field is left blank, and it can then be
+  edited. If a PDF document has been uploaded, the :guilabel:`Name` field is auto-populated with the
+  file name, and it can then be edited.
+- :guilabel:`File Content (base64)`: This field displays the uploaded file. Click it to open the
+  file directory and select a different PDF.
+- :icon:`fa-pencil` :guilabel:`(Edit)` icon: Click to open the file directory and select a different
+  PDF.
+- :icon:`fa-download` :guilabel:`(Download)` icon: Click to download the PDF document. This icon
+  only appears after a PDF is uploaded and the document form is saved.
+- :icon:`fa-trash` :guilabel:`(Delete)` icon: Click to remove the uploaded PDF. This action allows
+  the user to change the :guilabel:`Type` field from :guilabel:`File` to :guilabel:`URL` and enter a
+  URL link instead.
+- :guilabel:`Configure dynamic fields`: Click the link if the PDF document or URL has dynamic form
+  fields that need to be :ref:`configured to Odoo fields
+  <sales/pdf_quote_builder/dynamic_text/map-PDF-to-Odoo>`. If the PDF document or URL has custom
+  dynamic form fields, refer to the
+  :ref:`sales/pdf_quote_builder/dynamic_text/custom-dynamic-form-fields` for more information.
 
 .. image:: add_pdf_products/document-form-uploaded-pdf.png
    :alt: A standard document form with an uploaded pdf in Odoo Sales.
 
-.. note::
-    If a PDF is uploaded, the :guilabel:`Type` field is auto-populated to :guilabel:`File`, and it
-    cannot be modified.
+Sales section
+-------------
 
-Then, in the :guilabel:`Sales` section, in the :guilabel:`Visible at` field, click the drop-down
-menu, and select either: :guilabel:`On quotation`, :guilabel:`On confirmed order`, or
-:guilabel:`Inside quote pdf`.
+Click the :guilabel:`Sale: Visible at` field and select one of the following options:
 
-- :guilabel:`Quotation`: the document is sent to (and accessible by) customers at any time.
-
-- :guilabel:`Confirmed order`: the document is sent to customers upon the confirmation of an order.
-  This is best for user manuals and other supplemental documents.
-
-- :guilabel:`Inside quote`: the document is included in the PDF of the quotation, between the header
-  pages and the :guilabel:`Pricing` section of the quote.
-
-.. example::
-   When the :guilabel:`Inside quote` option for the :guilabel:`Visible at` field is chosen, and the
-   custom PDF file, `Corner Desk.pdf` is uploaded, the PDF is visible on the quotation in the
-   *customer portal* under the :guilabel:`Documents` field.
-
-    .. image:: add_pdf_products/pdf-on-quote-sample.png
-       :alt: Sample of an uploaded pdf with the on quote option chosen in Odoo Sales.
-
-Beside the :guilabel:`File Content` field, you have the possibility to :guilabel:`Configure dynamic
-fields`. When doing so, remember that the starting model is the :guilabel:`sale_order_line`, unlike
-for headers and footers that start from the :guilabel:`sale_order`.
-
-Lastly, in the :guilabel:`E-Commerce` section, decide whether or not to :guilabel:`Publish on
-Website` so that the PDF appears on the product page in the online store.
+- :guilabel:`Hidden`: The PDF or URL isn't visible in the **Sales** app. This option is best for
+  digital product documents intended for publication on the website, but not shown in the quotation
+  or customer portal.
+- :guilabel:`On quote`: The PDF document or URL can be sent to customers at any time. It is also
+  available for download on the customer portal. This options is best for product description files.
+- :guilabel:`On confirmed order`: The PDF document or URL is sent to customers upon order
+  confirmation. It is available on the customer port after a quotation is confirmed. This is best
+  for user manuals and digital content sold on eCommerce websites.
+- :guilabel:`Inside quote`: The PDF document or URL is included in the PDF quotation, between the
+  header pages and the :guilabel:`Pricing` section.
 
 .. example::
-   When the :guilabel:`Publish on Website` option is enabled, a link to the uploaded document,
-   `Corner Desk.pdf`, appears on the product's page in the online store.
+   When the :guilabel:`On quote` option for the :guilabel:`Visible at` field is selected and the
+   custom PDF document, `AC product info and warranty.pdf`, is uploaded, the PDF appears in the
+   *customer portal* quotation in the :guilabel:`Documents` section.
 
-   It appears beneath a :guilabel:`Documents` heading, with a link showcasing the name of the
-   uploaded document.
+   .. image:: add_pdf_products/pdf-on-quote-sample.png
+      :alt: Sample of an uploaded pdf with the on quote option chosen in Odoo Sales.
 
-    .. image:: add_pdf_products/show-product-page.png
-       :alt: Showing a link to an uploaded document on a product page using Odoo Sales.
+E-Commerce section
+------------------
+
+- :guilabel:`Publish on Website`: A checkbox that, if enabled, displays a link to download the PDF
+  document on the product page in the online store.
+
+  .. image:: add_pdf_products/show-product-page.png
+     :alt: An uploaded document on an e-commerce product page.
+
+Manufacturing section
+---------------------
+
+.. important::
+   This section only appears if the **Manufacturing** app is installed.
+
+Click the :guilabel:`Sale: Visible at` field and select one of the following options:
+
+- :guilabel:`Hidden`: The PDF or URL is accessible only on the product form.
+- :guilabel:`Bill of Materials`: The PDF or URL is attached to the bill of materials when the
+  product is manufactured. This option is best for assembly instructions and manufacturing
+  specifications.
+
+.. _sales/pdf_quote_builder/add_pdf_products/find-pdfs-for-product:
+
+View all configured PDFs or links for a product
+===============================================
+
+Navigate to the :menuselection:`Sales app --> Products --> Products` and select a product. Click the
+:guilabel:`Documents` smart button to open the :guilabel:`Documents` page and display all the
+documents for the product template and its variants. File and URL cards can be visually
+distinguished by the images in the left corner. A PDF thumbnail is for PDF documents, and a
+:icon:`fa-link` :guilabel:`link` icon is for URL links. For product variants documents, a *Variant*
+badge is to be displayed in the corner as well.
+
+.. image:: add_pdf_products/product-pdf-form-cards.png
+   :alt: PDFs form cards of a product in the Sales app and one has a variant badge.
+
+.. seealso::
+   :doc:`dynamic_text`
+

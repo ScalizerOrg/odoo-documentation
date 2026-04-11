@@ -16,8 +16,8 @@ self-titled sections. If any products have PDFs attached on their form, then a :
 section displays.
 
 Select the additional PDFs to be merged into the final PDF. If a selected PDF contains :ref:`custom
-note form fields <pdf_quote_builder/dynamic_text/custom-note>`, they appear as editable text boxes
-to be filled in.
+note form fields <sales/pdf_quote_builder/dynamic_text/custom-note>`, they appear as editable text
+boxes to be filled in.
 
 .. image:: add_pdf_quotes/quote-builder-headers.png
    :alt: The Quote Builder tab with selected headers and footers. Custom note form fields are
