@@ -222,3 +222,4 @@ of the record. Then, slide the :icon:`fa-toggle-off` :guilabel:`Unpublished` ico
    :titlesonly:
 
    appointments/create-opps
+   appointments/google_reserve
