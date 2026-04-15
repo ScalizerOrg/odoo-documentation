@@ -179,3 +179,4 @@ relevant task or ticket, then:
 
    timesheets/billing_rates
    timesheets/time_off
+   timesheets/timesheets_assistant
