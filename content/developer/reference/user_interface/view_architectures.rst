@@ -2143,6 +2143,59 @@ The `filter` element can have the following attributes:
                  <filter string="Category" context="{'group_by': 'category_id'}"/>
              </search>
 
+Lazy-loaded filter options
+**************************
+
+A `filter` element can embed a `<field>` child element to create a filter whose options are loaded
+dynamically when the user expands it. The filter is then rendered as an expandable item in the
+:guilabel:`Filters` menu, and its options are fetched on first click rather than at view
+initialization.
+
+.. code-block:: xml
+
+   <search>
+       <filter string="LABEL" name="NAME">
+           <field name="FIELD_NAME"/>
+       </filter>
+   </search>
+
+The `<field>` child element supports :class:`~odoo.fields.Selection`,
+:class:`~odoo.fields.Many2one`, and :class:`~odoo.fields.Many2many` fields only. For relational
+fields, a :guilabel:`More...` button appears when additional records are available beyond the
+initial set, allowing the user to progressively load more options.
+
+The `<field>` child element accepts the following attribute:
+
+.. attribute:: domain
+   :noindex:
+
+   A domain used to filter the records that are fetched as options. This only applies to
+   :class:`~odoo.fields.Many2one` and :class:`~odoo.fields.Many2many` fields and has no effect on
+   :class:`~odoo.fields.Selection` fields.
+
+   :requirement: Optional
+   :type: :ref:`Python expression <reference/view_architectures/python_expression>`
+   :default: `[]`
+   :scope: `<field>` child of a `<filter>`
+
+When an option is selected, the resulting search domain is the combination of the `<filter>`
+element's `domain` attribute and the selected option's domain.
+
+.. example::
+   .. code-block:: xml
+
+      <search>
+          <!-- Shows all Priority values; selecting one filters to leads only -->
+          <filter string="Lead Priority" name="lead_priority" domain="[('type', '=', 'lead')]">
+              <field name="priority"/>
+          </filter>
+          <!-- Shows only teams where the current user is team leader (field domain) -->
+          <!-- Selecting one also filters by assignee with the current user (filter domain)-->
+          <filter string="My Sales Teams" name="sales_teams_switcher" domain="[('user_id', '=', uid)]">
+              <field name="team_id" domain="[('user_id', '=', uid)]"/>
+          </filter>
+      </search>
+
 .. _reference/view_architectures/search/separator:
 
 `separator`: separate groups of filters
@@ -2372,6 +2425,10 @@ A numeric value (between 1 and 99) can be used to define the order of default *g
           'search_default_foo': 2,
           'search_default_bar': 1
       }
+
+.. note::
+   Lazy-loaded filters (filters with a `<field>` child element) cannot be used as search defaults,
+   as their options are only fetched when the user expands them.
 
 .. _reference/view_architectures/kanban:
 
