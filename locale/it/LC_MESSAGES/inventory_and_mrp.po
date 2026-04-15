@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:30+0000\n"
-"PO-Revision-Date: 2026-04-03 23:11+0000\n"
+"PO-Revision-Date: 2026-04-15 23:10+0000\n"
 "Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-18-doc/"
 "inventory_and_mrp/it/>\n"
@@ -5262,6 +5262,9 @@ msgid ""
 "enabling the *Batch Transfers* and *Packages* features "
 "(:menuselection:`Inventory app --> Configuration --> Settings`)."
 msgstr ""
+"Il campo *Uso collo* nel modulo corrispondente in Odoo è visibile solo "
+"abilitando le funzionalità *Trasferimento per lotto* e *Colli* "
+"(:menuselection:`Magazzino --> Configurazione --> Impostazioni`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:21
 msgid ""
@@ -5269,6 +5272,10 @@ msgid ""
 "Box*. Change this field to *Reusable Box* **only** when configuring packages "
 "for :ref:`cluster pickings <inventory/warehouses_storage/cluster-pack>`."
 msgstr ""
+"Per impostazione predefinita, il campo *Uso collo* nel modulo di un collo è "
+"impostato su *Scatola monouso*. Imposta il campo su *Scatola riutilizzabile* "
+"**solo** quando si configurano colli per :ref:`prelievi di tipo cluster "
+"<inventory/warehouses_storage/cluster-pack>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:25
 msgid ""
@@ -5278,6 +5285,11 @@ msgid ""
 "(e.g. boxes, pallets, other shipping containers) in shipping cost "
 "calculations."
 msgstr ""
+"La funzione *Tipologia collo* è opzionale e viene utilizzata per "
+":doc:`calcolare i costi di spedizione <../../shipping_receiving/"
+"setup_configuration>`in base al peso effettivo della spedizione. Crea tipi "
+"di collo per includere il peso del pacco stesso (ad es. scatole, pallet, "
+"altri contenitori di spedizione) nei calcoli dei costi di spedizione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:31
 msgid ""
@@ -5285,6 +5297,10 @@ msgid ""
 "<../../shipping_receiving/daily_operations/delivery_three_steps>`, they can "
 "be used in any workflow involving storable products."
 msgstr ""
+"Sebbene i colli siano comunemente utilizzati nel :doc:`percorso di consegna "
+"in 3 step <../../shipping_receiving/daily_operations/delivery_three_steps>`, "
+"possono essere utilizzati in qualsiasi flusso di lavoro che coinvolga "
+"prodotti stoccabili."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:40
 msgid ""
@@ -5292,6 +5308,10 @@ msgid ""
 "--> Settings`. Under the :guilabel:`Operations` heading, activate "
 "the :guilabel:`Packages` feature. Then, click :guilabel:`Save`."
 msgstr ""
+"Per utilizzare i colli, vai prima su :menuselection:`Magazzino --> "
+"Configurazione --> Impostazioni`. Sotto l'intestazione "
+":guilabel:`Operazioni`, attiva la funzione :guilabel:`Colli`. "
+"Successivamente, clicca su :guilabel:`Salva`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid ""
@@ -7332,7 +7352,7 @@ msgstr "Valutazione del magazzino"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:15
 msgid "Automatic inventory valuation"
-msgstr ""
+msgstr "Valutazione automatica magazzino"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:7
 msgid ""
@@ -8474,7 +8494,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:3
 msgid "Using inventory valuation"
-msgstr ""
+msgstr "Utilizzare valutazione magazzino"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:7
 msgid ""
@@ -8482,12 +8502,19 @@ msgid ""
 "calculates the value of on-hand stock. Once determined, the inventory "
 "valuation amount is then incorporated into a company's overall value."
 msgstr ""
+"La *valutazione del magazzino* è una procedura contabile fondamentale che "
+"calcola il valore delle scorte disponibili. Una volta determinato, l'importo "
+"della valutazione del magazzino viene quindi incorporato nel valore "
+"complessivo dell'azienda."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:11
 msgid ""
 "In Odoo, this process can be conducted manually— by warehouse employees "
 "physically counting the products— or automatically through the database."
 msgstr ""
+"In Odoo, questo processo può essere condotto manualmente: tramite il "
+"conteggio fisico dei prodotti da parte dei dipendenti del magazzino oppure "
+"automaticamente tramite il database."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:17
 msgid ""
@@ -8498,10 +8525,19 @@ msgid ""
 "the :guilabel:`Inventory Valuation` as :guilabel:`Automated` and "
 "the :guilabel:`Costing Method` to any of the three options."
 msgstr ""
+"Per utilizzare Odoo per generare automaticamente una serie di registrazioni "
+"di valutazione del magazzino, accedi innanzitutto all'elenco "
+":menuselection:`Categorie prodotto` seguendo il percorso "
+":menuselection:`Magazzino --> Configurazione --> Categorie prodotto` per poi "
+"selezionare la categoria prodotto desiderata. Nel modulo, imposta il campo "
+":guilabel:`Valutazione magazzino` su :guilabel:`Automatizzata` e il campo "
+":guilabel:`Metodo di imputazione dei costi` su una delle tre opzioni "
+"disponibili."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:24
 msgid ":doc:`Set up inventory valuation <inventory_valuation_config>`"
 msgstr ""
+":doc:`Configurare la valutazione del magazzino <inventory_valuation_config>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:26
 msgid ""
@@ -8509,10 +8545,13 @@ msgid ""
 "company's overall value, consider the following product and stock moves "
 "scenario below."
 msgstr ""
+"Per comprendere in che modo lo spostamento dei prodotti in entrata e in "
+"uscita dalle scorte influisca sul valore complessivo dell'azienda, considera "
+"lo scenario di movimentazione di prodotti e scorte riportato di seguito."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:30
 msgid "Receive a product"
-msgstr ""
+msgstr "Ricevere prodotti"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:32
 msgid ""
@@ -8525,6 +8564,15 @@ msgid ""
 "as :guilabel:`First In First Out (FIFO)` and :guilabel:`Inventory Valuation` "
 "as :guilabel:`Automated`."
 msgstr ""
+"Per tracciare il valore dei prodotti in entrata, come una semplice "
+"*tabella*, configura la categoria del prodotto sul prodotto stesso. Per "
+"farlo, apri l'app :menuselection:`Magazzino --> Prodotti --> Prodotti` e "
+"clicca sul prodotto desiderato. Nel modulo del prodotto, fai clic sull'icona "
+":guilabel:`➡️ (freccia destra)` accanto al campo :guilabel:`Categoria "
+"prodotto`, che apre un link interno per modificare la categoria del "
+"prodotto. Successivamente, imposta il :guilabel:`Metodo di imputazione dei "
+"costi` su :guilabel:`First In First Out (FIFO)` e il campo "
+":guilabel:`Valutazione magazzino` su :guilabel:`Automatizzata`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:40
 msgid ""
@@ -8532,6 +8580,9 @@ msgid ""
 "navigating to :menuselection:`Inventory app --> Configuration --> Product "
 "Categories` and select the desired product category."
 msgstr ""
+"In alternativa, accedi alla dashboard :guilabel:`Categorie prodotto` "
+"seguendo il percorso :menuselection:`app Magazzino --> Configurazione --> "
+"Categorie prodotto` e seleziona la categoria di prodotto desiderata."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:44
 msgid ""
@@ -8539,10 +8590,14 @@ msgid ""
 "The :abbr:`PO (Purchase Order)` for those tables will show the subtotal of "
 "the purchase as $100, plus any additional costs or taxes."
 msgstr ""
+"Successivamente, supponiamo che vengano acquistati 10 tavoli al prezzo di "
+"10,00 $ ciascuno. L'ordine di acquisto per quei tavoli mostrerà il subtotale "
+"dell'acquisto pari a 100 $, più eventuali costi aggiuntivi o tasse."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:None
 msgid "Purchase order with 10 tables products valued at $10.00 each."
 msgstr ""
+"Ordine di acquisto con 10 tabelle di prodotti del valore di 10,00 $ ciascuno."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:51
 msgid ""
@@ -8551,12 +8606,19 @@ msgid ""
 "displays a report showing how the inventory valuation for the table was "
 "affected by this purchase."
 msgstr ""
+"Dopo aver fatto clic sul pulsante :guilabel:`Valida` sull'ordine di "
+"acquisto, viene abilitato il pulsante smart :guilabel:`Valutazione`. Facendo "
+"clic su questo pulsante viene visualizzato un resoconto che mostra in che "
+"modo la valutazione del magazzino per il tavolo è stata influenzata da "
+"questo acquisto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:56
 msgid ""
 ":ref:`Developer mode <developer-mode>` **must** be turned on to see "
 "the :guilabel:`Valuation` smart button."
 msgstr ""
+"La :ref:`modalità sviluppatore <developer-mode>` **deve** essere attivata "
+"per visualizzare il pulsante smart :guilabel:`Valuatazione`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:60
 msgid ""
@@ -8565,10 +8627,16 @@ msgid ""
 "owned by other companies are not accounted for in the host company's "
 "inventory valuation."
 msgstr ""
+"La funzione :doc:`conto deposito <../../shipping_receiving/daily_operations/"
+"owned_stock>` consente di attribuire la proprietà agli articoli in "
+"magazzino. Pertanto, i prodotti di proprietà di altre aziende non vengono "
+"considerati nella valutazione del magazzino dell'azienda ospitante."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:None
 msgid "See Valuation smart button on a receipt, with Developer mode enabled."
 msgstr ""
+"Mostrare il pulsante smart Valutazione su una ricezione, con la modalità "
+"sviluppatore attiva."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:68
 msgid ""
@@ -8577,10 +8645,14 @@ msgid ""
 "the :ref:`stock valuation report <inventory/management/reporting/valuation-"
 "report>`."
 msgstr ""
+"Per una dashboard completa che include la valutazione delle scorte di tutte "
+"le spedizioni di prodotti, le rettifiche di magazzino e le operazioni di "
+"magazzino, consulta il :ref:`resoconto relativo alal valutazione delle "
+"scorte <inventory/management/reporting/valuation-report>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:73
 msgid "Deliver a product"
-msgstr ""
+msgstr "Consegnare un prodotto"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:75
 msgid ""
@@ -8589,14 +8661,18 @@ msgid ""
 "button on the :abbr:`DO (Delivery Order)`, likewise, displays the stock "
 "valuation record as it does on a :abbr:`PO (Purchase Order)`."
 msgstr ""
+"Con la stessa logica, quando un tavolo viene spedito a un cliente e lascia "
+"il magazzino, la valutazione delle scorte diminuisce. Il pulsante smart "
+":guilabel:`Valutazione` sull'ordine di vendita, allo stesso modo, mostra il "
+"record di valutazione delle scorte come avviene sull'ordine di acquisto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:None
 msgid "Decreased stock valuation after a product is shipped."
-msgstr ""
+msgstr "Diminuzione del valore delle scorte dopo la spedizione di un prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:86
 msgid "Inventory valuation report"
-msgstr ""
+msgstr "Resoconto valutazione magazzino"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:88
 msgid ""
@@ -8607,16 +8683,26 @@ msgid ""
 "products with the :guilabel:`Date`, :guilabel:`Quantity`, :guilabel:`Unit "
 "Value`, and :guilabel:`Total Value` of the inventory."
 msgstr ""
+"Per visualizzare il valore attuale di tutti i prodotti nel magazzino, attiva "
+"innanzitutto la :ref:`modalità sviluppatore <developer-mode>` e accedi "
+"all'app :menuselection:`Magazzino --> Rendicontazione --> Valutazione`. La "
+"dashboard :guilabel:`Valutazione magazzino` mostra registrazioni dettagliate "
+"dei prodotti con le informazioni relative a :guilabel:`Data`, "
+":guilabel:`Quantità`, :guilabel:`Valore unitario` e :guilabel:`Valore "
+"totale` del magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:95
 msgid ""
 ":ref:`Developer mode <developer-mode>` **must** be enabled to see "
 "the :guilabel:`Valuation` option under :guilabel:`Reporting`."
 msgstr ""
+"La :ref:`modalità sviluppatore <developer-mode>` **deve** essere abilitata "
+"per visualizzare l'opzione :guilabel:`Valutazione` nella sezione "
+":guilabel:`Rendicontazione`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:None
 msgid "Inventory valuation report showing multiple products."
-msgstr ""
+msgstr "Resoconto valutazione magazzino che mostra più prodotti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:102
 msgid ""
@@ -8625,6 +8711,11 @@ msgid ""
 "up, the inventory valuation of products available during a prior specified "
 "date can be seen and selected."
 msgstr ""
+"Il pulsante :guilabel:`Valutazione alla data`, situato nell'angolo in alto a "
+"sinistra della pagina :guilabel:`Valutazione magazzino`, fa apparire una "
+"finestra a comparsa. In questa finestra è possibile visualizzare e "
+"selezionare la valutazione del magazzino dei prodotti disponibili in una "
+"data specificata precedente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:107
 msgid ""
@@ -10046,12 +10137,18 @@ msgid ""
 "typically represent a specific batch of products that were received, stored, "
 "shipped, or manufactured in-house."
 msgstr ""
+"I *lotti* sono uno dei due modi per identificare e tracciare i prodotti in "
+"Odoo. In genere rappresentano un insieme specifico di prodotti che sono "
+"stati ricevuti, immagazzinati, spediti o prodotti internamente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:13
 msgid ""
 "Manufacturers assign lot numbers to groups of products sharing common "
 "properties, facilitating end-to-end traceability through their lifecycles."
 msgstr ""
+"I produttori assegnano numeri di lotto a gruppi di prodotti che condividono "
+"proprietà comuni, facilitando la tracciabilità end-to-end lungo il loro "
+"ciclo di vita."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:16
 msgid ""
@@ -10071,20 +10168,28 @@ msgid ""
 "down to the :guilabel:`Traceability` section, and tick the checkbox next "
 "to :guilabel:`Lots & Serial Numbers`. Then, click :guilabel:`Save`."
 msgstr ""
+"Per tracciare i prodotti utilizzando i lotti, abilita la funzione *Numeri di "
+"lotto e serie*. Apri l'app :menuselection:`Magazzino --> Configurazione --> "
+"Impostazioni`, scorri verso il basso fino alla sezione "
+":guilabel:`Tracciabilità` e spunta la casella accanto all'opzione "
+":guilabel:`Numeri di lotto e serie`. In seguito, fai clic su "
+":guilabel:`Salva`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:32
 msgid ":doc:`Tracking expiration dates <expiration_dates>`"
-msgstr ""
+msgstr ":doc:`Tracciare le date di scadenza <expiration_dates>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:33
 msgid ""
 ":ref:`Print GS1 barcodes for lots and serial numbers <barcode/operations/gs1-"
 "lots>`"
 msgstr ""
+":ref:`Stampare codici a barre GS1 per lotti e numeri di serie <barcode/"
+"operations/gs1-lots>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:41
 msgid "Track by lots"
-msgstr ""
+msgstr "Tracciamento per lotti"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:43
 msgid ""
@@ -10093,6 +10198,10 @@ msgid ""
 "to :menuselection:`Inventory app --> Products --> Products`, and choose a "
 "product to configure."
 msgstr ""
+"Una volta attivata la funzione :guilabel:`Numeri di lotto e serie`, "
+"configura i singoli prodotti da monitorare utilizzando i lotti. Per farlo, "
+"apri l'app :menuselection:`Magazzino --> Prodotti --> Prodotti` e scegli un "
+"prodotto da configurare."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:47
 msgid ""
@@ -10106,7 +10215,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:53
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:48
 msgid ":doc:`expiration_dates`"
-msgstr ""
+msgstr ":doc:`expiration_dates`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:56
 msgid ""
@@ -10133,13 +10242,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:74
 msgid "On receipts"
-msgstr ""
+msgstr "Al momento della ricezione"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:76
 msgid ""
 "Assigning new or existing lot numbers to incoming goods can be done directly "
 "on receipts."
 msgstr ""
+"L'assegnazione di numeri di lotto nuovi o esistenti alle merci in entrata "
+"può essere effettuata direttamente sulle ricevute."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:78
 msgid ""
@@ -10148,6 +10259,11 @@ msgid ""
 "by lot numbers. Then, click the :guilabel:`Receipt` smart button that "
 "appears at the top of the page to navigate to the warehouse receipt form."
 msgstr ""
+"Per iniziare, apri l'app :menuselection:`Acquisti` per `creare e confermare "
+"<https://www.youtube.com/watch?v=o_uI718P1Dc>`_ un ordine di acquisto per i "
+"prodotti tracciati tramite numeri di lotto. Successivamente, fai clic sul "
+"pulsante intelligente :guilabel:`Ricezione` che appare nella parte superiore "
+"della pagina per passare al modulo di ricezione di magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:84
 msgid ""
@@ -10155,6 +10271,9 @@ msgid ""
 "the :menuselection:`Inventory` app, clicking the :guilabel:`Receipts` Kanban "
 "card, and choosing the desired receipt."
 msgstr ""
+"In alternativa, accedi a una ricezione esistente andando sull'app "
+":menuselection:`Magazzino`, poi fai clic sulla scheda kanban "
+":guilabel:`Ricezioni` e scegli la ricezione desiderata."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:88
 msgid ""
@@ -10162,10 +10281,15 @@ msgid ""
 "error, indicating that a lot number **must** be assigned before validating "
 "the receipt."
 msgstr ""
+"Se fai clic su :guilabel:`Valida` prima di assegnare un numero di lotto "
+"verrà generato un errore che indica che un numero di lotto **deve** essere "
+"assegnato prima di convalidare la ricezione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:0
 msgid "Add lot/serial number user error popup."
 msgstr ""
+"Finestra con popup di errore utente relativo all'aggiunta di un numero di "
+"lotto/serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:94
 msgid ""
@@ -10173,24 +10297,32 @@ msgid ""
 "select the |list| icon to the right of the product that is tracked by lot "
 "numbers."
 msgstr ""
+"Nel modulo di ricezione, nella riga del prodotto nella scheda "
+":guilabel:`Operazioni`, seleziona l'icona :guilabel:`⦙≣ (elenco)` a destra "
+"del prodotto tracciato tramite numeri di lotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:None
 msgid "Show the bulleted list icon on the product line."
-msgstr ""
+msgstr "Immagine dell'icona elenco puntato nella riga prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:100
 msgid ""
 "Doing so opens the :guilabel:`Open: Stock move` pop-up window, where "
 "the :guilabel:`Lot/Serial Number` and :guilabel:`Quantity` are assigned."
 msgstr ""
+"In questo modo si apre la finestra pop-up :guilabel:`Apri: movimento di "
+"magazzino`, in cui vengono assegnati :guilabel:`Numeri di lotto/serie` e "
+":guilabel:`Quantità`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:103
 msgid "The two ways to assign lot numbers: **manually** and **importing**."
 msgstr ""
+"Due sono i modi per assegnare i numeri di lotto: **manualmente** e "
+"**importando**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:106
 msgid "Manual assignment"
-msgstr ""
+msgstr "Assegnazione manuale"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:108
 msgid ""
@@ -10198,6 +10330,10 @@ msgid ""
 "the :guilabel:`Lot/Serial Number`, :guilabel:`Store To` location for the "
 "lot, :guilabel:`Quantity`, and :guilabel:`Destination Package`, if any."
 msgstr ""
+"Per assegnare manualmente i numeri di lotto, fai clic su :guilabel:`Aggiungi "
+"riga`. Inserisci il :guilabel:`Numero di lotto/serie`, l'ubicazione "
+":guilabel:`Stocca in` del lotto stesso, la :guilabel:`Quantità` e il "
+":guilabel:`Collo di destinazione`, se presenti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:113
 msgid ""
@@ -10206,14 +10342,21 @@ msgid ""
 "for additional quantities. Repeat until the total in "
 "the :guilabel:`Quantity` column matches the :guilabel:`Demand` at the top."
 msgstr ""
+"Per assegnare più numeri di lotto o stoccare i prodotti in più ubicazioni, "
+"fai clic su :guilabel:`Aggiungi riga` e digita un nuovo :guilabel:`Numero di "
+"lotto/serie` per le quantità aggiuntive. Ripeti l'operazione finché il "
+"totale nella colonna :guilabel:`Quantità` non corrisponde alla quantità "
+":guilabel:`richiesta` in alto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:None
 msgid "Assign lot number detailed operations popup."
 msgstr ""
+"Finestra che mostra come assegnare il numero di lotto nel popup delle "
+"operazioni dettagliate."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:121
 msgid "Import lots"
-msgstr ""
+msgstr "Importare i lotti"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:123
 msgid ""
@@ -10221,16 +10364,21 @@ msgid ""
 "Serials/Lots`, then paste the bulk lot numbers, in the :guilabel:`Lots/"
 "Serial numbers` field."
 msgstr ""
+"Nella finestra pop-up :guilabel:`Apri: movimento di magazzino`, fai clic su "
+":guilabel:`Importa numeri di serie/lotti`, poi incolla i numeri di lotto in "
+"blocco nel campo :guilabel:`Numeri di lotto/serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:129
 msgid "Lot numbers copied to the lot number line."
-msgstr ""
+msgstr "Numeri di lotto copiati nella riga del numero di lotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:129
 msgid ""
 "Lot numbers pasted to the \"Lots/Serial numbers\" field, in the **Import "
 "Lots** pop-up window."
 msgstr ""
+"Numeri di lotto incollati nel campo \"Numeri di lotto/serie\", nella "
+"finestra pop-up **Importa lotti**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:131
 msgid ""
@@ -10239,6 +10387,10 @@ msgid ""
 "the lot numbers in the list, leave the :guilabel:`Keep current lines` option "
 "unticked."
 msgstr ""
+"Spunta la casella :guilabel:`Mantieni righe attuali` per generare numeri di "
+"lotto **aggiuntivi** nella finestra pop-up :guilabel:`Apri: movimento di "
+"magazzino`. Per sostituire i numeri di lotto nell'elenco, non selezionare "
+"l'opzione :guilabel:`Mantieni righe attuali`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:135
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:253
@@ -10251,6 +10403,9 @@ msgid ""
 "click :guilabel:`Save` to close the pop-up window. Then, "
 "click :guilabel:`Validate` on the receipt form."
 msgstr ""
+"Una volta assegnato un numero di lotto a tutte le quantità di prodotto, fai "
+"clic su :guilabel:`Salva` per chiudere la finestra pop-up. Successivamente, "
+"fai clic su :guilabel:`Valida` nel modulo di ricezione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:141
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:188
@@ -10258,16 +10413,20 @@ msgid ""
 ":ref:`Traceability report for lot numbers <inventory/product_management/lot-"
 "traceability>`"
 msgstr ""
+":ref:`Documenti di tracciabilità per i numeri di lotto <inventory/"
+"product_management/lot-traceability>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:146
 msgid "On delivery orders"
-msgstr ""
+msgstr "Sugli ordini di consegna"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:148
 msgid ""
 "Odoo makes it possible to specify which lot numbers for a product are chosen "
 "for outgoing shipment on a delivery order form."
 msgstr ""
+"Odoo consente di specificare quali numeri di lotto di un prodotto vengono "
+"scelti per le spedizioni in uscita su un modulo di ordine di consegna."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:151
 msgid ""
@@ -10277,6 +10436,11 @@ msgid ""
 "the :guilabel:`Delivery` smart button to view the warehouse receipt form for "
 "that specific |SO|."
 msgstr ""
+"Per iniziare, crea o seleziona un preventivo esistente dall'app "
+":menuselection:`Vendite`. Dopo aver confermato l'ordine di vendita, diventa "
+"disponibile il pulsante smart :guilabel:`Consegna`. Fai clic sul pulsante "
+"smart :guilabel:`Consegna` per visualizzare il modulo di ricezione del "
+"magazzino per quell'ordine di vendita specifico."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:156
 msgid ""
@@ -10284,6 +10448,9 @@ msgid ""
 "the :menuselection:`Inventory` app, and clicking the :guilabel:`Delivery "
 "Orders` kanban card."
 msgstr ""
+"In alternativa, accedi agli ordini di consegna andando sull'app "
+":menuselection:`Magazzino` e cliccando sulla scheda kanban :guilabel:`Ordini "
+"di consegna`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:159
 msgid ""
@@ -10293,6 +10460,12 @@ msgid ""
 "product that is tracked by lot numbers. Clicking that icon reveals "
 "a :guilabel:`Open: Stock move` pop-up window."
 msgstr ""
+"Dopo aver fatto clic sul pulsante smart :guilabel:`Consegna`, si aprirà il "
+"modulo dell'ordine di consegna da cui vengono selezionati i numeri di lotto "
+"per la consegna stessa. Nella scheda :guilabel:`Operazioni`, fai clic "
+"sull'icona :guilabel:`⦙≣ (elenco)` a destra del prodotto tracciato per "
+"numeri di lotto. Dopo aver fatto clic sull'icona, apparirà la finestra pop-"
+"up :guilabel:`Apri: movimento di magazzino`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:164
 msgid ""
@@ -10301,6 +10474,10 @@ msgid ""
 "full :guilabel:`Quantity` taken from that specific lot (if there is enough "
 "stock in that particular lot)."
 msgstr ""
+"Nella finestra pop-up, il numero di lotto scelto e la sua ubicazione di "
+"stoccaggio vengono visualizzati nella colonna :guilabel:`Preleva da`, con "
+"l'intera :guilabel:`Quantità` prelevata da quel lotto specifico (se in quel "
+"particolare lotto è presente una quantità sufficiente di scorte)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:168
 msgid ""
@@ -10308,6 +10485,9 @@ msgid ""
 "the :guilabel:`Demand` should be taken from multiple lots, change "
 "the :guilabel:`Quantity` directly."
 msgstr ""
+"Se le scorte di quel lotto sono insufficienti, o se quantità parziali della "
+":guilabel:`richiesta` devono essere prelevate da più lotti, modifica "
+"direttamente la :guilabel:`Quantità`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:172
 msgid ""
@@ -10317,6 +10497,11 @@ msgid ""
 "depends on the ordered quantity, and whether the lot's on-hand quantity is "
 "enough to fulfill the order."
 msgstr ""
+"Il lotto scelto automaticamente per gli ordini di consegna varia a seconda "
+"della strategia di rimozione selezionata (:abbr:`FIFO (First In, First Out)"
+"`, :abbr:`LIFO (Last In, First Out)` o :abbr:`FEFO (First Expiry, First Out)"
+"`). Dipende anche dalla quantità ordinata e dal fatto che la quantità "
+"disponibile del lotto sia sufficiente per evadere l'ordine."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:180
 msgid ""
@@ -10325,14 +10510,19 @@ msgid ""
 "window. Lastly, click the :guilabel:`Validate` button on the |DO| to deliver "
 "the products."
 msgstr ""
+"Ripeti i passaggi precedenti per selezionare un numero sufficiente di lotti "
+"per soddisfare la :guilabel:`richiesta`, poi fai clic su :guilabel:`Salva` "
+"per chiudere la finestra pop-up. Infine, fai clic sul pulsante "
+":guilabel:`Valida` nella pagina dell'ordine di spedizione per consegnare i "
+"prodotti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:None
 msgid "Popup for source lot number on sales order."
-msgstr ""
+msgstr "Finestra pop-up per numero di lotti di origine nell'ordine di vendita."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:191
 msgid "Lot management"
-msgstr ""
+msgstr "Gestione dei lotti"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:193
 msgid ""
@@ -10340,6 +10530,9 @@ msgid ""
 "Serial Numbers` dashboard by going to :menuselection:`Inventory app --> "
 "Products --> Lots/Serial Numbers`."
 msgstr ""
+"Per gestire e visualizzare i numeri di lotto esistenti per i prodotti nella "
+"dashboard :guilabel:`Numeri di lotto/serie` apri l'app "
+":menuselection:`Magazzino --> Prodotti --> Numeri di lotto/serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:196
 msgid ""
@@ -10350,26 +10543,38 @@ msgid ""
 "product_management/create-new-lot>` from this page, by clicking "
 "the :guilabel:`New` button."
 msgstr ""
+"Per impostazione predefinita, i numeri di lotto sono raggruppati per "
+"prodotto e selezionando il menu a tendina di ciascun prodotto vengono "
+"visualizzati i numeri di lotto esistenti. Seleziona un numero di lotto per "
+":ref:`modificare o aggiungere dettagli <inventory/product_management/edit-"
+"lot>` collegati al lotto. I numeri di lotto possono anche essere "
+":ref:`creati <inventory/product_management/create-new-lot>` da questa "
+"pagina, cliccando sul pulsante :guilabel:`Nuovo`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:205
 msgid "Show the \"Lot/Serial Number\" dashboard."
-msgstr ""
+msgstr "Immagine della dashboard \"Numeri di lotto/serie\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:205
 msgid ""
 "Display lot numbers, grouped by products, on the **Lot/Serial Number** "
 "dashboard."
 msgstr ""
+"Visualizza i numeri di lotto, raggruppati per prodotto, nella dashboard "
+"**Numeri di lotto/serie**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:210
 msgid "Modify lot"
-msgstr ""
+msgstr "Modificare i lotti"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:212
 msgid ""
 "Clicking a lot from the :guilabel:`Lot/Serial Number` dashboard reveals a "
 "separate page where additional information can be provided about the lot."
 msgstr ""
+"Sei fai clic su un lotto dalla dashboard :guilabel:`Numeri di lotto/serie` "
+"si apre una pagina separata dove è possibile fornire ulteriori informazioni "
+"sul lotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:216
 msgid ""
@@ -10378,16 +10583,23 @@ msgid ""
 "under the :guilabel:`Lot/Serial Number` field, and changing the generated "
 "number to any desired one."
 msgstr ""
+"Odoo genera automaticamente un nuovo :guilabel:`Numero di lotto/serie` che "
+"segue il numero più recente. Tuttavia, è possibile modificarlo cliccando "
+"sulla riga sotto il campo :guilabel:`Numero di lotto/serie` e cambiando il "
+"numero generato con quello desiderato."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:220
 msgid "On the lot number form, the following fields can be modified:"
 msgstr ""
+"Nel modulo del numero di lotto, è possibile modificare i seguenti campi:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:222
 msgid ""
 ":guilabel:`Lot/Serial Number`: change the lot number linked to "
 "the :guilabel:`Product`"
 msgstr ""
+":guilabel:`Numero di lotto/serie`: modifica il numero di lotto collegato al "
+":guilabel:`Prodotto`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:223
 msgid ""
@@ -10395,17 +10607,24 @@ msgid ""
 "used within the warehouse that differs from the one used by the supplier "
 "manufacturer."
 msgstr ""
+":guilabel:`Riferimento interno`: registra un numero di lotto/serie "
+"alternativo utilizzato all'interno del magazzino che differisce da quello "
+"utilizzato dal produttore fornitore"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:225
 msgid ""
 ":guilabel:`Company`: specify the company where the lot number is available."
 msgstr ""
+":guilabel:`Azienda`: specifica l'azienda presso la quale è disponibile il "
+"numero di lotto"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:226
 msgid ""
 ":guilabel:`Description`: add extra details about the lot or serial number in "
 "this text field."
 msgstr ""
+":guilabel:`Descrizione`: aggiungi ulteriori dettagli sul lotto o sul numero "
+"di serie in questo campo di testo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:229
 msgid ""
@@ -10413,24 +10632,29 @@ msgid ""
 "fields **cannot** be modified, as the lot numbers are linked with existing "
 "stock moves."
 msgstr ""
+"Sui lotti esistenti, i campi :guilabel:`Prodotto` e :guilabel:`Quantità a "
+"disposizione` **non possono** essere modificati, poiché i numeri di lotto "
+"sono collegati ai movimenti di magazzino esistenti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:None
 msgid "Show the lot number form."
-msgstr ""
+msgstr "Mostra il modulo del numero di lotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:236
 msgid ":doc:`Set expiration dates for lots <expiration_dates>`"
-msgstr ""
+msgstr ":doc:`Configurare date di scadenza per i lotti <expiration_dates>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:239
 msgid "Add property"
-msgstr ""
+msgstr "Aggiungere proprietà"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:241
 msgid ""
 "To add custom fields to lots for enhanced traceability, there are two "
 "methods of adding properties on a lot number form:"
 msgstr ""
+"Per aggiungere campi personalizzati ai lotti per una migliore tracciabilità, "
+"esistono due metodi per aggiungere proprietà a un modulo del numero di lotto:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:244
 msgid ""
@@ -10438,38 +10662,51 @@ msgid ""
 "then select :icon:`fa-cogs` :guilabel:`Add Properties` from the drop-down "
 "menu."
 msgstr ""
+"fai clic sull'icona :icon:`fa-cog` :guilabel:`(ingranaggio)` in alto a "
+"sinistra nella pagina, poi seleziona :icon:`fa-cogs` :guilabel:`Aggiungi "
+"proprietà` dal menu a discesa;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:246
 msgid ""
 "Click the :icon:`fa-plus` :guilabel:`Add a Property` button, located below "
 "the existing fields."
 msgstr ""
+"fai clic sul pulsante :icon:`fa-plus`:guilabel:`Aggiungi proprietà` nella "
+"parte inferiore rispetto ai campi esistenti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:248
 msgid ""
 "Name and :doc:`configure the new field </applications/essentials/"
 "property_fields>`. Once finished, enter the property value in the new field."
 msgstr ""
+"Inserisci un nome e :doc:`configura il nuovo campo </applications/essentials/"
+"property_fields>`. Una volta terminata la configurazione, inserisci il "
+"valore della proprietà."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:252
 msgid ""
 "The new property, `Wood type`, is added. The value is recorded as `Cherry "
 "wood`."
 msgstr ""
+"È stata aggiunta la nuova proprietà `Tipo di legno`. Il valore è registrato "
+"come `Legno di ciliegio`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:0
 msgid "Show the \"Add Properties\" button on a lot number form."
 msgstr ""
+"Mostrare il pulsante \"Aggiungi proprietà\" sul modulo di un numero di lotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:258
 msgid ""
 ":doc:`Configuring custom properties </applications/essentials/"
 "property_fields>`"
 msgstr ""
+":doc:`Configurare proprietà personalizzate </applications/essentials/"
+"property_fields>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:263
 msgid "Reserve lot number for a product"
-msgstr ""
+msgstr "Prenotare un numero di lotto per un prodotto specifico"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:265
 msgid ""
@@ -10477,6 +10714,9 @@ msgid ""
 "to :menuselection:`Inventory app --> Products --> Lot/Serial Numbers`, and "
 "click :guilabel:`New`."
 msgstr ""
+"Per creare un numero di lotto per un prodotto, accedi all'app "
+":menuselection:`Magazzino --> Prodotti --> Numeri di lotto/serie` e fai clic "
+"su :guilabel:`Nuovo`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:269
 msgid ""
@@ -10484,6 +10724,10 @@ msgid ""
 "To assign lot numbers, refer to the section on :ref:`assigning lot numbers "
 "on receipts <inventory/product_management/assign-lots>`."
 msgstr ""
+"La creazione di un numero di lotto lo riserva per un prodotto, ma **non** lo "
+"assegna. Per assegnare i numeri di lotto, consulta la sezione su come "
+":ref:`assegnare numeri di lotto alle ricezioni <inventory/product_management/"
+"assign-lots>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:274
 msgid ""
@@ -10492,6 +10736,11 @@ msgid ""
 "number, by clicking the line under the :guilabel:`Lot/Serial Number` field "
 "on the lot form, and changing the generated number."
 msgstr ""
+"Sebbene Odoo generi automaticamente un nuovo :guilabel:`Numero di lotto/"
+"serie` che segue il numero più recente, è possibile modificarlo e impostarlo "
+"su qualsiasi numero desiderato, facendo clic sulla riga sotto il campo "
+":guilabel:`Numero di lotto/serie` nel modulo del lotto e modificando il "
+"numero generato."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:278
 msgid ""
@@ -10499,14 +10748,20 @@ msgid ""
 "field next to :guilabel:`Product` to reveal a drop-down menu. From this "
 "menu, select the product to which this new number will be assigned."
 msgstr ""
+"Una volta generato il nuovo :guilabel:`Numero di lotto/serie`, fai clic sul "
+"campo vuoto accanto a :guilabel:`Prodotto` per visualizzare un menu a "
+"discesa. Da questo menu, seleziona il prodotto a cui verrà assegnato questo "
+"nuovo numero."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:283
 msgid "The lot number, `000001`, is created for the product, `Drawer Black`."
 msgstr ""
+"Il numero di lotto, `000001`, viene creato per il prodotto `Cassettiera "
+"nera`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:0
 msgid "New lot number creation form with assigned product."
-msgstr ""
+msgstr "Modulo di creazione di un nuovo numero di lotto con prodotto assegnato."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:288
 msgid ""
@@ -10515,10 +10770,15 @@ msgid ""
 "product, and can be selected when :ref:`assigning lot numbers to products on "
 "a receipt <inventory/product_management/assign-lots>`."
 msgstr ""
+"Dopo che un nuovo numero di lotto è stato creato, salvato e assegnato al "
+"prodotto desiderato, il numero di lotto viene salvato come numero di lotto "
+"esistente collegato al prodotto e può essere selezionato quando si "
+":ref:`assegnano numeri di lotti a prodotti in una ricezione <inventory/"
+"product_management/assign-lots>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:293
 msgid "Manage lots for different operations types"
-msgstr ""
+msgstr "Gestire i lotti per vari tipi di operazioni"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:295
 msgid ""
@@ -10527,6 +10787,11 @@ msgid ""
 "numbers can be utilized, and new ones cannot be created on the delivery "
 "order."
 msgstr ""
+"Per impostazione predefinita, i nuovi lotti possono essere creati solo al "
+"momento della ricezione dei prodotti e i numeri di lotto esistenti non "
+"possono essere utilizzati. Per gli ordini di vendita, è possibile utilizzare "
+"solo i numeri di lotto esistenti e non è possibile crearne di nuovi "
+"sull'ordine di consegna."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:299
 msgid ""
@@ -10534,6 +10799,10 @@ msgid ""
 "type, go to the :menuselection:`Inventory app --> Configuration --> "
 "Operations Types`, and select the desired operation type."
 msgstr ""
+"Per modificare la possibilità di utilizzare numeri di lotto nuovi (o "
+"esistenti) su qualsiasi tipo di operazione, apri l'app "
+":menuselection:`Magazzino --> Configurazione --> Tipi di operazione` e "
+"seleziona il tipo di operazione desiderato."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:303
 msgid ""
@@ -10542,10 +10811,16 @@ msgid ""
 "to be created during this operation type. Choose :guilabel:`Use Existing "
 "ones` if only existing lot numbers can be selected."
 msgstr ""
+"Nel modulo del tipo di operazione, nella sezione :guilabel:`Numeri di lotto/"
+"serie`, seleziona la casella :guilabel:`Crea nuovo` per consentire la "
+"creazione di nuovi numeri di lotto durante questo tipo di operazione. Scegli "
+":guilabel:`Usa esistenti` se è possibile selezionare solo numeri di lotto "
+"esistenti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:None
 msgid "Enabled traceability setting on operations type form."
 msgstr ""
+"Impostazione di tracciabilità abilitata nel modulo del tipo di operazione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:311
 msgid ""
@@ -10553,10 +10828,13 @@ msgid ""
 "useful to enable the :guilabel:`Use Existing Lots/Serial Numbers` option for "
 "warehouse receipts."
 msgstr ""
+"Per i trasferimenti tra magazzini che coinvolgono prodotti tracciati per "
+"lotti, può essere utile abilitare l'opzione :guilabel:`Usa numeri di lotto/"
+"serie esistenti` per le ricezioni di magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:317
 msgid "Display lots on delivery slips"
-msgstr ""
+msgstr "Mostrare i lotti sulle distinte di consegna"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:319
 msgid ""
@@ -10565,6 +10843,11 @@ msgid ""
 "customers in cases where lot numbers are needed, such as filing an RMA or "
 "repair request, or registering the product."
 msgstr ""
+"Quando si vendono prodotti tracciati con lotti, è possibile includere i "
+"numeri di lotto sulle distinte di consegna inviate ai clienti. Ciò può "
+"essere utile ai clienti nei casi in cui i numeri di lotto siano necessari, "
+"ad esempio per presentare una richiesta RMA o di riparazione, oppure per "
+"registrare il prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:323
 msgid ""
@@ -10574,6 +10857,12 @@ msgid ""
 "the :guilabel:`Traceability` section, tick the :guilabel:`Display Lots & "
 "Serial Numbers on Delivery Slips` checkbox, and click :guilabel:`Save`."
 msgstr ""
+"Per includere i numeri di lotto sulle bolle di consegna, apri l'app "
+":menuselection:`Magazzino` e vai su :menuselection:`Configurazione --> "
+"Impostazioni`. Scorri verso il basso fino alla sezione "
+":guilabel:`Tracciabilità`, seleziona la casella :guilabel:`Visualizzare "
+"lotti/numeri di serie su distinte di consegna` \" e clicca su "
+":guilabel:`Salva`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:328
 msgid ""
@@ -10581,6 +10870,10 @@ msgid ""
 "Slips` setting, lot numbers are listed on delivery slips for products "
 "tracked by lots, once the delivery order is validated."
 msgstr ""
+"Dopo aver abilitato l'impostazione :guilabel:`Visualizzare lotti/numeri di "
+"serie su distinte di consegna`, i numeri di lotto vengono elencati sulle "
+"bolle di consegna per i prodotti tracciati tramite numeri di lotto, una "
+"volta convalidato l'ordine di consegna."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:331
 msgid ""
@@ -10588,6 +10881,10 @@ msgid ""
 "the :menuselection:`Inventory` app, click on :guilabel:`Delivery Orders`, "
 "and select an order containing a product tracked using lots."
 msgstr ""
+"Per visualizzare i numeri di lotto sugli ordini di consegna e sulle bolle di "
+"consegna, accedi all'app :menuselection:`Magazzino`, fai clic su "
+":guilabel:`Ordini di consegna` e seleziona un ordine contenente un prodotto "
+"tracciato tramite lotti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:335
 msgid ""
@@ -10598,6 +10895,13 @@ msgid ""
 "a :guilabel:`Serial Numbers` column to appear. The lot number(s) for each "
 "product included in the order are displayed in this column."
 msgstr ""
+"Per visualizzare i numeri di lotto dei prodotti inclusi nell'ordine, "
+"assicurati che la scheda :guilabel:`Operazioni` sia selezionata, poi fai "
+"clic sul pulsante :icon:`oi-settings-adjust` :guilabel:`(regola)` a destra "
+"della scheda. Assicurati che la casella accanto alla voce :guilabel:`Numeri "
+"di serie` sia spuntata, in modo da far apparire la colonna :guilabel:`Numeri "
+"di serie`. In questa colonna vengono visualizzati i numeri di lotto di "
+"ciascun prodotto incluso nell'ordine."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:341
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:326
@@ -10617,6 +10921,12 @@ msgid ""
 "the device's browser or file manager. Lot numbers are listed next to their "
 "respective products in the :guilabel:`Lot/Serial Number` column."
 msgstr ""
+"Nella parte superiore del modulo dell'ordine, fai clic sul pulsante "
+":icon:`fa-cog`:guilabel:`(Azioni)` e seleziona :menuselection:`Stampa --> "
+"Bolla di consegna`. La bolla di consegna viene scaricata in seguito. Apri la "
+"bolla stessa utilizzando il browser del dispositivo o il gestore di file. I "
+"numeri di lotto vengono elencati accanto ai rispettivi prodotti nella "
+"colonna :guilabel:`Numero di lotto/serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:None
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:None
@@ -10633,6 +10943,10 @@ msgid ""
 "entire lifecycle of a product: where it came from, when it arrived, where it "
 "was stored, who it went to (and when)."
 msgstr ""
+"I produttori e le aziende possono consultare i resoconti sulla tracciabilità "
+"per visualizzare l'intero ciclo di vita di un prodotto: da dove proviene, "
+"quando è arrivato, dove è stato stoccato, a chi è stato consegnato (e quando)"
+"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:358
 msgid ""
@@ -10640,6 +10954,10 @@ msgid ""
 "the :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`. "
 "Doing so reveals the :menuselection:`Lots/Serial Numbers` dashboard."
 msgstr ""
+"Per visualizzare la tracciabilità completa di un prodotto, o raggruppare per "
+"lotti, apri l'app :menuselection:`Magazzino --> Prodotti --> Numeri di lotto/"
+"serie`. In questo modo verrà visualizzata la dashboard "
+":menuselection:`Numeri di lotto/serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:362
 msgid ""
@@ -10647,6 +10965,9 @@ msgid ""
 "default, and can be expanded to show the lot numbers those products have "
 "assigned to them."
 msgstr ""
+"Da qui, i prodotti a cui sono stati assegnati dei numeri di lotto saranno "
+"elencati per impostazione predefinita e possono essere espansi per mostrare "
+"i numeri di lotto loro assegnati."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:365
 msgid ""
@@ -10657,21 +10978,33 @@ msgid ""
 "the :guilabel:`Add Custom Group` option, and select :guilabel:`Lot/Serial "
 "Number` from the drop-down menu."
 msgstr ""
+"Per raggruppare per lotti, inizia rimuovendo eventuali filtri nella barra "
+":guilabel:`di ricerca`. Successivamente, fai clic sull'icona :icon:`fa-caret-"
+"down` :guilabel:`(freccia giù)` per aprire un menu a discesa con le opzioni "
+":guilabel:`Filtri`\", :guilabel:`Raggruppa per` e :guilabel:`Preferiti`. "
+"Nella sezione :guilabel:`Raggruppa per`, fai clic sull'opzione "
+":guilabel:`Aggiungi gruppo personalizzato` e seleziona :guilabel:`Numero di "
+"lotto/serie` dal menu a discesa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:371
+#, fuzzy
 msgid ""
 "Doing so reorganizes all the records on the page to display all existing "
 "lots and serial numbers, and can be expanded to show all quantities of "
 "products with that assigned number."
 msgstr ""
+"In questo modo si riorganizzano tutti i record della pagina per visualizzare "
+"tutti i lotti e i numeri di serie esistenti, ed è possibile espandere la "
+"visualizzazione per mostrare tutte le quantità di prodotti con quel numero "
+"assegnato."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:None
 msgid "Lots and serial numbers traceability report."
-msgstr ""
+msgstr "Resoconto sulla tracciabilità di numeri di lotto e serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:378
 msgid "Traceability report"
-msgstr ""
+msgstr "Resoconto sulla tracciabilità"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:380
 msgid ""
@@ -10679,18 +11012,24 @@ msgid ""
 "line from the :guilabel:`Lots/Serial Number` dashboard. On the lot number "
 "form, click the :guilabel:`Traceability` smart button."
 msgstr ""
+"Per visualizzare un resoconto completo dei movimenti di magazzino per un "
+"numero di lotto specifico, seleziona la riga del numero di lotto dalla "
+"dashboard :guilabel:`Numeri di lotto/serie`. Nel modulo del numero di lotto, "
+"fai clic sul pulsante intelligente :guilabel:`Tracciabilità`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:None
 msgid "Show the Traceability Report for a lot, that displays the stock moves."
 msgstr ""
+"Immagine del resoconto di tracciabilità di un lotto che mostra movimenti di "
+"magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:388
 msgid ":doc:`../product_tracking`"
-msgstr ""
+msgstr ":doc:`../product_tracking`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:3
 msgid "Reassign lot/serial numbers"
-msgstr ""
+msgstr "Riassegnare i numeri di lotto/serie"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:5
 msgid ""
@@ -10700,10 +11039,16 @@ msgid ""
 "adjustment to assign lot or serial numbers to products that were not "
 "originally assigned lots."
 msgstr ""
+"La modifica delle impostazioni di tracciabilità di un prodotto per "
+"utilizzare numeri di lotto o serie, *dopo* aver memorizzato i prodotti in "
+"Odoo senza di essi, può portare a record incoerenti. Leggi la documentazione "
+"per imparare come utilizzare una rettifica di magazzino per assegnare numeri "
+"di lotto o serie a prodotti a cui originariamente non erano stati assegnati."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:None
 msgid "Warning message: products in stock have no lot/serial number."
 msgstr ""
+"Messaggio di avviso: i prodotti in magazzino non hanno numero di lotto/serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:15
 msgid ""
@@ -10711,18 +11056,21 @@ msgid ""
 "to remove incorrect records *without* lot numbers, and another to save the "
 "quantities *with* the lot numbers."
 msgstr ""
+"Questo documento descrive il processo di utilizzo di due rettifiche di "
+"magazzino: una per rimuovere i record errati *senza* numeri di lotto, e "
+"un'altra per salvare le quantità *con* i numeri di lotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:19
 msgid ":doc:`Set up and use lot numbers <lots>`"
-msgstr ""
+msgstr ":doc:`Configurare e utilizzare i numeri di lotto <lots>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:20
 msgid ":doc:`Use serial numbers <serial_numbers>`"
-msgstr ""
+msgstr ":doc:`Utilizzare i numeri di serie <serial_numbers>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:23
 msgid "Change on-hand quantity to zero"
-msgstr ""
+msgstr "Impostare la quantità disponibile a zero"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:25
 msgid ""
@@ -10730,6 +11078,9 @@ msgid ""
 "by navigating to :menuselection:`Inventory app --> Products --> Products`, "
 "and select the intended product."
 msgstr ""
+"Per modificare le impostazioni del prodotto in modo da tracciare i lotti o i "
+"numeri di serie, apri l'app :menuselection:`Magazzino --> Prodotti --> "
+"Prodotti` e seleziona il prodotto desiderato."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:28
 msgid ""
@@ -10737,22 +11088,30 @@ msgid ""
 "the :guilabel:`Update Quantity` page. In the :guilabel:`On Hand Quantity` "
 "column, change the value to zero."
 msgstr ""
+"Successivamente, fai clic sul pulsante intelligente :guilabel:`A "
+"disposizione` del prodotto per aprire la pagina :guilabel:`Aggiorna "
+"quantità`. Nella colonna :guilabel:`Quantità a disposizione`, modifica il "
+"valore in zero."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:32
 msgid ""
 "If the product is stored in multiple locations, make sure the **total** on "
 "hand quantity at **all** locations is zero."
 msgstr ""
+"Se il prodotto è stoccato in più sedi, assicurati che il **totale** della "
+"quantità disponibile presso **tutte** le sedi sia pari a zero."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:None
 msgid ""
 "Show the Inventory Adjustments model, highlighting the \"On Hand Quantity\" "
 "field."
 msgstr ""
+"Visualizzazione del modello \"Magazzino\", evidenziando il campo \"Quantità "
+"a disposizione\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:40
 msgid "Change traceability setting"
-msgstr ""
+msgstr "Modificare le impostazioni di tracciabilità"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:42
 msgid ""
@@ -10762,15 +11121,20 @@ msgid ""
 "from :guilabel:`No Tracking` to :guilabel:`By Lots` or :guilabel:`By Unique "
 "Serial Number`."
 msgstr ""
+"Torna al modulo del prodotto (:menuselection:`Magazzino --> Prodotti --> "
+"Prodotti`) e passa alla scheda :guilabel:`Magazzino`. Nella sezione "
+":guilabel:`Tracciabilità`, modifica l'opzione :guilabel:`Monitoraggio` da "
+":guilabel:`Nessun monitoraggio` a :guilabel:`Per lotti` o :guilabel:`Per "
+"numero di serie univoco`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:None
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:None
 msgid "Enable lots and serial numbers."
-msgstr ""
+msgstr "Abilitare i lotti e i numeri di serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:55
 msgid "Restore on-hand quantity"
-msgstr ""
+msgstr "Ripristinare le quantità disponibili"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:57
 msgid ""
@@ -10779,6 +11143,10 @@ msgid ""
 "quantities by clicking the :guilabel:`On Hand` smart button from the desired "
 "product form."
 msgstr ""
+"Dopo aver impostato manualmente la quantità disponibile a zero e aver "
+"selezionato l'opzione :guilabel:`Monitoraggio` su \"lotti\" o \"numeri di "
+"serie\", ripristina le quantità cliccando sul pulsante :guilabel:`A "
+"disposizione` dal modulo del prodotto desiderato."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:61
 msgid ""
@@ -10790,6 +11158,14 @@ msgid ""
 "the :guilabel:`Lot/Serial Number` field, and adjust the :guilabel:`On Hand "
 "Quantity` to its original value."
 msgstr ""
+"Nella pagina :guilabel:`Aggiorna quantità`, poiché la quantità disponibile "
+"era stata precedentemente modificata a zero, sulla pagina appare l'avviso "
+":guilabel:`Nessuna giacenza a disposizione`. Da qui, fai clic sul pulsante "
+":guilabel:`Nuova` nell'angolo in alto a sinistra. In questo modo viene "
+"visualizzata una nuova riga modificabile nella pagina :guilabel:`Aggiorna "
+"quantità`. In seguito, inserisci il numero di lotto desiderato nel campo "
+":guilabel:`Numero di lotto/serie` e imposta il campo :guilabel:`Quantità a "
+"disposizione` al suo valore originale."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:68
 msgid ":doc:`../../warehouses_storage/inventory_management/count_products`"
@@ -10797,7 +11173,7 @@ msgstr ":doc:`../../warehouses_storage/inventory_management/count_products`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:None
 msgid "Fill in the \"Lot/Serial Number\" and \"On Hand Quantity\" field."
-msgstr ""
+msgstr "Compilare i campi \"Numero di lotto/serie\" e \"Quantità disponibile\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:75
 msgid ""
@@ -10807,20 +11183,29 @@ msgid ""
 "column. Then, click the :icon:`fa-history` :guilabel:`History` button on the "
 "far-right."
 msgstr ""
+"Per trovare la quantità originale e regolare di conseguenza la "
+":guilabel:`Quantità a disposizione`, dopo aver assegnato un nuovo numero di "
+"lotto o di serie, fai clic sull'icona :icon:`fa-pencil` :guilabel:`(matita)` "
+"nella colonna :guilabel:`Quantità a disposizione`. Successivamente, fai clic "
+"sul pulsante :icon:`fa-history` :guilabel:`Cronologia` all'estrema destra."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:None
 msgid "Show the \"History\" button on the Inventory Adjustments page."
 msgstr ""
+"Visualizzazione del pulsante \"Cronologia\" nella pagina Rettifiche "
+"magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:84
 msgid ""
 "The inventory adjustment that changed the on-hand quantity to zero is "
 "displayed in the :guilabel:`Quantity` field."
 msgstr ""
+"La rettifica di magazzino che ha portato la quantità disponibile a zero "
+"viene visualizzata nel campo :guilabel:`Quantità`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:0
 msgid "Show the history entry."
-msgstr ""
+msgstr "Visualizzare la voce della cronologia."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:3
 msgid "Serial numbers"
@@ -14388,7 +14773,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:3
 msgid "Routes and push/pull rules"
-msgstr ""
+msgstr "Percorsi e regole push/pull"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:5
 msgid ""
