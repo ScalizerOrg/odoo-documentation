@@ -816,6 +816,23 @@ Text (`text`)
 
     - Supported field types: `text`
 
+Password (`password`)
+    This widget renders the field value inside an input with ``type="password"``,
+    hiding the real value. An eye button next to the input allows the user to
+    reveal or hide the value. This widget is useful when a field must store
+    sensitive data (e.g. API keys, tokens) and the value should not be visible
+    by default.
+
+    - Supported field types: `char`, `text`
+
+    Options:
+
+    - `placeholder`: placeholder text displayed in the input when the field is empty.
+
+        .. code-block:: xml
+
+            <field name="api_key" widget="password" placeholder="Enter your API key"/>
+
 
 Handle (`handle`)
     This field's job is to be displayed as a `handle`, and allows reordering the
