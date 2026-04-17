@@ -17,17 +17,15 @@ Contact form and basic fields
 To create a new contact, navigate to the :menuselection:`Contacts app`, and click the
 :guilabel:`New` button. A new form appears where various contact information can be added.
 
-Beginning in 19.1, Odoo no longer draws a distinction between contacts for individuals and contacts
-for companies. There's now a single unified Contacts form that can be customized based on business
-needs. The name of the contact in the :guilabel:`Name (company or person)` field remains
+.. image:: contacts/unified-contact-form.png
+   :alt: A new contact form in the Contacts app.
+
+Enter the name of the contact in the :guilabel:`Name (company or person)` field. This field is
 **mandatory**.
 
-.. image:: contacts/unified-contact-form.png
-   :alt: The new contact form released with Odoo 19.1.
-
 .. tip::
-   Contacts for people can be linked to contacts for companies by entering the associated company in
-   the :icon:`fa-building` :guilabel:`Company Employer` field.
+   Contacts for individuals can be linked to contacts for companies by selecting the associated
+   company contact in the :icon:`fa-building` :guilabel:`Company Employer` field.
 
 In the :icon:`fa-envelope` :guilabel:`Email` field, enter the email address with the domain. In the
 :icon:`fa-phone` :guilabel:`Phone` field, enter the contact's phone number. Enter the
