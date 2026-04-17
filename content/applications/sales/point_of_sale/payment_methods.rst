@@ -53,6 +53,28 @@ Methods`, click :guilabel:`New`, and follow the next steps:
    - Always set the :guilabel:`Journal` to :guilabel:`Bank` when :ref:`configuring a payment
      terminal <pos/terminals/configuration>`.
 
+One-click payment
+-----------------
+
+The one-click payment feature allows you to bypass the payment screen for a faster checkout. To
+activate this setting, navigate to the :ref:`POS settings <pos/use/settings>`, scroll down to the
+:guilabel:`Payment` section, and enable :guilabel:`One-click Payment`. Then, select one or multiple
+payment methods in the :guilabel:`Payment Methods` field.
+
+.. note::
+   Online payment, delivery payment, terminal payment, and methods that require customer
+   identification are not supported for fast payment validation.
+
+Once activated and configured, :ref:`open the POS register <pos/use/open-register>` and add products
+to the cart. The previously selected payment methods are displayed as shortcut buttons next to the
+:guilabel:`Payment` button. Clicking a payment method validates the order immediately and brings
+you to the receipt screen.
+
+.. important::
+   While cash payments are supported, the one-click payment feature assumes the amount received is
+   exact. If the customer requires change, use the standard :guilabel:`Payment` button to enter the
+   amount tendered manually.
+
 .. cards::
 
    .. card:: Cash machines
