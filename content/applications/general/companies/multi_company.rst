@@ -32,23 +32,28 @@ enhancing the overall management process.
 Configuration
 =============
 
-Open the Settings app, navigate to the :guilabel:`Companies` section, and click
-:icon:`oi-arrow-right` :guilabel:`Manage Companies`. Then, click :guilabel:`New` and :ref:`fill in
-the form with the company's information <general/companies/company>` or select an existing company
-to edit it.
+Most *General settings* apply to all companies in the database. *Company-specific settings* are
+indicated with the :icon:`fa-building-o` :guilabel:`(Values set here are company-specific)` icon,
+and can also be accessed through company records.
 
-.. note::
-   Alternatively, it is possible to create a company by going to :menuselection:`Settings --> Users
-   & Companies --> Companies`.
+Create or edit a company
+------------------------
 
-.. tip::
-   To archive a company, follow these steps:
+To create or edit a specific company, navigate to :menuselection:`Settings app --> Users & Companies
+--> Companies`. Click :guilabel:`New` and :ref:`fill out the form with the company's information
+<general/companies/company>` or select an existing company to edit it.
 
-   #. In the Settings app, navigate to the :guilabel:`Companies` section and click
-      :icon:`oi-arrow-right` :guilabel:`Manage Companies`.
-   #. In the :guilabel:`Companies` list view, select the company to be archived.
-   #. Click the :icon:`fa-cog` :guilabel:`Actions` menu and select :guilabel:`Archive`.
-   #. Click :guilabel:`Archive` to confirm.
+
+Archive a company
+-----------------
+
+To archive a company, follow these steps:
+
+#. In the Settings app, navigate to the :guilabel:`Companies` section and click
+   :icon:`oi-arrow-right` :guilabel:`Manage Companies`.
+#. In the :guilabel:`Companies` list view, select the company to be archived.
+#. Click the :icon:`fa-cog` :guilabel:`Actions` menu and select :guilabel:`Archive`.
+#. Click :guilabel:`Archive` to confirm.
 
 .. _general/multi-company/multi-company-environment:
 
@@ -93,10 +98,10 @@ Shared and company-specific records
 -----------------------------------
 
 Data, such as products, contacts, and equipment can either be shared across companies or restricted
-to a specific company by setting the :guilabel:`Company` field on the relevant records:
+to a specific company by setting the :guilabel:`Company` field on relevant records:
 
-- either leave the field blank to make it accessible to all companies;
-- or select the company to make it visible to users logged in to that specific company.
+#. Leave the field blank to make the record accessible to all companies.
+#. Select specific companies to make the record visible to users logged in to those companies only.
 
 Records specifically linked to a particular company are accessible only within that entity. For
 instance, quotations, invoices, and vendor bills associated with a company are visible only when
@@ -106,15 +111,23 @@ displayed in the :guilabel:`Company` field.
 In a |mcd|, new products and contacts are shared across companies by default. To restrict them to a
 specific company, set the :guilabel:`Company` field on the record's form.
 
+.. note::
+   Individual properties in a shared record may be shared or company-specific. For example, product
+   records share common :guilabel:`Sales Price` and :guilabel:`Reference` values, but the
+   :guilabel:`Cost` value is company-specific. This allows for different cost structures across
+   companies while maintaining consistent sales pricing and product references.
+
+
 .. _general/multi-company/inter-company-transactions:
 
 Inter-company transactions
 ==========================
 
 The :guilabel:`Inter-Company Transactions` feature allows one company in the database to sell or
-purchase goods and services from another company within the same database. Depending on the
-configuration settings, counterpart documents for orders and invoices can be automatically generated
-and synchronized.
+purchase goods and services from another company within the same database. For inter-company
+transactions, :ref:`product records are shared <general/multi-company/shared-and-unshared-records>`
+among the involved companies. Depending on the configuration settings, counterpart documents for
+orders and invoices can be automatically generated and synchronized.
 
 .. warning::
    To handle inter-company transactions correctly, :doc:`general
@@ -123,32 +136,40 @@ and synchronized.
    :doc:`localizations <../../finance/fiscal_localizations>`.
 
 To activate inter-company transactions, select the relevant company in the :ref:`company selector
-<general/multi-company/company-selector>`, open the Settings app, navigate to the
-:guilabel:`Companies` section, enable :guilabel:`Inter-Company Transactions`, and :guilabel:`Save`.
-Then, select the options to create a counterpart for the selected company:
+<general/multi-company/company-selector>`, open the **Settings** app, navigate to the
+:guilabel:`Companies` section, enable :guilabel:`Inter-Company Transactions`, and click
+:guilabel:`Save`. Then, select the options to create a counterpart for the selected company:
 
-- :guilabel:`Generate Bills and Refunds`: Generate a bill/refund when a company confirms an
-  invoice/credit note for the selected company. To generate a validated bill/refund, select
-  :guilabel:`Validate`.
-- :guilabel:`Generate Sales Orders`: Generate a quotation (drafted sales order) when a purchase
-   order is confirmed for the selected company. To generate a validated sales order instead of a
-   quotation, select :guilabel:`Validate`.
-- :guilabel:`Generate Purchase Orders`: Generate a request for quotation (drafted purchase order)
-  using the selected company warehouse in the :guilabel:`Use Warehouse` field when a sales order is
-  confirmed for the selected company. To generate a validated purchase order instead of a request
-  for quotation, select :guilabel:`Validate`.
+- :guilabel:`Create Vendor Bills`: Automatically create a bill/refund when a company confirms
+  an invoice/credit note for the selected company.
+- :guilabel:`Create Sales Orders`: Automatically create a quotation (drafted sales order) when a
+  purchase order is confirmed for the selected company.
+- :guilabel:`Create Purchase Orders`: Automatically create a request for quotation (drafted purchase
+  order) using the selected company warehouse in the :guilabel:`Use Warehouse` field when a sales
+  order is confirmed for the selected company.
+- :guilabel:`Synchronize Stock Moves`: Automatically synchronize stock moves between companies when
+  fulfilling or receiving deliveries for the selected company.
+
+To automatically validate the records, select :guilabel:`Validated`. This setting applies to all of
+the inter-company transaction options.
 
 .. note::
-   For inter-company transactions, the :ref:`products must be shared
-   <general/multi-company/shared-and-unshared-records>` among the involved companies.
+   The :guilabel:`Use Warehouse` field appears if :guilabel:`Create Sales Orders` or
+   :guilabel:`Create Purchase Orders` is selected. However, Odoo does not automatically create
+   warehouses for additional companies created after the initial database setup. Warehouses for each
+   company must be created manually.
+
+Inter-company transaction settings can also be accessed and modified by going to
+:menuselection:`Settings --> Users & Companies --> Companies` and selecting the company. Enable
+:doc:`../developer_mode` and the :guilabel:`Inter-Company Transactions` tab appears.
 
 .. example::
-   :guilabel:`Generate Bills and Refunds`: when an invoice for :guilabel:`Customer` `JS Store US` is
+   :guilabel:`Create Bills and Refunds`: when an invoice for :guilabel:`Customer` `JS Store US` is
    posted on `JS Store Belgium`, a vendor bill is automatically created in `JS Store US`.
 
-   :guilabel:`Generate Purchase Orders`: when a sales order for :guilabel:`Customer` `JS Store US`
-   is confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically created
-   (and confirmed if the :guilabel:`Create and validate` option is selected).
+   :guilabel:`Create Purchase Orders`: when a sales order for :guilabel:`Customer` `JS Store US` is
+   confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically created (and
+   confirmed if the :guilabel:`Create and validate` option is selected).
 
 .. seealso::
    - :doc:`Multi-company Guidelines <../../../developer/howtos/company>`
