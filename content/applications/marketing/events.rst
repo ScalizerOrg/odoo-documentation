@@ -260,6 +260,7 @@ Gain invaluable insight into event-related revenues with customizable reports an
    events/track_manage_talks
    events/event_templates
    events/event_booths
+   events/community_rooms
    events/event_tracks
    events/registration_desk
    events/revenues_report
