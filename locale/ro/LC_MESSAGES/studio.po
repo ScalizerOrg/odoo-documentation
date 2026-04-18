@@ -12,7 +12,7 @@
 # Wil Odoo, 2024
 # Alin Miclea, 2025
 # Larisa_nexterp, 2025
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 #
 # Translators:
 #
@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-17 18:30+0000\n"
-"PO-Revision-Date: 2025-11-20 20:00+0000\n"
+"POT-Creation-Date: 2026-04-17 18:30+0000\n"
+"PO-Revision-Date: 2026-04-18 23:06+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-17-doc/"
 "studio/ro/>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: ../../content/applications/studio.rst:6
 msgid "Studio"
@@ -1138,50 +1138,70 @@ msgstr "Câmpuri și widget-uri"
 
 #: ../../content/applications/studio/fields.rst:5
 msgid ""
-"Fields structure the models of a database. If you picture a model as a table "
-"or spreadsheet, fields are the columns where data is stored in the records "
-"(i.e., the rows). Fields also define the type of data that is stored within "
-"them. How the data is presented and formatted on the :abbr:`UI (User "
-"Interface)` is defined by their widget."
+"Fields structure the :doc:`models <models_modules_apps>` of a database. If "
+"you think of a model as a table or spreadsheet, fields are the columns and "
+"records are the individual rows. Fields also define the type of data that is "
+"stored within them. The way in which a field's data is presented and "
+"formatted on the :abbr:`UI (User Interface)` is controlled by its widget."
 msgstr ""
-"Câmpurile compun structura unei baze de date. Dacă vă imaginați un model ca "
-"o tabelă sau un tabel, câmpurile sunt coloanele unde datele sunt stocate în "
-"înregistrări (adică rândurile). Câmpurile definesc de asemenea tipul de date "
-"stocate în ele. Modul în care sunt prezentate și forma datelor în :abbr:`UI "
-"(Interfața Utilizator)` este definit de widget-ul lor."
 
 #: ../../content/applications/studio/fields.rst:10
-msgid ""
-"From a technical point of view, there are 15 field types in Odoo. However, "
-"you can choose from 20 fields in Studio, as some field types are available "
-"more than once with a different default widget."
+msgid "With Studio, it is possible to:"
 msgstr ""
-"Din punct de vedere tehnic, există 15 tipuri de câmpuri în Odoo. Cu toate "
-"acestea, puteți alege din 20 de câmpuri în Studio, deoarece unele tipuri de "
-"câmpuri sunt disponibile de mai multe ori cu un widget implicit diferit."
 
-#: ../../content/applications/studio/fields.rst:14
+#: ../../content/applications/studio/fields.rst:12
 msgid ""
-":guilabel:`New Fields` can only be added to the :ref:`studio/views/general/"
-"form` and :ref:`studio/views/multiple-records/list` views. On other views, "
-"you can only add :guilabel:`Existing Fields` :dfn:`(fields already on the "
-"model)`."
+":ref:`add new fields <studio/fields/add-new>` to your database. From a "
+"technical point of view, there are 15 :ref:`field types <studio/fields/field-"
+"types>` in Odoo. However, you can choose from 20 field types in Studio, as "
+"some field types are available more than once with a different default "
+"widget;"
 msgstr ""
-":guilabel:`Câmpuri noi` pot fi adăugate doar la vizualizările de "
-"tip :ref:`studio/views/general/form` și :ref:`studio/views/multiple-records/"
-"list`. Pe alte vizualizări, puteți adăuga doar :guilabel:`Câmpuri "
-"existente` :dfn:`(câmpuri deja existente pe model)`."
 
-#: ../../content/applications/studio/fields.rst:21
+#: ../../content/applications/studio/fields.rst:16
+msgid ""
+":ref:`add existing fields, <studio/fields/add-existing>` i.e., fields that "
+"already exists on a model, to any view of that model;"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:18
+msgid ":ref:`modify a field's properties <studio/fields/modify>`; or"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:19
+msgid ":ref:`remove a field from a view <studio/fields/remove>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:24
+msgid "Field types"
+msgstr "Tipuri de câmpuri"
+
+#: ../../content/applications/studio/fields.rst:26
+msgid "Fields can be broadly divided into two categories:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:28
+msgid ""
+":ref:`Simple fields <studio/fields/simple-fields>`, which contain basic "
+"values, such as text, numbers, files, etc."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:30
+msgid ""
+":ref:`Relational fields <studio/fields/relational-fields>`, which are used "
+"to link and display the data from records on another model."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:36
 msgid "Simple fields"
 msgstr "Câmpuri simple"
 
-#: ../../content/applications/studio/fields.rst:23
+#: ../../content/applications/studio/fields.rst:38
 msgid "Simple fields contain basic values, such as text, numbers, files, etc."
 msgstr ""
 "Câmpurile simple conțin valori de bază, cum ar fi text, numere, fișiere, etc."
 
-#: ../../content/applications/studio/fields.rst:26
+#: ../../content/applications/studio/fields.rst:41
 msgid ""
 "Non-default widgets, when available, are presented as bullet points or sub-"
 "headings below."
@@ -1189,11 +1209,11 @@ msgstr ""
 "Widget-urile non-implicite, când sunt disponibile, sunt prezentate mai jos "
 "ca puncte sau subcapitole."
 
-#: ../../content/applications/studio/fields.rst:31
+#: ../../content/applications/studio/fields.rst:46
 msgid "Text (`char`)"
 msgstr "Text (`char`)"
 
-#: ../../content/applications/studio/fields.rst:33
+#: ../../content/applications/studio/fields.rst:48
 msgid ""
 "The :guilabel:`Text` field is used for short text containing any character. "
 "One text line is displayed when filling out the field."
@@ -1201,8 +1221,8 @@ msgstr ""
 "Câmpul :guilabel:`Text` este utilizat pentru text scurt care conține orice "
 "caracter. O singură linie de text este afișată la completarea câmpului."
 
-#: ../../content/applications/studio/fields.rst:36
-#: ../../content/applications/studio/fields.rst:258
+#: ../../content/applications/studio/fields.rst:51
+#: ../../content/applications/studio/fields.rst:273
 msgid ""
 ":guilabel:`Badge`: displays the value inside a rounded shape, similar to a "
 "tag. The value cannot be edited on the UI, but a default value can be set."
@@ -1211,19 +1231,19 @@ msgstr ""
 "etichetă. Valoarea nu poate fi editată în UI, dar o valoare implicită poate "
 "fi setată."
 
-#: ../../content/applications/studio/fields.rst:38
-#: ../../content/applications/studio/fields.rst:70
+#: ../../content/applications/studio/fields.rst:53
+#: ../../content/applications/studio/fields.rst:85
 msgid ""
 ":guilabel:`Copy to Clipboard`: users can copy the value by clicking a button."
 msgstr ""
 ":guilabel:`Copiază în Clipboard`: utilizatorii pot copia valoarea apăsând pe "
 "un buton."
 
-#: ../../content/applications/studio/fields.rst:39
+#: ../../content/applications/studio/fields.rst:54
 msgid ":guilabel:`E-mail`: the value becomes a clickable *mailto* link."
 msgstr ":guilabel:`E-mail`: valoarea devine un link *mailto* (email către)."
 
-#: ../../content/applications/studio/fields.rst:40
+#: ../../content/applications/studio/fields.rst:55
 msgid ""
 ":guilabel:`Image`: displays an image using a URL. The value cannot be edited "
 "manually, but a default value can be set."
@@ -1231,7 +1251,7 @@ msgstr ""
 ":guilabel:`Imagine`: afișează o imagine folosind un URL. Valoarea nu poate "
 "fi editată manual, dar o valoare implicită poate fi setată."
 
-#: ../../content/applications/studio/fields.rst:44
+#: ../../content/applications/studio/fields.rst:59
 msgid ""
 "This works differently than selecting the :ref:`Image field <studio/fields/"
 "simple-fields-image>` directly, as the image is not stored in Odoo when "
@@ -1244,11 +1264,11 @@ msgstr ""
 "ul :guilabel:`Imagine`. De exemplu, poate fi util dacă doriți să economisiți "
 "spațiu pe disc."
 
-#: ../../content/applications/studio/fields.rst:49
+#: ../../content/applications/studio/fields.rst:64
 msgid ":guilabel:`Phone`: the value becomes a clickable *tel* link."
 msgstr ":guilabel:`Telefon`: valoarea devine un link *tel*."
 
-#: ../../content/applications/studio/fields.rst:52
+#: ../../content/applications/studio/fields.rst:67
 msgid ""
 "Tick :guilabel:`Enable SMS` to add an option to send an SMS directly from "
 "Odoo next to the field."
@@ -1256,7 +1276,7 @@ msgstr ""
 "Bifați :guilabel:`Activează SMS` pentru a adăuga o opțiune de a trimite un "
 "SMS direct din Odoo lângă câmp."
 
-#: ../../content/applications/studio/fields.rst:55
+#: ../../content/applications/studio/fields.rst:70
 msgid ":guilabel:`URL`: the value becomes a clickable URL."
 msgstr ":guilabel:`URL`: valoarea devine un URL pe care se poate face clic."
 
@@ -1264,11 +1284,11 @@ msgstr ":guilabel:`URL`: valoarea devine un URL pe care se poate face clic."
 msgid "Examples of Text fields with different widgets"
 msgstr "Exemple de câmpuri Text cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:65
+#: ../../content/applications/studio/fields.rst:80
 msgid "Multiline Text (`text`)"
 msgstr "Text Multilinie (`text`)"
 
-#: ../../content/applications/studio/fields.rst:67
+#: ../../content/applications/studio/fields.rst:82
 msgid ""
 "The :guilabel:`Multiline Text` field is used for longer text containing any "
 "type of character. Two text lines are displayed on the UI when filling out "
@@ -1282,11 +1302,11 @@ msgstr ""
 msgid "Examples of Multiline Text fields with different widgets"
 msgstr "Exemple de câmpuri Text Multilinie cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:80
+#: ../../content/applications/studio/fields.rst:95
 msgid "Integer (`integer`)"
 msgstr "Întregi (`integer`)"
 
-#: ../../content/applications/studio/fields.rst:82
+#: ../../content/applications/studio/fields.rst:97
 msgid ""
 "The :guilabel:`Integer` field is used for all integer numbers "
 "(:dfn:`positive, negative, or zero, without a decimal`)."
@@ -1294,7 +1314,7 @@ msgstr ""
 "Câmpul :guilabel:`Integer` este utilizat pentru toate numerele întregi "
 "(:dfn:`pozitive, negative, sau zero, fără zecimale`)."
 
-#: ../../content/applications/studio/fields.rst:85
+#: ../../content/applications/studio/fields.rst:100
 msgid ""
 ":guilabel:`Percentage Pie`: displays the value inside a percentage circle, "
 "usually for a computed value. The value cannot be edited on the UI, but a "
@@ -1304,8 +1324,8 @@ msgstr ""
 "procentual, de obicei pentru o valoare calculată. Valoarea nu poate fi "
 "editată în UI, dar o valoare implicită îi poate fi setată."
 
-#: ../../content/applications/studio/fields.rst:87
-#: ../../content/applications/studio/fields.rst:115
+#: ../../content/applications/studio/fields.rst:102
+#: ../../content/applications/studio/fields.rst:130
 msgid ""
 ":guilabel:`Progress Bar`: displays the value next to a percentage bar, "
 "usually for a computed value. The field cannot be edited manually, but a "
@@ -1315,7 +1335,7 @@ msgstr ""
 "obicei pentru o valoare calculată. Câmpul nu poate fi editat manual, dar o "
 "valoare implicită îi poate fi setată."
 
-#: ../../content/applications/studio/fields.rst:89
+#: ../../content/applications/studio/fields.rst:104
 msgid ""
 ":guilabel:`Handle`: displays a drag handle icon to order records manually "
 "in :ref:`List view <studio/views/multiple-records/list>`."
@@ -1328,11 +1348,11 @@ msgstr ""
 msgid "Examples of Integer fields with different widgets"
 msgstr "Exemple de câmpuri Integer cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:100
+#: ../../content/applications/studio/fields.rst:115
 msgid "Decimal (`float`)"
 msgstr "Zecimal (`float`)"
 
-#: ../../content/applications/studio/fields.rst:102
+#: ../../content/applications/studio/fields.rst:117
 msgid ""
 "The :guilabel:`Decimal` field is used for all decimal numbers "
 "(:dfn:`positive, negative, or zero, with a decimal`)."
@@ -1340,7 +1360,7 @@ msgstr ""
 "Câmpul :guilabel:`Zecimal` este utilizat pentru toate numerele zecimale "
 "(:dfn:`pozitive, negative, sau zero, cu zecimale`)."
 
-#: ../../content/applications/studio/fields.rst:106
+#: ../../content/applications/studio/fields.rst:121
 msgid ""
 "Decimal numbers are displayed with two decimals after the decimal point on "
 "the UI, but they are stored in the database with more precision."
@@ -1349,7 +1369,7 @@ msgstr ""
 "zecimale după virgulă, dar sunt stocate în baza de date cu o precizie mai "
 "mare."
 
-#: ../../content/applications/studio/fields.rst:109
+#: ../../content/applications/studio/fields.rst:124
 msgid ""
 ":guilabel:`Monetary`: it is similar to using the :ref:`Monetary field "
 "<studio/fields/simple-fields-monetary>`. It is recommended to use the latter "
@@ -1359,12 +1379,12 @@ msgstr ""
 "<studio/fields/simple-fields-monetary>`. Se recomandă utilizarea acestuia "
 "din urmă deoarece oferă mai multe funcționalități."
 
-#: ../../content/applications/studio/fields.rst:112
+#: ../../content/applications/studio/fields.rst:127
 msgid ""
 ":guilabel:`Percentage`: displays a percent character `%` after the value."
 msgstr ":guilabel:`Procentaj`: afișează un caracter procent `%` după valoare."
 
-#: ../../content/applications/studio/fields.rst:113
+#: ../../content/applications/studio/fields.rst:128
 msgid ""
 ":guilabel:`Percentage Pie`: displays the value inside a percentage circle, "
 "usually for a computed value. The field cannot be edited manually, but a "
@@ -1374,7 +1394,7 @@ msgstr ""
 "procentual, de obicei pentru o valoare calculată. Câmpul nu poate fi editat "
 "manual, dar o valoare implicită îi poate fi setată."
 
-#: ../../content/applications/studio/fields.rst:117
+#: ../../content/applications/studio/fields.rst:132
 msgid ""
 ":guilabel:`Time`: the value must follow the *hh:mm* format, with a maximum "
 "of 59 minutes."
@@ -1386,16 +1406,16 @@ msgstr ""
 msgid "Examples of Decimal fields with different widgets"
 msgstr "Exemple de câmpuri Zecimale cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:127
+#: ../../content/applications/studio/fields.rst:142
 msgid "Monetary (`monetary`)"
 msgstr "Monetar (`monetary`)"
 
-#: ../../content/applications/studio/fields.rst:129
+#: ../../content/applications/studio/fields.rst:144
 msgid "The :guilabel:`Monetary` field is used for all monetary values."
 msgstr ""
 "Câmpul :guilabel:`Monetar` este utilizat pentru toate valorile monetare."
 
-#: ../../content/applications/studio/fields.rst:132
+#: ../../content/applications/studio/fields.rst:147
 msgid ""
 "When you first add a :guilabel:`Monetary` field, you are prompted to add "
 "a :guilabel:`Currency` field if none exists already on the model. Odoo "
@@ -1411,11 +1431,11 @@ msgstr ""
 msgid "Example of a Monetary field along with its Currency field"
 msgstr "Exemplu de câmp Monetar împreună cu câmpul Monedă"
 
-#: ../../content/applications/studio/fields.rst:144
+#: ../../content/applications/studio/fields.rst:159
 msgid "Html (`html`)"
 msgstr "Html (`html`)"
 
-#: ../../content/applications/studio/fields.rst:146
+#: ../../content/applications/studio/fields.rst:161
 msgid ""
 "The :guilabel:`Html` field is used to add text that can be edited using the "
 "Odoo HTML editor."
@@ -1423,7 +1443,7 @@ msgstr ""
 "Câmpul :guilabel:`Html` este utilizat pentru a adăuga text care poate fi "
 "editat folosind editorul HTML al Odoo."
 
-#: ../../content/applications/studio/fields.rst:148
+#: ../../content/applications/studio/fields.rst:163
 msgid ""
 ":guilabel:`Multiline Text`: disables the Odoo HTML editor to allow editing "
 "raw HTML."
@@ -1435,17 +1455,17 @@ msgstr ""
 msgid "Examples of Html fields with different widgets"
 msgstr "Exemple de câmpuri Html cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:158
+#: ../../content/applications/studio/fields.rst:173
 msgid "Date (`date`)"
 msgstr "Dată calendaristică (`date`)"
 
-#: ../../content/applications/studio/fields.rst:160
+#: ../../content/applications/studio/fields.rst:175
 msgid "The :guilabel:`Date` field is used to select a date on a calendar."
 msgstr ""
 "Câmpul :guilabel:`Dată calendaristică` este utilizat pentru a selecta o dată "
 "pe un calendar."
 
-#: ../../content/applications/studio/fields.rst:162
+#: ../../content/applications/studio/fields.rst:177
 msgid ""
 ":guilabel:`Remaining Days`: the remaining number of days before the selected "
 "date is displayed (e.g., *In 5 days*), based on the current date. This field "
@@ -1459,11 +1479,11 @@ msgstr ""
 msgid "Examples of Date fields with different widgets"
 msgstr "Exemple de câmpuri Dată calendaristică cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:173
+#: ../../content/applications/studio/fields.rst:188
 msgid "Date & Time (`datetime`)"
 msgstr "Dată și oră (`datetime`)"
 
-#: ../../content/applications/studio/fields.rst:175
+#: ../../content/applications/studio/fields.rst:190
 msgid ""
 "The :guilabel:`Date & Time` field is used to select a date on a calendar and "
 "a time on a clock. The user's current time is automatically used if no time "
@@ -1473,7 +1493,7 @@ msgstr ""
 "calendar și o ora anume. Timpul curent al utilizatorului este utilizat "
 "automat dacă nu este setat."
 
-#: ../../content/applications/studio/fields.rst:180
+#: ../../content/applications/studio/fields.rst:195
 msgid ""
 "As well as :ref:`general properties <studio/fields/properties>`, "
 "some :ref:`specific properties <studio/fields/properties-date-datetime>` are "
@@ -1485,11 +1505,11 @@ msgstr ""
 "sunt disponibile pentru câmpurile :guilabel:`Dată & Oră` care au setat "
 "widget-ul :guilabel:`Dată & Oră` sau :guilabel:`Interval de date`."
 
-#: ../../content/applications/studio/fields.rst:186
+#: ../../content/applications/studio/fields.rst:201
 msgid "Date Range (`daterange`)"
 msgstr "Interval de date (`daterange`)"
 
-#: ../../content/applications/studio/fields.rst:188
+#: ../../content/applications/studio/fields.rst:203
 msgid ""
 "The :guilabel:`Date Range` widget is used to display a period of time "
 "defined by a start date and an end date in a single line. A date range can "
@@ -1504,7 +1524,7 @@ msgstr ""
 "poate permite o dată de început sau de sfârșit opțională, de exemplu pentru "
 "o intervenție pe teren sau o sarcină de proiect."
 
-#: ../../content/applications/studio/fields.rst:193
+#: ../../content/applications/studio/fields.rst:208
 msgid ""
 "Adding a date range requires two fields: a :guilabel:`Date & Time` field "
 "with the :guilabel:`Date Range` widget set and another field that is "
@@ -1519,11 +1539,11 @@ msgstr ""
 "existent sau un câmp :guilabel:`Dată & Oră`, sau unul creat special pentru "
 "acest scop."
 
-#: ../../content/applications/studio/fields.rst:198
+#: ../../content/applications/studio/fields.rst:213
 msgid "To add a date range:"
 msgstr "Pentru a adăuga un interval de date:"
 
-#: ../../content/applications/studio/fields.rst:200
+#: ../../content/applications/studio/fields.rst:215
 msgid ""
 "Identify an existing :guilabel:`Date` or :guilabel:`Date & Time` field that "
 "can be used as the underlying start/end date field, or add a new one. If the "
@@ -1533,7 +1553,7 @@ msgstr ""
 "care poate fi folosit ca dată de început/sfârșit de bază sau adăugați unul "
 "nou. Dacă intervalul de date:"
 
-#: ../../content/applications/studio/fields.rst:203
+#: ../../content/applications/studio/fields.rst:218
 msgid ""
 "has a mandatory start date and end date, this field can be either the start "
 "date or end date; the outcome is the same."
@@ -1541,7 +1561,7 @@ msgstr ""
 "are o dată de început și de sfârșit obligatorii, acest câmp poate fi fie "
 "data de început, fie data de sfârșit; rezultatul este același."
 
-#: ../../content/applications/studio/fields.rst:205
+#: ../../content/applications/studio/fields.rst:220
 msgid ""
 "allows an optional start or end date, this field is the start date or end "
 "date, respectively."
@@ -1549,7 +1569,7 @@ msgstr ""
 "permite o dată de început sau de sfârșit opțională, acest câmp este data de "
 "început sau de sfârșit, respectiv."
 
-#: ../../content/applications/studio/fields.rst:208
+#: ../../content/applications/studio/fields.rst:223
 msgid ""
 "To avoid displaying the same information twice, the underlying start/end "
 "date field can be made invisible by enabling :guilabel:`Invisible` or "
@@ -1560,7 +1580,7 @@ msgstr ""
 "activând :guilabel:`Invizibil` sau eliminat din vizualizare "
 "apăsând :guilabel:`Elimină din vizualizare`."
 
-#: ../../content/applications/studio/fields.rst:212
+#: ../../content/applications/studio/fields.rst:227
 msgid ""
 "Add a :guilabel:`Date & Time` field and set the :guilabel:`Widget` field "
 "to :guilabel:`Date Range`."
@@ -1568,11 +1588,11 @@ msgstr ""
 "Adăugați un câmp :guilabel:`Dată & Oră` și setați câmpul :guilabel:`Widget` "
 "la :guilabel:`Interval de date`."
 
-#: ../../content/applications/studio/fields.rst:214
+#: ../../content/applications/studio/fields.rst:229
 msgid "Enter an appropriate :guilabel:`Label`."
 msgstr "Introduceți o :guilabel:`Etichetă` potrivită."
 
-#: ../../content/applications/studio/fields.rst:215
+#: ../../content/applications/studio/fields.rst:230
 msgid ""
 "Select the underlying start/end date field from the :guilabel:`Start date "
 "field` or :guilabel:`End date field` dropdown, as relevant."
@@ -1581,7 +1601,7 @@ msgstr ""
 "derulantă :guilabel:`Câmp dată început` sau :guilabel:`Câmp dată sfârșit`, "
 "după caz."
 
-#: ../../content/applications/studio/fields.rst:217
+#: ../../content/applications/studio/fields.rst:232
 msgid ""
 "If the date range should have a mandatory start and end date, "
 "enable :guilabel:`Always range`."
@@ -1589,7 +1609,7 @@ msgstr ""
 "Dacă intervalul de date trebuie să aibă o dată de început și de sfârșit "
 "obligatorii, activați :guilabel:`Întotdeauna interval`."
 
-#: ../../content/applications/studio/fields.rst:218
+#: ../../content/applications/studio/fields.rst:233
 msgid ""
 "Update any other :ref:`general properties <studio/fields/properties>` or "
 "specific :ref:`properties for Date & Time fields <studio/fields/properties-"
@@ -1605,11 +1625,11 @@ msgstr ""
 msgid "Examples of Date & Time fields with different widgets"
 msgstr "Exemple de câmpuri Dată și oră cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:228
+#: ../../content/applications/studio/fields.rst:243
 msgid "Remaining Days (`remaining_days`)"
 msgstr "Zile rămase (`remaining_days`)"
 
-#: ../../content/applications/studio/fields.rst:230
+#: ../../content/applications/studio/fields.rst:245
 msgid ""
 "The :guilabel:`Remaining Days` widget displays the remaining number of days "
 "before the selected date (e.g., *In 5 days*), based on the current date and "
@@ -1619,11 +1639,11 @@ msgstr ""
 "data selectată (ex: *Peste 5 zile*), pe baza datei și orei curente. Acest "
 "câmp trebuie setat ca :guilabel:`Doar citire`."
 
-#: ../../content/applications/studio/fields.rst:237
+#: ../../content/applications/studio/fields.rst:252
 msgid "Checkbox (`boolean`)"
 msgstr "Bifă (`boolean`)"
 
-#: ../../content/applications/studio/fields.rst:239
+#: ../../content/applications/studio/fields.rst:254
 msgid ""
 "The :guilabel:`Checkbox` field is used when a value should only be true or "
 "false, indicated by checking or unchecking a checkbox."
@@ -1631,7 +1651,7 @@ msgstr ""
 "Câmpul :guilabel:`Bifă` este utilizat atunci când o valoare trebuie să fie "
 "adevărată sau falsă, indicată prin bifarea sau debifarea unui câmp."
 
-#: ../../content/applications/studio/fields.rst:242
+#: ../../content/applications/studio/fields.rst:257
 msgid ""
 ":guilabel:`Button`: displays a radio button. The widget works without "
 "switching to the edit mode."
@@ -1639,7 +1659,7 @@ msgstr ""
 ":guilabel:`Buton`: afișează un buton radio. Widget-ul funcționează fără a "
 "trebui să treci în modul de editare."
 
-#: ../../content/applications/studio/fields.rst:243
+#: ../../content/applications/studio/fields.rst:258
 msgid ""
 ":guilabel:`Toggle`: displays a toggle button. The widget works without "
 "switching to the edit mode."
@@ -1651,11 +1671,11 @@ msgstr ""
 msgid "Examples of Checkbox fields with different widgets"
 msgstr "Exemple de câmpuri Bifă cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:253
+#: ../../content/applications/studio/fields.rst:268
 msgid "Selection (`selection`)"
 msgstr "Selcție (`selection`)"
 
-#: ../../content/applications/studio/fields.rst:255
+#: ../../content/applications/studio/fields.rst:270
 msgid ""
 "The :guilabel:`Selection` field is used when users should select a single "
 "value from a group of predefined values."
@@ -1663,7 +1683,7 @@ msgstr ""
 "Câmpul :guilabel:`Selcție` este utilizat atunci când utilizatorii trebuie să "
 "selecteze o singură valoare dintr-un grup de valori predefinite."
 
-#: ../../content/applications/studio/fields.rst:260
+#: ../../content/applications/studio/fields.rst:275
 msgid ""
 ":guilabel:`Badges`: displays all selectable values simultaneously inside "
 "rectangular shapes, organized horizontally."
@@ -1671,7 +1691,7 @@ msgstr ""
 ":guilabel:`Etichete`: afișează toate valorile selectabile simultan în "
 "interiorul formelor dreptunghiulare, organizate orizontal."
 
-#: ../../content/applications/studio/fields.rst:262
+#: ../../content/applications/studio/fields.rst:277
 msgid ""
 ":guilabel:`Priority`: displays star symbols instead of values, which can be "
 "used to indicate an importance or satisfaction level, for example. This has "
@@ -1685,8 +1705,8 @@ msgstr ""
 "<studio/fields/simple-fields-priority>`, deși pentru acesta din urmă există "
 "deja patru valori predefinite."
 
-#: ../../content/applications/studio/fields.rst:266
-#: ../../content/applications/studio/fields.rst:392
+#: ../../content/applications/studio/fields.rst:281
+#: ../../content/applications/studio/fields.rst:407
 msgid ""
 ":guilabel:`Radio`: displays all selectable values at the same time as radio "
 "buttons."
@@ -1694,7 +1714,7 @@ msgstr ""
 ":guilabel:`Radio`: afișează toate valorile selectabile simultan ca butoane "
 "radio."
 
-#: ../../content/applications/studio/fields.rst:269
+#: ../../content/applications/studio/fields.rst:284
 msgid ""
 "By default, radio buttons are organized vertically. "
 "Enable :guilabel:`Display horizontally` to switch the way they are displayed."
@@ -1702,7 +1722,7 @@ msgstr ""
 "În mod implicit, butoanele radio sunt organizate vertical. "
 "Activați :guilabel:`Afișează orizontal` pentru a schimba modul de afișare."
 
-#: ../../content/applications/studio/fields.rst:272
+#: ../../content/applications/studio/fields.rst:287
 msgid ""
 ":guilabel:`Status Bar`: displays all selectable values at the same time as "
 "an arrow progress bar."
@@ -1710,7 +1730,7 @@ msgstr ""
 ":guilabel:`Bară de stare`: afișează toate valorile selectabile simultan sub "
 "forma unei bare de progres cu săgeți."
 
-#: ../../content/applications/studio/fields.rst:275
+#: ../../content/applications/studio/fields.rst:290
 msgid ""
 "By default, values on the status bar are selectable. "
 "Disable :guilabel:`Clickable` to prevent the value being edited on the UI."
@@ -1723,11 +1743,11 @@ msgstr ""
 msgid "Examples of Selection fields with different widgets"
 msgstr "Exemple de câmpuri Selecție cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:286
+#: ../../content/applications/studio/fields.rst:301
 msgid "Priority (`selection`)"
 msgstr "Prioritate (`selection`)"
 
-#: ../../content/applications/studio/fields.rst:288
+#: ../../content/applications/studio/fields.rst:303
 msgid ""
 "The :guilabel:`Priority` field is used to display a three-star rating "
 "system, which can be used to indicate importance or satisfaction level. This "
@@ -1747,7 +1767,7 @@ msgstr ""
 "și :guilabel:`Selecție` au aceleași efecte ca cele descrise "
 "la :ref:`Selecție <studio/fields/simple-fields-selection>`."
 
-#: ../../content/applications/studio/fields.rst:296
+#: ../../content/applications/studio/fields.rst:311
 msgid ""
 "To change the number of available stars by adding or removing values, "
 "click :guilabel:`Edit Values`. Note that the first value is equal to 0 stars "
@@ -1764,11 +1784,11 @@ msgstr ""
 msgid "Example of a Priority field"
 msgstr "Exemplu de câmp Prioritate"
 
-#: ../../content/applications/studio/fields.rst:308
+#: ../../content/applications/studio/fields.rst:323
 msgid "File (`binary`)"
 msgstr "Fișier (`binary`)"
 
-#: ../../content/applications/studio/fields.rst:310
+#: ../../content/applications/studio/fields.rst:325
 msgid ""
 "The :guilabel:`File` field is used to upload any type of file, or sign a "
 "form (:guilabel:`Sign` widget)."
@@ -1776,7 +1796,7 @@ msgstr ""
 "Câmpul :guilabel:`Fișier` este utilizat pentru a încărca orice tip de "
 "fișier, sau pentru a semna un formular (:guilabel:`Semnează` widget)."
 
-#: ../../content/applications/studio/fields.rst:313
+#: ../../content/applications/studio/fields.rst:328
 msgid ""
 ":guilabel:`Image`: users can upload an image file, which is then displayed "
 "in :ref:`Form view <studio/views/general/form>`. This has the same effect as "
@@ -1787,7 +1807,7 @@ msgstr ""
 "același efect ca utilizarea :ref:`câmpului Imagine <studio/fields/simple-"
 "fields-image>`."
 
-#: ../../content/applications/studio/fields.rst:316
+#: ../../content/applications/studio/fields.rst:331
 msgid ""
 ":guilabel:`PDF Viewer`: users can upload a PDF file, which can be then "
 "browsed from the :ref:`Form view <studio/views/general/form>`."
@@ -1796,7 +1816,7 @@ msgstr ""
 "fi apoi vizualizat din :ref:`Vizualizare formular <studio/views/general/"
 "form>`."
 
-#: ../../content/applications/studio/fields.rst:318
+#: ../../content/applications/studio/fields.rst:333
 msgid ""
 ":guilabel:`Sign`: users can electronically sign the form. This has the same "
 "effect as selecting the :ref:`Sign field <studio/fields/simple-fields-sign>`."
@@ -1809,11 +1829,11 @@ msgstr ""
 msgid "Examples of File fields with different widgets"
 msgstr "Exemple de câmpuri Fișier cu diferite widget-uri"
 
-#: ../../content/applications/studio/fields.rst:329
+#: ../../content/applications/studio/fields.rst:344
 msgid "Image (`binary`)"
 msgstr "Imagine (`binary`)"
 
-#: ../../content/applications/studio/fields.rst:331
+#: ../../content/applications/studio/fields.rst:346
 msgid ""
 "The :guilabel:`Image` field is used to upload an image and display it "
 "in :ref:`Form view <studio/views/general/form>`. This field type is "
@@ -1831,7 +1851,7 @@ msgstr ""
 "și :guilabel:`Semnătură` au aceleași efecte ca cele descrise la :ref:`Fișier "
 "<studio/fields/simple-fields-file>`."
 
-#: ../../content/applications/studio/fields.rst:338
+#: ../../content/applications/studio/fields.rst:353
 msgid ""
 "To change the display size of uploaded images, "
 "select :guilabel:`Small`, :guilabel:`Medium`, or :guilabel:`Large` under "
@@ -1841,11 +1861,11 @@ msgstr ""
 "selectați :guilabel:`Mic`, :guilabel:`Mediu`, sau :guilabel:`Mare` sub "
 "opțiunea :guilabel:`Dimensiune`."
 
-#: ../../content/applications/studio/fields.rst:344
+#: ../../content/applications/studio/fields.rst:359
 msgid "Sign (`binary`)"
 msgstr "Semnătură (`binary`)"
 
-#: ../../content/applications/studio/fields.rst:346
+#: ../../content/applications/studio/fields.rst:361
 msgid ""
 "The :guilabel:`Sign` field is used to sign the form electronically. This "
 "field type is a :ref:`File field <studio/fields/simple-fields-file>` with "
@@ -1861,7 +1881,7 @@ msgstr ""
 "și :guilabel:`Vizualizator PDF` au aceleași efecte ca cele descrise "
 "la :ref:`Fișier <studio/fields/simple-fields-file>`."
 
-#: ../../content/applications/studio/fields.rst:352
+#: ../../content/applications/studio/fields.rst:367
 msgid ""
 "To give users the :guilabel:`Auto` option when having to draw their "
 "signature, select one of the available :guilabel:`Auto-complete with` fields "
@@ -1878,11 +1898,11 @@ msgstr ""
 "field>` doar pe model). Semnătura este generată automat folosind datele din "
 "câmpul selectat."
 
-#: ../../content/applications/studio/fields.rst:361
+#: ../../content/applications/studio/fields.rst:376
 msgid "Relational fields"
 msgstr "Câmpuri relaționale"
 
-#: ../../content/applications/studio/fields.rst:363
+#: ../../content/applications/studio/fields.rst:378
 msgid ""
 "Relational fields are used to link and display the data from records on "
 "another model."
@@ -1890,16 +1910,16 @@ msgstr ""
 "Câmpurile relaționale sunt utilizate pentru a lega și afișa datele din "
 "înregistrări de pe alt model."
 
-#: ../../content/applications/studio/fields.rst:366
+#: ../../content/applications/studio/fields.rst:381
 msgid ""
 "Non-default widgets, when available, are presented as bullet points below."
 msgstr "Widget-urile non-implicite, sunt prezentate mai jos."
 
-#: ../../content/applications/studio/fields.rst:371
+#: ../../content/applications/studio/fields.rst:386
 msgid "Many2One (`many2one`)"
 msgstr "Many2One (`many2one`)"
 
-#: ../../content/applications/studio/fields.rst:373
+#: ../../content/applications/studio/fields.rst:388
 msgid ""
 "The :guilabel:`Many2One` field is used to link another record (from another "
 "model) to the record being edited. The record's name from the other model is "
@@ -1909,7 +1929,7 @@ msgstr ""
 "(de pe alt model) cu înregistrarea care este editată. Numele înregistrării "
 "din alt model este apoi afișat în înregistrarea care este editată."
 
-#: ../../content/applications/studio/fields.rst:377
+#: ../../content/applications/studio/fields.rst:392
 msgid ""
 "On the *Sales Order* model, the :guilabel:`Customer` field is "
 "a :guilabel:`Many2One` field pointing at the *Contact* model. This allows "
@@ -1923,7 +1943,7 @@ msgstr ""
 msgid "Diagram showing a many2one relationship"
 msgstr "Diagramă care arată o relație many2one"
 
-#: ../../content/applications/studio/fields.rst:385
+#: ../../content/applications/studio/fields.rst:400
 msgid ""
 "To prevent users from creating a new record in the linked model, "
 "tick :guilabel:`Disable creation`."
@@ -1931,7 +1951,7 @@ msgstr ""
 "Pentru a preveni utilizatorii din a crea o nouă înregistrare în modelul "
 "legat, bifați :guilabel:`Dezactivează crearea`."
 
-#: ../../content/applications/studio/fields.rst:387
+#: ../../content/applications/studio/fields.rst:402
 msgid ""
 "To prevent users from opening records in a pop-up window, "
 "tick :guilabel:`Disable opening`."
@@ -1939,7 +1959,7 @@ msgstr ""
 "Pentru a preveni utilizatorii din a deschide înregistrări într-o fereastră "
 "pop-up, bifați :guilabel:`Dezactivează deschiderea`."
 
-#: ../../content/applications/studio/fields.rst:388
+#: ../../content/applications/studio/fields.rst:403
 msgid ""
 "To help users only select the right record, click on :guilabel:`Domain` to "
 "create a filter."
@@ -1947,7 +1967,7 @@ msgstr ""
 "Pentru a ajuta utilizatorii să selecteze doar înregistrarea potrivită, "
 "faceți clic pe :guilabel:`Domeniu` pentru a crea un filtru."
 
-#: ../../content/applications/studio/fields.rst:390
+#: ../../content/applications/studio/fields.rst:405
 msgid ""
 ":guilabel:`Badge`: displays the value inside a rounded shape, similar to a "
 "tag. The value cannot be edited on the UI."
@@ -1955,11 +1975,11 @@ msgstr ""
 ":guilabel:`Etichetă`: afișează valoarea într-o formă rotunjită, similară cu "
 "o etichetă. Valoarea nu poate fi editată în interfața utilizatorului."
 
-#: ../../content/applications/studio/fields.rst:397
+#: ../../content/applications/studio/fields.rst:412
 msgid "One2Many (`one2many`)"
 msgstr "One2Many (`one2many`) (Unul către mai multe)"
 
-#: ../../content/applications/studio/fields.rst:399
+#: ../../content/applications/studio/fields.rst:414
 msgid ""
 "The :guilabel:`One2Many` field is used to display the existing relations "
 "between a record on the current model and multiple records from another "
@@ -1969,7 +1989,7 @@ msgstr ""
 "între o înregistrare de pe modelul curent și mai multe înregistrări de pe "
 "alt model."
 
-#: ../../content/applications/studio/fields.rst:403
+#: ../../content/applications/studio/fields.rst:418
 msgid ""
 "You could add a :guilabel:`One2Many` field on the *Contact* model to look at "
 "**one** customer's **many** sales orders."
@@ -1982,7 +2002,7 @@ msgstr ""
 msgid "Diagram showing a one2many relationship"
 msgstr "Diagrama care arată o relație one2many"
 
-#: ../../content/applications/studio/fields.rst:410
+#: ../../content/applications/studio/fields.rst:425
 msgid ""
 "To use a :guilabel:`One2Many` field, the two models must have been linked "
 "already using a :ref:`Many2One field <studio/fields/relational-fields-"
@@ -1994,11 +2014,11 @@ msgstr ""
 "fields-many2one>`. Relațiile One2Many nu există independent: se realizează o "
 "căutare inversă a relațiilor Many2One existente."
 
-#: ../../content/applications/studio/fields.rst:417
+#: ../../content/applications/studio/fields.rst:432
 msgid "Lines (`one2many`)"
 msgstr "Linii (`one2many`)"
 
-#: ../../content/applications/studio/fields.rst:419
+#: ../../content/applications/studio/fields.rst:434
 msgid ""
 "The :guilabel:`Lines` field is used to create a table with rows and columns "
 "(e.g., the lines of products on a sales order)."
@@ -2006,7 +2026,7 @@ msgstr ""
 "Câmpul :guilabel:`Linii` este utilizat pentru a crea o tabelă cu rânduri și "
 "coloane (de exemplu, linii de produse pe o comandă de vânzare)."
 
-#: ../../content/applications/studio/fields.rst:423
+#: ../../content/applications/studio/fields.rst:438
 msgid ""
 "To modify the columns, click on the :guilabel:`Lines` field and "
 "then :guilabel:`Edit List View`. To edit the form that pops up when a user "
@@ -2023,11 +2043,11 @@ msgstr ""
 msgid "Example of a Lines field"
 msgstr "Exemplu de câmp Linii"
 
-#: ../../content/applications/studio/fields.rst:435
+#: ../../content/applications/studio/fields.rst:450
 msgid "Many2Many (`many2many`)"
 msgstr "Many2Many (`many2many`)"
 
-#: ../../content/applications/studio/fields.rst:437
+#: ../../content/applications/studio/fields.rst:452
 msgid ""
 "The :guilabel:`Many2Many` field is used to link multiple records from "
 "another model to multiple records on the current model. Many2Many fields can "
@@ -2041,7 +2061,7 @@ msgstr ""
 "crearea`, :guilabel:`Dezactivează deschiderea`, :guilabel:`Domeniu`, la fel "
 "ca :ref:`câmpurile Many2One <studio/fields/relational-fields-many2one>`."
 
-#: ../../content/applications/studio/fields.rst:443
+#: ../../content/applications/studio/fields.rst:458
 msgid ""
 "On the *Task* model, the :guilabel:`Assignees` field is "
 "a :guilabel:`Many2Many` field pointing at the *Contact* model. This allows a "
@@ -2057,14 +2077,14 @@ msgstr ""
 msgid "Diagram showing many2many relationships"
 msgstr "Diagrama care arată relațiile many2many"
 
-#: ../../content/applications/studio/fields.rst:450
+#: ../../content/applications/studio/fields.rst:465
 msgid ""
 ":guilabel:`Checkboxes`: users can select several values using checkboxes."
 msgstr ""
 ":guilabel:`Casete de selectare`: utilizatorii pot selecta mai multe valori "
 "folosind casetele de selectare."
 
-#: ../../content/applications/studio/fields.rst:451
+#: ../../content/applications/studio/fields.rst:466
 msgid ""
 ":guilabel:`Tags`: users can select several values appearing in rounded "
 "shapes, also known as *tags*. This has the same effect as selecting "
@@ -2074,11 +2094,11 @@ msgstr ""
 "formă de forme rotunjite, cunoscute și ca *etichete*. Are același efect ca "
 "selectarea :ref:`câmpului Etichete <studio/fields/relational-fields-tags>`."
 
-#: ../../content/applications/studio/fields.rst:458
+#: ../../content/applications/studio/fields.rst:473
 msgid "Tags (`many2many`)"
 msgstr "Etichete (`many2many`)"
 
-#: ../../content/applications/studio/fields.rst:460
+#: ../../content/applications/studio/fields.rst:475
 msgid ""
 "The :guilabel:`Tags` field is used to display several values from another "
 "model appearing in rounded shapes, also known as *tags*. This field type is "
@@ -2096,7 +2116,7 @@ msgstr ""
 "efecte ca cele descrise la :ref:`Many2Many <studio/fields/relational-fields-"
 "many2many>`."
 
-#: ../../content/applications/studio/fields.rst:467
+#: ../../content/applications/studio/fields.rst:482
 msgid ""
 "To display tags with different background colors, tick :guilabel:`Use "
 "colors`."
@@ -2108,11 +2128,11 @@ msgstr ""
 msgid "Example of a Tags field"
 msgstr "Exemplu de câmp Etichete"
 
-#: ../../content/applications/studio/fields.rst:477
+#: ../../content/applications/studio/fields.rst:492
 msgid "Related Field (`related`)"
 msgstr "Câmp Relaționat (`related`)"
 
-#: ../../content/applications/studio/fields.rst:479
+#: ../../content/applications/studio/fields.rst:494
 msgid ""
 "A :guilabel:`Related Field` is not a relational field per se; no "
 "relationship is created between models. It uses an existing relationship to "
@@ -2122,7 +2142,7 @@ msgstr ""
 "creată nicio relație între modele. Acesta utilizează o relație existentă "
 "pentru a prelua și afișa informații dintr-o altă înregistrare."
 
-#: ../../content/applications/studio/fields.rst:483
+#: ../../content/applications/studio/fields.rst:498
 msgid ""
 "To display the email address of a customer on the *Sales Order* model, use "
 "the :guilabel:`Related Field` `partner_id.email` by "
@@ -2132,15 +2152,183 @@ msgstr ""
 "Vânzare*, utilizați câmpul :guilabel:`Câmp Relaționat` `partner_id.email` "
 "prin selectarea :guilabel:`Client` și apoi :guilabel:`Email`."
 
-#: ../../content/applications/studio/fields.rst:489
-msgid "Properties"
-msgstr "Proprietăți"
+#: ../../content/applications/studio/fields.rst:504
+msgid "Add a field to a view"
+msgstr ""
 
-#: ../../content/applications/studio/fields.rst:492
+#: ../../content/applications/studio/fields.rst:506
+msgid "With Studio, it is possible to add:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:508
+msgid ""
+":ref:`a new field <studio/fields/add-new>` to a :ref:`form <studio/views/"
+"general/form>` or :ref:`list view <studio/views/multiple-records/list>` of a "
+"model"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:510
+msgid ""
+":ref:`an existing field <studio/fields/add-existing>`, i.e., a field that "
+"already exists on the :doc:`model <models_modules_apps>` in question, to "
+"*any* view of that model"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:514
+msgid ""
+"Add a new field to a form or list view to save it to the model and make it "
+"available as an existing field in other views of the same model."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:520
+msgid "Add a new field"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:523
+msgid ""
+"Activate :ref:`developer mode <developer-mode>` *before* adding a new field "
+"to see, and be able to edit, the field's technical name during configuration."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:526
+msgid "To add a new field, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:528
+msgid ""
+"Navigate to the relevant form or list view, then click the :icon:`oi-studio` "
+"(:guilabel:`Toggle Studio`) icon in the upper-right corner. Alternatively, "
+"with any app open, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) "
+"icon, then navigate to the relevant form or list view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:533
+msgid ""
+"In the :icon:`fa-plus` :guilabel:`Add` tab, drag the relevant :ref:`field "
+"type <studio/fields/field-types>` from the :guilabel:`New Fields` section "
+"and drop it in the desired position. If the new field is a :ref:`relational "
+"field <studio/fields/relational-fields>`, select the relevant reciprocal "
+"field, model, or related field in the pop-up."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:538
+msgid ""
+"In the :icon:`fa-server` :guilabel:`Properties` tab, configure the "
+"field's :ref:`properties <studio/fields/properties>`:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:541
+msgid ""
+"Enter the :guilabel:`Label` to be displayed as the field name on the UI; "
+"this is also used to generate the default technical name of the field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:543
+msgid ""
+"Click anywhere outside the :guilabel:`Label` field to see "
+"the :guilabel:`Technical Name` updated with the default technical name."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:547
+msgid ""
+"The :guilabel:`Technical Name` of a new field can be edited in Studio during "
+"the configuration process. At any other time, a field's technical name can "
+"only be :ref:`modified via the technical settings of the database <studio/"
+"fields/properties-technical-name-change>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:551
+msgid ""
+"The technical name of a new field added using Studio is by default prefixed "
+"by `x_studio_`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:554
+msgid ""
+"Optionally, select a different :guilabel:`Widget` via the dropdown; the "
+"default widget for the :ref:`field type <studio/fields/field-types>` is "
+"selected by default."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:556
+msgid ""
+"Optionally, configure any other :ref:`field properties <studio/fields/"
+"properties>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:558
+#: ../../content/applications/studio/fields.rst:584
+#: ../../content/applications/studio/fields.rst:697
+msgid "Click :guilabel:`Close` in the top-right corner to close Studio."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:563
+msgid "Add an existing field"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:565
+msgid ""
+"To add a field that exists on the model but that is not present on the "
+"current view, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:568
+#: ../../content/applications/studio/fields.rst:684
+#: ../../content/applications/studio/fields.rst:734
+msgid ""
+"Navigate to the relevant view, then click the :icon:`oi-studio` "
+"(:guilabel:`Toggle Studio`) icon in the upper-right corner. Alternatively, "
+"with any app open, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) "
+"icon, then navigate to the relevant view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:571
+msgid ""
+"In the :icon:`fa-plus` :guilabel:`Add` tab, in the left panel, "
+"click :guilabel:`Existing Fields` :icon:`fa-caret-right` to reveal a list of "
+"all the model's fields that are not currently present in the view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:574
+msgid "Drag the relevant field and drop it in the desired position."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:575
+msgid ""
+"In the :icon:`fa-server` :guilabel:`Properties` tab, configure the "
+"relevant :ref:`properties <studio/fields/properties>` for the field in the "
+"current view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:579
+msgid ""
+"Various properties can be configured independently for different views, if "
+"needed, such as the :guilabel:`Label`, the :guilabel:`Widget`, the "
+"visibility of the field for certain user groups, as well as whether or not "
+"the field is :guilabel:`Invisible`, :guilabel:`Required`, "
+"or :guilabel:`Readonly`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:589
+msgid "Field properties"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:591
+msgid ""
+"A series of :ref:`general properties <studio/fields/properties-general>` can "
+"be configured for most combinations of :ref:`field type and widget <studio/"
+"fields/field-types>`. Additional properties are available depending on the "
+"specific field type and widget selected. For example, :guilabel:`Date & "
+"Time` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range` "
+"widget have various :ref:`specific properties <studio/fields/properties-date-"
+"datetime>` that can be configured."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:600
 msgid "General properties"
 msgstr "Proprietăți generale"
 
-#: ../../content/applications/studio/fields.rst:494
+#: ../../content/applications/studio/fields.rst:602
 msgid ""
 ":guilabel:`Invisible`: Enable this property when it is not necessary for "
 "users to view a field on the UI. This helps declutter the UI by only showing "
@@ -2151,17 +2339,7 @@ msgstr ""
 "simplificarea interfeței afișând doar câmpurile esențiale în funcție de "
 "situație."
 
-#: ../../content/applications/studio/fields.rst:498
-msgid ""
-"The :guilabel:`Invisible` attribute also applies inside Studio. To view "
-"hidden fields in Studio, click on a view's :guilabel:`View` tab and "
-"enable :guilabel:`Show Invisible Elements`."
-msgstr ""
-"Atributul :guilabel:`Invizibil` se aplică și în Studio. Pentru a vedea "
-"câmpurile ascunse în Studio, apăsați pe fila :guilabel:`Vizualizare` a unei "
-"vizualizări și activați :guilabel:`Afișează elementele invizibile`."
-
-#: ../../content/applications/studio/fields.rst:501
+#: ../../content/applications/studio/fields.rst:606
 msgid ""
 ":guilabel:`Required`: Enable this property if a field should always be "
 "completed by the user before being able to proceed."
@@ -2169,7 +2347,7 @@ msgstr ""
 ":guilabel:`Obligatoriu`: Activați această proprietate dacă un câmp trebuie "
 "completat întotdeauna de utilizator înainte de a putea continua."
 
-#: ../../content/applications/studio/fields.rst:504
+#: ../../content/applications/studio/fields.rst:609
 msgid ""
 ":guilabel:`Readonly`: Enable this property if users should not be able to "
 "modify a field."
@@ -2177,39 +2355,34 @@ msgstr ""
 ":guilabel:`Doar citire`: Activați această proprietate dacă utilizatorii nu "
 "trebuie să poată modifica un câmp."
 
-#: ../../content/applications/studio/fields.rst:507
+#: ../../content/applications/studio/fields.rst:612
 msgid ""
-"You can choose to enable :guilabel:`Invisible`, :guilabel:`Required` "
-"and :guilabel:`Readonly` for specific records only by clicking "
+"The :guilabel:`Invisible` property also applies inside Studio. To view "
+"hidden fields in Studio, click on a view's :guilabel:`View` tab and "
+"enable :guilabel:`Show Invisible Elements`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:614
+msgid ""
+"The :guilabel:`Invisible`, :guilabel:`Required`, and :guilabel:`Readonly` "
+"properties can be enabled for specific records only by clicking "
 "on :guilabel:`Conditional` and creating a filter."
 msgstr ""
-"Puteți alege să activați :guilabel:`Invizibil`, :guilabel:`Obligatoriu` "
-"și :guilabel:`Doar citire` doar pentru anumite înregistrări apăsând "
-"pe :guilabel:`Condițional` și creând un filtru."
 
-#: ../../content/applications/studio/fields.rst:511
+#: ../../content/applications/studio/fields.rst:618
 msgid ""
-"On the *Form* view of the *Contact* model, the :guilabel:`Title` field only "
+"On the form view of the *Contact* model, the :guilabel:`Title` field only "
 "appears when :guilabel:`Individual` is selected, as that field would not be "
 "helpful for a :guilabel:`Company` contact."
 msgstr ""
-"Pe vizualizarea *Formular* a modelului *Contact*, câmpul :guilabel:`Titlu` "
-"apare doar atunci când este selectat :guilabel:`Individual`, deoarece acest "
-"câmp nu ar fi util pentru un contact de tip :guilabel:`Companie`."
 
-#: ../../content/applications/studio/fields.rst:515
+#: ../../content/applications/studio/fields.rst:622
 msgid ""
-":guilabel:`Label`: the field's name on the UI. This is not the name used in "
-"the PostgreSQL database. To view and change the latter, activate "
-"the :ref:`developer mode <developer-mode>` and edit the :guilabel:`Technical "
-"Name`."
+":guilabel:`Label`: This is the field name on the UI; the label is used to "
+"generate the technical name of the field."
 msgstr ""
-":guilabel:`Etichetă`: numele câmpului în interfață. Acesta nu este numele "
-"folosit în baza de date PostgreSQL. Pentru a vedea și modifica acesta din "
-"urmă, activați :ref:`modul dezvoltator <developer-mode>` și "
-"editați :guilabel:`Nume tehnic`."
 
-#: ../../content/applications/studio/fields.rst:519
+#: ../../content/applications/studio/fields.rst:625
 msgid ""
 ":guilabel:`Help Tooltip`: To explain the purpose of a field, add a "
 "description. The text is displayed inside a tooltip box when hovering with "
@@ -2219,7 +2392,21 @@ msgstr ""
 "descriere. Textul este afișat într-o casetă de tip tooltip când treceți cu "
 "mouse-ul peste semnul întrebării de lângă eticheta câmpului."
 
-#: ../../content/applications/studio/fields.rst:523
+#: ../../content/applications/studio/fields.rst:629
+msgid ""
+":guilabel:`Technical Name`: To view a field's technical name in Studio (and, "
+"during the configuration of a new field, edit it if desired), "
+"activate :ref:`developer mode <developer-mode>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:634
+msgid ""
+"If this field needs to be updated but is no longer editable via Studio, the "
+"technical name can be :ref:`modified via the technical settings of the "
+"database <studio/fields/properties-technical-name-change>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:638
 msgid ""
 ":guilabel:`Widget`: To change the default appearance or functionality of a "
 "field, select one of the available widgets."
@@ -2227,7 +2414,7 @@ msgstr ""
 ":guilabel:`Widget`: Pentru a schimba aspectul sau funcționalitatea implicită "
 "a unui câmp, selectați unul dintre widget-urile disponibile."
 
-#: ../../content/applications/studio/fields.rst:526
+#: ../../content/applications/studio/fields.rst:641
 msgid ""
 ":guilabel:`Placeholder`: To provide an example of how a field should be "
 "completed, add placeholder text. The text appears in light gray until a "
@@ -2237,7 +2424,7 @@ msgstr ""
 "trebui completat un câmp, adăugați un text de substituție. Textul apare cu "
 "gri deschis până când se introduce o valoare."
 
-#: ../../content/applications/studio/fields.rst:529
+#: ../../content/applications/studio/fields.rst:644
 msgid ""
 ":guilabel:`Default value`: To display a default value in a field when a "
 "record is created, add a value."
@@ -2245,7 +2432,7 @@ msgstr ""
 ":guilabel:`Valoare implicită`: Pentru a afișa o valoare implicită într-un "
 "câmp la crearea unei înregistrări, adăugați o valoare."
 
-#: ../../content/applications/studio/fields.rst:532
+#: ../../content/applications/studio/fields.rst:647
 msgid ""
 ":guilabel:`Allow visibility to groups`: To limit which users can view the "
 "field, select one or more user access :ref:`groups <access-rights/groups>`."
@@ -2254,7 +2441,7 @@ msgstr ""
 "utilizatori pot vedea câmpul, selectați unul sau mai multe :ref:`grupuri de "
 "acces <access-rights/groups>`."
 
-#: ../../content/applications/studio/fields.rst:534
+#: ../../content/applications/studio/fields.rst:649
 msgid ""
 ":guilabel:`Forbid visibility to groups`: To prevent certain users from "
 "seeing the field, select one or more user access :ref:`groups <access-rights/"
@@ -2264,11 +2451,11 @@ msgstr ""
 "anumiți utilizatori să vadă câmpul, selectați unul sau mai "
 "multe :ref:`grupuri de acces <access-rights/groups>`."
 
-#: ../../content/applications/studio/fields.rst:540
+#: ../../content/applications/studio/fields.rst:655
 msgid "Properties for Date & Time fields"
 msgstr "Proprietăți pentru câmpurile Dată & Oră"
 
-#: ../../content/applications/studio/fields.rst:542
+#: ../../content/applications/studio/fields.rst:657
 msgid ""
 "For :guilabel:`Date & Time` fields that have the :guilabel:`Date & Time` "
 "or :guilabel:`Date Range` widget set, some specific properties are available:"
@@ -2277,7 +2464,7 @@ msgstr ""
 "ul :guilabel:`Dată & Oră` sau :guilabel:`Interval de date`, sunt disponibile "
 "unele proprietăți specifice:"
 
-#: ../../content/applications/studio/fields.rst:545
+#: ../../content/applications/studio/fields.rst:660
 msgid ""
 ":guilabel:`Time interval`: Enter a value to determine the minute intervals "
 "shown in the time selector. For example, enter 15 to allow quarter-hour "
@@ -2288,7 +2475,7 @@ msgstr ""
 "pentru a permite intervale de un sfert de oră. Valoarea implicită este "
 "setată la 5 minute."
 
-#: ../../content/applications/studio/fields.rst:548
+#: ../../content/applications/studio/fields.rst:663
 msgid ""
 ":guilabel:`Warning for future dates`: Enable this property to display a "
 "warning icon if a future date is selected."
@@ -2297,7 +2484,7 @@ msgstr ""
 "pentru a afișa o pictogramă de avertizare dacă este selectată o dată "
 "viitoare."
 
-#: ../../content/applications/studio/fields.rst:550
+#: ../../content/applications/studio/fields.rst:665
 msgid ""
 ":guilabel:`Show time`: This property is enabled by default "
 "for :guilabel:`Date & Time` fields. On a read-only field, disable the "
@@ -2309,7 +2496,7 @@ msgstr ""
 "dezactivează proprietatea pentru a afișa doar data. Acest lucru poate "
 "menține o vizualizare de listă mai aerisită, de exemplu."
 
-#: ../../content/applications/studio/fields.rst:553
+#: ../../content/applications/studio/fields.rst:668
 msgid ""
 ":guilabel:`Earliest accepted date`: Enter the earliest date that can be "
 "selected in the date selector in ISO-format, i.e., `YYYY-MM-DD`. If the "
@@ -2322,7 +2509,7 @@ msgstr ""
 "introdu `today`. În selectorul de date, datele anterioare celei mai devreme "
 "date acceptate sunt estompate."
 
-#: ../../content/applications/studio/fields.rst:557
+#: ../../content/applications/studio/fields.rst:672
 msgid ""
 ":guilabel:`Latest accepted date`: Enter the latest date that can be selected "
 "in the date selector in ISO-format, i.e., `YYYY-MM-DD`. If the current date "
@@ -2334,6 +2521,121 @@ msgstr ""
 "Dacă data curentă este întotdeauna cea mai târzie dată acceptată, introdu "
 "`today`. În selectorul de date, datele ulterioare celei mai târzii date "
 "acceptate sunt estompate."
+
+#: ../../content/applications/studio/fields.rst:680
+msgid "Modify a field's properties"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:682
+msgid "To modify the properties of a field, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:687
+#: ../../content/applications/studio/fields.rst:737
+msgid "Click on the relevant field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:688
+msgid ""
+"In the :icon:`fa-server` :guilabel:`Properties` tab, make any desired "
+"changes to the :ref:`field properties <studio/fields/properties>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:692
+msgid ""
+"Various properties can be configured independently for different views, such "
+"as the :guilabel:`Label`, the :guilabel:`Widget`, the visibility of the "
+"field for certain user groups, as well as whether or not the field "
+"is :guilabel:`Invisible`, :guilabel:`Required`, or :guilabel:`Readonly`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:700
+msgid ""
+"The :guilabel:`Technical Name` of a field (visible in Studio "
+"with :ref:`developer mode <developer-mode>` activated) cannot be modified in "
+"Studio; this can be done :ref:`via the technical settings of the database "
+"<studio/fields/properties-technical-name-change>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:707
+msgid "Modify a field's technical name"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:709
+msgid ""
+"To modify the technical name of a field, activate :ref:`developer mode "
+"<developer-mode>`, then follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:712
+msgid "With the field open in Studio, copy the technical name of the field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:713
+msgid ""
+":ref:`Remove the field <studio/fields/remove>` from *all* views in Studio, "
+"then click :guilabel:`Close` to close Studio."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:715
+msgid "Navigate to :menuselection:`Settings app --> Technical --> Fields`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:716
+msgid ""
+"Paste the copied technical name into the search bar, then open the relevant "
+"field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:717
+msgid "Modify the :guilabel:`Field Name` as needed."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:719
+msgid ""
+"Once the field's technical name has been updated, the field can then "
+"be :ref:`added (back) to the relevant view(s) <studio/fields/add-existing>` "
+"from the list of existing fields."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:723
+msgid ""
+"When updating the technical name of a field, make sure to keep at least the "
+"`x_` prefix, which is required for any custom field; for fields created "
+"using Studio, keep the `x_studio_` prefix to allow such fields to be more "
+"easily identified."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:730
+msgid "Remove a field from a view"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:732
+msgid "To remove a field from a view, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:738
+msgid ""
+"Scroll to the bottom of the :guilabel:`Properties` tab, then "
+"click :guilabel:`Remove from view`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:739
+msgid "Click :guilabel:`Ok` to confirm the action."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:742
+msgid ""
+"A removed field can be easily :ref:`added back to the view <studio/fields/"
+"add-existing>` at a later stage, if needed."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:744
+msgid ""
+"If the intention is to declutter the view, it is also possible "
+"to :ref:`modify a field <studio/fields/modify>` and make "
+"it :guilabel:`Invisible` on the view in question."
+msgstr ""
 
 #: ../../content/applications/studio/models_modules_apps.rst:3
 msgid "Models, modules, and apps"
@@ -4445,3 +4747,80 @@ msgstr ""
 msgid "Sales Analysis Report model's Bar chart on Graph view"
 msgstr ""
 "Graficul de bare al modelului Raport analiză vânzări pe vizualizarea Grafic"
+
+#~ msgid ""
+#~ "Fields structure the models of a database. If you picture a model as a "
+#~ "table or spreadsheet, fields are the columns where data is stored in the "
+#~ "records (i.e., the rows). Fields also define the type of data that is "
+#~ "stored within them. How the data is presented and formatted on "
+#~ "the :abbr:`UI (User Interface)` is defined by their widget."
+#~ msgstr ""
+#~ "Câmpurile compun structura unei baze de date. Dacă vă imaginați un model "
+#~ "ca o tabelă sau un tabel, câmpurile sunt coloanele unde datele sunt "
+#~ "stocate în înregistrări (adică rândurile). Câmpurile definesc de asemenea "
+#~ "tipul de date stocate în ele. Modul în care sunt prezentate și forma "
+#~ "datelor în :abbr:`UI (Interfața Utilizator)` este definit de widget-ul "
+#~ "lor."
+
+#~ msgid ""
+#~ "From a technical point of view, there are 15 field types in Odoo. "
+#~ "However, you can choose from 20 fields in Studio, as some field types are "
+#~ "available more than once with a different default widget."
+#~ msgstr ""
+#~ "Din punct de vedere tehnic, există 15 tipuri de câmpuri în Odoo. Cu toate "
+#~ "acestea, puteți alege din 20 de câmpuri în Studio, deoarece unele tipuri "
+#~ "de câmpuri sunt disponibile de mai multe ori cu un widget implicit "
+#~ "diferit."
+
+#~ msgid ""
+#~ ":guilabel:`New Fields` can only be added to the :ref:`studio/views/"
+#~ "general/form` and :ref:`studio/views/multiple-records/list` views. On "
+#~ "other views, you can only add :guilabel:`Existing Fields` :dfn:`(fields "
+#~ "already on the model)`."
+#~ msgstr ""
+#~ ":guilabel:`Câmpuri noi` pot fi adăugate doar la vizualizările de "
+#~ "tip :ref:`studio/views/general/form` și :ref:`studio/views/multiple-"
+#~ "records/list`. Pe alte vizualizări, puteți adăuga doar :guilabel:`Câmpuri "
+#~ "existente` :dfn:`(câmpuri deja existente pe model)`."
+
+#~ msgid "Properties"
+#~ msgstr "Proprietăți"
+
+#~ msgid ""
+#~ "The :guilabel:`Invisible` attribute also applies inside Studio. To view "
+#~ "hidden fields in Studio, click on a view's :guilabel:`View` tab and "
+#~ "enable :guilabel:`Show Invisible Elements`."
+#~ msgstr ""
+#~ "Atributul :guilabel:`Invizibil` se aplică și în Studio. Pentru a vedea "
+#~ "câmpurile ascunse în Studio, apăsați pe fila :guilabel:`Vizualizare` a "
+#~ "unei vizualizări și activați :guilabel:`Afișează elementele invizibile`."
+
+#~ msgid ""
+#~ "You can choose to enable :guilabel:`Invisible`, :guilabel:`Required` "
+#~ "and :guilabel:`Readonly` for specific records only by clicking "
+#~ "on :guilabel:`Conditional` and creating a filter."
+#~ msgstr ""
+#~ "Puteți alege să activați :guilabel:`Invizibil`, :guilabel:`Obligatoriu` "
+#~ "și :guilabel:`Doar citire` doar pentru anumite înregistrări apăsând "
+#~ "pe :guilabel:`Condițional` și creând un filtru."
+
+#~ msgid ""
+#~ "On the *Form* view of the *Contact* model, the :guilabel:`Title` field "
+#~ "only appears when :guilabel:`Individual` is selected, as that field would "
+#~ "not be helpful for a :guilabel:`Company` contact."
+#~ msgstr ""
+#~ "Pe vizualizarea *Formular* a modelului *Contact*, "
+#~ "câmpul :guilabel:`Titlu` apare doar atunci când este "
+#~ "selectat :guilabel:`Individual`, deoarece acest câmp nu ar fi util pentru "
+#~ "un contact de tip :guilabel:`Companie`."
+
+#~ msgid ""
+#~ ":guilabel:`Label`: the field's name on the UI. This is not the name used "
+#~ "in the PostgreSQL database. To view and change the latter, activate "
+#~ "the :ref:`developer mode <developer-mode>` and edit "
+#~ "the :guilabel:`Technical Name`."
+#~ msgstr ""
+#~ ":guilabel:`Etichetă`: numele câmpului în interfață. Acesta nu este numele "
+#~ "folosit în baza de date PostgreSQL. Pentru a vedea și modifica acesta din "
+#~ "urmă, activați :ref:`modul dezvoltator <developer-mode>` și "
+#~ "editați :guilabel:`Nume tehnic`."
