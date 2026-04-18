@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-20 18:30+0000\n"
+"POT-Creation-Date: 2026-04-17 18:30+0000\n"
 "PO-Revision-Date: 2026-04-03 23:11+0000\n"
 "Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -41560,6 +41560,7 @@ msgstr ""
 "Work Orders`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:17
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:55
 msgid ":doc:`../basic_setup/bill_configuration`"
 msgstr ":doc:`../basic_setup/bill_configuration`"
 
@@ -42232,30 +42233,19 @@ msgstr "Dependențe de ordine de lucru"
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:7
 msgid ""
 "When manufacturing certain products, specific operations may need to be "
-"completed before others can begin. In order to ensure operations are carried "
-"out in the correct order, Odoo *Manufacturing* features a *work order "
-"dependencies* setting. Enabling this setting allows for operations on a Bill "
-"of Materials (BoM) to be *blocked* by other operations that should occur "
-"first."
+"completed before others can begin. To ensure operations are carried out in "
+"the correct order, the **Manufacturing** app features a *work order "
+"dependencies* setting. Enabling this setting blocks the bill of materials "
+"(BoM) operations when other operations should occur first."
 msgstr ""
-"La fabricarea anumitor produse, este posibil să fie necesară finalizarea "
-"unor operațiuni specifice înainte ca altele să poată începe. Pentru a se "
-"asigura că operațiunile sunt efectuate în ordinea corectă, Odoo "
-"*Manufacturing* are o setare de *dependențe de ordine de lucru*. Activarea "
-"acestei setări permite ca operațiunile de pe o listă de materiale (BoM) să "
-"fie *blocate* de alte operațiuni care ar trebui să aibă loc mai întâi."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:15
 msgid ""
 "The *work order dependencies* setting is not enabled by default. To enable "
-"it, begin by navigating to :menuselection:`Manufacturing --> Configuration --"
-"> Settings`. Then, enable the :guilabel:`Work Orders` setting, if it is not "
-"already active."
+"it, begin by navigating to :menuselection:`Manufacturing app --> "
+"Configuration --> Settings`. Then, enable the :guilabel:`Work Orders` "
+"setting if it is not already active."
 msgstr ""
-"Setarea *dependențe de comandă de lucru* nu este activată în mod implicit. "
-"Pentru a-l activa, începeți prin a naviga la :menuselection:`Producție --> "
-"Configurare --> Setări`. Apoi, activați setarea :guilabel:`Comenzi de "
-"lucru`, dacă nu este deja activă."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:19
 msgid ""
@@ -42275,104 +42265,67 @@ msgstr "Adăugați dependențe în BoM"
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:26
 msgid ""
 "Work order dependencies are configured on a product's |BOM|. To do so, "
-"navigate to :menuselection:`Manufacturing --> Products --> Bills of "
+"navigate to :menuselection:`Manufacturing app --> Products --> Bills of "
 "Materials`, then select a |BOM|, or create a new one by "
 "clicking :guilabel:`New`."
 msgstr ""
-"Dependențele comenzii de lucru sunt configurate pe |BOM| a unui produs. "
-"Pentru a face acest lucru, navigați la :menuselection:`Producție --> Produse "
-"--> Liste de materiale`, apoi selectați o |BOM|, sau creați una nouă făcând "
-"clic pe :guilabel:`Nou`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:30
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:94
-msgid "Learn more"
-msgstr "Aflați mai multe"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:32
 msgid ""
-"For a complete guide on how to properly configure a new |BOM|, see the "
-"documentation on :doc:`creating a bill of materials <../basic_setup/"
-"bill_configuration>`."
+"On the |BOM|, open the *Miscellaneous* tab, then select "
+"the :guilabel:`Operation Dependencies` checkbox. The :guilabel:`Blocked By` "
+"option becomes available under the :icon:`oi-settings-"
+"adjust` :guilabel:`(settings)` menu of the *Operations* tab."
 msgstr ""
-"Pentru un ghid complet despre cum să configurați corect o nouă |BOM|, "
-"consultați documentația despre :doc:`crearea unei liste de materiale <../"
-"basic_setup/bill_configuration>`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:35
-msgid ""
-"On the |BOM|, click on the :guilabel:`Miscellaneous` tab, then enable "
-"the :guilabel:`Operation Dependencies` checkbox. This makes a "
-"new :guilabel:`Blocked By` option available in the settings of "
-"the :guilabel:`Operations` tab."
-msgstr ""
-"În |BOM|, faceți clic pe fila :guilabel:`Diverse`, apoi activați caseta de "
-"selectare :guilabel:`Dependențe de operare`. Acest lucru face ca o nouă "
-"opțiune :guilabel:`Blocată de` să fie disponibilă în setările "
-"filei :guilabel:`Operațiuni`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The Operation Dependencies checkbox on the Miscellaneous tab of a BoM."
 msgstr "Caseta de selectare Dependențe de operare din fila Diverse a unei BM."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:37
 msgid ""
-"Next, click on the :guilabel:`Operations` tab. On the top-right of the tab, "
-"click on the tab's :guilabel:`settings` button, then enable "
-"the :guilabel:`Blocked By` checkbox. This makes a :guilabel:`Blocked By` "
-"field appear for each operation on the :guilabel:`Operations` tab."
+"Open the *Operations* tab. Click the :icon:`oi-settings-"
+"adjust` :guilabel:`(settings)` icon, then enable the :guilabel:`Blocked By` "
+"checkbox. The :guilabel:`Blocked By` field appears for each operation in the "
+"tab."
 msgstr ""
-"Apoi, faceți clic pe fila :guilabel:`Operations`. În partea din dreapta sus "
-"a filei, faceți clic pe butonul :guilabel:`settings` al filei, apoi activați "
-"caseta de selectare :guilabel:`Blocked By`. Acest lucru face ca un "
-"câmp :guilabel:`Blocat de` să apară pentru fiecare operațiune din "
-"fila :guilabel:`Operațiuni`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The settings for the Operations tab on a BoM."
 msgstr "Setările pentru fila Operațiuni dintr-o BC."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:44
 msgid ""
 "In the line of the operation that should be blocked by another operation, "
-"click the :guilabel:`Blocked By` field, and an :guilabel:`Open: Operations` "
-"pop-up window appears. In the :guilabel:`Blocked By` drop-down field on the "
-"pop-up window, select the blocking operation that must be completed *before* "
-"the operation that is blocked."
+"click the :guilabel:`Blocked By` field. The *Open: Operations* pop-up window "
+"opens. In the :guilabel:`Blocked By` field, select the blocking operation "
+"that must be completed *before* the operation that is blocked."
 msgstr ""
-"În linia operației care ar trebui să fie blocată de o altă operație, faceți "
-"clic pe câmpul :guilabel:`Blocat de` și va apărea o fereastră pop-"
-"up :guilabel:`Open: Operations`. În câmpul derulant :guilabel:`Blocked By` "
-"din fereastra pop-up, selectați operațiunea de blocare care trebuie "
-"finalizată *înaintea* operației care este blocată."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The Blocked By drop-down field for an operation on a BoM."
 msgstr "Câmpul derulant Blocat de pentru o operațiune pe o listă de gestiune."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:60
-msgid "Finally, save the |BOM| by clicking :guilabel:`Save`."
-msgstr "În cele din urmă, salvați |BOM| făcând clic pe :guilabel:`Salvează`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:52
+msgid ""
+"Finally, save the |BOM| by clicking :icon:`fa-cloud-upload` :guilabel:`(Save "
+"manually)`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:58
 msgid "Plan work orders using dependencies"
 msgstr "Planificați comenzile de lucru folosind dependențe"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:60
 msgid ""
-"Once work order dependencies have been configured on a |BOM|, Odoo "
-"*Manufacturing* is able to plan when work orders are scheduled, based on "
-"their dependencies. To plan the work orders for a manufacturing order, begin "
-"by navigating to :menuselection:`Manufacturing --> Operations --> "
-"Manufacturing Orders`."
+"After work order dependencies are configured for a |BOM|, the "
+"*Manufacturing* app can plan work order schedules based on those "
+"dependencies. To plan the work orders for a manufacturing order, navigate "
+"to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+"Orders`."
 msgstr ""
-"Odată ce dependențele comenzilor de lucru au fost configurate pe o |BOM|, "
-"Odoo *Manufacturing* poate planifica când sunt programate comenzile de "
-"lucru, pe baza dependențelor acestora. Pentru a planifica comenzile de lucru "
-"pentru o comandă de producție, începeți prin a naviga "
-"la :menuselection:`Producție --> Operațiuni --> Comenzi de fabricație`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:64
 msgid ""
 "Next, select a manufacturing order for a product with work order "
 "dependencies set on its |BOM|, or create a new manufacturing order by "
@@ -42387,59 +42340,41 @@ msgstr ""
 "câmpul drop-down :guilabel:`Bill of Material`, apoi faceți clic "
 "pe :guilabel:`Confirm`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:69
 msgid ""
-"After confirming the manufacturing order, select the :guilabel:`Work Orders` "
+"After confirming the manufacturing order, open the :guilabel:`Work Orders` "
 "tab to view the work orders required to complete it. Any work orders that "
-"are *not* blocked by a different work order display a `Ready` tag in "
-"the :guilabel:`Status` section."
+"are *not* blocked by a different work order display a :guilabel:`Ready` tag "
+"in the *Status* column."
 msgstr ""
-"După confirmarea comenzii de fabricație, selectați fila :guilabel:`Comenzi "
-"de lucru` pentru a vedea comenzile de lucru necesare pentru finalizarea "
-"acesteia. Orice comenzi de lucru care *nu* sunt blocate de o altă comandă de "
-"lucru afișează o etichetă „Gata” în secțiunea :guilabel: „Stare”."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:73
 msgid ""
-"Work orders that are blocked by one or more work orders display a `Waiting "
-"for another WO` tag instead. Once the blocking work order(s) are completed, "
-"the tag updates to `Ready`."
+"Work orders that are blocked by other work orders display "
+"a :guilabel:`Waiting for another WO` tag instead. After the blocking work "
+"orders are completed, the tag updates to :guilabel:`Ready`."
 msgstr ""
-"Comenzile de lucru care sunt blocate de una sau mai multe comenzi de lucru "
-"afișează în schimb eticheta „Se așteaptă un alt WO”. Odată ce comenzile de "
-"lucru de blocare sunt finalizate, eticheta se actualizează la „Gata”."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The status tags for work orders on a manufacturing order."
 msgstr ""
 "Etichetele de stare pentru comenzile de lucru dintr-o comandă de fabricație."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:79
 msgid ""
 "To schedule the manufacturing order's work orders, click "
 "the :guilabel:`Plan` button at the top of the page. After doing so, "
-"the :guilabel:`Scheduled Start Date` field for each work order on "
-"the :guilabel:`Work Orders` tab auto-fills with the scheduled start date and "
-"time. A blocked work order is scheduled at the end of the time period "
-"specified in the :guilabel:`Expected Duration` field of the work order that "
-"precedes it."
+"the :guilabel:`Start` field for each work order on the *Work Orders* tab "
+"populates with a scheduled start date and time. A blocked work order is "
+"scheduled at the end of the time period specified in the :guilabel:`Expected "
+"Duration` field of the work order that precedes it."
 msgstr ""
-"Pentru a programa comenzile de lucru ale comenzii de fabricație, faceți clic "
-"pe butonul :guilabel:`Planificați` din partea de sus a paginii. După ce "
-"faceți acest lucru, câmpul :guilabel:`Data de începere programată` pentru "
-"fiecare comandă de lucru din fila :guilabel:`Comenzi de lucru` se "
-"completează automat cu data și ora de începere programată. O comandă de "
-"lucru blocată este programată la sfârșitul perioadei de timp specificate în "
-"câmpul :guilabel:`Durata așteptată` al comenzii de lucru care o precede."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
-msgid ""
-"The Scheduled Start Date field for work orders on a manufacturing order."
+msgid "The Start field for work orders on a manufacturing order."
 msgstr ""
-"Câmpul Data de începere programată pentru comenzile de lucru dintr-o comandă "
-"de fabricație."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:97
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:88
 msgid ""
 "A manufacturing order is created for Product A. The manufacturing order has "
 "two operations: Cut and Assemble. Each operation has an expected duration of "
@@ -42450,7 +42385,7 @@ msgstr ""
 "estimată de 60 de minute, iar operația de Asamblare este blocată de operația "
 "de tăiere."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:92
 msgid ""
 "The :guilabel:`Plan` button for the manufacturing order is clicked at 1:30 "
 "pm, and the Cut operation is scheduled to begin immediately. Since the Cut "
@@ -42462,35 +42397,53 @@ msgstr ""
 "Deoarece operațiunea de tăiere are o durată estimată de 60 de minute, "
 "operațiunea de asamblare este programată să înceapă la ora 14:30."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:106
-msgid "Planning by workcenter"
-msgstr "Planificare prin centru de lucru"
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:97
+msgid "Planning views"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:99
+msgid ""
+"Two work order planning views are available to display a visual "
+"representation of how work orders are planned:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:102
+msgid ""
+":menuselection:`Manufacturing app --> Planning --> Planning by Production`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:103
+msgid ""
+":menuselection:`Manufacturing app --> Planning --> Planning by Workcenter`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:105
+msgid ""
+"Both open a *Work Orders Planning* page. This page shows a timeline of all "
+"the work orders scheduled for each operation."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:108
 msgid ""
-"To see a visual representation of how work orders are planned, navigate to "
-"the :guilabel:`Work Orders Planning` page by going "
-"to :menuselection:`Manufacturing --> Planning --> Planning by Workcenter`. "
-"This page shows a timeline of all the work orders scheduled for each "
-"operation."
+":guilabel:`Planning by Production` is best used to view work orders grouped "
+"by manufacturing order. This view is ideal for providing estimated delivery "
+"times or determining if an order will be completed on schedule."
 msgstr ""
-"Pentru a vedea o reprezentare vizuală a modului în care sunt planificate "
-"comenzile de lucru, navigați la pagina :guilabel:`Planificarea comenzilor de "
-"lucru` mergând la :menuselection:`Producție --> Planificare --> Planificare "
-"de către Centrul de lucru`. Această pagină arată o cronologie a tuturor "
-"comenzilor de lucru programate pentru fiecare operațiune."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:112
 msgid ""
-"If one work order is blocked by the completion of another, the work order "
-"that is blocked is shown as scheduled to start after the work order blocking "
-"it. In addition, an arrow connects the two work orders, leading from the "
-"blocking operation to the blocked operation."
+":guilabel:`Planning by Workcenter` is best used to view work orders grouped "
+"by the work center at which they take place. This view can help identify "
+"overloaded machines or bottlenecks in production."
 msgstr ""
-"Dacă o comandă de lucru este blocată prin finalizarea alteia, comanda de "
-"lucru care este blocată este afișată ca fiind programată să înceapă după ce "
-"comanda de lucru o blochează. În plus, o săgeată leagă cele două comenzi de "
-"lucru, ducând de la operațiunea de blocare la operațiunea blocată."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:115
+msgid ""
+"In both views, if one work order is blocked by the completion of another, "
+"the work order that is blocked is shown as scheduled to start after the work "
+"order that blocks it. In addition, a grey arrow connects the two work "
+"orders, leading from the blocking operation to the blocked operation."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid ""
@@ -42498,6 +42451,149 @@ msgid ""
 msgstr ""
 "Săgeata care conectează o comandă de lucru blocată cu comanda de lucru care "
 "o blochează."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:123
+msgid "Resolving inconsistencies"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:125
+msgid ""
+"The arrows on the *Work Orders Planning* page can also point out "
+"inconsistencies in the manufacturing order and how to correct them. When the "
+"arrow changes color, an inconsistency has been introduced."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:130
+msgid "A workshop is manufacturing a table in three work orders:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:132
+msgid "Assemble"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:133
+msgid "Apply finish"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:134
+msgid "Dry"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:136
+msgid ""
+"If the third work order is moved before the second work order, the third "
+"work order and the arrow pointing to it turn red to indicate that the "
+"planned schedule violates the defined work order dependency."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:0
+msgid "A red line appears between two work orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:143
+msgid "Inconsistencies can be resolved in three ways:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:145
+msgid ":ref:`manufacturing/advanced_configuration/edit-wo-schedule`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:146
+msgid ":ref:`manufacturing/advanced_configuration/use-icons`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:147
+msgid ":ref:`manufacturing/advanced_configuration/in-mo`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:152
+msgid "Editing the work order schedule"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:154
+msgid ""
+"To resolve the scheduling conflict and keep the dependency, select the red "
+"work order. Click the :guilabel:`Edit` button, and the *Open* window "
+"appears. Click the red :icon:`fa-exclamation-"
+"triangle` :guilabel:`(exclamation triangle)` icon next to "
+"the :guilabel:`Start Date`, and the *Scheduling Information* pop-up window "
+"appears."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
+msgid "Click the Replan button to reschedule the inconsistent work order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:162
+msgid ""
+"Click the :guilabel:`Replan` button, then click :guilabel:`Save & Close` to "
+"save the changes to the work order. The work order is rescheduled after the "
+"previous work order in a way that maintains the work order dependency."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:169
+msgid "Using icons on the line"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:171
+msgid ""
+"When hovering over the connecting line, three icons appear. The left and "
+"right arrows can be used to reschedule work orders to help maintain the "
+"correct work order dependencies."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
+msgid ""
+"A left arrow, X, and right arrow appear on the line for out-of-order work "
+"orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:177
+msgid ""
+"**Left arrow**: The work order is scheduled to be performed earlier than its "
+"linked step."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:178
+msgid ""
+"**Cancel button**: When clicking this button, Odoo assumes the dependencies "
+"no longer apply due to an exception, and the link between the steps is "
+"broken. To remove the dependency, hover over the connecting line. Click the "
+"**X** (cancel) button that appears, and the arrow between the two work "
+"orders disappears."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:182
+msgid ""
+"**Right arrow**: The work order is scheduled to be performed later than its "
+"linked step."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:187
+msgid "In the manufacturing order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:189
+msgid ""
+"Problems with scheduled work orders are visible in the *Work Orders* tab of "
+"the manufacturing order. Problems are indicated by the red :icon:`fa-"
+"exclamation-triangle` :guilabel:`(exclamation triangle)` icon on the work "
+"order line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
+msgid ""
+"A scheduling problem shows in the second operation in a group of three work "
+"orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:196
+msgid ""
+"Click the red :icon:`fa-exclamation-triangle` :guilabel:`(exclamation "
+"triangle)` icon, then click :guilabel:`Replan` in the *Scheduling "
+"Information* pop-up window. The work order is rescheduled to maintain its "
+"dependencies."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup.rst:5
 msgid "Basic setup"
@@ -43283,6 +43379,10 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:None
 msgid "The Operations tab on a bill of materials."
 msgstr "Fila Operațiuni dintr-o listă de materiale."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:94
+msgid "Learn more"
+msgstr "Aflați mai multe"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:96
 msgid ""
@@ -45869,52 +45969,101 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:13
 msgid ""
-"The *Shop Floor* module is installed alongside the *Manufacturing* app. It "
-"cannot be installed by itself. To install the *Manufacturing* app, navigate "
-"to :menuselection:`Apps`, search for `manufacturing` in "
-"the :guilabel:`Search...` bar, and then click :guilabel:`Install` on "
-"the :guilabel:`Manufacturing` app card."
+"The *Shop Floor* module is :ref:`installed <general/install>` alongside the "
+"*Manufacturing* app."
 msgstr ""
-"Modulul *Shop Floor* este instalat alături de aplicația *Manufacturing*. Nu "
-"poate fi instalat singur. Pentru a instala aplicația *Manufacturing*, "
-"navigați la :menuselection:`Apps`, căutați `manufacturing` în "
-"bara :guilabel:`Search...`, apoi faceți clic pe :guilabel:`Install` "
-"pe :guilabel:` Cardul aplicației de producție."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:19
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:16
+msgid "Opening Shop Floor"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:18
+msgid "*Shop Floor* can be opened in the following ways:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:20
 msgid ""
-"The *Shop Floor* module replaces the tablet view functionality of the "
-"*Manufacturing* app, and is only available in Odoo versions 16.4 and later."
+"Click the :guilabel:`Shop Floor` module icon from the main Odoo dashboard."
 msgstr ""
-"Modulul *Shop Floor* înlocuiește funcționalitatea de vizualizare a tabletei "
-"a aplicației *Manufacturing* și este disponibil numai în versiunile Odoo "
-"16.4 și ulterioare."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:22
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:21
 msgid ""
-"To check the version number of an Odoo database, navigate "
-"to :menuselection:`Settings` and scroll down to the :guilabel:`About` "
-"section at the bottom of the page. The version number is displayed there."
+"Click the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart button on a "
+"manufacturing order. This will open the manufacturing order in the *Shop "
+"Floor* module."
 msgstr ""
-"Pentru a verifica numărul versiunii unei baze de date Odoo, navigați "
-"la :menuselection:`Settings` și derulați în jos la "
-"secțiunea :guilabel:`Despre` din partea de jos a paginii. Numărul versiunii "
-"este afișat acolo."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:26
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:25
+msgid "Selecting work centers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:27
 msgid ""
-"To switch to a newer version of Odoo, see the documentation "
-"on :doc:`upgrading a database <../../../../administration/upgrade>`."
+"When *Shop Floor* is opened on a workstation, it is possible to select work "
+"centers to assign to it."
 msgstr ""
-"Pentru a trece la o versiune mai nouă de Odoo, consultați documentația "
-"despre :doc:`actualizarea unei baze de date <../../../../administration/"
-"upgrade>`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:29
+msgid ""
+"Open the *Shop Floor* app from either the main Odoo dashboard or from "
+"the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart button on a "
+"manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:32
+msgid ""
+"If it is the workstation's first time opening *Shop Floor*, a window may "
+"open to allow a user to select work centers. If the window does not open, "
+"click the :icon:`fa-plus` :guilabel:`(Add)` icon next to the list of work "
+"centers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:36
+msgid ""
+"Select the work centers to assign to the workstation, then "
+"click :guilabel:`Confirm`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
+msgid "Select at least one work center to assign to the workstation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:42
+msgid "Installing Shop Floor on a workstation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:44
+msgid ""
+"*Shop Floor* can be installed in the Chrome browser of a workstation to "
+"limit its access to other Odoo applications."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:47
+msgid ""
+"First, open the *Shop Floor* app from either the main Odoo dashboard or from "
+"the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart button on a "
+"manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:50
+msgid ""
+"On the *Shop Floor* overview, a pop-up window to select work centers for the "
+"workstation may open. If it does not open, click the :icon:`fa-"
+"plus` :guilabel:`(Add)` icon next to the list of work centers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:54
+msgid ""
+"Click the :guilabel:`Install App` button. A new window will open. In this "
+"window, click the :guilabel:`Install` button to install the app in the "
+"workstation's browser."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:58
 msgid "Navigation"
 msgstr "Navigare"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:60
 msgid ""
 "*Shop Floor* is broken down into three main views, which can be selected "
 "from the navigation bar at the top of the module:"
@@ -45922,243 +46071,167 @@ msgstr ""
 "*Shop Floor* este împărțit în trei vederi principale, care pot fi selectate "
 "din bara de navigare din partea de sus a modulului:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:63
 msgid ""
-"The :guilabel:`All` page serves as the main dashboard for the module, and "
+"The :guilabel:`All MO` page serves as the module's main dashboard and "
 "displays information cards for |MOs|."
 msgstr ""
-"Pagina :guilabel:`Toate` servește ca tablou de bord principal pentru modul "
-"și afișează carduri cu informații pentru |MO-uri|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:65
 msgid ""
-"Each work center also has a dedicated page, which shows information cards "
-"for work orders assigned to that work center. Work center pages can be "
-"toggled on or off by clicking the :guilabel:`+ (plus)` button in the "
+"Each work center also has a dedicated page that displays information cards "
+"for the work orders assigned to it. Work center pages can be toggled on or "
+"off by clicking the :icon:`fa-plus` :guilabel:`(plus)` icon in the "
 "navigation bar, selecting or deselecting them on the pop-up window that "
 "appears, and then clicking :guilabel:`Confirm`."
 msgstr ""
-"Fiecare centru de lucru are, de asemenea, o pagină dedicată, care arată "
-"carduri cu informații pentru comenzile de lucru alocate centrului de lucru "
-"respectiv. Paginile centrului de lucru pot fi activate sau dezactivate "
-"făcând clic pe butonul :guilabel:`+ (plus)` din bara de navigare, selectându-"
-"le sau deselectându-le în fereastra pop-up care apare, apoi făcând clic "
-"pe :guilabel:`Confirm`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:69
 msgid ""
-"The :guilabel:`My` page shows information cards for all work orders assigned "
-"to the employee whose profile is currently active in the operator panel on "
-"the left side of the module. Other than only showing work orders assigned to "
-"the active employee, this page functions the same as the pages for each work "
-"center."
+"The :guilabel:`My WO` page shows information cards for all work orders "
+"assigned to the employee whose profile is currently active in the operator "
+"panel on the left side of the module. This page functions largely the same "
+"as the pages for each work center, but it only shows work orders assigned to "
+"the active employee."
 msgstr ""
-"Pagina :guilabel:`My` afișează carduri de informații pentru toate comenzile "
-"de lucru atribuite angajatului al cărui profil este activ în prezent în "
-"panoul operator din partea stângă a modulului. În afară de afișarea numai "
-"comenzilor de lucru atribuite angajatului activ, această pagină funcționează "
-"la fel ca și paginile pentru fiecare centru de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:47
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:75
 msgid ""
-"To isolate an |MO| or work order, so that no other orders appear, simply "
-"search the reference number of the |MO| in the :guilabel:`Search...` bar at "
-"the top of the module. This search filter remains active while switching "
-"between the different module views."
+"To isolate an |MO| or work order so that no other orders appear, search the "
+"reference number of the |MO| in the :guilabel:`Search` bar at the top of the "
+"module. This search filter remains active when switching between the "
+"different module views."
 msgstr ""
-"Pentru a izola un |MO| sau comandă de lucru, astfel încât să nu apară alte "
-"comenzi, pur și simplu căutați numărul de referință al |MO| în "
-"bara :guilabel:`Căutare...` din partea de sus a modulului. Acest filtru de "
-"căutare rămâne activ în timp ce comutați între diferitele vizualizări ale "
-"modulelor."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:79
 msgid ""
 "On the left side of the module is the operator panel, which shows all of the "
-"employees currently signed in to *Shop Floor*, and allows new employees to "
+"employees currently signed in to *Shop Floor* and allows new employees to "
 "sign in. The operator panel is always available in the module, regardless of "
-"which view is selected. It can be toggled on or off by clicking "
-"the :guilabel:`sidebar` button at the extreme left of the navigation bar."
+"the selected view. It can be toggled on or off by clicking the :icon:`oi-"
+"panel-right` :guilabel:`(sidebar)` button in the navigation bar."
 msgstr ""
-"În partea stângă a modulului se află panoul operator, care arată toți "
-"angajații conectați în prezent la *Shop Floor* și le permite noilor angajați "
-"să se conecteze. Panoul operator este întotdeauna disponibil în modul, "
-"indiferent de vizualizarea. selectat. Acesta poate fi activat sau dezactivat "
-"făcând clic pe butonul :guilabel:`sidebar` din extrema stângă a barei de "
-"navigare."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
-msgid ""
-"The \"sidebar\" button, which is used to toggle the operator panel on or off."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:85
+msgid "All MO page"
 msgstr ""
-"Butonul „bară laterală”, care este folosit pentru a activa sau dezactiva "
-"panoul operator."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:61
-msgid "All page"
-msgstr "Toată pagina"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:63
-msgid ""
-"By default, the :guilabel:`All` page shows an information card for every |"
-"MO| that is *ready to start*. An |MO| is considered ready to start once it "
-"has been confirmed, and all required components are available."
-msgstr ""
-"În mod implicit, pagina :guilabel:`Toate` arată un card de informații pentru "
-"fiecare |MO| care este *gata să înceapă*. Un |MO| este considerat gata de "
-"pornire odată ce a fost confirmat și toate componentele necesare sunt "
-"disponibile."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:67
-msgid ""
-"To view every confirmed |MO| regardless of readiness, click "
-"the :guilabel:`x` button on the :guilabel:`Ready to Start` filter to remove "
-"it from the :guilabel:`Search...` bar."
-msgstr ""
-"Pentru a vizualiza fiecare |MO| confirmat indiferent de disponibilitate, "
-"faceți clic pe butonul :guilabel:`x` din filtrul :guilabel:`Gata de pornire` "
-"pentru a-l elimina din bara :guilabel:`Căutare...`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:71
-msgid "MO information card"
-msgstr "Cartelă de informații MO"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:73
-msgid ""
-"An |MO| information card on the :guilabel:`All` page shows all of the "
-"relevant details of the associated |MO|, and also provides employees with "
-"options for processing the |MO|."
-msgstr ""
-"Un |MO| cardul de informații de pe pagina :guilabel:`Toate` arată toate "
-"detaliile relevante ale |MO| asociat și oferă, de asemenea, angajaților "
-"opțiuni pentru procesarea |MO|."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:76
-msgid ""
-"The header for an |MO| card shows the |MO| number, the product and number of "
-"units being produced, and the status of the |MO|. If work has not yet begun "
-"on the |MO|, the status appears as :guilabel:`Confirmed`. Once work has "
-"begun, the status updates to :guilabel:`In Progress`. If all work orders for "
-"an |MO| have been completed and the |MO| is ready to close, the status "
-"updates to :guilabel:`To Close`."
-msgstr ""
-"Antetul pentru un |MO| cardul arată |MO| numărul, produsul și numărul de "
-"unități produse și starea |MO|. Dacă lucrările nu au început încă pe |MO|, "
-"starea apare ca :guilabel:`Confirmat`. Odată ce lucrările au început, starea "
-"se actualizează la :guilabel:`În curs`. Dacă toate comenzile de lucru pentru "
-"un |MO| au fost finalizate și |MO| este gata de închidere, starea se "
-"actualizează la :guilabel:`To Close`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:82
-msgid ""
-"The main body of an |MO| card shows a line for each completed work order, if "
-"any, followed by the current work order that needs to be completed. "
-"Completed work orders are indicated by a green check mark to the right of "
-"title of the work order. The current work order is indicated by a button "
-"that opens the page for the work center to which the order is assigned."
-msgstr ""
-"Corpul principal al unui |MO| cardul arată o linie pentru fiecare comandă de "
-"lucru finalizată, dacă există, urmată de comanda de lucru curentă care "
-"trebuie finalizată. Comenzile de lucru finalizate sunt indicate printr-o "
-"bifă verde în dreapta titlului comenzii de lucru. Comanda de lucru curentă "
-"este indicată de un buton care deschide pagina pentru centrul de lucru "
-"căruia îi este atribuită comanda."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:87
 msgid ""
-"Below the current work order is a line titled :guilabel:`Register "
-"Production`, which is used to record the number of product units produced. "
-"To manually enter the number of units produced, click on "
-"the :guilabel:`Register Production` line, enter a value in "
-"the :guilabel:`Units` field of the resulting pop-up window, then "
-"click :guilabel:`Validate`."
+"By default, the *All MO* page shows an information card for every |MO| that "
+"is *ready to start*. An |MO| is considered ready to start once it has been "
+"confirmed, and all required components are available."
 msgstr ""
-"Sub comanda curentă de lucru este o linie intitulată :guilabel:`Înregistrați "
-"producția`, care este utilizată pentru a înregistra numărul de unități de "
-"produs produse. Pentru a introduce manual numărul de unități produse, faceți "
-"clic pe linia :guilabel:`Înregistrați producția`, introduceți o valoare în "
-"câmpul :guilabel:`Unități` din fereastra pop-up rezultată, apoi faceți clic "
-"pe :guilabel:`Validare`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:92
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:91
 msgid ""
-"Alternatively, click the :guilabel:`# Units` button on the right side of the "
-"line, which automatically records the number of units the |MO| was created "
-"for as the number of units produced. For example, if an |MO| is created for "
-"10 units of a dining table, clicking the :guilabel:`10 units` button records "
-"that 10 units were produced."
+"To view every confirmed |MO| regardless of readiness, click the :icon:`oi-"
+"close` :guilabel:`(close)` icon on the :guilabel:`MO Ready` filter to remove "
+"it from the :guilabel:`Search` bar."
 msgstr ""
-"Alternativ, faceți clic pe butonul :guilabel:`# Units` din partea dreaptă a "
-"liniei, care înregistrează automat numărul de unități |MO| a fost creat "
-"pentru ca număr de unități produse. De exemplu, dacă un |MO| este creat "
-"pentru 10 unități dintr-o masă, făcând clic pe butonul :guilabel:`10 units` "
-"se înregistrează că au fost produse 10 unități."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:97
-msgid ""
-"The footer of the |MO| card displays a :guilabel:`Close Production` button. "
-"This is used to close the |MO| once production is completed. However, if "
-"there are any quality checks required for the |MO| as a whole (not the work "
-"orders within it), a :guilabel:`Quality Checks` button appears instead. "
-"Clicking :guilabel:`Quality Checks` opens a pop-up window, from which any "
-"required quality checks can be completed."
-msgstr ""
-"Subsolul |MO| cardul afișează un buton :guilabel:`Închide producția`. Acesta "
-"este folosit pentru a închide |MO| odată ce producția este finalizată. Cu "
-"toate acestea, dacă sunt necesare verificări de calitate pentru |MO| în "
-"ansamblu (nu comenzile de lucru din acesta), apare în schimb un "
-"buton :guilabel:`Verificări de calitate`. Făcând clic "
-"pe :guilabel:`Verificări de calitate`, se deschide o fereastră pop-up, din "
-"care pot fi efectuate toate verificările de calitate necesare."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:96
+msgid "MO information card"
+msgstr "Cartelă de informații MO"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:103
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:98
 msgid ""
-"After clicking :guilabel:`Close Production`, the |MO| card begins to fade "
-"away, and an :guilabel:`Undo` button appears on the footer. "
-"Clicking :guilabel:`Undo` causes the |MO| to remain open. Once the |MO| card "
-"disappears completely, the work order is closed."
+"An |MO| information card on the :guilabel:`All MO` page displays all the "
+"relevant details of the associated |MO|, and also provides employees with "
+"options for processing the |MO|."
 msgstr ""
-"După ce faceți clic pe :guilabel:`Închide producția`, |MO| cardul începe să "
-"dispară și un buton :guilabel:`Anulați` apare pe subsol. Dacă faceți clic "
-"pe :guilabel:`Anulați`, apare |MO| să rămână deschisă. Odată ce |MO| cardul "
-"dispare complet, comanda de lucru este închisă."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:101
+msgid ""
+"The header for an |MO| card shows the |MO| number, the product and number of "
+"units being produced, and the |MO| status. If work on the MO has not yet "
+"begun, the status appears as :guilabel:`Confirmed`. Once work has begun, the "
+"status updates to :guilabel:`In Progress`. If all work orders for an |MO| "
+"have been completed and the |MO| is ready to close, the status updates "
+"to :guilabel:`To Close`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:107
 msgid ""
-"On the right side of the footer is an :guilabel:`⋮ (options)` button, which "
-"opens a pop-up window with additional options for the |MO|:"
+"The main body of an |MO| card shows a line for each completed work order, if "
+"any, followed by the current work order to be completed. Completed work "
+"orders appear in grey and are struck out. The current work order is "
+"indicated by a button that opens the page for the work center to which the "
+"order is assigned."
 msgstr ""
-"În partea dreaptă a subsolului este un buton :guilabel:`⋮ (opțiuni)`, care "
-"deschide o fereastră pop-up cu opțiuni suplimentare pentru |MO|:"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:110
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:171
-msgid ""
-":guilabel:`Scrap` is used to send components to a scrap location when they "
-"are found to be defective."
-msgstr ""
-":guilabel:`Scrap` este folosit pentru a trimite componente într-o locație de "
-"deșeuri atunci când se constată că sunt defecte."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:112
 msgid ""
-":guilabel:`Add Work Order` is used to add an additional work order to the |"
-"MO|."
+"Below the current work order is a line titled :guilabel:`Register "
+"Production`, which records lot or serial numbers for the units produced. "
+"Click the :guilabel:`Register Production` line to specify a lot or serial "
+"number for the produced units, then click :guilabel:`Validate`."
 msgstr ""
-":guilabel:`Add Work Order` este folosit pentru a adăuga o comandă de lucru "
-"suplimentară la |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:113
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:173
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:116
 msgid ""
-":guilabel:`Add Component` is used to add an additional component to the |MO|."
+"To register the quantity of products being produced, click the :guilabel:`# "
+"Units` button on the right side of the line, which automatically records the "
+"number of units the |MO| was created for as the number of units produced. "
+"For example, if an |MO| is created for 10 units of a dining table, clicking "
+"the :guilabel:`10 units` button records that 10 units were produced."
 msgstr ""
-":guilabel:`Add Component` este folosit pentru a adăuga o componentă "
-"suplimentară la |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:114
-msgid ":guilabel:`Open Backend MO` opens the |MO| in the Manufacturing app."
-msgstr ":guilabel:`Open Backend MO` deschide |MO| în aplicația de producție."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:121
+msgid ""
+"The footer of the |MO| card displays a :guilabel:`Close Production` button. "
+"This is used to close the |MO| once production is completed. However, if any "
+"quality checks are required for the |MO| as a whole (not the work orders "
+"within it), a :guilabel:`Quality Checks` button appears instead. "
+"Clicking :guilabel:`Quality Checks` opens a pop-up window where any required "
+"quality checks can be completed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:126
+msgid ""
+"After clicking :guilabel:`Close Production`, the |MO| card begins to fade, "
+"and an :guilabel:`Undo` button appears in the footer. "
+"Clicking :guilabel:`Undo` keeps the |MO| open. When the |MO| card disappears "
+"completely, the work order is closed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:130
+msgid ""
+"On the right side of the footer is a :icon:`fa-gear` :guilabel:`(gear)` "
+"button, which opens a pop-up window with additional options for the |MO|:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:133
+msgid ""
+":guilabel:`Scrap`: Send components to a scrap location when they are found "
+"to be defective."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:134
+msgid ":guilabel:`Add Work Order`: Add an additional work order to the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:135
+msgid ":guilabel:`Add Component`: Add an additional component to the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:138
+msgid ""
+"Additional components are consumed in the *Shop Floor* module, but their "
+"stock moves will not be validated until the |MO| is closed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:141
+msgid ""
+":guilabel:`Open Manufacturing Order`: opens the |MO| in the *Manufacturing* "
+"app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:142
+msgid ""
+":guilabel:`Log Note`: Enter a note that will be visible on the backend and "
+"throughout all steps on the shop floor."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
 msgid ""
@@ -46166,11 +46239,11 @@ msgid ""
 msgstr ""
 "Un card de informații pentru un MO pe pagina „Toate” a modulului Shop Floor."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:149
 msgid "Work center pages"
 msgstr "Paginile centrului de lucru"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:151
 msgid ""
 "By default, the page for each work center shows an information card for "
 "every work order assigned to it that is *ready to start*. A work order is "
@@ -46183,63 +46256,41 @@ msgstr ""
 "cu |MO| este o parte din este gata de pornire și toate comenzile de lucru "
 "anterioare au fost finalizate."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:127
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:155
 msgid ""
 "To view every confirmed work order assigned to a work center regardless of "
-"readiness, click the :guilabel:`x` button on the :guilabel:`Ready to Start` "
-"filter to remove it from the :guilabel:`Search...` bar."
+"readiness, click the :icon:`oi-close` :guilabel:`(remove)` icon on "
+"the :guilabel:`MO Ready` filter to remove it from the :guilabel:`Search` bar."
 msgstr ""
-"Pentru a vizualiza fiecare comandă de lucru confirmată atribuită unui centru "
-"de lucru, indiferent de disponibilitate, faceți clic pe "
-"butonul :guilabel:`x` din filtrul :guilabel:`Gata de pornire` pentru a o "
-"elimina din bara :guilabel:`Căutare...` ."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:160
 msgid "Work order information card"
 msgstr "Fișă cu informații despre comanda de lucru"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:162
 msgid ""
-"A work order information card on a work center's page shows all of the "
-"relevant details of the associated work order, and also provides employees "
+"The work order information cards on a work center's page show all of the "
+"relevant details of the associated work order, and also provide employees "
 "with options for processing the work order."
 msgstr ""
-"Un card cu informații despre comanda de lucru pe pagina unui centru de lucru "
-"arată toate detaliile relevante ale comenzii de lucru asociate și oferă, de "
-"asemenea, angajaților opțiuni pentru procesarea comenzii de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:165
 msgid ""
 "The header for a work order card shows the reference number of the |MO| that "
-"the work order is a part of, the product and number of units being produced, "
-"and the status of the work order. If work has not yet begun on the work "
-"order, the status appears as :guilabel:`To Do`. Once work has begun, the "
-"status updates to display a timer showing the total time the work order has "
-"been worked on."
+"the work order is a part of, the product and number of units being produced. "
+"When work has begun, the status updates to display a timer showing the total "
+"time the work order has been worked on. The instructions for each work order "
+"open automatically when the timer starts."
 msgstr ""
-"Antetul unui card de comandă de lucru arată numărul de referință al |MO| din "
-"care face parte comanda de lucru, produsul și numărul de unități produse și "
-"starea comenzii de lucru. Dacă lucrul nu a început încă pe comanda de lucru, "
-"starea apare ca :guilabel:`To Do`. Odată ce lucrul a început, starea se "
-"actualizează pentru a afișa un cronometru care arată durata totală la care a "
-"fost lucrată comanda de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:142
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:170
 msgid ""
 "The main body of a work order card shows a line for each step required to "
 "complete the work order. Work order steps can be completed by clicking on "
-"the line, then following the instructions on the pop-up window that appears. "
-"Alternatively, clicking the checkbox on the right side of each line "
-"automatically marks the step as completed."
+"the line, then following the instructions on the pop-up window that appears."
 msgstr ""
-"Corpul principal al unui card de comandă de lucru arată o linie pentru "
-"fiecare pas necesar pentru finalizarea comenzii de lucru. Pașii comenzii de "
-"lucru pot fi finalizați făcând clic pe linie, apoi urmând instrucțiunile din "
-"fereastra pop-up care apare. Ca alternativă, făcând clic pe caseta de "
-"selectare din partea dreaptă a fiecărei linii marchează automat pasul ca "
-"finalizat."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:174
 msgid ""
 "Below the final step of the work order is a line titled :guilabel:`Register "
 "Production`, which functions the same as the :guilabel:`Register Production` "
@@ -46254,7 +46305,16 @@ msgstr ""
 "producție` pe un card de comandă de lucru completează, de asemenea, pasul "
 "pentru |MO| asociat. card."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:179
+msgid ""
+"If there are instructions for a work order, the operator can expand "
+"the :guilabel:`Instructions` header in the work order. To complete a step, "
+"click the instruction line and follow the instructions in the pop-up window. "
+"The instructions that follow an individual instruction will automatically "
+"open."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:184
 msgid ""
 "If the work order being processed is the final work order for the |MO|, "
 "a :guilabel:`Close Production` button appears on the footer of the work "
@@ -46270,7 +46330,7 @@ msgstr ""
 "verificare a calității pentru |MO|. În acest caz, verificarea calității "
 "trebuie finalizată din |MO| card înainte de |MO| poate fi închis."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:158
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:190
 msgid ""
 "Alternatively, if the |MO| requires the completion of additional work "
 "orders, a :guilabel:`Mark as Done` button appears instead. "
@@ -46284,7 +46344,7 @@ msgstr ""
 "finalizată și face ca următoarea comandă de lucru să apară pe pagina "
 "centrului de lucru căruia îi este alocată."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:163
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:195
 msgid ""
 "After clicking :guilabel:`Close Production` or :guilabel:`Mark as Done`, the "
 "work order card begins to fade away, and an :guilabel:`Undo` button appears "
@@ -46299,48 +46359,62 @@ msgstr ""
 "comandă de lucru dispare complet, comanda de lucru este marcată "
 "ca :guilabel:`Terminat` pe |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:168
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:200
 msgid ""
-"On the right side of the footer is an :guilabel:`⋮ (options)` button, which "
-"opens a pop-up window with additional options for the work order:"
+"On the right side of the footer is a :icon:`fa-gear` :guilabel:`(gear)` "
+"button, which opens a pop-up window with additional options for the work "
+"order:"
 msgstr ""
-"În partea dreaptă a subsolului este un buton :guilabel:`⋮ (opțiuni)`, care "
-"deschide o fereastră pop-up cu opțiuni suplimentare pentru comanda de lucru:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:174
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:203
 msgid ""
-":guilabel:`Move to work center` is used to transfer the work order to a "
-"different work center."
+":guilabel:`Scrap`: sends components to a scrap location when they are found "
+"to be defective."
 msgstr ""
-":guilabel:`Mutare la centrul de lucru` este folosit pentru a transfera "
-"comanda de lucru la un alt centru de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:175
-msgid ""
-":guilabel:`Suggest a Worksheet improvement` allows the user to propose a "
-"change to the work order's instructions or steps."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:204
+msgid ":guilabel:`Add Component`: adds an additional component to the |MO|."
 msgstr ""
-":guilabel:`Sugerează o îmbunătățire a foii de lucru` permite utilizatorului "
-"să propună o modificare a instrucțiunilor sau pașilor comenzii de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:177
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:205
 msgid ""
-":guilabel:`Create a Quality Alert` opens a quality alert form that can be "
+":guilabel:`Open Manufacturing Order`: opens the associated |MO| in the "
+"*Manufacturing* app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:206
+msgid ""
+":guilabel:`Move to work center`: transfers the work order to a different "
+"work center."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:207
+msgid ""
+":guilabel:`Update instructions`: allows the user to propose a change to the "
+"work order's instructions or steps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:209
+msgid ""
+":guilabel:`Create a Quality Alert`: opens a quality alert form that can be "
 "filled out to alert a quality team about a potential issue."
 msgstr ""
-":guilabel:`Creați o alertă de calitate` deschide un formular de alertă de "
-"calitate care poate fi completat pentru a alerta o echipă de calitate despre "
-"o problemă potențială."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:211
+msgid ""
+":guilabel:`Request Maintenance`: creates a maintenance request for the work "
+"center."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
 msgid "An information card for a work order in the Shop Floor module."
 msgstr "Un card de informații pentru o comandă de lucru în modulul Shop Floor."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:185
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:217
 msgid "Operator panel"
 msgstr "Panoul operator"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:219
 msgid ""
 "The operator panel is used to manage the employees that are signed in to the "
 "*Shop Floor* module. The panel shows the name and profile picture of every "
@@ -46351,7 +46425,7 @@ msgstr ""
 "fiecărui angajat care este conectat în prezent în toate instanțele bazei de "
 "date."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:191
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:223
 msgid ""
 "To interact with *Shop Floor* as a specific employee, click the employee's "
 "name to activate their profile. Profiles that are not active appear with "
@@ -46361,63 +46435,47 @@ msgstr ""
 "numele angajatului pentru a-i activa profilul. Profilurile care nu sunt "
 "active apar cu numele lor și fotografiile de profil cu gri."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:194
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:226
 msgid ""
 "When an employee is selected in the operator panel, they can begin working "
 "on a work order by clicking the work order's heading. If an employee is "
-"working on one or more work orders, the work order title(s) appear under "
-"their name, along with a timer showing how long they've been working on each "
-"order."
+"working on one or more work orders, the work order titles appear under their "
+"name, as well as a timer showing how long they've been working on each order."
 msgstr ""
-"Când un angajat este selectat în panoul operator, acesta poate începe să "
-"lucreze la o comandă de lucru făcând clic pe titlul comenzii de lucru. Dacă "
-"un angajat lucrează la una sau mai multe comenzi de lucru, titlul(ele) "
-"comenzii de lucru apar sub numele său, împreună cu un cronometru care arată "
-"cât timp lucrează la fiecare comandă."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:199
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:231
 msgid ""
-"To add a new employee to the operator panel, click the :guilabel:`+ Add "
-"Operator` button at the bottom of the panel. Then, select an employee from "
-"the :guilabel:`Select Employee` pop-up window."
+"To add a new employee to the operator panel, click the :icon:`fa-"
+"plus` :guilabel:`Add Operator` button at the bottom of the panel. Then, "
+"select an employee from the *Select Employee* pop-up window."
 msgstr ""
-"Pentru a adăuga un nou angajat la panoul operator, faceți clic pe "
-"butonul :guilabel:`+ Adăugare operator` din partea de jos a panoului. Apoi, "
-"selectați un angajat din fereastra pop-up :guilabel:`Select Employee`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:202
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:235
 msgid ""
-"To remove an employee from the operator panel, simply click "
-"the :guilabel:`x` button next to their name in the panel."
+"To remove an employee from the operator panel, click the :icon:`oi-"
+"close` :guilabel:`(log out)` button next to their name in the panel."
 msgstr ""
-"Pentru a elimina un angajat din panoul operator, faceți clic pe "
-"butonul :guilabel:`x` de lângă numele acestuia din panou."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
 msgid ""
-"The operator panel of the Shop Floor module, showing three employees signed "
+"The operator panel of the Shop Floor module, showing four employees signed "
 "in."
 msgstr ""
-"Panoul operator al modulului Shop Floor, care arată trei angajați conectați."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:210
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:242
 msgid "MO/WO prioritization"
 msgstr "Prioritizarea MO/WO"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:244
 msgid ""
-"The **Shop Floor** module uses the *scheduled date* entered on |MOs| to "
-"prioritize the |MOs| and work orders that appear on the module's dashboard "
-"and work center pages. |MOs| and work orders scheduled sooner are more "
-"highly prioritized, and appear before orders which are scheduled further out."
+"The *Shop Floor* module prioritizes orders based on their *scheduled date*. "
+"An order can be moved to the top of the list by clicking the :icon:`fa-star-"
+"o` :guilabel:`(star)` icon in the |MO| form. |MOs| and work orders scheduled "
+"sooner are more highly prioritized and appear before orders which are "
+"scheduled further out."
 msgstr ""
-"Modulul **Shop Floor** folosește *data programată* introdusă pe |MO| pentru "
-"a prioritiza |MO|-urile și ordinele de lucru care apar pe tabloul de bord și "
-"pe paginile centrelor de lucru ale modulului. |MO|-urile și ordinele de "
-"lucru programate mai devreme au prioritate mai mare și apar înaintea celor "
-"programate mai târziu."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:217
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:249
 msgid ""
 "To specify the scheduled date on an |MO|, begin by navigating "
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
@@ -46427,17 +46485,14 @@ msgstr ""
 "la :menuselection:`Aplicația Producție --> Operațiuni --> Ordine de "
 "producție` și apasă :guilabel:`Nou` pentru a crea un nou |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:220
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:252
 msgid ""
 "Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
-"window. By default, the :guilabel:`Scheduled Date` field, and its "
-"corresponding pop-up window, show the current date and time."
+"window. By default, the :guilabel:`Scheduled Date` field and its "
+"corresponding pop-up window show the current date and time."
 msgstr ""
-"Apasă pe câmpul :guilabel:`Dată programată` pentru a deschide o fereastră "
-"pop-up cu calendar. În mod implicit, câmpul :guilabel:`Dată programată` și "
-"fereastra sa pop-up afișează data și ora curente."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:255
 msgid ""
 "Use the calendar to select the date on which processing should begin for the "
 "|MO|. In the two fields at the bottom of the popover window, enter the hour "
@@ -46448,7 +46503,7 @@ msgstr ""
 "pop-up, introdu ora și minutul la care ar trebui să înceapă procesarea, "
 "folosind formatul de 24 de ore."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:228
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:259
 msgid ""
 "Finally, click :guilabel:`Apply` at the bottom of the popover window to set "
 "the date and time for the :guilabel:`Scheduled Date` field. Then, click "
@@ -46459,27 +46514,38 @@ msgstr ""
 "apasă butonul :guilabel:`Confirmă` din partea de sus a |MO| pentru a-l "
 "confirma."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:232
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:263
 msgid ""
-"Once the |MO| is confirmed, it appears in the **Shop Floor** module, as long "
+"To prioritize a manufacturing order and its work orders in the *Shop Floor* "
+"app, click the :icon:`fa-star-o` :guilabel:`(star)` icon in the |MO| form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:266
+msgid ""
+"Once the |MO| is confirmed, it appears in the *Shop Floor* module, as long "
 "is it has the :guilabel:`Ready` status, which means all components are "
 "available."
 msgstr ""
-"Odată ce |MO| este confirmat, acesta apare în modulul **Shop Floor**, atâta "
-"timp cât are statutul :guilabel:`Gata`, ceea ce înseamnă că toate "
-"componentele sunt disponibile."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:235
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:269
 msgid ""
 "On the Odoo dashboard, click on the :menuselection:`Shop Floor` module to "
-"open it. The :guilabel:`All MO #` page of the dashboard displays *Ready* |"
-"MOs|, organized in order of their scheduled dates."
+"open it. The *All MO #* page of the dashboard displays *Ready* |MOs|, "
+"organized in order of their scheduled dates."
 msgstr ""
-"Pe tabloul de bord Odoo, apasă pe modulul :menuselection:`Shop Floor` pentru "
-"a-l deschide. Pagina :guilabel:`Toate MO #` a tabloului de bord afișează |"
-"MO|-uri *Gata*, organizate în funcție de datele lor programate."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:239
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:272
+msgid ""
+"If a manufacturing order should be prioritized above the standard date "
+"scheduling, click the :icon:`fa-star-o` :guilabel:`(star)` icon next to its "
+"number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
+msgid "The All MO dashboard with prioritized orders appearing first."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:278
 msgid ""
 "At the top of the module, select a work center to see the work orders "
 "assigned to it. The page for each work center organizes work orders, based "
@@ -46490,48 +46556,39 @@ msgstr ""
 "organizează ordinele de lucru, pe baza datelor programate ale |MO|-urilor "
 "corespunzătoare."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:243
-msgid "Three |MOs| are confirmed for a *Bookcase* product:"
-msgstr "Trebuie confirmate trei |MO|-uri pentru un produs *Bibliotecă*:"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:245
-msgid "WH/MO/00411 has a :guilabel:`Scheduled Date` of August 16th."
-msgstr "WH/MO/00411 are o :guilabel:`Dată programată` de 16 august."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:246
-msgid "WH/MO/00412 has a :guilabel:`Scheduled Date` of August 20th."
-msgstr "WH/MO/00412 are o :guilabel:`Dată programată` de 20 august."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:247
-msgid "WH/MO/00413 has a :guilabel:`Scheduled Date` of August 18th."
-msgstr "WH/MO/00413 are o :guilabel:`Dată programată` de 18 august."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:249
-msgid ""
-"On the :guilabel:`All MO #` page of the **Shop Floor** module, the cards for "
-"each |MO| appear in this order: WH/MO/00411, WH/MO/00413, WH/MO/00412."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:282
+msgid "Three |MOs| are confirmed for a *Table* product:"
 msgstr ""
-"Pe pagina :guilabel:`Toate MO #` a modulului **Shop Floor**, cardurile "
-"pentru fiecare |MO| apar în această ordine: WH/MO/00411, WH/MO/00413, WH/MO/"
-"00412."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:284
+msgid "WH/MO/00076 has a :guilabel:`Scheduled Date` of April 2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:285
+msgid "WH/MO/00077 has a :guilabel:`Scheduled Date` of March 31."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:286
+msgid "WH/MO/00078 has a :guilabel:`Scheduled Date` of April 1."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:288
+msgid ""
+"On the :guilabel:`All MO #` page of the *Shop Floor* module, the cards for "
+"each |MO| appear in this order: WH/MO/00077, WH/MO/00078, WH/MO/000076."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
 msgid "MOs in the Shop Floor module, ordered by their scheduled date."
 msgstr "MO-urile din modulul Shop Floor, ordonate după data programată."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:256
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:294
 msgid ""
-"Each |MO| requires one work order, carried out at :guilabel:`Assembly "
-"Station 1`. Clicking on the :guilabel:`Assembly Station 1` button at the top "
-"of the screen opens the page for the work center, which displays one card "
-"for each work order, appearing in the same order as their corresponding |"
-"MOs|."
+"Each |MO| requires one work order, carried out at :guilabel:`Drill 1`. "
+"Clicking on the :guilabel:`Drill 1` button at the top of the screen opens "
+"the page for the work center, which displays one card for each work order, "
+"appearing in the same order as their corresponding |MOs|."
 msgstr ""
-"Fiecare |MO| necesită un ordin de lucru, efectuat la :guilabel:`Assembly "
-"Station 1`. Apăsând pe butonul :guilabel:`Assembly Station 1` din partea de "
-"sus a ecranului se deschide pagina centrului de lucru, care afișează câte un "
-"card pentru fiecare ordin de lucru, apărând în aceeași ordine ca |MO|-urile "
-"corespunzătoare."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:3
 msgid "Shop Floor time tracking"
@@ -46539,221 +46596,152 @@ msgstr "Urmărirea timpului de la magazin"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:8
 msgid ""
-"By signing in to the Odoo *Shop Floor* module as *operators*, employees are "
-"able to track the amount of time they spend working on each work order."
+"By signing in to the Odoo *Shop Floor* module as *operators*, employees can "
+"track the amount of time they spend working on each work order. Odoo tracks "
+"the time it takes to complete each work order, as well as the time each "
+"operator spends on it."
 msgstr ""
-"Conectându-se la modulul Odoo *Shop Floor* ca *operatori*, angajații pot "
-"urmări timpul petrecut lucrând la fiecare comandă de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:11
-msgid ""
-"Odoo tracks the time it takes to complete each work order, as well as the "
-"time each operator spends on each work order."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:13
+msgid "Manage operators"
 msgstr ""
-"Conectându-se la modulul Odoo *Shop Floor* ca *operatori*, angajații pot "
-"urmări timpul petrecut lucrând la fiecare comandă de lucru."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:15
-msgid "Operator sign in"
-msgstr "Conectați-vă operatorului"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:17
 msgid ""
-"To sign in to the *Shop Floor* module as an operator, sign in to the Odoo "
-"database, and open the :menuselection:`Shop Floor` module. The employee "
-"profile that is signed in to the database is automatically signed in as an "
-"operator."
+"When the *Shop Floor* module is first opened, the employee profile that is "
+"signed in to the database is automatically signed in as an operator."
 msgstr ""
-"Pentru a vă conecta la modulul *Shop Floor* ca operator, conectați-vă la "
-"baza de date Odoo și deschideți modulul :menuselection:`Shop Floor`. "
-"Profilul de angajat care este conectat la baza de date este conectat automat "
-"ca operator."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:21
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:18
 msgid ""
-"All active operators are listed in the operator panel on the left side of "
-"the module. The panel can be opened or collapsed by clicking "
-"the :guilabel:`show/hide panel (white square with black column on left "
-"side)` button, located in the top-left corner of the module."
+"All operators for the current session are listed in the operator panel next "
+"to the main content area. While the panel can list multiple employee "
+"profiles, only one employee can be active at once. The active profile "
+"highlighted in the operator panel is used for time tracking. The panel can "
+"be opened or collapsed by clicking the :icon:`oi-panel-right fa-flip-"
+"horizontal` :guilabel:`(employee panel)` icon located next to the view list."
 msgstr ""
-"Toți operatorii activi sunt listați în panoul operator din partea stângă a "
-"modulului. Panoul poate fi deschis sau restrâns făcând clic pe "
-"butonul :guilabel:`afișare/ascunde panoul (pătrat alb cu coloană neagră în "
-"partea stângă)`, situat în colțul din stânga sus al modulului."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
 msgid ""
-"The operator panel in the Shop Floor module, with the show/hide panel button "
+"The operator panel in the Shop Floor module, with the employee panel button "
 "above it."
 msgstr ""
-"Panoul operator din modulul Shop Floor, cu butonul de afișare/ascunde panou "
-"deasupra acestuia."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:29
-msgid ""
-"To sign in to *Shop Floor* as a different employee, click the :guilabel:`+ "
-"Add Operator` button at the bottom of the panel. Doing so opens "
-"the :guilabel:`Select Employee` pop-up window, which lists every employee "
-"that is able to sign in to the module."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:28
+msgid "Add an operator"
 msgstr ""
-"Pentru a vă conecta la *Shop Floor* ca alt angajat, faceți clic pe "
-"butonul :guilabel:`+ Adaugă operator` din partea de jos a panoului. "
-"Procedând astfel, se deschide fereastra pop-up :guilabel:`Select Employee`, "
-"care listează fiecare angajat care se poate conecta la modul."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:33
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:30
 msgid ""
-"Click on a specific employee to sign in using their profile. If no PIN code "
-"is required to sign in as that employee, the profile will be signed in "
-"automatically."
+"To add employees to the operator panel, click the :icon:`fa-"
+"plus` :guilabel:`Add Operator` button at the bottom of the panel. In the "
+"*Select Employee* pop-up window, click on a specific employee to sign in "
+"using their profile. If no PIN code is required to sign in as that employee, "
+"the profile is automatically signed in and selected as the active operator."
 msgstr ""
-"Faceți clic pe un anumit angajat pentru a vă conecta folosind profilul său. "
-"Dacă nu este necesar niciun cod PIN pentru a vă conecta ca angajat, profilul "
-"va fi conectat automat."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:35
 msgid ""
-"If a PIN code is required, a :guilabel:`Password?` pop-up window appears, "
-"showing a number pad, from which the code can be entered. Enter the code "
-"using the number pad, and click :guilabel:`Confirm` to sign in to the *Shop "
-"Floor* module."
+"If a PIN has been set for the employee, a *Password?* pop-up window opens. "
+"Enter the code using the number pad or keyboard, then "
+"click :guilabel:`Confirm` to sign in to the *Shop Floor* module."
 msgstr ""
-"Dacă este necesar un cod PIN, apare o fereastră pop-up :guilabel:`Parolă?`, "
-"care afișează o tastatură numerică, din care poate fi introdus codul. "
-"Introduceți codul folosind tastatura numerică și faceți clic "
-"pe :guilabel:`Confirm` pentru a vă conecta la modulul *Shop Floor*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
-msgid ""
-"The \"Password?\" pop-up window, which is used to enter an operator PIN code."
+msgid "Enter an operator PIN code in the Password? pop-up window."
 msgstr ""
-"Parola?\" fereastra pop-up, care este folosită pentru a introduce un cod PIN "
-"al operatorului."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:42
 msgid ""
-"A PIN code can be set for each employee, which must be entered each time "
-"they sign in to the *Shop Floor* module, check in or out in the *Kiosk Mode* "
-"of the *Attendances* application, or sign in as a cashier in the *Point of "
-"Sale* application."
+"Each employee can be assigned a PIN, which must be entered when signing in "
+"to the *Shop Floor* module. Badges can also be generated and printed for "
+"checking in and out with *Kiosk Mode* in the *Attendances* app. See "
+"the :ref:`employees/hr-settings` section for more details."
 msgstr ""
-"Se poate seta un cod PIN pentru fiecare angajat, care trebuie introdus de "
-"fiecare dată când se conectează la modulul *Shop Floor*, se înregistrează "
-"sau se înregistrează în *Modul Chioșc* al aplicației *Prezențe* sau se "
-"conectează ca casier în aplicația *Punctul de vânzare*."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:47
+msgid "Switch profiles"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:49
 msgid ""
-"To set an employee PIN, navigate to the :menuselection:`Employees` app, and "
-"select a specific employee. At the bottom of the employee's form, click on "
-"the :guilabel:`HR Settings` tab, and enter a numerical code in "
-"the :guilabel:`PIN Code` field."
+"Click an employee's name to make their profile active. The active employee "
+"appears highlighted in blue, while employees who are signed in but not "
+"active appear faded out."
 msgstr ""
-"Pentru a seta un PIN pentru angajat, navigați la "
-"aplicația :menuselection:`Angajați` și selectați un anumit angajat. În "
-"partea de jos a formularului angajatului, faceți clic pe "
-"fila :guilabel:`Setări HR` și introduceți un cod numeric în "
-"câmpul :guilabel:`Cod PIN`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:53
-msgid ""
-"Once an employee is signed in to the module, their name appears in the "
-"operator panel, along with every other employee that has signed in. While "
-"the panel can list multiple employees, only one employee can be active at "
-"any given time, on a single instance of the *Shop Floor* module."
+msgid "Log out an operator"
 msgstr ""
-"Odată ce un angajat este conectat la modul, numele acestuia apare în panoul "
-"operator, împreună cu fiecare alt angajat care s-a conectat. În timp ce "
-"panoul poate lista mai mulți angajați, un singur angajat poate fi activ la "
-"un moment dat, pe un singur angajat. instanță a modulului *Shop Floor*."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:55
 msgid ""
-"Click on an employee's name to make their profile active. The active "
-"employee appears highlighted in blue, while employees that are signed in, "
-"but not active, have their names faded out."
+"To sign out a specific employee from the module, click the :icon:`oi-"
+"close` :guilabel:`(logout)` icon next to their name in the operator panel."
 msgstr ""
-"Faceți clic pe numele unui angajat pentru a-și activa profilul. Angajatul "
-"activ apare evidențiat în albastru, în timp ce angajații care sunt "
-"conectați, dar nu sunt activi, au numele lor estompate."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:60
-msgid ""
-"To sign out a specific employee from the module, click the :guilabel:`X "
-"(remove)` button next to their name, in the operator panel."
-msgstr ""
-"Pentru a deconecta un anumit angajat din modul, faceți clic pe "
-"butonul :guilabel:`X (eliminați)` de lângă numele acestuia, în panoul "
-"operator."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:59
 msgid "Track work order duration"
 msgstr "Urmăriți durata comenzii de lucru"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:66
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:61
 msgid ""
-"To track time spent working on a work order, begin by selecting the employee "
-"working on it from the operator panel."
+"To track time spent on a work order, begin by selecting the employee "
+"assigned to it from the operator panel."
 msgstr ""
-"Pentru a urmări timpul petrecut lucrând la o comandă de lucru, începeți prin "
-"a selecta angajatul care lucrează la aceasta din panoul operator."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:64
 msgid ""
-"Next, navigate to the page for the work center where the work order is "
-"scheduled to be carried out. This can be done by selecting the work center "
-"from the top navigation in the *Shop Floor* module, or by clicking the name "
-"of the work center on the card for the manufacturing order (MO) that the "
-"work order is a part of."
+"Next, select the work center where the work order is scheduled to be carried "
+"out. This can be done by selecting the work center in the *Shop Floor* "
+"module. Alternatively, open the manufacturing order (MO), open the *Work "
+"Orders* tab, and click the :icon:`fa-external-link` :guilabel:`(Open Work "
+"Order)` icon. In the *Work Orders* pop-up window, click :icon:`oi-view-"
+"kanban` :guilabel:`Open Shop Floor`."
 msgstr ""
-"Apoi, navigați la pagina pentru centrul de lucru în care este programată să "
-"fie executată comanda de lucru. Acest lucru se poate face selectând centrul "
-"de lucru din navigarea de sus în modulul *Shop Floor* sau făcând clic pe "
-"numele centrului de lucru de pe cardul pentru comanda de fabricație (MO) din "
-"care face parte comanda de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:74
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:70
 msgid ""
-"On the page for the work center, find the card for the work order. Once work "
-"begins, click the header of the work order card to start timing the duration "
-"it takes to complete. This duration is displayed by a timer on the header of "
-"the work order card, which tracks the collective time spent working on the "
-"work order, by all employees."
+"In the work center view, find the card for the work order. The assigned "
+"operator's avatar is listed on the work order. When work begins, click "
+"the :icon:`fa-play` :guilabel:`(play)` icon to start tracking the duration. "
+"This duration tracks the collective time spent working on the work order by "
+"all employees. The operator's avatar is displayed on the work order to "
+"indicate that work has begun and is assigned to an operator."
 msgstr ""
-"Pe pagina pentru centrul de lucru, găsiți cardul pentru comanda de lucru. "
-"Odată ce începe munca, faceți clic pe antetul cardului de comandă de lucru "
-"pentru a începe să cronometrați durata necesară pentru finalizare. Această "
-"durată este afișată printr-un cronometru pe antetul cardului comenzii de "
-"lucru, care urmărește timpul colectiv petrecut lucrând la comanda de lucru, "
-"de către toți angajații."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
 msgid "A work order card with an active timer."
 msgstr "Un card de comandă de lucru cu un temporizator activ."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:79
 msgid ""
-"In addition, the reference number of the work order appears in the operator "
-"panel, under the name of the employee working on it, along with a second "
-"timer, which tracks the amount of time the employee has spent on the work "
-"order individually. This timer only reflects work done during the current "
-"session, even if the employee has previously worked on the work order."
+"In addition, the work order reference number appears in the operator panel "
+"under the employee's name, along with another timer that tracks the time the "
+"employee has spent individually on the work order. This timer only reflects "
+"work done during the current session, even if the employee has previously "
+"worked on the work order."
 msgstr ""
-"În plus, în panoul operatorului apare numărul de referință al comenzii de "
-"lucru, sub numele angajatului care lucrează la acesta, împreună cu un al "
-"doilea cronometru, care urmărește individual timpul petrecut de angajat cu "
-"comanda de lucru. Acest cronometru reflectă doar munca efectuată în timpul "
-"sesiunii curente, chiar dacă angajatul a lucrat anterior la comanda de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:88
-msgid ""
-"Employees are able to work on multiple work orders simultaneously, and track "
-"their time for each. The reference number for each work order being worked "
-"on appears below the employee's name, along with a timer."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:85
+msgid "View active profile work orders"
 msgstr ""
-"Angajații pot lucra la mai multe comenzi simultan și pot urmări timpul lor "
-"pentru fiecare. Numărul de referință pentru fiecare comandă de lucru la care "
-"se lucrează apare sub numele angajatului, împreună cu un cronometru."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:87
+msgid ""
+"The operator panel displays the work center location and the individual time "
+"spent for each work order an operator is working on. This timer only "
+"reflects work done during the current session, even if the operator has "
+"previously worked on the work order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:91
+msgid ""
+"Operators can work on multiple work orders simultaneously and track their "
+"time for each. Click :guilabel:`My WO` at the top of the page to see all of "
+"the work orders the active profile is working on."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
 msgid "An employee card in the operator panel, showing two work order timers."
@@ -46761,75 +46749,106 @@ msgstr ""
 "Un card de angajat în panoul operator, care arată două temporizatoare pentru "
 "comenzi de lucru."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:96
-msgid ""
-"To pause the timer on the work order card, and remove the work order from "
-"below the employee's name on the operator panel, click the header a second "
-"time."
-msgstr ""
-"Pentru a întrerupe cronometrul de pe cardul comenzii de lucru și a elimina "
-"comanda de lucru de sub numele angajatului de pe panoul operator, faceți "
-"clic pe antet a doua oară."
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:99
-msgid ""
-"Once the work order is completed, click the :guilabel:`Mark as Done` button "
-"at the bottom of the work order card, which causes the card to fade away. If "
-"the timer is still active, it stops once the card disappears completely."
+msgid "Pause and stop timer"
 msgstr ""
-"Odată ce comanda de lucru este finalizată, faceți clic pe "
-"butonul :guilabel:`Marcați ca gata` din partea de jos a cardului comenzii de "
-"lucru, ceea ce face ca cardul să dispară. Dacă cronometrul este încă activ, "
-"acesta se oprește odată ce cardul dispare complet."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:104
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:101
+msgid ""
+"To pause the timer on a work order, click the :icon:`fa-"
+"pause` :guilabel:`(pause)` icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:103
+msgid ""
+"When a work order is complete, click the :guilabel:`Mark as Done` button at "
+"the bottom of the work order card to remove it from the work center page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:107
+msgid ""
+"If there are no additional work orders for the |MO|, the button "
+"says :guilabel:`Close Production` instead. Clicking :guilabel:`Close "
+"Production` marks the entire |MO| as *Done* and removes it from the *Shop "
+"Floor* module."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:111
+msgid ""
+"The :guilabel:`Close Production` button is always visible on the |MO| card "
+"in the *All MO* view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:114
 msgid "View work order duration"
 msgstr "Vedeți durata comenzii de lucru"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:117
+msgid "By individual work order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:119
 msgid ""
 "To view the duration of a work order, navigate "
+"to :menuselection:`Manufacturing app --> Operations --> Work Orders`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:122
+msgid ""
+"By default, the search bar has a filter applied to display incomplete work "
+"orders only. To view work orders that have been completed and marked as "
+"*Done*, remove the filter from the search bar by clicking on the :icon:`oi-"
+"close` :guilabel:`(Remove)` icon next to the filter."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:126
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:148
+msgid ""
+"The actual time it took to complete each work order is displayed in "
+"the :guilabel:`Real Duration` column. This value represents the total time "
+"spent on the work order by all operators who worked on it. It includes time "
+"tracked in the *Shop Floor* module as well as time tracked in the work order "
+"form or the *Work Orders* tab of the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:131
+msgid ""
+"To view detailed time tracking information, select a work order. In the work "
+"order form, go to the *Time Tracking* tab to see a detailed list of all "
+"operators who have worked on the work order and the amount of time they "
+"spent on it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:136
+msgid "By manufacturing order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:138
+msgid ""
+"To view the duration of all work orders in a specific |MO|, navigate "
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
-"Orders`, and select an |MO|."
+"Orders`."
 msgstr ""
-"Pentru a vedea durata unei comenzi de lucru, navigați "
-"la :menuselection:`Aplicația de fabricație --> Operațiuni --> Comenzi de "
-"fabricație` și selectați un |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:141
 msgid ""
-"To view and select |MOs| that have been completed and marked as *Done*, "
-"remove the :guilabel:`To Do` filter from the :guilabel:`Search...` bar, by "
-"clicking on the :guilabel:`X (close)` button on the right side of the filter."
+"By default, the search bar has a filter applied to display incomplete |MOs| "
+"only. To view |MOs| that have been completed and marked as *Done*, remove "
+"the filter from the search bar by clicking the :icon:`oi-"
+"close` :guilabel:`(Remove)` icon next to the filter."
 msgstr ""
-"Pentru a vizualiza și selecta |MO-uri| care au fost completate și marcate ca "
-"*Terminat*, eliminați filtrul :guilabel:`To Do` din "
-"bara :guilabel:`Căutare...`, făcând clic pe butonul :guilabel:`X "
-"(închidere)` de pe partea dreaptă a filtrului."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:145
 msgid ""
-"On the page for the |MO|, click on the :guilabel:`Work Orders` tab to see a "
-"list of all work orders included in the |MO|. The time it took to complete "
-"each work order is displayed in the :guilabel:`Real Duration` column of the "
-"tab."
+"Select an |MO|. In the |MO| form, go to the *Work Orders* tab to see a list "
+"of all work orders included in the |MO|."
 msgstr ""
-"Pe pagina pentru |MO|, faceți clic pe fila :guilabel:`Comenzi de lucru` "
-"pentru a vedea o listă cu toate comenzile de lucru incluse în |MO|. Timpul "
-"necesar pentru a finaliza fiecare comandă de lucru este afișat în "
-"coloana :guilabel:`Durata reală` a filei."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:117
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:153
 msgid ""
-"The *Real Duration* represents the total time spent working on the work "
-"order by all workers who worked on it. It includes time tracked in the *Shop "
-"Floor* module, as well as time tracked on the :guilabel:`Work Orders` tab of "
-"the |MO| itself."
+"To view details for a specific work order, click the :icon:`fa-external-"
+"link` :guilabel:`(Open Work Order)` icon. The work order form opens."
 msgstr ""
-"*Durata reală* reprezintă timpul total petrecut lucrând la comanda de lucru "
-"de către toți lucrătorii care au lucrat la aceasta. Include timpul urmărit "
-"în modulul *Shop Floor*, precum și timpul urmărit în fila :guilabel:`Comenzi "
-"de lucru` din |MO| în sine."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:5
 msgid "Subcontracting"
@@ -51942,11 +51961,11 @@ msgstr ""
 msgid "The MPS setting in the Manufacturing app's settings."
 msgstr "Setarea MPS în pagina de setări a aplicației Producție."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:76
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:75
 msgid "|MPS| dashboard"
 msgstr "Tabloul de bord |MPS|"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:77
 msgid ""
 "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
 "Planning --> Master Production Schedule`. The |MPS| view appears as follows:"
@@ -51959,7 +51978,7 @@ msgstr ""
 msgid "The Master Production Schedule in the Manufacturing app."
 msgstr "Planificatorul principal de producție în aplicația Producție."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:83
 msgid ""
 "The grey column on the left side of the screen shows a section for every "
 "product added to the |MPS|, with each product section being broken down into "
@@ -51973,7 +51992,7 @@ msgstr ""
 "derulant al barei :guilabel:`Căutare...` din partea de sus a paginii. "
 "Categoriile implicite care apar în rânduri sunt:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:90
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:88
 msgid ""
 ":guilabel:`[Product] by [unit]` :icon:`fa-area-chart`: the forecasted stock "
 "quantity at the beginning of each time period. :guilabel:`[Product]` "
@@ -51985,7 +52004,7 @@ msgstr ""
 "și :icon:`fa-area-chart` sunt butoane selectabile care deschid pagina "
 "produsului sau, respectiv, raportul de prognoză pentru produs."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:91
 msgid ""
 ":guilabel:`- Forecasted Demand`: the demand forecast, which is entered "
 "manually. This represents an estimate of the demand for the product during "
@@ -51994,7 +52013,7 @@ msgstr ""
 ":guilabel:`- Cerere prognozată`: prognoza cererii, introdusă manual. Aceasta "
 "reprezintă o estimare a cererii pentru produs în fiecare perioadă de timp."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:93
 msgid ""
 ":guilabel:`- Indirect Demand Forecast`: while this is a default category, it "
 "**only** appears for products that are components of other products. It "
@@ -52004,7 +52023,7 @@ msgstr ""
 "implicită, ea **apare doar** pentru produsele care sunt componente ale altor "
 "produse. Reprezintă cererea pentru componentă provenită din |MO| existente."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:98
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:96
 msgid ""
 ":guilabel:`+ Suggested Replenishment`: the quantity of the product that is "
 "suggested to be replenished through |MOs| or |POs|. To the right of the "
@@ -52020,12 +52039,12 @@ msgstr ""
 msgid "The Replenish button on the \"+ Suggested Replenishment\" row."
 msgstr "Butonul Reaprovizionează de pe rândul \"+ Reaprovizionare sugerată\"."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:104
 msgid "The \"Replenish\" button on the \"+ Suggested Replenishment\" row."
 msgstr ""
 "Butonul \"Reaprovizionează\" de pe rândul \"+ Reaprovizionare sugerată\"."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:106
 msgid ""
 ":guilabel:`= Forecasted Stock`: the quantity of the product forecasted to be "
 "in stock at the end of each time period, assuming that suggested "
@@ -52035,11 +52054,11 @@ msgstr ""
 "sfârșitul fiecărei perioade de timp, presupunând că numerele de "
 "reaprovizionare sugerate sunt îndeplinite."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:109
 msgid "Altogether, these default categories form an equation:"
 msgstr "Împreună, aceste categorii implicite formează o ecuație:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:111
 msgid ""
 "\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
 "\\text{Forecasted Stock}\n"
@@ -52049,7 +52068,7 @@ msgstr ""
 "estimat}\n"
 "\n"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:117
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:114
 msgid ""
 "In the case of components, the :guilabel:`Indirect Demand Forecast` is taken "
 "into account as well."
@@ -52057,7 +52076,7 @@ msgstr ""
 "În cazul componentelor, se ia în considerare și :guilabel:`Prognoza cererii "
 "indirecte`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:116
 msgid ""
 "The :guilabel:`- Forecasted Demand` and :guilabel:`+ Suggested "
 "Replenishment` fields can be edited for any of the time periods to the right "
@@ -52069,7 +52088,7 @@ msgstr ""
 "dreapta coloanei produsului. Acest lucru modifică ecuația și actualizează "
 "valoarea afișată în câmpul :guilabel:`Stoc prognozat`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:120
 msgid ""
 "Changing the value in the :guilabel:`+ Suggested Replenishment` field also "
 "makes an :icon:`fa-times` :guilabel:`(reset)` button appear to the left of "
@@ -52081,7 +52100,7 @@ msgstr ""
 "câmpului. Apasă pe butonul :icon:`fa-times` :guilabel:`(resetare)` de lângă "
 "câmp pentru a reseta valoarea la cea calculată de |MPS|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:129
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:126
 msgid ""
 "While the |MPS| can be used with only the default categories enabled, it is "
 "advisable to also enable the :guilabel:`Actual Demand` category. This is "
@@ -52095,7 +52114,7 @@ msgstr ""
 "partea dreaptă a barei :guilabel:`Căutare...` și activând "
 "opțiunea :guilabel:`Cerere reală` sub antetul :guilabel:`Rânduri`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:131
 msgid ""
 "With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
 "Forecasted Demand` category changes to the :guilabel:`- Actual / Forecasted "
@@ -52108,7 +52127,7 @@ msgstr ""
 "prognozată introdusă manual, această categorie afișează și cererea "
 "confirmată pentru produs, bazată pe |SO| confirmate."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:139
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:136
 msgid ""
 "Each column to the right of the products column lists one unit of the time "
 "period selected in the *Time Range* field on the *Manufacturing* app "
@@ -52120,7 +52139,7 @@ msgstr ""
 "a aplicației *Producție* (ex. luni). Numărul de coloane de perioadă de timp "
 "corespunde valorii introduse în câmpul *Număr de coloane*."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:143
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:140
 msgid ""
 "The first time period column represents the current time period. For "
 "example, if the |MPS| is configured to use months, the first column displays "
@@ -52132,15 +52151,14 @@ msgstr ""
 "pentru luna curentă. În această primă coloană, câmpul :guilabel:`+ "
 "Reaprovizionare sugerată` apare în una dintre cele cinci culori:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:144
 msgid ""
 ":guilabel:`Green`: a replenishment order must be generated to keep stock at "
-"the :guilabel:`Safety Stock Target`."
+"the :guilabel:`Safety Stock Target`, based on the configured :doc:`lead "
+"times <../../inventory/warehouses_storage/replenishment/lead_times>`."
 msgstr ""
-":guilabel:`Verde`: trebuie generată o comandă de reaprovizionare pentru a "
-"menține stocul la :guilabel:`Ținta de stoc de siguranță`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:149
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
 msgid ""
 ":guilabel:`Gray`: a replenishment order has already been generated to keep "
 "stock at the :guilabel:`Safety Stock Target`."
@@ -52148,7 +52166,7 @@ msgstr ""
 ":guilabel:`Gri`: o comandă de reaprovizionare a fost deja generată pentru a "
 "menține stocul la :guilabel:`Ținta de stoc de siguranță`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:151
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:149
 msgid ""
 ":guilabel:`Yellow`: a replenishment order has already been generated, but "
 "the quantity it was created for is not enough to keep stock at "
@@ -52158,7 +52176,7 @@ msgstr ""
 "cantitatea pentru care a fost creată nu este suficientă pentru a menține "
 "stocul la :guilabel:`Ținta de stoc de siguranță`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:153
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:151
 msgid ""
 ":guilabel:`Red`: a replenishment order has already been generated, but the "
 "quantity it was created for puts the amount of stock above "
@@ -52168,7 +52186,7 @@ msgstr ""
 "cantitatea pentru care a fost creată duce stocul peste :guilabel:`Ținta de "
 "stoc de siguranță`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:156
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:154
 msgid ""
 "The :guilabel:`+ Suggested Replenishment` field appears white, if no "
 "replenishment order has been generated, and it is not necessary to generate "
@@ -52178,11 +52196,11 @@ msgstr ""
 "generată nicio comandă de reaprovizionare și nu este necesar să se genereze "
 "una în acest moment."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:160
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:158
 msgid "Add a product"
 msgstr "Adaugă un produs"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:162
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:160
 msgid ""
 "To use |MPS| to manage the replenishment of a product, navigate "
 "to :menuselection:`Manufacturing app --> Planning --> Master Production "
@@ -52195,14 +52213,14 @@ msgstr ""
 "pe :guilabel:`Adaugă un produs` pentru a deschide fereastra pop-"
 "up :guilabel:`Adaugă un produs`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:167
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:165
 msgid ""
 "Products **must** be properly configured to be replenished through the |MPS|."
 msgstr ""
 "Produsele **trebuie** să fie configurate corect pentru a fi reaprovizionate "
 "prin |MPS|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:169
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:167
 msgid ""
 "In the case of manufactured products, the *Manufacture* route must be "
 "selected in the *Routes* section of the *Inventory* tab, on the product's "
@@ -52211,7 +52229,7 @@ msgstr ""
 "În cazul produselor fabricate, ruta *Fabricare* trebuie selectată în "
 "secțiunea *Rute* din fila *Stocuri* a formularului produsului."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:172
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:170
 msgid ""
 "In the case of products that are purchased, the *Buy* route must be selected "
 "in the *Routes* section of the *Inventory* tab, on the product's form. "
@@ -52223,7 +52241,7 @@ msgstr ""
 "trebuie specificat un furnizor și prețul la care acesta vinde produsul, în "
 "fila *Achiziții*."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:176
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:174
 msgid ""
 "On the pop-up window, select the product to add in the :guilabel:`Product` "
 "drop-down menu. If the product is replenished through manufacturing, select "
@@ -52234,7 +52252,7 @@ msgstr ""
 "producție, selectează |BoM| al produsului în câmpul :guilabel:`Listă de "
 "materiale`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:181
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:179
 msgid ""
 "Selecting a BoM when adding a product to the |MPS| also adds any components "
 "listed on the BoM. If it is not necessary to manage the replenishment of "
@@ -52246,7 +52264,7 @@ msgstr ""
 "reaprovizionării componentelor prin |MPS|, lasă pur și simplu "
 "câmpul :guilabel:`Listă de materiale` necompletat."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:185
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
 msgid ""
 "If the database is configured with multiple warehouses, "
 "a :guilabel:`Production Warehouse` field appears on the :guilabel:`Add a "
@@ -52258,7 +52276,7 @@ msgstr ""
 "producție`. Folosește acest câmp pentru a specifica în ce depozit va fi "
 "reaprovizionat produsul."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:189
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:187
 msgid ""
 "In the :guilabel:`Safety Stock Target` field, specify the minimum quantity "
 "of the product that should be kept available for orders at all times. For "
@@ -52271,7 +52289,7 @@ msgstr ""
 "pentru onorarea comenzilor, introdu `20` în câmpul :guilabel:`Ținta de stoc "
 "de siguranță`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:194
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:192
 msgid ""
 "In the :guilabel:`Minimum to Replenish` field, enter the minimum product "
 "quantity for orders created to replenish the product. For example, if `5` is "
@@ -52283,7 +52301,7 @@ msgstr ""
 "în acest câmp, comenzile de reaprovizionare vor include cel puțin cinci "
 "unități."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:198
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:196
 msgid ""
 "In the :guilabel:`Maximum to Replenish` field, enter the maximum product "
 "quantity for orders created to replenish the product. For example, if `100` "
@@ -52295,7 +52313,7 @@ msgstr ""
 "în acest câmp, comenzile de reaprovizionare vor include cel mult 100 de "
 "unități."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:202
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:200
 msgid ""
 "Finally, click :guilabel:`Save` to add the product to the |MPS|. The product "
 "now appears on the |MPS| page each time it is opened. If a |BoM| was "
@@ -52313,11 +52331,11 @@ msgstr ""
 msgid "The Add a Product pop-up window in the MPS."
 msgstr "Fereastra pop-up Adaugă un produs din MPS."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:209
 msgid "Edit a product"
 msgstr "Editează un produs"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:214
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
 msgid ""
 "After adding a product to the |MPS|, it may be necessary to change the "
 "replenishment values entered on the :guilabel:`Add a Product` pop-up window. "
@@ -52331,7 +52349,7 @@ msgstr ""
 "imediat la dreapta butonului :guilabel:`Reaprovizionează`, pe "
 "rândul :guilabel:`+ Reaprovizionare sugerată`, sub numele produsului."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
 msgid ""
 "The first and second number displayed on the :guilabel:`# ≤…≤ #` button "
 "correspond to the values entered in the :guilabel:`Minimum to Replenish` "
@@ -52342,7 +52360,7 @@ msgstr ""
 "valorilor introduse în câmpurile :guilabel:`Minim de reaprovizionat` "
 "și :guilabel:`Maxim de reaprovizionat` la adăugarea produsului în |MPS|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
 msgid ""
 "For example, if `5` was entered in the :guilabel:`Minimum to Replenish` "
 "field, and `100` was entered in the :guilabel:`Maximum to Replenish` field, "
@@ -52352,7 +52370,7 @@ msgstr ""
 "reaprovizionat` și `100` în câmpul :guilabel:`Maxim de reaprovizionat`, "
 "butonul va apărea ca :guilabel:`5 ≤…≤ 100`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:228
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:225
 msgid ""
 "Clicking the :guilabel:`# ≤…≤ #` button opens the :guilabel:`Edit Production "
 "Schedule` pop-up window. This pop-up window is the same as "
@@ -52366,7 +52384,7 @@ msgstr ""
 "câmpurile :guilabel:`Produs` și :guilabel:`Listă de materiale` nu pot fi "
 "editate."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:232
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:229
 msgid ""
 "On the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
 "values in the :guilabel:`Safety Stock Target`, :guilabel:`Minimum to "
@@ -52378,11 +52396,11 @@ msgstr ""
 "siguranță`, :guilabel:`Minim de reaprovizionat` și :guilabel:`Maxim de "
 "reaprovizionat`. Apoi apasă :guilabel:`Salvează` pentru a salva modificările."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:237
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:234
 msgid "Remove a product"
 msgstr "Elimină un produs"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:239
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
 msgid ""
 "To remove a product from the |MPS|, tick the checkbox to the left of its "
 "name. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top "
@@ -52395,7 +52413,7 @@ msgstr ""
 "ecranului și selectează :guilabel:`Șterge` din meniul derulant. La final, "
 "apasă :guilabel:`Ok` în fereastra pop-up :guilabel:`Confirmare`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:244
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:241
 msgid ""
 "Deleting a product from the |MPS| removes it, along with all of its data. If "
 "the product is re-added, its replenishment values must be reconfigured."
@@ -52404,15 +52422,15 @@ msgstr ""
 "Dacă produsul este adăugat din nou, valorile de reaprovizionare trebuie "
 "reconfigurate."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:248
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:245
 msgid "|MPS| replenishment"
 msgstr "Reaprovizionare |MPS|"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:250
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:247
 msgid "Products in the |MPS| can be replenished in one of three ways:"
 msgstr "Produsele din |MPS| pot fi reaprovizionate în unul din trei moduri:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:249
 msgid ""
 "Click the :guilabel:`Replenish` button at the top of the screen to generate "
 "replenishment orders for every product below its :guilabel:`Safety Stock "
@@ -52422,7 +52440,7 @@ msgstr ""
 "pentru a genera comenzi de reaprovizionare pentru fiecare produs aflat "
 "sub :guilabel:`Ținta de stoc de siguranță` pentru luna curentă."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:251
 msgid ""
 "Click the :guilabel:`Replenish` button on the right side of the :guilabel:`+ "
 "Suggested Replenishment` row of a specific product, to generate a "
@@ -52432,7 +52450,7 @@ msgstr ""
 "rândului :guilabel:`+ Reaprovizionare sugerată` al unui anumit produs pentru "
 "a genera o comandă de reaprovizionare pentru acel produs."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:257
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
 msgid ""
 "Tick the checkbox to the left of the product name of one or more products. "
 "Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top of the "
@@ -52444,7 +52462,7 @@ msgstr ""
 "și selectează :guilabel:`Reaprovizionează` din meniul derulant. Astfel se va "
 "genera o comandă de reaprovizionare pentru fiecare produs selectat."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:262
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:259
 msgid ""
 "The type of replenishment order generated corresponds to the route selected "
 "on the *Inventory* tab of the product's form:"
@@ -52452,7 +52470,7 @@ msgstr ""
 "Tipul comenzii de reaprovizionare generate corespunde rutei selectate în "
 "fila *Stocuri* a formularului produsului:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:265
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:262
 msgid ""
 "If the *Buy* route is selected, an |RfQ| is generated to replenish the "
 "product. |RfQs| can be selected by navigating to "
@@ -52464,7 +52482,7 @@ msgstr ""
 "aplicația :menuselection:`Achiziții`. Orice |RfQ| generat de |MPS| va "
 "avea :guilabel:`MPS` în câmpul :guilabel:`Document sursă`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:268
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:265
 msgid ""
 "If the *Manufacture* route is selected, an |MO| is generated to replenish "
 "the product. |MOs| can be selected by navigating "
@@ -62880,6 +62898,891 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "When manufacturing certain products, specific operations may need to be "
+#~ "completed before others can begin. In order to ensure operations are "
+#~ "carried out in the correct order, Odoo *Manufacturing* features a *work "
+#~ "order dependencies* setting. Enabling this setting allows for operations "
+#~ "on a Bill of Materials (BoM) to be *blocked* by other operations that "
+#~ "should occur first."
+#~ msgstr ""
+#~ "La fabricarea anumitor produse, este posibil să fie necesară finalizarea "
+#~ "unor operațiuni specifice înainte ca altele să poată începe. Pentru a se "
+#~ "asigura că operațiunile sunt efectuate în ordinea corectă, Odoo "
+#~ "*Manufacturing* are o setare de *dependențe de ordine de lucru*. "
+#~ "Activarea acestei setări permite ca operațiunile de pe o listă de "
+#~ "materiale (BoM) să fie *blocate* de alte operațiuni care ar trebui să "
+#~ "aibă loc mai întâi."
+
+#~ msgid ""
+#~ "The *work order dependencies* setting is not enabled by default. To "
+#~ "enable it, begin by navigating to :menuselection:`Manufacturing --> "
+#~ "Configuration --> Settings`. Then, enable the :guilabel:`Work Orders` "
+#~ "setting, if it is not already active."
+#~ msgstr ""
+#~ "Setarea *dependențe de comandă de lucru* nu este activată în mod "
+#~ "implicit. Pentru a-l activa, începeți prin a naviga "
+#~ "la :menuselection:`Producție --> Configurare --> Setări`. Apoi, activați "
+#~ "setarea :guilabel:`Comenzi de lucru`, dacă nu este deja activă."
+
+#~ msgid ""
+#~ "Work order dependencies are configured on a product's |BOM|. To do so, "
+#~ "navigate to :menuselection:`Manufacturing --> Products --> Bills of "
+#~ "Materials`, then select a |BOM|, or create a new one by "
+#~ "clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "Dependențele comenzii de lucru sunt configurate pe |BOM| a unui produs. "
+#~ "Pentru a face acest lucru, navigați la :menuselection:`Producție --> "
+#~ "Produse --> Liste de materiale`, apoi selectați o |BOM|, sau creați una "
+#~ "nouă făcând clic pe :guilabel:`Nou`."
+
+#~ msgid ""
+#~ "For a complete guide on how to properly configure a new |BOM|, see the "
+#~ "documentation on :doc:`creating a bill of materials <../basic_setup/"
+#~ "bill_configuration>`."
+#~ msgstr ""
+#~ "Pentru un ghid complet despre cum să configurați corect o nouă |BOM|, "
+#~ "consultați documentația despre :doc:`crearea unei liste de materiale <../"
+#~ "basic_setup/bill_configuration>`."
+
+#~ msgid ""
+#~ "On the |BOM|, click on the :guilabel:`Miscellaneous` tab, then enable "
+#~ "the :guilabel:`Operation Dependencies` checkbox. This makes a "
+#~ "new :guilabel:`Blocked By` option available in the settings of "
+#~ "the :guilabel:`Operations` tab."
+#~ msgstr ""
+#~ "În |BOM|, faceți clic pe fila :guilabel:`Diverse`, apoi activați caseta "
+#~ "de selectare :guilabel:`Dependențe de operare`. Acest lucru face ca o "
+#~ "nouă opțiune :guilabel:`Blocată de` să fie disponibilă în setările "
+#~ "filei :guilabel:`Operațiuni`."
+
+#~ msgid ""
+#~ "Next, click on the :guilabel:`Operations` tab. On the top-right of the "
+#~ "tab, click on the tab's :guilabel:`settings` button, then enable "
+#~ "the :guilabel:`Blocked By` checkbox. This makes a :guilabel:`Blocked By` "
+#~ "field appear for each operation on the :guilabel:`Operations` tab."
+#~ msgstr ""
+#~ "Apoi, faceți clic pe fila :guilabel:`Operations`. În partea din dreapta "
+#~ "sus a filei, faceți clic pe butonul :guilabel:`settings` al filei, apoi "
+#~ "activați caseta de selectare :guilabel:`Blocked By`. Acest lucru face ca "
+#~ "un câmp :guilabel:`Blocat de` să apară pentru fiecare operațiune din "
+#~ "fila :guilabel:`Operațiuni`."
+
+#~ msgid ""
+#~ "In the line of the operation that should be blocked by another operation, "
+#~ "click the :guilabel:`Blocked By` field, and an :guilabel:`Open: "
+#~ "Operations` pop-up window appears. In the :guilabel:`Blocked By` drop-"
+#~ "down field on the pop-up window, select the blocking operation that must "
+#~ "be completed *before* the operation that is blocked."
+#~ msgstr ""
+#~ "În linia operației care ar trebui să fie blocată de o altă operație, "
+#~ "faceți clic pe câmpul :guilabel:`Blocat de` și va apărea o fereastră pop-"
+#~ "up :guilabel:`Open: Operations`. În câmpul derulant :guilabel:`Blocked "
+#~ "By` din fereastra pop-up, selectați operațiunea de blocare care trebuie "
+#~ "finalizată *înaintea* operației care este blocată."
+
+#~ msgid "Finally, save the |BOM| by clicking :guilabel:`Save`."
+#~ msgstr ""
+#~ "În cele din urmă, salvați |BOM| făcând clic pe :guilabel:`Salvează`."
+
+#~ msgid ""
+#~ "Once work order dependencies have been configured on a |BOM|, Odoo "
+#~ "*Manufacturing* is able to plan when work orders are scheduled, based on "
+#~ "their dependencies. To plan the work orders for a manufacturing order, "
+#~ "begin by navigating to :menuselection:`Manufacturing --> Operations --> "
+#~ "Manufacturing Orders`."
+#~ msgstr ""
+#~ "Odată ce dependențele comenzilor de lucru au fost configurate pe o |BOM|, "
+#~ "Odoo *Manufacturing* poate planifica când sunt programate comenzile de "
+#~ "lucru, pe baza dependențelor acestora. Pentru a planifica comenzile de "
+#~ "lucru pentru o comandă de producție, începeți prin a naviga "
+#~ "la :menuselection:`Producție --> Operațiuni --> Comenzi de fabricație`."
+
+#~ msgid ""
+#~ "After confirming the manufacturing order, select the :guilabel:`Work "
+#~ "Orders` tab to view the work orders required to complete it. Any work "
+#~ "orders that are *not* blocked by a different work order display a `Ready` "
+#~ "tag in the :guilabel:`Status` section."
+#~ msgstr ""
+#~ "După confirmarea comenzii de fabricație, selectați "
+#~ "fila :guilabel:`Comenzi de lucru` pentru a vedea comenzile de lucru "
+#~ "necesare pentru finalizarea acesteia. Orice comenzi de lucru care *nu* "
+#~ "sunt blocate de o altă comandă de lucru afișează o etichetă „Gata” în "
+#~ "secțiunea :guilabel: „Stare”."
+
+#~ msgid ""
+#~ "Work orders that are blocked by one or more work orders display a "
+#~ "`Waiting for another WO` tag instead. Once the blocking work order(s) are "
+#~ "completed, the tag updates to `Ready`."
+#~ msgstr ""
+#~ "Comenzile de lucru care sunt blocate de una sau mai multe comenzi de "
+#~ "lucru afișează în schimb eticheta „Se așteaptă un alt WO”. Odată ce "
+#~ "comenzile de lucru de blocare sunt finalizate, eticheta se actualizează "
+#~ "la „Gata”."
+
+#~ msgid ""
+#~ "To schedule the manufacturing order's work orders, click "
+#~ "the :guilabel:`Plan` button at the top of the page. After doing so, "
+#~ "the :guilabel:`Scheduled Start Date` field for each work order on "
+#~ "the :guilabel:`Work Orders` tab auto-fills with the scheduled start date "
+#~ "and time. A blocked work order is scheduled at the end of the time period "
+#~ "specified in the :guilabel:`Expected Duration` field of the work order "
+#~ "that precedes it."
+#~ msgstr ""
+#~ "Pentru a programa comenzile de lucru ale comenzii de fabricație, faceți "
+#~ "clic pe butonul :guilabel:`Planificați` din partea de sus a paginii. După "
+#~ "ce faceți acest lucru, câmpul :guilabel:`Data de începere programată` "
+#~ "pentru fiecare comandă de lucru din fila :guilabel:`Comenzi de lucru` se "
+#~ "completează automat cu data și ora de începere programată. O comandă de "
+#~ "lucru blocată este programată la sfârșitul perioadei de timp specificate "
+#~ "în câmpul :guilabel:`Durata așteptată` al comenzii de lucru care o "
+#~ "precede."
+
+#~ msgid ""
+#~ "The Scheduled Start Date field for work orders on a manufacturing order."
+#~ msgstr ""
+#~ "Câmpul Data de începere programată pentru comenzile de lucru dintr-o "
+#~ "comandă de fabricație."
+
+#~ msgid "Planning by workcenter"
+#~ msgstr "Planificare prin centru de lucru"
+
+#~ msgid ""
+#~ "To see a visual representation of how work orders are planned, navigate "
+#~ "to the :guilabel:`Work Orders Planning` page by going "
+#~ "to :menuselection:`Manufacturing --> Planning --> Planning by "
+#~ "Workcenter`. This page shows a timeline of all the work orders scheduled "
+#~ "for each operation."
+#~ msgstr ""
+#~ "Pentru a vedea o reprezentare vizuală a modului în care sunt planificate "
+#~ "comenzile de lucru, navigați la pagina :guilabel:`Planificarea comenzilor "
+#~ "de lucru` mergând la :menuselection:`Producție --> Planificare --> "
+#~ "Planificare de către Centrul de lucru`. Această pagină arată o cronologie "
+#~ "a tuturor comenzilor de lucru programate pentru fiecare operațiune."
+
+#~ msgid ""
+#~ "If one work order is blocked by the completion of another, the work order "
+#~ "that is blocked is shown as scheduled to start after the work order "
+#~ "blocking it. In addition, an arrow connects the two work orders, leading "
+#~ "from the blocking operation to the blocked operation."
+#~ msgstr ""
+#~ "Dacă o comandă de lucru este blocată prin finalizarea alteia, comanda de "
+#~ "lucru care este blocată este afișată ca fiind programată să înceapă după "
+#~ "ce comanda de lucru o blochează. În plus, o săgeată leagă cele două "
+#~ "comenzi de lucru, ducând de la operațiunea de blocare la operațiunea "
+#~ "blocată."
+
+#~ msgid ""
+#~ "The *Shop Floor* module is installed alongside the *Manufacturing* app. "
+#~ "It cannot be installed by itself. To install the *Manufacturing* app, "
+#~ "navigate to :menuselection:`Apps`, search for `manufacturing` in "
+#~ "the :guilabel:`Search...` bar, and then click :guilabel:`Install` on "
+#~ "the :guilabel:`Manufacturing` app card."
+#~ msgstr ""
+#~ "Modulul *Shop Floor* este instalat alături de aplicația *Manufacturing*. "
+#~ "Nu poate fi instalat singur. Pentru a instala aplicația *Manufacturing*, "
+#~ "navigați la :menuselection:`Apps`, căutați `manufacturing` în "
+#~ "bara :guilabel:`Search...`, apoi faceți clic pe :guilabel:`Install` "
+#~ "pe :guilabel:` Cardul aplicației de producție."
+
+#~ msgid ""
+#~ "The *Shop Floor* module replaces the tablet view functionality of the "
+#~ "*Manufacturing* app, and is only available in Odoo versions 16.4 and "
+#~ "later."
+#~ msgstr ""
+#~ "Modulul *Shop Floor* înlocuiește funcționalitatea de vizualizare a "
+#~ "tabletei a aplicației *Manufacturing* și este disponibil numai în "
+#~ "versiunile Odoo 16.4 și ulterioare."
+
+#~ msgid ""
+#~ "To check the version number of an Odoo database, navigate "
+#~ "to :menuselection:`Settings` and scroll down to the :guilabel:`About` "
+#~ "section at the bottom of the page. The version number is displayed there."
+#~ msgstr ""
+#~ "Pentru a verifica numărul versiunii unei baze de date Odoo, navigați "
+#~ "la :menuselection:`Settings` și derulați în jos la "
+#~ "secțiunea :guilabel:`Despre` din partea de jos a paginii. Numărul "
+#~ "versiunii este afișat acolo."
+
+#~ msgid ""
+#~ "To switch to a newer version of Odoo, see the documentation "
+#~ "on :doc:`upgrading a database <../../../../administration/upgrade>`."
+#~ msgstr ""
+#~ "Pentru a trece la o versiune mai nouă de Odoo, consultați documentația "
+#~ "despre :doc:`actualizarea unei baze de date <../../../../administration/"
+#~ "upgrade>`."
+
+#~ msgid ""
+#~ "The :guilabel:`All` page serves as the main dashboard for the module, and "
+#~ "displays information cards for |MOs|."
+#~ msgstr ""
+#~ "Pagina :guilabel:`Toate` servește ca tablou de bord principal pentru "
+#~ "modul și afișează carduri cu informații pentru |MO-uri|."
+
+#~ msgid ""
+#~ "Each work center also has a dedicated page, which shows information cards "
+#~ "for work orders assigned to that work center. Work center pages can be "
+#~ "toggled on or off by clicking the :guilabel:`+ (plus)` button in the "
+#~ "navigation bar, selecting or deselecting them on the pop-up window that "
+#~ "appears, and then clicking :guilabel:`Confirm`."
+#~ msgstr ""
+#~ "Fiecare centru de lucru are, de asemenea, o pagină dedicată, care arată "
+#~ "carduri cu informații pentru comenzile de lucru alocate centrului de "
+#~ "lucru respectiv. Paginile centrului de lucru pot fi activate sau "
+#~ "dezactivate făcând clic pe butonul :guilabel:`+ (plus)` din bara de "
+#~ "navigare, selectându-le sau deselectându-le în fereastra pop-up care "
+#~ "apare, apoi făcând clic pe :guilabel:`Confirm`."
+
+#~ msgid ""
+#~ "The :guilabel:`My` page shows information cards for all work orders "
+#~ "assigned to the employee whose profile is currently active in the "
+#~ "operator panel on the left side of the module. Other than only showing "
+#~ "work orders assigned to the active employee, this page functions the same "
+#~ "as the pages for each work center."
+#~ msgstr ""
+#~ "Pagina :guilabel:`My` afișează carduri de informații pentru toate "
+#~ "comenzile de lucru atribuite angajatului al cărui profil este activ în "
+#~ "prezent în panoul operator din partea stângă a modulului. În afară de "
+#~ "afișarea numai comenzilor de lucru atribuite angajatului activ, această "
+#~ "pagină funcționează la fel ca și paginile pentru fiecare centru de lucru."
+
+#~ msgid ""
+#~ "To isolate an |MO| or work order, so that no other orders appear, simply "
+#~ "search the reference number of the |MO| in the :guilabel:`Search...` bar "
+#~ "at the top of the module. This search filter remains active while "
+#~ "switching between the different module views."
+#~ msgstr ""
+#~ "Pentru a izola un |MO| sau comandă de lucru, astfel încât să nu apară "
+#~ "alte comenzi, pur și simplu căutați numărul de referință al |MO| în "
+#~ "bara :guilabel:`Căutare...` din partea de sus a modulului. Acest filtru "
+#~ "de căutare rămâne activ în timp ce comutați între diferitele vizualizări "
+#~ "ale modulelor."
+
+#~ msgid ""
+#~ "On the left side of the module is the operator panel, which shows all of "
+#~ "the employees currently signed in to *Shop Floor*, and allows new "
+#~ "employees to sign in. The operator panel is always available in the "
+#~ "module, regardless of which view is selected. It can be toggled on or off "
+#~ "by clicking the :guilabel:`sidebar` button at the extreme left of the "
+#~ "navigation bar."
+#~ msgstr ""
+#~ "În partea stângă a modulului se află panoul operator, care arată toți "
+#~ "angajații conectați în prezent la *Shop Floor* și le permite noilor "
+#~ "angajați să se conecteze. Panoul operator este întotdeauna disponibil în "
+#~ "modul, indiferent de vizualizarea. selectat. Acesta poate fi activat sau "
+#~ "dezactivat făcând clic pe butonul :guilabel:`sidebar` din extrema stângă "
+#~ "a barei de navigare."
+
+#~ msgid ""
+#~ "The \"sidebar\" button, which is used to toggle the operator panel on or "
+#~ "off."
+#~ msgstr ""
+#~ "Butonul „bară laterală”, care este folosit pentru a activa sau dezactiva "
+#~ "panoul operator."
+
+#~ msgid "All page"
+#~ msgstr "Toată pagina"
+
+#~ msgid ""
+#~ "By default, the :guilabel:`All` page shows an information card for every |"
+#~ "MO| that is *ready to start*. An |MO| is considered ready to start once "
+#~ "it has been confirmed, and all required components are available."
+#~ msgstr ""
+#~ "În mod implicit, pagina :guilabel:`Toate` arată un card de informații "
+#~ "pentru fiecare |MO| care este *gata să înceapă*. Un |MO| este considerat "
+#~ "gata de pornire odată ce a fost confirmat și toate componentele necesare "
+#~ "sunt disponibile."
+
+#~ msgid ""
+#~ "To view every confirmed |MO| regardless of readiness, click "
+#~ "the :guilabel:`x` button on the :guilabel:`Ready to Start` filter to "
+#~ "remove it from the :guilabel:`Search...` bar."
+#~ msgstr ""
+#~ "Pentru a vizualiza fiecare |MO| confirmat indiferent de disponibilitate, "
+#~ "faceți clic pe butonul :guilabel:`x` din filtrul :guilabel:`Gata de "
+#~ "pornire` pentru a-l elimina din bara :guilabel:`Căutare...`."
+
+#~ msgid ""
+#~ "An |MO| information card on the :guilabel:`All` page shows all of the "
+#~ "relevant details of the associated |MO|, and also provides employees with "
+#~ "options for processing the |MO|."
+#~ msgstr ""
+#~ "Un |MO| cardul de informații de pe pagina :guilabel:`Toate` arată toate "
+#~ "detaliile relevante ale |MO| asociat și oferă, de asemenea, angajaților "
+#~ "opțiuni pentru procesarea |MO|."
+
+#~ msgid ""
+#~ "The header for an |MO| card shows the |MO| number, the product and number "
+#~ "of units being produced, and the status of the |MO|. If work has not yet "
+#~ "begun on the |MO|, the status appears as :guilabel:`Confirmed`. Once work "
+#~ "has begun, the status updates to :guilabel:`In Progress`. If all work "
+#~ "orders for an |MO| have been completed and the |MO| is ready to close, "
+#~ "the status updates to :guilabel:`To Close`."
+#~ msgstr ""
+#~ "Antetul pentru un |MO| cardul arată |MO| numărul, produsul și numărul de "
+#~ "unități produse și starea |MO|. Dacă lucrările nu au început încă pe |"
+#~ "MO|, starea apare ca :guilabel:`Confirmat`. Odată ce lucrările au "
+#~ "început, starea se actualizează la :guilabel:`În curs`. Dacă toate "
+#~ "comenzile de lucru pentru un |MO| au fost finalizate și |MO| este gata de "
+#~ "închidere, starea se actualizează la :guilabel:`To Close`."
+
+#~ msgid ""
+#~ "The main body of an |MO| card shows a line for each completed work order, "
+#~ "if any, followed by the current work order that needs to be completed. "
+#~ "Completed work orders are indicated by a green check mark to the right of "
+#~ "title of the work order. The current work order is indicated by a button "
+#~ "that opens the page for the work center to which the order is assigned."
+#~ msgstr ""
+#~ "Corpul principal al unui |MO| cardul arată o linie pentru fiecare comandă "
+#~ "de lucru finalizată, dacă există, urmată de comanda de lucru curentă care "
+#~ "trebuie finalizată. Comenzile de lucru finalizate sunt indicate printr-o "
+#~ "bifă verde în dreapta titlului comenzii de lucru. Comanda de lucru "
+#~ "curentă este indicată de un buton care deschide pagina pentru centrul de "
+#~ "lucru căruia îi este atribuită comanda."
+
+#~ msgid ""
+#~ "Below the current work order is a line titled :guilabel:`Register "
+#~ "Production`, which is used to record the number of product units "
+#~ "produced. To manually enter the number of units produced, click on "
+#~ "the :guilabel:`Register Production` line, enter a value in "
+#~ "the :guilabel:`Units` field of the resulting pop-up window, then "
+#~ "click :guilabel:`Validate`."
+#~ msgstr ""
+#~ "Sub comanda curentă de lucru este o linie "
+#~ "intitulată :guilabel:`Înregistrați producția`, care este utilizată pentru "
+#~ "a înregistra numărul de unități de produs produse. Pentru a introduce "
+#~ "manual numărul de unități produse, faceți clic pe "
+#~ "linia :guilabel:`Înregistrați producția`, introduceți o valoare în "
+#~ "câmpul :guilabel:`Unități` din fereastra pop-up rezultată, apoi faceți "
+#~ "clic pe :guilabel:`Validare`."
+
+#~ msgid ""
+#~ "Alternatively, click the :guilabel:`# Units` button on the right side of "
+#~ "the line, which automatically records the number of units the |MO| was "
+#~ "created for as the number of units produced. For example, if an |MO| is "
+#~ "created for 10 units of a dining table, clicking the :guilabel:`10 units` "
+#~ "button records that 10 units were produced."
+#~ msgstr ""
+#~ "Alternativ, faceți clic pe butonul :guilabel:`# Units` din partea dreaptă "
+#~ "a liniei, care înregistrează automat numărul de unități |MO| a fost creat "
+#~ "pentru ca număr de unități produse. De exemplu, dacă un |MO| este creat "
+#~ "pentru 10 unități dintr-o masă, făcând clic pe butonul :guilabel:`10 "
+#~ "units` se înregistrează că au fost produse 10 unități."
+
+#~ msgid ""
+#~ "The footer of the |MO| card displays a :guilabel:`Close Production` "
+#~ "button. This is used to close the |MO| once production is completed. "
+#~ "However, if there are any quality checks required for the |MO| as a whole "
+#~ "(not the work orders within it), a :guilabel:`Quality Checks` button "
+#~ "appears instead. Clicking :guilabel:`Quality Checks` opens a pop-up "
+#~ "window, from which any required quality checks can be completed."
+#~ msgstr ""
+#~ "Subsolul |MO| cardul afișează un buton :guilabel:`Închide producția`. "
+#~ "Acesta este folosit pentru a închide |MO| odată ce producția este "
+#~ "finalizată. Cu toate acestea, dacă sunt necesare verificări de calitate "
+#~ "pentru |MO| în ansamblu (nu comenzile de lucru din acesta), apare în "
+#~ "schimb un buton :guilabel:`Verificări de calitate`. Făcând clic "
+#~ "pe :guilabel:`Verificări de calitate`, se deschide o fereastră pop-up, "
+#~ "din care pot fi efectuate toate verificările de calitate necesare."
+
+#~ msgid ""
+#~ "After clicking :guilabel:`Close Production`, the |MO| card begins to fade "
+#~ "away, and an :guilabel:`Undo` button appears on the footer. "
+#~ "Clicking :guilabel:`Undo` causes the |MO| to remain open. Once the |MO| "
+#~ "card disappears completely, the work order is closed."
+#~ msgstr ""
+#~ "După ce faceți clic pe :guilabel:`Închide producția`, |MO| cardul începe "
+#~ "să dispară și un buton :guilabel:`Anulați` apare pe subsol. Dacă faceți "
+#~ "clic pe :guilabel:`Anulați`, apare |MO| să rămână deschisă. Odată ce |MO| "
+#~ "cardul dispare complet, comanda de lucru este închisă."
+
+#~ msgid ""
+#~ "On the right side of the footer is an :guilabel:`⋮ (options)` button, "
+#~ "which opens a pop-up window with additional options for the |MO|:"
+#~ msgstr ""
+#~ "În partea dreaptă a subsolului este un buton :guilabel:`⋮ (opțiuni)`, "
+#~ "care deschide o fereastră pop-up cu opțiuni suplimentare pentru |MO|:"
+
+#~ msgid ""
+#~ ":guilabel:`Scrap` is used to send components to a scrap location when "
+#~ "they are found to be defective."
+#~ msgstr ""
+#~ ":guilabel:`Scrap` este folosit pentru a trimite componente într-o locație "
+#~ "de deșeuri atunci când se constată că sunt defecte."
+
+#~ msgid ""
+#~ ":guilabel:`Add Work Order` is used to add an additional work order to the "
+#~ "|MO|."
+#~ msgstr ""
+#~ ":guilabel:`Add Work Order` este folosit pentru a adăuga o comandă de "
+#~ "lucru suplimentară la |MO|."
+
+#~ msgid ""
+#~ ":guilabel:`Add Component` is used to add an additional component to the |"
+#~ "MO|."
+#~ msgstr ""
+#~ ":guilabel:`Add Component` este folosit pentru a adăuga o componentă "
+#~ "suplimentară la |MO|."
+
+#~ msgid ":guilabel:`Open Backend MO` opens the |MO| in the Manufacturing app."
+#~ msgstr ""
+#~ ":guilabel:`Open Backend MO` deschide |MO| în aplicația de producție."
+
+#~ msgid ""
+#~ "To view every confirmed work order assigned to a work center regardless "
+#~ "of readiness, click the :guilabel:`x` button on the :guilabel:`Ready to "
+#~ "Start` filter to remove it from the :guilabel:`Search...` bar."
+#~ msgstr ""
+#~ "Pentru a vizualiza fiecare comandă de lucru confirmată atribuită unui "
+#~ "centru de lucru, indiferent de disponibilitate, faceți clic pe "
+#~ "butonul :guilabel:`x` din filtrul :guilabel:`Gata de pornire` pentru a o "
+#~ "elimina din bara :guilabel:`Căutare...` ."
+
+#~ msgid ""
+#~ "A work order information card on a work center's page shows all of the "
+#~ "relevant details of the associated work order, and also provides "
+#~ "employees with options for processing the work order."
+#~ msgstr ""
+#~ "Un card cu informații despre comanda de lucru pe pagina unui centru de "
+#~ "lucru arată toate detaliile relevante ale comenzii de lucru asociate și "
+#~ "oferă, de asemenea, angajaților opțiuni pentru procesarea comenzii de "
+#~ "lucru."
+
+#~ msgid ""
+#~ "The header for a work order card shows the reference number of the |MO| "
+#~ "that the work order is a part of, the product and number of units being "
+#~ "produced, and the status of the work order. If work has not yet begun on "
+#~ "the work order, the status appears as :guilabel:`To Do`. Once work has "
+#~ "begun, the status updates to display a timer showing the total time the "
+#~ "work order has been worked on."
+#~ msgstr ""
+#~ "Antetul unui card de comandă de lucru arată numărul de referință al |MO| "
+#~ "din care face parte comanda de lucru, produsul și numărul de unități "
+#~ "produse și starea comenzii de lucru. Dacă lucrul nu a început încă pe "
+#~ "comanda de lucru, starea apare ca :guilabel:`To Do`. Odată ce lucrul a "
+#~ "început, starea se actualizează pentru a afișa un cronometru care arată "
+#~ "durata totală la care a fost lucrată comanda de lucru."
+
+#~ msgid ""
+#~ "The main body of a work order card shows a line for each step required to "
+#~ "complete the work order. Work order steps can be completed by clicking on "
+#~ "the line, then following the instructions on the pop-up window that "
+#~ "appears. Alternatively, clicking the checkbox on the right side of each "
+#~ "line automatically marks the step as completed."
+#~ msgstr ""
+#~ "Corpul principal al unui card de comandă de lucru arată o linie pentru "
+#~ "fiecare pas necesar pentru finalizarea comenzii de lucru. Pașii comenzii "
+#~ "de lucru pot fi finalizați făcând clic pe linie, apoi urmând "
+#~ "instrucțiunile din fereastra pop-up care apare. Ca alternativă, făcând "
+#~ "clic pe caseta de selectare din partea dreaptă a fiecărei linii marchează "
+#~ "automat pasul ca finalizat."
+
+#~ msgid ""
+#~ "On the right side of the footer is an :guilabel:`⋮ (options)` button, "
+#~ "which opens a pop-up window with additional options for the work order:"
+#~ msgstr ""
+#~ "În partea dreaptă a subsolului este un buton :guilabel:`⋮ (opțiuni)`, "
+#~ "care deschide o fereastră pop-up cu opțiuni suplimentare pentru comanda "
+#~ "de lucru:"
+
+#~ msgid ""
+#~ ":guilabel:`Move to work center` is used to transfer the work order to a "
+#~ "different work center."
+#~ msgstr ""
+#~ ":guilabel:`Mutare la centrul de lucru` este folosit pentru a transfera "
+#~ "comanda de lucru la un alt centru de lucru."
+
+#~ msgid ""
+#~ ":guilabel:`Suggest a Worksheet improvement` allows the user to propose a "
+#~ "change to the work order's instructions or steps."
+#~ msgstr ""
+#~ ":guilabel:`Sugerează o îmbunătățire a foii de lucru` permite "
+#~ "utilizatorului să propună o modificare a instrucțiunilor sau pașilor "
+#~ "comenzii de lucru."
+
+#~ msgid ""
+#~ ":guilabel:`Create a Quality Alert` opens a quality alert form that can be "
+#~ "filled out to alert a quality team about a potential issue."
+#~ msgstr ""
+#~ ":guilabel:`Creați o alertă de calitate` deschide un formular de alertă de "
+#~ "calitate care poate fi completat pentru a alerta o echipă de calitate "
+#~ "despre o problemă potențială."
+
+#~ msgid ""
+#~ "When an employee is selected in the operator panel, they can begin "
+#~ "working on a work order by clicking the work order's heading. If an "
+#~ "employee is working on one or more work orders, the work order title(s) "
+#~ "appear under their name, along with a timer showing how long they've been "
+#~ "working on each order."
+#~ msgstr ""
+#~ "Când un angajat este selectat în panoul operator, acesta poate începe să "
+#~ "lucreze la o comandă de lucru făcând clic pe titlul comenzii de lucru. "
+#~ "Dacă un angajat lucrează la una sau mai multe comenzi de lucru, "
+#~ "titlul(ele) comenzii de lucru apar sub numele său, împreună cu un "
+#~ "cronometru care arată cât timp lucrează la fiecare comandă."
+
+#~ msgid ""
+#~ "To add a new employee to the operator panel, click the :guilabel:`+ Add "
+#~ "Operator` button at the bottom of the panel. Then, select an employee "
+#~ "from the :guilabel:`Select Employee` pop-up window."
+#~ msgstr ""
+#~ "Pentru a adăuga un nou angajat la panoul operator, faceți clic pe "
+#~ "butonul :guilabel:`+ Adăugare operator` din partea de jos a panoului. "
+#~ "Apoi, selectați un angajat din fereastra pop-up :guilabel:`Select "
+#~ "Employee`."
+
+#~ msgid ""
+#~ "To remove an employee from the operator panel, simply click "
+#~ "the :guilabel:`x` button next to their name in the panel."
+#~ msgstr ""
+#~ "Pentru a elimina un angajat din panoul operator, faceți clic pe "
+#~ "butonul :guilabel:`x` de lângă numele acestuia din panou."
+
+#~ msgid ""
+#~ "The operator panel of the Shop Floor module, showing three employees "
+#~ "signed in."
+#~ msgstr ""
+#~ "Panoul operator al modulului Shop Floor, care arată trei angajați "
+#~ "conectați."
+
+#~ msgid ""
+#~ "The **Shop Floor** module uses the *scheduled date* entered on |MOs| to "
+#~ "prioritize the |MOs| and work orders that appear on the module's "
+#~ "dashboard and work center pages. |MOs| and work orders scheduled sooner "
+#~ "are more highly prioritized, and appear before orders which are scheduled "
+#~ "further out."
+#~ msgstr ""
+#~ "Modulul **Shop Floor** folosește *data programată* introdusă pe |MO| "
+#~ "pentru a prioritiza |MO|-urile și ordinele de lucru care apar pe tabloul "
+#~ "de bord și pe paginile centrelor de lucru ale modulului. |MO|-urile și "
+#~ "ordinele de lucru programate mai devreme au prioritate mai mare și apar "
+#~ "înaintea celor programate mai târziu."
+
+#~ msgid ""
+#~ "Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
+#~ "window. By default, the :guilabel:`Scheduled Date` field, and its "
+#~ "corresponding pop-up window, show the current date and time."
+#~ msgstr ""
+#~ "Apasă pe câmpul :guilabel:`Dată programată` pentru a deschide o fereastră "
+#~ "pop-up cu calendar. În mod implicit, câmpul :guilabel:`Dată programată` "
+#~ "și fereastra sa pop-up afișează data și ora curente."
+
+#~ msgid ""
+#~ "Once the |MO| is confirmed, it appears in the **Shop Floor** module, as "
+#~ "long is it has the :guilabel:`Ready` status, which means all components "
+#~ "are available."
+#~ msgstr ""
+#~ "Odată ce |MO| este confirmat, acesta apare în modulul **Shop Floor**, "
+#~ "atâta timp cât are statutul :guilabel:`Gata`, ceea ce înseamnă că toate "
+#~ "componentele sunt disponibile."
+
+#~ msgid ""
+#~ "On the Odoo dashboard, click on the :menuselection:`Shop Floor` module to "
+#~ "open it. The :guilabel:`All MO #` page of the dashboard displays *Ready* |"
+#~ "MOs|, organized in order of their scheduled dates."
+#~ msgstr ""
+#~ "Pe tabloul de bord Odoo, apasă pe modulul :menuselection:`Shop Floor` "
+#~ "pentru a-l deschide. Pagina :guilabel:`Toate MO #` a tabloului de bord "
+#~ "afișează |MO|-uri *Gata*, organizate în funcție de datele lor programate."
+
+#~ msgid "Three |MOs| are confirmed for a *Bookcase* product:"
+#~ msgstr "Trebuie confirmate trei |MO|-uri pentru un produs *Bibliotecă*:"
+
+#~ msgid "WH/MO/00411 has a :guilabel:`Scheduled Date` of August 16th."
+#~ msgstr "WH/MO/00411 are o :guilabel:`Dată programată` de 16 august."
+
+#~ msgid "WH/MO/00412 has a :guilabel:`Scheduled Date` of August 20th."
+#~ msgstr "WH/MO/00412 are o :guilabel:`Dată programată` de 20 august."
+
+#~ msgid "WH/MO/00413 has a :guilabel:`Scheduled Date` of August 18th."
+#~ msgstr "WH/MO/00413 are o :guilabel:`Dată programată` de 18 august."
+
+#~ msgid ""
+#~ "On the :guilabel:`All MO #` page of the **Shop Floor** module, the cards "
+#~ "for each |MO| appear in this order: WH/MO/00411, WH/MO/00413, WH/MO/00412."
+#~ msgstr ""
+#~ "Pe pagina :guilabel:`Toate MO #` a modulului **Shop Floor**, cardurile "
+#~ "pentru fiecare |MO| apar în această ordine: WH/MO/00411, WH/MO/00413, WH/"
+#~ "MO/00412."
+
+#~ msgid ""
+#~ "Each |MO| requires one work order, carried out at :guilabel:`Assembly "
+#~ "Station 1`. Clicking on the :guilabel:`Assembly Station 1` button at the "
+#~ "top of the screen opens the page for the work center, which displays one "
+#~ "card for each work order, appearing in the same order as their "
+#~ "corresponding |MOs|."
+#~ msgstr ""
+#~ "Fiecare |MO| necesită un ordin de lucru, efectuat la :guilabel:`Assembly "
+#~ "Station 1`. Apăsând pe butonul :guilabel:`Assembly Station 1` din partea "
+#~ "de sus a ecranului se deschide pagina centrului de lucru, care afișează "
+#~ "câte un card pentru fiecare ordin de lucru, apărând în aceeași ordine ca |"
+#~ "MO|-urile corespunzătoare."
+
+#~ msgid ""
+#~ "By signing in to the Odoo *Shop Floor* module as *operators*, employees "
+#~ "are able to track the amount of time they spend working on each work "
+#~ "order."
+#~ msgstr ""
+#~ "Conectându-se la modulul Odoo *Shop Floor* ca *operatori*, angajații pot "
+#~ "urmări timpul petrecut lucrând la fiecare comandă de lucru."
+
+#~ msgid ""
+#~ "Odoo tracks the time it takes to complete each work order, as well as the "
+#~ "time each operator spends on each work order."
+#~ msgstr ""
+#~ "Conectându-se la modulul Odoo *Shop Floor* ca *operatori*, angajații pot "
+#~ "urmări timpul petrecut lucrând la fiecare comandă de lucru."
+
+#~ msgid "Operator sign in"
+#~ msgstr "Conectați-vă operatorului"
+
+#~ msgid ""
+#~ "To sign in to the *Shop Floor* module as an operator, sign in to the Odoo "
+#~ "database, and open the :menuselection:`Shop Floor` module. The employee "
+#~ "profile that is signed in to the database is automatically signed in as "
+#~ "an operator."
+#~ msgstr ""
+#~ "Pentru a vă conecta la modulul *Shop Floor* ca operator, conectați-vă la "
+#~ "baza de date Odoo și deschideți modulul :menuselection:`Shop Floor`. "
+#~ "Profilul de angajat care este conectat la baza de date este conectat "
+#~ "automat ca operator."
+
+#~ msgid ""
+#~ "All active operators are listed in the operator panel on the left side of "
+#~ "the module. The panel can be opened or collapsed by clicking "
+#~ "the :guilabel:`show/hide panel (white square with black column on left "
+#~ "side)` button, located in the top-left corner of the module."
+#~ msgstr ""
+#~ "Toți operatorii activi sunt listați în panoul operator din partea stângă "
+#~ "a modulului. Panoul poate fi deschis sau restrâns făcând clic pe "
+#~ "butonul :guilabel:`afișare/ascunde panoul (pătrat alb cu coloană neagră "
+#~ "în partea stângă)`, situat în colțul din stânga sus al modulului."
+
+#~ msgid ""
+#~ "The operator panel in the Shop Floor module, with the show/hide panel "
+#~ "button above it."
+#~ msgstr ""
+#~ "Panoul operator din modulul Shop Floor, cu butonul de afișare/ascunde "
+#~ "panou deasupra acestuia."
+
+#~ msgid ""
+#~ "To sign in to *Shop Floor* as a different employee, click "
+#~ "the :guilabel:`+ Add Operator` button at the bottom of the panel. Doing "
+#~ "so opens the :guilabel:`Select Employee` pop-up window, which lists every "
+#~ "employee that is able to sign in to the module."
+#~ msgstr ""
+#~ "Pentru a vă conecta la *Shop Floor* ca alt angajat, faceți clic pe "
+#~ "butonul :guilabel:`+ Adaugă operator` din partea de jos a panoului. "
+#~ "Procedând astfel, se deschide fereastra pop-up :guilabel:`Select "
+#~ "Employee`, care listează fiecare angajat care se poate conecta la modul."
+
+#~ msgid ""
+#~ "Click on a specific employee to sign in using their profile. If no PIN "
+#~ "code is required to sign in as that employee, the profile will be signed "
+#~ "in automatically."
+#~ msgstr ""
+#~ "Faceți clic pe un anumit angajat pentru a vă conecta folosind profilul "
+#~ "său. Dacă nu este necesar niciun cod PIN pentru a vă conecta ca angajat, "
+#~ "profilul va fi conectat automat."
+
+#~ msgid ""
+#~ "If a PIN code is required, a :guilabel:`Password?` pop-up window appears, "
+#~ "showing a number pad, from which the code can be entered. Enter the code "
+#~ "using the number pad, and click :guilabel:`Confirm` to sign in to the "
+#~ "*Shop Floor* module."
+#~ msgstr ""
+#~ "Dacă este necesar un cod PIN, apare o fereastră pop-up :guilabel:`Parolă?"
+#~ "`, care afișează o tastatură numerică, din care poate fi introdus codul. "
+#~ "Introduceți codul folosind tastatura numerică și faceți clic "
+#~ "pe :guilabel:`Confirm` pentru a vă conecta la modulul *Shop Floor*."
+
+#~ msgid ""
+#~ "The \"Password?\" pop-up window, which is used to enter an operator PIN "
+#~ "code."
+#~ msgstr ""
+#~ "Parola?\" fereastra pop-up, care este folosită pentru a introduce un cod "
+#~ "PIN al operatorului."
+
+#~ msgid ""
+#~ "A PIN code can be set for each employee, which must be entered each time "
+#~ "they sign in to the *Shop Floor* module, check in or out in the *Kiosk "
+#~ "Mode* of the *Attendances* application, or sign in as a cashier in the "
+#~ "*Point of Sale* application."
+#~ msgstr ""
+#~ "Se poate seta un cod PIN pentru fiecare angajat, care trebuie introdus de "
+#~ "fiecare dată când se conectează la modulul *Shop Floor*, se înregistrează "
+#~ "sau se înregistrează în *Modul Chioșc* al aplicației *Prezențe* sau se "
+#~ "conectează ca casier în aplicația *Punctul de vânzare*."
+
+#~ msgid ""
+#~ "To set an employee PIN, navigate to the :menuselection:`Employees` app, "
+#~ "and select a specific employee. At the bottom of the employee's form, "
+#~ "click on the :guilabel:`HR Settings` tab, and enter a numerical code in "
+#~ "the :guilabel:`PIN Code` field."
+#~ msgstr ""
+#~ "Pentru a seta un PIN pentru angajat, navigați la "
+#~ "aplicația :menuselection:`Angajați` și selectați un anumit angajat. În "
+#~ "partea de jos a formularului angajatului, faceți clic pe "
+#~ "fila :guilabel:`Setări HR` și introduceți un cod numeric în "
+#~ "câmpul :guilabel:`Cod PIN`."
+
+#~ msgid ""
+#~ "Once an employee is signed in to the module, their name appears in the "
+#~ "operator panel, along with every other employee that has signed in. While "
+#~ "the panel can list multiple employees, only one employee can be active at "
+#~ "any given time, on a single instance of the *Shop Floor* module."
+#~ msgstr ""
+#~ "Odată ce un angajat este conectat la modul, numele acestuia apare în "
+#~ "panoul operator, împreună cu fiecare alt angajat care s-a conectat. În "
+#~ "timp ce panoul poate lista mai mulți angajați, un singur angajat poate fi "
+#~ "activ la un moment dat, pe un singur angajat. instanță a modulului *Shop "
+#~ "Floor*."
+
+#~ msgid ""
+#~ "Click on an employee's name to make their profile active. The active "
+#~ "employee appears highlighted in blue, while employees that are signed in, "
+#~ "but not active, have their names faded out."
+#~ msgstr ""
+#~ "Faceți clic pe numele unui angajat pentru a-și activa profilul. Angajatul "
+#~ "activ apare evidențiat în albastru, în timp ce angajații care sunt "
+#~ "conectați, dar nu sunt activi, au numele lor estompate."
+
+#~ msgid ""
+#~ "To sign out a specific employee from the module, click the :guilabel:`X "
+#~ "(remove)` button next to their name, in the operator panel."
+#~ msgstr ""
+#~ "Pentru a deconecta un anumit angajat din modul, faceți clic pe "
+#~ "butonul :guilabel:`X (eliminați)` de lângă numele acestuia, în panoul "
+#~ "operator."
+
+#~ msgid ""
+#~ "To track time spent working on a work order, begin by selecting the "
+#~ "employee working on it from the operator panel."
+#~ msgstr ""
+#~ "Pentru a urmări timpul petrecut lucrând la o comandă de lucru, începeți "
+#~ "prin a selecta angajatul care lucrează la aceasta din panoul operator."
+
+#~ msgid ""
+#~ "Next, navigate to the page for the work center where the work order is "
+#~ "scheduled to be carried out. This can be done by selecting the work "
+#~ "center from the top navigation in the *Shop Floor* module, or by clicking "
+#~ "the name of the work center on the card for the manufacturing order (MO) "
+#~ "that the work order is a part of."
+#~ msgstr ""
+#~ "Apoi, navigați la pagina pentru centrul de lucru în care este programată "
+#~ "să fie executată comanda de lucru. Acest lucru se poate face selectând "
+#~ "centrul de lucru din navigarea de sus în modulul *Shop Floor* sau făcând "
+#~ "clic pe numele centrului de lucru de pe cardul pentru comanda de "
+#~ "fabricație (MO) din care face parte comanda de lucru."
+
+#~ msgid ""
+#~ "On the page for the work center, find the card for the work order. Once "
+#~ "work begins, click the header of the work order card to start timing the "
+#~ "duration it takes to complete. This duration is displayed by a timer on "
+#~ "the header of the work order card, which tracks the collective time spent "
+#~ "working on the work order, by all employees."
+#~ msgstr ""
+#~ "Pe pagina pentru centrul de lucru, găsiți cardul pentru comanda de lucru. "
+#~ "Odată ce începe munca, faceți clic pe antetul cardului de comandă de "
+#~ "lucru pentru a începe să cronometrați durata necesară pentru finalizare. "
+#~ "Această durată este afișată printr-un cronometru pe antetul cardului "
+#~ "comenzii de lucru, care urmărește timpul colectiv petrecut lucrând la "
+#~ "comanda de lucru, de către toți angajații."
+
+#~ msgid ""
+#~ "In addition, the reference number of the work order appears in the "
+#~ "operator panel, under the name of the employee working on it, along with "
+#~ "a second timer, which tracks the amount of time the employee has spent on "
+#~ "the work order individually. This timer only reflects work done during "
+#~ "the current session, even if the employee has previously worked on the "
+#~ "work order."
+#~ msgstr ""
+#~ "În plus, în panoul operatorului apare numărul de referință al comenzii de "
+#~ "lucru, sub numele angajatului care lucrează la acesta, împreună cu un al "
+#~ "doilea cronometru, care urmărește individual timpul petrecut de angajat "
+#~ "cu comanda de lucru. Acest cronometru reflectă doar munca efectuată în "
+#~ "timpul sesiunii curente, chiar dacă angajatul a lucrat anterior la "
+#~ "comanda de lucru."
+
+#~ msgid ""
+#~ "Employees are able to work on multiple work orders simultaneously, and "
+#~ "track their time for each. The reference number for each work order being "
+#~ "worked on appears below the employee's name, along with a timer."
+#~ msgstr ""
+#~ "Angajații pot lucra la mai multe comenzi simultan și pot urmări timpul "
+#~ "lor pentru fiecare. Numărul de referință pentru fiecare comandă de lucru "
+#~ "la care se lucrează apare sub numele angajatului, împreună cu un "
+#~ "cronometru."
+
+#~ msgid ""
+#~ "To pause the timer on the work order card, and remove the work order from "
+#~ "below the employee's name on the operator panel, click the header a "
+#~ "second time."
+#~ msgstr ""
+#~ "Pentru a întrerupe cronometrul de pe cardul comenzii de lucru și a "
+#~ "elimina comanda de lucru de sub numele angajatului de pe panoul operator, "
+#~ "faceți clic pe antet a doua oară."
+
+#~ msgid ""
+#~ "Once the work order is completed, click the :guilabel:`Mark as Done` "
+#~ "button at the bottom of the work order card, which causes the card to "
+#~ "fade away. If the timer is still active, it stops once the card "
+#~ "disappears completely."
+#~ msgstr ""
+#~ "Odată ce comanda de lucru este finalizată, faceți clic pe "
+#~ "butonul :guilabel:`Marcați ca gata` din partea de jos a cardului comenzii "
+#~ "de lucru, ceea ce face ca cardul să dispară. Dacă cronometrul este încă "
+#~ "activ, acesta se oprește odată ce cardul dispare complet."
+
+#~ msgid ""
+#~ "To view the duration of a work order, navigate "
+#~ "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+#~ "Orders`, and select an |MO|."
+#~ msgstr ""
+#~ "Pentru a vedea durata unei comenzi de lucru, navigați "
+#~ "la :menuselection:`Aplicația de fabricație --> Operațiuni --> Comenzi de "
+#~ "fabricație` și selectați un |MO|."
+
+#~ msgid ""
+#~ "To view and select |MOs| that have been completed and marked as *Done*, "
+#~ "remove the :guilabel:`To Do` filter from the :guilabel:`Search...` bar, "
+#~ "by clicking on the :guilabel:`X (close)` button on the right side of the "
+#~ "filter."
+#~ msgstr ""
+#~ "Pentru a vizualiza și selecta |MO-uri| care au fost completate și marcate "
+#~ "ca *Terminat*, eliminați filtrul :guilabel:`To Do` din "
+#~ "bara :guilabel:`Căutare...`, făcând clic pe butonul :guilabel:`X "
+#~ "(închidere)` de pe partea dreaptă a filtrului."
+
+#~ msgid ""
+#~ "On the page for the |MO|, click on the :guilabel:`Work Orders` tab to see "
+#~ "a list of all work orders included in the |MO|. The time it took to "
+#~ "complete each work order is displayed in the :guilabel:`Real Duration` "
+#~ "column of the tab."
+#~ msgstr ""
+#~ "Pe pagina pentru |MO|, faceți clic pe fila :guilabel:`Comenzi de lucru` "
+#~ "pentru a vedea o listă cu toate comenzile de lucru incluse în |MO|. "
+#~ "Timpul necesar pentru a finaliza fiecare comandă de lucru este afișat în "
+#~ "coloana :guilabel:`Durata reală` a filei."
+
+#~ msgid ""
+#~ "The *Real Duration* represents the total time spent working on the work "
+#~ "order by all workers who worked on it. It includes time tracked in the "
+#~ "*Shop Floor* module, as well as time tracked on the :guilabel:`Work "
+#~ "Orders` tab of the |MO| itself."
+#~ msgstr ""
+#~ "*Durata reală* reprezintă timpul total petrecut lucrând la comanda de "
+#~ "lucru de către toți lucrătorii care au lucrat la aceasta. Include timpul "
+#~ "urmărit în modulul *Shop Floor*, precum și timpul urmărit în "
+#~ "fila :guilabel:`Comenzi de lucru` din |MO| în sine."
+
+#~ msgid ""
+#~ ":guilabel:`Green`: a replenishment order must be generated to keep stock "
+#~ "at the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`Verde`: trebuie generată o comandă de reaprovizionare pentru a "
+#~ "menține stocul la :guilabel:`Ținta de stoc de siguranță`."
 
 #~ msgid "Install"
 #~ msgstr "Instalare"

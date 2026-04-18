@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-20 18:30+0000\n"
+"POT-Creation-Date: 2026-04-17 18:30+0000\n"
 "PO-Revision-Date: 2026-04-03 23:10+0000\n"
 "Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -42400,6 +42400,7 @@ msgstr ""
 "indem Sie :menuselection:`Vorgänge --> Arbeitsaufträge` auswählen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:17
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:55
 msgid ":doc:`../basic_setup/bill_configuration`"
 msgstr ":doc:`../basic_setup/bill_configuration`"
 
@@ -43084,31 +43085,19 @@ msgstr "Arbeitsauftragsabhängigkeiten"
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:7
 msgid ""
 "When manufacturing certain products, specific operations may need to be "
-"completed before others can begin. In order to ensure operations are carried "
-"out in the correct order, Odoo *Manufacturing* features a *work order "
-"dependencies* setting. Enabling this setting allows for operations on a Bill "
-"of Materials (BoM) to be *blocked* by other operations that should occur "
-"first."
+"completed before others can begin. To ensure operations are carried out in "
+"the correct order, the **Manufacturing** app features a *work order "
+"dependencies* setting. Enabling this setting blocks the bill of materials "
+"(BoM) operations when other operations should occur first."
 msgstr ""
-"Bei der Herstellung bestimmter Produkte müssen bestimmte Vorgänge "
-"abgeschlossen sein, bevor andere beginnen können. Um sicherzustellen, dass "
-"die Vorgänge in der richtigen Reihenfolge ausgeführt werden, verfügt Odoo "
-"*Fertigung* über die Einstellung *Arbeitsfolgeabhängigkeiten*. Wenn Sie "
-"diese Einstellung aktivieren, können Vorgänge in einer Stückliste durch "
-"andere Vorgänge, die zuerst ausgeführt werden sollen, *gesperrt* werden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:15
 msgid ""
 "The *work order dependencies* setting is not enabled by default. To enable "
-"it, begin by navigating to :menuselection:`Manufacturing --> Configuration --"
-"> Settings`. Then, enable the :guilabel:`Work Orders` setting, if it is not "
-"already active."
+"it, begin by navigating to :menuselection:`Manufacturing app --> "
+"Configuration --> Settings`. Then, enable the :guilabel:`Work Orders` "
+"setting if it is not already active."
 msgstr ""
-"Die Einstellung *Arbeitsauftragsabhängigkeiten* ist nicht standardmäßig "
-"aktiviert. Navigieren Sie zur Aktivierung der Funktion "
-"zu :menuselection:`Fertigung --> Konfiguration --> Einstellungen`. "
-"Aktivieren Sie die Einstellungen :guilabel:`Arbeitsaufträge`, wenn sie noch "
-"nicht aktiviert wurde."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:19
 msgid ""
@@ -43128,106 +43117,69 @@ msgstr "Abhängigkeiten zur Stückliste hinzufügen"
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:26
 msgid ""
 "Work order dependencies are configured on a product's |BOM|. To do so, "
-"navigate to :menuselection:`Manufacturing --> Products --> Bills of "
+"navigate to :menuselection:`Manufacturing app --> Products --> Bills of "
 "Materials`, then select a |BOM|, or create a new one by "
 "clicking :guilabel:`New`."
 msgstr ""
-"Abhängigkeiten von Arbeitsaufträgen werden für die Stückliste eines Produkts "
-"konfiguriert. Navigieren Sie dazu zu :menuselection:`Fertigung --> Produkte "
-"--> Stücklisten` und wählen Sie eine Stückliste aus, oder erstellen Sie eine "
-"neue, indem Sie auf :guilabel:`Neu` klicken."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:30
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:94
-msgid "Learn more"
-msgstr "Mehr erfahren"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:32
 msgid ""
-"For a complete guide on how to properly configure a new |BOM|, see the "
-"documentation on :doc:`creating a bill of materials <../basic_setup/"
-"bill_configuration>`."
+"On the |BOM|, open the *Miscellaneous* tab, then select "
+"the :guilabel:`Operation Dependencies` checkbox. The :guilabel:`Blocked By` "
+"option becomes available under the :icon:`oi-settings-"
+"adjust` :guilabel:`(settings)` menu of the *Operations* tab."
 msgstr ""
-"Eine vollständige Anleitung zur korrekten Konfiguration einer neuen "
-"Stückliste finden Sie in der Dokumentation :doc:`Eine Stückliste "
-"erstellen<../basic_setup/bill_configuration>`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:35
-msgid ""
-"On the |BOM|, click on the :guilabel:`Miscellaneous` tab, then enable "
-"the :guilabel:`Operation Dependencies` checkbox. This makes a "
-"new :guilabel:`Blocked By` option available in the settings of "
-"the :guilabel:`Operations` tab."
-msgstr ""
-"Klicken Sie auf der Stückliste auf den Reiter :guilabel:`Sonstiges` und "
-"aktivieren Sie die :guilabel:`Vorgangsabhängigkeiten`. Dadurch erscheint "
-"eine neue Option :guilabel:`Blockiert durch` in den Einstellungen des "
-"Reiters :guilabel:`Vorgänge`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The Operation Dependencies checkbox on the Miscellaneous tab of a BoM."
 msgstr ""
 "Das Kästchen „Vorgangsabhängigkeiten“ im Reiter „Sonstiges“ einer Stückliste."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:37
 msgid ""
-"Next, click on the :guilabel:`Operations` tab. On the top-right of the tab, "
-"click on the tab's :guilabel:`settings` button, then enable "
-"the :guilabel:`Blocked By` checkbox. This makes a :guilabel:`Blocked By` "
-"field appear for each operation on the :guilabel:`Operations` tab."
+"Open the *Operations* tab. Click the :icon:`oi-settings-"
+"adjust` :guilabel:`(settings)` icon, then enable the :guilabel:`Blocked By` "
+"checkbox. The :guilabel:`Blocked By` field appears for each operation in the "
+"tab."
 msgstr ""
-"Klicken Sie dann auf den Reiter :guilabel:`Vorgänge`. Klicken Sie rechts auf "
-"dem Reiter auf die Schaltfläche :guilabel:`Einstellungen` und aktivieren "
-"Sie :guilabel:`Blockiert durch`. Dadurch erscheint :guilabel:`Blockiert "
-"durch`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The settings for the Operations tab on a BoM."
 msgstr "Die Einstellunge des Reiters „Vorgänge“ auf einer Stückliste."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:44
 msgid ""
 "In the line of the operation that should be blocked by another operation, "
-"click the :guilabel:`Blocked By` field, and an :guilabel:`Open: Operations` "
-"pop-up window appears. In the :guilabel:`Blocked By` drop-down field on the "
-"pop-up window, select the blocking operation that must be completed *before* "
-"the operation that is blocked."
+"click the :guilabel:`Blocked By` field. The *Open: Operations* pop-up window "
+"opens. In the :guilabel:`Blocked By` field, select the blocking operation "
+"that must be completed *before* the operation that is blocked."
 msgstr ""
-"Klicken Sie in der Zeile des Vorgangs, der durch einen anderen Vorgang "
-"blockiert werden soll, auf das Feld :guilabel:`Blockiert durch` und "
-"ein :guilabel:`Öffnen: Vorgänge` erscheint ein Pop-up-Fenster. Wählen Sie im "
-"Dropdown-Feld :guilabel:`Blockiert durch` des Pop-up-Fensters den "
-"blockierenden Vorgang aus, der *vor* dem blockierten Vorgang abgeschlossen "
-"werden muss."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The Blocked By drop-down field for an operation on a BoM."
 msgstr ""
 "Das Dropdown-Feld „Blockiert durch“ für eine Vorgang auf einer Stückliste."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:60
-msgid "Finally, save the |BOM| by clicking :guilabel:`Save`."
-msgstr "Klicken Sie anschließend auf :guilabel:`Speichern`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:52
+msgid ""
+"Finally, save the |BOM| by clicking :icon:`fa-cloud-upload` :guilabel:`(Save "
+"manually)`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:58
 msgid "Plan work orders using dependencies"
 msgstr "Arbeitsaufträge mit Abhängigkeiten planen"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:60
 msgid ""
-"Once work order dependencies have been configured on a |BOM|, Odoo "
-"*Manufacturing* is able to plan when work orders are scheduled, based on "
-"their dependencies. To plan the work orders for a manufacturing order, begin "
-"by navigating to :menuselection:`Manufacturing --> Operations --> "
-"Manufacturing Orders`."
+"After work order dependencies are configured for a |BOM|, the "
+"*Manufacturing* app can plan work order schedules based on those "
+"dependencies. To plan the work orders for a manufacturing order, navigate "
+"to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+"Orders`."
 msgstr ""
-"Sobald die Abhängigkeiten von Arbeitsaufträgen auf einer Stückliste "
-"konfiguriert sind, kann Odoo *Fertigung* planen, wann Arbeitsaufträge auf "
-"der Grundlage ihrer Abhängigkeiten eingeplant werden. Um die Arbeitsaufträge "
-"für einen Fertigungsauftrag zu planen, navigieren Sie zunächst "
-"zu :menuselection:`Fertigung --> Vorgänge --> Fertigungsaufträge`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:64
 msgid ""
 "Next, select a manufacturing order for a product with work order "
 "dependencies set on its |BOM|, or create a new manufacturing order by "
@@ -43242,60 +43194,40 @@ msgstr ""
 "Arbeitsauftragsabhängigkeiten aus dem Dropdown-Feld :guilabel:`Stückliste` "
 "und klicken dann auf :guilabel:`Bestätigen`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:69
 msgid ""
-"After confirming the manufacturing order, select the :guilabel:`Work Orders` "
+"After confirming the manufacturing order, open the :guilabel:`Work Orders` "
 "tab to view the work orders required to complete it. Any work orders that "
-"are *not* blocked by a different work order display a `Ready` tag in "
-"the :guilabel:`Status` section."
+"are *not* blocked by a different work order display a :guilabel:`Ready` tag "
+"in the *Status* column."
 msgstr ""
-"Nachdem Sie den Fertigungsauftrag bestätigt haben, wählen Sie den "
-"Reiter :guilabel:`Arbeitsaufträge`, um die Arbeitsaufträge anzuzeigen, die "
-"für die Fertigstellung des Auftrags erforderlich sind. Alle Arbeitsaufträge, "
-"die *nicht* durch einen anderen Arbeitsauftrag blockiert sind, werden im "
-"Abschnitt :guilabel:`Status` mit einem `Bereit` gekennzeichnet."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:73
 msgid ""
-"Work orders that are blocked by one or more work orders display a `Waiting "
-"for another WO` tag instead. Once the blocking work order(s) are completed, "
-"the tag updates to `Ready`."
+"Work orders that are blocked by other work orders display "
+"a :guilabel:`Waiting for another WO` tag instead. After the blocking work "
+"orders are completed, the tag updates to :guilabel:`Ready`."
 msgstr ""
-"Bei Arbeitsaufträgen, die durch einen oder mehrere Arbeitsaufträge blockiert "
-"sind, wird stattdessen die Markierung `Wartet auf anderen Arbeitsauftrag` "
-"angezeigt. Sobald der oder die blockierten Arbeitsaufträge abgeschlossen "
-"sind, wird die Markierung auf `Bereit` aktualisiert."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The status tags for work orders on a manufacturing order."
 msgstr "Die Statusanzeige für Arbeitsaufträge auf einem Fertigungsauftrag."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:79
 msgid ""
 "To schedule the manufacturing order's work orders, click "
 "the :guilabel:`Plan` button at the top of the page. After doing so, "
-"the :guilabel:`Scheduled Start Date` field for each work order on "
-"the :guilabel:`Work Orders` tab auto-fills with the scheduled start date and "
-"time. A blocked work order is scheduled at the end of the time period "
-"specified in the :guilabel:`Expected Duration` field of the work order that "
-"precedes it."
+"the :guilabel:`Start` field for each work order on the *Work Orders* tab "
+"populates with a scheduled start date and time. A blocked work order is "
+"scheduled at the end of the time period specified in the :guilabel:`Expected "
+"Duration` field of the work order that precedes it."
 msgstr ""
-"Um die Arbeitsaufträge des Fertigungsauftrags zu planen, klicken Sie auf die "
-"Schaltfläche :guilabel:`Planen` oben auf der Seite. Daraufhin wird das "
-"Feld :guilabel:`Geplantes Startdatum` für jeden Arbeitsauftrag im "
-"Reiter :guilabel:`Arbeitsaufträge` automatisch mit dem geplanten Startdatum "
-"und der Uhrzeit ausgefüllt. Ein blockierter Arbeitsauftrag wird am Ende des "
-"Zeitraums eingeplant, der im Feld :guilabel:`Erwartete Dauer` des "
-"vorangegangenen Arbeitsauftrags angegeben ist."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
-msgid ""
-"The Scheduled Start Date field for work orders on a manufacturing order."
+msgid "The Start field for work orders on a manufacturing order."
 msgstr ""
-"Das Feld „Geplantes Startdatum” für Arbeitsaufträge auf einem "
-"Fertigungsauftrag."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:97
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:88
 msgid ""
 "A manufacturing order is created for Product A. The manufacturing order has "
 "two operations: Cut and Assemble. Each operation has an expected duration of "
@@ -43306,7 +43238,7 @@ msgstr ""
 "Vorgang hat eine voraussichtliche Dauer von 60 Minuten, und der Vorgang "
 "Zusammenbau wird durch den Vorgang „Schneiden“ blockiert."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:92
 msgid ""
 "The :guilabel:`Plan` button for the manufacturing order is clicked at 1:30 "
 "pm, and the Cut operation is scheduled to begin immediately. Since the Cut "
@@ -43318,36 +43250,53 @@ msgstr ""
 "Schneidevorgang eine voraussichtliche Dauer von 60 Minuten hat, wird der "
 "Beginn des Montagevorgangs auf 14:30 Uhr festgelegt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:106
-msgid "Planning by workcenter"
-msgstr "Planung nach Arbeitsplatz"
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:97
+msgid "Planning views"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:99
+msgid ""
+"Two work order planning views are available to display a visual "
+"representation of how work orders are planned:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:102
+msgid ""
+":menuselection:`Manufacturing app --> Planning --> Planning by Production`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:103
+msgid ""
+":menuselection:`Manufacturing app --> Planning --> Planning by Workcenter`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:105
+msgid ""
+"Both open a *Work Orders Planning* page. This page shows a timeline of all "
+"the work orders scheduled for each operation."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:108
 msgid ""
-"To see a visual representation of how work orders are planned, navigate to "
-"the :guilabel:`Work Orders Planning` page by going "
-"to :menuselection:`Manufacturing --> Planning --> Planning by Workcenter`. "
-"This page shows a timeline of all the work orders scheduled for each "
-"operation."
+":guilabel:`Planning by Production` is best used to view work orders grouped "
+"by manufacturing order. This view is ideal for providing estimated delivery "
+"times or determining if an order will be completed on schedule."
 msgstr ""
-"Um eine visuelle Darstellung der Planung von Arbeitsaufträgen zu sehen, "
-"gehen Sie auf die Seite :guilabel:`Arbeitsauftragsplanung`, indem Sie "
-"auf :menuselection:`Fertigung --> Planung --> Planung nach Arbeitsplatz` "
-"gehen. Auf dieser Seite sehen Sie eine Zeitleiste mit allen "
-"Arbeitsaufträgen, die für jeden Vorgang geplant sind."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:112
 msgid ""
-"If one work order is blocked by the completion of another, the work order "
-"that is blocked is shown as scheduled to start after the work order blocking "
-"it. In addition, an arrow connects the two work orders, leading from the "
-"blocking operation to the blocked operation."
+":guilabel:`Planning by Workcenter` is best used to view work orders grouped "
+"by the work center at which they take place. This view can help identify "
+"overloaded machines or bottlenecks in production."
 msgstr ""
-"Wenn ein Arbeitsauftrag durch den Abschluss eines anderen blockiert wird, "
-"wird der blockierte Arbeitsauftrag als für den Start nach dem blockierten "
-"Arbeitsauftrag geplant angezeigt. Außerdem werden die beiden Arbeitsaufträge "
-"durch einen Pfeil verbunden, der vom blockierten Vorgang zum blockierten "
-"Vorgang führt."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:115
+msgid ""
+"In both views, if one work order is blocked by the completion of another, "
+"the work order that is blocked is shown as scheduled to start after the work "
+"order that blocks it. In addition, a grey arrow connects the two work "
+"orders, leading from the blocking operation to the blocked operation."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid ""
@@ -43355,6 +43304,149 @@ msgid ""
 msgstr ""
 "Der Pfeil, der einen blockierten Arbeitsauftrag mit dem blockierenden "
 "Arbeitsauftrag verbindet."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:123
+msgid "Resolving inconsistencies"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:125
+msgid ""
+"The arrows on the *Work Orders Planning* page can also point out "
+"inconsistencies in the manufacturing order and how to correct them. When the "
+"arrow changes color, an inconsistency has been introduced."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:130
+msgid "A workshop is manufacturing a table in three work orders:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:132
+msgid "Assemble"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:133
+msgid "Apply finish"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:134
+msgid "Dry"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:136
+msgid ""
+"If the third work order is moved before the second work order, the third "
+"work order and the arrow pointing to it turn red to indicate that the "
+"planned schedule violates the defined work order dependency."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:0
+msgid "A red line appears between two work orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:143
+msgid "Inconsistencies can be resolved in three ways:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:145
+msgid ":ref:`manufacturing/advanced_configuration/edit-wo-schedule`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:146
+msgid ":ref:`manufacturing/advanced_configuration/use-icons`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:147
+msgid ":ref:`manufacturing/advanced_configuration/in-mo`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:152
+msgid "Editing the work order schedule"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:154
+msgid ""
+"To resolve the scheduling conflict and keep the dependency, select the red "
+"work order. Click the :guilabel:`Edit` button, and the *Open* window "
+"appears. Click the red :icon:`fa-exclamation-"
+"triangle` :guilabel:`(exclamation triangle)` icon next to "
+"the :guilabel:`Start Date`, and the *Scheduling Information* pop-up window "
+"appears."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
+msgid "Click the Replan button to reschedule the inconsistent work order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:162
+msgid ""
+"Click the :guilabel:`Replan` button, then click :guilabel:`Save & Close` to "
+"save the changes to the work order. The work order is rescheduled after the "
+"previous work order in a way that maintains the work order dependency."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:169
+msgid "Using icons on the line"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:171
+msgid ""
+"When hovering over the connecting line, three icons appear. The left and "
+"right arrows can be used to reschedule work orders to help maintain the "
+"correct work order dependencies."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
+msgid ""
+"A left arrow, X, and right arrow appear on the line for out-of-order work "
+"orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:177
+msgid ""
+"**Left arrow**: The work order is scheduled to be performed earlier than its "
+"linked step."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:178
+msgid ""
+"**Cancel button**: When clicking this button, Odoo assumes the dependencies "
+"no longer apply due to an exception, and the link between the steps is "
+"broken. To remove the dependency, hover over the connecting line. Click the "
+"**X** (cancel) button that appears, and the arrow between the two work "
+"orders disappears."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:182
+msgid ""
+"**Right arrow**: The work order is scheduled to be performed later than its "
+"linked step."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:187
+msgid "In the manufacturing order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:189
+msgid ""
+"Problems with scheduled work orders are visible in the *Work Orders* tab of "
+"the manufacturing order. Problems are indicated by the red :icon:`fa-"
+"exclamation-triangle` :guilabel:`(exclamation triangle)` icon on the work "
+"order line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
+msgid ""
+"A scheduling problem shows in the second operation in a group of three work "
+"orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:196
+msgid ""
+"Click the red :icon:`fa-exclamation-triangle` :guilabel:`(exclamation "
+"triangle)` icon, then click :guilabel:`Replan` in the *Scheduling "
+"Information* pop-up window. The work order is rescheduled to maintain its "
+"dependencies."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup.rst:5
 msgid "Basic setup"
@@ -44160,6 +44252,10 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:None
 msgid "The Operations tab on a bill of materials."
 msgstr "Der Reiter „Vorgänge“ auf einer Stückliste."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:94
+msgid "Learn more"
+msgstr "Mehr erfahren"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:96
 msgid ""
@@ -46830,51 +46926,101 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:13
 msgid ""
-"The *Shop Floor* module is installed alongside the *Manufacturing* app. It "
-"cannot be installed by itself. To install the *Manufacturing* app, navigate "
-"to :menuselection:`Apps`, search for `manufacturing` in "
-"the :guilabel:`Search...` bar, and then click :guilabel:`Install` on "
-"the :guilabel:`Manufacturing` app card."
+"The *Shop Floor* module is :ref:`installed <general/install>` alongside the "
+"*Manufacturing* app."
 msgstr ""
-"Das *Werkstatt*-Modul wird zusammen mit der *Fertigungsapp* installiert. Es "
-"kann nicht eigenständig installiert werden. Um die *Fertigungsapp* zu "
-"installieren, navigieren Sie zu :menuselection:`Apps`, suchen Sie in der "
-"Leiste :guilabel:`Suchen ...` nach `Fertigung` und klicken Sie dann "
-"auf :guilabel:`Installieren` auf der Karte der :guilabel:`Fertigungsapp`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:19
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:16
+msgid "Opening Shop Floor"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:18
+msgid "*Shop Floor* can be opened in the following ways:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:20
 msgid ""
-"The *Shop Floor* module replaces the tablet view functionality of the "
-"*Manufacturing* app, and is only available in Odoo versions 16.4 and later."
+"Click the :guilabel:`Shop Floor` module icon from the main Odoo dashboard."
 msgstr ""
-"Das *Werkstatt*-Modul ersetzt die Tablet-Ansichtsfunktion der "
-"*Fertigungsapp* und ist nur in Odoo-Versionen 16.4 und höher verfügbar."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:22
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:21
 msgid ""
-"To check the version number of an Odoo database, navigate "
-"to :menuselection:`Settings` and scroll down to the :guilabel:`About` "
-"section at the bottom of the page. The version number is displayed there."
+"Click the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart button on a "
+"manufacturing order. This will open the manufacturing order in the *Shop "
+"Floor* module."
 msgstr ""
-"Um die Versionsnummer einer Odoo-Datenbank zu überprüfen, navigieren Sie "
-"zu :menuselection:`Einstellungen` und scrollen Sie zum "
-"Abschnitt :guilabel:`Über` am Ende der Seite. Dort wird die Versionsnummer "
-"angezeigt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:26
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:25
+msgid "Selecting work centers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:27
 msgid ""
-"To switch to a newer version of Odoo, see the documentation "
-"on :doc:`upgrading a database <../../../../administration/upgrade>`."
+"When *Shop Floor* is opened on a workstation, it is possible to select work "
+"centers to assign to it."
 msgstr ""
-"Um zu einer neueren Version von Odoo zu wechseln, lesen Sie die "
-"Dokumentation zu :doc:`Upgrade einer Datenbank <../../../../administration/"
-"upgrade>`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:29
+msgid ""
+"Open the *Shop Floor* app from either the main Odoo dashboard or from "
+"the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart button on a "
+"manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:32
+msgid ""
+"If it is the workstation's first time opening *Shop Floor*, a window may "
+"open to allow a user to select work centers. If the window does not open, "
+"click the :icon:`fa-plus` :guilabel:`(Add)` icon next to the list of work "
+"centers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:36
+msgid ""
+"Select the work centers to assign to the workstation, then "
+"click :guilabel:`Confirm`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
+msgid "Select at least one work center to assign to the workstation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:42
+msgid "Installing Shop Floor on a workstation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:44
+msgid ""
+"*Shop Floor* can be installed in the Chrome browser of a workstation to "
+"limit its access to other Odoo applications."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:47
+msgid ""
+"First, open the *Shop Floor* app from either the main Odoo dashboard or from "
+"the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart button on a "
+"manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:50
+msgid ""
+"On the *Shop Floor* overview, a pop-up window to select work centers for the "
+"workstation may open. If it does not open, click the :icon:`fa-"
+"plus` :guilabel:`(Add)` icon next to the list of work centers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:54
+msgid ""
+"Click the :guilabel:`Install App` button. A new window will open. In this "
+"window, click the :guilabel:`Install` button to install the app in the "
+"workstation's browser."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:58
 msgid "Navigation"
 msgstr "Navigation"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:60
 msgid ""
 "*Shop Floor* is broken down into three main views, which can be selected "
 "from the navigation bar at the top of the module:"
@@ -46882,257 +47028,167 @@ msgstr ""
 "*Werkstatt* ist in drei Hauptansichten unterteilt, die Sie über die "
 "Navigationsleiste am oberen Rand des Moduls auswählen können:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:63
 msgid ""
-"The :guilabel:`All` page serves as the main dashboard for the module, and "
+"The :guilabel:`All MO` page serves as the module's main dashboard and "
 "displays information cards for |MOs|."
 msgstr ""
-"Die Seite :guilabel:`Alle` dient als Hauptdashboard für das Modul und zeigt "
-"Informationskarten für Fertigungsaufträge an."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:65
 msgid ""
-"Each work center also has a dedicated page, which shows information cards "
-"for work orders assigned to that work center. Work center pages can be "
-"toggled on or off by clicking the :guilabel:`+ (plus)` button in the "
+"Each work center also has a dedicated page that displays information cards "
+"for the work orders assigned to it. Work center pages can be toggled on or "
+"off by clicking the :icon:`fa-plus` :guilabel:`(plus)` icon in the "
 "navigation bar, selecting or deselecting them on the pop-up window that "
 "appears, and then clicking :guilabel:`Confirm`."
 msgstr ""
-"Jeder Arbeitsplatz hat auch eine eigene Seite, auf der Informationskarten "
-"für Arbeitsaufträge angezeigt werden, die diesem Arbeitsplatz zugeordnet "
-"sind. Sie können die Arbeitsplatzseiten ein- oder ausschalten, indem Sie in "
-"der Navigationsleiste auf die Schaltfläche :guilabel:`+ (Plus)` klicken, sie "
-"in dem daraufhin angezeigten Pop-up-Fenster auswählen oder abwählen und dann "
-"auf :guilabel:`Bestätigen` klicken."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:69
 msgid ""
-"The :guilabel:`My` page shows information cards for all work orders assigned "
-"to the employee whose profile is currently active in the operator panel on "
-"the left side of the module. Other than only showing work orders assigned to "
-"the active employee, this page functions the same as the pages for each work "
-"center."
+"The :guilabel:`My WO` page shows information cards for all work orders "
+"assigned to the employee whose profile is currently active in the operator "
+"panel on the left side of the module. This page functions largely the same "
+"as the pages for each work center, but it only shows work orders assigned to "
+"the active employee."
 msgstr ""
-"Die Seite :guilabel:`Meine` zeigt Informationskarten für alle "
-"Arbeitsaufträge, die dem Mitarbeiter zugewiesen sind, dessen Profil im "
-"Bedienfeld auf der linken Seite des Moduls gerade aktiv ist. Abgesehen "
-"davon, dass nur Arbeitsaufträge angezeigt werden, die dem aktiven "
-"Mitarbeiter zugeordnet sind, funktioniert diese Seite genauso wie die Seiten "
-"für die einzelnen Arbeitsplätze."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:47
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:75
 msgid ""
-"To isolate an |MO| or work order, so that no other orders appear, simply "
-"search the reference number of the |MO| in the :guilabel:`Search...` bar at "
-"the top of the module. This search filter remains active while switching "
-"between the different module views."
+"To isolate an |MO| or work order so that no other orders appear, search the "
+"reference number of the |MO| in the :guilabel:`Search` bar at the top of the "
+"module. This search filter remains active when switching between the "
+"different module views."
 msgstr ""
-"Um einen Auftrag zu isolieren, sodass keine anderen Aufträge angezeigt "
-"werden, suchen Sie einfach die Referenznummer des Auftrags in der "
-"Leiste :guilabel:`Suchen ...` oben im Modul. Dieser Suchfilter bleibt aktiv, "
-"wenn Sie zwischen den verschiedenen Modulansichten wechseln."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:79
 msgid ""
 "On the left side of the module is the operator panel, which shows all of the "
-"employees currently signed in to *Shop Floor*, and allows new employees to "
+"employees currently signed in to *Shop Floor* and allows new employees to "
 "sign in. The operator panel is always available in the module, regardless of "
-"which view is selected. It can be toggled on or off by clicking "
-"the :guilabel:`sidebar` button at the extreme left of the navigation bar."
+"the selected view. It can be toggled on or off by clicking the :icon:`oi-"
+"panel-right` :guilabel:`(sidebar)` button in the navigation bar."
 msgstr ""
-"Auf der linken Seite des Moduls befindet sich das Bedienfeld, in dem alle "
-"Mitarbeiter angezeigt werden, die derzeit bei *Werkstatt* angemeldet sind, "
-"und in dem sich neue Mitarbeiter anmelden können. Das Bedienerpanel ist im "
-"Modul immer verfügbar, unabhängig davon, welche Ansicht ausgewählt ist. Sie "
-"können es ein- oder ausschalten, indem Sie auf die "
-"Schaltfläche :guilabel:`Seitenleiste` ganz links in der Navigationsleiste "
-"klicken."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
-msgid ""
-"The \"sidebar\" button, which is used to toggle the operator panel on or off."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:85
+msgid "All MO page"
 msgstr ""
-"Die Schaltfläche \"Seitenleiste\", mit der Sie das Bedienfeld ein- oder "
-"ausschalten können."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:61
-msgid "All page"
-msgstr "Seite „Alle Arbeitsaufträge“"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:63
-msgid ""
-"By default, the :guilabel:`All` page shows an information card for every |"
-"MO| that is *ready to start*. An |MO| is considered ready to start once it "
-"has been confirmed, and all required components are available."
-msgstr ""
-"Standardmäßig wird auf der Seite :guilabel:`Alle` eine Informationskarte für "
-"jeden *bereiten* Fertigungsauftrag angezeigt. Ein Fertigungsauftrag gilt als "
-"startbereit, wenn er bestätigt wurde und alle erforderlichen Komponenten "
-"verfügbar sind."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:67
-msgid ""
-"To view every confirmed |MO| regardless of readiness, click "
-"the :guilabel:`x` button on the :guilabel:`Ready to Start` filter to remove "
-"it from the :guilabel:`Search...` bar."
-msgstr ""
-"Wenn Sie alle bestätigten Fertigungsaufträge unabhängig von der Bereitschaft "
-"anzeigen möchten, klicken Sie auf die Schaltfläche :guilabel:`x` auf dem "
-"Filter :guilabel:`Bereit`, um ihn aus der Leiste :guilabel:`Suchen ...` zu "
-"entfernen."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:71
-msgid "MO information card"
-msgstr "Informationskarte des Fertigungsauftrags"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:73
-msgid ""
-"An |MO| information card on the :guilabel:`All` page shows all of the "
-"relevant details of the associated |MO|, and also provides employees with "
-"options for processing the |MO|."
-msgstr ""
-"Eine Informationskarte auf der Seite :guilabel:`Alle` zeigt alle relevanten "
-"Details zum zugehörigen Fertigungsauftrag und bietet den Mitarbeitern "
-"außerdem Optionen zur Bearbeitung des Fertigungsauftrags."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:76
-msgid ""
-"The header for an |MO| card shows the |MO| number, the product and number of "
-"units being produced, and the status of the |MO|. If work has not yet begun "
-"on the |MO|, the status appears as :guilabel:`Confirmed`. Once work has "
-"begun, the status updates to :guilabel:`In Progress`. If all work orders for "
-"an |MO| have been completed and the |MO| is ready to close, the status "
-"updates to :guilabel:`To Close`."
-msgstr ""
-"Die Kopfzeile einer Fertigungsauftragskarte zeigt die "
-"Fertigungsauftragsnummer, das Produkt und die Anzahl der produzierten "
-"Einheiten sowie den Status der Fertigungsauftragskarte. Wenn die Arbeit an "
-"der Karte noch nicht begonnen hat, wird der Status als :guilabel:`Bestätigt` "
-"angezeigt. Sobald die Arbeit begonnen hat, wird der Status auf :guilabel:`In "
-"Bearbeitung` aktualisiert. Wenn alle Arbeitsaufträge für einen "
-"Fertigungsauftrag abgeschlossen sind und der Fertigungsauftrag geschlossen "
-"werden kann, wird der Status auf :guilabel:`Zu schließen` aktualisiert."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:82
-msgid ""
-"The main body of an |MO| card shows a line for each completed work order, if "
-"any, followed by the current work order that needs to be completed. "
-"Completed work orders are indicated by a green check mark to the right of "
-"title of the work order. The current work order is indicated by a button "
-"that opens the page for the work center to which the order is assigned."
-msgstr ""
-"Der Hauptteil einer Fertigungsauftragskarte zeigt eine Zeile für jeden "
-"abgeschlossenen Arbeitsauftrag, falls vorhanden, gefolgt von dem aktuellen "
-"Arbeitsauftrag, der noch abgeschlossen werden muss. Erledigte "
-"Arbeitsaufträge sind durch ein grünes Häkchen rechts neben dem Titel des "
-"Arbeitsauftrags gekennzeichnet. Der aktuelle Arbeitsauftrag wird durch eine "
-"Schaltfläche angezeigt, die die Seite für den Arbeitsplatz öffnet, dem der "
-"Auftrag zugewiesen ist."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:87
 msgid ""
-"Below the current work order is a line titled :guilabel:`Register "
-"Production`, which is used to record the number of product units produced. "
-"To manually enter the number of units produced, click on "
-"the :guilabel:`Register Production` line, enter a value in "
-"the :guilabel:`Units` field of the resulting pop-up window, then "
-"click :guilabel:`Validate`."
+"By default, the *All MO* page shows an information card for every |MO| that "
+"is *ready to start*. An |MO| is considered ready to start once it has been "
+"confirmed, and all required components are available."
 msgstr ""
-"Unter dem aktuellen Arbeitsauftrag befindet sich eine Zeile mit der "
-"Bezeichnung :guilabel:`Produktion registrieren`, in der die Anzahl der "
-"produzierten Produkteinheiten erfasst wird. Um die Anzahl der produzierten "
-"Einheiten manuell einzugeben, klicken Sie auf die "
-"Zeile :guilabel:`Produktion registrieren`, geben einen Wert in das "
-"Feld :guilabel:`Einheit(en)` des sich öffnenden Fensters ein und klicken "
-"dann auf :guilabel:`Validieren`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:92
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:91
 msgid ""
-"Alternatively, click the :guilabel:`# Units` button on the right side of the "
-"line, which automatically records the number of units the |MO| was created "
-"for as the number of units produced. For example, if an |MO| is created for "
-"10 units of a dining table, clicking the :guilabel:`10 units` button records "
-"that 10 units were produced."
+"To view every confirmed |MO| regardless of readiness, click the :icon:`oi-"
+"close` :guilabel:`(close)` icon on the :guilabel:`MO Ready` filter to remove "
+"it from the :guilabel:`Search` bar."
 msgstr ""
-"Alternativ können Sie auch auf die Schaltfläche :guilabel:`# Einheit(en)` "
-"auf der rechten Seite der Zeile klicken, die automatisch die Anzahl der "
-"Einheiten, für die der Fertigungsauftrag erstellt wurde, als Anzahl der "
-"produzierten Einheiten aufzeichnet. Wenn z. B. für 10 Einheiten eines "
-"Esstisches ein Fertigungsauftrag erstellt wurde, wird durch Klicken auf die "
-"Schaltfläche :guilabel:`10 Einheit(en)` festgehalten, dass 10 Einheiten "
-"produziert wurden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:97
-msgid ""
-"The footer of the |MO| card displays a :guilabel:`Close Production` button. "
-"This is used to close the |MO| once production is completed. However, if "
-"there are any quality checks required for the |MO| as a whole (not the work "
-"orders within it), a :guilabel:`Quality Checks` button appears instead. "
-"Clicking :guilabel:`Quality Checks` opens a pop-up window, from which any "
-"required quality checks can be completed."
-msgstr ""
-"In der Fußzeile der Fertigungsauftragskarte wird eine "
-"Schaltfläche :guilabel:`Produktion schließen` angezeigt. Damit können Sie "
-"den Fertigungsauftrag schließen, sobald die Produktion abgeschlossen ist. "
-"Wenn jedoch Qualitätsprüfungen für den gesamten Auftrag (nicht für die darin "
-"enthaltenen Arbeitsaufträge) erforderlich sind, erscheint stattdessen die "
-"Schaltfläche :guilabel:`Qualitätsprüfungen`. Wenn Sie "
-"auf :guilabel:`Qualitätsprüfungen` klicken, öffnet sich ein Pop-up-Fenster, "
-"in dem Sie alle erforderlichen Qualitätsprüfungen durchführen können."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:96
+msgid "MO information card"
+msgstr "Informationskarte des Fertigungsauftrags"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:103
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:98
 msgid ""
-"After clicking :guilabel:`Close Production`, the |MO| card begins to fade "
-"away, and an :guilabel:`Undo` button appears on the footer. "
-"Clicking :guilabel:`Undo` causes the |MO| to remain open. Once the |MO| card "
-"disappears completely, the work order is closed."
+"An |MO| information card on the :guilabel:`All MO` page displays all the "
+"relevant details of the associated |MO|, and also provides employees with "
+"options for processing the |MO|."
 msgstr ""
-"Nachdem Sie auf :guilabel:`Produktion schließen` geklickt haben, wird die "
-"Fertigungsauftragskarte ausgeblendet, und in der Fußzeile erscheint die "
-"Schaltfläche :guilabel:`Rückgängig machen`. Wenn Sie "
-"auf :guilabel:`Rückgängig machen` klicken, bleibt die "
-"Fertigungsauftragskarte geöffnet. Sobald die Fertigungsauftragskarte "
-"vollständig verschwindet, ist der Arbeitsauftrag geschlossen."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:101
+msgid ""
+"The header for an |MO| card shows the |MO| number, the product and number of "
+"units being produced, and the |MO| status. If work on the MO has not yet "
+"begun, the status appears as :guilabel:`Confirmed`. Once work has begun, the "
+"status updates to :guilabel:`In Progress`. If all work orders for an |MO| "
+"have been completed and the |MO| is ready to close, the status updates "
+"to :guilabel:`To Close`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:107
 msgid ""
-"On the right side of the footer is an :guilabel:`⋮ (options)` button, which "
-"opens a pop-up window with additional options for the |MO|:"
+"The main body of an |MO| card shows a line for each completed work order, if "
+"any, followed by the current work order to be completed. Completed work "
+"orders appear in grey and are struck out. The current work order is "
+"indicated by a button that opens the page for the work center to which the "
+"order is assigned."
 msgstr ""
-"Auf der rechten Seite der Fußzeile befindet sich eine "
-"Schaltfläche :guilabel:`⋮ (Optionen)`, die ein Pop-up-Fenster mit "
-"zusätzlichen Optionen für den Fertigungsauftrag öffnet:"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:110
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:171
-msgid ""
-":guilabel:`Scrap` is used to send components to a scrap location when they "
-"are found to be defective."
-msgstr ""
-":guilabel:`Ausschuss melden` wird verwendet, um Komponenten an einen "
-"Ausschlussort zu senden, wenn sie für defekt befunden werden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:112
 msgid ""
-":guilabel:`Add Work Order` is used to add an additional work order to the |"
-"MO|."
+"Below the current work order is a line titled :guilabel:`Register "
+"Production`, which records lot or serial numbers for the units produced. "
+"Click the :guilabel:`Register Production` line to specify a lot or serial "
+"number for the produced units, then click :guilabel:`Validate`."
 msgstr ""
-":guilabel:`Arbeitsauftrag hinzufügen` wird verwendet, um einen zusätzlichen "
-"Arbeitsauftrag zum Fertigungsauftrag hinzuzufügen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:113
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:173
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:116
 msgid ""
-":guilabel:`Add Component` is used to add an additional component to the |MO|."
+"To register the quantity of products being produced, click the :guilabel:`# "
+"Units` button on the right side of the line, which automatically records the "
+"number of units the |MO| was created for as the number of units produced. "
+"For example, if an |MO| is created for 10 units of a dining table, clicking "
+"the :guilabel:`10 units` button records that 10 units were produced."
 msgstr ""
-":guilabel:`Komponente hinzufügen` wird verwendet, um eine zusätzliche "
-"Komponente zum Fertigungsauftrag hinzuzufügen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:114
-msgid ":guilabel:`Open Backend MO` opens the |MO| in the Manufacturing app."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:121
+msgid ""
+"The footer of the |MO| card displays a :guilabel:`Close Production` button. "
+"This is used to close the |MO| once production is completed. However, if any "
+"quality checks are required for the |MO| as a whole (not the work orders "
+"within it), a :guilabel:`Quality Checks` button appears instead. "
+"Clicking :guilabel:`Quality Checks` opens a pop-up window where any required "
+"quality checks can be completed."
 msgstr ""
-":guilabel:`Fertigungsaufrag im Backend öffnen` öffnet den Fertigungsauftrag "
-"in der Fertigungsapp."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:126
+msgid ""
+"After clicking :guilabel:`Close Production`, the |MO| card begins to fade, "
+"and an :guilabel:`Undo` button appears in the footer. "
+"Clicking :guilabel:`Undo` keeps the |MO| open. When the |MO| card disappears "
+"completely, the work order is closed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:130
+msgid ""
+"On the right side of the footer is a :icon:`fa-gear` :guilabel:`(gear)` "
+"button, which opens a pop-up window with additional options for the |MO|:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:133
+msgid ""
+":guilabel:`Scrap`: Send components to a scrap location when they are found "
+"to be defective."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:134
+msgid ":guilabel:`Add Work Order`: Add an additional work order to the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:135
+msgid ":guilabel:`Add Component`: Add an additional component to the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:138
+msgid ""
+"Additional components are consumed in the *Shop Floor* module, but their "
+"stock moves will not be validated until the |MO| is closed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:141
+msgid ""
+":guilabel:`Open Manufacturing Order`: opens the |MO| in the *Manufacturing* "
+"app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:142
+msgid ""
+":guilabel:`Log Note`: Enter a note that will be visible on the backend and "
+"throughout all steps on the shop floor."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
 msgid ""
@@ -47141,11 +47197,11 @@ msgstr ""
 "Eine Informationskarte für einen Fertigungsauftrag auf der Seite „Alle“ des "
 "Werkstatt-Moduls."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:149
 msgid "Work center pages"
 msgstr "Arbeitsplatzseiten"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:151
 msgid ""
 "By default, the page for each work center shows an information card for "
 "every work order assigned to it that is *ready to start*. A work order is "
@@ -47158,66 +47214,41 @@ msgstr ""
 "gehört, bereit ist und alle vorhergehenden Arbeitsaufträge abgeschlossen "
 "wurden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:127
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:155
 msgid ""
 "To view every confirmed work order assigned to a work center regardless of "
-"readiness, click the :guilabel:`x` button on the :guilabel:`Ready to Start` "
-"filter to remove it from the :guilabel:`Search...` bar."
+"readiness, click the :icon:`oi-close` :guilabel:`(remove)` icon on "
+"the :guilabel:`MO Ready` filter to remove it from the :guilabel:`Search` bar."
 msgstr ""
-"Wenn Sie alle bestätigten Arbeitssaufträge unabhängig von der Bereitschaft "
-"einem Arbeitsplatz zugewiesen haben, klicken Sie auf die "
-"Schaltfläche :guilabel:`x` auf dem Filter :guilabel:`Bereit`, um ihn aus der "
-"Leiste :guilabel:`Suchen ...` zu entfernen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:160
 msgid "Work order information card"
 msgstr "Informationskarte eines Arbeitsauftrags"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:162
 msgid ""
-"A work order information card on a work center's page shows all of the "
-"relevant details of the associated work order, and also provides employees "
+"The work order information cards on a work center's page show all of the "
+"relevant details of the associated work order, and also provide employees "
 "with options for processing the work order."
 msgstr ""
-"Eine Informationskarte eines Arbeitsauftrags auf der Seite eines "
-"Arbeitsplatzes zeigt alle relevanten Details zum zugehörigen Arbeitsauftrag "
-"und bietet den Mitarbeitern außerdem Optionen zur Bearbeitung des "
-"Arbeitsauftrags."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:165
 msgid ""
 "The header for a work order card shows the reference number of the |MO| that "
-"the work order is a part of, the product and number of units being produced, "
-"and the status of the work order. If work has not yet begun on the work "
-"order, the status appears as :guilabel:`To Do`. Once work has begun, the "
-"status updates to display a timer showing the total time the work order has "
-"been worked on."
+"the work order is a part of, the product and number of units being produced. "
+"When work has begun, the status updates to display a timer showing the total "
+"time the work order has been worked on. The instructions for each work order "
+"open automatically when the timer starts."
 msgstr ""
-"Die Kopfzeile einer Arbeitsauftragskarte zeigt die Referenznummer des "
-"Fertigungsauftrags, zu dem der Arbeitsauftrag gehört, das Produkt und die "
-"Anzahl der zu produzierenden Einheiten sowie den Status des Arbeitsauftrags. "
-"Wenn die Arbeit an dem Arbeitsauftrag noch nicht begonnen hat, wird der "
-"Status als :guilabel:`To-do` angezeigt. Sobald mit der Arbeit begonnen "
-"wurde, wird der Status aktualisiert und ein Timer angezeigt, der die "
-"Gesamtzeit anzeigt, in der der Arbeitsauftrag bearbeitet wurde."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:142
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:170
 msgid ""
 "The main body of a work order card shows a line for each step required to "
 "complete the work order. Work order steps can be completed by clicking on "
-"the line, then following the instructions on the pop-up window that appears. "
-"Alternatively, clicking the checkbox on the right side of each line "
-"automatically marks the step as completed."
+"the line, then following the instructions on the pop-up window that appears."
 msgstr ""
-"Der Hauptteil einer Arbeitsauftragskarte zeigt eine Zeile für jeden Schritt, "
-"der für die Ausführung des Arbeitsauftrags erforderlich ist. Sie können die "
-"Schritte eines Arbeitsauftrags abschließen, indem Sie auf die Zeile klicken "
-"und dann die Anweisungen in dem daraufhin angezeigten Pop-up-Fenster "
-"befolgen. Alternativ können Sie auch auf das Kontrollkästchen auf der "
-"rechten Seite jeder Zeile klicken, um den Schritt automatisch als erledigt "
-"zu markieren."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:174
 msgid ""
 "Below the final step of the work order is a line titled :guilabel:`Register "
 "Production`, which functions the same as the :guilabel:`Register Production` "
@@ -47233,7 +47264,16 @@ msgstr ""
 "registrieren, ist damit auch der Schritt für die zugehörige "
 "Fertigungsauftragskarte abgeschlossen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:179
+msgid ""
+"If there are instructions for a work order, the operator can expand "
+"the :guilabel:`Instructions` header in the work order. To complete a step, "
+"click the instruction line and follow the instructions in the pop-up window. "
+"The instructions that follow an individual instruction will automatically "
+"open."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:184
 msgid ""
 "If the work order being processed is the final work order for the |MO|, "
 "a :guilabel:`Close Production` button appears on the footer of the work "
@@ -47251,7 +47291,7 @@ msgstr ""
 "muss die Qualitätsprüfung über die Fertigungsauftragskarte abgeschlossen "
 "werden, bevor der Fertigungsauftrag geschlossen werden kann."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:158
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:190
 msgid ""
 "Alternatively, if the |MO| requires the completion of additional work "
 "orders, a :guilabel:`Mark as Done` button appears instead. "
@@ -47265,7 +47305,7 @@ msgstr ""
 "Arbeitsauftrag als erledigt markiert und der nächste Arbeitsauftrag "
 "erscheint auf der Seite für den Arbeitsplatz, dem er zugeordnet ist."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:163
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:195
 msgid ""
 "After clicking :guilabel:`Close Production` or :guilabel:`Mark as Done`, the "
 "work order card begins to fade away, and an :guilabel:`Undo` button appears "
@@ -47281,50 +47321,62 @@ msgstr ""
 "geöffnet. Sobald die Arbeitsauftragskarte vollständig verschwindet, wird der "
 "Arbeitsauftrag auf dem Fertigungsauftrag als :guilabel:`Fertig` markiert."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:168
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:200
 msgid ""
-"On the right side of the footer is an :guilabel:`⋮ (options)` button, which "
-"opens a pop-up window with additional options for the work order:"
+"On the right side of the footer is a :icon:`fa-gear` :guilabel:`(gear)` "
+"button, which opens a pop-up window with additional options for the work "
+"order:"
 msgstr ""
-"Auf der rechten Seite der Fußzeile befindet sich eine "
-"Schaltfläche :guilabel:`⋮ (Optionen)`, die ein Pop-up-Fenster mit "
-"zusätzlichen Optionen für den Arbeitsauftrag öffnet:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:174
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:203
 msgid ""
-":guilabel:`Move to work center` is used to transfer the work order to a "
-"different work center."
+":guilabel:`Scrap`: sends components to a scrap location when they are found "
+"to be defective."
 msgstr ""
-":guilabel:`Zum Arbeitsplatz verschieben` wird verwendet, um den "
-"Arbeitsauftrag an einen anderen Arbeitsplatz zu verschieben."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:175
-msgid ""
-":guilabel:`Suggest a Worksheet improvement` allows the user to propose a "
-"change to the work order's instructions or steps."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:204
+msgid ":guilabel:`Add Component`: adds an additional component to the |MO|."
 msgstr ""
-":guilabel:`Eine Verbesserung des Arbeitsblatts vorschlagen` ermöglicht es "
-"dem Benutzer, eine Änderung der Anweisungen oder Schritte des "
-"Arbeitsauftrags vorzuschlagen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:177
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:205
 msgid ""
-":guilabel:`Create a Quality Alert` opens a quality alert form that can be "
+":guilabel:`Open Manufacturing Order`: opens the associated |MO| in the "
+"*Manufacturing* app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:206
+msgid ""
+":guilabel:`Move to work center`: transfers the work order to a different "
+"work center."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:207
+msgid ""
+":guilabel:`Update instructions`: allows the user to propose a change to the "
+"work order's instructions or steps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:209
+msgid ""
+":guilabel:`Create a Quality Alert`: opens a quality alert form that can be "
 "filled out to alert a quality team about a potential issue."
 msgstr ""
-":guilabel:`Einen Qualitätsalarm erstellen` öffnet ein Formular für "
-"Qualitätsalarme, das ausgefüllt werden kann, um ein Qualitätsteam über ein "
-"mögliches Problem zu informieren."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:211
+msgid ""
+":guilabel:`Request Maintenance`: creates a maintenance request for the work "
+"center."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
 msgid "An information card for a work order in the Shop Floor module."
 msgstr "Eine Informationskarte für einen Arbeitsauftrag im Werkstatt-Modul."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:185
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:217
 msgid "Operator panel"
 msgstr "Bediener-Panel"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:219
 msgid ""
 "The operator panel is used to manage the employees that are signed in to the "
 "*Shop Floor* module. The panel shows the name and profile picture of every "
@@ -47334,7 +47386,7 @@ msgstr ""
 "Modul angemeldet sind. Das Panel zeigt den Namen und das Profilbild jedes "
 "Mitarbeiters an, der derzeit in allen Instanzen der Datenbank angemeldet ist."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:191
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:223
 msgid ""
 "To interact with *Shop Floor* as a specific employee, click the employee's "
 "name to activate their profile. Profiles that are not active appear with "
@@ -47344,67 +47396,47 @@ msgstr ""
 "Sie auf den Namen des Mitarbeiters, um sein Profil zu aktivieren. Profile, "
 "die nicht aktiv sind, erscheinen mit ausgegrauten Namen und Profilbildern."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:194
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:226
 msgid ""
 "When an employee is selected in the operator panel, they can begin working "
 "on a work order by clicking the work order's heading. If an employee is "
-"working on one or more work orders, the work order title(s) appear under "
-"their name, along with a timer showing how long they've been working on each "
-"order."
+"working on one or more work orders, the work order titles appear under their "
+"name, as well as a timer showing how long they've been working on each order."
 msgstr ""
-"Wenn ein Mitarbeiter im Bediener-Panel ausgewählt ist, kann er mit der "
-"Arbeit an einem Arbeitsauftrag beginnen, indem er auf die Überschrift des "
-"Arbeitsauftrags klickt. Wenn ein Mitarbeiter an einem oder mehreren "
-"Arbeitsaufträgen arbeitet, werden die Titel der Arbeitsaufträge unter seinem "
-"Namen angezeigt, zusammen mit einem Timer, der angibt, wie lange der "
-"Mitarbeiter bereits an jedem Auftrag arbeitet."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:199
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:231
 msgid ""
-"To add a new employee to the operator panel, click the :guilabel:`+ Add "
-"Operator` button at the bottom of the panel. Then, select an employee from "
-"the :guilabel:`Select Employee` pop-up window."
+"To add a new employee to the operator panel, click the :icon:`fa-"
+"plus` :guilabel:`Add Operator` button at the bottom of the panel. Then, "
+"select an employee from the *Select Employee* pop-up window."
 msgstr ""
-"Um einen neuen Mitarbeiter zum Bediener-Panel hinzuzufügen, klicken Sie auf "
-"die Schaltfläche :guilabel:`+ Bediener hinzufügen` am unteren Rand des "
-"Bedienfelds. Wählen Sie dann einen Mitarbeiter aus dem Popup-"
-"Fenster :guilabel:`Mitarbeiter auswählen`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:202
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:235
 msgid ""
-"To remove an employee from the operator panel, simply click "
-"the :guilabel:`x` button next to their name in the panel."
+"To remove an employee from the operator panel, click the :icon:`oi-"
+"close` :guilabel:`(log out)` button next to their name in the panel."
 msgstr ""
-"Um einen Mitarbeiter aus dem Bediener-Panel zu entfernen, klicken Sie "
-"einfach auf die Schaltfläche :guilabel:`x` neben dem Namen des Mitarbeiters "
-"im Bedienfeld."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
 msgid ""
-"The operator panel of the Shop Floor module, showing three employees signed "
+"The operator panel of the Shop Floor module, showing four employees signed "
 "in."
 msgstr ""
-"Das Bediener-Panel des Werkstatt-Moduls mit drei angemeldeten Mitarbeitern."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:210
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:242
 msgid "MO/WO prioritization"
 msgstr "Priorisierung von Fertigungs-/Arbeitsauftrag"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:244
 msgid ""
-"The **Shop Floor** module uses the *scheduled date* entered on |MOs| to "
-"prioritize the |MOs| and work orders that appear on the module's dashboard "
-"and work center pages. |MOs| and work orders scheduled sooner are more "
-"highly prioritized, and appear before orders which are scheduled further out."
+"The *Shop Floor* module prioritizes orders based on their *scheduled date*. "
+"An order can be moved to the top of the list by clicking the :icon:`fa-star-"
+"o` :guilabel:`(star)` icon in the |MO| form. |MOs| and work orders scheduled "
+"sooner are more highly prioritized and appear before orders which are "
+"scheduled further out."
 msgstr ""
-"Das *Werkstatt*-Modul verwendet das in den Fertigungsaufträgen eingegebene "
-"*geplante Datum*, um die Fertigungsaufträge und Arbeitsaufträge zu "
-"priorisieren, die auf den Dashboard- und Arbeitsplatzseiten des Moduls "
-"angezeigt werden. Fertigungs- und Arbeitsaufträge, die früher geplant sind, "
-"werden höher priorisiert und erscheinen vor Aufträgen, die später geplant "
-"sind."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:217
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:249
 msgid ""
 "To specify the scheduled date on an |MO|, begin by navigating "
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
@@ -47415,18 +47447,14 @@ msgstr ""
 "Fertigungfsaufträge`, und klicken Sie dann auf :guilabel:`Neu`, um einen "
 "neuen Fertigungsauftrag zu erstellen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:220
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:252
 msgid ""
 "Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
-"window. By default, the :guilabel:`Scheduled Date` field, and its "
-"corresponding pop-up window, show the current date and time."
+"window. By default, the :guilabel:`Scheduled Date` field and its "
+"corresponding pop-up window show the current date and time."
 msgstr ""
-"Klicken Sie auf das Feld :guilabel:`Geplantes Datum`, um ein Kalender-Pop-"
-"over-Fenster zu öffnen. Standardmäßig werden im Feld :guilabel:`Geplantes "
-"Datum` und im zugehörigen Pop-over-Fenster das aktuelle Datum und die "
-"aktuelle Uhrzeit angezeigt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:255
 msgid ""
 "Use the calendar to select the date on which processing should begin for the "
 "|MO|. In the two fields at the bottom of the popover window, enter the hour "
@@ -47437,7 +47465,7 @@ msgstr ""
 "Pop-over-Fenster die Stunde und Minute im 24-Stunden-Format ein, zu der die "
 "Verarbeitung beginnen soll."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:228
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:259
 msgid ""
 "Finally, click :guilabel:`Apply` at the bottom of the popover window to set "
 "the date and time for the :guilabel:`Scheduled Date` field. Then, click "
@@ -47448,28 +47476,38 @@ msgstr ""
 "festzulegen. Klicken Sie dann oben im Fertigungsauftrag auf die "
 "Schaltfläche :guilabel:`Bestätigen`, um diesen zu bestätigen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:232
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:263
 msgid ""
-"Once the |MO| is confirmed, it appears in the **Shop Floor** module, as long "
+"To prioritize a manufacturing order and its work orders in the *Shop Floor* "
+"app, click the :icon:`fa-star-o` :guilabel:`(star)` icon in the |MO| form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:266
+msgid ""
+"Once the |MO| is confirmed, it appears in the *Shop Floor* module, as long "
 "is it has the :guilabel:`Ready` status, which means all components are "
 "available."
 msgstr ""
-"Sobald der Fertigungsauftrag bestätigt ist, erscheint er im **Werkstatt**-"
-"Modul, solange er den Status :guilabel:`Bereit` hat, was bedeutet, dass alle "
-"Komponenten verfügbar sind."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:235
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:269
 msgid ""
 "On the Odoo dashboard, click on the :menuselection:`Shop Floor` module to "
-"open it. The :guilabel:`All MO #` page of the dashboard displays *Ready* |"
-"MOs|, organized in order of their scheduled dates."
+"open it. The *All MO #* page of the dashboard displays *Ready* |MOs|, "
+"organized in order of their scheduled dates."
 msgstr ""
-"Klicken Sie im Odoo-Dashboard auf das Modul :menuselection:`Werkstatt`, um "
-"es zu öffnen. Auf der Seite :guilabel:`Alle Fertigungsaufträge #` des "
-"Dashboards werden die Fertigungsaufträge, die **bereit** sind, in der "
-"Reihenfolge ihrer geplanten Termine angezeigt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:239
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:272
+msgid ""
+"If a manufacturing order should be prioritized above the standard date "
+"scheduling, click the :icon:`fa-star-o` :guilabel:`(star)` icon next to its "
+"number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
+msgid "The All MO dashboard with prioritized orders appearing first."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:278
 msgid ""
 "At the top of the module, select a work center to see the work orders "
 "assigned to it. The page for each work center organizes work orders, based "
@@ -47480,51 +47518,40 @@ msgstr ""
 "Arbeitsaufträge nach den geplanten Terminen der entsprechenden "
 "Fertigungsaufträgen geordnet."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:243
-msgid "Three |MOs| are confirmed for a *Bookcase* product:"
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:282
+msgid "Three |MOs| are confirmed for a *Table* product:"
 msgstr ""
-"Für ein Produkt *Bücherregal* wurden drei Fertigungsaufträge bestätigt:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:245
-msgid "WH/MO/00411 has a :guilabel:`Scheduled Date` of August 16th."
-msgstr "WH/MO/00411 hat ein :guilabel:`Geplantes Datum` am 16. August."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:284
+msgid "WH/MO/00076 has a :guilabel:`Scheduled Date` of April 2."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:246
-msgid "WH/MO/00412 has a :guilabel:`Scheduled Date` of August 20th."
-msgstr "WH/MO/00412 hat ein :guilabel:`Geplantes Datum` am 20. August."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:285
+msgid "WH/MO/00077 has a :guilabel:`Scheduled Date` of March 31."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:247
-msgid "WH/MO/00413 has a :guilabel:`Scheduled Date` of August 18th."
-msgstr "WH/MO/00413 hat ein :guilabel:`Geplantes Datum` am 18. August."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:286
+msgid "WH/MO/00078 has a :guilabel:`Scheduled Date` of April 1."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:249
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:288
 msgid ""
-"On the :guilabel:`All MO #` page of the **Shop Floor** module, the cards for "
-"each |MO| appear in this order: WH/MO/00411, WH/MO/00413, WH/MO/00412."
+"On the :guilabel:`All MO #` page of the *Shop Floor* module, the cards for "
+"each |MO| appear in this order: WH/MO/00077, WH/MO/00078, WH/MO/000076."
 msgstr ""
-"Auf der Seite :guilabel:`Alle Fertigungsaufträge #` des Moduls **Werkstatt** "
-"werden die Karten für jeden Fertigungsauftrag in dieser Reihenfolge "
-"angezeigt: WH/MO/00411, WH/MO/00413, WH/MO/00412."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:None
 msgid "MOs in the Shop Floor module, ordered by their scheduled date."
 msgstr ""
 "Fertigungsaufträge im Werkstatt-Modul, sortiert nach ihrem geplanten Datum."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:256
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:294
 msgid ""
-"Each |MO| requires one work order, carried out at :guilabel:`Assembly "
-"Station 1`. Clicking on the :guilabel:`Assembly Station 1` button at the top "
-"of the screen opens the page for the work center, which displays one card "
-"for each work order, appearing in the same order as their corresponding |"
-"MOs|."
+"Each |MO| requires one work order, carried out at :guilabel:`Drill 1`. "
+"Clicking on the :guilabel:`Drill 1` button at the top of the screen opens "
+"the page for the work center, which displays one card for each work order, "
+"appearing in the same order as their corresponding |MOs|."
 msgstr ""
-"Jeder Fertigungsauftrag erfordert einen Arbeitsauftrag, der an "
-"der :guilabel:`Montagestation 1` ausgeführt wird. Durch Klicken auf die "
-"Schaltfläche :guilabel:`Montagestation 1` oben auf dem Bildschirm wird die "
-"Seite für den Arbeitsplatz geöffnet, auf der für jeden Arbeitsauftrag eine "
-"Karte angezeigt wird, und zwar in derselben Reihenfolge wie die "
-"entsprechenden Fertigungsaufträge."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:3
 msgid "Shop Floor time tracking"
@@ -47532,227 +47559,152 @@ msgstr "Zeitverfolgung in der Werkstatt"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:8
 msgid ""
-"By signing in to the Odoo *Shop Floor* module as *operators*, employees are "
-"able to track the amount of time they spend working on each work order."
+"By signing in to the Odoo *Shop Floor* module as *operators*, employees can "
+"track the amount of time they spend working on each work order. Odoo tracks "
+"the time it takes to complete each work order, as well as the time each "
+"operator spends on it."
 msgstr ""
-"Indem Sie sich im Odoo-Modul *Werkstatt* als *Bediener* anmelden, können die "
-"Mitarbeiter die Zeit, die sie für jeden Arbeitsauftrag aufwenden, verfolgen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:11
-msgid ""
-"Odoo tracks the time it takes to complete each work order, as well as the "
-"time each operator spends on each work order."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:13
+msgid "Manage operators"
 msgstr ""
-"Odoo verfolgt die Zeit, die für die Erledigung jedes Arbeitsauftrags "
-"benötigt wird, sowie die Zeit, die jeder Mitarbeiter für jeden "
-"Arbeitsauftrag aufwendet."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:15
-msgid "Operator sign in"
-msgstr "Bedieneranmeldung"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:17
 msgid ""
-"To sign in to the *Shop Floor* module as an operator, sign in to the Odoo "
-"database, and open the :menuselection:`Shop Floor` module. The employee "
-"profile that is signed in to the database is automatically signed in as an "
-"operator."
+"When the *Shop Floor* module is first opened, the employee profile that is "
+"signed in to the database is automatically signed in as an operator."
 msgstr ""
-"Um sich im Modul *Werkstatt* als Bediener anzumelden, melden Sie sich bei "
-"der Odoo-Datenbank an und öffnen das Modul :menuselection:`Werkstatt`. Das "
-"Mitarbeiterprofil, das in der Datenbank angemeldet ist, wird automatisch als "
-"Bediener angemeldet."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:21
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:18
 msgid ""
-"All active operators are listed in the operator panel on the left side of "
-"the module. The panel can be opened or collapsed by clicking "
-"the :guilabel:`show/hide panel (white square with black column on left "
-"side)` button, located in the top-left corner of the module."
+"All operators for the current session are listed in the operator panel next "
+"to the main content area. While the panel can list multiple employee "
+"profiles, only one employee can be active at once. The active profile "
+"highlighted in the operator panel is used for time tracking. The panel can "
+"be opened or collapsed by clicking the :icon:`oi-panel-right fa-flip-"
+"horizontal` :guilabel:`(employee panel)` icon located next to the view list."
 msgstr ""
-"Alle aktiven Bediener werden im Bediener-Panel auf der linken Seite des "
-"Moduls aufgelistet. Das Panel kann durch Klicken auf die "
-"Schaltfläche :guilabel:`Panel anzeigen/ausblenden (weißes Quadrat mit "
-"schwarzer Spalte auf der linken Seite)` in der oberen linken Ecke des Moduls "
-"ein- oder ausgeklappt werden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
 msgid ""
-"The operator panel in the Shop Floor module, with the show/hide panel button "
+"The operator panel in the Shop Floor module, with the employee panel button "
 "above it."
 msgstr ""
-"Das Bediener-Panel im Werkstatt-Modul mit der Schaltfläche „Panel anzeigen/"
-"ausblenden“ darüber."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:29
-msgid ""
-"To sign in to *Shop Floor* as a different employee, click the :guilabel:`+ "
-"Add Operator` button at the bottom of the panel. Doing so opens "
-"the :guilabel:`Select Employee` pop-up window, which lists every employee "
-"that is able to sign in to the module."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:28
+msgid "Add an operator"
 msgstr ""
-"Um sich bei *Werkstatt* als ein anderer Mitarbeiter anzumelden, klicken Sie "
-"auf die Schaltfläche :guilabel:`+ Bediener hinzufügen` am unteren Rand des "
-"Fensters. Daraufhin öffnet sich das Pop-up-Fenster :guilabel:`Mitarbeiter "
-"auswählen`, in dem alle Mitarbeiter aufgelistet sind, die sich bei dem Modul "
-"anmelden können."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:33
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:30
 msgid ""
-"Click on a specific employee to sign in using their profile. If no PIN code "
-"is required to sign in as that employee, the profile will be signed in "
-"automatically."
+"To add employees to the operator panel, click the :icon:`fa-"
+"plus` :guilabel:`Add Operator` button at the bottom of the panel. In the "
+"*Select Employee* pop-up window, click on a specific employee to sign in "
+"using their profile. If no PIN code is required to sign in as that employee, "
+"the profile is automatically signed in and selected as the active operator."
 msgstr ""
-"Klicken Sie auf einen bestimmten Mitarbeiter, um sich mit dessen Profil "
-"anzumelden. Wenn kein PIN-Code erforderlich ist, um sich als dieser "
-"Mitarbeiter anzumelden, wird das Profil automatisch angemeldet."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:35
 msgid ""
-"If a PIN code is required, a :guilabel:`Password?` pop-up window appears, "
-"showing a number pad, from which the code can be entered. Enter the code "
-"using the number pad, and click :guilabel:`Confirm` to sign in to the *Shop "
-"Floor* module."
+"If a PIN has been set for the employee, a *Password?* pop-up window opens. "
+"Enter the code using the number pad or keyboard, then "
+"click :guilabel:`Confirm` to sign in to the *Shop Floor* module."
 msgstr ""
-"Wenn ein PIN-Code erforderlich ist, erscheint ein :guilabel:`Passwort?`-Pop-"
-"up-Fenster mit einem Ziffernblock, über den der Code eingegeben werden kann. "
-"Geben Sie den Code über den Ziffernblock ein und klicken Sie "
-"auf :guilabel:`Bestätigen`, um sich im *Werkstatt*-Modul anzumelden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
-msgid ""
-"The \"Password?\" pop-up window, which is used to enter an operator PIN code."
+msgid "Enter an operator PIN code in the Password? pop-up window."
 msgstr ""
-"Das Pop-up-Fenster „Passwort?“, das zur Eingabe eines Bediener-PIN-Codes "
-"dient."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:42
 msgid ""
-"A PIN code can be set for each employee, which must be entered each time "
-"they sign in to the *Shop Floor* module, check in or out in the *Kiosk Mode* "
-"of the *Attendances* application, or sign in as a cashier in the *Point of "
-"Sale* application."
+"Each employee can be assigned a PIN, which must be entered when signing in "
+"to the *Shop Floor* module. Badges can also be generated and printed for "
+"checking in and out with *Kiosk Mode* in the *Attendances* app. See "
+"the :ref:`employees/hr-settings` section for more details."
 msgstr ""
-"Für jeden Mitarbeiter kann ein PIN-Code festgelegt werden, der jedes Mal "
-"eingegeben werden muss, wenn er sich im Modul *Werkstatt* anmeldet, im "
-"*Kioskmodus* der *Anwesenheiten-App* ein- oder auscheckt oder sich als "
-"Kassierer in der *Kassensystem-App* anmeldet."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:47
+msgid "Switch profiles"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:49
 msgid ""
-"To set an employee PIN, navigate to the :menuselection:`Employees` app, and "
-"select a specific employee. At the bottom of the employee's form, click on "
-"the :guilabel:`HR Settings` tab, and enter a numerical code in "
-"the :guilabel:`PIN Code` field."
+"Click an employee's name to make their profile active. The active employee "
+"appears highlighted in blue, while employees who are signed in but not "
+"active appear faded out."
 msgstr ""
-"Um eine Mitarbeiter-PIN festzulegen, navigieren Sie "
-"zur :menuselection:`Mitarbeiter-App` und wählen einen bestimmten Mitarbeiter "
-"aus. Klicken Sie unten im Formular des Mitarbeiters auf den "
-"Reiter :guilabel:`HR-Einstellungen` und geben Sie einen numerischen Code in "
-"das Feld :guilabel:`PIN-Code` ein."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:53
-msgid ""
-"Once an employee is signed in to the module, their name appears in the "
-"operator panel, along with every other employee that has signed in. While "
-"the panel can list multiple employees, only one employee can be active at "
-"any given time, on a single instance of the *Shop Floor* module."
+msgid "Log out an operator"
 msgstr ""
-"Sobald ein Mitarbeiter im Modul angemeldet ist, erscheint sein Name im "
-"Bediener-Panel, zusammen mit dem jedes anderen Mitarbeiters, der sich "
-"angemeldet hat. Das Panel kann zwar mehrere Mitarbeiter auflisten, aber es "
-"kann immer nur ein Mitarbeiter in einer einzigen Instanz des *Werkstatt*-"
-"Moduls aktiv sein."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:55
 msgid ""
-"Click on an employee's name to make their profile active. The active "
-"employee appears highlighted in blue, while employees that are signed in, "
-"but not active, have their names faded out."
+"To sign out a specific employee from the module, click the :icon:`oi-"
+"close` :guilabel:`(logout)` icon next to their name in the operator panel."
 msgstr ""
-"Klicken Sie auf den Namen eines Mitarbeiters, um sein Profil zu aktivieren. "
-"Der aktive Mitarbeiter wird blau hervorgehoben, während die Namen der "
-"Mitarbeiter, die zwar angemeldet, aber nicht aktiv sind, ausgeblendet werden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:60
-msgid ""
-"To sign out a specific employee from the module, click the :guilabel:`X "
-"(remove)` button next to their name, in the operator panel."
-msgstr ""
-"Um einen bestimmten Mitarbeiter aus dem Modul abzumelden, klicken Sie im "
-"Bediener-Panel auf die Schaltfläche :guilabel:`X (entfernen)` neben dem "
-"Namen des Mitarbeiters."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:59
 msgid "Track work order duration"
 msgstr "Arbeitsauftragsdauer verfolgen"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:66
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:61
 msgid ""
-"To track time spent working on a work order, begin by selecting the employee "
-"working on it from the operator panel."
+"To track time spent on a work order, begin by selecting the employee "
+"assigned to it from the operator panel."
 msgstr ""
-"Um die für einen Arbeitsauftrag aufgewendete Zeit zu erfassen, wählen Sie "
-"zunächst den Mitarbeiter, der den Auftrag bearbeitet, im Bediener-Panel aus."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:64
 msgid ""
-"Next, navigate to the page for the work center where the work order is "
-"scheduled to be carried out. This can be done by selecting the work center "
-"from the top navigation in the *Shop Floor* module, or by clicking the name "
-"of the work center on the card for the manufacturing order (MO) that the "
-"work order is a part of."
+"Next, select the work center where the work order is scheduled to be carried "
+"out. This can be done by selecting the work center in the *Shop Floor* "
+"module. Alternatively, open the manufacturing order (MO), open the *Work "
+"Orders* tab, and click the :icon:`fa-external-link` :guilabel:`(Open Work "
+"Order)` icon. In the *Work Orders* pop-up window, click :icon:`oi-view-"
+"kanban` :guilabel:`Open Shop Floor`."
 msgstr ""
-"Als nächstes navigieren Sie zu der Seite für den Arbeitsplatz, an dem der "
-"Arbeitsauftrag ausgeführt werden soll. Wählen Sie dazu den Arbeitsplatz in "
-"der oberen Navigation im *Werkstatt*-Modul  aus oder klicken Sie auf den "
-"Namen des Arbeitsplatzes auf der Karte des Fertigungsauftrags, zu dem der "
-"Arbeitsauftrag gehört."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:74
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:70
 msgid ""
-"On the page for the work center, find the card for the work order. Once work "
-"begins, click the header of the work order card to start timing the duration "
-"it takes to complete. This duration is displayed by a timer on the header of "
-"the work order card, which tracks the collective time spent working on the "
-"work order, by all employees."
+"In the work center view, find the card for the work order. The assigned "
+"operator's avatar is listed on the work order. When work begins, click "
+"the :icon:`fa-play` :guilabel:`(play)` icon to start tracking the duration. "
+"This duration tracks the collective time spent working on the work order by "
+"all employees. The operator's avatar is displayed on the work order to "
+"indicate that work has begun and is assigned to an operator."
 msgstr ""
-"Auf der Seite für den Arbeitsplatz finden Sie die Karte für den "
-"Arbeitsauftrag. Sobald die Arbeit beginnt, klicken Sie auf die Kopfzeile der "
-"Arbeitsauftragskarte, um die Zeit zu messen, die bis zur Fertigstellung "
-"benötigt wird. Diese Dauer wird durch einen Timer in der Kopfzeile der "
-"Arbeitsauftragskarte angezeigt, der die von allen Mitarbeitern insgesamt für "
-"den Arbeitsauftrag aufgewendete Zeit erfasst."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
 msgid "A work order card with an active timer."
 msgstr "Eine Arbeitsauftragskarte mit einem aktiven Timer."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:79
 msgid ""
-"In addition, the reference number of the work order appears in the operator "
-"panel, under the name of the employee working on it, along with a second "
-"timer, which tracks the amount of time the employee has spent on the work "
-"order individually. This timer only reflects work done during the current "
-"session, even if the employee has previously worked on the work order."
+"In addition, the work order reference number appears in the operator panel "
+"under the employee's name, along with another timer that tracks the time the "
+"employee has spent individually on the work order. This timer only reflects "
+"work done during the current session, even if the employee has previously "
+"worked on the work order."
 msgstr ""
-"Darüber hinaus erscheint die Referenznummer des Arbeitsauftrags im Bediener-"
-"Panel unter dem Namen des Mitarbeiters, der daran arbeitet, zusammen mit "
-"einem zweiten Timer, der die Zeit anzeigt, die der Mitarbeiter für den "
-"einzelnen Arbeitsauftrag aufgewendet hat. Dieser Timer zeigt nur die während "
-"der aktuellen Sitzung geleistete Arbeit an, auch wenn der Mitarbeiter "
-"bereits früher an dem Arbeitsauftrag gearbeitet hat."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:88
-msgid ""
-"Employees are able to work on multiple work orders simultaneously, and track "
-"their time for each. The reference number for each work order being worked "
-"on appears below the employee's name, along with a timer."
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:85
+msgid "View active profile work orders"
 msgstr ""
-"Die Mitarbeiter können an mehreren Arbeitsaufträgen gleichzeitig arbeiten "
-"und ihre Zeit für jeden Auftrag erfassen. Die Referenznummer für jeden "
-"Arbeitsauftrag, an dem gearbeitet wird, erscheint unter dem Namen des "
-"Mitarbeiters, zusammen mit einem Timer."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:87
+msgid ""
+"The operator panel displays the work center location and the individual time "
+"spent for each work order an operator is working on. This timer only "
+"reflects work done during the current session, even if the operator has "
+"previously worked on the work order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:91
+msgid ""
+"Operators can work on multiple work orders simultaneously and track their "
+"time for each. Click :guilabel:`My WO` at the top of the page to see all of "
+"the work orders the active profile is working on."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:None
 msgid "An employee card in the operator panel, showing two work order timers."
@@ -47760,78 +47712,106 @@ msgstr ""
 "Eine Mitarbeiterkarte im Bediener-Panel, die zwei Timer für Arbeitsaufträge "
 "anzeigt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:96
-msgid ""
-"To pause the timer on the work order card, and remove the work order from "
-"below the employee's name on the operator panel, click the header a second "
-"time."
-msgstr ""
-"Um den Timer auf der Arbeitsauftragskarte anzuhalten und den Arbeitsauftrag "
-"unter dem Namen des Mitarbeiters auf dem Bediener-Panel zu entfernen, "
-"klicken Sie ein zweites Mal auf die Kopfzeile."
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:99
-msgid ""
-"Once the work order is completed, click the :guilabel:`Mark as Done` button "
-"at the bottom of the work order card, which causes the card to fade away. If "
-"the timer is still active, it stops once the card disappears completely."
+msgid "Pause and stop timer"
 msgstr ""
-"Sobald der Arbeitsauftrag abgeschlossen ist, klicken Sie auf die "
-"Schaltfläche :guilabel:`Als erledigt markieren` am unteren Rand der "
-"Arbeitsauftragskarte, wodurch die Karte ausgeblendet wird. Wenn der Timer "
-"noch aktiv ist, wird er angehalten, sobald die Karte vollständig "
-"verschwindet."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:104
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:101
+msgid ""
+"To pause the timer on a work order, click the :icon:`fa-"
+"pause` :guilabel:`(pause)` icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:103
+msgid ""
+"When a work order is complete, click the :guilabel:`Mark as Done` button at "
+"the bottom of the work order card to remove it from the work center page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:107
+msgid ""
+"If there are no additional work orders for the |MO|, the button "
+"says :guilabel:`Close Production` instead. Clicking :guilabel:`Close "
+"Production` marks the entire |MO| as *Done* and removes it from the *Shop "
+"Floor* module."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:111
+msgid ""
+"The :guilabel:`Close Production` button is always visible on the |MO| card "
+"in the *All MO* view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:114
 msgid "View work order duration"
 msgstr "Arbeitsauftragsdauer anzeigen"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:117
+msgid "By individual work order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:119
 msgid ""
 "To view the duration of a work order, navigate "
+"to :menuselection:`Manufacturing app --> Operations --> Work Orders`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:122
+msgid ""
+"By default, the search bar has a filter applied to display incomplete work "
+"orders only. To view work orders that have been completed and marked as "
+"*Done*, remove the filter from the search bar by clicking on the :icon:`oi-"
+"close` :guilabel:`(Remove)` icon next to the filter."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:126
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:148
+msgid ""
+"The actual time it took to complete each work order is displayed in "
+"the :guilabel:`Real Duration` column. This value represents the total time "
+"spent on the work order by all operators who worked on it. It includes time "
+"tracked in the *Shop Floor* module as well as time tracked in the work order "
+"form or the *Work Orders* tab of the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:131
+msgid ""
+"To view detailed time tracking information, select a work order. In the work "
+"order form, go to the *Time Tracking* tab to see a detailed list of all "
+"operators who have worked on the work order and the amount of time they "
+"spent on it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:136
+msgid "By manufacturing order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:138
+msgid ""
+"To view the duration of all work orders in a specific |MO|, navigate "
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
-"Orders`, and select an |MO|."
+"Orders`."
 msgstr ""
-"Um die Dauer eines Arbeitsauftras anzuzeigen, navigieren Sie "
-"zu :menuselection:`Fertigung --> Vorgänge --> Fertigungsaufträge` und wählen "
-"Sie einen Fertigungsauftrag."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:141
 msgid ""
-"To view and select |MOs| that have been completed and marked as *Done*, "
-"remove the :guilabel:`To Do` filter from the :guilabel:`Search...` bar, by "
-"clicking on the :guilabel:`X (close)` button on the right side of the filter."
+"By default, the search bar has a filter applied to display incomplete |MOs| "
+"only. To view |MOs| that have been completed and marked as *Done*, remove "
+"the filter from the search bar by clicking the :icon:`oi-"
+"close` :guilabel:`(Remove)` icon next to the filter."
 msgstr ""
-"Um abgeschlossene und als *Erledigt* markierte Aufgaben anzuzeigen und "
-"auszuwählen, entfernen Sie den Filter :guilabel:`To-do` aus der "
-"Leiste :guilabel:`Suchen ...`, indem Sie auf die Schaltfläche :guilabel:`X "
-"(schließen)` auf der rechten Seite des Filters klicken."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:145
 msgid ""
-"On the page for the |MO|, click on the :guilabel:`Work Orders` tab to see a "
-"list of all work orders included in the |MO|. The time it took to complete "
-"each work order is displayed in the :guilabel:`Real Duration` column of the "
-"tab."
+"Select an |MO|. In the |MO| form, go to the *Work Orders* tab to see a list "
+"of all work orders included in the |MO|."
 msgstr ""
-"Klicken Sie auf der Seite für den Fertigungsauftrag auf den "
-"Reiter :guilabel:`Arbeitsaufträge`, um eine Liste aller im Fertigungsauftrag "
-"enthaltenen Arbeitsaufträge zu sehen. Die Zeit, die für jeden Arbeitsauftrag "
-"benötigt wurde, wird in der Spalte :guilabel:`Tatsächliche Dauer` des "
-"Reiters angezeigt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:117
+#: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:153
 msgid ""
-"The *Real Duration* represents the total time spent working on the work "
-"order by all workers who worked on it. It includes time tracked in the *Shop "
-"Floor* module, as well as time tracked on the :guilabel:`Work Orders` tab of "
-"the |MO| itself."
+"To view details for a specific work order, click the :icon:`fa-external-"
+"link` :guilabel:`(Open Work Order)` icon. The work order form opens."
 msgstr ""
-"Die *tatsächliche Dauer* stellt die Gesamtzeit dar, die von allen Arbeitern, "
-"die an dem Arbeitsauftrag gearbeitet haben, aufgewendet wurde. Sie umfasst "
-"die im *Werkstatt*-Modul erfasste Zeit sowie die auf dem "
-"Reiter :guilabel:`Arbeitsaufträge` des Fertigungsauftrag selbst erfasste "
-"Zeit."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:5
 msgid "Subcontracting"
@@ -53131,11 +53111,11 @@ msgstr ""
 msgid "The MPS setting in the Manufacturing app's settings."
 msgstr "Die MPS-Einstellung in den Einstellung der Fertigungsapp."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:76
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:75
 msgid "|MPS| dashboard"
 msgstr "|MPS|-Dashboard"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:77
 msgid ""
 "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
 "Planning --> Master Production Schedule`. The |MPS| view appears as follows:"
@@ -53148,7 +53128,7 @@ msgstr ""
 msgid "The Master Production Schedule in the Manufacturing app."
 msgstr "Der Produktionszeitplan in der Fertigungsapp."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:83
 msgid ""
 "The grey column on the left side of the screen shows a section for every "
 "product added to the |MPS|, with each product section being broken down into "
@@ -53163,7 +53143,7 @@ msgstr ""
 "der Leiste :guilabel:`Suchen ...` oben auf der Seite ausgewählt wurden. Die "
 "Standardkategorien, die in den Zeilen erscheinen, sind:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:90
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:88
 msgid ""
 ":guilabel:`[Product] by [unit]` :icon:`fa-area-chart`: the forecasted stock "
 "quantity at the beginning of each time period. :guilabel:`[Product]` "
@@ -53176,7 +53156,7 @@ msgstr ""
 "Schaltflächen, die jeweils die Produktseite oder der Prognosebericht für das "
 "Produkt öffnen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:91
 msgid ""
 ":guilabel:`- Forecasted Demand`: the demand forecast, which is entered "
 "manually. This represents an estimate of the demand for the product during "
@@ -53186,7 +53166,7 @@ msgstr ""
 "eingegeben wird. Sie stellt eine Schätzung der Nachfrage nach dem Produkt in "
 "den einzelnen Zeiträumen dar."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:93
 msgid ""
 ":guilabel:`- Indirect Demand Forecast`: while this is a default category, it "
 "**only** appears for products that are components of other products. It "
@@ -53197,7 +53177,7 @@ msgstr ""
 "anderer Produkte sind. Sie stellt die Nachfrage nach der Komponente von "
 "bestehenden Fertigungsaufträgen dar."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:98
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:96
 msgid ""
 ":guilabel:`+ Suggested Replenishment`: the quantity of the product that is "
 "suggested to be replenished through |MOs| or |POs|. To the right of the "
@@ -53215,12 +53195,12 @@ msgid "The Replenish button on the \"+ Suggested Replenishment\" row."
 msgstr ""
 "Die Schaltfläche „Auffüllen“ in der Zeile „+ Vorgeschlagene Auffüllung“."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:104
 msgid "The \"Replenish\" button on the \"+ Suggested Replenishment\" row."
 msgstr ""
 "Die Schaltfläche „Auffüllen“ in der Zeile „+ Vorgeschlagene Auffüllung“."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:106
 msgid ""
 ":guilabel:`= Forecasted Stock`: the quantity of the product forecasted to be "
 "in stock at the end of each time period, assuming that suggested "
@@ -53230,11 +53210,11 @@ msgstr ""
 "jedes Zeitraums voraussichtlich auf Lager sein wird, unter der Annahme, dass "
 "die vorgeschlagenen Auffüllmengen erfüllt werden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:109
 msgid "Altogether, these default categories form an equation:"
 msgstr "Alles zusammen ergeben diese Standardkategorien eine Gleichung:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:111
 msgid ""
 "\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
 "\\text{Forecasted Stock}\n"
@@ -53244,7 +53224,7 @@ msgstr ""
 "\\text{Prognostizierter Bestand}\n"
 "\n"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:117
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:114
 msgid ""
 "In the case of components, the :guilabel:`Indirect Demand Forecast` is taken "
 "into account as well."
@@ -53252,7 +53232,7 @@ msgstr ""
 "Bei Komponenten wir die :guilabel:`Indirekte Bestandsprognose` ebenfalls "
 "berücksichtigt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:116
 msgid ""
 "The :guilabel:`- Forecasted Demand` and :guilabel:`+ Suggested "
 "Replenishment` fields can be edited for any of the time periods to the right "
@@ -53264,7 +53244,7 @@ msgstr ""
 "Produktspalte bearbeitet werden. Dadurch wird die Gleichung geändert und der "
 "im Feld :guilabel:`Prognostizierter Bestand` angezeigte Wert aktualisiert."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:120
 msgid ""
 "Changing the value in the :guilabel:`+ Suggested Replenishment` field also "
 "makes an :icon:`fa-times` :guilabel:`(reset)` button appear to the left of "
@@ -53277,7 +53257,7 @@ msgstr ""
 "Schaltfläche :icon:`fa-times` :guilabel:`(zurücksetzen)` neben dem Feld, um "
 "den Wert wieder auf den vom |MPS| berechneten Wert zurückzusetzen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:129
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:126
 msgid ""
 "While the |MPS| can be used with only the default categories enabled, it is "
 "advisable to also enable the :guilabel:`Actual Demand` category. This is "
@@ -53292,7 +53272,7 @@ msgstr ""
 "aktivieren Sie die Option :guilabel:`Tatsächlicher Bedarf` unter der "
 "Überschrift :guilabel:`Zeilen`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:131
 msgid ""
 "With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
 "Forecasted Demand` category changes to the :guilabel:`- Actual / Forecasted "
@@ -53307,7 +53287,7 @@ msgstr ""
 "Kategorie auch der bestätigte Bedarf für das Produkt angezeigt, der auf den "
 "bestätigten Verkaufsaufträgenbasiert."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:139
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:136
 msgid ""
 "Each column to the right of the products column lists one unit of the time "
 "period selected in the *Time Range* field on the *Manufacturing* app "
@@ -53320,7 +53300,7 @@ msgstr ""
 "Zeitraums entspricht dem Wert, der im Feld *Anzahl der Zeiträume* eingegeben "
 "wurde."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:143
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:140
 msgid ""
 "The first time period column represents the current time period. For "
 "example, if the |MPS| is configured to use months, the first column displays "
@@ -53333,15 +53313,14 @@ msgstr ""
 "wird das Feld :guilabel:`+ Vorgeschlagene Auffüllung` in einer von fünf "
 "Farben angezeigt:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:144
 msgid ""
 ":guilabel:`Green`: a replenishment order must be generated to keep stock at "
-"the :guilabel:`Safety Stock Target`."
+"the :guilabel:`Safety Stock Target`, based on the configured :doc:`lead "
+"times <../../inventory/warehouses_storage/replenishment/lead_times>`."
 msgstr ""
-":guilabel:`Grün`: Es muss ein Auffüllauftrag erstellt werden, um "
-"die :guilabel:`Zielvorgabe für Sicherheitsbestand` einzuhalten."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:149
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
 msgid ""
 ":guilabel:`Gray`: a replenishment order has already been generated to keep "
 "stock at the :guilabel:`Safety Stock Target`."
@@ -53349,7 +53328,7 @@ msgstr ""
 ":guilabel:`Grau`: Es wurde ein Auffüllauftrag erstellt, um "
 "die :guilabel:`Zielvorgabe für Sicherheitsbestand` einzuhalten."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:151
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:149
 msgid ""
 ":guilabel:`Yellow`: a replenishment order has already been generated, but "
 "the quantity it was created for is not enough to keep stock at "
@@ -53359,7 +53338,7 @@ msgstr ""
 "die er erstellt wurde, ist nicht ausreichend, um die :guilabel:`Zielvorgabe "
 "für Sicherheitsbestand` einzuhalten."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:153
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:151
 msgid ""
 ":guilabel:`Red`: a replenishment order has already been generated, but the "
 "quantity it was created for puts the amount of stock above "
@@ -53369,7 +53348,7 @@ msgstr ""
 "die er erstellt wurde, höher als die :guilabel:`Zielvorgabe für "
 "Sicherheitsbestand` ist."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:156
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:154
 msgid ""
 "The :guilabel:`+ Suggested Replenishment` field appears white, if no "
 "replenishment order has been generated, and it is not necessary to generate "
@@ -53379,11 +53358,11 @@ msgstr ""
 "der Auffüllauftrag generiert wurde, und es nicht nötig ist, aktuell einen zu "
 "erstellen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:160
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:158
 msgid "Add a product"
 msgstr "Produkt hinzufügen"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:162
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:160
 msgid ""
 "To use |MPS| to manage the replenishment of a product, navigate "
 "to :menuselection:`Manufacturing app --> Planning --> Master Production "
@@ -53395,14 +53374,14 @@ msgstr ""
 "(MPS)`. Klicken Sie oben auf der |MPS|-Seite auf :guilabel:`Produkt "
 "hinzufügen`, um das Pop-up-Fenster :guilabel:`Produkt hinzufügen` zu öffnen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:167
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:165
 msgid ""
 "Products **must** be properly configured to be replenished through the |MPS|."
 msgstr ""
 "Produkte **müssen** korrekt konfiguriert werden, damit Sie per |MPS| "
 "aufgefüllt werden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:169
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:167
 msgid ""
 "In the case of manufactured products, the *Manufacture* route must be "
 "selected in the *Routes* section of the *Inventory* tab, on the product's "
@@ -53411,7 +53390,7 @@ msgstr ""
 "Bei hergestellten Produkten muss die Route *Fertigung* im Abschnitt *Routen* "
 "des Reiters *Lager* auf dem Produktformular ausgewählt werden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:172
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:170
 msgid ""
 "In the case of products that are purchased, the *Buy* route must be selected "
 "in the *Routes* section of the *Inventory* tab, on the product's form. "
@@ -53423,7 +53402,7 @@ msgstr ""
 "Außerdem muss auf dem Reiter *Einkauf* ein Lieferant und der Preis, zu dem "
 "er das Produkt verkauft, angegeben werden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:176
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:174
 msgid ""
 "On the pop-up window, select the product to add in the :guilabel:`Product` "
 "drop-down menu. If the product is replenished through manufacturing, select "
@@ -53433,7 +53412,7 @@ msgstr ""
 "hinzuzufügende Produkt aus. Wenn das Produkt über die Fertigung aufgefüllt "
 "wird, wählen Sie die Stückliste des Produkts im Feld :guilabel:`Stückliste`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:181
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:179
 msgid ""
 "Selecting a BoM when adding a product to the |MPS| also adds any components "
 "listed on the BoM. If it is not necessary to manage the replenishment of "
@@ -53446,7 +53425,7 @@ msgstr ""
 "über den |MPS| zu verwalten, lassen Sie das Feld :guilabel:`Stückliste` "
 "einfach leer."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:185
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
 msgid ""
 "If the database is configured with multiple warehouses, "
 "a :guilabel:`Production Warehouse` field appears on the :guilabel:`Add a "
@@ -53458,7 +53437,7 @@ msgstr ""
 "hinzufügen`. Verwenden Sie dieses Feld, um anzugeben, in welchem Lagerhaus "
 "das Produkt aufgefüllt wird."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:189
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:187
 msgid ""
 "In the :guilabel:`Safety Stock Target` field, specify the minimum quantity "
 "of the product that should be kept available for orders at all times. For "
@@ -53471,7 +53450,7 @@ msgstr ""
 "Auftragsabwicklung verfügbar sein sollen, geben Sie in das "
 "Feld :guilabel:`Zielvorgabe für Sicherheitsbestand` `20` ein."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:194
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:192
 msgid ""
 "In the :guilabel:`Minimum to Replenish` field, enter the minimum product "
 "quantity for orders created to replenish the product. For example, if `5` is "
@@ -53483,7 +53462,7 @@ msgstr ""
 "Beispiel `5` in dieses Feld eingegeben wird, enthalten Auffüllaufträge für "
 "das Produkt eine Mindestanzahl von fünf Einheiten."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:198
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:196
 msgid ""
 "In the :guilabel:`Maximum to Replenish` field, enter the maximum product "
 "quantity for orders created to replenish the product. For example, if `100` "
@@ -53495,7 +53474,7 @@ msgstr ""
 "Beispiel `100` in dieses Feld eingegeben wird, enthalten Auffüllaufträge für "
 "das Produkt eine Höchstanzahl von 100 Einheiten."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:202
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:200
 msgid ""
 "Finally, click :guilabel:`Save` to add the product to the |MPS|. The product "
 "now appears on the |MPS| page each time it is opened. If a |BoM| was "
@@ -53514,11 +53493,11 @@ msgstr ""
 msgid "The Add a Product pop-up window in the MPS."
 msgstr "Das Pop-up-Fenster „Produkt hinzufügen“ im MPS."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:209
 msgid "Edit a product"
 msgstr "Ein Produkt bearbeiten"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:214
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
 msgid ""
 "After adding a product to the |MPS|, it may be necessary to change the "
 "replenishment values entered on the :guilabel:`Add a Product` pop-up window. "
@@ -53532,7 +53511,7 @@ msgstr ""
 "≤...≤ #` direkt rechts neben der Schaltfläche :guilabel:`Auffüllen` in der "
 "Zeile :guilabel:`+ Vorgeschlagene Auffüllung` unterhalb des Produktnamens."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
 msgid ""
 "The first and second number displayed on the :guilabel:`# ≤…≤ #` button "
 "correspond to the values entered in the :guilabel:`Minimum to Replenish` "
@@ -53544,7 +53523,7 @@ msgstr ""
 "Feldern :guilabel:`Minimum aufzufüllen` und :guilabel:`Maximum aufzufüllen` "
 "beim Hinzufügen des Produkts zum |MPS| eingegeben wurden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
 msgid ""
 "For example, if `5` was entered in the :guilabel:`Minimum to Replenish` "
 "field, and `100` was entered in the :guilabel:`Maximum to Replenish` field, "
@@ -53554,7 +53533,7 @@ msgstr ""
 "Feld :guilabel:`Maximum aufzufüllen` `100` eingegeben wurde, erscheint die "
 "Schaltfläche als :guilabel:`5 ≤...≤ 100`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:228
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:225
 msgid ""
 "Clicking the :guilabel:`# ≤…≤ #` button opens the :guilabel:`Edit Production "
 "Schedule` pop-up window. This pop-up window is the same as "
@@ -53568,7 +53547,7 @@ msgstr ""
 "Unterschied, dass die Felder :guilabel:`Produkt` und :guilabel:`Stückliste` "
 "nicht bearbeitet werden können."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:232
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:229
 msgid ""
 "On the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
 "values in the :guilabel:`Safety Stock Target`, :guilabel:`Minimum to "
@@ -53581,11 +53560,11 @@ msgstr ""
 "aufzufüllen` ein. Klicken Sie dann auf :guilabel:`Speichern`, um die "
 "Änderungen zu speichern."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:237
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:234
 msgid "Remove a product"
 msgstr "Ein Produkt entfernen"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:239
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
 msgid ""
 "To remove a product from the |MPS|, tick the checkbox to the left of its "
 "name. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top "
@@ -53600,7 +53579,7 @@ msgstr ""
 "down-Menü. Klicken Sie schließlich im Pop-up-Fenster :guilabel:`Bestätigung` "
 "auf :guilabel:`Ok`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:244
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:241
 msgid ""
 "Deleting a product from the |MPS| removes it, along with all of its data. If "
 "the product is re-added, its replenishment values must be reconfigured."
@@ -53609,15 +53588,15 @@ msgstr ""
 "allen Daten entfernt. Wenn das Produkt wieder hinzugefügt wird, müssen seine "
 "Auffüllwerte neu konfiguriert werden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:248
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:245
 msgid "|MPS| replenishment"
 msgstr "|MPS|-Auffüllung"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:250
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:247
 msgid "Products in the |MPS| can be replenished in one of three ways:"
 msgstr "Produkte im |MPS| können auf drei Arten aufgefüllt werden:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:249
 msgid ""
 "Click the :guilabel:`Replenish` button at the top of the screen to generate "
 "replenishment orders for every product below its :guilabel:`Safety Stock "
@@ -53628,7 +53607,7 @@ msgstr ""
 "seinem :guilabel:`Zielvorgabe für Sicherheitsbestand` für den aktuellen "
 "Monat liegt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:251
 msgid ""
 "Click the :guilabel:`Replenish` button on the right side of the :guilabel:`+ "
 "Suggested Replenishment` row of a specific product, to generate a "
@@ -53638,7 +53617,7 @@ msgstr ""
 "Zeile :guilabel:`+ Empfohlene Auffüllung` für ein bestimmtes Produkt, um "
 "einen Auffüllauftrag für dieses bestimmte Produkt zu generieren."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:257
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
 msgid ""
 "Tick the checkbox to the left of the product name of one or more products. "
 "Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top of the "
@@ -53651,7 +53630,7 @@ msgstr ""
 "Sie :guilabel:`Auffüllen` aus dem daraufhin angezeigten Drop-down-Menü aus. "
 "Dadurch wird für jedes ausgewählte Produkt einen Auffüllauftrag generiert."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:262
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:259
 msgid ""
 "The type of replenishment order generated corresponds to the route selected "
 "on the *Inventory* tab of the product's form:"
@@ -53659,7 +53638,7 @@ msgstr ""
 "Die Art des generierten Auffüllauftrags entspricht der Route, die im Reiter "
 "*Lager* des Produktformulars ausgewählt wird:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:265
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:262
 msgid ""
 "If the *Buy* route is selected, an |RfQ| is generated to replenish the "
 "product. |RfQs| can be selected by navigating to "
@@ -53672,7 +53651,7 @@ msgstr ""
 "generierte Angebotsanfrage listet :guilabel:`MPS` im "
 "Feld :guilabel:`Referenzbeleg` auf."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:268
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:265
 msgid ""
 "If the *Manufacture* route is selected, an |MO| is generated to replenish "
 "the product. |MOs| can be selected by navigating "
@@ -63274,6 +63253,927 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "When manufacturing certain products, specific operations may need to be "
+#~ "completed before others can begin. In order to ensure operations are "
+#~ "carried out in the correct order, Odoo *Manufacturing* features a *work "
+#~ "order dependencies* setting. Enabling this setting allows for operations "
+#~ "on a Bill of Materials (BoM) to be *blocked* by other operations that "
+#~ "should occur first."
+#~ msgstr ""
+#~ "Bei der Herstellung bestimmter Produkte müssen bestimmte Vorgänge "
+#~ "abgeschlossen sein, bevor andere beginnen können. Um sicherzustellen, "
+#~ "dass die Vorgänge in der richtigen Reihenfolge ausgeführt werden, verfügt "
+#~ "Odoo *Fertigung* über die Einstellung *Arbeitsfolgeabhängigkeiten*. Wenn "
+#~ "Sie diese Einstellung aktivieren, können Vorgänge in einer Stückliste "
+#~ "durch andere Vorgänge, die zuerst ausgeführt werden sollen, *gesperrt* "
+#~ "werden."
+
+#~ msgid ""
+#~ "The *work order dependencies* setting is not enabled by default. To "
+#~ "enable it, begin by navigating to :menuselection:`Manufacturing --> "
+#~ "Configuration --> Settings`. Then, enable the :guilabel:`Work Orders` "
+#~ "setting, if it is not already active."
+#~ msgstr ""
+#~ "Die Einstellung *Arbeitsauftragsabhängigkeiten* ist nicht standardmäßig "
+#~ "aktiviert. Navigieren Sie zur Aktivierung der Funktion "
+#~ "zu :menuselection:`Fertigung --> Konfiguration --> Einstellungen`. "
+#~ "Aktivieren Sie die Einstellungen :guilabel:`Arbeitsaufträge`, wenn sie "
+#~ "noch nicht aktiviert wurde."
+
+#~ msgid ""
+#~ "Work order dependencies are configured on a product's |BOM|. To do so, "
+#~ "navigate to :menuselection:`Manufacturing --> Products --> Bills of "
+#~ "Materials`, then select a |BOM|, or create a new one by "
+#~ "clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "Abhängigkeiten von Arbeitsaufträgen werden für die Stückliste eines "
+#~ "Produkts konfiguriert. Navigieren Sie dazu zu :menuselection:`Fertigung --"
+#~ "> Produkte --> Stücklisten` und wählen Sie eine Stückliste aus, oder "
+#~ "erstellen Sie eine neue, indem Sie auf :guilabel:`Neu` klicken."
+
+#~ msgid ""
+#~ "For a complete guide on how to properly configure a new |BOM|, see the "
+#~ "documentation on :doc:`creating a bill of materials <../basic_setup/"
+#~ "bill_configuration>`."
+#~ msgstr ""
+#~ "Eine vollständige Anleitung zur korrekten Konfiguration einer neuen "
+#~ "Stückliste finden Sie in der Dokumentation :doc:`Eine Stückliste "
+#~ "erstellen<../basic_setup/bill_configuration>`."
+
+#~ msgid ""
+#~ "On the |BOM|, click on the :guilabel:`Miscellaneous` tab, then enable "
+#~ "the :guilabel:`Operation Dependencies` checkbox. This makes a "
+#~ "new :guilabel:`Blocked By` option available in the settings of "
+#~ "the :guilabel:`Operations` tab."
+#~ msgstr ""
+#~ "Klicken Sie auf der Stückliste auf den Reiter :guilabel:`Sonstiges` und "
+#~ "aktivieren Sie die :guilabel:`Vorgangsabhängigkeiten`. Dadurch erscheint "
+#~ "eine neue Option :guilabel:`Blockiert durch` in den Einstellungen des "
+#~ "Reiters :guilabel:`Vorgänge`."
+
+#~ msgid ""
+#~ "Next, click on the :guilabel:`Operations` tab. On the top-right of the "
+#~ "tab, click on the tab's :guilabel:`settings` button, then enable "
+#~ "the :guilabel:`Blocked By` checkbox. This makes a :guilabel:`Blocked By` "
+#~ "field appear for each operation on the :guilabel:`Operations` tab."
+#~ msgstr ""
+#~ "Klicken Sie dann auf den Reiter :guilabel:`Vorgänge`. Klicken Sie rechts "
+#~ "auf dem Reiter auf die Schaltfläche :guilabel:`Einstellungen` und "
+#~ "aktivieren Sie :guilabel:`Blockiert durch`. Dadurch "
+#~ "erscheint :guilabel:`Blockiert durch`."
+
+#~ msgid ""
+#~ "In the line of the operation that should be blocked by another operation, "
+#~ "click the :guilabel:`Blocked By` field, and an :guilabel:`Open: "
+#~ "Operations` pop-up window appears. In the :guilabel:`Blocked By` drop-"
+#~ "down field on the pop-up window, select the blocking operation that must "
+#~ "be completed *before* the operation that is blocked."
+#~ msgstr ""
+#~ "Klicken Sie in der Zeile des Vorgangs, der durch einen anderen Vorgang "
+#~ "blockiert werden soll, auf das Feld :guilabel:`Blockiert durch` und "
+#~ "ein :guilabel:`Öffnen: Vorgänge` erscheint ein Pop-up-Fenster. Wählen Sie "
+#~ "im Dropdown-Feld :guilabel:`Blockiert durch` des Pop-up-Fensters den "
+#~ "blockierenden Vorgang aus, der *vor* dem blockierten Vorgang "
+#~ "abgeschlossen werden muss."
+
+#~ msgid "Finally, save the |BOM| by clicking :guilabel:`Save`."
+#~ msgstr "Klicken Sie anschließend auf :guilabel:`Speichern`."
+
+#~ msgid ""
+#~ "Once work order dependencies have been configured on a |BOM|, Odoo "
+#~ "*Manufacturing* is able to plan when work orders are scheduled, based on "
+#~ "their dependencies. To plan the work orders for a manufacturing order, "
+#~ "begin by navigating to :menuselection:`Manufacturing --> Operations --> "
+#~ "Manufacturing Orders`."
+#~ msgstr ""
+#~ "Sobald die Abhängigkeiten von Arbeitsaufträgen auf einer Stückliste "
+#~ "konfiguriert sind, kann Odoo *Fertigung* planen, wann Arbeitsaufträge auf "
+#~ "der Grundlage ihrer Abhängigkeiten eingeplant werden. Um die "
+#~ "Arbeitsaufträge für einen Fertigungsauftrag zu planen, navigieren Sie "
+#~ "zunächst zu :menuselection:`Fertigung --> Vorgänge --> "
+#~ "Fertigungsaufträge`."
+
+#~ msgid ""
+#~ "After confirming the manufacturing order, select the :guilabel:`Work "
+#~ "Orders` tab to view the work orders required to complete it. Any work "
+#~ "orders that are *not* blocked by a different work order display a `Ready` "
+#~ "tag in the :guilabel:`Status` section."
+#~ msgstr ""
+#~ "Nachdem Sie den Fertigungsauftrag bestätigt haben, wählen Sie den "
+#~ "Reiter :guilabel:`Arbeitsaufträge`, um die Arbeitsaufträge anzuzeigen, "
+#~ "die für die Fertigstellung des Auftrags erforderlich sind. Alle "
+#~ "Arbeitsaufträge, die *nicht* durch einen anderen Arbeitsauftrag blockiert "
+#~ "sind, werden im Abschnitt :guilabel:`Status` mit einem `Bereit` "
+#~ "gekennzeichnet."
+
+#~ msgid ""
+#~ "Work orders that are blocked by one or more work orders display a "
+#~ "`Waiting for another WO` tag instead. Once the blocking work order(s) are "
+#~ "completed, the tag updates to `Ready`."
+#~ msgstr ""
+#~ "Bei Arbeitsaufträgen, die durch einen oder mehrere Arbeitsaufträge "
+#~ "blockiert sind, wird stattdessen die Markierung `Wartet auf anderen "
+#~ "Arbeitsauftrag` angezeigt. Sobald der oder die blockierten "
+#~ "Arbeitsaufträge abgeschlossen sind, wird die Markierung auf `Bereit` "
+#~ "aktualisiert."
+
+#~ msgid ""
+#~ "To schedule the manufacturing order's work orders, click "
+#~ "the :guilabel:`Plan` button at the top of the page. After doing so, "
+#~ "the :guilabel:`Scheduled Start Date` field for each work order on "
+#~ "the :guilabel:`Work Orders` tab auto-fills with the scheduled start date "
+#~ "and time. A blocked work order is scheduled at the end of the time period "
+#~ "specified in the :guilabel:`Expected Duration` field of the work order "
+#~ "that precedes it."
+#~ msgstr ""
+#~ "Um die Arbeitsaufträge des Fertigungsauftrags zu planen, klicken Sie auf "
+#~ "die Schaltfläche :guilabel:`Planen` oben auf der Seite. Daraufhin wird "
+#~ "das Feld :guilabel:`Geplantes Startdatum` für jeden Arbeitsauftrag im "
+#~ "Reiter :guilabel:`Arbeitsaufträge` automatisch mit dem geplanten "
+#~ "Startdatum und der Uhrzeit ausgefüllt. Ein blockierter Arbeitsauftrag "
+#~ "wird am Ende des Zeitraums eingeplant, der im Feld :guilabel:`Erwartete "
+#~ "Dauer` des vorangegangenen Arbeitsauftrags angegeben ist."
+
+#~ msgid ""
+#~ "The Scheduled Start Date field for work orders on a manufacturing order."
+#~ msgstr ""
+#~ "Das Feld „Geplantes Startdatum” für Arbeitsaufträge auf einem "
+#~ "Fertigungsauftrag."
+
+#~ msgid "Planning by workcenter"
+#~ msgstr "Planung nach Arbeitsplatz"
+
+#~ msgid ""
+#~ "To see a visual representation of how work orders are planned, navigate "
+#~ "to the :guilabel:`Work Orders Planning` page by going "
+#~ "to :menuselection:`Manufacturing --> Planning --> Planning by "
+#~ "Workcenter`. This page shows a timeline of all the work orders scheduled "
+#~ "for each operation."
+#~ msgstr ""
+#~ "Um eine visuelle Darstellung der Planung von Arbeitsaufträgen zu sehen, "
+#~ "gehen Sie auf die Seite :guilabel:`Arbeitsauftragsplanung`, indem Sie "
+#~ "auf :menuselection:`Fertigung --> Planung --> Planung nach Arbeitsplatz` "
+#~ "gehen. Auf dieser Seite sehen Sie eine Zeitleiste mit allen "
+#~ "Arbeitsaufträgen, die für jeden Vorgang geplant sind."
+
+#~ msgid ""
+#~ "If one work order is blocked by the completion of another, the work order "
+#~ "that is blocked is shown as scheduled to start after the work order "
+#~ "blocking it. In addition, an arrow connects the two work orders, leading "
+#~ "from the blocking operation to the blocked operation."
+#~ msgstr ""
+#~ "Wenn ein Arbeitsauftrag durch den Abschluss eines anderen blockiert wird, "
+#~ "wird der blockierte Arbeitsauftrag als für den Start nach dem blockierten "
+#~ "Arbeitsauftrag geplant angezeigt. Außerdem werden die beiden "
+#~ "Arbeitsaufträge durch einen Pfeil verbunden, der vom blockierten Vorgang "
+#~ "zum blockierten Vorgang führt."
+
+#~ msgid ""
+#~ "The *Shop Floor* module is installed alongside the *Manufacturing* app. "
+#~ "It cannot be installed by itself. To install the *Manufacturing* app, "
+#~ "navigate to :menuselection:`Apps`, search for `manufacturing` in "
+#~ "the :guilabel:`Search...` bar, and then click :guilabel:`Install` on "
+#~ "the :guilabel:`Manufacturing` app card."
+#~ msgstr ""
+#~ "Das *Werkstatt*-Modul wird zusammen mit der *Fertigungsapp* installiert. "
+#~ "Es kann nicht eigenständig installiert werden. Um die *Fertigungsapp* zu "
+#~ "installieren, navigieren Sie zu :menuselection:`Apps`, suchen Sie in der "
+#~ "Leiste :guilabel:`Suchen ...` nach `Fertigung` und klicken Sie dann "
+#~ "auf :guilabel:`Installieren` auf der Karte der :guilabel:`Fertigungsapp`."
+
+#~ msgid ""
+#~ "The *Shop Floor* module replaces the tablet view functionality of the "
+#~ "*Manufacturing* app, and is only available in Odoo versions 16.4 and "
+#~ "later."
+#~ msgstr ""
+#~ "Das *Werkstatt*-Modul ersetzt die Tablet-Ansichtsfunktion der "
+#~ "*Fertigungsapp* und ist nur in Odoo-Versionen 16.4 und höher verfügbar."
+
+#~ msgid ""
+#~ "To check the version number of an Odoo database, navigate "
+#~ "to :menuselection:`Settings` and scroll down to the :guilabel:`About` "
+#~ "section at the bottom of the page. The version number is displayed there."
+#~ msgstr ""
+#~ "Um die Versionsnummer einer Odoo-Datenbank zu überprüfen, navigieren Sie "
+#~ "zu :menuselection:`Einstellungen` und scrollen Sie zum "
+#~ "Abschnitt :guilabel:`Über` am Ende der Seite. Dort wird die "
+#~ "Versionsnummer angezeigt."
+
+#~ msgid ""
+#~ "To switch to a newer version of Odoo, see the documentation "
+#~ "on :doc:`upgrading a database <../../../../administration/upgrade>`."
+#~ msgstr ""
+#~ "Um zu einer neueren Version von Odoo zu wechseln, lesen Sie die "
+#~ "Dokumentation zu :doc:`Upgrade einer Datenbank <../../../../"
+#~ "administration/upgrade>`."
+
+#~ msgid ""
+#~ "The :guilabel:`All` page serves as the main dashboard for the module, and "
+#~ "displays information cards for |MOs|."
+#~ msgstr ""
+#~ "Die Seite :guilabel:`Alle` dient als Hauptdashboard für das Modul und "
+#~ "zeigt Informationskarten für Fertigungsaufträge an."
+
+#~ msgid ""
+#~ "Each work center also has a dedicated page, which shows information cards "
+#~ "for work orders assigned to that work center. Work center pages can be "
+#~ "toggled on or off by clicking the :guilabel:`+ (plus)` button in the "
+#~ "navigation bar, selecting or deselecting them on the pop-up window that "
+#~ "appears, and then clicking :guilabel:`Confirm`."
+#~ msgstr ""
+#~ "Jeder Arbeitsplatz hat auch eine eigene Seite, auf der Informationskarten "
+#~ "für Arbeitsaufträge angezeigt werden, die diesem Arbeitsplatz zugeordnet "
+#~ "sind. Sie können die Arbeitsplatzseiten ein- oder ausschalten, indem Sie "
+#~ "in der Navigationsleiste auf die Schaltfläche :guilabel:`+ (Plus)` "
+#~ "klicken, sie in dem daraufhin angezeigten Pop-up-Fenster auswählen oder "
+#~ "abwählen und dann auf :guilabel:`Bestätigen` klicken."
+
+#~ msgid ""
+#~ "The :guilabel:`My` page shows information cards for all work orders "
+#~ "assigned to the employee whose profile is currently active in the "
+#~ "operator panel on the left side of the module. Other than only showing "
+#~ "work orders assigned to the active employee, this page functions the same "
+#~ "as the pages for each work center."
+#~ msgstr ""
+#~ "Die Seite :guilabel:`Meine` zeigt Informationskarten für alle "
+#~ "Arbeitsaufträge, die dem Mitarbeiter zugewiesen sind, dessen Profil im "
+#~ "Bedienfeld auf der linken Seite des Moduls gerade aktiv ist. Abgesehen "
+#~ "davon, dass nur Arbeitsaufträge angezeigt werden, die dem aktiven "
+#~ "Mitarbeiter zugeordnet sind, funktioniert diese Seite genauso wie die "
+#~ "Seiten für die einzelnen Arbeitsplätze."
+
+#~ msgid ""
+#~ "To isolate an |MO| or work order, so that no other orders appear, simply "
+#~ "search the reference number of the |MO| in the :guilabel:`Search...` bar "
+#~ "at the top of the module. This search filter remains active while "
+#~ "switching between the different module views."
+#~ msgstr ""
+#~ "Um einen Auftrag zu isolieren, sodass keine anderen Aufträge angezeigt "
+#~ "werden, suchen Sie einfach die Referenznummer des Auftrags in der "
+#~ "Leiste :guilabel:`Suchen ...` oben im Modul. Dieser Suchfilter bleibt "
+#~ "aktiv, wenn Sie zwischen den verschiedenen Modulansichten wechseln."
+
+#~ msgid ""
+#~ "On the left side of the module is the operator panel, which shows all of "
+#~ "the employees currently signed in to *Shop Floor*, and allows new "
+#~ "employees to sign in. The operator panel is always available in the "
+#~ "module, regardless of which view is selected. It can be toggled on or off "
+#~ "by clicking the :guilabel:`sidebar` button at the extreme left of the "
+#~ "navigation bar."
+#~ msgstr ""
+#~ "Auf der linken Seite des Moduls befindet sich das Bedienfeld, in dem alle "
+#~ "Mitarbeiter angezeigt werden, die derzeit bei *Werkstatt* angemeldet "
+#~ "sind, und in dem sich neue Mitarbeiter anmelden können. Das Bedienerpanel "
+#~ "ist im Modul immer verfügbar, unabhängig davon, welche Ansicht ausgewählt "
+#~ "ist. Sie können es ein- oder ausschalten, indem Sie auf die "
+#~ "Schaltfläche :guilabel:`Seitenleiste` ganz links in der Navigationsleiste "
+#~ "klicken."
+
+#~ msgid ""
+#~ "The \"sidebar\" button, which is used to toggle the operator panel on or "
+#~ "off."
+#~ msgstr ""
+#~ "Die Schaltfläche \"Seitenleiste\", mit der Sie das Bedienfeld ein- oder "
+#~ "ausschalten können."
+
+#~ msgid "All page"
+#~ msgstr "Seite „Alle Arbeitsaufträge“"
+
+#~ msgid ""
+#~ "By default, the :guilabel:`All` page shows an information card for every |"
+#~ "MO| that is *ready to start*. An |MO| is considered ready to start once "
+#~ "it has been confirmed, and all required components are available."
+#~ msgstr ""
+#~ "Standardmäßig wird auf der Seite :guilabel:`Alle` eine Informationskarte "
+#~ "für jeden *bereiten* Fertigungsauftrag angezeigt. Ein Fertigungsauftrag "
+#~ "gilt als startbereit, wenn er bestätigt wurde und alle erforderlichen "
+#~ "Komponenten verfügbar sind."
+
+#~ msgid ""
+#~ "To view every confirmed |MO| regardless of readiness, click "
+#~ "the :guilabel:`x` button on the :guilabel:`Ready to Start` filter to "
+#~ "remove it from the :guilabel:`Search...` bar."
+#~ msgstr ""
+#~ "Wenn Sie alle bestätigten Fertigungsaufträge unabhängig von der "
+#~ "Bereitschaft anzeigen möchten, klicken Sie auf die "
+#~ "Schaltfläche :guilabel:`x` auf dem Filter :guilabel:`Bereit`, um ihn aus "
+#~ "der Leiste :guilabel:`Suchen ...` zu entfernen."
+
+#~ msgid ""
+#~ "An |MO| information card on the :guilabel:`All` page shows all of the "
+#~ "relevant details of the associated |MO|, and also provides employees with "
+#~ "options for processing the |MO|."
+#~ msgstr ""
+#~ "Eine Informationskarte auf der Seite :guilabel:`Alle` zeigt alle "
+#~ "relevanten Details zum zugehörigen Fertigungsauftrag und bietet den "
+#~ "Mitarbeitern außerdem Optionen zur Bearbeitung des Fertigungsauftrags."
+
+#~ msgid ""
+#~ "The header for an |MO| card shows the |MO| number, the product and number "
+#~ "of units being produced, and the status of the |MO|. If work has not yet "
+#~ "begun on the |MO|, the status appears as :guilabel:`Confirmed`. Once work "
+#~ "has begun, the status updates to :guilabel:`In Progress`. If all work "
+#~ "orders for an |MO| have been completed and the |MO| is ready to close, "
+#~ "the status updates to :guilabel:`To Close`."
+#~ msgstr ""
+#~ "Die Kopfzeile einer Fertigungsauftragskarte zeigt die "
+#~ "Fertigungsauftragsnummer, das Produkt und die Anzahl der produzierten "
+#~ "Einheiten sowie den Status der Fertigungsauftragskarte. Wenn die Arbeit "
+#~ "an der Karte noch nicht begonnen hat, wird der Status "
+#~ "als :guilabel:`Bestätigt` angezeigt. Sobald die Arbeit begonnen hat, wird "
+#~ "der Status auf :guilabel:`In Bearbeitung` aktualisiert. Wenn alle "
+#~ "Arbeitsaufträge für einen Fertigungsauftrag abgeschlossen sind und der "
+#~ "Fertigungsauftrag geschlossen werden kann, wird der Status "
+#~ "auf :guilabel:`Zu schließen` aktualisiert."
+
+#~ msgid ""
+#~ "The main body of an |MO| card shows a line for each completed work order, "
+#~ "if any, followed by the current work order that needs to be completed. "
+#~ "Completed work orders are indicated by a green check mark to the right of "
+#~ "title of the work order. The current work order is indicated by a button "
+#~ "that opens the page for the work center to which the order is assigned."
+#~ msgstr ""
+#~ "Der Hauptteil einer Fertigungsauftragskarte zeigt eine Zeile für jeden "
+#~ "abgeschlossenen Arbeitsauftrag, falls vorhanden, gefolgt von dem "
+#~ "aktuellen Arbeitsauftrag, der noch abgeschlossen werden muss. Erledigte "
+#~ "Arbeitsaufträge sind durch ein grünes Häkchen rechts neben dem Titel des "
+#~ "Arbeitsauftrags gekennzeichnet. Der aktuelle Arbeitsauftrag wird durch "
+#~ "eine Schaltfläche angezeigt, die die Seite für den Arbeitsplatz öffnet, "
+#~ "dem der Auftrag zugewiesen ist."
+
+#~ msgid ""
+#~ "Below the current work order is a line titled :guilabel:`Register "
+#~ "Production`, which is used to record the number of product units "
+#~ "produced. To manually enter the number of units produced, click on "
+#~ "the :guilabel:`Register Production` line, enter a value in "
+#~ "the :guilabel:`Units` field of the resulting pop-up window, then "
+#~ "click :guilabel:`Validate`."
+#~ msgstr ""
+#~ "Unter dem aktuellen Arbeitsauftrag befindet sich eine Zeile mit der "
+#~ "Bezeichnung :guilabel:`Produktion registrieren`, in der die Anzahl der "
+#~ "produzierten Produkteinheiten erfasst wird. Um die Anzahl der "
+#~ "produzierten Einheiten manuell einzugeben, klicken Sie auf die "
+#~ "Zeile :guilabel:`Produktion registrieren`, geben einen Wert in das "
+#~ "Feld :guilabel:`Einheit(en)` des sich öffnenden Fensters ein und klicken "
+#~ "dann auf :guilabel:`Validieren`."
+
+#~ msgid ""
+#~ "Alternatively, click the :guilabel:`# Units` button on the right side of "
+#~ "the line, which automatically records the number of units the |MO| was "
+#~ "created for as the number of units produced. For example, if an |MO| is "
+#~ "created for 10 units of a dining table, clicking the :guilabel:`10 units` "
+#~ "button records that 10 units were produced."
+#~ msgstr ""
+#~ "Alternativ können Sie auch auf die Schaltfläche :guilabel:`# Einheit(en)` "
+#~ "auf der rechten Seite der Zeile klicken, die automatisch die Anzahl der "
+#~ "Einheiten, für die der Fertigungsauftrag erstellt wurde, als Anzahl der "
+#~ "produzierten Einheiten aufzeichnet. Wenn z. B. für 10 Einheiten eines "
+#~ "Esstisches ein Fertigungsauftrag erstellt wurde, wird durch Klicken auf "
+#~ "die Schaltfläche :guilabel:`10 Einheit(en)` festgehalten, dass 10 "
+#~ "Einheiten produziert wurden."
+
+#~ msgid ""
+#~ "The footer of the |MO| card displays a :guilabel:`Close Production` "
+#~ "button. This is used to close the |MO| once production is completed. "
+#~ "However, if there are any quality checks required for the |MO| as a whole "
+#~ "(not the work orders within it), a :guilabel:`Quality Checks` button "
+#~ "appears instead. Clicking :guilabel:`Quality Checks` opens a pop-up "
+#~ "window, from which any required quality checks can be completed."
+#~ msgstr ""
+#~ "In der Fußzeile der Fertigungsauftragskarte wird eine "
+#~ "Schaltfläche :guilabel:`Produktion schließen` angezeigt. Damit können Sie "
+#~ "den Fertigungsauftrag schließen, sobald die Produktion abgeschlossen ist. "
+#~ "Wenn jedoch Qualitätsprüfungen für den gesamten Auftrag (nicht für die "
+#~ "darin enthaltenen Arbeitsaufträge) erforderlich sind, erscheint "
+#~ "stattdessen die Schaltfläche :guilabel:`Qualitätsprüfungen`. Wenn Sie "
+#~ "auf :guilabel:`Qualitätsprüfungen` klicken, öffnet sich ein Pop-up-"
+#~ "Fenster, in dem Sie alle erforderlichen Qualitätsprüfungen durchführen "
+#~ "können."
+
+#~ msgid ""
+#~ "After clicking :guilabel:`Close Production`, the |MO| card begins to fade "
+#~ "away, and an :guilabel:`Undo` button appears on the footer. "
+#~ "Clicking :guilabel:`Undo` causes the |MO| to remain open. Once the |MO| "
+#~ "card disappears completely, the work order is closed."
+#~ msgstr ""
+#~ "Nachdem Sie auf :guilabel:`Produktion schließen` geklickt haben, wird die "
+#~ "Fertigungsauftragskarte ausgeblendet, und in der Fußzeile erscheint die "
+#~ "Schaltfläche :guilabel:`Rückgängig machen`. Wenn Sie "
+#~ "auf :guilabel:`Rückgängig machen` klicken, bleibt die "
+#~ "Fertigungsauftragskarte geöffnet. Sobald die Fertigungsauftragskarte "
+#~ "vollständig verschwindet, ist der Arbeitsauftrag geschlossen."
+
+#~ msgid ""
+#~ "On the right side of the footer is an :guilabel:`⋮ (options)` button, "
+#~ "which opens a pop-up window with additional options for the |MO|:"
+#~ msgstr ""
+#~ "Auf der rechten Seite der Fußzeile befindet sich eine "
+#~ "Schaltfläche :guilabel:`⋮ (Optionen)`, die ein Pop-up-Fenster mit "
+#~ "zusätzlichen Optionen für den Fertigungsauftrag öffnet:"
+
+#~ msgid ""
+#~ ":guilabel:`Scrap` is used to send components to a scrap location when "
+#~ "they are found to be defective."
+#~ msgstr ""
+#~ ":guilabel:`Ausschuss melden` wird verwendet, um Komponenten an einen "
+#~ "Ausschlussort zu senden, wenn sie für defekt befunden werden."
+
+#~ msgid ""
+#~ ":guilabel:`Add Work Order` is used to add an additional work order to the "
+#~ "|MO|."
+#~ msgstr ""
+#~ ":guilabel:`Arbeitsauftrag hinzufügen` wird verwendet, um einen "
+#~ "zusätzlichen Arbeitsauftrag zum Fertigungsauftrag hinzuzufügen."
+
+#~ msgid ""
+#~ ":guilabel:`Add Component` is used to add an additional component to the |"
+#~ "MO|."
+#~ msgstr ""
+#~ ":guilabel:`Komponente hinzufügen` wird verwendet, um eine zusätzliche "
+#~ "Komponente zum Fertigungsauftrag hinzuzufügen."
+
+#~ msgid ":guilabel:`Open Backend MO` opens the |MO| in the Manufacturing app."
+#~ msgstr ""
+#~ ":guilabel:`Fertigungsaufrag im Backend öffnen` öffnet den "
+#~ "Fertigungsauftrag in der Fertigungsapp."
+
+#~ msgid ""
+#~ "To view every confirmed work order assigned to a work center regardless "
+#~ "of readiness, click the :guilabel:`x` button on the :guilabel:`Ready to "
+#~ "Start` filter to remove it from the :guilabel:`Search...` bar."
+#~ msgstr ""
+#~ "Wenn Sie alle bestätigten Arbeitssaufträge unabhängig von der "
+#~ "Bereitschaft einem Arbeitsplatz zugewiesen haben, klicken Sie auf die "
+#~ "Schaltfläche :guilabel:`x` auf dem Filter :guilabel:`Bereit`, um ihn aus "
+#~ "der Leiste :guilabel:`Suchen ...` zu entfernen."
+
+#~ msgid ""
+#~ "A work order information card on a work center's page shows all of the "
+#~ "relevant details of the associated work order, and also provides "
+#~ "employees with options for processing the work order."
+#~ msgstr ""
+#~ "Eine Informationskarte eines Arbeitsauftrags auf der Seite eines "
+#~ "Arbeitsplatzes zeigt alle relevanten Details zum zugehörigen "
+#~ "Arbeitsauftrag und bietet den Mitarbeitern außerdem Optionen zur "
+#~ "Bearbeitung des Arbeitsauftrags."
+
+#~ msgid ""
+#~ "The header for a work order card shows the reference number of the |MO| "
+#~ "that the work order is a part of, the product and number of units being "
+#~ "produced, and the status of the work order. If work has not yet begun on "
+#~ "the work order, the status appears as :guilabel:`To Do`. Once work has "
+#~ "begun, the status updates to display a timer showing the total time the "
+#~ "work order has been worked on."
+#~ msgstr ""
+#~ "Die Kopfzeile einer Arbeitsauftragskarte zeigt die Referenznummer des "
+#~ "Fertigungsauftrags, zu dem der Arbeitsauftrag gehört, das Produkt und die "
+#~ "Anzahl der zu produzierenden Einheiten sowie den Status des "
+#~ "Arbeitsauftrags. Wenn die Arbeit an dem Arbeitsauftrag noch nicht "
+#~ "begonnen hat, wird der Status als :guilabel:`To-do` angezeigt. Sobald mit "
+#~ "der Arbeit begonnen wurde, wird der Status aktualisiert und ein Timer "
+#~ "angezeigt, der die Gesamtzeit anzeigt, in der der Arbeitsauftrag "
+#~ "bearbeitet wurde."
+
+#~ msgid ""
+#~ "The main body of a work order card shows a line for each step required to "
+#~ "complete the work order. Work order steps can be completed by clicking on "
+#~ "the line, then following the instructions on the pop-up window that "
+#~ "appears. Alternatively, clicking the checkbox on the right side of each "
+#~ "line automatically marks the step as completed."
+#~ msgstr ""
+#~ "Der Hauptteil einer Arbeitsauftragskarte zeigt eine Zeile für jeden "
+#~ "Schritt, der für die Ausführung des Arbeitsauftrags erforderlich ist. Sie "
+#~ "können die Schritte eines Arbeitsauftrags abschließen, indem Sie auf die "
+#~ "Zeile klicken und dann die Anweisungen in dem daraufhin angezeigten Pop-"
+#~ "up-Fenster befolgen. Alternativ können Sie auch auf das Kontrollkästchen "
+#~ "auf der rechten Seite jeder Zeile klicken, um den Schritt automatisch als "
+#~ "erledigt zu markieren."
+
+#~ msgid ""
+#~ "On the right side of the footer is an :guilabel:`⋮ (options)` button, "
+#~ "which opens a pop-up window with additional options for the work order:"
+#~ msgstr ""
+#~ "Auf der rechten Seite der Fußzeile befindet sich eine "
+#~ "Schaltfläche :guilabel:`⋮ (Optionen)`, die ein Pop-up-Fenster mit "
+#~ "zusätzlichen Optionen für den Arbeitsauftrag öffnet:"
+
+#~ msgid ""
+#~ ":guilabel:`Move to work center` is used to transfer the work order to a "
+#~ "different work center."
+#~ msgstr ""
+#~ ":guilabel:`Zum Arbeitsplatz verschieben` wird verwendet, um den "
+#~ "Arbeitsauftrag an einen anderen Arbeitsplatz zu verschieben."
+
+#~ msgid ""
+#~ ":guilabel:`Suggest a Worksheet improvement` allows the user to propose a "
+#~ "change to the work order's instructions or steps."
+#~ msgstr ""
+#~ ":guilabel:`Eine Verbesserung des Arbeitsblatts vorschlagen` ermöglicht es "
+#~ "dem Benutzer, eine Änderung der Anweisungen oder Schritte des "
+#~ "Arbeitsauftrags vorzuschlagen."
+
+#~ msgid ""
+#~ ":guilabel:`Create a Quality Alert` opens a quality alert form that can be "
+#~ "filled out to alert a quality team about a potential issue."
+#~ msgstr ""
+#~ ":guilabel:`Einen Qualitätsalarm erstellen` öffnet ein Formular für "
+#~ "Qualitätsalarme, das ausgefüllt werden kann, um ein Qualitätsteam über "
+#~ "ein mögliches Problem zu informieren."
+
+#~ msgid ""
+#~ "When an employee is selected in the operator panel, they can begin "
+#~ "working on a work order by clicking the work order's heading. If an "
+#~ "employee is working on one or more work orders, the work order title(s) "
+#~ "appear under their name, along with a timer showing how long they've been "
+#~ "working on each order."
+#~ msgstr ""
+#~ "Wenn ein Mitarbeiter im Bediener-Panel ausgewählt ist, kann er mit der "
+#~ "Arbeit an einem Arbeitsauftrag beginnen, indem er auf die Überschrift des "
+#~ "Arbeitsauftrags klickt. Wenn ein Mitarbeiter an einem oder mehreren "
+#~ "Arbeitsaufträgen arbeitet, werden die Titel der Arbeitsaufträge unter "
+#~ "seinem Namen angezeigt, zusammen mit einem Timer, der angibt, wie lange "
+#~ "der Mitarbeiter bereits an jedem Auftrag arbeitet."
+
+#~ msgid ""
+#~ "To add a new employee to the operator panel, click the :guilabel:`+ Add "
+#~ "Operator` button at the bottom of the panel. Then, select an employee "
+#~ "from the :guilabel:`Select Employee` pop-up window."
+#~ msgstr ""
+#~ "Um einen neuen Mitarbeiter zum Bediener-Panel hinzuzufügen, klicken Sie "
+#~ "auf die Schaltfläche :guilabel:`+ Bediener hinzufügen` am unteren Rand "
+#~ "des Bedienfelds. Wählen Sie dann einen Mitarbeiter aus dem Popup-"
+#~ "Fenster :guilabel:`Mitarbeiter auswählen`."
+
+#~ msgid ""
+#~ "To remove an employee from the operator panel, simply click "
+#~ "the :guilabel:`x` button next to their name in the panel."
+#~ msgstr ""
+#~ "Um einen Mitarbeiter aus dem Bediener-Panel zu entfernen, klicken Sie "
+#~ "einfach auf die Schaltfläche :guilabel:`x` neben dem Namen des "
+#~ "Mitarbeiters im Bedienfeld."
+
+#~ msgid ""
+#~ "The operator panel of the Shop Floor module, showing three employees "
+#~ "signed in."
+#~ msgstr ""
+#~ "Das Bediener-Panel des Werkstatt-Moduls mit drei angemeldeten "
+#~ "Mitarbeitern."
+
+#~ msgid ""
+#~ "The **Shop Floor** module uses the *scheduled date* entered on |MOs| to "
+#~ "prioritize the |MOs| and work orders that appear on the module's "
+#~ "dashboard and work center pages. |MOs| and work orders scheduled sooner "
+#~ "are more highly prioritized, and appear before orders which are scheduled "
+#~ "further out."
+#~ msgstr ""
+#~ "Das *Werkstatt*-Modul verwendet das in den Fertigungsaufträgen "
+#~ "eingegebene *geplante Datum*, um die Fertigungsaufträge und "
+#~ "Arbeitsaufträge zu priorisieren, die auf den Dashboard- und "
+#~ "Arbeitsplatzseiten des Moduls angezeigt werden. Fertigungs- und "
+#~ "Arbeitsaufträge, die früher geplant sind, werden höher priorisiert und "
+#~ "erscheinen vor Aufträgen, die später geplant sind."
+
+#~ msgid ""
+#~ "Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
+#~ "window. By default, the :guilabel:`Scheduled Date` field, and its "
+#~ "corresponding pop-up window, show the current date and time."
+#~ msgstr ""
+#~ "Klicken Sie auf das Feld :guilabel:`Geplantes Datum`, um ein Kalender-Pop-"
+#~ "over-Fenster zu öffnen. Standardmäßig werden im Feld :guilabel:`Geplantes "
+#~ "Datum` und im zugehörigen Pop-over-Fenster das aktuelle Datum und die "
+#~ "aktuelle Uhrzeit angezeigt."
+
+#~ msgid ""
+#~ "Once the |MO| is confirmed, it appears in the **Shop Floor** module, as "
+#~ "long is it has the :guilabel:`Ready` status, which means all components "
+#~ "are available."
+#~ msgstr ""
+#~ "Sobald der Fertigungsauftrag bestätigt ist, erscheint er im **Werkstatt**-"
+#~ "Modul, solange er den Status :guilabel:`Bereit` hat, was bedeutet, dass "
+#~ "alle Komponenten verfügbar sind."
+
+#~ msgid ""
+#~ "On the Odoo dashboard, click on the :menuselection:`Shop Floor` module to "
+#~ "open it. The :guilabel:`All MO #` page of the dashboard displays *Ready* |"
+#~ "MOs|, organized in order of their scheduled dates."
+#~ msgstr ""
+#~ "Klicken Sie im Odoo-Dashboard auf das Modul :menuselection:`Werkstatt`, "
+#~ "um es zu öffnen. Auf der Seite :guilabel:`Alle Fertigungsaufträge #` des "
+#~ "Dashboards werden die Fertigungsaufträge, die **bereit** sind, in der "
+#~ "Reihenfolge ihrer geplanten Termine angezeigt."
+
+#~ msgid "Three |MOs| are confirmed for a *Bookcase* product:"
+#~ msgstr ""
+#~ "Für ein Produkt *Bücherregal* wurden drei Fertigungsaufträge bestätigt:"
+
+#~ msgid "WH/MO/00411 has a :guilabel:`Scheduled Date` of August 16th."
+#~ msgstr "WH/MO/00411 hat ein :guilabel:`Geplantes Datum` am 16. August."
+
+#~ msgid "WH/MO/00412 has a :guilabel:`Scheduled Date` of August 20th."
+#~ msgstr "WH/MO/00412 hat ein :guilabel:`Geplantes Datum` am 20. August."
+
+#~ msgid "WH/MO/00413 has a :guilabel:`Scheduled Date` of August 18th."
+#~ msgstr "WH/MO/00413 hat ein :guilabel:`Geplantes Datum` am 18. August."
+
+#~ msgid ""
+#~ "On the :guilabel:`All MO #` page of the **Shop Floor** module, the cards "
+#~ "for each |MO| appear in this order: WH/MO/00411, WH/MO/00413, WH/MO/00412."
+#~ msgstr ""
+#~ "Auf der Seite :guilabel:`Alle Fertigungsaufträge #` des Moduls "
+#~ "**Werkstatt** werden die Karten für jeden Fertigungsauftrag in dieser "
+#~ "Reihenfolge angezeigt: WH/MO/00411, WH/MO/00413, WH/MO/00412."
+
+#~ msgid ""
+#~ "Each |MO| requires one work order, carried out at :guilabel:`Assembly "
+#~ "Station 1`. Clicking on the :guilabel:`Assembly Station 1` button at the "
+#~ "top of the screen opens the page for the work center, which displays one "
+#~ "card for each work order, appearing in the same order as their "
+#~ "corresponding |MOs|."
+#~ msgstr ""
+#~ "Jeder Fertigungsauftrag erfordert einen Arbeitsauftrag, der an "
+#~ "der :guilabel:`Montagestation 1` ausgeführt wird. Durch Klicken auf die "
+#~ "Schaltfläche :guilabel:`Montagestation 1` oben auf dem Bildschirm wird "
+#~ "die Seite für den Arbeitsplatz geöffnet, auf der für jeden Arbeitsauftrag "
+#~ "eine Karte angezeigt wird, und zwar in derselben Reihenfolge wie die "
+#~ "entsprechenden Fertigungsaufträge."
+
+#~ msgid ""
+#~ "By signing in to the Odoo *Shop Floor* module as *operators*, employees "
+#~ "are able to track the amount of time they spend working on each work "
+#~ "order."
+#~ msgstr ""
+#~ "Indem Sie sich im Odoo-Modul *Werkstatt* als *Bediener* anmelden, können "
+#~ "die Mitarbeiter die Zeit, die sie für jeden Arbeitsauftrag aufwenden, "
+#~ "verfolgen."
+
+#~ msgid ""
+#~ "Odoo tracks the time it takes to complete each work order, as well as the "
+#~ "time each operator spends on each work order."
+#~ msgstr ""
+#~ "Odoo verfolgt die Zeit, die für die Erledigung jedes Arbeitsauftrags "
+#~ "benötigt wird, sowie die Zeit, die jeder Mitarbeiter für jeden "
+#~ "Arbeitsauftrag aufwendet."
+
+#~ msgid "Operator sign in"
+#~ msgstr "Bedieneranmeldung"
+
+#~ msgid ""
+#~ "To sign in to the *Shop Floor* module as an operator, sign in to the Odoo "
+#~ "database, and open the :menuselection:`Shop Floor` module. The employee "
+#~ "profile that is signed in to the database is automatically signed in as "
+#~ "an operator."
+#~ msgstr ""
+#~ "Um sich im Modul *Werkstatt* als Bediener anzumelden, melden Sie sich bei "
+#~ "der Odoo-Datenbank an und öffnen das Modul :menuselection:`Werkstatt`. "
+#~ "Das Mitarbeiterprofil, das in der Datenbank angemeldet ist, wird "
+#~ "automatisch als Bediener angemeldet."
+
+#~ msgid ""
+#~ "All active operators are listed in the operator panel on the left side of "
+#~ "the module. The panel can be opened or collapsed by clicking "
+#~ "the :guilabel:`show/hide panel (white square with black column on left "
+#~ "side)` button, located in the top-left corner of the module."
+#~ msgstr ""
+#~ "Alle aktiven Bediener werden im Bediener-Panel auf der linken Seite des "
+#~ "Moduls aufgelistet. Das Panel kann durch Klicken auf die "
+#~ "Schaltfläche :guilabel:`Panel anzeigen/ausblenden (weißes Quadrat mit "
+#~ "schwarzer Spalte auf der linken Seite)` in der oberen linken Ecke des "
+#~ "Moduls ein- oder ausgeklappt werden."
+
+#~ msgid ""
+#~ "The operator panel in the Shop Floor module, with the show/hide panel "
+#~ "button above it."
+#~ msgstr ""
+#~ "Das Bediener-Panel im Werkstatt-Modul mit der Schaltfläche „Panel "
+#~ "anzeigen/ausblenden“ darüber."
+
+#~ msgid ""
+#~ "To sign in to *Shop Floor* as a different employee, click "
+#~ "the :guilabel:`+ Add Operator` button at the bottom of the panel. Doing "
+#~ "so opens the :guilabel:`Select Employee` pop-up window, which lists every "
+#~ "employee that is able to sign in to the module."
+#~ msgstr ""
+#~ "Um sich bei *Werkstatt* als ein anderer Mitarbeiter anzumelden, klicken "
+#~ "Sie auf die Schaltfläche :guilabel:`+ Bediener hinzufügen` am unteren "
+#~ "Rand des Fensters. Daraufhin öffnet sich das Pop-up-"
+#~ "Fenster :guilabel:`Mitarbeiter auswählen`, in dem alle Mitarbeiter "
+#~ "aufgelistet sind, die sich bei dem Modul anmelden können."
+
+#~ msgid ""
+#~ "Click on a specific employee to sign in using their profile. If no PIN "
+#~ "code is required to sign in as that employee, the profile will be signed "
+#~ "in automatically."
+#~ msgstr ""
+#~ "Klicken Sie auf einen bestimmten Mitarbeiter, um sich mit dessen Profil "
+#~ "anzumelden. Wenn kein PIN-Code erforderlich ist, um sich als dieser "
+#~ "Mitarbeiter anzumelden, wird das Profil automatisch angemeldet."
+
+#~ msgid ""
+#~ "If a PIN code is required, a :guilabel:`Password?` pop-up window appears, "
+#~ "showing a number pad, from which the code can be entered. Enter the code "
+#~ "using the number pad, and click :guilabel:`Confirm` to sign in to the "
+#~ "*Shop Floor* module."
+#~ msgstr ""
+#~ "Wenn ein PIN-Code erforderlich ist, erscheint ein :guilabel:`Passwort?`-"
+#~ "Pop-up-Fenster mit einem Ziffernblock, über den der Code eingegeben "
+#~ "werden kann. Geben Sie den Code über den Ziffernblock ein und klicken Sie "
+#~ "auf :guilabel:`Bestätigen`, um sich im *Werkstatt*-Modul anzumelden."
+
+#~ msgid ""
+#~ "The \"Password?\" pop-up window, which is used to enter an operator PIN "
+#~ "code."
+#~ msgstr ""
+#~ "Das Pop-up-Fenster „Passwort?“, das zur Eingabe eines Bediener-PIN-Codes "
+#~ "dient."
+
+#~ msgid ""
+#~ "A PIN code can be set for each employee, which must be entered each time "
+#~ "they sign in to the *Shop Floor* module, check in or out in the *Kiosk "
+#~ "Mode* of the *Attendances* application, or sign in as a cashier in the "
+#~ "*Point of Sale* application."
+#~ msgstr ""
+#~ "Für jeden Mitarbeiter kann ein PIN-Code festgelegt werden, der jedes Mal "
+#~ "eingegeben werden muss, wenn er sich im Modul *Werkstatt* anmeldet, im "
+#~ "*Kioskmodus* der *Anwesenheiten-App* ein- oder auscheckt oder sich als "
+#~ "Kassierer in der *Kassensystem-App* anmeldet."
+
+#~ msgid ""
+#~ "To set an employee PIN, navigate to the :menuselection:`Employees` app, "
+#~ "and select a specific employee. At the bottom of the employee's form, "
+#~ "click on the :guilabel:`HR Settings` tab, and enter a numerical code in "
+#~ "the :guilabel:`PIN Code` field."
+#~ msgstr ""
+#~ "Um eine Mitarbeiter-PIN festzulegen, navigieren Sie "
+#~ "zur :menuselection:`Mitarbeiter-App` und wählen einen bestimmten "
+#~ "Mitarbeiter aus. Klicken Sie unten im Formular des Mitarbeiters auf den "
+#~ "Reiter :guilabel:`HR-Einstellungen` und geben Sie einen numerischen Code "
+#~ "in das Feld :guilabel:`PIN-Code` ein."
+
+#~ msgid ""
+#~ "Once an employee is signed in to the module, their name appears in the "
+#~ "operator panel, along with every other employee that has signed in. While "
+#~ "the panel can list multiple employees, only one employee can be active at "
+#~ "any given time, on a single instance of the *Shop Floor* module."
+#~ msgstr ""
+#~ "Sobald ein Mitarbeiter im Modul angemeldet ist, erscheint sein Name im "
+#~ "Bediener-Panel, zusammen mit dem jedes anderen Mitarbeiters, der sich "
+#~ "angemeldet hat. Das Panel kann zwar mehrere Mitarbeiter auflisten, aber "
+#~ "es kann immer nur ein Mitarbeiter in einer einzigen Instanz des "
+#~ "*Werkstatt*-Moduls aktiv sein."
+
+#~ msgid ""
+#~ "Click on an employee's name to make their profile active. The active "
+#~ "employee appears highlighted in blue, while employees that are signed in, "
+#~ "but not active, have their names faded out."
+#~ msgstr ""
+#~ "Klicken Sie auf den Namen eines Mitarbeiters, um sein Profil zu "
+#~ "aktivieren. Der aktive Mitarbeiter wird blau hervorgehoben, während die "
+#~ "Namen der Mitarbeiter, die zwar angemeldet, aber nicht aktiv sind, "
+#~ "ausgeblendet werden."
+
+#~ msgid ""
+#~ "To sign out a specific employee from the module, click the :guilabel:`X "
+#~ "(remove)` button next to their name, in the operator panel."
+#~ msgstr ""
+#~ "Um einen bestimmten Mitarbeiter aus dem Modul abzumelden, klicken Sie im "
+#~ "Bediener-Panel auf die Schaltfläche :guilabel:`X (entfernen)` neben dem "
+#~ "Namen des Mitarbeiters."
+
+#~ msgid ""
+#~ "To track time spent working on a work order, begin by selecting the "
+#~ "employee working on it from the operator panel."
+#~ msgstr ""
+#~ "Um die für einen Arbeitsauftrag aufgewendete Zeit zu erfassen, wählen Sie "
+#~ "zunächst den Mitarbeiter, der den Auftrag bearbeitet, im Bediener-Panel "
+#~ "aus."
+
+#~ msgid ""
+#~ "Next, navigate to the page for the work center where the work order is "
+#~ "scheduled to be carried out. This can be done by selecting the work "
+#~ "center from the top navigation in the *Shop Floor* module, or by clicking "
+#~ "the name of the work center on the card for the manufacturing order (MO) "
+#~ "that the work order is a part of."
+#~ msgstr ""
+#~ "Als nächstes navigieren Sie zu der Seite für den Arbeitsplatz, an dem der "
+#~ "Arbeitsauftrag ausgeführt werden soll. Wählen Sie dazu den Arbeitsplatz "
+#~ "in der oberen Navigation im *Werkstatt*-Modul  aus oder klicken Sie auf "
+#~ "den Namen des Arbeitsplatzes auf der Karte des Fertigungsauftrags, zu dem "
+#~ "der Arbeitsauftrag gehört."
+
+#~ msgid ""
+#~ "On the page for the work center, find the card for the work order. Once "
+#~ "work begins, click the header of the work order card to start timing the "
+#~ "duration it takes to complete. This duration is displayed by a timer on "
+#~ "the header of the work order card, which tracks the collective time spent "
+#~ "working on the work order, by all employees."
+#~ msgstr ""
+#~ "Auf der Seite für den Arbeitsplatz finden Sie die Karte für den "
+#~ "Arbeitsauftrag. Sobald die Arbeit beginnt, klicken Sie auf die Kopfzeile "
+#~ "der Arbeitsauftragskarte, um die Zeit zu messen, die bis zur "
+#~ "Fertigstellung benötigt wird. Diese Dauer wird durch einen Timer in der "
+#~ "Kopfzeile der Arbeitsauftragskarte angezeigt, der die von allen "
+#~ "Mitarbeitern insgesamt für den Arbeitsauftrag aufgewendete Zeit erfasst."
+
+#~ msgid ""
+#~ "In addition, the reference number of the work order appears in the "
+#~ "operator panel, under the name of the employee working on it, along with "
+#~ "a second timer, which tracks the amount of time the employee has spent on "
+#~ "the work order individually. This timer only reflects work done during "
+#~ "the current session, even if the employee has previously worked on the "
+#~ "work order."
+#~ msgstr ""
+#~ "Darüber hinaus erscheint die Referenznummer des Arbeitsauftrags im "
+#~ "Bediener-Panel unter dem Namen des Mitarbeiters, der daran arbeitet, "
+#~ "zusammen mit einem zweiten Timer, der die Zeit anzeigt, die der "
+#~ "Mitarbeiter für den einzelnen Arbeitsauftrag aufgewendet hat. Dieser "
+#~ "Timer zeigt nur die während der aktuellen Sitzung geleistete Arbeit an, "
+#~ "auch wenn der Mitarbeiter bereits früher an dem Arbeitsauftrag gearbeitet "
+#~ "hat."
+
+#~ msgid ""
+#~ "Employees are able to work on multiple work orders simultaneously, and "
+#~ "track their time for each. The reference number for each work order being "
+#~ "worked on appears below the employee's name, along with a timer."
+#~ msgstr ""
+#~ "Die Mitarbeiter können an mehreren Arbeitsaufträgen gleichzeitig arbeiten "
+#~ "und ihre Zeit für jeden Auftrag erfassen. Die Referenznummer für jeden "
+#~ "Arbeitsauftrag, an dem gearbeitet wird, erscheint unter dem Namen des "
+#~ "Mitarbeiters, zusammen mit einem Timer."
+
+#~ msgid ""
+#~ "To pause the timer on the work order card, and remove the work order from "
+#~ "below the employee's name on the operator panel, click the header a "
+#~ "second time."
+#~ msgstr ""
+#~ "Um den Timer auf der Arbeitsauftragskarte anzuhalten und den "
+#~ "Arbeitsauftrag unter dem Namen des Mitarbeiters auf dem Bediener-Panel zu "
+#~ "entfernen, klicken Sie ein zweites Mal auf die Kopfzeile."
+
+#~ msgid ""
+#~ "Once the work order is completed, click the :guilabel:`Mark as Done` "
+#~ "button at the bottom of the work order card, which causes the card to "
+#~ "fade away. If the timer is still active, it stops once the card "
+#~ "disappears completely."
+#~ msgstr ""
+#~ "Sobald der Arbeitsauftrag abgeschlossen ist, klicken Sie auf die "
+#~ "Schaltfläche :guilabel:`Als erledigt markieren` am unteren Rand der "
+#~ "Arbeitsauftragskarte, wodurch die Karte ausgeblendet wird. Wenn der Timer "
+#~ "noch aktiv ist, wird er angehalten, sobald die Karte vollständig "
+#~ "verschwindet."
+
+#~ msgid ""
+#~ "To view the duration of a work order, navigate "
+#~ "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+#~ "Orders`, and select an |MO|."
+#~ msgstr ""
+#~ "Um die Dauer eines Arbeitsauftras anzuzeigen, navigieren Sie "
+#~ "zu :menuselection:`Fertigung --> Vorgänge --> Fertigungsaufträge` und "
+#~ "wählen Sie einen Fertigungsauftrag."
+
+#~ msgid ""
+#~ "To view and select |MOs| that have been completed and marked as *Done*, "
+#~ "remove the :guilabel:`To Do` filter from the :guilabel:`Search...` bar, "
+#~ "by clicking on the :guilabel:`X (close)` button on the right side of the "
+#~ "filter."
+#~ msgstr ""
+#~ "Um abgeschlossene und als *Erledigt* markierte Aufgaben anzuzeigen und "
+#~ "auszuwählen, entfernen Sie den Filter :guilabel:`To-do` aus der "
+#~ "Leiste :guilabel:`Suchen ...`, indem Sie auf die "
+#~ "Schaltfläche :guilabel:`X (schließen)` auf der rechten Seite des Filters "
+#~ "klicken."
+
+#~ msgid ""
+#~ "On the page for the |MO|, click on the :guilabel:`Work Orders` tab to see "
+#~ "a list of all work orders included in the |MO|. The time it took to "
+#~ "complete each work order is displayed in the :guilabel:`Real Duration` "
+#~ "column of the tab."
+#~ msgstr ""
+#~ "Klicken Sie auf der Seite für den Fertigungsauftrag auf den "
+#~ "Reiter :guilabel:`Arbeitsaufträge`, um eine Liste aller im "
+#~ "Fertigungsauftrag enthaltenen Arbeitsaufträge zu sehen. Die Zeit, die für "
+#~ "jeden Arbeitsauftrag benötigt wurde, wird in der "
+#~ "Spalte :guilabel:`Tatsächliche Dauer` des Reiters angezeigt."
+
+#~ msgid ""
+#~ "The *Real Duration* represents the total time spent working on the work "
+#~ "order by all workers who worked on it. It includes time tracked in the "
+#~ "*Shop Floor* module, as well as time tracked on the :guilabel:`Work "
+#~ "Orders` tab of the |MO| itself."
+#~ msgstr ""
+#~ "Die *tatsächliche Dauer* stellt die Gesamtzeit dar, die von allen "
+#~ "Arbeitern, die an dem Arbeitsauftrag gearbeitet haben, aufgewendet wurde. "
+#~ "Sie umfasst die im *Werkstatt*-Modul erfasste Zeit sowie die auf dem "
+#~ "Reiter :guilabel:`Arbeitsaufträge` des Fertigungsauftrag selbst erfasste "
+#~ "Zeit."
+
+#~ msgid ""
+#~ ":guilabel:`Green`: a replenishment order must be generated to keep stock "
+#~ "at the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`Grün`: Es muss ein Auffüllauftrag erstellt werden, um "
+#~ "die :guilabel:`Zielvorgabe für Sicherheitsbestand` einzuhalten."
 
 #~ msgid "Install"
 #~ msgstr "Installieren"
