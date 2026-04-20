@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:30+0000\n"
-"PO-Revision-Date: 2026-04-17 23:21+0000\n"
+"PO-Revision-Date: 2026-04-20 23:20+0000\n"
 "Last-Translator: \"Nurul Aini Akrima Sabila (nuaas)\" <nuaas@odoo.com>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-19-doc/"
 "inventory_and_mrp/id/>\n"
@@ -31783,6 +31783,11 @@ msgid ""
 "work order is defined in the *Operations* tab of a bill of materials (BoM) "
 "for a product."
 msgstr ""
+"*Pusat kerja* adalah tempat memproses surat perintah kerja (WO) untuk "
+"**Manufaktur**, dan dapat digunakan untuk melacak biaya, membuat jadwal, "
+"merencanakan kapasitas, mengatur peralatan, dan melacak efisiensi. Pusat "
+"kerja perlu ditentukan ketika surat perintah kerja (WO) didefinisikan di tab "
+"*Operasi* pada bill of materials (BoM) untuk suatu produk."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:11
 msgid ""
@@ -31792,63 +31797,81 @@ msgid ""
 "be managed in the :guilabel:`Manufacturing` app by "
 "selecting :menuselection:`Operations --> Work Orders`."
 msgstr ""
+"Pusat kerja hanya muncul jika pengaturan :guilabel:`Surat Perintah Kerja` "
+"diaktifkan. Untuk melakukannya, buka :menuselection:`aplikasi Manufaktur --> "
+"Konfigurasi --> Pengaturan`, lalu centang kotak :guilabel:`SPK`. Perintah "
+"kerja dapat dikelola di aplikasi :guilabel:`Manufaktur` dengan memilih "
+":menuselection:`Operasi --> SPK`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:17
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:55
 msgid ":doc:`../basic_setup/bill_configuration`"
-msgstr ""
+msgstr ":doc:`../basic_setup/bill_configuration`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:20
 msgid "Work center configuration"
-msgstr ""
+msgstr "Konfigurasi pusat kerja"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:25
 msgid "Create a new work center"
-msgstr "Buat pusat kerja baru"
+msgstr "Membuat pusat kerja baru"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:27
 msgid ""
 "In the **Manufacturing** app, select :menuselection:`Configuration --> Work "
 "Centers` and click the :guilabel:`New` button to open a new work center form."
 msgstr ""
+"Di aplikasi **Manufaktur**, pilih :menuselection:`Konfigurasi --> Pusat "
+"Kerja` dan klik tombol :guilabel:`Baru` untuk membuka formulir pusat kerja "
+"baru."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:None
 msgid "An example of a fully configured work center form."
-msgstr ""
+msgstr "Contoh formulir pusat kerja dengan konfigurasi lengkap."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:33
 msgid ""
 ":guilabel:`Work Center Name`: the label for the work center used to select "
 "it on a work order or on the reporting dashboards"
 msgstr ""
+":guilabel:`Nama Pusat Kerja`: label untuk pusat kerja yang digunakan untuk "
+"memilihnya pada surat peritah kerja (WO) atau pada dashboard laporan"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:35
 msgid ""
 ":guilabel:`Tag`: reusable labels that can be used to sort work centers in "
 "list view"
 msgstr ""
+":guilabel:`Tag`: label yang dapat digunakan kembali untuk mengurutkan pusat "
+"kerja dalam tampilan daftar"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:36
 msgid ""
 ":guilabel:`Alternative Workcenters`: where a work order should be carried "
 "out if this work center is not available"
 msgstr ""
+":guilabel:`Pusat Kerja Alternatif`: tempat SPK (WO) dilaksanakan jika pusat "
+"kerja ini tidak tersedia"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:38
 msgid ""
 ":guilabel:`Code`: reference id for the work center that is displayed in the "
 "list view"
 msgstr ""
+":guilabel:`Kode`: id referensi untuk pusat kerja yang ditampilkan di "
+"tampilan daftar"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:39
 msgid ""
 ":guilabel:`Working Hours`: the hours that work center can be used during the "
 "week"
 msgstr ""
+":guilabel:`Jam Kerja`: jam yang dapat digunakan di pusat kerja selama "
+"seminggu"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:44
 msgid "Working hours"
-msgstr ""
+msgstr "Jam kerja"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:46
 msgid ""
@@ -31856,6 +31879,9 @@ msgid ""
 "two-week schedule. These hours also form the basis for calculating *overall "
 "equipment efficiency* (OEE)."
 msgstr ""
+"*Jam kerja* menentukan kapan pusat kerja harus beroperasi, berdasarkan "
+"jadwal satu atau dua minggu. Jam ini juga menjadi dasar untuk menghitung "
+"*efektivitas peralatan keseluruhan* (OEE)."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:50
 msgid ""
@@ -31863,6 +31889,9 @@ msgid ""
 "expects work centers to operate between 8:00 AM and 5:00 PM on Monday "
 "through Friday."
 msgstr ""
+"Secara default, Odoo menggunakan jam kerja `Standar 40 jam/minggu`, dengan "
+"ekspektasi pusat kerja beroperasi antara pukul 08.00 dan 17.00 pada hari "
+"Senin hingga Jumat."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:53
 msgid ""
@@ -31870,10 +31899,13 @@ msgid ""
 "Hours` value and click the :icon:`fa-arrow-right` (:guilabel:`Internal "
 "link`) icon to open the working hours form."
 msgstr ""
+"Untuk mengubah jam kerja, arahkan kursor ke nilai :guilabel:`Jam Kerja` saat "
+"ini dan klik ikon :icon:`fa-arrow-right` (:guilabel:`Tautan internal`) untuk "
+"membuka formulir jam kerja."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:None
 msgid "The working hours form for Standard 40 hours/week."
-msgstr ""
+msgstr "Formulir jam kerja untuk Standar 40 jam/minggu."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:59
 msgid ""
@@ -31883,20 +31915,25 @@ msgid ""
 "the :icon:`fa-trash-o` :guilabel:`(trash)` icon. To create a new time range, "
 "click :guilabel:`Add a line` at the bottom of the list."
 msgstr ""
+"Untuk membuat set jam kerja baru, klik tombol :guilabel:`Baru` dan beri "
+"nama. Dari sini, edit nilai :guilabel:`Kerja dari` atau :guilabel:`Kerja "
+"hingga` untuk menyesuaikan rentang waktu. Hapus baris dengan mengklik ikon "
+":icon:`fa-trash-o` :guilabel:`(sampah)`. Untuk membuat rentang waktu baru, "
+"klik :guilabel:`Tambahkan baris` di bagian bawah daftar."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:65
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:95
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:205
 msgid ":doc:`../reporting/oee`"
-msgstr ""
+msgstr ":doc:`../reporting/oee`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:66
 msgid ":doc:`../workflows/work_center_time_off`"
-msgstr ""
+msgstr ":doc:`../workflows/work_center_time_off`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:69
 msgid "Set productivity standards and allowed employees"
-msgstr ""
+msgstr "Mengatur standar produktivitas dan karyawan yang diizinkan"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:71
 msgid ""
@@ -31905,32 +31942,43 @@ msgid ""
 "basis for calculating how much of the potential time the work center is "
 "being used and its operating costs."
 msgstr ""
+"Tab :guilabel:`Informasi Umum` pada formulir pusat kerja memungkinkan "
+"penetapan target produktivitas untuk pusat kerja. Target ini digunakan "
+"sebagai dasar untuk menghitung seberapa banyak waktu potensial yang "
+"digunakan pusat kerja beserta biaya operasionalnya."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:None
 msgid "The general information tab of the work center form."
-msgstr ""
+msgstr "Tab informasi umum dari formulir pusat kerja."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:78
 msgid ""
 ":guilabel:`Time Efficiency`: a multiplier for how using this work center "
 "affects the normal speed of execution of a work order"
 msgstr ""
+":guilabel:`Efisiensi Waktu`: pengali untuk pengaruh penggunaan pusat kerja "
+"terhadap kecepatan eksekusi normal dari surat perintah kerja"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:82
 msgid ""
 "If a work center has older equipment and work orders take twice as long to "
 "produce, the `Time Efficiency` would be `50.00%`."
 msgstr ""
+"Jika pusat kerja memiliki peralatan dengan umur yang lebih tua dan surat "
+"perintah kerja membutuhkan waktu dua kali lebih lama untuk produksi, "
+"`Efisiensi Waktu` akan menjadi `50,00%`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:85
 msgid ""
 ":guilabel:`Capacity`: the number of products that can be processed at the "
 "work center simultaneously"
 msgstr ""
+":guilabel:`Kapasitas`: jumlah produk yang dapat diproses di pusat kerja "
+"secara bersamaan"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:88
 msgid ":guilabel:`OEE Target`: the target for efficiency at the work center"
-msgstr ""
+msgstr ":guilabel:`Target OEE`: target efisiensi di pusat kerja"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:91
 msgid ""
@@ -31938,18 +31986,25 @@ msgid ""
 "be used for `7 hours per day`, the OEE would be "
 "`87.50%`. :math:`7/8*100=87.5`"
 msgstr ""
+"Jika pusat kerja tersedia selama `8 jam per hari`, tetapi diprediksi hanya "
+"digunakan selama `7 jam per hari`, OEE akan menjadi `87,50%`. :math:`7/"
+"8*100=87,5`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:97
 msgid ""
 ":guilabel:`Setup Time`: the time required before work can commence on a work "
 "order"
 msgstr ""
+":guilabel:`Waktu Setup`: waktu yang diperlukan sebelum pekerjaan dapat "
+"dimulai dari surat perintah kerja"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:98
 msgid ""
 ":guilabel:`Cleanup Time`: breakdown or cleanup time required after a work "
 "order is finished"
 msgstr ""
+":guilabel:`Waktu Pembersihan`: waktu breakdown atau pembersihan yang "
+"diperlukan setelah perintah kerja selesai"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:99
 msgid ""
@@ -31957,16 +32012,21 @@ msgid ""
 "The :guilabel:`per employee` value is for estimating the average cost per "
 "employee."
 msgstr ""
+":guilabel:`Biaya per jam`: biaya operasional dari workstation tersebut. "
+"Nilai :guilabel:`per karyawan` digunakan untuk memperkirakan biaya rata-rata "
+"per karyawan."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:103
 msgid ":doc:`../basic_setup/mo_costs`"
-msgstr ""
+msgstr ":doc:`../basic_setup/mo_costs`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:105
 msgid ""
 ":guilabel:`Allowed Employees`: the employees who can perform work at the "
 "work center. If blank, all employees are allowed."
 msgstr ""
+":guilabel:`Karyawan yang Diizinkan`: karyawan yang dapat melakukan pekerjaan "
+"di pusat kerja. Jika kosong, semua karyawan diperbolehkan."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:109
 msgid ""
@@ -31974,10 +32034,13 @@ msgid ""
 "operate, :guilabel:`Allowed Employees` could list only those employees who "
 "have the certification."
 msgstr ""
+"Jika peralatan di pusat kerja memerlukan sertifikasi untuk dioperasikan, "
+":guilabel:`Karyawan yang Diizinkan` dapat mencantumkan karyawan yang "
+"memiliki sertifikasi saja."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:113
 msgid "Set production capacities"
-msgstr ""
+msgstr "Mengatur kapasitas produksi"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:115
 msgid ""
@@ -31986,53 +32049,62 @@ msgid ""
 "that a work center can produce different quantities of different products, "
 "select the :guilabel:`Specific Capacities` tab."
 msgstr ""
+"Pengaturan :guilabel:`Kapasitas` di pusat kerja membuat nilai default untuk "
+"jumlah unit yang dapat diproduksi dalam satu waktu di pusat kerja. Untuk "
+"menentukan bahwa pusat kerja dapat memproduksi jumlah yang berbeda dari "
+"produk yang berbeda, pilih tab :guilabel:`Kapasitas Spesifik`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:None
 msgid ""
 "A work center form with different capacities specified for different "
 "products."
 msgstr ""
+"Formulir pusat kerja dengan kapasitas berbeda-beda untuk produk berbeda-beda."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:123
 msgid ""
 "To specify production capacities in different measurements from a count of "
 "units, enable the *Units of Measure* feature in the **Inventory** app."
 msgstr ""
+"Untuk menentukan kapasitas produksi dalam satuan ukuran yang berbeda dari "
+"jumlah unit, aktifkan fitur *Satuan Ukuran* di aplikasi **Inventaris**."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:127
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:153
 msgid ":doc:`../../maintenance/add_new_equipment`"
-msgstr ""
+msgstr ":doc:`../../maintenance/add_new_equipment`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:132
 msgid "Integrate IoT devices"
-msgstr ""
+msgstr "Mengintegrasikan perangkat IoT"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:134
 msgid ""
 "The :guilabel:`IoT Triggers` tab enables the integration of :abbr:`IoT "
 "(Internet of Things)` devices with a work center:"
 msgstr ""
+"Tab :guilabel:`Pemicu IoT` memungkinkan integrasi perangkat :abbr:`IoT "
+"(Internet of Things)` dengan pusat kerja:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:137
 msgid ":guilabel:`Device`: specifies the IoT device to be triggered"
-msgstr ""
+msgstr ":guilabel:`Perangkat`: menentukan perangkat IoT yang akan dipicu"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:138
 msgid ":guilabel:`Key`: the security key for the device"
-msgstr ""
+msgstr ":guilabel:`Kunci`: kunci keamanan untuk perangkat"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:139
 msgid ":guilabel:`Action`: the IoT device action triggered"
-msgstr ""
+msgstr ":guilabel:`Tindakan`: tindakan perangkat IoT yang dipicu"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:None
 msgid "The IoT Triggers tab of the work center form."
-msgstr ""
+msgstr "Tab Pemicu IoT dari formulir pusat kerja."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:145
 msgid "Assigning equipment to work centers"
-msgstr ""
+msgstr "Menetapkan peralatan ke pusat kerja"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:147
 msgid ""
@@ -32041,10 +32113,15 @@ msgid ""
 "the :guilabel:`Equipment` and :guilabel:`Maintenance` tabs to the work "
 "center form, used to list equipment and schedule maintenance activities."
 msgstr ""
+"Aplikasi **Maintenance** memungkinkan penambahan peralatan spesifik ke pusat "
+"kerja dan melacak biaya serta produktivitasnya secara individual. Aplikasi "
+"ini juga menambahkan tab :guilabel:`Peralatan` dan :guilabel:`Maintenance` "
+"ke formulir pusat kerja, yang digunakan untuk membuat daftar peralatan dan "
+"menjadwalkan aktivitas maintenance."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:156
 msgid "Configure equipment"
-msgstr ""
+msgstr "Mengonfigurasi peralatan"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:158
 msgid ""
@@ -32052,52 +32129,66 @@ msgid ""
 "equipment to be assigned to a work center. The following information is "
 "displayed for each piece of equipment added:"
 msgstr ""
+"Penggunaan tab :guilabel:`Peralatan` memungkinkan peralatan tertentu untuk "
+"ditetapkan ke pusat kerja. Informasi berikut ditampilkan untuk setiap "
+"peralatan yang ditambahkan:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:161
 msgid ":guilabel:`Equipment Name`: the name of the piece of equipment"
-msgstr ""
+msgstr ":guilabel:`Nama Peralatan`: nama untuk suatu peralatan"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:162
 msgid ""
 ":guilabel:`Technician`: the technician responsible for servicing the "
 "equipment"
 msgstr ""
+":guilabel:`Teknisi`: teknisi yang bertanggung jawab atas servis peralatan"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:163
 msgid ":guilabel:`Equipment Category`: the category the equipment belongs to"
 msgstr ""
+":guilabel:`Kategori Peralatan`: kategori yang menaungi peralatan tersebut"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:164
 msgid ""
 ":guilabel:`MTBF`: mean time between failures; the average time that the "
 "piece of equipment will operate before failing"
 msgstr ""
+":guilabel:`MTBF`: waktu rata-rata antara kegagalan; waktu rata-rata "
+"peralatan akan beroperasi sebelum mengalami kegagalan"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:166
 msgid ""
 ":guilabel:`MTTR`: mean time to recovery; the average time it takes for the "
 "equipment to become fully operational again"
 msgstr ""
+":guilabel:`MTTR`: waktu rata-rata untuk pemulihan; waktu rata-rata yang "
+"dibutuhkan agar peralatan dapat beroperasi penuh kembali"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:168
 msgid ""
 ":guilabel:`Est. Next Failure`: an estimate of when the next equipment "
 "failure will occur"
 msgstr ""
+":guilabel:`Est. Kegagalan Berikutnya`: perkiraan kapan kegagalan peralatan "
+"berikutnya akan terjadi"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:None
 msgid "The equipment tab of the work center form."
-msgstr ""
+msgstr "Tab peralatan di formulir pusat kerja."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:174
 msgid ""
 ":guilabel:`MTBF`, :guilabel:`MTTR`, and :guilabel:`Est. Next Failure` are "
 "all calculated automatically based on past failure data, if any exists."
 msgstr ""
+":guilabel:`MTBF`, :guilabel:`MTTR`, dan :guilabel:`Est. Kegagalan "
+"Berikutnya` dihitung secara otomatis berdasarkan data kegagalan masa lalu, "
+"jika ada."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:178
 msgid "Work center planning"
-msgstr ""
+msgstr "Perencanaan pusat kerja"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:180
 msgid ""
@@ -32105,10 +32196,14 @@ msgid ""
 "accessing :menuselection:`Manufacturing app --> Planning --> Planning by "
 "Workcenter`."
 msgstr ""
+"Surat perintah kerja (WO) yang saat ini dijadwalkan dapat dilihat dengan "
+"mengakses :menuselection:`aplikasi Manufaktur --> Perencanaan --> "
+"Perencanaan berdasarkan Pusat Kerja`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:None
 msgid "The Gantt view of planning showing two assembly work centers."
 msgstr ""
+"Tampilan Gantt dari perencanaan yang menampilkan dua pusat kerja perakitan."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:186
 msgid ""
@@ -32117,6 +32212,11 @@ msgid ""
 "times that are currently scheduled for work orders. Times and planned work "
 "centers can be changed by clicking to access the individual work order."
 msgstr ""
+"Tampilan yang berbeda menampilkan jumlah perintah kerja individual yang "
+"dijadwalkan, total menit dari setiap jam pusat kerja yang sedang diproduksi, "
+"dan tanggal serta waktu yang saat ini dijadwalkan untuk perintah kerja. "
+"Waktu dan pusat kerja yang direncanakan dapat diubah dengan mengklik untuk "
+"mengakses masing-masing perintah kerja."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:192
 msgid "Work center performance"
