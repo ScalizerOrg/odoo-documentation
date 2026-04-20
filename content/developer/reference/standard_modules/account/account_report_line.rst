@@ -11,7 +11,7 @@ Report Line
     .. autofield:: hierarchy_level
     .. autofield:: parent_id
     .. autofield:: children_ids
-    .. autofield:: foldable
+    .. autofield:: foldability
     .. autofield:: print_on_new_page
     .. autofield:: action_id
     .. autofield:: hide_if_zero
