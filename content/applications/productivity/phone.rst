@@ -54,8 +54,7 @@ To make |VOIP| calls in Odoo, first :ref:`install <general/install>` the **Phone
 Once the app is installed, a :icon:`oi-voip` (:guilabel:`Phone`) icon will appear at the top of the
 screen. When this icon is clicked, a **Phone** pop-up widget appears on the screen. This is where
 users can make and receive calls, send emails, edit user and employee info, and manage activities.
-screen. Clicking it opens a widget, where users can make and receive calls, send emails, edit user
-and employee info, and manage activities. The widget stays open when navigating other Odoo apps.
+The widget stays open when navigating other Odoo apps.
 
 Assign user permissions
 -----------------------
