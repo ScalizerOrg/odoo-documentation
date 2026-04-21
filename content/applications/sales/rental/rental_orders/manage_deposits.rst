@@ -50,7 +50,7 @@ With the above configuration, a :ref:`rental order <rental/order>` can be create
    rental product.
 
 .. tip::
-   If :doc:`eCommerce <../../websites/ecommerce>` is installed, add an :guilabel:`Ecommerce
+   If :doc:`eCommerce <../../../websites/ecommerce>` is installed, add an :guilabel:`Ecommerce
    Description` stating the deposit is required in the rental product's :guilabel:`Sales` tab.
 
    When a customer adds the rental product to their cart, a :guilabel:`Configure your product`
@@ -67,6 +67,6 @@ With the above configuration, a :ref:`rental order <rental/order>` can be create
 Refund deposits upon return
 ---------------------------
 
-Once a customer :ref:`returns the rented product <rental/return-products>`, reimburse their deposit with a
-:doc:`credit note <../../finance/accounting/customer_invoices/credit_notes>` from the invoice, and
-change the *delivered quantity* to `0` on the linked sales order.
+Once a customer :ref:`returns the rented product <rental/return-products>`, reimburse their deposit
+with a :doc:`credit note <../../../finance/accounting/customer_invoices/credit_notes>` from the
+invoice, and change the *delivered quantity* to `0` on the linked sales order.
