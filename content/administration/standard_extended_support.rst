@@ -107,11 +107,11 @@ The table below shows the support status of every version. Major releases are hi
 
    |green| : Standard support
 
-   |orange| : Extended support available (with an extra fee)
+   |orange| : Extended support*
 
    |red| : Not supported
 
-   N/A : Never released for this platform
+   \* Mandatory, non-negotiable surcharge applies
 
 .. |green| raw:: html
 
