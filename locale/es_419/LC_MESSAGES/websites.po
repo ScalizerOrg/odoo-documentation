@@ -28,8 +28,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:30+0000\n"
-"PO-Revision-Date: 2026-04-20 23:20+0000\n"
-"Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
+"PO-Revision-Date: 2026-04-21 23:21+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/websites/es_419/>\n"
 "Language: es_419\n"
@@ -765,11 +765,20 @@ msgid ""
 "page) and :guilabel:`Go to Checkout` :icon:`fa-chevron-right` (to be "
 "redirected to the cart)."
 msgstr ""
+":guilabel:`Quedarse en la página del producto`: El cliente se quedará en la "
+"página del producto después de agregar un producto al carrito. Si el "
+"producto agregado está vinculado a :ref:`productos opcionales <ecommerce/"
+"products/cross_upselling>`, el cliente puede seleccionar entre "
+":guilabel:`Agregar al carrito` (para quedarse en la página del producto) e "
+":guilabel:`Ir al pago` :icon:`fa-chevron-right` (para que se les redirija al "
+"carrito)."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:40
 msgid ""
 ":guilabel:`Go to cart`: The customer is redirected to the cart immediately."
 msgstr ""
+":guilabel:`Ir al carrito`: El cliente será redirigido de inmediato al "
+"carrito."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:45
 msgid "Button customization"
@@ -803,6 +812,11 @@ msgid ""
 "the contact form where the :guilabel:`Subject` field is already auto-filled "
 "with the requested product's name."
 msgstr ""
+"Para mostrar el botón :guilabel:`Contáctanos` debes :ref:`ocultar los "
+"precios <ecommerce/prices/hide-prices>` en la página del producto. Cuando el "
+"cliente haga clic en el botón :guilabel:`Contáctanos` se le redireccionará "
+"al formulario de contacto de forma predeterminada, donde el campo "
+":guilabel:`Asunto` ya estará lleno con el nombre del producto solicitado."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:60
 msgid "Additional add to cart buttons"
@@ -816,6 +830,12 @@ msgid ""
 "Once placed, click the button, scroll to the :guilabel:`Add to Cart Button` "
 "section, and configure the following:"
 msgstr ""
+"Puede agregar más botones de :guilabel:`Agregar al carrito` y vincularlos a "
+"productos específicos en cualquier página web. Para agregarlos, abre el "
+"editor del sitio web y agrega un bloque de creación de contenido interno "
+":guilabel:`Botón de Agregar al carrito`. Una vez que lo hagas, haz clic en "
+"el botón, ve a la sección :guilabel:`Botón Agregar al carrito` y configura "
+"lo siguiente:"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:67
 msgid ":guilabel:`Product`: Select the product to link the button with."
@@ -828,6 +848,8 @@ msgid ""
 ":guilabel:`Action`: Choose whether to use an :guilabel:`Add to Cart` "
 "or :ref:`Buy Now <ecommerce/checkout/buy-now>` button."
 msgstr ""
+":guilabel:`Acción`: Elige si debe ser un botón de tipo :guilabel:`Agregar al "
+"carrito` o :ref:`Comprar ahora <ecommerce/checkout/buy-now>`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:72
 msgid ""
@@ -836,12 +858,18 @@ msgid ""
 "variant before choosing to :guilabel:`Add to cart` and continue shopping or "
 "to :guilabel:`Go to Checkout`."
 msgstr ""
+"Si el producto tiene variantes, puedes elegir una o dejar la opción en "
+":guilabel:`Elección del visitante`. Esto hará que se le pida al cliente que "
+"elija una variante y luego seleccione entre :guilabel:`Agregar al carrito` y "
+"seguir comprando o :guilabel:`Ir al pago`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:75
 msgid ""
 "The default :guilabel:`Add to cart` button does not offer those options, but "
 "its label can be changed."
 msgstr ""
+"El botón predeterminado :guilabel:`Agregar al carrito` no cuenta con estas "
+"opciones, pero puedes cambiar su etiqueta."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:79
 msgid ""
@@ -853,6 +881,13 @@ msgid ""
 "is not enabled, the cart icon appears only when an item is added to the "
 "cart. The number of items in the cart is also displayed next to the icon."
 msgstr ""
+"Para mostrar el icono :icon:`fa-shopping-cart` (:guilabel:`carrito`) en el "
+"encabezado, abre el editor del sitio web, haz clic en el encabezado, "
+"dirígete a :guilabel:`Estilo`, ve a la sección :guilabel:`Ocultar o mostrar "
+"elementos` y presiona el icono :icon:`fa-shopping-cart` "
+"(:guilabel:`carrito`) junto a :guilabel:`Mostrar vacío`. Si no lo activas, "
+"el icono del carrito solo aparecerá al agregar un artículo al carrito. El "
+"número de artículos en el carrito también aparece junto al icono."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:89
 msgid "Buy now"
@@ -866,6 +901,12 @@ msgid ""
 "the :guilabel:`Style` tab, and click the :icon:`fa-bolt` :guilabel:`Buy Now` "
 "button next to the :guilabel:`Purchase Options`."
 msgstr ""
+"Para permitir que los clientes vayan directamente al paso de :ref:`resumen "
+"de la orden <ecommerce/checkout/review_order>`, puedes agregar un botón "
+"adicional :guilabel:`Comprar ahora`. Para ello, abre la página de cualquier "
+"producto, entra al editor del sitio web, ve a la pestaña :guilabel:`Estilo` "
+"y haz clic en el botón :icon:`fa-bolt` :guilabel:`Comprar ahora` junto a "
+":guilabel:`Opciones de compra`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:None
 msgid "Buy now button"
@@ -919,6 +960,8 @@ msgstr "Pasos para el pago"
 #: ../../content/applications/websites/ecommerce/checkout.rst:125
 msgid "During checkout, customers are taken through the following steps:"
 msgstr ""
+"Durante el proceso de pago los clientes tendrán que seguir los siguientes "
+"pasos:"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:127
 msgid ":ref:`Order summary <ecommerce/checkout/review_order>`"
@@ -926,11 +969,13 @@ msgstr ":ref:`Resumen de la orden <ecommerce/checkout/review_order>`"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:128
 msgid ":ref:`Address <ecommerce/checkout/delivery>`"
-msgstr ""
+msgstr ":ref:`Dirección <ecommerce/checkout/delivery>`"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:129
 msgid ":ref:`Extra Info (if enabled) <ecommerce/checkout/extra_step>`"
 msgstr ""
+":ref:`Información adicional (si está activado) <ecommerce/checkout/"
+"extra_step>`"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:130
 msgid ":ref:`Payment <ecommerce/checkout/payment>`"
@@ -984,6 +1029,14 @@ msgid ""
 "chevron-right` button to continue to the :ref:`Address <ecommerce/checkout/"
 "delivery>` step."
 msgstr ""
+"El paso de :guilabel:`resumen de la orden` permite que los clientes vean los "
+"artículos que agregaron a su carrito, ajusten las cantidades, "
+":guilabel:`eliminen` productos y :ref:`vuelvan a pedir productos de una "
+"orden anterior <ecommerce/checkout/reorder>`. También muestra la información "
+"relacionada con los precios de los productos y los impuestos aplicados. "
+"Luego, los clientes pueden hacer clic en el botón :guilabel:`Pagar`:icon:`fa-"
+"chevron-right` para continuar al paso :ref:`Dirección <ecommerce/checkout/"
+"delivery>`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:158
 msgid ""
@@ -1008,6 +1061,10 @@ msgid ""
 "products_prices/loyalty_discount>` or :ref:`promotional codes <ecommerce/"
 "prices/promotional-code>`;"
 msgstr ""
+":guilabel:`Código promocional`: Para permitir que los clientes canjeen "
+":ref:`tarjetas de regalo <ewallet_gift/gift-cards>` y apliquen :doc:`códigos "
+"de descuento <../../sales/sales/products_prices/loyalty_discount>` o "
+":ref:`códigos promocionales <ecommerce/prices/promotional-code>`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:166
 msgid ""
@@ -1016,6 +1073,11 @@ msgid ""
 "from their cart and add it to their wishlist using the :guilabel:`Save for "
 "Later` option."
 msgstr ""
+":guilabel:`Agregar a la lista de deseos`: :ref:`Habilita las listas de "
+"deseos <ecommerce/products/additional_features/wishlists>` para permitir que "
+"los usuarios que hayan iniciado sesión eliminen un producto de su carrito y "
+"lo agreguen a su lista de deseos con la opción :guilabel:`Guardar para "
+"después`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:171
 msgid ""
@@ -1041,7 +1103,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:181
 msgid "Address"
-msgstr ""
+msgstr "Dirección"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:183
 msgid "Once they have reviewed their order:"
@@ -1053,6 +1115,9 @@ msgid ""
 "their :guilabel:`Name` and :guilabel:`Email` address, along with their "
 "delivery address and phone details;"
 msgstr ""
+"Los clientes que no hayan iniciado sesión deben :guilabel:`iniciar sesión` o "
+"ingresar su :guilabel:`nombre` y :guilabel:`dirección de correo`, junto con "
+"los detalles de dirección de entrega y número de teléfono."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:187
 msgid ""
