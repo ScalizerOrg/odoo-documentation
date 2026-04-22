@@ -85,6 +85,16 @@ jobs:
         if: steps.check.outputs.skip != 'true' && steps.branch-check.outputs.exists == 'true'
         run: pip install -r repo-main/scripts/requirements.txt
 
+      - name: Detect content directory
+        if: steps.check.outputs.skip != 'true' && steps.branch-check.outputs.exists == 'true'
+        id: content-dir
+        run: |
+          if [ -d "repo-content/content" ]; then
+            echo "path=repo-content/content" >> "$GITHUB_OUTPUT"
+          else
+            echo "path=repo-content" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build native index
         if: steps.check.outputs.skip != 'true' && steps.branch-check.outputs.exists == 'true'
         env:
@@ -95,7 +105,7 @@ jobs:
           python repo-main/scripts/build_index.py \
             --version ${{ matrix.version }} \
             --source native \
-            --content-dir repo-content/content \
+            --content-dir ${{ steps.content-dir.outputs.path }} \
             --json-output index-${{ matrix.version }}.json
 
       - name: Upload JSON index as artifact
@@ -163,7 +173,7 @@ jobs:
   build-changelog:
     runs-on: ubuntu-latest
     needs: [index-native, index-oca]
-    if: always() && github.event.inputs.skip_changelog != 'true' && (needs.index-native.result == 'success' || needs.index-oca.result == 'success')
+    if: always() && github.event.inputs.skip_changelog != 'true' && needs.index-native.result != 'cancelled' && needs.index-oca.result != 'cancelled'
     steps:
       - name: Checkout main (scripts)
         uses: actions/checkout@v4

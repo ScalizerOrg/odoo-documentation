@@ -37,7 +37,7 @@ class SupabaseClient:
         for i in range(0, len(pages), SUPABASE_BATCH_SIZE):
             batch = pages[i : i + SUPABASE_BATCH_SIZE]
             resp = requests.post(
-                f"{self.base_url}/rest/v1/doc_pages",
+                f"{self.base_url}/rest/v1/doc_pages?on_conflict=path,version,source",
                 headers={
                     **self.headers,
                     "Prefer": "resolution=merge-duplicates,return=minimal",
@@ -102,7 +102,7 @@ class SupabaseClient:
         for i in range(0, len(entries), SUPABASE_BATCH_SIZE):
             batch = entries[i : i + SUPABASE_BATCH_SIZE]
             resp = requests.post(
-                f"{self.base_url}/rest/v1/doc_changelog",
+                f"{self.base_url}/rest/v1/doc_changelog?on_conflict=path,source,version_from,version_to",
                 headers={
                     **self.headers,
                     "Prefer": "resolution=merge-duplicates,return=minimal",
@@ -131,7 +131,7 @@ class SupabaseClient:
         for i in range(0, len(repos), SUPABASE_BATCH_SIZE):
             batch = repos[i : i + SUPABASE_BATCH_SIZE]
             resp = requests.post(
-                f"{self.base_url}/rest/v1/oca_repos",
+                f"{self.base_url}/rest/v1/oca_repos?on_conflict=repo_name",
                 headers={
                     **self.headers,
                     "Prefer": "resolution=merge-duplicates,return=minimal",
