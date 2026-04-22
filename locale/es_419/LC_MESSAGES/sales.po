@@ -33,8 +33,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:30+0000\n"
-"PO-Revision-Date: 2026-04-21 23:21+0000\n"
-"Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
+"PO-Revision-Date: 2026-04-22 23:20+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/sales/es_419/>\n"
 "Language: es_419\n"
@@ -43,7 +43,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
 "0) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 5.17\n"
 
 #: ../../content/applications/sales.rst:5
 #: ../../content/applications/sales/sales.rst:8
@@ -2325,6 +2325,14 @@ msgid ""
 "(In-App Purchase)`. This applies to demo/training, educational, and one-app-"
 "free databases."
 msgstr ""
+"El *enriquecimiento de leads* es un servicio de compras dentro de la "
+"aplicación (IAP, por sus siglas en inglés) que proporciona información "
+"empresarial para un contacto vinculado a un lead. Para usar esta función "
+"necesitas créditos y puedes usarlos para leads existentes en la base de "
+"datos. Los usuarios de Odoo Enterprise que tengan una suscripción válida "
+"reciben los créditos gratis para probar las :abbr:`IAP (Compras dentro de la "
+"aplicación)`. Esto aplica a bases de datos de demostración o capacitación, "
+"educativas y con una aplicación gratis."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:11
 msgid ""
@@ -2332,12 +2340,19 @@ msgid ""
 "about the business (including full business name and logo) and its size, "
 "revenue, social media accounts, known technology use, and more."
 msgstr ""
+"La información proporcionada por el enriquecimiento de leads puede incluir "
+"información general sobre el negocio (como su nombre completo y logotipo), "
+"su tamaño, sus ingresos, cuentas de redes sociales, la tecnologías que usan "
+"y más."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:15
 msgid ""
 "The *Leads* feature :ref:`must be configured <crm/configure-leads>` in the "
 "**CRM** app's settings page in order to use lead enrichment."
 msgstr ""
+"La función *Leads* :ref:`se debe configurar <crm/configure-leads>` en la "
+"página de ajustes de la aplicación **CRM** para poder utilizar el "
+"enriquecimiento de leads."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:None
 msgid "Chatter showing lead enrichment data."
@@ -2349,6 +2364,10 @@ msgid ""
 "regulations. For more information about the General Data Protection "
 "Regulation, refer to the `Odoo GDPR <http://odoo.com/gdpr>`__."
 msgstr ""
+"Al recopilar la información de contacto de una empresa, asegúrate de estar "
+"al tanto de las regulaciones más recientes de la UE. Consulta la sección "
+"`GDPR de Odoo <http://odoo.com/gdpr>`__ para obtener más información sobre "
+"el Reglamento General de Protección de Datos."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:27
 msgid "Lead enrichment set up"
@@ -2363,6 +2382,13 @@ msgid ""
 "demand only` or :guilabel:`Enrich all leads automatically`. Click "
 "the :guilabel:`Save` button to activate the changes."
 msgstr ""
+"Para configurar el enriquecimiento de leads en la aplicación **CRM**, ve a "
+":menuselection:`la aplicación CRM --> Configuración --> Ajustes` y en la "
+"sección :guilabel:`Generación de leads` selecciona la casilla junto a "
+":guilabel:`Enriquecimiento de leads`. Elige entre :guilabel:`Enriquecer "
+"leads solo bajo demanda` o :guilabel:`Enriquecer todos los leads en "
+"automático` y haz clic en el botón :guilabel:`Guardar` para activar los "
+"cambios."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:None
 msgid ""
@@ -2370,10 +2396,13 @@ msgid ""
 "highlighted and\n"
 "enrich leads on demand only chosen."
 msgstr ""
+"Página de ajustes de generación de leads en CRM, con la activación del "
+"enriquecimiento de leads resaltada y la opción de enriquecer \n"
+"leads solo bajo demanda elegida."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:40
 msgid "Automatic and manual enrichment"
-msgstr ""
+msgstr "Enriquecimiento manual y automático"
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:42
 msgid ""
@@ -2381,6 +2410,9 @@ msgid ""
 "There are two different ways that a lead can be enriched: *automatically* or "
 "*manually*."
 msgstr ""
+"El enriquecimiento de leads se basa en el dominio de la dirección de correo "
+"electrónico del cliente establecido en el lead. Hay dos formas diferentes de "
+"enriquecer un lead, ya sea de forma *automática* o *manual*."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:46
 msgid "Automatically enrich leads"
@@ -2393,6 +2425,10 @@ msgid ""
 "scheduled action contacts a remote database and enriches any unenriched "
 "leads."
 msgstr ""
+"Si seleccionaste *Enriquecer todos los leads en automático*, en la página "
+"*Ajustes* no se requiere acción del usuario. Una vez cada 60 minutos, "
+"correrá una acción programada para contactar una base de datos remota y "
+"enriquecer a todos los leads que todavía no se hayan enriquecido."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:52
 msgid ""
@@ -2407,6 +2443,17 @@ msgid ""
 "interval, priority, and more. The minimum value for the :guilabel:`Execute "
 "Every` field is 5 minutes."
 msgstr ""
+"Para cambiar las reglas subyacentes para el enriquecimiento de leads, activa "
+"el :ref:`modo de desarrollador <developer-mode>`. Con el modo de "
+"desarrollador activado, escribe \"acciones programadas\" en el tablero de "
+"Odoo principal para obtener la pantalla :icon:`fa-search` :guilabel:`(Buscar "
+"un menú)`. Haz clic en :guilabel:`Ajustes / Técnicos / Automatización / "
+"Acciones programadas` para navegar a la página de Acciones programadas. En "
+"la barra de búsqueda escribe \"enriquecer leads\" y haz clic en la acción "
+":guilabel:`CRM\\: enriquecer leads con IAP`. Desde esta página puedes "
+"cambiar el enriquecimiento de leads automático, incluyendo el intervalo de "
+"ejecución, la prioridad y más. El valor mínimo para el campo "
+":guilabel:`Ejecutar cada` es de 5 minutos."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:61
 msgid "Manually enrich leads"
@@ -2421,6 +2468,13 @@ msgid ""
 "per enrichment). This method of enrichment is useful when not every lead "
 "needs to be enriched or when cost is an issue."
 msgstr ""
+"Si el *Enriquecimiento de leads* se establece como :guilabel:`Enriquecer "
+"leads solo bajo demanda`, el enriquecimiento de leads se debe hacer de forma "
+"manual. Para hacer esto, debes hacer clic en el botón :guilabel:`Enriquecer` "
+"en el menú superior de la página de leads. Esto recuperará la misma "
+"información que el enriquecimiento automático y al mismo costo (un crédito "
+"por enriquecimiento). Este método de enriquecimiento es útil cuando no todos "
+"los leads necesitan enriquecerse o cuando el costo es un problema."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:69
 msgid ""
@@ -2436,6 +2490,18 @@ msgid ""
 "the :icon:`fa-align-justify` :guilabel:`(List)` button to switch to the list "
 "view and select the leads to enrich."
 msgstr ""
+"Enriquece los leads de forma manual en un solo paso con la vista de *lista*. "
+"Primero ve a :menuselection:`la aplicación CRM --> Leads`, haz clic en el "
+"botón :icon:`fa-align-justify` :guilabel:`(Lista)` y selecciona las casillas "
+"de los leads que deseas enriquecer de forma manual. Por último, haz clic en "
+"el :icon:`fa-cog` :guilabel:`(Acción)` y selecciona :guilabel:`Enriquecer` "
+"en el menú desplegable que aparece. También es posible realizar esto desde "
+"la página *Mi flujo* o *Flujo*. Abre la aplicación **CRM**, en la página *Mi "
+"flujo*, haz clic en el icono :icon:`fa-close`:guilabel:`(Eliminar)` que se "
+"encuentra en la barra de búsqueda para mostrar el flujo completo, si lo "
+"deseas. Luego, haz clic en el botón :icon:`fa-align-justify` :guilabel:`"
+"(Lista)` para cambiar a la vista de lista y selecciona los leads que "
+"enriquecerás."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:82
 msgid ""
@@ -2445,6 +2511,12 @@ msgid ""
 "credits can be found on the `Lead Generation <https://iap.odoo.com/iap/in-"
 "app-services/167>`_ page."
 msgstr ""
+"El enriquecimiento de leads es una función que requiere compras dentro de la "
+"aplicación (IAP) y cada enriquecimiento de leads cuesta 1 crédito. Si la "
+"base de datos no tiene créditos disponibles, solo se agregan el sitio web y "
+"el logo para el enriquecimiento. Puedes encontrar la información sobre los "
+"precios de los créditos en la página `Generación de leads <https://"
+"iap.odoo.com/iap/in-app-services/167>`_."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:87
 msgid ""
@@ -2453,6 +2525,10 @@ msgid ""
 "the :guilabel:`Lead Enrichment` feature, click on :guilabel:`Manage Service "
 "& Buy Credits`."
 msgstr ""
+"Para comprar créditos, navega a :menuselection:`la aplicación de CRM --> "
+"Configuración --> Ajustes`. En la sección :guilabel:`Generación de leads` "
+"deslízate a la función :guilabel:`Enriquecimiento de leads` y haz clic en "
+":guilabel:`Gestionar servicio y comprar créditos`."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:92
 msgid ""
@@ -2461,6 +2537,11 @@ msgid ""
 "Mining` sub-header does **not** lead to a web page where *Lead Enrichment* "
 "credits can be purchased."
 msgstr ""
+"Como los créditos no se pueden intercambiar entre servicios de compras "
+"dentro de la aplicación, si haces clic en el enlace :guilabel:`Gestionar "
+"servicio y comprar créditos` que aparece debajo del encabezado "
+":guilabel:`Minado de leads` **no** te llevará una página web donde puedas "
+"comprar créditos de *Enriquecimiento de leads*."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:96
 msgid ""
@@ -2470,6 +2551,12 @@ msgid ""
 "IAP service in the database can be viewed and credits can be purchased by "
 "selecting one and clicking the :guilabel:`Buy Credit` link."
 msgstr ""
+"También puedes comprar créditos en la aplicación :guilabel:`Ajustes`. En la "
+"sección de :guilabel:`Contactos` busca a función :guilabel:`Compras dentro "
+"de la aplicación de Odoo` y haz clic en :guilabel:`Ver mis servicios`. Aquí "
+"podrás ver todos los servicios de compras dentro de la aplicación activos. "
+"Para comprar créditos solo selecciona uno y haz clic en el enlace "
+":guilabel:`Comprar crédito`."
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:105
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:67
@@ -3236,6 +3323,14 @@ msgid ""
 "in the :guilabel:`Trigger` field, select whether the activity should occur "
 "before or after the plan date."
 msgstr ""
+"Después, configura la línea de tiempo de la actividad. Las actividades se "
+"pueden programar para que sucedan ya sea antes o después de la fecha de "
+"planeación. Programar actividades antes de la fecha planeada puede ser útil "
+"para actividades programadas en el futuro que requieren preparación previa. "
+"Usa los campos :guilabel:`Intervalo` y :guilabel:`Unidades` para configurar "
+"una fecha límite para esta actividad. Finalmente, en el campo "
+":guilabel:`Activar` selecciona si la actividad debe suceder antes o después "
+"de la fecha planeada."
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:210
 msgid ""
@@ -3288,7 +3383,7 @@ msgstr "Repita estos pasos para cada actividad que se incluya en el plan."
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:227
 msgid "Use an activity plan"
-msgstr ""
+msgstr "Usa un plan de actividad"
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:229
 msgid ""
@@ -3296,12 +3391,17 @@ msgid ""
 "to :menuselection:`CRM app` and click on the Kanban card of an opportunity "
 "to open it."
 msgstr ""
+"Para usar un plan de actividad con una oportunidad de *CRM*, ve a la "
+":menuselection:`aplicación de CRM` y haz clic en la tarjeta de kanban de una "
+"oportunidad para abrirla."
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:232
 msgid ""
 "Above the opportunity's chatter, click :guilabel:`Activity` to open "
 "the :guilabel:`Schedule Activity` pop-up window."
 msgstr ""
+"Arriba del chatter de la oportunidad, haz clic en :guilabel:`Actividad` para "
+"abrir la ventana emergente :guilabel:`Programar actividad`."
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:235
 msgid ""
@@ -3312,6 +3412,13 @@ msgid ""
 "updates the :guilabel:`Plan summary` with deadlines based on the intervals "
 "configured in the :ref:`activity plan <crm/activity-plans>`."
 msgstr ""
+"Selecciona el plan de actividad que quiere iniciar en el campo "
+":guilabel:`Plan` de la sección arriba de las actividades individuales. Esta "
+"acción generará un :guilabel:`resumen del plan` que mostrará las actividades "
+"incluidas en el plan. Selecciona una :guilabel:`Fecha límite` en el "
+"calendario que aparece para actualizar, en automático, el :guilabel:`resumen "
+"del plan` con los plazos basados en los intervalos configurados en el "
+":ref:`plan de actividad <crm/activity-plans>`."
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:241
 msgid ""
@@ -3319,6 +3426,10 @@ msgid ""
 "any of the activities on the plan that were configured with :guilabel:`Ask "
 "at launch` in the :guilabel:`Assignment` field."
 msgstr ""
+"Selecciona un usuario en el campo :guilabel:`Responsable`. Este será el "
+"usuario asignado a cualquiera de las actividades en el plan que se hayan "
+"configurado con :guilabel:`Preguntar al iniciar` en campo "
+":guilabel:`Asignación`."
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:None
 msgid "The schedule activity pop-up window with an Activity plan selected."
@@ -3332,6 +3443,9 @@ msgid ""
 "the :guilabel:`Planned Activities` section of the chatter, in addition to "
 "each of the activities that make up the plan."
 msgstr ""
+"Haz clic en :guilabel:`Programar`. Los detalles del plan se agregan a la "
+"sección :guilabel:`Actividades planeadas` del chatter, además de a cada una "
+"de las actividades que componen el plan."
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:None
 msgid "The chatter thread of a CRM opportunity with a launched activity plan."
@@ -3345,6 +3459,7 @@ msgstr ":doc:`Actividades </applications/essentials/activities>`"
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:255
 msgid ":doc:`Email templates </applications/general/companies/email_template>`"
 msgstr ""
+":doc:`Plantillas de correo </applications/general/companies/email_template>`"
 
 #: ../../content/applications/sales/crm/performance.rst:5
 msgid "Analyze performance"
@@ -17860,6 +17975,10 @@ msgid ""
 "defining :doc:`presets <extra/presets>`, and managing :ref:`courses <pos/"
 "restaurant/orders/courses>`."
 msgstr ""
+"La caja del PdV permite :ref:`procesar <pos/restaurant/orders/process>` y "
+":ref:`trasladar <pos/restaurant/floors/transfer>` órdenes, definir "
+":doc:`ajustes preestablecidos <extra/presets>` y gestionar los :ref:`tiempos "
+"de los alimentos <pos/restaurant/orders/courses>`."
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:231
 msgid "Order process"
@@ -17895,7 +18014,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:242
 msgid "Click :guilabel:`Send` to validate the order."
-msgstr ""
+msgstr "Haz clic en :guilabel:`Enviar` para validar la orden."
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:243
 msgid ""
@@ -17910,6 +18029,10 @@ msgid ""
 "floors>` view if :guilabel:`Tables` is selected as the :ref:`default start "
 "screen <pos/restaurant/default>`."
 msgstr ""
+"Al hacer clic en :guilabel:`Enviar`, el sistema te redirigirá a la vista de "
+":ref:`mapas <pos/restaurant/floors>` si la opción :guilabel:`Mesas` está "
+"seleccionada como la :ref:`pantalla de inicio predeterminada <pos/restaurant/"
+"default>`."
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:250
 msgid ""
@@ -17948,6 +18071,9 @@ msgid ""
 "Use :doc:`presets <extra/presets>` when offering different service types, "
 "e.g., :guilabel:`Dine In`, :guilabel:`Takeout`, or :guilabel:`Delivery`."
 msgstr ""
+"Usa los :doc:`ajustes preestablecidos <extra/presets>` cuando ofrezcas "
+"distintos tipos de servicio, por ejemplo, :guilabel:`Comer en el local`, "
+":guilabel:`Para llevar` o :guilabel:`Entrega`."
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:261
 msgid ""
@@ -17955,6 +18081,10 @@ msgid ""
 "modified by clicking the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) menu "
 "and selecting :icon:`fa-pencil-square-o` :guilabel:`Edit Order Name`."
 msgstr ""
+"Si la orden es una venta directa que no está vinculada a ninguna mesa, "
+"puedes cambiar su nombre al hacer clic en el menú :icon:`fa-ellipsis-v` "
+"(:guilabel:`Acciones`) y seleccionar :icon:`fa-pencil-square-o` "
+":guilabel:`Editar nombre de la orden`."
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:266
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:352
@@ -19536,6 +19666,9 @@ msgid ""
 "from initial setup and configuration to managing sales transactions, "
 "customer records, and receipt/invoice handling."
 msgstr ""
+"Esta sección cubre las operaciones diarias esenciales de Punto de venta, "
+"desde la configuración inicial hasta la gestión de transacciones de venta, "
+"registros de clientes y la gestión de recibos y facturas."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:12
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:5
@@ -19547,6 +19680,8 @@ msgid ""
 "Set up automatic printing, customize headers and footers, and learn how to "
 "reprint past receipts."
 msgstr ""
+"Configura la impresión automática, personaliza los encabezados y los pies de "
+"página, y aprende cómo volver a imprimir recibos anteriores."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:19
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:3
@@ -19558,6 +19693,8 @@ msgid ""
 "Configure default invoicing parameters, issue invoices during checkout, and "
 "manage reprinting or emailing them later."
 msgstr ""
+"Configura los parámetros de facturación predeterminados, emite facturas "
+"durante el proceso de pago y gestiona su reimpresión o envío por correo."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:29
 msgid "Create a POS"
@@ -19600,6 +19737,10 @@ msgid ""
 "<https://support.google.com/chrome/answer/12929150?hl=en#zippy=%2Cturn-"
 "memory-saver-on-or-off>`_ setting in Google Chrome."
 msgstr ""
+"Para evitar que la pestaña de la aplicación PdV trabaje con lentitud, "
+"desactiva la función `Ahorro de memoria <https://support.google.com/chrome/"
+"answer/12929150?hl=en#zippy=%2Cturn-memory-saver-on-or-off>`_ en Google "
+"Chrome."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:46
 msgid ""
@@ -19846,6 +19987,9 @@ msgid ""
 "configuration/receipt-configuration>` can be sent via email, SMS, or "
 "WhatsApp from the :guilabel:`Receipt` screen."
 msgstr ""
+"Después de hacer clic en :guilabel:`Validar` podrás enviar el :ref:`recibo "
+"<pos/configuration/receipt-configuration>` de la orden por correo, SMS o "
+"WhatsApp desde la pantalla :guilabel:`Recibo`."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:133
 msgid "You can use both `,` and `.` on the keyboard as decimal separators."
@@ -19910,6 +20054,10 @@ msgid ""
 "screen, and select the desired customer. To change the customer, click their "
 "name in the pad, then select another one."
 msgstr ""
+"Para asignar un cliente a una orden, haz clic en :guilabel:`Cliente` para "
+"abrir la ventana emergente :guilabel:`Elige un cliente` en la caja del PdV o "
+"en la pantalla de pago y selecciona el cliente deseado. Para cambiar el "
+"cliente, haz clic en su nombre en la ventana y selecciona otro."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:163
 msgid ""
@@ -19917,6 +20065,10 @@ msgid ""
 "click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon next to the "
 "relevant customer and select :guilabel:`Edit Details`."
 msgstr ""
+"Para editar los datos del cliente, haz clic en su nombre en la ventana, "
+"luego haz clic en el icono :icon:`fa-bars` (:guilabel:`menú hamburguesa`) "
+"ubicado junto al cliente correspondiente y selecciona :guilabel:`Editar "
+"datos`."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:168
 msgid ""
@@ -20079,6 +20231,9 @@ msgid ""
 "If using :doc:`presets <extra/presets>`, click one to view the related "
 "orders. Click it again to return to the main overview."
 msgstr ""
+"Si usas :doc:`valores predefinidos <extra/presets>`, haz clic en uno para "
+"ver las órdenes relacionadas. Vuelve a hacer clic para volver al resumen "
+"principal."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:232
 msgid "Return and refund products"
@@ -20183,6 +20338,9 @@ msgid ""
 "Selecting the returned product(s) from the POS register and a :doc:`preset "
 "<extra/presets>` set up for the return mode."
 msgstr ""
+"Selecciona el o los productos devueltos desde la caja del PdV y usa el "
+":doc:`valor preestablecido <extra/presets>` configurado para el modo de "
+"devolución."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:265
 msgid ""
@@ -20227,6 +20385,9 @@ msgid ""
 "register>` are displayed on the :doc:`customer display <../point_of_sale/"
 "hardware_network/customer_display>`."
 msgstr ""
+"Las notas agregadas a un producto desde la :ref:`caja del PdV <pos/use/open-"
+"register>` aparecen en la :doc:`pantalla del cliente <../point_of_sale/"
+"hardware_network/customer_display>`."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:287
 msgid "Internal notes"
@@ -20683,6 +20844,9 @@ msgid ""
 "Configuration --> Settings`, and scroll down to the :guilabel:`Bills & "
 "Receipts` section."
 msgstr ""
+"Para configurar los recibos del PdV, ve a :menuselection:`Punto de venta --> "
+"Configuración --> Ajustes` y dirígete a la sección :guilabel:`Facturas y "
+"recibos`."
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:30
 msgid ""
@@ -20690,12 +20854,17 @@ msgid ""
 "Footer` setting and enter the information to be printed on the receipts in "
 "both fields."
 msgstr ""
+"Para personalizar el encabezado y el pie de página, activa la función "
+":guilabel:`Encabezado y pie de página personalizados` e ingresa la "
+"información que deseas imprimir en los recibos en ambos campos."
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:32
 msgid ""
 "To print receipts automatically upon payment confirmation, enable "
 "the :guilabel:`Automatic Receipt Printing` setting."
 msgstr ""
+"Para imprimir los recibos de forma automática al confirmar el pago, activa "
+"la función :guilabel:`Impresión automática de recibos`."
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:34
 msgid ""
@@ -20711,6 +20880,9 @@ msgid ""
 "the :ref:`Receipt <pos/use/sell>` screen, enable the :guilabel:`SMS Enabled` "
 "and/or :guilabel:`WhatsApp Enabled` setting(s)."
 msgstr ""
+"Para permitir el envío de recibos por correo, SMS o WhatsApp desde la "
+"pantalla :ref:`Recibo <pos/use/sell>`, activa las funciones :guilabel:`Envío "
+"por SMS` y :guilabel:`Envío por WhatsApp`."
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:39
 msgid ""
@@ -20736,31 +20908,35 @@ msgstr ":doc:`../hardware_network/receipt_printers`"
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:50
 msgid "Receipt reprint"
-msgstr ""
+msgstr "Reimpresión de recibos"
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:52
 msgid "To reprint a receipt, follow the next steps:"
-msgstr ""
+msgstr "Sigue estos pasos para volver a imprimir un recibo:"
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:54
 msgid "Access the :ref:`POS register <pos/use/open-register>`."
-msgstr ""
+msgstr "Accede a la :ref:`caja del PdV <pos/use/open-register>`."
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:55
 msgid "Click :guilabel:`Orders` on the POS interface."
-msgstr ""
+msgstr "Haz clic en :guilabel:`Órdenes` en la interfaz del PdV."
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:56
 msgid ""
 "Open the dropdown selection menu next to the search bar, and set the filter "
 "to :guilabel:`Paid`."
 msgstr ""
+"Abre el menú desplegable ubicado junto a la barra de búsqueda y configura el "
+"filtro con la opción :guilabel:`Pagado`."
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:57
 msgid ""
 "Select the desired order and click :icon:`fa-print` :guilabel:`Print "
 "Receipt`."
 msgstr ""
+"Selecciona la orden deseada y haz clic en :icon:`fa-print` "
+":guilabel:`Imprimir recibo`."
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:60
 msgid ""
