@@ -1,0 +1,194 @@
+name: Build Documentation Index (V2)
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - "scripts/**"
+  workflow_dispatch:
+    inputs:
+      versions:
+        description: "Comma-separated versions to index (e.g. 17.0,18.0,19.0). Leave empty for all."
+        required: false
+        default: ""
+      skip_oca:
+        description: "Skip OCA indexation"
+        required: false
+        type: boolean
+        default: false
+      skip_changelog:
+        description: "Skip changelog generation"
+        required: false
+        type: boolean
+        default: false
+  schedule:
+    # Every Sunday at 8:00 UTC
+    - cron: "0 8 * * 0"
+
+jobs:
+  # -------------------------------------------------------------------
+  # Job 1: Index native documentation (matrix on versions)
+  # -------------------------------------------------------------------
+  index-native:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        version: ["14.0", "15.0", "16.0", "17.0", "18.0", "19.0"]
+    steps:
+      - name: Check if version should be indexed
+        id: check
+        run: |
+          INPUT_VERSIONS="${{ github.event.inputs.versions }}"
+          VERSION="${{ matrix.version }}"
+          if [ -z "$INPUT_VERSIONS" ] || echo "$INPUT_VERSIONS" | grep -q "$VERSION"; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout main (scripts)
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: repo-main
+
+      - name: Check if version branch exists
+        if: steps.check.outputs.skip != 'true'
+        id: branch-check
+        run: |
+          if git ls-remote --heads origin "${{ matrix.version }}" | grep -q "${{ matrix.version }}"; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+        working-directory: repo-main
+
+      - name: Checkout version branch (content)
+        if: steps.check.outputs.skip != 'true' && steps.branch-check.outputs.exists == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.version }}
+          path: repo-content
+          fetch-depth: 1
+
+      - name: Set up Python
+        if: steps.check.outputs.skip != 'true' && steps.branch-check.outputs.exists == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.check.outputs.skip != 'true' && steps.branch-check.outputs.exists == 'true'
+        run: pip install -r repo-main/scripts/requirements.txt
+
+      - name: Build native index
+        if: steps.check.outputs.skip != 'true' && steps.branch-check.outputs.exists == 'true'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+        run: |
+          python repo-main/scripts/build_index.py \
+            --version ${{ matrix.version }} \
+            --source native \
+            --content-dir repo-content/content \
+            --json-output index-${{ matrix.version }}.json
+
+      - name: Upload JSON index as artifact
+        if: steps.check.outputs.skip != 'true' && steps.branch-check.outputs.exists == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: index-native-${{ matrix.version }}
+          path: index-${{ matrix.version }}.json
+          retention-days: 30
+
+  # -------------------------------------------------------------------
+  # Job 2: Index OCA modules (matrix on versions)
+  # -------------------------------------------------------------------
+  index-oca:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.skip_oca != 'true'
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        version: ["14.0", "15.0", "16.0", "17.0", "18.0"]
+    steps:
+      - name: Check if version should be indexed
+        id: check
+        run: |
+          INPUT_VERSIONS="${{ github.event.inputs.versions }}"
+          VERSION="${{ matrix.version }}"
+          if [ -z "$INPUT_VERSIONS" ] || echo "$INPUT_VERSIONS" | grep -q "$VERSION"; then
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout main (scripts)
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: repo-main
+
+      - name: Set up Python
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.check.outputs.skip != 'true'
+        run: pip install -r repo-main/scripts/requirements.txt
+
+      - name: Index OCA modules
+        if: steps.check.outputs.skip != 'true'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+        run: |
+          python repo-main/scripts/index_oca.py \
+            --version ${{ matrix.version }} \
+            --repos-file repo-main/scripts/oca_repos.json
+
+  # -------------------------------------------------------------------
+  # Job 3: Build changelog (after both indexation jobs)
+  # -------------------------------------------------------------------
+  build-changelog:
+    runs-on: ubuntu-latest
+    needs: [index-native, index-oca]
+    if: always() && github.event.inputs.skip_changelog != 'true' && (needs.index-native.result == 'success' || needs.index-oca.result == 'success')
+    steps:
+      - name: Checkout main (scripts)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Build changelog (native)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          python scripts/build_changelog.py --all-versions --source native
+
+      - name: Build changelog (OCA)
+        if: github.event.inputs.skip_oca != 'true'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          python scripts/build_changelog.py --all-versions --source oca
