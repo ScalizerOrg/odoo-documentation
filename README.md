@@ -1,67 +1,70 @@
-# Odoo documentation
+# Odoo Documentation — Scalizer Fork
 
-## Build the documentation
+Fork de [`odoo/documentation`](https://github.com/odoo/documentation) maintenu par [Scalizer](https://www.scalizer.fr) pour alimenter un **MCP Server** rendant la documentation Odoo accessible depuis claude.ai.
 
-### Requirements
+## Architecture
 
-- [Git](https://git-scm.com/install)
-- [Python 3.10 to 3.14](https://www.python.org/downloads/).
-- Make
-- Python dependencies from `requirements.txt` (see instructions below)
-- A local copy of the [odoo/odoo](https://github.com/odoo/odoo) repository (optional)
-- A local copy of the [odoo/upgrade-util](https://github.com/odoo/upgrade-util) repository
-  (optional)
+```
+GitHub (ce repo)          Supabase                   n8n MCP Server       claude.ai
+┌─────────────────┐      ┌──────────────────────┐   ┌──────────────┐    ┌─────────┐
+│ 19.0 (RST docs) │─────→│ doc_pages + pgvector  │──→│ search_docs  │───→│         │
+│                 │      │ Edge Fn: search-docs  │   │ get_page     │    │ Claude  │
+│ GitHub Actions  │      │ RPC: get_page         │   │ list_modules │    │         │
+│ (build + sync)  │      │ RPC: list_modules     │   │ list_pages   │    │         │
+└─────────────────┘      │ RPC: list_pages       │   └──────────────┘    └─────────┘
+                         └──────────────────────┘
+```
 
-### Quick start
+## Fonctionnement
 
-1. Create and activate a virtual environment.
-   - On Linux and macOS: `python3 -m venv .venv && source .venv/bin/activate`
-   - On Windows (PowerShell): `py3 -m venv .venv; .\.venv\Scripts\Activate.ps1`
-2. Install the Python dependencies: `pip install -r requirements.txt`
-3. Build the documentation: `make html` (see more commands with `make help`)
-4. Open `documentation/_build/html/index.html` in your web browser.
+1. **Indexation** : `scripts/build_index.py` parcourt `content/`, génère des embeddings via OpenAI (`text-embedding-3-small`), et stocke tout dans Supabase (métadonnées + contenu RST + vecteurs)
+2. **Recherche hybride** : L'Edge Function `search-docs` combine similarité vectorielle (70%) et full-text PostgreSQL (30%) pour des résultats pertinents
+3. **Sync upstream** : GitHub Action hebdomadaire pour rester synchronisé avec `odoo/documentation`
+4. **MCP Server** : Workflow n8n exposant 4 outils via le protocole MCP :
+   - `search_docs` — Recherche hybride sémantique + full-text
+   - `get_page` — Récupère le contenu RST complet d'une page
+   - `list_modules` — Liste l'arbre des modules
+   - `list_pages` — Liste les pages d'un module
 
-### Additional build options
+## Développement local
 
-- `make fast` to build the documentation with a shallow menu (faster).
-- `make clean` to delete the build files.
-- `make test` to run the guidelines tests.
-- `make html CURRENT_LANG=fr` to build the documentation only in French.
-- `make html CURRENT_LANG=fr LANGUAGES=en,fr,de` to build the documentation in French and enable the
-  language switcher, with the specified LANGUAGES as available languages. This command must be
-  invoked for each CURRENT_LANG you want to build.
-- `make html VERSIONS=17.0,18.0,saas-18.4,19.0,master` to build the documentation in the **current
-  version** and enable the version switcher, with the specified VERSIONS as available versions. This
-  command must be invoked for each of the VERSIONS you want to build.
+```bash
+# Pré-requis : Python 3.10+
+pip install -r scripts/requirements.txt
 
-The list of available languages can be found in `conf.py`, in the `languages_names` variable.
+# Variables d'environnement requises
+export SUPABASE_URL="https://miymrcgruoooygmcsthl.supabase.co"
+export SUPABASE_SERVICE_KEY="..."
+export OPENAI_API_KEY="..."
 
-When building the documentation for a specific language or version, the build files are created in
-`documentation/_build/html/<language>/`, `documentation/_build/html/<version>/` or
-`documentation/_build/html/<version>/<language>/`.
+# Dry run (vérifie le parsing sans appels API)
+python scripts/build_index.py --version 19.0 --content-dir content --dry-run
 
-### Using local Odoo sources
+# Indexation complète
+python scripts/build_index.py --version 19.0 --content-dir content
 
-If you have local checkouts of `odoo/odoo` and/or `odoo/upgrade-util`, place them either:
-- as siblings of this repository (in the parent directory), or
-- inside the `documentation` directory.
+# Avec export JSON en backup
+python scripts/build_index.py --version 19.0 --content-dir content --json-output index-19.0.json
+```
 
-When present in one of these locations, the build will include Python docstrings from those
-repositories if their version matches the documentation's version.
+## Stack technique
 
-### Troubleshooting
+| Composant | Technologie |
+|-----------|-------------|
+| Documentation source | RST (reStructuredText) |
+| Stockage & recherche | Supabase (PostgreSQL + pgvector) |
+| Embeddings | OpenAI text-embedding-3-small (1536 dim) |
+| Recherche hybride | 70% similarité cosinus + 30% ts_rank full-text |
+| MCP Server | n8n workflow |
+| CI/CD | GitHub Actions |
 
-- Verify your Python version: `python3 --version` (must be 3.10–3.14)
-- Ensure your virtual environment is active and dependencies are installed.
-- If you have made changes to the file structure, try `make clean` before building.
-- If the language or version switchers redirect to a missing file, check that you have built the
-  documentation for all available languages and versions.
-- The "Developer" documentation is only available in English.
+## V2 (roadmap)
 
-## Contribute to the documentation
+- Multi-version : branches 16.0, 17.0, 18.0
+- Recherche FR-aware : tokenisation française
+- Analytics des requêtes
+- Changelog : diff entre versions pour un module donné
 
-For contributions to the content of the documentation, see the
-[Introduction Guide](https://www.odoo.com/documentation/latest/contributing/documentation.html).
+## Licence
 
-To report a content issue, request new content, or ask a question, use the
-[issue tracker](https://github.com/odoo/documentation/issues).
+La documentation Odoo est sous [Creative Commons Attribution-NonCommercial-ShareAlike 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/).

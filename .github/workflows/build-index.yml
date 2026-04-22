@@ -1,0 +1,48 @@
+name: Build Documentation Index
+
+on:
+  push:
+    branches:
+      - "19.0"
+    paths:
+      - "content/**"
+  workflow_dispatch:
+  schedule:
+    # Every Sunday at 8:00 UTC
+    - cron: "0 8 * * 0"
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout documentation branch
+        uses: actions/checkout@v4
+        with:
+          ref: "19.0"
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Build index and push to Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python scripts/build_index.py \
+            --version 19.0 \
+            --content-dir content \
+            --json-output index-19.0.json
+
+      - name: Upload JSON index as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: index-19.0
+          path: index-19.0.json
+          retention-days: 30
