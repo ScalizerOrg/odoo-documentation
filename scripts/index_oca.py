@@ -186,20 +186,30 @@ def run_pipeline(
     # Clean up removed
     deleted = sb.delete_removed_pages(version, {p["path"] for p in all_pages}, "oca")
 
-    # Update oca_repos registry
+    # Update oca_repos registry with enriched data
     now = datetime.now(timezone.utc).isoformat()
     registry_entries = []
     indexed_repos = {p["oca_repo"] for p in all_pages}
+
+    # Compute per-repo stats from indexed pages
+    repo_modules: dict[str, set[str]] = {}
+    for p in all_pages:
+        repo_modules.setdefault(p["oca_repo"], set()).add(p["oca_module"])
+
     for repo_info in repos:
-        if repo_info["repo"] in indexed_repos:
+        rname = repo_info["repo"]
+        if rname in indexed_repos:
+            modules = sorted(repo_modules.get(rname, set()))
+            base_desc = repo_info.get("description", "")
             entry = {
-                "repo_name": repo_info["repo"],
+                "repo_name": rname,
                 "category": repo_info.get("category", ""),
-                "description": repo_info.get("description", ""),
+                "description": f"{base_desc} ({len(modules)} modules in {version})",
                 "last_indexed_at": now,
                 "is_active": True,
+                "module_count": len(modules),
+                "top_modules": modules[:10],
             }
-            # Update versions_available would need a read-modify-write, skip for now
             registry_entries.append(entry)
 
     if registry_entries:
