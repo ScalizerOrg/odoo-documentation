@@ -116,7 +116,7 @@ jobs:
   trigger-rebuild:
     runs-on: ubuntu-latest
     needs: [sync]
-    if: always() && needs.sync.result == 'success'
+    if: always() && needs.sync.result != 'cancelled'
     steps:
       - name: Trigger index rebuild
         uses: actions/github-script@v7
