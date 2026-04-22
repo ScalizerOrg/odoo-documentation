@@ -110,7 +110,7 @@ def run_pipeline(
     # 5. Prepare rows for upsert
     rows = []
     for page, embedding in zip(changed_pages, embeddings):
-        rows.append({
+        row = {
             "path": page["path"],
             "title": page["title"],
             "section": page["section"],
@@ -124,7 +124,13 @@ def run_pipeline(
             "version": page["version"],
             "checksum": page["checksum"],
             "source": page["source"],
-        })
+        }
+        # Chunking fields (Phase 3)
+        if page.get("parent_path") is not None:
+            row["parent_path"] = page["parent_path"]
+        if page.get("chunk_index") is not None:
+            row["chunk_index"] = page["chunk_index"]
+        rows.append(row)
 
     # 6. Upsert to Supabase
     print(f"Upserting {len(rows)} pages to Supabase...")

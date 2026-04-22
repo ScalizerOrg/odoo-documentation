@@ -5,10 +5,10 @@ import hashlib
 import re
 from pathlib import Path
 
-from .rst_parser import clean_text, EMBEDDING_MAX_CHARS
+from .rst_parser import clean_text, extract_keywords, EMBEDDING_MAX_CHARS
 
-# Minimum chars of documentation to index a module
-MIN_DOC_CHARS = 100
+# Minimum chars of documentation to index a module (raised from 100 to filter noise)
+MIN_DOC_CHARS = 250
 
 
 def parse_manifest(manifest_path: Path) -> dict | None:
@@ -133,6 +133,32 @@ def process_oca_module(
         embedding_parts.append(cleaned_readme[:EMBEDDING_MAX_CHARS])
     embedding_text = "\n".join(embedding_parts)
 
+    # Build enriched keywords from manifest + README
+    oca_keywords = set()
+
+    # Module depends (common search terms)
+    for dep in manifest.get("depends", []):
+        if dep and dep not in ("base",):
+            oca_keywords.add(dep.replace("_", " "))
+
+    # Category (functional area)
+    cat = manifest.get("category", "")
+    if cat:
+        oca_keywords.add(cat)
+        # Also add sub-parts (e.g. "Accounting/Invoicing" -> "Accounting", "Invoicing")
+        for part in cat.split("/"):
+            part = part.strip()
+            if part:
+                oca_keywords.add(part)
+
+    # Headings from README (business terms)
+    if readme_text:
+        readme_keywords = extract_keywords(readme_text)
+        oca_keywords.update(readme_keywords)
+
+    # Module technical name as keyword
+    oca_keywords.add(module_name.replace("_", " "))
+
     return {
         "path": path,
         "title": manifest.get("name", module_name),
@@ -140,7 +166,7 @@ def process_oca_module(
         "module": repo_name,
         "submodule": module_name,
         "breadcrumb": f"OCA > {repo_name} > {module_name}",
-        "keywords": [],
+        "keywords": sorted(oca_keywords),
         "preview": full_doc[:500],
         "content": content,
         "checksum": checksum,
