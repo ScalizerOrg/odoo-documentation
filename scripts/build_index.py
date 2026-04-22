@@ -2,7 +2,7 @@
 """
 Build index from Odoo RST documentation and push to Supabase with vector embeddings.
 
-Scans content/ directory for .rst files, generates embeddings via OpenAI,
+Scans content/ directory for .rst files, generates embeddings via Voyage AI,
 and upserts everything into the Supabase doc_pages table.
 
 Uses checksums to skip re-embedding unchanged pages (saves API costs).
@@ -10,7 +10,7 @@ Uses checksums to skip re-embedding unchanged pages (saves API costs).
 Environment variables:
     SUPABASE_URL         - Supabase project URL
     SUPABASE_SERVICE_KEY - Supabase service role key
-    OPENAI_API_KEY       - OpenAI API key for embeddings
+    VOYAGE_API_KEY       - Voyage AI API key for embeddings
 
 Usage:
     python scripts/build_index.py --version 19.0 --content-dir content
@@ -18,7 +18,7 @@ Usage:
     python scripts/build_index.py --version 19.0 --content-dir content --dry-run
 
 Requirements:
-    pip install openai requests
+    pip install requests
 """
 
 import argparse
@@ -31,7 +31,6 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-import openai
 import requests
 
 # ---------------------------------------------------------------------------
@@ -42,8 +41,9 @@ EXCLUDED_DIRS = {"locale", "extensions", "redirects", "static", "tests", "_stati
 EXCLUDED_PATTERNS = {".pot", ".po", ".mo"}
 RST_HEADING_CHARS = set("=-~^\"'`#*+:._")
 
-EMBEDDING_MODEL = "text-embedding-3-small"
-EMBEDDING_BATCH_SIZE = 200  # OpenAI supports up to 2048 per batch
+VOYAGE_API_URL = "https://api.voyageai.com/v1/embeddings"
+EMBEDDING_MODEL = "voyage-3"
+EMBEDDING_BATCH_SIZE = 128  # Voyage supports up to 128 per batch
 SUPABASE_BATCH_SIZE = 50    # Rows per upsert call
 EMBEDDING_MAX_CHARS = 4000  # Max chars for embedding input text
 
@@ -263,25 +263,34 @@ class SupabaseClient:
 
 
 # ---------------------------------------------------------------------------
-# OpenAI Embeddings
+# Voyage AI Embeddings
 # ---------------------------------------------------------------------------
 
 def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
-    """Generate embeddings for a list of texts using OpenAI API."""
-    client = openai.OpenAI(api_key=api_key)
+    """Generate embeddings for a list of texts using Voyage AI API."""
     all_embeddings: list[list[float]] = [[] for _ in texts]
 
     for i in range(0, len(texts), EMBEDDING_BATCH_SIZE):
         batch = texts[i : i + EMBEDDING_BATCH_SIZE]
         print(f"  Generating embeddings batch {i // EMBEDDING_BATCH_SIZE + 1} ({len(batch)} texts)...")
 
-        response = client.embeddings.create(
-            model=EMBEDDING_MODEL,
-            input=batch,
+        resp = requests.post(
+            VOYAGE_API_URL,
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": EMBEDDING_MODEL,
+                "input": batch,
+                "input_type": "document",
+            },
         )
+        resp.raise_for_status()
+        data = resp.json()
 
-        for j, item in enumerate(response.data):
-            all_embeddings[i + j] = item.embedding
+        for j, item in enumerate(data["data"]):
+            all_embeddings[i + j] = item["embedding"]
 
         # Respect rate limits
         if i + EMBEDDING_BATCH_SIZE < len(texts):
@@ -299,7 +308,7 @@ def run_pipeline(
     version: str,
     supabase_url: str,
     supabase_key: str,
-    openai_key: str,
+    voyage_key: str,
     json_output: str | None = None,
     dry_run: bool = False,
 ):
@@ -355,7 +364,7 @@ def run_pipeline(
     # 4. Generate embeddings for changed pages
     print(f"Generating embeddings for {len(changed_pages)} pages...")
     embedding_texts = [p["embedding_text"] for p in changed_pages]
-    embeddings = generate_embeddings(embedding_texts, openai_key)
+    embeddings = generate_embeddings(embedding_texts, voyage_key)
 
     # 5. Prepare rows for upsert
     rows = []
@@ -416,7 +425,7 @@ def main():
     # Environment variables
     supabase_url = os.environ.get("SUPABASE_URL", "")
     supabase_key = os.environ.get("SUPABASE_SERVICE_KEY", "")
-    openai_key = os.environ.get("OPENAI_API_KEY", "")
+    voyage_key = os.environ.get("VOYAGE_API_KEY", "")
 
     if not args.dry_run:
         missing = []
@@ -424,8 +433,8 @@ def main():
             missing.append("SUPABASE_URL")
         if not supabase_key:
             missing.append("SUPABASE_SERVICE_KEY")
-        if not openai_key:
-            missing.append("OPENAI_API_KEY")
+        if not voyage_key:
+            missing.append("VOYAGE_API_KEY")
         if missing:
             print(f"Error: Missing environment variables: {', '.join(missing)}", file=sys.stderr)
             sys.exit(1)
@@ -438,7 +447,7 @@ def main():
         version=args.version,
         supabase_url=supabase_url,
         supabase_key=supabase_key,
-        openai_key=openai_key,
+        voyage_key=voyage_key,
         json_output=args.json_output,
         dry_run=args.dry_run,
     )
