@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:30+0000\n"
-"PO-Revision-Date: 2026-04-23 23:10+0000\n"
+"PO-Revision-Date: 2026-04-24 23:11+0000\n"
 "Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-18-doc/"
 "inventory_and_mrp/it/>\n"
@@ -27564,10 +27564,14 @@ msgid ""
 "time configuration, allowing coordination and planning of manufacturing "
 "orders, deliveries, and receipts."
 msgstr ""
+"Pianificare correttamente le date di consegna è di vitale importanza per "
+"soddisfare le aspettative dei clienti. In Odoo, l'app **Magazzino** permette "
+"di eseguire una configurazione completa dei tempi di attesa/esecuzione così "
+"da poter pianificare ordini di produzione, consegne e ricezioni."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:17
 msgid "Lead time types"
-msgstr ""
+msgstr "Tipi di tempi di attesa"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:19
 msgid ""
@@ -27588,6 +27592,12 @@ msgid ""
 "date the products are shipped from the warehouse. This is also known as "
 "*delivery lead time*."
 msgstr ""
+":ref:`Tempi di attesa del cliente <inventory/warehouses_storage/customer-lt>"
+"`: periodo di tempo predefinito per l'evasione degli ordini dei clienti. Il "
+"tempo di attesa del cliente corrisponde al numero di giorni che intercorrono "
+"tra la data di conferma dell'ordine di vendita e la data di spedizione dei "
+"prodotti dal magazzino. Sono noti anche come *Tempo di risposta per "
+"consegne*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:30
 msgid ""
@@ -27597,6 +27607,11 @@ msgid ""
 "shipment earlier, considering the possibility of delays in the fulfillment "
 "process."
 msgstr ""
+":ref:`Tempo di risposta sicuro per vendite <inventory/warehouses_storage/"
+"sales-security-lt>`: sposta in avanti la *data di consegna prevista* di un "
+"numero specificato di giorni. Questo funge da margine di sicurezza per "
+"consentire di preparare la spedizione in anticipo, tenendo conto della "
+"possibilità di ritardi nel processo di evasione dell'ordine"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:35
 msgid ""
@@ -27606,6 +27621,11 @@ msgid ""
 "the warehouse, facilitating effective scheduling and planning of supplier "
 "deliveries."
 msgstr ""
+":ref:`Tempo di risposta per acquisti <inventory/warehouses_storage/purchase-"
+"lt>`: numero di giorni che intercorrono tra la conferma di un ordine di "
+"acquisto e la ricezione dei prodotti. Fornisce informazioni sul tempo "
+"necessario affinché i prodotti arrivino al magazzino, facilitando una "
+"programmazione e una pianificazione efficaci delle consegne dei fornitori"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:40
 msgid ""
@@ -27616,6 +27636,13 @@ msgid ""
 "that are set to replenish to order, the need appears on the *Replenishment "
 "report* earlier, according to the specified number of days."
 msgstr ""
+":ref:`Tempo di risposta sicuro per acquisti <inventory/warehouses_storage/"
+"purchase-security-lt>`: anticipa la scadenza dell'ordine su un :abbr:`ordine "
+"di acquisto` di un numero specificato di giorni. Questo approccio proattivo "
+"di effettuare gli ordini in anticipo mitiga il rischio di ritardi da parte "
+"del fornitore o nella spedizione. Pertanto, per i prodotti impostati per il "
+"rifornimento su ordinazione, la necessità appare sul *resoconto di "
+"rifornimento* in anticipo, in base al numero di giorni specificato"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:46
 msgid ""
@@ -27624,6 +27651,10 @@ msgid ""
 "confirm it. It advances the deadline to schedule a |RFQ| by a specified "
 "number of days."
 msgstr ""
+":ref:`Giorni all'acquisto <inventory/warehouses_storage/days-to-purchase>`: "
+"giorni necessari al fornitore per ricevere una richiesta di preventivo e "
+"confermarla. Anticipa la scadenza per programmare una richiesta di "
+"preventivo di un numero specificato di giorni"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:50
 msgid ""
@@ -27633,6 +27664,11 @@ msgid ""
 "Odoo), and is used to forecast an approximate production date for a finished "
 "good."
 msgstr ""
+":ref:`Tempo di risposta per produzione <inventory/warehouses_storage/manuf-"
+"lt>`: numero di giorni necessari per completare un ordine di produzione "
+"dalla data di conferma. Questi tempi di produzione includono i fine "
+"settimana (ore non lavorative in Odoo) e vengono utilizzati per prevedere "
+"una data di produzione approssimativa per un prodotto finito"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:55
 msgid ""
@@ -27642,6 +27678,12 @@ msgid ""
 "directly on the bill of materials (BoM), or click *Compute* to sum up "
 "purchase and manufacturing lead times of components in the |BoM|."
 msgstr ""
+":ref:`Giorni per la preparazione dell'ordine di produzione <inventory/"
+"warehouses_storage/prepare-manufacturing-order>`: numero di giorni necessari "
+"per rifornire i componenti o produrre i sottoassiemi del prodotto. Impostalo "
+"direttamente sulla distinta base oppure clicca su *Calcola* per sommare i "
+"tempi di attesa per l'acquisto e la produzione dei componenti nella distinta "
+"base"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:61
 msgid ""
@@ -27651,10 +27693,16 @@ msgid ""
 "<inventory/management/products/strategies>`, the security lead time makes "
 "the need appear earlier on the replenishment report."
 msgstr ""
+":ref:`Tempo di attesa di sicurezza per la produzione <inventory/"
+"warehouses_storage/manuf-security-lt>`: sposta in avanti la data prevista "
+"dell'ordine di produzione di un numero specificato di giorni. Se utilizzato "
+"in combinazione con il percorso :ref:`rifornimento su ordine <inventory/"
+"management/products/strategies>`, il tempo di attesa di sicurezza fa "
+"apparire la necessità prima nel resoconto di rifornimento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:69
 msgid "Sales lead times"
-msgstr ""
+msgstr "Tempi di attesa per vendite"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:71
 msgid ""
@@ -28788,34 +28836,38 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:40
 msgid ":ref:`Horizon days <inventory/warehouses_storage/horizon-days>`"
-msgstr ""
+msgstr ":ref:`Giorni orizzonte <inventory/warehouses_storage/horizon-days>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:45
 msgid "Reordering rules setup"
-msgstr ""
+msgstr "Configurare le regole di riordino"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:47
 msgid ""
 "To configure automatic and manual reordering rules, complete the following:"
 msgstr ""
+"Per configurare le regole di riordino automatiche e manuali, leggi i "
+"seguenti articoli:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:49
 msgid ""
 ":ref:`Product type configuration <inventory/warehouses_storage/set-product-"
 "type>`"
 msgstr ""
+":ref:`Configurazione della tipologia di prodotto <inventory/"
+"warehouses_storage/set-product-type>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:50
 msgid ":ref:`Replenishment method <inventory/warehouses_storage/set-method>`"
-msgstr ""
+msgstr ":ref:`Metodi di rifornimento <inventory/warehouses_storage/set-method>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:51
 msgid ":ref:`Create rule <inventory/warehouses_storage/rr-fields>`"
-msgstr ""
+msgstr ":ref:`Creare regole <inventory/warehouses_storage/rr-fields>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:56
 msgid "Product type configuration"
-msgstr ""
+msgstr "Configurare la tipologia di prodotto"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:58
 msgid ""
@@ -28823,6 +28875,10 @@ msgid ""
 "navigating to :menuselection:`Inventory app --> Products --> Products`, then "
 "select an existing product, or create a new one by clicking :guilabel:`New`."
 msgstr ""
+"Un prodotto deve essere configurato correttamente per poter utilizzare le "
+"regole di riordino. Per prima cosa, apri l'app :menuselection:`Magazzino --> "
+"Prodotti --> Prodotti`, poi seleziona un prodotto esistente o creane uno "
+"nuovo facendo clic su :guilabel:`Nuovo`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:62
 msgid ""
@@ -28831,14 +28887,20 @@ msgid ""
 "the :guilabel:`Track Inventory` checkbox is ticked. This is necessary for "
 "Odoo to track the product's stock levels and trigger reordering rules."
 msgstr ""
+"Nel modulo del prodotto, sotto la scheda :guilabel:`Informazioni generali`, "
+"imposta la :guilabel:`Tipologia prodotto` su :guilabel:`Beni` e assicurati "
+"che la casella :guilabel:`Traccia magazzino` sia spuntata. Questo è "
+"necessario per Odoo per tracciare i livelli delle scorte del prodotto e "
+"attivare le regole di riordino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:None
 msgid "Product Type and Track Inventory configurations."
 msgstr ""
+"Configurazione della tipologia di prodotto e del monitoraggio del magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:72
 msgid "Replenishment method"
-msgstr ""
+msgstr "Metodo di approvvigionamento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:74
 msgid "Next, configure the replenishment method (e.g. buy or manufacture)."
@@ -29554,6 +29616,10 @@ msgid ""
 "why there are no smart buttons that link |SOs| to |POs|, unlike "
 "the :abbr:`MTO (Make to Order)` route."
 msgstr ""
+"le regole di riordino non assegnano automaticamente un gruppo di "
+"approvvigionamento che spiega perché non esistono pulsanti smart che "
+"collegano ordini di vendita a ordini di acquisto, a differenza del percorso "
+":abbr:`MTO`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:358
 msgid ""
@@ -29561,6 +29627,9 @@ msgid ""
 "(not :abbr:`MTO (Make to Order)`), with specific quantities linked to "
 "specific demands (e.g. |SOs|), assign a procurement group."
 msgstr ""
+"per attivare i pulsanti smart per i prodotti riforniti da regole di riordino "
+"(non :abbr:`MTO`), con quantità specifiche collegate a richieste specifiche "
+"(ad es. ordini di vendita), assegna un gruppo di approvvigionamento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:361
 msgid ""
@@ -29569,6 +29638,11 @@ msgid ""
 "for those demands. This allows for more efficient procurement by "
 "consolidating demands into fewer orders."
 msgstr ""
+"senza un gruppo di approvvigionamento, le richieste per lo stesso prodotto "
+"possono essere unite in una singola richiesta di preventivo anche se la "
+"regola di riordino viene eseguita più volte per quelle richieste. In questo "
+"modo l'approvvigionamento sarà più efficace perché le richieste verranno "
+"consolidate in meno ordini."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:365
 msgid ""
@@ -29576,6 +29650,10 @@ msgid ""
 "the replenishment report ensures that all linked orders are grouped under "
 "the same demand, based on the defined route."
 msgstr ""
+"La selezione di un gruppo di approvvigionamento nel campo :guilabel:`Gruppo "
+"di approvvigionamento` nel resoconto dedicato garantisce che tutti gli "
+"ordini collegati vengano raggruppati sotto la stessa richiesta in base al "
+"percorso definito."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:370
 msgid ""
@@ -29584,6 +29662,11 @@ msgid ""
 "in sales order SO35, given they share the same vendor, Azure Interior, and "
 "ensure other demands for these products are handled separately?"
 msgstr ""
+"Come è possibile impostare i campi *Gruppo di approvvigionamento*, "
+"*Fornitore* e *Percorso* nel resoconto di rifornimento per generare un'unica "
+"richiesta di preventivo per cinque prodotti diversi nell'ordine di vendita "
+"SO35, dato che condividono lo stesso fornitore, Azure Interior, e garantire "
+"che le altre richieste per questi prodotti vengano gestite separatamente?"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:377
 msgid ""
@@ -29591,22 +29674,32 @@ msgid ""
 "all five products. This groups the demands for `SO35` in the same |RFQ| or |"
 "MO|."
 msgstr ""
+"Imposta il :guilabel:`Gruppo di approvvigionamento` su `SO35`, nella regola "
+"di riordino per i cinque prodotti. In questo modo, vengono raggruppate le "
+"richieste per l'ordine `SO35` nella stessa richiesta di preventivo od ordine "
+"di produzione"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:379
 msgid ""
 "Set the :guilabel:`Vendor` to `Azure Interior` to ensure the |RFQ| is "
 "created for the same supplier."
 msgstr ""
+"imposta il :guilabel:`Fornitore` su `Azure Interior` per garantire che la "
+"richiesta di preventivo venga creata per lo stesso fornitore"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:381
 msgid "Set the :guilabel:`Route` to :guilabel:`Buy` to generate an |RFQ|."
 msgstr ""
+"imposta il :guilabel:`Percorso` su :guilabel:`Acquisto` per generare una "
+"richiesta di preventivo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:382
 msgid ""
 "Click the :guilabel:`Order` button to generate a single |RFQ| for the five "
 "products tied to `SO35`."
 msgstr ""
+"fai clic sul pulsante :guilabel:`Ordina` per generare un'unica richiesta di "
+"preventivo per i cinque prodotti legati all'ordine `SO35`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
 msgid ""
@@ -29615,10 +29708,15 @@ msgid ""
 "demands for these products are managed separately and assigned to different |"
 "RFQs| (the usual behavior)."
 msgstr ""
+"Dopo aver effettuato l'ordine, rimuovi `SO35` dal campo :guilabel:`Gruppo di "
+"approvvigionamento` nelle regole di riordino dei cinque prodotti. Ciò "
+"garantisce che le future richieste di questi prodotti vengano gestite "
+"separatamente e assegnate a diverse richieste di preventivo (il "
+"comportamento usuale)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:392
 msgid "Just-in-time logic"
-msgstr ""
+msgstr "Logica just-in-time"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:394
 msgid ""
@@ -29627,6 +29725,11 @@ msgid ""
 "date <inventory/warehouses_storage/forecasted-date>`, which determines when "
 "replenishment is necessary to avoid overstocking."
 msgstr ""
+"La *logica just-in-time* in Odoo riduce al minimo i costi di stoccaggio "
+"effettuando ordini con precisione per rispettare le scadenze. Ciò si ottiene "
+"utilizzando la :ref:`data prevista <inventory/warehouses_storage/forecasted-"
+"date>` , che determina quando è necessario il rifornimento per evitare "
+"l'eccesso di scorte."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:398
 msgid ""
@@ -29638,6 +29741,14 @@ msgid ""
 "or :ref:`manufacturing lead times <inventory/warehouses_storage/manuf-lt>` "
 "for production. Both automatic and manual reordering rules work this way."
 msgstr ""
+"La data prevista è la **data più vicina possibile** per ricevere un prodotto "
+"se il processo di rifornimento inizia immediatamente. Viene calcolata "
+"sommando i tempi di consegna legati al processo di rifornimento, come "
+":ref:`i tempi di risposta dei fornitori <inventory/warehouses_storage/"
+"purchase-lt>` e :ref:`i ritardi di acquisto <inventory/warehouses_storage/"
+"purchase-security-lt>` per gli acquisti, o :ref:`i tempi di produzione "
+"<inventory/warehouses_storage/manuf-lt>` per la produzione. Sia le regole di "
+"riordino automatiche che quelle manuali funzionano in questo modo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:406
 msgid ""
@@ -29645,16 +29756,23 @@ msgid ""
 "in 10 days, Odoo waits 5 days to place the order, ensuring it arrives just "
 "in time for delivery."
 msgstr ""
+"Per un prodotto con un tempo di consegna totale di 5 giorni e una data di "
+"consegna dell'ordine di vendita entro 10 giorni, Odoo attende 5 giorni prima "
+"di effettuare l'ordine, assicurandosi che arrivi giusto in tempo per la "
+"consegna."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:409
 msgid "Important considerations:"
-msgstr ""
+msgstr "Considerazioni importanti:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:411
 msgid ""
 "**If this feels risky**, consider adding buffer time or :doc:`adjusting lead "
 "times <lead_times>` for more flexibility."
 msgstr ""
+"**se questo sembra rischioso**, valuta l'aggiunta di un margine di tempo o "
+":doc:`l'adeguamento dei tempi di risposta <lead_times>` per una maggiore "
+"flessibilità"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:413
 msgid ""
@@ -29663,10 +29781,15 @@ msgid ""
 "dates on sales orders as their *creation date* ensures purchases are "
 "immediately triggered when needed"
 msgstr ""
+"sebbene i tempi di risposta e la logica just-in-time forniscano un controllo "
+"aggiuntivo, **le regole di riordino funzionano perfettamente anche senza di "
+"essi**. Mantenere le date di consegna sugli ordini di vendita come *data di "
+"creazione* garantisce che gli acquisti vengano attivati immediatamente "
+"quando necessario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:420
 msgid "Forecasted date and To Order quantity"
-msgstr ""
+msgstr "Data prevista e quantità da ordinare"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:422
 msgid ""
@@ -29675,6 +29798,11 @@ msgid ""
 "product's replenishment process. The total of these lead times, added to the "
 "current date, determines when Odoo checks for demanded stock."
 msgstr ""
+"La *data prevista* è la data di ricezione più vicina per un prodotto, se "
+"ordinato in questo momento. Viene calcolata sommando i tempi di consegna "
+"legati al processo di rifornimento del prodotto. Il totale di questi tempi "
+"di consegna, aggiunto alla data corrente, determina quando Odoo verifica le "
+"scorte richieste."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:426
 msgid ""
@@ -29683,25 +29811,33 @@ msgid ""
 "reordering rule. The :guilabel:`Replenishment Information` pop-up window "
 "displays the :guilabel:`Forecasted Date` and various lead times."
 msgstr ""
+"Per visualizzare la data prevista, vai al resoconto di rifornimento e clicca "
+"sull'icona :icon:`fa-info-circle` :guilabel:`(info)` relativa alla regola di "
+"riordino desiderata. La finestra popup :guilabel:`Informazioni sul "
+"rifornimento` mostra la :guilabel:`Data prevista` e i vari tempi di attesa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:431
 msgid ""
 "A manual reordering rule is set up with no minimum or maximum quantities."
 msgstr ""
+"Una regola di riordino manuale viene configurata senza quantità minime o "
+"massime."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:433
 msgid ""
 "Vendor lead time is 4 days, the purchase security lead time is 1 day, and "
 "the days to purchase is 2 days."
 msgstr ""
+"Il tempo di risposta del fornitore è di 4 giorni, il tempo di attesa della "
+"garanzia di acquisto è di 1 giorno e i giorni per l'acquisto sono 2."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:435
 msgid "Today's date is November 26."
-msgstr ""
+msgstr "La data odierna è il 26 novembre."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:436
 msgid "These add up to 7 days, making the forecasted date, December 3rd."
-msgstr ""
+msgstr "Il tutto richiede 7 giorni, portando la data prevista al 3 dicembre."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:438
 msgid ""
@@ -29709,6 +29845,9 @@ msgid ""
 "from today). This demand will appear on the replenishment report today, in "
 "the **To Order** field."
 msgstr ""
+"Un ordine di vendita confermato per 5 unità ha la data di consegna al 3 "
+"dicembre (7 giorni a partire da oggi). Questa richiesta apparirà nel "
+"resoconto di approvvigionamento di oggi, nel campo **Da ordinare**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:441
 msgid ""
@@ -29717,16 +29856,23 @@ msgid ""
 "fall within the forecasted date window, ensuring orders are placed precisely "
 "when needed."
 msgstr ""
+"Tuttavia, se la data di consegna fosse successiva al 3 dicembre, non "
+"apparirebbe ancora nel resoconto. Odoo visualizza le quantità da rifornire "
+"solo quando rientrano nella finestra temporale prevista, garantendo che gli "
+"ordini vengano effettuati esattamente quando necessario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
 msgid "Show forecasted date in Odoo."
-msgstr ""
+msgstr "Mostrare la data prevista in Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:448
 msgid ""
 "The *just-in-time* logic ensures replenishment happens only when it's "
 "necessary for the forecasted date's demand, helping avoid overstocking."
 msgstr ""
+"La *logica \"just-in-time* garantisce che il rifornimento avvenga solo "
+"quando è necessario per soddisfare la domanda prevista per la data prevista, "
+"contribuendo ad evitare l'eccesso di scorte."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:451
 msgid "For example:"
@@ -29737,16 +29883,20 @@ msgid ""
 "If the forecasted quantity drops below the minimum **on** the forecasted "
 "date, replenishment must begin immediately to avoid shortages."
 msgstr ""
+"se la quantità prevista scende al di sotto del minimo **alla** data "
+"prevista, il rifornimento deve iniziare immediatamente per evitare carenze"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:455
 msgid ""
 "If the quantity drops below the minimum **after** the forecasted date, "
 "replenishment can wait."
 msgstr ""
+"se la quantità scende al di sotto del minimo **dopo** la data prevista, il "
+"rifornimento può attendere."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:457
 msgid "The **To Order** quantity is the total demand on the forecasted date."
-msgstr ""
+msgstr "La quantità **Da ordinare** è la richiesta totale alla data prevista."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:459
 msgid ""
@@ -29755,16 +29905,23 @@ msgid ""
 "are ordered at the last possible moment—strategic procrastination without "
 "the stress!"
 msgstr ""
+"Sincronizzando gli ordini di acquisto in base ai tempi di consegna "
+"combinati, Odoo ottimizza i livelli del magazzino, mantenendo il magazzino "
+"al minimo e assicurando al contempo che le esigenze future vengano ordinate "
+"all'ultimo momento possibile: un rinvio strategico senza stress!"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:464
 msgid "Common confusion about forecasted quantities"
-msgstr ""
+msgstr "Dubbi comuni sulle quantità previste"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:466
 msgid ""
 "|SOs| due **after** the :guilabel:`Forecasted Date` are not accounted for in "
 "the :guilabel:`Forecast` quantities of the reordering rule."
 msgstr ""
+"Gli ordini di vendita dovuti **dopo** la :guilabel:`Data prevista` non "
+"vengono considerati nelle quantità :guilabel:`previste` della regola di "
+"riordino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:469
 msgid ""
@@ -29773,10 +29930,14 @@ msgid ""
 "replenishment report, as this one represents the **long-term forecasted "
 "quantity**."
 msgstr ""
+"Tuttavia, vengono presi in considerazione nel resoconto previsionale che "
+"puoi aprire facendo clic sull'icona :icon:`fa-area-chart`:guilabel:`"
+"(grafico` nel resoconto di riapprovvigionamento in quanto questo rappresenta "
+"la **quantità prevista a lungo termine**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
 msgid "Forecast and To Order quantities is zero."
-msgstr ""
+msgstr "Le quantità previste e da ordinare sono pari a zero."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:478
 msgid ""
@@ -29784,16 +29945,21 @@ msgid ""
 "December 4th, the :guilabel:`Forecast` and :guilabel:`To Order` quantities "
 "are zero."
 msgstr ""
+"Continuando con l'esempio precedente, quando la scadenza dell'ordine di "
+"vendita viene modificata al 4 dicembre, le quantità :guilabel:`previste` e "
+":guilabel:`da ordinare` sono pari a zero."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
 msgid "Show forecasted report."
-msgstr ""
+msgstr "Mostrare il resoconto previsionale."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:484
 msgid ""
 "Opening the :guilabel:`Forecasted Report` shows the :guilabel:`Forecasted` "
 "units is `5.00`."
 msgstr ""
+"Se apri il :guilabel:`Resoconto previsionale` vedrai che le unità "
+":guilabel:`previste` sono `5,00`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:489
 msgid "Visibility days"
@@ -29807,6 +29973,12 @@ msgid ""
 "rule. **Only if** it is time to reorder, visibility days check additional "
 "future demand by the specified number of days."
 msgstr ""
+"I *giorni di visibilità* consentono di determinare se è necessario "
+"aggiungere quantità aggiuntive al rifornimento pianificato. Odoo verifica se "
+"lo stock previsto alla data prevista scenderà al di sotto del minimo nella "
+"regola di riordino. **Solo se** è il momento di riordinare, i giorni di "
+"visibilità controllano la domanda futura aggiuntiva per il numero di giorni "
+"specificato."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:496
 msgid ""
@@ -29814,6 +29986,9 @@ msgid ""
 "needs, reducing transport costs and enabling supplier discounts for larger "
 "orders."
 msgstr ""
+"Questa funzione aiuta a consolidare gli ordini raggruppando le esigenze "
+"immediate e quelle a breve termine, riducendo i costi di trasporto e "
+"consentendo sconti da parte dei fornitori per ordini di grandi dimensioni."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:499
 msgid ""
@@ -29822,6 +29997,10 @@ msgid ""
 "Replenishment`, or by clicking the *Reordering Rules* smart button from the "
 "product form."
 msgstr ""
+"Per impostare i giorni di visibilità in modo da includere gli ordini per un "
+"determinato numero di giorni futuri, apri l'app "
+":menuselection:`Magazzino --> Operazioni --> Rifornimenti`, oppure fai clic "
+"sul pulsante intelligente *Regole di riordino* dal modulo del prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:503
 msgid ""
@@ -29829,6 +30008,10 @@ msgid ""
 "to the far right and choosing the feature from the drop-down menu. Then, "
 "enter the desired visibility days."
 msgstr ""
+"Successivamente, abilita il campo :guilabel:`Giorni di visibilità` cliccando "
+"sull'icona :icon:`oi-settings-adjust`:guilabel:`(regola)` all'estrema destra "
+"e selezionando la funzione dal menu a tendina. In seguito, inserisci i "
+"giorni di visibilità desiderati."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:507
 msgid ""
@@ -29836,10 +30019,13 @@ msgid ""
 "the extra visibility days if the stock falls below the minimum threshold on "
 "the forecasted date."
 msgstr ""
+"La data prevista non viene mai anticipata o prorogata. Odoo verifica i "
+"giorni di visibilità aggiuntivi solo se le scorte scendono al di sotto della "
+"soglia minima alla data prevista."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:511
 msgid "Example where visibility days is triggered"
-msgstr ""
+msgstr "Esempio in cui viene attivata la funzione Giorni di visibilità"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:513
 msgid ""
@@ -29847,74 +30033,98 @@ msgid ""
 "shipping cost of $100 (including :doc:`landed costs <../../"
 "product_management/inventory_valuation/landed_costs>` and tariffs)."
 msgstr ""
+"Un prodotto spedito dall'Asia ha un tempo di attesa del fornitore "
+"complessivo di 30 giorni e un costo di spedizione di 100 $ (compresi i "
+":doc:`costi di sbarco <../../product_management/inventory_valuation/"
+"landed_costs>` \" e i dazi doganali)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:517
 msgid ""
 "November 4: Current date. The forecasted date is December 4 (30 days later)."
 msgstr ""
+"4 novembre: data attuale. La data prevista è il 4 dicembre (30 giorni dopo)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:518
 msgid ""
 "|SO| 1: Requires the product by Dec 4. Odoo places the order today, costing "
 "$100."
 msgstr ""
+"Ordine di vendita 1: richiede il prodotto entro il 4 dicembre. Odoo effettua "
+"l'ordine oggi, per un costo di 100 $."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:519
 msgid ""
 "|SO| 2: Requires the product by Dec 19. Normally, Odoo would order on Nov "
 "19, costing an additional $100."
 msgstr ""
+"Ordine di vendita 2: richiede il prodotto entro il 19 dicembre. Normalmente, "
+"Odoo effettuerebbe l'ordine il 19 novembre, con un costo aggiuntivo di 100 $."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:521
 msgid ""
 "|SO| 3: Requires the product by Dec 25. Normally, Odoo would order on Nov "
 "25, costing another $100."
 msgstr ""
+"Ordine di vendita 3: richiede il prodotto entro il 25 dicembre. Normalmente, "
+"Odoo effettuerebbe l'ordine il 25 novembre, con un costo aggiuntivo di 100 $."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:524
 msgid ""
 "Ordering separately for these sales orders totals $300 in shipping costs."
 msgstr ""
+"L'ordine separato per questi ordini di vendita comporta un costo di "
+"spedizione totale di 300 $."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:None
 msgid "Show forecasted date visualization."
-msgstr ""
+msgstr "Visualizzazione Mostra data prevista."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:529
 msgid ""
 "Setting :guilabel:`Visibility Days` to `20.0` allows Odoo to \"look ahead\" "
 "20 days from December 4 (|SO| 1's forecasted date) to December 24."
 msgstr ""
+"Impostando i :guilabel:`Giorni di visibilità` su `20,0`, Odoo potrà "
+"\"guardare avanti\" 20 giorni dal 4 dicembre (la data prevista dell'ordine "
+"di vendita 1) fino al 24 dicembre."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:532
 msgid ""
 "It groups |SO| 2's order with |SO| 1, reducing shipping costs by "
 "consolidating orders."
 msgstr ""
+"Raggruppa l'ordine di vendita 2 con l'ordine di vendita 1 così da ridurre i "
+"costi di spedizione consolidando gli ordini."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:533
 msgid ""
 "|SO| 3, which is due on Dec 25, is one day late and is not grouped with the "
 "other two orders."
 msgstr ""
+"L'ordine di vendita 3, che è dovuto il 25 dicembre, è un giorno in ritardo e "
+"non è raggruppato con gli altri due ordini."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:536
 msgid "Counterexample where visibility days is not triggered"
-msgstr ""
+msgstr "Controesempio in cui i giorni di visibilità non vengono attivati"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:538
 msgid "Considering the example above, if |SO| 1 does not exist, then:"
 msgstr ""
+"Considerando l'esempio sopra riportato, se l'ordine di vendita 1 non esiste, "
+"allora:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:540
 msgid ""
 "**November 4**: Current date. The forecasted date is December 4 (30 days "
 "later)."
 msgstr ""
+"**4 novembre**: data attuale. La data prevista è il 4 dicembre (30 giorni "
+"dopo)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:541
 msgid "**November 5**: The forecasted date shifts to December 5."
-msgstr ""
+msgstr "**5 novembre**: la data prevista slitta al 5 dicembre."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:542
 msgid ""
@@ -29922,21 +30132,26 @@ msgid ""
 "order on November 19, meaning the user will not see a replenishment "
 "notification until then."
 msgstr ""
+"Ordine di vendita 2: richiede il prodotto entro il 19 dicembre. Odoo "
+"attiverà l'ordine solo il 19 novembre, il che significa che l'utente non "
+"vedrà una notifica di rifornimento fino a quel momento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:545
 msgid ""
 "This shows that visibility days complement just-in-time logic by optimizing "
 "it to balance replenishment costs more effectively."
 msgstr ""
+"Ciò dimostra che i giorni di visibilità integrano la logica just-in-time "
+"ottimizzandola per bilanciare i costi di rifornimento in modo più efficace."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:None
 msgid "Example where the visibility days does not trigger."
-msgstr ""
+msgstr "Esempio in cui i giorni di visibilità non si attivano."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:552
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:67
 msgid "Horizon days"
-msgstr ""
+msgstr "Giorni di orizzonte"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:554
 msgid ""
@@ -29945,12 +30160,19 @@ msgid ""
 "help users plan replenishment in advance, by increasing the :ref:`forecasted "
 "date <inventory/warehouses_storage/forecasted-date>`."
 msgstr ""
+"I *giorni di orizzonte* determinano quanti giorni in anticipo Odoo verifica "
+"se la quantità prevista scenderà al di sotto del minimo della regola di "
+"riordino. La funzione ha lo scopo di aiutare gli utenti a pianificare il "
+"rifornimento in anticipo, aumentando la :ref:`data prevista <inventory/"
+"warehouses_storage/forecasted-date>` ."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:558
 msgid ""
 "\\text{Forecasted date} = \\text{Current date} + \\text{Vendor Lead Time} + "
 "\\text{Horizon Days}"
 msgstr ""
+"\\text{Data prevista} = \\text{Data attuale} + \\text{Tempi di attesa del "
+"fornitore} + \\text{Giorni di orizzonte}"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:564
 msgid ""
@@ -29958,6 +30180,9 @@ msgid ""
 "find details about the feature in the :doc:`Replenishment report article "
 "<report>`."
 msgstr ""
+"Poiché i giorni di orizzonte sono destinati esclusivamente all'uso con "
+"regole di riordino manuale, trova i dettagli sulla funzionalità nella "
+"sezione :doc:`Resoconto di rifornimento <report>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:3
 msgid "Replenishment report"
@@ -29969,6 +30194,10 @@ msgid ""
 "uses :doc:`manual reordering rules <reordering_rules>`, lead times, and "
 "upcoming demands to forecast quantities of products that need restocking."
 msgstr ""
+"Il *resoconto di rifornimento* è una dashboard interattiva che utilizza le "
+":doc:`regole di riordino manuali <reordering_rules>` , i tempi di attesa e "
+"le richieste imminenti per prevedere le quantità di prodotti che necessitano "
+"di rifornimento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:12
 msgid ""
@@ -29976,28 +30205,38 @@ msgid ""
 "user benefits from a monitoring menu with extra options to manage "
 "suggestions for replenishment."
 msgstr ""
+"Le regole di riordino utilizzate in questa dashboard sono le normali regole "
+"di riordino, ma l'utente beneficia di un menu di monitoraggio con opzioni "
+"aggiuntive per gestire i suggerimenti di rifornimento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:15
 msgid ""
 "This enables users to anticipate future needs, keep less products on hand "
 "without the risk of running out, plan and consolidate orders."
 msgstr ""
+"Ciò consente agli utenti di anticipare le esigenze future, tenere meno "
+"prodotti a disposizione senza il rischio di esaurirli, pianificare e "
+"consolidare gli ordini."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:19
 msgid "Navigate the replenishment report"
-msgstr ""
+msgstr "Esplorare il resoconto di rifornimento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:21
 msgid ""
 "To access the replenishment report, go to :menuselection:`Inventory app --> "
 "Operations --> Replenishment.`"
 msgstr ""
+"Per accedere al resoconto di rifornimento, segui il percorso "
+":menuselection:`app Magazzino --> Operazioni --> Rifornimenti.`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:25
 msgid ""
 "Automatic reordering rules are available on this menu as well, but are "
 "hidden by default."
 msgstr ""
+"In questo menu sono disponibili anche regole di riordino automatiche, ma "
+"sono nascoste per impostazione predefinita."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:27
 msgid ""
@@ -30005,6 +30244,10 @@ msgid ""
 "below. For definitions of the other fields, go to the :ref:`Create "
 "reordering rules section <inventory/warehouses_storage/rr-fields>`."
 msgstr ""
+"I campi e le funzionalità specifici della dashboard di rifornimento sono "
+"visualizzati di seguito. Per le definizioni degli altri campi, vai alla "
+"sezione :ref:`Crea regole di riordino <inventory/warehouses_storage/rr-"
+"fields>` ."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:31
 msgid ""
@@ -30014,6 +30257,11 @@ msgid ""
 "and changing the value. To replenish a product manually, click :icon:`fa-"
 "truck` :guilabel:`Order`."
 msgstr ""
+"Per impostazione predefinita, la quantità nel campo :guilabel:`Da ordinare` "
+"è la quantità necessaria per raggiungere la :guilabel:`Quantità massima`. "
+"Tuttavia, la :guilabel:`Quantità da ordinare` può essere modificata "
+"cliccando sul campo e cambiando il valore. Per rifornire manualmente un "
+"prodotto, clicca su :icon:`fa-truck` :guilabel:`Ordina`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:36
 msgid ""
@@ -30021,6 +30269,9 @@ msgid ""
 "reordering rule for the set period, hiding the entry from the replenishment "
 "dashboard, when it is supposed to appear."
 msgstr ""
+"Fai clic su :icon:`fa-bell-slash`:guilabel:`Posticipa` per disattivare "
+"temporaneamente la regola di riordino per il periodo impostato, nascondendo "
+"la registrazione dalla dashboard di rifornimento quando dovrebbe apparire."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:40
 msgid ""
@@ -30030,14 +30281,21 @@ msgid ""
 "adjust` :guilabel:`(adjust settings)` icon and select :guilabel:`Vendor` "
 "from the drop-down list to view the field on the report."
 msgstr ""
+"Definire un :guilabel:`Fornitore` permette di filtrare o raggruppare le "
+"richieste per venditore. Questo semplifica il processo di identificazione "
+"dei prodotti da ordinare e può ridurre i costi di spedizione. Fai clic "
+"sull'icona :icon:`oi-settings-adjust`:guilabel:`(modifica impostazioni)` e "
+"seleziona un :guilabel:`Fornitore` dall'elenco a discesa per visualizzare il "
+"campo sul resoconto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:None
 msgid "Replenishment report that displays recommended quantities to order."
 msgstr ""
+"Resoconto di rifornimento che mostra le quantità consigliate da ordinare."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:49
 msgid "Order to max"
-msgstr ""
+msgstr "Ordine massimo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:51
 msgid ""
@@ -30048,6 +30306,12 @@ msgid ""
 "needs to be maximized to obtain better discounts, or to save on delivery "
 "costs."
 msgstr ""
+"Se una regola di riordino non prevede che il prodotto scenda al di sotto del "
+"minimo, il rifornimento non può essere attivato, poiché è considerato "
+"*inutile*. Tuttavia, possono esserci casi in cui un prodotto deve essere "
+"rifornito anche se non è ritenuto *necessario*, ad esempio quando è "
+"necessario massimizzare un ordine per ottenere sconti migliori o per "
+"risparmiare sui costi di consegna."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:56
 msgid ""
@@ -30057,10 +30321,15 @@ msgid ""
 "replenishment date for each product for the maximum specified in the "
 "reordering rule."
 msgstr ""
+"Per prima cosa, seleziona uno o più prodotti spuntando la casella "
+"appropriata. Successivamente, clicca sul pulsante :guilabel:`Rifornisci` e "
+"seleziona :guilabel:`Ordine massimo`. In questo modo si crea una richiesta "
+"di preventivo per la prima data di rifornimento possibile per ciascun "
+"prodotto fino al massimo specificato nella regola di riordino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:None
 msgid "The Order to Max option on the replenishment dashboard."
-msgstr ""
+msgstr "L'opzione Ordine massimo nella dashboard di rifornimento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:69
 msgid ""
@@ -30070,6 +30339,12 @@ msgid ""
 "date <inventory/warehouses_storage/forecasted-date>` on "
 "the :doc:`replenishment report <report>`."
 msgstr ""
+"I *giorni di orizzonte* determinano quanti giorni in anticipo Odoo verifica "
+"se la quantità prevista scenderà al di sotto del minimo della regola di "
+"riordino. La funzione ha lo scopo di aiutare gli utenti a pianificare il "
+"rifornimento in anticipo, aumentando la :ref:`data prevista <inventory/"
+"warehouses_storage/forecasted-date>` nel :doc:`resoconto di rifornimento "
+"<report>` ."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:75
 msgid ""
@@ -30077,6 +30352,10 @@ msgid ""
 "trigger within the next seven days appear on the replenishment report, "
 "allowing users to review and decide which products to order in advance."
 msgstr ""
+"Impostare i giorni di orizzonte su `7` garantisce che tutte le regole di "
+"riordino manuale impostate per attivarsi nei prossimi sette giorni compaiano "
+"nel resoconto di rifornimento, consentendo agli utenti di esaminare e "
+"decidere in anticipo quali prodotti ordinare."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:79
 msgid ""
@@ -30085,6 +30364,10 @@ msgid ""
 "folder` :guilabel:`Manual` in the left sidebar. In the menu that appears, "
 "set the number of :guilabel:`Horizon` days."
 msgstr ""
+"Per configurare i giorni di orizzonte, apri l'app "
+":menuselection:`Magazzino --> Operazioni --> Rifornimenti` e fai clic su "
+":icon:`fa-angle-double-right`Manuale` nella barra laterale di sinistra. Nel "
+"menu che appare, configura il numero di giorni di :guilabel:`orizzonte`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:83
 msgid ""
@@ -30092,12 +30375,17 @@ msgid ""
 "visibility-days>` allow Odoo to anticipate future demand, but they work "
 "differently:"
 msgstr ""
+"Sia i giorni di orizzonte che i :ref:`giorni di visibilità <inventory/"
+"warehouses_storage/visibility-days>` consentono a Odoo di anticipare la "
+"domanda futura, ma funzionano in modo diverso:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:86
 msgid ""
 "**Visibility days**: only checks future demand if a replenishment would have "
 "been triggered today."
 msgstr ""
+"**Giorni di visibilità**: verifica la domanda futura solo se oggi sarebbe "
+"stato attivato un rifornimento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:87
 msgid ""
@@ -30105,68 +30393,83 @@ msgid ""
 "reordering rules as soon as the forecasted quantity falls below the minimum "
 "within that window — even if no replenishment is needed today."
 msgstr ""
+"**Giorni di orizzonte**: guarda avanti di un numero specificato di giorni e "
+"attiva le regole di riordino non appena la quantità prevista scende al di "
+"sotto del minimo entro quella finestra, anche se oggi non è necessario alcun "
+"rifornimento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:92
 msgid "Current date: Feb 18"
-msgstr ""
+msgstr "Data odierna: 18 febbraio"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:93
 msgid "On hand quantity: 10"
-msgstr ""
+msgstr "Quantità a disposizione: 10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:94
 msgid "Reordering rule: Min: 5, Max 10"
-msgstr ""
+msgstr "Regola di riordino: min: 5, max 10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:95
 msgid "Vendor lead time: 1 day"
-msgstr ""
+msgstr "Tempi di attesa del fornitore: 1 giorno"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:97
 msgid ""
 "8 units are needed for an |SO| on Feb 23. That means, on Feb 23, there will "
 "only be 2 units in stock."
 msgstr ""
+"Sono necessarie 8 unità per un ordine di vendita e il 23 febbraio. Ciò "
+"significa che, il 23 febbraio, ci saranno solo 2 unità in magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:100
 msgid "**Without horizon days**"
-msgstr ""
+msgstr "**Senza giorni di orizzonte**"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:102
 msgid ""
 "The demand appears on the replenishment report only on Feb 22, one day "
 "before the delivery date."
 msgstr ""
+"La richiesta compare sul resoconto di rifornimento solo il 22 febbraio, un "
+"giorno prima della data di consegna."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:104
 msgid "Forecasted date: Feb 19 (current date + vendor lead time)"
 msgstr ""
+"Data prevista: 19 febbraio (data odierna + tempi di attesa del fornitore)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:106
 msgid "**With horizon days (4 or more days)**"
-msgstr ""
+msgstr "**Con giorni di orizzonte (4 o più giorni)**"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:108
 msgid "Odoo considers demand up to Feb 23 as relevant today (Feb 18)"
 msgstr ""
+"Odoo considera la domanda fino al 23 febbraio come rilevante oggi (18 "
+"febbraio)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:109
 msgid ""
 "The need for 8 more units appears immediately in the replenishment report"
 msgstr ""
+"La necessità di altre 8 unità appare immediatamente nel resoconto di "
+"rifornimento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:110
 msgid ""
 "Forecasted date: Feb 23 (current date + vendor lead time + horizon days)"
 msgstr ""
+"Data prevista: 23 febbraio (data odierna + tempi di attesa del fornitore + "
+"giorni di orizzonte)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:0
 msgid "Show forecasted date brought forward."
-msgstr ""
+msgstr "Mostrare la data prevista anticipata."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:116
 msgid "Replenishment information"
-msgstr ""
+msgstr "Informazioni di rifornimento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:118
 msgid ""
@@ -30175,6 +30478,10 @@ msgid ""
 "Information` pop-up window, which displays the *lead times* and *forecasted "
 "date*."
 msgstr ""
+"In ogni riga del resoconto di rifornimento, facendo clic sull'icona "
+":icon:`fa-info-circle` :guilabel:`(info)` si apre la finestra popup "
+":guilabel:`Informazioni di rifornimento`, che mostra i *tempi di attesa* e "
+"la *data prevista*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:122
 msgid ""
@@ -30182,10 +30489,13 @@ msgid ""
 "the :ref:`Just in time logic <inventory/warehouses_storage/just-in-time>` "
 "section."
 msgstr ""
+"Per informazioni dettagliate su come utilizzare questa funzione per il "
+"rifornimento, vai alla sezione :ref:`Logica just-in-time <inventory/"
+"warehouses_storage/just-in-time>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:126
 msgid "Select a warehouse"
-msgstr ""
+msgstr "Selezionare un magazzino"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:128
 msgid ""
@@ -30196,6 +30506,12 @@ msgid ""
 "the :guilabel:`Warehouses` tab, and the :guilabel:`Available Quantity` shows "
 "the on-hand stock in each warehouse."
 msgstr ""
+"Se il metodo di rifornimento del magazino corrisponde a :doc:`Rifornisci da "
+"un altro magazzino <resupply_warehouses>`, verifica le quantità di prodotto "
+"disponibili in altri magazzini dalla finestra popup :guilabel:`Informazioni "
+"di rifornimento`. I magazzini che possono rifornire le scorte sono elencati "
+"nella scheda :guilabel:`Magazzini` e il valore nel campo :guilabel:`Quantità "
+"disponibile` mostra le scorte a disposizione in ogni magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:134
 msgid ""
@@ -30203,14 +30519,17 @@ msgid ""
 "Route` :guilabel:`Order` button is clicked, the reordering rule will revert "
 "to its preferred route (Buy or Manufacture)."
 msgstr ""
+"Dopo aver selezionato un magazzino di rifornimento, fai clic su "
+":guilabel:`Scegli percorso`. Se fai clic sul pulsante :guilabel:`Ordina, la "
+"regola di riordino tornerà al percorso preferito (Acquisto o Produzione)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:None
 msgid "The warehouse tab on the Replenishment Information pop-up window."
-msgstr ""
+msgstr "La scheda Magazzino nella finestra popup Informazioni di rifornimento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:141
 msgid ":ref:`Temporary Reordering Rules <purchase/check-replenishment>`"
-msgstr ""
+msgstr ":ref:`Regole di riordino temporanee <purchase/check-replenishment>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:3
 msgid "Inter-warehouse replenishment"
