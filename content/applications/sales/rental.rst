@@ -1,4 +1,6 @@
+:nosearch:
 :show-content:
+:show-toc:
 
 ======
 Rental
@@ -16,7 +18,7 @@ returned, and invoice customers from this single platform.
 .. cards::
 
    .. card:: Manage deposits
-      :target: rental/manage_deposits
+      :target: rental/rental_orders/manage_deposits
       :large:
 
       Learn how to create a refundable deposit for rental products.
@@ -26,7 +28,7 @@ Dashboard
 
 Upon opening the **Rental** application, the :guilabel:`Rental Orders` dashboard is revealed.
 
-.. image:: rental/rental-orders-dashboard.png
+.. image:: rental/rental/rental-orders-dashboard.png
    :alt: Example of the Rental Orders dashboard available in the Odoo Rental application.
 
 In the default Kanban view, all rentals are visible. Each rental card displays the customer name,
@@ -42,7 +44,7 @@ Settings
 To configure additional rental delay costs, availability of rental items, or minimum time of rental,
 navigate to :menuselection:`Rental app --> Configuration --> Settings`.
 
-.. image:: rental/rental-settings.png
+.. image:: rental/rental/rental-settings.png
    :alt: How the Settings page appears in the Odoo Rental application.
 
 In the :guilabel:`Rental` section, there are options to configure :guilabel:`Default Delay Costs`
@@ -67,7 +69,7 @@ Each product Kanban card displays that product's name, rental price, and product
 applicable).
 
 .. seealso::
-   :doc:`rental/manage_deposits`
+   :doc:`rental/rental_orders/manage_deposits`
 
 .. _rental/pricing:
 
@@ -80,7 +82,7 @@ app, then select the desired product or click :guilabel:`New` to create a new pr
 On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, open the
 :guilabel:`Rental prices` tab.
 
-.. image:: rental/rental-prices-tab.png
+.. image:: rental/rental/rental-prices-tab.png
    :alt: How the Settings page appears in the Odoo Rental application.
 
 Pricing
@@ -113,9 +115,9 @@ Under the :guilabel:`Reservations` section of the :guilabel:`Rental prices` tab,
 to configure additional fines for any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the
 customer takes to return a rental.
 
-Also, there is the option to set the :guilabel:`Reserve product` time, expressed in hours, to make the rental
-product temporarily unavailable between two rental orders. Such a feature may prove useful if
-maintenance or cleaning is required between rentals.
+Also, there is the option to set the :guilabel:`Reserve product` time, expressed in hours, to make
+the rental product temporarily unavailable between two rental orders. Such a feature may prove
+useful if maintenance or cleaning is required between rentals.
 
 Price computing
 ---------------
@@ -138,7 +140,9 @@ Odoo always uses two rules to compute the price of a product when a rental order
    customer has to pay three times '3 days' to cover the rental's eight days, for a total of $750.
 
 .. toctree::
-   rental/products
-   rental/service_products
-   rental/manage_deposits
+   :titlesonly:
+
+   rental/configure_products
+   rental/rental_orders
+
 

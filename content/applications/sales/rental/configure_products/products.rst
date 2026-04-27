@@ -179,7 +179,7 @@ ensure everything is returned on-time and in its original condition.
 
 .. note::
    Requesting a signature can be done during any stage of the order. This feature also requires the
-   :doc:`Sign <../../productivity/sign>` app.
+   :doc:`Sign <../../../productivity/sign>` app.
 
 If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
 dashboard, select the desired rental order. To go the :icon:`fa-cog` :guilabel:`(Actions)` icon, and

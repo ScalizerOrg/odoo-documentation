@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 18:30+0000\n"
+"POT-Creation-Date: 2026-04-24 17:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:20+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-19-doc/sales/"
@@ -98,9 +98,8 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:423
 #: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:38
 #: ../../content/applications/sales/point_of_sale/shop.rst:60
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:18
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:25
-#: ../../content/applications/sales/rental/manage_deposits.rst:14
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:14
 #: ../../content/applications/sales/sales/commissions.rst:14
 #: ../../content/applications/sales/sales/gelato.rst:15
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:14
@@ -639,7 +638,7 @@ msgstr ""
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:81
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:80
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:47
-#: ../../content/applications/sales/rental.rst:87
+#: ../../content/applications/sales/rental.rst:89
 msgid "Pricing"
 msgstr "Priser"
 
@@ -7619,6 +7618,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:155
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:38
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:144
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`."
 msgstr ""
 
@@ -15457,7 +15457,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use.rst:19
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:3
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:5
 msgid "Invoices"
 msgstr "Fakturaer"
 
@@ -15704,7 +15704,7 @@ msgid ""
 "Registering customers is necessary to :ref:`collect their loyalty points and "
 "grant them rewards <pos/pricing/loyalty>`, automatically apply "
 "an :ref:`attributed pricelist <pos/pricing/pricelists>`, or :ref:`generate "
-"and print invoices <pos_invoices/invoices>`."
+"and print invoices <pos/invoices/invoices>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use.rst:146
@@ -16199,107 +16199,274 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:7
 msgid ""
-"Point of Sale allows you to issue and print invoices for :ref:`registered "
-"customers <pos/use/customers>` upon payment and retrieve all past invoiced "
-"orders."
+"Point of Sale allows for :ref:`creating <pos/invoices/generate>` invoices "
+"for :ref:`registered customers <pos/use/customers>`, :ref:`retrieving <pos/"
+"invoices/retrieve>` all past invoiced orders, and :ref:`accessing and "
+"downloading <pos/invoices/qr-codes>` an invoice using a QR code or URL."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:11
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:12
+msgid ":doc:`/applications/finance/accounting/customer_invoices`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:13
+#: ../../content/applications/sales/point_of_sale/use/receipts.rst:46
 msgid ""
-"An invoice created in a POS creates an entry into the "
-"corresponding :ref:`accounting journal <cheat_sheet/"
-"journals>` :ref:`configured in the POS settings <pos_invoices/"
-"invoice_configuration>`."
+"`Receipts and Invoices (video tutorial) <https://youtu.be/w_DKgHcIV0U?"
+"si=Gnf6untzAz2zvNku>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:18
+msgid "Invoice creation"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:20
 msgid ""
-"To define the default journals for a specific POS, go to the :ref:`POS' "
-"settings <pos/use/settings>`, scroll down to the :guilabel:`Accounting` "
-"section, and select the appropriate journals for :guilabel:`Orders` "
-"and :guilabel:`Invoices` under :guilabel:`Default Journals`."
+"Invoices can be created :ref:`during the ordering process <pos/invoices/"
+"generate-payment>`, :ref:`after the ordering process <pos/invoices/generate-"
+"overview>`, or :ref:`by consolidating multiple sales orders from the same "
+"customer <pos/invoices/generate-global>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:None
-msgid "accounting section in the POS settings"
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:25
+msgid ""
+"Creating an invoice requires :ref:`assigning the customer to the order <pos/"
+"use/customers>`. To ensure the customer is identified on the invoice, "
+"click :guilabel:`Customer` in the :ref:`POS register <pos/use/open-"
+"register>`, then select or create one."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:29
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:30
+msgid ""
+"An invoice created in a POS creates an entry into the "
+"corresponding :ref:`accounting journal <cheat_sheet/journals>` configured in "
+"the :ref:`POS settings <pos/use/settings>`. To modify the default journals "
+"for orders and invoices, go to :menuselection:`Point of Sale --> "
+"Configuration --> Settings`, scroll down to the :guilabel:`Accounting` "
+"section, and select the appropriate journals in the :guilabel:`Orders` "
+"and :guilabel:`Invoices` fields under :guilabel:`Default Journals`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:36
 msgid ""
 "Specific journals can also be defined for each :doc:`payment method <../"
 "payment_methods>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:32
-msgid "Invoice a customer"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:34
-msgid ""
-"To invoice a customer, first make sure a :ref:`customer is set <pos/use/"
-"customers>` for the order. Then, upon :ref:`processing the payment <pos/use/"
-"sell>`, click :guilabel:`Invoice` underneath the customer's name to issue an "
-"invoice for that order."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:38
-msgid ""
-"Select the payment method and click :guilabel:`Validate`. The invoice is "
-"automatically issued and ready to be downloaded and/or printed."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:42
-msgid "Retrieve invoices"
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:39
+msgid "From the frontend"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:44
-msgid "To retrieve the invoice of a POS order, follow these steps:"
+msgid "During the ordering process"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:46
+msgid ""
+"To create and issue an invoice to the customer upon :ref:`payment <pos/use/"
+"sell>`, enable the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox, "
+"select a :doc:`payment method <../payment_methods>`, then "
+"click :guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:50
+msgid ""
+"The invoice is automatically issued and downloaded. To simultaneously send "
+"the receipt and the invoice from the :ref:`Receipt <pos/configuration/"
+"receipts>` screen, click the :icon:`fa-paper-plane` (:guilabel:`send`) "
+"button next to the customer's email address."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:55
+msgid ""
+"If the registered customer's :ref:`contact type <essentials/contacts/type>` "
+"is set to :guilabel:`Company`, the :icon:`fa-file-text-"
+"o` :guilabel:`Invoice` checkbox is automatically enabled."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:60
+msgid ":doc:`receipts`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:65
+msgid "After the ordering process"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:67
+msgid ""
+"To create and issue an invoice to the customer from the POS register after "
+"an order is processed, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:70
+msgid "Click :guilabel:`Orders` in the POS interface."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:71
+msgid "Set the :guilabel:`Active` dropdown menu to :guilabel:`Paid`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:72
+msgid ""
+"Select the relevant order and click :icon:`fa-file-pdf-"
+"o` :guilabel:`Invoice` above the numpad."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:75
+msgid ""
+"To reprint the invoice, select the relevant order and click :icon:`fa-file-"
+"pdf-o` :guilabel:`Reprint Invoice` above the numpad."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:79
+msgid "From the backend"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:84
+msgid "Backend invoice creation"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:86
+msgid "To create and issue an invoice from the backend, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:88
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:101
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:124
 msgid "Go to :menuselection:`Point of Sale --> Orders --> Orders`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:47
-msgid "Click the relevant invoiced order in the list."
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:89
+msgid "Select the relevant order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:48
-msgid "On the order form, click the :guilabel:`Invoice` smart button."
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:90
+msgid "Add the :guilabel:`Customer` if needed, then click :guilabel:`Invoice`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:51
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:95
+msgid "Consolidated customer invoice"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:97
 msgid ""
-"Invoiced orders have the :guilabel:`Fully Invoiced` :guilabel:`Invoice "
-"Status`."
+"To create a consolidated invoice for all orders linked to the same customer "
+"that are not yet invoiced (i.e., invoices with an :guilabel:`Invoice Status` "
+"set to :guilabel:`To Invoice`), follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:52
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:102
+msgid "Click the search bar and :guilabel:`Group By` :guilabel:`Customer`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:103
 msgid ""
-"You can filter the list of orders to only display invoiced orders in the "
-"list: click the search bar and select the :guilabel:`Invoiced` filter."
+"Click the :icon:`fa-caret-right` (:guilabel:`caret`) icon next to the "
+"relevant customer and enable :guilabel:`Order Ref` in the column header or "
+"select the relevant orders."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:56
-msgid "QR codes to generate invoices"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:58
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:105
 msgid ""
-"Customers can also request an invoice by scanning the QR code printed on "
-"their receipt. Upon scanning, they must fill in a form with their billing "
-"information and click :guilabel:`Get my invoice`. The invoice is then "
-"generated and available for download and the order's status is updated "
-"to :guilabel:`Fully invoiced`."
+"Click :guilabel:`Create Invoices`, keep the :guilabel:`Consolidated Billing` "
+"option enabled, then click :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:63
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:109
 msgid ""
-"To use this feature, enable QR codes on receipts by going "
-"to :menuselection:`Point of Sale --> Configuration --> Settings`. Then, "
-"select the POS in the :guilabel:`Point of Sale` field, scroll down to "
-"the :guilabel:`Bills & Receipts` section, and enable :guilabel:`Use QR code "
-"on ticket`."
+"Alternatively, go to :menuselection:`Point of Sale --> Orders --> "
+"Customers`, select the relevant customer, click the :icon:`fa-shopping-"
+"bag` :guilabel:`PoS Orders` smart button on the customer form, select the "
+"relevant orders, click :guilabel:`Create Invoices`, then :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:113
+msgid ""
+"To create an individual invoice for each sales order, disable "
+"the :guilabel:`Consolidated Billing` option."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:119
+msgid "Invoice retrieval"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:121
+msgid ""
+"Retrieving invoices is useful for customer requests and accounting purposes, "
+"for example. To view, download, reprint, or send past transactions, follow "
+"these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:125
+msgid "Click the relevant order in the list."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:126
+msgid "Click the :guilabel:`Invoice` smart button on the order form."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:127
+msgid "Click the following buttons to manage the invoice:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:129
+msgid ":guilabel:`Send`: Send or resend the invoice."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:130
+msgid ""
+":guilabel:`Print`: Open the browser's print function or download the invoice."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:131
+msgid ":guilabel:`Preview`: Preview and download the invoice."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:132
+msgid ""
+":guilabel:`Credit Note`: Issue a :ref:`credit note <accounting/credit_notes/"
+"issue-credit-note>` to the customer."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:134
+msgid ""
+":guilabel:`Reset to Draft`: Reset the invoice to draft if changes are needed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:139
+msgid "Invoice generation via QR code and URL"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:141
+msgid ""
+"To allow customers to request an invoice by scanning a QR code printed on "
+"their :ref:`receipt <pos/configuration/receipts>`, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:145
+msgid "Scroll down to the :guilabel:`Bills & Receipts` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:146
+msgid "Enable the :guilabel:`Self-service invoicing` setting."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:147
+msgid ""
+"Set the :guilabel:`Print` field to :guilabel:`QR code`, :guilabel:`URL`, "
+"or :guilabel:`QR code + URL` to determine how customers can access their "
+"invoice (e.g., by scanning the QR code or by typing the URL in a browser)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:151
+msgid ""
+"Upon scanning the QR code or typing the URL in a browser, customers must "
+"fill in a form with the information on the receipt (i.e., "
+"the :guilabel:`Ticket Number`, :guilabel:`Date`, and :guilabel:`Unique "
+"code`) and click :guilabel:`Request Invoice`. Then, they must enter their "
+"billing information or sign in and click :guilabel:`Get my invoice`. The "
+"invoice is then generated and available for download, and the order status "
+"is updated to :guilabel:`Fully Invoiced`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:8
@@ -16330,8 +16497,8 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:18
 msgid ""
-"Optionally, a QR code or URL link for customers to generate :doc:`invoices "
-"<pos_invoices>`"
+"Optionally, a QR code or URL link for customers to generate :ref:`invoices "
+"<pos/invoices/qr-codes>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:27
@@ -16386,79 +16553,79 @@ msgstr ""
 msgid ":doc:`../hardware_network/receipt_printers`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/receipts.rst:50
+#: ../../content/applications/sales/point_of_sale/use/receipts.rst:51
 msgid "Receipt reprint"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/receipts.rst:52
+#: ../../content/applications/sales/point_of_sale/use/receipts.rst:53
 msgid "To reprint a receipt, follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/receipts.rst:54
+#: ../../content/applications/sales/point_of_sale/use/receipts.rst:55
 msgid "Access the :ref:`POS register <pos/use/open-register>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/receipts.rst:55
+#: ../../content/applications/sales/point_of_sale/use/receipts.rst:56
 msgid "Click :guilabel:`Orders` on the POS interface."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/receipts.rst:56
+#: ../../content/applications/sales/point_of_sale/use/receipts.rst:57
 msgid ""
 "Open the dropdown selection menu next to the search bar, and set the filter "
 "to :guilabel:`Paid`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/receipts.rst:57
+#: ../../content/applications/sales/point_of_sale/use/receipts.rst:58
 msgid ""
 "Select the desired order and click :icon:`fa-print` :guilabel:`Print "
 "Receipt`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/receipts.rst:60
+#: ../../content/applications/sales/point_of_sale/use/receipts.rst:61
 msgid ""
 "Filter the list of orders using the search bar: type in your reference and "
 "select :guilabel:`Receipt Number`, :guilabel:`Date`, or :guilabel:`Customer`."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:5
+#: ../../content/applications/sales/rental.rst:7
 msgid "Rental"
 msgstr "Udlejning"
 
-#: ../../content/applications/sales/rental.rst:7
+#: ../../content/applications/sales/rental.rst:9
 msgid ""
 "The Odoo **Rental** application provides comprehensive solutions to "
 "configure and manage rentals."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:9
+#: ../../content/applications/sales/rental.rst:11
 msgid ""
 "Send quotations, confirm orders, schedule rentals, register products when "
 "they are picked up and returned, and invoice customers from this single "
 "platform."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:13
+#: ../../content/applications/sales/rental.rst:15
 msgid "`Odoo Rental: product page <https://www.odoo.com/app/rental>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:14
+#: ../../content/applications/sales/rental.rst:16
 msgid "`Odoo Tutorials: Rental <https://www.odoo.com/slides/rental-48>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:18
-#: ../../content/applications/sales/rental/manage_deposits.rst:3
+#: ../../content/applications/sales/rental.rst:20
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:3
 msgid "Manage deposits"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:18
+#: ../../content/applications/sales/rental.rst:20
 msgid "Learn how to create a refundable deposit for rental products."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:25
+#: ../../content/applications/sales/rental.rst:27
 msgid "Dashboard"
 msgstr "Kontrolpanel"
 
-#: ../../content/applications/sales/rental.rst:27
+#: ../../content/applications/sales/rental.rst:29
 msgid ""
 "Upon opening the **Rental** application, the :guilabel:`Rental Orders` "
 "dashboard is revealed."
@@ -16470,14 +16637,14 @@ msgid ""
 "application."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:32
+#: ../../content/applications/sales/rental.rst:34
 msgid ""
 "In the default Kanban view, all rentals are visible. Each rental card "
 "displays the customer name, the price of the rental, the related sales order "
 "number, along with the status of the rental."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:35
+#: ../../content/applications/sales/rental.rst:37
 msgid ""
 "On the left sidebar, the :guilabel:`Rental Status` for each rental can be "
 "found. Beneath that, the :guilabel:`Invoice Status` of the rentals is "
@@ -16485,9 +16652,9 @@ msgid ""
 "rentals on the dashboard."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:40
-#: ../../content/applications/sales/rental/products.rst:10
-#: ../../content/applications/sales/rental/service_products.rst:16
+#: ../../content/applications/sales/rental.rst:42
+#: ../../content/applications/sales/rental/configure_products/products.rst:10
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:16
 #: ../../content/applications/sales/sales/amazon_connector/fba.rst:34
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
@@ -16495,7 +16662,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Indstillinger"
 
-#: ../../content/applications/sales/rental.rst:42
+#: ../../content/applications/sales/rental.rst:44
 msgid ""
 "To configure additional rental delay costs, availability of rental items, or "
 "minimum time of rental, navigate to :menuselection:`Rental app --> "
@@ -16506,30 +16673,30 @@ msgstr ""
 msgid "How the Settings page appears in the Odoo Rental application."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:48
+#: ../../content/applications/sales/rental.rst:50
 msgid ""
 "In the :guilabel:`Rental` section, there are options to "
 "configure :guilabel:`Default Delay Costs` and :guilabel:`Default Padding "
 "Time`. Also, there is the option to activate :guilabel:`Rental Transfers`."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:52
+#: ../../content/applications/sales/rental.rst:54
 msgid ":guilabel:`Default Delay Costs` are additional costs for late returns."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:53
+#: ../../content/applications/sales/rental.rst:55
 msgid ""
 ":guilabel:`Default Padding Time` represents the minimum amount of time "
 "between two rentals."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:54
+#: ../../content/applications/sales/rental.rst:56
 msgid ""
 ":guilabel:`Rental Transfers` means stock deliveries and receipts can be used "
 "for rental orders."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:56
+#: ../../content/applications/sales/rental.rst:58
 msgid ""
 "In the :guilabel:`Rent Online` section, there are options to configure "
 "a :guilabel:`Minimal Rental Duration` and "
@@ -16537,52 +16704,52 @@ msgid ""
 "return are not possible."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:61
-#: ../../content/applications/sales/rental/products.rst:35
+#: ../../content/applications/sales/rental.rst:63
+#: ../../content/applications/sales/rental/configure_products/products.rst:35
 msgid "Rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:63
+#: ../../content/applications/sales/rental.rst:65
 msgid ""
 "To view all products that can rented in the database, navigate "
 "to :menuselection:`Rentals app --> Products`. By default, "
 "the :guilabel:`Rental` search filter appears in the search bar."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:66
+#: ../../content/applications/sales/rental.rst:68
 msgid ""
 "Each product Kanban card displays that product's name, rental price, and "
 "product image (if applicable)."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:70
-msgid ":doc:`rental/manage_deposits`"
-msgstr ""
-
-#: ../../content/applications/sales/rental.rst:75
-msgid "Rental pricing"
+#: ../../content/applications/sales/rental.rst:72
+msgid ":doc:`rental/rental_orders/manage_deposits`"
 msgstr ""
 
 #: ../../content/applications/sales/rental.rst:77
+msgid "Rental pricing"
+msgstr ""
+
+#: ../../content/applications/sales/rental.rst:79
 msgid ""
 "To adjust the rental pricing on a product, go to the :guilabel:`Products` "
 "page in the **Rental** app, then select the desired product or "
 "click :guilabel:`New` to create a new product from scratch."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:80
+#: ../../content/applications/sales/rental.rst:82
 msgid ""
 "On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, "
 "open the :guilabel:`Rental prices` tab."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:89
+#: ../../content/applications/sales/rental.rst:91
 msgid ""
 "Under the :guilabel:`Pricing` section of the :guilabel:`Rental prices` tab, "
 "designate custom rental prices and rental periods for the product."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:92
+#: ../../content/applications/sales/rental.rst:94
 msgid ""
 "To add pricing for a rental, click :guilabel:`Add a price`. Then, choose a "
 "*pricing period* (:dfn:`the unit of duration of the rental`) in "
@@ -16590,26 +16757,26 @@ msgid ""
 "the name and clicking :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:96
+#: ../../content/applications/sales/rental.rst:98
 msgid ""
 "Next, decide whether or not to apply this custom rental price to a "
 "specific :guilabel:`Pricelist`."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:98
+#: ../../content/applications/sales/rental.rst:100
 msgid ""
 "Lastly, enter the desired :guilabel:`Price` for that "
 "specific :guilabel:`Period`."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:101
+#: ../../content/applications/sales/rental.rst:103
 msgid ""
 "No limit exists on how many pricing lines can be added. Multiple pricing "
 "options for rental products are typically used to give discounts for "
 "customers who agree to longer rental durations."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:105
+#: ../../content/applications/sales/rental.rst:107
 msgid ""
 "Remember when considering pricing that renting for a day is usually limited "
 "to operating hours, not 24 hours. When determining pricing, keep in mind "
@@ -16617,11 +16784,11 @@ msgid ""
 "period."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:110
+#: ../../content/applications/sales/rental.rst:112
 msgid "Reservations"
 msgstr "Reservationer"
 
-#: ../../content/applications/sales/rental.rst:112
+#: ../../content/applications/sales/rental.rst:114
 msgid ""
 "Under the :guilabel:`Reservations` section of the :guilabel:`Rental prices` "
 "tab, there is the option to configure additional fines for "
@@ -16629,7 +16796,7 @@ msgid ""
 "takes to return a rental."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:116
+#: ../../content/applications/sales/rental.rst:118
 msgid ""
 "Also, there is the option to set the :guilabel:`Reserve product` time, "
 "expressed in hours, to make the rental product temporarily unavailable "
@@ -16637,207 +16804,87 @@ msgid ""
 "cleaning is required between rentals."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:121
+#: ../../content/applications/sales/rental.rst:123
 msgid "Price computing"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:123
+#: ../../content/applications/sales/rental.rst:125
 msgid ""
 "Odoo always uses two rules to compute the price of a product when a rental "
 "order is created:"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:125
+#: ../../content/applications/sales/rental.rst:127
 msgid "Only one price line is used."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:126
+#: ../../content/applications/sales/rental.rst:128
 msgid "The cheapest line is selected."
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:129
+#: ../../content/applications/sales/rental.rst:131
 msgid "Consider the following rental pricing configuration for a product:"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:131
+#: ../../content/applications/sales/rental.rst:133
 msgid "1 day: $100"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:132
+#: ../../content/applications/sales/rental.rst:134
 msgid "3 days: $250"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:133
+#: ../../content/applications/sales/rental.rst:135
 msgid "1 week: $500"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:135
+#: ../../content/applications/sales/rental.rst:137
 msgid ""
 "A customer wants to rent this product for eight days. What price will they "
 "pay?"
 msgstr ""
 
-#: ../../content/applications/sales/rental.rst:137
+#: ../../content/applications/sales/rental.rst:139
 msgid ""
 "After an order is created, Odoo selects the second line as this is the "
 "cheapest option. The customer has to pay three times '3 days' to cover the "
 "rental's eight days, for a total of $750."
 msgstr ""
 
-#: ../../content/applications/sales/rental/manage_deposits.rst:5
-msgid ""
-"Requiring fixed deposits is common in many rental scenarios; such as "
-"collecting security deposits."
+#: ../../content/applications/sales/rental/configure_products.rst:5
+msgid "Configure rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/manage_deposits.rst:7
-msgid ""
-"This document covers the standard options for :ref:`configuring <rental/"
-"manage_deposits/config>`, :ref:`collecting <rental/manage_deposits/product>` "
-"and :ref:`refunding <rental/manage_deposits/refund>` deposits within the "
-"**Rentals** app."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:16
-msgid ""
-"First, create a *deposit service product* for each rental product that "
-"requires a deposit."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:18
-msgid ""
-"To do so, go to :menuselection:`Rental --> Products` and create "
-"a :guilabel:`New` product."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:20
-msgid ""
-"On the product form, give the product a name that indicates it is a deposit."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:23
-msgid ""
-"If this deposit service product is intended for the *Digital Camera* rental "
-"product, the name may be entered as `Digital Camera Deposit`."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:26
-msgid ""
-"Next, set the :guilabel:`Product Type` to :guilabel:`Service`, "
-"the :guilabel:`Invoicing Policy` to :guilabel:`Delivered quantities` and "
-"then assign a :guilabel:`Sales Price` with the amount to collect for the "
-"deposit. Choose whether or not to include :guilabel:`Sales Taxes` for this "
-"deposit service product."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:31
-msgid ""
-"Finally, :icon:`fa-cloud-upload` :guilabel:`(save)` the deposit service "
-"product."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:36
-msgid "Collect deposits from an optional product"
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:38
-msgid ""
-"On the rental product's form, go to the :guilabel:`Sales` tab and add "
-"the :ref:`deposit service product <rental/manage_deposits/config>` to "
-"the :guilabel:`Optional Products`."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:41
-msgid ""
-"Be sure to configure the rental product's prices on the :ref:`Rental prices "
-"<rental/pricing>` tab."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:43
-msgid ""
-"With the above configuration, a :ref:`rental order <rental/order>` can be "
-"created."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:46
-msgid ""
-"After selecting the rental product in the :guilabel:`Order Lines` tab, be "
-"sure to :icon:`fa-plus` :guilabel:`Add` the deposit service product in "
-"the :guilabel:`Configure your product` pop-up."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:49
-msgid ""
-"The :guilabel:`Configure your product` pop-up only appears if the optional "
-"product is set on the rental product."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:53
-msgid ""
-"If :doc:`eCommerce <../../websites/ecommerce>` is installed, add "
-"an :guilabel:`Ecommerce Description` stating the deposit is required in the "
-"rental product's :guilabel:`Sales` tab."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:56
-msgid ""
-"When a customer adds the rental product to their cart, "
-"a :guilabel:`Configure your product` pop-up displays the deposit service "
-"product under :guilabel:`Available options`."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:59
-msgid ""
-"Once the customer clicks :icon:`fa-shopping-cart` :guilabel:`Add` the rental "
-"product and the deposit service product are added to their cart."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:None
-msgid "A deposit service product listed in the rental quotation."
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:68
-msgid "Refund deposits upon return"
-msgstr ""
-
-#: ../../content/applications/sales/rental/manage_deposits.rst:70
-msgid ""
-"Once a customer :ref:`returns the rented product <rental/return-products>`, "
-"reimburse their deposit with a :doc:`credit note <../../finance/accounting/"
-"customer_invoices/credit_notes>` from the invoice, and change the *delivered "
-"quantity* to `0` on the linked sales order."
-msgstr ""
-
-#: ../../content/applications/sales/rental/products.rst:3
+#: ../../content/applications/sales/rental/configure_products/products.rst:3
 msgid "Physical rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:5
+#: ../../content/applications/sales/rental/configure_products/products.rst:5
 msgid ""
 "Odoo **Rental** app allows users to customize the scheduling, pricing, and "
 "inventory for rental physical products. Users can set up multiple pickup and "
 "drop-off locations and track rental products by serial number."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:12
-#: ../../content/applications/sales/rental/service_products.rst:18
+#: ../../content/applications/sales/rental/configure_products/products.rst:12
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:18
 msgid ""
 "To configure default settings on rental products, navigate "
 "to :menuselection:`Rental app --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "The Rental setting view in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:18
+#: ../../content/applications/sales/rental/configure_products/products.rst:18
 msgid ""
 "In the **Rental** section, under the :guilabel:`Default Delay Costs` "
 "subsection, fill in the :guilabel:`Apply after` field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:22
-#: ../../content/applications/sales/rental/service_products.rst:28
+#: ../../content/applications/sales/rental/configure_products/products.rst:22
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:28
 msgid ""
 "For finer control, configure the costs of late returns for "
 "the :guilabel:`Per Hour` and :guilabel:`Per Day` fields at the product "
@@ -16845,23 +16892,23 @@ msgid ""
 "field blank."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:26
+#: ../../content/applications/sales/rental/configure_products/products.rst:26
 msgid ""
 "In the :guilabel:`Default Padding Time` section, fill in "
 "the :guilabel:`Padding` field. Next, enable :guilabel:`Rental Transfers`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:29
+#: ../../content/applications/sales/rental/configure_products/products.rst:29
 msgid ""
 "In the :guilabel:`Rent Online` section, fill in the :guilabel:`Minimal "
 "Rental Duration` field and designate :guilabel:`Unavailability` days."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:32
+#: ../../content/applications/sales/rental/configure_products/products.rst:32
 msgid "Click **Save** to apply the changes."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:37
+#: ../../content/applications/sales/rental/configure_products/products.rst:37
 msgid ""
 "To view all products that can be rented in the database, navigate "
 "to :menuselection:`Rentals app --> Products`. By default, "
@@ -16869,28 +16916,28 @@ msgid ""
 "Kanban."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:41
+#: ../../content/applications/sales/rental/configure_products/products.rst:41
 msgid ""
 "Each product Kanban card displays the name of the product, rental rate, "
 "amount of units on hand, and product image (if applicable)."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:45
+#: ../../content/applications/sales/rental/configure_products/products.rst:45
 msgid "Create a new physical product"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:47
+#: ../../content/applications/sales/rental/configure_products/products.rst:47
 msgid ""
 "To set up a new physical rental product, go to the :menuselection:`Rental "
 "app --> Products`, then click :guilabel:`New`. In the new product window, "
 "the :guilabel:`Rental` checkbox is already ticked by default."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "The new product view in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:54
+#: ../../content/applications/sales/rental/configure_products/products.rst:54
 msgid ""
 "Select the :guilabel:`Product Type` as :guilabel:`Goods` and tick "
 "the :guilabel:`Track Inventory` checkbox. Next to the :guilabel:`Track "
@@ -16900,7 +16947,7 @@ msgid ""
 "clicking :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:59
+#: ../../content/applications/sales/rental/configure_products/products.rst:59
 msgid ""
 "Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` "
 "section, click :guilabel:`Add a price` to enter a new rental rate. Choose a "
@@ -16909,7 +16956,7 @@ msgid ""
 "the name and clicking :guilabel:`Create and edit`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:65
+#: ../../content/applications/sales/rental/configure_products/products.rst:65
 msgid ""
 "Creating a new pricing period opens a pop-up :guilabel:`Create period` "
 "window. Fill in the :guilabel:`Name`, :guilabel:`Duration`, "
@@ -16917,12 +16964,12 @@ msgid ""
 "automatically applies."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:0
+#: ../../content/applications/sales/rental/configure_products/products.rst:0
 msgid "Sample of a New Period view in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:72
-#: ../../content/applications/sales/rental/service_products.rst:122
+#: ../../content/applications/sales/rental/configure_products/products.rst:72
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:122
 msgid ""
 "Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To "
 "apply the configured rental rate to an existing pricelist, click in "
@@ -16930,8 +16977,8 @@ msgid ""
 "down menu."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:76
-#: ../../content/applications/sales/rental/service_products.rst:126
+#: ../../content/applications/sales/rental/configure_products/products.rst:76
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:126
 msgid ""
 "In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly "
 "Fine`, :guilabel:`Daily Fine`, and the :guilabel:`Reserve product` time. "
@@ -16940,14 +16987,14 @@ msgid ""
 "the :menuselection:`Rental app --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:81
-#: ../../content/applications/sales/rental/service_products.rst:131
+#: ../../content/applications/sales/rental/configure_products/products.rst:81
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:131
 msgid ""
 "Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the "
 "top to save."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:84
+#: ../../content/applications/sales/rental/configure_products/products.rst:84
 msgid ""
 "A bike rental business only rents out tandem bikes for the local park for "
 "two hours. The hourly rental rate for their tandem bikes is $20, but since "
@@ -16956,99 +17003,99 @@ msgid ""
 "as $20 per hour and $160 per day ($20 x 8 hrs)."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:89
+#: ../../content/applications/sales/rental/configure_products/products.rst:89
 msgid ""
 "Create a new pricing period by navigating to :menuselection:`Rental app --> "
 "Configuration --> Rental periods`. Click :guilabel:`New` and configure a the "
 "period for 2 hours."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:92
+#: ../../content/applications/sales/rental/configure_products/products.rst:92
 msgid ""
 "Navigate to the tandem bike product and in the :guilabel:`Rental prices` tab "
 "and add the 2 hour period set at $35. Manually save to apply changes."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:0
+#: ../../content/applications/sales/rental/configure_products/products.rst:0
 msgid "Sample of a rental product with the custom rental period applied."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:101
+#: ../../content/applications/sales/rental/configure_products/products.rst:101
 msgid "Create a rental order"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:103
+#: ../../content/applications/sales/rental/configure_products/products.rst:103
 msgid ""
 "To create a rental order in the *Rental* app, navigate "
 "to :menuselection:`Rental app --> Orders --> Orders`, and "
 "click :guilabel:`New`. Doing so reveals a blank rental order form."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid ""
 "Sample of a filled out rental order available in the Odoo Rental application."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:109
+#: ../../content/applications/sales/rental/configure_products/products.rst:109
 msgid ""
 "Start by adding a :guilabel:`Customer`, then configure the desired duration "
 "of the rental in the :guilabel:`Rental period` field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:112
+#: ../../content/applications/sales/rental/configure_products/products.rst:112
 msgid ""
 "To adjust the rental duration, click the first date in the :guilabel:`Rental "
 "period` field, and select the range of dates and time to represent the "
 "rental duration from the pop-up calendar form that appears."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid ""
 "Sample of a rental period calendar pop-up window in the Odoo Rental "
 "application."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:119
+#: ../../content/applications/sales/rental/configure_products/products.rst:119
 msgid ""
 "Once complete, click :guilabel:`Apply` in the calendar pop-up form. "
 "Following that, the pop-up form disappears, and the designated time period "
 "of the rental is represented in the :guilabel:`Duration` field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:123
+#: ../../content/applications/sales/rental/configure_products/products.rst:123
 msgid ""
 "Next, add a rental product in the :guilabel:`Order Lines` tab, by "
 "clicking :guilabel:`Add a product`, and selecting the desired rental product "
 "to add to the form."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:127
+#: ../../content/applications/sales/rental/configure_products/products.rst:127
 msgid ""
 "If a rental product is added *before* the :guilabel:`Rental period` field "
 "has been properly configured, the user can *still* adjust "
 "the :guilabel:`Rental period` field accordingly."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:130
+#: ../../content/applications/sales/rental/configure_products/products.rst:130
 msgid ""
 "Select the desired range of dates to represent the duration of the rental, "
 "then click :guilabel:`Update Rental Prices` in the :guilabel:`Duration` "
 "field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid ""
 "The update rental prices option that appears in the Odoo Rental application."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:136
+#: ../../content/applications/sales/rental/configure_products/products.rst:136
 msgid ""
 "Doing so reveals a :guilabel:`Confirmation` pop-up window. If everything is "
 "correct, click :guilabel:`Ok`, and Odoo recalculates the rental price "
 "accordingly."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:139
+#: ../../content/applications/sales/rental/configure_products/products.rst:139
 msgid ""
 "Once all the information has been entered correctly on the rental order "
 "form, click :guilabel:`Send` to send the quotation to the customer and when "
@@ -17056,12 +17103,12 @@ msgid ""
 "the order. A :guilabel:`Pickup` banner displays on the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:144
-#: ../../content/applications/sales/rental/service_products.rst:256
+#: ../../content/applications/sales/rental/configure_products/products.rst:144
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:256
 msgid "Create an invoice"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:146
+#: ../../content/applications/sales/rental/configure_products/products.rst:146
 msgid ""
 "Navigate to the desired invoice by navigating to **Rental** app and on "
 "the :guilabel:`Rental Orders` dashboard, in the :guilabel:`INVOICE STATUS` "
@@ -17069,25 +17116,25 @@ msgid ""
 "require to be sent."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of the INVOICE STATUS section in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:153
-#: ../../content/applications/sales/rental/service_products.rst:265
+#: ../../content/applications/sales/rental/configure_products/products.rst:153
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:265
 msgid ""
 "Click on the desired rental order and click :guilabel:`Create Invoice`. "
 "Select :guilabel:`Regular invoice` from the :guilabel:`Create invoice(s)` "
 "window and click :guilabel:`Create Draft`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of Create invoices window in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:159
+#: ../../content/applications/sales/rental/configure_products/products.rst:159
 msgid ""
 "If all the details are correct, click :guilabel:`Confirm` and "
 "click :guilabel:`Send` to email the invoice to the customer "
@@ -17096,28 +17143,28 @@ msgid ""
 "and click :guilabel:`Create Payment`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "Sample of the Pay page in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:167
+#: ../../content/applications/sales/rental/configure_products/products.rst:167
 msgid ""
 "Click on the :guilabel:`Payments` smart button that appears on the top of "
 "the rental order. Click :guilabel:`Validate` on the Payment page."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of the Payment page in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:174
-#: ../../content/applications/sales/rental/service_products.rst:193
+#: ../../content/applications/sales/rental/configure_products/products.rst:174
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:193
 msgid "Customer signature"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:176
-#: ../../content/applications/sales/rental/service_products.rst:195
+#: ../../content/applications/sales/rental/configure_products/products.rst:176
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:195
 msgid ""
 "Odoo has the ability to request the customer sign a rental agreement, "
 "outlining the arrangement between the company and customer, *before* they "
@@ -17125,15 +17172,15 @@ msgid ""
 "returned on-time and in its original condition."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:181
-#: ../../content/applications/sales/rental/service_products.rst:200
+#: ../../content/applications/sales/rental/configure_products/products.rst:181
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:200
 msgid ""
 "Requesting a signature can be done during any stage of the order. This "
-"feature also requires the :doc:`Sign <../../productivity/sign>` app."
+"feature also requires the :doc:`Sign <../../../productivity/sign>` app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:184
-#: ../../content/applications/sales/rental/service_products.rst:203
+#: ../../content/applications/sales/rental/configure_products/products.rst:184
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:203
 msgid ""
 "If signatures are required, go to the **Rental** app and from the "
 "default :guilabel:`Rental Orders` dashboard, select the desired rental "
@@ -17141,36 +17188,36 @@ msgid ""
 "click :guilabel:`Request Signature`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "The Request Signature option in the Odoo Rental application."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:191
+#: ../../content/applications/sales/rental/configure_products/products.rst:191
 msgid ""
 "In the *Sign Documents* pop-up window, either :ref:`select an existing "
 "document template <sign/request-signatures/template-odoo-record>`  "
 "or :ref:`create a new one <sign/request-signatures/one-off-record>`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:195
-#: ../../content/applications/sales/rental/service_products.rst:214
+#: ../../content/applications/sales/rental/configure_products/products.rst:195
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:214
 msgid ""
 "After sending the request, a link to the signature request appears in the "
 "record's chatter. The document is accessible to the customer via the "
 "customer portal or email."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:199
-#: ../../content/applications/sales/rental/service_products.rst:218
+#: ../../content/applications/sales/rental/configure_products/products.rst:199
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:218
 msgid "`Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:202
+#: ../../content/applications/sales/rental/configure_products/products.rst:202
 msgid "Multi-location management and transfers"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:204
+#: ../../content/applications/sales/rental/configure_products/products.rst:204
 msgid ""
 "Tracking the location of high-value physical products between locations is "
 "essential. The **Rental** app helps with the *Rental Transfers* feature. "
@@ -17179,7 +17226,7 @@ msgid ""
 "physical product is rented or returned."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:209
+#: ../../content/applications/sales/rental/configure_products/products.rst:209
 msgid ""
 "For multi-location management and rental item transfer tracking, navigate to "
 "the :menuselection:`Rental app > Configuration > Settings` and in "
@@ -17187,11 +17234,11 @@ msgid ""
 "checkbox."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "Sample of the Rental settings with the Rental Transfers enabled."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:217
+#: ../../content/applications/sales/rental/configure_products/products.rst:217
 msgid ""
 "The **Inventory** app automatically creates an internal default location "
 "once the *Rental Transfers* feature is enabled. Odoo uses the new default "
@@ -17201,7 +17248,7 @@ msgid ""
 "inventory tracking."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:223
+#: ../../content/applications/sales/rental/configure_products/products.rst:223
 msgid ""
 "Next, go to the :menuselection:`Inventory app --> Configuration --> "
 "Settings` and in the :guilabel:`Warehouse` section, tick "
@@ -17209,14 +17256,14 @@ msgid ""
 "the changes."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:227
+#: ../../content/applications/sales/rental/configure_products/products.rst:227
 msgid ""
 "To configure new locations, navigate to :menuselection:`Inventory app --> "
 "Configuration --> Locations`. Click :guilabel:`New` to configure a new "
 "internal location."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:230
+#: ../../content/applications/sales/rental/configure_products/products.rst:230
 msgid ""
 "On the new location page, enter the :guilabel:`Location Name` and ensure "
 "the :guilabel:`Parent Location` field is set to :guilabel:`WH`. Click "
@@ -17224,38 +17271,38 @@ msgid ""
 "save."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:235
+#: ../../content/applications/sales/rental/configure_products/products.rst:235
 msgid ""
 "A bike rental business has two store locations within the same city. Both "
 "locations allow for pick-up and drop-off of their bikes. The company wants "
 "to track its bikes accurately at each location."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:239
+#: ../../content/applications/sales/rental/configure_products/products.rst:239
 msgid ""
 "Ensure the **Rental** and **Inventory** apps are configured by "
 "enabling :guilabel:`Rental Transfers` in the **Rental app** "
 "and :guilabel:`Storage Locations` in the **Inventory** app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:242
+#: ../../content/applications/sales/rental/configure_products/products.rst:242
 msgid ""
 "Next, go to the :menuselection:`Inventory app > Configuration > Locations`. "
 "Create a new location for each storefront."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:0
+#: ../../content/applications/sales/rental/configure_products/products.rst:0
 msgid ""
 "Sample of internal inventory locations that represent different rental store "
 "locations."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:249
-#: ../../content/applications/sales/rental/service_products.rst:290
+#: ../../content/applications/sales/rental/configure_products/products.rst:249
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:290
 msgid "Pickup products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:251
+#: ../../content/applications/sales/rental/configure_products/products.rst:251
 msgid ""
 "When a customer picks up products, navigate to the appropriate rental order, "
 "click :guilabel:`Pickup`. The **Rental** app displays a warehouse delivery "
@@ -17263,119 +17310,119 @@ msgid ""
 "move the order to the :guilabel:`Done` stage."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "Sample of a Pickup page in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:258
+#: ../../content/applications/sales/rental/configure_products/products.rst:258
 msgid ""
 "Doing so places a :guilabel:`Pickedup` status banner on the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:263
-#: ../../content/applications/sales/rental/service_products.rst:310
+#: ../../content/applications/sales/rental/configure_products/products.rst:263
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:310
 msgid "Return products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:265
+#: ../../content/applications/sales/rental/configure_products/products.rst:265
 msgid ""
 "When a customer returns products, navigate to the desired rental order, "
 "click :guilabel:`Return`. The **Rental** app displays a warehouse receipt "
 "form listing the checked out rental products."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:268
+#: ../../content/applications/sales/rental/configure_products/products.rst:268
 msgid ""
 "Enter the same amount of products the customer returned in "
 "the :guilabel:`Quantity` column. If any of the products have serial numbers, "
 "enter them into the :guilabel:`Serial Numbers` column."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "Sample of the Return page in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:274
+#: ../../content/applications/sales/rental/configure_products/products.rst:274
 msgid ""
 "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. "
 "A :guilabel:`Returned` status banner appears on the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:278
+#: ../../content/applications/sales/rental/configure_products/products.rst:278
 msgid "Print pickup and return receipts"
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:280
+#: ../../content/applications/sales/rental/configure_products/products.rst:280
 msgid ""
 "Pickup and return receipts can be printed for customers when they pick up "
 "and/or return rental products."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:283
+#: ../../content/applications/sales/rental/configure_products/products.rst:283
 msgid ""
 "To print pickup and/or return receipts, navigate to the appropriate rental "
 "order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-"
 "down menu."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:None
+#: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid ""
 "The pickup and return receipt print option in the Odoo Rental application."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:289
+#: ../../content/applications/sales/rental/configure_products/products.rst:289
 msgid ""
 "From this drop-down menu, hover over the :guilabel:`Print` option to reveal "
 "a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/products.rst:292
+#: ../../content/applications/sales/rental/configure_products/products.rst:292
 msgid ""
 "Odoo generates and downloads a PDF, detailing all information about the "
 "current status of the rented items."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:3
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:3
 msgid "Service rental products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:5
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:5
 msgid ""
 "The **Rental** app is a comprehensive tool that enables users to manage the "
 "scheduling, pricing, and inventory for both physical goods (products) and "
 "non-physical goods (services) within a single platform."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:9
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:9
 msgid ""
 "This flexibility allows for combining products and services like bike "
 "rentals with guided tours, or booking a studio with a photographer."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:12
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:12
 msgid ""
 "This document covers how to configure a rental service to automatically sync "
 "with staff shifts, track time sheet hours, and set up and link project tasks "
 "based on a rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of Rental app configuration settings."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:24
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:24
 msgid ""
 "In the :guilabel:`Rental` section, under the :guilabel:`Default Delay Costs` "
 "subsection, fill in the :guilabel:`Apply after` field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:32
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:32
 msgid ""
 "In the :guilabel:`Default Padding Time` section, fill in "
 "the :guilabel:`Padding` field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:34
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:34
 msgid ""
 "Next, enable :guilabel:`Rental Transfers`. In the :guilabel:`Rent Online` "
 "section, fill in the :guilabel:`Minimal Rental Duration` field and "
@@ -17383,63 +17430,61 @@ msgid ""
 "the changes."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:39
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:39
 msgid "App integration configuration"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:41
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:41
 msgid ""
 "The following apps are essential for workflow efficiency and automation when "
 "creating a service product and rental order:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:44
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:44
 msgid ""
 "**Sales** app: Enables the use of online payments and utilizes quotation "
 "templates within the **Rental** app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:46
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:46
 msgid ""
 "**Sign** app: Allows for the upload and customization of different rental "
 "and service agreements. These documents are used to facilitate "
 "the :guilabel:`Request Signature` feature."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:48
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:48
 msgid ""
 "**Project** and **Planning** apps: Integrate with the Rental app to "
 "automatically match purchased products and services with employees based on "
 "availability."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:52
-msgid ":doc:`../sales/sales_quotations/quote_template`"
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:52
+msgid ":doc:`../../sales/sales_quotations/quote_template`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:53
-#: ../../content/applications/sales/subscriptions/renewals.rst:58
-#: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:74
-msgid ":doc:`../sales/sales_quotations/get_paid_to_validate`"
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:53
+msgid ":doc:`../../sales/sales_quotations/get_paid_to_validate`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:54
-msgid ":doc:`../../services/project/project_management`"
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:54
+msgid ":doc:`../../../services/project/project_management`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:55
-msgid ":doc:`../../services/planning`"
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:55
+msgid ":doc:`../../../services/planning`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:56
-msgid ":doc:`../../productivity/sign`"
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:56
+msgid ":doc:`../../../productivity/sign`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:59
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:59
 msgid "Rental services"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:61
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:61
 msgid ""
 "To view all products that can be rented in the database, navigate "
 "to :menuselection:`Rentals app --> Products`. By default, "
@@ -17448,50 +17493,50 @@ msgid ""
 "filters, select :guilabel:`Services`. All the configured services appear."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:66
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:66
 msgid "Each Kanban card displays the name and rental price of the service."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:71
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:71
 msgid "Create a new service product"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:75
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:75
 msgid ""
 "The **Project** and the **Sales** apps must be installed for the following "
 "options to be available:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:78
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:78
 msgid ":guilabel:`Create on Order`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:79
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:79
 msgid ":guilabel:`Project Template`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:80
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:80
 msgid ":guilabel:`Invoicing Policy`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:81
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:81
 msgid ":guilabel:`Project & Task`"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:83
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:83
 msgid ""
 "Ticking the :guilabel:`Sales` checkbox displays the :guilabel:`Create on "
 "Order` and :guilabel:`Invoicing Policy`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:86
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:86
 msgid ""
 "To set up a new rental service, go to the :menuselection:`Rental app --> "
 "Products` and then click :guilabel:`New`. In the new product window, "
 "the :guilabel:`Rental` checkbox is already ticked by default."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:90
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:90
 msgid ""
 "Tick the :guilabel:`Sales` checkbox. Select the :guilabel:`Product Type` as "
 "a :guilabel:`Service`. In the :guilabel:`Create on Order` drop-down menu, "
@@ -17499,35 +17544,35 @@ msgid ""
 "down menu, select :guilabel:`Based on Timesheets`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:94
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:94
 msgid ""
 "Tick the :guilabel:`Plan Services` checkbox and either create a new role or "
 "select a pre-existing one. To create a new role, type in the name of the "
 "role in the blank field and click :guilabel:`Create and edit` that appears."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of a configured service product in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:101
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:101
 msgid ""
 "In the :guilabel:`Create Planning Role` pop-up window, enter the role's "
 "name. Select an option for the :guilabel:`Services` "
 "and :guilabel:`Resources`, and click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid ""
 "Sample of the Create Planning Role window for a service product in the "
 "Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:108
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:108
 msgid "Configure rental price"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:110
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:110
 msgid ""
 "Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` "
 "section, click :guilabel:`Add a price` to enter a new rental rate. Choose a "
@@ -17536,70 +17581,70 @@ msgid ""
 "the name and clicking Create and edit."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:116
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:116
 msgid ""
 "Customize rental rate time periods by navigating to :menuselection:`Rental "
 "app --> Configuration --> Rental periods`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:0
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:0
 msgid "Sample of a Create Period pop up window in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:134
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:134
 msgid ""
 "A photography studio rents out its photographers on an hourly and daily "
 "basis. They want to add a new four hour package for $750."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:137
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:137
 msgid ""
 "All reservations require 24-hour notice to reserve a photographer, but they "
 "do not charge a fine if the reservations go over the agreed time. Instead, "
 "they default to their hourly fee."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:140
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:140
 msgid ""
 "Create a new pricing period by navigating to :menuselection:`Rental app --> "
 "Configuration --> Rental periods`. Click :guilabel:`New` and configure the "
 "period for four hours."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:143
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:143
 msgid ""
 "Navigate to the :guilabel:`Photographer` service product and in "
 "the :guilabel:`Rental prices` tab, add the four hour period set at $750. "
 "Manually save to apply changes."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:0
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:0
 msgid "Sample of the Rental prices tab of service product in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:150
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:150
 msgid "Create a rental order with a service product"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:152
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:152
 msgid ""
 "In Odoo, a rental order is the same as a sales order. When creating orders "
 "in the **Rental** app they are referred to as rental orders."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:155
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:155
 msgid ""
 "Navigate to the **Rental** app which opens the Rental Orders dashboard. "
 "Click :guilabel:`New` to open a new rental order form."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:158
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:158
 msgid ""
 "Enter the :guilabel:`Customer` field, and select a :guilabel:`Quotation "
 "Template`, if applicable."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:160
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:160
 msgid ""
 "Next, set the desired rental duration in the :guilabel:`Rental period` "
 "field. To adjust the rental duration, click the first date in "
@@ -17607,19 +17652,19 @@ msgid ""
 "to represent the rental duration from the pop-up calendar form that appears."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid ""
 "Sample of the rental period field calendar pop-up window in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:167
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:167
 msgid ""
 "Once complete, click :guilabel:`Apply` in the calendar pop-up form. "
 "Following that, the pop-up form disappears, and the designated rental time "
 "period is represented in the :guilabel:`Duration` field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:170
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:170
 msgid ""
 "Next, add a rental service in the :guilabel:`Order Lines` tab, by "
 "clicking :guilabel:`Add a product` and selecting the desired rental service "
@@ -17627,7 +17672,7 @@ msgid ""
 "column."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:175
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:175
 msgid ""
 "If a rental product is added before the Rental period field has been "
 "properly configured, the user can still adjust the Rental period field "
@@ -17635,23 +17680,23 @@ msgid ""
 "the rental, then click Update Rental Prices in the Duration field."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid ""
 "Sample of the Duration field with the Update Rental Prices option in the "
 "Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:182
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:182
 msgid ""
 "Doing so reveals a Confirmation pop-up window. If everything is correct, "
 "click Ok, and Odoo recalculates the rental price accordingly."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of a rental order for a service product in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:188
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:188
 msgid ""
 "Once all information has been entered correctly on the rental order form, "
 "click :guilabel:`Send` to email the quotation to the customer. When the "
@@ -17659,18 +17704,18 @@ msgid ""
 "displays on the rental order stating its current status."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:210
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:210
 msgid ""
 "A *Sign Documents* pop-up window displays. Either :ref:`select an existing "
 "document template <sign/request-signatures/template-odoo-record>` "
 "or :ref:`create a new one <sign/request-signatures/one-off-record>`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:221
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:221
 msgid "Entering time for the rental order"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:224
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:224
 msgid ""
 "For the appropriate smart buttons to display, the **Project**, "
 "**Timesheet**, and **Planning** apps are needed. The selected service "
@@ -17678,44 +17723,44 @@ msgid ""
 "service_products/service>` to integrate with the recommended apps."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:228
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:228
 msgid ""
 "Navigate to the rental orders by :menuselection:`Rental app --> Orders --> "
 "Orders` and select the desired rental order. At the top of the rental order "
 "form, the following smart buttons appear:"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:231
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:231
 msgid ""
 ":icon:`fa-puzzle-piece` :guilabel:`Tasks`: Linked to the **Projects** app "
 "and shows any projects"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:232
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:232
 msgid "or tasks related to the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:233
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:233
 msgid ""
 ":icon:`fa-clock-o` :guilabel:`Recorded`: Linked to the **Timesheets** app "
 "and shows how many hours"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:234
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:234
 msgid "are related to the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:236
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:236
 msgid ""
 ":icon:`fa-tasks` :guilabel:`Planned`: Linked to the **Planning** app and "
 "shows how many shifts are"
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:236
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:236
 msgid "related to the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:238
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:238
 msgid ""
 "Click the :icon:`fa-puzzle-piece` :guilabel:`Tasks` smart button to view a "
 "Kanban view of all the associated tasks that were automatically created when "
@@ -17723,29 +17768,29 @@ msgid ""
 "the :guilabel:`Timesheets` tab."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of a project task card for the rental order in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:245
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:245
 msgid ""
 "Click :guilabel:`Add a line` to enter the number of hours worked on the task "
 "manually. Click on the :icon:`fa-dollar` :guilabel:`Sales Order` smart "
 "button to return to the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of a task Timesheet tab for a rental order in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:252
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:252
 msgid ""
 "Once time is added to the :guilabel:`Timesheets` tab  of a task, the status "
 "of the rental order is automatically changed to :guilabel:`Picked-up` and "
 "the :guilabel:`Return` button appears."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:258
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:258
 msgid ""
 "Go to the desired invoice by navigating to the :menuselection:`Rental` app "
 "and, on the :guilabel:`Rental Orders` dashboard, click :guilabel:`To "
@@ -17753,7 +17798,7 @@ msgid ""
 "that require invoices to be sent."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:271
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:271
 msgid ""
 "If all the details are correct, click :guilabel:`Confirm`. "
 "Click :guilabel:`Send` to email the invoice to the customer "
@@ -17761,28 +17806,28 @@ msgid ""
 "person."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:275
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:275
 msgid ""
 "In the :guilabel:`Pay` pop-up window, select a :guilabel:`Journal` and "
 "click :guilabel:`Create Payment`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of the Pay pop-up window in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:281
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:281
 msgid ""
 "Click on the :icon:`fa-bars` :guilabel:`Payments` smart button that appears "
 "on the top of the rental order. Click :guilabel:`Validate` on "
 "the :guilabel:`Payment` page."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:287
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:287
 msgid "Use the breadcrumbs to return to the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:292
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:292
 msgid ""
 "When time is entered on the :guilabel:`Timesheets` tab of an associated "
 "task, the rental order status automatically changes to :guilabel:`Picked-"
@@ -17790,7 +17835,7 @@ msgid ""
 "ordered with the service is picked up."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:296
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:296
 msgid ""
 "If a product is rented alongside a service, it is advised to pick it up "
 "before entering time on the associated task. The :guilabel:`Pickup` button "
@@ -17798,29 +17843,29 @@ msgid ""
 "the product."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:300
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:300
 msgid ""
 "When a customer picks up the product, navigate to the appropriate rental "
 "order, click :guilabel:`Pickup`, and then click :guilabel:`Validate` in "
 "the :guilabel:`Validate a pickup` pop-up form that appears."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of a service product pick up pop-up window in the Rental."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:307
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:307
 msgid ""
 "Doing so places a :guilabel:`Picked-up` status banner on the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:312
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:312
 msgid ""
 "Regardless if there is a product rented along with a service, the service or "
 "product must be returned on the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:315
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:315
 msgid ""
 "When a customer returns the products or when the service has been completed, "
 "navigate to the appropriate rental order and click :guilabel:`Return`. "
@@ -17828,23 +17873,23 @@ msgid ""
 "the :guilabel:`Validate a return` pop-up form that appears."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:None
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:None
 msgid "Sample of returning a service product in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:322
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:322
 msgid ""
 "Doing so places a :guilabel:`Returned` status banner on the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:325
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:325
 msgid ""
 "The photography studio had a customer who wanted to rent one of their "
 "photographers and banner decorations for a home photo shoot. The booking was "
 "for two hours."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:328
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:328
 msgid ""
 "On the :guilabel:`Validate a return` form the rental order, the banner line "
 "item matches number of banners picked up and the photographer line item "
@@ -17852,9 +17897,137 @@ msgid ""
 "the related task."
 msgstr ""
 
-#: ../../content/applications/sales/rental/service_products.rst:0
+#: ../../content/applications/sales/rental/configure_products/service_products.rst:0
 msgid ""
 "Sample of a Validate a return form with a rental product and service listed."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders.rst:5
+msgid "Rental orders"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:5
+msgid ""
+"Requiring fixed deposits is common in many rental scenarios; such as "
+"collecting security deposits."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:7
+msgid ""
+"This document covers the standard options for :ref:`configuring <rental/"
+"manage_deposits/config>`, :ref:`collecting <rental/manage_deposits/product>` "
+"and :ref:`refunding <rental/manage_deposits/refund>` deposits within the "
+"**Rentals** app."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:16
+msgid ""
+"First, create a *deposit service product* for each rental product that "
+"requires a deposit."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:18
+msgid ""
+"To do so, go to :menuselection:`Rental --> Products` and create "
+"a :guilabel:`New` product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:20
+msgid ""
+"On the product form, give the product a name that indicates it is a deposit."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:23
+msgid ""
+"If this deposit service product is intended for the *Digital Camera* rental "
+"product, the name may be entered as `Digital Camera Deposit`."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:26
+msgid ""
+"Next, set the :guilabel:`Product Type` to :guilabel:`Service`, "
+"the :guilabel:`Invoicing Policy` to :guilabel:`Delivered quantities` and "
+"then assign a :guilabel:`Sales Price` with the amount to collect for the "
+"deposit. Choose whether or not to include :guilabel:`Sales Taxes` for this "
+"deposit service product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:31
+msgid ""
+"Finally, :icon:`fa-cloud-upload` :guilabel:`(save)` the deposit service "
+"product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:36
+msgid "Collect deposits from an optional product"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:38
+msgid ""
+"On the rental product's form, go to the :guilabel:`Sales` tab and add "
+"the :ref:`deposit service product <rental/manage_deposits/config>` to "
+"the :guilabel:`Optional Products`."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:41
+msgid ""
+"Be sure to configure the rental product's prices on the :ref:`Rental prices "
+"<rental/pricing>` tab."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:43
+msgid ""
+"With the above configuration, a :ref:`rental order <rental/order>` can be "
+"created."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:46
+msgid ""
+"After selecting the rental product in the :guilabel:`Order Lines` tab, be "
+"sure to :icon:`fa-plus` :guilabel:`Add` the deposit service product in "
+"the :guilabel:`Configure your product` pop-up."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:49
+msgid ""
+"The :guilabel:`Configure your product` pop-up only appears if the optional "
+"product is set on the rental product."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:53
+msgid ""
+"If :doc:`eCommerce <../../../websites/ecommerce>` is installed, add "
+"an :guilabel:`Ecommerce Description` stating the deposit is required in the "
+"rental product's :guilabel:`Sales` tab."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:56
+msgid ""
+"When a customer adds the rental product to their cart, "
+"a :guilabel:`Configure your product` pop-up displays the deposit service "
+"product under :guilabel:`Available options`."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:59
+msgid ""
+"Once the customer clicks :icon:`fa-shopping-cart` :guilabel:`Add` the rental "
+"product and the deposit service product are added to their cart."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:None
+msgid "A deposit service product listed in the rental quotation."
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:68
+msgid "Refund deposits upon return"
+msgstr ""
+
+#: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:70
+msgid ""
+"Once a customer :ref:`returns the rented product <rental/return-products>`, "
+"reimburse their deposit with a :doc:`credit note <../../../finance/"
+"accounting/customer_invoices/credit_notes>` from the invoice, and change the "
+"*delivered quantity* to `0` on the linked sales order."
 msgstr ""
 
 #: ../../content/applications/sales/sales.rst:10
@@ -27081,7 +27254,7 @@ msgid "Add PDF as Header/Footer"
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:64
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:41
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:44
 msgid ""
 "Odoo does not permit spaces in PDF field names. Only use letters, numbers, "
 "hyphens, or underscores."
@@ -27545,50 +27718,50 @@ msgstr ""
 msgid ":doc:`../quote_template`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:5
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:8
 msgid "Configure dynamic form fields in PDFs"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:7
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:10
 msgid ""
 "When creating custom PDFs to import into the **Sales** app, use *dynamic "
 "form fields* to auto-fill the PDF content with relevant information from the "
 "Odoo database, including names and prices."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:10
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:13
 msgid ""
 "*Dynamic form fields* are configurable text fields that can be added to a "
 "PDF form, and Odoo automatically fills them with values from the sales order/"
 "product associated with the quote."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:14
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:17
 msgid "Formatting tips"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:16
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:19
 msgid ""
 "When designing the base PDF template for a quote’s header or footer, keep "
 "the placements of *dynamic form field* in mind. Use the following tips to "
 "avoid overlapping text and other formatting issues:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:19
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:24
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:22
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:27
 msgid ""
 "**Leave whitespace**: Ensure there is enough room for dynamic data to expand "
 "without overlapping logos or borders."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:21
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:24
 msgid ""
 "**Add line breaks**: Place dynamic form fields, like *Customer Name*, on "
 "their own lines. Alternatively, put them at the end of phrases to avoid text "
 "breaking. Long names can push static text out of alignment."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:26
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:29
 msgid ""
 "**Add line breaks**: Place dynamic form fields, like *Customer Name*, on "
 "their own lines. Alternatively, put them at the end of phrases to avoid text "
@@ -27596,49 +27769,72 @@ msgid ""
 "when adding or editing content."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:30
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:33
 msgid ""
 "Odoo recommends editing PDF forms with Adobe software. Form fields in header "
 "and footer templates are required to retrieve dynamic values in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:34
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:37
 msgid ""
 "If the PDF is too large to send as an email attachment, try using \"system "
 "fonts\" (e.g., Arial, Helvetica, Times New Roman) instead of custom fonts to "
 "reduce the file size."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:38
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:41
 msgid "Create dynamic form fields in PDF"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:44
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:48
 msgid ""
-"To add dynamic form fields, use the preferred PDF editor, such as Adobe "
-"Acrobat Pro or Scribus. Refer to the following instructions to:"
+"The following software are examples. They are **not** endorsements of any "
+"specific software."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:47
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:50
+msgid ""
+"To add dynamic form fields, use the preferred PDF editor. `Adobe Acrobat Pro "
+"<Adobe_>`_ is the easiest and most commonly used software. Some examples for "
+"free open source PDF editors are:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:53
+msgid "Scribus_"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:54
+msgid "BentoPDF_"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:55
+msgid "EmbedPDF_"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:57
+msgid "Refer to the following instructions to:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:59
 msgid ""
 "Find :ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:48
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:60
 msgid ":ref:`sales/pdf_quote_builder/dynamic_text/Odoo-field-path`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:49
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:61
 msgid ""
 ":ref:`sales/pdf_quote_builder/dynamic_text/custom-dynamic-form-fields` in "
 "Odoo after uploading the PDF."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:53
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:65
 msgid "Adobe Acrobat Pro"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:55
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:67
 msgid ""
 "`Convert the PDF into a PDF form <Adobe_>`_, then add a *dynamic form field* "
 "at the location where the Odoo information should be inserted. Link the Odoo "
@@ -27646,7 +27842,7 @@ msgid ""
 "open :guilabel:`Properties`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:59
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:71
 msgid ""
 "In the :guilabel:`General tab`, enter the name of the Odoo field for "
 "the :guilabel:`Name`. Set the :guilabel:`Common Properties` "
@@ -27654,7 +27850,7 @@ msgid ""
 "populated."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:63
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:75
 msgid ""
 "Next, click the :guilabel:`Appearance` tab and select the :guilabel:`Font "
 "Size`, :guilabel:`Font Choice`, and :guilabel:`Text Color` to match the "
@@ -27662,11 +27858,11 @@ msgid ""
 "set the text alignment to match the template’s design."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:68
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:80
 msgid "Generic PDF editor"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:70
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:82
 msgid ""
 "Open the PDF with the PDF editor, add a *dynamic form field* where the Odoo "
 "information is needed. Link the Odoo fields to the *dynamic form fields* by "
@@ -27674,7 +27870,7 @@ msgid ""
 "the :guilabel:`Name` for that field, enter the name of the Odoo field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:74
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:86
 msgid ""
 "If possible, configure the :guilabel:`Font Size`, :guilabel:`Font Choice`, "
 "and :guilabel:`Text Color` to match the template's existing text or "
@@ -27682,11 +27878,11 @@ msgid ""
 "match the template’s design."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:81
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:93
 msgid "Map PDF form fields to Odoo"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:83
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:95
 msgid ""
 "This step connects any *dynamic form field* in the PDF to the corresponding "
 "Odoo field by specifying the exact location of that information. Once the "
@@ -27695,7 +27891,7 @@ msgid ""
 "clicking :guilabel:`Upload`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:88
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:100
 msgid ""
 "Odoo automatically detects *dynamic form fields* in the uploaded PDF and "
 "displays the :guilabel:`Configure dynamic fields` link. Click "
@@ -27703,7 +27899,7 @@ msgid ""
 "Fields` page."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:92
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:104
 msgid ""
 "The :guilabel:`Form Field Name` column is populated with the *dynamic form "
 "fields* from the PDF. The :guilabel:`Path` column specifies the path to the "
@@ -27714,7 +27910,7 @@ msgstr ""
 msgid "Configured text form fields in the PDF quote builder."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:99
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:111
 msgid ""
 "To edit, click the :guilabel:`Path` cell of the desired form field row and "
 "enter the Odoo field name. Refer to the :ref:`sales/pdf_quote_builder/"
@@ -27723,11 +27919,11 @@ msgid ""
 "section for instructions on how to find Odoo field names and paths."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:107
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:119
 msgid "Find Odoo field names or paths"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:109
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:121
 msgid ""
 "Users can enable :ref:`developer-mode` in Odoo and hover over the desired "
 "field to see its technical name, which is the :guilabel:`Field` value in the "
@@ -27738,11 +27934,11 @@ msgid ""
 "dynamic-placeholders>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:118
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:130
 msgid "Configure custom dynamic form fields"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:120
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:132
 msgid ""
 "To pull specific information from a sales order or a product that is not in "
 "the :ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values` "
@@ -27750,7 +27946,7 @@ msgid ""
 "configure the :guilabel:`Path` to point to the desired information in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:125
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:137
 msgid ""
 "When configuring the :guilabel:`Path`, use the dot (`.`) notation to specify "
 "relationships between models. Headers and footers start from the "
@@ -27758,7 +27954,7 @@ msgid ""
 "from :guilabel:`sale_order_line`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:130
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:142
 msgid ""
 "A company wants to display the customer's country in its quotations. To "
 "display the customer's country in the quotation PDF, they used the dynamic "
@@ -27767,7 +27963,7 @@ msgid ""
 "of the :guilabel:`Form Field Name` to:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:135
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:147
 msgid ""
 "For a header or footer "
 "document: :guilabel:`partner_invoice_id.country_id.name`"
@@ -27777,13 +27973,13 @@ msgstr ""
 msgid "The customer's country form field pathing for a quotation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:140
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:152
 msgid ""
 "Example of Odoo's Form Field Path for the customer's country from a "
 "quotation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:142
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:154
 msgid ""
 "For a product "
 "document: :guilabel:`order_id.partner_invoice_id.country_id.name`"
@@ -27793,131 +27989,131 @@ msgstr ""
 msgid "The customer's country form field pathing from the product document."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:147
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:159
 msgid ""
 "Example of Odoo's Form Field Path for the customer's country from a product "
 "document."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:152
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:164
 msgid "Create a custom note form field"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:154
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:166
 msgid ""
 "When uploading any PDF containing the form field :guilabel:`custom_note`, "
 "leaving the :guilabel:`Path` empty allows the seller to add any note to that "
 "form field in the document, which shown when the PDF is built."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:161
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:173
 msgid "Custom note field name with an empty Path cell."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:161
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:173
 msgid ""
 "Leave the :guilabel:`Path` column cell empty for the :guilabel:`custom_note` "
 "row."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:166
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:178
 msgid "Quote Builder tab with note field to customize."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:166
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:178
 msgid ""
 "The note field in the *Header* section in the :guilabel:`Quote Builder` tab "
 "on a quotation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:171
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:183
 msgid "Common dynamic form fields"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:173
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:185
 msgid ""
 "Below are common dynamic form fields to use in custom PDFs that "
 "automatically map to the correct Odoo fields when uploaded to the **Sales** "
 "app, and what they represent."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:176
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:188
 msgid "For headers and footers PDF:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:178
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:190
 msgid ":guilabel:`name`: Sales Order Reference"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:179
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:191
 msgid ":guilabel:`partner_id__name`: Customer Name"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:180
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:192
 msgid ":guilabel:`user_id__name`: Salesperson Name"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:181
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:193
 msgid ":guilabel:`amount_untaxed`: Untaxed Amount"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:182
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:194
 msgid ":guilabel:`amount_total`: Total Amount"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:183
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:195
 msgid ":guilabel:`delivery_date`: Delivery Date"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:184
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:196
 msgid ":guilabel:`validity_date`: Expiration Date"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:185
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:197
 msgid ":guilabel:`client_order_ref`: Customer Reference"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:188
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:200
 msgid "For product PDF:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:190
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:202
 msgid ":guilabel:`description`: Product Description"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:191
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:203
 msgid ":guilabel:`quantity`: Quantity"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:192
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:204
 msgid ":guilabel:`uom`: Unit of Measure (UoM)"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:193
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:205
 msgid ":guilabel:`price_unit`: Price Unit"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:194
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:206
 msgid ":guilabel:`discount`: Discount"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:195
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:207
 msgid ":guilabel:`product_sale_price`: Product List Price"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:196
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:208
 msgid ":guilabel:`taxes`: Taxes name joined by a comma (`,`)"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:197
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:209
 msgid ":guilabel:`tax_excl_price`: Tax Excluded Price"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:198
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:210
 msgid ":guilabel:`tax_incl_price`: Tax Included Price"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:201
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:213
 msgid ""
 "When creating a PDF, it's best practice to use common dynamic form fields "
 "(:guilabel:`user_id_name`, :guilabel:`partner_id_name`, "
@@ -27925,7 +28121,7 @@ msgid ""
 "those fields with the information from their respective fields."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:205
+#: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:217
 msgid ""
 "In this case, Odoo would auto-populate the Salesperson's name in "
 "the :guilabel:`user_id_name` dynamic text field, the Sales Order Reference "
@@ -30302,6 +30498,11 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/renewals.rst:57
 #: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:73
 msgid ":doc:`../sales/sales_quotations/create_quotations`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:58
+#: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:74
+msgid ":doc:`../sales/sales_quotations/get_paid_to_validate`"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:3
