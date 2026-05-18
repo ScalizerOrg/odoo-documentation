@@ -56,8 +56,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-08 17:30+0000\n"
-"PO-Revision-Date: 2026-05-05 23:20+0000\n"
+"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"PO-Revision-Date: 2026-05-15 23:20+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/finance/zh_Hans/>\n"
@@ -490,7 +490,7 @@ msgstr "执行摘要"
 
 #: ../../content/applications/finance/accounting.rst:203
 #: ../../content/applications/finance/accounting.rst:254
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:102
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:108
 msgid "Tax return"
 msgstr "报税表"
 
@@ -1023,7 +1023,7 @@ msgstr ":doc:`transactions`"
 #: ../../content/applications/finance/accounting/payments/pay_checks.rst:10
 #: ../../content/applications/finance/accounting/payments/pay_sepa.rst:46
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:11
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:22
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:28
 #: ../../content/applications/finance/accounting/taxes/B2B_B2C.rst:52
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:14
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:17
@@ -2142,6 +2142,8 @@ msgid ""
 "conditions>`, and leave the model set to :guilabel:`Manual` to ensure the "
 "model is available to be selected for all transactions."
 msgstr ""
+"请勿选择具体的 :ref:`匹配条件 <accounting/rec-models/conditions>`，并将模型设"
+"置为 :guilabel:`手动`，以确保该模型可在所有交易中被选中。"
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:29
 msgid "In the :guilabel:`Counterpart Items` tab, click :guilabel:`Add a line`."
@@ -2217,10 +2219,12 @@ msgid ""
 "When transferring $1,000 from Bank Account A to Bank Account B, each of the "
 "two bank journals has one journal entry:"
 msgstr ""
+"从银行账户 A 向银行账户 B 转账 1000 美元时，两个银行日记账会各自生成一条会计"
+"分录："
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
 msgid "The outgoing transaction in the Bank Account A journal:"
-msgstr ""
+msgstr "银行账户 A 日记账中的支出交易："
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:66
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:83
@@ -2264,11 +2268,11 @@ msgstr "**$1,000**"
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
 msgid "The incoming transaction in the Bank Account B journal:"
-msgstr ""
+msgstr "银行账户 B 日记账中的入账交易："
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:86
 msgid "Bank Account B"
-msgstr ""
+msgstr "银行账户 B"
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
 msgid ":doc:`reconciliation`"
@@ -2767,24 +2771,12 @@ msgstr "折扣匹配：针对享有提前付款折扣的付款条款"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:129
 msgid ""
-"Tolerance match: within 3% to account for merchant fees, rounding "
-"differences, and user errors"
-msgstr "容差匹配：允许3%的容差，以考虑商户手续费、四舍五入差异和用户错误"
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:130
-msgid ""
-"Currency match: when the transaction is in a different currency than the "
-"invoice, bill, or payment (with a 3% tolerance for exchange rate differences)"
-msgstr "货币匹配：当交易与发票、账单或付款的币种不同时（允许3%的汇率差异容差）"
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:132
-msgid ""
 "Amount in label: if the invoice :guilabel:`Amount` is found in the "
 "transaction's :guilabel:`Label`"
 msgstr ""
 "标签中的金额：如果在交易的 :guilabel:`标签`中找到了发票的:guilabel:`金额`"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:135
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:132
 msgid ""
 "In addition to using these fixed matching rules, transactions can be matched "
 "automatically with the use of :doc:`reconciliation models "
@@ -2794,13 +2786,13 @@ msgstr ""
 "除了使用这些固定的匹配规则外，还可以通过使用 :doc:`核销模型 "
 "<reconciliation_models>` 来自动匹配交易。否则，请按照以下步骤手动核销交易："
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:139
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:136
 msgid ""
 "Expand the desired line among unmatched bank transactions to display all "
 "available action buttons."
 msgstr "在未匹配的银行交易中，展开所需的分录行以显示所有可用的操作按钮。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:141
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:138
 msgid ""
 "Define the counterpart. There are several options for defining a "
 "counterpart, including :ref:`matching existing items <accounting/"
@@ -2814,7 +2806,7 @@ msgstr ""
 "reconciliation/set-account>`、与 :doc:`批量付款 <../payments/batch>`匹配，以"
 "及使用 :ref:`核销模型按钮 <accounting/reconciliation/model>`。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:146
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:143
 msgid ""
 "If the resulting entry is not fully balanced, add another existing "
 "counterpart item or write it off by :ref:`setting the account <accounting/"
@@ -2823,11 +2815,11 @@ msgstr ""
 "如果最终的分录未完全平衡，请添加另一个现有的对应项，或者通过 :ref:`设置剩余金"
 "额的科目 <accounting/reconciliation/set-account>`来将其核销。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:153
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:150
 msgid "Existing items"
 msgstr "现有项目"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:155
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:152
 msgid ""
 "To reconcile transactions with existing items related to records such as "
 "customer invoices, vendor bills, and payments, click "
@@ -2838,7 +2830,7 @@ msgstr ""
 "击 :guilabel:`核销` 操作按钮，在列表中选择匹配的日记账项目，然后点"
 "击 :guilabel:`选择`。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:160
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:157
 msgid ""
 "If the :guilabel:`Partner` is set, this list is automatically filtered to "
 "only include items related to that partner."
@@ -2846,7 +2838,7 @@ msgstr ""
 "如果设置了:guilabel:`合作伙伴`，此列表会自动过滤，仅包含与该往来单位相关的项"
 "目。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:164
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:161
 msgid ""
 "Use the search bar within the :guilabel:`Search: Journal Items to Match` "
 "window to search for specific journal items."
@@ -2854,7 +2846,7 @@ msgstr ""
 "在 :guilabel:`搜索：要匹配的日记账项目` 窗口中使用搜索栏来搜索特定的日记账项"
 "目。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:167
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:164
 msgid ""
 "If a transaction amount is lower than the invoice or bill it is reconciled "
 "with, the transaction is fully reconciled, but the difference remains open "
@@ -2873,7 +2865,7 @@ msgstr ""
 "reconciliation/edit>`该分录行，点击:guilabel:`部分付款`，然后 :guilabel:`保存"
 "`。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:175
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:172
 msgid ""
 "If a transaction amount is greater than the invoice or bill it is reconciled "
 "with, the transaction is only partially reconciled. The remaining balance "
@@ -2882,7 +2874,7 @@ msgstr ""
 "如果交易金额大于与之核销的发票或账单金额，则该交易仅被部分核销。剩余余额可以"
 "像处理任何其他交易金额一样进行核销。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:180
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:177
 msgid ""
 "Existing items of draft entries can be matched. Eventual automatic moves "
 "(like currency exchange or cash basis moves) are created in draft "
@@ -2892,11 +2884,11 @@ msgstr ""
 "可以匹配草稿分录中的现有项目。最终的系统自动分录（如货币兑换或现金制分录）将"
 "在核销的同时以草稿状态创建。对原始分录进行过账时，该自动分录也会一并被过账。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:187
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:184
 msgid "Set account"
 msgstr "设置科目"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:189
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:186
 msgid ""
 "If no existing item matches the selected transaction, you can still write "
 "off the transaction manually: Click :guilabel:`Set Account`, then choose the "
@@ -2909,7 +2901,7 @@ msgstr ""
 "分录行 <accounting/reconciliation/edit>`以反映正确的金额，并按照您的需求核销"
 "剩余金额。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:195
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:192
 msgid ""
 "If the partner is set, write the amount off to their receivable or payable "
 "account directly by clicking the :guilabel:`Receivable` "
@@ -2920,12 +2912,12 @@ msgstr ""
 "这两个 :ref:`操作按钮 <accounting/reconciliation/action-buttons>`，直接将金额"
 "冲销至该合作伙伴的应收或应付科目。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:202
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:199
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:3
 msgid "Reconciliation models"
 msgstr "核销模型"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:204
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:201
 msgid ""
 "Use :doc:`reconciliation models <reconciliation_models>` to create custom "
 "rules that can be applied automatically or manually via custom buttons for "
@@ -2939,7 +2931,7 @@ msgstr ""
 "手动核销银行交易，并且在核销交易时，还可以与其他核销模型以及对应科目项结合使"
 "用。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:210
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:207
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:141
 msgid ""
 "An outgoing bank transaction for $103 is partially matched with a vendor "
@@ -2951,11 +2943,11 @@ msgstr ""
 "该交易仍有3美元未核销。此时，可以使用:guilabel:`银行手续费`核销模型创建一个3"
 "美元的新对应科目项，并将其与银行交易中剩余的3美元进行核销。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:218
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:215
 msgid "Edit lines and unreconcile transactions"
 msgstr "编辑分录和冲销交易"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:220
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:217
 msgid ""
 "To edit a counterpart item, expand the line, click the :icon:`fa-"
 "pencil` :guilabel:`(pencil)` icon, and edit the necessary fields "
@@ -2964,13 +2956,13 @@ msgstr ""
 "要编辑一个对应科目项，请展开该分录行，点击:icon:`fa-pencil`:guilabel:`(铅笔)`"
 "图标，然后在 :guilabel:`编辑分录行` 窗口中修改必要的字段。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:224
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:221
 msgid ""
 "When the counterpart item is an existing journal item, some fields are read-"
 "only."
 msgstr "当对应科目项是现有的日记账项目时，部分字段为只读。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:226
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:223
 msgid ""
 "If a transaction is partially matched with a counterpart item, use the link "
 "to mark the invoice as :guilabel:`fully paid` or to switch back to "
@@ -2979,7 +2971,7 @@ msgstr ""
 "如果一笔交易与对应科目项是部分匹配的，可以使用链接将发票标记为 :guilabel:`全"
 "额付款`，或切换回 :guilabel:`部分付款 ` 状态。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:229
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:226
 msgid ""
 "To unreconcile a transaction, delete all counterpart items associated with "
 "the transaction by clicking on the :icon:`fa-trash` :guilabel:`(trash)` icon."
@@ -2987,11 +2979,11 @@ msgstr ""
 "要冲销一笔交易的核销，请通过点击 :icon:`fa-trash`:guilabel:`(垃圾桶)`图标，删"
 "除与该交易关联的所有对应科目项。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:235
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:232
 msgid "Netting"
 msgstr "净额结算"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:237
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:234
 msgid ""
 "Netting (also known as AP/AR offsetting) is the process of balancing "
 "incoming debts from and outgoing debts to the same partner. Reconciling the "
@@ -3002,7 +2994,7 @@ msgstr ""
 "的过程。核销应收和应付债务会创建一个新的日记账分录来平衡这些债务。主要存在两"
 "种情景："
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:241
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:238
 msgid ""
 ":ref:`A bank transaction balances <accounting/reconciliation/net-"
 "transaction>` (either fully or partially) the incoming and outgoing debts."
@@ -3010,7 +3002,7 @@ msgstr ""
 ":ref:`存在一笔银行交易平衡 <accounting/reconciliation/net-transaction>`（全部"
 "或部分）了应收和应付债务。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:243
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:240
 msgid ""
 ":ref:`No bank transaction balances <accounting/reconciliation/net-no-"
 "transaction>` the incoming and outgoing debts. This situation can occur "
@@ -3020,11 +3012,11 @@ msgstr ""
 ":ref:`没有银行交易平衡 <accounting/reconciliation/net-no-transaction>`应收和"
 "应付债务。这种情况可能发生在债务完全相互抵消时，也可能发生在债务仍未平衡时。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:250
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:247
 msgid "Netting with bank transactions"
 msgstr "涉及银行交易的净额结算"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:252
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:249
 msgid ""
 "When a bank transaction balances (either fully or partially) the incoming "
 "and outgoing debts, reconcile the bank transaction from the :guilabel:`Bank "
@@ -3035,27 +3027,27 @@ msgstr ""
 "现有项目 <accounting/reconciliation/existing-items>` 一样，在 :guilabel:`银行"
 "匹配`视图中核销该银行交易："
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:256
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:253
 msgid "Click :guilabel:`Reconcile` on the transaction."
 msgstr "点击交易上的 :guilabel:`核销`。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:257
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:254
 msgid ""
 "Select all the relevant counterpart items on both the payable and receivable "
 "side."
 msgstr "同时选择应付方和应收方所有相关的对应科目项。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:258
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:255
 msgid "Click :guilabel:`Select`."
 msgstr "点击 :guilabel:`选择`。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:259
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:256
 msgid ""
 "If a balance remains, depending on the details, the following situations are "
 "possible:"
 msgstr "若有余额剩余，根据具体情况，可能出现以下情形："
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:261
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:258
 msgid ""
 "An invoice, bill, or other item is not fully reconciled, and the remaining "
 "balance can be :ref:`reconciled <accounting/reconciliation/reconcile>` with "
@@ -3064,7 +3056,7 @@ msgstr ""
 "某张发票、账单或其他项目未被完全核销，剩余金额可与其他银行交易进行 :ref:`核"
 "销 <accounting/reconciliation/reconcile>`。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:263
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:260
 msgid ""
 "The bank transaction itself is not fully reconciled, and the remaining "
 "balance can be :ref:`reconciled <accounting/reconciliation/reconcile>` as in "
@@ -3073,11 +3065,11 @@ msgstr ""
 "该银行交易本身未被完全核销，其剩余金额可如同处理其他情况一样进行 :ref:`核销 "
 "<accounting/reconciliation/reconcile>`。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:269
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:266
 msgid "Netting without bank transactions"
 msgstr "无银行交易的净额结算"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:271
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:268
 msgid ""
 "When no bank transaction balances the incoming and outgoing debts, there is "
 "nothing to reconcile from the :guilabel:`Bank Matching` view. However, the "
@@ -3089,22 +3081,22 @@ msgstr ""
 "行核销操作。然而，该债务金额会同时显示在应收账款和应付账款中。若要平衡这些债"
 "务，使其不再显示在往来单位分类账中，请遵循以下步骤："
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:273
 msgid "Go to :menuselection:`Accounting --> Accounting --> Reconcile`."
 msgstr "前往 :menuselection:`会计 --> 会计 --> 核销`。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:274
 msgid ""
 "Select the journal items that debit or credit the account receivable and "
 "account payable and represent the debts to be netted."
 msgstr "选择那些借记或贷记应收账款和应付账款、且代表待抵消债务的日记账项目。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:279
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
 #: ../../content/applications/finance/accounting/payments.rst:279
 msgid "Click :guilabel:`Reconcile`."
 msgstr "点击 :guilabel:`核销`。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:280
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
 msgid ""
 "If the debts don't balance each other perfectly, a :guilabel:`Write-Off "
 "Entry` popup window appears, allowing you to decide how to resolve the "
@@ -3113,7 +3105,7 @@ msgstr ""
 "如果债务未能完全相互抵消，系统将弹出 :guilabel:`冲销分录` 窗口，允许您决定如"
 "何处理剩余余额："
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:283
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:280
 msgid ""
 "Select :guilabel:`Allow partials` to only partially reconcile the account "
 "receivable and account payable and leave the remaining balance open."
@@ -3121,13 +3113,13 @@ msgstr ""
 "选择:guilabel:`允许部分核销`，仅部分核销应收账款和应付账款，并使剩余余额保持"
 "未核销状态。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:285
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:282
 msgid ""
 "Use a :doc:`reconciliation model button <reconciliation_models>` to write "
 "off the balance."
 msgstr "使用 :doc:`核销模型按钮 <reconciliation_models>`来冲销该余额。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:286
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:283
 msgid ""
 "Manually choose an :guilabel:`Account`, and optionally adjust "
 "the :guilabel:`Tax`, :guilabel:`Journal`, :guilabel:`Label`, :guilabel:`Date`, "
@@ -3136,7 +3128,7 @@ msgstr ""
 "手动选择一个 :guilabel:`科目`，并可选择性地调整 :guilabel:`税费`、:guilabel:`"
 "日记账`、:guilabel:`标签`、:guilabel:`日期`和 :guilabel:`待核对` 字段。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:289
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:286
 msgid ""
 "The items are then matched, and their balance is removed from the partner "
 "ledger, representing that no payment is due for these debts."
@@ -3144,7 +3136,7 @@ msgstr ""
 "随后，这些项目将被匹配，它们的余额将从往来单位分类账中移除，表明这些债务已无"
 "需支付。"
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:293
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:290
 msgid ""
 "The workflow is the same whether there are only two equal debts in the "
 "receivable and payable accounts or multiple debts in each account."
@@ -5482,38 +5474,39 @@ msgstr "分录 1，日期为 1 月 31 日："
 msgid ""
 "Line 1: Income account -1200 -600 -600 = **-2400** (cancelling the total of "
 "all invoices)"
-msgstr ""
+msgstr "第 1 行：收入科目  -1200 -600 -600 = -2400（冲销所有发票合计金额）"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:144
 msgid ""
 "Line 2: Income account 100 + 50 = **150** (recognizing 1/12 of invoice A and "
 "invoice B)"
 msgstr ""
+"第 2 行：收入科目  100 + 50 = 150（确认发票 A、发票 B 各十二分之一的收入）"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:145
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:145
 msgid ""
 "Line 3: Deferred account 2400 - 150 = **2250** (amount that has yet to be "
 "deferred later on)"
-msgstr ""
+msgstr "第 3 行：递延科目  2400 - 150 = 2250（后续待递延摊销金额）"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:148
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:148
 msgid "Entry 2 dated on the 1st February, the reversal of the previous entry:"
-msgstr "分录 2，日期为 2 月 1 日，用于撤销先前的分录："
+msgstr "分录 2，日期为 2 月 1 日，为上一笔分录的回转冲销分录："
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:150
 msgid "Line 1: Income account **2400**"
-msgstr ""
+msgstr "第 1 行：收入科目 2400"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:151
 msgid "Line 3: Income account **-150**"
-msgstr ""
+msgstr "第 3 行：收入科目 -150"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:152
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:152
 msgid "Line 2: Deferred account **-2250**"
-msgstr ""
+msgstr "第 2 行：递延科目 -2250"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:165
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:165
@@ -5537,13 +5530,14 @@ msgid ""
 "Line 2: Income account 200 + 100 = **300** (recognizing 2/12 of invoice A "
 "and invoice B)"
 msgstr ""
+"第 2 行：收入科目 200 + 100 = 300（确认发票 A、发票 B 合计十二分之二的收入）"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:162
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:162
 msgid ""
 "Line 3: Deferred account 2400 - 300 = **2100** (amount that has yet to be "
 "deferred later on)"
-msgstr ""
+msgstr "第 3 行：递延科目 2400 - 300 = 2100（后续待递延分摊的剩余金额）"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:165
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:165
@@ -5553,12 +5547,12 @@ msgstr "分录 2，日期为 3 月 1 日，用于撤销先前的分录。"
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:168
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:168
 msgid "From March to November"
-msgstr ""
+msgstr "从3月到11月"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:168
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:168
 msgid "The same computation is done for each month until November."
-msgstr ""
+msgstr "对每个月都进行相同的计算，直到11月。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:171
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:171
@@ -5568,7 +5562,7 @@ msgstr "十二月"
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:171
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:171
 msgid "There is no need to generate entries in December."
-msgstr ""
+msgstr "无需在12月生成条目。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:181
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:181
@@ -5582,18 +5576,18 @@ msgstr "如果我们把一切都汇总起来，我们就会有："
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:176
 msgid "Invoice A and invoice B"
-msgstr ""
+msgstr "发票 A 与 发票 B"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:177
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:177
 msgid ""
 "Two entries (one for the deferral and one for the reversal) for each month "
 "from January to November"
-msgstr ""
+msgstr "1 月至 11 月每月生成两笔分录（一笔为递延分录，一笔为回转冲销分录）"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:179
 msgid "Invoice C will be deferred later"
-msgstr ""
+msgstr "发票 C 将延后进行递延处理"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:181
 msgid ""
@@ -6096,16 +6090,20 @@ msgid ""
 "relevant vendor bills, and click :guilabel:`Create Vendor Bill`. The "
 "corresponding vendor bill is then created."
 msgstr ""
+"然后，打开文件管理应用，导航至相应的文件夹，选择相关的供应商账单，并点"
+"击 :guilabel:`创建供应商账单`。随后，相应的供应商账单即被创建。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:216
 msgid ""
 "It is also possible to send :ref:`self-bills <accounting/vendor_bills/self-"
 "billing>` via Peppol."
 msgstr ""
+"还可以通过 Peppol 发送 :ref:`自开票据 <accounting/vendor_bills/self-"
+"billing>`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:221
 msgid "Add extra fields"
-msgstr ""
+msgstr "添加额外字段"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:224
 msgid "Adding fields requires the :doc:`Studio <../../../studio>` app."
@@ -10375,7 +10373,7 @@ msgstr "请按照以下步骤重新排列发票编号："
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:51
 #: ../../content/applications/finance/accounting/get_started/consolidation.rst:104
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:52
-#: ../../content/applications/finance/payment_providers.rst:313
+#: ../../content/applications/finance/payment_providers.rst:320
 msgid "Activate the :ref:`developer mode <developer-mode>`."
 msgstr "启用:ref:`开发者模式<developer-mode>`."
 
@@ -12153,17 +12151,14 @@ msgstr "科目配置"
 msgid ""
 "The country you select during the creation of your database (or additional "
 "company in your database) determines which :doc:`fiscal localization package "
-"<../../fiscal_localizations>` is installed by default. This package includes "
-"a standard chart of accounts already configured according to the country's "
-"regulations. You can use it directly or set it according to your company's "
-"needs."
+"<../../fiscal_localizations>` is installed by default. This package adds a "
+"standard chart of accounts already configured according to the country's "
+"regulations, including expense accounts that may be :ref:`linked to default "
+"asset models <chart-of-account/assets>`. You can use the chart of accounts "
+"directly or modify it according to your company's needs."
 msgstr ""
-"您在创建数据库时选择的国家/地区（或数据库中的其他公司）决定了默认安装"
-"的 :doc:`财务本地化服务包 <.../../fiscal_localizations>` 版本。软件包包括已根"
-"据国家/地区规定配置好的标准会计科目表，可以直接使用，也可以根据公司需要进行设"
-"置。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:28
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:30
 msgid ""
 "To create a new account, go to :menuselection:`Accounting --> Configuration "
 "--> Chart of Accounts`, click :guilabel:`Create`, and fill in (at the "
@@ -12173,49 +12168,49 @@ msgstr ""
 "击 :guilabel:`创建`，并填写（至少）所需字段（:guilabel:`代码、账户名称、类型"
 "`）。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:33
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:35
 msgid ""
 "It is not possible to modify the **fiscal localization** of a company once a "
 "journal entry has been posted."
 msgstr "日记账记项过账后，无法修改公司的**财务本地化**。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:37
-msgid "Code and name"
-msgstr "代码和名称"
-
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:39
-msgid ""
-"Each account is identified by its :guilabel:`Code` and :guilabel:`Name`, "
-"which also indicate the account's purpose."
-msgstr ":guilabel:`代码` 和 :guilabel:`名称` 标识科目，同时表明科目用途。"
+msgid "Code and account name"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:45
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:41
+msgid ""
+"Each account is identified by its :guilabel:`Code` and :guilabel:`Account "
+"Name`, which also indicate the account's purpose."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:47
 msgid "Type"
 msgstr "类型"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:47
-msgid ""
-"Correctly configuring the **account type** is critical as it serves multiple "
-"purposes:"
-msgstr "正确配置**科目类型**至关重要，因为科目类型有多重作用："
-
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:49
-msgid "Information on the account's purpose and behavior"
-msgstr "关于科目目的和行为的信息"
+msgid ""
+"Correctly configuring the account's :guilabel:`Type` is critical as it "
+"serves multiple purposes:"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:50
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:51
+msgid "Provide information on the account's purpose and behavior"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:52
 msgid "Generate country-specific legal and financial reports"
 msgstr "生成特定国家的法律和财务报告"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:51
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:53
 msgid "Set the rules to close a fiscal year"
 msgstr "设置结束一个财政年度的规则"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:52
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:54
 msgid "Generate opening entries"
 msgstr "生成期初分录"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:54
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:56
 msgid ""
 "To configure an account type, open the :guilabel:`Type` field's drop-down "
 "selector and select the corresponding type from the following list:"
@@ -12223,19 +12218,19 @@ msgstr ""
 "要配置账户类型，请打开 :guilabel:`类型` 字段的下拉选择器，并从以下列表中选择"
 "相应类型："
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:58
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
 msgid "Report"
 msgstr "报表"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:58
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
 msgid "Category"
 msgstr "类别"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:58
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
 msgid "Account Types"
 msgstr "科目类型"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:58
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
 #: ../../content/applications/finance/accounting/taxes.rst:227
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:166
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:34
@@ -12282,207 +12277,205 @@ msgstr "科目类型"
 msgid "Description"
 msgstr "描述"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:62
 #: ../../content/applications/finance/accounting/reporting.rst:40
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:27
 msgid "Balance Sheet"
 msgstr "资产负债表"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:98
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:62
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:102
 msgid "Assets"
 msgstr "资产"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:62
 msgid "Receivable"
 msgstr "应收账款"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:62
 msgid "Money owed to the company by customers for goods or services delivered"
 msgstr "客户因所交付的货物或服务而拖欠公司的款项"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:62
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:64
 msgid "Bank and Cash"
 msgstr "银行和现金"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:62
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:64
 msgid "Funds held in company bank accounts or on hand as cash"
 msgstr "公司银行账户中的资金或库存现金"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:64
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:66
 msgid "Current Assets"
 msgstr "流动资产"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:64
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:66
 msgid "Short-term assets expected to be converted into cash within a year"
 msgstr "预计在一年内转化为现金的短期资产"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:66
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:68
 msgid "Non-current Assets"
 msgstr "非流动资产"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:66
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:68
 msgid "Long-term assets not expected to be converted to cash within a year"
 msgstr "预计一年内不会转化为现金的长期资产"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:68
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:70
 msgid "Prepayments"
 msgstr "预付款"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:68
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:70
 msgid ""
 "Payments made in advance for goods or services to be received in the future"
 msgstr "为将来收到的货物或服务预付的款项"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:70
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:72
 msgid "Fixed Assets"
 msgstr "固定资产"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:70
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:72
 msgid ""
 "Tangible long-term assets like buildings, machinery, and vehicles used in "
 "operation and subject to depreciation"
 msgstr "有形长期资产，如建筑物、机械和运营中使用并需折旧的车辆"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:72
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:74
 msgid "Liabilities"
 msgstr "负债"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:72
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:74
 msgid "Payable"
 msgstr "应付账款"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:72
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:74
 msgid "Money the company owes to suppliers or vendors"
 msgstr "公司欠供应商或销售商的款项"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:74
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:76
 msgid "Credit Card"
 msgstr "信用卡"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:74
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:76
 msgid "Balances and transactions associated with company credit card usage"
 msgstr "与公司信用卡使用相关的余额和交易"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:76
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:78
 msgid "Current Liabilities"
 msgstr "流动负债"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:76
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:78
 msgid ""
 "Obligations due within one year, such as short-term loans or accrued expenses"
 msgstr "一年内到期的债务，如短期贷款或应计费用"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:78
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:80
 msgid "Non-current Liabilities"
 msgstr "非流动负债"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:78
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:80
 msgid "Long-term debts and financial obligations due beyond one year"
 msgstr "一年后到期的长期债务和财政义务"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:80
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:82
 msgid "Equity"
 msgstr "股本"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:80
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:82
 msgid ""
 "The owner's residual interest in the company after liabilities are deducted "
 "from assets"
 msgstr "从资产中扣除负债后，所有者在公司中的剩余权益"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:82
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:84
 msgid "Current Year Earnings"
 msgstr "本年收益"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:82
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:84
 msgid "The company's net profit or loss accumulated in the current fiscal year"
 msgstr "公司本财政年度累计净利润或亏损"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:84
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:86
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:28
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:24
 msgid "Profit & Loss"
 msgstr "损益"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:84
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:86
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:409
 msgid "Income"
 msgstr "收入"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:84
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:86
 msgid "Revenue generated from the company's primary business activities"
 msgstr "公司主要业务活动产生的收入"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:86
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:88
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:419
 msgid "Other Income"
 msgstr "其他收入"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:86
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:88
 msgid ""
 "Revenue from secondary or non-operational sources, like interest or asset "
 "sales"
 msgstr "次级或非经营性收入来源，如利息或资产出售"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:88
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:90
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:415
 msgid "Expense"
 msgstr "费用"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:88
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:90
 msgid "Costs incurred during operations to generate revenue"
 msgstr "运营期间产生的创收成本"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:90
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:92
 msgid "Depreciation"
 msgstr "折旧"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:90
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:92
 msgid "The allocation of the cost of tangible assets over their useful life"
 msgstr "有形资产成本在其使用寿命内的分配"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:92
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:94
 msgid "Cost of Revenue"
 msgstr "收入成本"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:92
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:94
 msgid ""
 "Direct costs attributable to the production or delivery of goods and services"
 msgstr "生产或交付货物和服务的直接成本"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:94
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:96
 msgid "Other"
 msgstr "其他"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:94
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:96
 msgid "Off-Balance Sheet"
 msgstr "资产负债表外"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:94
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:96
 msgid ""
 "Transactions not displayed on the balance sheet or profit and loss report"
 msgstr "资产负债表或损益报告中未显示的交易"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:100
-msgid ""
-"Some **account types** can **automate** the creation of :ref:`asset <assets-"
-"automation>` entries. To **automate** entries, click :guilabel:`View` on an "
-"account line and go to the :guilabel:`Automation` tab."
-msgstr ""
-"部分**账户类型**可**自动**创建 :ref:`资产<assets-automation>` 条目。要**自动"
-"化**条目，单及账户行上的 :guilabel:`查看`，然后转到 :guilabel:`自动化`选项"
-"卡。"
-
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:104
-msgid "You have three choices for the :guilabel:`Automation` tab:"
-msgstr ":guilabel:`自动化` 选项卡有三种选择："
+msgid ""
+"Account types of :guilabel:`Fixed Assets` and :guilabel:`Non-current Assets` "
+"can **automate** the creation of :ref:`asset <assets-automation>` entries. "
+"To **automate** entries, click :guilabel:`View` on an account line and go to "
+"the :guilabel:`Automation` tab."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:106
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:108
+msgid "There are three options for the :guilabel:`Automation` tab:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:110
 msgid ":guilabel:`No`: this is the default value. Nothing happens."
 msgstr ":guilabel:`否`：默认值。无变化。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:107
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:111
 msgid ""
 ":guilabel:`Create in draft`: whenever a transaction is posted on the "
 "account, a draft entry is created but not validated. You must first fill out "
@@ -12491,7 +12484,7 @@ msgstr ""
 ":guilabel:`在草稿中创建`：每当有交易记入账户时，就会创建草稿条目，但不会进行"
 "验证。您必须先填写相应表单。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:109
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:113
 msgid ""
 ":guilabel:`Create and validate`: you must also select a :guilabel:`Deferred "
 "Expense Model`. Whenever a transaction is posted on the account, an entry is "
@@ -12500,24 +12493,23 @@ msgstr ""
 ":guilabel:`创建并验证`：还必须选择:guilabel:`递延支出模式`。每当有一笔交易记"
 "入账户时，就会创建一个条目并立即进行验证。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:113
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:117
 #: ../../content/applications/finance/accounting/taxes.rst:114
 msgid "Default taxes"
 msgstr "默认税"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:115
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:119
 msgid ""
-"In the :guilabel:`View` menu of an account, select a **default tax** to be "
-"applied when this account is chosen for a product sale or purchase."
+"In the :guilabel:`View` menu of an account, select the :guilabel:`Default "
+"Taxes` to be applied when this account is chosen for a product sale or "
+"purchase."
 msgstr ""
-"在账户的 :guilabel:`视图` 菜单中选择**默认税**，以便在选择该账户进行产品销售"
-"或购买时应用。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:121
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:125
 msgid "Tags"
 msgstr "标签"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:123
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:127
 msgid ""
 "Some accounting reports require **tags** to be set on the relevant accounts. "
 "To add a tag, under :guilabel:`View`, click the :guilabel:`Tags` field and "
@@ -12526,11 +12518,11 @@ msgstr ""
 "某些会计报告要求在相关账户上设置**标签**。要添加标签，请在 :guilabel:`试图` "
 "下单击 :guilabel:`标签` 字段，选择现有标签或 :guilabel:`创建` 新标签。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:128
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:132
 msgid "Account groups"
 msgstr "科目组"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:130
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:134
 msgid ""
 "**Account groups** are useful to list multiple accounts as *sub-accounts* of "
 "a bigger account and thus consolidate reports such as the **Trial Balance**. "
@@ -12544,17 +12536,17 @@ msgstr ""
 "组 `131000`的一部分。您可以在 :guilabel:`视图` 下的 :guilabel:`组` 字段中为账"
 "户指定一个特定组。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:137
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:141
 msgid "Create account groups manually"
 msgstr "手动创建科目组"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:140
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:144
 msgid ""
 "Regular users should not need to create account groups manually. The "
 "following section is only intended for rare and advanced use cases."
 msgstr "普通用户无需手动创建科目组。以下内容仅适用于少数高级用例。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:143
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:147
 msgid ""
 "To create a new account group, activate :ref:`developer mode <developer-"
 "mode>` and head to :menuselection:`Accounting --> Configuration --> Account "
@@ -12572,7 +12564,7 @@ msgstr ""
 msgid "Account groups creation."
 msgstr "科目组创建。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:151
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:155
 msgid ""
 "To display your **Trial Balance** report with your account groups, go "
 "to :menuselection:`Accounting --> Reporting --> Trial Balance`, then open "
@@ -12585,11 +12577,11 @@ msgstr ""
 msgid "Account Groups in the Trial Balance in Odoo Accounting"
 msgstr "Odoo会计试算表中的科目组"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:159
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:163
 msgid "Allow reconciliation"
 msgstr "允许对账"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:161
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:165
 msgid ""
 "To keep the reconciliation process simple, when reconciling a bank, cash, or "
 "credit card transaction with an existing journal item, only journal items "
@@ -12600,7 +12592,7 @@ msgstr ""
 "借记或贷记已启用 :guilabel:`允许对账` 选项的账户的日记账项目才会显示为可能的"
 "匹配项。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:165
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:169
 msgid ""
 "To enable this option on an account, tick the :guilabel:`Allow "
 "Reconciliation` checkbox in the account's settings, and :guilabel:`Save`; or "
@@ -12609,11 +12601,11 @@ msgstr ""
 "要在账户中启用该选项，请在账户设置中勾选 :guilabel:`允许对账` 复选框，然"
 "后 :guilabel:`保存`；或在账户图表视图中启用该按钮。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:171
-msgid "Shared Accounts"
-msgstr "共享账户"
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:175
+msgid "Shared accounts"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:173
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:177
 msgid ""
 "The **Shared Accounts** feature allows the creation of a single account for "
 "a specific purpose and sharing it between multiple companies. It is "
@@ -12623,11 +12615,11 @@ msgstr ""
 "**共享账户**功能允许为特定目的创建一个账户，并在多个公司之间共享。该功能对于"
 "多公司环境尤其有用，因为在这种环境下，不同公司可能会使用类似的账户。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:178
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:182
 msgid "Deprecated"
 msgstr "已弃用"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:180
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:184
 msgid ""
 "It is not possible to delete an account once a transaction has been recorded "
 "on it. You can make them unusable by using the **Deprecated** feature: check "
@@ -12637,30 +12629,30 @@ msgstr ""
 "账户上一旦有交易记录，就无法删除。您可以使用**废弃**功能使其不可用：在账户设"
 "置中勾选 :guilabel:`已废弃`复选框，然后 :guilabel:`保存`。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:185
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:189
 msgid ":doc:`cheat_sheet`"
 msgstr ":doc:`cheat_sheet`"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:186
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:190
 msgid ":doc:`../vendor_bills/assets`"
 msgstr ":doc:`../vendor_bills/assets`"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:187
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:191
 msgid ":doc:`../vendor_bills/deferred_expenses`"
 msgstr ":doc:`../vendor_bills/deferred_expenses`"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:188
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:192
 msgid ":doc:`../customer_invoices/deferred_revenues`"
 msgstr ":doc:`../customer_invoices/deferred_revenues`"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:189
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:193
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:17
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:126
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:38
 msgid ":doc:`../../fiscal_localizations`"
 msgstr ":doc:`../../fiscal_localizations`"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:190
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:194
 msgid ""
 "`Odoo Tutorials: Chart of accounts <https://www.odoo.com/slides/slide/chart-"
 "of-accounts-6834>`_"
@@ -12668,7 +12660,7 @@ msgstr ""
 "`Odoo 教程：会计科目表 <https://www.odoo.com/slides/slide/chart-of-"
 "accounts-6834>`_"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:191
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:195
 msgid ""
 "`Odoo Tutorials: Update your chart of accounts <https://www.odoo.com/slides/"
 "slide/update-your-chart-of-accounts-6391>`_"
@@ -14270,6 +14262,9 @@ msgid ""
 "> Settings` in the :guilabel:`Currencies` section. Click the :icon:`os-"
 "refresh-data` :guilabel:`(Update now)` icon to update the rates."
 msgstr ""
+"当您首次激活第二种货币时,:guilabel:`自动货币汇率`会出现在:menuselection:`会"
+"计 --> 配置 --> 设置`的:guilabel:`货币`部分下。点击:icon:`os-refresh-"
+"data` :guilabel:`(立即更新)`图标以更新汇率。"
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:65
 msgid ""
@@ -14279,6 +14274,9 @@ msgid ""
 "also select the web service from which you want to retrieve the latest "
 "currency rates by clicking the :guilabel:`Service` field."
 msgstr ""
+"汇率可以定期自动更新。要实现此功能，请将:guilabel:`时间间隔`从:guilabel:`手动"
+"`更改为:guilabel:`每日`、:guilabel:`每周`或:guilabel:`每月`。您还可以通过点"
+"击:guilabel:`服务`字段来选择要从中检索最新汇率的网络服务。"
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:73
 msgid "Exchange difference entries"
@@ -14594,7 +14592,7 @@ msgstr ""
 "configuration-6832>`_"
 
 #: ../../content/applications/finance/accounting/payments.rst:26
-#: ../../content/applications/finance/payment_providers.rst:276
+#: ../../content/applications/finance/payment_providers.rst:283
 #: ../../content/applications/finance/payment_providers/nuvei.rst:51
 msgid "Payment methods"
 msgstr "支付方式"
@@ -16180,7 +16178,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:143
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:159
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:154
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:160
 #: ../../content/applications/finance/accounting/vendor_bills.rst:224
 msgid ""
 "Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, "
@@ -19888,59 +19886,67 @@ msgstr ""
 msgid ":doc:`../get_started`"
 msgstr ":doc:`../get_started`"
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:27
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:20
+msgid ""
+"Different contacts sharing the same VAT ID may result in an incorrect VAT "
+"report. If your contacts are related (e.g., related partners, divisions "
+"within the same company, etc.), consider using :doc:`parent-type and "
+"children-type contacts <../../../essentials/contacts>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:33
 msgid "Tax return periodicity"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:29
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:35
 msgid ""
 "The configuration of the tax return periodicity allows Odoo to compute tax "
 "returns correctly and automatically send reminders to make sure that "
 "deadlines are met."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:32
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:38
 msgid ""
 "To do so, go to :menuselection:`Accounting --> Configuration --> Settings`, "
 "navigate to the :guilabel:`Tax Return Periodicity` section, and update the "
 "following fields, if needed:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:35
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:41
 msgid ":guilabel:`Periodicity`: Define the tax return periodicity."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:36
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:42
 msgid ""
 ":guilabel:`Deadline`: Define when Odoo should send reminders to submit the "
 "tax return."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:37
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:43
 msgid ""
 ":guilabel:`Journal`: Update the journal where the tax return is recorded, if "
 "needed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:40
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:46
 msgid ""
 "This information is usually configured during the :doc:`app's initial setup "
 "<../get_started>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:45
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:51
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:164
 msgid "Tax grids"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:47
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:53
 msgid ""
 "Odoo generates tax reports based on the :guilabel:`Tax Grids` settings "
 "configured for each tax. All recorded transactions must apply the correct "
 "tax rates to ensure accurate reporting."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:50
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:56
 msgid ""
 ":guilabel:`Tax Grids` are displayed in the :guilabel:`Journal Items` tab of "
 "any invoice or bill."
@@ -19950,55 +19956,55 @@ msgstr ""
 msgid "example of tax grids used on an invoice"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:55
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:61
 msgid ""
 "To configure tax grids for taxes, go to :menuselection:`Accounting --> "
 "Configuration --> Taxes`, open the relevant tax, and edit the tax settings "
 "and the tax grids used to record invoices or refunds."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:60
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:66
 msgid ""
 "Taxes and reports are usually pre-configured according to the country "
 "selected for the :doc:`company <../../../general/companies>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:66
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:72
 msgid "Tax returns journal"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:68
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:74
 msgid ""
 "On the Accounting dashboard, complete the following actions displayed in "
 "the :guilabel:`Tax Returns` journal before creating tax returns:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:71
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:77
 msgid ""
 ":guilabel:`Set Company Data`: :ref:`Configure the company details <general/"
 "companies/company>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:72
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:78
 msgid ""
 ":guilabel:`Set Periods`: In the :guilabel:`Accounting Periods` window, fill "
 "in the :guilabel:`Opening date`, :guilabel:`Fiscal Year End`, and update "
 "the :guilabel:`Periodicity` if needed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:75
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:81
 msgid ":guilabel:`Review Chart of Accounts`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:80
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:86
 msgid "Close a tax period"
 msgstr "关闭纳税期"
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:85
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:91
 msgid "Tax return lock date"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:87
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:93
 msgid ""
 "Setting a tax lock date prevents changes that could impact VAT-related "
 "journal entries. Locking the period before processing the :guilabel:`Closing "
@@ -20006,26 +20012,26 @@ msgid ""
 "risk of tax errors."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:91
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:97
 msgid ""
 "To view or edit the current :guilabel:`Lock Tax Return` date, go "
 "to :menuselection:`Accounting --> Accounting --> Lock Dates`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:95
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:101
 msgid ""
 "Any new transaction whose accounting date is before the :guilabel:`Lock Tax "
 "Return` date has its tax values moved to the next open tax period, "
 "preventing any changes to a report after its period is closed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:104
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:110
 msgid ""
 "On the Accounting Dashboard, the :guilabel:`Tax Returns` journal displays "
 "automatic reminders to avoid missing important tasks and deadlines."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:107
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:113
 msgid ""
 "After completing all :ref:`configurations <accounting/tax-returns/"
 "configuration>` and posting all tax-related transactions for the reporting "
@@ -20034,7 +20040,7 @@ msgid ""
 "to :menuselection:`Accounting --> Accounting --> Tax Returns`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:112
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:118
 msgid ""
 "The :guilabel:`Tax Return` view displays a chronological list of all "
 "pending :ref:`tax returns (VAT report) <accounting/tax-returns/vat-report>` "
@@ -20043,22 +20049,22 @@ msgid ""
 "on the list includes:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:117
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:123
 msgid "A period (month or quarter)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:118
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:124
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:273
 msgid "A deadline date."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:119
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:125
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:274
 msgid ""
 "The related company and :ref:`branch(es) <general/branches>`, if applicable."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:120
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:126
 msgid ""
 "Action steps, such as :ref:`Review <accounting/tax-returns/vat-return-"
 "review>`, :ref:`Submit <accounting/tax-returns/vat-return-submit>`, "
@@ -20066,13 +20072,13 @@ msgid ""
 "when completed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:123
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:129
 msgid ""
 "Action buttons: These are displayed as primary (purple) and secondary (grey) "
 "buttons to indicate their priority."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:125
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:131
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:278
 msgid ""
 "A :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` menu for additional "
@@ -20083,30 +20089,30 @@ msgstr ""
 msgid "Tax return tool overview"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:131
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:137
 msgid ""
 "Before the tax return is reviewed, the number of :guilabel:`Pending` "
 "or :guilabel:`Passed` tax validation checks is displayed in red or green, "
 "respectively."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:133
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:139
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:283
 msgid "If the :guilabel:`Deadline` date has passed, it appears in red."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:136
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:142
 msgid ""
 "To export all tax returns from the selected period, click the :icon:`fa-cog` "
 "(:guilabel:`gear`) icon, then click :icon:`fa-upload` :guilabel:`Export All` "
 "to download the tax returns XLSX."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:142
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:148
 msgid "VAT report"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:144
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:150
 msgid ""
 "Each pending tax return (VAT report) follows these steps: :ref:`review "
 "<accounting/tax-returns/vat-return-review>`, :ref:`submit <accounting/tax-"
@@ -20114,7 +20120,7 @@ msgid ""
 "return-pay>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:148
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:154
 msgid ""
 "To access a tax return, click the local VAT report button "
 "(e.g., :guilabel:`VAT Return (BE)` or :guilabel:`Tax Report (US)`, depending "
@@ -20123,7 +20129,7 @@ msgid ""
 "the :guilabel:`Tax Return` view."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:155
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:161
 msgid ""
 "Click the :icon:`fa-cog` (:guilabel:`gear`) icon and :guilabel:`Copy to "
 "Documents` to save the report to the :doc:`Documents <../../../productivity/"
@@ -20132,7 +20138,7 @@ msgid ""
 "add any :guilabel:`Tags`. Then click :guilabel:`Export`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:160
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:166
 msgid ""
 "To create a new return, click :guilabel:`New`, select the "
 "relevant :guilabel:`Return Type`, and fill in the "
@@ -20140,41 +20146,41 @@ msgid ""
 "following returns can be generated:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:164
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:170
 msgid ":guilabel:`Annual Closing: Corporate Tax`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:165
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:171
 msgid ":guilabel:`VAT` (return)/:guilabel:`Tax`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:166
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:172
 msgid ":guilabel:`VAT Listing` (Belgium-specific)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:167
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:173
 msgid ":guilabel:`EC Sales List` (EU-specific)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:168
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:174
 msgid ":guilabel:`Advance Payment` (Belgium-specific)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:169
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:175
 msgid ":guilabel:`Intrastat` (EU-specific)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:174
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:180
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:288
 msgid "Review"
 msgstr "审查"
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:176
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:182
 msgid ""
 "To start the review of a tax return, click on the relevant tax return line:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:178
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:184
 msgid ""
 "If all automatic tax validation checks have passed, "
 "click :guilabel:`Validate` to complete the :guilabel:`Review` step. "
@@ -20184,83 +20190,83 @@ msgid ""
 "be :ref:`submitted <accounting/tax-returns/vat-return-submit>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:182
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:188
 msgid ""
 "If any automatic tax validation checks are pending, the :guilabel:`Tax "
 "Checks` view displays the following, depending on the :doc:`fiscal "
 "localization <../../fiscal_localizations>`:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:185
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:191
 msgid ""
 ":guilabel:`Bank Matching`: This check is used to identify any missing bills; "
 "it is optional for VAT reports."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:187
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:193
 msgid ""
 ":guilabel:`Bill attachments`: Bills must have attached documents as proof in "
 "case of an audit."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:188
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:194
 msgid ""
 ":guilabel:`Company data`: Missing information (e.g., VAT number or country) "
 "can lead to errors in tax reports or exemptions."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:190
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:196
 msgid ""
 ":guilabel:`Draft entries`: Any draft invoices and bills within the "
 "corresponding period must be reviewed and posted, or assigned a different "
 "accounting date."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:192
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:198
 msgid ""
 ":guilabel:`No negative amount in VAT report`: Some countries only allow "
 "positive values in tax returns, as a negative amount could indicate "
 "misconfigurations."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:194
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:200
 msgid ""
 ":guilabel:`Taxes and countries matching`: Taxes applied on invoices and "
 "bills must match the customer’s country."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:197
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:203
 msgid ""
 "Each check card is either highlighted in green (Reviewed or Supervised), red "
 "(Anomaly) or grey (To review). If a check fails, there are two options:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:200
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:206
 msgid "Click on the failed check's card to fix the issue."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:201
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:207
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:326
 msgid ""
 "Click :guilabel:`Anomaly` and select :guilabel:`Reviewed` "
 "or :guilabel:`Supervised` to pass the check without fixing the issue."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:204
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:210
 msgid ""
 "Once all checks have passed, click :guilabel:`Validate`. Then, depending on "
 "the :doc:`fiscal localization <../../fiscal_localizations>`, "
 "click :guilabel:`Lock` in the :guilabel:`Lock` window."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:207
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:213
 msgid ""
 "On validating the tax return, the :ref:`Lock Tax Return <accounting/tax-"
 "returns/lock-date>` date is automatically updated, and the closing journal "
 "entry is posted in the :guilabel:`Tax Returns` journal."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:212
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:218
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:334
 msgid ""
 "To add customized checks, activate :ref:`developer mode <developer-mode>`, "
@@ -20268,12 +20274,12 @@ msgid ""
 "click :guilabel:`New` and complete the necessary fields."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:215
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:221
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:337
 msgid "All check status changes are logged in the chatter."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:218
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:224
 msgid ""
 "If the :guilabel:`Lock Tax Return` date is not locked before reviewing the "
 "tax return, the fiscal period is automatically locked on the same date as "
@@ -20282,25 +20288,25 @@ msgid ""
 "Return date <accounting/tax-returns/lock-date>` manually beforehand."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:224
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:230
 msgid ""
 "After the tax report for a period has been posted, that period is locked to "
 "prevent new VAT-related journal entries from being created. Corrections to "
 "customer invoices or vendor bills must be recorded in the following period."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:231
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:237
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:342
 msgid "Submit"
 msgstr "提交"
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:233
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:239
 msgid ""
 "Once a tax return has completed the :ref:`Review <accounting/tax-returns/vat-"
 "return-review>` step, proceed as follows:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:236
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:242
 msgid ""
 "In the :guilabel:`Tax Return` view, click the local VAT report button "
 "(e.g., :guilabel:`VAT Return (BE)` or :guilabel:`Tax Report (US)`, depending "
@@ -20309,54 +20315,54 @@ msgid ""
 "preview the tax return report."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:240
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:246
 msgid ""
 "Once the tax return report has been verified, go back to the :guilabel:`Tax "
 "Return` view and click :guilabel:`Submit`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:242
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:248
 msgid ""
 "If a :guilabel:`Submission Instructions` pop-up window appears, follow the "
 "local :guilabel:`Instructions`, and click :guilabel:`Mark as Submitted` "
 "or :ref:`Mark Paid <accounting/tax-returns/vat-return-pay>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:246
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:252
 msgid ""
 "The submitted tax return contains all the values tax authorities need, and "
 "the amount to be paid or refunded."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:250
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:256
 msgid ""
 "To display all posted closing journal entries, click the :guilabel:`Tax "
 "Returns` journal in the Accounting dashboard."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:252
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:258
 msgid ""
 "To display the tax return entry posted, click the :icon:`fa-ellipsis-"
 "v` :guilabel:`(vertical ellipsis)` icon and select :guilabel:`View Entry`. "
 "The following options are available if needed:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:256
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:262
 msgid ":guilabel:`Reverse Entry`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:257
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:263
 msgid ""
 ":guilabel:`Reset to Draft`: The :guilabel:`Lock Tax Return` date must be "
 "manually removed using a :ref:`lock date exception <accounting/year-end/lock-"
 "date-exception>` to reset a tax return entry to draft."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:264
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:270
 msgid "Pay"
 msgstr "支付"
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:266
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:272
 msgid ""
 "Once a tax return is submitted, a :guilabel:`Payment` window appears if a "
 "tax payment is required. It displays all necessary payment details to "
@@ -20365,20 +20371,20 @@ msgid ""
 "fiscal_localizations>` package. There are three options:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:271
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:277
 msgid ""
 "Click :guilabel:`Mark Paid` after completing the payment: the corresponding "
 "tax return line disappears from the :guilabel:`Tax Return` view."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:273
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:279
 msgid ""
 "Click :guilabel:`Send` to email all payment information. Once sent, the tax "
 "return completes the :guilabel:`Pay` step, and its corresponding line "
 "disappears from the :guilabel:`Tax Return` view."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:275
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:281
 msgid ""
 "Click :guilabel:`Discard`: the corresponding tax return line remains visible "
 "in the :guilabel:`Tax Return` view, indicating the amount due. Click "
@@ -20390,50 +20396,50 @@ msgstr ""
 msgid "view when tax return is submitted"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:285
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:291
 msgid "Advance tax payments"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:288
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:294
 msgid ""
 "Advance tax payments are specific to local :doc:`fiscal localizations <../../"
 "fiscal_localizations>` and the requirements of certain countries' tax "
 "systems."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:291
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:297
 msgid ""
 "In the :guilabel:`Tax Return` view, click :guilabel:`Pay` on the relevant "
 "advance tax payment line that needs to be processed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:294
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:300
 msgid ""
 "In the :guilabel:`Advance Payment` window, follow the local recommendations, "
 "fill in the required local fields, and use the provided payment details to "
 "finalize the transaction. Two options are available:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:298
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:304
 msgid ""
 "Click :guilabel:`Mark Paid` once the payment is processed: The corresponding "
 "advance tax payment line disappears from the :guilabel:`Tax Return` view."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:300
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:306
 msgid ""
 "Click :guilabel:`Send` to email all payment information. Once sent, the "
 "advance tax payment completes the :guilabel:`Pay` step, and its "
 "corresponding line disappears from the :guilabel:`Tax Return` view."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:303
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:309
 msgid ""
 "Click :guilabel:`Discard`: The corresponding advance tax payment line "
 "remains visible in the :guilabel:`Tax Return` view."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:307
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:313
 msgid ""
 "To mark a tax payment that has already been completed, click the :icon:`fa-"
 "ellipsis-v` :guilabel:`(vertical ellipsis)` icon and select :guilabel:`Mark "
@@ -27695,7 +27701,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/expenses/expense_cards.rst:33
-#: ../../content/applications/finance/payment_providers.rst:430
+#: ../../content/applications/finance/payment_providers.rst:437
 msgid "Availability"
 msgstr "可用性"
 
@@ -30041,10 +30047,10 @@ msgstr "财务本地化"
 
 #: ../../content/applications/finance/fiscal_localizations.rst:7
 msgid ""
-"Fiscal localizations are country-specific modules that allow you to be "
-"compliant with a country's fiscal requirements. Most of these modules are "
-"related to the Accounting app, but they can also be necessary for other apps "
-"such as Point of Sale, eCommerce, etc., depending on a country's fiscal "
+"Fiscal localizations are country-specific modules that allows for compliance "
+"with a country's fiscal requirements. Most of these modules are related to "
+"the **Accounting** app, but they can also be necessary for other apps such "
+"as **Point of Sale**, **eCommerce**, etc., depending on a country's fiscal "
 "requirements."
 msgstr ""
 
@@ -44002,6 +44008,7 @@ msgstr "这些代码是机密的，应安全存储."
 #: ../../content/applications/finance/payment_providers/amazon_payment_services.rst:37
 #: ../../content/applications/finance/payment_providers/asiapay.rst:34
 #: ../../content/applications/finance/payment_providers/buckaroo.rst:27
+#: ../../content/applications/finance/payment_providers/ecpay.rst:26
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:29
 #: ../../content/applications/finance/payment_providers/nuvei.rst:36
 #: ../../content/applications/finance/payment_providers/paymob.rst:38
@@ -47260,12 +47267,12 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:142
-#: ../../content/applications/finance/payment_providers.rst:77
-#: ../../content/applications/finance/payment_providers.rst:95
-#: ../../content/applications/finance/payment_providers.rst:149
-#: ../../content/applications/finance/payment_providers.rst:155
-#: ../../content/applications/finance/payment_providers.rst:167
-#: ../../content/applications/finance/payment_providers.rst:173
+#: ../../content/applications/finance/payment_providers.rst:78
+#: ../../content/applications/finance/payment_providers.rst:96
+#: ../../content/applications/finance/payment_providers.rst:156
+#: ../../content/applications/finance/payment_providers.rst:162
+#: ../../content/applications/finance/payment_providers.rst:174
+#: ../../content/applications/finance/payment_providers.rst:180
 msgid "Odoo"
 msgstr "Odoo"
 
@@ -53462,7 +53469,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:426
-#: ../../content/applications/finance/payment_providers.rst:396
+#: ../../content/applications/finance/payment_providers.rst:403
 msgid "Refunds"
 msgstr "退款"
 
@@ -69282,7 +69289,7 @@ msgid ""
 "to generate QR codes."
 msgstr "确保配置了 :guilabel:`收款银行` 字段，因为 Odoo 使用此字段生成二维码。"
 
-#: ../../content/applications/finance/payment_providers.rst:33
+#: ../../content/applications/finance/payment_providers.rst:34
 msgid ""
 "Odoo embeds several **payment providers** that allow your customers to pay "
 "online, on their *customer portals*, or on your *eCommerce website*. They "
@@ -69293,7 +69300,7 @@ msgstr ""
 "上进行在线支付。他们可以使用自己喜欢的付款方式（如**信用卡**）支付销售订单、"
 "发票或订购的定期付款。"
 
-#: ../../content/applications/finance/payment_providers.rst:38
+#: ../../content/applications/finance/payment_providers.rst:39
 msgid ""
 "Each payment provider is linked to a list of supported :ref:`payment methods "
 "<payment_providers/payment_methods>` that can be (de)activated based on your "
@@ -69306,7 +69313,7 @@ msgstr ""
 msgid "Online payment form"
 msgstr "在线支付表格"
 
-#: ../../content/applications/finance/payment_providers.rst:45
+#: ../../content/applications/finance/payment_providers.rst:46
 msgid ""
 "Odoo apps delegate the handling of sensitive information to the certified "
 "payment provider so that you don't ever have to worry about PCI compliance. "
@@ -69320,11 +69327,11 @@ msgstr ""
 "Odoo 数据库中。相反，Odoo 应用程序使用一个唯一的参考编号，将数据安全地存储在"
 "支付提供商的系统中。"
 
-#: ../../content/applications/finance/payment_providers.rst:53
+#: ../../content/applications/finance/payment_providers.rst:54
 msgid "Supported payment providers"
 msgstr "支持的支付服务提供商"
 
-#: ../../content/applications/finance/payment_providers.rst:55
+#: ../../content/applications/finance/payment_providers.rst:56
 msgid ""
 "To access the supported payment providers, go to :menuselection:`Accounting "
 "--> Configuration --> Payment Providers`, :menuselection:`Website --> "
@@ -69333,168 +69340,173 @@ msgid ""
 "card to access and configure the related provider."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:63
+#: ../../content/applications/finance/payment_providers.rst:64
 msgid "Online payment providers"
 msgstr "在线支付服务提供商"
 
-#: ../../content/applications/finance/payment_providers.rst:71
+#: ../../content/applications/finance/payment_providers.rst:72
 msgid "Payment flow from"
 msgstr "付款流程起点"
 
-#: ../../content/applications/finance/payment_providers.rst:72
+#: ../../content/applications/finance/payment_providers.rst:73
 msgid ":ref:`Tokenization <payment_providers/tokenization>`"
 msgstr ":ref:`标记化 <payment_providers/tokenization>`"
 
-#: ../../content/applications/finance/payment_providers.rst:73
+#: ../../content/applications/finance/payment_providers.rst:74
 msgid ":ref:`Manual capture <payment_providers/manual_capture>`"
 msgstr ":ref:`手动捕捉 <payment_providers/manual_capture>`"
 
-#: ../../content/applications/finance/payment_providers.rst:74
+#: ../../content/applications/finance/payment_providers.rst:75
 msgid ":ref:`Refunds <payment_providers/refunds>`"
 msgstr ":ref:`退款 <payment_providers/refunds>`"
 
-#: ../../content/applications/finance/payment_providers.rst:75
+#: ../../content/applications/finance/payment_providers.rst:76
 msgid ":ref:`Express checkout <payment_providers/express_checkout>`"
 msgstr ":ref:`快速结账 <payment_providers/express_checkout>`"
 
-#: ../../content/applications/finance/payment_providers.rst:76
+#: ../../content/applications/finance/payment_providers.rst:77
 msgid ":doc:`Adyen <payment_providers/adyen>`"
 msgstr ":doc:`Adyen <payment_providers/adyen>`"
 
-#: ../../content/applications/finance/payment_providers.rst:78
-#: ../../content/applications/finance/payment_providers.rst:96
-#: ../../content/applications/finance/payment_providers.rst:114
-#: ../../content/applications/finance/payment_providers.rst:126
-#: ../../content/applications/finance/payment_providers.rst:156
-#: ../../content/applications/finance/payment_providers.rst:168
-#: ../../content/applications/finance/payment_providers.rst:171
-#: ../../content/applications/finance/payment_providers.rst:180
+#: ../../content/applications/finance/payment_providers.rst:79
+#: ../../content/applications/finance/payment_providers.rst:97
+#: ../../content/applications/finance/payment_providers.rst:121
+#: ../../content/applications/finance/payment_providers.rst:133
+#: ../../content/applications/finance/payment_providers.rst:163
+#: ../../content/applications/finance/payment_providers.rst:175
+#: ../../content/applications/finance/payment_providers.rst:178
+#: ../../content/applications/finance/payment_providers.rst:187
 msgid "|V|"
 msgstr "|V|"
 
-#: ../../content/applications/finance/payment_providers.rst:79
 #: ../../content/applications/finance/payment_providers.rst:80
-#: ../../content/applications/finance/payment_providers.rst:158
-#: ../../content/applications/finance/payment_providers.rst:170
+#: ../../content/applications/finance/payment_providers.rst:81
+#: ../../content/applications/finance/payment_providers.rst:165
+#: ../../content/applications/finance/payment_providers.rst:177
 msgid "Full and partial"
 msgstr "全额和部分金额"
 
-#: ../../content/applications/finance/payment_providers.rst:82
+#: ../../content/applications/finance/payment_providers.rst:83
 msgid ""
 ":doc:`Amazon Payment Services <payment_providers/amazon_payment_services>`"
 msgstr ":doc:`亚马逊支付服务<payment_providers/amazon_payment_services>`"
 
-#: ../../content/applications/finance/payment_providers.rst:83
-#: ../../content/applications/finance/payment_providers.rst:89
-#: ../../content/applications/finance/payment_providers.rst:101
-#: ../../content/applications/finance/payment_providers.rst:107
-#: ../../content/applications/finance/payment_providers.rst:113
-#: ../../content/applications/finance/payment_providers.rst:119
-#: ../../content/applications/finance/payment_providers.rst:131
-#: ../../content/applications/finance/payment_providers.rst:137
-#: ../../content/applications/finance/payment_providers.rst:143
-#: ../../content/applications/finance/payment_providers.rst:161
-#: ../../content/applications/finance/payment_providers.rst:179
+#: ../../content/applications/finance/payment_providers.rst:84
+#: ../../content/applications/finance/payment_providers.rst:90
+#: ../../content/applications/finance/payment_providers.rst:102
+#: ../../content/applications/finance/payment_providers.rst:108
+#: ../../content/applications/finance/payment_providers.rst:114
+#: ../../content/applications/finance/payment_providers.rst:120
+#: ../../content/applications/finance/payment_providers.rst:126
+#: ../../content/applications/finance/payment_providers.rst:138
+#: ../../content/applications/finance/payment_providers.rst:144
+#: ../../content/applications/finance/payment_providers.rst:150
+#: ../../content/applications/finance/payment_providers.rst:168
+#: ../../content/applications/finance/payment_providers.rst:186
 msgid "The provider's website"
 msgstr "服务商网站"
 
-#: ../../content/applications/finance/payment_providers.rst:88
+#: ../../content/applications/finance/payment_providers.rst:89
 msgid ":doc:`AsiaPay <payment_providers/asiapay>`"
 msgstr ":doc:`AsiaPay <payment_providers/asiapay>`"
 
-#: ../../content/applications/finance/payment_providers.rst:94
+#: ../../content/applications/finance/payment_providers.rst:95
 msgid ":doc:`Authorize.Net <payment_providers/authorize>`"
 msgstr ":doc:`Authorize.Net <payment_providers/authorize>`"
 
-#: ../../content/applications/finance/payment_providers.rst:97
 #: ../../content/applications/finance/payment_providers.rst:98
-#: ../../content/applications/finance/payment_providers.rst:157
-#: ../../content/applications/finance/payment_providers.rst:169
+#: ../../content/applications/finance/payment_providers.rst:99
+#: ../../content/applications/finance/payment_providers.rst:164
+#: ../../content/applications/finance/payment_providers.rst:176
 msgid "Full only"
 msgstr "仅限全额"
 
-#: ../../content/applications/finance/payment_providers.rst:100
+#: ../../content/applications/finance/payment_providers.rst:101
 msgid ":doc:`Buckaroo <payment_providers/buckaroo>`"
 msgstr ":doc:`Buckaroo <payment_providers/buckaroo>`"
 
-#: ../../content/applications/finance/payment_providers.rst:106
+#: ../../content/applications/finance/payment_providers.rst:107
 msgid ":doc:`DPO Pay <payment_providers/dpo>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:112
+#: ../../content/applications/finance/payment_providers.rst:113
+msgid ":doc:`ECPay <payment_providers/ecpay>`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:119
 msgid ":doc:`Flutterwave <payment_providers/flutterwave>`"
 msgstr ":doc:`Flutterwave <payment_providers/flutterwave>`"
 
-#: ../../content/applications/finance/payment_providers.rst:118
+#: ../../content/applications/finance/payment_providers.rst:125
 msgid ":doc:`Iyzico <payment_providers/iyzico>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:124
+#: ../../content/applications/finance/payment_providers.rst:131
 msgid ":doc:`Mercado Pago <payment_providers/mercado_pago>`"
 msgstr ":doc:`Mercado Pago <payment_providers/mercado_pago>`"
 
-#: ../../content/applications/finance/payment_providers.rst:125
-#: ../../content/applications/finance/payment_providers.rst:185
+#: ../../content/applications/finance/payment_providers.rst:132
+#: ../../content/applications/finance/payment_providers.rst:192
 msgid "Odoo or the provider's website"
 msgstr "Odoo 或服务商网站"
 
-#: ../../content/applications/finance/payment_providers.rst:130
+#: ../../content/applications/finance/payment_providers.rst:137
 msgid ":doc:`Mollie <payment_providers/mollie>`"
 msgstr ":doc:`Mollie <payment_providers/mollie>`"
 
-#: ../../content/applications/finance/payment_providers.rst:136
+#: ../../content/applications/finance/payment_providers.rst:143
 msgid ":doc:`Nuvei <payment_providers/nuvei>`"
 msgstr ":doc:`Nuvei <payment_providers/nuvei>`"
 
-#: ../../content/applications/finance/payment_providers.rst:142
+#: ../../content/applications/finance/payment_providers.rst:149
 msgid ":doc:`Paymob <payment_providers/paymob>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:148
+#: ../../content/applications/finance/payment_providers.rst:155
 msgid ":doc:`PayPal <payment_providers/paypal>`"
 msgstr ":doc:`PayPal <payment_providers/paypal>`"
 
-#: ../../content/applications/finance/payment_providers.rst:154
+#: ../../content/applications/finance/payment_providers.rst:161
 msgid ":doc:`Razorpay <payment_providers/razorpay>`"
 msgstr ":doc:`Razorpay <payment_providers/razorpay>`"
 
-#: ../../content/applications/finance/payment_providers.rst:160
+#: ../../content/applications/finance/payment_providers.rst:167
 msgid ":doc:`Redsys <payment_providers/redsys>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:166
+#: ../../content/applications/finance/payment_providers.rst:173
 msgid ":doc:`Stripe <payment_providers/stripe>`"
 msgstr ":doc:`Stripe <payment_providers/stripe>`"
 
-#: ../../content/applications/finance/payment_providers.rst:172
+#: ../../content/applications/finance/payment_providers.rst:179
 msgid ":doc:`Toss Payments <payment_providers/tosspayments>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:178
+#: ../../content/applications/finance/payment_providers.rst:185
 msgid ":doc:`Worldline <payment_providers/worldline>`"
 msgstr ":doc:`Worldline <payment_providers/worldline>`"
 
-#: ../../content/applications/finance/payment_providers.rst:184
+#: ../../content/applications/finance/payment_providers.rst:191
 msgid ":doc:`Xendit <payment_providers/xendit>`"
 msgstr ":doc:`Xendit <payment_providers/xendit>`"
 
-#: ../../content/applications/finance/payment_providers.rst:186
+#: ../../content/applications/finance/payment_providers.rst:193
 msgid "|V| *"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:192
+#: ../../content/applications/finance/payment_providers.rst:199
 msgid ""
 "Refer to the :doc:`Xendit documentation <payment_providers/xendit>` for more "
 "information."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:195
+#: ../../content/applications/finance/payment_providers.rst:202
 msgid ""
 "Each provider has its own specific configuration flow, depending on which "
 "feature is available."
 msgstr "每个支付提供商都有自己特定的配置流程，具体取决于可用的功能。"
 
-#: ../../content/applications/finance/payment_providers.rst:197
+#: ../../content/applications/finance/payment_providers.rst:204
 msgid ""
 "Some of these online payment providers can also be added as :doc:`bank "
 "accounts <../finance/accounting/bank>`, but this is **not** the same process "
@@ -69507,7 +69519,7 @@ msgstr ""
 "付，银行账户被添加并在会计应用程序中配置为 :doc:`银行对账 <accounting/bank/"
 "reconciliation>` 。"
 
-#: ../../content/applications/finance/payment_providers.rst:204
+#: ../../content/applications/finance/payment_providers.rst:211
 msgid ""
 "In addition to the regular payment providers that integrate with an API, "
 "such as Stripe, PayPal, or Adyen, Odoo bundles the :doc:`Demo payment "
@@ -69519,7 +69531,7 @@ msgstr ""
 "了 :doc:`Demo 支付提供商 <payment_providers/demo>`。该支付提供程序允许您测试"
 "涉及在线支付的业务流程。由于演示付款是虚拟付款，因此无需任何凭证。"
 
-#: ../../content/applications/finance/payment_providers.rst:212
+#: ../../content/applications/finance/payment_providers.rst:219
 #: ../../content/applications/finance/payment_providers/bank_payments.rst:3
 msgid "Bank payments"
 msgstr "银行付款"
@@ -69544,7 +69556,7 @@ msgid ""
 "and allow their account to be charged directly for future payments."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:222
+#: ../../content/applications/finance/payment_providers.rst:229
 #: ../../content/applications/finance/payment_providers/inperson_payments.rst:3
 msgid "In-person payments"
 msgstr ""
@@ -69569,17 +69581,17 @@ msgstr ""
 msgid "Customers can pay for their orders upon delivery."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:232
+#: ../../content/applications/finance/payment_providers.rst:239
 msgid "Enabling a payment provider"
 msgstr "启用支付提供商"
 
-#: ../../content/applications/finance/payment_providers.rst:234
+#: ../../content/applications/finance/payment_providers.rst:241
 msgid ""
 "To add a new payment provider and make its related payment methods available "
 "to your customers, proceed as follows:"
 msgstr "要添加新的支付提供商并向客户提供相关支付方法，请按以下步骤操作："
 
-#: ../../content/applications/finance/payment_providers.rst:237
+#: ../../content/applications/finance/payment_providers.rst:244
 msgid ""
 "Go to the payment provider's website, create an account, and make sure you "
 "have the API credentials requested for third-party use. These are necessary "
@@ -69588,7 +69600,7 @@ msgstr ""
 "访问支付提供商的网站，创建一个账户，并确保您拥有第三方使用所需的 API 凭据。这"
 "是 Odoo 与支付提供商进行通信的必要条件。"
 
-#: ../../content/applications/finance/payment_providers.rst:240
+#: ../../content/applications/finance/payment_providers.rst:247
 msgid ""
 "In Odoo, navigate to the :guilabel:`Payment providers` by going "
 "to :menuselection:`Accounting --> Configuration --> Payment "
@@ -69600,11 +69612,11 @@ msgstr ""
 "`、:menuselection:`网站 --> 配置 --> 支付提供商` 或 :menuselection:`销售 --> "
 "配置 --> 支付提供商` 导航至 :guilabel:`支付提供商`。"
 
-#: ../../content/applications/finance/payment_providers.rst:243
+#: ../../content/applications/finance/payment_providers.rst:250
 msgid "Select the provider and configure the :guilabel:`Credentials` tab."
 msgstr "选择提供程序并配置 :guilabel:`证书` 选项卡。"
 
-#: ../../content/applications/finance/payment_providers.rst:244
+#: ../../content/applications/finance/payment_providers.rst:251
 #: ../../content/applications/finance/payment_providers/adyen.rst:60
 #: ../../content/applications/finance/payment_providers/bank_payments.rst:45
 #: ../../content/applications/finance/payment_providers/bank_payments.rst:99
@@ -69614,7 +69626,7 @@ msgstr "选择提供程序并配置 :guilabel:`证书` 选项卡。"
 msgid "Set the :guilabel:`State` field to :guilabel:`Enabled`."
 msgstr "将 :guilabel:`状态` 字段设置为 :guilabel:`已启用`。"
 
-#: ../../content/applications/finance/payment_providers.rst:247
+#: ../../content/applications/finance/payment_providers.rst:254
 msgid ""
 "The fields available in the :guilabel:`Credentials` tab depend on the "
 "payment provider. Refer to the :ref:`related documentation "
@@ -69623,7 +69635,7 @@ msgstr ""
 "在 :guilabel:`证书` 选项卡中可用的字段取决于支付提供商。有关详细信息，请参"
 "阅 :ref:`相关文档 <payment_providers/supported_providers>`。"
 
-#: ../../content/applications/finance/payment_providers.rst:250
+#: ../../content/applications/finance/payment_providers.rst:257
 msgid ""
 "Once you have enabled the payment provider, it is automatically published on "
 "your website. If you wish to unpublish it, click the :guilabel:`Published` "
@@ -69635,17 +69647,17 @@ msgstr ""
 "击 :guilabel:`已发布` 按钮。客户无法通过未发布的提供商付款，但仍可管理 :dfn:`"
 "（删除并分配给订阅）` 与该提供商链接的现有令牌。"
 
-#: ../../content/applications/finance/payment_providers.rst:258
+#: ../../content/applications/finance/payment_providers.rst:265
 msgid "Test mode"
 msgstr "测试模式"
 
-#: ../../content/applications/finance/payment_providers.rst:261
+#: ../../content/applications/finance/payment_providers.rst:268
 msgid ""
 "We recommend using the test mode on a **duplicate** or a **test** database "
 "to avoid potential issues with invoice numbering."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:264
+#: ../../content/applications/finance/payment_providers.rst:271
 msgid ""
 "To try a payment provider without affecting live transactions, set "
 "the :guilabel:`State` field in the payment provider form to :guilabel:`Test "
@@ -69654,13 +69666,13 @@ msgid ""
 "separate test account or environment for this purpose."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:270
+#: ../../content/applications/finance/payment_providers.rst:277
 msgid ""
 "By default, the payment provider remains **unpublished** in test mode so "
 "that it's not visible to visitors."
 msgstr "默认情况下，支付提供商在测试模式下保持**未发布**，这样访客就看不到它。"
 
-#: ../../content/applications/finance/payment_providers.rst:278
+#: ../../content/applications/finance/payment_providers.rst:285
 msgid ""
 "Each payment provider is related to a list of supported payment methods; the "
 "methods listed in the :guilabel:`Payment methods` field in "
@@ -69673,7 +69685,7 @@ msgstr ""
 "标签的 :guilabel:`支付方式` 字段中列出的方法是已激活的方法。要激活或停用提供"
 "商的支付方法，请单击 :guilabel:`启用支付方法`，然后单击相关方法的切换按钮。"
 
-#: ../../content/applications/finance/payment_providers.rst:284
+#: ../../content/applications/finance/payment_providers.rst:291
 msgid ""
 "To view the complete list of supported payment methods, go "
 "to :menuselection:`Accounting --> Configuration --> Payment "
@@ -69681,18 +69693,18 @@ msgid ""
 "or :menuselection:`Sales --> Configuration --> Payment Methods`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:287
+#: ../../content/applications/finance/payment_providers.rst:294
 msgid ""
 "Payment methods are displayed on the ecommerce website based on their "
 "sequence order. To reorder them, drag and drop the payment methods into the "
 "desired order in the :guilabel:`Payment Methods` list."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:292
+#: ../../content/applications/finance/payment_providers.rst:299
 msgid "Icons and brands"
 msgstr "图标和品牌"
 
-#: ../../content/applications/finance/payment_providers.rst:294
+#: ../../content/applications/finance/payment_providers.rst:301
 msgid ""
 "The icons displayed next to the payment method on your website are either "
 "the icons of the brands activated for the payment method or, if there aren't "
@@ -69701,7 +69713,7 @@ msgid ""
 "payment_methods>`, then click the relevant one."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:299
+#: ../../content/applications/finance/payment_providers.rst:306
 msgid ""
 "To modify a payment method's icon, hover your mouse over the image in the "
 "upper-right corner of the payment method's form and click the :icon:`fa-"
@@ -69710,7 +69722,7 @@ msgstr ""
 "要修改付款方式的图标，请将鼠标悬停在付款方式表单右上角的图片上，然后点"
 "击 :icon:`fa-pencil`（:guilabel:`铅笔`）图标。"
 
-#: ../../content/applications/finance/payment_providers.rst:302
+#: ../../content/applications/finance/payment_providers.rst:309
 msgid ""
 "Select the :guilabel:`Brands` tab to view the brands that have been "
 "activated for the payment method. The brands and their related icons are "
@@ -69720,26 +69732,26 @@ msgid ""
 "right corner and click the :icon:`fa-pencil` (:guilabel:`pencil`) icon."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:309
+#: ../../content/applications/finance/payment_providers.rst:316
 msgid "Advanced configuration"
 msgstr "高级配置"
 
-#: ../../content/applications/finance/payment_providers.rst:311
+#: ../../content/applications/finance/payment_providers.rst:318
 msgid "To further configure payment methods, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:314
+#: ../../content/applications/finance/payment_providers.rst:321
 msgid ""
 ":ref:`Access the list of payment methods <payment_providers/"
 "payment_methods>` and click the relevant one."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:316
+#: ../../content/applications/finance/payment_providers.rst:323
 msgid ""
 "Go to the :guilabel:`Configuration` tab and adjust the features as needed."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:319
+#: ../../content/applications/finance/payment_providers.rst:326
 msgid ""
 "Each payment method is preconfigured in a way that aligns with the payment "
 "providers' behavior and their integration with Odoo. Any change to this "
@@ -69749,7 +69761,7 @@ msgstr ""
 "每种支付方式都经过预先配置，以与支付提供商的行为和其与 Odoo 的整合相匹配。对"
 "该配置进行任何更改可能会导致错误，因此建议先在副本或测试数据库上进行测试。"
 
-#: ../../content/applications/finance/payment_providers.rst:322
+#: ../../content/applications/finance/payment_providers.rst:329
 msgid ""
 "Modifications to the payment method's configuration only work to the extent "
 "of the method's and provider's capabilities. For example, "
@@ -69764,11 +69776,11 @@ msgstr ""
 "用:ref:`tokenization <payment_providers/tokenization>`，将无法产生预期的结"
 "果。"
 
-#: ../../content/applications/finance/payment_providers.rst:331
+#: ../../content/applications/finance/payment_providers.rst:338
 msgid "Tokenization"
 msgstr "符号化"
 
-#: ../../content/applications/finance/payment_providers.rst:333
+#: ../../content/applications/finance/payment_providers.rst:340
 msgid ""
 ":ref:`If the payment provider supports this feature <payment_providers/"
 "online_providers>`, customers can save their payment method details for "
@@ -69780,7 +69792,7 @@ msgstr ""
 "可以保存其支付方法的详细信息以供日后使用。要启用此功能，请转到所选支付提供商"
 "的 :guilabel:`配置` 选项卡并启用 :guilabel:`允许保存支付方式`。"
 
-#: ../../content/applications/finance/payment_providers.rst:338
+#: ../../content/applications/finance/payment_providers.rst:345
 msgid ""
 "In this case, a **payment token** is created in Odoo to be used as a payment "
 "method for subsequent payments without the customer having to enter their "
@@ -69791,7 +69803,7 @@ msgstr ""
 "无需再次输入其支付方式的详细信息。这对电子商务转换率和使用定期付款订阅特别有"
 "用。"
 
-#: ../../content/applications/finance/payment_providers.rst:343
+#: ../../content/applications/finance/payment_providers.rst:350
 msgid ""
 "To add or delete their saved payment method details, customers can "
 "click :guilabel:`Manage payment methods` in the :ref:`customer portal <users-"
@@ -69800,11 +69812,11 @@ msgstr ""
 "要添加或删除已保存的付款方式详情，客户可点击 :ref:`客户门户<users-portal-"
 "payment-methods>` 中的 :guilabel:`管理付款方式`。"
 
-#: ../../content/applications/finance/payment_providers.rst:346
+#: ../../content/applications/finance/payment_providers.rst:353
 msgid "PCI DSS and Attestation of Compliance"
 msgstr "PCI DSS 和合规证明"
 
-#: ../../content/applications/finance/payment_providers.rst:348
+#: ../../content/applications/finance/payment_providers.rst:355
 msgid ""
 "Odoo is not `PCI <https://www.pcisecuritystandards.org>`_ DSS-certified "
 "because it does not store cardholder data or process payments. Instead, it "
@@ -69822,12 +69834,12 @@ msgstr ""
 "一起完成最基本的自我评估问卷 (SAQ)，即可获得合规证明 (AoC)，实现 PCI 合规性。"
 "Odoo 不应在 :abbr:SAQ (自我评估问卷) 中被提及为支付处理器或第三方服务提供商。"
 
-#: ../../content/applications/finance/payment_providers.rst:359
+#: ../../content/applications/finance/payment_providers.rst:366
 #: ../../content/applications/finance/payment_providers/adyen.rst:69
 msgid "Manual capture"
 msgstr "手动捕获"
 
-#: ../../content/applications/finance/payment_providers.rst:361
+#: ../../content/applications/finance/payment_providers.rst:368
 msgid ""
 ":ref:`If the payment provider supports this feature <payment_providers/"
 "online_providers>`, you can authorize and capture payments in two steps "
@@ -69839,7 +69851,7 @@ msgstr ""
 "分两步授权和获取付款。要启用此功能，请转到所选支付提供商的 :guilabel:`配置` "
 "选项卡，并启用 :guilabel:`手动获取金额`。"
 
-#: ../../content/applications/finance/payment_providers.rst:366
+#: ../../content/applications/finance/payment_providers.rst:373
 msgid ""
 "When you authorize a payment, the funds are reserved on the customer's "
 "payment method but not immediately charged. They are charged when you "
@@ -69851,32 +69863,32 @@ msgstr ""
 "取付款时，才会扣款。您也可以撤销授权，取消授权并释放保留的资金。手动获取支付"
 "在很多情况下都很有用："
 
-#: ../../content/applications/finance/payment_providers.rst:371
+#: ../../content/applications/finance/payment_providers.rst:378
 msgid ""
 "Receive the payment confirmation and wait until the order is shipped to "
 "capture the payment."
 msgstr "收到付款确认，在订单发货后获取付款。"
 
-#: ../../content/applications/finance/payment_providers.rst:372
+#: ../../content/applications/finance/payment_providers.rst:379
 msgid ""
 "Review and verify that orders are legitimate before the payment is completed "
 "and the fulfillment process starts."
 msgstr "在付款完成、付款流程开始前，审核并验证订单是否合法。"
 
-#: ../../content/applications/finance/payment_providers.rst:374
+#: ../../content/applications/finance/payment_providers.rst:381
 msgid ""
 "Avoid potentially high refund fees for refunded payments: payment providers "
 "will not charge you for voiding an authorization."
 msgstr ""
 "避免退还付款时可能产生的高额退款费用：支付提供商不会向你收取撤销授权的费用。"
 
-#: ../../content/applications/finance/payment_providers.rst:376
+#: ../../content/applications/finance/payment_providers.rst:383
 msgid ""
 "Hold a security deposit to return later, minus any deductions (e.g., in case "
 "of damages)."
 msgstr "保留一笔保证金，以便稍后退还，扣除任何扣款（例如，损坏赔偿）。"
 
-#: ../../content/applications/finance/payment_providers.rst:378
+#: ../../content/applications/finance/payment_providers.rst:385
 msgid ""
 "To capture the payment after it was authorized, go to the related sales "
 "order or invoice and click the :guilabel:`Capture Transaction` button. To "
@@ -69885,7 +69897,7 @@ msgstr ""
 "要在授权后获取付款，请转到相关销售订单或发票，然后点击 :guilabel:`捕获交易` "
 "按钮。要释放资金，请单击 :guilabel:`无效交易` 按钮。"
 
-#: ../../content/applications/finance/payment_providers.rst:383
+#: ../../content/applications/finance/payment_providers.rst:390
 msgid ""
 "Some payment providers support capturing only part of the authorized amount. "
 "The remaining amount can then be either captured or voided. These providers "
@@ -69897,7 +69909,7 @@ msgstr ""
 "务提供商在:ref:`table above <payment_providers/online_providers>`中设置**全额"
 "和部分金额**值。仅支持捕获或作废全额的支付服务提供商设置的值为**仅限全额**。"
 
-#: ../../content/applications/finance/payment_providers.rst:387
+#: ../../content/applications/finance/payment_providers.rst:394
 msgid ""
 "The funds are likely not reserved forever. After a certain time, they may be "
 "automatically released back to the customer's payment method. Refer to your "
@@ -69906,13 +69918,13 @@ msgstr ""
 "资金不会永远保留，一段时间后，可能会自动返回至客户的付款方式。请参阅支付服务"
 "提供商的文档，以了解准确的保留时长。"
 
-#: ../../content/applications/finance/payment_providers.rst:390
+#: ../../content/applications/finance/payment_providers.rst:397
 msgid ""
 ":doc:`payment_providers/adyen` and :doc:`payment_providers/stripe` allow to "
 "capture payments manually directly from their website interface."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:398
+#: ../../content/applications/finance/payment_providers.rst:405
 msgid ""
 "If your payment provider supports this feature, you can refund payments "
 "directly from Odoo. It does not need to be enabled first. To refund a "
@@ -69921,7 +69933,7 @@ msgstr ""
 "如果您的支付提供商支持此功能，您可以直接从 Odoo 退款。无需先启用该功能。要退"
 "还客户付款，请导航至该付款，然后单击 :guilabel:`退款` 按钮。"
 
-#: ../../content/applications/finance/payment_providers.rst:403
+#: ../../content/applications/finance/payment_providers.rst:410
 msgid ""
 "Some payment providers support refunding only part of the amount. The "
 "remaining amount can then optionally be refunded, too. These providers have "
@@ -69933,17 +69945,17 @@ msgstr ""
 "在:ref:`table above<payment_providers/online_providers>`中设置**全额和部分金"
 "额**值。仅支持全额退款的支付服务提供商设置的值为**仅限全额**。"
 
-#: ../../content/applications/finance/payment_providers.rst:407
+#: ../../content/applications/finance/payment_providers.rst:414
 msgid ""
 ":doc:`payment_providers/adyen` and :doc:`payment_providers/stripe` allow to "
 "refund payments directly from their website interface."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:413
+#: ../../content/applications/finance/payment_providers.rst:420
 msgid "Express checkout"
 msgstr "快速结账"
 
-#: ../../content/applications/finance/payment_providers.rst:415
+#: ../../content/applications/finance/payment_providers.rst:422
 msgid ""
 ":ref:`If the payment provider supports this feature <payment_providers/"
 "online_providers>`, you can allow customers to use the :guilabel:`Google "
@@ -69957,7 +69969,7 @@ msgstr ""
 "商务订单。使用这些按钮时，客户可直接从购物车进入确认页面，无需填写联系表单。"
 "他们只需在 Google 或 Apple 的付款表单上验证付款即可。"
 
-#: ../../content/applications/finance/payment_providers.rst:421
+#: ../../content/applications/finance/payment_providers.rst:428
 msgid ""
 "To enable this feature, go to the :guilabel:`Configuration` tab of the "
 "selected payment provider and enable :guilabel:`Allow Express Checkout`."
@@ -69965,12 +69977,12 @@ msgstr ""
 "要启用此功能，请转至所选支付提供商的 :guilabel:`配置` 选项卡并启"
 "用 :guilabel:`允许快速结账`。"
 
-#: ../../content/applications/finance/payment_providers.rst:425
+#: ../../content/applications/finance/payment_providers.rst:432
 msgid ""
 "All prices shown on the express checkout payment form always include taxes."
 msgstr "快速结账付款单上显示的所有价格均含税。"
 
-#: ../../content/applications/finance/payment_providers.rst:432
+#: ../../content/applications/finance/payment_providers.rst:439
 msgid ""
 "You can adapt the payment provider's availability by specifying "
 "the :guilabel:`Maximum amount` allowed and modifying "
@@ -69980,7 +69992,7 @@ msgstr ""
 "您可以通过指定允许的 :guilabel:`最大金额` 和修改 :guilabel:`配置` 选项卡中"
 "的 :guilabel:`货币` 和 :guilabel:`国家/地区` 来调整支付提供商的可用性。"
 
-#: ../../content/applications/finance/payment_providers.rst:437
+#: ../../content/applications/finance/payment_providers.rst:444
 msgid ""
 "To display an availability report for payment providers and payment methods, "
 "and to help diagnose potential availability issues on the payment form, "
@@ -69997,11 +70009,11 @@ msgstr ""
 "支付方法列表、支付提供商或支付方法不可用的原因（如适用）以及每种支付方法支持"
 "的提供商列表。"
 
-#: ../../content/applications/finance/payment_providers.rst:447
+#: ../../content/applications/finance/payment_providers.rst:454
 msgid "Currencies and countries"
 msgstr "货币和国家/地区"
 
-#: ../../content/applications/finance/payment_providers.rst:449
+#: ../../content/applications/finance/payment_providers.rst:456
 msgid ""
 "All payment providers have a different list of available currencies and "
 "countries. They serve as a first filter during payment operations, i.e., the "
@@ -70016,7 +70028,7 @@ msgstr ""
 "表可能存在错误、更新和未知，因此可以添加或删除支付提供商支持的货币或国家/地"
 "区。"
 
-#: ../../content/applications/finance/payment_providers.rst:457
+#: ../../content/applications/finance/payment_providers.rst:464
 msgid ""
 ":ref:`Payment methods <payment_providers/payment_methods>` also have their "
 "own list of available currencies and countries that serves as another filter "
@@ -70025,7 +70037,7 @@ msgstr ""
 ":ref:`支付方式 <payment_providers/payment_methods>` 也有可用货币和国家/地区列"
 "表，可作为支付操作过程中的另一个筛选器。"
 
-#: ../../content/applications/finance/payment_providers.rst:459
+#: ../../content/applications/finance/payment_providers.rst:466
 msgid ""
 "If the list of supported currencies or countries is empty, it means the list "
 "is too long to be displayed, or Odoo does not have information on that "
@@ -70037,11 +70049,11 @@ msgstr ""
 "提供商的信息。如果不支持该国家/地区或货币，支付提供商仍可使用，但在稍后阶段支"
 "付可能会被拒绝。"
 
-#: ../../content/applications/finance/payment_providers.rst:467
+#: ../../content/applications/finance/payment_providers.rst:474
 msgid "Maximum amount"
 msgstr "最大金额"
 
-#: ../../content/applications/finance/payment_providers.rst:469
+#: ../../content/applications/finance/payment_providers.rst:476
 msgid ""
 "You can restrict the :guilabel:`Maximum Amount` that can be paid with the "
 "selected provider. Leave the field to `0.00` to make the payment provider "
@@ -70050,7 +70062,7 @@ msgstr ""
 "您可以限制所选提供商可支付的 :guilabel:`最大金额`。如果将该字段保留为 "
 "`0.00`，则无论支付金额多少，都可以使用支付提供程序。"
 
-#: ../../content/applications/finance/payment_providers.rst:473
+#: ../../content/applications/finance/payment_providers.rst:480
 msgid ""
 "This feature is not intended to work on pages that allow the customer to "
 "update the payment amount, e.g., the **Donation** snippet and the "
@@ -70060,11 +70072,11 @@ msgstr ""
 "此功能不适用于允许客户更新付款金额的页面，例如，启用已付款 :doc:`运输方式 "
 "<../websites/ecommerce/shipping>` 时的 **捐赠** 片段和 **结账** 页面。"
 
-#: ../../content/applications/finance/payment_providers.rst:480
+#: ../../content/applications/finance/payment_providers.rst:487
 msgid "Payment journal"
 msgstr "付款日记账"
 
-#: ../../content/applications/finance/payment_providers.rst:482
+#: ../../content/applications/finance/payment_providers.rst:489
 msgid ""
 "A :doc:`payment journal <accounting/bank>` must be defined for the payment "
 "provider to record the payments on an **outstanding account**. By default, "
@@ -70077,25 +70089,25 @@ msgstr ""
 "支付日记账。要修改，请转到所选支付提供程序的 :guilabel:`配置` 选项卡，选择另"
 "一个 :guilabel:`付款日记账`。"
 
-#: ../../content/applications/finance/payment_providers.rst:488
+#: ../../content/applications/finance/payment_providers.rst:495
 msgid "The payment journal must be a :guilabel:`Bank` journal."
 msgstr "付款日记账必须是 :guilabel:`银行` 日记账。"
 
-#: ../../content/applications/finance/payment_providers.rst:489
+#: ../../content/applications/finance/payment_providers.rst:496
 msgid "The same journal can be used for several payment providers."
 msgstr "同一日记账可用于多个支付提供商。"
 
-#: ../../content/applications/finance/payment_providers.rst:490
+#: ../../content/applications/finance/payment_providers.rst:497
 msgid ""
 "Payment journals must only be configured if the :doc:`Invoicing or "
 "Accounting app <accounting>` is installed."
 msgstr "只有安装了 :doc:`发票或会计应用程序<accounting>` 才能配置付款日记账。"
 
-#: ../../content/applications/finance/payment_providers.rst:494
+#: ../../content/applications/finance/payment_providers.rst:501
 msgid "Accounting perspective"
 msgstr "会计的观点"
 
-#: ../../content/applications/finance/payment_providers.rst:496
+#: ../../content/applications/finance/payment_providers.rst:503
 msgid ""
 "From an accounting perspective, there are two types of online payment "
 "workflows: the payments that are directly deposited into your bank account "
@@ -70112,7 +70124,7 @@ msgstr ""
 "要您遵循另一个会计工作流程。对于这些付款，您需要考虑如何记录付款的日记账分"
 "录。我们建议您向会计师咨询。"
 
-#: ../../content/applications/finance/payment_providers.rst:503
+#: ../../content/applications/finance/payment_providers.rst:510
 msgid ""
 "By default, the :guilabel:`Bank Account` defined for the :ref:`payment "
 "journal <payment_providers/journal>` is used, but you can also specify "
@@ -70125,83 +70137,87 @@ msgstr ""
 msgid "Define an outstanding account for a payment provider."
 msgstr "为支付提供商定义未结账户。"
 
-#: ../../content/applications/finance/payment_providers.rst:512
+#: ../../content/applications/finance/payment_providers.rst:519
 msgid ":doc:`payment_providers/adyen`"
 msgstr ":doc:`payment_providers/adyen`"
 
-#: ../../content/applications/finance/payment_providers.rst:513
+#: ../../content/applications/finance/payment_providers.rst:520
 msgid ":doc:`payment_providers/authorize`"
 msgstr ":doc:`payment_providers/authorize`"
 
-#: ../../content/applications/finance/payment_providers.rst:514
+#: ../../content/applications/finance/payment_providers.rst:521
 msgid ":doc:`payment_providers/asiapay`"
 msgstr ":doc:`payment_providers/asiapay`"
 
-#: ../../content/applications/finance/payment_providers.rst:515
+#: ../../content/applications/finance/payment_providers.rst:522
 msgid ":doc:`payment_providers/buckaroo`"
 msgstr ":doc:`payment_providers/buckaroo`"
 
-#: ../../content/applications/finance/payment_providers.rst:516
+#: ../../content/applications/finance/payment_providers.rst:523
 msgid ":doc:`payment_providers/demo`"
 msgstr ":doc:`payment_providers/demo`"
 
-#: ../../content/applications/finance/payment_providers.rst:517
+#: ../../content/applications/finance/payment_providers.rst:524
 msgid ":doc:`payment_providers/dpo`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:518
+#: ../../content/applications/finance/payment_providers.rst:525
+msgid ":doc:`payment_providers/ecpay`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:526
 msgid ":doc:`payment_providers/mercado_pago`"
 msgstr ":doc:`payment_providers/mercado_pago`"
 
-#: ../../content/applications/finance/payment_providers.rst:519
+#: ../../content/applications/finance/payment_providers.rst:527
 msgid ":doc:`payment_providers/mollie`"
 msgstr ":doc:`payment_providers/mollie`"
 
-#: ../../content/applications/finance/payment_providers.rst:520
+#: ../../content/applications/finance/payment_providers.rst:528
 msgid ":doc:`payment_providers/nuvei`"
 msgstr ":doc:`payment_providers/nuvei`"
 
-#: ../../content/applications/finance/payment_providers.rst:521
+#: ../../content/applications/finance/payment_providers.rst:529
 msgid ":doc:`payment_providers/paymob`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:522
+#: ../../content/applications/finance/payment_providers.rst:530
 msgid ":doc:`payment_providers/paypal`"
 msgstr ":doc:`payment_providers/paypal`"
 
-#: ../../content/applications/finance/payment_providers.rst:523
+#: ../../content/applications/finance/payment_providers.rst:531
 msgid ":doc:`payment_providers/razorpay`"
 msgstr ":doc:`payment_providers/razorpay`"
 
-#: ../../content/applications/finance/payment_providers.rst:524
+#: ../../content/applications/finance/payment_providers.rst:532
 msgid ":doc:`payment_providers/redsys`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:525
+#: ../../content/applications/finance/payment_providers.rst:533
 msgid ":doc:`payment_providers/stripe`"
 msgstr ":doc:`payment_providers/stripe`"
 
-#: ../../content/applications/finance/payment_providers.rst:526
+#: ../../content/applications/finance/payment_providers.rst:534
 msgid ":doc:`payment_providers/tosspayments`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:527
+#: ../../content/applications/finance/payment_providers.rst:535
 msgid ":doc:`payment_providers/worldline`"
 msgstr ":doc:`payment_providers/worldline`"
 
-#: ../../content/applications/finance/payment_providers.rst:528
+#: ../../content/applications/finance/payment_providers.rst:536
 msgid ":doc:`payment_providers/xendit`"
 msgstr ":doc:`payment_providers/xendit`"
 
-#: ../../content/applications/finance/payment_providers.rst:529
+#: ../../content/applications/finance/payment_providers.rst:537
 msgid ":doc:`payment_providers/bank_payments`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:530
+#: ../../content/applications/finance/payment_providers.rst:538
 msgid ":doc:`payment_providers/inperson_payments`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:531
+#: ../../content/applications/finance/payment_providers.rst:539
 msgid ":doc:`accounting/bank`"
 msgstr ":doc:`accounting/bank`"
 
@@ -70328,6 +70344,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:59
+#: ../../content/applications/finance/payment_providers/ecpay.rst:31
 #: ../../content/applications/finance/payment_providers/iyzico.rst:30
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:45
 #: ../../content/applications/finance/payment_providers/mollie.rst:28
@@ -70400,6 +70417,7 @@ msgstr ""
 #: ../../content/applications/finance/payment_providers/bank_payments.rst:6
 #: ../../content/applications/finance/payment_providers/buckaroo.rst:37
 #: ../../content/applications/finance/payment_providers/dpo.rst:45
+#: ../../content/applications/finance/payment_providers/ecpay.rst:36
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:44
 #: ../../content/applications/finance/payment_providers/inperson_payments.rst:36
 #: ../../content/applications/finance/payment_providers/iyzico.rst:34
@@ -71492,6 +71510,73 @@ msgid ""
 "page where they can select their preferred payment method. To enable or "
 "disable specific payment options, contact `DPO Pay support <https://"
 "dpogroup.com/contact-us/>`_."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:3
+msgid "ECPay"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:5
+msgid ""
+"`ECPay <https://www.ecpay.com.tw/>`_ is a Taiwanese payment solution "
+"provider. It allows businesses to accept a wide variety of local payment "
+"methods."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:11
+msgid "Configuration on the ECPay vendor portal"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:13
+msgid ""
+"`Create an account <https://vendor.ecpay.com.tw/User/LogOn_Step1>`_ on the "
+"ECPay vendor portal."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:14
+msgid ""
+"`Apply for services <https://support.ecpay.com.tw/26291/>`_ during the "
+"seller account setup. Choose the appropriate membership level for your "
+"desired payment methods."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:16
+msgid ""
+"Upload the required documents for `account verification <https://"
+"support.ecpay.com.tw/4862/#verify>`_."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:18
+msgid ""
+"Once verified, log into the Vendor Portal and navigate "
+"to :menuselection:`System Settings --> System Interface Settings --> "
+"Interface Information`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:20
+msgid ""
+"Copy the :guilabel:`Merchant ID`, :guilabel:`Hash Key`, and :guilabel:`Hash "
+"IV`, and save them for the :ref:`Odoo configuration step <payment_providers/"
+"ecpay/configure_odoo>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:28
+msgid ""
+":ref:`Navigate to the payment provider ECPay <payment_providers/add_new>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:29
+msgid ""
+"Fill in the :guilabel:`Merchant ID`, :guilabel:`Hash Key`, "
+"and :guilabel:`Hash IV` fields with the information saved at the "
+"step :ref:`payment_providers/ecpay/configure_dashboard`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/ecpay.rst:32
+msgid ""
+"Set the :guilabel:`State` field to :guilabel:`Enabled` (or :guilabel:`Test "
+"Mode` if you are trying ECPay as a :ref:`test <payment_providers/test-"
+"mode>`)."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:3
@@ -73244,6 +73329,70 @@ msgid ""
 msgstr ""
 "使用在 :ref:`payment_providers/xendit/configure_dashboard` 步骤中保存的信息填"
 "写 :guilabel:`秘钥` 和 :guilabel:`网络钩子令牌` 字段。"
+
+#~ msgid ""
+#~ "Tolerance match: within 3% to account for merchant fees, rounding "
+#~ "differences, and user errors"
+#~ msgstr "容差匹配：允许3%的容差，以考虑商户手续费、四舍五入差异和用户错误"
+
+#~ msgid ""
+#~ "Currency match: when the transaction is in a different currency than the "
+#~ "invoice, bill, or payment (with a 3% tolerance for exchange rate "
+#~ "differences)"
+#~ msgstr ""
+#~ "货币匹配：当交易与发票、账单或付款的币种不同时（允许3%的汇率差异容差）"
+
+#~ msgid ""
+#~ "The country you select during the creation of your database (or "
+#~ "additional company in your database) determines which :doc:`fiscal "
+#~ "localization package <../../fiscal_localizations>` is installed by "
+#~ "default. This package includes a standard chart of accounts already "
+#~ "configured according to the country's regulations. You can use it "
+#~ "directly or set it according to your company's needs."
+#~ msgstr ""
+#~ "您在创建数据库时选择的国家/地区（或数据库中的其他公司）决定了默认安装"
+#~ "的 :doc:`财务本地化服务包 <.../../fiscal_localizations>` 版本。软件包包括"
+#~ "已根据国家/地区规定配置好的标准会计科目表，可以直接使用，也可以根据公司需"
+#~ "要进行设置。"
+
+#~ msgid "Code and name"
+#~ msgstr "代码和名称"
+
+#~ msgid ""
+#~ "Each account is identified by its :guilabel:`Code` and :guilabel:`Name`, "
+#~ "which also indicate the account's purpose."
+#~ msgstr ":guilabel:`代码` 和 :guilabel:`名称` 标识科目，同时表明科目用途。"
+
+#~ msgid ""
+#~ "Correctly configuring the **account type** is critical as it serves "
+#~ "multiple purposes:"
+#~ msgstr "正确配置**科目类型**至关重要，因为科目类型有多重作用："
+
+#~ msgid "Information on the account's purpose and behavior"
+#~ msgstr "关于科目目的和行为的信息"
+
+#~ msgid ""
+#~ "Some **account types** can **automate** the creation of :ref:`asset "
+#~ "<assets-automation>` entries. To **automate** entries, "
+#~ "click :guilabel:`View` on an account line and go to "
+#~ "the :guilabel:`Automation` tab."
+#~ msgstr ""
+#~ "部分**账户类型**可**自动**创建 :ref:`资产<assets-automation>` 条目。要**自"
+#~ "动化**条目，单及账户行上的 :guilabel:`查看`，然后转到 :guilabel:`自动化`选"
+#~ "项卡。"
+
+#~ msgid "You have three choices for the :guilabel:`Automation` tab:"
+#~ msgstr ":guilabel:`自动化` 选项卡有三种选择："
+
+#~ msgid ""
+#~ "In the :guilabel:`View` menu of an account, select a **default tax** to "
+#~ "be applied when this account is chosen for a product sale or purchase."
+#~ msgstr ""
+#~ "在账户的 :guilabel:`视图` 菜单中选择**默认税**，以便在选择该账户进行产品销"
+#~ "售或购买时应用。"
+
+#~ msgid "Shared Accounts"
+#~ msgstr "共享账户"
 
 #~ msgid "*Equity accounts:* Use the historical exchange rate."
 #~ msgstr "*权益账户：* 使用历史汇率。"

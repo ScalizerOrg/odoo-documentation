@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-01 17:30+0000\n"
-"PO-Revision-Date: 2026-05-06 23:20+0000\n"
+"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"PO-Revision-Date: 2026-05-14 23:20+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
 "inventory_and_mrp/ko/>\n"
@@ -186,8 +186,8 @@ msgstr "지정 수량이 표시되어 있는 바코드 현황판."
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:21
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:52
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:18
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:41
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:40
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:22
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:19
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:21
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:17
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:26
@@ -2950,6 +2950,11 @@ msgid ""
 "verifies the connection. Scan the products, then validate the scan on the "
 "mobile computer or smartphone."
 msgstr ""
+"**바코드** 앱에서 작업 바코드를 스캔하거나 :guilabel:`작업` 버튼을 탭하는 방"
+"식으로 입고, 내부 이송, 배송 주문 또는 제조 주문과 관련된 작업을 실행할 수 있"
+"습니다. 판독 장치가 연결되어 있지 않은 경우 Odoo에서 자동으로 장치에 연결합니"
+"다. 장치가 연결되면 연결 확인 메시지가 화면에 표시됩니다. 품목을 스캔한 후 모"
+"바일 컴퓨터 또는 스마트폰에서 스캔 내용을 승인합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:None
 msgid "Validate the operation on the mobile device."
@@ -5090,7 +5095,7 @@ msgid ""
 "lot or serial number for each quantity."
 msgstr ""
 "로트번호나 일련번호로 추적되는 모든 품목에 대해 바코드 작업을 하려면, 기본 **"
-"바코드** 페이지에서 :guilabel:`작업`을 선택한 후 인터페이스에서 원하는 작업"
+"바코드** 페이지에서 :guilabel:`작업` 을 선택한 후 인터페이스에서 원하는 작업"
 "을 선택하거나 특정 피킹 순서의 바코드를 스캔하면 됩니다. 주문 스캔 후에는 바"
 "코드를 선택하거나 스캔하여 품목을 선택하고 각 수량의 로트번호나 일련번호를 스"
 "캔합니다."
@@ -7183,8 +7188,6 @@ msgid "Product management"
 msgstr "품목 관리"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:9
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:51
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:53
 msgid "Configure product"
 msgstr "품목 구성"
 
@@ -13343,7 +13346,8 @@ msgstr "확정이 완료된 구매주문서 양식에 있는 입고 스마트 �
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:80
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:111
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:114
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:249
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:203
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:159
 msgid "Process receipt"
 msgstr "입고 처리"
 
@@ -17275,6 +17279,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:29
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:79
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:103
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
 msgid "Workflow"
 msgstr "업무 순서"
@@ -19379,6 +19385,11 @@ msgid ""
 "the delivery itself, open the :guilabel:`Additional Info` tab and modify "
 "the :guilabel:`Carrier` field."
 msgstr ""
+"판매주문서에 배송 방법을 추가하면 배송주문서에 있는 배송업체 세부 정보로 연결"
+"됩니다. 주문서를 확정하면 페이지 상단에 :icon:`fa-truck` :guilabel:`배송` 스"
+"마트 버튼이 나타납니다. :icon:`fa-truck` :guilabel:`배송` 스마트 버튼을 클릭"
+"하면 창고 배송 양식이 열립니다. 해당 배송 건에 배송 방법을 추가하거나 변경하"
+"려면 :guilabel:`추가 정보` 탭을 열고 :guilabel:`배송업체` 필드를 수정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:None
 msgid "Shipping carrier information on the delivery form."
@@ -39056,7 +39067,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.rst:107
 msgid "Post WIP entries"
-msgstr ""
+msgstr "진행 중인 작업(WIP) 등록하기"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.rst:109
 msgid "To manually post |WIP| entries:"
@@ -39093,7 +39104,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.rst:122
 msgid "Reverse WIP entries"
-msgstr ""
+msgstr "진행 중인 작업(WIP) 취소하기"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.rst:124
 msgid "To manually reverse |WIP| entries:"
@@ -39127,7 +39138,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.rst:142
 msgid "Verify WIP entries"
-msgstr ""
+msgstr "WIP 항목 확인"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.rst:144
 msgid ""
@@ -40364,7 +40375,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:15
 msgid "Access Shop Floor"
-msgstr ""
+msgstr "작업 현장 접근"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:17
 msgid "*Shop Floor* can be opened in the following ways:"
@@ -40384,7 +40395,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:24
 msgid "Activating work centers"
-msgstr ""
+msgstr "작업장 활성화"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:26
 msgid ""
@@ -40636,7 +40647,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:149
 msgid "Work center views"
-msgstr ""
+msgstr "작업장 보기"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:151
 msgid ""
@@ -40661,7 +40672,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:163
 msgid "Managing work centers"
-msgstr ""
+msgstr "작업장 관리"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:165
 msgid ""
@@ -41246,7 +41257,6 @@ msgid ""
 msgstr "하도급 제품에 대해 공급업체에 부품을 제공하지 않습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:40
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:3
 msgid "Resupply subcontractor"
 msgstr "외주업체 재공급"
 
@@ -41486,6 +41496,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:33
 msgid "Configure product vendor"
 msgstr ""
 
@@ -41497,6 +41509,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:38
 msgid ""
 "On the product form, click the :guilabel:`Purchase` tab and add the "
 "product's subcontractor as a vendor by clicking :guilabel:`Add a line`. "
@@ -41504,6 +41517,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:47
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:42
 msgid "Then, enter the price of the product in the :guilabel:`Price` field."
 msgstr ""
 
@@ -41525,7 +41540,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:54
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:62
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:58
 msgid "Configure BoM"
 msgstr "자재명세서 환경설정"
 
@@ -41537,8 +41553,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:61
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:78
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:65
 msgid ""
 "Alternatively, navigate to :menuselection:`Manufacturing app --> Products --"
 "> Bills of Materials`, and select the |BoM| for the subcontracted product."
@@ -41593,10 +41609,12 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:127
 msgid "Create and confirm PO"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:97
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:141
 msgid ""
 "To create a |PO| for the subcontracted product, navigate "
 "to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
@@ -41604,6 +41622,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:100
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:144
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:132
 msgid ""
 "Begin filling out the |PO| by selecting a subcontractor from "
 "the :guilabel:`Vendor` drop-down menu. In the :guilabel:`Products` tab, "
@@ -41613,6 +41633,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:105
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:149
 msgid ""
 "After adding the product, the :guilabel:`Expected Arrival` field is updated "
 "with the finished product's expected delivery date, as configured earlier "
@@ -41633,6 +41654,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:164
 msgid ""
 "To receive the finished product from the subcontractor, click "
 "the :guilabel:`Receive Products` button on the |PO|, or click "
@@ -41641,6 +41663,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:124
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:215
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:169
 msgid ""
 "If :doc:`multi-step inventory flows <../../inventory/shipping_receiving/"
 "daily_operations>` are enabled, additional transfers must be validated to "
@@ -41648,10 +41672,13 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:130
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:221
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:175
 msgid "Track inventory moves"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:223
 msgid ""
 "After validating a receipt, Odoo automatically generates inventory moves to "
 "track the movement of subcontracted products between locations. To view "
@@ -41680,188 +41707,87 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:12
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:10
 msgid ""
-"In manufacturing, subcontracting is the process of a company engaging a "
-"third-party manufacturer, or subcontractor, to manufacture products that are "
-"then sold by the contracting company."
-msgstr ""
-"제조 과정에서 외주란 회사가 외부 제조업체나 외주업체와 계약을 맺고 제품을 제"
-"조한 후 계약 회사에서 판매하는 과정을 말합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:15
-msgid ""
-"In Odoo, the *Dropship Subcontractor on Order* route is used to purchase the "
-"necessary components for a subcontracted product from the vendor, and have "
-"them delivered directly to the subcontractor, each time a purchase order "
-"(PO) for that product is confirmed."
-msgstr ""
-"Odoo에서는 *주문 시 협력업체 직배송* 경로를 사용하여 하청 제품에 필요한 구성"
-"품을 공급업체에서 구매하고 해당 제품에 대한 구매주문서 (PO)를 확인할 때마다 "
-"협력업체에 직접 배송합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:19
-msgid ""
-"The subcontractor then uses the components to manufacture the desired "
-"product, before shipping it back to the contracting company."
+"In the *Dropship to Subcontractor* workflow, a company purchases the "
+"components of a product from a vendor, who delivers them directly to the "
+"subcontractor for manufacturing. The subcontractor then ships the finished "
+"product back to the contracting company."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:23
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:16
 msgid ""
-"It is necessary to understand the differences between the *Dropship* and "
-"*Dropship Subcontractor on Order* routes. While both routes involve "
-"dropshipping, they are used for different purposes."
-msgstr ""
-"*직배송* 과 *주문 시 외주업체 직배송* 경로의 차이점에 대해 이해해야 합니다. "
-"두 경로 모두 직배송을 하고 있지만, 다른 용도로 사용됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:26
-msgid ""
-"The *Dropship* route is used to purchase products from a vendor, and have "
-"them shipped directly to the end customer."
+"The following documentation covers how to configure a subcontracted product "
+"and trigger the *Dropship to Subcontractor* workflow."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:29
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:24
 msgid ""
-"The *Dropship Subcontractor on Order* route is used to purchase components "
-"from a vendor, and have them shipped directly to a subcontractor. By "
-"default, finished products are then sent from the subcontractor back to the "
-"contracting company."
-msgstr ""
-"*주문 시 협력업체 직배송* 경로는 공급업체로부터 구성품을 매입한 후 이를 협력"
-"업체에 직접 배송하는 데 사용합니다. 기본적으로 완제품은 그 다음에 협력업체로"
-"부터 발주업체로 다시 배송됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:33
-msgid ""
-"However, it is possible to combine both the *Dropship* and *Dropship "
-"Subcontractor on Order* routes so they are used for the same product. In "
-"this workflow, components are dropshipped to the subcontractor, who then "
-"ships the finished product directly to the end customer."
-msgstr ""
-"그러나 *직배송* 및 *주문 시 협력업체 직배송* 경로를 통합하여 동일한 품목에서 "
-"사용할 수 있습니다. 이 워크플로우에서는 구성품이 협력업체에 직접 배송되고, 협"
-"력업체는 완제품을 최종 고객에게 직접 배송합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:37
-msgid ""
-"This can be achieved by following steps one through five in "
-"the :ref:`workflow section <manufacturing/workflows/subcontracting-"
-"dropship>` of this doc."
+"To use the *Dropship to Subcontractor* workflow, contractors must first "
+"configure subcontracted products with a :ref:`vendor pricelist <purchase/"
+"products/pricelist>` and a :ref:`subcontracting-type BoM <manufacturing/"
+"subcontracting_dropship/config/bom-config>`. Each component must then be "
+"configured with the appropriate :doc:`route <../../inventory/"
+"shipping_receiving/daily_operations/use_routes>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:30
 msgid ""
-"To use the *Dropship Subcontractor on Order* route, navigate "
-"to :menuselection:`Manufacturing app --> Configuration --> Settings`, and "
-"enable the checkbox next to :guilabel:`Subcontracting`, under "
-"the :guilabel:`Operations` heading."
+"The pricelist allows the contracting company to purchase the product from "
+"the vendor (subcontractor) through a |PO|, while the |BoM| allows the "
+"product to be manufactured externally by the subcontractor. Routes are "
+"applied to each component in order to be properly sent from the dropshipping "
+"vendor to the subcontractor."
 msgstr ""
-"*주문 시 외주업체 직배송* 경로를 사용하려면 :menuselection:`제조 관리 앱 --> "
-"환경설정 --> 설정` 으로 이동하여 :guilabel:`운영` 제목 아래에 있"
-"는 :guilabel:`외주` 옆 확인란을 활성화합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:47
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:40
 msgid ""
-"Once the *Subcontracting* setting is enabled, it is also necessary to "
-"properly configure the subcontracted product, the product's |BoM|, and the "
-"components listed on the |BoM|."
+"To configure a product's vendor for subcontractor dropshipping, navigate "
+"to :menuselection:`Inventory app --> Products --> Products`, and select a "
+"product, or :doc:`create a new one <../../inventory/product_management/"
+"configure/type>`."
 msgstr ""
-"*외주* 설정이 활성화되면, 반드시 외주 제품, 제품 |BoM| 및 |BoM| 에 있는 구성"
-"품을 역시 알맞게 설정해야 합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:53
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:44
 msgid ""
-"To configure a product for the *Dropship Subcontractor on Order* route, "
-"navigate to :menuselection:`Inventory app --> Products --> Products`, and "
-"select a product, or create a new one by clicking :guilabel:`New`."
+"On the product form, click the *Purchase* tab and add the product's "
+"subcontractor as a vendor by clicking :guilabel:`Add a line`. Select the "
+"subcontractor in the :guilabel:`Vendor` drop-down menu."
 msgstr ""
-"*주문 시 협력업체 직배송* 경로로 품목을 설정하려면 :menuselection:`재고 관리 "
-"앱 --> 품목 --> 품목` 으로 이동하여 품목을 선택하거나 :guilabel:`신규` 를 클"
-"릭하여 새로운 품목을 생성합니다. ."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:57
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:49
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:44
 msgid ""
-"Select the :guilabel:`Purchase` tab, and add the product's subcontractor as "
-"a vendor by clicking :guilabel:`Add a line`, selecting the subcontractor in "
-"the :guilabel:`Vendor` drop-down menu, and entering a price in "
-"the :guilabel:`Price` field."
+"Finally, set a :doc:`lead time <../../inventory/warehouses_storage/"
+"replenishment/lead_times>` for the product in the :guilabel:`Delivery Lead "
+"Time` field to specify the number of days for the subcontractor to receive "
+"components, produce the product, and deliver the finished good."
 msgstr ""
-":guilabel:`매입` 탭을 선택하고 :guilabel:`줄 추가` 를 클릭하여 :guilabel:`공"
-"급업체` 드롭다운 메뉴에서 협력업체를 선택합니다. :guilabel:`공급업체` 드롭다"
-"운 메뉴에서 협력업체를 선택한 후 :guilabel:`가격` 필드에 가격을 입력합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:61
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:71
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:54
 msgid ""
-"Then, click on the :guilabel:`Inventory` tab to configure a route that "
-"determines what happens to the finished product, once it has been "
-"manufactured by the subcontractor."
+"Contractors do not need to configure manufacturing lead times on a |BoM|. "
+"Instead, provide only a single *Delivery Lead Time* on the vendor pricelist, "
+"factoring in the duration for the subcontractor to receive the components "
+"from the dropship vendor, manufacture the product, and deliver the finished "
+"good back to the subcontractor."
 msgstr ""
-"그런 다음 :guilabel:`재고 관리` 탭을 클릭하여 외주업체에서 완제품을 제조한 "
-"후 완제품을 어떻게 처리할지 지정하는 경로를 설정합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:64
 msgid ""
-"If the finished product is shipped back to the contracting company, make "
-"sure that the :guilabel:`Buy` route is selected. In addition, select "
-"the :guilabel:`Replenish on Order (MTO)` route to automatically create a |"
-"PO| for the product upon confirmation of a |SO|, unless there is enough "
-"stock on-hand to fulfill the |SO|."
-msgstr ""
-"완제품을 계약업체로 다시 출고하는 경우 :guilabel:`매입` 경로가 선택되어 있는"
-"지 확인합니다. 또한 |SO|를 충족할 만큼 보유 재고가 충분하지 않은 경우 |SO|가 "
-"확인되면 해당 제품에 대해 자동으로 |PO| 를 생성하도록 :guilabel:`주문 시 보"
-"충 (MTO)` 경로를 선택합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:69
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:79
-msgid ""
-"If the finished product is shipped directly to the customer by the "
-"subcontractor, make sure that only the :guilabel:`Dropship` route is "
-"selected."
+"After specifying the vendor, configure a subcontracting-type |BoM| for the "
+"product. To start, click the :icon:`fa-flask` :guilabel:`Bill of Materials` "
+"smart button on the product's page. Then, select the desired |BoM| or create "
+"a new one."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:73
-msgid "Configure bill of materials"
-msgstr "자재명세서 환경설정"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:75
-msgid ""
-"To configure a |BoM| for the *Dropship Subcontractor on Order* route, click "
-"the :guilabel:`Bill of Materials` smart button on the product's page, and "
-"select the |BoM|."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:82
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:92
-msgid ""
-"For a full overview of |BoM| configuration, see the :doc:`Bill of materials "
-"<../basic_setup/bill_configuration>` documentation."
-msgstr ""
-"전체적인 |BoM| 환경설정에 대한 내용은 :doc:`자재명세서 <../basic_setup/"
-"bill_configuration>` 문서를 참조하세요."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:85
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:72
 msgid ""
 "In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` "
 "option. Then, add one or more subcontractors in "
-"the :guilabel:`Subcontractors` field that appears below."
+"the :guilabel:`Subcontractors` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
-msgid ""
-"The \"BoM Type\" field on a BoM, configured to manufacture the product using "
-"subcontracting."
-msgstr ""
-"BoM의 \"BoM 유형\" 필드에 제품이 외주 생산되도록 환경설정되어 있는 모습입니"
-"다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:92
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:102
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:75
 msgid ""
 "Finally, make sure that all necessary components are specified on "
 "the :guilabel:`Components` tab. To add a new component, click :guilabel:`Add "
@@ -41873,308 +41799,127 @@ msgstr ""
 "성품` 드롭다운 메뉴에서 구성품을 선택한 다음 :guilabel:`수량` 필드에 필요한 "
 "수량을 지정합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:97
-msgid "Configure Components"
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
+msgid "The BoM of a product with components dropshipped to the subcontractor."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:81
+msgid "Configure components"
 msgstr "구성품 환경설정"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:99
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:87
 msgid ""
-"To configure components for the *Dropship Subcontractor on Order* route, "
-"navigate to each component from the |BoM| by selecting the component's name "
-"in the :guilabel:`Components` tab, and clicking the :guilabel:`➡️ (right "
-"arrow)` button to the right of the name."
-msgstr ""
-"*주문 시 협력업체 직배송* 경로에 대한 구성품을 설정하려면 :guilabel:`구성품` "
-"탭에서 구성품 이름을 선택하고 이름 오른쪽에 있는 :guilabel:`➡️ (오른쪽 화살"
-"표)` 버튼을 클릭하여 |BoM|에서 각 구성품으로 이동합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:103
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:113
-msgid ""
-"Alternatively, navigate to each component by going "
-"to :menuselection:`Inventory app --> Products --> Products`, and selecting "
-"the component."
+"When dropshipping to subcontractors, each component of a product must have a "
+"specified vendor and have the *Dropship Subcontractor on Order* route "
+"enabled. This allows the components to be properly dropshipped from the "
+"vendor to the subcontractor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:91
 msgid ""
-"On the component product form, select the :guilabel:`Purchase` tab, and add "
-"a vendor by clicking :guilabel:`Add a line`, selecting the vendor in "
-"the :guilabel:`Vendor` field, and adding the price they sell the product for "
-"in the :guilabel:`Price` field. This is the vendor that sends components to "
-"the subcontractor, once they are purchased."
+"To specify a component's vendor, select the component's name in "
+"the :guilabel:`Components` tab, and click the :icon:`oi-arrow-"
+"right` :guilabel:`(Internal link)` arrow."
 msgstr ""
-"구성품 양식에 있는 :guilabel:`매입` 탭을 선택한 후 공급업체를 추가하려"
-"면 :guilabel:`줄 추가` 를 클릭한 후 :guilabel:`공급업체` 에서 업체를 선택한 "
-"다음 :guilabel:`가격` 에 품목의 판매가를 추가합니다. 이 업체는 구성품을 매입"
-"한 후 협력업체에 부품을 보내는 공급업체입니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:111
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:95
 msgid ""
-"Then, click on the :guilabel:`Inventory` tab and select "
+"Alternatively, navigate to :menuselection:`Inventory app --> Products --> "
+"Products` and select the component."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:98
+msgid ""
+"On the component product form, click the :guilabel:`Purchase` tab. Add a "
+"vendor by clicking :guilabel:`Add a line`. Then, select the vendor in "
+"the :guilabel:`Vendor` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:101
+msgid ""
+"Next, to configure the route, click on the *Inventory* tab and select "
 "the :guilabel:`Dropship Subcontractor on Order` route in "
 "the :guilabel:`Routes` section."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:104
+msgid ""
+"Repeat the process for every component dropshipped to the subcontractor."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
+msgid "Route for a component to be dropshipped to a subcontractor."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:114
 msgid ""
-"Repeat the process for every component that must be dropshipped to the "
-"subcontractor."
-msgstr "외주업체에 직배송해야 하는 모든 구성품에 대해 이 과정을 반복합니다."
+"The *Dropship to Subcontractor* workflow begins by :ref:`creating a PO "
+"<manufacturing/subcontracting-dropship/workflow/create-po>` to purchase the "
+"product from the subcontractor (1)."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:119
-msgid "Dropship subcontractor on order workflow"
-msgstr "주문 워크플로우에서의 외주업체 직배송"
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:118
+msgid ""
+"The contractor (Your Company) then confirms the *subcontractor* |PO| (2). "
+"This creates an |RfQ| to purchase the components from the vendor, as well as "
+"a receipt to transfer the final product."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:121
 msgid ""
-"The dropship subcontractor on order workflow consists of up to six steps:"
+"Next, the contractor :ref:`confirms the RfQ <manufacturing/subcontracting-"
+"dropship/workflow/confirm-rfq>`, turning it into a *vendor* |PO| and "
+"creating a dropship order to send the components from the vendor to the "
+"subcontractor (3). Once the contractor :ref:`validates the dropship "
+"<manufacturing/subcontracting-dropship/workflow/validate-dropship>` order, "
+"the subcontractor begins to manufacture the final product with the "
+"components and ships it to the contractor when done."
 msgstr ""
-"직배송 외주업체에서 진행하는 주문 워크플로우는 최대 6단계로 구성됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:123
-msgid ""
-"Create a sales order (SO) for the subcontracted product; doing so creates a "
-"*subcontractor* |PO| to purchase the product from the subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:125
-msgid ""
-"Confirm the |PO| created in the previous step, or create a new |PO|; doing "
-"so creates a request for quotation (RfQ) to purchase the components from the "
-"vendor, as well as a receipt order or a dropship order."
-msgstr ""
-"이전 단계에서 생성한 |PO|를 확인하거나 새로운 |PO|를 생성합니다. 이렇게 하면 "
-"공급업체에서 구성품을 매입할 수 있도록 견적요청서 (RfQ)가 생성되며 수령 확인"
-"증이나 직배송 주문서도 생성할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:128
 msgid ""
-"Confirm the |RfQ| to turn it into a second |PO| (*vendor* |PO|); doing so "
-"creates a *Dropship Subcontractor* order."
+"Once the product has been produced and received, the "
+"contractor :ref:`validates the receipt <manufacturing/subcontracting-"
+"dropship/workflow/process-receipt>` (6) to trigger :ref:`inventory moves "
+"<manufacturing/subcontracting-dropship/workflow/track-inventory>` from the "
+"subcontractor to the company's stock (4, 5)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:130
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
+msgid "Diagram of dropship to subcontractor workflow."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:139
+msgid "Create and confirm subcontractor PO"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:152
 msgid ""
-"Process the *Dropship Subcontractor* order once the vendor has sent the "
-"components to the subcontractor."
+"Finally, click :guilabel:`Confirm Order` to confirm the |PO|. A receipt is "
+"automatically created, and a :icon:`fa-truck` :guilabel:`Receipt` smart "
+"button appears at the top of the form. In addition, a separate |RfQ| is "
+"automatically created to purchase the components from the dropship vendor."
 msgstr ""
-"*외주업체 직배송* 주문을 공급업체에서 외주업체로 구성품을 보낸 즉시 처리합니"
-"다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:132
-msgid ""
-"Process the receipt once the subcontractor has finished manufacturing the "
-"subcontracted product, and shipped it back to the contracting company **OR** "
-"process the dropship order to ship the product directly to the end customer."
-msgstr ""
-"입고 처리는 외주업체에서 외주 제품 생산을 완료한 후 계약한 회사로 배송이 되"
-"면 처리하거나 **또는** 직배송 주문으로 최종 고객에게 제품이 직배송되면 처리합"
-"니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:135
-msgid ""
-"If the workflow was started by creating an |SO|, and the finished product is "
-"not dropshipped to the end customer, process the delivery order once the "
-"product has been shipped to the customer."
-msgstr ""
-"|SO| 를 생성하여 워크플로우가 시작된 상황에서, 최종 고객에게 완제품이 직배송"
-"되도록 설정되어 있지 않은 경우에는 제품이 고객에게 출고된 후 배송주문서를 처"
-"리합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:138
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:138
-msgid ""
-"The specific number of steps depends on the reason that the subcontracted "
-"product is being purchased from the subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:141
-msgid ""
-"If the reason is to fulfill a specific customer order, the process starts "
-"with creating an SO, and ends with delivering the product to the customer, "
-"or having the subcontractor dropship it to them."
-msgstr ""
-"고객이 지정한 주문에 맞추기 위한 이유인 경우에는 프로세스는 SO를 생성하는 것"
-"으로 시작하여 고객에게 제품을 배송하거나 협력업체에서 직배송하도록 하는 것으"
-"로 끝납니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:144
-msgid ""
-"If the reason is to increase quantity of stock on-hand, the process starts "
-"with creating a PO, and ends with receiving the product into inventory."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:148
-msgid "Create an SO"
-msgstr "SO 만들기"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:150
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:171
-msgid ""
-"It is only necessary to complete this step if the product is being purchased "
-"from the subcontractor to fulfill a customer need. If the product is being "
-"purchased to increase the quantity of stock on-hand, move on to the next "
-"step."
-msgstr ""
-"이 단계는 고객 요구 사항을 충족하기 위해 협력업체로부터 제품을 구매하는 경우"
-"에만 완료하면 됩니다. 보유 재고 수량을 늘리기 위해 제품을 구매하는 경우에는 "
-"다음 단계로 이동합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:154
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:175
-msgid ""
-"To create a new |SO|, navigate to :menuselection:`Sales app --> Orders --> "
-"Orders`, and click :guilabel:`New`."
-msgstr ""
-"새 |SO| 를 생성하려면 :menuselection:`판매 앱 --> 주문서 --> 주문서` 로 이동"
-"한 다음 :guilabel:`신규` 를 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:157
 msgid ""
-"Select the customer in the :guilabel:`Customer` drop-down menu. Then, "
-"click :guilabel:`Add a product` on the :guilabel:`Order Lines` tab, select "
-"the product in the :guilabel:`Product` drop-down menu, and enter a quantity "
-"in the :guilabel:`Quantity` field."
-msgstr ""
-":guilabel:`고객` 드롭다운 메뉴에서 고객을 선택합니다. 그런 다음 :guilabel:`주"
-"문 내역` 탭에서 :guilabel:`품목 추가` 를 클릭하고 :guilabel:`품목` 드롭다운 "
-"메뉴에서 품목을 선택한 후 :guilabel:`수량` 에 수량을 입력합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:161
-msgid ""
-"Click :guilabel:`Confirm` to confirm the |SO|, at which point "
-"a :guilabel:`Purchase` smart button appears at the top of the page. This is "
-"the *subcontractor* |PO|, or the |PO| created to purchase the subcontracted "
-"product from the subcontractor."
-msgstr ""
-":guilabel:`확인` 을 클릭하여 |SO| 가 확정되면 :guilabel:`매입` 스마트 버튼이 "
-"페이지 상단에 나타납니다. 이는 *외주업체* 에서 생성한 |PO| 또는 외주업체에서 "
-"생산한 제품을 구매하기 위해 생성된 |PO|입니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:166
-msgid ""
-"An |SO| for the product only creates a *subcontractor* |PO| if the "
-"*Replenish on Order (MTO)* route is enabled on the product's page, **and** "
-"there is no stock of the product on-hand."
-msgstr ""
-"품목 페이지에서 *주문 시 보충 (MTO)* 경로가 활성화되어 있고 **동시에** 보유 "
-"중인 품목의 재고가 없는 경우에는 품목 관련 |SO|에서는 *협력업체* |PO| 만 만들"
-"어지게 됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:169
-msgid ""
-"If there is stock on-hand, confirming an |SO| for the product will instead "
-"create a delivery order, because Odoo assumes that the |SO| is fulfilled "
-"using the stock in the warehouse."
-msgstr ""
-"보유 중인 재고가 있는 경우 품목 관련된 |SO| 를 확인하면 이를 대체하여 배송주"
-"문서가 생성됩니다. Odoo에서 창고에 있는 재고를 사용하여 |SO| 를 처리한다고 가"
-"정하기 때문입니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:172
-msgid ""
-"This is not the case for subcontracted products that are dropshipped to the "
-"end customer. In that case, a *subcontractor* |PO| is **always** created, "
-"even if there is stock on-hand."
-msgstr ""
-"최종 고객에게 직접 배송되는 외주 제품의 경우에는 해당되지 않습니다. 이런 경"
-"우, 보유 중인 재고가 있더라도 **항상** *외주업체* |PO| 가 생성됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:176
-msgid "Process subcontractor PO"
-msgstr "외주업체 PO 처리"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:178
-msgid ""
-"If a *subcontractor* |PO| was not created in the previous step, do so now by "
-"navigating to :menuselection:`Purchase app --> Orders --> Purchase Orders`, "
-"and clicking :guilabel:`New`."
-msgstr ""
-"이전 단계에서 *외주업체* |PO| 를 생성하지 않은 경우에는 :menuselection:`매입 "
-"앱 --> 주문서 --> 구매발주서` 로 이동하여 :guilabel:`신규` 를 클릭하면 바로 "
-"생성할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:181
-msgid ""
-"Begin filling out the |PO| by selecting a subcontractor from "
-"the :guilabel:`Vendor` drop-down menu."
-msgstr ""
-"|PO| 입력을 시작하려면:guilabel:`공급업체` 드롭다운 메뉴에서 외주업체를 선택"
-"하세요."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:183
-msgid ""
-"In the :guilabel:`Products` tab, click :guilabel:`Add a product` to create a "
-"new product line. Select a product produced by the subcontractor in "
-"the :guilabel:`Product` field, and enter the quantity in "
-"the :guilabel:`Quantity` field."
-msgstr ""
-":guilabel:`품목` 탭에서 :guilabel:`품목 추가` 를 클릭하여 품목 줄을 새로 생성"
-"합니다. :guilabel:`품목` 필드에서 협력업체가 생산한 품목을 선택하"
-"고 :guilabel:`수량` 필드에 수량을 입력합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:187
-msgid ""
-"Finally, click :guilabel:`Confirm Order` to confirm the *subcontractor* |PO|."
-msgstr ""
-"마지막으로, :guilabel:`주문 확인` 을 클릭하면 *외주업체* |PO| 가 확정됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:189
-msgid ""
-"When a |PO| is confirmed for a product that requires dropshipping components "
-"to a subcontractor, a receipt or dropship order is automatically created, "
-"and can be accessed from the corresponding :guilabel:`Receipt` "
-"or :guilabel:`Dropship` smart button that appears at the top of the |PO|."
-msgstr ""
-"협력업체에 직배송 부품이 필요한 제품에 대한 |PO|가 확인되면 영수증 또는 직배"
-"송 주문서가 자동으로 생성되며, |PO| 상단에 나타나는 해당 :guilabel:`영수증` "
-"또는 :guilabel:`직배송` 스마트 버튼을 통해 액세스할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
-msgid ""
-"A subcontractor PO for a *Dropship Subcontractor on Order* product, with a "
-"Receipt smart\n"
-"button at the top of the page."
+"This |RfQ| is **not** automatically linked to the |PO|. It is accessed "
+"separately on the *Requests for Quotation* page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:198
-msgid ""
-"In addition, an |RfQ| is created for the components that are purchased from "
-"the vendor and sent to the subcontractor. However, the |RfQ| **IS NOT** "
-"automatically linked to the *subcontractor* |PO|."
-msgstr ""
-"또한 공급업체에서 매입하여 협력업체로 보내는 구성품에 대해 |RfQ| 가 생성됩니"
-"다. 그러나 |RfQ| 가 자동으로 *협력업체* |PO| 로 연계되지는 **않습니다**."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:201
-msgid ""
-"Once the |RfQ| is confirmed and becomes a *vendor* |PO|, a *Dropship "
-"Subcontractor* order is created. This order is linked to both the *vendor* |"
-"PO| and the *subcontractor* |PO|."
-msgstr ""
-"|RfQ| 를 확정하여 *공급업체* |PO| 로 전환되면 *직배송 협력업체* 주문서가 생성"
-"됩니다. 이 주문서는 *공급업체* |PO| 및 *협력업체* |PO| 양쪽에 모두 연결되어 "
-"있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:205
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:163
 msgid "Confirm vendor RfQ"
 msgstr "공급업체 RFQ 확정"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:207
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:165
 msgid ""
-"To access the |RfQ| created by confirming the *subcontractor* |PO|, navigate "
-"to :menuselection:`Purchase app --> Orders --> Requests for Quotation`. "
-"Select the |RfQ| that lists the correct vendor in the :guilabel:`Vendor` "
-"field, and the reference number of the receipt that was created after "
-"confirming *subcontractor* |PO|, in the :guilabel:`Source Document` field."
+"To confirm the vendor |RfQ|, navigate to :menuselection:`Purchase app --> "
+"Orders --> Requests for Quotation`. Select the newly-created |RfQ| for the "
+"appropriate vendor."
 msgstr ""
-"|RfQ| 에 액세스하려면 *협력업체* |PO| 를 확정하여 생성한 후 :menuselection:`"
-"매입 앱 --> 주문서 --> 견적요청서` 로 이동합니다. 공급업체가 알맞게 기재된 |"
-"RfQ|를 :guilabel:`공급업체` 필드에서 선택한 후 :guilabel:`원본 문서` 필드에 "
-"있는 *협력업체* |PO| 를 확정하여 영수증이 생성되면 참조 번호를 입력합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:168
 msgid ""
 "On the |RfQ|, the :guilabel:`Deliver To` field reads :guilabel:`Dropship "
 "Subcontractor`, and the :guilabel:`Dropship Address` field shows the name of "
@@ -42184,633 +41929,300 @@ msgstr ""
 "시되고, :guilabel:`직배송 주소` 필드에는 구성품이 직배송될 외주업체의 업체명"
 "이 표시됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:216
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:172
 msgid ""
-"Click :guilabel:`Confirm Order` to turn the |RfQ| into a *vendor* |PO|, and "
-"confirm the purchase of components from the vendor. After doing so, "
-"a :guilabel:`Dropship` smart button appears at the top of the *vendor* |PO|, "
-"and a :guilabel:`Resupply` smart button appears at the top of the "
-"*subcontractor* |PO|."
+"Click :guilabel:`Confirm Order` to confirm the purchase of components from "
+"the vendor. Doing so turns the |RfQ| into a *vendor* |PO|. A :icon:`fa-"
+"truck` :guilabel:`Dropship` smart button appears at the top of the vendor |"
+"PO|."
 msgstr ""
-":guilabel:`주문 확인` 을 클릭하여 |RfQ|를 *공급업체* |PO|로 전환하고 공급업체"
-"로부터 구성품 구매를 확정합니다. 그렇게 하면 *공급업체* |PO| 상단"
-"에 :guilabel:`직배송` 스마트 버튼이 나타나고 *협력업체* |PO| 상단에"
-"는 :guilabel:`재공급` 스마트 버튼이 나타납니다."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:177
+msgid ""
+"Simultaneously, a :icon:`fa-truck` :guilabel:`Resupply` smart button appears "
+"at the top of the *subcontractor* |PO| created earlier. In dropship "
+"subcontracting, this smart button links to the dropship order."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
+msgid "Vendor RfQ for the dropshipped components of a subcontracted product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:187
+msgid "Validate dropship order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:189
 msgid ""
-"A vendor PO for the components of a *Dropship Subcontractor on Order* "
-"product, with a\n"
-"Dropship smart button at the top of the page."
+"Once the components have been delivered to the subcontractor by the dropship "
+"vendor, click the :icon:`fa-truck` :guilabel:`Dropship` smart button on the "
+"vendor |PO| to open the dropship order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:193
+msgid ""
+"The dropship order can also be opened from the *subcontractor* |PO|. "
+"Navigate to :menuselection:`Purchase app --> Orders --> Purchase Orders`, "
+"select the |PO|, then click the :icon:`fa-truck` :guilabel:`Resupply` smart "
+"button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:197
+msgid ""
+"Finally, click the :guilabel:`Validate` button at the top to confirm that "
+"the subcontractor has received the components. The subcontractor then begins "
+"manufacturing the final product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:205
+msgid ""
+"After the subcontractor completes production, the finished product is "
+"shipped to the contractor."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:207
+msgid ""
+"To receive the product into stock, navigate to :menuselection:`Purchase app "
+"--> Orders --> Purchase Orders`, and select the *subcontractor* |PO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:210
+msgid ""
+"At the top of the |PO|, click the :guilabel:`Receive Products` button, or "
+"click the :icon:`fa-truck` :guilabel:`Receipt` smart button. Then, "
+"click :guilabel:`Validate` to enter the incoming shipment into inventory."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:227
-msgid "Process Dropship Subcontractor order"
-msgstr "외주업체 주문 직배송 처리"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:229
 msgid ""
-"Once the components have been delivered to the subcontractor, navigate "
-"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and select "
-"the *vendor* |PO| or the *subcontractor* |PO|. Then, click "
-"the :guilabel:`Dropship` smart button or the :guilabel:`Resupply` smart "
-"button, respectively."
-msgstr ""
-"구성품이 협력업체에 배송되면 :menuselection:`매입 앱 --> 주문서 --> 구매발주"
-"서` 로 이동하여 *공급업체* |PO| 또는 *협력업체* |PO|를 선택합니다. 그런 다"
-"음 :guilabel:`직배송` 스마트 버튼 또는 :guilabel:`재공급` 스마트 버튼을 각각 "
-"클릭합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:233
-msgid ""
-"Clicking either button opens the *Dropship Subcontractor* order. Click "
-"the :guilabel:`Validate` button at the top of the order to confirm that the "
-"subcontractor has received the components."
-msgstr ""
-"두 가지 버튼 중 하나를 클릭하면 *외주업체 직배송* 주문서가 열립니다. 주문 상"
-"단에 있는 :guilabel:`승인` 버튼을 클릭하면 외주업체에서 구성품을 수령했다는 "
-"확정을 할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:237
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:242
-msgid "Process receipt or dropship order"
-msgstr "입고 또는 직배송 주문 처리"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:239
-msgid ""
-"Once the subcontractor has manufactured the finished product, navigate "
-"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and select "
-"the *subcontractor* |PO|."
+"In the *Dropship to Subcontractor* workflow, product components are first "
+"sent from the vendors to a dedicated *Subcontracting Location*. "
+"A :ref:`virtual location <inventory/warehouses_storage/location-type>` "
+"called *Production* then consumes the components and produces the finished "
+"good. Once produced, the good then moves back to the *Subcontracting "
+"Location* before finally entering the contractor's stock when the receipt is "
+"validated."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:242
-msgid ""
-"If the subcontracted product should be received into inventory, once the "
-"product arrives, click the :guilabel:`Receive Products` button at the top of "
-"the *subcontractor* |PO| to open the receipt. Then, "
-"click :guilabel:`Validate` at the top of the receipt to register the product "
-"into inventory."
-msgstr ""
-"외주 제품이 재고로 입고되는 경우, 제품이 도착하면 *외주업체* |PO| 상단에 있"
-"는 :guilabel:`제품 입고` 버튼을 클릭하면 영수증이 열립니다. 그런 다음 영수증 "
-"상단의 :guilabel:`승인` 을 클릭하여 제품을 재고로 등록합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:246
-msgid ""
-"Alternatively, select the :guilabel:`Receipt` smart button at the top of the "
-"*subcontractor* |PO|, and click :guilabel:`Validate` at the top of the "
-"receipt."
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
+msgid "Moves History for the dropship to subcontractor workflow."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:249
-msgid ""
-"If the subcontracted product should be dropshipped, select "
-"the :guilabel:`Dropship` button at the top of the page to open the dropship "
-"order, and click :guilabel:`Validate` once the subcontractor has sent the "
-"product to the customer."
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:3
+msgid "Resupply subcontracting"
 msgstr ""
-"외주 제품을 직배송해야 하는 경우에는 페이지 상단에 있는 :guilabel:`직배송` 버"
-"튼을 선택하여 직배송 주문서를 열고, 외주업체에서 고객에게 제품이 출고되"
-"면 :guilabel:`승인` 을 클릭합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:254
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:270
-msgid "Process delivery order"
-msgstr "배송 주문 처리"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:256
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:10
 msgid ""
-"If the subcontracting workflow was started by a customer |SO|, and the "
-"finished product was **not** dropshipped to the customer, but rather "
-"delivered to the contracting company, it is necessary to ship the product to "
-"the customer, and process the delivery order."
+"In resupply subcontracting, a company supplies the components of its product "
+"to a subcontractor, who manufactures the product, then delivers the finished "
+"product to the contracting company's warehouse."
 msgstr ""
-"외주 작업 흐름이 고객사 |SO| 로부터 시작되어, 완제품은 고객에게 직배송되지 **"
-"않고** 원청업체로 전달되는 경우에는, 제품을 고객에게 배송한 후 배송주문서를 "
-"처리해야 합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:260
-msgid ""
-"Once the product has been shipped to the customer, navigate to "
-"the :menuselection:`Sales` app, and select the |SO|. Select "
-"the :guilabel:`Delivery` smart button at the top of the page to open the "
-"delivery order, and click :guilabel:`Validate` to confirm that the product "
-"has been shipped to the customer."
-msgstr ""
-"고객에게 품목 배송이 완료되면 :menuselection:`판매` 앱으로 이동하여 |SO|를 선"
-"택합니다. 페이지 상단에 있는 :guilabel:`배송` 스마트 버튼을 선택하여 배송 주"
-"문서를 열고, :guilabel:`승인` 을 클릭하여 고객에게 품목이 배송되었다는 것을 "
-"확인합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:13
 msgid ""
-"In Odoo, the *Resupply Subcontractor on Order* route is used to deliver the "
-"necessary components for a subcontracted product to the subcontractor, each "
-"time a purchase order (PO) for that product is confirmed."
-msgstr ""
-"Odoo에서는 *주문 시 외주업체 재공급* 경로를 사용하여 외주 제품에 구성품이 필"
-"요한 경우 외주업체로 배송하며, 매번 해당 제품에 대한 매입발주서(PO)를 확정하"
-"게 됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:17
-msgid ""
-"The subcontractor then uses the components to manufacture the desired "
-"product, before shipping it back to the contracting company, or dropshipping "
-"it to the end customer."
+"This article covers how to configure a subcontracted product and walk "
+"through the resupply subcontracting process."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:21
 msgid ""
-"It is necessary to understand the differences between the *Resupply "
-"Subcontractor on Order* and the *Dropship Subcontractor on Order* routes."
+"To use the resupply subcontractor workflow, contractors must first configure "
+"products with a :ref:`vendor pricelist <purchase/products/pricelist>` and a "
+"subcontracting-type |BoM|. Each component must then be configured with the "
+"appropriate route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:24
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:25
 msgid ""
-"While both routes are used to supply a subcontractor with the components "
-"required for manufacturing a product, they differ in how the components are "
-"sourced."
+"The pricelist allows the contracting company to purchase the product from "
+"the vendor (subcontractor) through a |PO|, while the |BoM| allows the "
+"product to be manufactured externally by the subcontractor. Routes are "
+"applied to each component in order to be properly sent from the contractor "
+"to the subcontractor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:27
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:35
 msgid ""
-"When using *Resupply Subcontractor on Order*, components are shipped from "
-"the warehouse of the contracting company."
-msgstr ""
-"*주문 시 외주업체 재공급* 기능을 사용하면 구성품이 계약회사 창고에서 출고됩니"
-"다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:30
-msgid ""
-"When using *Dropship Subcontractor on Order*, components are purchased from "
-"a vendor and shipped directly to the subcontractor."
+"To configure a product's vendor for resupply subcontracting, navigate "
+"to :menuselection:`Inventory app --> Products --> Products`, and select a "
+"product, or create a new one."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:33
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:49
 msgid ""
-"The choice of which route to use depends upon the specific requirements of "
-"the subcontracting company and their subcontractors."
+"Since contractors are not responsible for manufacturing the final product, "
+"there is no need to configure manufacturing lead times on a |BoM|. Instead, "
+"provide only a single *Delivery Lead Time* on the vendor pricelist, "
+"factoring in the duration for the subcontractor to receive the components "
+"from the contractor, manufacture the product, and deliver the finished good "
+"back to the contractor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:60
 msgid ""
-"See the :doc:`subcontracting_dropship` documentation for a full overview of "
-"the *Dropship Subcontractor on Order* route."
+"After specifying the vendor, configure a subcontracting-type |BoM| for the "
+"product. To start, click the :guilabel:`Bill of Materials` smart button on "
+"the product's page. Then, select the desired |BoM| or create a new one."
 msgstr ""
-"*주문 시 외주업체 직배송* 경로에 대한 모든 전체보기 내용"
-"은 :doc:`subcontracting_dropship` 문서를 참조하세요."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:42
-msgid ""
-"To use the *Resupply Subcontractor on Order* route, navigate "
-"to :menuselection:`Manufacturing app --> Configuration --> Settings`, and "
-"enable the checkbox next to :guilabel:`Subcontracting`, under "
-"the :guilabel:`Operations` heading."
-msgstr ""
-"*주문시 외주업체 재공급* 경로를 사용하려면 :menuselection:`제조 관리 앱 --> "
-"환경설정 --> 설정` 으로 이동하여 :guilabel:`운영` 제목 아래에 있"
-"는 :guilabel:`외주` 옆 확인란을 활성화합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:46
-msgid ""
-"Once the *Subcontracting* setting is enabled, it is also necessary to "
-"properly configure the subcontracted product, the product's bill of "
-"materials (BoM), and the components listed on the |BoM|."
-msgstr ""
-"*외주* 설정을 활성화하게 되면, 반드시 외주 품목, 품목에 대한 자재명세서(BoM) "
-"및 |BoM| 에 나타나 있는 구성품 역시 알맞게 설정해야 합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:55
-msgid ""
-"To configure a product for the *Resupply Subcontractor on Order* route, "
-"navigate to :menuselection:`Inventory app --> Products --> Products`, and "
-"select a product, or create a new one by clicking :guilabel:`New`."
-msgstr ""
-"*주문 시 협력업체 재공급* 경로로 품목을 설정하려면 :menuselection:`재고 관리 "
-"앱 --> 품목 --> 품목` 으로 이동하여 품목을 선택하거나 :guilabel:`신규` 를 클"
-"릭하여 새로운 품목을 생성합니다. ."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:64
-msgid ""
-"The value entered in the :guilabel:`Price` field on the :guilabel:`Purchase` "
-"tab of the of the subcontracted product's page is the amount paid to the "
-"subcontractor for the manufacturing of the product."
-msgstr ""
-"외주 제품 페이지의 :guilabel:`매입` 탭 :guilabel:`가격` 항목에 입력되어 있는 "
-"값은, 제품 생산을 위해 외주업체에서 지급한 금액입니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:68
 msgid ""
-"This does not represent the total cost of the product, which includes other "
-"elements, like the cost of the product's components."
+"In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` "
+"option. Then, add one or more subcontractors in "
+"the :guilabel:`Subcontractors` field below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:74
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:71
 msgid ""
-"If the finished product is shipped back to the contracting company, make "
-"sure that the :guilabel:`Buy` route is selected. In addition, select "
-"the :guilabel:`Replenish on Order (MTO)` route to automatically create a |"
-"PO| for the product upon confirmation of a sales order (SO), unless there is "
-"enough stock on-hand to fulfill the |SO|."
+"Finally, add all necessary components in the :guilabel:`Components` tab. To "
+"add a new component, click :guilabel:`Add a line`. Then, select the "
+"component in the :guilabel:`Component` drop-down menu, and specify the "
+"required quantity in the :guilabel:`Quantity` field."
 msgstr ""
-"완제품을 계약업체로 다시 출고하는 경우 :guilabel:`매입` 경로가 선택되어 있는"
-"지 확인합니다. 또한 |SO|를 충족할 만큼 보유 재고가 충분하지 않은 경우 판매주"
-"문서(SO)가 확인되면 해당 제품에 대해 자동으로 |PO| 를 생성하도록 :guilabel:`"
-"주문 시 보충(MTO)` 경로를 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
+msgid "BoM for a resupply subcontracting product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:83
 msgid ""
-"To configure a |BoM| for the *Resupply Subcontractor on Order* route, click "
-"the :guilabel:`Bill of Materials` smart button on the product's page, and "
-"select the |BoM|."
+"In resupply subcontracting, each component must be individually configured "
+"with the *Resupply Subcontractor on Order* route. This allows the components "
+"to be transferred from the contractor to the subcontractor when a |PO| is "
+"made for the subcontracted product."
 msgstr ""
-"*주문 시 외주업체 재공급* 경로로 |BoM| 을 설정하려면 품목 페이지에"
-"서 :guilabel:`자재명세서` 스마트 버튼을 클릭하고 |BoM| 을 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:107
-msgid "Configure components"
-msgstr "구성품 환경설정"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:87
 msgid ""
-"To configure components for the *Resupply Subcontractor on Order* route, "
-"navigate to each component from the |BoM| by selecting the component's name "
-"in the :guilabel:`Components` tab, and clicking the :guilabel:`➡️ (right "
-"arrow)` button to the right of the name."
+"To configure a component's route, select the component's name in "
+"the :guilabel:`Components` tab, and click the :icon:`oi-arrow-"
+"right` :guilabel:`(Internal link)` arrow. Alternatively, navigate "
+"to :menuselection:`Inventory app --> Products --> Products`, and select the "
+"component."
 msgstr ""
-"*주문시 협력업체 재공급* 경로에 대한 구성품을 설정하려면:guilabel:`구성품` 탭"
-"에서 구성품 이름을 선택하고 이름 오른쪽에 있는 :guilabel:`➡️ (오른쪽 화살표)` "
-"버튼을 클릭하여 |BoM|에서 각 구성품으로 이동합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:116
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:91
 msgid ""
-"On the component product form, click on the :guilabel:`Inventory` tab and "
-"select the :guilabel:`Resupply Subcontractor on Order` route in "
-"the :guilabel:`Routes` section."
+"On the component product form, click on the :guilabel:`Inventory` tab. Then, "
+"in the :guilabel:`Routes` section, select the :guilabel:`Resupply "
+"Subcontractor on Order` route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:95
 msgid ""
 "Repeat the process for every component that must be sent to the "
 "subcontractor."
 msgstr "외주업체에 배송해야 하는 모든 구성품에 대해 이 과정을 반복합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:122
-msgid "Resupply subcontractor on order workflow"
-msgstr "주문 워크플로우에서의 외주업체 재공급"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:124
-msgid ""
-"The resupply subcontractor on order workflow consists of up to five steps:"
-msgstr ""
-"재공급 외주업체에서 진행하는 주문 워크플로우는 최대 5단계로 구성됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:126
-msgid ""
-"Create an |SO| for the subcontracted product; doing so creates a |PO| to "
-"purchase the product from the subcontractor."
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
+msgid "Inventory routes for a resupply subcontracting component."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:128
-msgid ""
-"Confirm the |PO| created in the previous step, or create a new |PO|; doing "
-"so creates a *Resupply Subcontractor* order, as well as a receipt order or a "
-"dropship order."
-msgstr ""
-"이전 단계에서 생성한 |PO| 를 확정하거나, 새로운 |PO| 를 생성합니다. 이렇게 하"
-"면 *협력업체 재공급* 주문서와 함께 물론 입고주문서나 직배송 주문서가 생성됩니"
-"다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:130
-msgid ""
-"Process the *Resupply Subcontractor* order once components for the "
-"subcontracted product have been sent to the subcontractor."
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
+msgid "Diagram of resupply subcontracting workflow in Odoo MRP Subcontracting."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:108
 msgid ""
-"Process the receipt once the subcontractor has finished manufacturing the "
-"subcontracted product, and shipped it back to the contracting company **OR** "
-"process the dropship order to ship the product directly to the customer."
+"The resupply subcontracting workflow begins by :ref:`creating a PO "
+"<manufacturing/subcontracting_resupply/workflow/create-po>` to purchase the "
+"product from the subcontractor (1)."
 msgstr ""
-"입고 처리는 외주업체에서 외주 제품 생산을 완료한 후 계약한 회사로 배송이 되"
-"면 처리하거나 **또는** 직배송 주문으로 고객에게 제품이 직배송되면 처리합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:135
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:112
 msgid ""
-"If the workflow was started by creating an |SO|, and the finished product is "
-"not dropshipped to the end customer, process the delivery order once the "
-"product is shipped to the customer."
+"The contractor (YourCompany) then confirms the |PO|, which creates both a "
+"resupply order to transfer the components and a receipt to receive the final "
+"product (2) from the subcontractor."
 msgstr ""
-"|SO| 를 생성하여 워크플로우가 시작된 상황에서, 최종 고객에게 완제품이 직배송"
-"되도록 설정되어 있지 않은 경우에는 제품이 고객에게 출고된 후 배송주문서를 처"
-"리합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:141
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:115
 msgid ""
-"If the reason is to fulfill a specific customer order, the process starts "
-"with creating an |SO|, and ends with delivering the product to the customer, "
-"or having the subcontractor dropship it to them."
+"Next, the contractor :ref:`validates the transfer <manufacturing/"
+"subcontracting_resupply/workflow/validate-resupply>` of components to the "
+"subcontractor (3). The subcontractor begins producing the product."
 msgstr ""
-"고객이 지정한 주문에 맞추기 위한 이유인 경우에는 프로세스는 |SO|를 생성하는 "
-"것으로 시작하여 고객에게 제품을 배송하거나 협력업체에서 직배송하도록 하는 것"
-"으로 끝납니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:144
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:119
 msgid ""
-"If the reason is to increase the quantity of stock on-hand, the process "
-"starts with creating a |PO|, and ends with receiving the product into "
-"inventory."
+"Once the product has been produced and received, the "
+"contractor :ref:`validates the receipt <manufacturing/"
+"subcontracting_resupply/workflow/process-receipt>` (6) to "
+"trigger :ref:`inventory moves <manufacturing/subcontracting_resupply/"
+"workflow/track-inventory>` from the subcontractor to the company's stock (4, "
+"5)."
 msgstr ""
-"보유 재고 수량을 늘리는 것이 목적인 경우, 프로세스는 |PO| 를 생성하는 것으로 "
-"시작하여 품목이 재고로 입고되는 것으로 종료됩니다."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:129
+msgid ""
+"To create a |PO| for the subcontracted product, navigate "
+"to :menuselection:`Purchase app --> Orders --> Purchase Orders` and "
+"click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:137
+msgid ""
+"After adding the product, the :guilabel:`Expected Arrival` field is updated "
+"with the finished product's expected delivery date, as configured earlier "
+"with the vendor *Delivery Lead Time*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:140
+msgid ""
+"Finally, click :guilabel:`Confirm Order` to confirm the |PO|. A receipt and "
+"a resupply order are automatically created, accessible via "
+"the :guilabel:`Receipt` and :guilabel:`Resupply` smart buttons at the top of "
+"the form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:147
+msgid "Validate resupply order"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:149
 msgid ""
-"While the *Resupply Subcontractor on Order* route can be used to "
-"automatically resupply a subcontractor upon confirmation of a |PO|, it is "
-"also possible to create a resupply order manually. This workflow is useful "
-"when it is necessary to resupply the subcontractor without creating a |PO|."
-msgstr ""
-"*주문 시 협력업체 재공급* 경로를 사용하여 |PO|를 컨펌하면 협력업체에 자동으"
-"로 재공급하도록 할 수 있으나, 직접 재공급 주문서를 생성할 수도 있습니다. 이"
-"와 같은 워크플로우는 |PO|를 생성하지 않고 협력업체에 재공급을 해야 할 때 유용"
-"하게 사용할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:154
-msgid ""
-"To resupply a subcontractor manually, navigate to "
-"the :menuselection:`Inventory` app, and click on the :guilabel:`Resupply "
-"Subcontractor` card. Create a new *Resupply Subcontractor* order by "
-"clicking :guilabel:`New`."
+"Click the :guilabel:`Resupply` smart button at the top of the |PO| to open "
+"the resupply order, and click :guilabel:`Validate` to confirm that the "
+"components have been sent to the subcontractor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:158
-msgid ""
-"In the :guilabel:`Delivery Address` field, select the subcontractor to whom "
-"the components should be sent."
-msgstr ":guilabel:`배송지 주소` 필드에서 구성품을 보낼 외주업체를 선택합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:161
-msgid ""
-"Then, add each component to the :guilabel:`Operations` tab by "
-"clicking :guilabel:`Add a line`, selecting the component in "
-"the :guilabel:`Product` drop-down field, and specifying a quantity in "
-"the :guilabel:`Demand` field."
-msgstr ""
-"그런 다음 :guilabel:`작업` 탭에 모든 구성품을 추가하며 :guilabel:`줄 추가` "
-"를 클릭하고, :guilabel:`품목` 드롭다운 필드에서 구성품을 선택하"
-"고, :guilabel:`수요` 필드에 수량을 지정하면 됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:165
-msgid ""
-"Finally, click :guilabel:`Mark as Todo` to register the order. Once the "
-"components have been sent to the subcontractor, click :guilabel:`Validate` "
-"to confirm that the order has been sent."
-msgstr ""
-"마지막으로 :guilabel:`할 일로 표시` 를 클릭하여 주문서를 등록합니다. 구성품"
-"을 외주업체로 보내면 :guilabel:`승인` 을 클릭하여 주문이 전송되었는지 확인합"
-"니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:169
-msgid "Create SO"
-msgstr "판매주문서 만들기"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:178
-msgid ""
-"Select the customer in the :guilabel:`Customer` drop-down menu. Then, "
-"click :guilabel:`Add a product` on the :guilabel:`Order Lines` tab, select a "
-"subcontracted product in the :guilabel:`Product` drop-down menu, and enter a "
-"quantity in the :guilabel:`Quantity` field."
-msgstr ""
-":guilabel:`고객` 드롭다운 메뉴에서 고객을 선택합니다. 그런 다음 :guilabel:`주"
-"문 내역` 탭에서 :guilabel:`품목 추가` 를 클릭하고 :guilabel:`품목` 드롭다운 "
-"메뉴에서 외주 제품을 선택한 후 :guilabel:`수량` 필드에 수량을 입력합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:182
-msgid ""
-"Click :guilabel:`Confirm` to confirm the |SO|, at which point "
-"a :guilabel:`Purchase` smart button appears at the top of the page. This "
-"opens the |PO| created to purchase the subcontracted product from the "
-"subcontractor."
-msgstr ""
-":guilabel:`확인` 을 클릭하여 |SO| 가 확정되면 :guilabel:`매입` 스마트 버튼이 "
-"페이지 상단에 나타납니다. 외주업체에서 외주 제품을 구매하기 위해 생성한 |PO| "
-"가 열리게 됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:187
-msgid ""
-"An |SO| for the product only creates a |PO| if the *Replenish on Order "
-"(MTO)* route is enabled on the product's page, **and** there is not enough "
-"stock of the product on-hand to fulfill the |SO|."
-msgstr ""
-"품목 페이지에서 *주문 시 보충 (MTO)* 경로가 활성화되어 있고 **동시에** 보유 "
-"중인 품목의 재고가 |SO|에서 사용하기에 충분하지 않은 경우에는, 품목 관련 |SO|"
-"에서는 |PO|만 만들어지게 됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:190
-msgid ""
-"If there is enough stock on-hand, confirming an |SO| for the product instead "
-"creates a delivery order, because Odoo assumes that the |SO| is fulfilled "
-"using the stock in the warehouse."
-msgstr ""
-"보유 중인 재고가 충분한 경우 품목 관련된 |SO| 를 확인하면 이를 대체하여 배송"
-"주문서가 생성됩니다. Odoo에서 창고에 있는 재고를 사용하여 |SO| 를 처리한다고 "
-"가정하기 때문입니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:193
-msgid ""
-"This is not the case for subcontracted products that are dropshipped to the "
-"end customer. In that case, a |PO| is **always** created, even if there is "
-"enough stock on-hand."
-msgstr ""
-"최종 고객에게 직접 배송되는 외주 제품의 경우에는 해당되지 않습니다. 이런 경"
-"우, 보유 재고량이 충분하더라도 **항상** |PO| 가 생성됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:197
-msgid "Process PO"
-msgstr "구매발주서 처리"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:199
-msgid ""
-"If a |PO| was created in the previous step, navigate to :guilabel:`Purchase "
-"app --> Orders --> Purchase Orders`, and select the |PO|. Then, "
-"click :guilabel:`Confirm Order` to confirm it."
-msgstr ""
-"이전 단계에서 |PO| 를 생성한 경우, :guilabel:`매입 앱 --> 주문서 --> 구매발주"
-"서` 로 이동하여 |PO| 를 선택합니다. 그런 다음 :guilabel:`주문 확인` 을 클릭하"
-"여 확정합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:202
-msgid ""
-"If a |PO| was not created in the previous step, do so now by navigating "
-"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
-"clicking :guilabel:`New`."
-msgstr ""
-"이전 단계에서 |PO| 를 생성하지 않은 경우에는 :menuselection:`매입 앱 --> 주문"
-"서 --> 구매발주서` 로 이동하여 :guilabel:`신규` 를 클릭하면 바로 생성할 수 있"
-"습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:205
-msgid ""
-"Begin filling out the |PO| by selecting a subcontractor from "
-"the :guilabel:`Vendor` drop-down menu. In the :guilabel:`Products` tab, "
-"click :guilabel:`Add a product` to create a new product line. Select a "
-"subcontracted product in the :guilabel:`Product` field, and enter the "
-"quantity in the :guilabel:`Quantity` field. Finally, "
-"click :guilabel:`Confirm Order` to confirm the |PO|."
-msgstr ""
-":guilabel:`공급업체` 드롭다운 메뉴에서 외주업체를 선택하는 것으로 |PO| 작성"
-"을 시작합니다. :guilabel:`품목` 탭에서 :guilabel:`품목 추가` 를 클릭하여 새 "
-"제품을 입력할 줄을 생성합니다. :guilabel:`품목` 에서 외주 제품을 선택하"
-"고 :guilabel:`수량` 에 수량을 입력합니다. 마지막으로 :guilabel:`주문 확인` "
-"을 클릭하여 |PO| 를 확정합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:210
-msgid ""
-"When a |PO| is confirmed for a product that requires resupplying a "
-"subcontractor with components, a receipt or dropship order is automatically "
-"created, and can be accessed from the corresponding :guilabel:`Receipt` "
-"or :guilabel:`Dropship` smart button that appears at the top of the |PO|."
-msgstr ""
-"협력업체에 부품을 재공급해야 하는 제품에 대한 |PO|가 확인되면 영수증 또는 직"
-"배송 주문서가 자동으로 생성되며, |PO| 상단에 나타나는 해당 :guilabel:`영수증"
-"` 또는 :guilabel:`직배송` 스마트 버튼을 통해 액세스할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:214
-msgid ""
-"In addition, a *Resupply Subcontractor* order is created to ship the "
-"required components to the subcontractor. This order can also be accessed "
-"from the |PO|, by clicking the :guilabel:`Resupply` smart button at the top "
-"of the page."
-msgstr ""
-"또한 *협력업체 재공급 * 주문서를 생성하여 필수 구성품을 협력업체로 배송합니"
-"다. 페이지 상단에 있는 :guilabel:`재공급` 스마트 버튼을 클릭하면 |PO|에서도 "
-"주문서에 액세스할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:223
-msgid ""
-"A PO for a *Resupply Subcontractor on Order* product, with Resupply and "
-"Receipt smart\n"
-"buttons at the top of the page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:223
-msgid ""
-"A PO for a *Resupply Subcontractor on Order* product, with Resupply and "
-"Receipt smart buttons at the top of the page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:227
-msgid "Process Resupply Subcontractor order"
-msgstr "외주업체 주문 재공급 처리"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:229
-msgid ""
-"Once the subcontracted product's components have been sent to the "
-"subcontractor, navigate to :menuselection:`Purchase app --> Orders --> "
-"Purchase Orders`, and select the |PO|."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:232
-msgid ""
-"Click the :guilabel:`Resupply` smart button at the top of the screen to open "
-"the *Resupply Subcontractor* order, and click :guilabel:`Validate` to "
-"confirm that the components have been sent to the subcontractor."
-msgstr ""
-"화면 상단에 있는 :guilabel:`재공급` 스마트 버튼을 클릭하면 *협력업체 재공급* "
-"주문서가 열리고, 구성품이 협력업체에 전송되면 :guilabel:`승인` 을 클릭하여 확"
-"인합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:236
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:152
 msgid ""
 "Alternatively, navigate to the :menuselection:`Inventory` app, click "
-"the :guilabel:`# To Process` button on the :guilabel:`Resupply "
-"Subcontractor` card, and select the *Resupply Subcontractor* order. Then, "
+"the :guilabel:`(#) To Process` button on the :guilabel:`Resupply "
+"Subcontractor` card, and select the relevant resupply order. Then, "
 "click :guilabel:`Validate` to confirm that the components have been sent to "
 "the subcontractor."
 msgstr ""
-"또는 :menuselection:`재고 관리` 앱으로 이동하여 :guilabel:`협력업체 재공급` "
-"카드에서 :guilabel:`처리할 숫자` 버튼을 클릭한 후 *협력업체 재공급* 주문서를 "
-"선택합니다. 그런 다음 :guilabel:`승인` 을 클릭하여 구성품이 협력업체에 배송되"
-"었음을 확인합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:244
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:161
 msgid ""
-"Once the subcontractor has finished manufacturing the product, they either "
-"ship it to the contracting company, or dropship it to the end customer, "
-"depending on how the product was :ref:`configured <manufacturing/workflows/"
-"subcontracting_resupply/product-config>`."
-msgstr ""
-"협력업체에서 제품 제조를 완료하면 제품의 :ref:`환경 설정 <manufacturing/"
-"workflows/subcontracting_basic/product-config>` 에 따라 계약된 회사로 배송하"
-"거나 최종 고객에게 직배송합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:251
-msgid ""
-"If the subcontractor ships the finished product to the contracting company, "
-"once it has been received, navigate to :menuselection:`Purchase app --> "
-"Orders --> Purchase Orders`, and select the |PO|."
-msgstr ""
-"협력업체에서 완제품을 원청업체에 배송하는 경우, 제품이 입고되"
-"면 :menuselection:`매입 앱 --> 주문서 --> 구매발주서` 로 이동하여 |PO| 를 선"
-"택합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:255
-msgid ""
-"Click the :guilabel:`Receive Products` button at the top of the |PO|, or "
-"the :guilabel:`Receipt` smart button at the top of the page, to open the "
-"receipt. Then, click :guilabel:`Validate` at the top of the receipt to enter "
-"the product into inventory."
-msgstr ""
-"|PO| 상단에 있는 :guilabel:`품목 수령` 버튼을 클릭하거나 페이지 상단에 있"
-"는 :guilabel:`입고` 스마트 버튼을 클릭하면 영수증이 열립니다. 그런 다음 영수"
-"증 상단에 있는 :guilabel:`승인` 을 클릭하여 품목을 재고로 입력합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:260
-msgid "Process dropship order"
-msgstr "직배송 주문 처리"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:262
-msgid ""
-"If the subcontractor dropships the product, once they have sent it, navigate "
-"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and select "
-"the |PO|."
+"After the resupply order is confirmed, the subcontractor manufactures the "
+"product and delivers the finished good back to the contracting company."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:265
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:177
 msgid ""
-"Select the :guilabel:`Dropship` smart button at the top of the page to open "
-"the dropship order, and click :guilabel:`Validate` at the top of the order "
-"to confirm that the product has been sent to the customer."
+"After validating the receipt, Odoo automatically generates inventory moves "
+"to track the movement of subcontracted products between locations. To view "
+"these inventory moves, navigate to :menuselection:`Inventory app --> "
+"Reporting --> Moves History`."
 msgstr ""
-"페이지 상단에 있는 :guilabel:`직배송` 스마트 버튼을 선택하면 직배송 주문서가 "
-"열립니다. 주문서 상단의 :guilabel:`승인` 을 클릭하여 품목이 고객에게 발송되었"
-"는지 확인합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:272
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:181
 msgid ""
-"If the subcontracting workflow was started by a customer |SO|, and the "
-"finished product was **NOT** dropshipped to the customer, but rather "
-"delivered to the contracting company, it is necessary to ship the product to "
-"the customer, and process the delivery order."
+"In resupply subcontracting, Odoo first transfers any product components to a "
+"dedicated *Subcontracting Location*. A :ref:`virtual location <inventory/"
+"warehouses_storage/location-type>` called *Production* then consumes the "
+"components and produces the finished good. Once produced, the good then "
+"moves back to the *Subcontracting Location* before finally entering the "
+"contractor's stock when the receipt is validated."
 msgstr ""
-"외주 작업 흐름이 고객사 |SO| 로부터 시작되어, 완제품은 고객에게 직배송되지 **"
-"않고** 원청업체로 전달되는 경우에는, 제품을 고객에게 배송한 후 배송주문서를 "
-"처리해야 합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:276
-msgid ""
-"Once the product has been shipped to the customer, navigate to "
-"the :menuselection:`Sales` app, and select the |SO|. Select "
-"the :guilabel:`Delivery` smart button at the top of the page to open the "
-"delivery order, and click :guilabel:`Validate` on the order to confirm that "
-"the product has been shipped to the customer."
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
+msgid "Moves History of resupply subcontracting in Odoo MRP Subcontracting."
 msgstr ""
-"고객에게 품목 출고가 완료되면 :menuselection:`판매` 앱으로 이동하여 |SO| 를 "
-"선택합니다. 페이지 상단에 있는 :guilabel:`배송` 스마트 버튼을 선택하여 배송주"
-"문서를 열고, 주문서에서 :guilabel:`승인` 을 클릭하여 고객에게 품목이 출고되었"
-"다는 것을 확정합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows.rst:5
 msgid "Workflows"
@@ -54473,7 +53885,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:70
 msgid "Repair form configuration"
-msgstr ""
+msgstr "수리 양식 환경설정"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:72
 msgid ""
@@ -54598,7 +54010,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:124
 msgid "Repair Notes tab"
-msgstr ""
+msgstr "수리 메모 탭"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:126
 msgid ""
@@ -54744,6 +54156,812 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:212
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "In manufacturing, subcontracting is the process of a company engaging a "
+#~ "third-party manufacturer, or subcontractor, to manufacture products that "
+#~ "are then sold by the contracting company."
+#~ msgstr ""
+#~ "제조 과정에서 외주란 회사가 외부 제조업체나 외주업체와 계약을 맺고 제품을 "
+#~ "제조한 후 계약 회사에서 판매하는 과정을 말합니다."
+
+#~ msgid ""
+#~ "In Odoo, the *Dropship Subcontractor on Order* route is used to purchase "
+#~ "the necessary components for a subcontracted product from the vendor, and "
+#~ "have them delivered directly to the subcontractor, each time a purchase "
+#~ "order (PO) for that product is confirmed."
+#~ msgstr ""
+#~ "Odoo에서는 *주문 시 협력업체 직배송* 경로를 사용하여 하청 제품에 필요한 구"
+#~ "성품을 공급업체에서 구매하고 해당 제품에 대한 구매주문서 (PO)를 확인할 때"
+#~ "마다 협력업체에 직접 배송합니다."
+
+#~ msgid ""
+#~ "It is necessary to understand the differences between the *Dropship* and "
+#~ "*Dropship Subcontractor on Order* routes. While both routes involve "
+#~ "dropshipping, they are used for different purposes."
+#~ msgstr ""
+#~ "*직배송* 과 *주문 시 외주업체 직배송* 경로의 차이점에 대해 이해해야 합니"
+#~ "다. 두 경로 모두 직배송을 하고 있지만, 다른 용도로 사용됩니다."
+
+#~ msgid ""
+#~ "The *Dropship Subcontractor on Order* route is used to purchase "
+#~ "components from a vendor, and have them shipped directly to a "
+#~ "subcontractor. By default, finished products are then sent from the "
+#~ "subcontractor back to the contracting company."
+#~ msgstr ""
+#~ "*주문 시 협력업체 직배송* 경로는 공급업체로부터 구성품을 매입한 후 이를 협"
+#~ "력업체에 직접 배송하는 데 사용합니다. 기본적으로 완제품은 그 다음에 협력업"
+#~ "체로부터 발주업체로 다시 배송됩니다."
+
+#~ msgid ""
+#~ "However, it is possible to combine both the *Dropship* and *Dropship "
+#~ "Subcontractor on Order* routes so they are used for the same product. In "
+#~ "this workflow, components are dropshipped to the subcontractor, who then "
+#~ "ships the finished product directly to the end customer."
+#~ msgstr ""
+#~ "그러나 *직배송* 및 *주문 시 협력업체 직배송* 경로를 통합하여 동일한 품목에"
+#~ "서 사용할 수 있습니다. 이 워크플로우에서는 구성품이 협력업체에 직접 배송되"
+#~ "고, 협력업체는 완제품을 최종 고객에게 직접 배송합니다."
+
+#~ msgid ""
+#~ "To use the *Dropship Subcontractor on Order* route, navigate "
+#~ "to :menuselection:`Manufacturing app --> Configuration --> Settings`, and "
+#~ "enable the checkbox next to :guilabel:`Subcontracting`, under "
+#~ "the :guilabel:`Operations` heading."
+#~ msgstr ""
+#~ "*주문 시 외주업체 직배송* 경로를 사용하려면 :menuselection:`제조 관리 앱 "
+#~ "--> 환경설정 --> 설정` 으로 이동하여 :guilabel:`운영` 제목 아래에 있"
+#~ "는 :guilabel:`외주` 옆 확인란을 활성화합니다."
+
+#~ msgid ""
+#~ "Once the *Subcontracting* setting is enabled, it is also necessary to "
+#~ "properly configure the subcontracted product, the product's |BoM|, and "
+#~ "the components listed on the |BoM|."
+#~ msgstr ""
+#~ "*외주* 설정이 활성화되면, 반드시 외주 제품, 제품 |BoM| 및 |BoM| 에 있는 구"
+#~ "성품을 역시 알맞게 설정해야 합니다."
+
+#~ msgid ""
+#~ "To configure a product for the *Dropship Subcontractor on Order* route, "
+#~ "navigate to :menuselection:`Inventory app --> Products --> Products`, and "
+#~ "select a product, or create a new one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "*주문 시 협력업체 직배송* 경로로 품목을 설정하려면 :menuselection:`재고 관"
+#~ "리 앱 --> 품목 --> 품목` 으로 이동하여 품목을 선택하거나 :guilabel:`신규` "
+#~ "를 클릭하여 새로운 품목을 생성합니다. ."
+
+#~ msgid ""
+#~ "Select the :guilabel:`Purchase` tab, and add the product's subcontractor "
+#~ "as a vendor by clicking :guilabel:`Add a line`, selecting the "
+#~ "subcontractor in the :guilabel:`Vendor` drop-down menu, and entering a "
+#~ "price in the :guilabel:`Price` field."
+#~ msgstr ""
+#~ ":guilabel:`매입` 탭을 선택하고 :guilabel:`줄 추가` 를 클릭하여 :guilabel:`"
+#~ "공급업체` 드롭다운 메뉴에서 협력업체를 선택합니다. :guilabel:`공급업체` 드"
+#~ "롭다운 메뉴에서 협력업체를 선택한 후 :guilabel:`가격` 필드에 가격을 입력합"
+#~ "니다."
+
+#~ msgid ""
+#~ "Then, click on the :guilabel:`Inventory` tab to configure a route that "
+#~ "determines what happens to the finished product, once it has been "
+#~ "manufactured by the subcontractor."
+#~ msgstr ""
+#~ "그런 다음 :guilabel:`재고 관리` 탭을 클릭하여 외주업체에서 완제품을 제조"
+#~ "한 후 완제품을 어떻게 처리할지 지정하는 경로를 설정합니다."
+
+#~ msgid ""
+#~ "If the finished product is shipped back to the contracting company, make "
+#~ "sure that the :guilabel:`Buy` route is selected. In addition, select "
+#~ "the :guilabel:`Replenish on Order (MTO)` route to automatically create a |"
+#~ "PO| for the product upon confirmation of a |SO|, unless there is enough "
+#~ "stock on-hand to fulfill the |SO|."
+#~ msgstr ""
+#~ "완제품을 계약업체로 다시 출고하는 경우 :guilabel:`매입` 경로가 선택되어 있"
+#~ "는지 확인합니다. 또한 |SO|를 충족할 만큼 보유 재고가 충분하지 않은 경우 |"
+#~ "SO|가 확인되면 해당 제품에 대해 자동으로 |PO| 를 생성하도록 :guilabel:`주"
+#~ "문 시 보충 (MTO)` 경로를 선택합니다."
+
+#~ msgid "Configure bill of materials"
+#~ msgstr "자재명세서 환경설정"
+
+#~ msgid ""
+#~ "For a full overview of |BoM| configuration, see the :doc:`Bill of "
+#~ "materials <../basic_setup/bill_configuration>` documentation."
+#~ msgstr ""
+#~ "전체적인 |BoM| 환경설정에 대한 내용은 :doc:`자재명세서 <../basic_setup/"
+#~ "bill_configuration>` 문서를 참조하세요."
+
+#~ msgid ""
+#~ "The \"BoM Type\" field on a BoM, configured to manufacture the product "
+#~ "using subcontracting."
+#~ msgstr ""
+#~ "BoM의 \"BoM 유형\" 필드에 제품이 외주 생산되도록 환경설정되어 있는 모습입"
+#~ "니다."
+
+#~ msgid "Configure Components"
+#~ msgstr "구성품 환경설정"
+
+#~ msgid ""
+#~ "To configure components for the *Dropship Subcontractor on Order* route, "
+#~ "navigate to each component from the |BoM| by selecting the component's "
+#~ "name in the :guilabel:`Components` tab, and clicking the :guilabel:`➡️ "
+#~ "(right arrow)` button to the right of the name."
+#~ msgstr ""
+#~ "*주문 시 협력업체 직배송* 경로에 대한 구성품을 설정하려면 :guilabel:`구성"
+#~ "품` 탭에서 구성품 이름을 선택하고 이름 오른쪽에 있는 :guilabel:`➡️ (오른쪽 "
+#~ "화살표)` 버튼을 클릭하여 |BoM|에서 각 구성품으로 이동합니다."
+
+#~ msgid ""
+#~ "On the component product form, select the :guilabel:`Purchase` tab, and "
+#~ "add a vendor by clicking :guilabel:`Add a line`, selecting the vendor in "
+#~ "the :guilabel:`Vendor` field, and adding the price they sell the product "
+#~ "for in the :guilabel:`Price` field. This is the vendor that sends "
+#~ "components to the subcontractor, once they are purchased."
+#~ msgstr ""
+#~ "구성품 양식에 있는 :guilabel:`매입` 탭을 선택한 후 공급업체를 추가하려"
+#~ "면 :guilabel:`줄 추가` 를 클릭한 후 :guilabel:`공급업체` 에서 업체를 선택"
+#~ "한 다음 :guilabel:`가격` 에 품목의 판매가를 추가합니다. 이 업체는 구성품"
+#~ "을 매입한 후 협력업체에 부품을 보내는 공급업체입니다."
+
+#~ msgid ""
+#~ "Repeat the process for every component that must be dropshipped to the "
+#~ "subcontractor."
+#~ msgstr "외주업체에 직배송해야 하는 모든 구성품에 대해 이 과정을 반복합니다."
+
+#~ msgid "Dropship subcontractor on order workflow"
+#~ msgstr "주문 워크플로우에서의 외주업체 직배송"
+
+#~ msgid ""
+#~ "The dropship subcontractor on order workflow consists of up to six steps:"
+#~ msgstr ""
+#~ "직배송 외주업체에서 진행하는 주문 워크플로우는 최대 6단계로 구성됩니다."
+
+#~ msgid ""
+#~ "Confirm the |PO| created in the previous step, or create a new |PO|; "
+#~ "doing so creates a request for quotation (RfQ) to purchase the components "
+#~ "from the vendor, as well as a receipt order or a dropship order."
+#~ msgstr ""
+#~ "이전 단계에서 생성한 |PO|를 확인하거나 새로운 |PO|를 생성합니다. 이렇게 하"
+#~ "면 공급업체에서 구성품을 매입할 수 있도록 견적요청서 (RfQ)가 생성되며 수"
+#~ "령 확인증이나 직배송 주문서도 생성할 수 있습니다."
+
+#~ msgid ""
+#~ "Process the *Dropship Subcontractor* order once the vendor has sent the "
+#~ "components to the subcontractor."
+#~ msgstr ""
+#~ "*외주업체 직배송* 주문을 공급업체에서 외주업체로 구성품을 보낸 즉시 처리합"
+#~ "니다."
+
+#~ msgid ""
+#~ "Process the receipt once the subcontractor has finished manufacturing the "
+#~ "subcontracted product, and shipped it back to the contracting company "
+#~ "**OR** process the dropship order to ship the product directly to the end "
+#~ "customer."
+#~ msgstr ""
+#~ "입고 처리는 외주업체에서 외주 제품 생산을 완료한 후 계약한 회사로 배송이 "
+#~ "되면 처리하거나 **또는** 직배송 주문으로 최종 고객에게 제품이 직배송되면 "
+#~ "처리합니다."
+
+#~ msgid ""
+#~ "If the workflow was started by creating an |SO|, and the finished product "
+#~ "is not dropshipped to the end customer, process the delivery order once "
+#~ "the product has been shipped to the customer."
+#~ msgstr ""
+#~ "|SO| 를 생성하여 워크플로우가 시작된 상황에서, 최종 고객에게 완제품이 직배"
+#~ "송되도록 설정되어 있지 않은 경우에는 제품이 고객에게 출고된 후 배송주문서"
+#~ "를 처리합니다."
+
+#~ msgid ""
+#~ "If the reason is to fulfill a specific customer order, the process starts "
+#~ "with creating an SO, and ends with delivering the product to the "
+#~ "customer, or having the subcontractor dropship it to them."
+#~ msgstr ""
+#~ "고객이 지정한 주문에 맞추기 위한 이유인 경우에는 프로세스는 SO를 생성하는 "
+#~ "것으로 시작하여 고객에게 제품을 배송하거나 협력업체에서 직배송하도록 하는 "
+#~ "것으로 끝납니다."
+
+#~ msgid "Create an SO"
+#~ msgstr "SO 만들기"
+
+#~ msgid ""
+#~ "It is only necessary to complete this step if the product is being "
+#~ "purchased from the subcontractor to fulfill a customer need. If the "
+#~ "product is being purchased to increase the quantity of stock on-hand, "
+#~ "move on to the next step."
+#~ msgstr ""
+#~ "이 단계는 고객 요구 사항을 충족하기 위해 협력업체로부터 제품을 구매하는 경"
+#~ "우에만 완료하면 됩니다. 보유 재고 수량을 늘리기 위해 제품을 구매하는 경우"
+#~ "에는 다음 단계로 이동합니다."
+
+#~ msgid ""
+#~ "To create a new |SO|, navigate to :menuselection:`Sales app --> Orders --"
+#~ "> Orders`, and click :guilabel:`New`."
+#~ msgstr ""
+#~ "새 |SO| 를 생성하려면 :menuselection:`판매 앱 --> 주문서 --> 주문서` 로 이"
+#~ "동한 다음 :guilabel:`신규` 를 클릭합니다."
+
+#~ msgid ""
+#~ "Select the customer in the :guilabel:`Customer` drop-down menu. Then, "
+#~ "click :guilabel:`Add a product` on the :guilabel:`Order Lines` tab, "
+#~ "select the product in the :guilabel:`Product` drop-down menu, and enter a "
+#~ "quantity in the :guilabel:`Quantity` field."
+#~ msgstr ""
+#~ ":guilabel:`고객` 드롭다운 메뉴에서 고객을 선택합니다. 그런 다"
+#~ "음 :guilabel:`주문 내역` 탭에서 :guilabel:`품목 추가` 를 클릭하"
+#~ "고 :guilabel:`품목` 드롭다운 메뉴에서 품목을 선택한 후 :guilabel:`수량` "
+#~ "에 수량을 입력합니다."
+
+#~ msgid ""
+#~ "Click :guilabel:`Confirm` to confirm the |SO|, at which point "
+#~ "a :guilabel:`Purchase` smart button appears at the top of the page. This "
+#~ "is the *subcontractor* |PO|, or the |PO| created to purchase the "
+#~ "subcontracted product from the subcontractor."
+#~ msgstr ""
+#~ ":guilabel:`확인` 을 클릭하여 |SO| 가 확정되면 :guilabel:`매입` 스마트 버튼"
+#~ "이 페이지 상단에 나타납니다. 이는 *외주업체* 에서 생성한 |PO| 또는 외주업"
+#~ "체에서 생산한 제품을 구매하기 위해 생성된 |PO|입니다."
+
+#~ msgid ""
+#~ "An |SO| for the product only creates a *subcontractor* |PO| if the "
+#~ "*Replenish on Order (MTO)* route is enabled on the product's page, "
+#~ "**and** there is no stock of the product on-hand."
+#~ msgstr ""
+#~ "품목 페이지에서 *주문 시 보충 (MTO)* 경로가 활성화되어 있고 **동시에** 보"
+#~ "유 중인 품목의 재고가 없는 경우에는 품목 관련 |SO|에서는 *협력업체* |PO| "
+#~ "만 만들어지게 됩니다."
+
+#~ msgid ""
+#~ "If there is stock on-hand, confirming an |SO| for the product will "
+#~ "instead create a delivery order, because Odoo assumes that the |SO| is "
+#~ "fulfilled using the stock in the warehouse."
+#~ msgstr ""
+#~ "보유 중인 재고가 있는 경우 품목 관련된 |SO| 를 확인하면 이를 대체하여 배송"
+#~ "주문서가 생성됩니다. Odoo에서 창고에 있는 재고를 사용하여 |SO| 를 처리한다"
+#~ "고 가정하기 때문입니다."
+
+#~ msgid ""
+#~ "This is not the case for subcontracted products that are dropshipped to "
+#~ "the end customer. In that case, a *subcontractor* |PO| is **always** "
+#~ "created, even if there is stock on-hand."
+#~ msgstr ""
+#~ "최종 고객에게 직접 배송되는 외주 제품의 경우에는 해당되지 않습니다. 이런 "
+#~ "경우, 보유 중인 재고가 있더라도 **항상** *외주업체* |PO| 가 생성됩니다."
+
+#~ msgid "Process subcontractor PO"
+#~ msgstr "외주업체 PO 처리"
+
+#~ msgid ""
+#~ "If a *subcontractor* |PO| was not created in the previous step, do so now "
+#~ "by navigating to :menuselection:`Purchase app --> Orders --> Purchase "
+#~ "Orders`, and clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "이전 단계에서 *외주업체* |PO| 를 생성하지 않은 경우에는 :menuselection:`매"
+#~ "입 앱 --> 주문서 --> 구매발주서` 로 이동하여 :guilabel:`신규` 를 클릭하면 "
+#~ "바로 생성할 수 있습니다."
+
+#~ msgid ""
+#~ "Begin filling out the |PO| by selecting a subcontractor from "
+#~ "the :guilabel:`Vendor` drop-down menu."
+#~ msgstr ""
+#~ "|PO| 입력을 시작하려면:guilabel:`공급업체` 드롭다운 메뉴에서 외주업체를 선"
+#~ "택하세요."
+
+#~ msgid ""
+#~ "In the :guilabel:`Products` tab, click :guilabel:`Add a product` to "
+#~ "create a new product line. Select a product produced by the subcontractor "
+#~ "in the :guilabel:`Product` field, and enter the quantity in "
+#~ "the :guilabel:`Quantity` field."
+#~ msgstr ""
+#~ ":guilabel:`품목` 탭에서 :guilabel:`품목 추가` 를 클릭하여 품목 줄을 새로 "
+#~ "생성합니다. :guilabel:`품목` 필드에서 협력업체가 생산한 품목을 선택하"
+#~ "고 :guilabel:`수량` 필드에 수량을 입력합니다."
+
+#~ msgid ""
+#~ "Finally, click :guilabel:`Confirm Order` to confirm the *subcontractor* |"
+#~ "PO|."
+#~ msgstr ""
+#~ "마지막으로, :guilabel:`주문 확인` 을 클릭하면 *외주업체* |PO| 가 확정됩니"
+#~ "다."
+
+#~ msgid ""
+#~ "When a |PO| is confirmed for a product that requires dropshipping "
+#~ "components to a subcontractor, a receipt or dropship order is "
+#~ "automatically created, and can be accessed from the "
+#~ "corresponding :guilabel:`Receipt` or :guilabel:`Dropship` smart button "
+#~ "that appears at the top of the |PO|."
+#~ msgstr ""
+#~ "협력업체에 직배송 부품이 필요한 제품에 대한 |PO|가 확인되면 영수증 또는 직"
+#~ "배송 주문서가 자동으로 생성되며, |PO| 상단에 나타나는 해당 :guilabel:`영수"
+#~ "증` 또는 :guilabel:`직배송` 스마트 버튼을 통해 액세스할 수 있습니다."
+
+#~ msgid ""
+#~ "In addition, an |RfQ| is created for the components that are purchased "
+#~ "from the vendor and sent to the subcontractor. However, the |RfQ| **IS "
+#~ "NOT** automatically linked to the *subcontractor* |PO|."
+#~ msgstr ""
+#~ "또한 공급업체에서 매입하여 협력업체로 보내는 구성품에 대해 |RfQ| 가 생성됩"
+#~ "니다. 그러나 |RfQ| 가 자동으로 *협력업체* |PO| 로 연계되지는 **않습니다**."
+
+#~ msgid ""
+#~ "Once the |RfQ| is confirmed and becomes a *vendor* |PO|, a *Dropship "
+#~ "Subcontractor* order is created. This order is linked to both the "
+#~ "*vendor* |PO| and the *subcontractor* |PO|."
+#~ msgstr ""
+#~ "|RfQ| 를 확정하여 *공급업체* |PO| 로 전환되면 *직배송 협력업체* 주문서가 "
+#~ "생성됩니다. 이 주문서는 *공급업체* |PO| 및 *협력업체* |PO| 양쪽에 모두 연"
+#~ "결되어 있습니다."
+
+#~ msgid ""
+#~ "To access the |RfQ| created by confirming the *subcontractor* |PO|, "
+#~ "navigate to :menuselection:`Purchase app --> Orders --> Requests for "
+#~ "Quotation`. Select the |RfQ| that lists the correct vendor in "
+#~ "the :guilabel:`Vendor` field, and the reference number of the receipt "
+#~ "that was created after confirming *subcontractor* |PO|, in "
+#~ "the :guilabel:`Source Document` field."
+#~ msgstr ""
+#~ "|RfQ| 에 액세스하려면 *협력업체* |PO| 를 확정하여 생성한 "
+#~ "후 :menuselection:`매입 앱 --> 주문서 --> 견적요청서` 로 이동합니다. 공급"
+#~ "업체가 알맞게 기재된 |RfQ|를 :guilabel:`공급업체` 필드에서 선택한 "
+#~ "후 :guilabel:`원본 문서` 필드에 있는 *협력업체* |PO| 를 확정하여 영수증이 "
+#~ "생성되면 참조 번호를 입력합니다."
+
+#~ msgid ""
+#~ "Click :guilabel:`Confirm Order` to turn the |RfQ| into a *vendor* |PO|, "
+#~ "and confirm the purchase of components from the vendor. After doing so, "
+#~ "a :guilabel:`Dropship` smart button appears at the top of the *vendor* |"
+#~ "PO|, and a :guilabel:`Resupply` smart button appears at the top of the "
+#~ "*subcontractor* |PO|."
+#~ msgstr ""
+#~ ":guilabel:`주문 확인` 을 클릭하여 |RfQ|를 *공급업체* |PO|로 전환하고 공급"
+#~ "업체로부터 구성품 구매를 확정합니다. 그렇게 하면 *공급업체* |PO| 상단"
+#~ "에 :guilabel:`직배송` 스마트 버튼이 나타나고 *협력업체* |PO| 상단에"
+#~ "는 :guilabel:`재공급` 스마트 버튼이 나타납니다."
+
+#~ msgid "Process Dropship Subcontractor order"
+#~ msgstr "외주업체 주문 직배송 처리"
+
+#~ msgid ""
+#~ "Once the components have been delivered to the subcontractor, navigate "
+#~ "to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
+#~ "select the *vendor* |PO| or the *subcontractor* |PO|. Then, click "
+#~ "the :guilabel:`Dropship` smart button or the :guilabel:`Resupply` smart "
+#~ "button, respectively."
+#~ msgstr ""
+#~ "구성품이 협력업체에 배송되면 :menuselection:`매입 앱 --> 주문서 --> 구매발"
+#~ "주서` 로 이동하여 *공급업체* |PO| 또는 *협력업체* |PO|를 선택합니다. 그런 "
+#~ "다음 :guilabel:`직배송` 스마트 버튼 또는 :guilabel:`재공급` 스마트 버튼을 "
+#~ "각각 클릭합니다."
+
+#~ msgid ""
+#~ "Clicking either button opens the *Dropship Subcontractor* order. Click "
+#~ "the :guilabel:`Validate` button at the top of the order to confirm that "
+#~ "the subcontractor has received the components."
+#~ msgstr ""
+#~ "두 가지 버튼 중 하나를 클릭하면 *외주업체 직배송* 주문서가 열립니다. 주문 "
+#~ "상단에 있는 :guilabel:`승인` 버튼을 클릭하면 외주업체에서 구성품을 수령했"
+#~ "다는 확정을 할 수 있습니다."
+
+#~ msgid "Process receipt or dropship order"
+#~ msgstr "입고 또는 직배송 주문 처리"
+
+#~ msgid ""
+#~ "If the subcontracted product should be received into inventory, once the "
+#~ "product arrives, click the :guilabel:`Receive Products` button at the top "
+#~ "of the *subcontractor* |PO| to open the receipt. Then, "
+#~ "click :guilabel:`Validate` at the top of the receipt to register the "
+#~ "product into inventory."
+#~ msgstr ""
+#~ "외주 제품이 재고로 입고되는 경우, 제품이 도착하면 *외주업체* |PO| 상단에 "
+#~ "있는 :guilabel:`제품 입고` 버튼을 클릭하면 영수증이 열립니다. 그런 다음 영"
+#~ "수증 상단의 :guilabel:`승인` 을 클릭하여 제품을 재고로 등록합니다."
+
+#~ msgid ""
+#~ "If the subcontracted product should be dropshipped, select "
+#~ "the :guilabel:`Dropship` button at the top of the page to open the "
+#~ "dropship order, and click :guilabel:`Validate` once the subcontractor has "
+#~ "sent the product to the customer."
+#~ msgstr ""
+#~ "외주 제품을 직배송해야 하는 경우에는 페이지 상단에 있는 :guilabel:`직배송"
+#~ "` 버튼을 선택하여 직배송 주문서를 열고, 외주업체에서 고객에게 제품이 출고"
+#~ "되면 :guilabel:`승인` 을 클릭합니다."
+
+#~ msgid "Process delivery order"
+#~ msgstr "배송 주문 처리"
+
+#~ msgid ""
+#~ "If the subcontracting workflow was started by a customer |SO|, and the "
+#~ "finished product was **not** dropshipped to the customer, but rather "
+#~ "delivered to the contracting company, it is necessary to ship the product "
+#~ "to the customer, and process the delivery order."
+#~ msgstr ""
+#~ "외주 작업 흐름이 고객사 |SO| 로부터 시작되어, 완제품은 고객에게 직배송되"
+#~ "지 **않고** 원청업체로 전달되는 경우에는, 제품을 고객에게 배송한 후 배송주"
+#~ "문서를 처리해야 합니다."
+
+#~ msgid ""
+#~ "Once the product has been shipped to the customer, navigate to "
+#~ "the :menuselection:`Sales` app, and select the |SO|. Select "
+#~ "the :guilabel:`Delivery` smart button at the top of the page to open the "
+#~ "delivery order, and click :guilabel:`Validate` to confirm that the "
+#~ "product has been shipped to the customer."
+#~ msgstr ""
+#~ "고객에게 품목 배송이 완료되면 :menuselection:`판매` 앱으로 이동하여 |SO|"
+#~ "를 선택합니다. 페이지 상단에 있는 :guilabel:`배송` 스마트 버튼을 선택하여 "
+#~ "배송 주문서를 열고, :guilabel:`승인` 을 클릭하여 고객에게 품목이 배송되었"
+#~ "다는 것을 확인합니다."
+
+#~ msgid ""
+#~ "In Odoo, the *Resupply Subcontractor on Order* route is used to deliver "
+#~ "the necessary components for a subcontracted product to the "
+#~ "subcontractor, each time a purchase order (PO) for that product is "
+#~ "confirmed."
+#~ msgstr ""
+#~ "Odoo에서는 *주문 시 외주업체 재공급* 경로를 사용하여 외주 제품에 구성품이 "
+#~ "필요한 경우 외주업체로 배송하며, 매번 해당 제품에 대한 매입발주서(PO)를 확"
+#~ "정하게 됩니다."
+
+#~ msgid ""
+#~ "When using *Resupply Subcontractor on Order*, components are shipped from "
+#~ "the warehouse of the contracting company."
+#~ msgstr ""
+#~ "*주문 시 외주업체 재공급* 기능을 사용하면 구성품이 계약회사 창고에서 출고"
+#~ "됩니다."
+
+#~ msgid ""
+#~ "See the :doc:`subcontracting_dropship` documentation for a full overview "
+#~ "of the *Dropship Subcontractor on Order* route."
+#~ msgstr ""
+#~ "*주문 시 외주업체 직배송* 경로에 대한 모든 전체보기 내용"
+#~ "은 :doc:`subcontracting_dropship` 문서를 참조하세요."
+
+#~ msgid ""
+#~ "To use the *Resupply Subcontractor on Order* route, navigate "
+#~ "to :menuselection:`Manufacturing app --> Configuration --> Settings`, and "
+#~ "enable the checkbox next to :guilabel:`Subcontracting`, under "
+#~ "the :guilabel:`Operations` heading."
+#~ msgstr ""
+#~ "*주문시 외주업체 재공급* 경로를 사용하려면 :menuselection:`제조 관리 앱 --"
+#~ "> 환경설정 --> 설정` 으로 이동하여 :guilabel:`운영` 제목 아래에 있"
+#~ "는 :guilabel:`외주` 옆 확인란을 활성화합니다."
+
+#~ msgid ""
+#~ "Once the *Subcontracting* setting is enabled, it is also necessary to "
+#~ "properly configure the subcontracted product, the product's bill of "
+#~ "materials (BoM), and the components listed on the |BoM|."
+#~ msgstr ""
+#~ "*외주* 설정을 활성화하게 되면, 반드시 외주 품목, 품목에 대한 자재명세서"
+#~ "(BoM) 및 |BoM| 에 나타나 있는 구성품 역시 알맞게 설정해야 합니다."
+
+#~ msgid ""
+#~ "To configure a product for the *Resupply Subcontractor on Order* route, "
+#~ "navigate to :menuselection:`Inventory app --> Products --> Products`, and "
+#~ "select a product, or create a new one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "*주문 시 협력업체 재공급* 경로로 품목을 설정하려면 :menuselection:`재고 관"
+#~ "리 앱 --> 품목 --> 품목` 으로 이동하여 품목을 선택하거나 :guilabel:`신규` "
+#~ "를 클릭하여 새로운 품목을 생성합니다. ."
+
+#~ msgid ""
+#~ "The value entered in the :guilabel:`Price` field on "
+#~ "the :guilabel:`Purchase` tab of the of the subcontracted product's page "
+#~ "is the amount paid to the subcontractor for the manufacturing of the "
+#~ "product."
+#~ msgstr ""
+#~ "외주 제품 페이지의 :guilabel:`매입` 탭 :guilabel:`가격` 항목에 입력되어 있"
+#~ "는 값은, 제품 생산을 위해 외주업체에서 지급한 금액입니다."
+
+#~ msgid ""
+#~ "If the finished product is shipped back to the contracting company, make "
+#~ "sure that the :guilabel:`Buy` route is selected. In addition, select "
+#~ "the :guilabel:`Replenish on Order (MTO)` route to automatically create a |"
+#~ "PO| for the product upon confirmation of a sales order (SO), unless there "
+#~ "is enough stock on-hand to fulfill the |SO|."
+#~ msgstr ""
+#~ "완제품을 계약업체로 다시 출고하는 경우 :guilabel:`매입` 경로가 선택되어 있"
+#~ "는지 확인합니다. 또한 |SO|를 충족할 만큼 보유 재고가 충분하지 않은 경우 판"
+#~ "매주문서(SO)가 확인되면 해당 제품에 대해 자동으로 |PO| 를 생성하도"
+#~ "록 :guilabel:`주문 시 보충(MTO)` 경로를 선택합니다."
+
+#~ msgid ""
+#~ "To configure a |BoM| for the *Resupply Subcontractor on Order* route, "
+#~ "click the :guilabel:`Bill of Materials` smart button on the product's "
+#~ "page, and select the |BoM|."
+#~ msgstr ""
+#~ "*주문 시 외주업체 재공급* 경로로 |BoM| 을 설정하려면 품목 페이지에"
+#~ "서 :guilabel:`자재명세서` 스마트 버튼을 클릭하고 |BoM| 을 선택합니다."
+
+#~ msgid ""
+#~ "To configure components for the *Resupply Subcontractor on Order* route, "
+#~ "navigate to each component from the |BoM| by selecting the component's "
+#~ "name in the :guilabel:`Components` tab, and clicking the :guilabel:`➡️ "
+#~ "(right arrow)` button to the right of the name."
+#~ msgstr ""
+#~ "*주문시 협력업체 재공급* 경로에 대한 구성품을 설정하려면:guilabel:`구성품"
+#~ "` 탭에서 구성품 이름을 선택하고 이름 오른쪽에 있는 :guilabel:`➡️ (오른쪽 화"
+#~ "살표)` 버튼을 클릭하여 |BoM|에서 각 구성품으로 이동합니다."
+
+#~ msgid "Resupply subcontractor on order workflow"
+#~ msgstr "주문 워크플로우에서의 외주업체 재공급"
+
+#~ msgid ""
+#~ "The resupply subcontractor on order workflow consists of up to five steps:"
+#~ msgstr ""
+#~ "재공급 외주업체에서 진행하는 주문 워크플로우는 최대 5단계로 구성됩니다."
+
+#~ msgid ""
+#~ "Confirm the |PO| created in the previous step, or create a new |PO|; "
+#~ "doing so creates a *Resupply Subcontractor* order, as well as a receipt "
+#~ "order or a dropship order."
+#~ msgstr ""
+#~ "이전 단계에서 생성한 |PO| 를 확정하거나, 새로운 |PO| 를 생성합니다. 이렇"
+#~ "게 하면 *협력업체 재공급* 주문서와 함께 물론 입고주문서나 직배송 주문서가 "
+#~ "생성됩니다."
+
+#~ msgid ""
+#~ "Process the receipt once the subcontractor has finished manufacturing the "
+#~ "subcontracted product, and shipped it back to the contracting company "
+#~ "**OR** process the dropship order to ship the product directly to the "
+#~ "customer."
+#~ msgstr ""
+#~ "입고 처리는 외주업체에서 외주 제품 생산을 완료한 후 계약한 회사로 배송이 "
+#~ "되면 처리하거나 **또는** 직배송 주문으로 고객에게 제품이 직배송되면 처리합"
+#~ "니다."
+
+#~ msgid ""
+#~ "If the workflow was started by creating an |SO|, and the finished product "
+#~ "is not dropshipped to the end customer, process the delivery order once "
+#~ "the product is shipped to the customer."
+#~ msgstr ""
+#~ "|SO| 를 생성하여 워크플로우가 시작된 상황에서, 최종 고객에게 완제품이 직배"
+#~ "송되도록 설정되어 있지 않은 경우에는 제품이 고객에게 출고된 후 배송주문서"
+#~ "를 처리합니다."
+
+#~ msgid ""
+#~ "If the reason is to fulfill a specific customer order, the process starts "
+#~ "with creating an |SO|, and ends with delivering the product to the "
+#~ "customer, or having the subcontractor dropship it to them."
+#~ msgstr ""
+#~ "고객이 지정한 주문에 맞추기 위한 이유인 경우에는 프로세스는 |SO|를 생성하"
+#~ "는 것으로 시작하여 고객에게 제품을 배송하거나 협력업체에서 직배송하도록 하"
+#~ "는 것으로 끝납니다."
+
+#~ msgid ""
+#~ "If the reason is to increase the quantity of stock on-hand, the process "
+#~ "starts with creating a |PO|, and ends with receiving the product into "
+#~ "inventory."
+#~ msgstr ""
+#~ "보유 재고 수량을 늘리는 것이 목적인 경우, 프로세스는 |PO| 를 생성하는 것으"
+#~ "로 시작하여 품목이 재고로 입고되는 것으로 종료됩니다."
+
+#~ msgid ""
+#~ "While the *Resupply Subcontractor on Order* route can be used to "
+#~ "automatically resupply a subcontractor upon confirmation of a |PO|, it is "
+#~ "also possible to create a resupply order manually. This workflow is "
+#~ "useful when it is necessary to resupply the subcontractor without "
+#~ "creating a |PO|."
+#~ msgstr ""
+#~ "*주문 시 협력업체 재공급* 경로를 사용하여 |PO|를 컨펌하면 협력업체에 자동"
+#~ "으로 재공급하도록 할 수 있으나, 직접 재공급 주문서를 생성할 수도 있습니"
+#~ "다. 이와 같은 워크플로우는 |PO|를 생성하지 않고 협력업체에 재공급을 해야 "
+#~ "할 때 유용하게 사용할 수 있습니다."
+
+#~ msgid ""
+#~ "In the :guilabel:`Delivery Address` field, select the subcontractor to "
+#~ "whom the components should be sent."
+#~ msgstr ""
+#~ ":guilabel:`배송지 주소` 필드에서 구성품을 보낼 외주업체를 선택합니다."
+
+#~ msgid ""
+#~ "Then, add each component to the :guilabel:`Operations` tab by "
+#~ "clicking :guilabel:`Add a line`, selecting the component in "
+#~ "the :guilabel:`Product` drop-down field, and specifying a quantity in "
+#~ "the :guilabel:`Demand` field."
+#~ msgstr ""
+#~ "그런 다음 :guilabel:`작업` 탭에 모든 구성품을 추가하며 :guilabel:`줄 추가"
+#~ "` 를 클릭하고, :guilabel:`품목` 드롭다운 필드에서 구성품을 선택하"
+#~ "고, :guilabel:`수요` 필드에 수량을 지정하면 됩니다."
+
+#~ msgid ""
+#~ "Finally, click :guilabel:`Mark as Todo` to register the order. Once the "
+#~ "components have been sent to the subcontractor, "
+#~ "click :guilabel:`Validate` to confirm that the order has been sent."
+#~ msgstr ""
+#~ "마지막으로 :guilabel:`할 일로 표시` 를 클릭하여 주문서를 등록합니다. 구성"
+#~ "품을 외주업체로 보내면 :guilabel:`승인` 을 클릭하여 주문이 전송되었는지 확"
+#~ "인합니다."
+
+#~ msgid "Create SO"
+#~ msgstr "판매주문서 만들기"
+
+#~ msgid ""
+#~ "Select the customer in the :guilabel:`Customer` drop-down menu. Then, "
+#~ "click :guilabel:`Add a product` on the :guilabel:`Order Lines` tab, "
+#~ "select a subcontracted product in the :guilabel:`Product` drop-down menu, "
+#~ "and enter a quantity in the :guilabel:`Quantity` field."
+#~ msgstr ""
+#~ ":guilabel:`고객` 드롭다운 메뉴에서 고객을 선택합니다. 그런 다"
+#~ "음 :guilabel:`주문 내역` 탭에서 :guilabel:`품목 추가` 를 클릭하"
+#~ "고 :guilabel:`품목` 드롭다운 메뉴에서 외주 제품을 선택한 후 :guilabel:`수"
+#~ "량` 필드에 수량을 입력합니다."
+
+#~ msgid ""
+#~ "Click :guilabel:`Confirm` to confirm the |SO|, at which point "
+#~ "a :guilabel:`Purchase` smart button appears at the top of the page. This "
+#~ "opens the |PO| created to purchase the subcontracted product from the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ ":guilabel:`확인` 을 클릭하여 |SO| 가 확정되면 :guilabel:`매입` 스마트 버튼"
+#~ "이 페이지 상단에 나타납니다. 외주업체에서 외주 제품을 구매하기 위해 생성"
+#~ "한 |PO| 가 열리게 됩니다."
+
+#~ msgid ""
+#~ "An |SO| for the product only creates a |PO| if the *Replenish on Order "
+#~ "(MTO)* route is enabled on the product's page, **and** there is not "
+#~ "enough stock of the product on-hand to fulfill the |SO|."
+#~ msgstr ""
+#~ "품목 페이지에서 *주문 시 보충 (MTO)* 경로가 활성화되어 있고 **동시에** 보"
+#~ "유 중인 품목의 재고가 |SO|에서 사용하기에 충분하지 않은 경우에는, 품목 관"
+#~ "련 |SO|에서는 |PO|만 만들어지게 됩니다."
+
+#~ msgid ""
+#~ "If there is enough stock on-hand, confirming an |SO| for the product "
+#~ "instead creates a delivery order, because Odoo assumes that the |SO| is "
+#~ "fulfilled using the stock in the warehouse."
+#~ msgstr ""
+#~ "보유 중인 재고가 충분한 경우 품목 관련된 |SO| 를 확인하면 이를 대체하여 배"
+#~ "송주문서가 생성됩니다. Odoo에서 창고에 있는 재고를 사용하여 |SO| 를 처리한"
+#~ "다고 가정하기 때문입니다."
+
+#~ msgid ""
+#~ "This is not the case for subcontracted products that are dropshipped to "
+#~ "the end customer. In that case, a |PO| is **always** created, even if "
+#~ "there is enough stock on-hand."
+#~ msgstr ""
+#~ "최종 고객에게 직접 배송되는 외주 제품의 경우에는 해당되지 않습니다. 이런 "
+#~ "경우, 보유 재고량이 충분하더라도 **항상** |PO| 가 생성됩니다."
+
+#~ msgid "Process PO"
+#~ msgstr "구매발주서 처리"
+
+#~ msgid ""
+#~ "If a |PO| was created in the previous step, navigate "
+#~ "to :guilabel:`Purchase app --> Orders --> Purchase Orders`, and select "
+#~ "the |PO|. Then, click :guilabel:`Confirm Order` to confirm it."
+#~ msgstr ""
+#~ "이전 단계에서 |PO| 를 생성한 경우, :guilabel:`매입 앱 --> 주문서 --> 구매"
+#~ "발주서` 로 이동하여 |PO| 를 선택합니다. 그런 다음 :guilabel:`주문 확인` "
+#~ "을 클릭하여 확정합니다."
+
+#~ msgid ""
+#~ "If a |PO| was not created in the previous step, do so now by navigating "
+#~ "to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
+#~ "clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "이전 단계에서 |PO| 를 생성하지 않은 경우에는 :menuselection:`매입 앱 --> "
+#~ "주문서 --> 구매발주서` 로 이동하여 :guilabel:`신규` 를 클릭하면 바로 생성"
+#~ "할 수 있습니다."
+
+#~ msgid ""
+#~ "Begin filling out the |PO| by selecting a subcontractor from "
+#~ "the :guilabel:`Vendor` drop-down menu. In the :guilabel:`Products` tab, "
+#~ "click :guilabel:`Add a product` to create a new product line. Select a "
+#~ "subcontracted product in the :guilabel:`Product` field, and enter the "
+#~ "quantity in the :guilabel:`Quantity` field. Finally, "
+#~ "click :guilabel:`Confirm Order` to confirm the |PO|."
+#~ msgstr ""
+#~ ":guilabel:`공급업체` 드롭다운 메뉴에서 외주업체를 선택하는 것으로 |PO| 작"
+#~ "성을 시작합니다. :guilabel:`품목` 탭에서 :guilabel:`품목 추가` 를 클릭하"
+#~ "여 새 제품을 입력할 줄을 생성합니다. :guilabel:`품목` 에서 외주 제품을 선"
+#~ "택하고 :guilabel:`수량` 에 수량을 입력합니다. 마지막으로 :guilabel:`주문 "
+#~ "확인` 을 클릭하여 |PO| 를 확정합니다."
+
+#~ msgid ""
+#~ "When a |PO| is confirmed for a product that requires resupplying a "
+#~ "subcontractor with components, a receipt or dropship order is "
+#~ "automatically created, and can be accessed from the "
+#~ "corresponding :guilabel:`Receipt` or :guilabel:`Dropship` smart button "
+#~ "that appears at the top of the |PO|."
+#~ msgstr ""
+#~ "협력업체에 부품을 재공급해야 하는 제품에 대한 |PO|가 확인되면 영수증 또는 "
+#~ "직배송 주문서가 자동으로 생성되며, |PO| 상단에 나타나는 해당 :guilabel:`영"
+#~ "수증` 또는 :guilabel:`직배송` 스마트 버튼을 통해 액세스할 수 있습니다."
+
+#~ msgid ""
+#~ "In addition, a *Resupply Subcontractor* order is created to ship the "
+#~ "required components to the subcontractor. This order can also be accessed "
+#~ "from the |PO|, by clicking the :guilabel:`Resupply` smart button at the "
+#~ "top of the page."
+#~ msgstr ""
+#~ "또한 *협력업체 재공급 * 주문서를 생성하여 필수 구성품을 협력업체로 배송합"
+#~ "니다. 페이지 상단에 있는 :guilabel:`재공급` 스마트 버튼을 클릭하면 |PO|에"
+#~ "서도 주문서에 액세스할 수 있습니다."
+
+#~ msgid "Process Resupply Subcontractor order"
+#~ msgstr "외주업체 주문 재공급 처리"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Resupply` smart button at the top of the screen to "
+#~ "open the *Resupply Subcontractor* order, and click :guilabel:`Validate` "
+#~ "to confirm that the components have been sent to the subcontractor."
+#~ msgstr ""
+#~ "화면 상단에 있는 :guilabel:`재공급` 스마트 버튼을 클릭하면 *협력업체 재공"
+#~ "급* 주문서가 열리고, 구성품이 협력업체에 전송되면 :guilabel:`승인` 을 클릭"
+#~ "하여 확인합니다."
+
+#~ msgid ""
+#~ "Alternatively, navigate to the :menuselection:`Inventory` app, click "
+#~ "the :guilabel:`# To Process` button on the :guilabel:`Resupply "
+#~ "Subcontractor` card, and select the *Resupply Subcontractor* order. Then, "
+#~ "click :guilabel:`Validate` to confirm that the components have been sent "
+#~ "to the subcontractor."
+#~ msgstr ""
+#~ "또는 :menuselection:`재고 관리` 앱으로 이동하여 :guilabel:`협력업체 재공급"
+#~ "` 카드에서 :guilabel:`처리할 숫자` 버튼을 클릭한 후 *협력업체 재공급* 주문"
+#~ "서를 선택합니다. 그런 다음 :guilabel:`승인` 을 클릭하여 구성품이 협력업체"
+#~ "에 배송되었음을 확인합니다."
+
+#~ msgid ""
+#~ "Once the subcontractor has finished manufacturing the product, they "
+#~ "either ship it to the contracting company, or dropship it to the end "
+#~ "customer, depending on how the product was :ref:`configured "
+#~ "<manufacturing/workflows/subcontracting_resupply/product-config>`."
+#~ msgstr ""
+#~ "협력업체에서 제품 제조를 완료하면 제품의 :ref:`환경 설정 <manufacturing/"
+#~ "workflows/subcontracting_basic/product-config>` 에 따라 계약된 회사로 배송"
+#~ "하거나 최종 고객에게 직배송합니다."
+
+#~ msgid ""
+#~ "If the subcontractor ships the finished product to the contracting "
+#~ "company, once it has been received, navigate to :menuselection:`Purchase "
+#~ "app --> Orders --> Purchase Orders`, and select the |PO|."
+#~ msgstr ""
+#~ "협력업체에서 완제품을 원청업체에 배송하는 경우, 제품이 입고되"
+#~ "면 :menuselection:`매입 앱 --> 주문서 --> 구매발주서` 로 이동하여 |PO| 를 "
+#~ "선택합니다."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Receive Products` button at the top of the |PO|, or "
+#~ "the :guilabel:`Receipt` smart button at the top of the page, to open the "
+#~ "receipt. Then, click :guilabel:`Validate` at the top of the receipt to "
+#~ "enter the product into inventory."
+#~ msgstr ""
+#~ "|PO| 상단에 있는 :guilabel:`품목 수령` 버튼을 클릭하거나 페이지 상단에 있"
+#~ "는 :guilabel:`입고` 스마트 버튼을 클릭하면 영수증이 열립니다. 그런 다음 영"
+#~ "수증 상단에 있는 :guilabel:`승인` 을 클릭하여 품목을 재고로 입력합니다."
+
+#~ msgid "Process dropship order"
+#~ msgstr "직배송 주문 처리"
+
+#~ msgid ""
+#~ "Select the :guilabel:`Dropship` smart button at the top of the page to "
+#~ "open the dropship order, and click :guilabel:`Validate` at the top of the "
+#~ "order to confirm that the product has been sent to the customer."
+#~ msgstr ""
+#~ "페이지 상단에 있는 :guilabel:`직배송` 스마트 버튼을 선택하면 직배송 주문서"
+#~ "가 열립니다. 주문서 상단의 :guilabel:`승인` 을 클릭하여 품목이 고객에게 발"
+#~ "송되었는지 확인합니다."
+
+#~ msgid ""
+#~ "If the subcontracting workflow was started by a customer |SO|, and the "
+#~ "finished product was **NOT** dropshipped to the customer, but rather "
+#~ "delivered to the contracting company, it is necessary to ship the product "
+#~ "to the customer, and process the delivery order."
+#~ msgstr ""
+#~ "외주 작업 흐름이 고객사 |SO| 로부터 시작되어, 완제품은 고객에게 직배송되"
+#~ "지 **않고** 원청업체로 전달되는 경우에는, 제품을 고객에게 배송한 후 배송주"
+#~ "문서를 처리해야 합니다."
+
+#~ msgid ""
+#~ "Once the product has been shipped to the customer, navigate to "
+#~ "the :menuselection:`Sales` app, and select the |SO|. Select "
+#~ "the :guilabel:`Delivery` smart button at the top of the page to open the "
+#~ "delivery order, and click :guilabel:`Validate` on the order to confirm "
+#~ "that the product has been shipped to the customer."
+#~ msgstr ""
+#~ "고객에게 품목 출고가 완료되면 :menuselection:`판매` 앱으로 이동하여 |SO| "
+#~ "를 선택합니다. 페이지 상단에 있는 :guilabel:`배송` 스마트 버튼을 선택하여 "
+#~ "배송주문서를 열고, 주문서에서 :guilabel:`승인` 을 클릭하여 고객에게 품목"
+#~ "이 출고되었다는 것을 확정합니다."
 
 #~ msgid ""
 #~ "DHL is one of the shipping carriers for which a *shipping connector* is "
