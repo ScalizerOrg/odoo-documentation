@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
-"PO-Revision-Date: 2026-05-13 23:20+0000\n"
+"POT-Creation-Date: 2026-05-22 17:35+0000\n"
+"PO-Revision-Date: 2026-05-19 23:21+0000\n"
 "Last-Translator: Nusara Boonma <nuboo@odoo.com>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-19-doc/"
 "administration/th/>\n"
@@ -32,7 +32,7 @@ msgstr "คู่มือเหล่านี้ให้คำแนะนำ
 
 #: ../../content/administration.rst:13
 msgid ":doc:`History of Versions <administration/standard_extended_support>`"
-msgstr ""
+msgstr ":doc:`ประวัติของเวอร์ชั่นต่างๆ <administration/standard_extended_support>`"
 
 #: ../../content/administration.rst:16
 #: ../../content/administration/on_premise/geo_ip.rst:9
@@ -2589,6 +2589,11 @@ msgid ""
 "tests or allow specific tests to be run with custom tags by going to "
 "the :ref:`branch's settings <odoo-sh/branches/tabs/settings>`."
 msgstr ""
+"เมื่อพุชคอมมิตไปยังบรานช์การพัฒนา เซิร์ฟเวอร์ใหม่จะถูกเริ่มต้น พร้อมกับฐานข้อมูลที่สร้างขึ้นใหม่ทั้งหมด "
+"และบรานช์จะถูกอัปเดต ข้อมูลสาธิตจะถูกโหลด "
+"และการทดสอบยูนิตจะถูกดำเนินการโดยค่าเริ่มต้นเพื่อตรวจสอบว่าการเปลี่ยนแปลงไม่ทำให้ฟีเจอร์ที่กำลังทดสอบเสียหาย "
+"คุณสามารถปิดการทดสอบหรืออนุญาตให้การทดสอบบางส่วนทำงานด้วยแท็กที่กำหนดเองได้โดยไปที่ :ref:`การตั้งค่าของบรานช์ "
+"<odoo-sh/branches/tabs/settings>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:134
 msgid ""
@@ -3243,6 +3248,13 @@ msgid ""
 "will be changed with the module update triggered afterwards. In these two "
 "cases, a backup is triggered as it may break something."
 msgstr ""
+"เมื่อมีการรวมคอมมิตที่อัปเดตเวอร์ชั่นของโมดูลหนึ่งหรือหลายโมดูล "
+"(ใน :file:`__manifest__.py`) หรือ Python dependencies ที่ใช้อยู่ "
+"(ใน :file:`ความต้องการ.txt`) Odoo.sh จะทำการสำรองข้อมูลอัตโนมัติ "
+"(ถูกทำเครื่องหมายด้วยประเภท `อัพเดท` ในรายการ) "
+"เนื่องจากคอนเทนเนอร์จะถูกเปลี่ยนแปลงโดยการติดตั้งแพ็กเกจ pip ใหม่ "
+"หรือฐานข้อมูลเองจะถูกเปลี่ยนแปลงด้วยการอัปเดตโมดูลที่ถูกเรียกใช้ภายหลัง ในทั้งสองกรณีนี้ "
+"การสำรองข้อมูลจะถูกเรียกใช้เนื่องจากอาจทำให้เกิดปัญหาได้"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:487
 msgid ""
@@ -6280,23 +6292,14 @@ msgid ""
 "Nevertheless, once the file has been located and the access rights verified "
 "by Odoo, it is a good idea to serve the file using the static web server "
 "instead of Odoo. For Odoo to delegate serving files to the static web "
-"server, the `X-Sendfile <https://tn123.org/mod_xsendfile/>`_ (apache) or `X-"
-"Accel <https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/"
-">`_ (nginx) extensions must be enabled and configured on the static web "
+"server, the `X-Sendfile <https://tn123.org/mod_xsendfile/>`_ (apache) or X-"
+"Accel (nginx) extensions must be enabled and configured on the static web "
 "server. Once it is set up, start Odoo with the :option:`--x-sendfile <odoo-"
 "bin --x-sendfile>` CLI flag (this unique flag is used for both X-Sendfile "
 "and X-Accel)."
 msgstr ""
-"อย่างไรก็ตาม เมื่อไฟล์ถูกพบและยืนยันสิทธิ์การเข้าถึงโดย Odoo แล้ว "
-"เป็นความคิดที่ดีที่จะให้บริการไฟล์โดยใช้เว็บเซิร์ฟเวอร์แบบ static แทน Odoo เพื่อให้ Odoo "
-"มอบหมายการให้บริการไฟล์ไปยังเว็บเซิร์ฟเวอร์แบบคงที่ `X-Sendfile <https://tn123.org/"
-"mod_xsendfile/>`_ (apache) หรือ `X-Accel <https://www.nginx.com/ resources/"
-"wiki/start/topics/examples/x-accel/>`_ (nginx) "
-"จะต้องเปิดใช้งานและกำหนดค่าบนเว็บเซิร์ฟเวอร์แบบ static เมื่อตั้งค่าแล้ว ให้เริ่ม Odoo "
-"ด้วย :option:`--x-sendfile <odoo-bin --x-sendfile>` แฟล็ก CLI "
-"(แฟล็กเฉพาะนี้ใช้สำหรับทั้ง X-Sendfile และ X-Accel)"
 
-#: ../../content/administration/on_premise/deploy.rst:527
+#: ../../content/administration/on_premise/deploy.rst:526
 msgid ""
 "The X-Sendfile extension for apache (and compatible web servers) does not "
 "require any supplementary configuration."
@@ -6304,13 +6307,13 @@ msgstr ""
 "ส่วนขยาย X-Sendfile สำหรับ apache (และเว็บเซิร์ฟเวอร์ที่เข้ากันได้) "
 "ไม่ต้องการการกำหนดค่าเพิ่มเติมใดๆ"
 
-#: ../../content/administration/on_premise/deploy.rst:529
+#: ../../content/administration/on_premise/deploy.rst:528
 msgid ""
 "The X-Accel extension for NGINX **does** require the following additionnal "
 "configuration:"
 msgstr "ส่วนขยาย X-Accel สำหรับ NGINX **ไม่** จำเป็นต้องมีการกำหนดค่าเพิ่มเติมต่อไปนี้:"
 
-#: ../../content/administration/on_premise/deploy.rst:540
+#: ../../content/administration/on_premise/deploy.rst:539
 msgid ""
 "In case you don't know what is the path to your filestore, start Odoo with "
 "the :option:`--x-sendfile <odoo-bin --x-sendfile>` option and navigate to "
@@ -6323,11 +6326,11 @@ msgstr ""
 "Odoo (อย่านำทางไปยัง URL ผ่าน NGINX) ซึ่งจะบันทึกคำเตือน "
 "ข้อความประกอบด้วยการกำหนดค่าที่คุณต้องการ"
 
-#: ../../content/administration/on_premise/deploy.rst:549
+#: ../../content/administration/on_premise/deploy.rst:548
 msgid "Security"
 msgstr "ความปลอดภัย"
 
-#: ../../content/administration/on_premise/deploy.rst:551
+#: ../../content/administration/on_premise/deploy.rst:550
 msgid ""
 "For starters, keep in mind that securing an information system is a "
 "continuous process, not a one-shot operation. At any moment, you will only "
@@ -6336,7 +6339,7 @@ msgstr ""
 "สำหรับผู้เริ่มต้น โปรดทราบว่าการรักษาความปลอดภัยของระบบข้อมูลนั้นเป็นกระบวนการที่ต่อเนื่อง "
 "ไม่ใช่การดำเนินการเพียงครั้งเดียว คุณมีความปลอดภัยเท่าจุดอ่อนที่สุดในสภาพแวดล้อมของคุณเท่านั้น"
 
-#: ../../content/administration/on_premise/deploy.rst:555
+#: ../../content/administration/on_premise/deploy.rst:554
 msgid ""
 "So please do not take this section as the ultimate list of measures that "
 "will prevent all security problems. It's only intended as a summary of the "
@@ -6350,14 +6353,14 @@ msgstr ""
 "ส่วนที่เหลือจะมาจากแนวทางปฏิบัติด้านความปลอดภัยที่ดีที่สุดสำหรับระบบปฏิบัติการและการเผยแพร่ของคุณ "
 "แนวทางปฏิบัติที่ดีที่สุดในแง่ของผู้ใช้ รหัสผ่าน และการจัดการการควบคุมการเข้าถึง และอื่นๆ"
 
-#: ../../content/administration/on_premise/deploy.rst:561
+#: ../../content/administration/on_premise/deploy.rst:560
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
 msgstr ""
 "เมื่อปรับใช้เซิร์ฟเวอร์ที่เชื่อมต่อกับอินเทอร์เน็ต โปรดพิจารณาหัวข้อที่เกี่ยวข้องกับความปลอดภัยต่อไปนี้:"
 
-#: ../../content/administration/on_premise/deploy.rst:564
+#: ../../content/administration/on_premise/deploy.rst:563
 msgid ""
 "Always set a strong super-admin admin password, and restrict access to the "
 "database management pages as soon as the system is set up. "
@@ -6367,7 +6370,7 @@ msgstr ""
 "และจำกัดการเข้าถึงหน้าการจัดการฐานข้อมูลทันทีที่ตั้งค่าระบบ "
 "โปรดดู :ref:`db_manager_security`"
 
-#: ../../content/administration/on_premise/deploy.rst:567
+#: ../../content/administration/on_premise/deploy.rst:566
 msgid ""
 "Choose unique logins and strong passwords for all administrator accounts on "
 "all databases. Do not use 'admin' as the login. Do not use those logins for "
@@ -6380,7 +6383,7 @@ msgstr ""
 "เพียงเพื่อการควบคุม/จัดการการติดตั้งเท่านั้น *ห้าม* ใช้รหัสผ่านเริ่มต้นใดๆ เช่น ผู้ดูแลระบบ/"
 "ผู้ดูแลระบบ แม้แต่กับฐานข้อมูลการทดสอบ/ชั่วคราวก็ตาม"
 
-#: ../../content/administration/on_premise/deploy.rst:572
+#: ../../content/administration/on_premise/deploy.rst:571
 msgid ""
 "Do **not** install demo data on internet-facing servers. Databases with demo "
 "data contain default logins and passwords that can be used to get into your "
@@ -6390,7 +6393,7 @@ msgstr ""
 "ฐานข้อมูลที่มีข้อมูลสาธิตประกอบด้วยการเข้าสู่ระบบและรหัสผ่านเริ่มต้นที่สามารถใช้เพื่อเข้าสู่ระบบของคุณและก่อให้เกิดปัญหาร้ายแรง "
 "แม้แต่ในระบบชั่วคราว/การพัฒนา"
 
-#: ../../content/administration/on_premise/deploy.rst:576
+#: ../../content/administration/on_premise/deploy.rst:575
 msgid ""
 "Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-"
 "filter>`) to restrict the visibility of your databases according to the "
@@ -6404,7 +6407,7 @@ msgstr ""
 "(คั่นด้วยเครื่องหมายจุลภาค) ของคุณเองเพื่อกรอง "
 "แทนที่จะปล่อยให้ระบบดึงข้อมูลทั้งหมดจากแบ็กเอนด์ฐานข้อมูล"
 
-#: ../../content/administration/on_premise/deploy.rst:583
+#: ../../content/administration/on_premise/deploy.rst:582
 msgid ""
 "Once your ``db_name`` and ``dbfilter`` are configured and only match a "
 "single database per hostname, you should set ``list_db`` configuration "
@@ -6419,7 +6422,7 @@ msgstr ""
 "เข้าถึงหน้าจอการจัดการฐานข้อมูล (ซึ่งแสดงเป็น :option:`--no-database-list <odoo-bin --"
 "no-database-list>` ตัวเลือกบรรทัดคำสั่ง)"
 
-#: ../../content/administration/on_premise/deploy.rst:589
+#: ../../content/administration/on_premise/deploy.rst:588
 msgid ""
 "Make sure the PostgreSQL user (:option:`--db_user <odoo-bin --db_user>`) is "
 "*not* a super-user, and that your databases are owned by a different user. "
@@ -6432,7 +6435,7 @@ msgstr ""
 "``postgres`` อาจเป็นเจ้าของได้ หากคุณใช้ ``db_user`` ที่ไม่มีสิทธิพิเศษโดยเฉพาะ "
 "ดูเพิ่มเติมที่ :ref:`setup/deploy/odoo`"
 
-#: ../../content/administration/on_premise/deploy.rst:594
+#: ../../content/administration/on_premise/deploy.rst:593
 msgid ""
 "Keep installations updated by regularly installing the latest builds, either "
 "via GitHub or by downloading the latest version from https://www.odoo.com/"
@@ -6442,7 +6445,7 @@ msgstr ""
 "หรือโดยการดาวน์โหลดเวอร์ชันล่าสุดจาก https://www.odoo.com/page/download หรือ http://"
 "nightly.odoo.com"
 
-#: ../../content/administration/on_premise/deploy.rst:598
+#: ../../content/administration/on_premise/deploy.rst:597
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your "
 "typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
@@ -6450,7 +6453,7 @@ msgstr ""
 "กำหนดค่าเซิร์ฟเวอร์ของคุณในโหมดหลายกระบวนการด้วยขีดจำกัดที่เหมาะสมซึ่งตรงกับการใช้งานทั่วไปของคุณ "
 "(หน่วยความจำ/CPU/หมดเวลา) ดูเพิ่มเติม :ref:`builtin_server`"
 
-#: ../../content/administration/on_premise/deploy.rst:601
+#: ../../content/administration/on_premise/deploy.rst:600
 msgid ""
 "Run Odoo behind a web server providing HTTPS termination with a valid SSL "
 "certificate, in order to prevent eavesdropping on cleartext communications. "
@@ -6465,7 +6468,7 @@ msgstr ""
 "จากนั้นเปิดใช้งานตัวเลือก :option:`proxy mode <odoo-bin --proxy-mode>` "
 "ดูเพิ่มเติม :ref:`https_proxy`"
 
-#: ../../content/administration/on_premise/deploy.rst:608
+#: ../../content/administration/on_premise/deploy.rst:607
 msgid ""
 "If you need to allow remote SSH access to your servers, make sure to set a "
 "strong password for **all** accounts, not just `root`. It is strongly "
@@ -6481,7 +6484,7 @@ msgstr ""
 "VPN โดยอนุญาตเฉพาะ IP ที่เชื่อถือได้ในไฟร์วอลล์ และ/หรือใช้งานระบบตรวจจับแบบ brute-force "
 "เช่น `fail2ban` หรือเทียบเท่า"
 
-#: ../../content/administration/on_premise/deploy.rst:614
+#: ../../content/administration/on_premise/deploy.rst:613
 msgid ""
 "Consider installing appropriate rate-limiting on your proxy or firewall, to "
 "prevent brute-force attacks and denial of service attacks. See "
@@ -6491,7 +6494,7 @@ msgstr ""
 "force และการโจมตีแบบปฏิเสธบริการ ดูเพิ่มเติม :ref:`login_brute_force` "
 "สำหรับมาตรการเฉพาะ"
 
-#: ../../content/administration/on_premise/deploy.rst:618
+#: ../../content/administration/on_premise/deploy.rst:617
 msgid ""
 "Many network providers provide automatic mitigation for Distributed Denial "
 "of Service attacks (DDOS), but this is often an optional service, so you "
@@ -6500,7 +6503,7 @@ msgstr ""
 "ผู้ให้บริการเครือข่ายหลายรายจัดให้มีการบรรเทาการโจมตีแบบ Distributed Denial of Service "
 "(DDOS) โดยอัตโนมัติ แต่มักเป็นบริการเสริม ดังนั้นคุณควรปรึกษากับผู้ให้บริการเครือข่ายเหล่านั้น"
 
-#: ../../content/administration/on_premise/deploy.rst:622
+#: ../../content/administration/on_premise/deploy.rst:621
 msgid ""
 "Whenever possible, host your public-facing demo/test/staging instances on "
 "different machines than the production ones. And apply the same security "
@@ -6510,7 +6513,7 @@ msgstr ""
 "การแสดงแบบสาธารณะของคุณบนเครื่องที่แตกต่างจากเครื่องที่ใช้งานจริง "
 "และใช้มาตรการรักษาความปลอดภัยเช่นเดียวกับการผลิต"
 
-#: ../../content/administration/on_premise/deploy.rst:626
+#: ../../content/administration/on_premise/deploy.rst:625
 msgid ""
 "If your public-facing Odoo server has access to sensitive internal network "
 "resources or services (e.g. via a private VLAN), implement appropriate "
@@ -6534,7 +6537,7 @@ msgstr ""
 "0pointer.net/blog/ip-accounting-and-access-lists-with-systemd.html>`_ "
 "อาจมีประโยชน์ในการใช้การควบคุมการเข้าถึงเครือข่ายต่อกระบวนการ"
 
-#: ../../content/administration/on_premise/deploy.rst:637
+#: ../../content/administration/on_premise/deploy.rst:636
 msgid ""
 "If your public-facing Odoo server is behind a Web Application Firewall, a "
 "load-balancer, a transparent DDoS protection service (like CloudFlare) or a "
@@ -6558,7 +6561,7 @@ msgstr ""
 "เฉพาะของ WAF, โหลดบาลานเซอร์ หรือบริการพร็อกซีของคุณ ผู้ให้บริการเช่น CloudFlare "
 "มักจะรักษารายการสาธารณะของช่วงที่อยู่ IP ของตนเพื่อจุดประสงค์นี้"
 
-#: ../../content/administration/on_premise/deploy.rst:648
+#: ../../content/administration/on_premise/deploy.rst:647
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
@@ -6566,7 +6569,7 @@ msgstr ""
 "หากคุณโฮสต์ลูกค้าหลายราย ให้แยกข้อมูลและไฟล์ของลูกค้าออกจากกันโดยใช้คอนเทนเนอร์หรือเทคนิค "
 "\"การกักขัง\" ที่เหมาะสม"
 
-#: ../../content/administration/on_premise/deploy.rst:651
+#: ../../content/administration/on_premise/deploy.rst:650
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a "
 "remote archiving server that is not accessible from the server itself."
@@ -6574,7 +6577,7 @@ msgstr ""
 "ตั้งค่าการสำรองข้อมูลรายวันของฐานข้อมูลและข้อมูลพื้นที่จัดเก็บไฟล์ของคุณ "
 "และคัดลอกไปยังเซิร์ฟเวอร์การเก็บถาวรระยะไกลที่ไม่สามารถเข้าถึงได้จากเซิร์ฟเวอร์เอง"
 
-#: ../../content/administration/on_premise/deploy.rst:654
+#: ../../content/administration/on_premise/deploy.rst:653
 msgid ""
 "Deploying Odoo on Linux is strongly recommended over Windows. Should you "
 "choose nevertheless to deploy on a Windows platform, a thorough security "
@@ -6585,11 +6588,11 @@ msgstr ""
 "Windows "
 "ควรดำเนินการตรวจสอบการรักษาความปลอดภัยอย่างเข้มงวดของเซิร์ฟเวอร์และอยู่นอกเหนือขอบเขตของคู่มือนี้"
 
-#: ../../content/administration/on_premise/deploy.rst:662
+#: ../../content/administration/on_premise/deploy.rst:661
 msgid "Blocking Brute Force Attacks"
 msgstr "การปิดกั้นการโจมตีแบบ Brute Force"
 
-#: ../../content/administration/on_premise/deploy.rst:664
+#: ../../content/administration/on_premise/deploy.rst:663
 msgid ""
 "For internet-facing deployments, brute force attacks on user passwords are "
 "very common, and this threat should not be neglected for Odoo servers. Odoo "
@@ -6601,37 +6604,37 @@ msgstr ""
 "ปล่อยรายการบันทึกทุกครั้งที่พยายามเข้าสู่ระบบ และรายงานผลลัพธ์: สำเร็จหรือไม่สำเร็จ "
 "พร้อมทั้งการเข้าสู่ระบบเป้าหมายและ IP ต้นทาง"
 
-#: ../../content/administration/on_premise/deploy.rst:668
+#: ../../content/administration/on_premise/deploy.rst:667
 msgid "The log entries will have the following form."
 msgstr "รายการบันทึกจะมีแบบฟอร์มดังต่อไปนี้"
 
-#: ../../content/administration/on_premise/deploy.rst:670
+#: ../../content/administration/on_premise/deploy.rst:669
 msgid "Failed login::"
 msgstr "เข้าสู่ระบบไม่สำเร็จ::"
 
-#: ../../content/administration/on_premise/deploy.rst:674
+#: ../../content/administration/on_premise/deploy.rst:673
 msgid "Successful login::"
 msgstr "เข้าสู่ระบบสำเร็จ::"
 
-#: ../../content/administration/on_premise/deploy.rst:679
+#: ../../content/administration/on_premise/deploy.rst:678
 msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
 msgstr "บันทึกเหล่านี้สามารถวิเคราะห์ได้อย่างง่ายดายด้วยระบบป้องกันการบุกรุก เช่น `fail2ban`"
 
-#: ../../content/administration/on_premise/deploy.rst:681
+#: ../../content/administration/on_premise/deploy.rst:680
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
 msgstr "ตัวอย่างเช่น ข้อกำหนดตัวกรอง failed2ban ต่อไปนี้ควรตรงกับการเข้าสู่ระบบที่ไม่สำเร็จ::"
 
-#: ../../content/administration/on_premise/deploy.rst:688
+#: ../../content/administration/on_premise/deploy.rst:687
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
 msgstr "สามารถใช้กับคำจำกัดความของคุกเพื่อป้องกัน IP ที่ถูกโจมตีบน HTTP(S)"
 
-#: ../../content/administration/on_premise/deploy.rst:690
+#: ../../content/administration/on_premise/deploy.rst:689
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
@@ -6639,21 +6642,21 @@ msgstr ""
 "ต่อไปนี้คือลักษณะที่ปรากฏสำหรับการบล็อก IP เป็นเวลา 15 นาที "
 "เมื่อตรวจพบการพยายามเข้าสู่ระบบที่ไม่สำเร็จเกินกว่า 10 ครั้งจาก IP เดียวกันภายใน 1 นาที::"
 
-#: ../../content/administration/on_premise/deploy.rst:704
+#: ../../content/administration/on_premise/deploy.rst:703
 msgid "Database Manager Security"
 msgstr "ความปลอดภัยของผู้จัดการฐานข้อมูล"
 
-#: ../../content/administration/on_premise/deploy.rst:706
+#: ../../content/administration/on_premise/deploy.rst:705
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
 msgstr ":ref:`setup/deploy/odoo` กล่าวถึง ``admin_passwd`` ในการผ่าน"
 
-#: ../../content/administration/on_premise/deploy.rst:708
+#: ../../content/administration/on_premise/deploy.rst:707
 msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
 msgstr "การตั้งค่านี้ใช้กับหน้าจอการจัดการฐานข้อมูลทั้งหมด (เพื่อสร้าง ลบ ดัมพ์ หรือกู้คืนฐานข้อมูล)"
 
-#: ../../content/administration/on_premise/deploy.rst:711
+#: ../../content/administration/on_premise/deploy.rst:710
 msgid ""
 "If the management screens must not be accessible at all, you should set "
 "``list_db`` configuration option to ``False``, to block access to all the "
@@ -6662,7 +6665,7 @@ msgstr ""
 "หากหน้าจอการจัดการต้องไม่สามารถเข้าถึงได้เลย คุณควรตั้งค่าตัวเลือกการกำหนดค่า ``list_db`` "
 "เป็น ``False`` เพื่อบล็อกการเข้าถึงการเลือกฐานข้อมูลและหน้าจอการจัดการทั้งหมด"
 
-#: ../../content/administration/on_premise/deploy.rst:717
+#: ../../content/administration/on_premise/deploy.rst:716
 msgid ""
 "It is strongly recommended to disable the Database Manager for any internet-"
 "facing system! It is meant as a development/demo tool, to make it easy to "
@@ -6676,7 +6679,7 @@ msgstr ""
 "นอกจากนี้ยังไม่ได้ออกแบบมาเพื่อจัดการกับฐานข้อมูลขนาดใหญ่ "
 "และอาจทำให้เกิดขีดจำกัดของหน่วยความจำ"
 
-#: ../../content/administration/on_premise/deploy.rst:723
+#: ../../content/administration/on_premise/deploy.rst:722
 msgid ""
 "On production systems, database management operations should always be "
 "performed by the system administrator, including provisioning of new "
@@ -6685,7 +6688,7 @@ msgstr ""
 "ในระบบที่ใช้งานจริง ผู้ดูแลระบบควรดำเนินการจัดการฐานข้อมูลเสมอ "
 "รวมถึงการจัดเตรียมฐานข้อมูลใหม่และการสำรองข้อมูลอัตโนมัติ"
 
-#: ../../content/administration/on_premise/deploy.rst:726
+#: ../../content/administration/on_premise/deploy.rst:725
 msgid ""
 "Be sure to setup an appropriate ``db_name`` parameter (and optionally, "
 "``dbfilter`` too) so that the system can determine the target database for "
@@ -6696,7 +6699,7 @@ msgstr ""
 "``db_filter`` ด้วย) เพื่อให้ระบบสามารถระบุฐานข้อมูลเป้าหมายสำหรับแต่ละคำขอ "
 "ไม่เช่นนั้นผู้ใช้จะถูกบล็อกเนื่องจากจะไม่ได้รับอนุญาตให้เลือก ฐานข้อมูลนั้นเอง"
 
-#: ../../content/administration/on_premise/deploy.rst:731
+#: ../../content/administration/on_premise/deploy.rst:730
 msgid ""
 "If the management screens must only be accessible from a selected set of "
 "machines, use the proxy server's features to block access to all routes "
@@ -6707,7 +6710,7 @@ msgstr ""
 "ให้ใช้ฟีเจอร์ของพร็อกซีเซิร์ฟเวอร์เพื่อบล็อกการเข้าถึงทุกเส้นทางที่ขึ้นต้นด้วย ``/web/database`` "
 "ยกเว้น (อาจจะ) ``/web/database/selector`` ซึ่งแสดงหน้าจอการเลือกฐานข้อมูล"
 
-#: ../../content/administration/on_premise/deploy.rst:735
+#: ../../content/administration/on_premise/deploy.rst:734
 msgid ""
 "If the database-management screen should be left accessible, the "
 "``admin_passwd`` setting must be changed from its ``admin`` default: this "
@@ -6717,19 +6720,19 @@ msgstr ""
 "จะต้องเปลี่ยนจากค่าเริ่มต้น ``admin``: "
 "รหัสผ่านนี้จะถูกตรวจสอบก่อนที่จะอนุญาตการดำเนินการแก้ไขฐานข้อมูล"
 
-#: ../../content/administration/on_premise/deploy.rst:739
+#: ../../content/administration/on_premise/deploy.rst:738
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr "ควรเก็บไว้อย่างปลอดภัย และควรสร้างขึ้นแบบสุ่ม เช่น"
 
-#: ../../content/administration/on_premise/deploy.rst:745
+#: ../../content/administration/on_premise/deploy.rst:744
 msgid "which generates a 32-character pseudorandom printable string."
 msgstr "ซึ่งสร้างสตริงที่พิมพ์ได้แบบสุ่มหลอก 32 ตัวอักษร"
 
-#: ../../content/administration/on_premise/deploy.rst:748
+#: ../../content/administration/on_premise/deploy.rst:747
 msgid "Reset the master password"
 msgstr "รีเซ็ตรหัสผ่านหลัก"
 
-#: ../../content/administration/on_premise/deploy.rst:750
+#: ../../content/administration/on_premise/deploy.rst:749
 msgid ""
 "There may be instances where the master password is misplaced, or "
 "compromised, and needs to be reset. The following process is for system "
@@ -6740,11 +6743,11 @@ msgstr ""
 "กระบวนการต่อไปนี้มีไว้สำหรับผู้ดูแลระบบของฐานข้อมูลภายในองค์กร Odoo "
 "ซึ่งมีรายละเอียดวิธีการรีเซ็ตและเข้ารหัสรหัสผ่านหลักอีกครั้งด้วยตนเอง"
 
-#: ../../content/administration/on_premise/deploy.rst:755
+#: ../../content/administration/on_premise/deploy.rst:754
 msgid ":doc:`../odoo_accounts`"
 msgstr ""
 
-#: ../../content/administration/on_premise/deploy.rst:757
+#: ../../content/administration/on_premise/deploy.rst:756
 msgid ""
 "When creating a new on-premise database, a random master password is "
 "generated. Odoo recommends using this password to secure the database. This "
@@ -6755,7 +6758,7 @@ msgstr ""
 "ขอแนะนำให้ใช้รหัสผ่านนี้เพื่อรักษาความปลอดภัยฐานข้อมูล รหัสผ่านนี้จะถูกใช้งานตามค่าเริ่มต้น "
 "ดังนั้นจึงมีรหัสผ่านหลักที่ปลอดภัยสำหรับการปรับใช้ Odoo ภายในองค์กร"
 
-#: ../../content/administration/on_premise/deploy.rst:762
+#: ../../content/administration/on_premise/deploy.rst:761
 msgid ""
 "When creating an Odoo on-premise database the installation is accessible to "
 "anyone on the internet, until this password is set to secure the database."
@@ -6763,7 +6766,7 @@ msgstr ""
 "เมื่อสร้างฐานข้อมูล Odoo ภายในองค์กร ทุกคนบนอินเทอร์เน็ตจะสามารถเข้าถึงการติดตั้งได้ "
 "จนกว่าจะตั้งค่ารหัสผ่านนี้เพื่อรักษาความปลอดภัยของฐานข้อมูล"
 
-#: ../../content/administration/on_premise/deploy.rst:765
+#: ../../content/administration/on_premise/deploy.rst:764
 msgid ""
 "The master password is specified in the Odoo configuration file (`odoo.conf` "
 "or `odoorc` (hidden file)). The Odoo master password is needed to modify, "
@@ -6773,17 +6776,17 @@ msgstr ""
 "ต้องใช้รหัสผ่านหลักของ Odoo เพื่อแก้ไข สร้าง หรือลบฐานข้อมูลผ่านทางอินเทอร์เฟซผู้ใช้แบบกราฟิก "
 "(GUI)"
 
-#: ../../content/administration/on_premise/deploy.rst:770
+#: ../../content/administration/on_premise/deploy.rst:769
 msgid "Locate configuration file"
 msgstr "ค้นหาไฟล์การกำหนดค่า"
 
-#: ../../content/administration/on_premise/deploy.rst:772
+#: ../../content/administration/on_premise/deploy.rst:771
 msgid ""
 "First, open the Odoo configuration file (`odoo.conf` or `odoorc` (hidden "
 "file))."
 msgstr "ขั้นแรก ให้เปิดไฟล์การกำหนดค่า Odoo (`odoo.conf` หรือ `odoorc` (ไฟล์ที่ซ่อน))"
 
-#: ../../content/administration/on_premise/deploy.rst:776
+#: ../../content/administration/on_premise/deploy.rst:775
 #: ../../content/administration/on_premise/packages.rst:130
 #: ../../content/administration/on_premise/source.rst:70
 #: ../../content/administration/on_premise/source.rst:133
@@ -6797,7 +6800,7 @@ msgstr "ขั้นแรก ให้เปิดไฟล์การกำ�
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../content/administration/on_premise/deploy.rst:778
+#: ../../content/administration/on_premise/deploy.rst:777
 msgid ""
 "The configuration file is located at: `c:\\\\ProgramFiles\\\\Odoo{VERSION}\\"
 "\\server\\\\odoo.conf`"
@@ -6805,7 +6808,7 @@ msgstr ""
 "ไฟล์การกำหนดค่าอยู่ที่:  `c:\\\\ProgramFiles\\\\Odoo{VERSION}\\\\server\\"
 "\\odoo.conf`"
 
-#: ../../content/administration/on_premise/deploy.rst:780
+#: ../../content/administration/on_premise/deploy.rst:779
 #: ../../content/administration/on_premise/packages.rst:25
 #: ../../content/administration/on_premise/source.rst:52
 #: ../../content/administration/on_premise/source.rst:129
@@ -6819,7 +6822,7 @@ msgstr ""
 msgid "Linux"
 msgstr "Linux"
 
-#: ../../content/administration/on_premise/deploy.rst:782
+#: ../../content/administration/on_premise/deploy.rst:781
 msgid ""
 "Depending on how Odoo is installed on the Linux machine, the configuration "
 "file is located in one of two different places:"
@@ -6827,31 +6830,31 @@ msgstr ""
 "ไฟล์การกำหนดค่าจะอยู่ในตำแหน่งใดตำแหน่งหนึ่งจากสองตำแหน่งที่แตกต่างกัน ขึ้นอยู่กับวิธีการติดตั้ง "
 "Odoo บนเครื่อง Linux:"
 
-#: ../../content/administration/on_premise/deploy.rst:785
+#: ../../content/administration/on_premise/deploy.rst:784
 msgid "Package installation: `/etc/odoo.conf`"
 msgstr "การติดตั้งแพ็คเกจ: `/etc/odoo.conf`"
 
-#: ../../content/administration/on_premise/deploy.rst:786
+#: ../../content/administration/on_premise/deploy.rst:785
 msgid "Source installation: `~/.odoorc`"
 msgstr "การติดตั้งแหล่งที่มา: `~/.odoorc`"
 
-#: ../../content/administration/on_premise/deploy.rst:789
+#: ../../content/administration/on_premise/deploy.rst:788
 msgid "Change old password"
 msgstr "เปลี่ยนรหัสผ่านเก่า"
 
-#: ../../content/administration/on_premise/deploy.rst:791
+#: ../../content/administration/on_premise/deploy.rst:790
 msgid ""
 "Once the appropriate file has been opened, proceed to modify the old "
 "password in the configuration file to a temporary password."
 msgstr ""
 "เมื่อเปิดไฟล์ที่เหมาะสมแล้ว ให้ดำเนินการแก้ไขรหัสผ่านเก่าในไฟล์กำหนดค่าเป็นรหัสผ่านชั่วคราว"
 
-#: ../../content/administration/on_premise/deploy.rst:796
-#: ../../content/administration/on_premise/deploy.rst:844
+#: ../../content/administration/on_premise/deploy.rst:795
+#: ../../content/administration/on_premise/deploy.rst:843
 msgid "Graphical user interface"
 msgstr "ส่วนติดต่อผู้ใช้แบบกราฟิก"
 
-#: ../../content/administration/on_premise/deploy.rst:798
+#: ../../content/administration/on_premise/deploy.rst:797
 msgid ""
 "After locating the configuration file, open it using a (:abbr:`GUI "
 "(graphical user interface)`). This can be achieved by simply double clicking "
@@ -6862,7 +6865,7 @@ msgstr ""
 "ซึ่งสามารถทำได้โดยเพียงดับเบิลคลิกที่ไฟล์ จากนั้น อุปกรณ์ควรมีค่าเริ่มต้น :abbr:`GUI "
 "(อินเทอร์เฟซผู้ใช้แบบกราฟิก)` เพื่อเปิดไฟล์"
 
-#: ../../content/administration/on_premise/deploy.rst:802
+#: ../../content/administration/on_premise/deploy.rst:801
 msgid ""
 "Next, modify the master password line `admin_passwd = $pbkdf2-sha…` to "
 "`admin_passwd = newpassword1234`, for example. This password can be "
@@ -6873,8 +6876,8 @@ msgstr ""
 "newpassword1234` เป็นต้น รหัสผ่านนี้สามารถเป็นอะไรก็ได้ ตราบใดที่มันถูกบันทึกไว้ชั่วคราว "
 "ตรวจสอบให้แน่ใจว่าได้แก้ไขอักขระทั้งหมดหลัง `=`"
 
-#: ../../content/administration/on_premise/deploy.rst:807
-#: ../../content/administration/on_premise/deploy.rst:826
+#: ../../content/administration/on_premise/deploy.rst:806
+#: ../../content/administration/on_premise/deploy.rst:825
 msgid ""
 "The line appears like this: `admin_passwd = $pbkdf2-"
 "sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/"
@@ -6884,23 +6887,23 @@ msgstr ""
 "sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/"
 "b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`"
 
-#: ../../content/administration/on_premise/deploy.rst:811
-#: ../../content/administration/on_premise/deploy.rst:830
+#: ../../content/administration/on_premise/deploy.rst:810
+#: ../../content/administration/on_premise/deploy.rst:829
 msgid "The modified line appears like this: `admin_passwd = newpassword1234`"
 msgstr "บรรทัดที่แก้ไขจะแสดงดังนี้: `admin_passwd = newpassword1234`"
 
-#: ../../content/administration/on_premise/deploy.rst:813
-#: ../../content/administration/on_premise/deploy.rst:853
+#: ../../content/administration/on_premise/deploy.rst:812
+#: ../../content/administration/on_premise/deploy.rst:852
 msgid "Command-line interface"
 msgstr "อินเทอร์เฟซบรรทัดคำสั่ง"
 
-#: ../../content/administration/on_premise/deploy.rst:815
+#: ../../content/administration/on_premise/deploy.rst:814
 msgid ""
 "Modify the master password line using the following Unix command detailed "
 "below."
 msgstr "แก้ไขบรรทัดรหัสผ่านหลักโดยใช้คำสั่ง Unix ต่อไปนี้ซึ่งมีรายละเอียดด้านล่าง"
 
-#: ../../content/administration/on_premise/deploy.rst:817
+#: ../../content/administration/on_premise/deploy.rst:816
 msgid ""
 "Connect to the Odoo server's terminal via Secure Shell (SSH) protocol, and "
 "edit the configuration file. To modify the configuration file, enter the "
@@ -6910,7 +6913,7 @@ msgstr ""
 "และแก้ไขไฟล์การกำหนดค่า หากต้องการแก้ไขไฟล์การกำหนดค่า "
 "ให้ป้อนคำสั่งต่อไปนี้: :command:`sudo nano /etc/odoo.conf`"
 
-#: ../../content/administration/on_premise/deploy.rst:821
+#: ../../content/administration/on_premise/deploy.rst:820
 msgid ""
 "After opening the configuration file, modify the master password line "
 "`admin_passwd = $pbkdf2-sha…` to `admin_passwd = newpassword1234`. This "
@@ -6921,7 +6924,7 @@ msgstr ""
 "เป็น `admin_passwd = newpassword1234` รหัสผ่านนี้สามารถเป็นอะไรก็ได้ "
 "ตราบใดที่มันถูกบันทึกไว้ชั่วคราว ตรวจสอบให้แน่ใจว่าได้แก้ไขตัวอักษรทั้งหมดหลัง `=`"
 
-#: ../../content/administration/on_premise/deploy.rst:833
+#: ../../content/administration/on_premise/deploy.rst:832
 msgid ""
 "It is essential that the password is changed to something else, rather than "
 "triggering a new password reset by adding a semicolon `;` at the beginning "
@@ -6932,17 +6935,17 @@ msgstr ""
 "แทนที่จะเรียกใช้การรีเซ็ตรหัสผ่านใหม่โดยเพิ่มเครื่องหมายอัฒภาค `;` ที่จุดเริ่มต้นของบรรทัด "
 "สิ่งนี้ทำให้มั่นใจได้ว่าฐานข้อมูลมีความปลอดภัยตลอดกระบวนการรีเซ็ตรหัสผ่านทั้งหมด"
 
-#: ../../content/administration/on_premise/deploy.rst:838
+#: ../../content/administration/on_premise/deploy.rst:837
 msgid "Restart Odoo server"
 msgstr "รีสตาร์ทเซิร์ฟเวอร์ Odoo"
 
-#: ../../content/administration/on_premise/deploy.rst:840
+#: ../../content/administration/on_premise/deploy.rst:839
 msgid ""
 "After setting the temporary password, a restart of the Odoo server is "
 "**required**."
 msgstr "หลังจากตั้งรหัสผ่านชั่วคราวแล้ว **จำเป็นต้องรีสตาร์ทเซิร์ฟเวอร์ Odoo"
 
-#: ../../content/administration/on_premise/deploy.rst:846
+#: ../../content/administration/on_premise/deploy.rst:845
 msgid ""
 "To restart the Odoo server, first, type `services` into the "
 "Windows :guilabel:`Search` bar. Then, select the :guilabel:`Services` "
@@ -6952,7 +6955,7 @@ msgstr ""
 "Windows :guilabel:`ค้นหา` จากนั้นเลือกแอปพลิเคชัน :guilabel:`บริการ` "
 "และเลื่อนลงไปที่บริการ :guilabel:`Odoo`"
 
-#: ../../content/administration/on_premise/deploy.rst:850
+#: ../../content/administration/on_premise/deploy.rst:849
 msgid ""
 "Next, right click on :guilabel:`Odoo`, and select :guilabel:`Start` "
 "or :guilabel:`Restart`. This action manually restarts the Odoo server."
@@ -6960,23 +6963,23 @@ msgstr ""
 "จากนั้นคลิกขวาที่ :guilabel:`Odoo` และเลือก :guilabel:`เริ่ม` หรือ :guilabel:`รีสตาร์ท` "
 "การดำเนินการนี้จะรีสตาร์ทเซิร์ฟเวอร์ Odoo ด้วยตนเอง"
 
-#: ../../content/administration/on_premise/deploy.rst:855
+#: ../../content/administration/on_premise/deploy.rst:854
 msgid ""
 "Restart the Odoo server by typing the command: :command:`sudo service odoo15 "
 "restart`"
 msgstr "รีสตาร์ทเซิร์ฟเวอร์ Odoo โดยพิมพ์คำสั่ง: :command:`sudo service odoo15 restart`"
 
-#: ../../content/administration/on_premise/deploy.rst:858
+#: ../../content/administration/on_premise/deploy.rst:857
 msgid ""
 "Change the number after `odoo` to fit the specific version the server is "
 "running on."
 msgstr "เปลี่ยนตัวเลขหลัง `odoo` เพื่อให้พอดีกับเวอร์ชันเฉพาะที่เซิร์ฟเวอร์กำลังทำงานอยู่"
 
-#: ../../content/administration/on_premise/deploy.rst:861
+#: ../../content/administration/on_premise/deploy.rst:860
 msgid "Use web interface to re-encrypt password"
 msgstr "ใช้เว็บอินเตอร์เฟสเพื่อเข้ารหัสรหัสผ่านอีกครั้ง"
 
-#: ../../content/administration/on_premise/deploy.rst:863
+#: ../../content/administration/on_premise/deploy.rst:862
 msgid ""
 "First, navigate to `/web/database/manager` or `http://server_ip:port/web/"
 "database/manager` in a browser."
@@ -6984,7 +6987,7 @@ msgstr ""
 "ขั้นแรก ไปที่ `/web/database/manager` หรือ `http://server_ip:port/web/database/"
 "manager` ในเบราว์เซอร์"
 
-#: ../../content/administration/on_premise/deploy.rst:867
+#: ../../content/administration/on_premise/deploy.rst:866
 msgid ""
 "Replace `server_ip` with the IP address of the database. Replace `port` with "
 "the numbered port the database is accessible from."
@@ -6992,7 +6995,7 @@ msgstr ""
 "แทนที่ `server_ip` ด้วยที่อยู่ IP ของฐานข้อมูล แทนที่ `port` "
 "ด้วยพอร์ตที่มีหมายเลขที่ฐานข้อมูลสามารถเข้าถึงได้"
 
-#: ../../content/administration/on_premise/deploy.rst:870
+#: ../../content/administration/on_premise/deploy.rst:869
 msgid ""
 "Next, click :guilabel:`Set Master Password`, and type in the previously-"
 "selected temporary password into the :guilabel:`Master Password` field. "
@@ -7005,14 +7008,14 @@ msgstr ""
 "พิมพ์ :guilabel:`รหัสผ่านหลักใหม่` :guilabel:`รหัสผ่านหลักใหม่` จะถูกแฮช (หรือเข้ารหัส) "
 "เมื่อคลิกปุ่ม :guilabel:`ดำเนินการต่อ`"
 
-#: ../../content/administration/on_premise/deploy.rst:875
+#: ../../content/administration/on_premise/deploy.rst:874
 msgid ""
 "At this point, the password has been successfully reset, and a hashed "
 "version of the new password now appears in the configuration file."
 msgstr ""
 "ณ จุดนี้ รหัสผ่านได้รับการรีเซ็ตเรียบร้อยแล้ว และรหัสผ่านใหม่เวอร์ชันแฮชจะปรากฏในไฟล์การกำหนดค่า"
 
-#: ../../content/administration/on_premise/deploy.rst:879
+#: ../../content/administration/on_premise/deploy.rst:878
 msgid ""
 "For more information on Odoo database security, see this "
 "documentation: :ref:`db_manager_security`."
@@ -7020,31 +7023,31 @@ msgstr ""
 "สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการรักษาความปลอดภัยฐานข้อมูล Odoo "
 "โปรดดูเอกสารนี้: :ref:`db_manager_security`"
 
-#: ../../content/administration/on_premise/deploy.rst:883
+#: ../../content/administration/on_premise/deploy.rst:882
 msgid "Supported Browsers"
 msgstr "เบราว์เซอร์ที่รองรับ"
 
-#: ../../content/administration/on_premise/deploy.rst:885
+#: ../../content/administration/on_premise/deploy.rst:884
 msgid "Odoo supports the latest version of the following browsers."
 msgstr ""
 
-#: ../../content/administration/on_premise/deploy.rst:887
+#: ../../content/administration/on_premise/deploy.rst:886
 msgid "Google Chrome"
 msgstr "Google Chrome"
 
-#: ../../content/administration/on_premise/deploy.rst:888
+#: ../../content/administration/on_premise/deploy.rst:887
 msgid "Mozilla Firefox"
 msgstr "Mozilla Firefox"
 
-#: ../../content/administration/on_premise/deploy.rst:889
+#: ../../content/administration/on_premise/deploy.rst:888
 msgid "Microsoft Edge"
 msgstr "Microsoft Edge"
 
-#: ../../content/administration/on_premise/deploy.rst:890
+#: ../../content/administration/on_premise/deploy.rst:889
 msgid "Apple Safari"
 msgstr "Apple Safari"
 
-#: ../../content/administration/on_premise/deploy.rst:893
+#: ../../content/administration/on_premise/deploy.rst:892
 msgid ""
 "to have multiple Odoo installations use the same PostgreSQL database, or to "
 "provide more computing resources to both software."
@@ -7052,7 +7055,7 @@ msgstr ""
 "เพื่อให้การติดตั้ง Odoo หลายรายการใช้ฐานข้อมูล PostgreSQL เดียวกัน "
 "หรือเพื่อจัดหาทรัพยากรการประมวลผลเพิ่มเติมให้กับซอฟต์แวร์ทั้งสอง"
 
-#: ../../content/administration/on_premise/deploy.rst:896
+#: ../../content/administration/on_premise/deploy.rst:895
 msgid ""
 "technically a tool like socat_ can be used to proxy UNIX sockets across "
 "networks, but that is mostly for software which can only be used over UNIX "
@@ -7061,7 +7064,7 @@ msgstr ""
 "ในทางเทคนิคแล้ว เครื่องมืออย่าง socat_ สามารถใช้กับซ็อกเก็ตพร็อกซี UNIX ข้ามเครือข่ายได้ "
 "แต่ส่วนใหญ่ใช้สำหรับซอฟต์แวร์ที่สามารถใช้ได้ผ่านซ็อกเก็ต UNIX เท่านั้น"
 
-#: ../../content/administration/on_premise/deploy.rst:900
+#: ../../content/administration/on_premise/deploy.rst:899
 msgid ""
 "or be accessible only over an internal packet-switched network, but that "
 "requires secured switches, protections against `ARP spoofing`_ and precludes "
@@ -9497,6 +9500,26 @@ msgstr ":doc:`เอกสาร Odoo.sh <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ""
+
+#~ msgid ""
+#~ "Nevertheless, once the file has been located and the access rights "
+#~ "verified by Odoo, it is a good idea to serve the file using the static "
+#~ "web server instead of Odoo. For Odoo to delegate serving files to the "
+#~ "static web server, the `X-Sendfile <https://tn123.org/mod_xsendfile/>`_ "
+#~ "(apache) or `X-Accel <https://www.nginx.com/resources/wiki/start/topics/"
+#~ "examples/x-accel/>`_ (nginx) extensions must be enabled and configured on "
+#~ "the static web server. Once it is set up, start Odoo with the :option:`--"
+#~ "x-sendfile <odoo-bin --x-sendfile>` CLI flag (this unique flag is used "
+#~ "for both X-Sendfile and X-Accel)."
+#~ msgstr ""
+#~ "อย่างไรก็ตาม เมื่อไฟล์ถูกพบและยืนยันสิทธิ์การเข้าถึงโดย Odoo แล้ว "
+#~ "เป็นความคิดที่ดีที่จะให้บริการไฟล์โดยใช้เว็บเซิร์ฟเวอร์แบบ static แทน Odoo เพื่อให้ Odoo "
+#~ "มอบหมายการให้บริการไฟล์ไปยังเว็บเซิร์ฟเวอร์แบบคงที่ `X-Sendfile <https://tn123.org/"
+#~ "mod_xsendfile/>`_ (apache) หรือ `X-Accel <https://www.nginx.com/ resources/"
+#~ "wiki/start/topics/examples/x-accel/>`_ (nginx) "
+#~ "จะต้องเปิดใช้งานและกำหนดค่าบนเว็บเซิร์ฟเวอร์แบบ static เมื่อตั้งค่าแล้ว ให้เริ่ม Odoo "
+#~ "ด้วย :option:`--x-sendfile <odoo-bin --x-sendfile>` แฟล็ก CLI "
+#~ "(แฟล็กเฉพาะนี้ใช้สำหรับทั้ง X-Sendfile และ X-Accel)"
 
 #~ msgid ""
 #~ "The above command is explained in the section :ref:`Commit & Push your "
