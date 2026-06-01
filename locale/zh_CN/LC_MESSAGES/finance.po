@@ -56,8 +56,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22 17:35+0000\n"
-"PO-Revision-Date: 2026-05-15 23:20+0000\n"
+"POT-Creation-Date: 2026-05-29 17:30+0000\n"
+"PO-Revision-Date: 2026-05-29 23:21+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/finance/zh_Hans/>\n"
@@ -1058,7 +1058,7 @@ msgstr ":doc:`transactions`"
 #: ../../content/applications/finance/fiscal_localizations/croatia.rst:63
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:377
 #: ../../content/applications/finance/fiscal_localizations/france.rst:98
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:256
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:257
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:62
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:6
 #: ../../content/applications/finance/fiscal_localizations/india.rst:667
@@ -20680,6 +20680,11 @@ msgid ""
 "and edit entries if an :ref:`exception is configured <accounting/year-end/"
 "lock-date-exception>`."
 msgstr ""
+"作为此流程的一部分，将:ref:`全部锁定 <accounting/year-end/lock-everything-"
+"date>`日期设置为上一财年的最后一天（含）是一个良好的做法。这可以确保会计日期"
+"在锁定日期或之前的会计凭证在审计期间无法创建或修改。如果:ref:`配置了例外 "
+"<accounting/year-end/lock-date-exception>`，具有*管理员*访问权限的用户仍然可"
+"以创建和编辑凭证。"
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:104
 msgid "Lock everything date"
@@ -20758,6 +20763,9 @@ msgid ""
 "to ensure inalterability and to meet accounting requirements in certain "
 "countries."
 msgstr ""
+"要在保存后移除锁定日期，请将例外配置为应用于:guilabel:`所有人`，并将持续时间"
+"设置为:guilabel:`永久`。这不适用于:guilabel:`硬锁定`日期，该日期是不可逆的，"
+"以确保不可更改性并满足某些国家/地区的会计要求。"
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:144
 msgid "Current year earnings"
@@ -20813,6 +20821,17 @@ msgid ""
 "profit/loss is ready to be appropriated, this manual journal entry replaces "
 "the dynamic line."
 msgstr ""
+"试算平衡表默认借贷双方始终平衡（即借方合计等于贷方合计），因为其数据源自每一"
+"笔借贷相等的会计分录。**资产负债类科目**（资产、负债、所有者权益）会延续上一"
+"会计年度的余额；而**损益类科目**（收入、费用及 :ref:`利润分配科目 "
+"<accounting/year-end/appropriation>`）在新会计年度期初余额将清零。若没有*本年"
+"结转损益*这一动态行来临时抹平差额，上述两类科目的差异会导致试算平衡表失衡。待"
+"到财务人员编制正式:ref:`手工会计分录 <accounting/year-end/manual-je>`完成利润"
+"或亏损结转后，该动态行作用随即失效。在年末向:ref:`本年利润科目 <accounting/"
+"year-end/appropriation>`录入正式结转分录，即可抵消上述动态行，并依靠真实会计"
+"分录保证试算平衡表借贷相等。该手工分录无需在会计年度结束后立即编制 —— 试算平"
+"衡表会始终保持平衡；待企业完成利润 / 亏损结转工作后，再用此手工分录替换动态行"
+"即可。"
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:184
 msgid "Appropriation (current year earnings) accounts"
@@ -21111,6 +21130,8 @@ msgid ""
 "Some of the checks are performed automatically, while others serve as "
 "reminders to review essential tasks. Each check card is either labeled as:"
 msgstr ""
+"部分检查项将自动执行，其余则用于提醒您核查关键任务。所有检查卡片分为以下两"
+"类："
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:319
 msgid ":guilabel:`Reviewed` (highlighted in green): The check has passed."
@@ -34305,7 +34326,7 @@ msgid "The SAF-T button to export the file in XML format"
 msgstr "SAF-T 按钮，用于以 XML 格式导出文件"
 
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:159
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:234
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:235
 msgid "Point of Sale"
 msgstr "POS"
 
@@ -38163,7 +38184,7 @@ msgstr ""
 "况下，才能使用所有功能。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:76
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:271
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:272
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:102
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:192
 #: ../../content/applications/finance/fiscal_localizations/india.rst:44
@@ -46346,20 +46367,19 @@ msgstr "带 DATEV 导出的总分类账操作菜单"
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:56
 msgid ""
 "Upload the downloaded ZIP file via the `DATEV Belegtransfer software "
-"<https://www.datev.de/web/de/service-und-support/software-bereitstellung/"
-"download-bereich/betriebliches-rechnungswesen/belegtransfer>`_."
+"<https://www.datev.de/web/de/berufsgruppenuebergreifend/mydatev/cloud-"
+"anwendungen/datev-upload-online>`_."
 msgstr ""
-"通过 `DATEV Belegtransfer 软件 <https://www.datev.de/web/de/service-und-"
-"support/software-bereitstellung/download-bereich/betriebliches-"
-"rechnungswesen/belegtransfer>`_ 上传下载的 ZIP 文件。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:58
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:59
 msgid ""
-"If you do not have the DATEV Belegtransfer software installed on your "
-"computer, ask your tax advisor to help you with this."
-msgstr "如果您的电脑上没有安装 DATEV Belegtransfer 软件，请咨询您的税务顾问。"
+"If you do not have the DATEV Belegtransfer software `installed <https://"
+"apps.datev.de/myupdates/download/products/ddc1adec-4b1e-4581-"
+"b5b0-504fe0d68fd2>`_ on your computer, ask your tax advisor to help you with "
+"this."
+msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:62
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:63
 msgid ""
 "The DATEV ATCH ZIP file includes the files (reports) linked to an Odoo "
 "invoice or bill. For customer invoices, the file must have been generated by "
@@ -46368,28 +46388,28 @@ msgid ""
 "button."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:67
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:89
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:68
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:90
 msgid "DATEV ATCH ZIP file"
 msgstr "DATEV ATCH ZIP 文件"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:69
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:70
 msgid "The ZIP file contains two types of files:"
 msgstr "ZIP 文件包含两类文件："
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:71
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:72
 msgid ""
 "the individual invoice/bill files (PDF, JPEG, etc.) for the selected period "
 "on the general ledger, and"
 msgstr "总分类账上所选期间的单个发票/账单文件（PDF、JPEG 等），以及"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:73
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:74
 msgid ""
 "a :file:`document.xml` file used to generate a unique ID (GUID) for each "
 "file."
 msgstr "一个 :file:`document.xml` 文件，用于为每个文件生成唯一的 ID（GUID）。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:75
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:76
 msgid ""
 "These unique IDs are essential as they allow DATEV to automatically link the "
 "files to the individual journal items, which will be imported with the DATEV "
@@ -46398,11 +46418,11 @@ msgstr ""
 "这些唯一 ID 至关重要，因为它们允许 DATEV 自动将文件链接到单个日记账项，这些日"
 "记账项将在下一步与 DATEV DATA 文件一起导入。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:79
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:80
 msgid "2. DATEV DATA"
 msgstr "2. DATEV DATA"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:81
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:82
 msgid ""
 "Go to :menuselection:`Accounting --> Reporting --> General Ledger`, click "
 "the :icon:`fa-cog` (:guilabel:`Actions`) button, and select :guilabel:`Datev "
@@ -46411,7 +46431,7 @@ msgstr ""
 "进入 :menuselection:`会计 --> 报告 --> 总分类账`，点击 :icon:`fa-cog`"
 "（:guilabel:`操作`）按钮，并选择 :guilabel:`Datev DATA (zip)`。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:84
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:85
 msgid ""
 "Transfer the downloaded ZIP file to your tax advisor. They should import the "
 "ZIP file into DATEV Rechnungswesen."
@@ -46419,27 +46439,27 @@ msgstr ""
 "将下载的 ZIP 文件传输给您的税务顾问。他们应将 ZIP 文件导入 DATEV "
 "Rechnungswesen。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:87
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:88
 msgid "Check with your tax advisor how often they need these files."
 msgstr "请向您的税务顾问咨询他们需要这些文件的频率。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:91
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:92
 msgid "The ZIP file contains three CSV files:"
 msgstr "ZIP 文件包含三个 CSV 文件："
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:93
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:94
 msgid ""
 "the :file:`EXTF_customer_accounts.csv` file containing all information "
 "related to your customers,"
 msgstr "包含与客户相关的所有信息的 :file:`EXTF_customer_accounts.csv` 文件、"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:95
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:96
 msgid ""
 "the :file:`EXTF_vendor_accounts.csv` file containing all information related "
 "to your vendors, and"
 msgstr "包含所有供应商相关信息的 :file:`EXTF_vendor_accounts.csv` 文件，以及"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:97
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:98
 msgid ""
 "the :file:`EXTF_accounting_entries.csv` containing all journal items for the "
 "period defined on the general ledger, as well as the unique IDs (GUID) so "
@@ -46450,11 +46470,11 @@ msgstr ""
 "项目，以及唯一 ID（GUID），以便将日记账项目链接到 DATEV ATCH ZIP 文件内的文"
 "件。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:104
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:105
 msgid "GoBD compliance"
 msgstr "GoBD 合规"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:106
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:107
 msgid ""
 "**GoBD** stands for *Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung "
 "von Büchern, Aufzeichnungen und Unterlagen in elektronischer Form sowie zum "
@@ -46468,7 +46488,7 @@ msgstr ""
 "Datenzugriff*的缩写。简而言之，这是一份关于正确管理和存储电子形式的账簿、记录"
 "和文件以及数据访问的指南，与德国税务机关、纳税申报和资产负债表相关。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:112
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:113
 msgid ""
 "These principles have been written and published by the Federal Ministry of "
 "Finance (BMF) in November 2014. Since January 2015, **they have become the "
@@ -46482,15 +46502,15 @@ msgstr ""
 "方案（云托管、无纸化公司等）的发展，联邦财政部在 2019 年和 2020 年 1 月对其中"
 "一些内容进行了修改。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:119
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:120
 msgid "Odoo is certified **GoBD-compliant**."
 msgstr "Odoo 已通过**GoBD 合规性**认证。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:122
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:123
 msgid "Understanding GoBD in relation to accounting software"
 msgstr "了解与会计软件相关的 GoBD"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:124
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:125
 msgid ""
 "The **GoBD is binding for companies that have to present accounts**, which "
 "includes SMEs, freelancers, and entrepreneurs, to the financial authorities. "
@@ -46502,39 +46522,39 @@ msgstr ""
 "企业家。因此，纳税人本人是唯一负责完整和详尽地保存与财政相关的数据（上述财务"
 "及相关数据）的责任方。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:129
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:130
 msgid ""
 "Apart from software requirements, the user is required to ensure internal "
 "control systems (*in accordance with sec. 146 of the Fiscal Code*):"
 msgstr "除软件要求外，用户还需确保内部控制系统（*依据德国财税法第 146 条*）："
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:132
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:133
 msgid "access rights control;"
 msgstr "访问权限控制；"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:133
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:134
 msgid "segregation of duties, functional separating;"
 msgstr "职责分离，功能分离；"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:134
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:135
 msgid "entry controls (error notifications, plausibility checks);"
 msgstr "输入控制（错误通知，合理性检查）；"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:135
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:136
 msgid "reconciliation checks at data entry;"
 msgstr "数据输入时的对账检查；"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:136
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:137
 msgid "processing controls; and"
 msgstr "处理控制；以及"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:137
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:138
 msgid ""
 "measures to prevent intentional or unintentional manipulation of software, "
 "data, or documents."
 msgstr "防止有意或无意操纵软件、数据或文件的措施。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:139
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:140
 msgid ""
 "The user must distribute tasks within their organization to the relevant "
 "positions (*control*) and verify that the tasks are properly and completely "
@@ -46547,11 +46567,11 @@ msgstr ""
 "执行（*监督*）。这些控制的结果必须被记录下来（*文档*），如果在这些控制中发现"
 "错误，应采取适当措施纠正情况（*预防*）。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:145
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:146
 msgid "Data security"
 msgstr "数据安全"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:147
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:148
 msgid ""
 "The taxpayer must **secure the system against any data loss** due to "
 "deletion, removal, or theft of any data. If the entries are not sufficiently "
@@ -46561,13 +46581,13 @@ msgstr ""
 "纳税人必须**保护系统，防止因删除、移除或盗窃任何数据而导致的数据丢失**。如果"
 "分录没有得到充分的保护，记账将被视为不符合 GoBD 指南。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:151
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:152
 msgid ""
 "Once bookings have been finally posted, they can no longer be changed or "
 "deleted via the application."
 msgstr "预订最终发布后，将无法再通过应用程序进行更改或删除。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:154
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:155
 msgid ""
 "If Odoo is used in the cloud, regular backups are part of the Odoo Online "
 "service. In addition, regular backups can be downloaded and backed up on "
@@ -46576,19 +46596,19 @@ msgstr ""
 "如果在云端使用Odoo，则提供定期备份服务。此外，可以在外部系统下载和备份定期备"
 "份数据。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:158
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:159
 msgid ""
 "`Odoo Cloud Hosting - Service Level Agreement <https://www.odoo.com/cloud-"
 "sla>`_"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:160
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:161
 msgid ""
 "If the server is operated locally, the user is responsible for creating the "
 "necessary backup infrastructure."
 msgstr "如果服务器在本地运行，用户有责任创建必要的备份基础设施。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:164
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:165
 msgid ""
 "In some cases, data has to be kept for ten years or more, so always have "
 "backups saved. It is even more important if you decide to change software "
@@ -46597,11 +46617,11 @@ msgstr ""
 "在某些情况下，数据必须保留十年或更长时间，因此始终保存备份。如果您决定更换软"
 "件提供商，则更为重要。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:168
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:169
 msgid "Responsibility of the software editor"
 msgstr "软件编辑的责任"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:170
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:171
 msgid ""
 "Considering GoBD applies only to the taxpayer, **the software editor can by "
 "no means be held responsible for the accurate and compliant documentation of "
@@ -46612,11 +46632,11 @@ msgstr ""
 "鉴于 GoBD 仅适用于纳税人，软件编辑方绝不对其用户的财务交易数据的准确和合规文"
 "档负责。它只能为用户提供必要的工具，以遵守 GoBD 中描述的与软件相关的指南。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:176
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:177
 msgid "Ensuring compliance through Odoo"
 msgstr "通过 Odoo 确保合规性"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:178
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:179
 msgid ""
 "The keywords, when it comes to GoBD are: **traceable, verifiable, true, "
 "clear, and continuous**. In short, you need to have audit-proof archiving in "
@@ -46719,11 +46739,11 @@ msgstr ""
 "通过德语Odoo本地化，Odoo的标准配置方式是，无需任何进一步的自定义即可遵守不可"
 "更改性子句。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:213
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:214
 msgid "GoBD export"
 msgstr "GoBD 导出"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:215
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:216
 msgid ""
 "In the case of fiscal control, the fiscal authority can request three levels "
 "of access to the accounting system (Z1, Z2, Z3). These levels vary from "
@@ -46733,7 +46753,7 @@ msgstr ""
 "在财政控制的情况下，财政当局可以请求对会计系统的三个级别的访问（Z1，Z2，"
 "Z3）。这些级别从直接访问接口到在存储设备上移交财务数据不等。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:219
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:220
 msgid ""
 "In the case of a handover of financial data to a storage device, the GoBD "
 "does **not** enforce the format. It can be, for example, in XLS, CSV, XML, "
@@ -46743,21 +46763,21 @@ msgid ""
 "Datenträgerüberlassung\" §3), but it is not binding."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:226
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:227
 msgid "Non-compliance"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:228
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:229
 msgid ""
 "In the event of an infringement, you can expect a fine and a court order "
 "demanding the implementation of specific measures."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:237
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:238
 msgid "Technical security system"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:239
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:240
 msgid ""
 "The **Kassensicherungsverordnung** (The Act on Protection against "
 "Manipulation of Digital Records) requires that electronic record-keeping "
@@ -46766,7 +46786,7 @@ msgid ""
 "system** (also called **TSS** or **TSE**)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:244
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:245
 msgid ""
 "Odoo offers a service that is compliant with the help of `fiskaly <https://"
 "fiskaly.com>`_, a *cloud-based solution*."
@@ -46774,20 +46794,20 @@ msgstr ""
 "Odoo提供了一项在“fiskaly <https://fiskaly.com>”的帮助下兼容的服务，这是一种基"
 "于云的解决方案*。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:248
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:249
 msgid ""
 "Since this solution is cloud-based, a working internet connection is "
 "required."
 msgstr "由于此解决方案是基于云的，因此需要有效的互联网连接。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:251
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:252
 msgid ""
 "The only VAT rates allowed are given by fiskaly. You can check these rates "
 "by consulting `fiskaly DSFinV-K API: VAT Definition <https://"
 "developer.fiskaly.com/api/dsfinvk/v0/#tag/VAT-Definition>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:258
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:259
 msgid ""
 ":ref:`Install <general/install>` the **Germany - Certification for Point of "
 "Sale** (`l10n_de_pos_cert`) and **Germany - Certification for Point of Sale "
@@ -46796,67 +46816,67 @@ msgstr ""
 "：ref：“安装<一般/安装>” **国 - 销售点认** （“l10n_de_pos_cert”）和 **国 - 餐"
 "厅类型销售点认** （“l10n_de_pos_res_cert”）模块。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:263
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:264
 msgid ""
 "If these modules are not listed, :ref:`update the app list <general/"
 "install>`."
 msgstr "如果未列出这些模块，则 ：ref：`更新应用列表<一般/安装>`。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:266
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:267
 msgid "Company registration at the financial authority"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:268
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:269
 msgid ""
 "To register your company, open the :guilabel:`Settings` app, "
 "click :guilabel:`Update Info` under the :guilabel:`Companies` section, and "
 "fill in the following fields:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:272
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:273
 msgid ":guilabel:`Address`"
 msgstr ":guilabel:`地址`"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:273
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:274
 msgid ":guilabel:`VAT`"
 msgstr ":guilabel:`VAT`"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:274
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:275
 msgid ""
 ":guilabel:`St.-Nr.` (Steuernummer) this number is assigned by the tax office "
 "to every taxable natural or legal person (e.g., `2893081508152`)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:276
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:277
 msgid ""
 ":guilabel:`W-IdNr.` (Wirtschafts-Identifikationsnummer) this number is used "
 "as a permanent identification number for economically active persons."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:279
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:280
 msgid ""
 "You can then **register your company through fiskaly** by opening "
 "the :guilabel:`Fiskaly` tab and clicking the :guilabel:`Fiskaly "
 "Registration` button."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:283
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:284
 msgid ""
 "If you do not see the :guilabel:`Fiskaly Registration` button, make sure "
 "that you *saved* your company details and are not in *editing mode* anymore."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:286
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:287
 msgid "Once the registration has been finalized, new fields appear:"
 msgstr "注册完成后，将显示新字段："
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:288
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:289
 msgid ""
 ":guilabel:`Fiskaly Organization ID` refers to the ID of your company on "
 "fiskaly's side."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:289
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:290
 msgid ""
 ":guilabel:`Fiskaly API Key` and :guilabel:`Fiskaly API Secret` are the "
 "credentials the system uses to access the services offered by fiskaly."
@@ -46866,17 +46886,17 @@ msgstr ""
 msgid "Fiskaly registration tab"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:296
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:297
 msgid ""
 "It is possible to request new credentials if there is any issue with the "
 "current ones by clicking the :guilabel:`New keys` button."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:300
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:301
 msgid "Create a technical security system and link it to a POS"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:302
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:303
 msgid ""
 "To use a point of sale in Germany, first create a :abbr:`TSS (Technical "
 "Security System)` by going to :menuselection:`Point of Sale --> "
@@ -46888,16 +46908,16 @@ msgstr ""
 "个 :guilabel:`TSS（技术安全系统）`，选择要编辑的 :guilabel:`POS`，然后选"
 "中 :guilabel:`Fiskaly API` 部分下的 :guilabel:`创建 TSS` 框。"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:307
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:308
 msgid "Once the creation of the TSS is successful, you can find the:"
 msgstr "成功创建 TSS 后，您可以找到："
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:309
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:310
 msgid ""
 ":guilabel:`TSS ID`, which refers to the ID of your TSS on fiskaly's side, and"
 msgstr ":guilabel:`TSS ID` 指的是您的 TSS 在 fiskaly 端的 ID，以及"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:310
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:311
 msgid ""
 ":guilabel:`Fiskaly Client ID`, which refers to your POS on fiskaly's side."
 msgstr ":guilabel:`Fiskaly 客户 ID`，指的是您在 fiskaly 端的 POS。"
@@ -46906,18 +46926,18 @@ msgstr ":guilabel:`Fiskaly 客户 ID`，指的是您在 fiskaly 端的 POS。"
 msgid "Fiskaly API section"
 msgstr "Fiskaly API 部分"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:316
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:317
 msgid "DSFinV-K export"
 msgstr "DSFinV-K 导出"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:318
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:319
 msgid ""
 "Whenever you close the POS register, the details of the orders are sent to "
 "the :abbr:`DSFinV-K (Digitale Schnittstelle der Finanzverwaltung für "
 "Kassensysteme)` service of fiskaly."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:321
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:322
 msgid ""
 "In case of an audit, you can export the data sent to DSFinV-K by going "
 "to :menuselection:`Point of Sale --> Orders --> DSFinV-K Exports --> New`."
@@ -46929,23 +46949,23 @@ msgstr ""
 msgid "Menu to export DSFinV-K"
 msgstr "用于导出DSFinV-K的菜单"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:327
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:328
 msgid "These fields are mandatory:"
 msgstr "这些字段是必填字段："
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:329
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:330
 msgid ""
 ":guilabel:`Start Datetime`: export data with dates larger than or equal to "
 "the given start date"
 msgstr ":guilabel:`开始日期`：导出日期大于或等于给定开始日期的数据）"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:330
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:331
 msgid ""
 ":guilabel:`End Datetime`: export data with dates smaller than or equal to "
 "the given end date"
 msgstr ":guilabel:`结束日期`：导出日期小于或等于给定结束日期的数据）"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:332
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:333
 msgid ""
 "Leave the :guilabel:`Point of Sale` field blank to export the data of all "
 "your points of sale; specify one if you want to export data for this "
@@ -46958,7 +46978,7 @@ msgstr ""
 msgid "Exporting DSFinV-K"
 msgstr "导出 DSFinV-K"
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:338
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:339
 msgid ""
 "When an export is successfully triggered and is being processed, "
 "the :guilabel:`State` field should mention :guilabel:`Pending`. "
@@ -73311,6 +73331,21 @@ msgid ""
 msgstr ""
 "使用在 :ref:`payment_providers/xendit/configure_dashboard` 步骤中保存的信息填"
 "写 :guilabel:`秘钥` 和 :guilabel:`网络钩子令牌` 字段。"
+
+#~ msgid ""
+#~ "Upload the downloaded ZIP file via the `DATEV Belegtransfer software "
+#~ "<https://www.datev.de/web/de/service-und-support/software-bereitstellung/"
+#~ "download-bereich/betriebliches-rechnungswesen/belegtransfer>`_."
+#~ msgstr ""
+#~ "通过 `DATEV Belegtransfer 软件 <https://www.datev.de/web/de/service-und-"
+#~ "support/software-bereitstellung/download-bereich/betriebliches-"
+#~ "rechnungswesen/belegtransfer>`_ 上传下载的 ZIP 文件。"
+
+#~ msgid ""
+#~ "If you do not have the DATEV Belegtransfer software installed on your "
+#~ "computer, ask your tax advisor to help you with this."
+#~ msgstr ""
+#~ "如果您的电脑上没有安装 DATEV Belegtransfer 软件，请咨询您的税务顾问。"
 
 #~ msgid "Install Odoo as a local proxy on your computer"
 #~ msgstr "在您的计算机上安装 Odoo 作为本地代理"
