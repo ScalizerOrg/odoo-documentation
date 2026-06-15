@@ -88,7 +88,7 @@ Fiscal localization modules are available for the countries listed below.
 - Guinea-Bissau
 - Honduras
 - :doc:`Hong Kong <fiscal_localizations/hong_kong>`
-- Hungary
+- :doc:`Hungary <fiscal_localizations/hungary>`
 - :doc:`India <fiscal_localizations/india>`
 - :doc:`Indonesia <fiscal_localizations/indonesia>`
 - :doc:`Italy <fiscal_localizations/italy>`
@@ -119,7 +119,7 @@ Fiscal localization modules are available for the countries listed below.
 - Panama
 - :doc:`Peru <fiscal_localizations/peru>`
 - :doc:`Philippines <fiscal_localizations/philippines>`
-- Poland
+- :doc:`Poland <fiscal_localizations/poland>`
 - Portugal
 - Qatar
 - :doc:`Romania <fiscal_localizations/romania>`
@@ -169,6 +169,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/germany
    fiscal_localizations/guatemala
    fiscal_localizations/hong_kong
+   fiscal_localizations/hungary
    fiscal_localizations/india
    fiscal_localizations/indonesia
    fiscal_localizations/italy
@@ -182,6 +183,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/oman
    fiscal_localizations/peru
    fiscal_localizations/philippines
+   fiscal_localizations/poland
    fiscal_localizations/romania
    fiscal_localizations/saudi_arabia
    fiscal_localizations/singapore

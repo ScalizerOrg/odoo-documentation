@@ -33,7 +33,7 @@ orders:
 .. cards::
 
    .. card:: Online food delivery
-      :target: restaurant/online_food_delivery
+      :target: restaurant/urban_piper
       :large:
 
       Integrate third-party delivery platforms via UrbanPiper to centralize and manage external
@@ -264,7 +264,7 @@ To process an order from the POS register, follow these steps:
 
 .. seealso::
    - :doc:`extra/preparation`
-   - :doc:`restaurant/online_food_delivery`
+   - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
 
 .. _pos/restaurant/floors/transfer:
 
@@ -428,11 +428,15 @@ To allow tipping in a POS, go to the :ref:`POS settings <pos/use/settings>`, scr
 :guilabel:`Payment` section, enable :guilabel:`Tips`, and click :guilabel:`Save`.
 
 .. important::
-   - The :guilabel:`Add tip after payment` setting only works for a POS in the United States
-     of America with an :doc:`Adyen <payment_methods/terminals/adyen>` or a :doc:`Stripe
-     <payment_methods/terminals/stripe>` :ref:`payment terminal <pos/terminals/configuration>`.
-   - The :guilabel:`Add tip through payment terminal (Adyen)` setting only works with an
-     :ref:`Adyen <adyen/tips>` terminal.
+   Depending on your hardware setup and geographical location, enable the following options as
+   relevant:
+
+   - :guilabel:`Add tip through payment terminal (Adyen)`: Only works with an :doc:`Adyen
+     <payment_methods/terminals/adyen>` card terminal.
+   - :ref:`Add tip after payment <pos/restaurant/tips-after-payment>`: Only works for a POS in the
+     United States of America with an :doc:`Adyen <payment_methods/terminals/adyen>` or a
+     :doc:`Stripe <payment_methods/terminals/stripe>` :ref:`payment terminal
+     <pos/terminals/configuration>`.
 
 .. note::
    - Saving the :guilabel:`Tips` setting automatically fills the :guilabel:`Tip product` field
@@ -458,6 +462,8 @@ To process a tip during :ref:`payment <pos/restaurant/bills/payment>`, follow th
    :icon:`fa-heart` :guilabel:`Tip`, add the tip amount, and click :guilabel:`Ok`.
    Finally, :guilabel:`Validate` the payment.
 
+.. _pos/restaurant/tips-after-payment:
+
 Tip after payment (US only)
 ---------------------------
 
@@ -478,4 +484,4 @@ after payment, follow these steps:
 .. toctree::
    :titlesonly:
 
-   restaurant/online_food_delivery
+   restaurant/urban_piper

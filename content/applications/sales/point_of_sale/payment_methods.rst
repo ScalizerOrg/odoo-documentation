@@ -68,7 +68,7 @@ Methods`, click :guilabel:`New`, and follow the next steps:
 
 .. note::
    - The :guilabel:`Delivery Payment` option links a payment method to online orders placed through
-     :doc:`Urban Piper <restaurant/online_food_delivery>`. Select the appropriate
+     :doc:`Urban Piper <restaurant/urban_piper>`. Select the appropriate
      :guilabel:`Delivery Provider` to associate with the payment method.
    - If the Accounting app is installed, use the :guilabel:`Intermediary Account` field, if needed,
      to record transactions for this payment method in a specific receivable account for
@@ -81,6 +81,9 @@ Methods`, click :guilabel:`New`, and follow the next steps:
    - Use a dedicated :ref:`cash journal <accounting/journals/cash>` to record cash payments.
    - Always set the :guilabel:`Journal` to :guilabel:`Bank` when :ref:`configuring a payment
      terminal <pos/terminals/configuration>`.
+   - You can manage all configured payment methods linked to a POS in the :ref:`POS settings
+     <pos/use/settings>` by navigating to the :guilabel:`Payment` section and adding or removing
+     them via the dropdown under :guilabel:`Payment Methods`.
 
 One-click payment
 -----------------
