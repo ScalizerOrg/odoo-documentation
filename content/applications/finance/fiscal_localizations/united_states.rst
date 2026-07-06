@@ -43,6 +43,8 @@ localization for the Odoo **Accounting** app.
 .. image:: united_states/us-l10n-package.png
    :alt: The Package field with the United States package selected.
 
+.. _l10n_us/optional-modules:
+
 Optional modules
 ----------------
 
@@ -178,13 +180,11 @@ View, edit, and sort accounts
 -----------------------------
 
 Access the *Chart of Accounts* dashboard in Odoo by navigating to :menuselection:`Accounting app -->
-Configuration --> Accounting: Chart of Accounts`.
-
-From the :guilabel:`Chart of Accounts` dashboard, create new accounts by clicking the
-:guilabel:`New` button in the top-left corner of the dashboard and :ref:`filling in the
-corresponding form <chart-of-account/create>`. Search and sort through existing accounts by using
-specific :guilabel:`Filters` and :guilabel:`Group By` criteria, which are available in the search
-drop-down menu.
+Configuration --> Accounting: Chart of Accounts`. From the :guilabel:`Chart of Accounts` dashboard,
+create new accounts by clicking the :guilabel:`New` button in the top-left corner of the dashboard
+and :ref:`filling in the corresponding form <chart-of-account/create>`. Search and sort through
+existing accounts by using specific :guilabel:`Filters` and :guilabel:`Group By` criteria, which are
+available in the search drop-down menu.
 
 To filter accounts by category, click the :icon:`fa-caret-down` :guilabel:`(dropdown)` icon to
 access the drop-down menu and look under the :guilabel:`Filters` column for individual selections.
@@ -792,7 +792,7 @@ a new |NACHA| |ACH| file.
 
 .. seealso::
    - :doc:`../accounting/payments/batch`
-   - :doc:`Europe's direct debiting <../accounting/payments/batch_sdd>`
+   - :doc:`Europe's direct debiting <../accounting/payments/sepa_payments>`
 
 .. |API| replace:: :abbr:`API (Application Programming Interface)`
 
@@ -895,8 +895,8 @@ detailed below:
       .. important::
          To avoid errors when initiating payments to the vendor, ensure the following:
 
-         - Verify the destination bank account with the vendor, then mark it as :doc:`Trusted
-           <../accounting/payments/trusted_accounts>`.
+         - Verify the destination bank account with the vendor, then mark it as :ref:`Trusted
+           <accounting/batch/bank-accounts>`.
          - Select the correct :guilabel:`Bank Account Type` (checking or savings).
          - Select the preferred :guilabel:`Direct Deposit Transfer Type` for the vendor/destination
            account. Pricing can be verified directly in Wise.
@@ -1130,3 +1130,5 @@ etc.) are valid. The list of payments appears inside the file. Review and confir
 then click `Approve` or `Submit`.
 
 The bank processes each payment in the file and transfers the funds to the recipients.
+
+   - :doc:`Europe's direct debiting <../accounting/payments/sepa_payments>`
