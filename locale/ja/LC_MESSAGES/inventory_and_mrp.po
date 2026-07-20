@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-10 17:30+0000\n"
+"POT-Creation-Date: 2026-07-17 17:31+0000\n"
 "PO-Revision-Date: 2026-07-05 01:20+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -17030,7 +17030,7 @@ msgid "The Inventory dashboard with the Prepare Batch option highlighted."
 msgstr "バッチ処理オプションがハイライトされた在庫ダッシュボード。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:52
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:268
 msgid "On the batch transfer form, fill the following fields out accordingly:"
 msgstr "一括転送フォームに以下の項目を入力して下さい:"
 
@@ -17043,7 +17043,6 @@ msgstr ""
 "キングを遂行できる場合は、このフィールドは空白のままにしておいて下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:56
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:234
 msgid ""
 ":guilabel:`Operation Type`: from the drop-down menu, select the operation "
 "type under which the picking is categorized."
@@ -17052,7 +17051,6 @@ msgstr ""
 "類されるオペレーションタイプを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:58
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:236
 msgid ""
 ":guilabel:`Scheduled Date`: specifies the date by which "
 "the :guilabel:`Responsible` person should complete the transfer to the "
@@ -21925,25 +21923,31 @@ msgstr "**フリート** アプリを :ref:`インストール <general/install>
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:20
 msgid ""
-"Configure vehicle :ref:`capacity (volume and weight) <inventory/"
-"shipping_receiving/vehicle-capacity>`."
-msgstr ""
-"車両 :ref:積載量 (容積および重量) <inventory/shipping_receiving/vehicle-"
-"capacity>` を設定します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:22
-msgid "Enter vehicle :doc:`car model(s) <../../../../hr/fleet/models>`."
-msgstr "車両 :doc:`車両モデル <../../../../hr/fleet/models>` を入力します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:23
-msgid ""
 "Enable :ref:`necessary features <inventory/shipping_receiving/inventory-"
 "features>` in the **Inventory** app."
 msgstr ""
 "**在庫** アプリで、:ref:`必要機能 <inventory/shipping_receiving/inventory-"
 "features>` を有効にします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:22
+msgid ""
+"Enable and configure the :ref:`Mapbox integration <inventory/"
+"shipping_receiving/mapbox-integration>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:24
+msgid ""
+"Configure vehicle :ref:`capacity (volume and weight) <inventory/"
+"shipping_receiving/vehicle-capacity>`."
+msgstr ""
+"車両 :ref:積載量 (容積および重量) <inventory/shipping_receiving/vehicle-"
+"capacity>` を設定します。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:26
+msgid "Enter vehicle :doc:`car models <../../../../hr/fleet/models>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:27
 msgid ""
 "Set up :ref:`vehicles as delivery methods <inventory/shipping_receiving/"
 "delivery-method-for-carrier>`."
@@ -21951,16 +21955,115 @@ msgstr ""
 ":ref:`車両を配送方法 <inventory/shipping_receiving/delivery-method-for-"
 "carrier>` として設定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:29
 msgid "Create :ref:`dock locations <inventory/shipping_receiving/docks>`."
 msgstr ""
 ":ref:`ドックロケーション <inventory/shipping_receiving/docks>` を作成します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:32
+msgid ""
+"Dispatch management can evaluate capacity on a vehicle **only** if a weight "
+"and volume are assigned to a product on the *Inventory* tab of its product "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:38
+msgid "Inventory settings"
+msgstr "在庫設定"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:40
+msgid ""
+"To set the required inventory settings, navigate "
+"to :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:43
+msgid ""
+"In the *Operations* section, select the :guilabel:`Batch, Wave & Cluster "
+"Transfers` checkbox to prepare batches of orders for delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:46
+msgid ""
+"In the *Shipping* section, select the :guilabel:`Delivery Methods` "
+"and :guilabel:`Dispatch Management System` checkboxes. Doing so allows "
+"specific vehicles to be :ref:`set as carriers <inventory/shipping_receiving/"
+"delivery-method-for-carrier>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:50
+msgid ""
+"In the *Warehouse* section, select the :guilabel:`Storage Locations` "
+"checkbox to assign specific locations in the warehouse as loading zones for "
+"delivery trucks."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:53
+msgid ""
+"Then, once all the configurations are complete, be sure to "
+"click :guilabel:`Save`."
+msgstr ""
+"そして、全ての設定が完了したら、必ず :guilabel:`保存` をクリックして下さい。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:58
+msgid "Mapbox integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:60
+msgid "Next, configure the `Mapbox <https://www.mapbox.com/>`_ integration."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:62
+msgid ""
+"First, `create a Mapbox account <https://account.mapbox.com/auth/signup/>`_. "
+"If you already have a MapBox account, `log in <https://account.mapbox.com/"
+"auth/signin/>`_. Upon login, the *Account overview* page displays."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:66
+msgid ""
+"Then, `create an access token <https://docs.mapbox.com/help/dive-deeper/"
+"access-tokens/>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:68
+msgid "After the token is created, copy it to the clipboard."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:71
+msgid ""
+"If you have created a secret token, Mapbox does not display secret tokens "
+"again after leaving the *Access tokens* page. Make a copy of this token now."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:75
+msgid ""
+"`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
+"dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:77
+msgid ""
+"`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:79
+msgid ""
+"In Odoo, navigate to the :menuselection:`Settings` app. In the "
+"*Integrations* section, locate the :guilabel:`Map Routes` setting. Paste the "
+"token in the :guilabel:`Token` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:82
+msgid "Be sure to click :guilabel:`Save` to save the settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:87
 msgid "Vehicle capacity"
 msgstr "車両積載量"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:89
 msgid ""
 "To configure the vehicle capacity, go to :menuselection:`Fleet app --> "
 "Configuration --> Categories`."
@@ -21968,7 +22071,7 @@ msgstr ""
 "車両積載量を設定するには :menuselection:`フリートアプリ --> 設定 --> カテゴリ"
 "` に行きます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:92
 msgid ""
 "Next, click :guilabel:`New` to add a new category, or click into an existing "
 "category to modify it. In the :guilabel:`Name` field, enter the type of "
@@ -21986,7 +22089,7 @@ msgstr ""
 msgid "Vehicle categories with defined weight and volume."
 msgstr "重量と容積が定義された車両カテゴリ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:102
 msgid ""
 "The units of measurement for vehicle capacity are assigned at the global "
 "level in the **Settings** app, in the :guilabel:`Units of Measure` section."
@@ -21998,15 +22101,15 @@ msgstr ""
 msgid "Show units of measure settings."
 msgstr "測定単位の設定を表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:109
 msgid ":ref:`Vehicle category <fleet/categories>`"
 msgstr ":ref:`車両カテゴリ <fleet/categories>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:113
 msgid "Car model"
 msgstr "車両モデル"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:115
 msgid ""
 "Configuring a vehicle's car model is required when adding vehicles in Odoo. "
 "Ensure the correct *Category* is selected for a car model. Doing so "
@@ -22017,7 +22120,7 @@ msgstr ""
 "いカテゴリが選択されていることを確認して下さい。 そうすることで、そのタイプの"
 "車両全てに重量と容量が自動的に適用されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:119
 msgid ""
 "To configure, navigate to :menuselection:`Fleet app --> Configuration --> "
 "Models`."
@@ -22025,7 +22128,7 @@ msgstr ""
 "設定するには、:menuselection:`フリートアプリ --> 設定 --> モデル` に移動して"
 "下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:121
 msgid ""
 "From the :guilabel:`Models` list, select an existing model, or "
 "click :guilabel:`New` in the top-left corner to create a new model. Then, "
@@ -22035,72 +22138,21 @@ msgstr ""
 "る :guilabel:`新規` をクリックして新しいモデルを作成します。次に、関連す"
 "る :guilabel:`カテゴリ` フィールドを該当する車両カテゴリに設定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:126
 msgid ":doc:`Create car model <../../../../hr/fleet/models>`"
 msgstr ":doc:`車両モデルの作成 <../../../../hr/fleet/models>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:77
-msgid "Inventory settings"
-msgstr "在庫設定"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:79
-msgid ""
-"Next, go to :menuselection:`Inventory app --> Configuration --> Settings`, "
-"and enable the required features for dispatch management."
-msgstr ""
-"次に、:menuselection:`在庫アプリ --> 設定 --> 管理設定` に移動し、発送管理に"
-"必要な機能を有効にします。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:82
-msgid ""
-"In the :guilabel:`Operations` section, tick the :guilabel:`Batch, Wave & "
-"Cluster Transfers` checkbox to prepare batches of orders for delivery."
-msgstr ""
-":guilabel:`オペレーション` セクションで、:guilabel:`バッチ、ウェーブ、クラス"
-"タ転送` チェックボックスにチェックを入れ、配送用のオーダのバッチを準備しま"
-"す。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:85
-msgid ""
-"In the :guilabel:`Shipping` section, tick the :guilabel:`Delivery Methods` "
-"and :guilabel:`Dispatch Management System` checkboxes. Doing so allows "
-"specific vehicles to be :ref:`set as carriers <inventory/shipping_receiving/"
-"delivery-method-for-carrier>`."
-msgstr ""
-":guilabel:`配送` セクションで、:guilabel:`配送方法` と :guilabel:`発送管理シ"
-"ステム` のチェックボックスにチェックを入れます。そうすることで、特定の車両"
-"を :ref:`配送業者として設定 <inventory/shipping_receiving/delivery-method-"
-"for-carrier>` できるようになります。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:89
-msgid ""
-"In the :guilabel:`Warehouse` section, tick the :guilabel:`Storage Locations` "
-"checkbox to assign specific locations in the warehouse as loading zones for "
-"delivery trucks."
-msgstr ""
-":guilabel:`倉庫` セクションで、:guilabel:`保管場所` チェックボックスにチェッ"
-"クを入れると、配送トラックの荷積みゾーンとして倉庫内の特定のロケーションを割"
-"当てることができます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:92
-msgid ""
-"Then, once all the configurations are complete, be sure to "
-"click :guilabel:`Save`."
-msgstr ""
-"そして、全ての設定が完了したら、必ず :guilabel:`保存` をクリックして下さい。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:131
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:92
 msgid "Delivery method"
 msgstr "配送方法"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:133
 msgid ""
-"Next, assign each delivery vehicle as a *Carrier* by configuring a delivery "
-"method."
-msgstr "次に、配送方法の設定により、各配送車両を *配送業者* として割当てます。"
+"Optionally, delivery vehicles can be assigned as a delivery method *carrier*."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:135
 msgid ""
 "To configure delivery methods, go to :menuselection:`Inventory app --> "
 "Configuration --> Delivery Methods`. Select an existing delivery method, or "
@@ -22109,11 +22161,11 @@ msgstr ""
 "配送方法を設定するには、:menuselection:`在庫アプリ --> 設定 --> 配送方法`に移"
 "動します。既存の配送方法を選択するか、:guilabel:`新規作成` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:139
 msgid ":doc:`Configure delivery method <../setup_configuration>`"
 msgstr ":doc:`配送方法の設定 <../setup_configuration>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:141
 msgid ""
 "On the :guilabel:`Delivery Method` form, enter a name for the delivery "
 "method. It is recommended to use identifying information, such as the "
@@ -22123,7 +22175,7 @@ msgstr ""
 "バープレート番号など、識別可能な情報を使用することをお勧めします(例: `トラッ"
 "ク 123-ABCD`)。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:145
 msgid ""
 "Since the delivery methods are managed internally, set "
 "the :guilabel:`Provider` to either :guilabel:`Fixed Price` "
@@ -22136,7 +22188,7 @@ msgstr ""
 "の計算方法の詳細については、:doc:`配送方法 <../setup_configuration>` の記事を"
 "参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:149
 msgid ""
 "Next, set a :guilabel:`Delivery Product`, which is the product that shows up "
 "as the customer's :ref:`delivery charge <inventory/shipping/sales-order>` on "
@@ -22146,7 +22198,7 @@ msgstr ""
 "<inventory/shipping/sales-order>` として販売オーダまたは顧客請求書に表示され"
 "るプロダクトです。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:152
 msgid ""
 "Optionally, in the :guilabel:`Availability` tab, set "
 "the :guilabel:`Countries`, :guilabel:`States`, or :guilabel:`Zip Prefixes` "
@@ -22156,71 +22208,64 @@ msgstr ""
 "都道府県`、または :guilabel:`郵便番号プレフィクス` を設定して、ローカル配送の"
 "範囲を限定することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:124
-msgid "Delivery method form."
-msgstr "配送方法フォーム"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:None
 msgid ""
-"Example delivery method, with the :guilabel:`Zip Prefixes` set to San "
-"Francisco's zip code."
+"Example delivery method with the Zip Prefixes set to San Francisco's zip "
+"code."
 msgstr ""
-":guilabel:`郵便番号プレフィクス` をサンフランシスコの郵便番号に設定した配送方"
-"法の例"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:161
 msgid "Dock locations"
 msgstr "ドックロケーション"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:163
 msgid ""
-"Each loading dock must have a dedicated location. To create or configure "
-"dock locations, go to :menuselection:`Inventory app --> Configuration --> "
-"Locations`."
+"Each loading dock must have a dedicated location. To create dock locations, "
+"go to :menuselection:`Inventory app --> Configuration --> Locations` and "
+"click :guilabel:`New`."
 msgstr ""
-"各ローディングドックには専用のロケーションが必要です。ドックロケーションを作"
-"成または設定するには、次の場所に移動します。:menuselection:`在庫アプリ --> 設"
-"定 --> ロケーション`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:166
 msgid ""
-"Click the desired location, which opens the :guilabel:`Location` form. In "
-"the :guilabel:`Additional Information` section, tick the :guilabel:`Is a "
-"Dock Location` checkbox."
+"After dock locations are set up in Odoo, configure them in the operation "
+"type. Navigate to :menuselection:`Inventory app --> Configuration --> "
+"Operations Types` and open an existing delivery operation type, or "
+"click :guilabel:`New` to create a new one."
 msgstr ""
-"希望のロケーションをクリックすると、:guilabel:`ロケーション` フォームが開きま"
-"す。:guilabel:`追加情報` セクションで、:guilabel:`ドックロケーションである` "
-"チェックボックスにチェックを入れます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:170
+msgid ""
+"After defining the other fields in the operation type form, scroll to the "
+"*Batch & wave transfers* section and select the :guilabel:`Dispatch "
+"Management` checkbox. The :guilabel:`Dock locations` field appears. Define "
+"the dock locations for this operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:None
 msgid "Location configuration."
 msgstr "ロケーション設定"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:140
-msgid ""
-"Location configuration page with :guilabel:`Is a Dock Location` checkbox "
-"ticked."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:178
+msgid ":doc:`../../warehouses_storage/inventory_management/use_locations`"
 msgstr ""
-":guilabel:`ドックロケーションである` チェックボックスにチェックが入った状態の"
-"ロケーション設定ページ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:179
+msgid ":doc:`../../warehouses_storage/inventory_management/operation_type`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:182
 msgid "Build loads"
 msgstr "載積を構築する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:184
 msgid ""
-"Once setup is complete, :ref:`assign orders to a carrier <inventory/"
-"shipping_receiving/assign-carrier>` and :ref:`group them into batches "
-"<inventory/shipping_receiving/create-batch>`. Then, :ref:`configure the "
-"batch form <inventory/shipping_receiving/batch-form>`, as needed."
+"After setup is complete, optionally :ref:`assign orders to a carrier "
+"<inventory/shipping_receiving/assign-carrier>` and :ref:`group them into "
+"batches <inventory/shipping_receiving/create-batch>`. Then, :ref:`configure "
+"the batch form <inventory/shipping_receiving/batch-form>`, as needed."
 msgstr ""
-"設定が完了したら、:ref:`配送業者にオーダを割当て <inventory/"
-"shipping_receiving/assign-carrier>`、:ref:`バッチにグループ化 <inventory/"
-"shipping_receiving/create-batch>` します。その後、必要に応じて、:ref:`バッチ"
-"フォームを設定 <inventory/shipping_receiving/batch-form>` します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:189
 msgid ""
 "To group products, go to the :menuselection:`Inventory app --> Operations --"
 "> Deliveries`, which reveals a list of outgoing deliveries."
@@ -22228,41 +22273,36 @@ msgstr ""
 "プロダクトをグループ化するには、:menuselection:`在庫アプリ --> オペレーショ"
 "ン --> 配送` に移動し、発送済みの配送のリストを表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:193
 msgid ""
-"Since this article is about a specific use case, explore details about each "
-"picking method in their dedicated articles."
+"Because this article is about a specific use case, explore details about "
+"each picking method in their dedicated articles."
 msgstr ""
-"この記事は特定のユースケースに関するものですので、各ピッキング方法の詳細につ"
-"いては、それぞれの専用記事をご覧下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:196
 msgid ":doc:`../picking_methods/batch`"
 msgstr ":doc:`../picking_methods/batch`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:197
 msgid ":doc:`Wave picking <../picking_methods/wave>`"
 msgstr ":doc:`ウェーブピッキング <../picking_methods/wave>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:198
 msgid ":doc:`../picking_methods/cluster`"
 msgstr ":doc:`../picking_methods/cluster`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:203
 msgid "Carrier assignment"
 msgstr "配送業者の割当"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:205
 msgid ""
 "Reveal the *Carrier* column, if it is not visible by default, by clicking "
 "the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon in the top-right "
-"corner, and ticking the :guilabel:`Carrier` checkbox."
+"corner, and selecting the :guilabel:`Carrier` checkbox."
 msgstr ""
-"デフォルトで表示されていない場合は、右上隅にある :icon:`oi-settings-"
-"adjust` :guilabel:`(設定)` アイコンをクリックして、:guilabel:`配送業者` "
-"チェックボックスにチェックを入れることで、*配送業者* 列を表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:210
 msgid ""
 "Other useful columns to enable can be :guilabel:`Zip` "
 "code, :guilabel:`Shipping Weight`, and :guilabel:`Shipping Volume`."
@@ -22270,9 +22310,9 @@ msgstr ""
 "有効にできるその他の便利な列は、:guilabel:`郵便番号`、:guilabel:`配送重量"
 "`、:guilabel:`配送容量` です。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:213
 msgid ""
-"Select the delivery orders for the batch by ticking the checkboxes on the "
+"Select the delivery orders for the batch by selecting the checkboxes on the "
 "left. Next, click into the line's :guilabel:`Carrier` fields. In the "
 "resulting drop-down menu, choose the desired vehicle's :ref:`delivery method "
 "<inventory/shipping_receiving/delivery-method-for-carrier>`. "
@@ -22280,19 +22320,12 @@ msgid ""
 "orders being added to the batch. Click :guilabel:`Confirm`, and the carrier "
 "is updated for all the selected records."
 msgstr ""
-"左側のチェックボックスにチェックを入れ、バッチの出荷オーダを選択します。次"
-"に、明細の :guilabel:`配送業者` フィールドをクリックします。ドロップダウンメ"
-"ニューから、希望する車両の :ref:`配送方法 <inventory/shipping_receiving/"
-"delivery-method-for-carrier>` を選択します。:guilabel:`確認` というポップアッ"
-"プウィンドウが表示され、バッチに追加されるオーダの数が示されま"
-"す。 :guilabel:`確認` をクリックすると、選択したレコードの全てに対して配送業"
-"者が更新されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:222
 msgid "Set carrier."
 msgstr "配送業者を設定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:222
 msgid ""
 "The delivery method `Truck 1-MER-001` is set as the :guilabel:`Carrier` for "
 "two delivery orders."
@@ -22300,11 +22333,11 @@ msgstr ""
 "出荷オーダ2件に対して、配送方法 `トラック 1-MER-001`が :guilabel:`配送業者` "
 "として設定されています。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:189
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:227
 msgid "Create batch"
 msgstr "一括転送を作成"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:191
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:229
 msgid ""
 "With the carrier set, begin adding orders to a batch or wave transfer by "
 "ticking the checkbox."
@@ -22312,7 +22345,7 @@ msgstr ""
 "配送業者を設定したら、チェックボックスにチェックを入れ一括転送またはウェーブ"
 "転送にオーダを追加します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:232
 msgid ""
 "If a delivery order is already assigned to a batch transfer, assigning a "
 "batch transfer here does **not** update it."
@@ -22320,7 +22353,7 @@ msgstr ""
 "出荷オーダがすでに一括転送に割当てられている場合、ここで一括転送を割当てて"
 "も、**更新はされません**。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:235
 msgid ""
 "Then, click the :icon:`fa-cog` :guilabel:`Actions` button, and click "
 "either :guilabel:`Add to batch` or :guilabel:`Add to wave`. In the pop-up "
@@ -22332,31 +22365,27 @@ msgstr ""
 "ポップアップウィンドウで、:guilabel:`追加先` が :guilabel:`新規 [一括/ウェー"
 "ブ] 転送` に設定されていることを確認し、:guilabel:`確認` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:204
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:242
 msgid "Example wave."
 msgstr "ウェーブの例"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:204
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:242
 msgid "Delivery orders are selected to be grouped into a wave transfer."
 msgstr "出荷オーダは、ウェーブ転送にグループ化されるように選択されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:245
 msgid "Alternative batch creation method"
 msgstr "代替のバッチ作成方法"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:247
 msgid ""
 "Another place to create batches is by going to "
 "the :menuselection:`Inventory` app, and in the :guilabel:`Delivery Orders` "
-"card, click the :icon:`fa-ellipsis-v` :guilabel:`(three dots)` icon. In the "
-"resulting drop-down menu, click :guilabel:`Prepare batch`."
+"card, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon. "
+"In the resulting drop-down menu, click :guilabel:`Prepare batch`."
 msgstr ""
-"バッチを作成する別の場所は、:menuselection:`在庫` アプリに移動し、:guilabel:`"
-"出荷オーダ` カードで、:icon:`fa-ellipsis-v` :guilabel:`(3つのドット)` アイコ"
-"ンをクリックします。表示されるドロップダウンメニューで、:guilabel:`バッチを準"
-"備` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:252
 msgid ""
 "The :guilabel:`Transport Management` drop-down menu contains other tools for "
 "fleet management:"
@@ -22364,11 +22393,11 @@ msgstr ""
 ":guilabel:`輸送管理`ドロップダウンメニューには、車両管理用の他のツールも含ま"
 "れています。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:254
 msgid ":guilabel:`Manage Batches`: open list of batches"
 msgstr ":guilabel:`バッチ管理`: バッチのリストを開く"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:217
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:255
 msgid ""
 ":guilabel:`Dock Dispatching`: open weekly calendar view of scheduled batch "
 "operations"
@@ -22376,7 +22405,7 @@ msgstr ""
 ":guilabel:`ドック配車管理`: スケジュールされたバッチオペレーションの週次カレ"
 "ンダを開く"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:218
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:256
 msgid ""
 ":guilabel:`Batches by Route`: Kanban view of batches grouped by fulfillment "
 "route"
@@ -22384,11 +22413,11 @@ msgstr ""
 ":guilabel:`ルート別バッチ`: フルフィルメントルートごとにグループ化されたバッ"
 "チのカンバンビューを開く"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:219
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:257
 msgid ":guilabel:`Calendar`: open hourly calendar view of scheduled operations"
 msgstr ":guilabel:`カレンダ`: スケジュールされた作業の時間単位カレンダを開く"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:258
 msgid ":guilabel:`Statistics`: open pivot table of the batch transfers"
 msgstr ":guilabel:`統計`: 一括転送のピボットテーブルを開く"
 
@@ -22397,54 +22426,61 @@ msgid "Show prepare batch option from the Transport Management drop-down menu."
 msgstr ""
 "輸送管理のドロップダウンメニューからバッチオプションの準備を表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:228
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:266
 msgid "Batch form"
 msgstr "バッチフォーム"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:270
 msgid ""
-":guilabel:`Responsible`: employee assigned to the picking. Leave blank if "
+":guilabel:`Responsible`: Assign an employee to the picking. Leave blank if "
 "*any* worker can fulfill this picking."
 msgstr ""
-":guilabel:`担当`:ピッキングに割当てられた従業員。 * どの作業員でも* このピッ"
-"キングを行える場合は、空欄のままにして下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:238
-msgid ":guilabel:`Dock Location`: select the loading location."
-msgstr ":guilabel:`ドックロケーション`: 積載場所を選択します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:239
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:272
 msgid ""
-":guilabel:`Vehicle`: select the vehicle, which will auto-"
-"fill :guilabel:`Vehicle Category`."
+":guilabel:`Operation Type`: From the drop-down menu, select the operation "
+"type under which the picking is categorized."
 msgstr ""
-":guilabel:`車両`: 車両を選択すると、:guilabel:`車両カテゴリ` が自動入力されま"
-"す。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:274
 msgid ""
-":guilabel:`Vehicle Category`: show if the order exceeds the :ref:`vehicle's "
-"capacity limits <inventory/shipping_receiving/vehicle-capacity>`"
+":guilabel:`Scheduled Date`: Specify the date by which "
+"the :guilabel:`Responsible` person should complete the transfer to the "
+"output location."
 msgstr ""
-":guilabel:`車両カテゴリ`: オーダが :ref:`車両の容量制限 <inventory>` を超える"
-"場合に表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:244
-msgid ""
-"The :guilabel:`Volume` bar is grayed out because the capacity has been "
-"reached."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:276
+msgid ":guilabel:`Dock Location`: Select the loading location."
 msgstr ""
-"容量が限界に達しているため、:guilabel:`容量` バーはグレー表示になっています。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:277
+msgid ""
+":guilabel:`Vehicle`: Select the vehicle, which will auto-fill "
+"the :guilabel:`Vehicle Category`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:278
+msgid ""
+":guilabel:`Vehicle Category`: Determine if the order exceeds "
+"the :ref:`vehicle's capacity limits <inventory/shipping_receiving/vehicle-"
+"capacity>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:282
+msgid ""
+"The :guilabel:`Volume` bar indicates that the transport truck is nearing "
+"capacity."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:0
 msgid "Show batch form."
 msgstr "バッチフォームを表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:288
 msgid "Prepare delivery route"
 msgstr "配送ルートを準備する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:252
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:290
 msgid ""
 "To help the driver prepare, click the :guilabel:`Map` button at the top of "
 "the batch or wave form to view delivery destinations on a map. Selecting an "
@@ -22454,7 +22490,7 @@ msgstr ""
 "図` ボタンをクリックして、配送先を地図上に表示します。個々の出荷オーダを選択"
 "すると、その場所が特定されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:256
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:294
 msgid ""
 "The :guilabel:`Map` button is only visible for transfers with "
 "the :guilabel:`In progress` status."
@@ -22466,7 +22502,7 @@ msgstr ""
 msgid "Show map in Odoo, with information of the delivery orders."
 msgstr "Odooで出荷オーダ情報を表示した地図を表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:261
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:299
 msgid ""
 "Additionally, use the :guilabel:`View in Google Maps` button to generate a "
 "route from the warehouse to the delivery points."
@@ -60809,6 +60845,172 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:212
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid "Enter vehicle :doc:`car model(s) <../../../../hr/fleet/models>`."
+#~ msgstr "車両 :doc:`車両モデル <../../../../hr/fleet/models>` を入力します。"
+
+#~ msgid ""
+#~ "Next, go to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`, and enable the required features for dispatch management."
+#~ msgstr ""
+#~ "次に、:menuselection:`在庫アプリ --> 設定 --> 管理設定` に移動し、発送管理"
+#~ "に必要な機能を有効にします。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Operations` section, tick the :guilabel:`Batch, Wave & "
+#~ "Cluster Transfers` checkbox to prepare batches of orders for delivery."
+#~ msgstr ""
+#~ ":guilabel:`オペレーション` セクションで、:guilabel:`バッチ、ウェーブ、クラ"
+#~ "スタ転送` チェックボックスにチェックを入れ、配送用のオーダのバッチを準備し"
+#~ "ます。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Shipping` section, tick the :guilabel:`Delivery "
+#~ "Methods` and :guilabel:`Dispatch Management System` checkboxes. Doing so "
+#~ "allows specific vehicles to be :ref:`set as carriers <inventory/"
+#~ "shipping_receiving/delivery-method-for-carrier>`."
+#~ msgstr ""
+#~ ":guilabel:`配送` セクションで、:guilabel:`配送方法` と :guilabel:`発送管理"
+#~ "システム` のチェックボックスにチェックを入れます。そうすることで、特定の車"
+#~ "両を :ref:`配送業者として設定 <inventory/shipping_receiving/delivery-"
+#~ "method-for-carrier>` できるようになります。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Warehouse` section, tick the :guilabel:`Storage "
+#~ "Locations` checkbox to assign specific locations in the warehouse as "
+#~ "loading zones for delivery trucks."
+#~ msgstr ""
+#~ ":guilabel:`倉庫` セクションで、:guilabel:`保管場所` チェックボックスに"
+#~ "チェックを入れると、配送トラックの荷積みゾーンとして倉庫内の特定のロケー"
+#~ "ションを割当てることができます。"
+
+#~ msgid ""
+#~ "Next, assign each delivery vehicle as a *Carrier* by configuring a "
+#~ "delivery method."
+#~ msgstr ""
+#~ "次に、配送方法の設定により、各配送車両を *配送業者* として割当てます。"
+
+#~ msgid "Delivery method form."
+#~ msgstr "配送方法フォーム"
+
+#~ msgid ""
+#~ "Example delivery method, with the :guilabel:`Zip Prefixes` set to San "
+#~ "Francisco's zip code."
+#~ msgstr ""
+#~ ":guilabel:`郵便番号プレフィクス` をサンフランシスコの郵便番号に設定した配"
+#~ "送方法の例"
+
+#~ msgid ""
+#~ "Each loading dock must have a dedicated location. To create or configure "
+#~ "dock locations, go to :menuselection:`Inventory app --> Configuration --> "
+#~ "Locations`."
+#~ msgstr ""
+#~ "各ローディングドックには専用のロケーションが必要です。ドックロケーションを"
+#~ "作成または設定するには、次の場所に移動します。:menuselection:`在庫アプリ "
+#~ "--> 設定 --> ロケーション`。"
+
+#~ msgid ""
+#~ "Click the desired location, which opens the :guilabel:`Location` form. In "
+#~ "the :guilabel:`Additional Information` section, tick the :guilabel:`Is a "
+#~ "Dock Location` checkbox."
+#~ msgstr ""
+#~ "希望のロケーションをクリックすると、:guilabel:`ロケーション` フォームが開"
+#~ "きます。:guilabel:`追加情報` セクションで、:guilabel:`ドックロケーションで"
+#~ "ある` チェックボックスにチェックを入れます。"
+
+#~ msgid ""
+#~ "Location configuration page with :guilabel:`Is a Dock Location` checkbox "
+#~ "ticked."
+#~ msgstr ""
+#~ ":guilabel:`ドックロケーションである` チェックボックスにチェックが入った状"
+#~ "態のロケーション設定ページ"
+
+#~ msgid ""
+#~ "Once setup is complete, :ref:`assign orders to a carrier <inventory/"
+#~ "shipping_receiving/assign-carrier>` and :ref:`group them into batches "
+#~ "<inventory/shipping_receiving/create-batch>`. Then, :ref:`configure the "
+#~ "batch form <inventory/shipping_receiving/batch-form>`, as needed."
+#~ msgstr ""
+#~ "設定が完了したら、:ref:`配送業者にオーダを割当て <inventory/"
+#~ "shipping_receiving/assign-carrier>`、:ref:`バッチにグループ化 <inventory/"
+#~ "shipping_receiving/create-batch>` します。その後、必要に応じて、:ref:`バッ"
+#~ "チフォームを設定 <inventory/shipping_receiving/batch-form>` します。"
+
+#~ msgid ""
+#~ "Since this article is about a specific use case, explore details about "
+#~ "each picking method in their dedicated articles."
+#~ msgstr ""
+#~ "この記事は特定のユースケースに関するものですので、各ピッキング方法の詳細に"
+#~ "ついては、それぞれの専用記事をご覧下さい。"
+
+#~ msgid ""
+#~ "Reveal the *Carrier* column, if it is not visible by default, by clicking "
+#~ "the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon in the top-"
+#~ "right corner, and ticking the :guilabel:`Carrier` checkbox."
+#~ msgstr ""
+#~ "デフォルトで表示されていない場合は、右上隅にある :icon:`oi-settings-"
+#~ "adjust` :guilabel:`(設定)` アイコンをクリックして、:guilabel:`配送業者` "
+#~ "チェックボックスにチェックを入れることで、*配送業者* 列を表示します。"
+
+#~ msgid ""
+#~ "Select the delivery orders for the batch by ticking the checkboxes on the "
+#~ "left. Next, click into the line's :guilabel:`Carrier` fields. In the "
+#~ "resulting drop-down menu, choose the desired vehicle's :ref:`delivery "
+#~ "method <inventory/shipping_receiving/delivery-method-for-carrier>`. "
+#~ "A :guilabel:`Confirmation` pop-up window appears, indicating the number "
+#~ "of orders being added to the batch. Click :guilabel:`Confirm`, and the "
+#~ "carrier is updated for all the selected records."
+#~ msgstr ""
+#~ "左側のチェックボックスにチェックを入れ、バッチの出荷オーダを選択します。次"
+#~ "に、明細の :guilabel:`配送業者` フィールドをクリックします。ドロップダウン"
+#~ "メニューから、希望する車両の :ref:`配送方法 <inventory/shipping_receiving/"
+#~ "delivery-method-for-carrier>` を選択します。:guilabel:`確認` というポップ"
+#~ "アップウィンドウが表示され、バッチに追加されるオーダの数が示されま"
+#~ "す。 :guilabel:`確認` をクリックすると、選択したレコードの全てに対して配送"
+#~ "業者が更新されます。"
+
+#~ msgid ""
+#~ "Another place to create batches is by going to "
+#~ "the :menuselection:`Inventory` app, and in the :guilabel:`Delivery "
+#~ "Orders` card, click the :icon:`fa-ellipsis-v` :guilabel:`(three dots)` "
+#~ "icon. In the resulting drop-down menu, click :guilabel:`Prepare batch`."
+#~ msgstr ""
+#~ "バッチを作成する別の場所は、:menuselection:`在庫` アプリに移動"
+#~ "し、:guilabel:`出荷オーダ` カードで、:icon:`fa-ellipsis-v` :guilabel:`(3つ"
+#~ "のドット)` アイコンをクリックします。表示されるドロップダウンメニュー"
+#~ "で、:guilabel:`バッチを準備` をクリックします。"
+
+#~ msgid ""
+#~ ":guilabel:`Responsible`: employee assigned to the picking. Leave blank if "
+#~ "*any* worker can fulfill this picking."
+#~ msgstr ""
+#~ ":guilabel:`担当`:ピッキングに割当てられた従業員。 * どの作業員でも* この"
+#~ "ピッキングを行える場合は、空欄のままにして下さい。"
+
+#~ msgid ":guilabel:`Dock Location`: select the loading location."
+#~ msgstr ":guilabel:`ドックロケーション`: 積載場所を選択します。"
+
+#~ msgid ""
+#~ ":guilabel:`Vehicle`: select the vehicle, which will auto-"
+#~ "fill :guilabel:`Vehicle Category`."
+#~ msgstr ""
+#~ ":guilabel:`車両`: 車両を選択すると、:guilabel:`車両カテゴリ` が自動入力さ"
+#~ "れます。"
+
+#~ msgid ""
+#~ ":guilabel:`Vehicle Category`: show if the order exceeds "
+#~ "the :ref:`vehicle's capacity limits <inventory/shipping_receiving/vehicle-"
+#~ "capacity>`"
+#~ msgstr ""
+#~ ":guilabel:`車両カテゴリ`: オーダが :ref:`車両の容量制限 <inventory>` を超"
+#~ "える場合に表示します。"
+
+#~ msgid ""
+#~ "The :guilabel:`Volume` bar is grayed out because the capacity has been "
+#~ "reached."
+#~ msgstr ""
+#~ "容量が限界に達しているため、:guilabel:`容量` バーはグレー表示になっていま"
+#~ "す。"
 
 #~ msgid ""
 #~ ":guilabel:`Package Use` is a field on the package form in Odoo that is "
