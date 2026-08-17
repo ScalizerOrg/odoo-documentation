@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 17:32+0000\n"
-"PO-Revision-Date: 2026-08-03 06:09+0000\n"
+"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"PO-Revision-Date: 2026-08-11 00:34+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
 "finance/ja/>\n"
@@ -56,11 +56,11 @@ msgid "Get started"
 msgstr "はじめましょう"
 
 #: ../../content/applications/finance/accounting.rst:17
-msgid "Basic concepts of accounting and initial setup of your accounting"
-msgstr "会計の基本概念と会計の初期設定"
+msgid "Detailed instructions for the initial setup of your accounting"
+msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:23
-#: ../../content/applications/finance/accounting/get_started.rst:83
+#: ../../content/applications/finance/accounting/get_started.rst:178
 #: ../../content/applications/finance/accounting/taxes.rst:5
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:94
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:530
@@ -77,6 +77,7 @@ msgstr "会計の基本概念と会計の初期設定"
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:57
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:79
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:208
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:87
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:69
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:128
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:316
@@ -157,6 +158,7 @@ msgstr "銀行同期、消込、および現金レジ"
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:241
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:336
 #: ../../content/applications/finance/fiscal_localizations/france.rst:92
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:138
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:111
 msgid "Reporting"
 msgstr "レポーティング"
@@ -499,6 +501,7 @@ msgid "Check register"
 msgstr "登録を確認"
 
 #: ../../content/applications/finance/accounting.rst:217
+#: ../../content/applications/finance/accounting/get_started.rst:415
 #: ../../content/applications/finance/esg.rst:209
 #: ../../content/applications/finance/esg.rst:225
 #: ../../content/applications/finance/esg.rst:237
@@ -920,7 +923,6 @@ msgstr ""
 "に従ってください。"
 
 #: ../../content/applications/finance/accounting/bank.rst:37
-#: ../../content/applications/finance/accounting/get_started.rst:183
 msgid ":doc:`bank/bank_synchronization`"
 msgstr ":doc:`bank/bank_synchronization`"
 
@@ -1085,6 +1087,7 @@ msgstr ":doc:`取引`"
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1301
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1587
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1716
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:115
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:215
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:88
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:759
@@ -4897,6 +4900,7 @@ msgstr ""
 "` と :guilabel:`現金損失勘定` に使用する勘定科目を選択します。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:50
+#: ../../content/applications/finance/accounting/get_started.rst:188
 msgid "Payment terms"
 msgstr "支払条件"
 
@@ -5669,6 +5673,9 @@ msgstr ""
 "オプションが利用可能です:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:34
+#: ../../content/applications/finance/accounting/get_started.rst:432
+#: ../../content/applications/finance/accounting/get_started.rst:643
+#: ../../content/applications/finance/accounting/get_started.rst:685
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:34
 msgid "Journal"
 msgstr "仕訳帳"
@@ -6724,6 +6731,8 @@ msgstr "TaxPointDate"
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:251
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:261
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:263
+#: ../../content/applications/finance/accounting/get_started.rst:641
+#: ../../content/applications/finance/accounting/get_started.rst:684
 msgid "Date"
 msgstr "日付"
 
@@ -12044,392 +12053,1660 @@ msgstr "ウェブページとしての諸条件の例"
 
 #: ../../content/applications/finance/accounting/get_started.rst:7
 msgid ""
-"When you first open your Odoo Accounting app, the :guilabel:`Accounting "
-"Dashboard` welcomes you with a step-by-step onboarding banner, a wizard that "
-"helps you get started. This onboarding banner is displayed until you choose "
-"to close it."
+"While some companies use Odoo from their first day of business, many "
+"companies need to transition to Odoo from a different legacy accounting "
+"software. The process for companies starting directly with Odoo is much "
+"simpler but still requires the following steps:"
 msgstr ""
-"Odoo会計アプリをはじめて開くと、ステップバイステップのオンボードバナー"
-"と :guilabel:`会計ダッシュボード` がが表示されます。このバナーは閉じるまで表"
-"示されます。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:11
 msgid ""
-"The settings visible in the onboarding banner can still be modified later by "
-"going to :menuselection:`Accounting --> Configuration --> Settings`."
+":ref:`Validate the fiscal localization <accounting/get_started/db-creation>`"
 msgstr ""
-"オンボーディングバナーに表示されている設定は、後で :menuselection:`会計 --> "
-"設定 --> 管理設定` で変更することができます。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:15
+#: ../../content/applications/finance/accounting/get_started.rst:12
 msgid ""
-"Odoo Accounting automatically installs the appropriate **Fiscal Localization "
-"Package** for your company, according to the country selected at the "
-"creation of the database. This way, the right accounts, reports, and taxes "
-"are ready-to-go. :ref:`Click here <fiscal_localizations/packages>` for more "
-"information about Fiscal Localization Packages."
+":ref:`Import accounting <accounting/get_started/master-data>` "
+"and :ref:`other master data <accounting/get_started/add-master-data>`"
 msgstr ""
-"Odoo会計はデータベース作成時に選択された国に応じて、あなたの会社に適切な **会"
-"計ローカリゼーションパッケージ** を自動的にインストールします。それにより、適"
-"切な勘定科目、レポート、税が利用できます。会計ローカリゼーションパッケージに"
-"ついて詳しくは  :ref:`こちらをクリック <fiscal_localizations/packages>` して"
-"下さい。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:21
-msgid "Accounting onboarding banner"
-msgstr "会計オンボーディングバナー"
-
-#: ../../content/applications/finance/accounting/get_started.rst:23
+#: ../../content/applications/finance/accounting/get_started.rst:14
 msgid ""
-"The step-by-step Accounting onboarding banner is composed of four steps:"
+":ref:`Configure the Accounting settings <accounting/get_started/accounting-"
+"config>` to meet the company's business needs"
 msgstr ""
-"ステップバイステップの会計オンボーディングバナーは、4つのステップで構成されて"
-"います:"
 
-#: ../../content/applications/finance/accounting/get_started.rst:None
-msgid "Step-by-step onboarding banner in Odoo Accounting"
-msgstr "Odoo会計のステップバイステップ・オンボーディングバナー"
+#: ../../content/applications/finance/accounting/get_started.rst:17
+msgid ""
+"The process for companies transitioning to Odoo involves the same steps as "
+"well as :ref:`importing opening entries <accounting/get_started/open-"
+"entries>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:24
+msgid "Time of execution"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:25
+msgid "General category"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:26
+msgid "Specific to-do item"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:27
+msgid ""
+":ref:`At database/company creation <accounting/get_started/db-creation>`"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:28
-msgid ":ref:`accounting-setup-periods`"
-msgstr ":ref:`accounting-setup-periods`"
+msgid "Fiscal localization"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:29
-msgid ":ref:`accounting-setup-bank`"
-msgstr ":ref:`accounting-setup-bank`"
+msgid "Verify localization"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:30
-msgid ":ref:`accounting-setup-taxes`"
-msgstr ":ref:`accounting-setup-taxes`"
+msgid ":ref:`Prior to implementation <accounting/get_started/prior>`"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:31
-msgid ":ref:`accounting-setup-chart`"
-msgstr ":ref:`accounting-setup-chart`"
-
-#: ../../content/applications/finance/accounting/get_started.rst:36
-msgid "Accounting Periods"
-msgstr "会計期間"
-
-#: ../../content/applications/finance/accounting/get_started.rst:38
-msgid ""
-"Define the **Fiscal Years**’ opening and closing dates, which are used to "
-"generate reports automatically, and set your **Tax Return Periodicity**, "
-"along with a reminder to never miss a tax return deadline."
+msgid ":ref:`Accounting master data <accounting/get_started/master-data>`"
 msgstr ""
-"**会計年度** の開始日と終了日を定義して下さい。これはレポートを自動生成するた"
-"めに使用されます。**税務申告書周期** を設定し、税務申告期限を逃さないようにリ"
-"マインダーを設定しましょう。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:42
-msgid ""
-"By default, the opening date is set on the 1st of January and the closing "
-"date on the 31st of December, as this is the most common use."
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Chart of accounts <accounting/get_started/coa>`"
 msgstr ""
-"デフォルトでは、最も一般的なものに倣い、開始日は1月1日、終了日は12月31日に設"
-"定されています。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:46
-msgid ""
-"You can also change these settings by going to :menuselection:`Accounting --"
-"> Configuration --> Settings --> Fiscal Periods` and updating the values."
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Currency <accounting/get_started/currency>`"
 msgstr ""
-":menuselection:`会計 --> 設定 --> 管理設定 --> 会計期間` に移動して値を更新す"
-"ることによってもこれらを変更することができます。"
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Journals <accounting/get_started/journals>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Fiscal positions <accounting/get_started/fiscal-positions>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Taxes <accounting/get_started/taxes>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Payment terms <accounting/get_started/payment-terms>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:39
+msgid ":ref:`Additional master data <accounting/get_started/add-master-data>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Product categories <accounting/get_started/products>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Products <accounting/get_started/products>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Contact bank accounts <accounting/get_started/contact-bank>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Contacts <accounting/get_started/contacts>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:45
+msgid ""
+":ref:`Accounting configurations <accounting/get_started/accounting-config>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+#: ../../content/applications/finance/fiscal_localizations/austria.rst:69
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:73
+#: ../../content/applications/finance/fiscal_localizations/colombia.rst:76
+#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:47
+#: ../../content/applications/finance/fiscal_localizations/philippines.rst:190
+#: ../../content/applications/finance/fiscal_localizations/united_states.rst:997
+msgid "Company information"
+msgstr "会社情報"
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:33
+msgid "Tax return periodicity"
+msgstr "税申告周期"
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid "Tax rounding and inclusion in prices"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid "Default accounts"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid "Financial year end date"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid "Document sequencing"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:52
-msgid "Bank Account"
-msgstr "銀行口座"
-
-#: ../../content/applications/finance/accounting/get_started.rst:54
 msgid ""
-"Connect your bank account to your database and have your bank statements "
-"synced automatically. To do so, find your bank in the list, "
-"click :guilabel:`Connect`, and follow the instructions on-screen."
+":ref:`At time of implementation <accounting/get_started/at-implementation>`"
 msgstr ""
-"銀行口座をデータベースに接続し、銀行明細を自動的に同期させることができます。"
-"リストから該当の銀行を見つけ、 :guilabel:`接続` をクリックし、画面の指示に"
-"従って下さい。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:58
-msgid ""
-":doc:`Click here <bank/bank_synchronization>` for more information about "
-"this feature."
+#: ../../content/applications/finance/accounting/get_started.rst:53
+msgid ":ref:`Opening entries <accounting/get_started/open-entries>`"
 msgstr ""
-"この機能についてさらに詳しくは :doc:`こちらをクリック <bank/"
-"bank_synchronization>`"
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Open invoices and bills <accounting/get_started/open-bills>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Inventory count <accounting/get_started/open-inventory>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ":ref:`Trial balance <accounting/get_started/open-tb>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:0
+msgid ""
+":ref:`Bank and credit card transactions <accounting/get_started/open-bank>`"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:60
 msgid ""
-"If your Bank Institution can’t be synchronized automatically, or if you "
-"prefer not to sync it with your database, you can also configure your bank "
-"account manually by typing its name, clicking :guilabel:`Create your Bank "
-"Account`, and filling out the form."
+"The process of transitioning from a legacy software system to Odoo "
+"Accounting is complex and can vary greatly from one business to another. "
+"While these instructions provide the basic steps of the process, Odoo's "
+"`Success Packs <https://www.odoo.com/pricing-packs>`_ allow you to get "
+"personalized instructions on how best to adapt the process to your "
+"business's needs. Advanced users can use these instructions as a guide to "
+"transition to Odoo Accounting with the understanding that they may have "
+"individual needs not covered here."
 msgstr ""
-"銀行口座が自動的に同期されない場合、またはデータベースと同期させたくない場合"
-"は、銀行口座の名前を入力して :guilabel:`銀行口座を作成` をクリックし、フォー"
-"ムに記入して手動で設定することもできます。"
-
-#: ../../content/applications/finance/accounting/get_started.rst:64
-msgid ":guilabel:`Name`: the bank account's name, as displayed in Odoo."
-msgstr ":guilabel:`名前`: Odooに表示される銀行口座名"
-
-#: ../../content/applications/finance/accounting/get_started.rst:65
-msgid ":guilabel:`Account Number`: your bank account number (IBAN in Europe)."
-msgstr ":guilabel:`銀行口座`: 銀行口座番号 (ヨーロッパ内IBAN)"
-
-#: ../../content/applications/finance/accounting/get_started.rst:66
-msgid ""
-":guilabel:`Bank`: click :guilabel:`Create and edit` to configure the bank's "
-"details. Add the bank institution's :guilabel:`Name` and "
-"its :guilabel:`Identifier Code` (BIC or SWIFT)."
-msgstr ""
-":guilabel:`銀行`: :guilabel:`作成して編集` をクリックして、銀行の詳細を設定し"
-"ます。銀行機関の :guilabel:`名前` と :guilabel:`識別コード` (BIC または "
-"SWIFT)を追加して下さい。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:68
 msgid ""
-":guilabel:`Code`: this code is your Journal's :guilabel:`Short Code`, as "
-"displayed in Odoo. By default, Odoo creates a new Journal with this short "
-"code."
+"It is recommended to practice this process in a test database and work in "
+"parallel with your prior accounting workflows in case there are any issues."
 msgstr ""
-":guilabel:`コード`: このコードはOdooで表示される仕訳帳の :guilabel:`短縮コー"
-"ド` です。デフォルトでは、Odooはこの短縮コードで新しい仕訳帳を作成します。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:70
-msgid ""
-":guilabel:`Journal`: This field is displayed if you have an existing bank "
-"journal that is not linked yet to a bank account. If so, then select "
-"the :guilabel:`Journal` you want to use to record the financial transactions "
-"linked to this bank account or create a new one by "
-"clicking :guilabel:`Create and Edit`."
+#: ../../content/applications/finance/accounting/get_started.rst:74
+msgid "At database/company creation"
 msgstr ""
-":guilabel:`仕訳帳`: このフィールドは、まだ銀行口座にリンクされていない既存の"
-"銀行仕訳帳がある場合に表示されます。もしそうであれば、この銀行口座にリンクさ"
-"れている金融取引を記録するために使用したい :guilabel:`仕訳帳` を選択する"
-"か、 :guilabel:`作成と編集` をクリックして新しい仕訳帳を作成して下さい。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:76
 msgid ""
-"You can add as many bank accounts as needed with this tool by going "
-"to :menuselection:`Accounting --> Configuration --> Add a Bank Account`."
+":doc:`Fiscal localization packages <../fiscal_localizations>` are country-"
+"specific modules that install pre-configured taxes, fiscal positions, charts "
+"of accounts, and legal statements on your database. Some additional "
+"features, such as the configuration of specific certificates, are also added "
+"to the Accounting app, following your fiscal administration requirements."
 msgstr ""
-"このツールで、 :menuselection:`会計 --> 設定 --> 銀行口座を追加` で必要なだけ"
-"銀行口座を追加することができます。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:78
-msgid ":doc:`Click here <bank>` for more information about Bank Accounts."
-msgstr "銀行口座について更に詳しくは :doc:`こちらをクリック <bank>`"
-
-#: ../../content/applications/finance/accounting/get_started.rst:85
+#: ../../content/applications/finance/accounting/get_started.rst:81
 msgid ""
-"This menu allows you to create new taxes, (de)activate, or modify existing "
-"taxes. Depending on the :doc:`localization package <../"
-"fiscal_localizations>` installed on your database, taxes required for your "
-"country are already configured."
+"A fiscal localization package is automatically installed based on the "
+"country selected when the database is created. Some countries have multiple "
+"fiscal localization packages for different business types, so be sure to "
+"verify that the correct package is installed. To do so, go "
+"to :menuselection:`Accounting --> Configuration --> Settings` and verify the "
+"correct localization is set in the :guilabel:`Package` field in "
+"the :guilabel:`Fiscal Localization` section."
 msgstr ""
-"このメニューでは、新しい税の作成、有(無)効化、既存の税の修正を行うことができ"
-"ます。データベースにインストールされている :doc:`ローカリゼーションパッケー"
-"ジ <../fiscal_localizations>` に応じて、あなたの国に必要な税がすでに設定され"
-"ています。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:90
-msgid ":doc:`Click here <taxes>` for more information about taxes."
-msgstr "税について詳しい情報は :doc:`こちらをクリック <taxes>` して下さい。"
-
-#: ../../content/applications/finance/accounting/get_started.rst:95
-msgid "Chart of Accounts"
-msgstr "勘定科目表"
-
-#: ../../content/applications/finance/accounting/get_started.rst:97
+#: ../../content/applications/finance/accounting/get_started.rst:88
 msgid ""
-"With this menu, you can add accounts to your **Chart of Accounts** and "
-"indicate their initial opening balances."
+"Selecting another package is only possible if no journal entry has been "
+"posted yet."
 msgstr ""
-"このメニューでは、勘定科目を **勘定科目表** に追加し、その初期開始残高を表示"
-"することができます。"
+
+#: ../../content/applications/finance/accounting/get_started.rst:93
+msgid "Prior to implementation"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:98
+msgid "Accounting master data"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:100
 msgid ""
-"Basic settings are displayed on this page to help you review your Chart of "
-"Accounts. To access all the settings of an account, click on "
-"the :guilabel:`Setup` button at the end of the line."
+"Master data is data that other records rely on. For example, an invoice "
+"requires a customer; the customer, or contact, is master data. Because other "
+"records rely on master data, the order in which accounting data is "
+"transferred into Odoo, whether manually or via import, is crucial."
 msgstr ""
-"基本的な設定はこのページに表示され、勘定科目表を確認するのに役立ちます。勘定"
-"科目の全ての設定にアクセスするには、行末の :guilabel:`セットアップ` ボタンを"
-"クリックして下さい。"
-
-#: ../../content/applications/finance/accounting/get_started.rst:None
-msgid ""
-"Setup of the Chart of Accounts and their opening balances in Odoo Accounting"
-msgstr "Odoo会計での勘定科目とその開始残高の設定"
 
 #: ../../content/applications/finance/accounting/get_started.rst:107
-msgid ""
-":doc:`Click here <get_started/chart_of_accounts>` for more information on "
-"how to configure your Chart of Accounts."
-msgstr ""
-":doc:`ここをクリック <get_started/chart_of_accounts>` して、勘定科目表を設定"
-"する方法についてさらに詳しく参照して下さい。"
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:3
+#: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:79
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:92
+#: ../../content/applications/finance/fiscal_localizations/argentina.rst:78
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:67
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:98
+#: ../../content/applications/finance/fiscal_localizations/canada.rst:82
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:368
+#: ../../content/applications/finance/fiscal_localizations/colombia.rst:325
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:9
+#: ../../content/applications/finance/fiscal_localizations/guatemala.rst:179
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1133
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:78
+#: ../../content/applications/finance/fiscal_localizations/oman.rst:55
+#: ../../content/applications/finance/fiscal_localizations/romania.rst:69
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:84
+#: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:63
+#: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:53
+#: ../../content/applications/finance/fiscal_localizations/united_states.rst:111
+#: ../../content/applications/finance/fiscal_localizations/uruguay.rst:213
+#: ../../content/applications/finance/fiscal_localizations/uzbekistan.rst:77
+msgid "Chart of accounts"
+msgstr "勘定科目表"
 
-#: ../../content/applications/finance/accounting/get_started.rst:111
-msgid "Invoicing onboarding banner"
-msgstr "請求書オンボーディングバナー"
-
-#: ../../content/applications/finance/accounting/get_started.rst:113
+#: ../../content/applications/finance/accounting/get_started.rst:109
 msgid ""
-"There is another step-by-step onboarding banner that helps you take "
-"advantage of your Odoo Invoicing and Accounting apps. The Invoicing "
-"onboarding banner is the one that welcomes you if you use the Invoicing app "
-"rather than the Accounting app."
+"The :doc:`chart of accounts <get_started/chart_of_accounts>` is the "
+"foundation of all accounting records, and as such, it needs to be created "
+"before other database records. A standard chart of accounts is included with "
+"each fiscal localization, but most businesses have their own chart of "
+"accounts with its own accounts. Some of these accounts likely serve the same "
+"purpose as some of Odoo's standard accounts, but they may have a different "
+"name and/or code. Other accounts may not have an analogous account in Odoo's "
+"standard chart of accounts. These two types of accounts should be handled "
+"differently:"
 msgstr ""
-"Odooの請求アプリと会計アプリを活用するためのサポートとして、もう一つステップ"
-"バイステップのオンボーディングバナーがあります。請求書作成オンボーディングバ"
-"ナーは、会計アプリではなく請求アプリを使用する場合に表示されます。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:117
 msgid ""
-"If you have Odoo Accounting installed on your database, you can reach it by "
-"going to :menuselection:`Accounting --> Customers --> Invoices`."
+"For accounts in your chart that have an analogous account in Odoo's standard "
+"chart of accounts, simply edit the account name and/or account code of the "
+"standard Odoo account to match your own."
 msgstr ""
-"データベースにOdoo会計がインストールされている場合、 :menuselection:`会計 --"
-"> 顧客 --> 請求書` からアクセスできます。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:120
-msgid "The Invoicing onboarding banner consists of four main steps:"
+#: ../../content/applications/finance/accounting/get_started.rst:119
+msgid ""
+"For accounts in your chart that do not have an analogous account in Odoo's "
+"standard chart of accounts, create them manually or :ref:`import <essentials/"
+"export_import_data/import-data>` them."
 msgstr ""
-"顧客請求書発行のオンボーディングバナーは、4つの主なステップで構成されていま"
-"す。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:None
-msgid "Step-by-step onboarding banner in Odoo Invoicing"
-msgstr "Odoo請求のステップバイステップオンボーディングバナー"
-
-#: ../../content/applications/finance/accounting/get_started.rst:125
-msgid ":ref:`invoicing-setup-company`"
-msgstr ":ref:`invoicing-setup-company`"
-
-#: ../../content/applications/finance/accounting/get_started.rst:126
-msgid ":ref:`invoicing-setup-layout`"
-msgstr ":ref:`invoicing-setup-layout`"
+#: ../../content/applications/finance/accounting/get_started.rst:123
+msgid ""
+"Account codes must be unique per chart of accounts, so ensure that any newly "
+"created or imported accounts do not share the same code as an existing "
+"account."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:127
-msgid ":ref:`invoicing-setup-invoice`"
-msgstr ":ref:`invoicing-setup-invoice`"
-
-#: ../../content/applications/finance/accounting/get_started.rst:128
-msgid ":ref:`invoicing-setup-payments`"
-msgstr ":ref:`invoicing-setup-payments`"
+msgid ""
+"Because certain standard accounts are set as the default accounts for "
+"various fields (on products, product categories, contacts, and in the "
+"Accounting settings), **deleting them or changing their account type can "
+"break basic processes** like creating an invoice. Instead of deleting "
+"accounts in Odoo's standard chart of accounts, simply rename and recode them."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:133
-msgid "Company Data"
-msgstr "会社データ"
-
-#: ../../content/applications/finance/accounting/get_started.rst:135
 msgid ""
-"Add your company’s details, such as the name, address, logo, website, phone "
-"number, email address, and Tax ID or VAT number. These details are then "
-"displayed on your documents, such as invoices."
+"`Odoo Tutorial: Update your chart of accounts <https://www.odoo.com/slides/"
+"slide/update-your-chart-of-accounts-6391>`_"
 msgstr ""
-"会社名、住所、ロゴ、ウェブサイト、電話番号、Eメールアドレス、登録番号または"
-"VAT番号など、貴社の詳細情報を追加します。これらの情報は、顧客請求書などのド"
-"キュメントに表示されます。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:139
-msgid ""
-"You can also change the company's details by going "
-"to :menuselection:`Settings --> General Settings`, scrolling down to "
-"the :guilabel:`Companies` section, and :guilabel:`Update Info`."
-msgstr ""
-"また、会社の詳細を変更するには、 :menuselection:`設定 --> 一般設定` を開"
-"き、 :guilabel:`会社` セクションまでスクロールダウンし :guilabel:`会社情報更"
-"新` を開いて下さい。"
+#: ../../content/applications/finance/accounting/get_started.rst:441
+msgid "Currency"
+msgstr "通貨"
 
-#: ../../content/applications/finance/accounting/get_started.rst:145
-msgid "Documents Layout"
-msgstr "ドキュメントレイアウト"
-
-#: ../../content/applications/finance/accounting/get_started.rst:147
+#: ../../content/applications/finance/accounting/get_started.rst:141
 msgid ""
-"Customize the :ref:`default invoice layout <studio/pdf-reports/default-"
-"layout>`."
+"If additional :doc:`currencies <get_started/multi_currency>` are required "
+"beyond the default of the company's fiscal localization, activate them. "
+"Currency rates can be set to update automatically in "
+"the :guilabel:`Currencies` section of the Accounting settings."
 msgstr ""
-":ref:`デフォルト請求書レイアウト <studio/pdf-reports/default-layout>` をカス"
-"タマイズする"
+
+#: ../../content/applications/finance/accounting/get_started.rst:148
+#: ../../content/applications/finance/accounting/get_started/journals.rst:3
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:104
+#: ../../content/applications/finance/fiscal_localizations/argentina.rst:167
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:285
+#: ../../content/applications/finance/fiscal_localizations/france.rst:635
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:541
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:365
+msgid "Journals"
+msgstr "仕訳帳"
 
 #: ../../content/applications/finance/accounting/get_started.rst:150
 msgid ""
-"You can also change the invoice layout by going to :menuselection:`Settings "
-"--> General Settings`, scrolling down to the :guilabel:`Companies` section, "
-"and clicking :guilabel:`Configure Document Layout`."
+"Standard :doc:`journals <get_started/journals>` such as a sales journal, a "
+"purchase journal, a bank journal, and more are created by default, but "
+"additional journals can be created to manage different situations, including:"
 msgstr ""
-"また、 :menuselection:`設定 --> 一般設定` に進み、 :guilabel:`会社` セクショ"
-"ンまでスクロールダウンし、 :guilabel:`ドキュメントレイアウトを設定` をクリッ"
-"クすると、顧客請求書のレイアウトを変更することができます。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:157
-msgid "Create Invoice"
-msgstr "請求書作成"
+#: ../../content/applications/finance/accounting/get_started.rst:154
+msgid "tracking income through multiple sales journals"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started.rst:159
-msgid "Create your first invoice."
-msgstr "最初の請求書を作成します。"
+#: ../../content/applications/finance/accounting/get_started.rst:155
+msgid "having multiple bank accounts, each with its own journal"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started.rst:162
+#: ../../content/applications/finance/accounting/get_started.rst:156
 msgid ""
-"Add your **bank account number** and a link to your **General Terms & "
-"Condition** in the footer. This way, your contacts can find the full content "
-"of your GT&C online without having to print them on the invoices you issue."
+"managing loans, tax returns, payroll, and more with miscellaneous journals"
 msgstr ""
-"フッターに **銀行口座番号** と **一般諸条件** へのリンクを追加してください。"
-"こうすることで、発行する請求書に印刷することなく、オンラインで一般諸条件の全"
-"内容を確認することができます。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:169
-msgid "Online Payments"
-msgstr "オンライン支払"
-
-#: ../../content/applications/finance/accounting/get_started.rst:171
+#: ../../content/applications/finance/accounting/get_started.rst:158
 msgid ""
-"Get started with Stripe and enable secure integrated credit and debit card "
-"payments within Odoo."
+"Recording payments in bank, cash, and credit card journals can create "
+"journal entries or not, depending on the journal's configuration. By "
+"default, no journal entries are created for payments. To configure a journal "
+"to create payments, set :ref:`outstanding payments accounts <accounting/"
+"journals/outstanding-accounts>` on the journal's payment methods."
 msgstr ""
-"Stripeではじめましょう。Odoo内で安全な統合クレジットカードおよびデビットカー"
-"ド支払が可能になります。"
 
-#: ../../content/applications/finance/accounting/get_started.rst:174
+#: ../../content/applications/finance/accounting/get_started.rst:166
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:282
+#: ../../content/applications/finance/fiscal_localizations/canada.rst:152
+msgid "Fiscal positions"
+msgstr "会計ポジション"
+
+#: ../../content/applications/finance/accounting/get_started.rst:168
 msgid ""
-"To use other payment providers, go to :guilabel:`Invoicing --> Configuration "
-"--> Payment Providers` and :doc:`enable the desired providers <../"
-"payment_providers>`."
+":doc:`Fiscal positions <taxes/fiscal_positions>` allow you to configure "
+"products to use different income/expense accounts and apply "
+"different :doc:`taxes <taxes>` depending on the customer or vendor "
+"purchasing or selling them. They can also be configured to apply "
+"automatically based on the customer's or vendor's location. Default fiscal "
+"positions are included when installing a :doc:`fiscal localization package "
+"<../fiscal_localizations>`, but existing fiscal positions can be adjusted, "
+"and new fiscal positions can be created manually."
 msgstr ""
-"他の決済プロバイダーを使用するには :guilabel:`請求 --> 設定 --> 決済プロバイ"
-"ダー` に行き、 :doc:`希望のプロバイダーを有効化 <../payment_providers>` して"
-"下さい。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:180
-msgid ":doc:`bank`"
-msgstr ":doc:`銀行`"
-
-#: ../../content/applications/finance/accounting/get_started.rst:181
-msgid ":doc:`get_started/chart_of_accounts`"
-msgstr ":doc:`get_started/chart_of_accounts`"
-
-#: ../../content/applications/finance/accounting/get_started.rst:182
-msgid ":doc:`get_started/consolidation`"
-msgstr ":doc:`get_started/consolidation`"
-
-#: ../../content/applications/finance/accounting/get_started.rst:184
-msgid ":doc:`../fiscal_localizations`"
-msgstr ":doc:`../fiscal_localizations`"
-
-#: ../../content/applications/finance/accounting/get_started.rst:185
 msgid ""
-"`Odoo Tutorials: Accounting and Invoicing - Getting started [video] <https://"
-"www.odoo.com/slides/slide/getting-started-7063>`_"
+":doc:`taxes` interact with many different aspects of accounting, "
+"including :doc:`fiscal positions <taxes/fiscal_positions>`, :ref:`accounts "
+"<taxes/definition-tab>`, and products. Default taxes are included when "
+"installing a :doc:`fiscal localization package <../fiscal_localizations>`, "
+"but existing taxes can be adjusted, and new taxes can be created manually."
 msgstr ""
-"`Odooチュートリアル: 会計と請求 - はじめましょう [動画] <https://"
-"www.odoo.com/slides/slide/getting-started-7063>`_"
+
+#: ../../content/applications/finance/accounting/get_started.rst:190
+msgid ""
+":doc:`Payment terms <customer_invoices/payment_terms>` detail the conditions "
+"of payment for records such as sales and purchase orders, customer invoices, "
+"and vendor bills. Payment terms also allow you to define installment plans "
+"for when one record's payments should be made in multiple installments."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:194
+msgid ""
+"As they are both used to dictate when payment is due, payment terms and due "
+"dates are mutually exclusive: a record can only have one or the other."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:200
+msgid "Additional master data"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:205
+msgid "Products and product categories"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:207
+msgid ""
+":doc:`Import your products <../../sales/sales/products_prices/products/"
+"import>` and product categories or create them manually. Multiple fields on "
+"the product category form relate to accounting, including:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:211
+msgid ":ref:`Costing Method <costing-methods>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:212
+msgid ""
+":ref:`Inventory Valuation <accounting/inventory-valuation/valuation-method>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:213
+msgid ":guilabel:`Income Account`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:214
+msgid ":guilabel:`Expense Account`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:215
+msgid ":guilabel:`Stock Account`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:216
+msgid ""
+":guilabel:`Price Difference Account` (available only on product categories "
+"that use :guilabel:`Perpetual (at invoicing)` for their :guilabel:`Inventory "
+"Valuation`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:219
+msgid ""
+"By default, products inherit their :guilabel:`Income Account` "
+"and :guilabel:`Expense Account` from their product category, but these "
+"accounts can be overridden on each product record. Other fields on the "
+"product form relate to accounting as well, including:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:223
+msgid ":guilabel:`Invoicing policy`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:224
+msgid ":guilabel:`Sales Taxes`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:225
+msgid ""
+":guilabel:`Cost` (which is particularly important for importing "
+"the :ref:`opening inventory <accounting/get_started/open-inventory>`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:227
+msgid ":guilabel:`Purchase Taxes`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:230
+msgid ""
+"Import product categories before products so that each product's category "
+"can be specified during the product import."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:236
+msgid "Contact banks and bank accounts"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:238
+msgid ""
+"To send payments to vendors (such as with :ref:`SEPA credit transfer "
+"<accounting/sepa_payments/sct>` or :doc:`NACHA <../fiscal_localizations/"
+"united_states>` files) and collect payments from customers via :ref:`SEPA "
+"direct debit <accounting/sepa_payments/sdd>`, the customer's or vendor's "
+"bank account must be set on their contact record."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:243
+msgid ""
+":ref:`Import <essentials/export_import_data/import-data>` your "
+"contacts' :ref:`banks <accounting/batch/create-bank>` and :ref:`bank "
+"accounts <accounting/batch/create-bank-account>` or create them manually."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:250
+#: ../../content/applications/finance/fiscal_localizations/argentina.rst:295
+#: ../../content/applications/finance/fiscal_localizations/colombia.rst:233
+#: ../../content/applications/finance/fiscal_localizations/france.rst:217
+#: ../../content/applications/finance/fiscal_localizations/france.rst:697
+#: ../../content/applications/finance/fiscal_localizations/guatemala.rst:188
+#: ../../content/applications/finance/fiscal_localizations/indonesia.rst:47
+#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:238
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:188
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1304
+#: ../../content/applications/finance/fiscal_localizations/philippines.rst:214
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:76
+#: ../../content/applications/finance/fiscal_localizations/uruguay.rst:225
+msgid "Contacts"
+msgstr "連絡先"
+
+#: ../../content/applications/finance/accounting/get_started.rst:252
+msgid ""
+":ref:`Import <essentials/export_import_data/import-data>` "
+"your :doc:`contacts <../../essentials/contacts>` or create them manually. "
+"Multiple fields  on the contact form affect the contact's accounting "
+"records, such as invoices and bills, including:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:256
+msgid ""
+":doc:`Payment Terms <customer_invoices/payment_terms>` for sales and for "
+"purchases"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:257
+msgid ":doc:`Fiscal Position <taxes/fiscal_positions>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:258
+#: ../../content/applications/finance/fiscal_localizations/canada.rst:142
+#: ../../content/applications/finance/fiscal_localizations/united_states.rst:171
+msgid ":guilabel:`Account Receivable`"
+msgstr ":guilabel:`売掛金勘定`"
+
+#: ../../content/applications/finance/accounting/get_started.rst:259
+#: ../../content/applications/finance/fiscal_localizations/canada.rst:144
+#: ../../content/applications/finance/fiscal_localizations/united_states.rst:173
+msgid ":guilabel:`Account Payable`"
+msgstr ":guilabel:`買掛金勘定`"
+
+#: ../../content/applications/finance/accounting/get_started.rst:260
+msgid ""
+":ref:`Invoice sending <accounting/invoice/sending>` preferences (visible "
+"only in :ref:`developer mode <developer-mode>`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:262
+msgid ":guilabel:`eInvoice format`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:263
+msgid "Peppol e-address (EAS)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:264
+msgid "e-invoicing endpoint"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:265
+msgid ":ref:`Bank accounts <accounting/batch/create-bank-account>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:266
+msgid ""
+"Additional e-invoicing fields may be available depending on the :doc:`fiscal "
+"localization <../fiscal_localizations>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:272
+msgid "Accounting configurations"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:274
+msgid ""
+"The following primary accounting configurations are crucial to successfully "
+"setting up accounting records. The majority of these are found in the "
+"Accounting settings and accessible via :menuselection:`Accounting --> "
+"Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:278
+msgid ""
+":doc:`Company information <../../general/companies>`, such as its name, "
+"address, logo, phone, and email address"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:280
+msgid ":ref:`accounting/tax-returns/periodicity`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:281
+msgid ""
+":guilabel:`Rounding Method`: Choose whether the total tax amount is rounded "
+"per line or per tax in the :guilabel:`Taxes` section of the Accounting "
+"settings."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:283
+msgid ""
+":guilabel:`Prices`: Choose whether prices are :guilabel:`Tax Excluded` "
+"or :guilabel:`Tax Included` by default in the :guilabel:`Taxes` section of "
+"the Accounting settings."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:285
+msgid ":doc:`customer_invoices/terms_conditions`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:286
+msgid ""
+":guilabel:`Default accounts`: Default accounts can be set in the following "
+"two sections of the Accounting settings:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:289
+msgid ""
+":guilabel:`Default accounts`: Additional default accounts beyond those "
+"configured for each journal"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:291
+msgid ""
+":guilabel:`Inventory valuation`: Other default accounts regarding both "
+"inventory valuation and manufacturing accounting"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:294
+msgid ":ref:`Fiscal year end date <accounting/year-end/fiscal-years>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:295
+msgid ":doc:`customer_invoices/sequence`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:300
+msgid "At the time of implementation"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:305
+msgid "Opening entries"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:307
+msgid ""
+"Companies transitioning to Odoo with existing account balances, open "
+"invoices and bills, and an opening inventory count need to enter these "
+"opening entries in their Odoo database so that they are accurately "
+"represented."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:311
+msgid ""
+"The process of bringing in an :ref:`opening trial balance <accounting/"
+"get_started/open-tb>` and :ref:`open invoices/bills <accounting/get_started/"
+"open-bills>` introduces complications because it can cause duplicated values "
+"if done incorrectly."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:316
+msgid ""
+"A company has a current balance of $1000 in its accounts receivable, "
+"reflecting the $1000 that it is owed for its open invoices."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:319
+msgid ""
+"If these open invoices and the balance of the accounts receivable are both "
+"created in Odoo without making any changes, the accounts receivable will "
+"mistakenly reflect a balance of $2000:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:322
+msgid "$1000 from the opening trial balance of the accounts receivable"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:323
+msgid "$1000 from the creation of the open invoices in Odoo"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:325
+msgid "The same concept applies to open vendor bills and the accounts payable."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:327
+msgid ""
+"To avoid this error, use *clearing accounts*, which are accounts that "
+"temporarily hold the value before being balanced (or \"cleared\")."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:333
+msgid "When to transition"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:335
+msgid ""
+"There are three options for when to transition your accounting workflows to "
+"Odoo:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:337
+msgid ""
+"At the end of the fiscal year: this is the easiest option because it "
+"minimizes the data that needs to be transferred."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:339
+msgid ""
+"At the end of the tax period: with this option, you can choose to post all "
+"of the entries from the past period or only the balance of each account at "
+"the end of the period."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:341
+msgid ""
+"In the middle of a tax period: this option is not recommended because it "
+"causes additional work and complications. Splitting a tax period between a "
+"legacy software and Odoo complicates the tax filing process since the data "
+"from the two systems must be combined."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:345
+msgid "Prepare the following documents from your previous system(s):"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:347
+msgid "Opening account balances"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:348
+msgid "Open (unpaid) invoices and credit notes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:349
+msgid "Open (unpaid) vendor bills and refunds"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:350
+msgid "Opening inventory count"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:353
+msgid ""
+"If journal entries have been created through the use of the Invoicing app or "
+"stock moves in a system with an automated inventory valuation, use "
+"the :guilabel:`Invoicing Switch Threshold` feature in the Accounting "
+"settings to cancel all journal entries before the specified date to start "
+"with a clean general ledger. Additionally, enter the appropriate starting "
+"balance on each bank journal's first statement so that it matches the "
+"current bank account balance."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:360
+msgid ""
+"Before starting the process of creating opening entries in Odoo, verify that "
+"the data meets the following requirements:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:363
+#: ../../content/applications/finance/accounting/get_started.rst:751
+msgid ""
+"The sum of the opening trial balances of all receivable accounts must equal "
+"the sum of the open customer invoices minus credit notes."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:365
+#: ../../content/applications/finance/accounting/get_started.rst:753
+msgid ""
+"The sum of the opening trial balances of all payable accounts must equal the "
+"sum of the open vendor bills minus refunds."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:367
+#: ../../content/applications/finance/accounting/get_started.rst:755
+msgid ""
+"The sum of the opening trial balance values of all inventory accounts must "
+"equal the sum of the value of the inventory (calculated by multiplying the "
+"product cost by the product quantity for each product and summing them "
+"together)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:370
+#: ../../content/applications/finance/accounting/get_started.rst:758
+msgid "The opening trial balance itself must be balanced."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:375
+msgid "Open invoices and bills"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:377
+msgid ""
+"Companies transitioning to Odoo need to import or manually create their open "
+"(i.e., existing but not yet fully paid) invoices and vendor bills (as well "
+"as any credit notes or refunds) in Odoo so that no invoice or bill is lost "
+"in the transition. Importing these records is largely the same process for "
+"both invoices and bills and is done in three steps:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:382
+msgid ":ref:`Preparing invoices/bills <accounting/get_started/prep-bills>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:383
+msgid ""
+":ref:`Validating invoices/bills <accounting/get_started/validate-bills>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:384
+msgid ":ref:`Importing invoices/bills <accounting/get_started/import-bills>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:387
+msgid ""
+"For simplicity's sake, it is recommended to import each invoice/bill with "
+"only the total amount due, rather than individual invoice/bill lines. This "
+"avoids common errors, such as tax accounts being affected twice for the same "
+"record."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:394
+msgid "Prepare invoices and bills"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:396
+msgid ""
+"Prepare the open invoices and bills using the import template available in "
+"Odoo. To access the import templates:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:399
+msgid ""
+"For invoices and credit notes, go to :menuselection:`Accounting --> "
+"Customers --> Invoices`, click the :icon:`fa-cog` (:guilabel:`Actions`) "
+"icon, and click :icon:`fa-download` :guilabel:`Import records`. "
+"Click :icon:`fa-download` :guilabel:`Import Template for Invoices` to "
+"download the template."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:403
+msgid ""
+"For vendor bills and refunds, go to :menuselection:`Accounting --> Vendors --"
+"> Bills`, click the :icon:`fa-cog` (:guilabel:`Actions`) icon, and "
+"click :icon:`fa-download` :guilabel:`Import records`. Click :icon:`fa-"
+"download` :guilabel:`Import Template for Bills` to download the template."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:407
+#: ../../content/applications/finance/accounting/get_started.rst:527
+msgid "Prepare the following fields:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:413
+#: ../../content/applications/finance/accounting/get_started.rst:533
+#: ../../content/applications/finance/accounting/get_started.rst:636
+msgid "Field"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:414
+#: ../../content/applications/finance/accounting/get_started.rst:534
+#: ../../content/applications/finance/accounting/get_started.rst:637
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
+#: ../../content/applications/finance/accounting/taxes.rst:221
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:166
+#: ../../content/applications/finance/fiscal_localizations/argentina.rst:30
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:14
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:78
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:106
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:160
+#: ../../content/applications/finance/fiscal_localizations/austria.rst:18
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:18
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:34
+#: ../../content/applications/finance/fiscal_localizations/canada.rst:34
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:34
+#: ../../content/applications/finance/fiscal_localizations/colombia.rst:50
+#: ../../content/applications/finance/fiscal_localizations/croatia.rst:21
+#: ../../content/applications/finance/fiscal_localizations/ecuador.rst:45
+#: ../../content/applications/finance/fiscal_localizations/egypt.rst:18
+#: ../../content/applications/finance/fiscal_localizations/france.rst:20
+#: ../../content/applications/finance/fiscal_localizations/france.rst:51
+#: ../../content/applications/finance/fiscal_localizations/france.rst:498
+#: ../../content/applications/finance/fiscal_localizations/guatemala.rst:76
+#: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:16
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:18
+#: ../../content/applications/finance/fiscal_localizations/india.rst:18
+#: ../../content/applications/finance/fiscal_localizations/indonesia.rst:18
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:23
+#: ../../content/applications/finance/fiscal_localizations/jordan.rst:18
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:17
+#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:25
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:29
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:62
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:18
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:36
+#: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:18
+#: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:80
+#: ../../content/applications/finance/fiscal_localizations/oman.rst:18
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:23
+#: ../../content/applications/finance/fiscal_localizations/philippines.rst:18
+#: ../../content/applications/finance/fiscal_localizations/poland.rst:18
+#: ../../content/applications/finance/fiscal_localizations/romania.rst:16
+#: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:18
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:18
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:47
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:17
+#: ../../content/applications/finance/fiscal_localizations/thailand.rst:16
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:20
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:41
+#: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:17
+#: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:18
+#: ../../content/applications/finance/fiscal_localizations/united_states.rst:60
+#: ../../content/applications/finance/fiscal_localizations/uruguay.rst:60
+#: ../../content/applications/finance/fiscal_localizations/uzbekistan.rst:20
+#: ../../content/applications/finance/fiscal_localizations/vietnam.rst:19
+msgid "Description"
+msgstr "説明"
+
+#: ../../content/applications/finance/accounting/get_started.rst:416
+msgid "Customer name (must exactly match a contact record in Odoo)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:417
+msgid "Number"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:418
+msgid ""
+"Invoice number (e.g., BILL/2026/00001): This number must **not** already "
+"exist in this database yet; otherwise, it will have to be :doc:`resequenced "
+"<customer_invoices/sequence>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:420
+#: ../../content/applications/finance/accounting/get_started.rst:638
+#: ../../content/applications/finance/accounting/get_started.rst:683
+msgid "Reference"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:421
+msgid ""
+"(Optional) Invoice reference (i.e., the name of the document that created "
+"this invoice)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:422
+msgid "Invoice Bill Date"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:423
+msgid ""
+"Date the invoice was created. Ensure the year in the :guilabel:`Number` and "
+"the year in this field are the same to prevent errors."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:425
+msgid "Due Date"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:426
+msgid ""
+"Date the invoice/bill is due. Each invoice/bill can have either a due date "
+"or payment terms, but not both."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:428
+msgid "Payment Terms"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:429
+msgid ""
+"The :doc:`payment terms <customer_invoices/payment_terms>` of the invoice/"
+"bill. Each invoice/bill can have either a due date or payment terms, but not "
+"both. Payment terms are only recommended for open invoices/bills if they are "
+"used with payment installments."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:433
+msgid ""
+"(Optional) The journal name, if multiple sales journals or multiple purchase "
+"journals exist"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:434
+msgid "Invoice Lines / Label"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:435
+msgid "A label for the invoice (e.g., `Open Invoices`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:436
+msgid "Invoice Lines / Account"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:437
+msgid "The receivable clearing account"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:438
+msgid "Invoice Lines / Unit Price"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:439
+msgid ""
+"The total amount due on the invoice. If partial payments have been made, "
+"this is for the remaining amount due (i.e., total minus partial payments)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:442
+msgid ""
+"Currency the invoice was issued in (if different from the company currency). "
+"If importing open invoices with different currencies, create "
+"a :ref:`historical exchange rate <multi-currency/manual-update>` for each "
+"invoice in a different currency before importing."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:449
+msgid "Validate invoices and bills"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:451
+msgid ""
+"Validate the following aspects of the open invoices, bills, credit notes, "
+"and refunds:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:453
+msgid ""
+"The sum of open bills minus the sum of open refunds equals the balance of "
+"accounts payable on the accounts payable of the opening trial balance."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:455
+msgid ""
+"The sum of open invoices minus the sum of open credit notes equals the "
+"balance of the accounts receivable on the opening trial balance."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:457
+msgid "Check for negative invoices and bills:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:459
+msgid ""
+"If any invoices are for negative amounts, they are credit notes and should "
+"be imported separately as a positive value under "
+"the :menuselection:`Accounting --> Customers --> Credit Notes` menu. Change "
+"the :guilabel:`Number` from `INV/YEAR/NUMBER` to `RINV/YEAR/NUMBER`, and "
+"(optionally) change the :guilabel:`Reference` to `Reversal of: [INV Number]`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:463
+msgid ""
+"Similarly, if any bills are for negative amounts, they are refunds and "
+"should be imported separately as a positive value under "
+"the :guilabel:`Accounting --> Vendors --> Refunds` menu. Change "
+"the :guilabel:`Number` from `BILL/YEAR/NUMBER` to `RBILL/YEAR/NUMBER` and "
+"(optionally) change the :guilabel:`Reference` to `Reversal of: [BILL "
+"Number]`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:468
+msgid ""
+"Check for different currencies: If importing open invoices/bills with "
+"different currencies, create a :ref:`historical exchange rate <multi-"
+"currency/manual-update>` for the date of creation for each invoice or bill "
+"in a different currency."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:475
+msgid "Import invoices and bills"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:477
+msgid ""
+":ref:`Import <essentials/export_import_data/import-data>` the :ref:`prepared "
+"fields <accounting/get_started/prep-bills>` from the appropriate menu:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:480
+msgid ""
+"For customer invoices, go to :menuselection:`Accounting --> Customers --> "
+"Invoices`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:481
+msgid ""
+"For vendor bills, go to :menuselection:`Accounting --> Vendors --> Bills`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:482
+msgid ""
+"For credit notes, go to :menuselection:`Accounting --> Customers --> Credit "
+"Notes`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:483
+msgid ""
+"For vendor refunds, go to :menuselection:`Accounting --> Vendors --> "
+"Refunds`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:485
+msgid ""
+"The records are all imported as drafts. From the resulting list view, select "
+"the imported draft records, click :icon:`fa-cog` :guilabel:`Actions`, and "
+"click :guilabel:`Confirm Entries`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:488
+msgid ""
+"Repeat the process for each record type (invoices, bills, credit notes, and "
+"refunds)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:493
+msgid "Opening inventory"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:496
+msgid ""
+"The process of creating an opening inventory count and the associated "
+"inventory valuation is the same regardless of the :ref:`accounting standard "
+"<accounting/inventory-valuation/accounting-standards>` or :ref:`valuation "
+"method <accounting/inventory-valuation/configuration>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:501
+msgid "The process of importing an opening inventory is done in three steps:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:503
+msgid ":ref:`Preparing inventory <accounting/get_started/prep-inventory>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:504
+msgid ":ref:`Validating inventory <accounting/get_started/validate-inventory>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:505
+msgid ":ref:`Importing inventory <accounting/get_started/import-inventory>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:510
+msgid "Prepare the inventory"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:512
+msgid ""
+"If product costs were not already included when the products were created, "
+"update them, either manually in the :guilabel:`Cost` field on the product "
+"form, or via an :ref:`import to update <essentials/update-data>` it."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:517
+msgid ""
+"To import products that use a :abbr:`FIFO (first in first out)` costing "
+"method with multiple quantities at different costs, set the cost on the "
+"product form, then import the quantity at that cost. Repeat the process as "
+"many times as needed, once for each different cost."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:521
+msgid ""
+"Prepare the opening inventory count using the import template available in "
+"Odoo. To access the import template, go to :menuselection:`Inventory --> "
+"Operations --> Physical Inventory`, click the :icon:`fa-cog` "
+"(:guilabel:`Actions`) icon, and click :icon:`fa-download` :guilabel:`Import "
+"records`. Click :icon:`fa-download` :guilabel:`Import Template for Inventory "
+"Adjustments` to download the template."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:535
+#: ../../content/applications/finance/accounting/get_started.rst:565
+#: ../../content/applications/finance/esg.rst:208
+#: ../../content/applications/finance/esg.rst:226
+#: ../../content/applications/finance/esg.rst:238
+#: ../../content/applications/finance/esg.rst:257
+#: ../../content/applications/finance/esg.rst:269
+#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:98
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:403
+#: ../../content/applications/finance/fiscal_localizations/romania.rst:113
+msgid "Product"
+msgstr "プロダクト"
+
+#: ../../content/applications/finance/accounting/get_started.rst:536
+msgid ""
+"The product name or internal reference. If using :doc:`product variants "
+"<../../sales/sales/products_prices/products/variants>`, identifying the "
+"product is more complicated as multiple variants could have the same product "
+"name. In this case, it is recommended to use the :ref:`external ID "
+"<export_import_data/different-ids>` to identify the product and change the "
+"column name to `Product / External ID`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:541
+msgid "Counted"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:542
+msgid "The quantity of products in the opening inventory count"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:543
+msgid "Location"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:544
+msgid ""
+"If the :guilabel:`Locations` feature has been enabled in the settings, it is "
+"required to specify where each line of the opening inventory is located."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:546
+msgid "Lot/Serial Number"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:547
+msgid ""
+"If the product is tracked by lot or serial numbers, specify the lot or "
+"serial number here. Each unique lot or serial number requires its own line."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:553
+msgid "Validate the inventory"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:555
+msgid ""
+"Verify that the sum of the opening trial balance values of all inventory "
+"accounts equals the sum of the value of the inventory. The value of the "
+"inventory is calculated by multiplying the product cost by the product "
+"quantity for each line and summing them together."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:566
+msgid "Counted quantity"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:567
+msgid "Product cost"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:568
+msgid "Total value"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:569
+msgid "Desk"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:570
+#: ../../content/applications/finance/accounting/taxes/tax_computation.rst:51
+#: ../../content/applications/finance/fiscal_localizations/france.rst:523
+msgid "10"
+msgstr "10"
+
+#: ../../content/applications/finance/accounting/get_started.rst:571
+msgid "$250"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:572
+msgid "$2500"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:573
+msgid "Table"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:574
+#: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:91
+#: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:272
+#: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:274
+msgid "8"
+msgstr "8"
+
+#: ../../content/applications/finance/accounting/get_started.rst:575
+msgid "$350"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:576
+msgid "$2800"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:577
+msgid "Chair"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:578
+#: ../../content/applications/finance/fiscal_localizations/france.rst:535
+msgid "15"
+msgstr "15"
+
+#: ../../content/applications/finance/accounting/get_started.rst:579
+msgid "$50"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:580
+msgid "$750"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:582
+msgid ""
+"The sum of all the inventory is $6050 ($2500 + $2800 + $750). The value of "
+"the inventory account in the trial balance must equal $6050, or if there are "
+"multiple inventory accounts, their sum must be $6050."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:589
+msgid "Import the inventory"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:591
+msgid ""
+":ref:`Import <essentials/export_import_data/import-data>` the :ref:`prepared "
+"fields <accounting/get_started/prep-inventory>`:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:594
+msgid "Go to :menuselection:`Inventory --> Operations --> Physical Inventory`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:595
+msgid ""
+":ref:`Import <essentials/export_import_data/import-data>` the inventory "
+"count."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:596
+msgid ""
+"The records are all imported as drafts. From the resulting list view, "
+"click :guilabel:`Apply All`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:598
+msgid ""
+"Enter an :guilabel:`Inventory Reason` (e.g., `Opening inventory`) and "
+"a :guilabel:`Counting Date`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:600
+msgid "Click :guilabel:`Update Quantities`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:605
+#: ../../content/applications/finance/accounting/get_started.rst:689
+msgid "Opening trial balance"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:607
+msgid ""
+"The trial balance is the complete list of accounts with their current "
+"balance. It is crucial to input this data into Odoo so that accounts have "
+"the correct balances going forward."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:610
+msgid ""
+"The process of importing an opening trial balance is done in three steps:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:612
+msgid ":ref:`Preparing the trial balance <accounting/get_started/prep-tb>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:613
+msgid ""
+":ref:`Validating the trial balance <accounting/get_started/validate-tb>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:614
+msgid ":ref:`Importing the trial balance <accounting/get_started/import-tb>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:619
+msgid "Prepare the opening trial balance"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:621
+msgid ""
+"Export the trial balance from your legacy software. The trial balance should "
+"be a list of all accounts in the chart of accounts, each with its balance as "
+"either a debit or a credit."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:624
+msgid ""
+"Prepare the opening trial balance by inserting the information from your "
+"legacy software into the journal entry import template available in Odoo. To "
+"access the import template for journal entries, go "
+"to :menuselection:`Accounting --> Accounting --> Journal Entries`, click "
+"the :icon:`fa-cog` (:guilabel:`Actions`) icon, and click :icon:`fa-"
+"download` :guilabel:`Import records`. Click :icon:`fa-"
+"download` :guilabel:`Import Template for Misc. Operations` to download the "
+"template."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:630
+msgid ""
+"Insert the data of the trial balance in the template with the following "
+"fields:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:639
+msgid ""
+"A reference that identifies this journal entry (e.g., `Opening trial "
+"balance` or something similar)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:642
+msgid "The date of this journal entry"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:644
+msgid ""
+"The journal this journal entry should exist in. The default miscellaneous "
+"journal is recommended."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:646
+#: ../../content/applications/finance/accounting/get_started.rst:686
+msgid "Journal Items/Account"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:647
+msgid "The account code and/or name"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:648
+#: ../../content/applications/finance/accounting/get_started.rst:687
+msgid "Journal Items/Debit"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:649
+msgid ""
+"The debit value of the account in the company's main currency. If the line "
+"has a credit, this field should be left blank. Do not enter `0.00` or a "
+"negative value."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:651
+#: ../../content/applications/finance/accounting/get_started.rst:688
+msgid "Journal Items/Credit"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:652
+msgid ""
+"The credit value of the account in the company's main currency. If the line "
+"has a debit, this field should be left blank. Do not enter `0.00` or a "
+"negative value."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:654
+msgid "Journal Items/Label"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:655
+msgid ""
+"(Optional) A label that identifies this specific line of the trial balance"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:658
+msgid ""
+"The :guilabel:`Reference`, :guilabel:`Date`, and :guilabel:`Journal` columns "
+"refer to the entire journal entry. As such, they should only be populated "
+"for the first line so that one journal entry is created containing all of "
+"the journal items within it."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:661
+msgid ""
+"Each line should have only one value in either the :guilabel:`Journal Items/"
+"Debit` or :guilabel:`Journal Items/Credit` column, and the other column of "
+"the line should remain blank. Do not enter `0.00` or a negative value in any "
+"column."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:665
+msgid ""
+"Edit the opening trial balance spreadsheet, replacing the following accounts "
+"with clearing accounts:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:667
+msgid ""
+"Accounts Receivable --> AR Clearing (:guilabel:`Type` = :guilabel:`Current "
+"Assets`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:668
+msgid ""
+"Accounts Payable --> AP Clearing (:guilabel:`Type` = :guilabel:`Current "
+"Assets`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:672
+msgid ""
+"In the :ref:`final validation step <accounting/get_started/validation>`, the "
+"clearing account types are changed to :guilabel:`Off-Balance Sheet`, so the "
+"account type is not critical."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:674
+msgid ""
+"If you use multiple accounts receivable or multiple accounts payable, they "
+"can be merged into a single clearing account."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:690
+msgid "01/01/2026"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:691
+#: ../../content/applications/finance/accounting/get_started/journals.rst:254
+msgid "Miscellaneous"
+msgstr "その他"
+
+#: ../../content/applications/finance/accounting/get_started.rst:692
+msgid "101404 Bank"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:693
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:219
+msgid "10,000"
+msgstr "10,000"
+
+#: ../../content/applications/finance/accounting/get_started.rst:698
+msgid "110100 Inventory Valuation"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:699
+msgid "30,000"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:704
+msgid "777777 AR Clearing"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:705
+#: ../../content/applications/finance/accounting/get_started.rst:742
+msgid "5,000"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:710
+msgid "131000 Tax Paid"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:711
+msgid "2,000"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:716
+msgid "888888 AP Clearing"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:718
+msgid "4,000"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:722
+msgid "220000 Credit Card"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:724
+msgid "8,000"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:728
+msgid "251000 Tax Received"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:730
+msgid "6,000"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:734
+msgid "400000 Product Sales"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:736
+msgid "24,000"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:740
+msgid "690000 Miscellaneous Expenses"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:747
+msgid "Validate the opening trial balance"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:749
+msgid "Verify that the trial balance meets the following requirements:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:763
+msgid "Import the opening trial balance"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:765
+msgid ""
+":ref:`Import <essentials/export_import_data/import-data>` the :ref:`prepared "
+"fields <accounting/get_started/prep-tb>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:768
+msgid ""
+"The trial balance is imported as a draft. From the resulting list view, open "
+"the draft entry, review it, and click :guilabel:`Post`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:774
+msgid "Opening bank and credit card transactions"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:776
+msgid ""
+"For bank, credit card, and cash accounts, it is important to verify that the "
+"journal's opening statement's starting balance is updated to reflect the "
+"actual value of the account:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:779
+msgid ""
+"Once the first transactions are added (whether manually, via import, or via "
+"bank sync), create the opening :ref:`statement <accounting/transactions/"
+"statements>` with as many or few transactions as desired. Set "
+"the :guilabel:`Starting Balance` to the correct balance of the bank account "
+"before the first transaction."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:785
+msgid ""
+"When :doc:`synchronizing <bank/bank_synchronization>` bank and credit card "
+"accounts, delete any transactions from before the date of the trial balance "
+"to ensure the account balance is correct."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:788
+msgid "Repeat this process for each bank, cash, or credit card journal."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:793
+msgid "Final validation"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started.rst:795
+msgid ""
+"To complete the transition to Odoo, verify that all clearing accounts are "
+"now balanced, and remove them from reports by changing "
+"their :guilabel:`Account Type` to :guilabel:`Off-Balance Sheet` after the "
+"import."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:3
 msgid "Average price on returned goods"
@@ -12674,12 +13951,6 @@ msgstr "8 * $10"
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:274
 msgid "$80"
 msgstr "$80"
-
-#: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:91
-#: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:272
-#: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:274
-msgid "8"
-msgstr "8"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:91
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:272
@@ -13544,29 +14815,6 @@ msgstr ""
 msgid "Return to get 10 dollars back."
 msgstr "戻って10ドルを取り戻す。"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:3
-#: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:79
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:92
-#: ../../content/applications/finance/fiscal_localizations/argentina.rst:78
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:67
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:98
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:82
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:368
-#: ../../content/applications/finance/fiscal_localizations/colombia.rst:325
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:9
-#: ../../content/applications/finance/fiscal_localizations/guatemala.rst:179
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1133
-#: ../../content/applications/finance/fiscal_localizations/oman.rst:55
-#: ../../content/applications/finance/fiscal_localizations/romania.rst:69
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:84
-#: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:63
-#: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:53
-#: ../../content/applications/finance/fiscal_localizations/united_states.rst:111
-#: ../../content/applications/finance/fiscal_localizations/uruguay.rst:213
-#: ../../content/applications/finance/fiscal_localizations/uzbekistan.rst:77
-msgid "Chart of accounts"
-msgstr "勘定科目表"
-
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:5
 msgid ""
 "The **chart of accounts (COA)** is the list of all the accounts used to "
@@ -13696,60 +14944,6 @@ msgstr "カテゴリー"
 msgid "Account Types"
 msgstr "勘定科目タイプ"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
-#: ../../content/applications/finance/accounting/taxes.rst:221
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:166
-#: ../../content/applications/finance/fiscal_localizations/argentina.rst:30
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:14
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:78
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:106
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:160
-#: ../../content/applications/finance/fiscal_localizations/austria.rst:18
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:18
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:34
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:34
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:34
-#: ../../content/applications/finance/fiscal_localizations/colombia.rst:50
-#: ../../content/applications/finance/fiscal_localizations/croatia.rst:21
-#: ../../content/applications/finance/fiscal_localizations/ecuador.rst:45
-#: ../../content/applications/finance/fiscal_localizations/egypt.rst:18
-#: ../../content/applications/finance/fiscal_localizations/france.rst:20
-#: ../../content/applications/finance/fiscal_localizations/france.rst:51
-#: ../../content/applications/finance/fiscal_localizations/france.rst:498
-#: ../../content/applications/finance/fiscal_localizations/guatemala.rst:76
-#: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:16
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:18
-#: ../../content/applications/finance/fiscal_localizations/india.rst:18
-#: ../../content/applications/finance/fiscal_localizations/indonesia.rst:18
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:23
-#: ../../content/applications/finance/fiscal_localizations/jordan.rst:18
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:17
-#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:25
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:29
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:62
-#: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:18
-#: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:80
-#: ../../content/applications/finance/fiscal_localizations/oman.rst:18
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:23
-#: ../../content/applications/finance/fiscal_localizations/philippines.rst:18
-#: ../../content/applications/finance/fiscal_localizations/poland.rst:18
-#: ../../content/applications/finance/fiscal_localizations/romania.rst:16
-#: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:18
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:18
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:47
-#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:17
-#: ../../content/applications/finance/fiscal_localizations/thailand.rst:16
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:20
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:41
-#: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:17
-#: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:18
-#: ../../content/applications/finance/fiscal_localizations/united_states.rst:60
-#: ../../content/applications/finance/fiscal_localizations/uruguay.rst:60
-#: ../../content/applications/finance/fiscal_localizations/uzbekistan.rst:20
-#: ../../content/applications/finance/fiscal_localizations/vietnam.rst:19
-msgid "Description"
-msgstr "説明"
-
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:62
 #: ../../content/applications/finance/accounting/reporting.rst:41
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:27
@@ -13870,7 +15064,6 @@ msgstr "当会計年度に累積された会社の純利益または純損失"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:86
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:28
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:24
 msgid "Profit & Loss"
 msgstr "損益"
 
@@ -15755,16 +16948,6 @@ msgid ""
 "or |GRNI| account, etc., must be up to date."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/journals.rst:3
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:104
-#: ../../content/applications/finance/fiscal_localizations/argentina.rst:167
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:285
-#: ../../content/applications/finance/fiscal_localizations/france.rst:635
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:541
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:365
-msgid "Journals"
-msgstr "仕訳帳"
-
 #: ../../content/applications/finance/accounting/get_started/journals.rst:5
 msgid ""
 "Journal entries are recorded in different **journals** to maintain an "
@@ -16366,10 +17549,6 @@ msgstr ""
 "と、メインの仕入先請求書シーケンスとは別に増分する、クレジットノートの参照用"
 "の個別シーケンスが使用され、仕訳帳の短縮コードの前に参照に `R` が追加されま"
 "す。"
-
-#: ../../content/applications/finance/accounting/get_started/journals.rst:254
-msgid "Miscellaneous"
-msgstr "その他"
 
 #: ../../content/applications/finance/accounting/get_started/journals.rst:256
 msgid ""
@@ -19119,6 +20298,7 @@ msgstr ""
 "\\ :ref:`照合 <accounting/reconciliation/reconcile>`\\ します。"
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:182
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:177
 msgid "SEPA Credit Transfer"
 msgstr "SEPA送金(SCT)"
 
@@ -22407,8 +23587,8 @@ msgid ""
 "statistics*."
 msgstr ""
 "Intrastatシステムは現在も使用されていますが、最新の法律 <http://"
-"data.europa.eu/eli/reg/2019/2152/2022-01-01>`_ ではイントラスタットという用語"
-"は使用されていません。"
+"data.europa.eu/eli/reg/2019/2152/2022-01-01>`_ ではintrastat という用語は使用"
+"されていません。"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:20
 msgid ""
@@ -23055,10 +24235,6 @@ msgstr ""
 "ます。連絡先が関連している場合（関連パートナー、同じ会社内の部門など）は、"
 "\\ :doc:`親タイプと子タイプの連絡先 <../../../essentials/contacts>`\\ の使用"
 "を検討してください。"
-
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:33
-msgid "Tax return periodicity"
-msgstr "税申告周期"
 
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:35
 msgid ""
@@ -26123,6 +27299,8 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:23
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:27
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:60
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:16
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:34
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:16
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:16
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:21
@@ -26170,6 +27348,8 @@ msgstr "名称"
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:24
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:28
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:61
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:17
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:35
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:17
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:17
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:22
@@ -28650,11 +29830,6 @@ msgstr "合計"
 #: ../../content/applications/finance/fiscal_localizations/india.rst:228
 msgid "1,000"
 msgstr "1,000"
-
-#: ../../content/applications/finance/accounting/taxes/tax_computation.rst:51
-#: ../../content/applications/finance/fiscal_localizations/france.rst:523
-msgid "10"
-msgstr "10"
 
 #: ../../content/applications/finance/accounting/taxes/tax_computation.rst:51
 msgid "1,010.00"
@@ -31725,17 +32900,6 @@ msgid ""
 msgstr ""
 "属性の特異性：Odooはまず最も正確な属性によってルールを評価し、次の優先順位階"
 "層に従います（最も具体的なものから最も具体性の低いものへ）："
-
-#: ../../content/applications/finance/esg.rst:208
-#: ../../content/applications/finance/esg.rst:226
-#: ../../content/applications/finance/esg.rst:238
-#: ../../content/applications/finance/esg.rst:257
-#: ../../content/applications/finance/esg.rst:269
-#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:98
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:403
-#: ../../content/applications/finance/fiscal_localizations/romania.rst:113
-msgid "Product"
-msgstr "プロダクト"
 
 #: ../../content/applications/finance/esg.rst:212
 msgid ""
@@ -35816,6 +36980,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:8
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:8
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:19
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:8
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:8
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:8
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:13
@@ -35929,6 +37094,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:38
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:37
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:108
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:58
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:38
 #: ../../content/applications/finance/fiscal_localizations/oman.rst:34
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:37
@@ -36356,6 +37522,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:61
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:198
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:145
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:95
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:49
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:81
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:37
@@ -36370,21 +37537,6 @@ msgid ""
 "field, :guilabel:`ARCA Responsibility Type`, to define the company's fiscal "
 "obligation and structure."
 msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/argentina.rst:295
-#: ../../content/applications/finance/fiscal_localizations/colombia.rst:233
-#: ../../content/applications/finance/fiscal_localizations/france.rst:217
-#: ../../content/applications/finance/fiscal_localizations/france.rst:697
-#: ../../content/applications/finance/fiscal_localizations/guatemala.rst:188
-#: ../../content/applications/finance/fiscal_localizations/indonesia.rst:47
-#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:238
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:188
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1304
-#: ../../content/applications/finance/fiscal_localizations/philippines.rst:214
-#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:76
-#: ../../content/applications/finance/fiscal_localizations/uruguay.rst:225
-msgid "Contacts"
-msgstr "連絡先"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:300
 msgid "Identification type and VAT"
@@ -39225,15 +40377,6 @@ msgstr ""
 "スを設定する方法を説明します。不足している情報がある場合は、エクスポート中に"
 "必要な情報を列挙した警告メッセージが表示されます。"
 
-#: ../../content/applications/finance/fiscal_localizations/austria.rst:69
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:73
-#: ../../content/applications/finance/fiscal_localizations/colombia.rst:76
-#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:47
-#: ../../content/applications/finance/fiscal_localizations/philippines.rst:190
-#: ../../content/applications/finance/fiscal_localizations/united_states.rst:997
-msgid "Company information"
-msgstr "会社情報"
-
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:71
 msgid ""
 "Open the database :guilabel:`Settings`. Under the :guilabel:`Companies` "
@@ -42064,11 +43207,6 @@ msgstr ""
 "ラーメッセージが表示された場合、このプロセスを都市ポータルで実行する必要があ"
 "ります。"
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:282
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:152
-msgid "Fiscal positions"
-msgstr "会計ポジション"
-
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:284
 msgid ""
 "To set up the :guilabel:`Automatic Tax Mapping (Avalara "
@@ -43490,20 +44628,10 @@ msgstr ":guilabel:`繰越利益剰余金/未処分欠損金`"
 msgid ":guilabel:`Receivable`"
 msgstr ":guilabel:`売掛金`"
 
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:142
-#: ../../content/applications/finance/fiscal_localizations/united_states.rst:171
-msgid ":guilabel:`Account Receivable`"
-msgstr ":guilabel:`売掛金勘定`"
-
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:143
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:172
 msgid ":guilabel:`Payable`"
 msgstr ":guilabel:`買掛金`"
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:144
-#: ../../content/applications/finance/fiscal_localizations/united_states.rst:173
-msgid ":guilabel:`Account Payable`"
-msgstr ":guilabel:`買掛金勘定`"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:147
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:177
@@ -52937,10 +54065,6 @@ msgstr "会計項目相互参照 (null可)"
 #: ../../content/applications/finance/fiscal_localizations/france.rst:532
 msgid "`move_line.fec_matching_number`"
 msgstr "`move_line.fec_matching_number`"
-
-#: ../../content/applications/finance/fiscal_localizations/france.rst:535
-msgid "15"
-msgstr "15"
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:535
 msgid "DateLet"
@@ -67482,7 +68606,98 @@ msgstr ""
 "必要があります。たとえば、`15 48 3009 0001235` のようにテキストの間に**2つ**"
 "のスペースを入れます。"
 
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:6
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:10
+msgid ""
+"The following modules are installed automatically with the Dutch "
+"localization:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:19
+msgid ":guilabel:`Netherlands - Accounting`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:20
+msgid "`l10n_nl`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:21
+msgid ""
+"Base Dutch :ref:`fiscal localization <fiscal_localizations/packages>` "
+"complete with the Dutch chart of accounts, taxes, financial reports, and "
+"fiscal positions"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:23
+msgid ":guilabel:`Netherlands - Accounting Reports`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:24
+msgid "`l10n_nl_reports`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:25
+msgid "Dutch-specific tax and profit-and-loss reporting"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:27
+msgid ""
+"Additionally, the following modules must be manually :ref:`installed "
+"<general/install>` to use SBR reporting, Dutch-specific payroll features, "
+"and Intrastat reporting:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:37
+msgid ":guilabel:`Netherlands - Payroll`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:38
+msgid "`l10n_nl_hr_payroll`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:39
+msgid ""
+"Dutch-specific payroll rules including employee details, passport-based "
+"contracts, etc."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:40
+msgid ":guilabel:`Netherlands - Payroll with Accounting`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:41
+msgid "`l10n_nl_hr_payroll_account`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:42
+msgid "Accounting data for Netherlands payroll rules"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:43
+msgid ":guilabel:`Netherlands Intrastat Declaration`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:44
+msgid "`l10n_nl_intrastat`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:45
+msgid ""
+"Generates Netherlands Intrastat report for declarations based on invoices"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:48
+#: ../../content/applications/finance/fiscal_localizations/philippines.rst:31
+#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:32
+msgid ""
+"In some cases, such as when upgrading to a version with additional modules, "
+"modules may not be installed automatically. Any missing modules can be "
+"manually :ref:`installed <general/install>`."
+msgstr ""
+"追加モジュールを含むバージョンへのアップグレード時など、モジュールが自動的に"
+"インストールされない場合があります。不足しているモジュールは手動で:ref:`イン"
+"ストール <general/install>`できます。"
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:52
 msgid ""
 ":doc:`Documentation on e-invoicing’s legality and compliance in the "
 "Netherlands <../accounting/customer_invoices/electronic_invoicing/"
@@ -67491,42 +68706,227 @@ msgstr ""
 ":doc:`オランダにおける電子請求書の適法性とコンプライアンスに関するドキュメン"
 "ト <../accounting/customer_invoices/electronic_invoicing/netherlands>`"
 
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:10
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:60
+msgid ""
+"The Netherlands localization package ensures compliance with Dutch fiscal "
+"and accounting regulations. It includes tools for managing taxes, fiscal "
+"positions, reporting, and a predefined chart of accounts tailored to Dutch "
+"standards."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:64
+msgid "The Dutch localization package provides the following key features:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:66
+msgid ""
+":ref:`Chart of accounts <localizations/netherlands/chart-of-accounts>`: a "
+"predefined structure tailored to Dutch accounting standards."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:68
+msgid ""
+":ref:`Taxes <localizations/netherlands/taxes>`: pre-configured tax rates, "
+"including standard VAT, zero-rated, and exempt options."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:70
+msgid ""
+":doc:`Fiscal positions (tax and account mapping) <../accounting/taxes/"
+"fiscal_positions>`: automated tax adjustments based on customer or supplier "
+"registration status."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:72
+msgid ""
+":ref:`Electronic document solutions <localizations/netherlands/sbr>`: "
+"integration with SBR reporting to meet electronic document regulations."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:80
+#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:86
+msgid ""
+"In the :doc:`chart of accounts <../accounting/get_started/"
+"chart_of_accounts>`, accounts are automatically mapped to their "
+"corresponding taxes and default accounts payable and accounts receivable "
+"fields."
+msgstr ""
+":doc:`勘定科目表 <../accounting/get_started/chart_of_accounts>`\\ では、分析"
+"勘定が対応する税金および既定の買掛金勘定と売掛金勘定フィールドに自動的にマッ"
+"ピングされます。"
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:89
+msgid ""
+":ref:`Taxes <localizations/netherlands/taxes>` are automatically created and "
+"configured when the Netherlands localization is installed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:97
+msgid ""
+"To use all the features of this fiscal localization, the following fields "
+"are the minimum required on the company record. You can access these by "
+"going to :menuselection:`Settings --> Users & Companies --> Companies`:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:101
+msgid ""
+":guilabel:`Company Name`: The name of the company based in the Netherlands."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:102
+msgid ":guilabel:`Country`: Set to `Netherlands` for the company."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:103
+msgid ":guilabel:`VAT`: The tax identification number of the company."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:105
+msgid "You can fill out the remaining fields as needed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:110
+msgid "SBR Integration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:118
+msgid ""
+"`PKIoverheid <https://www.logius.nl/onze-dienstverlening/toegang/"
+"pkioverheid>`_"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:119
+msgid ""
+"`Requesting a certificate <https://www.logius.nl/onze-dienstverlening/"
+"toegang/pkioverheid/pkioverheidcertificaat-aanvragen>`_"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:121
+msgid ""
+":abbr:`SBR (Standard Business Reporting)` electronic reporting is integrated "
+"within Odoo and allows you to send your reports directly to the Dutch tax "
+"authorities. To use SBR reporting, ensure that the :ref:`Netherlands - SBR "
+"<localizations/netherlands/modules>` module is installed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:125
+msgid ""
+"To set up SBR reporting, open the **Accounting** app, go "
+"to :menuselection:`Configuration --> Settings`, and scroll down to "
+"the :guilabel:`Dutch Localization` section. Click the :guilabel:`Digipoort "
+"Certificate` field, enter a name for the certificate, and "
+"click :guilabel:`Create and edit...`. In the pop-up window, fill out the "
+"following fields:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:130
+msgid ""
+":guilabel:`Name`: enter the name previously specified (you can modify it if "
+"desired)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:131
+msgid ""
+":guilabel:`Certificate`: click :guilabel:`Upload your file` to upload the "
+"certificate file."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:132
+msgid ""
+":guilabel:`Certificate Password`: enter the password for your certificate "
+"file."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:133
+msgid "Click :guilabel:`Save & Close`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:140
+msgid ""
+"Once :ref:`enabled <localizations/netherlands/sbr-configuration>`, you can "
+"establish an XBRL connection with the Dutch tax authorities by navigating "
+"to :menuselection:`Reporting --> Tax Report` in the **Accounting** app, "
+"clicking the :icon:`fa-cog` :guilabel:`(gear)` icon, and "
+"selecting :guilabel:`XBRL`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:145
+msgid "In the pop-up window, fill out the following fields:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:147
+msgid ""
+":guilabel:`Contact Initials`: The initials of the contact person creating "
+"the SBR file."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:148
+msgid ":guilabel:`Contact Last Name`: The last name of the contact person."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:149
+msgid ""
+":guilabel:`Contact Name Infix`: The prefix or middle name of the contact "
+"person."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:150
+msgid ":guilabel:`Contact Phone`: The phone number of the contact person."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:151
+msgid ""
+":guilabel:`Contact Type`: Select :guilabel:`Taxpayer (BPL)` if you are "
+"filing the turnover tax return for your own business, "
+"or :guilabel:`Intermediary (INT)` if the return is filed by a tax "
+"professional."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:154
+msgid ""
+":guilabel:`Tax Consultant Number`: If you selected :guilabel:`Intermediary "
+"(INT)`, enter the 6-digit tax advisor registration number (*Beconnummer*)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:156
+msgid ""
+":guilabel:`Tax Consultant Order`: If applicable, enter the membership or "
+"registration number for your professional tax association (e.g., NOB, RB, "
+"NBA, etc.)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:158
+msgid ""
+":guilabel:`Is Test`: Tick this box to submit the file to a pre-production "
+"environment. A valid PKIoverheid certificate is required, "
+"and :doc:`developer mode <../../general/developer_mode>` must be enabled."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:162
+msgid ""
+"Click :guilabel:`Download` to save the `.XBRL` file to your computer, or "
+"click :guilabel:`Send` to transmit the SBR tax report directly to the Dutch "
+"tax authorities."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:168
 msgid "XAF Export"
 msgstr "XAFエクスポート"
 
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:12
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:170
 msgid ""
-"With the Dutch accounting localization installed, you will be able to export "
-"all your accounting entries in XAF format. For this, you have to go "
-"in :menuselection:`Accounting --> Reporting --> General Ledger`, you define "
-"the entries you want to export using the filters (period, journals, ...) and "
-"then you click on the button **EXPORT (XAF)**."
+"To export accounting entries in XAF format, open the **Accounting** app and "
+"go to :menuselection:`Reporting --> General Ledger`. Use the filters to "
+"select the range of entries to export, click the :icon:`fa-"
+"cog` :guilabel:`(gear)` icon, and then click :guilabel:`XAF`."
 msgstr ""
-"オランダの会計ローカライゼーションをインストールすると、XAFフォーマットで会計"
-"項目を全てエクスポートすることができます。そのためには、 :menuselection:`会"
-"計 --> レポーティング --> 総勘定元帳` で、エクスポートしたい項目をフィルタ(期"
-"間、仕訳帳、...)を使って定義し、**EXPORT (XAF)** ボタンをクリックします。"
 
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:19
-msgid "Dutch Accounting Reports"
-msgstr "オランダ会計レポート"
-
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:21
+#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:179
 msgid ""
-"If you install the Dutch accounting localization, you will have access to "
-"some reports that are specific to the Netherlands such as :"
+"To enable SEPA Credit Transfer as a payment method, follow :ref:`these steps "
+"<accounting/sepa_payments/sct>` and enter `Belastingdienst` as "
+"the :guilabel:`Issuer`."
 msgstr ""
-"オランダ会計ローカライゼーションをインストールすると、以下のようなオランダ特"
-"有のレポートにアクセスできます:"
-
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:25
-msgid "Tax Report (Aangifte omzetbelasting)"
-msgstr "税レポート (Aangifte omzetbelasting)"
-
-#: ../../content/applications/finance/fiscal_localizations/netherlands.rst:26
-msgid "Intrastat Report (ICP)"
-msgstr "Intrastat レポート (ICP)"
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:3
 msgid "New Zealand"
@@ -68923,10 +70323,6 @@ msgstr "5000"
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:217
 msgid "110"
 msgstr "110"
-
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:219
-msgid "10,000"
-msgstr "10,000"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:219
 msgid "220"
@@ -70868,17 +72264,6 @@ msgid ""
 msgstr ""
 "このモジュールには、PCHC小切手形式を有効にするために必要な機能が含まれていま"
 "す。"
-
-#: ../../content/applications/finance/fiscal_localizations/philippines.rst:31
-#: ../../content/applications/finance/fiscal_localizations/taiwan.rst:32
-msgid ""
-"In some cases, such as when upgrading to a version with additional modules, "
-"modules may not be installed automatically. Any missing modules can be "
-"manually :ref:`installed <general/install>`."
-msgstr ""
-"追加モジュールを含むバージョンへのアップグレード時など、モジュールが自動的に"
-"インストールされない場合があります。不足しているモジュールは手動で:ref:`イン"
-"ストール <general/install>`できます。"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:39
 msgid ""
@@ -76066,17 +77451,6 @@ msgid ""
 msgstr ""
 ":ref:`localizations/turkiye/eds`\\ ：電子ドキュメント規制に準拠するための"
 "Nilveraとの統合"
-
-#: ../../content/applications/finance/fiscal_localizations/turkiye.rst:86
-msgid ""
-"In the :doc:`chart of accounts <../accounting/get_started/"
-"chart_of_accounts>`, accounts are automatically mapped to their "
-"corresponding taxes and default accounts payable and accounts receivable "
-"fields."
-msgstr ""
-":doc:`勘定科目表 <../accounting/get_started/chart_of_accounts>`\\ では、分析"
-"勘定が対応する税金および既定の買掛金勘定と売掛金勘定フィールドに自動的にマッ"
-"ピングされます。"
 
 #: ../../content/applications/finance/fiscal_localizations/turkiye.rst:91
 msgid ""
@@ -87394,6 +88768,376 @@ msgstr ""
 "に :ref:`payment_providers/xendit/configure_dashboard` ステップで保存した情報"
 "を入力します。"
 
+#~ msgid "Basic concepts of accounting and initial setup of your accounting"
+#~ msgstr "会計の基本概念と会計の初期設定"
+
+#~ msgid ""
+#~ "When you first open your Odoo Accounting app, the :guilabel:`Accounting "
+#~ "Dashboard` welcomes you with a step-by-step onboarding banner, a wizard "
+#~ "that helps you get started. This onboarding banner is displayed until you "
+#~ "choose to close it."
+#~ msgstr ""
+#~ "Odoo会計アプリをはじめて開くと、ステップバイステップのオンボードバナー"
+#~ "と :guilabel:`会計ダッシュボード` がが表示されます。このバナーは閉じるまで"
+#~ "表示されます。"
+
+#~ msgid ""
+#~ "The settings visible in the onboarding banner can still be modified later "
+#~ "by going to :menuselection:`Accounting --> Configuration --> Settings`."
+#~ msgstr ""
+#~ "オンボーディングバナーに表示されている設定は、後で :menuselection:`会計 --"
+#~ "> 設定 --> 管理設定` で変更することができます。"
+
+#~ msgid ""
+#~ "Odoo Accounting automatically installs the appropriate **Fiscal "
+#~ "Localization Package** for your company, according to the country "
+#~ "selected at the creation of the database. This way, the right accounts, "
+#~ "reports, and taxes are ready-to-go. :ref:`Click here "
+#~ "<fiscal_localizations/packages>` for more information about Fiscal "
+#~ "Localization Packages."
+#~ msgstr ""
+#~ "Odoo会計はデータベース作成時に選択された国に応じて、あなたの会社に適切な "
+#~ "**会計ローカリゼーションパッケージ** を自動的にインストールします。それに"
+#~ "より、適切な勘定科目、レポート、税が利用できます。会計ローカリゼーション"
+#~ "パッケージについて詳しくは  :ref:`こちらをクリック <fiscal_localizations/"
+#~ "packages>` して下さい。"
+
+#~ msgid "Accounting onboarding banner"
+#~ msgstr "会計オンボーディングバナー"
+
+#~ msgid ""
+#~ "The step-by-step Accounting onboarding banner is composed of four steps:"
+#~ msgstr ""
+#~ "ステップバイステップの会計オンボーディングバナーは、4つのステップで構成さ"
+#~ "れています:"
+
+#~ msgid "Step-by-step onboarding banner in Odoo Accounting"
+#~ msgstr "Odoo会計のステップバイステップ・オンボーディングバナー"
+
+#~ msgid ":ref:`accounting-setup-periods`"
+#~ msgstr ":ref:`accounting-setup-periods`"
+
+#~ msgid ":ref:`accounting-setup-bank`"
+#~ msgstr ":ref:`accounting-setup-bank`"
+
+#~ msgid ":ref:`accounting-setup-taxes`"
+#~ msgstr ":ref:`accounting-setup-taxes`"
+
+#~ msgid ":ref:`accounting-setup-chart`"
+#~ msgstr ":ref:`accounting-setup-chart`"
+
+#~ msgid "Accounting Periods"
+#~ msgstr "会計期間"
+
+#~ msgid ""
+#~ "Define the **Fiscal Years**’ opening and closing dates, which are used to "
+#~ "generate reports automatically, and set your **Tax Return Periodicity**, "
+#~ "along with a reminder to never miss a tax return deadline."
+#~ msgstr ""
+#~ "**会計年度** の開始日と終了日を定義して下さい。これはレポートを自動生成す"
+#~ "るために使用されます。**税務申告書周期** を設定し、税務申告期限を逃さない"
+#~ "ようにリマインダーを設定しましょう。"
+
+#~ msgid ""
+#~ "By default, the opening date is set on the 1st of January and the closing "
+#~ "date on the 31st of December, as this is the most common use."
+#~ msgstr ""
+#~ "デフォルトでは、最も一般的なものに倣い、開始日は1月1日、終了日は12月31日に"
+#~ "設定されています。"
+
+#~ msgid ""
+#~ "You can also change these settings by going to :menuselection:`Accounting "
+#~ "--> Configuration --> Settings --> Fiscal Periods` and updating the "
+#~ "values."
+#~ msgstr ""
+#~ ":menuselection:`会計 --> 設定 --> 管理設定 --> 会計期間` に移動して値を更"
+#~ "新することによってもこれらを変更することができます。"
+
+#~ msgid "Bank Account"
+#~ msgstr "銀行口座"
+
+#~ msgid ""
+#~ "Connect your bank account to your database and have your bank statements "
+#~ "synced automatically. To do so, find your bank in the list, "
+#~ "click :guilabel:`Connect`, and follow the instructions on-screen."
+#~ msgstr ""
+#~ "銀行口座をデータベースに接続し、銀行明細を自動的に同期させることができま"
+#~ "す。リストから該当の銀行を見つけ、 :guilabel:`接続` をクリックし、画面の指"
+#~ "示に従って下さい。"
+
+#~ msgid ""
+#~ ":doc:`Click here <bank/bank_synchronization>` for more information about "
+#~ "this feature."
+#~ msgstr ""
+#~ "この機能についてさらに詳しくは :doc:`こちらをクリック <bank/"
+#~ "bank_synchronization>`"
+
+#~ msgid ""
+#~ "If your Bank Institution can’t be synchronized automatically, or if you "
+#~ "prefer not to sync it with your database, you can also configure your "
+#~ "bank account manually by typing its name, clicking :guilabel:`Create your "
+#~ "Bank Account`, and filling out the form."
+#~ msgstr ""
+#~ "銀行口座が自動的に同期されない場合、またはデータベースと同期させたくない場"
+#~ "合は、銀行口座の名前を入力して :guilabel:`銀行口座を作成` をクリックし、"
+#~ "フォームに記入して手動で設定することもできます。"
+
+#~ msgid ":guilabel:`Name`: the bank account's name, as displayed in Odoo."
+#~ msgstr ":guilabel:`名前`: Odooに表示される銀行口座名"
+
+#~ msgid ""
+#~ ":guilabel:`Account Number`: your bank account number (IBAN in Europe)."
+#~ msgstr ":guilabel:`銀行口座`: 銀行口座番号 (ヨーロッパ内IBAN)"
+
+#~ msgid ""
+#~ ":guilabel:`Bank`: click :guilabel:`Create and edit` to configure the "
+#~ "bank's details. Add the bank institution's :guilabel:`Name` and "
+#~ "its :guilabel:`Identifier Code` (BIC or SWIFT)."
+#~ msgstr ""
+#~ ":guilabel:`銀行`: :guilabel:`作成して編集` をクリックして、銀行の詳細を設"
+#~ "定します。銀行機関の :guilabel:`名前` と :guilabel:`識別コード` (BIC また"
+#~ "は SWIFT)を追加して下さい。"
+
+#~ msgid ""
+#~ ":guilabel:`Code`: this code is your Journal's :guilabel:`Short Code`, as "
+#~ "displayed in Odoo. By default, Odoo creates a new Journal with this short "
+#~ "code."
+#~ msgstr ""
+#~ ":guilabel:`コード`: このコードはOdooで表示される仕訳帳の :guilabel:`短縮"
+#~ "コード` です。デフォルトでは、Odooはこの短縮コードで新しい仕訳帳を作成しま"
+#~ "す。"
+
+#~ msgid ""
+#~ ":guilabel:`Journal`: This field is displayed if you have an existing bank "
+#~ "journal that is not linked yet to a bank account. If so, then select "
+#~ "the :guilabel:`Journal` you want to use to record the financial "
+#~ "transactions linked to this bank account or create a new one by "
+#~ "clicking :guilabel:`Create and Edit`."
+#~ msgstr ""
+#~ ":guilabel:`仕訳帳`: このフィールドは、まだ銀行口座にリンクされていない既存"
+#~ "の銀行仕訳帳がある場合に表示されます。もしそうであれば、この銀行口座にリン"
+#~ "クされている金融取引を記録するために使用したい :guilabel:`仕訳帳` を選択す"
+#~ "るか、 :guilabel:`作成と編集` をクリックして新しい仕訳帳を作成して下さい。"
+
+#~ msgid ""
+#~ "You can add as many bank accounts as needed with this tool by going "
+#~ "to :menuselection:`Accounting --> Configuration --> Add a Bank Account`."
+#~ msgstr ""
+#~ "このツールで、 :menuselection:`会計 --> 設定 --> 銀行口座を追加` で必要な"
+#~ "だけ銀行口座を追加することができます。"
+
+#~ msgid ":doc:`Click here <bank>` for more information about Bank Accounts."
+#~ msgstr "銀行口座について更に詳しくは :doc:`こちらをクリック <bank>`"
+
+#~ msgid ""
+#~ "This menu allows you to create new taxes, (de)activate, or modify "
+#~ "existing taxes. Depending on the :doc:`localization package <../"
+#~ "fiscal_localizations>` installed on your database, taxes required for "
+#~ "your country are already configured."
+#~ msgstr ""
+#~ "このメニューでは、新しい税の作成、有(無)効化、既存の税の修正を行うことがで"
+#~ "きます。データベースにインストールされている :doc:`ローカリゼーションパッ"
+#~ "ケージ <../fiscal_localizations>` に応じて、あなたの国に必要な税がすでに設"
+#~ "定されています。"
+
+#~ msgid ":doc:`Click here <taxes>` for more information about taxes."
+#~ msgstr "税について詳しい情報は :doc:`こちらをクリック <taxes>` して下さい。"
+
+#~ msgid "Chart of Accounts"
+#~ msgstr "勘定科目表"
+
+#~ msgid ""
+#~ "With this menu, you can add accounts to your **Chart of Accounts** and "
+#~ "indicate their initial opening balances."
+#~ msgstr ""
+#~ "このメニューでは、勘定科目を **勘定科目表** に追加し、その初期開始残高を表"
+#~ "示することができます。"
+
+#~ msgid ""
+#~ "Basic settings are displayed on this page to help you review your Chart "
+#~ "of Accounts. To access all the settings of an account, click on "
+#~ "the :guilabel:`Setup` button at the end of the line."
+#~ msgstr ""
+#~ "基本的な設定はこのページに表示され、勘定科目表を確認するのに役立ちます。勘"
+#~ "定科目の全ての設定にアクセスするには、行末の :guilabel:`セットアップ` ボタ"
+#~ "ンをクリックして下さい。"
+
+#~ msgid ""
+#~ "Setup of the Chart of Accounts and their opening balances in Odoo "
+#~ "Accounting"
+#~ msgstr "Odoo会計での勘定科目とその開始残高の設定"
+
+#~ msgid ""
+#~ ":doc:`Click here <get_started/chart_of_accounts>` for more information on "
+#~ "how to configure your Chart of Accounts."
+#~ msgstr ""
+#~ ":doc:`ここをクリック <get_started/chart_of_accounts>` して、勘定科目表を設"
+#~ "定する方法についてさらに詳しく参照して下さい。"
+
+#~ msgid "Invoicing onboarding banner"
+#~ msgstr "請求書オンボーディングバナー"
+
+#~ msgid ""
+#~ "There is another step-by-step onboarding banner that helps you take "
+#~ "advantage of your Odoo Invoicing and Accounting apps. The Invoicing "
+#~ "onboarding banner is the one that welcomes you if you use the Invoicing "
+#~ "app rather than the Accounting app."
+#~ msgstr ""
+#~ "Odooの請求アプリと会計アプリを活用するためのサポートとして、もう一つステッ"
+#~ "プバイステップのオンボーディングバナーがあります。請求書作成オンボーディン"
+#~ "グバナーは、会計アプリではなく請求アプリを使用する場合に表示されます。"
+
+#~ msgid ""
+#~ "If you have Odoo Accounting installed on your database, you can reach it "
+#~ "by going to :menuselection:`Accounting --> Customers --> Invoices`."
+#~ msgstr ""
+#~ "データベースにOdoo会計がインストールされている場合、 :menuselection:`会計 "
+#~ "--> 顧客 --> 請求書` からアクセスできます。"
+
+#~ msgid "The Invoicing onboarding banner consists of four main steps:"
+#~ msgstr ""
+#~ "顧客請求書発行のオンボーディングバナーは、4つの主なステップで構成されてい"
+#~ "ます。"
+
+#~ msgid "Step-by-step onboarding banner in Odoo Invoicing"
+#~ msgstr "Odoo請求のステップバイステップオンボーディングバナー"
+
+#~ msgid ":ref:`invoicing-setup-company`"
+#~ msgstr ":ref:`invoicing-setup-company`"
+
+#~ msgid ":ref:`invoicing-setup-layout`"
+#~ msgstr ":ref:`invoicing-setup-layout`"
+
+#~ msgid ":ref:`invoicing-setup-invoice`"
+#~ msgstr ":ref:`invoicing-setup-invoice`"
+
+#~ msgid ":ref:`invoicing-setup-payments`"
+#~ msgstr ":ref:`invoicing-setup-payments`"
+
+#~ msgid "Company Data"
+#~ msgstr "会社データ"
+
+#~ msgid ""
+#~ "Add your company’s details, such as the name, address, logo, website, "
+#~ "phone number, email address, and Tax ID or VAT number. These details are "
+#~ "then displayed on your documents, such as invoices."
+#~ msgstr ""
+#~ "会社名、住所、ロゴ、ウェブサイト、電話番号、Eメールアドレス、登録番号また"
+#~ "はVAT番号など、貴社の詳細情報を追加します。これらの情報は、顧客請求書など"
+#~ "のドキュメントに表示されます。"
+
+#~ msgid ""
+#~ "You can also change the company's details by going "
+#~ "to :menuselection:`Settings --> General Settings`, scrolling down to "
+#~ "the :guilabel:`Companies` section, and :guilabel:`Update Info`."
+#~ msgstr ""
+#~ "また、会社の詳細を変更するには、 :menuselection:`設定 --> 一般設定` を開"
+#~ "き、 :guilabel:`会社` セクションまでスクロールダウンし :guilabel:`会社情報"
+#~ "更新` を開いて下さい。"
+
+#~ msgid "Documents Layout"
+#~ msgstr "ドキュメントレイアウト"
+
+#~ msgid ""
+#~ "Customize the :ref:`default invoice layout <studio/pdf-reports/default-"
+#~ "layout>`."
+#~ msgstr ""
+#~ ":ref:`デフォルト請求書レイアウト <studio/pdf-reports/default-layout>` をカ"
+#~ "スタマイズする"
+
+#~ msgid ""
+#~ "You can also change the invoice layout by going "
+#~ "to :menuselection:`Settings --> General Settings`, scrolling down to "
+#~ "the :guilabel:`Companies` section, and clicking :guilabel:`Configure "
+#~ "Document Layout`."
+#~ msgstr ""
+#~ "また、 :menuselection:`設定 --> 一般設定` に進み、 :guilabel:`会社` セク"
+#~ "ションまでスクロールダウンし、 :guilabel:`ドキュメントレイアウトを設定` を"
+#~ "クリックすると、顧客請求書のレイアウトを変更することができます。"
+
+#~ msgid "Create Invoice"
+#~ msgstr "請求書作成"
+
+#~ msgid "Create your first invoice."
+#~ msgstr "最初の請求書を作成します。"
+
+#~ msgid ""
+#~ "Add your **bank account number** and a link to your **General Terms & "
+#~ "Condition** in the footer. This way, your contacts can find the full "
+#~ "content of your GT&C online without having to print them on the invoices "
+#~ "you issue."
+#~ msgstr ""
+#~ "フッターに **銀行口座番号** と **一般諸条件** へのリンクを追加してくださ"
+#~ "い。こうすることで、発行する請求書に印刷することなく、オンラインで一般諸条"
+#~ "件の全内容を確認することができます。"
+
+#~ msgid "Online Payments"
+#~ msgstr "オンライン支払"
+
+#~ msgid ""
+#~ "Get started with Stripe and enable secure integrated credit and debit "
+#~ "card payments within Odoo."
+#~ msgstr ""
+#~ "Stripeではじめましょう。Odoo内で安全な統合クレジットカードおよびデビット"
+#~ "カード支払が可能になります。"
+
+#~ msgid ""
+#~ "To use other payment providers, go to :guilabel:`Invoicing --> "
+#~ "Configuration --> Payment Providers` and :doc:`enable the desired "
+#~ "providers <../payment_providers>`."
+#~ msgstr ""
+#~ "他の決済プロバイダーを使用するには :guilabel:`請求 --> 設定 --> 決済プロバ"
+#~ "イダー` に行き、 :doc:`希望のプロバイダーを有効化 <../payment_providers>` "
+#~ "して下さい。"
+
+#~ msgid ":doc:`bank`"
+#~ msgstr ":doc:`銀行`"
+
+#~ msgid ":doc:`get_started/chart_of_accounts`"
+#~ msgstr ":doc:`get_started/chart_of_accounts`"
+
+#~ msgid ":doc:`get_started/consolidation`"
+#~ msgstr ":doc:`get_started/consolidation`"
+
+#~ msgid ":doc:`../fiscal_localizations`"
+#~ msgstr ":doc:`../fiscal_localizations`"
+
+#~ msgid ""
+#~ "`Odoo Tutorials: Accounting and Invoicing - Getting started [video] "
+#~ "<https://www.odoo.com/slides/slide/getting-started-7063>`_"
+#~ msgstr ""
+#~ "`Odooチュートリアル: 会計と請求 - はじめましょう [動画] <https://"
+#~ "www.odoo.com/slides/slide/getting-started-7063>`_"
+
+#~ msgid ""
+#~ "With the Dutch accounting localization installed, you will be able to "
+#~ "export all your accounting entries in XAF format. For this, you have to "
+#~ "go in :menuselection:`Accounting --> Reporting --> General Ledger`, you "
+#~ "define the entries you want to export using the filters (period, "
+#~ "journals, ...) and then you click on the button **EXPORT (XAF)**."
+#~ msgstr ""
+#~ "オランダの会計ローカライゼーションをインストールすると、XAFフォーマットで"
+#~ "会計項目を全てエクスポートすることができます。そのために"
+#~ "は、 :menuselection:`会計 --> レポーティング --> 総勘定元帳` で、エクス"
+#~ "ポートしたい項目をフィルタ(期間、仕訳帳、...)を使って定義し、**EXPORT "
+#~ "(XAF)** ボタンをクリックします。"
+
+#~ msgid "Dutch Accounting Reports"
+#~ msgstr "オランダ会計レポート"
+
+#~ msgid ""
+#~ "If you install the Dutch accounting localization, you will have access to "
+#~ "some reports that are specific to the Netherlands such as :"
+#~ msgstr ""
+#~ "オランダ会計ローカライゼーションをインストールすると、以下のようなオランダ"
+#~ "特有のレポートにアクセスできます:"
+
+#~ msgid "Tax Report (Aangifte omzetbelasting)"
+#~ msgstr "税レポート (Aangifte omzetbelasting)"
+
+#~ msgid "Intrastat Report (ICP)"
+#~ msgstr "Intrastat レポート (ICP)"
+
 #~ msgid ""
 #~ "All features are only available if the company already completed the `SII "
 #~ "Sistema de Facturación de Mercado <https://www.sii.cl/factura_electronica/"
@@ -98422,9 +100166,6 @@ msgstr ""
 #~ ":guilabel:`利益勘定` は、現金出納帳の期末残高がシステムの計算と異なる場合"
 #~ "に利益を登録するために使用され、 :guilabel:`損失勘定` は、現金出納帳の期末"
 #~ "残高がシステムの計算と異なる場合に損失を登録するために使用されます。"
-
-#~ msgid "Currency"
-#~ msgstr "通貨"
 
 #~ msgid "You can edit the currency used to enter the transactions."
 #~ msgstr "取引を入力する際に使用する通貨を編集することができます。"

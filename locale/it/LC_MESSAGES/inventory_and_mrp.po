@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 17:32+0000\n"
-"PO-Revision-Date: 2026-07-05 00:18+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"PO-Revision-Date: 2026-08-14 14:08+0000\n"
+"Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-19-doc/"
 "inventory_and_mrp/it/>\n"
 "Language: it\n"
@@ -6761,6 +6761,9 @@ msgid ""
 "inventory valuation, see :doc:`../../../finance/accounting/get_started/"
 "inventory_valuation`."
 msgstr ""
+"Per istruzioni più dettagliate sugli aspetti della contabilità della "
+"configurazione della valutazione del magazzino, consulta la "
+"pagina :doc:`../../../finance/accounting/get_started/inventory_valuation`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.rst:240
 msgid "EU Periodic"
@@ -7660,6 +7663,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:25
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:12
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:34
 msgid "Enable settings"
 msgstr "Abilita impostazioni"
 
@@ -9321,6 +9325,10 @@ msgid ""
 "and :guilabel:`Packages` features (:menuselection:`Inventory app --> "
 "Configuration --> Settings`)."
 msgstr ""
+"Il campo :guilabel:`Utilizzo collo` appare nel modulo del tipo di collo che "
+"è visibile solo dopo aver attivato le funzione :guilabel:`Trasferimenti "
+"raggruppati, wave e cluster` e :guilabel:`Colli` (:menuselection:`app "
+"Magazzino --> Configurazione --> Impostazioni`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:22
 msgid ""
@@ -9329,6 +9337,11 @@ msgid ""
 "to :guilabel:`Reusable Box` when configuring packages for :ref:`cluster "
 "pickings <inventory/warehouses_storage/cluster-pack>`."
 msgstr ""
+"Per impostazione predefinita, il campo :guilabel:`Utilizzo collo` è "
+"impostato su :guilabel:`Scatola monouso` nel modulo del tipo di collo. "
+"Modifica il campo in :guilabel:`Scatola riutilizzabile` **solo** durante la "
+"configurazione di colli per :ref:`prelievi cluster <inventory/"
+"warehouses_storage/cluster-pack>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:26
 msgid ""
@@ -9338,6 +9351,11 @@ msgid ""
 "itself (e.g. boxes, pallets, other shipping containers) in shipping cost "
 "calculations."
 msgstr ""
+"La funzionalità :guilabel:`Tipologia collo` viene utilizzata principalmente "
+"per :doc:`calcolare i costi di spedizione <../../shipping_receiving/"
+"setup_configuration>` in base al peso di spedizione reale. Crea tipi di "
+"collo per includere il peso del collo stesso (ad es. scatole, pallet, altri "
+"tipi di contenitori) nei calcoli dei costi di spedizione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:32
 msgid ""
@@ -9346,6 +9364,11 @@ msgid ""
 "be used in any workflow involving products tracked by quantity, lots, or "
 "serial numbers."
 msgstr ""
+"Sebbene i pacchi siano comunemente utilizzati nel :doc:`percorso di consegna "
+"in tre fasi <../../shipping_receiving/daily_operations/"
+"delivery_three_steps>`, possono essere utilizzati in qualsiasi flusso di "
+"lavoro che coinvolga prodotti tracciati per quantità, lotti o numeri di "
+"serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:41
 msgid ""
@@ -9546,38 +9569,48 @@ msgid ""
 "On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a "
 "blank package type form."
 msgstr ""
+"Nell'elenco di :guilabel:`tipi di collo`, se fai clic su :guilabel:`Nuovo` "
+"apaprirà un modulo vuoto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:137
 msgid "Define the :guilabel:`Package Type` name."
-msgstr ""
+msgstr "Aggiungi il nome del :guilabel:`tipo di collo`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:140
 msgid "Configuration tab"
-msgstr ""
+msgstr "Scheda configurazione"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:142
 msgid ""
 "The following fields are available in the *Configuration* tab of a package "
 "type form:"
 msgstr ""
+"Nella scheda *Configurazione* del modulo relativo al tipo di collo sono "
+"disponibili i seguenti campi:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:145
 msgid ""
 ":guilabel:`Sequence prefix`: Specify the prefix to use when creating new "
 "packages of this type."
 msgstr ""
+":guilabel:`Prefisso sequenza`: specifica il prefisso da utilizzare al "
+"momento della creazione di nuovi colli di questo tipo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:148
 msgid ""
 "Stealthy Wood wants to create a package type for cluster packs. They specify "
 "`CLU` as the sequence prefix."
 msgstr ""
+"Stealthy Wood vuole creare un tipo di collo per colli cluster. Specifica "
+"`CLU` come prefisso della sequenza."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:151
 msgid ""
 ":guilabel:`Routes`: Specify the routes for which this package type can be "
 "used."
 msgstr ""
+":guilabel:`Percorsi`: specifica i percorsi per i quali è possibile "
+"utilizzare questo tipo di collo;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
 msgid ""
@@ -9596,18 +9629,25 @@ msgid ""
 "Choose :guilabel:`Disposable Box` for packages used to ship products to "
 "customers."
 msgstr ""
+":guilabel:`Utilizzo collo`: scegli :guilabel:`Scatola riutilizzabile` per i "
+"colli utilizzati per spostare i prodotti all'interno del "
+"magazzino. :guilabel:`Scatola monouso` per i colli utilizzati per spedire i "
+"prodotti ai clienti;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Configuration tab for reusable cluster pack box with sequence prefix."
 msgstr ""
+"Scheda di configurazione per una scatola collo cluster riutilizzabile con "
+"prefisso di sequenza."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:164
 msgid "Dimensions tab"
-msgstr ""
+msgstr "Scheda \"Dimensioni\""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:166
 msgid "Use the *Dimensions* tab to specify package dimensions:"
 msgstr ""
+"Utilizza la scheda *Dimensioni* per specificare le dimensioni del collo:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:168
 msgid ""
@@ -9615,12 +9655,17 @@ msgid ""
 "The fields, from left to right, define "
 "the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`."
 msgstr ""
+":guilabel:`Dimensione`: indica le dimensioni del collo in millimetri (mm). I "
+"campi, da sinistra a destra, "
+"indicano :guilabel:`Lunghezza`, :guilabel:`Profondità` e :guilabel:`Altezza`;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:170
 msgid ""
 ":guilabel:`Weight`: Define the weight of an empty package (e.g. an empty "
 "box, pallet)."
 msgstr ""
+":guilabel:`Peso`: indica il peso di un collo vuoto (ad es. una scatola "
+"vuota, un pallet);"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:173
 msgid ""
@@ -9629,36 +9674,46 @@ msgid ""
 "the :guilabel:`Weight` field in the :guilabel:`Inventory` tab of each "
 "product form."
 msgstr ""
+"Odoo calcola il peso del pacco sommando il peso del pacco vuoto più il peso "
+"degli articoli, che si trova nel campo :guilabel:`Peso`, nella "
+"scheda :guilabel:`Magazzino`, di ciascun modulo prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:177
 msgid ""
 ":guilabel:`Max Weight`: Specify the maximum shipping weight allowed in the "
 "package."
 msgstr ""
+":guilabel:`Peso massimo`: specifica il massimo consentito per la spedizione "
+"nel collo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Dimensions tab for FedEx 25 kilogram box package type."
-msgstr ""
+msgstr "Scheda “Dimensioni” per il tipo di collo FedEx da 25 chilogrammi."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:183
 msgid "Capacity tab"
-msgstr ""
+msgstr "Scheda \"Capacità\""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:185
 msgid ""
 "This tab can only be configured if :guilabel:`Multi-Step Routes` is also "
 "enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"Questa scheda può essere configurata solo se è abilitata anche "
+"l’opzione :guilabel:`Percorsi multi-fase` nell’app :menuselection:`Magazzino "
+"--> Configurazione --> Impostazioni`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:188
 msgid ""
 "Select or create a :guilabel:`Storage Category` and :guilabel:`Quantity` by "
 "clicking :guilabel:`Add a line`."
 msgstr ""
+"Seleziona o crea una :guilabel:`categoria di stoccaggio` e "
+"una :guilabel:`quantità` facendo clic su :guilabel:`Aggiungi riga`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:192
 msgid ":doc:`../../shipping_receiving/daily_operations/storage_category`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/daily_operations/storage_category`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:197
 msgid "Cluster packages"
@@ -9670,6 +9725,10 @@ msgid ""
 "> Configuration --> Settings`, and activate the :guilabel:`Batch, Wave & "
 "Cluster Transfers` feature, located in the :guilabel:`Operations` section."
 msgstr ""
+"Per utilizzare i *colli cluster* , accedi all’app :menuselection:`Magazzino "
+"--> Configurazione --> Impostazioni` e attiva la "
+"funzione :guilabel:`Trasferimenti raggruppati, wave e cluster` situata nella "
+"sezione :guilabel:`Operazioni`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid ""
@@ -9693,52 +9752,64 @@ msgstr ""
 msgid ""
 ":guilabel:`Package Reference` (required): Define the name of the package."
 msgstr ""
+":guilabel:`Riferimento collo` (obbligatorio): indica il nome del collo;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:211
 msgid ""
 ":guilabel:`Package Type`: Specify the :ref:`package type <inventory/"
 "warehouses_storage/package-type>` to use."
 msgstr ""
+":guilabel:`Tipologia collo`: specifica il :ref:`tipo di collo <inventory/"
+"warehouses_storage/package-type>` da utilizzare;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:215
 msgid ""
 "Setting a :guilabel:`Package Type` is unnecessary for configuring packages "
 "for cluster pickings."
 msgstr ""
+"Non è necessario impostare la :guilabel:`tipologia di collo` per configurare "
+"colli destinati a prelievi cluster."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:218
 msgid ":guilabel:`Location`: Define the current location of the package."
-msgstr ""
+msgstr ":guilabel:`Ubicazione`: indica l'ubicazione attuale del collo;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:219
 msgid ""
 ":guilabel:`Container`: If the package is contained within another package, "
 "define the container package."
 msgstr ""
+":guilabel:`Contenitore`: se il collo è contenuto in un altro collo, indica "
+"il collo contenitore;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:221
 msgid ""
 ":guilabel:`Shipping Weight`: Used to input the weight of the package after "
 "measuring it on a scale."
 msgstr ""
+":guilabel:`Peso spedizione`: campo utilizzato per inserire il peso del collo "
+"dopo averlo pesato;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:223
 msgid ":guilabel:`Company`: The company that can use this package is defined."
-msgstr ""
+msgstr ":guilabel:`Azienda`: indica l'azienda che può utilizzare il collo;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:224
 msgid ":guilabel:`Pack Date`: Specify the date the package was created."
 msgstr ""
+":guilabel:`Data imballaggio`: specifica la data di creazione del collo;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:226
 msgid ""
 "Below the package definition fields is the *Content* section. Use this field "
 "to learn more about the contents of the package."
 msgstr ""
+"Sotto i campi di definizione del collo si trova la sezione *Contenuto*. "
+"Utilizza questo campo per saperne di più sul contenuto del collo stesso."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "A package form to create a cluster pack."
-msgstr ""
+msgstr "Modulo di un collo per creare un collo cluster."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:233
 msgid ""
@@ -9757,6 +9828,9 @@ msgid ""
 "To view all packages, go to :menuselection:`Inventory app --> Products --> "
 "Packages`. By default, packages are shown in list view."
 msgstr ""
+"Per visualizzare tutti i colli, apri l'app :menuselection:`Magazzino --> "
+"Prodotti --> Colli`. Per impostazione predefinita, i colli vengono "
+"visualizzati nella vista elenco."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Packages dashboard."
@@ -10931,6 +11005,11 @@ msgid ""
 "the metric system, and then sell those products in a country that uses the "
 "imperial system. In that case, the business needs to convert the units."
 msgstr ""
+"In alcuni casi, è necessario gestire prodotti con *unità di misura* (UdM) "
+"diverse. Ad esempio, un'azienda può acquistare prodotti da un Paese che "
+"utilizza il sistema metrico e poi vendere tali prodotti in un Paese che "
+"utilizza il sistema imperiale. In tal caso, l'azienda deve convertire le "
+"unità."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:15
 msgid ""
@@ -10944,6 +11023,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:18
 msgid "Odoo can be set up to use different units of measure for one product."
 msgstr ""
+"Odoo può essere configurato per utilizzare diverse unità di misura per un "
+"unico prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:25
 msgid ""
@@ -11029,10 +11110,15 @@ msgid ""
 "the :guilabel:`Packagings` field. Multiple packagings can be specified for "
 "each product."
 msgstr ""
+"Le unità di misura in cui il prodotto viene venduto sono considerate "
+"imballaggi. Per definire gli imballaggi, apri la scheda *Vendite* del "
+"prodotto, poi nella sezione :guilabel:`Upsell & Cross-Sell`, aggiungi "
+"un'imballaggio nel campo :guilabel:`Imballaggi`. È possibile specificare più "
+"imballaggi per ciascun prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:None
 msgid "Add a packaging to the Sales tab of the product."
-msgstr ""
+msgstr "Aggiungere un imballaggio alla scheda Vendite del prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:67
 msgid ":doc:`Packaging <packaging>`"
@@ -11049,10 +11135,15 @@ msgid ""
 "of measure after they are defined in the vendor pricelist. Purchase units of "
 "measure must be in the same category as the default unit of measure."
 msgstr ""
+"Le unità di misura in cui viene acquistato il prodotto sono definite nella "
+"scheda *Acquisti* del prodotto stesso. Gli ordini di acquisto possono essere "
+"creati in queste unità di misura dopo che sono state definite nel listino "
+"prezzi del fornitore. Le unità di misura di acquisto devono appartenere alla "
+"stessa categoria dell’unità di misura predefinita."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:None
 msgid "Specify a purchase unit of measure in the Purchase tab."
-msgstr ""
+msgstr "Specificare un'unità di misura d'acquisto nella scheda Acquisti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:82
 msgid "Unit conversion"
@@ -11117,6 +11208,13 @@ msgid ""
 "company prefers to use. If needed, manually edit the :guilabel:`Unit` value "
 "on the |RFQ|."
 msgstr ""
+"Al momento della creazione di una nuova richiesta di preventivo, nell'app "
+"Acquisti, Odoo usa l'unità che il fornitore preferisce utilizzare, indicata "
+"nel campo :guilabel:`Unità` nella riga del fornitore nella scheda *Acquisto* "
+"del prodotto. L'unità che il fornitore preferisce **può** differire "
+"dall'unità che preferisce utilizzare l'azienda. Se necessario, è possibile "
+"modificare manualmente il valore :guilabel:`dell'unità` nella richiesta di "
+"preventivo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:108
 msgid ""
@@ -11203,6 +11301,9 @@ msgid ""
 "A |PO| can **only** be automatically generated if at least **one** vendor is "
 "listed in the product form's *Purchase* tab."
 msgstr ""
+"Un ordine di acquisto può essere generato automaticamente **solo** se almeno "
+"**uno** dei fornitori viene elencato nella scheda *Acquisto* del modulo del "
+"prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:None
 msgid "Click the Confirm button to manually replenish."
@@ -11326,11 +11427,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:0
 msgid "Specify a reference unit in the Quantity field."
-msgstr ""
+msgstr "Specificare un'unità di riferimento nel campo Quantità."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:201
 msgid "Group units of measure in the POS app"
-msgstr ""
+msgstr "Raggruppare unità di misura nell’app Punto vendita"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:203
 msgid ""
@@ -11339,34 +11440,45 @@ msgid ""
 "point_of_sale/hardware_network/customer_display>` shows each unit of the "
 "product on a separate line, thus cluttering the display."
 msgstr ""
+"Per impostazione predefinita, quando un cliente ordina più unità dello "
+"stesso prodotto presso un punto vendita, sia il punto vendita che "
+"lo :doc:`schermo cliente <../../../../sales/point_of_sale/hardware_network/"
+"customer_display>` mostrano ciascuna unità del prodotto su una riga "
+"separata, ingombrando così la visualizzazione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:208
 msgid ""
 "Products can be grouped by unit of measure on the POS register and on the "
 "customer display."
 msgstr ""
+"I prodotti possono essere raggruppati per unità di misura nella cassa del "
+"punto vendita e nello schermo del cliente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:210
 msgid "To do so, follow these steps:"
-msgstr ""
+msgstr "Per farlo, segui questi passaggi:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:212
 msgid "Enable :doc:`developer mode <../../../../general/developer_mode>`."
 msgstr ""
+"attiva la :doc:`modalità sviluppatore <../../../../general/developer_mode>`;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:213
 msgid ""
 "Open the *Units & Packagings* page by navigating "
 "to :menuselection:`Inventory app --> Configuration --> Units & Packagings`."
 msgstr ""
+"apri la pagina *Unità e imballaggi* seguendo il "
+"percorso :menuselection:`Magazzino --> Configurazione --> Unità e "
+"imballaggi`;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:215
 msgid "Select a unit of measure."
-msgstr ""
+msgstr "seleziona un'unità di misura;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:216
 msgid "Enable :guilabel:`Group Products in POS`."
-msgstr ""
+msgstr "attiva :guilabel:`Raggruppa prodotti nel POS`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:218
 msgid ""
@@ -11374,14 +11486,18 @@ msgid ""
 "on the POS register. The number of that unit of measure and the total price "
 "of the products are displayed."
 msgstr ""
+"Una volta attivata l'impostazione, più articoli della stessa unità vengono "
+"raggruppati sul registratore di cassa del punto vendita. Vengono "
+"visualizzati il numero di quella unità di misura e il prezzo totale dei "
+"prodotti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:None
 msgid "12 eggs are grouped in the POS app."
-msgstr ""
+msgstr "Nell’app Punto vendita sono raggruppate 12 uova."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:225
 msgid ":doc:`../../../../sales/point_of_sale/products`"
-msgstr ""
+msgstr ":doc:`../../../../sales/point_of_sale/products`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:6
 msgid "Product tracking"
@@ -23362,6 +23478,8 @@ msgid ""
 "Enable and configure the :ref:`Mapbox integration <inventory/"
 "shipping_receiving/mapbox-integration>`."
 msgstr ""
+"abilita e configura :ref:`l'integrazione Mapbox <inventory/"
+"shipping_receiving/mapbox-integration>`;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:24
 msgid ""
@@ -23373,7 +23491,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:26
 msgid "Enter vehicle :doc:`car models <../../../../hr/fleet/models>`."
-msgstr ""
+msgstr "inserisci i:doc:`modelli di auto <../../../../hr/fleet/models>`;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:27
 msgid ""
@@ -23394,6 +23512,9 @@ msgid ""
 "and volume are assigned to a product on the *Inventory* tab of its product "
 "form."
 msgstr ""
+"La gestione delle spedizioni può valutare la capacità di un veicolo **solo** "
+"se a un prodotto sono stati assegnati peso e volume nella scheda *Magazzino* "
+"del relativo modulo prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:38
 msgid "Inventory settings"
@@ -23404,12 +23525,17 @@ msgid ""
 "To set the required inventory settings, navigate "
 "to :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"Per configurare le impostazioni di magazzino richieste, apri "
+"l’app :menuselection:`Magazzino --> Configurazione --> Impostazioni`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:43
 msgid ""
 "In the *Operations* section, select the :guilabel:`Batch, Wave & Cluster "
 "Transfers` checkbox to prepare batches of orders for delivery."
 msgstr ""
+"Nella sezione *Operazioni*, spunta la casella :guilabel:`Trasferimenti "
+"raggruppati, wave e cluster` per preparare i lotti degli ordini da "
+"consegnare."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:46
 msgid ""
@@ -23418,6 +23544,10 @@ msgid ""
 "specific vehicles to be :ref:`set as carriers <inventory/shipping_receiving/"
 "delivery-method-for-carrier>`."
 msgstr ""
+"Nella sezione *Spedizioni*, spunta le caselle :guilabel:`Metodi di consegna` "
+"e :guilabel:`Sistema di gestione spedizioni`. In questo modo è possibile "
+"impostare veicoli specifici :ref:`come corrieri <inventory/"
+"shipping_receiving/delivery-method-for-carrier>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:50
 msgid ""
@@ -23425,6 +23555,9 @@ msgid ""
 "checkbox to assign specific locations in the warehouse as loading zones for "
 "delivery trucks."
 msgstr ""
+"Nella sezione *Magazzino*, spunta la casella :guilabel:`Ubicazioni di "
+"stoccaggio` per assegnare ubicazioni specifiche all’interno del magazzino "
+"come zone di carico per i camion di consegna."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:53
 msgid ""
@@ -23436,11 +23569,13 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:58
 msgid "Mapbox integration"
-msgstr ""
+msgstr "Integrazione Mapbox"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:60
 msgid "Next, configure the `Mapbox <https://www.mapbox.com/>`_ integration."
 msgstr ""
+"Successivamente, configura l'integrazione `Mapbox <https://www.mapbox.com/"
+">`_."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:62
 msgid ""
@@ -23448,34 +23583,47 @@ msgid ""
 "If you already have a MapBox account, `log in <https://account.mapbox.com/"
 "auth/signin/>`_. Upon login, the *Account overview* page displays."
 msgstr ""
+"Per prima cosa, `crea un account Mapbox <https://account.mapbox.com/auth/"
+"signup/>`_. Se hai già un account, `accedi <https://account.mapbox.com/auth/"
+"signin/>`_. Una volta effettuato l’accesso, verrà visualizzata la pagina "
+"*Panoramica account*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:66
 msgid ""
 "Then, `create an access token <https://docs.mapbox.com/help/dive-deeper/"
 "access-tokens/>`_."
 msgstr ""
+"In seguito, `crea un token di accesso <https://docs.mapbox.com/help/dive-"
+"deeper/access-tokens/>`_."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:68
 msgid "After the token is created, copy it to the clipboard."
-msgstr ""
+msgstr "Una volta creato il token, copialo negli appunti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:71
 msgid ""
 "If you have created a secret token, Mapbox does not display secret tokens "
 "again after leaving the *Access tokens* page. Make a copy of this token now."
 msgstr ""
+"Se hai creato un token segreto, Mapbox non lo visualizzerà più dopo che "
+"avrai lasciato la pagina *Token di accesso*. Crea subito una copia di questo "
+"token."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:75
 msgid ""
 "`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
 "dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 msgstr ""
+"`Come utilizzare Mapbox in modo sicuro: token di accesso <https://"
+"docs.mapbox.com/help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:77
 msgid ""
 "`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
 "restrictions>`_"
 msgstr ""
+"`Restrizioni relative agli URL <https://docs.mapbox.com/accounts/guides/"
+"tokens/#url-restrictions>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:79
 msgid ""
@@ -23483,10 +23631,14 @@ msgid ""
 "*Integrations* section, locate the :guilabel:`Map Routes` setting. Paste the "
 "token in the :guilabel:`Token` field."
 msgstr ""
+"In Odoo, apri l’app :menuselection:`Impostazioni`. Nella sezione "
+"*Integrazioni*, individua l’impostazione :guilabel:`Mappa percorsi`. Incolla "
+"il token nel campo :guilabel:`Token`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:82
 msgid "Be sure to click :guilabel:`Save` to save the settings."
 msgstr ""
+"Assicurati di cliccare su :guilabel:`Salva` per salvare le impostazioni."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:87
 msgid "Vehicle capacity"
@@ -23583,6 +23735,8 @@ msgstr "Metodo di consegna"
 msgid ""
 "Optionally, delivery vehicles can be assigned as a delivery method *carrier*."
 msgstr ""
+"In alternativa, è possibile assegnare i mezzi di consegna come *corriere* "
+"del metodo di consegna."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:135
 msgid ""
@@ -23647,6 +23801,8 @@ msgid ""
 "Example delivery method with the Zip Prefixes set to San Francisco's zip "
 "code."
 msgstr ""
+"Esempio di metodo di consegna con i prefissi postali impostati sul codice "
+"postale di San Francisco."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:161
 msgid "Dock locations"
@@ -23658,6 +23814,9 @@ msgid ""
 "go to :menuselection:`Inventory app --> Configuration --> Locations` and "
 "click :guilabel:`New`."
 msgstr ""
+"Ogni banchina di carico deve avere una posizione dedicata. Per creare le "
+"posizioni delle banchine, apri l'app :menuselection:`Magazzino --> "
+"Configurazione --> Ubicazioni` e clicca su :guilabel:`Nuovo`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:166
 msgid ""
@@ -23666,6 +23825,10 @@ msgid ""
 "Operations Types` and open an existing delivery operation type, or "
 "click :guilabel:`New` to create a new one."
 msgstr ""
+"Dopo aver impostato le ubicazioni delle banchine in Odoo, configurale nel "
+"tipo di operazione. Apri l'app :menuselection:`Magazzino --> Configurazione "
+"--> Tipi di operazioni` e apri un tipo di operazione di consegna esistente "
+"oppure fai clic su :guilabel:`Nuovo` per crearne uno nuovo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:170
 msgid ""
@@ -23681,11 +23844,11 @@ msgstr "Configurazione posizione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:178
 msgid ":doc:`../../warehouses_storage/inventory_management/use_locations`"
-msgstr ""
+msgstr ":doc:`../../warehouses_storage/inventory_management/use_locations`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:179
 msgid ":doc:`../../warehouses_storage/inventory_management/operation_type`"
-msgstr ""
+msgstr ":doc:`../../warehouses_storage/inventory_management/operation_type`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:182
 msgid "Build loads"
@@ -33303,7 +33466,7 @@ msgstr ":doc:`use_locations`"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:13
 msgid "Operation types"
-msgstr ""
+msgstr "Tipi di operazione"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:5
 msgid ""
@@ -33313,26 +33476,38 @@ msgid ""
 "*operations*. Operations can also help keep what the system shows current "
 "using counts and adjustments."
 msgstr ""
+"Odoo **Magazzino** tiene traccia delle scorte per magazzino e ubicazione e "
+"registra ciò che accade ai prodotti (ricezione, stoccaggio e trasferimenti "
+"interni, prelievo e consegna) sotto forma di movimenti strutturati delle "
+"scorte stesse. Questi movimenti sono denominati *operazioni*. Le operazioni "
+"possono anche aiutare a mantenere aggiornate le informazioni visualizzate "
+"dal sistema tramite conteggi e rettifiche."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:10
 msgid "Each operation belongs to a specific *operation type*."
-msgstr ""
+msgstr "Ogni operazione appartiene a uno specifico *tipo di operazione*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:15
 msgid ""
 "To add or edit operation types, navigate to :menuselection:`Inventory app --"
 "> Configuration --> Operations Types`. A list of operation types displays."
 msgstr ""
+"Per aggiungere o modificare i tipi di operazione, apri "
+"l’app :menuselection:`Magazzino --> Configurazione --> Tipi di operazione`. "
+"Apparirà un elenco dei tipi di operazione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:18
 msgid ""
 "Open an existing operation type, or click :guilabel:`New` to create a new "
 "operation type. Next, complete the fields of the operation type form."
 msgstr ""
+"Apri un tipo di operazione esistente oppure fai clic su :guilabel:`Nuovo` "
+"per creare un nuovo tipo di operazione. Successivamente, compila i campi del "
+"modulo relativo al tipo di operazione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:24
 msgid "General tab"
-msgstr ""
+msgstr "Scheda \"Generale\""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:26
 msgid "Use the *General* tab to specify basic settings for the operation type."
@@ -33340,34 +33515,42 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:28
 msgid "The following fields are available in the *General* tab:"
-msgstr ""
+msgstr "I seguenti campi sono disponibili nella scheda *Generale*:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:30
 msgid ":guilabel:`Type of Operation`: Specify the type of operation."
-msgstr ""
+msgstr ":guilabel:`Tipo di operazione`: specifica il tipo di operazione;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:31
 msgid ""
 ":guilabel:`Sequence Prefix`: Specify a short prefix Odoo will use to name "
 "transfers."
 msgstr ""
+":guilabel:`Prefisso sequenza`: specifica un breve prefisso che Odoo "
+"utilizzerà per nominare i trasferimenti;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:32
 msgid ""
 ":guilabel:`Barcode`: Define the barcode to be used when transferring "
 "products between locations."
 msgstr ""
+":guilabel:`Codice a barre`: indica il codice a barre da utilizzare durante "
+"il trasferimento di prodotti tra ubicazioni;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:33
 msgid ""
 ":guilabel:`Company`: Specify the company that can use this operation type."
 msgstr ""
+":guilabel:`Azienda`: specifica l'azienda che può utilizzare questo tipo di "
+"operazione;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:34
 msgid ""
 ":guilabel:`Returns Type`: Define which operation can create returns for this "
 "operation type."
 msgstr ""
+":guilabel:`Tipi di reso`: indica quali operazioni possono generare resi per "
+"questo tipo di operazione;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:35
 msgid ""
@@ -33378,6 +33561,12 @@ msgid ""
 "Select :guilabel:`Never` to specify that the remaining products should be "
 "canceled."
 msgstr ""
+":guilabel:`Crea ordine residuo`: indica quando è possibile creare ordini "
+"residui per prodotti non realizzati alla convalida di questo tipo di "
+"operazione. Seleziona :guilabel:`Chiedi` se Odoo dovrebbe chiedere il "
+"permesso per la creazione di un ordine residuo. Seleziona :guilabel:`Sempre` "
+"per generare un ordine residuo. Seleziona :guilabel:`Mai` per specificare "
+"che i prodotti rimanenti dovrebbero essere annullati;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:39
 msgid ""
@@ -33387,6 +33576,12 @@ msgid ""
 "been validated for the project. This ensures that the product's cost is "
 "tracked during the stock move."
 msgstr ""
+":guilabel:`Costi analitici`: seleziona questa casella per garantire che le "
+"registrazioni analitiche vengano create in un progetto al momento della "
+"convalida dei movimenti di magazzino. Tiene traccia del costo totale dei "
+"prodotti inclusi nei movimenti di magazzino (consegne e ricezioni) che sono "
+"stati convalidati per il progetto. Ciò garantisce che il costo del prodotto "
+"venga monitorato durante il movimento di magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:43
 msgid ""
@@ -33396,23 +33591,28 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:47
 msgid "Lots/serial numbers"
-msgstr ""
+msgstr "Lotti/Numeri di serie"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:49
 msgid ""
 "This section only appears if :guilabel:`Lots & Serial Numbers` is enabled "
 "in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"Questa sezione appare solo se la funzione :guilabel:`Lotti e numeri di "
+"serie` è attiva in :menuselection:`Magazzino --> Configurazione --> "
+"Impostazioni`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:52
 msgid "The following fields are available:"
-msgstr ""
+msgstr "Sono disponibili i seguenti campi:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:54
 msgid ""
 ":guilabel:`Create New`: Select this checkbox to specify that lots and serial "
 "numbers can be created from this operation type."
 msgstr ""
+":guilabel:`Crea nuovo`: seleziona questa casella per specificare che da "
+"questo tipo di operazione possano essere creati lotti e numeri di serie;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:56
 msgid ""
@@ -33420,36 +33620,46 @@ msgid ""
 "serial number can be selected when creating transfers for this operation "
 "type."
 msgstr ""
+":guilabel:`Utilizza esistenti`: se questa casella è selezionata è possibile "
+"selezionare il lotto o il numero di serie durante la creazione dei "
+"trasferimenti per questo tipo di operazione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:60
 msgid ":doc:`../../product_management/product_tracking/lots`"
-msgstr ""
+msgstr ":doc:`../../product_management/product_tracking/lots`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:61
 msgid ":doc:`../../product_management/product_tracking/serial_numbers`"
-msgstr ""
+msgstr ":doc:`../../product_management/product_tracking/serial_numbers`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:66
 msgid ""
 "This section only appears if :guilabel:`Storage Locations` is enabled "
 "in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"Questa sezione appare solo se la funzione :guilabel:`Ubicazioni di "
+"stoccaggio` è abilitata in :menuselection:`Magazzino --> Configurazione --> "
+"Impostazioni`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:69
 msgid "Specify the following locations for the operation type:"
-msgstr ""
+msgstr "Specifica le seguenti ubicazioni per il tipo di operazione:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:71
 msgid ""
 ":guilabel:`Source Location`: Select a default source location when "
 "operations of this type are created."
 msgstr ""
+":guilabel:`Ubicazione di origine`: seleziona un'ubicazione di origine "
+"predefinita quando vengono create operazioni di questo tipo;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:73
 msgid ""
 ":guilabel:`Destination Location`: Select a default destination location when "
 "operations of this type are created."
 msgstr ""
+":guilabel:`Ubicazione di destinazione`: seleziona un'ubicazione di "
+"destinazione predefinita quando vengono create operazioni di questo tipo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:82
 msgid ""
@@ -33466,13 +33676,16 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:89
 msgid "Batch & wave transfers"
-msgstr ""
+msgstr "Trasferimenti raggruppati e wave"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:91
 msgid ""
 "This section appears only if :guilabel:`Batch, Wave & Cluster Transfers` is "
 "enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"Questa sezione appare solo se è abilitata l'opzione :guilabel:`Trasferimenti "
+"in lotto, wave e cluster` nell'app :menuselection:`Magazzino\" --> "
+"Configurazione --> Impostazioni`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:94
 msgid ""
@@ -33492,22 +33705,25 @@ msgid ""
 "Select the :guilabel:`Automatic Batches` checkbox to specify that pickings "
 "should be automatically batched as they are confirmed when possible."
 msgstr ""
+"Seleziona la casella :guilabel:`Raggruppamento automatico` per specificare "
+"che i prelievi debbano essere raggruppati automaticamente in lotti man mano "
+"che vengono confermati, quando possibile."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:104
 msgid ":doc:`../../shipping_receiving/picking_methods/wave`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/picking_methods/wave`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:105
 msgid ":doc:`../../shipping_receiving/picking_methods/batch`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/picking_methods/batch`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:106
 msgid ":doc:`../../shipping_receiving/picking_methods/cluster`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/picking_methods/cluster`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:111
 msgid "Hardware tab"
-msgstr ""
+msgstr "Scheda Hardware"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:113
 msgid ""
@@ -33534,6 +33750,8 @@ msgid ""
 "In the *Scales* section, specify a scale to use in conjunction with "
 "operations of this operation type in the :guilabel:`Connect Scale` field."
 msgstr ""
+"Nella sezione *Bilance*, specifica una scala da utilizzare in combinazione "
+"con le operazioni di questo tipo nel campo :guilabel:`Collega bilancia`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:126
 msgid ""
@@ -33544,15 +33762,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:130
 msgid ":doc:`../../../../general/iot/devices/printer`"
-msgstr ""
+msgstr ":doc:`../../../../general/iot/devices/printer`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:131
 msgid ":doc:`../../../../general/iot/devices/scale`"
-msgstr ""
+msgstr ":doc:`../../../../general/iot/devices/scale`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:136
 msgid "Barcode App tab"
-msgstr ""
+msgstr "Scheda app Codice a barre"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:138
 msgid ""
@@ -33560,12 +33778,19 @@ msgid ""
 "the **Barcode** app. Specify when barcodes must be scanned or how often, "
 "whether to group products, or when to validate an operation."
 msgstr ""
+"Usa la scheda *App Codice a barre* per specificare in che modo questo tipo "
+"di operazione si integra con l'app **Codice a barre**. Specifica quando i "
+"codici a barre devono essere scansionati o quanto spesso oppure quando "
+"convalidare un'operazione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:142
 msgid ""
 "To display reserved lots or serial numbers on an operation in the "
 "**Barcode** app, select the :guilabel:`Show reserved lots/SN` checkbox."
 msgstr ""
+"Per visualizzare i lotti riservati o i numeri di serie in un’operazione "
+"nell’app **Codice a barre**, seleziona la casella di "
+"controllo :guilabel:`Mostra lotti/NS prenotati`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:145
 msgid ""
@@ -33575,12 +33800,12 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:149
 msgid ":doc:`../../../barcode`"
-msgstr ""
+msgstr ":doc:`../../../barcode`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:82
 msgid "Reception report"
-msgstr ""
+msgstr "Rapporto di ricezione"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:11
 msgid ""
@@ -33590,6 +33815,11 @@ msgid ""
 "higher-priority orders or retain more control over their inventory "
 "reservations."
 msgstr ""
+"In Odoo **Magazzino**, gli utenti possono utilizzare i rapporti di ricezione "
+"per allocare le scorte in entrata provenienti dagli ordini di acquisto a uno "
+"o più ordini di vendita. Ciò consente agli utenti di assegnare direttamente "
+"le unità delle scorte rifornite per evadere gli ordini con priorità più alta "
+"o mantenere un maggiore controllo sulle proprie prenotazioni di magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:21
 msgid ""
@@ -33598,6 +33828,10 @@ msgid ""
 "Under the *Operations* section, select the checkbox next "
 "to :guilabel:`Reception Report`, then click :guilabel:`Save`."
 msgstr ""
+"Per utilizzare i rapporti di ricezione, abilita la funzione *Rapporto di "
+"ricezione* accedendo a :menuselection:`Magazzino --> Configurazione --> "
+"Impostazioni`. Nella sezione *Operazioni* seleziona la casella accanto "
+"a :guilabel:`Rapporto di ricezione` e poi fai clic su :guilabel:`Salva`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:30
 msgid ""
@@ -33607,52 +33841,72 @@ msgid ""
 "order can users access the reception report and reserve units from the |PO| "
 "to fulfill specific customer orders."
 msgstr ""
+"I rapporti di ricezione vengono utilizzati per gestire l’allocazione delle "
+"scorte rifornite. Ciò significa che gli utenti devono prima confermare la "
+"domanda dei clienti e poi rifornire le scorte necessarie tramite un ordine "
+"di acquisto. Solo dopo aver confermato questo ordine di rifornimento, gli "
+"utenti possono accedere al rapporto di ricezione e riservare le unità "
+"dall’ordine di acquisto per evadere gli ordini specifici dei clienti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:36
 msgid ""
 "|SOs| with products that can be fulfilled with existing on-hand stock do "
 "**not** appear in reception reports."
 msgstr ""
+"Gli ordini di vendita con prodotti che possono essere completati con le "
+"scorte disponibili **non** appaiono nei rapporti di ricezione."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:39
 msgid ""
 "The following process outlines all necessary steps for allocating stock "
 "using reception reports:"
 msgstr ""
+"Il seguente processo illustra tutti i passaggi necessari per l’assegnazione "
+"delle scorte tramite i rapporti di ricezione:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:41
 msgid ""
 ":ref:`Confirm SOs <inventory/reception-report/workflow/confirm-so>` for one "
 "or more customers."
 msgstr ""
+":ref:`conferma gli ordini di vendita <inventory/reception-report/workflow/"
+"confirm-so>` per uno o più clienti;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:42
 msgid ""
 "Create and :ref:`confirm a PO <inventory/reception-report/workflow/confirm-"
 "po>` for the demanded products."
 msgstr ""
+"crea e :ref:`conferma un ordine di acquisto <inventory/reception-report/"
+"workflow/confirm-po>` per i prodotti richiesti;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:44
 msgid ""
 "Open receipt and :ref:`access the reception report <inventory/reception-"
 "report/workflow/reception-report>` to allocate products."
 msgstr ""
+"apri la ricezione e :ref:`accedi al rapporto di ricezione <inventory/"
+"reception-report/workflow/reception-report>` per assegnare i prodotti;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:46
 msgid ""
 ":ref:`Validate receipt <inventory/reception-report/workflow/validate-"
 "receipt>` on the |PO|."
 msgstr ""
+":ref:`convalida la ricezione <inventory/reception-report/workflow/validate-"
+"receipt>` nell'ordine di acquisto;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:47
 msgid ""
 ":ref:`Validate delivery <inventory/reception-report/workflow/validate-"
 "delivery>` on the |SO|."
 msgstr ""
+":ref:`convalida la consegna <inventory/reception-report/workflow/validate-"
+"delivery>` nell'ordine di vendita."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:52
 msgid "Create and confirm |SOs|"
-msgstr ""
+msgstr "Creare e confermare ordini di vendita"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:54
 msgid ""
@@ -33662,28 +33916,36 @@ msgid ""
 "This generates a delivery order for each |SO|, accessible via the :icon:`fa-"
 "truck` :guilabel:`Delivery` smart button."
 msgstr ""
+"Se utilizzi rapporti di ricezione, inizia creando preventivi par uno o più "
+"clienti con i :guilabel:`prodotti` e le :guilabel:`quantità` richiesti. "
+"Conferma i preventivi e trasformali in ordini di vendita. In seguito, verrà "
+"generato un ordine di consegna per ogni ordine di vendita accessibile dal "
+"pulsante smart :icon:`fa-truck`:guilabel:`Consegna`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:60
 msgid ""
 "To ensure Odoo can properly create allocations, confirm that the selected "
 "product has the following configurations:"
 msgstr ""
+"Per garantire che Odoo possa creare correttamente le allocazioni, verifica "
+"che il prodotto selezionato presenti le seguenti configurazioni:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:63
 msgid ":guilabel:`Purchase` checkbox is selected"
-msgstr ""
+msgstr "la casella :guilabel:`Acquisti` è selezionata;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:64
 msgid ":guilabel:`Product Type` is set to :guilabel:`Goods`"
 msgstr ""
+"il campo :guilabel:`Tipologia prodotto` è impostato su :guilabel:`Beni`;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:65
 msgid ":guilabel:`Track Inventory` option is selected"
-msgstr ""
+msgstr "l'opzione :guilabel:`Monitora magazzino` è selezionata."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:70
 msgid "Create and confirm |PO|"
-msgstr ""
+msgstr "Creare e confermare ordini di acquisto"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:72
 msgid ""
@@ -33693,12 +33955,19 @@ msgid ""
 "clicking :guilabel:`Add a product` in the *Products* tab and specifying the "
 "required :guilabel:`Quantity`."
 msgstr ""
+"In seguito, l'utente crea una nuova richiesta di preventivo per rifornire le "
+"scorte richieste. Per farlo, apri l'app *Acquisti* e fai clic "
+"su :guilabel:`Nuovo`. Nel modulo, aggiungi i prodotti richiesti dal cliente "
+"nell'ordine di vendita facendo clic su :guilabel:`Aggiungi prodotto` nella "
+"scheda *Prodotti* e specifica la :guilabel:`Quantità` richiesta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:77
 msgid ""
 "After adding the products, click :guilabel:`Confirm Order` to turn the |RfQ| "
 "into a |PO|."
 msgstr ""
+"Dopo aver aggiunto i prodotti, clicca su :guilabel:`Conferma ordine` per "
+"trasformare la richiesta di preventivo in un ordine di acquisto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:84
 msgid ""
@@ -33707,6 +33976,11 @@ msgid ""
 "truck` :guilabel:`Receipt` smart button at the top of the |PO| to open the "
 "receipt for the incoming stock of the product."
 msgstr ""
+"Dopo aver confermato l'ordine di acquisto, apri il rapporto di ricezione per "
+"assegnare le unità dei prodotti agli ordini di vendita desiderati. Per "
+"farlo, fai clic sul pulsante :icon:`fa-truck`:guilabel:`Ricezione` nella "
+"parte alta dell'ordine di acquisto per aprire la ricezione delle scorte in "
+"arrivo del prodotto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:89
 msgid ""
@@ -33714,12 +33988,17 @@ msgid ""
 "Process` in the :guilabel:`Receipts` card. Then, select the appropriate "
 "receipt."
 msgstr ""
+"In alternativa, apri l'app **Magazzino** e fai clic su :guilabel:`(#) Da "
+"elaborare` nella scheda :guilabel:`Ricezioni`. In seguito, seleziona la "
+"ricezione appropriata."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:92
 msgid ""
 "On the receipt, an :icon:`fa-list` :guilabel:`Allocations` smart button "
 "appears at the top, which opens the *Reception Report* page."
 msgstr ""
+"Nella ricezione, nella parte superiore compare il pulsante smart :icon:`fa-"
+"list` :guilabel:`Assegnazioni` che apre la pagina *Rapporto di ricezione*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:95
 msgid ""
@@ -33731,6 +34010,15 @@ msgid ""
 "its products, including each product's name, quantity, and the option to "
 "assign the specified units individually."
 msgstr ""
+"La pagina *Rapporto di ricezione* mostra un elenco di prodotti a cui è "
+"possibile assegnare le unità presenti in questo ordine di acquisto, "
+"raggruppate in base all’ordine di vendita in cui compaiono. È incluso un "
+"link a ciascun ordine di vendita, insieme alla :guilabel:`Consegna prevista` "
+"e a un’opzione per :ref:`assegnare <inventory/reception-report/workflow/"
+"reception-report/allocate>` tutte le unità dei propri prodotti. Sotto "
+"ciascun ordine di vendita è presente un elenco dei relativi prodotti, che "
+"include il nome di ciascun prodotto, la quantità e l’opzione per assegnare "
+"singolarmente le unità specificate."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:103
 msgid ""
@@ -33739,20 +34027,28 @@ msgid ""
 "first). In other words, |SOs| are ordered by how recently they were "
 "confirmed, with the oldest confirmed |SO| appearing first."
 msgstr ""
+"Gli ordini di vendita nel rapporto di ricezione vengono elencati in base "
+"alla data della consegna associata (ad es. l'ordine di vendita con l'ordine "
+"di consegna più vecchio appare per primo). In altre parole, gli ordini di "
+"vendita vengono ordinati in base alla data di conferma più recente e "
+"l'ordine di vendità più vecchio appare per primo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:None
 msgid "The Reception Report Page in Odoo."
-msgstr ""
+msgstr "La pagina del rapporto di ricezione in Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:113
 msgid "Allocate units"
-msgstr ""
+msgstr "Assegnare unità"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:115
 msgid ""
 "To allocate units for a product in an |SO|, click :guilabel:`Assign` in the "
 "product's corresponding row. To undo allocation, click :guilabel:`Unassign`."
 msgstr ""
+"Per assegnare le unità a un prodotto in un ordine di vendita, fai clic "
+"su :guilabel:`Assegna` nella riga corrispondente al prodotto. Per annullare "
+"l'assegnazione, fai clic su :guilabel:`Annulla assegnazione`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:118
 msgid ""
@@ -33761,6 +34057,11 @@ msgid ""
 "all available units across all |SOs|, click :guilabel:`Assign All` at the "
 "top."
 msgstr ""
+"In alternativa, per assegnare tutte le unità disponibili a tutti i prodotti "
+"in un ordine di vendita, fai clic su :guilabel:`Assegna tutto` nella riga "
+"corrispondente dell'ordine di vendita. Per assegnare tutte le unità "
+"disponibili a tutti gli ordini di vendita, fai clic su :guilabel:`Assegna "
+"tutto` nella parte superiore."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:122
 msgid ""
@@ -33769,6 +34070,10 @@ msgid ""
 "allocate as many units as available on the |PO| to fulfill the quantity "
 "specified on the |SO|."
 msgstr ""
+"La quantità di unità prenotabili per ciascun prodotto viene calcolata "
+"automaticamente nell’ordine, a partire dall'ordine di vendita più vecchio. "
+"Ciò consente agli utenti di assegnare tutte le unità disponibili nell'ordine "
+"di acquisto per soddisfare la quantità specificata nell'ordine di vendita."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:127
 msgid ""
@@ -33778,6 +34083,13 @@ msgid ""
 "this |PO| can be assigned to |SO| B, which will create a backorder due to "
 "insufficient supply."
 msgstr ""
+"Ad esempio, nell'ordine di vendita A vengono richieste cinque *Sedie* e "
+"nell'ordine di vendita B richiede cinque *Sedie*. Viene creato un ordine di "
+"acquisto per otto unità. Nel rapporto di ricezione, l'ordine di vendita A "
+"viene elencato per primo con cinque unità prenotabili. Le restanti tre unità "
+"disponibili di questo ordine di acquisto possono essere assegnate all'ordine "
+"di vendita B per il quale verrà creato un ordine residuo a causa delle "
+"scorte non sufficienti."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:132
 msgid ""
@@ -33787,10 +34099,16 @@ msgid ""
 "be accessed from the |PO| via the :icon:`fa-dollar` :guilabel:`Sale` smart "
 "button."
 msgstr ""
+"Gli ordini di vendita con unità assegnate vengono collegati automaticamente "
+"all'ordine di acquisto. Gli utenti possono accedere a questo ordine di "
+"acquisto direttamente dall'ordine di vendita tramite il pulsante :icon:`fa-"
+"credit-card`:guilabel:`Acquisto`. Allo stesso modo, è possibile accedere "
+"all'ordine di vendita associato dall'ordine di acquisto tramite il "
+"pulsante :icon:`fa-dollar`:guilabel:`Vendita`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:140
 msgid "Validate receipt"
-msgstr ""
+msgstr "Convalidare la ricezione"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:142
 msgid ""
@@ -33799,10 +34117,15 @@ msgid ""
 "truck` :guilabel:`Receipt` to open the receipt. Then, "
 "click :guilabel:`Validate` to receive the products into stock."
 msgstr ""
+"Dopo avere assegnato le unità desiderate è il momento di ricevere le scorte. "
+"Per farlo, apri l'ordine di acquisto e fai clic su :guilabel:`Ricevi "
+"prodotti` oppure su :icon:`fa-truck`:guilabel:`Ricezione` per aprire la "
+"ricezione stessa. In seguito, fai clic su :guilabel:`Valida` per ricevere i "
+"prodotti in magazzino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:149
 msgid "Validate delivery"
-msgstr ""
+msgstr "Convalidare la consegna"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:151
 msgid ""
@@ -33812,22 +34135,34 @@ msgid ""
 "*Operations* tab is populated with a new line showing the "
 "allocated :guilabel:`Product` and its allocated :guilabel:`Quantity`."
 msgstr ""
+"Dopo aver ricevuto le scorte, completa l'ordine di consegna per l'ordine di "
+"vendita del cliente. Per farlo, apri l'ordine di vendita, fai clic "
+"su :guilabel:`Consegna` per aprire l'ordine di consegna. Nota che la scheda "
+"*Operazioni* viene popolata con una nuova riga che mostra "
+"il :guilabel:`Prodotto` assegnato e le rispettive :guilabel:`Quantità`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:156
 msgid ""
 "Finally, click :guilabel:`Validate` to confirm that the products have been "
 "delivered to the customer."
 msgstr ""
+"Infine, fai clic su :guilabel:`Valida` per confermare che i prodotti siano "
+"stati consegnati al cliente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:None
 msgid "A delivery order for reserved products using reception report in Odoo."
 msgstr ""
+"Un ordine di consegna per prodotti riservati utilizzando il rapporto di "
+"ricezione in Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:163
 msgid ""
 "The following example demonstrates how a reception report is used to "
 "allocate stock for a customer |SO| of higher priority."
 msgstr ""
+"L’esempio seguente illustra come un rapporto di ricezione venga utilizzato "
+"per assegnare le scorte all'ordine di vendita di un cliente con priorità più "
+"elevata."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:166
 msgid ""
@@ -33835,6 +34170,9 @@ msgid ""
 "a *Chair*. Customer B also orders 75 units of the same product but needs "
 "them as soon as possible."
 msgstr ""
+"Vengono creati due ordini di vendita per clienti diversi. A ordina 75 unità "
+"di una *sedia*. Anche il cliente B ordina 75 unità dello stesso prodotto ma "
+"ne ha bisogno il prima possibile."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:169
 msgid ""
@@ -33844,6 +34182,12 @@ msgid ""
 "replenish the remaining 50 units from Vendor B, which will be available next "
 "week."
 msgstr ""
+"Non ci sono scorte disponibili per la *sedia* quindi l'utente crea e "
+"conferma un ordine di acquisto per rifornirsi del prodotto dal fornitore A. "
+"Questo fornitore può fornire solo 100 unità della *sedia* questa settimana. "
+"Pertanto, l'utente crea e conferma un altro ordine di acquisto per "
+"rifornirsi delle restanti 50 unità dal fornitore B che saranno disponibili "
+"la prossima settimana."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:174
 msgid ""
@@ -33852,6 +34196,12 @@ msgid ""
 "reservable units, then Customer B's |SO| with 25 reservable units. Vendor "
 "B's report lists the |SO| for Customer A with 50 reservable units."
 msgstr ""
+"Dopo aver confermato l'ordine di acquisto, l'utente apre i rapporti di "
+"ricezione per le ricezioni di ogni fornitore. Il rapporto del fornitore A "
+"elenca gli ordini di vendita del Cliente A con 75 unità prenotabili e "
+"l'ordine di vendita del Cliente B con 25 unità prenotabili. Il rapporto del "
+"fornitore B elenca l'ordine di vendita per il Cliente A con 50 unità "
+"prenotabili."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:179
 msgid ""
@@ -33862,12 +34212,21 @@ msgid ""
 "report, updating Customer A's previous quantity of 75 units to 25 units and "
 "Customer B's quantity to 75 units."
 msgstr ""
+"Dato che l’utente desidera dare priorità all’ordine del Cliente B, vuole "
+"assicurarsi che il Cliente B riceva 75 unità dal Fornitore A, il quale può "
+"garantire una consegna più rapida. Per farlo, apre innanzitutto il rapporto "
+"di ricezione del Fornitore B e assegna 50 unità all’ordine di vendita e del "
+"Cliente A. Odoo ricalcola quindi il rapporto di ricezione del Fornitore A, "
+"aggiornando la quantità precedente del Cliente A da 75 a 25 unità e quella "
+"del Cliente B a 75 unità."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:185
 msgid ""
 "The user can now assign all 75 units from Vendor A to fulfill Customer B's "
 "delivery."
 msgstr ""
+"L'utente può ora assegnare tutte le 75 unità del fornitore A per evadere la "
+"consegna del cliente B."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:190
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:125
@@ -33879,6 +34238,8 @@ msgid ""
 "Users can print labels for allocated products to ensure that they are "
 "correctly designated to the appropriate customer."
 msgstr ""
+"Gli utenti possono stampare le etichette per i prodotti assegnati per "
+"assicurarsi che siano correttamente attribuiti al cliente appropriato."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:195
 msgid ""
@@ -33887,10 +34248,16 @@ msgid ""
 "includes a scannable barcode at the top for the receipt order. Additional "
 "barcodes are also included for any delivery orders with allocated units."
 msgstr ""
+"Dopo aver assegnato le unità desiderate, fai clic su :guilabel:`Stampa` "
+"nella parte superiore per scaricare un PDF del rapporto di ricezione "
+"relativo alle unità assegnate. Il rapporto include un codice a barre "
+"scansionabile nella parte superiore per l’ordine di ricezione. Sono inclusi "
+"anche codici a barre aggiuntivi per eventuali ordini di consegna con unità "
+"assegnate."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:None
 msgid "A printed reception report of assigned units in Odoo."
-msgstr ""
+msgstr "Un rapporto di ricezione stampato delle unità assegnate in Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:202
 msgid ""
@@ -33899,10 +34266,15 @@ msgid ""
 "label displays the name of the product, its associated |SO| number, and its "
 "customer."
 msgstr ""
+"Se i prodotti sono stati assegnati, gli utenti possono anche fare clic "
+"su :guilabel:`Stampa etichette` per stampare un'etichetta individuale per "
+"ciascuna unità dei prodotti assegnati. Ogni etichetta riporta il nome del "
+"prodotto, il numero di ordine di vendita associato e il cliente "
+"corrispondente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:None
 msgid "Printed labels for a reception report in Odoo."
-msgstr ""
+msgstr "Etichette stampate per un rapporto di ricezione in Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:3
 msgid "Scrap inventory"
@@ -50776,12 +51148,17 @@ msgid ""
 "<manufacturing/subcontracting-dropship/workflow>`, users must first follow "
 "the configuration process below:"
 msgstr ""
+"Per utilizzare il :ref:`flusso di lavoro <manufacturing/subcontracting-"
+"dropship/workflow>` *Dropshipping al subappaltatore*, gli utenti devono "
+"prima seguire il seguente processo di configurazione:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:33
 msgid ""
 ":ref:`Specify the subcontractor <manufacturing/subcontracting_dropship/"
 "config/product-config>` as a vendor on the subcontracted product."
 msgstr ""
+":ref:`specifica il subappaltatore <manufacturing/subcontracting_dropship/"
+"config/product-config>` come fornitore nel prodotto in subappalto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:35
 msgid ""
@@ -50789,6 +51166,9 @@ msgid ""
 "subcontracting_dropship/config/bom-config>` for the product and add the "
 "necessary components."
 msgstr ""
+":ref:`crea una distinta base di subappalto <manufacturing/"
+"subcontracting_dropship/config/bom-config>` per il prodotto e aggiungi i "
+"componenti necessari;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:38
 msgid ""
@@ -50827,7 +51207,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:57
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:42
 msgid "Specify product vendor"
-msgstr ""
+msgstr "Specificare il fornitore del prodotto"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:59
 msgid ""
@@ -50883,7 +51263,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:81
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:67
 msgid "Configure |BoM|"
-msgstr ""
+msgstr "Configurare una distinta base"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:83
 msgid ""
@@ -50993,30 +51373,40 @@ msgid ""
 "The *Dropship to Subcontractor* workflow can be summarized in the following "
 "steps:"
 msgstr ""
+"Il flusso di lavoro *Dropshipping al subappaltatore* può essere riassunto "
+"nei seguenti passaggi:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:135
 msgid ""
 ":ref:`Create and confirm a subcontractor PO <manufacturing/subcontracting-"
 "dropship/workflow/create-po>`."
 msgstr ""
+":ref:`crea e conferma un ordine di acquisto per un subappaltatore "
+"<manufacturing/subcontracting-dropship/workflow/create-po>`;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:137
 msgid ""
 "Open and :ref:`confirm the dropship vendor request for quotation (RfQ) "
 "<manufacturing/subcontracting-dropship/workflow/confirm-rfq>`."
 msgstr ""
+"apri e :ref:`conferma la richiesta di preventivo del fornitore con "
+"dropshipping <manufacturing/subcontracting-dropship/workflow/confirm-rfq>`;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:139
 msgid ""
 ":ref:`Validate the dropship order <manufacturing/subcontracting-dropship/"
 "workflow/validate-dropship>` to send the components."
 msgstr ""
+":ref:`convalida l'ordine di dropshipping <manufacturing/subcontracting-"
+"dropship/workflow/validate-dropship>` per inviare i componenti;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:141
 msgid ""
 ":ref:`Validate the receipt <manufacturing/subcontracting-dropship/workflow/"
 "process-receipt>` to receive the final product."
 msgstr ""
+":ref:`convalida la ricezione <manufacturing/subcontracting-dropship/workflow/"
+"process-receipt>` per ricevere il prodotto finale."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
 msgid "Diagram of dropship to subcontractor workflow."
@@ -51028,6 +51418,8 @@ msgid ""
 "The workflow begins by creating a |PO| to purchase the product from the "
 "subcontractor (1)."
 msgstr ""
+"Il flusso di lavoro inizia con la creazione di un ordine di acquisto per "
+"acquistare il prodotto dal subappaltatore (1)."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:149
 msgid ""
@@ -51047,6 +51439,13 @@ msgid ""
 "subcontractor begins to manufacture the final product with the components "
 "and ships it to the contractor when done."
 msgstr ""
+"Successivamente, l’appaltatore conferma la richiesta di preventivo "
+"trasformandolo nell'ordine di acquisto del *fornitore* per poi creare un "
+"ordine in dropshipping per inviare i componenti dal fornitore al "
+"subappaltatore (3). Una volta che l’appaltatore convalida l’ordine in "
+"dropshipping, il subappaltatore inizia a effettuare la produzione del "
+"prodotto finale con i componenti e lo spedisce all’appaltatore una volta "
+"terminato."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:157
 msgid ""
@@ -51055,11 +51454,15 @@ msgid ""
 "subcontracting-dropship/workflow/track-inventory>` from the subcontractor to "
 "the company's stock (4, 5)."
 msgstr ""
+"Una volta che il prodotto è stato realizzato e ricevuto, l’appaltatore "
+"convalida la ricezione (6) per attivare i :ref:`movimenti di magazzino "
+"<manufacturing/subcontracting-dropship/workflow/track-inventory>` dal "
+"subappaltatore al magazzino dell’azienda (4, 5)."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:164
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:119
 msgid "Create and confirm subcontractor |PO|"
-msgstr ""
+msgstr "Creare e confermare gli ordini di acquisto dei fornitori"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:177
 msgid ""
@@ -51248,12 +51651,18 @@ msgid ""
 "subcontracting_resupply/workflow>`, users must follow the configuration "
 "process below:"
 msgstr ""
+"Per poter utilizzare il :ref:`flusso di lavoro <manufacturing/"
+"subcontracting_resupply/workflow>` di rifornimento per il subappaltatore, "
+"gli utenti devono seguire la procedura di configurazione riportata di "
+"seguito:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:28
 msgid ""
 ":ref:`Specify the subcontractor <manufacturing/subcontracting_resupply/"
 "config/product-config>` as a vendor on the subcontracted product."
 msgstr ""
+":ref:`specifica il subappaltatore <manufacturing/subcontracting_resupply/"
+"config/product-config>` come fornitore del prodotto richiesto in subappalto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:30
 msgid ""
@@ -51261,6 +51670,9 @@ msgid ""
 "subcontracting_resupply/config/bom-config>` for the product and add the "
 "necessary components."
 msgstr ""
+":ref:`crea una distinta base di subappalto <manufacturing/"
+"subcontracting_resupply/config/bom-config>` per il prodotto e aggiungi i "
+"componenti necessari;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:33
 msgid ""
@@ -51341,24 +51753,33 @@ msgid ""
 "The resupply subcontracting workflow can be summarized in the following "
 "steps:"
 msgstr ""
+"Il flusso di lavoro relativo al subappalto per il rifornimento può essere "
+"riassunto nei seguenti passaggi:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:94
 msgid ""
 ":ref:`Create and confirm a subcontractor PO <manufacturing/"
 "subcontracting_resupply/workflow/create-po>`."
 msgstr ""
+":ref:`crea e conferma un ordine di acquisto per il subappaltatore "
+"<manufacturing/subcontracting_resupply/workflow/create-po>`;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:96
 msgid ""
 ":ref:`Validate the resupply order <manufacturing/subcontracting_resupply/"
 "workflow/validate-resupply>` to send the components."
 msgstr ""
+":ref:`convalida l'ordine di rifornimento <manufacturing/"
+"subcontracting_resupply/workflow/validate-resupply>` per inviare i "
+"componenti;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:98
 msgid ""
 ":ref:`Validate the receipt <manufacturing/subcontracting_resupply/workflow/"
 "process-receipt>` to receive the final product."
 msgstr ""
+":ref:`convalida la ricezione <manufacturing/subcontracting_resupply/workflow/"
+"process-receipt>` per ricevere il prodotto finale."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
 msgid "Diagram of resupply subcontracting workflow in Odoo MRP Subcontracting."
@@ -51381,6 +51802,8 @@ msgid ""
 "Next, the contractor validates the transfer of components to the "
 "subcontractor (3). The subcontractor begins producing the product."
 msgstr ""
+"Successivamente, l’appaltatore convalida il trasferimento dei componenti al "
+"subappaltatore (3). Il subappaltatore inizia a produrre il prodotto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:112
 msgid ""
@@ -51389,6 +51812,10 @@ msgid ""
 "subcontracting_resupply/workflow/track-inventory>` from the subcontractor to "
 "the company's stock (4, 5)."
 msgstr ""
+"Una volta che il prodotto è stato realizzato e ricevuto, l’appaltatore "
+"convalida la ricezione (6) per attivare i :ref:`movimenti di magazzino "
+"<manufacturing/subcontracting_resupply/workflow/track-inventory>` dal "
+"subappaltatore al magazzino dell’azienda (4, 5)."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:121
 msgid ""
@@ -51590,11 +52017,11 @@ msgstr ""
 "Con l'impostazione :guilabel:`Sottoprodotti` abilitata, una "
 "scheda :guilabel:`Sottoprodotti` appare nelle |BoMs| dei prodotti."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:38
 msgid "Add byproduct to BoM"
 msgstr "Aggiungi sottoprodotto alla distinta base"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:40
 msgid ""
 "To add by-products to a |BoM|, navigate to :menuselection:`Manufacturing app "
 "--> Products --> Bills of Materials`, and select a |BoM|."
@@ -51602,7 +52029,7 @@ msgstr ""
 "Per aggiungere sottoprodotti a una |BoM|, andare su :menuselection:`app "
 "Produzione --> Prodotti --> Distinte base` e selezionare una |BoM|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:43
 msgid ""
 "On the |BoM|, select the :guilabel:`By-products` tab. Click :guilabel:`Add a "
 "line`, and select the by-product in the :guilabel:`By-product` drop-down "
@@ -51614,7 +52041,7 @@ msgstr ""
 "tendina :guilabel:`Sottoprodotto`. Nel campo :guilabel:`Quantità`, inserire "
 "la quantità del sottoprodotto prodotto durante la lavorazione."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:47
 msgid ""
 "If the by-product is produced during a specific operation of a manufacturing "
 "order (MO), select the operation in the :guilabel:`Produced in Operation` "
@@ -51635,11 +52062,11 @@ msgstr ""
 "La scheda Sottoprodotti di una distinta base, configurata con un "
 "sottoprodotto \"Legno di scarto\"."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:55
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:57
 msgid "Manufacture by-product"
 msgstr "Produci sottoprodotto"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:59
 msgid ""
 "When an |MO| is completed and marked as *Done*, Odoo registers the quantity "
 "of by-products created during the manufacturing process. To create a new |"
@@ -51651,7 +52078,7 @@ msgstr ""
 "creare un nuovo |MO|, andare su :menuselection:`app Produzione --> "
 "Operazioni --> Ordini di produzione` e fare clic su :guilabel:`Nuovo`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:61
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:63
 msgid ""
 "In the :guilabel:`Bill of Material` field, select a |BoM| on which by-"
 "products have been specified. After doing so, the :guilabel:`Product` field "
@@ -51663,7 +52090,7 @@ msgstr ""
 "campo :guilabel:`Prodotto` si compila automaticamente con il prodotto "
 "corrispondente. Fare clic su :guilabel:`Conferma` per confermare l'|MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:67
 msgid ""
 "When manufacturing is completed, click the :guilabel:`Produce All` button at "
 "the top of the |MO|. After doing so, inventory counts update to reflect the "
@@ -51674,7 +52101,7 @@ msgstr ""
 "magazzino si aggiornano per riflettere la quantità di sottoprodotto/i "
 "prodotto/i, così come la quantità del prodotto."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:71
 msgid ""
 "Click the :guilabel:`Product Moves` smart button at the top of the |MO| page "
 "to see the movements of components and products. Each by-product is listed "
@@ -52283,6 +52710,186 @@ msgstr ""
 "questo processo (feedback dei clienti, controllo qualità, ecc.) sono sempre "
 "attivi, può essere riutilizzato per aggiornare continuamente prodotti e "
 "processi."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:3
+msgid "Dismantle products into components"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:8
+msgid ""
+"Some companies may take in products from external sources and retain "
+"components of those products for future use. For example, a car junkyard may "
+"take in cars that are no longer functional and break them down into their "
+"components, selling the functional parts to mechanics, who can make use of "
+"those parts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:13
+msgid ""
+"While :doc:`unbuild orders <unbuild_orders>` apply to products that are "
+"manufactured, purchased products being disassembled rely on a bill of "
+"material's (BoM) :doc:`by-products <byproducts>` to split the item into "
+"components and add those parts to inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:17
+msgid ""
+"Creating by-products ensures that the components for each product can be "
+"entered into inventory, complete with serial numbers (if they are used)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:20
+msgid "Typically, the process is as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:22
+msgid ""
+":ref:`Create a bill of materials for the product to dismantle <manufacturing/"
+"dismantle_products/create-bom>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:24
+msgid "Create a manufacturing order (MO) for the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:25
+msgid ""
+":ref:`Break down the product into its by-product components <manufacturing/"
+"dismantle_products/dismantle>` and enter any tracking numbers (like lots or "
+"serial numbers) for the component parts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:28
+msgid ""
+":ref:`Enter parts into inventory <manufacturing/dismantle_products/"
+"inventory>` by clicking :guilabel:`Produce All` on the manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:36
+msgid ""
+"To set up Odoo to dismantle products into by-products, navigate "
+"to :menuselection:`Manufacturing app --> Configuration --> Settings`. In the "
+"*Operations* section, select the :guilabel:`By-Products` checkbox."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
+msgid "Enable By-Products in the Manufacturing configuration settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:46
+msgid "Create bill of materials"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:48
+msgid "First, create a new |BoM| for the product that will be dismantled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:50
+msgid ""
+"Set up a :ref:`new BoM <manufacturing/basic_setup/bom-setup>`. Be sure to "
+"name the product in a way that differentiates it from the product being "
+"disassembled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:53
+msgid ""
+"Add the product being disassembled to the |BoM| as a component. Doing this "
+"will ensure that the on-hand quantity of the product being disassembled will "
+"decrease by `1` every time an |MO| is completed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:57
+msgid ""
+":ref:`Add by-products <manufacturing/byproducts/add-to-bom>` to the |BoM| "
+"that define the components that will be entered into inventory as a result "
+"of an |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
+msgid "A Car bill of materials with parts listed as by-products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:63
+msgid ""
+"If necessary, add work orders and operations to the |BoM| to track "
+"disassembly."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:65
+msgid "After the |BoM| is created, create an |MO| and confirm it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:68
+msgid ":doc:`../basic_setup/one_step_manufacturing`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:69
+msgid ":doc:`../basic_setup/two_step_manufacturing`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:70
+msgid ":doc:`../basic_setup/three_step_manufacturing`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:75
+msgid "Dismantle product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:77
+msgid ""
+"After the |MO| is confirmed, the product can be broken down into its "
+"component parts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:79
+msgid "Retrieve the parts, or by-products, from the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:81
+msgid ""
+"If the by-products are tracked by lot or serial number, open the *By-"
+"Products* tab of the |MO|. Click the :icon:`fa-list` :guilabel:`(Show "
+"Details)` icon to open the *Move Byproduct* window. Enter the :guilabel:`Lot/"
+"Serial Number` for each by-product, then click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
+msgid "Two axle by-products are assigned serial numbers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:91
+msgid "Enter by-products into inventory"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:93
+msgid ""
+"To enter the by-products into inventory, click the :guilabel:`Produce All` "
+"button on the |MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:95
+msgid ""
+"To confirm that the products have been entered into inventory, click "
+"the :icon:`oi-arrow-up` :guilabel:`Traceability` smart button. A "
+"*Traceability Report* opens, showing the manufacturing order responsible for "
+"creating the by-products in the :guilabel:`Reference` column, "
+"the :guilabel:`Lot/Serial #` associated with the by-products, where it is "
+"moving :guilabel:`From` and :guilabel:`To`, and the :guilabel:`Quantity`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
+msgid "A traceability report for a car and its by-products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:104
+msgid ""
+"Similar information can be found on the :icon:`fa-"
+"exchange` :guilabel:`Product Moves` smart button of the manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
+msgid "An Inventory Moves report for a car and its by-products."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacture_lots_serials.rst:3
 msgid "Manufacture with lots and serial numbers"
@@ -53635,6 +54242,14 @@ msgid ""
 "planning against an expected future demand to ensure continued availability "
 "of stock."
 msgstr ""
+"In Odoo **Produzione**, il Piano Generale di Produzione viene utilizzato per "
+"pianificare il rifornimento a lungo termine dei prodotti sulla base di una "
+"previsione della domanda regolabile manualmente. Sebbene le strategie Make-"
+"to-Order (MTO) o le regole di riordino siano utili per rifornire "
+"immediatamente le scorte, i prodotti o i componenti con tempi di consegna "
+"lunghi o con una domanda stagionale variabile potrebbero richiedere una "
+"pianificazione a più lungo termine in base alla domanda futura prevista, al "
+"fine di garantire la disponibilità continua delle scorte."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:22
 msgid ""
@@ -53642,6 +54257,10 @@ msgid ""
 "future time periods, generating suggested replenishment quantities based on "
 "forecasted demand and on user-specified stock targets."
 msgstr ""
+"Grazie al Piano Generale di Produzione, gli utenti possono pianificare il "
+"rifornimento di prodotti specifici per periodi futuri così da generare "
+"quantità di rifornimento suggerite in base alla domanda prevista e agli "
+"obiettivi di magazzino specificati dall’utente."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:27
 msgid ""
@@ -53650,6 +54269,10 @@ msgid ""
 "to be replenished, requiring the user to actually create the replenishing |"
 "POs|/|MOs|."
 msgstr ""
+"L'aggiunta di un prodotto al Piano Generale di Produzione **non** crea "
+"automaticamente un ordine di acquisto o di produzione. Il Piano suggerisce "
+"solamente la quantità di prodotto da rifornire richiedendo all'utente di "
+"creare effettivamente gli ordini di acquisto/produzione per il rifornimento."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:31
 msgid ""
@@ -53657,6 +54280,10 @@ msgid ""
 "**not** be applied to products added to the |MPS|. Doing so creates "
 "inaccurate forecasts and unnecessary replenishment orders."
 msgstr ""
+"Poiché il Piano Generale di Produzione si basa sul rifornimento manuale, le "
+"regole di riordino **non** dovrebbero essere applicate ai prodotti aggiunti "
+"al Piano stesso. Ciò comporterebbe previsioni inaccurate e ordini di "
+"rifornimento non necessari."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:36
 msgid ""
@@ -53667,6 +54294,13 @@ msgid ""
 "enter a greater demand in the |MPS| to properly replenish ahead of this "
 "future customer demand."
 msgstr ""
+"Un negozio al dettaglio vende *alberi di Natale* artificiali durante le "
+"festività natalizie. Attualmente siamo a settembre e il negozio ha meno di "
+"dieci ordini di produzione per gli alberi di Natale confermati per il mese "
+"di dicembre. Il responsabile dell’approvvigionamento sa che la domanda di "
+"alberi di Natale raggiunge il picco a dicembre. Di conseguenza, inserisce "
+"manualmente una domanda maggiore nel Piano per rifornire adeguatamente le "
+"scorte in vista di questa futura domanda dei clienti."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:47
 msgid ""
@@ -53675,10 +54309,14 @@ msgid ""
 "select the :guilabel:`Master Production Schedule` checkbox in "
 "the :guilabel:`Planning` section."
 msgstr ""
+"Per utilizzare il Piano, è necessario attivare la funzionalità "
+"corrispondente. Apri l'app :menuselection:`Produzione --> Configurazione --> "
+"Impostazioni` e spunta la casella :guilabel:`Piano Generale di Produzione` "
+"nella sezione :guilabel:`Pianificazione`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:51
 msgid "After enabling the feature, two new columns appear below:"
-msgstr ""
+msgstr "Dopo aver attivato la funzione, sotto compaiono due nuove colonne:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:53
 msgid ""
@@ -53687,12 +54325,18 @@ msgid ""
 "a :guilabel:`Yearly`, :guilabel:`Monthly`, :guilabel:`Weekly`, "
 "or :guilabel:`Daily` basis."
 msgstr ""
+":guilabel:`Intervallo di tempo predefinito`: seleziona il periodo di tempo "
+"su cui si basa la pianificazione, a scelta "
+"tra :guilabel:`Annuale`, :guilabel:`Mensile`, :guilabel:`Settimanale` "
+"o :guilabel:`Giornaliera`;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:55
 msgid ""
 ":guilabel:`Number of Periods`: Specify the number of periods to display for "
 "each time range."
 msgstr ""
+":guilabel:`Numero di periodi`: specifica il numero di periodi da "
+"visualizzare per ciascun intervallo di tempo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:58
 msgid ""
@@ -53700,10 +54344,14 @@ msgid ""
 "and the :guilabel:`Number of Periods` field is set to `12`, the |MPS| shows "
 "one column for each of the next 12 months, starting with the current month."
 msgstr ""
+"Se il campo :guilabel:`Intervallo di tempo predefinito` è impostato "
+"su :guilabel:`Mensile` e il campo :guilabel:`Numero di periodi` è impostato "
+"su `12`, il Piano mostra una colonna per ciascuno dei prossimi 12 mesi, a "
+"partire dal mese corrente."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:62
 msgid "Finally, click :guilabel:`Save` to load the changes."
-msgstr ""
+msgstr "Infine, fai clic su :guilabel:`Salva` per caricare le modifiche."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The MPS setting in the Manufacturing app's settings."
@@ -53720,10 +54368,17 @@ msgid ""
 "with the time periods represented as columns and each product :ref:`added to "
 "the MPS <manufacturing/mps/add-product>` as an individual grouping of rows."
 msgstr ""
+"Per aprire il piano, apri l'app :menuselection:`Produzione --> "
+"Pianificazione --> Piano Generale di Produzione`. Il Piano ha una struttura "
+"a griglia e i periodi di tempo sono rappresentati come colonne e ogni "
+"prodotto :ref:`aggiunto al Piano <manufacturing/mps/add-product>` viene "
+"visualizzato come un raggruppamento indipendente di righe."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:76
 msgid "By default, the group of rows for each product includes the following:"
 msgstr ""
+"Per impostazione predefinita, il gruppo di righe per ciascun prodotto "
+"include quanto segue:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:78
 msgid ""
@@ -53733,12 +54388,21 @@ msgid ""
 "the beginning of each time period. Clicking the :guilabel:`[Product]` link "
 "opens the product's forecasted report."
 msgstr ""
+":guilabel:`[Prodotto] per [Unità] - [Azienda]`: la riga di intestazione con "
+"il nome del prodotto, la sua unità di misura e la sua azienda (se "
+"applicabile). Per impostazione predefinita, le celle di questa riga mostrano "
+"la quantità di scorte iniziale del prodotto all’inizio di ciascun periodo di "
+"tempo. Facendo clic sul link :guilabel:`[Prodotto]` si apre il resoconto "
+"delle previsioni relative al prodotto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:82
 msgid ""
 ":guilabel:`- Forecasted Demand`: The user's estimated demand for the product "
 "during each time period. Cells in this row can be entered manually."
 msgstr ""
+":guilabel:`- Domanda prevista`: la domanda stimata dell’utente per il "
+"prodotto in ciascun periodo di tempo. Le celle di questa riga possono essere "
+"compilate manualmente;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:84
 msgid ""
@@ -53746,6 +54410,9 @@ msgid ""
 "component from existing |MOs|. This row **only** appears if the product is a "
 "component of another product."
 msgstr ""
+":guilabel:`- Previsione domanda indiretta`: la domanda prevista per il "
+"componente proveniente dall’ordine di produzione esistente. Questa riga "
+"appare **solo** se il prodotto è il componente di un altro prodotto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:86
 msgid ""
@@ -53758,6 +54425,15 @@ msgid ""
 "manually :ref:`replenishes <manufacturing/mps/replenish>` the product based "
 "on the quantity suggested or entered."
 msgstr ""
+":guilabel:`+ Rifornimento`: la quantità specificata dall’utente del prodotto "
+"da rifornire tramite ordine di produzione o di acquisto. I valori in queste "
+"celle vengono suggeriti automaticamente in base agli *obiettivi di scorta di "
+"sicurezza* e ai minimi/massimi di rifornimento specificati "
+"nelle :ref:`impostazioni di programmazione <manufacturing/mps/add-product>` "
+"del prodotto. Tuttavia, gli utenti possono anche modificare manualmente "
+"questi valori. Facendo clic sul pulsante :guilabel:`Ordina` il prodotto "
+"viene :ref:`rifornito <manufacturing/mps/replenish>` manualmente in base "
+"alla quantità suggerita o inserita;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:92
 msgid ""
@@ -53765,6 +54441,9 @@ msgid ""
 "at the end of each time period, assuming that suggested replenishment "
 "numbers are fulfilled."
 msgstr ""
+":guilabel:`= Giacenza prevista`: la quantità prevista delle scorte del "
+"prodotto alla fine di ciascun periodo, ipotizzando che i livelli di "
+"rifornimento suggeriti vengano rispettati;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:95
 msgid ""
@@ -53772,6 +54451,9 @@ msgid ""
 "filters>` can be selected in their respective sections of "
 "the :guilabel:`Search...` bar drop-down menu at the top."
 msgstr ""
+"È possibile selezionare :ref:`righe e filtri <manufacturing/mps/additional-"
+"rows-filters>` aggiuntivi nelle sezioni corrispondenti del menu a tendina "
+"della barra :guilabel:`di ricerca` in alto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:99
 msgid ""
@@ -53779,6 +54461,9 @@ msgid ""
 "useful to enable the :guilabel:`Actual Demand` category in "
 "the :guilabel:`Search...` bar."
 msgstr ""
+"Sebbene il Piano Generale di Produzione possa essere utilizzato solo con le "
+"categorie predefinite, potrebbe essere utile abilitare la "
+"categoria :guilabel:`Domanda effettiva` nella barra :guilabel:`di ricerca`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:102
 msgid ""
@@ -53787,6 +54472,10 @@ msgid ""
 "Demand` category, displaying both the confirmed demand for the product based "
 "on confirmed |SOs| and the forecasted demand."
 msgstr ""
+"Dopo aver attivato l'opzione :guilabel:`Domanda effettiva`, la "
+"categoria :guilabel:`- Domanda prevista` diventa :guilabel:`Domanda "
+"effettiva/prevista` e mostrerà sia la domanda confermata basata sugli ordini "
+"di vendita confermati che la domanda prevista."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Master Production Schedule in the Manufacturing app."
@@ -53794,7 +54483,7 @@ msgstr "Il programma di produzione principale nell'app Produzione."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:110
 msgid "Relationship between rows"
-msgstr ""
+msgstr "Relazione tra righe"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:112
 msgid ""
@@ -53802,6 +54491,10 @@ msgid ""
 "Indirect Demand Forecast` (if applicable), :guilabel:`+ Replenishment`, "
 "and :guilabel:`= Forecasted Stock` values define the following relation:"
 msgstr ""
+"Insieme, le scorte iniziali, la :guilabel:`- Domanda prevista`, "
+"la :guilabel:`- Domanda prevista indiretta` (se applicabile), "
+"il :guilabel:`+ Rifornimento`, e le :guilabel:`= Scorte previste` "
+"definiscono la seguente relazione:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:116
 msgid ""
@@ -53812,6 +54505,12 @@ msgid ""
 "&+ \\text{Replenishment}\n"
 "\\end{align}"
 msgstr ""
+"\\begin{align}\n"
+"\\text{Scorte previste} &= \\text{Scorte iniziali} \\\\\n"
+"&- \\text{Domanda prevista} \\\\\n"
+"&- \\text{Domanda prevista indiretta} \\\\\n"
+"&+ \\text{Rifornimento}\n"
+"\\end{align}"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:125
 msgid ""
@@ -53822,6 +54521,12 @@ msgid ""
 "time period is updated with the previous period's :guilabel:`= Forecasted "
 "Stock`."
 msgstr ""
+"Le celle :guilabel:`- Domanda prevista` e :guilabel:`+ Rifornimento` possono "
+"essere modificate manualmente per qualsiasi periodo di tempo. In questo "
+"modo, il valore visualizzato nelle celle :guilabel:`= Scorte previste` viene "
+"aggiornato in base all’equazione. Di conseguenza, la quantità di scorte "
+"iniziale di ciascun periodo successivo viene aggiornata con il valore del "
+"periodo precedente :guilabel:`= Scorte previste`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:131
 msgid ""
@@ -53829,10 +54534,14 @@ msgid ""
 "value and displays an :icon:`fa-times` :guilabel:`(reset)` button next to "
 "the cell to reset it back to the default value calculated by the |MPS|."
 msgstr ""
+"Modificando il valore nella cella :guilabel:`+ Rifornimento`, il valore "
+"viene evidenziato e accanto alla cella viene visualizzato il "
+"pulsante :icon:`fa-times` :guilabel:`(ripristina)` per riportarlo al valore "
+"predefinito calcolato dal Piano Generale di Produzione."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:138
 msgid "Adding products to |MPS|"
-msgstr ""
+msgstr "Aggiungere prodotti al Piano"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:140
 msgid ""
@@ -53841,6 +54550,11 @@ msgid ""
 "Schedule`. At the top of the |MPS| page, click :guilabel:`Add a Product` to "
 "open the *Add a Product* pop-up window."
 msgstr ""
+"Per utilizzare il Piano per gestire il rifornimento di un prodotto, apri "
+"l'app :menuselection:`Produzione --> Pianificazione --> Piano Generale di "
+"Produzione`. Nella parte superiore della pagina, fai clic "
+"su :guilabel:`Aggiungi prodotto` per aprire la finestra pop-"
+"up :guilabel:`Aggiungi prodotto`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:145
 msgid ""
@@ -53854,6 +54568,8 @@ msgid ""
 "For manufactured products, the *Manufacture* route must be selected in the "
 "*Routes* section of the *Inventory* tab on the product's form."
 msgstr ""
+"Per i prodotti realizzati, è necessario selezionare il percorso *Produzione* "
+"nella sezione *Percorsi* della scheda *Magazzino* del prodotto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:150
 msgid ""
@@ -53862,20 +54578,26 @@ msgid ""
 "a :ref:`vendor pricelist <purchase/manage_deals/vendor-pricelist>` must be "
 "configured on the *Purchase* tab."
 msgstr ""
+"Per i prodotti acquistati, è necessario selezionare il percorso *Acquisto* "
+"nella sezione *Percorsi* della scheda *Magazzino* nel modulo del prodotto. "
+"Inoltre, è necessario configurare un :ref:`listino prezzi fornitore "
+"<purchase/manage_deals/vendor-pricelist>` nella scheda *Acquisti*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:155
 msgid "Enter product details"
-msgstr ""
+msgstr "Inserire dettagli prodotto"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:157
 msgid ""
 "On the pop-up window, select the product to add in the :guilabel:`Product` "
 "drop-down menu."
 msgstr ""
+"Nella finestra a comparsa, seleziona il prodotto da aggiungere nel menu a "
+"tendina :guilabel:`Prodotto`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:159
 msgid "Then, specify the following information about the product:"
-msgstr ""
+msgstr "In seguito, specifica le seguenti informazioni sul prodotto:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:161
 msgid ""
@@ -53883,18 +54605,26 @@ msgid ""
 "can be hidden when the :guilabel:`To Forecast` filter is selected in "
 "the :guilabel:`Search...` bar drop-down menu."
 msgstr ""
+":guilabel:`Domanda indiretta`: seleziona questa casella facoltativa se il "
+"prodotto può essere nascosto quando è selezionato il filtro :guilabel:`Da "
+"stimare` nel menu a tendina della barra :guilabel:`di ricerca`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:163
 msgid ""
 ":guilabel:`Bill of Materials`: Select the product's |BoM| if the product is "
 "manufactured."
 msgstr ""
+":guilabel:`Distinta base`: seleziona la |DiBa| del prodotto se il prodotto è "
+"in produzione;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:164
 msgid ""
 ":guilabel:`Route`: Select the replenishment route for the product (e.g., "
 "`Buy` for purchased products, `Manufacture` for manufactured products)."
 msgstr ""
+":guilabel:`Percorso`: seleziona il percorso di rifornimento del prodotto (ad "
+"es., `Acquisto` per i prodotti acquistati, `Produzione` per i prodotti "
+"fabbricati);"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:166
 msgid ""
@@ -53902,6 +54632,9 @@ msgid ""
 "appears if the :guilabel:`Buy` option was selected in the :guilabel:`Route` "
 "field."
 msgstr ""
+":guilabel:`Fornitore`: seleziona il fornitore del prodotto. Questo campo "
+"appare **solo** se l’opzione :guilabel:`Acquisto` è stata selezionata nel "
+"campo :guilabel:`Percorso`;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:168
 msgid ""
@@ -53911,6 +54644,12 @@ msgid ""
 "to enter a batch size, or leave it un-toggled if no batch size should be "
 "specified."
 msgstr ""
+":guilabel:`Dimensione lotto`: dividi gli ordini di produzione in ordini di "
+"questa quantità. Il campo appare **solo** se "
+"l'opzione :guilabel:`Produzione` è stata selezionata nel "
+"campo :guilabel:`Percorso`. Spunta la casella :guilabel:`Nessuna dimensione "
+"lotto` per aggiungere una dimensione oppure non spuntare la casella se non "
+"hai bisogno di specificare una dimensione per il lotto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:174
 msgid ""
@@ -53919,6 +54658,10 @@ msgid ""
 "components through the |MPS|, leave the :guilabel:`Bill of Materials` field "
 "blank."
 msgstr ""
+"La selezione di una distinta base (DiBa) durante l’aggiunta di un prodotto "
+"aggiunge anche tutti i componenti elencati nella DiBa al Piano. Se non è "
+"necessario gestire il rifornimento dei componenti tramite il Piano, lascia "
+"vuoto il campo :guilabel:`Distinta base`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:178
 msgid ""
@@ -53927,10 +54670,13 @@ msgid ""
 "Product` pop-up window to specify which warehouse the product is replenished "
 "to."
 msgstr ""
+"Se il database è configurato con più magazzini, nella finestra pop-"
+"up :guilabel:`Aggiungi un prodotto` compare il campo :guilabel:`Magazzino di "
+"produzione` per specificare in quale magazzino va rifornito il prodotto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
 msgid "Enter product replenishment options"
-msgstr ""
+msgstr "Inserire opzioni di rifornimento prodotti"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:185
 msgid ""
@@ -53938,18 +54684,25 @@ msgid ""
 "calculates suggested replenishment quantities for each product. Enter the "
 "following information:"
 msgstr ""
+"Successivamente, specifica le opzioni di rifornimento del prodotto per "
+"configurare il modo in cui il Piano calcola le quantità di rifornimento "
+"suggerite per ciascun prodotto. Inserisci le seguenti informazioni:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:188
 msgid ""
 ":guilabel:`Safety Stock Target`: Specify the minimum quantity of the product "
 "to be available across all time periods."
 msgstr ""
+":guilabel:`Obiettivo per giacenza di sicurezza`: specifica la quantità "
+"minima del prodotto che deve essere disponibile in tutti i periodi di tempo;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:190
 msgid ""
 ":guilabel:`Minimum to Replenish`: Specify the minimum quantity of the "
 "product to replenish for each period."
 msgstr ""
+":guilabel:`Minimo da rifornire`: specifica la quantità minima del prodotto "
+"da rifornire per ciascun periodo;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:192
 msgid ""
@@ -53959,6 +54712,12 @@ msgid ""
 "period. Toggle the :guilabel:`No Maximum` checkbox to enter a maximum value, "
 "or leave it un-toggled if no maximum should be specified."
 msgstr ""
+":guilabel:`Massimo da rifornire`: specifica la quantità massima del prodotto "
+"da rifornire per ciascun periodo. Se la domanda è superiore a tale massimo, "
+"la quantità rimanente viene automaticamente trasferita al periodo "
+"successivo. Seleziona la casella :guilabel:`No massimo` per inserire un "
+"valore massimo oppure non selezionarla se non desideri specificare alcun "
+"massimo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:197
 msgid ""
@@ -53968,6 +54727,12 @@ msgid ""
 "other words, the suggested quantity in the replenishment row is calculated "
 "by the following relation:"
 msgstr ""
+"Se non sono stati impostati limiti minimi o massimi di rifornimento, il "
+"Piano suggerisce la quantità di rifornimento necessaria per "
+"raggiungere :guilabel:`l'obiettivo di scorta di sicurezza` tenendo conto "
+"delle scorte iniziali e della domanda prevista. In altre parole, la quantità "
+"suggerita nella riga di rifornimento viene calcolata in base alla seguente "
+"relazione:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:202
 msgid ""
@@ -53978,6 +54743,12 @@ msgid ""
 "&- \\text{Indirect Demand Forecast}\n"
 "\\end{align}"
 msgstr ""
+"\\begin{align}\n"
+"\\text{Rifornimento} &= \\text{Obiettivo giacenza di sicurezza} \\\\\n"
+"&- \\text{Scorte iniziali} \\\\\n"
+"&- \\text{Domanda prevista} \\\\\n"
+"&- \\text{Domanda prevista indiretta}\n"
+"\\end{align}"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
 msgid ""
@@ -53985,36 +54756,47 @@ msgid ""
 "is always bounded by these limits, regardless of the needed quantity to "
 "reach the :guilabel:`Safety Stock Target`."
 msgstr ""
+"Se sono stati impostati limiti minimi o massimi, la quantità di rifornimento "
+"suggerita è sempre compresa entro tali limiti, indipendentemente dalla "
+"quantità necessaria per raggiungere :guilabel:`l’obiettivo di scorta di "
+"sicurezza` ."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:215
 msgid "Specify replenishment trigger"
-msgstr ""
+msgstr "Specificare il trigger di rifornimento"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
 msgid ""
 "Finally, in the :guilabel:`Replenishment Trigger` field, specify how the "
 "product should be replenished:"
 msgstr ""
+"Infine, nel campo :guilabel:`Attivazione rifornimento`, specifica come il "
+"prodotto deve essere rifornito:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
 msgid ":guilabel:`Manual`: Manually replenish the product from the |MPS|."
-msgstr ""
+msgstr ":guilabel:`Manuale`: rifornisci manualmente il prodotto dal Piano;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
 msgid ""
 ":guilabel:`Automatic`: Automatically schedule a replenishment order for the "
 "product."
 msgstr ""
+":guilabel:`Automatico`: pianifica automaticamente un ordine di rifornimento "
+"per il prodotto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
 msgid ":guilabel:`Never`: Never replenish the product from the |MPS|."
-msgstr ""
+msgstr ":guilabel:`Mai`: non rifornire mai il prodotto dal Piano."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
 msgid ""
 "Click :guilabel:`Save` to add the product to the |MPS|. The product now "
 "appears on the |MPS| page, along with any components (if applicable)."
 msgstr ""
+"Fai clic su :guilabel:`Salva` per aggiungere il prodotto al Piano. Il "
+"prodotto ora appare nella pagina corrispondente, insieme a eventuali "
+"componenti (se applicabile)."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Add a Product pop-up window in the MPS."
@@ -54030,18 +54812,26 @@ msgid ""
 "the :icon:`fa-pencil` :guilabel:`(Forecasted)` button next to the product's "
 "header row."
 msgstr ""
+"Per modificare il programma di pianificazione di un prodotto nel Piano, fai "
+"clic sul pulsante :icon:`fa-pencil` :guilabel:`(Previste)` accanto alla riga "
+"di intestazione del prodotto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
 msgid ""
 "In the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
 "modifications. Then, click :guilabel:`Save` to save the changes."
 msgstr ""
+"Inserisci le modifiche desiderate nella finestra pop-up :guilabel:`Modifica "
+"pianificazione produzione`. Successivamente, fai clic su :guilabel:`Salva` "
+"per salvare le modifiche."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:240
 msgid ""
 "The :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot be "
 "edited."
 msgstr ""
+"I campi :guilabel:`Prodotto` e :guilabel:`Distinta base` non possono essere "
+"modificati."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:243
 msgid "Remove a product"
@@ -54054,10 +54844,15 @@ msgid ""
 "screen, and select :guilabel:`Delete` from the drop-down menu. On "
 "the :guilabel:`Confirmation` pop-up window, click :guilabel:`Ok`."
 msgstr ""
+"Per rimuovere un prodotto dal Piano, seleziona la casella accanto al suo "
+"nome. In seguito, fai clic sul pulsante :icon:`fa-cog` :guilabel:`Azioni` "
+"nella parte superiore dello schermo e seleziona :guilabel:`Elimina` dal menu "
+"a discesa. Nella finestra pop-up :guilabel:`Conferma`, fai clic "
+"su :guilabel:`Ok`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
 msgid "Replenishing products with |MPS|"
-msgstr ""
+msgstr "Rifornire i prodotti tramite MPS"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
 msgid "Products in the |MPS| can be replenished in one of three ways:"
@@ -54068,12 +54863,17 @@ msgid ""
 "To replenish every product for the current time period, click "
 "the :guilabel:`Order` button at the top."
 msgstr ""
+"per rifornire tutti i prodotti per il periodo di tempo corrente, clicca sul "
+"pulsante :guilabel:`Ordina` in alto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:258
 msgid ""
 "To replenish a specific product, click the :guilabel:`Order` button next to "
 "the :guilabel:`+ Replenishment` row of the product."
 msgstr ""
+"per rifornire un prodotto specifico, fai clic sul "
+"pulsante :guilabel:`Ordina` accanto alla riga :guilabel:`+ Rifornimento` del "
+"prodotto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:260
 msgid ""
@@ -54082,6 +54882,10 @@ msgid ""
 "cog` :guilabel:`Actions` button at the top and select :guilabel:`Order` from "
 "the drop-down menu."
 msgstr ""
+"per selezionare e rifornire più prodotti, seleziona la casella accanto alle "
+"righe di intestazione di uno o più prodotti. In seguito, fai clic sul "
+"pulsante :icon:`fa-cog`:guilabel:`Azioni` in alto e "
+"seleziona :guilabel:`Ordina` dal menu a tendina."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:264
 msgid ""
@@ -54089,6 +54893,9 @@ msgid ""
 "selected on the *Add a Product* pop-up window when :ref:`adding a product "
 "<manufacturing/mps/add-product>` to the |MPS|."
 msgstr ""
+"Il tipo di ordine di rifornimento generato è determinato dal percorso "
+"selezionato nella finestra pop-up *Aggiungi prodotto* quando :ref:`si "
+"aggiunge un prodotto <manufacturing/mps/add-product>` al Piano."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:267
 msgid ""
@@ -54096,6 +54903,10 @@ msgid ""
 "product. Generated |RfQs| can be located by navigating "
 "to :menuselection:`Purchase app --> Orders --> Requests for Quotation`."
 msgstr ""
+"Se selezioni il percorso *Acquisto*, una richiesta di preventivo verrà "
+"generata per acquistare il prodotto. È possibile accedere alle richieste di "
+"preventivo generate seguendo il percorso :menuselection:`app Acquisti --> "
+"Ordini --> Richieste di preventivo`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:270
 msgid ""
@@ -54104,10 +54915,14 @@ msgid ""
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
 "Orders`."
 msgstr ""
+"Se scegli il percorso *Produzione*, viene creato un ordine di produzione per "
+"realizzare il prodotto. È possibile accedere agli ordini di produzione "
+"generati seguendo il percorso :menuselection:`app Magazzino --> Operazioni --"
+"> Ordini di produzione`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:277
 msgid "Replenishment status indicators"
-msgstr ""
+msgstr "Indicatori stato rifornimento"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:279
 msgid ""
@@ -54115,32 +54930,43 @@ msgid ""
 "following highlights, depending on whether the replenished quantities match "
 "the suggested quantities:"
 msgstr ""
+"Le celle :guilabel:`+ Rifornimento` vengono evidenziate nel Piano come "
+"segue, a seconda che le quantità rifornite corrispondano o meno a quelle "
+"suggerite:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:282
 msgid ":guilabel:`Green`: The quantity is ready to be replenished."
-msgstr ""
+msgstr ":guilabel:`verde`: la quantità è pronta per essere rifornita;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:283
 msgid ""
 ":guilabel:`Gray`: A replenishment order has already been generated, and its "
 "ordered quantity matches the suggested quantity for the time period."
 msgstr ""
+":guilabel:`grigio`: è già stato generato un ordine di rifornimento e la "
+"quantità ordinata corrisponde a quella suggerita per il periodo di tempo "
+"indicato;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:285
 msgid ""
 ":guilabel:`Yellow`: A replenishment order has already been generated, but "
 "its ordered quantity is below the suggested quantity for the time period."
 msgstr ""
+":guilabel:`giallo`: è già stato generato un ordine di rifornimento ma la "
+"quantità ordinata è inferiore a quella suggerita per il periodo di tempo in "
+"questione;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:287
 msgid ""
 ":guilabel:`Red`: A replenishment order has already been generated, but its "
 "ordered quantity exceeds the suggested quantity for the time period."
 msgstr ""
+":guilabel:`rosso`: è già stato generato un ordine di rifornimento ma la "
+"quantità ordinata supera quella suggerita per il periodo di tempo indicato."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:293
 msgid "Additional rows and filters"
-msgstr ""
+msgstr "Righe e filtri aggiuntivi"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:295
 msgid ""
@@ -54148,16 +54974,22 @@ msgid ""
 "customize the |MPS| by configuring additional rows for products or by "
 "filtering existing records based on specific criteria."
 msgstr ""
+"Grazie al menu a tendina della barra :guilabel:`di ricerca`, gli utenti "
+"possono personalizzare ulteriormente il Piano tramite la configurazione di "
+"righe aggiuntive per prodotti oppure filtrando i record esistenti in base a "
+"criteri specifici."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:300
 msgid "Rows"
-msgstr ""
+msgstr "Righe"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:302
 msgid ""
 "The following rows can be added to the |MPS| in addition to the default rows "
 "shown on the :ref:`dashboard <manufacturing/mps/dashboard>`."
 msgstr ""
+"È possibile aggiungere al Piano le seguenti righe, oltre alle righe "
+"predefinite mostrate nella :ref:`dashboard <manufacturing/mps/dashboard>`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:305
 msgid ""
@@ -54165,18 +54997,25 @@ msgid ""
 "to :guilabel:`- Actual / Forecasted Demand`, comparing the product's "
 "confirmed demand and its forecasted demand."
 msgstr ""
+":guilabel:`Domanda effettiva`: modifica la riga :guilabel:`- Domanda "
+"prevista` in :guilabel:`Domanda attuale/prevista` così da confrontare la "
+"domanda confermata del prodotto e le quantità previste;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:307
 msgid ""
 ":guilabel:`Actual Demand Y-1`: Displays the :guilabel:`Actual Demand` one "
 "year before the current time period."
 msgstr ""
+":guilabel:`Domanda attuale Y-1`: mostra la :guilabel:`Domanda effettiva` "
+"relativa a un anno prima del periodo di tempo corrente;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:309
 msgid ""
 ":guilabel:`Actual Demand Y-2`: Displays the :guilabel:`Actual Demand` two "
 "years before the current time period."
 msgstr ""
+":guilabel:`Domanda attuale Y-2`: mostra la :guilabel:`Domanda attuale` due "
+"anni prima del periodo attuale;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:311
 msgid ""
@@ -54184,6 +55023,9 @@ msgid ""
 "row to :guilabel:`+ Actual / Replenishment`, comparing the product's "
 "replenished quantity and its suggested quantity."
 msgstr ""
+":guilabel:`Rifornimento effettivo`: modifica la riga :guilabel:`+ "
+"Rifornimento` in :guilabel:`+ Attuale/Rifornimento` confrontando la quantità "
+"rifornita del prodotto con quella suggerita;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:313
 msgid ""
@@ -54192,17 +55034,24 @@ msgid ""
 "available stock (``Starting Stock - Actual Demand + Replenishment``) and its "
 "forecasted stock."
 msgstr ""
+":guilabel:`Disponibilità alla promessa (ATP)`: modifica la riga :guilabel:`= "
+"Scorte previste` in :guilabel:`=ATP/Scorte previste` confrontando le scorte "
+"disponibili del prodotto (``Scorte iniziali - Domanda attuale + "
+"Rifornimento``) e le sue scorte previste."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:320
 msgid ""
 "Users can filter records from the |MPS| based on the following criteria:"
 msgstr ""
+"Gli utenti possono filtrare i record dal Piano in base ai seguenti criteri:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:322
 msgid ""
 ":guilabel:`To Forecast`: Filter by products that are manually or "
 "automatically replenished."
 msgstr ""
+":guilabel:`Da stimare` filtra in base ai prodotti riforniti manualmente o "
+"automaticamente;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:323
 msgid ""
@@ -54210,12 +55059,17 @@ msgid ""
 "replenished (i.e., with at least one :guilabel:`+ Replenishment` cell "
 "highlighted in green)."
 msgstr ""
+":guilabel:`Da rifornire`: filtra in base ai prodotti pronti per essere "
+"riforniti (ovvero, con almeno una cella :guilabel:`+ Rifornimento` "
+"evidenziata in verde);"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:325
 msgid ""
 ":guilabel:`Indirect Demand`: Filter by products configured with the "
 "*Indirect Demand* option."
 msgstr ""
+":guilabel:`Domanda indiretta`: filtra in base ai prodotti configurati con "
+"l'opzione *Domanda indiretta*;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:326
 msgid ""
@@ -54223,6 +55077,9 @@ msgid ""
 "quantity below the suggested replenishment quantity (i.e., with at least "
 "one :guilabel:`+ Replenishment` cell highlighted in yellow)."
 msgstr ""
+":guilabel:`Rifornimento troppo basso`: filtra i prodotti con una quantità "
+"rifornita inferiore alla quantità di rifornimento suggerita (ovvero con "
+"almeno una cella :guilabel:`+ Rifornimento` evidenziata in giallo);"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:329
 msgid ""
@@ -54230,24 +55087,33 @@ msgid ""
 "quantity above the suggested replenishment quantity (i.e., with at least "
 "one :guilabel:`+ Replenishment` cell highlighted in red)."
 msgstr ""
+":guilabel:`Rifornimento troppo alto`: filtra i prodotti con una quantità di "
+"rifornimento superiore a quella suggerita (ovvero con almeno una "
+"cella :guilabel:`+ Rifornimento` evidenziata in rosso);"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:332
 msgid ""
 ":guilabel:`Manually Replenished`: Filter by products with the *Replenishment "
 "Trigger* set to *Manual*."
 msgstr ""
+":guilabel:`Rifornito manualmente`: filtra i prodotti con il *trigger di "
+"rifornimento* impostato su *manuale*;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:334
 msgid ""
 ":guilabel:`Automatically Replenished`: Filter by products with the "
 "*Replenishment Trigger* set to *Automatic*."
 msgstr ""
+":guilabel:`Rifornito automaticamente`: filtra i prodotti con il *Trigger "
+"rifornimento* impostato su *automatico*;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:336
 msgid ""
 ":guilabel:`Not Replenished from MPS`: Filter by products with the "
 "*Replenishment Trigger* set to *Never*."
 msgstr ""
+":guilabel:`Non rifornito da MPS`: filtra i prodotti con il *Trigger di "
+"rifornimento* impostato su *mai*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
