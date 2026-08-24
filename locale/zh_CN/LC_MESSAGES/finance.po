@@ -57,9 +57,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
-"PO-Revision-Date: 2026-08-11 00:37+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
+"PO-Revision-Date: 2026-08-20 09:09+0000\n"
+"Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/finance/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -103,7 +103,7 @@ msgstr "开始"
 
 #: ../../content/applications/finance/accounting.rst:17
 msgid "Detailed instructions for the initial setup of your accounting"
-msgstr ""
+msgstr "会计初始设置的详细说明"
 
 #: ../../content/applications/finance/accounting.rst:23
 #: ../../content/applications/finance/accounting/get_started.rst:178
@@ -2357,44 +2357,59 @@ msgstr ""
 msgid "Register an internal transfer from one bank to another"
 msgstr "登记银行间内部转账"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:40
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:41
+msgid ""
+"For the sake of clarity, this process is explained with the "
+"incoming :doc:`transaction <transactions>` being reconciled with "
+"the :guilabel:`Internal Transfers` reconciliation model button and the "
+"outgoing transaction then being reconciled with the journal item of the "
+"incoming transaction. It is possible to switch which transaction is "
+"reconciled with the :guilabel:`Internal Transfers` reconciliation model "
+"button without any negative implications."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:47
 msgid ""
 "When money is transferred from one bank or cash account to another, that "
-"amount appears as two transactions on the corresponding journals, whether "
-"the transactions are created manually, via import, or via :doc:`bank "
-"synchronization <bank_synchronization>`. When :ref:`reconciling the "
-"transaction <accounting/reconciliation/reconcile>`, select "
-"the :guilabel:`Internal Transfers` :doc:`reconciliation model "
-"<reconciliation_models>` button. This action writes the transaction off to "
-"the :guilabel:`Internal Transfer` account."
+"amount appears as one incoming :doc:`transaction <transactions>` and one "
+"outgoing transaction in their corresponding journals, whether the "
+"transactions are created manually, via import, or via :doc:`bank "
+"synchronization <bank_synchronization>`. :ref:`Reconcile <accounting/"
+"reconciliation/reconcile>` the two transactions as follows:"
 msgstr ""
-"当资金从一个银行或现金账户转入另一个账户时，无论交易是通过手动创建、导入还是"
-"通过 :doc:`银行同步 <bank_synchronization>` 生成，该金额都会在相应的日记账中"
-"显示为两笔交易。在 :ref:`对账 <accounting/reconciliation/reconcile>` 时，请选"
-"择 :guilabel:`内部转账` :doc:`对账模型 <reconciliation_models>` 按钮。此操作"
-"将交易过账至 :guilabel:`内部转账` 账户。"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:48
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:53
 msgid ""
-"Remember to reconcile both the outgoing transaction (on the journal that "
-"sends the payment) and the incoming transaction (on the journal that "
-"receives the payment) with the internal transfers account using "
-"the :guilabel:`Internal Transfers` reconciliation model button."
+"Reconcile the incoming transaction by selecting the :guilabel:`Internal "
+"Transfers` :doc:`reconciliation model <reconciliation_models>` button. This "
+"action writes the transaction off to the :guilabel:`Internal Transfers` "
+"account."
 msgstr ""
-"请务必使用 :guilabel:`内部转账`对账模型按钮，将付款方日记账中的“付款”交易与收"
-"款方日记账中的“收款”交易，与内部转账账户进行对账。"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:52
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:56
 msgid ""
-"Once each bank journal's transaction is reconciled using "
-"the :guilabel:`Internal Transfers` reconciliation model, the internal "
-"transfer account is balanced, and the balances of both bank accounts are "
-"updated to reflect the transfer."
+"Reconcile the outgoing transaction with the journal item of the incoming "
+"transaction:"
 msgstr ""
-"一旦使用 :guilabel:`内部转账` 对账模型对每个银行日记账的交易进行对账，内部转"
-"账账户即会结清，两个银行账户的余额也会相应更新以反映该笔转账。"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:57
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:58
+msgid "Click the :icon:`fa-ellipsis-v` (vertical ellipsis icon)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:59
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/payments.rst:342
+msgid "Click :guilabel:`Reconcile`."
+msgstr "点击 :guilabel:`核销`。"
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+msgid ""
+"In the :guilabel:`Search: Journal Items to Match` popup, click the journal "
+"item of the incoming transaction. This action balances "
+"the :guilabel:`Internal Transfers` account and links the two transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:65
 msgid ""
 "When transferring $1,000 from Bank Account A to Bank Account B, each of the "
 "two bank journals has one journal entry:"
@@ -2402,63 +2417,63 @@ msgstr ""
 "从银行账户 A 向银行账户 B 转账 1000 美元时，两个银行日记账会各自生成一条会计"
 "分录："
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
 msgid "The outgoing transaction in the Bank Account A journal:"
 msgstr "银行账户 A 日记账中的支出交易："
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:66
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:83
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:74
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
 msgid "**Account**"
 msgstr "**科目**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:67
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:75
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:92
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Debit**"
 msgstr "**借项**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:85
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:93
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Credit**"
 msgstr "**贷方**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:69
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:77
 msgid "Bank Account A"
 msgstr "银行 A 账户"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:71
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:87
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:79
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
 msgid "$1,000"
 msgstr "$1,000"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:72
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:89
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:80
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:97
 msgid "**Internal transfer account**"
 msgstr "**内部转账账户**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:73
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:81
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:99
 msgid "**$1,000**"
 msgstr "**$1,000**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
 msgid "The incoming transaction in the Bank Account B journal:"
 msgstr "银行账户 B 日记账中的入账交易："
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:86
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
 msgid "Bank Account B"
 msgstr "银行账户 B"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:102
 msgid ":doc:`reconciliation`"
 msgstr ":doc:`reconciliation`"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:103
 msgid ":doc:`reconciliation_models`"
 msgstr ":doc:`reconciliation_models`"
 
@@ -3270,11 +3285,6 @@ msgid ""
 "Select the journal items that debit or credit the account receivable and "
 "account payable and represent the debts to be netted."
 msgstr "选择那些借记或贷记应收账款和应付账款、且代表待抵消债务的日记账项目。"
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
-#: ../../content/applications/finance/accounting/payments.rst:342
-msgid "Click :guilabel:`Reconcile`."
-msgstr "点击 :guilabel:`核销`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
 msgid ""
@@ -11456,23 +11466,29 @@ msgid ""
 "software. The process for companies starting directly with Odoo is much "
 "simpler but still requires the following steps:"
 msgstr ""
+"部分企业从开业之初便使用 Odoo，但很多企业需要从其他旧版财务软件迁移至 Odoo。"
+"直接启用 Odoo 的企业流程会简单很多，但仍需完成以下步骤："
 
 #: ../../content/applications/finance/accounting/get_started.rst:11
 msgid ""
 ":ref:`Validate the fiscal localization <accounting/get_started/db-creation>`"
-msgstr ""
+msgstr ":ref:`验证财税本地化包 <accounting/get_started/db-creation>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:12
 msgid ""
 ":ref:`Import accounting <accounting/get_started/master-data>` "
 "and :ref:`other master data <accounting/get_started/add-master-data>`"
 msgstr ""
+":ref:`导入会计主数据 <accounting/get_started/master-data>` 以及:ref:`中的其他"
+"主数据 <accounting/get_started/add-master-data>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:14
 msgid ""
 ":ref:`Configure the Accounting settings <accounting/get_started/accounting-"
 "config>` to meet the company's business needs"
 msgstr ""
+":ref:`配置会计设置 <accounting/get_started/accounting-config>` 以满足公司的业"
+"务需求"
 
 #: ../../content/applications/finance/accounting/get_started.rst:17
 msgid ""
@@ -11480,88 +11496,90 @@ msgid ""
 "well as :ref:`importing opening entries <accounting/get_started/open-"
 "entries>`."
 msgstr ""
+"迁移至 Odoo 的企业除上述步骤以外，还需要:ref:`导入初始分录 <accounting/"
+"get_started/open-entries>` 。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:24
 msgid "Time of execution"
-msgstr ""
+msgstr "执行时机"
 
 #: ../../content/applications/finance/accounting/get_started.rst:25
 msgid "General category"
-msgstr ""
+msgstr "通用类别"
 
 #: ../../content/applications/finance/accounting/get_started.rst:26
 msgid "Specific to-do item"
-msgstr ""
+msgstr "具体待办事项"
 
 #: ../../content/applications/finance/accounting/get_started.rst:27
 msgid ""
 ":ref:`At database/company creation <accounting/get_started/db-creation>`"
-msgstr ""
+msgstr ":ref:`在创建数据库/公司时 <accounting/get_started/db-creation>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:28
 msgid "Fiscal localization"
-msgstr ""
+msgstr "财税本地化"
 
 #: ../../content/applications/finance/accounting/get_started.rst:29
 msgid "Verify localization"
-msgstr ""
+msgstr "校验本地化配置"
 
 #: ../../content/applications/finance/accounting/get_started.rst:30
 msgid ":ref:`Prior to implementation <accounting/get_started/prior>`"
-msgstr ""
+msgstr ":ref:`实施前期 <accounting/get_started/prior>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:31
 msgid ":ref:`Accounting master data <accounting/get_started/master-data>`"
-msgstr ""
+msgstr ":ref:`会计主数据 <accounting/get_started/master-data>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Chart of accounts <accounting/get_started/coa>`"
-msgstr ""
+msgstr ":ref:`会计科目表 <accounting/get_started/coa>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Currency <accounting/get_started/currency>`"
-msgstr ""
+msgstr ":ref:`货币 <accounting/get_started/currency>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Journals <accounting/get_started/journals>`"
-msgstr ""
+msgstr ":ref:`日记账 <accounting/get_started/journals>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Fiscal positions <accounting/get_started/fiscal-positions>`"
-msgstr ""
+msgstr ":ref:`财务状况 <accounting/get_started/fiscal-positions>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Taxes <accounting/get_started/taxes>`"
-msgstr ""
+msgstr ":ref:`税收 <accounting/get_started/taxes>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Payment terms <accounting/get_started/payment-terms>`"
-msgstr ""
+msgstr ":ref:`付款条款 <accounting/get_started/payment-terms>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:39
 msgid ":ref:`Additional master data <accounting/get_started/add-master-data>`"
-msgstr ""
+msgstr ":ref:`其他主数据 <accounting/get_started/add-master-data>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Product categories <accounting/get_started/products>`"
-msgstr ""
+msgstr ":ref:`产品类别 <accounting/get_started/products>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Products <accounting/get_started/products>`"
-msgstr ""
+msgstr ":ref:`产品 <accounting/get_started/products>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Contact bank accounts <accounting/get_started/contact-bank>`"
-msgstr ""
+msgstr ":ref:`联系银行账户 <accounting/get_started/contact-bank>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Contacts <accounting/get_started/contacts>`"
-msgstr ""
+msgstr ":ref:`联系人 <accounting/get_started/contacts>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:45
 msgid ""
 ":ref:`Accounting configurations <accounting/get_started/accounting-config>`"
-msgstr ""
+msgstr ":ref:`会计配置 <accounting/get_started/accounting-config>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:69
@@ -11580,45 +11598,45 @@ msgstr "纳税申报表周期"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid "Tax rounding and inclusion in prices"
-msgstr ""
+msgstr "税额舍入与价格含税设置"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid "Default accounts"
-msgstr ""
+msgstr "默认账户"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid "Financial year end date"
-msgstr ""
+msgstr "财政年度结束日期"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid "Document sequencing"
-msgstr ""
+msgstr "文档排序"
 
 #: ../../content/applications/finance/accounting/get_started.rst:52
 msgid ""
 ":ref:`At time of implementation <accounting/get_started/at-implementation>`"
-msgstr ""
+msgstr ":ref:`实施阶段 <accounting/get_started/at-implementation>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:53
 msgid ":ref:`Opening entries <accounting/get_started/open-entries>`"
-msgstr ""
+msgstr ":ref:`期初分录 <accounting/get_started/open-entries>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Open invoices and bills <accounting/get_started/open-bills>`"
-msgstr ""
+msgstr ":ref:`未结清销货发票与供应商账单 <accounting/get_started/open-bills>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Inventory count <accounting/get_started/open-inventory>`"
-msgstr ""
+msgstr ":ref:`库存盘点 <accounting/get_started/open-inventory>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ":ref:`Trial balance <accounting/get_started/open-tb>`"
-msgstr ""
+msgstr ":ref:`试算平衡表 <accounting/get_started/open-tb>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:0
 msgid ""
 ":ref:`Bank and credit card transactions <accounting/get_started/open-bank>`"
-msgstr ""
+msgstr ":ref:`银行与信用卡交易记录 <accounting/get_started/open-bank>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:60
 msgid ""
@@ -11631,16 +11649,21 @@ msgid ""
 "transition to Odoo Accounting with the understanding that they may have "
 "individual needs not covered here."
 msgstr ""
+"从旧软件系统迁移至 Odoo 会计模块流程较为复杂，不同企业之间差异较大。本文档提"
+"供基础操作步骤，Odoo 的服务包<https://www.odoo.com/pricing-packs>_可为您提供"
+"个性化指引，适配企业自身业务需求。高级用户可将本文作为迁移参考，但请注意部分"
+"个性化需求本文并未覆盖。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:68
 msgid ""
 "It is recommended to practice this process in a test database and work in "
 "parallel with your prior accounting workflows in case there are any issues."
 msgstr ""
+"建议在测试数据库演练整套流程，同时并行沿用原有会计工作流程，规避故障风险。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:74
 msgid "At database/company creation"
-msgstr ""
+msgstr "数据库 / 公司创建阶段"
 
 #: ../../content/applications/finance/accounting/get_started.rst:76
 msgid ""
@@ -11650,6 +11673,9 @@ msgid ""
 "features, such as the configuration of specific certificates, are also added "
 "to the Accounting app, following your fiscal administration requirements."
 msgstr ""
+":doc:`财税本地化包 <../fiscal_localizations>`为国家专属模块，会在数据库中预配"
+"置税种、财税位置、会计科目表以及法定报表。同时会计应用会新增部分附加功能，例"
+"如特定证书配置，以满足财税监管机构要求。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:81
 msgid ""
@@ -11661,20 +11687,24 @@ msgid ""
 "correct localization is set in the :guilabel:`Package` field in "
 "the :guilabel:`Fiscal Localization` section."
 msgstr ""
+"创建数据库时，系统会根据所选国家自动安装对应的财税本地化包。部分国家针对不同"
+"业务类型提供多个本地化包，请务必确认已安装正确套件。操作路"
+"径：:menuselection:`会计 ‑‑> 配置 ‑‑> 设置`，在 :guilabel:`财税本地化`板块"
+"的:guilabel:`套件`字段核对当前启用的本地化包。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:88
 msgid ""
 "Selecting another package is only possible if no journal entry has been "
 "posted yet."
-msgstr ""
+msgstr "仅在尚未过账任何会计分录的前提下，才允许切换其他本地化套件。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:93
 msgid "Prior to implementation"
-msgstr ""
+msgstr "实施前期"
 
 #: ../../content/applications/finance/accounting/get_started.rst:98
 msgid "Accounting master data"
-msgstr ""
+msgstr "会计主数据"
 
 #: ../../content/applications/finance/accounting/get_started.rst:100
 msgid ""
@@ -11683,6 +11713,9 @@ msgid ""
 "records rely on master data, the order in which accounting data is "
 "transferred into Odoo, whether manually or via import, is crucial."
 msgstr ""
+"主数据是其他业务记录所依赖的基础数据。例如开具发票需要客户信息，客户（联系"
+"人）即为主数据。由于其他记录依赖主数据，无论手动录入还是导入，会计数据导入 "
+"Odoo 的先后顺序至关重要。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:107
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:3
@@ -11721,6 +11754,11 @@ msgid ""
 "standard chart of accounts. These two types of accounts should be handled "
 "differently:"
 msgstr ""
+":doc:`会计科目表  <get_started/chart_of_accounts>`是全部会计记录的基础，因此"
+"必须在录入其他数据库记录之前完成配置。每套财税本地化包都会附带一套标准会计科"
+"目表，但多数企业拥有自定义科目表。部分企业科目与 Odoo 标准科目用途一致，只是"
+"科目名称或编码不同；还有部分科目在 Odoo 标准科目表中没有对应科目。两类科目需"
+"要区分处理："
 
 #: ../../content/applications/finance/accounting/get_started.rst:117
 msgid ""
@@ -11728,6 +11766,8 @@ msgid ""
 "chart of accounts, simply edit the account name and/or account code of the "
 "standard Odoo account to match your own."
 msgstr ""
+"对于企业科目表中与 Odoo 标准科目用途对应的科目，直接修改 Odoo 标准科目的名称"
+"或编码，与企业自身保持一致即可。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:119
 msgid ""
@@ -11735,6 +11775,8 @@ msgid ""
 "standard chart of accounts, create them manually or :ref:`import <essentials/"
 "export_import_data/import-data>` them."
 msgstr ""
+"对于企业科目表中无对应 Odoo 标准科目的科目，手动新建或者 :ref:`导入 "
+"<essentials/export_import_data/import-data>`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:123
 msgid ""
@@ -11742,6 +11784,7 @@ msgid ""
 "created or imported accounts do not share the same code as an existing "
 "account."
 msgstr ""
+"同一套科目表内科目编码必须唯一，请确保新建或导入的科目编码不与已有科目重复。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:127
 msgid ""
@@ -11751,12 +11794,17 @@ msgid ""
 "break basic processes** like creating an invoice. Instead of deleting "
 "accounts in Odoo's standard chart of accounts, simply rename and recode them."
 msgstr ""
+"部分标准科目被用作产品、产品分类、联系人以及会计设置中多个字段的默认科目，**"
+"删除或修改其科目类型会导致开发票等基础业务流程异常**。请勿直接删除 Odoo 标准"
+"科目，建议修改名称与编码复用。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:133
 msgid ""
 "`Odoo Tutorial: Update your chart of accounts <https://www.odoo.com/slides/"
 "slide/update-your-chart-of-accounts-6391>`_"
 msgstr ""
+"`Odoo教程：更新会计科目表 <https://www.odoo.com/slides/slide/update-your-"
+"chart-of-accounts-6391>`_"
 
 #: ../../content/applications/finance/accounting/get_started.rst:139
 #: ../../content/applications/finance/accounting/get_started.rst:441
@@ -11770,6 +11818,9 @@ msgid ""
 "Currency rates can be set to update automatically in "
 "the :guilabel:`Currencies` section of the Accounting settings."
 msgstr ""
+"如果企业需要财税本地化包默认之外的其他 :doc:`币种 <get_started/"
+"multi_currency>`，启用对应币种。可在会计设置的 :guilabel:`币种`板块配置汇率自"
+"动更新。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:148
 #: ../../content/applications/finance/accounting/get_started/journals.rst:3
@@ -11788,19 +11839,21 @@ msgid ""
 "purchase journal, a bank journal, and more are created by default, but "
 "additional journals can be created to manage different situations, including:"
 msgstr ""
+"系统默认会生成 :doc:`日记账 <get_started/journals>`，例如销售日记账、采购日记"
+"账、银行日记账等。也可新建日记账适配不同业务场景，包括："
 
 #: ../../content/applications/finance/accounting/get_started.rst:154
 msgid "tracking income through multiple sales journals"
-msgstr ""
+msgstr "使用多个销售日记账区分收入来源"
 
 #: ../../content/applications/finance/accounting/get_started.rst:155
 msgid "having multiple bank accounts, each with its own journal"
-msgstr ""
+msgstr "多个银行账户分别配置独立日记账"
 
 #: ../../content/applications/finance/accounting/get_started.rst:156
 msgid ""
 "managing loans, tax returns, payroll, and more with miscellaneous journals"
-msgstr ""
+msgstr "通过杂项日记账管理贷款、税务申报、薪酬管理等业务"
 
 #: ../../content/applications/finance/accounting/get_started.rst:158
 msgid ""
@@ -11810,12 +11863,15 @@ msgid ""
 "to create payments, set :ref:`outstanding payments accounts <accounting/"
 "journals/outstanding-accounts>` on the journal's payment methods."
 msgstr ""
+"在银行、现金以及信用卡日记账中记录付款时，是否生成会计分录取决于日记账配置。"
+"系统默认不会为付款生成分录。如需让日记账生成付款分录，请在该日记账的付款方式"
+"上设置 :ref:`待收付款科目 <accounting/journals/outstanding-accounts>`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:166
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:282
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:152
 msgid "Fiscal positions"
-msgstr "财政状况"
+msgstr "财务规则"
 
 #: ../../content/applications/finance/accounting/get_started.rst:168
 msgid ""
@@ -11828,6 +11884,10 @@ msgid ""
 "<../fiscal_localizations>`, but existing fiscal positions can be adjusted, "
 "and new fiscal positions can be created manually."
 msgstr ""
+":doc:`财务规则 <taxes/fiscal_positions>`可根据客户或供应商，为产品配置不同收"
+"入、费用科目并套用不同 :doc:`:税种 <taxes>`。也可设置依据客户或供应商地址自动"
+"匹配财税位置。安装 :doc:`财税本地化包 <../fiscal_localizations>` 会自带默认财"
+"务规则，既可以修改现有配置，也可以手动新建财务规则。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:180
 msgid ""
@@ -11837,6 +11897,10 @@ msgid ""
 "installing a :doc:`fiscal localization package <../fiscal_localizations>`, "
 "but existing taxes can be adjusted, and new taxes can be created manually."
 msgstr ""
+":doc:`税种`会作用于会计多个业务环节，包括 :doc:`财务规则 <taxes/"
+"fiscal_positions>`、:ref:`会计科目 <taxes/definition-tab>`以及产品。安"
+"装 :doc:`财税本地化包  <../fiscal_localizations>`会自带默认税种，可修改现有税"
+"种，也可手动新增税种。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:190
 msgid ""
@@ -11845,20 +11909,24 @@ msgid ""
 "and vendor bills. Payment terms also allow you to define installment plans "
 "for when one record's payments should be made in multiple installments."
 msgstr ""
+":doc:`付款条款 <customer_invoices/payment_terms>`用于定义销售订单、采购订单、"
+"客户发票、供应商账单等单据的付款条件，还可以设置分期方案，实现单据分多期收款"
+"付款。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:194
 msgid ""
 "As they are both used to dictate when payment is due, payment terms and due "
 "dates are mutually exclusive: a record can only have one or the other."
 msgstr ""
+"付款条款与到期日均用于规定付款到期时间，二者互斥，一张单据只能选用其中一种。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:200
 msgid "Additional master data"
-msgstr ""
+msgstr "其他主数据"
 
 #: ../../content/applications/finance/accounting/get_started.rst:205
 msgid "Products and product categories"
-msgstr ""
+msgstr "产品与产品分类"
 
 #: ../../content/applications/finance/accounting/get_started.rst:207
 msgid ""
@@ -11866,27 +11934,29 @@ msgid ""
 "import>` and product categories or create them manually. Multiple fields on "
 "the product category form relate to accounting, including:"
 msgstr ""
+":doc:`导入产品  <../../sales/sales/products_prices/products/import>`和产品分"
+"类，也可手动创建。产品分类表单包含多项会计相关字段，包括："
 
 #: ../../content/applications/finance/accounting/get_started.rst:211
 msgid ":ref:`Costing Method <costing-methods>`"
-msgstr ""
+msgstr ":ref:`成本核算方法 <costing-methods>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:212
 msgid ""
 ":ref:`Inventory Valuation <accounting/inventory-valuation/valuation-method>`"
-msgstr ""
+msgstr ":ref:`库存计价方式 <accounting/inventory-valuation/valuation-method>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:213
 msgid ":guilabel:`Income Account`"
-msgstr ""
+msgstr ":guilabel:`收入科目`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:214
 msgid ":guilabel:`Expense Account`"
-msgstr ""
+msgstr ":guilabel:`费用科目`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:215
 msgid ":guilabel:`Stock Account`"
-msgstr ""
+msgstr ":guilabel:`库存科目`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:216
 msgid ""
@@ -11894,6 +11964,8 @@ msgid ""
 "that use :guilabel:`Perpetual (at invoicing)` for their :guilabel:`Inventory "
 "Valuation`)"
 msgstr ""
+":guilabel:`价格差异科目`（仅当产品分类的 :guilabel:`库存计价方式`设置"
+"为 :guilabel:`永续盘存（开票时）`时可用）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:219
 msgid ""
@@ -11902,34 +11974,38 @@ msgid ""
 "accounts can be overridden on each product record. Other fields on the "
 "product form relate to accounting as well, including:"
 msgstr ""
+"产品默认会继承所属产品分类的 :guilabel:`收入科目`与 :guilabel:`费用科目`，也"
+"可在单个产品记录上覆盖该科目设置。产品表单还有其他会计相关字段，包括："
 
 #: ../../content/applications/finance/accounting/get_started.rst:223
 msgid ":guilabel:`Invoicing policy`"
-msgstr ""
+msgstr ":guilabel:`开票策略`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:224
 msgid ":guilabel:`Sales Taxes`"
-msgstr ""
+msgstr ":guilabel:`销售税`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:225
 msgid ""
 ":guilabel:`Cost` (which is particularly important for importing "
 "the :ref:`opening inventory <accounting/get_started/open-inventory>`)"
 msgstr ""
+":guilabel:`成本`（在导入:ref:`期初库存 <accounting/get_started/open-"
+"inventory>`时尤为重要）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:227
 msgid ":guilabel:`Purchase Taxes`"
-msgstr ""
+msgstr ":guilabel:`采购税`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:230
 msgid ""
 "Import product categories before products so that each product's category "
 "can be specified during the product import."
-msgstr ""
+msgstr "请先导入产品分类，再导入产品，这样导入产品时就可以指定对应的产品分类。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:236
 msgid "Contact banks and bank accounts"
-msgstr ""
+msgstr "往来银行以及银行账户"
 
 #: ../../content/applications/finance/accounting/get_started.rst:238
 msgid ""
@@ -11939,6 +12015,10 @@ msgid ""
 "direct debit <accounting/sepa_payments/sdd>`, the customer's or vendor's "
 "bank account must be set on their contact record."
 msgstr ""
+"向供应商付款（例如通过 :ref:`SEPA贷记转账 <accounting/sepa_payments/sct>`或"
+"者 :doc:`NACHA <../fiscal_localizations/united_states>`文件），以及通"
+"过 :ref:`SEPA直接扣款  <accounting/sepa_payments/sdd>`向客户收款时，必须在联"
+"系人档案中维护客户或供应商的银行账户信息"
 
 #: ../../content/applications/finance/accounting/get_started.rst:243
 msgid ""
@@ -11946,6 +12026,9 @@ msgid ""
 "contacts' :ref:`banks <accounting/batch/create-bank>` and :ref:`bank "
 "accounts <accounting/batch/create-bank-account>` or create them manually."
 msgstr ""
+":ref:`导入 <essentials/export_import_data/import-data>`联系人的 :ref:`银行 "
+"<accounting/batch/create-bank>`与 :ref:`银行账户 <accounting/batch/create-"
+"bank-account>`，也可以手动新建。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:250
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:295
@@ -11970,16 +12053,19 @@ msgid ""
 "Multiple fields  on the contact form affect the contact's accounting "
 "records, such as invoices and bills, including:"
 msgstr ""
+":ref:`导入 <essentials/export_import_data/import-data>` :doc:`联系人 <../../"
+"essentials/contacts>`，也可以手动新建。联系人表单的多个字段会影响发票、供应商"
+"账单等会计单据，包括："
 
 #: ../../content/applications/finance/accounting/get_started.rst:256
 msgid ""
 ":doc:`Payment Terms <customer_invoices/payment_terms>` for sales and for "
 "purchases"
-msgstr ""
+msgstr "销售以及采购对应的 :doc:`付款条款 <customer_invoices/payment_terms>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:257
 msgid ":doc:`Fiscal Position <taxes/fiscal_positions>`"
-msgstr ""
+msgstr ":doc:`财务规则 <taxes/fiscal_positions>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:258
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:142
@@ -11991,39 +12077,43 @@ msgstr ":guilabel:`应收账款`"
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:144
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:173
 msgid ":guilabel:`Account Payable`"
-msgstr ":guilabel:`Account Payable`"
+msgstr ":guilabel:`应付账款`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:260
 msgid ""
 ":ref:`Invoice sending <accounting/invoice/sending>` preferences (visible "
 "only in :ref:`developer mode <developer-mode>`)"
 msgstr ""
+":ref:`发票发送 <accounting/invoice/sending>`偏好设置（仅在:ref:`开发者模式 "
+"<developer-mode>`下可见）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:262
 msgid ":guilabel:`eInvoice format`"
-msgstr ""
+msgstr ":guilabel:`电子发票格式`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:263
 msgid "Peppol e-address (EAS)"
-msgstr ""
+msgstr "Peppol 电子地址（EAS）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:264
 msgid "e-invoicing endpoint"
-msgstr ""
+msgstr "电子发票接入端点"
 
 #: ../../content/applications/finance/accounting/get_started.rst:265
 msgid ":ref:`Bank accounts <accounting/batch/create-bank-account>`"
-msgstr ""
+msgstr ":ref:`银行账户 <accounting/batch/create-bank-account>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:266
 msgid ""
 "Additional e-invoicing fields may be available depending on the :doc:`fiscal "
 "localization <../fiscal_localizations>`"
 msgstr ""
+"根据所使用的 :doc:`财务本地化包 <../fiscal_localizations>`，系统可能会显示更"
+"多电子发票相关字段"
 
 #: ../../content/applications/finance/accounting/get_started.rst:272
 msgid "Accounting configurations"
-msgstr ""
+msgstr "会计配置"
 
 #: ../../content/applications/finance/accounting/get_started.rst:274
 msgid ""
@@ -12032,16 +12122,20 @@ msgid ""
 "Accounting settings and accessible via :menuselection:`Accounting --> "
 "Configuration --> Settings`."
 msgstr ""
+"以下核心会计配置对会计档案初始化至关重要。大部分配置位于会计设置页面，路"
+"径：:menuselection:`会计 ‑‑> 配置 ‑‑> 设置`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:278
 msgid ""
 ":doc:`Company information <../../general/companies>`, such as its name, "
 "address, logo, phone, and email address"
 msgstr ""
+":doc:`公司信息  <../../general/companies>`，例如公司名称、地址、Logo、电话与"
+"邮箱地址"
 
 #: ../../content/applications/finance/accounting/get_started.rst:280
 msgid ":ref:`accounting/tax-returns/periodicity`"
-msgstr ""
+msgstr ":ref:`accounting/tax-returns/periodicity`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:281
 msgid ""
@@ -12049,6 +12143,8 @@ msgid ""
 "per line or per tax in the :guilabel:`Taxes` section of the Accounting "
 "settings."
 msgstr ""
+":guilabel:`舍入方式`：在会计设置的 :guilabel:`税种`板块，选择税额是按单据行舍"
+"入还是按税种舍入。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:283
 msgid ""
@@ -12056,44 +12152,46 @@ msgid ""
 "or :guilabel:`Tax Included` by default in the :guilabel:`Taxes` section of "
 "the Accounting settings."
 msgstr ""
+":guilabel:`价格`：在会计设置的 :guilabel:`税种`板块，设置价格默认 :guilabel:`"
+"不含税`还是 :guilabel:`含税`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:285
 msgid ":doc:`customer_invoices/terms_conditions`"
-msgstr ""
+msgstr ":doc:`customer_invoices/terms_conditions`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:286
 msgid ""
 ":guilabel:`Default accounts`: Default accounts can be set in the following "
 "two sections of the Accounting settings:"
-msgstr ""
+msgstr ":guilabel:`默认科目`：可在会计设置的以下两个板块配置默认科目："
 
 #: ../../content/applications/finance/accounting/get_started.rst:289
 msgid ""
 ":guilabel:`Default accounts`: Additional default accounts beyond those "
 "configured for each journal"
-msgstr ""
+msgstr ":guilabel:`默认科目`：日记账之外的其他通用默认科目"
 
 #: ../../content/applications/finance/accounting/get_started.rst:291
 msgid ""
 ":guilabel:`Inventory valuation`: Other default accounts regarding both "
 "inventory valuation and manufacturing accounting"
-msgstr ""
+msgstr ":guilabel:`库存估值`：库存估值以及生产会计相关的其他默认科目"
 
 #: ../../content/applications/finance/accounting/get_started.rst:294
 msgid ":ref:`Fiscal year end date <accounting/year-end/fiscal-years>`"
-msgstr ""
+msgstr ":ref:`会计年度结束日期 <accounting/year-end/fiscal-years>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:295
 msgid ":doc:`customer_invoices/sequence`"
-msgstr ""
+msgstr ":doc:`customer_invoices/sequence`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:300
 msgid "At the time of implementation"
-msgstr ""
+msgstr "实施阶段"
 
 #: ../../content/applications/finance/accounting/get_started.rst:305
 msgid "Opening entries"
-msgstr ""
+msgstr "期初分录"
 
 #: ../../content/applications/finance/accounting/get_started.rst:307
 msgid ""
@@ -12102,6 +12200,8 @@ msgid ""
 "opening entries in their Odoo database so that they are accurately "
 "represented."
 msgstr ""
+"迁移至 Odoo 的企业，如果已有科目余额、未结清发票与供应商账单、期初盘点库存，"
+"需要在 Odoo 数据库录入期初分录，保证数据准确体现。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:311
 msgid ""
@@ -12110,12 +12210,16 @@ msgid ""
 "open-bills>` introduces complications because it can cause duplicated values "
 "if done incorrectly."
 msgstr ""
+"导入 :ref:`期初试算平衡表 <accounting/get_started/open-tb>`与 :ref:`未结清发"
+"票/账单 <accounting/get_started/open-bills>` 的流程存在风险，操作不当会造成金"
+"额重复。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:316
 msgid ""
 "A company has a current balance of $1000 in its accounts receivable, "
 "reflecting the $1000 that it is owed for its open invoices."
 msgstr ""
+"某企业应收账款当前余额为 1000 美元，对应未结清发票的待收款项 1000 美元。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:319
 msgid ""
@@ -12123,40 +12227,44 @@ msgid ""
 "created in Odoo without making any changes, the accounts receivable will "
 "mistakenly reflect a balance of $2000:"
 msgstr ""
+"如果直接在 Odoo 同时录入这批未结清发票以及应收账款科目余额，应收账款会错误显"
+"示余额 2000 美元："
 
 #: ../../content/applications/finance/accounting/get_started.rst:322
 msgid "$1000 from the opening trial balance of the accounts receivable"
-msgstr ""
+msgstr "来自应收账款期初试算平衡表的 1000 美元"
 
 #: ../../content/applications/finance/accounting/get_started.rst:323
 msgid "$1000 from the creation of the open invoices in Odoo"
-msgstr ""
+msgstr "来自 Odoo 内新建未结清发票产生的 1000 美元"
 
 #: ../../content/applications/finance/accounting/get_started.rst:325
 msgid "The same concept applies to open vendor bills and the accounts payable."
-msgstr ""
+msgstr "该逻辑同样适用于未结清供应商账单与应付账款。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:327
 msgid ""
 "To avoid this error, use *clearing accounts*, which are accounts that "
 "temporarily hold the value before being balanced (or \"cleared\")."
 msgstr ""
+"为避免该错误，请使用*过渡清算科目*，这类科目用于临时存放金额，后续再完成轧平"
+"（即 “清算”）。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:333
 msgid "When to transition"
-msgstr ""
+msgstr "迁移时机"
 
 #: ../../content/applications/finance/accounting/get_started.rst:335
 msgid ""
 "There are three options for when to transition your accounting workflows to "
 "Odoo:"
-msgstr ""
+msgstr "将会计工作流程迁移至 Odoo 共有三种时机可选："
 
 #: ../../content/applications/finance/accounting/get_started.rst:337
 msgid ""
 "At the end of the fiscal year: this is the easiest option because it "
 "minimizes the data that needs to be transferred."
-msgstr ""
+msgstr "会计年度末：该方案最简单，需要迁移的数据量最少。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:339
 msgid ""
@@ -12164,6 +12272,8 @@ msgid ""
 "of the entries from the past period or only the balance of each account at "
 "the end of the period."
 msgstr ""
+"报税周期末：此模式下，可以选择过账上一周期全部分录，或仅录入周期末各科目余"
+"额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:341
 msgid ""
@@ -12172,26 +12282,28 @@ msgid ""
 "legacy software and Odoo complicates the tax filing process since the data "
 "from the two systems must be combined."
 msgstr ""
+"报税周期中途：不推荐该方案，会增加额外工作量与复杂度。同一报税周期拆分在旧系"
+"统与 Odoo 两套系统，需要合并两套系统数据，报税流程会变得繁琐。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:345
 msgid "Prepare the following documents from your previous system(s):"
-msgstr ""
+msgstr "请从旧系统准备以下文档："
 
 #: ../../content/applications/finance/accounting/get_started.rst:347
 msgid "Opening account balances"
-msgstr ""
+msgstr "科目期初余额"
 
 #: ../../content/applications/finance/accounting/get_started.rst:348
 msgid "Open (unpaid) invoices and credit notes"
-msgstr ""
+msgstr "未结清（未付款）发票与贷项通知单"
 
 #: ../../content/applications/finance/accounting/get_started.rst:349
 msgid "Open (unpaid) vendor bills and refunds"
-msgstr ""
+msgstr "未结清（未付款）供应商账单与退款单据"
 
 #: ../../content/applications/finance/accounting/get_started.rst:350
 msgid "Opening inventory count"
-msgstr ""
+msgstr "期初库存盘点数据"
 
 #: ../../content/applications/finance/accounting/get_started.rst:353
 msgid ""
@@ -12203,12 +12315,16 @@ msgid ""
 "balance on each bank journal's first statement so that it matches the "
 "current bank account balance."
 msgstr ""
+"如果系统启用自动存货计价，并且已经通过开票应用或库存移动生成过会计分录，请使"
+"用会计设置里的 :guilabel:`开票切换阈值`能，撤销指定日期之前的全部分录，获得干"
+"净的总账初始状态。另外，请在每个银行日记账的第一期对账单录入正确期初余额，与"
+"实际银行账户余额保持一致。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:360
 msgid ""
 "Before starting the process of creating opening entries in Odoo, verify that "
 "the data meets the following requirements:"
-msgstr ""
+msgstr "在 Odoo 中录入期初分录之前，请核对数据满足以下要求："
 
 #: ../../content/applications/finance/accounting/get_started.rst:363
 #: ../../content/applications/finance/accounting/get_started.rst:751
@@ -12216,6 +12332,7 @@ msgid ""
 "The sum of the opening trial balances of all receivable accounts must equal "
 "the sum of the open customer invoices minus credit notes."
 msgstr ""
+"全部应收科目期初试算余额之和，必须等于未结清客户发票总额减去贷项通知单总额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:365
 #: ../../content/applications/finance/accounting/get_started.rst:753
@@ -12223,6 +12340,7 @@ msgid ""
 "The sum of the opening trial balances of all payable accounts must equal the "
 "sum of the open vendor bills minus refunds."
 msgstr ""
+"全部应付科目期初试算余额之和，必须等于未结清供应商账单总额减去退款单据总额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:367
 #: ../../content/applications/finance/accounting/get_started.rst:755
@@ -12232,15 +12350,17 @@ msgid ""
 "product cost by the product quantity for each product and summing them "
 "together)."
 msgstr ""
+"product quantity for each product and summing them together).全部存货科目期初"
+"试算余额之和，必须等于库存总价值（每件产品成本乘以库存数量，再汇总求和）。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:370
 #: ../../content/applications/finance/accounting/get_started.rst:758
 msgid "The opening trial balance itself must be balanced."
-msgstr ""
+msgstr "期初试算平衡表本身借贷必须平衡。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:375
 msgid "Open invoices and bills"
-msgstr ""
+msgstr "未结清发票与供应商账单"
 
 #: ../../content/applications/finance/accounting/get_started.rst:377
 msgid ""
@@ -12250,19 +12370,22 @@ msgid ""
 "in the transition. Importing these records is largely the same process for "
 "both invoices and bills and is done in three steps:"
 msgstr ""
+"迁移至 Odoo 的企业，需要导入或手动录入未结清（即已有但尚未完全结清）的客户发"
+"票、供应商账单（含贷项通知单、退款单据），避免迁移过程丢失单据。发票与账单的"
+"导入流程大体一致，分为三步："
 
 #: ../../content/applications/finance/accounting/get_started.rst:382
 msgid ":ref:`Preparing invoices/bills <accounting/get_started/prep-bills>`"
-msgstr ""
+msgstr ":ref:`准备发票/账单数据 <accounting/get_started/prep-bills>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:383
 msgid ""
 ":ref:`Validating invoices/bills <accounting/get_started/validate-bills>`"
-msgstr ""
+msgstr ":ref:`校验发票/账单 <accounting/get_started/validate-bills>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:384
 msgid ":ref:`Importing invoices/bills <accounting/get_started/import-bills>`"
-msgstr ""
+msgstr ":ref:`导入发票/账单 <accounting/get_started/import-bills>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:387
 msgid ""
@@ -12271,16 +12394,19 @@ msgid ""
 "avoids common errors, such as tax accounts being affected twice for the same "
 "record."
 msgstr ""
+"为简化操作，建议导入单据时只录入到期总金额，不要录入每一行明细。可以避免同一"
+"笔单据造成税种科目重复记账等常见问题。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:394
 msgid "Prepare invoices and bills"
-msgstr ""
+msgstr "准备发票与供应商账单数据"
 
 #: ../../content/applications/finance/accounting/get_started.rst:396
 msgid ""
 "Prepare the open invoices and bills using the import template available in "
 "Odoo. To access the import templates:"
 msgstr ""
+"使用 Odoo 提供的导入模板准备未结清发票和账单数据。获取导入模板操作路径："
 
 #: ../../content/applications/finance/accounting/get_started.rst:399
 msgid ""
@@ -12290,6 +12416,10 @@ msgid ""
 "Click :icon:`fa-download` :guilabel:`Import Template for Invoices` to "
 "download the template."
 msgstr ""
+"处理发票与贷项通知单：进入:menuselection:`会计 ‑‑> 客户 ‑‑> 发票`，点"
+"击 :icon:`fa-cog`（:guilabel:`操作`）图标，再点击 :icon:`fa-"
+"download` :guilabel:`导入记录`。点击 :icon:`fa-download` :guilabel:`发票导入"
+"模板`下载模板。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:403
 msgid ""
@@ -12298,17 +12428,21 @@ msgid ""
 "click :icon:`fa-download` :guilabel:`Import records`. Click :icon:`fa-"
 "download` :guilabel:`Import Template for Bills` to download the template."
 msgstr ""
+"处理供应商账单与退款单据：进入 :menuselection:`会计 ‑‑> 供应商 ‑‑> 账单`，点"
+"击:icon:`fa-cog`（:guilabel:`操作`）图标，再点击 :icon:`fa-"
+"download` :guilabel:`导入记录`。点击 :icon:`fa-download` :guilabel:`账单导入"
+"模板`下载模板。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:407
 #: ../../content/applications/finance/accounting/get_started.rst:527
 msgid "Prepare the following fields:"
-msgstr ""
+msgstr "请准备以下字段："
 
 #: ../../content/applications/finance/accounting/get_started.rst:413
 #: ../../content/applications/finance/accounting/get_started.rst:533
 #: ../../content/applications/finance/accounting/get_started.rst:636
 msgid "Field"
-msgstr ""
+msgstr "字段"
 
 #: ../../content/applications/finance/accounting/get_started.rst:414
 #: ../../content/applications/finance/accounting/get_started.rst:534
@@ -12371,11 +12505,11 @@ msgstr "描述"
 
 #: ../../content/applications/finance/accounting/get_started.rst:416
 msgid "Customer name (must exactly match a contact record in Odoo)"
-msgstr ""
+msgstr "客户名称（必须与 Odoo 内的联系人记录完全一致）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:417
 msgid "Number"
-msgstr ""
+msgstr "编号"
 
 #: ../../content/applications/finance/accounting/get_started.rst:418
 msgid ""
@@ -12383,38 +12517,44 @@ msgid ""
 "exist in this database yet; otherwise, it will have to be :doc:`resequenced "
 "<customer_invoices/sequence>`"
 msgstr ""
+"发票编号（例如：BILL/2026/00001）：该编号**不得**已存在于当前数据库，否则需要"
+"执行 :doc:`重新编号 <customer_invoices/sequence>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:420
 #: ../../content/applications/finance/accounting/get_started.rst:638
 #: ../../content/applications/finance/accounting/get_started.rst:683
 msgid "Reference"
-msgstr ""
+msgstr "参考号"
 
 #: ../../content/applications/finance/accounting/get_started.rst:421
 msgid ""
 "(Optional) Invoice reference (i.e., the name of the document that created "
 "this invoice)"
-msgstr ""
+msgstr "（选填）发票参考号，即生成该发票的原始单据名称"
 
 #: ../../content/applications/finance/accounting/get_started.rst:422
 msgid "Invoice Bill Date"
-msgstr ""
+msgstr "发票账单日期"
 
 #: ../../content/applications/finance/accounting/get_started.rst:423
 msgid ""
 "Date the invoice was created. Ensure the year in the :guilabel:`Number` and "
 "the year in this field are the same to prevent errors."
 msgstr ""
+"发票的创建日期。请保证 :guilabel:`单据编号`中的年份与本字段年份保持一致，避免"
+"报错。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:425
 msgid "Due Date"
-msgstr ""
+msgstr "到期日"
 
 #: ../../content/applications/finance/accounting/get_started.rst:426
 msgid ""
 "Date the invoice/bill is due. Each invoice/bill can have either a due date "
 "or payment terms, but not both."
 msgstr ""
+"发票 / 账单的付款到期日期。每张单据只能填写到期日或者付款条款，二者不可同时使"
+"用。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:428
 msgid "Payment Terms"
@@ -12427,38 +12567,43 @@ msgid ""
 "both. Payment terms are only recommended for open invoices/bills if they are "
 "used with payment installments."
 msgstr ""
+"发票 / 账单的 :doc:`付款条款 <customer_invoices/payment_terms>`。每张单据只能"
+"填写到期日或者付款条款，二者不可同时使用。仅当未结清发票 / 账单涉及分期收款"
+"时，才建议使用付款条款。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:433
 msgid ""
 "(Optional) The journal name, if multiple sales journals or multiple purchase "
 "journals exist"
-msgstr ""
+msgstr "（选填）日记账名称，适用于存在多个销售日记账或采购日记账的场景"
 
 #: ../../content/applications/finance/accounting/get_started.rst:434
 msgid "Invoice Lines / Label"
-msgstr ""
+msgstr "发票行 / 标签"
 
 #: ../../content/applications/finance/accounting/get_started.rst:435
 msgid "A label for the invoice (e.g., `Open Invoices`)"
-msgstr ""
+msgstr "发票标签（例如：`未结清发票`）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:436
 msgid "Invoice Lines / Account"
-msgstr ""
+msgstr "发票行 / 科目"
 
 #: ../../content/applications/finance/accounting/get_started.rst:437
 msgid "The receivable clearing account"
-msgstr ""
+msgstr "应收过渡清算科目"
 
 #: ../../content/applications/finance/accounting/get_started.rst:438
 msgid "Invoice Lines / Unit Price"
-msgstr ""
+msgstr "发票行 / 单价"
 
 #: ../../content/applications/finance/accounting/get_started.rst:439
 msgid ""
 "The total amount due on the invoice. If partial payments have been made, "
 "this is for the remaining amount due (i.e., total minus partial payments)."
 msgstr ""
+"发票到期总金额。如已发生部分付款，则填写剩余待付金额（总金额减去已部分付"
+"款）。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:442
 msgid ""
@@ -12467,32 +12612,38 @@ msgid ""
 "a :ref:`historical exchange rate <multi-currency/manual-update>` for each "
 "invoice in a different currency before importing."
 msgstr ""
+"发票开具币种（与公司本位币不一致时填写）。如果导入多币种未结清发票，导入前需"
+"要为每一笔外币发票维护 :ref:`历史汇率 <multi-currency/manual-update>`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:449
 msgid "Validate invoices and bills"
-msgstr ""
+msgstr "校验发票与账单"
 
 #: ../../content/applications/finance/accounting/get_started.rst:451
 msgid ""
 "Validate the following aspects of the open invoices, bills, credit notes, "
 "and refunds:"
-msgstr ""
+msgstr "对未结清发票、供应商账单、贷项通知单、退款单据校验以下内容："
 
 #: ../../content/applications/finance/accounting/get_started.rst:453
 msgid ""
 "The sum of open bills minus the sum of open refunds equals the balance of "
 "accounts payable on the accounts payable of the opening trial balance."
 msgstr ""
+"未结清供应商账单总额减去未结清退款单据总额，应当等于期初试算平衡表中的应付账"
+"款余额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:455
 msgid ""
 "The sum of open invoices minus the sum of open credit notes equals the "
 "balance of the accounts receivable on the opening trial balance."
 msgstr ""
+"未结清发票总额减去未结清贷项通知单总额，应当等于期初试算平衡表中的应收账款余"
+"额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:457
 msgid "Check for negative invoices and bills:"
-msgstr ""
+msgstr "检查负金额发票与账单："
 
 #: ../../content/applications/finance/accounting/get_started.rst:459
 msgid ""
@@ -12502,6 +12653,10 @@ msgid ""
 "the :guilabel:`Number` from `INV/YEAR/NUMBER` to `RINV/YEAR/NUMBER`, and "
 "(optionally) change the :guilabel:`Reference` to `Reversal of: [INV Number]`."
 msgstr ""
+"如果存在负金额发票，该类单据属于贷项通知单，需要在 :menuselection:`会"
+"计 ‑‑> 客户 ‑‑> 贷项通知单`菜单下，以正数数值单独导入。将 :guilabel:`单据编号"
+"`由 `INV/YEAR/NUMBER` 修改为`RINV/YEAR/NUMBER`，可（选填）将:guilabel:`参考号"
+"`改为冲销单据：[发票编号]。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:463
 msgid ""
@@ -12512,6 +12667,10 @@ msgid ""
 "(optionally) change the :guilabel:`Reference` to `Reversal of: [BILL "
 "Number]`."
 msgstr ""
+"同理，如果存在负金额供应商账单，该类单据属于退款单据，需要在 :guilabel:`会"
+"计 ‑‑> 供应商 ‑‑> 退款单据`菜单下，以正数数值单独导入。将 :guilabel:`单据编号"
+"`由 `BILL/YEAR/NUMBER`修改为`RBILL/YEAR/NUMBER`，可（选填）将 :guilabel:`参考"
+"号`改为`冲销单据：[账单编号]`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:468
 msgid ""
@@ -12520,39 +12679,44 @@ msgid ""
 "currency/manual-update>` for the date of creation for each invoice or bill "
 "in a different currency."
 msgstr ""
+"多币种检查：如果导入不同币种的期初应收 / 应付单据，请为每一笔非本位币的发票或"
+"账单，按其创建日期创建对应的：:ref:`历史汇率 <multi-currency/manual-"
+"update>`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:475
 msgid "Import invoices and bills"
-msgstr ""
+msgstr "导入发票与账单"
 
 #: ../../content/applications/finance/accounting/get_started.rst:477
 msgid ""
 ":ref:`Import <essentials/export_import_data/import-data>` the :ref:`prepared "
 "fields <accounting/get_started/prep-bills>` from the appropriate menu:"
 msgstr ""
+"在对应菜单下：:ref:`导入 <essentials/export_import_data/import-data>`已"
+"经：:ref:`准备好的字段 <accounting/get_started/prep-bills>`："
 
 #: ../../content/applications/finance/accounting/get_started.rst:480
 msgid ""
 "For customer invoices, go to :menuselection:`Accounting --> Customers --> "
 "Invoices`."
-msgstr ""
+msgstr "客户发票：进入:menuselection:`会计 --> 客户 --> 发票`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:481
 msgid ""
 "For vendor bills, go to :menuselection:`Accounting --> Vendors --> Bills`."
-msgstr ""
+msgstr "供应商账单：进入 :menuselection:`会计 --> 供应商 --> 账单`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:482
 msgid ""
 "For credit notes, go to :menuselection:`Accounting --> Customers --> Credit "
 "Notes`."
-msgstr ""
+msgstr "贷记单：进入 :menuselection:`会计 --> 客户 --> 贷记单`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:483
 msgid ""
 "For vendor refunds, go to :menuselection:`Accounting --> Vendors --> "
 "Refunds`."
-msgstr ""
+msgstr "供应商退款单：进入 :menuselection:`会计 --> 供应商 --> 退款`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:485
 msgid ""
@@ -12560,16 +12724,18 @@ msgid ""
 "the imported draft records, click :icon:`fa-cog` :guilabel:`Actions`, and "
 "click :guilabel:`Confirm Entries`."
 msgstr ""
+"所有记录均以草稿状态导入。在生成的列表视图中，选中导入的草稿记录，点"
+"击 :icon:`fa-cog` :guilabel:`操作`，再点击 :guilabel:`确认分录`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:488
 msgid ""
 "Repeat the process for each record type (invoices, bills, credit notes, and "
 "refunds)."
-msgstr ""
+msgstr "对每一类单据（发票、账单、贷记单、退款单）重复上述操作。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:493
 msgid "Opening inventory"
-msgstr ""
+msgstr "期初库存"
 
 #: ../../content/applications/finance/accounting/get_started.rst:496
 msgid ""
@@ -12578,26 +12744,29 @@ msgid ""
 "<accounting/inventory-valuation/accounting-standards>` or :ref:`valuation "
 "method <accounting/inventory-valuation/configuration>`."
 msgstr ""
+"无论采用何种 :ref:`会计准则 <accounting/inventory-valuation/accounting-"
+"standards>` 与 :ref:`计价方式 <accounting/inventory-valuation/"
+"configuration>`，期初库存盘点及对应库存估值的操作流程保持一致。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:501
 msgid "The process of importing an opening inventory is done in three steps:"
-msgstr ""
+msgstr "期初库存导入分为三步："
 
 #: ../../content/applications/finance/accounting/get_started.rst:503
 msgid ":ref:`Preparing inventory <accounting/get_started/prep-inventory>`"
-msgstr ""
+msgstr ":ref:`准备库存数据 <accounting/get_started/prep-inventory>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:504
 msgid ":ref:`Validating inventory <accounting/get_started/validate-inventory>`"
-msgstr ""
+msgstr ":ref:`校验库存数据 <accounting/get_started/validate-inventory>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:505
 msgid ":ref:`Importing inventory <accounting/get_started/import-inventory>`"
-msgstr ""
+msgstr ":ref:`导入库存数据 <accounting/get_started/import-inventory>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:510
 msgid "Prepare the inventory"
-msgstr ""
+msgstr "准备库存数据"
 
 #: ../../content/applications/finance/accounting/get_started.rst:512
 msgid ""
@@ -12605,6 +12774,8 @@ msgid ""
 "update them, either manually in the :guilabel:`Cost` field on the product "
 "form, or via an :ref:`import to update <essentials/update-data>` it."
 msgstr ""
+"如果创建产品时未录入产品成本，请进行更新：可在产品表单的 :guilabel:`成本`字段"
+"手动录入，也可通过 :ref:`导入更新 <essentials/update-data>`完成。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:517
 msgid ""
@@ -12613,6 +12784,9 @@ msgid ""
 "product form, then import the quantity at that cost. Repeat the process as "
 "many times as needed, once for each different cost."
 msgstr ""
+"对于采用 :abbr:`FIFO（先进先出）`成本计价法、存在多批次不同成本库存的产品：先"
+"在产品表单设置对应成本，再导入该成本下的库存数量。不同成本需分别执行一次该操"
+"作，按需重复。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:521
 msgid ""
@@ -12623,6 +12797,10 @@ msgid ""
 "records`. Click :icon:`fa-download` :guilabel:`Import Template for Inventory "
 "Adjustments` to download the template."
 msgstr ""
+"使用 Odoo 自带导入模板准备期初库存盘点数据。获取模板路径：进"
+"入 :menuselection:`库存 --> 作业 --> 实际库存`，点击 :icon:`fa-cog`"
+"（:guilabel:`操作`）图标，点击 :icon:`fa-download` :guilabel:`导入记录`，再点"
+"击 :icon:`fa-download` :guilabel:`库存调整`导入模板下载模板。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:535
 #: ../../content/applications/finance/accounting/get_started.rst:565
@@ -12646,38 +12824,45 @@ msgid ""
 "<export_import_data/different-ids>` to identify the product and change the "
 "column name to `Product / External ID`."
 msgstr ""
+"产品名称或内部参考编号。如果使用 :doc:`产品变体 <../../sales/sales/"
+"products_prices/products/variants>`，识别逻辑会更复杂，多个变体可能共用同一个"
+"产品名称。此种场景建议使用 :ref:`外部ID <export_import_data/different-ids>`定"
+"位产品，并将列名修改为`产品 / 外部ID`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:541
 msgid "Counted"
-msgstr ""
+msgstr "盘点数量"
 
 #: ../../content/applications/finance/accounting/get_started.rst:542
 msgid "The quantity of products in the opening inventory count"
-msgstr ""
+msgstr "期初库存盘点的产品数量"
 
 #: ../../content/applications/finance/accounting/get_started.rst:543
 msgid "Location"
-msgstr ""
+msgstr "库位"
 
 #: ../../content/applications/finance/accounting/get_started.rst:544
 msgid ""
 "If the :guilabel:`Locations` feature has been enabled in the settings, it is "
 "required to specify where each line of the opening inventory is located."
 msgstr ""
+"若设置中已开启 :guilabel:`库位`功能，则必须填写每一行期初库存对应的存放库位。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:546
 msgid "Lot/Serial Number"
-msgstr ""
+msgstr "批次 / 序列号"
 
 #: ../../content/applications/finance/accounting/get_started.rst:547
 msgid ""
 "If the product is tracked by lot or serial numbers, specify the lot or "
 "serial number here. Each unique lot or serial number requires its own line."
 msgstr ""
+"如果产品启用批次或序列号管理，请在此填写对应批次或序列号；每个独立批次、序列"
+"号需要单独占一行。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:553
 msgid "Validate the inventory"
-msgstr ""
+msgstr "校验库存数据"
 
 #: ../../content/applications/finance/accounting/get_started.rst:555
 msgid ""
@@ -12686,22 +12871,24 @@ msgid ""
 "inventory is calculated by multiplying the product cost by the product "
 "quantity for each line and summing them together."
 msgstr ""
+"核对所有库存科目期初试算平衡余额之和，应当等于库存总价值。库存总价值计算方"
+"式：每行记录的产品成本 × 产品数量，再全部累加。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:566
 msgid "Counted quantity"
-msgstr ""
+msgstr "盘点数量"
 
 #: ../../content/applications/finance/accounting/get_started.rst:567
 msgid "Product cost"
-msgstr ""
+msgstr "产品成本"
 
 #: ../../content/applications/finance/accounting/get_started.rst:568
 msgid "Total value"
-msgstr ""
+msgstr "总价值"
 
 #: ../../content/applications/finance/accounting/get_started.rst:569
 msgid "Desk"
-msgstr ""
+msgstr "桌子"
 
 #: ../../content/applications/finance/accounting/get_started.rst:570
 #: ../../content/applications/finance/accounting/taxes/tax_computation.rst:51
@@ -12711,15 +12898,15 @@ msgstr "10"
 
 #: ../../content/applications/finance/accounting/get_started.rst:571
 msgid "$250"
-msgstr ""
+msgstr "$250"
 
 #: ../../content/applications/finance/accounting/get_started.rst:572
 msgid "$2500"
-msgstr ""
+msgstr "$2500"
 
 #: ../../content/applications/finance/accounting/get_started.rst:573
 msgid "Table"
-msgstr ""
+msgstr "桌子"
 
 #: ../../content/applications/finance/accounting/get_started.rst:574
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:91
@@ -12730,15 +12917,15 @@ msgstr "8"
 
 #: ../../content/applications/finance/accounting/get_started.rst:575
 msgid "$350"
-msgstr ""
+msgstr "$350"
 
 #: ../../content/applications/finance/accounting/get_started.rst:576
 msgid "$2800"
-msgstr ""
+msgstr "$2800"
 
 #: ../../content/applications/finance/accounting/get_started.rst:577
 msgid "Chair"
-msgstr ""
+msgstr "椅子"
 
 #: ../../content/applications/finance/accounting/get_started.rst:578
 #: ../../content/applications/finance/fiscal_localizations/france.rst:535
@@ -12747,11 +12934,11 @@ msgstr "15"
 
 #: ../../content/applications/finance/accounting/get_started.rst:579
 msgid "$50"
-msgstr ""
+msgstr "$50"
 
 #: ../../content/applications/finance/accounting/get_started.rst:580
 msgid "$750"
-msgstr ""
+msgstr "$750"
 
 #: ../../content/applications/finance/accounting/get_started.rst:582
 msgid ""
@@ -12759,47 +12946,52 @@ msgid ""
 "the inventory account in the trial balance must equal $6050, or if there are "
 "multiple inventory accounts, their sum must be $6050."
 msgstr ""
+"全部库存合计为 6050 美元（2500 + 2800 + 750）。试算平衡表中的库存科目余额必须"
+"等于 6050 美元；若存在多个库存科目，则各科目余额之和应为 6050 美元。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:589
 msgid "Import the inventory"
-msgstr ""
+msgstr "导入库存数据"
 
 #: ../../content/applications/finance/accounting/get_started.rst:591
 msgid ""
 ":ref:`Import <essentials/export_import_data/import-data>` the :ref:`prepared "
 "fields <accounting/get_started/prep-inventory>`:"
 msgstr ""
+":ref:`导入  <essentials/export_import_data/import-data>`:ref:`已准备好的字段 "
+"<accounting/get_started/prep-inventory>`："
 
 #: ../../content/applications/finance/accounting/get_started.rst:594
 msgid "Go to :menuselection:`Inventory --> Operations --> Physical Inventory`."
-msgstr ""
+msgstr "前往 :menuselection:`库存 --> 作业 --> 实物盘点`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:595
 msgid ""
 ":ref:`Import <essentials/export_import_data/import-data>` the inventory "
 "count."
-msgstr ""
+msgstr ":ref:`导入 <essentials/export_import_data/import-data>`库存数据。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:596
 msgid ""
 "The records are all imported as drafts. From the resulting list view, "
 "click :guilabel:`Apply All`."
 msgstr ""
+"导入的记录全部为草稿状态。在生成的列表视图中点击 :guilabel:`全部应用`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:598
 msgid ""
 "Enter an :guilabel:`Inventory Reason` (e.g., `Opening inventory`) and "
 "a :guilabel:`Counting Date`."
-msgstr ""
+msgstr "填写 :guilabel:`库存原因`（例如：期初库存）以及 :guilabel:`盘点日期`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:600
 msgid "Click :guilabel:`Update Quantities`."
-msgstr ""
+msgstr "点击 :guilabel:`更新数量`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:605
 #: ../../content/applications/finance/accounting/get_started.rst:689
 msgid "Opening trial balance"
-msgstr ""
+msgstr "期初试算平衡表"
 
 #: ../../content/applications/finance/accounting/get_started.rst:607
 msgid ""
@@ -12807,28 +12999,30 @@ msgid ""
 "balance. It is crucial to input this data into Odoo so that accounts have "
 "the correct balances going forward."
 msgstr ""
+"试算平衡表是所有科目及其当前余额的完整清单。务必将该数据录入 Odoo，以保证后续"
+"科目余额准确。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:610
 msgid ""
 "The process of importing an opening trial balance is done in three steps:"
-msgstr ""
+msgstr "导入期初试算平衡表分为三步："
 
 #: ../../content/applications/finance/accounting/get_started.rst:612
 msgid ":ref:`Preparing the trial balance <accounting/get_started/prep-tb>`"
-msgstr ""
+msgstr ":ref:`准备试算平衡表 <accounting/get_started/prep-tb>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:613
 msgid ""
 ":ref:`Validating the trial balance <accounting/get_started/validate-tb>`"
-msgstr ""
+msgstr ":ref:`校验试算平衡表 <accounting/get_started/validate-tb>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:614
 msgid ":ref:`Importing the trial balance <accounting/get_started/import-tb>`"
-msgstr ""
+msgstr ":ref:`导入试算平衡表 <accounting/get_started/import-tb>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:619
 msgid "Prepare the opening trial balance"
-msgstr ""
+msgstr "准备期初试算平衡表"
 
 #: ../../content/applications/finance/accounting/get_started.rst:621
 msgid ""
@@ -12836,6 +13030,8 @@ msgid ""
 "be a list of all accounts in the chart of accounts, each with its balance as "
 "either a debit or a credit."
 msgstr ""
+"从旧系统软件导出试算平衡表。试算平衡表应列出科目表下全部科目，每个科目分别填"
+"列借方余额或贷方余额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:624
 msgid ""
@@ -12848,42 +13044,47 @@ msgid ""
 "download` :guilabel:`Import Template for Misc. Operations` to download the "
 "template."
 msgstr ""
+"将旧系统的数据填入 Odoo 提供的会计分录导入模板，完成期初试算平衡表准备。打开"
+"会计分录导入模板：进入菜单 :menuselection:`会计 --> 会计 --> 会计分录`，点"
+"击 :icon:`fa-cog`（:guilabel:`操作`）图标，再点击 :icon:`fa-"
+"download` :guilabel:`导入记录`。点击 :icon:`fa-download` :guilabel:`其他业务"
+"导入模板`下载模板。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:630
 msgid ""
 "Insert the data of the trial balance in the template with the following "
 "fields:"
-msgstr ""
+msgstr "请在模板中录入试算平衡表数据，使用以下字段："
 
 #: ../../content/applications/finance/accounting/get_started.rst:639
 msgid ""
 "A reference that identifies this journal entry (e.g., `Opening trial "
 "balance` or something similar)"
-msgstr ""
+msgstr "用于标识该笔会计分录的参考编号（例如：期初试算平衡表或类似标识）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:642
 msgid "The date of this journal entry"
-msgstr ""
+msgstr "该笔会计分录的日期"
 
 #: ../../content/applications/finance/accounting/get_started.rst:644
 msgid ""
 "The journal this journal entry should exist in. The default miscellaneous "
 "journal is recommended."
-msgstr ""
+msgstr "该分录归属的日记账。建议使用默认的杂项日记账。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:646
 #: ../../content/applications/finance/accounting/get_started.rst:686
 msgid "Journal Items/Account"
-msgstr ""
+msgstr "分录行 / 科目"
 
 #: ../../content/applications/finance/accounting/get_started.rst:647
 msgid "The account code and/or name"
-msgstr ""
+msgstr "科目编码和 / 或科目名称"
 
 #: ../../content/applications/finance/accounting/get_started.rst:648
 #: ../../content/applications/finance/accounting/get_started.rst:687
 msgid "Journal Items/Debit"
-msgstr ""
+msgstr "分录行 / 借方"
 
 #: ../../content/applications/finance/accounting/get_started.rst:649
 msgid ""
@@ -12891,11 +13092,13 @@ msgid ""
 "has a credit, this field should be left blank. Do not enter `0.00` or a "
 "negative value."
 msgstr ""
+"以公司本位币填写科目的借方金额。若该行是贷方，则此字段留空，请勿填写0.00或负"
+"数。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:651
 #: ../../content/applications/finance/accounting/get_started.rst:688
 msgid "Journal Items/Credit"
-msgstr ""
+msgstr "分录行 / 贷方"
 
 #: ../../content/applications/finance/accounting/get_started.rst:652
 msgid ""
@@ -12903,15 +13106,17 @@ msgid ""
 "has a debit, this field should be left blank. Do not enter `0.00` or a "
 "negative value."
 msgstr ""
+"以公司本位币填写科目的贷方金额。若该行是借方，则此字段留空，请勿填写0.00或负"
+"数。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:654
 msgid "Journal Items/Label"
-msgstr ""
+msgstr "分录行 / 备注"
 
 #: ../../content/applications/finance/accounting/get_started.rst:655
 msgid ""
 "(Optional) A label that identifies this specific line of the trial balance"
-msgstr ""
+msgstr "（选填）用于标识该条试算平衡表分录行的备注"
 
 #: ../../content/applications/finance/accounting/get_started.rst:658
 msgid ""
@@ -12920,6 +13125,8 @@ msgid ""
 "for the first line so that one journal entry is created containing all of "
 "the journal items within it."
 msgstr ""
+":guilabel:`参考编号`、:guilabel:`日期`、:guilabel:`日记账`这三列作用于整笔会"
+"计分录。因此仅需在第一行填写，系统将生成一笔包含全部分录行的会计分录。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:661
 msgid ""
@@ -12928,24 +13135,26 @@ msgid ""
 "the line should remain blank. Do not enter `0.00` or a negative value in any "
 "column."
 msgstr ""
+"每一行仅可在 :guilabel:`分录行/借方` 或 :guilabel:`分录行/贷方` 其中一列录入"
+"金额，该行另一列保持为空。所有列均不要填写 0.00 或负数。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:665
 msgid ""
 "Edit the opening trial balance spreadsheet, replacing the following accounts "
 "with clearing accounts:"
-msgstr ""
+msgstr "编辑期初试算平衡表表格，使用过渡科目替换以下科目："
 
 #: ../../content/applications/finance/accounting/get_started.rst:667
 msgid ""
 "Accounts Receivable --> AR Clearing (:guilabel:`Type` = :guilabel:`Current "
 "Assets`)"
-msgstr ""
+msgstr "应收账款 --> 应收过渡科目（:guilabel:`类型` = :guilabel:`流动资产`）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:668
 msgid ""
 "Accounts Payable --> AP Clearing (:guilabel:`Type` = :guilabel:`Current "
 "Assets`)"
-msgstr ""
+msgstr "应付账款 --> 应付过渡科目（:guilabel:`类型` = :guilabel:`流动资产`）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:672
 msgid ""
@@ -12953,16 +13162,18 @@ msgid ""
 "clearing account types are changed to :guilabel:`Off-Balance Sheet`, so the "
 "account type is not critical."
 msgstr ""
+"在:ref:`最终校验步骤  <accounting/get_started/validation>`中，过渡科目的类型"
+"会被修改为 :guilabel:`表外科目`，因此科目类型无需严格限定。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:674
 msgid ""
 "If you use multiple accounts receivable or multiple accounts payable, they "
 "can be merged into a single clearing account."
-msgstr ""
+msgstr "如果存在多个应收账款或多个应付账款科目，可以将其合并至同一个过渡科目。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:690
 msgid "01/01/2026"
-msgstr ""
+msgstr "01/01/2026"
 
 #: ../../content/applications/finance/accounting/get_started.rst:691
 #: ../../content/applications/finance/accounting/get_started/journals.rst:254
@@ -12971,7 +13182,7 @@ msgstr "杂项"
 
 #: ../../content/applications/finance/accounting/get_started.rst:692
 msgid "101404 Bank"
-msgstr ""
+msgstr "101404 银行"
 
 #: ../../content/applications/finance/accounting/get_started.rst:693
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:219
@@ -12980,11 +13191,11 @@ msgstr "10,000"
 
 #: ../../content/applications/finance/accounting/get_started.rst:698
 msgid "110100 Inventory Valuation"
-msgstr ""
+msgstr "110100 库存估值"
 
 #: ../../content/applications/finance/accounting/get_started.rst:699
 msgid "30,000"
-msgstr ""
+msgstr "30,000"
 
 #: ../../content/applications/finance/accounting/get_started.rst:704
 msgid "777777 AR Clearing"
@@ -13045,27 +13256,31 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:749
 msgid "Verify that the trial balance meets the following requirements:"
-msgstr ""
+msgstr "请确认试算表符合以下要求："
 
 #: ../../content/applications/finance/accounting/get_started.rst:763
 msgid "Import the opening trial balance"
-msgstr ""
+msgstr "导入期初试算表"
 
 #: ../../content/applications/finance/accounting/get_started.rst:765
 msgid ""
 ":ref:`Import <essentials/export_import_data/import-data>` the :ref:`prepared "
 "fields <accounting/get_started/prep-tb>`."
 msgstr ""
+":ref:`导入 <essentials/export_import_data/import-data>` 中的:ref:`预设字段 "
+"<accounting/get_started/prep-tb>` 。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:768
 msgid ""
 "The trial balance is imported as a draft. From the resulting list view, open "
 "the draft entry, review it, and click :guilabel:`Post`."
 msgstr ""
+"试算表将作为草稿导入。在生成的列表视图中，打开该草稿条目，进行审核，然后点"
+"击 :guilabel:`发布`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:774
 msgid "Opening bank and credit card transactions"
-msgstr ""
+msgstr "开户及信用卡交易"
 
 #: ../../content/applications/finance/accounting/get_started.rst:776
 msgid ""
@@ -13073,6 +13288,8 @@ msgid ""
 "journal's opening statement's starting balance is updated to reflect the "
 "actual value of the account:"
 msgstr ""
+"对于银行、信用卡和现金账户，务必核实日记账期初余额表中的期初余额是否已更新，"
+"以反映账户的实际价值："
 
 #: ../../content/applications/finance/accounting/get_started.rst:779
 msgid ""
@@ -13082,6 +13299,9 @@ msgid ""
 "the :guilabel:`Starting Balance` to the correct balance of the bank account "
 "before the first transaction."
 msgstr ""
+"添加首批交易记录后（无论是手动添加、通过导入还是通过银行同步），请创建期初对"
+"账单:ref:` <accounting/transactions/statements>` ，其中可包含任意数量的交易记"
+"录。将:guilabel:`期初余额` 设置为第一笔交易发生前该银行账户的正确余额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:785
 msgid ""
@@ -13089,14 +13309,16 @@ msgid ""
 "accounts, delete any transactions from before the date of the trial balance "
 "to ensure the account balance is correct."
 msgstr ""
+"当 :doc:`同步 <bank/bank_synchronization>` 银行和信用卡账户时，请删除试算表日"
+"期之前的任何交易，以确保账户余额准确无误。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:788
 msgid "Repeat this process for each bank, cash, or credit card journal."
-msgstr ""
+msgstr "对每个银行、现金或信用分录重复此过程。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:793
 msgid "Final validation"
-msgstr ""
+msgstr "最终验证"
 
 #: ../../content/applications/finance/accounting/get_started.rst:795
 msgid ""
@@ -13105,6 +13327,8 @@ msgid ""
 "their :guilabel:`Account Type` to :guilabel:`Off-Balance Sheet` after the "
 "import."
 msgstr ""
+"为完成向 Odoo 的过渡，请确认所有抵销账户现已收支平衡，并在导入后将"
+"其 :guilabel:`账户类型` 更改为:guilabel:`表外科目（` ），以将其从报表中移除。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:3
 msgid "Average price on returned goods"
@@ -15744,6 +15968,11 @@ msgid ""
 "the :guilabel:`Periodic` inventory valuation method, the expense account is "
 "debited when vendor bills are posted."
 msgstr ""
+":guilabel:`定期核算（期末结账时）`：仅在执行:ref:`库存结账流程 <accounting/"
+"inventory-valuation/closing-entry>`生成凭证时，才更新存货价值。货物出入库变动"
+"会通过 :doc:`库存台账 <../../../inventory_and_mrp/inventory/"
+"warehouses_storage/reporting/stock>` 报表进行实物统计，但不会自动同步至财务账"
+"务。选用 :guilabel:`定期` 存货计价方式时，供应商发票过账时借记费用科目。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:74
 msgid ""
@@ -15754,6 +15983,11 @@ msgid ""
 "entry>`, :guilabel:`Perpetual (at invoicing)` inventory valuation is updated "
 "for deliveries and receipts, even if there is no invoice or vendor bill yet."
 msgstr ""
+":guilabel:`永续核算（开票时核算）`：在发票或账单过账时更新存货价值。过账销售"
+"发票时，借记费用科目 (:abbr:`COGS（主营业务成本）`)。配合:ref:`库存结账流程 "
+"<accounting/inventory-valuation/closing-entry>`，即便尚未开具发票或录入供应商"
+"账单，:guilabel:`永续核算（开票时核算）`模式也会针对货品出入库业务更新存货价"
+"值。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:81
 msgid ""
@@ -15762,6 +15996,8 @@ msgid ""
 "standards. However, companies may choose a different inventory valuation "
 "method based on their specific needs."
 msgstr ""
+"定期计价模式通常适用于大陆法系会计准则，永续计价模式则普遍应用于英美法系会计"
+"准则。企业可根据自身实际需求，选择适配的存货计价方式。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:84
 msgid ""
@@ -15771,6 +16007,10 @@ msgid ""
 "require synchronization with inventory stock, unless an automatic update of "
 "accounting inventory value is needed."
 msgstr ""
+"采用 :guilabel:`永续` 计价模式时，一般将 :guilabel:`定期计价` 设置"
+"为 :guilabel:`手动` 模式，仅在会计期间结账，或是财务报表需要与库存数据保持一"
+"致时生成结账凭证；除非企业需要系统自动更新账面存货价值，否则无需设置自动生成"
+"凭证。 "
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:90
 msgid ""
@@ -15781,10 +16021,13 @@ msgid ""
 "the product form, and the actual billed price, helping track pricing "
 "fluctuations."
 msgstr ""
+"将:guilabel:`永续核算（开票时核算）`计价方式搭配:guilabel:`标准价`成本核算方"
+"法使用时，可为:guilabel:`产品类别`指定:guilabel:`价格差异科目`。该科目用于记"
+"录产品档案中标注的标准价格与实际开票价格之间的差额，便于追踪价格波动情况。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:99
 msgid "Valuation account"
-msgstr ""
+msgstr "计价科目"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:101
 msgid ""
@@ -15793,10 +16036,13 @@ msgid ""
 "inventory asset value differently depending on the selected :ref:`valuation "
 "method <accounting/inventory-valuation/valuation-method>`."
 msgstr ""
+":guilabel:`计价科目`用于记录资产负债表中列为流动资产的存货金额。根据所"
+"选 :ref:`计价方式 <accounting/inventory-valuation/valuation-method>` 的不"
+"同，:guilabel:`计价科目`核算存货资产价值的规则也有所区别。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:108
 msgid "Variation account"
-msgstr ""
+msgstr "差异科目"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:110
 msgid ""
@@ -15805,18 +16051,25 @@ msgid ""
 "valuation/closing-entry>` and can be updated during :ref:`configuration "
 "<accounting/inventory-valuation/configuration>`:"
 msgstr ""
+":guilabel:`差异科目`用于归集:ref:`库存结账流程 <accounting/inventory-"
+"valuation/closing-entry>`期间产生的存货变动金额，可在:ref:`配置页面 "
+"<accounting/inventory-valuation/configuration>`中进行设置："
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:114
 msgid ""
 "Continental :guilabel:`Periodic (at closing)`: Expense account (specific for "
 "variation recording)."
 msgstr ""
+"大陆法系 :guilabel:`定期核算（期末结账）`：选用费用科目（专门用于核算存货差"
+"异）。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:115
 msgid ""
 "Anglo-Saxon :guilabel:`Perpetual (at invoicing)`: Current asset account "
 "(recommended for interim tracking) or expense account (optional)."
 msgstr ""
+"英美法系 :guilabel:`永续核算（开票时核算）`：流动资产科目（中期核算推荐使"
+"用），也可选用费用科目（可选配置）。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:119
 msgid ""
@@ -15825,6 +16078,9 @@ msgid ""
 "Valuation report <accounting/inventory-valuation/inventory-valuation-"
 "report>`."
 msgstr ""
+"货品出入库产生的库存变动数据，会展示在 :ref:`存货价值报表 <accounting/"
+"inventory-valuation/inventory-valuation-report>` 的 :guilabel:`库存变动` 栏目"
+"中。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:122
 msgid ""
@@ -15835,14 +16091,18 @@ msgid ""
 "the :ref:`accrual entries <accounting/inventory-valuation/accrual-entries>` "
 "are recorded."
 msgstr ""
+"启用 :guilabel:`永续核算（开票时核算）`存货计价方式后，即便出入库业务尚未生成"
+"供应商账单或销售发票，系统仍可将库存价值变动记入财务账务。在生成 :ref:`预提凭"
+"证 <accounting/inventory-valuation/accrual-entries>`之前，:guilabel:`差异科目"
+"` 充当过渡缓冲科目。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:131
 msgid "Other accounts"
-msgstr ""
+msgstr "其他科目"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:136
 msgid "Inventory Loss"
-msgstr ""
+msgstr "库存损失"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:138
 msgid ""
@@ -15987,6 +16247,9 @@ msgid ""
 "the :ref:`Loss Account <accounting/inventory-valuation/inventory-loss>` was "
 "filled in during configuration."
 msgstr ""
+":guilabel:`存货损失科目`（仅适用于:guilabel:`定期核算（期末结账模式））：仅在"
+"配置环节填写了 :ref:`损失科目 <accounting/inventory-valuation/inventory-"
+"loss>` 时启用。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:202
 msgid ""
@@ -84126,6 +84389,40 @@ msgid ""
 msgstr ""
 "使用在 :ref:`payment_providers/xendit/configure_dashboard` 步骤中保存的信息填"
 "写 :guilabel:`秘钥` 和 :guilabel:`网络钩子令牌` 字段。"
+
+#~ msgid ""
+#~ "When money is transferred from one bank or cash account to another, that "
+#~ "amount appears as two transactions on the corresponding journals, whether "
+#~ "the transactions are created manually, via import, or via :doc:`bank "
+#~ "synchronization <bank_synchronization>`. When :ref:`reconciling the "
+#~ "transaction <accounting/reconciliation/reconcile>`, select "
+#~ "the :guilabel:`Internal Transfers` :doc:`reconciliation model "
+#~ "<reconciliation_models>` button. This action writes the transaction off "
+#~ "to the :guilabel:`Internal Transfer` account."
+#~ msgstr ""
+#~ "当资金从一个银行或现金账户转入另一个账户时，无论交易是通过手动创建、导入还"
+#~ "是通过 :doc:`银行同步 <bank_synchronization>` 生成，该金额都会在相应的日记"
+#~ "账中显示为两笔交易。在 :ref:`对账 <accounting/reconciliation/reconcile>` "
+#~ "时，请选择 :guilabel:`内部转账` :doc:`对账模型 <reconciliation_models>` 按"
+#~ "钮。此操作将交易过账至 :guilabel:`内部转账` 账户。"
+
+#~ msgid ""
+#~ "Remember to reconcile both the outgoing transaction (on the journal that "
+#~ "sends the payment) and the incoming transaction (on the journal that "
+#~ "receives the payment) with the internal transfers account using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model button."
+#~ msgstr ""
+#~ "请务必使用 :guilabel:`内部转账`对账模型按钮，将付款方日记账中的“付款”交易"
+#~ "与收款方日记账中的“收款”交易，与内部转账账户进行对账。"
+
+#~ msgid ""
+#~ "Once each bank journal's transaction is reconciled using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model, the internal "
+#~ "transfer account is balanced, and the balances of both bank accounts are "
+#~ "updated to reflect the transfer."
+#~ msgstr ""
+#~ "一旦使用 :guilabel:`内部转账` 对账模型对每个银行日记账的交易进行对账，内部"
+#~ "转账账户即会结清，两个银行账户的余额也会相应更新以反映该笔转账。"
 
 #~ msgid "Basic concepts of accounting and initial setup of your accounting"
 #~ msgstr "会计的基本概念和会计的初始设置"
