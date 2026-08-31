@@ -4,7 +4,7 @@ Recruitment flow
 
 When a prospective employee applies for a job in Odoo, there is a preconfigured process from the
 :ref:`initial inquiry <recruitment/recruitment_flow/new>` to the :ref:`creation of a new employee
-<recruitment/offer_job_position/new-employee>` once hired. The following outlines the default
+<recruitment/offer_job_positions/new-employee>` once hired. The following outlines the default
 recruitment process for Odoo's **Recruitment** application.
 
 .. important::
@@ -19,7 +19,7 @@ New
 
 At the start of the process, all applicants appear in the :guilabel:`New` stage on the
 *Applications* page, whether they submitted through the company website, emailed a resumé to the
-email alias, or were :doc:`manually added by a recruiter <add-new-applicants>`.
+email alias, or were :doc:`manually added by a recruiter <add_applicants>`.
 
 The :guilabel:`Applicant`, :guilabel:`Email`, and :guilabel:`Phone` number on the applicant's card
 are filled as soon as it is created. By default, these details are required for every job position.
