@@ -28,8 +28,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-28 17:32+0000\n"
-"PO-Revision-Date: 2026-08-29 01:09+0000\n"
+"POT-Creation-Date: 2026-09-04 17:33+0000\n"
+"PO-Revision-Date: 2026-08-31 20:09+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/general/es_419/>\n"
@@ -14690,6 +14690,13 @@ msgid ""
 "into the database with. Any device currently logged into the system displays "
 "a green circle next to the device name on the Kanban card."
 msgstr ""
+"Para revisar los dispositivos que tienen una sesión iniciada, haz clic en el "
+"icono de usuario que está ubicado en la esquina superior derecha y luego "
+"en :guilabel:`Mis preferencias` para abrir el perfil del usuario. Haz clic "
+"en la pestaña *Seguridad* para ver una lista de todos los dispositivos con "
+"los que el usuario inició sesión en la base de datos. Todos los dispositivos "
+"que tienen una sesión activa muestran un círculo verde junto al nombre del "
+"dispositivo en la tarjeta de kanban."
 
 #: ../../content/applications/general/users.rst:None
 msgid "The Kanban view of all user devices."
@@ -14705,6 +14712,9 @@ msgid ""
 "potential security risk, remove the device and revoke access by clicking "
 "the :guilabel:`Log out` button."
 msgstr ""
+"Si un dispositivo de la lista **no** es un dispositivo legítimo del usuario "
+"y podría representar un riesgo de seguridad, elimina el dispositivo y revoca "
+"el acceso al hacer clic en el botón :guilabel:`Cerrar sesión`."
 
 #: ../../content/applications/general/users.rst:88
 msgid ""
@@ -14712,12 +14722,17 @@ msgid ""
 "confirm their identity. Enter the user's password, then "
 "click :guilabel:`Confirm Password`."
 msgstr ""
+"Esta acción abre la ventana emergente :guilabel:`Control de acceso`, que te "
+"pedirá confirmar tu identidad. Ingresa la contraseña del usuario y haz clic "
+"en :guilabel:`Confirmar contraseña`."
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
 "The device disappears from the *Security* tab and can no longer be used to "
 "log into the database."
 msgstr ""
+"El dispositivo desaparece de la pestaña *Seguridad* y ya no se puede usar "
+"para iniciar sesión en la base de datos."
 
 #: ../../content/applications/general/users.rst:None
 msgid ""
@@ -14849,6 +14864,12 @@ msgid ""
 "section, and enter the desired password length in the :guilabel:`Minimum "
 "Password Length` field. By default, the value is `8`."
 msgstr ""
+"Para exigir una longitud mínima de contraseña, :ref:`instala <general/"
+"install>` el módulo :guilabel:`Política de contraseñas` "
+"(`auth_password_policy`). Después, abre la aplicación :guilabel:`Ajustes`, "
+"ve a la sección *Permisos* e ingresa la longitud deseada en el "
+"campo :guilabel:`Longitud mínima de la contraseña`. El valor predeterminado "
+"es `8`."
 
 #: ../../content/applications/general/users.rst:153
 msgid "Reset password"
@@ -15007,7 +15028,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "Multiempresa"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -15016,12 +15037,18 @@ msgid ""
 "to :menuselection:`Settings app --> Users section --> Manage Users`. Then "
 "select the desired user to open their user form."
 msgstr ""
+"El campo :guilabel:`Empresas` del formulario del usuario determina a qué "
+"empresas puede acceder un usuario. Para configurar el acceso multiempresa, "
+"ve a :menuselection:`Ajustes --> sección Usuarios --> Administrar usuarios`. "
+"Después, selecciona al usuario deseado para abrir su formulario."
 
 #: ../../content/applications/general/users.rst:230
 msgid ""
 "In the *Access Rights* tab, under the *Roles* section, configure "
 "the :guilabel:`Companies` and :guilabel:`Default Company` fields:"
 msgstr ""
+"En la pestaña *Permisos de acceso*, en la sección *Roles*, configura los "
+"campos :guilabel:`Empresas` y :guilabel:`Empresa predeterminada`:"
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -15029,12 +15056,18 @@ msgid ""
 "user's access and editing permissions are determined by their assigned "
 "access rights."
 msgstr ""
+":guilabel:`Empresas`: Selecciona una o más empresas a las que el usuario "
+"puede acceder. Los permisos de acceso y edición del usuario dependen de los "
+"permisos que tenga asignados."
 
 #: ../../content/applications/general/users.rst:235
 msgid ""
 ":guilabel:`Default Company`: Select the company that is automatically "
 "selected when the user logs in. Only one company can be set as the default."
 msgstr ""
+":guilabel:`Empresa predeterminada`: Elige la empresa que se selecciona de "
+"forma automática cuando el usuario inicia sesión. Solo puedes definir una "
+"empresa como predeterminada."
 
 #: ../../content/applications/general/users.rst:239
 msgid ""
@@ -15044,6 +15077,12 @@ msgid ""
 "explanations, refer to the developer documentation on :doc:`../../../"
 "developer/howtos/company`."
 msgstr ""
+"Una configuración incorrecta del acceso multiempresa puede provocar un "
+"comportamiento irregular entre las empresas. Solo los usuarios de Odoo con "
+"experiencia deben modificar los permisos de acceso de los usuarios en bases "
+"de datos con una configuración multiempresa. Para obtener explicaciones "
+"técnicas, consulta la documentación para desarrolladores "
+"sobre :doc:`../../../developer/howtos/company`."
 
 #: ../../content/applications/general/users.rst:None
 msgid "View of a user's form emphasizing the multi companies field in Odoo."
@@ -15173,50 +15212,35 @@ msgstr "Configuración de la autenticación de dos factores"
 #: ../../content/applications/general/users/2fa.rst:51
 msgid ""
 "After selecting an authenticator, log in to Odoo, then click the profile "
-"avatar in the upper-right corner, and select :guilabel:`My Profile` from the "
-"resulting drop-down menu."
+"avatar in the upper-right corner, and select :guilabel:`My Preferences` from "
+"the resulting drop-down menu."
 msgstr ""
-"Seleccione un autenticador y luego inicie sesión en Odoo. Haz clic en el "
-"avatar de su perfil que está ubicado en la esquina superior derecha y "
-"seleccione la opción :guilabel:`Mi perfil` en el menú desplegable."
 
 #: ../../content/applications/general/users/2fa.rst:54
-msgid ""
-"Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-"
-"Factor Authentication` toggle to *active*."
+msgid "Click the *Security* tab, then click :guilabel:`Enable 2FA`."
 msgstr ""
-"Haz clic en la pestaña :guilabel:`Seguridad de la cuenta` y después presione "
-"el botón :guilabel:`Autenticación de dos factores` para *activarla*."
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid "The account secuirty tab in a user profile."
 msgstr "La pestaña de seguridad de la cuenta en un perfil de usuario."
 
-#: ../../content/applications/general/users/2fa.rst:60
+#: ../../content/applications/general/users/2fa.rst:59
 msgid ""
-"This generates a :guilabel:`Security Control` pop-up window that requires "
-"password confirmation to continue. Enter the appropriate password, then "
-"click :guilabel:`Confirm Password`. Next, a :guilabel:`Two-Factor "
-"Authentication Activation` pop-up window appears, with a |QR|."
+"This generates an *Access Control* pop-up window that requires password "
+"confirmation to continue. Enter the Odoo account password, then "
+"click :guilabel:`Confirm Password`. Next, a *Two-Factor Authentication "
+"Activation* pop-up window appears, with a |QR|."
 msgstr ""
-"Esta acción abre la ventana emergente :guilabel:`Control de seguridad`, allí "
-"deberás confirmar tu contraseña para continuar. Escribe la contraseña "
-"correspondiente, haz clic en :guilabel:`Confirmar contraseña` y después "
-"aparecerá la ventana emergente :guilabel:`Activación de autenticación de dos "
-"factores` con un código QR."
 
-#: ../../content/applications/general/users/2fa.rst:67
+#: ../../content/applications/general/users/2fa.rst:66
 msgid "The 2fa authentication QR code in Odoo."
 msgstr "El código QR de autenticación de dos factores en Odoo."
 
-#: ../../content/applications/general/users/2fa.rst:67
-msgid ""
-"Using the desired authenticator application, scan the |QR| when prompted."
+#: ../../content/applications/general/users/2fa.rst:66
+msgid "Using the desired authenticator application, scan the |QR| code."
 msgstr ""
-"Use la aplicación de autenticación que haya elegido para escanear el código "
-"QR cuando se le solicite."
 
-#: ../../content/applications/general/users/2fa.rst:70
+#: ../../content/applications/general/users/2fa.rst:69
 msgid ""
 "If scanning the screen is not possible (e.g., the setup is being completed "
 "on the *same* device as the authenticator application), click the "
@@ -15235,7 +15259,7 @@ msgstr ""
 "Un código secreto de autenticación en dos pasos en una ventana emergente de "
 "autenticación."
 
-#: ../../content/applications/general/users/2fa.rst:77
+#: ../../content/applications/general/users/2fa.rst:76
 msgid "Afterwards, the authenticator should display a *verification code*."
 msgstr "Después, el autenticador debe mostrar un *código de verificación*."
 
@@ -15245,13 +15269,11 @@ msgstr ""
 "Una vista de la aplicación Google Authenticator con el código de seis "
 "dígitos para la autenticación en dos factores."
 
-#: ../../content/applications/general/users/2fa.rst:82
+#: ../../content/applications/general/users/2fa.rst:81
 msgid ""
-"Enter the code into the :guilabel:`Verification Code` field, then "
-"click :guilabel:`Activate`."
+"Enter the code into the :guilabel:`Verification code` field, then "
+"click :guilabel:`Enable Two-Factor Authentication`."
 msgstr ""
-"Escriba el código en el campo :guilabel:`Código de verificación` y después "
-"haz clic en :guilabel:`Activar`."
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid ""
@@ -16052,23 +16074,19 @@ msgstr "Tiempo de espera de inactividad"
 #: ../../content/applications/general/users/access_rights.rst:255
 msgid ""
 "*Inactivity timeout* controls whether users are automatically logged out "
-"after a period of content/applications/general/users.rstinactivity."
+"after a period of inactivity."
 msgstr ""
+"El *tiempo de espera de inactividad* controla si el sistema cierra la sesión "
+"de los usuarios después de un periodo sin actividad."
 
 #: ../../content/applications/general/users/access_rights.rst:258
 msgid ""
 "To enable inactivity timeout, click the *Timeouts* tab and select "
 "the :guilabel:`Inactivity` checkbox. Next, choose either :guilabel:`Screen "
 "lock` or :guilabel:`Screen lock with two-factor authentication` from the "
-"drop-down menu. This determines whether the user must to complete 2FA "
+"drop-down menu. This determines whether the user must complete 2FA "
 "verification when logging back in."
 msgstr ""
-"Para activar el tiempo de espera por inactividad, haz clic en la pestaña "
-"*Tiempos de espera* y selecciona la casilla :guilabel:`Inactividad`. "
-"Después, elige :guilabel:`Bloqueo de pantalla` o :guilabel:`Bloqueo de "
-"pantalla con autenticación de dos factores` en el menú desplegable. Esto "
-"define si el usuario debe completar la verificación con 2FA cuando vuelva a "
-"iniciar sesión."
 
 #: ../../content/applications/general/users/access_rights.rst:263
 msgid ""
@@ -18097,6 +18115,70 @@ msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ":doc:`Documentación de acceso al portal <portal_access>`"
 
 #~ msgid ""
+#~ "After selecting an authenticator, log in to Odoo, then click the profile "
+#~ "avatar in the upper-right corner, and select :guilabel:`My Profile` from "
+#~ "the resulting drop-down menu."
+#~ msgstr ""
+#~ "Seleccione un autenticador y luego inicie sesión en Odoo. Haz clic en el "
+#~ "avatar de su perfil que está ubicado en la esquina superior derecha y "
+#~ "seleccione la opción :guilabel:`Mi perfil` en el menú desplegable."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-"
+#~ "Factor Authentication` toggle to *active*."
+#~ msgstr ""
+#~ "Haz clic en la pestaña :guilabel:`Seguridad de la cuenta` y después "
+#~ "presione el botón :guilabel:`Autenticación de dos factores` para "
+#~ "*activarla*."
+
+#~ msgid ""
+#~ "This generates a :guilabel:`Security Control` pop-up window that requires "
+#~ "password confirmation to continue. Enter the appropriate password, then "
+#~ "click :guilabel:`Confirm Password`. Next, a :guilabel:`Two-Factor "
+#~ "Authentication Activation` pop-up window appears, with a |QR|."
+#~ msgstr ""
+#~ "Esta acción abre la ventana emergente :guilabel:`Control de seguridad`, "
+#~ "allí deberás confirmar tu contraseña para continuar. Escribe la "
+#~ "contraseña correspondiente, haz clic en :guilabel:`Confirmar contraseña` "
+#~ "y después aparecerá la ventana emergente :guilabel:`Activación de "
+#~ "autenticación de dos factores` con un código QR."
+
+#~ msgid ""
+#~ "Using the desired authenticator application, scan the |QR| when prompted."
+#~ msgstr ""
+#~ "Use la aplicación de autenticación que haya elegido para escanear el "
+#~ "código QR cuando se le solicite."
+
+#~ msgid ""
+#~ "Enter the code into the :guilabel:`Verification Code` field, then "
+#~ "click :guilabel:`Activate`."
+#~ msgstr ""
+#~ "Escriba el código en el campo :guilabel:`Código de verificación` y "
+#~ "después haz clic en :guilabel:`Activar`."
+
+#~ msgid ""
+#~ "*Inactivity timeout* controls whether users are automatically logged out "
+#~ "after a period of content/applications/general/users.rstinactivity."
+#~ msgstr ""
+#~ "El *tiempo de espera de inactividad* controla si el sistema cierra la "
+#~ "sesión de los usuarios de forma automática después de un periodo de "
+#~ "inactividad."
+
+#~ msgid ""
+#~ "To enable inactivity timeout, click the *Timeouts* tab and select "
+#~ "the :guilabel:`Inactivity` checkbox. Next, choose "
+#~ "either :guilabel:`Screen lock` or :guilabel:`Screen lock with two-factor "
+#~ "authentication` from the drop-down menu. This determines whether the user "
+#~ "must to complete 2FA verification when logging back in."
+#~ msgstr ""
+#~ "Para activar el tiempo de espera por inactividad, haz clic en la pestaña "
+#~ "*Tiempos de espera* y selecciona la casilla :guilabel:`Inactividad`. "
+#~ "Después, elige :guilabel:`Bloqueo de pantalla` o :guilabel:`Bloqueo de "
+#~ "pantalla con autenticación de dos factores` en el menú desplegable. Esto "
+#~ "define si el usuario debe completar la verificación con 2FA cuando vuelva "
+#~ "a iniciar sesión."
+
+#~ msgid ""
 #~ "To check the logged-in devices, click the user icon in the upper-right "
 #~ "corner, and click :guilabel:`My Profile`. This opens the user's profile "
 #~ "in the **Settings** app. Click the :guilabel:`Devices` tab to view a "
@@ -18239,13 +18321,6 @@ msgstr ":doc:`Documentación de acceso al portal <portal_access>`"
 #~ "las bases de datos que tienen una configuración multiempresa. Consulte la "
 #~ "documentación para desarrolladores en :doc:`../../../developer/howtos/"
 #~ "company` para leer las explicaciones técnicas."
-
-#~ msgid ""
-#~ "*Inactivity timeout* controls whether users are automatically logged out "
-#~ "after a period of inactivity."
-#~ msgstr ""
-#~ "El *tiempo de espera de inactividad* controla si el sistema cierra la "
-#~ "sesión de los usuarios después de un periodo sin actividad."
 
 #~ msgid ""
 #~ "For incoming emails, after adding your own domain, :ref:`replies from "
