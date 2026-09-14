@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:33+0000\n"
-"PO-Revision-Date: 2026-08-27 16:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"PO-Revision-Date: 2026-09-07 18:12+0000\n"
+"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-19-doc/"
 "general/ro/>\n"
 "Language: ro\n"
@@ -4769,6 +4769,9 @@ msgid ""
 "Since a new subdomain is being configured for inbound mail, its :doc:`DNS "
 "records must also be set up for outbound mail <email_domain>`."
 msgstr ""
+"Deoarece un subdomeniu nou este configurat pentru e-mailurile "
+"primite, :doc:`trebuie configurate și înregistrările DNS pentru e-mailurile "
+"trimise <email_domain>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
 #: ../../content/applications/general/email_communication/faq.rst:296
@@ -4778,7 +4781,7 @@ msgstr "Odoo Online"
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:386
 msgid "Access your DNS settings"
-msgstr ""
+msgstr "Accesați setările DNS"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:326
 msgid ""
@@ -4786,34 +4789,43 @@ msgid ""
 "Namecheap, Cloudflare), log in to the registrar and open the DNS management "
 "zone for your domain."
 msgstr ""
+"Dacă domeniul dvs. este găzduit de un registrator terț (de exemplu, GoDaddy, "
+"Namecheap, Cloudflare), conectați-vă la registrator și deschideți zona de "
+"gestionare DNS pentru domeniul dvs."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "If Odoo manages your DNS:"
-msgstr ""
+msgstr "Dacă Odoo gestionează DNS-ul dvs.:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
 msgstr ""
+"Deschideți `managerul de baze de date <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "Click the :icon:`fa-gear` (:guilabel:`gear`) icon beside the database and "
 "choose :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"Faceți clic pe pictograma :icon:`fa-gear` (:guilabel:`roată dințată`) de "
+"lângă baza de date și alegeți :icon:`fa-globe` :guilabel:`Nume de domeniu`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid "Click :guilabel:`DNS`, then :guilabel:`Add DNS record`."
 msgstr ""
+"Faceți clic pe :guilabel:`DNS`, apoi pe :guilabel:`Adaugă înregistrare DNS`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:336
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:390
 msgid "Create a CNAME record"
-msgstr ""
+msgstr "Creați o înregistrare CNAME"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:392
 msgid "**Name / Host:** the subdomain you want to use (for example, `mail`)."
 msgstr ""
+"**Nume / Gazdă:** subdomeniul pe care doriți să îl utilizați (de exemplu, "
+"`mail`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:393
@@ -4821,10 +4833,12 @@ msgid ""
 "**Content / Target:** your database root domain (for example, "
 "`dbname.odoo.com.`)."
 msgstr ""
+"**Conținut / Țintă:** domeniul rădăcină al bazei de date (de exemplu, "
+"`dbname.odoo.com.`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "Add the subdomain to your Odoo portal"
-msgstr ""
+msgstr "Adăugați subdomeniul în portalul Odoo"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4832,6 +4846,9 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon for your database and "
 "select :icon:`fa-globe` :guilabel:`Domain Names`."
 msgstr ""
+"În `managerul de baze de date <https://www.odoo.com/my/databases>`_, faceți "
+"clic pe pictograma :icon:`fa-gear` (:guilabel:`roată dințată`) pentru baza "
+"dvs. de date și selectați :icon:`fa-globe` :guilabel:`Nume de domeniu`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid ""
@@ -4839,6 +4856,9 @@ msgid ""
 "`mail.mydomain.com`). When verification succeeds, click :guilabel:`I "
 "confirm, it's done`."
 msgstr ""
+"Faceți clic pe :guilabel:`Folosește propriul meu domeniu`, introduceți "
+"subdomeniul complet (de exemplu, `mail.mydomain.com`). Când verificarea "
+"reușește, faceți clic pe :guilabel:`Confirm, este gata`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
 msgid ""
@@ -4848,16 +4868,22 @@ msgid ""
 "take anywhere from a few minutes up to 48 hours depending on your provider. "
 "Once propagation is complete, try verifying again."
 msgstr ""
+"Dacă verificarea eșuează, verificați dacă ținta CNAME se termină cu un punct "
+"(de exemplu, `dbname.odoo.com.`), deoarece unii furnizori DNS îl solicită. "
+"De asemenea, acordați ceva timp pentru propagarea modificărilor DNS — acest "
+"lucru poate dura de la câteva minute până la 48 de ore, în funcție de "
+"furnizor. După finalizarea propagării, încercați din nou verificarea."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:407
 msgid "Add the alias domain to the database"
-msgstr ""
+msgstr "Adăugați domeniul alias în baza de date"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:358
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:409
 msgid "Log in to the database and open the :guilabel:`Settings` app."
 msgstr ""
+"Conectați-vă la baza de date și deschideți aplicația :guilabel:`Setări`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:410
@@ -4865,20 +4891,25 @@ msgid ""
 "In the :guilabel:`Alias Domain` field, enter the subdomain you configured "
 "(for example, `mail.mydomain.com`)."
 msgstr ""
+"În câmpul :guilabel:`Domeniu alias`, introduceți subdomeniul pe care l-ați "
+"configurat (de exemplu, `mail.mydomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Adding an alias domain in the settings."
-msgstr ""
+msgstr "Adăugarea unui domeniu alias în setări."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:368
 msgid ""
 "In the :guilabel:`Domain Names` section, the subdomain should appear as "
 "follows:"
 msgstr ""
+"În secțiunea :guilabel:`Nume de domeniu`, subdomeniul ar trebui să apară "
+"astfel:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Example of domain name records configuration in the Odoo portal."
 msgstr ""
+"Exemplu de configurare a înregistrărilor de nume de domeniu în portalul Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:373
 msgid "In the :guilabel:`DNS` section, the records should appear as follows:"
@@ -6516,13 +6547,10 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/faq.rst:253
 msgid ""
-"For more information about crons when using Odoo.sh, check out :doc:`Odoo.sh "
-"frequent technical questions <../../../administration/odoo_sh/advanced/"
-"frequent_technical_questions>`."
+"For more information about crons when using Odoo.sh, check out "
+"the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
+"scheduled>`."
 msgstr ""
-"Pentru mai multe informații despre cron-uri când folosiți Odoo.sh, "
-"consultați :doc:`întrebările tehnice frecvente Odoo.sh <../../../"
-"administration/odoo_sh/advanced/frequent_technical_questions>`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -7804,7 +7832,7 @@ msgid "Address autocomplete on the contact form."
 msgstr "Completare automată a adresei pe formularul de contact."
 
 #: ../../content/applications/general/integrations/address_autocomplete.rst:14
-#: ../../content/applications/general/integrations/geolocation.rst:31
+#: ../../content/applications/general/integrations/geolocation.rst:52
 msgid ""
 "Using the Google Places API could require `payment to Google <https://"
 "mapsplatform.google.com/pricing/>`_."
@@ -8017,6 +8045,7 @@ msgstr ""
 "Places API key <address_autocomplete/generate_api_key>` în câmpul dedicat."
 
 #: ../../content/applications/general/integrations/address_autocomplete.rst:96
+#: ../../content/applications/general/integrations/geolocation.rst:85
 msgid "Click :guilabel:`Save`."
 msgstr "Faceți clic pe :guilabel:`Salvează`."
 
@@ -8655,63 +8684,89 @@ msgid "Geolocation"
 msgstr "Geolocation"
 
 #: ../../content/applications/general/integrations/geolocation.rst:5
-msgid "You can locate contacts or places and generate routes on a map in Odoo."
-msgstr ""
-"Puteți localiza contacte sau locuri și puteți genera rute pe o hartă în Odoo."
-
-#: ../../content/applications/general/integrations/geolocation.rst:None
-msgid "Map displaying a contact's location."
-msgstr "Hartă afișând locația unui contact."
-
-#: ../../content/applications/general/integrations/geolocation.rst:10
 msgid ""
-"To use the feature, open the :guilabel:`Settings` app, and, under "
-"the :guilabel:`Integrations`, section, activate :guilabel:`Geo "
-"Localization`. Then, choose between using the OpenStreetMap or Google Places "
-"API."
+"Odoo provides geolocation integrations that allow you to locate contacts or "
+"places and generate routes on a map."
 msgstr ""
-"Pentru a utiliza funcția, deschideți aplicația :guilabel:`Settings` și, în "
-"secțiunea :guilabel:`Integrations`, activați :guilabel:`Geo Localization`. "
-"Apoi, alegeți între utilizarea OpenStreetMap sau API-ul Google Places."
 
-#: ../../content/applications/general/integrations/geolocation.rst:14
-msgid "**OpenStreetMap**"
-msgstr "**OpenStreetMap**"
-
-#: ../../content/applications/general/integrations/geolocation.rst:16
+#: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
-"OpenStreetMap is a free, open geographic database updated and maintained by "
-"volunteers. To use it, select :guilabel:`Open Street Map`."
+"The :ref:`Map <studio/views/multiple-records/map>` view is available by "
+"default. No configuration is required to access it."
 msgstr ""
-"OpenStreetMap este o bază de date geografică gratuită, deschisă, actualizată "
-"și întreținută de voluntari. Pentru a-l folosi, "
-"selectați :guilabel:`Deschideți harta străzilor`."
+
+#: ../../content/applications/general/integrations/geolocation.rst:15
+msgid "Geolocate contacts and places"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:17
+msgid ""
+"The :guilabel:`Geolocation` feature generates latitude and longitude "
+"coordinates to pinpoint locations. It can be used to:"
+msgstr ""
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
-"OpenStreetMap might not always be accurate. You can `join the OpenStreetMap "
-"community <https://www.openstreetmap.org/fixthemap>`_ to fix any issues "
-"encountered."
+"Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
+"details>` in the **Attendances** app;"
 msgstr ""
-"OpenStreetMap poate să nu fie întotdeauna precis. Vă puteți „alătura "
-"comunității OpenStreetMap <https://www.openstreetmap.org/fixthemap>`_ pentru "
-"a remedia orice probleme întâlnite."
+
+#: ../../content/applications/general/integrations/geolocation.rst:22
+msgid ""
+"Display the pickup location when using the :ref:`pickup on-site delivery "
+"method <ecommerce/shipping/instore-pickup>`;"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:24
+msgid ""
+":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
+msgstr ""
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
-msgid "**Google Places API map**"
-msgstr "**Harta API Google Locații**"
-
-#: ../../content/applications/general/integrations/geolocation.rst:27
 msgid ""
-"The Google Places API map provides detailed info on places, businesses, and "
-"points of interest. It supports location-based features like search, "
-"navigation, and recommendations."
+"Validate addresses with the :ref:`Avatax address validation <accounting/"
+"avatax/address-validation>` feature."
 msgstr ""
-"Harta API Google Locații oferă informații detaliate despre locuri, companii "
-"și puncte de interes. Acceptă funcții bazate pe locație, cum ar fi căutarea, "
-"navigarea și recomandările."
 
-#: ../../content/applications/general/integrations/geolocation.rst:34
+#: ../../content/applications/general/integrations/geolocation.rst:28
+msgid ""
+"To enable the :guilabel:`Geolocation` feature, navigate "
+"to :menuselection:`Settings --> General Settings`, scroll down to "
+"the :guilabel:`Integrations` section, and activate :guilabel:`Geolocation`. "
+"Then, in the :guilabel:`API` field, select either :guilabel:`Open Street "
+"Map` or :guilabel:`Google Place Map`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:37
+msgid "OpenStreetMap"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:39
+msgid ""
+"OpenStreetMap is a free, open geographic database updated and maintained by "
+"volunteers. No additional configuration is required to use :guilabel:`Open "
+"Street Map`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:43
+msgid ""
+"OpenStreetMap data may not always be accurate. You can `join the "
+"OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
+"report and correct any issues you encounter."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:46
+msgid "Google Places API"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:48
+msgid ""
+"The Google Places API provides detailed information about places, "
+"businesses, and points of interest. It supports location-based features like "
+"search, navigation, and recommendations."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
 "To use it, select :guilabel:`Google Place Map` and enter your :ref:`API Key "
 "<address_autocomplete/generate_api_key>`."
@@ -8719,13 +8774,73 @@ msgstr ""
 "Pentru a utiliza, selectați :guilabel:`Google Place Map` și "
 "introduceți :ref:`Cheia dvs. API <address_autocomplete/generate_api_key>`."
 
-#: ../../content/applications/general/integrations/geolocation.rst:None
-msgid "Google Places API key"
-msgstr "Cheia API Google Locații"
-
-#: ../../content/applications/general/integrations/geolocation.rst:41
+#: ../../content/applications/general/integrations/geolocation.rst:59
 msgid ":doc:`address_autocomplete`"
 msgstr ":doc:`address_autocomplete`"
+
+#: ../../content/applications/general/integrations/geolocation.rst:64
+msgid "Map routes"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:66
+msgid ""
+"Map routes are useful for providing itineraries and locations to :doc:`field "
+"service technicians </applications/services/field_service/"
+"planning_itinerary>` and delivery routes to drivers in a :doc:`dispatch "
+"management system </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dispatch>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:71
+msgid "To create routes, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:73
+msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:74
+msgid ""
+"`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
+"tokens/>`_."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:75
+msgid ""
+"Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
+"tokens/>`_ and copy your token to the clipboard."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:79
+msgid ""
+"Mapbox displays secret tokens only once upon creation and hides them "
+"permanently after leaving the :guilabel:`Access Token` page. Make sure to "
+"save the token."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:82
+msgid ""
+"In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
+"to the :guilabel:`Integrations` section."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:84
+msgid ""
+"Under :guilabel:`Map Routes`, paste the Mapbox access token into "
+"the :guilabel:`Token` field."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:88
+msgid ""
+"`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
+"dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:90
+msgid ""
+"`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
+msgstr ""
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -9469,10 +9584,13 @@ msgid ""
 "upgraded database version, clearing the stalled script and resolving the "
 "execution error."
 msgstr ""
+"Acest lucru forțează pluginul să sincronizeze manual conexiunea cu versiunea "
+"de bază de date recent actualizată, eliminând scriptul blocat și rezolvând "
+"eroarea de execuție."
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
 msgid "Refresh button in the Odoo Gmail plugin."
-msgstr ""
+msgstr "Butonul de reîmprospătare din pluginul Odoo Gmail."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook Plugin"
@@ -14264,6 +14382,13 @@ msgid ""
 "into the database with. Any device currently logged into the system displays "
 "a green circle next to the device name on the Kanban card."
 msgstr ""
+"Pentru a verifica dispozitivele conectate, faceți clic pe pictograma "
+"utilizatorului din colțul din dreapta sus, apoi pe :guilabel:`Preferințele "
+"mele` pentru a deschide profilul utilizatorului. Faceți clic pe fila "
+"*Securitate* pentru a vedea o listă cu toate dispozitivele de pe care "
+"utilizatorul s-a conectat la baza de date. Orice dispozitiv conectat în "
+"prezent la sistem afișează un cerc verde lângă numele dispozitivului pe "
+"cardul Kanban."
 
 #: ../../content/applications/general/users.rst:None
 msgid "The Kanban view of all user devices."
@@ -14279,6 +14404,10 @@ msgid ""
 "potential security risk, remove the device and revoke access by clicking "
 "the :guilabel:`Log out` button."
 msgstr ""
+"Dacă un dispozitiv din listă **nu** este un dispozitiv legitim al "
+"utilizatorului și ar putea reprezenta un risc de securitate, eliminați "
+"dispozitivul și revocați accesul făcând clic pe "
+"butonul :guilabel:`Deconectare`."
 
 #: ../../content/applications/general/users.rst:88
 msgid ""
@@ -14286,12 +14415,17 @@ msgid ""
 "confirm their identity. Enter the user's password, then "
 "click :guilabel:`Confirm Password`."
 msgstr ""
+"Se încarcă o fereastră pop-up :guilabel:`Control acces`, solicitând "
+"utilizatorului să își confirme identitatea. Introduceți parola contului "
+"utilizatorului, apoi faceți clic pe :guilabel:`Confirmare parolă`."
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
 "The device disappears from the *Security* tab and can no longer be used to "
 "log into the database."
 msgstr ""
+"Dispozitivul dispare din fila *Securitate* și nu mai poate fi folosit pentru "
+"a se conecta la baza de date."
 
 #: ../../content/applications/general/users.rst:None
 msgid ""
@@ -14419,6 +14553,11 @@ msgid ""
 "section, and enter the desired password length in the :guilabel:`Minimum "
 "Password Length` field. By default, the value is `8`."
 msgstr ""
+"Pentru a impune o lungime minimă a parolei, :ref:`instalați <general/"
+"install>` modulul :guilabel:`Politica de parole` (`auth_password_policy`). "
+"Apoi, deschideți aplicația :guilabel:`Setări`, navigați la secțiunea "
+"*Permisiuni* și introduceți lungimea dorită a parolei în "
+"câmpul :guilabel:`Lungime minimă parolă`. Valoarea implicită este `8`."
 
 #: ../../content/applications/general/users.rst:153
 msgid "Reset password"
@@ -14569,7 +14708,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:224
 msgid "Multi companies"
-msgstr ""
+msgstr "Companii multiple"
 
 #: ../../content/applications/general/users.rst:226
 msgid ""
@@ -14578,12 +14717,19 @@ msgid ""
 "to :menuselection:`Settings app --> Users section --> Manage Users`. Then "
 "select the desired user to open their user form."
 msgstr ""
+"Câmpul :guilabel:`Companii` din formularul utilizatorului determină la ce "
+"companii poate accesa un utilizator. Pentru a configura accesul multi-"
+"companie, navigați la :menuselection:`Aplicația Setări --> secțiunea "
+"Utilizatori --> Gestionare utilizatori`. Apoi selectați utilizatorul dorit "
+"pentru a-i deschide formularul."
 
 #: ../../content/applications/general/users.rst:230
 msgid ""
 "In the *Access Rights* tab, under the *Roles* section, configure "
 "the :guilabel:`Companies` and :guilabel:`Default Company` fields:"
 msgstr ""
+"În fila *Drepturi de acces*, în secțiunea *Roluri*, configurați "
+"câmpurile :guilabel:`Companii` și :guilabel:`Companie implicită`:"
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -14591,12 +14737,18 @@ msgid ""
 "user's access and editing permissions are determined by their assigned "
 "access rights."
 msgstr ""
+":guilabel:`Companii`: selectați una sau mai multe companii pe care "
+"utilizatorul le poate accesa. Permisiunile de acces și editare ale "
+"utilizatorului sunt determinate de drepturile de acces atribuite."
 
 #: ../../content/applications/general/users.rst:235
 msgid ""
 ":guilabel:`Default Company`: Select the company that is automatically "
 "selected when the user logs in. Only one company can be set as the default."
 msgstr ""
+":guilabel:`Companie implicită`: selectați compania care este selectată "
+"automat la conectarea utilizatorului. Poate fi setată o singură companie ca "
+"implicită."
 
 #: ../../content/applications/general/users.rst:239
 msgid ""
@@ -14606,6 +14758,12 @@ msgid ""
 "explanations, refer to the developer documentation on :doc:`../../../"
 "developer/howtos/company`."
 msgstr ""
+"Configurarea incorectă a accesului multi-companie poate duce la un "
+"comportament inconsecvent între companii. Doar utilizatorii Odoo "
+"experimentați ar trebui să modifice drepturile de acces ale utilizatorilor "
+"în bazele de date cu o configurație multi-companie. Pentru explicații "
+"tehnice, consultați documentația pentru dezvoltatori de la :doc:`../../../"
+"developer/howtos/company`."
 
 #: ../../content/applications/general/users.rst:None
 msgid "View of a user's form emphasizing the multi companies field in Odoo."
@@ -14740,10 +14898,13 @@ msgid ""
 "avatar in the upper-right corner, and select :guilabel:`My Preferences` from "
 "the resulting drop-down menu."
 msgstr ""
+"După selectarea unui autentificator, conectați-vă la Odoo, apoi faceți clic "
+"pe avatarul de profil din colțul din dreapta sus și "
+"selectați :guilabel:`Preferințele mele` din meniul derulant rezultat."
 
 #: ../../content/applications/general/users/2fa.rst:54
 msgid "Click the *Security* tab, then click :guilabel:`Enable 2FA`."
-msgstr ""
+msgstr "Faceți clic pe fila *Securitate*, apoi pe :guilabel:`Activare 2FA`."
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid "The account secuirty tab in a user profile."
@@ -14756,6 +14917,10 @@ msgid ""
 "click :guilabel:`Confirm Password`. Next, a *Two-Factor Authentication "
 "Activation* pop-up window appears, with a |QR|."
 msgstr ""
+"Aceasta generează o fereastră pop-up *Control acces* care necesită "
+"confirmarea parolei pentru a continua. Introduceți parola contului Odoo, "
+"apoi faceți clic pe :guilabel:`Confirmare parolă`. Apoi, apare o fereastră "
+"pop-up *Activare autentificare în doi factori*, cu un |QR|."
 
 #: ../../content/applications/general/users/2fa.rst:66
 msgid "The 2fa authentication QR code in Odoo."
@@ -14763,7 +14928,7 @@ msgstr "Codul QR de autentificare 2fa în Odoo."
 
 #: ../../content/applications/general/users/2fa.rst:66
 msgid "Using the desired authenticator application, scan the |QR| code."
-msgstr ""
+msgstr "Utilizând aplicația de autentificare dorită, scanați codul |QR|."
 
 #: ../../content/applications/general/users/2fa.rst:69
 msgid ""
@@ -14797,6 +14962,8 @@ msgid ""
 "Enter the code into the :guilabel:`Verification code` field, then "
 "click :guilabel:`Enable Two-Factor Authentication`."
 msgstr ""
+"Introduceți codul în câmpul :guilabel:`Cod de verificare`, apoi faceți clic "
+"pe :guilabel:`Activare autentificare în doi factori`."
 
 #: ../../content/applications/general/users/2fa.rst:None
 msgid ""
@@ -15578,6 +15745,11 @@ msgid ""
 "drop-down menu. This determines whether the user must complete 2FA "
 "verification when logging back in."
 msgstr ""
+"Pentru a activa timpul de expirare pentru inactivitate, faceți clic pe fila "
+"*Timp de expirare* și selectați caseta de bifare :guilabel:`Inactivitate`. "
+"Apoi, alegeți fie :guilabel:`Blocare ecran` fie :guilabel:`Blocare ecran cu "
+"autentificare în doi factori` din meniul derulant. Aceasta determină dacă "
+"utilizatorul trebuie să finalizeze verificarea 2FA la reconectare."
 
 #: ../../content/applications/general/users/access_rights.rst:263
 msgid ""
@@ -17578,6 +17750,70 @@ msgstr ":doc:`Drepturi de acces </applications/general/users/access_rights>`"
 #: ../../content/applications/general/users/user_portals/updating_portal_info.rst:154
 msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ":doc:`Documentație acces portal <portal_access>`"
+
+#~ msgid ""
+#~ "For more information about crons when using Odoo.sh, check "
+#~ "out :doc:`Odoo.sh frequent technical questions <../../../administration/"
+#~ "odoo_sh/advanced/frequent_technical_questions>`."
+#~ msgstr ""
+#~ "Pentru mai multe informații despre cron-uri când folosiți Odoo.sh, "
+#~ "consultați :doc:`întrebările tehnice frecvente Odoo.sh <../../../"
+#~ "administration/odoo_sh/advanced/frequent_technical_questions>`."
+
+#~ msgid ""
+#~ "You can locate contacts or places and generate routes on a map in Odoo."
+#~ msgstr ""
+#~ "Puteți localiza contacte sau locuri și puteți genera rute pe o hartă în "
+#~ "Odoo."
+
+#~ msgid "Map displaying a contact's location."
+#~ msgstr "Hartă afișând locația unui contact."
+
+#~ msgid ""
+#~ "To use the feature, open the :guilabel:`Settings` app, and, under "
+#~ "the :guilabel:`Integrations`, section, activate :guilabel:`Geo "
+#~ "Localization`. Then, choose between using the OpenStreetMap or Google "
+#~ "Places API."
+#~ msgstr ""
+#~ "Pentru a utiliza funcția, deschideți aplicația :guilabel:`Settings` și, "
+#~ "în secțiunea :guilabel:`Integrations`, activați :guilabel:`Geo "
+#~ "Localization`. Apoi, alegeți între utilizarea OpenStreetMap sau API-ul "
+#~ "Google Places."
+
+#~ msgid "**OpenStreetMap**"
+#~ msgstr "**OpenStreetMap**"
+
+#~ msgid ""
+#~ "OpenStreetMap is a free, open geographic database updated and maintained "
+#~ "by volunteers. To use it, select :guilabel:`Open Street Map`."
+#~ msgstr ""
+#~ "OpenStreetMap este o bază de date geografică gratuită, deschisă, "
+#~ "actualizată și întreținută de voluntari. Pentru a-l folosi, "
+#~ "selectați :guilabel:`Deschideți harta străzilor`."
+
+#~ msgid ""
+#~ "OpenStreetMap might not always be accurate. You can `join the "
+#~ "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
+#~ "fix any issues encountered."
+#~ msgstr ""
+#~ "OpenStreetMap poate să nu fie întotdeauna precis. Vă puteți „alătura "
+#~ "comunității OpenStreetMap <https://www.openstreetmap.org/fixthemap>`_ "
+#~ "pentru a remedia orice probleme întâlnite."
+
+#~ msgid "**Google Places API map**"
+#~ msgstr "**Harta API Google Locații**"
+
+#~ msgid ""
+#~ "The Google Places API map provides detailed info on places, businesses, "
+#~ "and points of interest. It supports location-based features like search, "
+#~ "navigation, and recommendations."
+#~ msgstr ""
+#~ "Harta API Google Locații oferă informații detaliate despre locuri, "
+#~ "companii și puncte de interes. Acceptă funcții bazate pe locație, cum ar "
+#~ "fi căutarea, navigarea și recomandările."
+
+#~ msgid "Google Places API key"
+#~ msgstr "Cheia API Google Locații"
 
 #~ msgid ""
 #~ "After selecting an authenticator, log in to Odoo, then click the profile "

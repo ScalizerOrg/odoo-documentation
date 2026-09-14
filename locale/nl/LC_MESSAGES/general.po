@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 17:33+0000\n"
-"PO-Revision-Date: 2026-08-31 16:09+0000\n"
+"POT-Creation-Date: 2026-09-11 17:33+0000\n"
+"PO-Revision-Date: 2026-09-08 07:11+0000\n"
 "Last-Translator: Bren Driesen <brdri@odoo.com>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-19-doc/"
 "general/nl/>\n"
@@ -2560,15 +2560,15 @@ msgid ""
 msgstr ""
 "Om het te activeren open je de :guilabel:`Instellingen`-app, scrol je naar "
 "beneden naar de sectie :guilabel:`Ontwikkelaarstools` en klik je "
-"op :guilabel:`Activeer de ontwikkelaarsmodus`."
+"op :guilabel:`Ontwikkelaarsmodus activeren`."
 
 #: ../../content/applications/general/developer_mode.rst:28
 msgid ""
 "Once activated, the :guilabel:`Deactivate the developer mode` option becomes "
 "available."
 msgstr ""
-"Eenmaal geactiveerd, wordt de optie :guilabel:`Deactiveer de "
-"ontwikkelaarsmodus` beschikbaar."
+"Eenmaal geactiveerd, wordt de optie :guilabel:`Ontwikkelaarsmodus "
+"deactiveren` beschikbaar."
 
 #: ../../content/applications/general/developer_mode.rst:None
 msgid "Activating the developer mode in the Settings app"
@@ -2599,11 +2599,12 @@ msgid ""
 "type `debug` to activate the developer mode with assets or deactivate it."
 msgstr ""
 "Open het **commandopalet** door op `Ctrl + K` of `Cmd ⌘ + K` te drukken, typ "
-"dan `debug` om de ontwikkelmodus met assets te activeren of te deactiveren."
+"dan `debug` om de ontwikkelaarsmodus met assets te activeren of te "
+"deactiveren."
 
 #: ../../content/applications/general/developer_mode.rst:43
 msgid "Browser extension"
-msgstr "Browser extensie"
+msgstr "Browserextensie"
 
 #: ../../content/applications/general/developer_mode.rst:45
 msgid ""
@@ -2614,9 +2615,9 @@ msgid ""
 "<https://addons.mozilla.org/firefox/addon/odoo-debug/>`_."
 msgstr ""
 "De `Odoo Debug <https://github.com/Droggol/OdooDebug>`_ browserextensie "
-"voegt een pictogram toe om de ontwikkelmodus in of uit te schakelen vanaf de "
-"werkbalk van de browser. Het is beschikbaar in de `Chrome Web Store <https://"
-"chromewebstore.google.com/detail/odoo-debug/"
+"voegt een pictogram toe om de ontwikkelaarsmodus in of uit te schakelen "
+"vanaf de werkbalk van de browser. Het is beschikbaar in de `Chrome Web Store "
+"<https://chromewebstore.google.com/detail/odoo-debug/"
 "hmdmhilocobgohohpdpolmibjklfgkbi>`_ en `Firefox Add-ons <https://"
 "addons.mozilla.org/firefox/addon/odoo-debug/>`_."
 
@@ -2649,7 +2650,7 @@ msgid ""
 "as ones related to the database structure, security, actions, etc."
 msgstr ""
 "Databasebeheerders hebben toegang tot het technische menu vanuit "
-"de :guilabel:`Instellingen` app. Het bevat geavanceerde database-"
+"de :guilabel:`Instellingen`-app. Het bevat geavanceerde database-"
 "instellingen, zoals instellingen met betrekking tot de databasestructuur, "
 "beveiliging, acties, enz."
 
@@ -6507,13 +6508,10 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/faq.rst:253
 msgid ""
-"For more information about crons when using Odoo.sh, check out :doc:`Odoo.sh "
-"frequent technical questions <../../../administration/odoo_sh/advanced/"
-"frequent_technical_questions>`."
+"For more information about crons when using Odoo.sh, check out "
+"the :ref:`Odoo.sh and scheduled actions documentation <odoo-sh/advanced/"
+"scheduled>`."
 msgstr ""
-"Kijk voor meer informatie over crons bij het gebruik van Odoo.sh "
-"in :doc:`Odoo.sh veelvoorkomende technische vragen <../../administration/"
-"odoo_sh/advanced/frequent_technical_questions>`."
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
@@ -7790,7 +7788,7 @@ msgid "Address autocomplete on the contact form."
 msgstr "Adres automatisch aanvullen op het contactformulier."
 
 #: ../../content/applications/general/integrations/address_autocomplete.rst:14
-#: ../../content/applications/general/integrations/geolocation.rst:31
+#: ../../content/applications/general/integrations/geolocation.rst:52
 msgid ""
 "Using the Google Places API could require `payment to Google <https://"
 "mapsplatform.google.com/pricing/>`_."
@@ -8003,6 +8001,7 @@ msgstr ""
 "bestemde veld."
 
 #: ../../content/applications/general/integrations/address_autocomplete.rst:96
+#: ../../content/applications/general/integrations/geolocation.rst:85
 msgid "Click :guilabel:`Save`."
 msgstr "Klik op :guilabel:`Opslaan`."
 
@@ -8644,65 +8643,89 @@ msgid "Geolocation"
 msgstr "Geolocatie"
 
 #: ../../content/applications/general/integrations/geolocation.rst:5
-msgid "You can locate contacts or places and generate routes on a map in Odoo."
-msgstr ""
-"U kunt contacten of plaatsen lokaliseren en routes genereren op een kaart in "
-"Odoo."
-
-#: ../../content/applications/general/integrations/geolocation.rst:None
-msgid "Map displaying a contact's location."
-msgstr "Kaart met de locatie van een contactpersoon."
-
-#: ../../content/applications/general/integrations/geolocation.rst:10
 msgid ""
-"To use the feature, open the :guilabel:`Settings` app, and, under "
-"the :guilabel:`Integrations`, section, activate :guilabel:`Geo "
-"Localization`. Then, choose between using the OpenStreetMap or Google Places "
-"API."
+"Odoo provides geolocation integrations that allow you to locate contacts or "
+"places and generate routes on a map."
 msgstr ""
-"Om deze functie te gebruiken, open je de app :guilabel:`Instellingen` en "
-"activeer je onder de sectie :guilabel:`Integraties` :guilabel:`Geo "
-"Lokalisatie`. Kies vervolgens tussen het gebruik van de OpenStreetMap of "
-"Google Places API."
 
-#: ../../content/applications/general/integrations/geolocation.rst:14
-msgid "**OpenStreetMap**"
-msgstr "**OpenStreetMap**"
-
-#: ../../content/applications/general/integrations/geolocation.rst:16
+#: ../../content/applications/general/integrations/geolocation.rst:9
 msgid ""
-"OpenStreetMap is a free, open geographic database updated and maintained by "
-"volunteers. To use it, select :guilabel:`Open Street Map`."
+"The :ref:`Map <studio/views/multiple-records/map>` view is available by "
+"default. No configuration is required to access it."
 msgstr ""
-"OpenStreetMap is een gratis, open geografische database die wordt bijgewerkt "
-"en onderhouden door vrijwilligers. Om het te gebruiken, selecteert "
-"u :guilabel:`Open Street Map`."
+
+#: ../../content/applications/general/integrations/geolocation.rst:15
+msgid "Geolocate contacts and places"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:17
+msgid ""
+"The :guilabel:`Geolocation` feature generates latitude and longitude "
+"coordinates to pinpoint locations. It can be used to:"
+msgstr ""
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
-"OpenStreetMap might not always be accurate. You can `join the OpenStreetMap "
-"community <https://www.openstreetmap.org/fixthemap>`_ to fix any issues "
-"encountered."
+"Check employees' :ref:`check-in/out locations <attendances/check-in-out-"
+"details>` in the **Attendances** app;"
 msgstr ""
-"OpenStreetMap is mogelijk niet altijd accuraat. U kunt `lid worden van de "
-"OpenStreetMap-gemeenschap <https://www.openstreetmap.org/fixthemap>`_ om "
-"eventuele problemen op te lossen."
+
+#: ../../content/applications/general/integrations/geolocation.rst:22
+msgid ""
+"Display the pickup location when using the :ref:`pickup on-site delivery "
+"method <ecommerce/shipping/instore-pickup>`;"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:24
+msgid ""
+":ref:`Assign partners <contacts/partner-assignment>` in the **Contacts** app;"
+msgstr ""
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
-msgid "**Google Places API map**"
-msgstr "**Google Places API-kaart**"
-
-#: ../../content/applications/general/integrations/geolocation.rst:27
 msgid ""
-"The Google Places API map provides detailed info on places, businesses, and "
-"points of interest. It supports location-based features like search, "
-"navigation, and recommendations."
+"Validate addresses with the :ref:`Avatax address validation <accounting/"
+"avatax/address-validation>` feature."
 msgstr ""
-"De Google Places API-kaart biedt gedetailleerde informatie over plaatsen, "
-"bedrijven en interessante plaatsen. Het ondersteunt locatiegebaseerde "
-"functies zoals zoeken, navigatie en aanbevelingen."
 
-#: ../../content/applications/general/integrations/geolocation.rst:34
+#: ../../content/applications/general/integrations/geolocation.rst:28
+msgid ""
+"To enable the :guilabel:`Geolocation` feature, navigate "
+"to :menuselection:`Settings --> General Settings`, scroll down to "
+"the :guilabel:`Integrations` section, and activate :guilabel:`Geolocation`. "
+"Then, in the :guilabel:`API` field, select either :guilabel:`Open Street "
+"Map` or :guilabel:`Google Place Map`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:37
+msgid "OpenStreetMap"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:39
+msgid ""
+"OpenStreetMap is a free, open geographic database updated and maintained by "
+"volunteers. No additional configuration is required to use :guilabel:`Open "
+"Street Map`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:43
+msgid ""
+"OpenStreetMap data may not always be accurate. You can `join the "
+"OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
+"report and correct any issues you encounter."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:46
+msgid "Google Places API"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:48
+msgid ""
+"The Google Places API provides detailed information about places, "
+"businesses, and points of interest. It supports location-based features like "
+"search, navigation, and recommendations."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:55
 msgid ""
 "To use it, select :guilabel:`Google Place Map` and enter your :ref:`API Key "
 "<address_autocomplete/generate_api_key>`."
@@ -8710,13 +8733,73 @@ msgstr ""
 "Om het te gebruiken, selecteer je :guilabel:`Google Place Map` en voer je "
 "de :ref:`API-sleutel <address_autocomplete/generate_api_key>` in."
 
-#: ../../content/applications/general/integrations/geolocation.rst:None
-msgid "Google Places API key"
-msgstr "Google Places API-sleutel"
-
-#: ../../content/applications/general/integrations/geolocation.rst:41
+#: ../../content/applications/general/integrations/geolocation.rst:59
 msgid ":doc:`address_autocomplete`"
 msgstr ":doc:`address_autocomplete`"
+
+#: ../../content/applications/general/integrations/geolocation.rst:64
+msgid "Map routes"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:66
+msgid ""
+"Map routes are useful for providing itineraries and locations to :doc:`field "
+"service technicians </applications/services/field_service/"
+"planning_itinerary>` and delivery routes to drivers in a :doc:`dispatch "
+"management system </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dispatch>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:71
+msgid "To create routes, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:73
+msgid "Create or sign in to a `Mapbox account <https://www.mapbox.com/>`_."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:74
+msgid ""
+"`Create an access token <https://docs.mapbox.com/help/dive-deeper/access-"
+"tokens/>`_."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:75
+msgid ""
+"Go to the `Access tokens page on Mapbox <https://account.mapbox.com/access-"
+"tokens/>`_ and copy your token to the clipboard."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:79
+msgid ""
+"Mapbox displays secret tokens only once upon creation and hides them "
+"permanently after leaving the :guilabel:`Access Token` page. Make sure to "
+"save the token."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:82
+msgid ""
+"In Odoo, go to :menuselection:`Settings --> General Settings`, scroll down "
+"to the :guilabel:`Integrations` section."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:84
+msgid ""
+"Under :guilabel:`Map Routes`, paste the Mapbox access token into "
+"the :guilabel:`Token` field."
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:88
+msgid ""
+"`How to use Mapbox securely: Access tokens <https://docs.mapbox.com/help/"
+"dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_"
+msgstr ""
+
+#: ../../content/applications/general/integrations/geolocation.rst:90
+msgid ""
+"`URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-"
+"restrictions>`_"
+msgstr ""
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
@@ -12737,7 +12820,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:42
 msgid "Check the :ref:`iot/windows-iot/firewall`."
-msgstr "Controleer de :ref:`iot/windows-iot/firewall`."
+msgstr "Lees: :ref:`iot/windows-iot/firewall`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:45
 msgid "The IoT system does not work after an Odoo upgrade"
@@ -12750,7 +12833,7 @@ msgid ""
 "program <iot/windows_iot/uninstall>` and :ref:`reinstalling the virtual IoT "
 "package <iot/windows-iot/installation>`."
 msgstr ""
-"Als het probleem aanhoudt, :ref:`werk de image bij <iot/updating_iot/image-"
+"Als het probleem aanhoudt: :ref:`Werk de image bij <iot/updating_iot/image-"
 "code>` door de kaart van de IoT Box te flashen of :ref:`verwijder het "
 "virtuele Windows IoT-programma <iot/windows_iot/uninstall>` "
 "en :ref:`installeer het virtuele IoT-pakket opnieuw <iot/windows-iot/"
@@ -12819,12 +12902,16 @@ msgid ""
 "The IoT system is connected and reports are assigned to a printer that "
 "cannot print"
 msgstr ""
+"Het IoT-systeem is verbonden en rapporten worden toegewezen aan een printer "
+"die niet kan afdrukken"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
 msgid ""
 "Verify that the browser is allowed to :ref:`access devices on the local "
 "network <pos/lna/browser-permission>`."
 msgstr ""
+"Controleer of de browser :ref:`toegang heeft tot apparaten op het lokale "
+"netwerk <pos/lna/browser-permission>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:85
 msgid "HTTPS certificate generation issues and errors"
@@ -12832,11 +12919,11 @@ msgstr "Problemen en fouten bij het genereren van HTTPS-certificaten"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:88
 msgid "The HTTPS certificate does not generate"
-msgstr "Het HTTPS-certificaat genereert geen"
+msgstr "Het HTTPS-certificaat wordt niet gegenereerd"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:90
 msgid "Potential causes include the following:"
-msgstr "Mogelijke oorzaken zijn de volgende:"
+msgstr "Dit zijn mogelijke oorzaken:"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:92
 msgid ""
@@ -12893,7 +12980,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:114
 msgid "Missing credentials"
-msgstr "Ontbrekende inloggegevens"
+msgstr "Ontbrekende identificatiegegevens"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:116
 msgid ""
@@ -12911,9 +12998,9 @@ msgid ""
 "cogs` (:guilabel:`cogs`) button, then click :guilabel:`Credentials`."
 msgstr ""
 "Controleer of beide waarden correct zijn geconfigureerd. Om ze bij te "
-"werken, :ref:`ga naar de homepage van de IoT Box <iot/iot-box/homepage>` "
+"werken, :ref:`ga je naar de homepage van de IoT Box <iot/iot-box/homepage>` "
 "of :ref:`de homepage van de virtuele Windows IoT <iot/windows-iot/"
-"homepage>`, klik op de :icon:`fa-cogs` (:guilabel:`tandwielen`) knop en klik "
+"homepage>`, klik je op de :icon:`fa-cogs` (:guilabel:`tandwielen`) en "
 "vervolgens op :guilabel:`Credentials`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:123
@@ -12934,9 +13021,9 @@ msgstr ""
 "<iot/connect/IoT-form>`. Om de logniveaus te definiëren die in het "
 "logbestand van het IoT-systeem worden vastgelegd, :ref:`open je de homepage "
 "van de IoT Box <iot/windows-iot/homepage>` of :ref:`de homepage van de "
-"Windows virtuele IoT <iot/iot-box/homepage>`, klik je op de knop :icon:`fa-"
-"cogs` (:guilabel:`tandwielen`) en vervolgens op :guilabel:`Logniveau` "
-"onderaan de pagina."
+"Windows virtuele IoT <iot/iot-box/homepage>`, klik je op :icon:`fa-cogs` "
+"(:guilabel:`tandwielen`) en vervolgens op :guilabel:`Logniveau` onderaan de "
+"pagina."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:130
 msgid ""
@@ -12944,7 +13031,7 @@ msgid ""
 "administrator; these issues are beyond the scope of Odoo support services."
 msgstr ""
 "Neem contact op met je systeem- of netwerkbeheerder om netwerkgerelateerde "
-"problemen aan te pakken; deze problemen vallen buiten de scope van Odoo-"
+"problemen aan te pakken. Deze problemen vallen buiten de scope van Odoo-"
 "ondersteuningsdiensten."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:134
@@ -13000,7 +13087,7 @@ msgid ""
 "https_certificate>`."
 msgstr ""
 "Als het IoT-systeem succesvol verbinding heeft gemaakt met `<https://"
-"www.odoo.com>`_, maar de server weigerde het :ref:`HTTPS-certificaat <iot/"
+"www.odoo.com>`_, maar de server weigert het :ref:`HTTPS-certificaat <iot/"
 "connect/https_certificate>` te verstrekken."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:153
@@ -13023,7 +13110,7 @@ msgid ""
 "Tailscale token on the IoT Box's homepage. This allows the Odoo support team "
 "to access the IoT Box for troubleshooting securely."
 msgstr ""
-"Verstrek een Tailscale-token op de startpagina van de IoT Box als je externe "
+"Vul een Tailscale-token in op de startpagina van de IoT Box als je externe "
 "toegang tot een IoT Box moet verlenen. Hierdoor kan het Odoo-"
 "ondersteuningsteam de IoT Box veilig openen voor probleemoplossing."
 
@@ -13035,7 +13122,7 @@ msgid ""
 msgstr ""
 "Voer alleen een token in van een vertrouwde bron, zoals een officiële Odoo-"
 "ondersteuningsmedewerker. Het verstrekken van een token verleent toegang tot "
-"de IoT Box en je hele lokale netwerk, dus doe dit voorzichtig."
+"de IoT Box en je hele lokale netwerk, dus ga hier voorzichtig mee om."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:168
 msgid ""
@@ -13044,19 +13131,18 @@ msgid ""
 "the pop-up window, enter the Tailscale token provided by the Odoo support "
 "team and click :guilabel:`Enable`."
 msgstr ""
-"Open de :ref:`startpagina van de IoT Box <iot/iot-box/homepage>`, klik op de "
-"knop :icon:`fa-cogs` (:guilabel:`tandwielen`) en klik "
-"op :guilabel:`Debugging Tools`. Voer in het pop-upvenster het Tailscale-"
-"token in dat door het Odoo-ondersteuningsteam is verstrekt en klik "
-"op :guilabel:`Inschakelen`."
+"Open de :ref:`startpagina van de IoT Box <iot/iot-box/homepage>`, klik "
+"op :icon:`fa-cogs` (:guilabel:`tandwielen`) en klik op :guilabel:`Debugging "
+"Tools`. Voer in het pop-upvenster het Tailscale-token in dat door het Odoo-"
+"ondersteuningsteam is verstrekt en klik op :guilabel:`Inschakelen`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:173
 msgid ""
 "**Remote Debug** is only available for :doc:`IoT boxes <../iot_box>`, not "
 "the :doc:`Windows virtual IoT <../windows_iot>`."
 msgstr ""
-"**Remote Debug** is alleen beschikbaar voor :doc:`IoT-boxen <../iot_box>`, "
-"niet voor de :doc:`Windows virtuele IoT <../windows_iot>`."
+"**Debug op afstand** is alleen beschikbaar voor :doc:`IoT-boxen <../"
+"iot_box>`, niet voor de :doc:`Windows virtuele IoT <../windows_iot>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:177
 msgid "Is the IoT Box down?"
@@ -13068,10 +13154,10 @@ msgid ""
 "support team. Just provide the key in the only field displayed on "
 "the :ref:`homepage <iot/iot-box/homepage>` and click :guilabel:`Enable`."
 msgstr ""
-"Verstrek de sleutel in het enige veld dat op de :ref:`startpagina <iot/iot-"
-"box/homepage>` wordt weergegeven en klik op :guilabel:`Inschakelen` als de "
-"IoT Box offline is. Je kunt dan nog steeds externe toegang inschakelen voor "
-"het Odoo-ondersteuningsteam."
+"Als de IoT Box offline is, kun je nog steeds externe toegang inschakelen "
+"voor het Odoo-ondersteuningsteam. Vul de sleutel in het enige veld dat op "
+"de :ref:`startpagina <iot/iot-box/homepage>` wordt weergegeven in en klik "
+"op :guilabel:`Inschakelen`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:187
 msgid ""
@@ -14039,8 +14125,8 @@ msgid ""
 msgstr ""
 "Om bedrijfscontinuïteit te waarborgen bij een onbetrouwbare of niet-"
 "beschikbare internetverbinding, zoals tijdens het woon-werkverkeer of op "
-"locaties met slechte of geen dekking, maakt Odoo bepaalde gegevens offline "
-"beschikbaar voor ingelogde gebruikers."
+"locaties met slechte of geen verbinding, maakt Odoo bepaalde gegevens "
+"offline beschikbaar voor ingelogde gebruikers."
 
 #: ../../content/applications/general/offline_mode.rst:9
 msgid ""
@@ -14093,9 +14179,9 @@ msgid ""
 "troubleshooting reasons, removes all locally stored data. This impacts the "
 "availability of views and records in offline mode."
 msgstr ""
-"Een harde verversing uitvoeren met `Ctrl + F5` of `Cmd + Shift + R`, bv. "
-"voor probleemoplossing, verwijdert alle lokaal opgeslagen gegevens. Dit "
-"beïnvloedt de beschikbaarheid van weergaven en records in offline modus."
+"Een hard refresh uitvoeren met `Ctrl + F5` of `Cmd + Shift + R`, bv. voor "
+"probleemoplossing, verwijdert alle lokaal opgeslagen gegevens. Dit "
+"beïnvloedt de beschikbaarheid van weergaven en records in offlinemodus."
 
 #: ../../content/applications/general/users.rst:7
 msgid ""
@@ -15640,6 +15726,11 @@ msgid ""
 "drop-down menu. This determines whether the user must complete 2FA "
 "verification when logging back in."
 msgstr ""
+"Om time-out bij inactiviteit in te schakelen, klik je op het tabblad "
+"*Timeouts* en selecteer je het selectievakje :guilabel:`Inactiviteit`. Kies "
+"vervolgens :guilabel:`Schermvergrendeling` of :guilabel:`Schermvergrendeling "
+"met tweestapsverificatie` in het vervolgkeuzemenu. Dit bepaalt of de "
+"gebruiker tweestapsverificatie moet doorlopen bij het opnieuw inloggen."
 
 #: ../../content/applications/general/users/access_rights.rst:263
 msgid ""
@@ -17633,6 +17724,70 @@ msgstr ":doc:`Toegangsrechten </applications/general/users/access_rights>`"
 #: ../../content/applications/general/users/user_portals/updating_portal_info.rst:154
 msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ":doc:`Documentatie over portaaltoegang <portal_access>`"
+
+#~ msgid ""
+#~ "For more information about crons when using Odoo.sh, check "
+#~ "out :doc:`Odoo.sh frequent technical questions <../../../administration/"
+#~ "odoo_sh/advanced/frequent_technical_questions>`."
+#~ msgstr ""
+#~ "Kijk voor meer informatie over crons bij het gebruik van Odoo.sh "
+#~ "in :doc:`Odoo.sh veelvoorkomende technische vragen <../../administration/"
+#~ "odoo_sh/advanced/frequent_technical_questions>`."
+
+#~ msgid ""
+#~ "You can locate contacts or places and generate routes on a map in Odoo."
+#~ msgstr ""
+#~ "U kunt contacten of plaatsen lokaliseren en routes genereren op een kaart "
+#~ "in Odoo."
+
+#~ msgid "Map displaying a contact's location."
+#~ msgstr "Kaart met de locatie van een contactpersoon."
+
+#~ msgid ""
+#~ "To use the feature, open the :guilabel:`Settings` app, and, under "
+#~ "the :guilabel:`Integrations`, section, activate :guilabel:`Geo "
+#~ "Localization`. Then, choose between using the OpenStreetMap or Google "
+#~ "Places API."
+#~ msgstr ""
+#~ "Om deze functie te gebruiken, open je de app :guilabel:`Instellingen` en "
+#~ "activeer je onder de sectie :guilabel:`Integraties` :guilabel:`Geo "
+#~ "Lokalisatie`. Kies vervolgens tussen het gebruik van de OpenStreetMap of "
+#~ "Google Places API."
+
+#~ msgid "**OpenStreetMap**"
+#~ msgstr "**OpenStreetMap**"
+
+#~ msgid ""
+#~ "OpenStreetMap is a free, open geographic database updated and maintained "
+#~ "by volunteers. To use it, select :guilabel:`Open Street Map`."
+#~ msgstr ""
+#~ "OpenStreetMap is een gratis, open geografische database die wordt "
+#~ "bijgewerkt en onderhouden door vrijwilligers. Om het te gebruiken, "
+#~ "selecteert u :guilabel:`Open Street Map`."
+
+#~ msgid ""
+#~ "OpenStreetMap might not always be accurate. You can `join the "
+#~ "OpenStreetMap community <https://www.openstreetmap.org/fixthemap>`_ to "
+#~ "fix any issues encountered."
+#~ msgstr ""
+#~ "OpenStreetMap is mogelijk niet altijd accuraat. U kunt `lid worden van de "
+#~ "OpenStreetMap-gemeenschap <https://www.openstreetmap.org/fixthemap>`_ om "
+#~ "eventuele problemen op te lossen."
+
+#~ msgid "**Google Places API map**"
+#~ msgstr "**Google Places API-kaart**"
+
+#~ msgid ""
+#~ "The Google Places API map provides detailed info on places, businesses, "
+#~ "and points of interest. It supports location-based features like search, "
+#~ "navigation, and recommendations."
+#~ msgstr ""
+#~ "De Google Places API-kaart biedt gedetailleerde informatie over plaatsen, "
+#~ "bedrijven en interessante plaatsen. Het ondersteunt locatiegebaseerde "
+#~ "functies zoals zoeken, navigatie en aanbevelingen."
+
+#~ msgid "Google Places API key"
+#~ msgstr "Google Places API-sleutel"
 
 #~ msgid ""
 #~ "After selecting an authenticator, log in to Odoo, then click the profile "
